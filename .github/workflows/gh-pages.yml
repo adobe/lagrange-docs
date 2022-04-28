@@ -1,0 +1,39 @@
+name: github pages
+
+on:
+  push:
+    branches:
+      - docs
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Setup Conda
+        uses: conda-incubator/setup-miniconda@v2
+        with:
+          activate-environment: lagrange-website
+          environment-file: conda.yml
+          auto-activate-base: false
+
+      - name: Build website
+        shell: bash -l {0}
+        run: |
+          git clone --depth 1 https://github.com/adobe/lagrange.git ./lagrange_tmp
+          python generate.py ./lagrange_tmp
+          mkdocs build
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+            github_token: ${{ secrets.GITHUB_TOKEN }}
+            publish_dir: ./site
+
+      - name: Check links
+        shell: bash -l {0}
+        run: |
+          chmod o-w -R $CONDA_PREFIX
+          linkchecker site/index.html

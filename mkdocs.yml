@@ -1,0 +1,103 @@
+site_name: Lagrange
+site_url: 'https://opensource.adobe.com/lagrange-docs/'
+edit_uri: 'https://github.com/adobe/lagrange-docs/edit/docs/docs/'
+docs_dir: 'docs/open'
+theme:
+  name: 'material'
+  logo: img/Lagrange-logo.svg
+  palette:
+    primary: red
+    accent: red
+  features:
+    - navigation.instant
+    - navigation.tabs
+    - navigation.expand
+    - navigation.top
+    - navigation.indexes
+
+repo_name: adobe/lagrange
+repo_url: https://github.com/adobe/lagrange
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - codehilite
+  - footnotes
+  - md_in_html
+  - pymdownx.inlinehilite
+  - pymdownx.superfences
+  - pymdownx.tabbed
+  - pymdownx.details
+  - pymdownx.smartsymbols
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:pymdownx.emoji.twemoji
+      emoji_generator: !!python/name:pymdownx.emoji.to_svg
+
+plugins:
+  - search
+  - macros:
+      include_yaml:
+        - macros.open.yml
+  - redirects:
+      redirect_maps:
+        'UserGuide/Core/Attributes.md': 'user/core/attributes.md'
+
+extra_javascript:
+  - https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/tablesort.min.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+  - javascripts/extra.js
+  - javascripts/tables.js
+  - javascripts/mathjax.js
+
+extra_css:
+  - stylesheets/extra.css
+
+nav:
+  - Home:
+    - index.md
+    - Goals: goals.md
+    - Getting Started: setup.md
+    - Build: build.md
+    - Contribute: dev/contribute.md
+    - Code Style: dev/code-style.md
+    - Releases: https://github.com/adobe/lagrange/releases
+    - Third Party Libraries: third-party.md
+  - User Guide:
+    - General:
+      - Mesh Class: user/core/mesh.md
+      - Mesh Attributes: user/core/attributes.md
+      - Mesh Cleanup: user/core/mesh-cleanup.md
+      - Utility Functions: user/core/utility-functions.md
+      - Legacy Mesh Class: user/core/legacy-mesh.md
+      - Legacy Mesh Attributes: user/core/legacy-attributes.md
+    - UI:
+      - Overview: user/ui/overview.md
+      - Entity Component System: user/ui/ecs.md
+      - Mesh Visualization: user/ui/mesh-visualization.md
+      - Components: user/ui/components.md
+      - Lights: user/ui/lights.md
+      - User Interface: user/ui/user-interface.md
+      - Viewports: user/ui/viewports.md
+      - Customizing Lagrange UI: user/ui/customizing.md
+      - Examples: user/ui/examples.md
+  - Dev Guide:
+      - Lagrange:
+        - Contribute: dev/contribute.md
+        - Code Style: dev/code-style.md
+        - Unit Tests: dev/unit-tests.md
+      - Performance:
+        - Profiling Runtime With Tracy: dev/runtime-profiling.md
+        - Profiling Compilation Times: dev/compilation-profiling.md
+        - Speeding Up Compilation: dev/speeding-up-compilation.md
+      - Development:
+        - VSCode Tips and Tricks: dev/vscode.md
+        - Autocompletion With Clangd: dev/clangd.md
+        - VisualStudio and WSL: dev/visualstudio-wsl.md
+
+  - Reference Documentation:
+    - Home: ref/index.html
