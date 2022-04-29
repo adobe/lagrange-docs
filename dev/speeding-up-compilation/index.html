@@ -1,0 +1,2049 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://opensource.adobe.com/lagrange-docs/dev/speeding-up-compilation/">
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.4, mkdocs-material-8.2.11">
+    
+    
+      
+        <title>Speeding Up Compilation - Lagrange</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.8c5ef100.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.9647289d.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#ef5552">
+        
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="red" data-md-color-accent="red">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#tips-to-speed-up-compilation-times" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Lagrange" class="md-header__button md-logo" aria-label="Lagrange" data-md-component="logo">
+      
+  <img src="../../img/Lagrange-logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Lagrange
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Speeding Up Compilation
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/adobe/lagrange/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    adobe/lagrange
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        Home
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../user/core/mesh/" class="md-tabs__link">
+        User Guide
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../contribute/" class="md-tabs__link md-tabs__link--active">
+        Dev Guide
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../ref/" class="md-tabs__link">
+        Reference Documentation
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Lagrange" class="md-nav__button md-logo" aria-label="Lagrange" data-md-component="logo">
+      
+  <img src="../../img/Lagrange-logo.svg" alt="logo">
+
+    </a>
+    Lagrange
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/adobe/lagrange/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    adobe/lagrange
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" data-md-state="indeterminate" type="checkbox" id="__nav_1" checked>
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../..">Home</a>
+          
+            <label for="__nav_1">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Home" data-md-level="1">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          Home
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../goals/" class="md-nav__link">
+        Goals
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../setup/" class="md-nav__link">
+        Getting Started
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../build/" class="md-nav__link">
+        Build
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contribute/" class="md-nav__link">
+        Contribute
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../code-style/" class="md-nav__link">
+        Code Style
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://github.com/adobe/lagrange/releases" class="md-nav__link">
+        Releases
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../third-party/" class="md-nav__link">
+        Third Party Libraries
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" data-md-state="indeterminate" type="checkbox" id="__nav_2" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          User Guide
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="User Guide" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          User Guide
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" data-md-state="indeterminate" type="checkbox" id="__nav_2_1" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2_1">
+          General
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="General" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          General
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user/core/mesh/" class="md-nav__link">
+        Mesh Class
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user/core/attributes/" class="md-nav__link">
+        Mesh Attributes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user/core/mesh-cleanup/" class="md-nav__link">
+        Mesh Cleanup
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user/core/utility-functions/" class="md-nav__link">
+        Utility Functions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user/core/legacy-mesh/" class="md-nav__link">
+        Legacy Mesh Class
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user/core/legacy-attributes/" class="md-nav__link">
+        Legacy Mesh Attributes
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" data-md-state="indeterminate" type="checkbox" id="__nav_2_2" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2_2">
+          UI
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="UI" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          UI
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user/ui/overview/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user/ui/ecs/" class="md-nav__link">
+        Entity Component System
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user/ui/mesh-visualization/" class="md-nav__link">
+        Mesh Visualization
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user/ui/components/" class="md-nav__link">
+        Components
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user/ui/lights/" class="md-nav__link">
+        Lights
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user/ui/user-interface/" class="md-nav__link">
+        User Interface
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user/ui/viewports/" class="md-nav__link">
+        Viewports
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user/ui/customizing/" class="md-nav__link">
+        Customizing Lagrange UI
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user/ui/examples/" class="md-nav__link">
+        Examples
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Dev Guide
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Dev Guide" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Dev Guide
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1" data-md-state="indeterminate" type="checkbox" id="__nav_3_1" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_1">
+          Lagrange
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Lagrange" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          Lagrange
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contribute/" class="md-nav__link">
+        Contribute
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../code-style/" class="md-nav__link">
+        Code Style
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unit-tests/" class="md-nav__link">
+        Unit Tests
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" type="checkbox" id="__nav_3_2" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_2">
+          Performance
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Performance" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          Performance
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../runtime-profiling/" class="md-nav__link">
+        Profiling Runtime With Tracy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../compilation-profiling/" class="md-nav__link">
+        Profiling Compilation Times
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Speeding Up Compilation
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Speeding Up Compilation
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#placebo-solutions" class="md-nav__link">
+    Placebo Solutions
+  </a>
+  
+    <nav class="md-nav" aria-label="Placebo Solutions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#use-pre-compiled-headers" class="md-nav__link">
+    Use Pre-Compiled Headers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-ccache" class="md-nav__link">
+    Using ccache
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#real-solutions" class="md-nav__link">
+    Real Solutions
+  </a>
+  
+    <nav class="md-nav" aria-label="Real Solutions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#accepting-trade-offs" class="md-nav__link">
+    Accepting Trade-Offs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#explicit-template-instantiation" class="md-nav__link">
+    Explicit Template Instantiation
+  </a>
+  
+    <nav class="md-nav" aria-label="Explicit Template Instantiation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#before" class="md-nav__link">
+    Before
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#after" class="md-nav__link">
+    After
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limit-header-pollution" class="md-nav__link">
+    Limit Header Pollution
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-pimpl-idiom" class="md-nav__link">
+    The PIMPL idiom
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#x-macro-trick-for-explicit-instantiations" class="md-nav__link">
+    X Macro Trick For Explicit Instantiations
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3" data-md-state="indeterminate" type="checkbox" id="__nav_3_3" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_3">
+          Development
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Development" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          Development
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vscode/" class="md-nav__link">
+        VSCode Tips and Tricks
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../clangd/" class="md-nav__link">
+        Autocompletion With Clangd
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../visualstudio-wsl/" class="md-nav__link">
+        VisualStudio and WSL
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" data-md-state="indeterminate" type="checkbox" id="__nav_4" checked>
+      
+      
+      
+        
+          
+            
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../ref/">Reference Documentation</a>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Reference Documentation" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Reference Documentation
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#placebo-solutions" class="md-nav__link">
+    Placebo Solutions
+  </a>
+  
+    <nav class="md-nav" aria-label="Placebo Solutions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#use-pre-compiled-headers" class="md-nav__link">
+    Use Pre-Compiled Headers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-ccache" class="md-nav__link">
+    Using ccache
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#real-solutions" class="md-nav__link">
+    Real Solutions
+  </a>
+  
+    <nav class="md-nav" aria-label="Real Solutions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#accepting-trade-offs" class="md-nav__link">
+    Accepting Trade-Offs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#explicit-template-instantiation" class="md-nav__link">
+    Explicit Template Instantiation
+  </a>
+  
+    <nav class="md-nav" aria-label="Explicit Template Instantiation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#before" class="md-nav__link">
+    Before
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#after" class="md-nav__link">
+    After
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limit-header-pollution" class="md-nav__link">
+    Limit Header Pollution
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-pimpl-idiom" class="md-nav__link">
+    The PIMPL idiom
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#x-macro-trick-for-explicit-instantiations" class="md-nav__link">
+    X Macro Trick For Explicit Instantiations
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+  <a href="https://github.com/adobe/lagrange-docs/edit/docs/docs/dev/speeding-up-compilation.md" title="Edit this page" class="md-content__button md-icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+  </a>
+
+
+
+<h1 id="tips-to-speed-up-compilation-times">Tips To Speed Up Compilation Times</h1>
+<p>If your hand has reached too deep into the depth of C++ template meta-programming and header-only
+libraries, you might find yourself in a hot mess of slow-compiling projects and long wait-time
+between recompilations.</p>
+<p><img alt="" src="../img/xkcd_compiling.png" /></p>
+<p>Unfortunately, it is very easy to shoot oneself in the foot and blow up compilation times in a C++
+project. In this page we will discuss various ways to alleviate the problem.</p>
+<h2 id="placebo-solutions">Placebo Solutions</h2>
+<p>These are some "simple" solutions we can use to treat the symptoms (slow compile times) without
+addressing the root cause (code architecture). Pre-compiled headers are pretty much a no-brainer to
+use with CMake, and may or may not provide some speedup in your project. On Windows, many people use
+<a href="https://www.incredibuild.com/">IncrediBuild</a> for distributed compilation/caching to dramatically
+improve compilation performance. On Linux and macOS, you can use <a href="https://ccache.dev/">ccache</a> for
+to improve the performance of repeated builds. Combined with a shared cache database stored in a
+Redis server, this will provide additional performance (e.g. in a Jenkins build cluster).
+<a href="https://github.com/mozilla/sccache">sccache</a> is an alternative to ccache that also works on Windows
+and support cloud storage. Finally, for distributed compilation on Linux, you can also look into
+<a href="https://github.com/icecc/icecream">icecream</a>.</p>
+<h3 id="use-pre-compiled-headers">Use Pre-Compiled Headers</h3>
+<p>The basic CMake file to enable pre-compiled headers for your project look like this:</p>
+<div class="highlight"><pre><span></span><code><span class="c"># We use an interface target to define commonly used pre-compiled headers</span>
+<span class="nb">add_library</span><span class="p">(</span><span class="s">mylib_pch</span><span class="w"> </span><span class="s">INTERFACE</span><span class="p">)</span>
+
+<span class="c"># Always define an alias in the form foo::bar to prevent silly CMake errors</span>
+<span class="nb">add_library</span><span class="p">(</span><span class="s">mylib::pch</span><span class="w"> </span><span class="s">ALIAS</span><span class="w"> </span><span class="s">mylib_pch</span><span class="p">)</span>
+
+<span class="c"># Define commonly used headers here</span>
+<span class="nb">target_precompile_headers</span><span class="p">(</span><span class="s">mylib_pch</span><span class="w"> </span><span class="s">INTERFACE</span>
+<span class="w">    </span><span class="c"># C++ headers</span>
+<span class="w">    </span><span class="s">&lt;algorithm&gt;</span>
+<span class="w">    </span><span class="s">&lt;chrono&gt;</span>
+<span class="w">    </span><span class="s">&lt;functional&gt;</span>
+
+<span class="w">    </span><span class="c"># Third party libraries</span>
+<span class="w">    </span><span class="s">&lt;Eigen/Core&gt;</span>
+
+<span class="w">    </span><span class="c"># Your own library headers</span>
+<span class="w">    </span><span class="s">&lt;mylib/common.h&gt;</span>
+<span class="w">    </span><span class="s">&lt;mylib/Mesh.h&gt;</span>
+<span class="w">    </span><span class="s">&lt;mylib/logger.h&gt;</span>
+<span class="p">)</span>
+
+<span class="c"># Reuse the same pre-compiled headers for both lib, executable and unit tests</span>
+<span class="c"># (but do not make it a PUBLIC dependency of `mylib`).</span>
+<span class="nb">target_link_libraries</span><span class="p">(</span><span class="s">mylib</span><span class="w"> </span><span class="s">PRIVATE</span><span class="w"> </span><span class="s">mylib::pch</span><span class="p">)</span>
+<span class="nb">target_link_libraries</span><span class="p">(</span><span class="s">myexecutable</span><span class="w"> </span><span class="s">PRIVATE</span><span class="w"> </span><span class="s">mylib::pch</span><span class="p">)</span>
+</code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">Choice of Precompiled Headers</p>
+<p>You want to add headers that are used often in the project, ideally in at least a third of the
+compilation units. Avoid adding a header to PCH if you are actively working on it.</p>
+</div>
+<p>And that's it! Please consult the official documentation of the
+<a href="https://cmake.org/cmake/help/v3.18/command/target_precompile_headers.html">target_precompile_headers()</a>
+function for more information. For example, one could use the <code>REUSE_FROM</code> syntax to reuse a list of
+pre-compiled headers from one target to the next, rather than using an interface target for this
+purpose.</p>
+<h3 id="using-ccache">Using ccache</h3>
+<p>Ccache can be used to speed up compilation on macOS and Linux. There are similar tools that also
+work on Windows, such as <a href="https://github.com/mozilla/sccache">sscache</a> (developed by Mozilla).</p>
+<p>First, make sure you set a cache size large enough to accommodate your C++ projects:
+<div class="highlight"><pre><span></span><code>ccache -M 100G <span class="c1"># set max cache size</span>
+ccache -s <span class="c1"># show stats</span>
+</code></pre></div></p>
+<p>To enable ccache in a CMake project, simply set the <code>CMAKE_CXX_COMPILER_LAUNCHER</code> variable to the
+ccache executable. This simple CMake snippet will work on machines with and without ccache
+installed:</p>
+<div class="highlight"><pre><span></span><code><span class="nb">find_program</span><span class="p">(</span><span class="s">CCACHE_PROGRAM</span><span class="w"> </span><span class="s">ccache</span><span class="p">)</span>
+<span class="nb">if</span><span class="p">(</span><span class="s">CCACHE_PROGRAM</span><span class="p">)</span>
+<span class="w">    </span><span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_C_COMPILER_LAUNCHER</span><span class="w">   </span><span class="o">${</span><span class="nv">CCACHE_PROGRAM</span><span class="o">}</span><span class="p">)</span>
+<span class="w">    </span><span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_CXX_COMPILER_LAUNCHER</span><span class="w"> </span><span class="o">${</span><span class="nv">CCACHE_PROGRAM</span><span class="o">}</span><span class="p">)</span>
+<span class="nb">endif</span><span class="p">()</span>
+</code></pre></div>
+<p>Without any additional settings however, it is likely that you will not have as many cache hits as
+you would like. Here are some important settings to experiment with:</p>
+<ul>
+<li><strong><code>CCACHE_BASEDIR</code></strong>: Should be set to either <code>${CMAKE_BINARY_DIR}</code> or <code>${CMAKE_SOURCE_DIR}</code>.</li>
+<li><strong><code>CCACHE_SLOPPINESS</code></strong>: When using pre-compiled headers, it is important to define this to
+  <code>pch_defines,time_macros</code>. Other settings may improve cache hit performance, such as
+  <code>include_file_mtime</code>.</li>
+<li><strong><code>CCACHE_PREFIX</code></strong>: Should be set when combining ccache with another compiler wrapper (such as
+  distcc or icecc for distributed compilation, e.g. <code>CCACHE_PREFIX=icecc</code>).</li>
+</ul>
+<p>To set those options from your CMake project, you can use the following code snippet:</p>
+<div class="highlight"><pre><span></span><code><span class="nb">find_program</span><span class="p">(</span><span class="s">CCACHE_PROGRAM</span><span class="w"> </span><span class="s">ccache</span><span class="p">)</span>
+<span class="nb">if</span><span class="p">(</span><span class="s">CCACHE_PROGRAM</span><span class="p">)</span>
+<span class="w">    </span><span class="nb">set</span><span class="p">(</span><span class="s">ccacheEnv</span>
+<span class="w">        </span><span class="s">CCACHE_BASEDIR=</span><span class="o">${</span><span class="nv">CMAKE_BINARY_DIR</span><span class="o">}</span>
+<span class="w">        </span><span class="s">CCACHE_SLOPPINESS=clang_index_store,include_file_ctime,include_file_mtime,locale,pch_defines,time_macros</span>
+<span class="w">    </span><span class="p">)</span>
+<span class="w">    </span><span class="nb">foreach</span><span class="p">(</span><span class="s">lang</span><span class="w"> </span><span class="s">IN</span><span class="w"> </span><span class="s">ITEMS</span><span class="w"> </span><span class="s">C</span><span class="w"> </span><span class="s">CXX</span><span class="w"> </span><span class="s">CUDA</span><span class="p">)</span>
+<span class="w">        </span><span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_</span><span class="o">${</span><span class="nv">lang</span><span class="o">}</span><span class="s">_COMPILER_LAUNCHER</span>
+<span class="w">            </span><span class="o">${</span><span class="nv">CMAKE_COMMAND</span><span class="o">}</span><span class="w"> </span><span class="s">-E</span><span class="w"> </span><span class="s">env</span><span class="w"> </span><span class="o">${</span><span class="nv">ccacheEnv</span><span class="o">}</span><span class="w"> </span><span class="o">${</span><span class="nv">CCACHE_PROGRAM</span><span class="o">}</span>
+<span class="w">            </span><span class="s">PARENT_SCOPE</span>
+<span class="w">        </span><span class="p">)</span>
+<span class="w">    </span><span class="nb">endforeach</span><span class="p">()</span>
+<span class="nb">endif</span><span class="p">()</span>
+</code></pre></div>
+<h2 id="real-solutions">Real Solutions</h2>
+<div class="admonition important">
+<p class="admonition-title">Profile Compilation Times First!</p>
+<p>Before going head-over-heel and refactor all your code, it is essential that you run some simple
+<a href="../compilation-profiling/">profiling tools</a> to help you analyze what parts of your project are
+slow to compile.</p>
+</div>
+<h3 id="accepting-trade-offs">Accepting Trade-Offs</h3>
+<p>To <em>really</em> reduce compile times in a C++ project, we need to re-think its architecture and accept
+trade-offs. Why are C++ projects slow to compile in the first place? In my experience the main
+culprit is often 1) long header parsing time and 2) long codegen time for templated code.</p>
+<p>The C++ syntax is incredibly complicated, and after pre-processor STL headers can expand to
+thousands of lines of code. Compilers need to work extra hard to parse the language correctly, a
+phenomenon that does not improve with new versions of the C++ standard.</p>
+<p>Secondly, templated code require the compiler to generate code at each location where a templated
+function is used. In a project where everything is templated, deeply nested calls to templated
+functions means that the compiler will basically have to compile the whole project for each
+translation unit. This kinda defeats the purpose of separating a project in <a href="https://en.wikipedia.org/wiki/Single_Compilation_Unit">single compilation
+units</a> in the first place. Because templated
+code is usually header-only, pulling a complicated templated function will pull a lot of dependent
+headers, which will need to be parsed, and compiled, etc. The result is a big quagmire of header
+files that the compiler needs to go through every time, which leads to tremendously slow compilation
+times.</p>
+<p>To remedy this, one needs to find <strong>compromise</strong>, and refactor your code accordingly:</p>
+<ol>
+<li>Do you <em>need</em> to support generic templated types, or do you only need to support a limited number
+   of instantiations? E.g. <code>float</code> and <code>double</code>, or dimensions <code>2</code> and <code>3</code>?</li>
+<li>Can you get away with runtime polymorphism (virtual methods, function pointers, etc.) instead of
+   compile time polymorphism (templates)? Yes there is an small overhead, but your development time
+   might be more valuable than the incurred performance cost. Most of the time, I find that if you
+   really need to support a generic type, a virtual class will do just fine.</li>
+</ol>
+<h3 id="explicit-template-instantiation">Explicit Template Instantiation</h3>
+<p>The first step to sanitize a C++ project slowed down by expensive templates is to get rid of them.
+Seriously. Do not use templates unless you have to.</p>
+<p>If you absolutely need do use templates, consider the following:</p>
+<ol>
+<li>If you only need to support a limited number of types, use explicit template instantiation.</li>
+<li>Write separate files for function declaration and definition, just like you would for a regular
+   C++ function.</li>
+</ol>
+<h4 id="before">Before</h4>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">sum.h</label><label for="__tabbed_1_2">main.cpp</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="cp">#pragma once</span>
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;expensive_operation&gt;</span><span class="c1"> // Expensive header to parse</span><span class="cp"></span>
+
+<span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">Scalar</span><span class="o">&gt;</span><span class="w"></span>
+<span class="n">Scalar</span><span class="w"> </span><span class="n">sum</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Scalar</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="n">pts</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">Scalar</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">size_t</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">pts</span><span class="p">.</span><span class="n">size</span><span class="p">();</span><span class="w"> </span><span class="o">++</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">x</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">expensive_operation</span><span class="p">(</span><span class="n">pts</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">x</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="c1">// This will pull other headers, such as `expensive_operation`</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;sum.h&quot;</span><span class="cp"></span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;</span><span class="w"> </span><span class="n">pts</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">};</span><span class="w"></span>
+<span class="w">    </span><span class="n">sum</span><span class="p">(</span><span class="n">pts</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<h4 id="after">After</h4>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:3"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><input id="__tabbed_2_3" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">sum.h</label><label for="__tabbed_2_2">sum.cpp</label><label for="__tabbed_2_3">main.cpp</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="cp">#pragma once</span>
+
+<span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">Scalar</span><span class="o">&gt;</span><span class="w"></span>
+<span class="n">Scalar</span><span class="w"> </span><span class="n">sum</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Scalar</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="n">pts</span><span class="p">);</span><span class="w"></span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;sum.h&quot;</span><span class="cp"></span>
+
+<span class="c1">// Now `expensive_operation` is safely hidden inside the .cpp</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;expensive_operation&gt;</span><span class="cp"></span>
+
+<span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">Scalar</span><span class="o">&gt;</span><span class="w"></span>
+<span class="n">Scalar</span><span class="w"> </span><span class="n">sum</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Scalar</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="n">pts</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">Scalar</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">size_t</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">pts</span><span class="p">.</span><span class="n">size</span><span class="p">();</span><span class="w"> </span><span class="o">++</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">x</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">expensive_operation</span><span class="p">(</span><span class="n">pts</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">x</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="c1">// Explicit template instantiation</span>
+<span class="k">template</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">sum</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="n">pts</span><span class="p">);</span><span class="w"></span>
+<span class="k">template</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">sum</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="n">pts</span><span class="p">);</span><span class="w"></span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="c1">// Now this header is cheap to parse</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;sum.h&quot;</span><span class="cp"></span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;</span><span class="w"> </span><span class="n">pts</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">};</span><span class="w"></span>
+<span class="w">    </span><span class="n">sum</span><span class="p">(</span><span class="n">pts</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<p>To avoid repeating explicit template instantiations for various types, we can use a <a href="#x-macro-trick-for-explicit-instantiations">cool macro
+trick</a> described at the end of this page.</p>
+<div class="admonition caution">
+<p class="admonition-title">Definitions In Header Files</p>
+<p>One could also envision using separate header files for the declaration/definition of a
+templated function (as opposed to a header file + source file). But this gets tricky when
+nesting templated function calls and trying to instantiate them with new types.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Extern Templates</p>
+<p>While <strong>extern template</strong> might seem like a good idea, they will only save time on code
+generation, not parsing. If your templated function only need to support a finite number of
+fundamental types, moving their definition into a separate source file will save you the
+additional parsing overhead and avoid header pollution.</p>
+</div>
+<h3 id="limit-header-pollution">Limit Header Pollution</h3>
+<p>Remember that a large portion of a compiler's time is spent parsing headers. STL headers in
+particular will have various impact on compilation times. Some headers like <code>&lt;type_traits&gt;</code> will
+have a minimal overhead, while <code>&lt;filesystem&gt;</code> or <code>&lt;regex&gt;</code> can take more than 200ms to parse on a
+powerful machine. See <a href="https://artificial-mind.net/projects/compile-health/">this website</a> for
+detailed statistics on all STL headers.</p>
+<p>To limit compilation overhead due to header parsing, you can do the following:</p>
+<ul>
+<li><a href="../compilation-profiling/">Profile</a> your compilation times to find out which header takes the most
+  time to parse.</li>
+<li>Separate your code between source and header files. Move header includes to the .cpp if they are
+  not needed in the .h.</li>
+<li>Separate expensive headers from cheap-but-commonly-used ones, and only include what you need.</li>
+<li><strong>Avoid</strong> having a <code>all.h</code> or <code>common.h</code> that include all headers from your library. This may seem
+  convenient, but will increase compilation times for your users.</li>
+<li>Use forward declarations to avoid pulling expensive headers.</li>
+<li>Use the <a href="#the-pimpl-idiom">PIMPL idiom</a> to hide implementation details from header files of a
+  class.</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Forward Declarations And Pass-By-Value</p>
+<p>I was surprised to learn that you can declare a function taking a forward declared class as a
+by-value argument and as a result. I.e. this works just fine:</p>
+<div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">type</span><span class="p">;</span><span class="w"></span>
+<span class="n">type</span><span class="w"> </span><span class="nf">function</span><span class="p">(</span><span class="n">type</span><span class="p">);</span><span class="w"></span>
+</code></pre></div>
+</div>
+<div class="admonition caution">
+<p class="admonition-title">Forward Declarations And Circular Dependencies</p>
+<p>The Google C++ Style Guide cautions <a href="https://google.github.io/styleguide/cppguide.html#Forward_Declarations">against using forward
+declarations</a> whenever
+possible. Forward declaration can hide circular dependencies which should be a red flag in your
+code architecture. My advice would be to use them sparingly when it makes sense, and measure the
+performance impact on your project when possible.</p>
+</div>
+<h3 id="the-pimpl-idiom">The PIMPL idiom</h3>
+<div class="admonition tip">
+<p class="admonition-title">TL;DR</p>
+<p>Use <a href="https://github.com/LoopPerfect/valuable">valuable::value_ptr&lt;&gt;</a> or
+<a href="https://github.com/oliora/samples">spimpl::impl_ptr&lt;&gt;</a>.</p>
+</div>
+<p>When defining a class in C++, the types of its member variables need to be known, as the compiler
+needs to determine the size of the object. However, sometimes we have private member variables whose
+type do not need to be exposed in the class header. Their type is an implementation detail, and we
+do not want to expose the additional dependency.</p>
+<p>The PIMPL idiom (Pointer to IMPLementation) is a technique to hide this implementation detail, such
+that the underlying types used in a class are not exposed in the class header. Of course there is a
+small price to pay. In most cases this means an extra heap allocation and pointer indirection.
+Oftentimes the trade-off is worth it, but this depends on your specific use case.</p>
+<p>There are several ways to implement a PIMPL in your code (from bad to good):</p>
+<ol>
+<li><strong>[Bad]</strong> Use a raw <code>T * m_foo;</code> member variable and forward-declare <code>T</code>. But this is <strong>bad</strong>
+   because there is no lifetime management (when the encapsulating class is destroyed/moved/copied,
+   etc.).
+    <div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">HiddenType</span><span class="p">;</span><span class="w"></span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">Bar</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="k">protected</span><span class="o">:</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// No lifetime management = bad</span>
+<span class="w">    </span><span class="n">HiddenType</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">m_foo</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div></li>
+<li>
+<p><strong>[Not Great]</strong> Use a <code>std::unique_ptr&lt;T&gt; m_foo</code>. This would work, but there are two problems
+   with that.</p>
+<ol>
+<li>
+<p>The <code>std::unique_ptr&lt;&gt;</code> needs to know how to destroy the object, so you need to define the
+   encapsulating class destructor <em>in the .cpp</em> source file, or you would be forced to pull
+   <code>&lt;HiddenType.h&gt;</code> in <code>&lt;Bar.h&gt;</code>.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Bar.h</label><label for="__tabbed_3_2">Bar.cpp</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">HiddenType</span><span class="p">;</span><span class="w"></span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">Bar</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="o">~</span><span class="n">Bar</span><span class="p">();</span><span class="w"></span>
+<span class="k">protected</span><span class="o">:</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">HiddenType</span><span class="o">&gt;</span><span class="w"> </span><span class="n">m_foo</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;HiddenType.h&gt;</span><span class="cp"></span>
+
+<span class="c1">// The destructor needs to know HiddenType</span>
+<span class="n">Bar</span><span class="o">::~</span><span class="n">Bar</span><span class="p">()</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">default</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+</div>
+</div>
+</div>
+</li>
+<li>
+<p>You lose value semantics on the encapsulating type. I.e. you can no longer copy the object
+   easily, just move it.</p>
+</li>
+</ol>
+</li>
+<li>
+<p><strong>[Not Great]</strong> Use a <code>std::shared_ptr&lt;T&gt; m_foo</code>. This has the same issues as the
+   <code>std::unique_ptr&lt;&gt;</code> solution. You lose value semantics, but you may also incur additional bugs
+   due to the shared ownership of the hidden object (e.g. in case a copy of <code>Bar</code> is created).</p>
+</li>
+<li><strong>[Good]</strong> Use a thin-wrapper around <code>std::unique_ptr&lt;&gt;</code> that provides copy/value semantics. Here
+   are some readily available single-file implementations:<ul>
+<li><a href="https://github.com/LoopPerfect/valuable">valuable::value_ptr&lt;&gt;</a> (with accompanying <a href="https://hackernoon.com/value-ptr-the-missing-c-smart-pointer-1f515664153e">blog
+  post</a>).</li>
+<li><a href="https://github.com/oliora/samples">spimpl::impl_ptr&lt;&gt;</a> very similar.</li>
+</ul>
+</li>
+</ol>
+<div class="admonition caution">
+<p class="admonition-title">Pointers &amp; Const-Correctness</p>
+<p>When storing member variables that are pointers to data, you need to be very careful regarding
+<strong>const-correctness</strong>.
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;ExplicitType.h&gt;</span><span class="cp"></span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">Bar</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="o">~</span><span class="n">Bar</span><span class="p">();</span><span class="w"></span>
+<span class="k">public</span><span class="o">:</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// Will compile, but this is NOT ok</span>
+<span class="w">    </span><span class="n">ExplicitType</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">get_foo_bad</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="o">*</span><span class="n">m_foo</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// Const accessors should return pointers/reference to _const_ data.</span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">ExplicitType</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">get_foo_good</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="o">*</span><span class="n">m_foo</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// This is a const method, so it should return a pointer to a _const_ data.</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="k">const</span><span class="w"> </span><span class="n">ExplicitType</span><span class="o">&gt;</span><span class="w"> </span><span class="n">get_foo_ptr</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">m_foo</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+
+<span class="k">protected</span><span class="o">:</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">ExplicitType</span><span class="o">&gt;</span><span class="w"> </span><span class="n">m_foo</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div></p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>An example usage of the PIMPL idiom in Lagrange is the <code>AttributeManager</code> class in
+<a href="https://github.com/adobe/lagrange/blob/main/modules/src/SurfaceMesh.cpp">SurfaceMesh.h</a>.</p>
+</div>
+<h3 id="x-macro-trick-for-explicit-instantiations">X Macro Trick For Explicit Instantiations</h3>
+<p>Repeating explicit template instantiations for various types can be a tedious task. It makes code
+lengthy, hard to read and hard to extend when adding new types/functions to your codebase.
+Fortunately we can use a cool preprocessor trick known as <a href="https://en.wikipedia.org/wiki/X_Macro">X
+macros</a> to iterate over a list of types and generate a list
+of explicit template instantiation for various classes/functions.</p>
+<p>While you could use the Boost Preprocessing library and macros such as <code>BOOST_PP_SEQ_FOR_EACH</code>, you
+can also roll out your own solution, which requires very little code and is easy to understand.</p>
+<p>The basic idea is as follows:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:3"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><input id="__tabbed_4_3" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">Attribute.h</label><label for="__tabbed_4_2">AttributeTypes.h</label><label for="__tabbed_4_3">Attribute.cpp</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="cp">#pragma once</span>
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;vector&gt;</span><span class="cp"></span>
+<span class="err">​</span><span class="w"></span>
+<span class="k">namespace</span><span class="w"> </span><span class="nn">mylib</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+
+<span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">T</span><span class="o">&gt;</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">Attribute</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">some_method</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="w"> </span><span class="n">m_data</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+
+<span class="p">}</span><span class="w"> </span><span class="c1">// namespace mylib</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="cp">#pragma once</span>
+
+<span class="c1">// Define the X macro arguments here (= the list of types to instantiate)</span>
+<span class="cp">#define MYLIB_ATTRIBUTE_X(mode, data) \</span>
+<span class="cp">    MYLIB_X_##mode(data, int8_t) \</span>
+<span class="cp">    MYLIB_X_##mode(data, int16_t) \</span>
+<span class="cp">    MYLIB_X_##mode(data, int32_t) \</span>
+<span class="cp">    MYLIB_X_##mode(data, int64_t) \</span>
+<span class="cp">    MYLIB_X_##mode(data, uint8_t) \</span>
+<span class="cp">    MYLIB_X_##mode(data, uint16_t) \</span>
+<span class="cp">    MYLIB_X_##mode(data, uint32_t) \</span>
+<span class="cp">    MYLIB_X_##mode(data, uint64_t) \</span>
+<span class="cp">    MYLIB_X_##mode(data, float) \</span>
+<span class="cp">    MYLIB_X_##mode(data, double)</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;mylib/Attribute.h&gt;</span><span class="cp"></span>
+
+<span class="k">namespace</span><span class="w"> </span><span class="nn">mylib</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+
+<span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">T</span><span class="o">&gt;</span><span class="w"></span>
+<span class="kt">void</span><span class="w"> </span><span class="n">Attribute</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;::</span><span class="n">some_method</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// do something</span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="c1">// Explicit template instantiation using X macros</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;mylib/AttributeTypes.h&gt;</span><span class="cp"></span>
+<span class="cp">#define MYLIB_X_attr_class(_, T) template class Attribute&lt;T&gt;;</span>
+<span class="n">MYLIB_ATTRIBUTE_X</span><span class="p">(</span><span class="n">attr_class</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"></span>
+<span class="cp">#undef MYLIB_X_attr_class</span>
+
+<span class="p">}</span><span class="w"> </span><span class="c1">// namespace mylib</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Macro Cleanup</p>
+<p>There is no need to <code>#undef MYLIB_X_attr_class</code> at the end of <code>Attribute.cpp</code>, since the macro
+is usually defined at the <em>end</em> of a .cpp file. But if you are planning on doing <a href="https://cmake.org/cmake/help/latest/prop_tgt/UNITY_BUILD.html">Unity
+builds</a> and are <em>not</em> using
+unique names for your macro, then it is a good idea to do so.</p>
+</div>
+<p>The above solution works well for a single list of types to instantiate. But what if we are mixing
+functions that depend on two different types <code>U</code> and <code>T</code>? This is where the extra parameter <code>data</code>
+comes in. You can think of it as a continuation parameter to recursively instantiate nested type
+lists.</p>
+<p>Here is an concrete example:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:3"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><input id="__tabbed_5_3" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">Header.h</label><label for="__tabbed_5_2">Types.h</label><label for="__tabbed_5_3">Source.cpp</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="cp">#pragma once</span>
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;vector&gt;</span><span class="cp"></span>
+
+<span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">T</span><span class="o">&gt;</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">Attribute</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">some_method</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="w"> </span><span class="n">m_data</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+
+<span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">Scalar</span><span class="o">&gt;</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">Mesh</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Scalar</span><span class="o">&gt;</span><span class="w"> </span><span class="n">m_vertices</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+
+<span class="k">template</span><span class="o">&lt;</span><span class="kt">size_t</span><span class="w"> </span><span class="n">Dim</span><span class="o">&gt;</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">Volume</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="kt">size_t</span><span class="w"> </span><span class="n">m_volume</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Dim</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+
+<span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">T</span><span class="p">,</span><span class="w"> </span><span class="k">typename</span><span class="w"> </span><span class="nc">Scalar</span><span class="o">&gt;</span><span class="w"></span>
+<span class="kt">void</span><span class="w"> </span><span class="n">set_attribute</span><span class="p">(</span><span class="n">Mesh</span><span class="o">&lt;</span><span class="n">Scalar</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="n">mesh</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Attribute</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="n">attr</span><span class="p">);</span><span class="w"></span>
+
+<span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">T</span><span class="p">,</span><span class="w"> </span><span class="k">typename</span><span class="w"> </span><span class="nc">Scalar</span><span class="p">,</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">D</span><span class="o">&gt;</span><span class="w"></span>
+<span class="kt">void</span><span class="w"> </span><span class="n">set_volume</span><span class="p">(</span><span class="n">Mesh</span><span class="o">&lt;</span><span class="n">Scalar</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="n">mesh</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Attribute</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="n">attr</span><span class="p">,</span><span class="w"> </span><span class="n">Volume</span><span class="o">&lt;</span><span class="n">D</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="n">vol</span><span class="p">);</span><span class="w"></span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="cp">#pragma once</span>
+
+<span class="c1">// Define the X macro arguments for each type list</span>
+
+<span class="cp">#define MYLIB_ATTRIBUTE_X(mode, data) \</span>
+<span class="cp">    MYLIB_X_##mode(data, int8_t) \</span>
+<span class="cp">    MYLIB_X_##mode(data, int16_t) \</span>
+<span class="cp">    MYLIB_X_##mode(data, int32_t) \</span>
+<span class="cp">    MYLIB_X_##mode(data, int64_t) \</span>
+<span class="cp">    MYLIB_X_##mode(data, uint8_t) \</span>
+<span class="cp">    MYLIB_X_##mode(data, uint16_t) \</span>
+<span class="cp">    MYLIB_X_##mode(data, uint32_t) \</span>
+<span class="cp">    MYLIB_X_##mode(data, uint64_t) \</span>
+<span class="cp">    MYLIB_X_##mode(data, float) \</span>
+<span class="cp">    MYLIB_X_##mode(data, double)</span>
+
+<span class="cp">#define MYLIB_MESH_X(mode, data) \</span>
+<span class="cp">    MYLIB_X_##mode(data, double) \</span>
+<span class="cp">    MYLIB_X_##mode(data, float)</span>
+
+<span class="cp">#define MYLIB_VOL_X(mode, data) \</span>
+<span class="cp">    MYLIB_X_##mode(data, 2) \</span>
+<span class="cp">    MYLIB_X_##mode(data, 3)</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;Header.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;Types.h&quot;</span><span class="cp"></span>
+
+<span class="c1">// Method/function definitions in the source file</span>
+
+<span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">T</span><span class="o">&gt;</span><span class="w"></span>
+<span class="kt">void</span><span class="w"> </span><span class="n">Attribute</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;::</span><span class="n">some_method</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// do something</span>
+<span class="p">}</span><span class="w"></span>
+<span class="err">​</span><span class="w"></span>
+<span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">T</span><span class="p">,</span><span class="w"> </span><span class="k">typename</span><span class="w"> </span><span class="nc">Scalar</span><span class="o">&gt;</span><span class="w"></span>
+<span class="kt">void</span><span class="w"> </span><span class="n">set_attribute</span><span class="p">(</span><span class="n">Mesh</span><span class="o">&lt;</span><span class="n">Scalar</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="n">mesh</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Attribute</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="n">attr</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// do something</span>
+<span class="p">}</span><span class="w"></span>
+<span class="err">​</span><span class="w"></span>
+<span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">T</span><span class="p">,</span><span class="w"> </span><span class="k">typename</span><span class="w"> </span><span class="nc">Scalar</span><span class="p">,</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">D</span><span class="o">&gt;</span><span class="w"></span>
+<span class="kt">void</span><span class="w"> </span><span class="n">set_volume</span><span class="p">(</span><span class="n">Mesh</span><span class="o">&lt;</span><span class="n">Scalar</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="n">mesh</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Attribute</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="n">attr</span><span class="p">,</span><span class="w"> </span><span class="n">Volume</span><span class="o">&lt;</span><span class="n">D</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="n">vol</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// do something</span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="c1">// Explicit instantiation</span>
+<span class="err">​</span><span class="w"></span>
+<span class="c1">// 1. Simple type lists (Attribute&lt;&gt; and Mesh&lt;&gt; classes)</span>
+<span class="cp">#define MYLIB_X_attr_class(_, T) template class Attribute&lt;T&gt;;</span>
+<span class="n">MYLIB_ATTRIBUTE_X</span><span class="p">(</span><span class="n">attr_class</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"></span>
+<span class="err">​</span><span class="w"></span>
+<span class="cp">#define MYLIB_X_mesh_class(_, S) template class Mesh&lt;S&gt;;</span>
+<span class="n">MYLIB_MESH_X</span><span class="p">(</span><span class="n">mesh_class</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"></span>
+<span class="err">​</span><span class="w"></span>
+<span class="c1">// 2. Cartesian product with two types S x T</span>
+<span class="cp">#define MYLIB_X_attr_set(S, T) template void set_attribute(Mesh&lt;S&gt; &amp;mesh, const Attribute&lt;T&gt; &amp;attr);</span>
+<span class="cp">#define MYLIB_X_mesh_set(_, S) MYLIB_ATTRIBUTE_X(attr_set, S)</span>
+<span class="err">​</span><span class="w"></span>
+<span class="n">MYLIB_MESH_X</span><span class="p">(</span><span class="n">mesh_set</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"></span>
+<span class="err">​</span><span class="w"></span>
+<span class="c1">// 3. Cartesian product with three types S x D x T.</span>
+<span class="c1">//    We need to define helper macros to unpack argument tuples.</span>
+<span class="cp">#define fst(first, second) first</span>
+<span class="cp">#define snd(first, second) second</span>
+<span class="cp">#define MYLIB_X_attr_vol(SD, T) template void set_volume(Mesh&lt;fst SD&gt; &amp;mesh, const Attribute&lt;T&gt; &amp;attr, Volume&lt;snd SD&gt; &amp;vol);</span>
+<span class="cp">#define MYLIB_X_mesh_vol(D, S) MYLIB_ATTRIBUTE_X(attr_vol, (S, D))</span>
+<span class="cp">#define MYLIB_X_dim_vol(_, D) MYLIB_MESH_X(mesh_vol, D)</span>
+<span class="err">​</span><span class="w"></span>
+<span class="n">MYLIB_VOL_X</span><span class="p">(</span><span class="n">dim_vol</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+</div>
+</div>
+</div>
+
+              
+            </article>
+          </div>
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" data-md-state="hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../compilation-profiling/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Profiling Compilation Times" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Profiling Compilation Times
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../vscode/" class="md-footer__link md-footer__link--next" aria-label="Next: VSCode Tips and Tricks" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              VSCode Tips and Tricks
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "navigation.indexes"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.2a1c317c.min.js"}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.748e2769.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/tablesort.min.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="../../javascripts/extra.js"></script>
+      
+        <script src="../../javascripts/tables.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,27 @@
+var searchData=
+[
+  ['warnandcopy_0',['WarnAndCopy',['../group__group-surfacemesh-attr.html#ggaee0f51b5f793101c19bd6dede5db7a7aaef773dc1e1097301a1bf955bfa9857ec',1,'lagrange::WarnAndCopy()'],['../group__group-surfacemesh-attr.html#gga3018d576f81897e1712c3601b9625cb9aef773dc1e1097301a1bf955bfa9857ec',1,'lagrange::WarnAndCopy()']]],
+  ['warnings_1',['Warnings',['../group__group-utils-warning.html',1,'']]],
+  ['wheel_2',['wheel',['../structlagrange_1_1ui_1_1_input_state_1_1_mouse.html#a03c7b11f1388dad69110dd19809558de',1,'lagrange::ui::InputState::Mouse']]],
+  ['wheel_5fhorizontal_3',['wheel_horizontal',['../structlagrange_1_1ui_1_1_input_state_1_1_mouse.html#a00dde4d404c8cbc0140241d8016581f6',1,'lagrange::ui::InputState::Mouse']]],
+  ['width_4',['width',['../structlagrange_1_1ui_1_1_viewer_1_1_window_options.html#a2474a5474cbff19523a51eb1de01cda4',1,'lagrange::ui::Viewer::WindowOptions']]],
+  ['window_5ffullscreen_5',['window_fullscreen',['../structlagrange_1_1ui_1_1_viewer_1_1_window_options.html#a87f23fdcd4a30726eeade0a04faaa0fc',1,'lagrange::ui::Viewer::WindowOptions']]],
+  ['window_5ftitle_6',['window_title',['../structlagrange_1_1ui_1_1_viewer_1_1_window_options.html#a0eb02ce03ec18a375c3f31d1f3e473f6',1,'lagrange::ui::Viewer::WindowOptions']]],
+  ['windowcloseevent_7',['WindowCloseEvent',['../structlagrange_1_1ui_1_1_window_close_event.html',1,'lagrange::ui']]],
+  ['windowdropevent_8',['WindowDropEvent',['../structlagrange_1_1ui_1_1_window_drop_event.html',1,'lagrange::ui']]],
+  ['windowoptions_9',['WindowOptions',['../structlagrange_1_1ui_1_1_viewer_1_1_window_options.html',1,'lagrange::ui::Viewer']]],
+  ['windowresizeevent_10',['WindowResizeEvent',['../structlagrange_1_1ui_1_1_window_resize_event.html',1,'lagrange::ui']]],
+  ['windowsize_11',['WindowSize',['../structlagrange_1_1ui_1_1_window_size.html',1,'lagrange::ui']]],
+  ['wrap_12',['wrap',['../classlagrange_1_1_attribute.html#a809028fdd3de22f0e33c7e97f3712578',1,'lagrange::Attribute']]],
+  ['wrap_5fas_5fattribute_13',['wrap_as_attribute',['../classlagrange_1_1_surface_mesh.html#ad3f51c7ce47c56fdd44ac7960044c277',1,'lagrange::SurfaceMesh']]],
+  ['wrap_5fas_5fconst_5fattribute_14',['wrap_as_const_attribute',['../classlagrange_1_1_surface_mesh.html#ab4273659a074810181638f86fbe4373c',1,'lagrange::SurfaceMesh']]],
+  ['wrap_5fas_5fconst_5ffacets_15',['wrap_as_const_facets',['../classlagrange_1_1_surface_mesh.html#a9b4345e9a203bea515b2290275a5faac',1,'lagrange::SurfaceMesh::wrap_as_const_facets(span&lt; const Index &gt; facets_view, Index num_facets, Index vertex_per_facet)'],['../classlagrange_1_1_surface_mesh.html#a579faf1a71ae048baabbd5faf8eb6331',1,'lagrange::SurfaceMesh::wrap_as_const_facets(span&lt; const Index &gt; offsets_view, Index num_facets, span&lt; const Index &gt; facets_view, Index num_corners)']]],
+  ['wrap_5fas_5fconst_5findexed_5fattribute_16',['wrap_as_const_indexed_attribute',['../classlagrange_1_1_surface_mesh.html#a5334d560ab700341d3deec635520057d',1,'lagrange::SurfaceMesh']]],
+  ['wrap_5fas_5fconst_5fvertices_17',['wrap_as_const_vertices',['../classlagrange_1_1_surface_mesh.html#a9990f194f65dc11e3a36c687864d8976',1,'lagrange::SurfaceMesh']]],
+  ['wrap_5fas_5ffacets_18',['wrap_as_facets',['../classlagrange_1_1_surface_mesh.html#ae70fd65a58e6c322cc359577bdf31712',1,'lagrange::SurfaceMesh::wrap_as_facets(span&lt; Index &gt; facets_view, Index num_facets, Index vertex_per_facet)'],['../classlagrange_1_1_surface_mesh.html#a52b89a6d10eee2400c2ca3d1c32dcf01',1,'lagrange::SurfaceMesh::wrap_as_facets(span&lt; Index &gt; offsets_view, Index num_facets, span&lt; Index &gt; facets_view, Index num_corners)']]],
+  ['wrap_5fas_5findexed_5fattribute_19',['wrap_as_indexed_attribute',['../classlagrange_1_1_surface_mesh.html#ac0cb4ae7ef9528cff1f5baca53711e84',1,'lagrange::SurfaceMesh']]],
+  ['wrap_5fas_5fvertices_20',['wrap_as_vertices',['../classlagrange_1_1_surface_mesh.html#ab8c6f796ec0588302d42ff96970f1bc5',1,'lagrange::SurfaceMesh']]],
+  ['wrap_5fconst_21',['wrap_const',['../classlagrange_1_1_attribute.html#a533dd1690d70c2fac47a6fcf95b31b76',1,'lagrange::Attribute']]],
+  ['wrap_5fwith_5fmesh_22',['wrap_with_mesh',['../namespacelagrange.html#abfe650b7cf9ca2f348fbf4791d148706',1,'lagrange']]],
+  ['write_5fcheck_23',['write_check',['../classlagrange_1_1_attribute.html#aa568f68fc806a5b6fb9ceff17eeb7ee5',1,'lagrange::Attribute']]]
+];

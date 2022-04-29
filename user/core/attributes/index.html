@@ -1,0 +1,2069 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://opensource.adobe.com/lagrange-docs/user/core/attributes/">
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.4, mkdocs-material-8.2.11">
+    
+    
+      
+        <title>Mesh Attributes - Lagrange</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.8c5ef100.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.9647289d.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#ef5552">
+        
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="red" data-md-color-accent="red">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#mesh-attributes" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Lagrange" class="md-header__button md-logo" aria-label="Lagrange" data-md-component="logo">
+      
+  <img src="../../../img/Lagrange-logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Lagrange
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Mesh Attributes
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/adobe/lagrange/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    adobe/lagrange
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        Home
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../mesh/" class="md-tabs__link md-tabs__link--active">
+        User Guide
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../dev/contribute/" class="md-tabs__link">
+        Dev Guide
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../ref/" class="md-tabs__link">
+        Reference Documentation
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Lagrange" class="md-nav__button md-logo" aria-label="Lagrange" data-md-component="logo">
+      
+  <img src="../../../img/Lagrange-logo.svg" alt="logo">
+
+    </a>
+    Lagrange
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/adobe/lagrange/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    adobe/lagrange
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" data-md-state="indeterminate" type="checkbox" id="__nav_1" checked>
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../..">Home</a>
+          
+            <label for="__nav_1">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Home" data-md-level="1">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          Home
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../goals/" class="md-nav__link">
+        Goals
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../setup/" class="md-nav__link">
+        Getting Started
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../build/" class="md-nav__link">
+        Build
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../dev/contribute/" class="md-nav__link">
+        Contribute
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../dev/code-style/" class="md-nav__link">
+        Code Style
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://github.com/adobe/lagrange/releases" class="md-nav__link">
+        Releases
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../third-party/" class="md-nav__link">
+        Third Party Libraries
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          User Guide
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="User Guide" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          User Guide
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2_1">
+          General
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="General" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          General
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mesh/" class="md-nav__link">
+        Mesh Class
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Mesh Attributes
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Mesh Attributes
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#attribute-creation" class="md-nav__link">
+    Attribute Creation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#accessing-attribute-values" class="md-nav__link">
+    Accessing Attribute Values
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#iterating-over-mesh-attributes" class="md-nav__link">
+    Iterating Over Mesh Attributes
+  </a>
+  
+    <nav class="md-nav" aria-label="Iterating Over Mesh Attributes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#inferring-value-type" class="md-nav__link">
+    Inferring Value Type
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#filtering-element-types" class="md-nav__link">
+    Filtering Element Types
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a-note-on-thread-safety" class="md-nav__link">
+    A Note On Thread-Safety
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wrapping-external-buffers" class="md-nav__link">
+    Wrapping External Buffers
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#delete-and-export-attributes" class="md-nav__link">
+    Delete And Export Attributes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reserved-attribute-names" class="md-nav__link">
+    Reserved Attribute Names
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attribute-policies" class="md-nav__link">
+    Attribute Policies
+  </a>
+  
+    <nav class="md-nav" aria-label="Attribute Policies">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-policy" class="md-nav__link">
+    Create Policy
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#growth-policy" class="md-nav__link">
+    Growth Policy
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#write-policy" class="md-nav__link">
+    Write Policy
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete-policy" class="md-nav__link">
+    Delete Policy
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#export-policy" class="md-nav__link">
+    Export Policy
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mesh-cleanup/" class="md-nav__link">
+        Mesh Cleanup
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../utility-functions/" class="md-nav__link">
+        Utility Functions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../legacy-mesh/" class="md-nav__link">
+        Legacy Mesh Class
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../legacy-attributes/" class="md-nav__link">
+        Legacy Mesh Attributes
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" data-md-state="indeterminate" type="checkbox" id="__nav_2_2" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2_2">
+          UI
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="UI" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          UI
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ui/overview/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ui/ecs/" class="md-nav__link">
+        Entity Component System
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ui/mesh-visualization/" class="md-nav__link">
+        Mesh Visualization
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ui/components/" class="md-nav__link">
+        Components
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ui/lights/" class="md-nav__link">
+        Lights
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ui/user-interface/" class="md-nav__link">
+        User Interface
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ui/viewports/" class="md-nav__link">
+        Viewports
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ui/customizing/" class="md-nav__link">
+        Customizing Lagrange UI
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ui/examples/" class="md-nav__link">
+        Examples
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" data-md-state="indeterminate" type="checkbox" id="__nav_3" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Dev Guide
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Dev Guide" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Dev Guide
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1" data-md-state="indeterminate" type="checkbox" id="__nav_3_1" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_1">
+          Lagrange
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Lagrange" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          Lagrange
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../dev/contribute/" class="md-nav__link">
+        Contribute
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../dev/code-style/" class="md-nav__link">
+        Code Style
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../dev/unit-tests/" class="md-nav__link">
+        Unit Tests
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" data-md-state="indeterminate" type="checkbox" id="__nav_3_2" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_2">
+          Performance
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Performance" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          Performance
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../dev/runtime-profiling/" class="md-nav__link">
+        Profiling Runtime With Tracy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../dev/compilation-profiling/" class="md-nav__link">
+        Profiling Compilation Times
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../dev/speeding-up-compilation/" class="md-nav__link">
+        Speeding Up Compilation
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3" data-md-state="indeterminate" type="checkbox" id="__nav_3_3" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_3">
+          Development
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Development" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          Development
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../dev/vscode/" class="md-nav__link">
+        VSCode Tips and Tricks
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../dev/clangd/" class="md-nav__link">
+        Autocompletion With Clangd
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../dev/visualstudio-wsl/" class="md-nav__link">
+        VisualStudio and WSL
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" data-md-state="indeterminate" type="checkbox" id="__nav_4" checked>
+      
+      
+      
+        
+          
+            
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../ref/">Reference Documentation</a>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Reference Documentation" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Reference Documentation
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#attribute-creation" class="md-nav__link">
+    Attribute Creation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#accessing-attribute-values" class="md-nav__link">
+    Accessing Attribute Values
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#iterating-over-mesh-attributes" class="md-nav__link">
+    Iterating Over Mesh Attributes
+  </a>
+  
+    <nav class="md-nav" aria-label="Iterating Over Mesh Attributes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#inferring-value-type" class="md-nav__link">
+    Inferring Value Type
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#filtering-element-types" class="md-nav__link">
+    Filtering Element Types
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a-note-on-thread-safety" class="md-nav__link">
+    A Note On Thread-Safety
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wrapping-external-buffers" class="md-nav__link">
+    Wrapping External Buffers
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#delete-and-export-attributes" class="md-nav__link">
+    Delete And Export Attributes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reserved-attribute-names" class="md-nav__link">
+    Reserved Attribute Names
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attribute-policies" class="md-nav__link">
+    Attribute Policies
+  </a>
+  
+    <nav class="md-nav" aria-label="Attribute Policies">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-policy" class="md-nav__link">
+    Create Policy
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#growth-policy" class="md-nav__link">
+    Growth Policy
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#write-policy" class="md-nav__link">
+    Write Policy
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete-policy" class="md-nav__link">
+    Delete Policy
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#export-policy" class="md-nav__link">
+    Export Policy
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+  <a href="https://github.com/adobe/lagrange-docs/edit/docs/docs/user/core/attributes.md" title="Edit this page" class="md-content__button md-icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+  </a>
+
+
+
+<h1 id="mesh-attributes">Mesh Attributes</h1>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>Since v6.0.0, Lagrange introduced a new polygonal mesh class that is meant to replace the
+original mesh class used throughout Lagrange. While currently few of the Lagrange functions use
+this new mesh class, over time old and new features will transition to use this new data
+structure.</p>
+</div>
+<!-- @header
+#include <lagrange/SurfaceMesh.h>
+#include <lagrange/Attribute.h>
+#include <lagrange/views.h>
+#include <lagrange/foreach_attribute.h>
+#include <lagrange/Logger.h>
+#include <vector>
+#include <random>
+using Scalar = double;
+using Index = uint64_t;
+-->
+
+<p>Mesh attributes are buffers of data associated to a mesh element. They are characterized by the following:</p>
+<ul>
+<li><strong>Name</strong>: A string that uniquely identifies the attribute in the mesh, irrespectively of which
+  mesh element it is associated to.</li>
+<li><strong>Id</strong>: A 32bit unsigned integer that uniquely identifies the attribute in the mesh. Ids are
+  assigned at attribute creation and will not be invalidated if other attributes are
+  removed/created.</li>
+<li>
+<p><strong>Value Type</strong>: Value type of the data being stored in the attribute. We only support fixed-sized
+  integer and floating point types.</p>
+<details class="note">
+<summary>Supported Value Types (Click to expand)</summary>
+<ul>
+<li><code>int8_t</code></li>
+<li><code>int16_t</code></li>
+<li><code>int32_t</code></li>
+<li><code>int64_t</code></li>
+<li><code>uint8_t</code></li>
+<li><code>uint16_t</code></li>
+<li><code>uint32_t</code></li>
+<li><code>uint64_t</code></li>
+<li><code>float</code></li>
+<li><code>double</code></li>
+</ul>
+</details>
+</li>
+<li>
+<p><strong>Element</strong>: Type of mesh element the attribute is associated to. It can be one of the following:</p>
+<table>
+<thead>
+<tr>
+<th><code>AttributeElement</code></th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Vertex</code></td>
+<td>Attribute associated to mesh vertices (e.g., positions).</td>
+</tr>
+<tr>
+<td><code>Facet</code></td>
+<td>Attribute associated to mesh facets.</td>
+</tr>
+<tr>
+<td><code>Edge</code></td>
+<td>Attribute associated to mesh edges.</td>
+</tr>
+<tr>
+<td><code>Corner</code></td>
+<td>Attribute associated to mesh facet corners (e.g. vertex indices).</td>
+</tr>
+<tr>
+<td><code>Value</code></td>
+<td>Attribute that is <strong>not</strong> associated to any mesh element (arbitrary size).</td>
+</tr>
+<tr>
+<td><code>Indexed</code></td>
+<td>A pair of (<code>Corner</code>, <code>Value</code>) attributes, where the corner attribute is an<br/>index into the value attribute buffer (e.g. a UV).</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Automatic Resizing</p>
+<p><code>Vertex</code>, <code>Facet</code>, <code>Edge</code> and <code>Corner</code> attributes are resized accordingly to their
+respective mesh element when inserting/removing vertices/facets, while a <code>Value</code> attribute
+is never resized automatically.</p>
+</div>
+</li>
+<li>
+<p><strong>Usage</strong>: A usage tag is an optional tag that can be used to determine how attribute values are
+  affected by other mesh operations. See the <a href="../../../ref/group__group-surfacemesh-attr.html#ga35b5eb426384b257452ee0ffdb732c27">reference documentation</a> for a list
+  of available usage tags.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>When applying a rigid transform <span class="arithmatex">\(M\)</span> to a mesh, attributes with the <code>Normal</code> tag will be
+transformed according to <span class="arithmatex">\(M^{-T}\)</span>. Similarly, when removing mesh vertices, attributes with
+the <code>VertexIndex</code> tag will be remapped accordingly.</p>
+</div>
+</li>
+<li>
+<p><strong>Channels</strong>: Number of channels for each mesh element in the attribute. The number of possible
+  channels for an attribute is restricted by the attribute usage tag.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>An attribute with the <code>VertexIndex</code> tag must have a single channel, while attributes with
+the <code>Color</code> tag can have between 1 and 4 channels.</p>
+</div>
+</li>
+</ul>
+<h2 id="attribute-creation">Attribute Creation</h2>
+<p>To create a new attribute and return its id:</p>
+<div class="highlight"><pre><span></span><code><span class="n">lagrange</span><span class="o">::</span><span class="n">SurfaceMesh</span><span class="o">&lt;</span><span class="n">Scalar</span><span class="p">,</span><span class="w"> </span><span class="n">Index</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mesh</span><span class="p">;</span><span class="w"></span>
+
+<span class="c1">// Minimal version only requires name + element type.</span>
+<span class="k">auto</span><span class="w"> </span><span class="n">id0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mesh</span><span class="p">.</span><span class="n">create_attribute</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="p">(</span><span class="w"></span>
+<span class="w">    </span><span class="s">&quot;color&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="n">lagrange</span><span class="o">::</span><span class="n">AttributeElement</span><span class="o">::</span><span class="n">Corner</span><span class="p">);</span><span class="w"></span>
+
+<span class="c1">// Optionally specify usage tag + num channels.</span>
+<span class="k">auto</span><span class="w"> </span><span class="n">id1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mesh</span><span class="p">.</span><span class="n">create_attribute</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;</span><span class="p">(</span><span class="w"></span>
+<span class="w">    </span><span class="s">&quot;normals&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="n">lagrange</span><span class="o">::</span><span class="n">AttributeElement</span><span class="o">::</span><span class="n">Vertex</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="n">lagrange</span><span class="o">::</span><span class="n">AttributeUsage</span><span class="o">::</span><span class="n">Normal</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="mi">3</span><span class="p">);</span><span class="w"></span>
+
+<span class="c1">// View attribute as a Eigen::Map&lt;const ...&gt;</span>
+<span class="k">auto</span><span class="w"> </span><span class="n">attr_matrix</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">matrix_view</span><span class="p">(</span><span class="n">mesh</span><span class="p">.</span><span class="n">get_attribute</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;</span><span class="p">(</span><span class="n">id1</span><span class="p">));</span><span class="w"></span>
+</code></pre></div>
+<h2 id="accessing-attribute-values">Accessing Attribute Values</h2>
+<div class="highlight"><pre><span></span><code><span class="n">lagrange</span><span class="o">::</span><span class="n">SurfaceMesh</span><span class="o">&lt;</span><span class="n">Scalar</span><span class="p">,</span><span class="w"> </span><span class="n">Index</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mesh</span><span class="p">;</span><span class="w"></span>
+
+<span class="c1">// ...</span>
+
+<span class="c1">// Returns a const Attribute&lt;T&gt; &amp;</span>
+<span class="k">auto</span><span class="o">&amp;</span><span class="w"> </span><span class="n">attr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mesh</span><span class="p">.</span><span class="n">get_attribute</span><span class="o">&lt;</span><span class="n">Scalar</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;normals&quot;</span><span class="p">);</span><span class="w"></span>
+
+<span class="c1">// Alternative: use id to retrieve attr (avoids a hash map lookup)</span>
+<span class="k">auto</span><span class="w"> </span><span class="n">attr_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mesh</span><span class="p">.</span><span class="n">get_attribute_id</span><span class="p">(</span><span class="s">&quot;normals&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="k">auto</span><span class="o">&amp;</span><span class="w"> </span><span class="n">attr2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mesh</span><span class="p">.</span><span class="n">get_attribute</span><span class="o">&lt;</span><span class="n">Scalar</span><span class="o">&gt;</span><span class="p">(</span><span class="n">attr_id</span><span class="p">);</span><span class="w"></span>
+
+<span class="c1">// Wrap as an Eigen matrix as usual</span>
+<span class="k">auto</span><span class="w"> </span><span class="n">attr_matrix</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">matrix_view</span><span class="p">(</span><span class="n">attr</span><span class="p">);</span><span class="w"></span>
+</code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">Using Attribute Ids</p>
+<p>Using the attribute id instead of its name avoids a <code>std::string -&gt; uint32_t</code> lookup. Since
+attribute ids are guaranteed to not be invalidated, you may also store it in your application
+(e.g. UI menus, etc.).</p>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Disabled Implicit Copies</p>
+<p>It is important to note that implicit copies of an <code>Attribute</code> object is forbidden. Since
+Attribute buffers have value semantics (like <code>std::vector&lt;&gt;</code>), storing the result of
+<code>mesh.get_attribute&lt;&gt;()</code> in a <code>auto attr</code> variable would lead to an implicit copy. For this
+reason, the following code will <strong>not</strong> compile and produce an error:</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// The following will NOT compile (Attribute copy is explicit)</span>
+<span class="c1">// auto attr3 = mesh.get_attribute&lt;float&gt;(&quot;normals&quot;);</span>
+</code></pre></div>
+<p>Copy-on-write handling of attribute buffers is done at the mesh level, i.e. when copying a
+<code>SurfaceMesh</code> object, or when calling methods such as <code>SurfaceMesh::duplicate_attribute()</code>.</p>
+</div>
+<h2 id="iterating-over-mesh-attributes">Iterating Over Mesh Attributes</h2>
+<p>In many situation, it is desirable to iterate over existing mesh attributes to extract some
+information, or process existing attributes. We provide utility functions to iterate over existing
+mesh attributes, with additional filtering based on element types.</p>
+<p>Basic example:
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;lagrange/foreach_attribute.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;lagrange/Logger.h&gt;</span><span class="cp"></span>
+
+<span class="n">lagrange</span><span class="o">::</span><span class="n">SurfaceMesh</span><span class="o">&lt;</span><span class="n">Scalar</span><span class="p">,</span><span class="w"> </span><span class="n">Index</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mesh</span><span class="p">;</span><span class="w"></span>
+
+<span class="c1">// ...</span>
+
+<span class="c1">// Iterate over each attribute sequentially</span>
+<span class="n">seq_foreach_attribute_read</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span><span class="w"> </span><span class="p">[](</span><span class="k">auto</span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">attr</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">lagrange</span><span class="o">::</span><span class="n">logger</span><span class="p">().</span><span class="n">info</span><span class="p">(</span><span class="s">&quot;Attribute with {} channels&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">attr</span><span class="p">.</span><span class="n">get_num_channels</span><span class="p">());</span><span class="w"></span>
+<span class="p">});</span><span class="w"></span>
+
+<span class="c1">// Same, but retrieves attribute names while iterating</span>
+<span class="n">seq_foreach_named_attribute_read</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="o">&amp;</span><span class="p">](</span><span class="n">std</span><span class="o">::</span><span class="n">string_view</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="k">auto</span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">attr</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">lagrange</span><span class="o">::</span><span class="n">logger</span><span class="p">().</span><span class="n">info</span><span class="p">(</span><span class="s">&quot;Attribute named &#39;{}&#39; with {} channels&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">attr</span><span class="p">.</span><span class="n">get_num_channels</span><span class="p">());</span><span class="w"></span>
+<span class="p">});</span><span class="w"></span>
+</code></pre></div></p>
+<p>Iterator functions follow the same naming convention, with variations being as follows:</p>
+<table>
+<thead>
+<tr>
+<th>Variation</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>seq</strong> vs <strong>par</strong></td>
+<td>Iterate sequentially or in parallel over available mesh attributes.</td>
+</tr>
+<tr>
+<td><strong>named</strong> vs unnamed</td>
+<td>Whether to pass attribute names to the callback function .</td>
+</tr>
+<tr>
+<td><strong>read</strong> vs <strong>write</strong></td>
+<td>Whether read-only or writable references to the attributes are required.</td>
+</tr>
+</tbody>
+</table>
+<p>See <a href="../../../ref/group__group-surfacemesh-iterate.html">reference documentation</a> for additional details.</p>
+<h3 id="inferring-value-type">Inferring Value Type</h3>
+<p>Since we use generic lambda to iterate over attributes of different types, it is possible to deduce
+the value type of the current attribute in the following manner:</p>
+<div class="highlight"><pre><span></span><code><span class="n">lagrange</span><span class="o">::</span><span class="n">SurfaceMesh</span><span class="o">&lt;</span><span class="n">Scalar</span><span class="p">,</span><span class="w"> </span><span class="n">Index</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mesh</span><span class="p">;</span><span class="w"></span>
+
+<span class="c1">// ...</span>
+
+<span class="n">seq_foreach_attribute_read</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span><span class="w"> </span><span class="p">[](</span><span class="k">auto</span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">attr</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// Retrieve the attribute value type within the lambda</span>
+<span class="w">    </span><span class="k">using</span><span class="w"> </span><span class="n">AttributeType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">decay_t</span><span class="o">&lt;</span><span class="k">decltype</span><span class="p">(</span><span class="n">attr</span><span class="p">)</span><span class="o">&gt;</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">using</span><span class="w"> </span><span class="n">ValueType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">typename</span><span class="w"> </span><span class="nc">AttributeType</span><span class="o">::</span><span class="n">ValueType</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">lagrange</span><span class="o">::</span><span class="n">logger</span><span class="p">().</span><span class="n">info</span><span class="p">(</span><span class="s">&quot;Attribute value type size: {}&quot;</span><span class="p">,</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="n">ValueType</span><span class="p">));</span><span class="w"></span>
+<span class="p">});</span><span class="w"></span>
+</code></pre></div>
+<h3 id="filtering-element-types">Filtering Element Types</h3>
+<p>Since indexed attributes have a different interface from non-indexed attributes, it is often
+necessary to use two different code path when iterating over mesh attributes. Fortunately, it is
+possible to do so concisely thanks to C++17's <code>if constexpr()</code>, like so:</p>
+<div class="highlight"><pre><span></span><code><span class="n">lagrange</span><span class="o">::</span><span class="n">SurfaceMesh</span><span class="o">&lt;</span><span class="n">Scalar</span><span class="p">,</span><span class="w"> </span><span class="n">Index</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mesh</span><span class="p">;</span><span class="w"></span>
+
+<span class="c1">// ...</span>
+
+<span class="c1">// Use compile-time if to check for indexed attributes</span>
+<span class="n">seq_foreach_named_attribute_read</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span><span class="w"> </span><span class="p">[](</span><span class="n">std</span><span class="o">::</span><span class="n">string_view</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="k">auto</span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">attr</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">using</span><span class="w"> </span><span class="n">AttributeType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">decay_t</span><span class="o">&lt;</span><span class="k">decltype</span><span class="p">(</span><span class="n">attr</span><span class="p">)</span><span class="o">&gt;</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="k">constexpr</span><span class="w"> </span><span class="p">(</span><span class="n">AttributeType</span><span class="o">::</span><span class="n">IsIndexed</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">lagrange</span><span class="o">::</span><span class="n">logger</span><span class="p">().</span><span class="n">info</span><span class="p">(</span><span class="w"></span>
+<span class="w">            </span><span class="s">&quot;Indexed attribute &#39;{}&#39; with {} values&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="n">name</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="n">attr</span><span class="p">.</span><span class="n">values</span><span class="p">().</span><span class="n">get_num_elements</span><span class="p">());</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">lagrange</span><span class="o">::</span><span class="n">logger</span><span class="p">().</span><span class="n">info</span><span class="p">(</span><span class="w"></span>
+<span class="w">            </span><span class="s">&quot;Non-indexed attribute &#39;{}&#39; with {} elements&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="n">name</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="n">attr</span><span class="p">.</span><span class="n">get_num_elements</span><span class="p">());</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">});</span><span class="w"></span>
+</code></pre></div>
+<p>Alternatively, one can provide an optional template argument to the  <code>foreach</code> function to iterate
+over a specific element type:</p>
+<div class="highlight"><pre><span></span><code><span class="n">lagrange</span><span class="o">::</span><span class="n">SurfaceMesh</span><span class="o">&lt;</span><span class="n">Scalar</span><span class="p">,</span><span class="w"> </span><span class="n">Index</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mesh</span><span class="p">;</span><span class="w"></span>
+
+<span class="c1">// ...</span>
+
+<span class="c1">// Iterate over non-indexed attributes</span>
+<span class="n">lagrange</span><span class="o">::</span><span class="n">seq_foreach_named_attribute_read</span><span class="o">&lt;~</span><span class="n">lagrange</span><span class="o">::</span><span class="n">AttributeElement</span><span class="o">::</span><span class="n">Indexed</span><span class="o">&gt;</span><span class="p">(</span><span class="w"></span>
+<span class="w">    </span><span class="n">mesh</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="p">[</span><span class="o">&amp;</span><span class="p">](</span><span class="n">std</span><span class="o">::</span><span class="n">string_view</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="k">auto</span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">attr</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">lagrange</span><span class="o">::</span><span class="n">logger</span><span class="p">().</span><span class="n">info</span><span class="p">(</span><span class="w"></span>
+<span class="w">            </span><span class="s">&quot;Attribute named &#39;{}&#39; with {} elements&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="n">name</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="n">attr</span><span class="p">.</span><span class="n">get_num_elements</span><span class="p">());</span><span class="w"></span>
+<span class="w">    </span><span class="p">});</span><span class="w"></span>
+
+<span class="c1">// Iterate over indexed attributes only</span>
+<span class="n">lagrange</span><span class="o">::</span><span class="n">seq_foreach_attribute_read</span><span class="o">&lt;</span><span class="n">lagrange</span><span class="o">::</span><span class="n">AttributeElement</span><span class="o">::</span><span class="n">Indexed</span><span class="o">&gt;</span><span class="p">(</span><span class="w"></span>
+<span class="w">    </span><span class="n">mesh</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="p">[](</span><span class="k">auto</span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">attr</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="k">using</span><span class="w"> </span><span class="n">AttributeType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">decay_t</span><span class="o">&lt;</span><span class="k">decltype</span><span class="p">(</span><span class="n">attr</span><span class="p">)</span><span class="o">&gt;</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="k">using</span><span class="w"> </span><span class="n">ValueType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">typename</span><span class="w"> </span><span class="nc">AttributeType</span><span class="o">::</span><span class="n">ValueType</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="k">using</span><span class="w"> </span><span class="n">Index</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">typename</span><span class="w"> </span><span class="nc">AttributeType</span><span class="o">::</span><span class="n">Index</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="n">lagrange</span><span class="o">::</span><span class="n">logger</span><span class="p">().</span><span class="n">info</span><span class="p">(</span><span class="w"></span>
+<span class="w">            </span><span class="s">&quot;Indexed attribute using value type size {} and index size {}&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="k">sizeof</span><span class="p">(</span><span class="n">ValueType</span><span class="p">),</span><span class="w"></span>
+<span class="w">            </span><span class="k">sizeof</span><span class="p">(</span><span class="n">Index</span><span class="p">));</span><span class="w"></span>
+<span class="w">    </span><span class="p">});</span><span class="w"></span>
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Argument-Dependent Lookup</p>
+<p>With this variant, <a href="https://en.wikipedia.org/wiki/Argument-dependent_name_lookup">ADL</a> no longer
+work, so you need to explicitly call <code>lagrange::seq_foreach_attribute_read(mesh, ...)</code> rather
+than <code>seq_foreach_attribute_read(mesh, ...)</code>.</p>
+</div>
+<p>Finally, it is possible to combine template argument filters via bitwise boolean operations:</p>
+<div class="highlight"><pre><span></span><code><span class="n">lagrange</span><span class="o">::</span><span class="n">SurfaceMesh</span><span class="o">&lt;</span><span class="n">Scalar</span><span class="p">,</span><span class="w"> </span><span class="n">Index</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mesh</span><span class="p">;</span><span class="w"></span>
+
+<span class="c1">// ...</span>
+
+<span class="c1">// Iterate over vertex, facet and corner attributes:</span>
+<span class="n">lagrange</span><span class="o">::</span><span class="n">seq_foreach_attribute_read</span><span class="o">&lt;</span><span class="w"></span>
+<span class="w">    </span><span class="n">lagrange</span><span class="o">::</span><span class="n">AttributeElement</span><span class="o">::</span><span class="n">Vertex</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">lagrange</span><span class="o">::</span><span class="n">AttributeElement</span><span class="o">::</span><span class="n">Facet</span><span class="w"> </span><span class="o">|</span><span class="w"></span>
+<span class="w">    </span><span class="n">lagrange</span><span class="o">::</span><span class="n">AttributeElement</span><span class="o">::</span><span class="n">Corner</span><span class="o">&gt;</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="o">&amp;</span><span class="p">](</span><span class="k">auto</span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">attr</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">lagrange</span><span class="o">::</span><span class="n">logger</span><span class="p">().</span><span class="n">info</span><span class="p">(</span><span class="w"></span>
+<span class="w">        </span><span class="s">&quot;Non-indexed attribute with {} elements&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="n">attr</span><span class="p">.</span><span class="n">get_num_elements</span><span class="p">());</span><span class="w"></span>
+<span class="p">});</span><span class="w"></span>
+</code></pre></div>
+<h3 id="a-note-on-thread-safety">A Note On Thread-Safety</h3>
+<p>The following operations are <strong>safe</strong> to do in parallel:</p>
+<ul>
+<li>Writing to two separate mesh attributes pointing to the same buffer (a deep copy will be created).</li>
+</ul>
+<p>The following operations are <strong>not safe</strong> to do in parallel:</p>
+<ul>
+<li>Writing to an attribute while creating other mesh attributes.</li>
+<li>Adding elements to a mesh while writing to another attribute of the same mesh.</li>
+</ul>
+<p>From a practical standpoint, copy-on-write attributes behave as if each mesh owns its own
+<code>std::vector&lt;&gt;</code> for each attribute. Adding an element to a mesh would resize the corresponding mesh
+attributes, making concurrent writes unsafe. Creating new mesh attributes will move existing mesh
+attributes, making concurrent writes also unsafe.</p>
+<p>Note that if two meshes are shallow copies of each other, it is perfectly safe to add elements to
+each of them concurrently. The same goes for writing in parallel to mesh attributes that are
+duplicates of each others: each attribute behaves as if it owns its own copy of the data.</p>
+<div class="admonition attention">
+<p class="admonition-title">Temporary Copy On Concurrent Writes</p>
+<p>While concurrent writing to mesh attributes is a thread-safe operation, note that it may
+sometimes create an unnecessary temporary copy of the data. To avoid this, we would need to
+block every write operation with a mutex, which would involve an expensive <a href="http://ithare.com/infographics-operation-costs-in-cpu-clock-cycles/">context
+switch</a>. Instead, we simply
+rely on the atomic counter from the <code>shared_ptr&lt;&gt;</code> to decide whether to copy/acquire ownership
+of the data. While this is a thread-safe operation, it may create a temporary copy of the data.</p>
+</div>
+<h2 id="wrapping-external-buffers">Wrapping External Buffers</h2>
+<p>A key feature of our attribute system is the possibility to easily wrap external buffer and treat
+them as regular mesh attributes, avoiding any data copy. As long as the data layout is compatible,
+you will be able to wrap a continuous buffer as a mesh attribute and pass it around.</p>
+<!-- @attr -->
+<div class="highlight"><pre><span></span><code><span class="n">lagrange</span><span class="o">::</span><span class="n">SurfaceMesh</span><span class="o">&lt;</span><span class="n">Scalar</span><span class="p">,</span><span class="w"> </span><span class="n">Index</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mesh</span><span class="p">;</span><span class="w"></span>
+<span class="n">mesh</span><span class="p">.</span><span class="n">add_vertices</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span><span class="w"></span>
+
+<span class="n">Index</span><span class="w"> </span><span class="n">num_verts</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mesh</span><span class="p">.</span><span class="n">get_num_vertices</span><span class="p">();</span><span class="w"></span>
+<span class="n">Index</span><span class="w"> </span><span class="n">num_coords</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mesh</span><span class="p">.</span><span class="n">get_dimension</span><span class="p">();</span><span class="w"></span>
+
+<span class="c1">// Create a flat buffer to use as external attribute data</span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Scalar</span><span class="o">&gt;</span><span class="w"> </span><span class="n">normals</span><span class="p">(</span><span class="n">num_verts</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">num_coords</span><span class="p">);</span><span class="w"></span>
+
+<span class="c1">// Wrap external buffer as a read-write attribute</span>
+<span class="n">mesh</span><span class="p">.</span><span class="n">wrap_as_attribute</span><span class="o">&lt;</span><span class="n">Scalar</span><span class="o">&gt;</span><span class="p">(</span><span class="w"></span>
+<span class="w">    </span><span class="s">&quot;normals&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="n">lagrange</span><span class="o">::</span><span class="n">AttributeElement</span><span class="o">::</span><span class="n">Vertex</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="n">lagrange</span><span class="o">::</span><span class="n">AttributeUsage</span><span class="o">::</span><span class="n">Normal</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="n">num_coords</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="n">normals</span><span class="p">);</span><span class="w"></span>
+
+<span class="c1">// Retrieves a Eigen::Map&lt;&gt; view of the attribute</span>
+<span class="k">auto</span><span class="w"> </span><span class="n">N</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lagrange</span><span class="o">::</span><span class="n">attribute_matrix_ref</span><span class="o">&lt;</span><span class="n">Scalar</span><span class="o">&gt;</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;normals&quot;</span><span class="p">);</span><span class="w"></span>
+
+<span class="c1">// Check that all coordinates are finite (no inf/nan).</span>
+<span class="n">assert</span><span class="p">(</span><span class="n">N</span><span class="p">.</span><span class="n">allFinite</span><span class="p">());</span><span class="w"></span>
+</code></pre></div>
+<p>Sometimes, it is necessary to wrap a pointer to a <strong>const</strong> buffer, to ensure the external buffer
+will not be be written to:</p>
+<!-- @attr -->
+<div class="highlight"><pre><span></span><code><span class="c1">// Wrap external buffer as a read-only attribute</span>
+<span class="k">const</span><span class="w"> </span><span class="n">Scalar</span><span class="w"> </span><span class="o">*</span><span class="n">const_normals</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">normals</span><span class="p">.</span><span class="n">data</span><span class="p">();</span><span class="w"></span>
+<span class="n">mesh</span><span class="p">.</span><span class="n">wrap_as_const_attribute</span><span class="o">&lt;</span><span class="n">Scalar</span><span class="o">&gt;</span><span class="p">(</span><span class="w"></span>
+<span class="w">    </span><span class="s">&quot;const_normals&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="n">lagrange</span><span class="o">::</span><span class="n">AttributeElement</span><span class="o">::</span><span class="n">Vertex</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="n">lagrange</span><span class="o">::</span><span class="n">AttributeUsage</span><span class="o">::</span><span class="n">Normal</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="n">num_coords</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="n">const_normals</span><span class="p">,</span><span class="w"> </span><span class="n">normals</span><span class="p">.</span><span class="n">size</span><span class="p">()});</span><span class="w"></span>
+
+<span class="c1">// Non-const methods on the normal attr will throw an error</span>
+<span class="n">mesh</span><span class="p">.</span><span class="n">ref_attribute</span><span class="o">&lt;</span><span class="n">Scalar</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;const_normals&quot;</span><span class="p">).</span><span class="n">ref_all</span><span class="p">();</span><span class="w"> </span><span class="c1">// --&gt; throws an exception</span>
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Non-Const Access</p>
+<p>The following code does <strong>not</strong> throw an exception:
+<!-- @attr -->
+<div class="highlight"><pre><span></span><code><span class="k">auto</span><span class="w"> </span><span class="o">&amp;</span><span class="n">attr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mesh</span><span class="p">.</span><span class="n">ref_attribute</span><span class="o">&lt;</span><span class="n">Scalar</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;const_normals&quot;</span><span class="p">);</span><span class="w"></span>
+</code></pre></div>
+This is because while <code>attr</code> is a writable reference to the attribute <code>"const_normals"</code>, the
+user could decide to update the attribute itself to wrap another non-const buffer (via
+<code>attr.wrap(...)</code>). Only methods which provide write access to the actual buffer data (such as
+<code>attr.ref_all()</code>) will throw an exception.</p>
+</div>
+<p>Alternatively, instead of implicitly converting to a <code>span&lt;&gt;</code>, you can explicitly pass a <code>span&lt;&gt;</code>
+object and let the compiler deduce the <code>Scalar</code> type template argument:</p>
+<!-- @attr -->
+<div class="highlight"><pre><span></span><code><span class="c1">// Pass a `span&lt;&gt;` object directly to let the compiler deduce the template value type</span>
+<span class="n">mesh</span><span class="p">.</span><span class="n">wrap_as_const_attribute</span><span class="p">(</span><span class="w"></span>
+<span class="w">    </span><span class="s">&quot;normals&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="n">lagrange</span><span class="o">::</span><span class="n">AttributeElement</span><span class="o">::</span><span class="n">Vertex</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="n">lagrange</span><span class="o">::</span><span class="n">AttributeUsage</span><span class="o">::</span><span class="n">Normal</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="n">num_coords</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="n">lagrange</span><span class="o">::</span><span class="n">span</span><span class="o">&lt;</span><span class="k">const</span><span class="w"> </span><span class="n">Scalar</span><span class="o">&gt;</span><span class="p">(</span><span class="n">normals</span><span class="p">));</span><span class="w"></span>
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Lifetime Management</p>
+<p>Our API assumes that the external buffer remains valid for the lifetime of the mesh object
+wrapping the external data. We do not pass any counter, smart pointer or custom deleter function
+that would allow to track or keep alive the external data. This is because most of the time we
+just need to create a Lagrange Mesh wrapping an existing buffer, process it with Lagrange, and
+extract the results. If more advanced lifetime management is desirable, please let us know.</p>
+</div>
+<h2 id="delete-and-export-attributes">Delete And Export Attributes</h2>
+<p>To delete an attribute, simply call the eponymous method:</p>
+<!-- @delete -->
+<div class="highlight"><pre><span></span><code><span class="n">lagrange</span><span class="o">::</span><span class="n">SurfaceMesh</span><span class="o">&lt;</span><span class="n">Scalar</span><span class="p">,</span><span class="w"> </span><span class="n">Index</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mesh</span><span class="p">;</span><span class="w"></span>
+
+<span class="c1">// ...</span>
+
+<span class="c1">// Delete attribute</span>
+<span class="n">mesh</span><span class="p">.</span><span class="n">delete_attribute</span><span class="p">(</span><span class="s">&quot;normals&quot;</span><span class="p">);</span><span class="w"></span>
+</code></pre></div>
+<p>More interestingly, the attribute itself can be exported into a <code>std::shared_ptr&lt;Attribute&lt;T&gt;&gt;</code> that
+can be handed back to the user. This allows client code to reuse the attribute data after the
+destruction of any mesh object that was containing the attribute: only the
+<code>std::shared_ptr&lt;Attribute&lt;T&gt;&gt;</code> needs to be kept alive.</p>
+<!-- @delete -->
+<div class="highlight"><pre><span></span><code><span class="c1">// Delete and export a std::shared_ptr&lt;Attribute&lt;T&gt;&gt;</span>
+<span class="k">auto</span><span class="w"> </span><span class="n">attr_ptr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mesh</span><span class="p">.</span><span class="n">delete_and_export_attribute</span><span class="o">&lt;</span><span class="n">Scalar</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;normals&quot;</span><span class="p">);</span><span class="w"></span>
+
+<span class="c1">// Pass a raw pointer/span to the attribute data back to client code</span>
+<span class="k">auto</span><span class="w"> </span><span class="n">data_ptr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">attr_ptr</span><span class="o">-&gt;</span><span class="n">ref_all</span><span class="p">().</span><span class="n">data</span><span class="p">();</span><span class="w"></span>
+</code></pre></div>
+<h2 id="reserved-attribute-names">Reserved Attribute Names</h2>
+<p>We use the convention that attribute names starting with <code>"$"</code> are reserved for internal use by the
+mesh class. For example, <code>$vertex_to_position</code> and <code>$corner_to_vertex</code> are used for vertex positions
+and facet indices respectively. The list of available internal attributes and their names is subject
+to future changes.</p>
+<h2 id="attribute-policies">Attribute Policies</h2>
+<p><strong>Policies</strong> can be used to control the behavior when manipulating attributes that wraps external
+buffers, creating/deleting attributes with reserved names, etc. Policies are runtime properties that
+need to be set for each attribute separately. They are copied over when an attribute is duplicated
+via our copy-on-write mechanism.</p>
+<h3 id="create-policy">Create Policy</h3>
+<p>Controls the behavior when creating an attribute with a reserved name (starting with <code>$</code>). The
+default is to throw an exception. See <a href="../../../ref/group__group-surfacemesh-attr.html#ga809dfcec94612491ec5be8bb8614ceab">reference documentation</a> for more details.</p>
+<h3 id="growth-policy">Growth Policy</h3>
+<p>Controls the behavior when adding element to an attribute that wrap an external buffer. The default
+behavior is to throw an exception. See <a href="../../../ref/group__group-surfacemesh-attr.html#gaee0f51b5f793101c19bd6dede5db7a7a">reference documentation</a> for more details.</p>
+<div class="highlight"><pre><span></span><code><span class="n">Index</span><span class="w"> </span><span class="n">dim</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w"></span>
+<span class="n">Index</span><span class="w"> </span><span class="n">num_vertices</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w"></span>
+<span class="n">lagrange</span><span class="o">::</span><span class="n">SurfaceMesh</span><span class="o">&lt;</span><span class="n">Scalar</span><span class="p">,</span><span class="w"> </span><span class="n">Index</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mesh</span><span class="p">(</span><span class="n">dim</span><span class="p">);</span><span class="w"></span>
+
+<span class="c1">// Define external buffer</span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Scalar</span><span class="o">&gt;</span><span class="w"> </span><span class="n">buffer</span><span class="p">(</span><span class="mi">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">num_vertices</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">dim</span><span class="p">);</span><span class="w"></span>
+
+<span class="c1">// ... fill buffer with values ...</span>
+
+<span class="c1">// Wrap external buffer AND resize num of vertices</span>
+<span class="n">mesh</span><span class="p">.</span><span class="n">wrap_as_vertices</span><span class="p">(</span><span class="n">buffer</span><span class="p">,</span><span class="w"> </span><span class="n">num_vertices</span><span class="p">);</span><span class="w"></span>
+
+<span class="c1">// Writable reference to vertex position attribute</span>
+<span class="k">auto</span><span class="o">&amp;</span><span class="w"> </span><span class="n">attr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mesh</span><span class="p">.</span><span class="n">ref_vertex_to_position</span><span class="p">();</span><span class="w"></span>
+
+<span class="c1">// Set growth attribute policy</span>
+<span class="n">attr</span><span class="p">.</span><span class="n">set_growth_policy</span><span class="p">(</span><span class="n">lagrange</span><span class="o">::</span><span class="n">AttributeGrowthPolicy</span><span class="o">::</span><span class="n">ErrorIfExternal</span><span class="p">);</span><span class="w"></span>
+<span class="n">attr</span><span class="p">.</span><span class="n">set_growth_policy</span><span class="p">(</span><span class="n">lagrange</span><span class="o">::</span><span class="n">AttributeGrowthPolicy</span><span class="o">::</span><span class="n">AllowWithinCapacity</span><span class="p">);</span><span class="w"></span>
+<span class="n">attr</span><span class="p">.</span><span class="n">set_growth_policy</span><span class="p">(</span><span class="n">lagrange</span><span class="o">::</span><span class="n">AttributeGrowthPolicy</span><span class="o">::</span><span class="n">WarnAndCopy</span><span class="p">);</span><span class="w"></span>
+
+<span class="c1">// Inserting more vertices might throw an error, depending on the policy</span>
+<span class="n">mesh</span><span class="p">.</span><span class="n">add_vertices</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span><span class="w"></span>
+</code></pre></div>
+<h3 id="write-policy">Write Policy</h3>
+<p>Controls the behavior when providing writable access to an attribute wrapping a const external
+buffer. The default behavior is to throw an exception. See <a href="../../../ref/group__group-surfacemesh-attr.html#ga3018d576f81897e1712c3601b9625cb9">reference documentation</a>
+for more details.</p>
+<div class="highlight"><pre><span></span><code><span class="n">Index</span><span class="w"> </span><span class="n">dim</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w"></span>
+<span class="n">Index</span><span class="w"> </span><span class="n">num_vertices</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w"></span>
+<span class="n">lagrange</span><span class="o">::</span><span class="n">SurfaceMesh</span><span class="o">&lt;</span><span class="n">Scalar</span><span class="p">,</span><span class="w"> </span><span class="n">Index</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mesh</span><span class="p">(</span><span class="n">dim</span><span class="p">);</span><span class="w"></span>
+
+<span class="c1">// Define external buffer</span>
+<span class="k">const</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">num_channels</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Scalar</span><span class="o">&gt;</span><span class="w"> </span><span class="n">buffer</span><span class="p">(</span><span class="n">mesh</span><span class="p">.</span><span class="n">get_num_vertices</span><span class="p">()</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">num_channels</span><span class="p">);</span><span class="w"></span>
+
+<span class="c1">// ... fill buffer with values ...</span>
+
+<span class="c1">// Wrap external buffer as read-only attribute</span>
+<span class="k">auto</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mesh</span><span class="p">.</span><span class="n">wrap_as_const_attribute</span><span class="o">&lt;</span><span class="n">Scalar</span><span class="o">&gt;</span><span class="p">(</span><span class="w"></span>
+<span class="w">    </span><span class="s">&quot;normals&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="n">lagrange</span><span class="o">::</span><span class="n">AttributeElement</span><span class="o">::</span><span class="n">Vertex</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="n">lagrange</span><span class="o">::</span><span class="n">AttributeUsage</span><span class="o">::</span><span class="n">Normal</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="n">num_channels</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="n">buffer</span><span class="p">);</span><span class="w"></span>
+<span class="k">auto</span><span class="o">&amp;</span><span class="w"> </span><span class="n">attr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mesh</span><span class="p">.</span><span class="n">ref_attribute</span><span class="o">&lt;</span><span class="n">Scalar</span><span class="o">&gt;</span><span class="p">(</span><span class="n">id</span><span class="p">);</span><span class="w"></span>
+
+<span class="c1">// Set write policy for read-only attributes</span>
+<span class="n">attr</span><span class="p">.</span><span class="n">set_write_policy</span><span class="p">(</span><span class="n">lagrange</span><span class="o">::</span><span class="n">AttributeWritePolicy</span><span class="o">::</span><span class="n">ErrorIfReadOnly</span><span class="p">);</span><span class="w"></span>
+<span class="n">attr</span><span class="p">.</span><span class="n">set_write_policy</span><span class="p">(</span><span class="n">lagrange</span><span class="o">::</span><span class="n">AttributeWritePolicy</span><span class="o">::</span><span class="n">WarnAndCopy</span><span class="p">);</span><span class="w"></span>
+
+<span class="c1">// Write access to the attribute might throw depending on policy</span>
+<span class="n">attr</span><span class="p">.</span><span class="n">ref</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">3.14</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<h3 id="delete-policy">Delete Policy</h3>
+<p>Controls the behavior when deleting an attribute with a reserved name. The default behavior is to
+throw an exception. See <a href="../../../ref/group__group-surfacemesh-attr.html#gad17b213b11e78aeb807ad3ece7e67e84">reference documentation</a> for more details.</p>
+<h3 id="export-policy">Export Policy</h3>
+<p>Controls the behavior when exporting an attribute wrapping an external buffer. The default behavior
+is to create an internal copy to ensure lifetime of the data is preserved. See <a href="../../../ref/group__group-surfacemesh-attr.html#gade3ae5b7e72e9d4f92f29c6563551c10">reference
+documentation</a> for more details.</p>
+<div class="highlight"><pre><span></span><code><span class="n">Index</span><span class="w"> </span><span class="n">dim</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w"></span>
+<span class="n">Index</span><span class="w"> </span><span class="n">num_vertices</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w"></span>
+<span class="n">lagrange</span><span class="o">::</span><span class="n">SurfaceMesh</span><span class="o">&lt;</span><span class="n">Scalar</span><span class="p">,</span><span class="w"> </span><span class="n">Index</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mesh</span><span class="p">(</span><span class="n">dim</span><span class="p">);</span><span class="w"></span>
+
+<span class="c1">// Define external buffer</span>
+<span class="k">const</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">num_channels</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Scalar</span><span class="o">&gt;</span><span class="w"> </span><span class="n">buffer</span><span class="p">(</span><span class="n">mesh</span><span class="p">.</span><span class="n">get_num_vertices</span><span class="p">()</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">num_channels</span><span class="p">);</span><span class="w"></span>
+
+<span class="c1">// ... fill buffer with values ...</span>
+
+<span class="c1">// Wrap external buffer as read-only attribute</span>
+<span class="k">auto</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mesh</span><span class="p">.</span><span class="n">wrap_as_const_attribute</span><span class="o">&lt;</span><span class="n">Scalar</span><span class="o">&gt;</span><span class="p">(</span><span class="w"></span>
+<span class="w">    </span><span class="s">&quot;normals&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="n">lagrange</span><span class="o">::</span><span class="n">AttributeElement</span><span class="o">::</span><span class="n">Vertex</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="n">lagrange</span><span class="o">::</span><span class="n">AttributeUsage</span><span class="o">::</span><span class="n">Normal</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="n">num_channels</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="n">buffer</span><span class="p">);</span><span class="w"></span>
+
+<span class="c1">// Delete and export might create an internal copy depending on policy</span>
+<span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">lagrange</span><span class="p">;</span><span class="w"></span>
+<span class="k">auto</span><span class="w"> </span><span class="n">attr_ptr1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mesh</span><span class="p">.</span><span class="n">delete_and_export_attribute</span><span class="o">&lt;</span><span class="n">Scalar</span><span class="o">&gt;</span><span class="p">(</span><span class="w"></span>
+<span class="w">    </span><span class="s">&quot;normals&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="n">AttributeDeletePolicy</span><span class="o">::</span><span class="n">ErrorIfReserved</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="n">AttributeExportPolicy</span><span class="o">::</span><span class="n">CopyIfExternal</span><span class="p">);</span><span class="w"></span>
+<span class="k">auto</span><span class="w"> </span><span class="n">attr_ptr2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mesh</span><span class="p">.</span><span class="n">delete_and_export_attribute</span><span class="o">&lt;</span><span class="n">Scalar</span><span class="o">&gt;</span><span class="p">(</span><span class="w"></span>
+<span class="w">    </span><span class="s">&quot;normals&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="n">AttributeDeletePolicy</span><span class="o">::</span><span class="n">ErrorIfReserved</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="n">AttributeExportPolicy</span><span class="o">::</span><span class="n">ErrorIfExternal</span><span class="p">);</span><span class="w"></span>
+<span class="k">auto</span><span class="w"> </span><span class="n">attr_ptr3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mesh</span><span class="p">.</span><span class="n">delete_and_export_attribute</span><span class="o">&lt;</span><span class="n">Scalar</span><span class="o">&gt;</span><span class="p">(</span><span class="w"></span>
+<span class="w">    </span><span class="s">&quot;normals&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="n">AttributeDeletePolicy</span><span class="o">::</span><span class="n">ErrorIfReserved</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="n">AttributeExportPolicy</span><span class="o">::</span><span class="n">KeepExternalPtr</span><span class="p">);</span><span class="w"></span>
+</code></pre></div>
+
+              
+            </article>
+          </div>
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" data-md-state="hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../mesh/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Mesh Class" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Mesh Class
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../mesh-cleanup/" class="md-footer__link md-footer__link--next" aria-label="Next: Mesh Cleanup" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Mesh Cleanup
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "navigation.indexes"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.2a1c317c.min.js"}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.748e2769.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/tablesort.min.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="../../../javascripts/extra.js"></script>
+      
+        <script src="../../../javascripts/tables.js"></script>
+      
+        <script src="../../../javascripts/mathjax.js"></script>
+      
+    
+  </body>
+</html>

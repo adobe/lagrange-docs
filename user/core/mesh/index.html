@@ -1,0 +1,1936 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://opensource.adobe.com/lagrange-docs/user/core/mesh/">
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.4, mkdocs-material-8.2.11">
+    
+    
+      
+        <title>Mesh Class - Lagrange</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.8c5ef100.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.9647289d.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#ef5552">
+        
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="red" data-md-color-accent="red">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#mesh-class" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Lagrange" class="md-header__button md-logo" aria-label="Lagrange" data-md-component="logo">
+      
+  <img src="../../../img/Lagrange-logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Lagrange
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Mesh Class
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/adobe/lagrange/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    adobe/lagrange
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        Home
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="./" class="md-tabs__link md-tabs__link--active">
+        User Guide
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../dev/contribute/" class="md-tabs__link">
+        Dev Guide
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../ref/" class="md-tabs__link">
+        Reference Documentation
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Lagrange" class="md-nav__button md-logo" aria-label="Lagrange" data-md-component="logo">
+      
+  <img src="../../../img/Lagrange-logo.svg" alt="logo">
+
+    </a>
+    Lagrange
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/adobe/lagrange/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    adobe/lagrange
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" data-md-state="indeterminate" type="checkbox" id="__nav_1" checked>
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../..">Home</a>
+          
+            <label for="__nav_1">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Home" data-md-level="1">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          Home
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../goals/" class="md-nav__link">
+        Goals
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../setup/" class="md-nav__link">
+        Getting Started
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../build/" class="md-nav__link">
+        Build
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../dev/contribute/" class="md-nav__link">
+        Contribute
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../dev/code-style/" class="md-nav__link">
+        Code Style
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://github.com/adobe/lagrange/releases" class="md-nav__link">
+        Releases
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../third-party/" class="md-nav__link">
+        Third Party Libraries
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          User Guide
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="User Guide" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          User Guide
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2_1">
+          General
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="General" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          General
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Mesh Class
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Mesh Class
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#mesh-representation" class="md-nav__link">
+    Mesh Representation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#terminology" class="md-nav__link">
+    Terminology
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adding-verticesfacets" class="md-nav__link">
+    Adding Vertices/Facets
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#removing-verticesfacets" class="md-nav__link">
+    Removing Vertices/Facets
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#copy-on-write" class="md-nav__link">
+    Copy-On-Write
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#eigen-matrix-views" class="md-nav__link">
+    Eigen Matrix Views
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mesh-edges" class="md-nav__link">
+    Mesh Edges
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#connectivity-and-navigation" class="md-nav__link">
+    Connectivity And Navigation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#half-edges" class="md-nav__link">
+    Half-Edges
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#template-parameters" class="md-nav__link">
+    Template Parameters
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../attributes/" class="md-nav__link">
+        Mesh Attributes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mesh-cleanup/" class="md-nav__link">
+        Mesh Cleanup
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../utility-functions/" class="md-nav__link">
+        Utility Functions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../legacy-mesh/" class="md-nav__link">
+        Legacy Mesh Class
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../legacy-attributes/" class="md-nav__link">
+        Legacy Mesh Attributes
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" data-md-state="indeterminate" type="checkbox" id="__nav_2_2" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2_2">
+          UI
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="UI" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          UI
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ui/overview/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ui/ecs/" class="md-nav__link">
+        Entity Component System
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ui/mesh-visualization/" class="md-nav__link">
+        Mesh Visualization
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ui/components/" class="md-nav__link">
+        Components
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ui/lights/" class="md-nav__link">
+        Lights
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ui/user-interface/" class="md-nav__link">
+        User Interface
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ui/viewports/" class="md-nav__link">
+        Viewports
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ui/customizing/" class="md-nav__link">
+        Customizing Lagrange UI
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ui/examples/" class="md-nav__link">
+        Examples
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" data-md-state="indeterminate" type="checkbox" id="__nav_3" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Dev Guide
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Dev Guide" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Dev Guide
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1" data-md-state="indeterminate" type="checkbox" id="__nav_3_1" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_1">
+          Lagrange
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Lagrange" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          Lagrange
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../dev/contribute/" class="md-nav__link">
+        Contribute
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../dev/code-style/" class="md-nav__link">
+        Code Style
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../dev/unit-tests/" class="md-nav__link">
+        Unit Tests
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" data-md-state="indeterminate" type="checkbox" id="__nav_3_2" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_2">
+          Performance
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Performance" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          Performance
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../dev/runtime-profiling/" class="md-nav__link">
+        Profiling Runtime With Tracy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../dev/compilation-profiling/" class="md-nav__link">
+        Profiling Compilation Times
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../dev/speeding-up-compilation/" class="md-nav__link">
+        Speeding Up Compilation
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3" data-md-state="indeterminate" type="checkbox" id="__nav_3_3" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_3">
+          Development
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Development" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          Development
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../dev/vscode/" class="md-nav__link">
+        VSCode Tips and Tricks
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../dev/clangd/" class="md-nav__link">
+        Autocompletion With Clangd
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../dev/visualstudio-wsl/" class="md-nav__link">
+        VisualStudio and WSL
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" data-md-state="indeterminate" type="checkbox" id="__nav_4" checked>
+      
+      
+      
+        
+          
+            
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../ref/">Reference Documentation</a>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Reference Documentation" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Reference Documentation
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#mesh-representation" class="md-nav__link">
+    Mesh Representation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#terminology" class="md-nav__link">
+    Terminology
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adding-verticesfacets" class="md-nav__link">
+    Adding Vertices/Facets
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#removing-verticesfacets" class="md-nav__link">
+    Removing Vertices/Facets
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#copy-on-write" class="md-nav__link">
+    Copy-On-Write
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#eigen-matrix-views" class="md-nav__link">
+    Eigen Matrix Views
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mesh-edges" class="md-nav__link">
+    Mesh Edges
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#connectivity-and-navigation" class="md-nav__link">
+    Connectivity And Navigation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#half-edges" class="md-nav__link">
+    Half-Edges
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#template-parameters" class="md-nav__link">
+    Template Parameters
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+  <a href="https://github.com/adobe/lagrange-docs/edit/docs/docs/user/core/mesh.md" title="Edit this page" class="md-content__button md-icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+  </a>
+
+
+
+<h1 id="mesh-class">Mesh Class</h1>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>Since v6.0.0, Lagrange introduced a new polygonal mesh class that is meant to replace the
+original mesh class used throughout Lagrange. While currently few of the Lagrange functions use
+this new mesh class, over time old and new features will transition to use this new data
+structure.</p>
+</div>
+<!-- @header
+#include <lagrange/SurfaceMesh.h>
+#include <lagrange/Attribute.h>
+#include <lagrange/views.h>
+#include <lagrange/SurfaceMeshTypes.h>
+#include <vector>
+#include <random>
+using Scalar = double;
+using Index = uint64_t;
+
+template <typename Scalar>
+using RowMatrix = Eigen::Matrix<Scalar, Eigen::Dynamic, Eigen::Dynamic, Eigen::RowMajor>;
+template <typename Scalar>
+using ConstRowMatrixView = Eigen::Map<const RowMatrix<Scalar>, Eigen::Unaligned>;
+-->
+
+<p>The <a href="../../../ref/classlagrange_1_1_surface_mesh.html">SurfaceMesh</a> class is the new generic mesh class in Lagrange to represent meshes. It is a very
+generic class that supports triangle meshes, quad meshes, as well as quad-dominant and arbitrary
+polygonal meshes. This new data structure was designed with a couple of key features in mind:</p>
+<ul>
+<li><strong>Generic and powerful API</strong>:<ul>
+<li>A generic mesh API that works in 2D, 3D, ND with triangles/quad/hybrid meshes using the same
+  <a href="../../../ref/classlagrange_1_1_surface_mesh.html">SurfaceMesh</a> type.</li>
+<li>A simple API based on <code>std::span&lt;&gt;</code> (pointer + size). This avoids a lot of header-only
+  template shenanigans, while providing a low-overhead but secure interface to manipulate
+  continuous buffers.</li>
+</ul>
+</li>
+<li><strong>Clean headers</strong>:<ul>
+<li>The main <code>SurfaceMesh.h</code> header only pulls a few STL headers (<code>&lt;memory&gt;</code>, <code>&lt;string_view&gt;</code>,
+  <code>&lt;span&gt;</code> and <code>&lt;functional&gt;</code> -- the last one can be avoided easily).</li>
+<li>A separate header <code>views.h</code> allows to "view" mesh buffers as <a href="http://eigen.tuxfamily.org">Eigen</a> matrices (e.g., for easy
+  interfacing with <a href="https://libigl.github.io/">libigl</a>).</li>
+<li>A separate header <code>foreach_attributes.h</code> provides utility functions to iterate over mesh
+  attributes.</li>
+</ul>
+</li>
+<li><strong>Efficient memory usage</strong>:<ul>
+<li>Generic <strong>copy-on-write</strong> mesh attributes (per vertex, facet, edge, etc.).</li>
+<li>Efficient memory storage: a pure triangle/quad meshes only needs 2 buffers for vertex
+  positions and facet indices, while hybrid meshes will use an additional offset buffer.</li>
+<li>Mesh attributes can wrap external buffers (including const buffers), as long as memory layout
+  is compatible. Policies determine write/growth behavior.</li>
+<li>Mesh attributes can be exported in a <code>std::shared_ptr&lt;&gt;</code> to be transferred back to client
+  code.</li>
+</ul>
+</li>
+<li><strong>Dynamic editing capabilities</strong>:<ul>
+<li>Mesh vertices and facets can be dynamically inserted and removed efficiently.</li>
+</ul>
+</li>
+<li><strong>Powerful attribute system</strong>:<ul>
+<li>Generic attribute system supporting any fixed-size integer types (<code>int8_t</code> ... <code>uint64_t</code>) and
+  floating point types (<code>float</code>, <code>double</code>).</li>
+<li>Attributes can be attached to any mesh element (vertex, facet, edge, corner), or can indexed
+  by a secondary buffer (e.g. UVs).</li>
+<li>Usage tag specifies how attributes are used and transformed (e.g. Color, Normals, UV, etc.).</li>
+</ul>
+</li>
+<li><strong>Optional edge/connectivity attributes</strong>:<ul>
+<li>Mesh edges can be numbered automatically, or based on a user-provided ordering.</li>
+<li>Connectivity attributes allow efficient navigation around mesh elements (similar to
+  half-edges).</li>
+</ul>
+</li>
+<li><strong>Fast compilation times</strong><sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>:<ul>
+<li>Clean separation between class declaration/definition allows for faster build times.</li>
+<li>Explicit template instantiation is used to limit available types usable with our
+  <code>SurfaceMesh&lt;&gt;</code> and <code>Attribute&lt;&gt;</code> class.</li>
+<li><a href="../../../ref/group__group-surfacemesh.html">X macros</a> are used to facilitate explicit template instantiation of predetermined types (can
+  be used by client code).</li>
+</ul>
+</li>
+<li><strong>Extensive documentation</strong><ul>
+<li>Complete user guide (this document)</li>
+<li>Full Doxygen API reference.</li>
+</ul>
+</li>
+</ul>
+<h2 id="mesh-representation">Mesh Representation</h2>
+<p>At the core, our mesh data structure is just a collection of mesh elements (vertices, facets, edges,
+corners), where each element is attached a number of <a href="../attributes/">attributes</a>. Specifically, we
+define the following elements:</p>
+<ul>
+<li>
+<p><strong>Vertices</strong>: Points used to form the facets of the mesh. Typically associated with a 2D or 3D
+  position attribute.</p>
+<p><img alt="" src="../img/mesh_vertices.svg" width="300" /></p>
+</li>
+<li>
+<p><strong>Facets</strong>: Polygons formed by connecting mesh vertices together. In a triangle mesh, all facets
+  are 3-gons.</p>
+<p><img alt="" src="../img/mesh_facets.svg" width="300" /></p>
+</li>
+<li>
+<p><strong>Edges</strong>: Edges are formed by unordered pairs of consecutive vertices in a mesh facet. The set of
+  mesh edges is defined implicitly from the mesh facets. See <a href="#mesh-edges">Mesh Edges</a> for more
+  details.</p>
+<p><img alt="" src="../img/mesh_edges.svg" width="300" /></p>
+</li>
+<li>
+<p><strong>Corners</strong>: Facet corner elements can be used to reference vertices in a specific facet. Corners
+  from the same facets are indexed contiguously in a flat list containing all facet corners.</p>
+<p><img alt="" src="../img/mesh_corners.svg" width="300" /></p>
+</li>
+</ul>
+<p>Our mesh data structure is very generic, and can represent any kind of polygonal mesh, non-manifold
+surface, mesh containing isolated vertices, point clouds, etc.</p>
+<h2 id="terminology">Terminology</h2>
+<ul>
+<li><strong>Regular mesh</strong>: In the context of this documentation, a regular mesh is a mesh whose facets have
+  the <em>same constant size</em>. E.g. a triangle mesh is a regular mesh (facet size = 3). So is a quad
+  mesh (facet size = 4), a pentagonal mesh, etc.</li>
+<li><strong>Hybrid mesh</strong>: A hybrid mesh is a mesh whose facets may have varying sizes. E.g. a quad dominant
+  mesh is a hybrid mesh.</li>
+<li><strong>Vertex valence</strong>: Number of facet corners pointing to a given vertex (repeated vertex indices in
+  a degenerate facet will count multiple times towards the vertex valence).</li>
+<li><strong>Facet size</strong>: Number of corners/vertices in a facet. Currently we require facet sizes to be &gt; 2,
+  but this restriction will be lifted in a future version (supporting facets of size 1 and 2).</li>
+</ul>
+<p>A hybrid mesh will store an additional "offset" attribute for each facet, to determine where each
+facet starts/ends in the attribute buffer storing vertex indices.</p>
+<div class="admonition example">
+<p class="admonition-title">Offset Indices</p>
+<p>In the following mesh, facets <code>[f0, f1, f2]</code> have an "offset" attribute of <code>[0, 3, 7]</code>. This
+means that the first corner of <code>f0</code> is <code>c0</code>, the first corner of <code>f1</code> is <code>c3</code>, etc. The size of
+a facet can be computed from the difference between two consecutive offsets.</p>
+<p><img alt="" src="../img/mesh_facets.svg" width="300" />
+<img alt="" src="../img/mesh_corners.svg" width="300" /></p>
+</div>
+<h2 id="adding-verticesfacets">Adding Vertices/Facets</h2>
+<p>Simple version:</p>
+<div class="highlight"><pre><span></span><code><span class="n">lagrange</span><span class="o">::</span><span class="n">SurfaceMesh</span><span class="o">&lt;</span><span class="n">Scalar</span><span class="p">,</span><span class="w"> </span><span class="n">Index</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mesh</span><span class="p">;</span><span class="w"></span>
+<span class="n">mesh</span><span class="p">.</span><span class="n">add_vertices</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span><span class="w"> </span><span class="c1">// adds 10 vertices with 0-initialized coordinates</span>
+<span class="n">mesh</span><span class="p">.</span><span class="n">add_triangles</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span><span class="w"> </span><span class="c1">// adds 3 triangles with 0-initialized vertex indices</span>
+<span class="n">mesh</span><span class="p">.</span><span class="n">add_quads</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span><span class="w"> </span><span class="c1">// adds 2 quads with 0-initialized vertex vertices</span>
+</code></pre></div>
+<p>Another example:</p>
+<div class="highlight"><pre><span></span><code><span class="n">lagrange</span><span class="o">::</span><span class="n">SurfaceMesh</span><span class="o">&lt;</span><span class="n">Scalar</span><span class="p">,</span><span class="w"> </span><span class="n">Index</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mesh</span><span class="p">;</span><span class="w"></span>
+<span class="n">mesh</span><span class="p">.</span><span class="n">add_vertex</span><span class="p">({</span><span class="mf">0.5</span><span class="p">,</span><span class="w"> </span><span class="mf">0.2</span><span class="p">,</span><span class="w"> </span><span class="mf">0.9</span><span class="p">});</span><span class="w"> </span><span class="c1">// adds a vertex at (0.5, 0.2, 0.9)</span>
+<span class="n">mesh</span><span class="p">.</span><span class="n">add_triangle</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">);</span><span class="w"> </span><span class="c1">// adds triangle (v1, v3, v3)</span>
+<span class="n">mesh</span><span class="p">.</span><span class="n">add_quad</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span><span class="w"> </span><span class="c1">// adds quad (v1, v3, v4, v2)</span>
+<span class="n">mesh</span><span class="p">.</span><span class="n">add_polygon</span><span class="p">({</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">});</span><span class="w"> </span><span class="c1">// adds polygon (v1, v3, v4, v2, v5)</span>
+</code></pre></div>
+<p>To create a mesh from an existing buffer (with copy):</p>
+<div class="highlight"><pre><span></span><code><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Scalar</span><span class="o">&gt;</span><span class="w"> </span><span class="n">vertices</span><span class="p">;</span><span class="w"> </span><span class="c1">// flat buffer of size N x 3</span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Index</span><span class="o">&gt;</span><span class="w"> </span><span class="n">facets</span><span class="p">;</span><span class="w"> </span><span class="c1">// flat buffer of size M x 3</span>
+<span class="c1">// ... fill up vertices/facets ...</span>
+<span class="n">Index</span><span class="w"> </span><span class="n">num_vertices</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Index</span><span class="p">(</span><span class="n">vertices</span><span class="p">.</span><span class="n">size</span><span class="p">())</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w"></span>
+<span class="n">Index</span><span class="w"> </span><span class="n">num_facets</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Index</span><span class="p">(</span><span class="n">facets</span><span class="p">.</span><span class="n">size</span><span class="p">())</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w"></span>
+
+<span class="n">lagrange</span><span class="o">::</span><span class="n">SurfaceMesh</span><span class="o">&lt;</span><span class="n">Scalar</span><span class="p">,</span><span class="w"> </span><span class="n">Index</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mesh</span><span class="p">;</span><span class="w"></span>
+<span class="n">mesh</span><span class="p">.</span><span class="n">add_vertices</span><span class="p">(</span><span class="n">num_vertices</span><span class="p">,</span><span class="w"> </span><span class="n">vertices</span><span class="p">);</span><span class="w"></span>
+<span class="n">mesh</span><span class="p">.</span><span class="n">add_triangles</span><span class="p">(</span><span class="n">num_facets</span><span class="p">,</span><span class="w"> </span><span class="n">facets</span><span class="p">);</span><span class="w"></span>
+</code></pre></div>
+<p>Note that any continuous buffer of the appropriate size will work. If your input buffer is of type
+<code>std::vector&lt;std::array&lt;Scalar, 3&gt;&gt;</code>, you will need to convert the pointer:</p>
+<div class="highlight"><pre><span></span><code><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">array</span><span class="o">&lt;</span><span class="n">Scalar</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">vertices</span><span class="p">;</span><span class="w"></span>
+<span class="n">lagrange</span><span class="o">::</span><span class="n">SurfaceMesh</span><span class="o">&lt;</span><span class="n">Scalar</span><span class="p">,</span><span class="w"> </span><span class="n">Index</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mesh</span><span class="p">;</span><span class="w"></span>
+<span class="n">mesh</span><span class="p">.</span><span class="n">add_vertices</span><span class="p">(</span><span class="w"></span>
+<span class="w">    </span><span class="n">Index</span><span class="p">(</span><span class="n">vertices</span><span class="p">.</span><span class="n">size</span><span class="p">()),</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="n">vertices</span><span class="p">.</span><span class="n">empty</span><span class="p">()</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="k">nullptr</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">vertices</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">data</span><span class="p">(),</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">vertices</span><span class="p">.</span><span class="n">size</span><span class="p">()});</span><span class="w"></span>
+</code></pre></div>
+<p>You can add multiple polygonal facets with different sizes in the same function call by using the
+<code>add_hybrid()</code> method. While this method can take an existing buffer as input, it may be simpler to
+use it via user-defined callbacks:</p>
+<div class="highlight"><pre><span></span><code><span class="n">lagrange</span><span class="o">::</span><span class="n">SurfaceMesh</span><span class="o">&lt;</span><span class="n">Scalar</span><span class="p">,</span><span class="w"> </span><span class="n">Index</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mesh</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">mt19937</span><span class="w"> </span><span class="n">gen</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">uniform_int_distribution</span><span class="o">&lt;</span><span class="n">Index</span><span class="o">&gt;</span><span class="w"> </span><span class="n">random_facet_size</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">);</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">uniform_int_distribution</span><span class="o">&lt;</span><span class="n">Index</span><span class="o">&gt;</span><span class="w"> </span><span class="n">random_vertex_index</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">9</span><span class="p">);</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">uniform_real_distribution</span><span class="o">&lt;</span><span class="n">Scalar</span><span class="o">&gt;</span><span class="w"> </span><span class="n">random_position</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span><span class="w"></span>
+<span class="n">mesh</span><span class="p">.</span><span class="n">add_vertices</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="o">&amp;</span><span class="p">](</span><span class="n">Index</span><span class="p">,</span><span class="w"> </span><span class="n">lagrange</span><span class="o">::</span><span class="n">span</span><span class="o">&lt;</span><span class="n">Scalar</span><span class="o">&gt;</span><span class="w"> </span><span class="n">p</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">p</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">random_position</span><span class="p">(</span><span class="n">gen</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">p</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">random_position</span><span class="p">(</span><span class="n">gen</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">p</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">random_position</span><span class="p">(</span><span class="n">gen</span><span class="p">);</span><span class="w"></span>
+<span class="p">});</span><span class="w"></span>
+<span class="n">mesh</span><span class="p">.</span><span class="n">add_hybrid</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// The first callback determines the degree of facet `f`</span>
+<span class="w">    </span><span class="p">[</span><span class="o">&amp;</span><span class="p">](</span><span class="n">Index</span><span class="w"> </span><span class="n">f</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">random_facet_size</span><span class="p">(</span><span class="n">gen</span><span class="p">);</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// The second callback sets the mapping corner id -&gt; vertex id for facet `f`</span>
+<span class="w">    </span><span class="p">[</span><span class="o">&amp;</span><span class="p">](</span><span class="n">Index</span><span class="w"> </span><span class="n">f</span><span class="p">,</span><span class="w"> </span><span class="n">lagrange</span><span class="o">::</span><span class="n">span</span><span class="o">&lt;</span><span class="n">Index</span><span class="o">&gt;</span><span class="w"> </span><span class="n">t</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">Index</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">t</span><span class="p">.</span><span class="n">size</span><span class="p">();</span><span class="w"> </span><span class="o">++</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="c1">// Assign a random vertex id to each facet corner</span>
+<span class="w">            </span><span class="n">t</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">random_vertex_index</span><span class="p">(</span><span class="n">gen</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="p">});</span><span class="w"></span>
+</code></pre></div>
+<h2 id="removing-verticesfacets">Removing Vertices/Facets</h2>
+<div class="admonition attention">
+<p class="admonition-title">Batch Removal Only</p>
+<p>Currently, we only support efficient <strong>batch</strong> removal of vertices/facets. This is because
+removing any mesh element will cause <strong>reindexing</strong> of <strong>all</strong> mesh attributes referencing a
+mesh element (e.g. vertex indices). To allow for "lazy" deletion, you can use an attribute to
+keep track of "deleted" vertices/facets until you actually clean them up. An element removal is
+a <strong>O(|V| + |F|)</strong> operation.</p>
+</div>
+<p>To remove a list of vertices/facets:</p>
+<div class="highlight"><pre><span></span><code><span class="n">lagrange</span><span class="o">::</span><span class="n">SurfaceMesh</span><span class="o">&lt;</span><span class="n">Scalar</span><span class="p">,</span><span class="w"> </span><span class="n">Index</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mesh</span><span class="p">;</span><span class="w"></span>
+<span class="n">mesh</span><span class="p">.</span><span class="n">add_vertices</span><span class="p">(</span><span class="mi">20</span><span class="p">);</span><span class="w"></span>
+<span class="n">mesh</span><span class="p">.</span><span class="n">add_triangles</span><span class="p">(</span><span class="mi">12</span><span class="p">);</span><span class="w"></span>
+
+<span class="c1">// Remove vertices v2, v5 and v9</span>
+<span class="n">mesh</span><span class="p">.</span><span class="n">remove_vertices</span><span class="p">({</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">9</span><span class="p">});</span><span class="w"></span>
+
+<span class="c1">// Remove facets v6, v2 and v8</span>
+<span class="n">mesh</span><span class="p">.</span><span class="n">remove_facets</span><span class="p">({</span><span class="mi">6</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">});</span><span class="w"></span>
+</code></pre></div>
+<p>Alternatively, you can use a filter returning a boolean value to determine the vertices/facets to
+remove:</p>
+<div class="highlight"><pre><span></span><code><span class="n">lagrange</span><span class="o">::</span><span class="n">SurfaceMesh</span><span class="o">&lt;</span><span class="n">Scalar</span><span class="p">,</span><span class="w"> </span><span class="n">Index</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mesh</span><span class="p">;</span><span class="w"></span>
+<span class="n">mesh</span><span class="p">.</span><span class="n">add_vertices</span><span class="p">(</span><span class="mi">20</span><span class="p">);</span><span class="w"></span>
+<span class="n">mesh</span><span class="p">.</span><span class="n">add_triangles</span><span class="p">(</span><span class="mi">12</span><span class="p">);</span><span class="w"></span>
+
+<span class="c1">// Remove vertices with even index</span>
+<span class="n">mesh</span><span class="p">.</span><span class="n">remove_vertices</span><span class="p">([](</span><span class="n">Index</span><span class="w"> </span><span class="n">v</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="p">(</span><span class="n">v</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span><span class="w"> </span><span class="p">});</span><span class="w"></span>
+
+<span class="c1">// Remove random facets</span>
+<span class="n">std</span><span class="o">::</span><span class="n">mt19937</span><span class="w"> </span><span class="n">gen</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">uniform_int_distribution</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">flip_coin</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span><span class="w"></span>
+<span class="n">mesh</span><span class="p">.</span><span class="n">remove_facets</span><span class="p">([</span><span class="o">&amp;</span><span class="p">](</span><span class="n">Index</span><span class="w"> </span><span class="n">f</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">flip_coin</span><span class="p">(</span><span class="n">gen</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="p">});</span><span class="w"></span>
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Vertex Removal</p>
+<p>Removing a vertex will automatically remove any facet containing that vertex!</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Facet Removal</p>
+<p>Removing a facet will <strong>not</strong> automatically remove any incident vertex. You can end up with
+floating/isolated vertices after facet removal. Consider filtering them as a post-processing.</p>
+</div>
+<h2 id="copy-on-write">Copy-On-Write</h2>
+<p>All mesh data is stored in an <a href="../../../ref/classlagrange_1_1_attribute.html">Attribute</a> object, including vertex positions, facet indices, etc.
+These mesh attributes are handled via a copy-on-write mechanism, meaning that copying a mesh is a
+cheap operation by default: no buffer is actually duplicated until you start writing to it. For this
+reason, we distinguish most accessors between <strong>getters</strong> and <strong>setters</strong>:</p>
+<ul>
+<li><strong>Getters</strong> start with <code>get_xxx()</code> and provide read-only access to an attribute data. They will
+  not cause any copy.</li>
+<li><strong>Setters</strong> start with <code>ref_xxx()</code> and will cause an immediate buffer copy if the buffer is not
+  uniquely owned (i.e. there are more than 1 object referencing the same buffer).</li>
+</ul>
+<p>Note that both getters and setters are <strong>safe to use concurrently</strong>. Please read our <a href="#a-note-on-thread-safety">"note on
+thread-safety"</a> for more information.</p>
+<p>See below for a short example:</p>
+<div class="highlight"><pre><span></span><code><span class="n">lagrange</span><span class="o">::</span><span class="n">SurfaceMesh</span><span class="o">&lt;</span><span class="n">Scalar</span><span class="p">,</span><span class="w"> </span><span class="n">Index</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mesh</span><span class="p">;</span><span class="w"></span>
+<span class="c1">// ... Fill up mesh ...</span>
+<span class="n">lagrange</span><span class="o">::</span><span class="n">SurfaceMesh</span><span class="o">&lt;</span><span class="n">Scalar</span><span class="p">,</span><span class="w"> </span><span class="n">Index</span><span class="o">&gt;</span><span class="w"> </span><span class="n">copy</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mesh</span><span class="p">;</span><span class="w"></span>
+
+<span class="c1">// Writable reference to a vertex</span>
+<span class="k">auto</span><span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">copy</span><span class="p">.</span><span class="n">ref_position</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span><span class="w"> </span><span class="c1">// &lt;-- leads to a copy of the vertex buffer</span>
+<span class="n">p</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.1</span><span class="p">;</span><span class="w"></span>
+<span class="n">p</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.2</span><span class="p">;</span><span class="w"></span>
+<span class="n">p</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.3</span><span class="p">;</span><span class="w"></span>
+
+<span class="c1">// Now vertices v1 are different</span>
+<span class="n">std</span><span class="o">::</span><span class="n">equal</span><span class="p">(</span><span class="w"></span>
+<span class="w">    </span><span class="n">mesh</span><span class="p">.</span><span class="n">get_position</span><span class="p">(</span><span class="mi">1</span><span class="p">).</span><span class="n">begin</span><span class="p">(),</span><span class="w"></span>
+<span class="w">    </span><span class="n">mesh</span><span class="p">.</span><span class="n">get_position</span><span class="p">(</span><span class="mi">1</span><span class="p">).</span><span class="n">end</span><span class="p">(),</span><span class="w"></span>
+<span class="w">    </span><span class="n">copy</span><span class="p">.</span><span class="n">get_position</span><span class="p">(</span><span class="mi">1</span><span class="p">).</span><span class="n">begin</span><span class="p">());</span><span class="w"> </span><span class="c1">// --&gt; false</span>
+
+<span class="c1">// The pointers to the vertex positions are now different</span>
+<span class="n">mesh</span><span class="p">.</span><span class="n">get_vertex_to_position</span><span class="p">().</span><span class="n">get_all</span><span class="p">().</span><span class="n">data</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"></span>
+<span class="w">    </span><span class="n">copy</span><span class="p">.</span><span class="n">get_vertex_to_position</span><span class="p">().</span><span class="n">get_all</span><span class="p">().</span><span class="n">data</span><span class="p">();</span><span class="w"> </span><span class="c1">// --&gt; false</span>
+
+<span class="c1">// But the pointers to the facet indices are still the same</span>
+<span class="n">mesh</span><span class="p">.</span><span class="n">get_corner_to_vertex</span><span class="p">().</span><span class="n">get_all</span><span class="p">().</span><span class="n">data</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"></span>
+<span class="w">    </span><span class="n">copy</span><span class="p">.</span><span class="n">get_corner_to_vertex</span><span class="p">().</span><span class="n">get_all</span><span class="p">().</span><span class="n">data</span><span class="p">();</span><span class="w"> </span><span class="c1">// --&gt; true</span>
+</code></pre></div>
+<h2 id="eigen-matrix-views">Eigen Matrix Views</h2>
+<p>Mesh attributes such as positions and facet indices can be views as <a href="http://eigen.tuxfamily.org">Eigen</a> matrices. Specifically,
+we provide read-only views as <code>Eigen::Map&lt;const ...&gt;</code>:</p>
+<!-- @views -->
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;lagrange/SurfaceMesh.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;lagrange/views.h&gt;</span><span class="cp"></span>
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;igl/massmatrix.h&gt;</span><span class="cp"></span>
+
+<span class="n">lagrange</span><span class="o">::</span><span class="n">SurfaceMesh</span><span class="o">&lt;</span><span class="n">Scalar</span><span class="p">,</span><span class="w"> </span><span class="n">Index</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mesh</span><span class="p">;</span><span class="w"></span>
+
+<span class="c1">// Fill up mesh data...</span>
+
+<span class="c1">// With ADL, no need to prefix by lagrange::</span>
+<span class="k">auto</span><span class="w"> </span><span class="n">V_view</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vertex_view</span><span class="p">(</span><span class="n">mesh</span><span class="p">);</span><span class="w"></span>
+<span class="k">auto</span><span class="w"> </span><span class="n">F_view</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">facet_view</span><span class="p">(</span><span class="n">mesh</span><span class="p">);</span><span class="w"></span>
+
+<span class="c1">// Call your favorite libigl function</span>
+<span class="n">Eigen</span><span class="o">::</span><span class="n">SparseMatrix</span><span class="o">&lt;</span><span class="n">Scalar</span><span class="o">&gt;</span><span class="w"> </span><span class="n">M</span><span class="p">;</span><span class="w"></span>
+<span class="n">igl</span><span class="o">::</span><span class="n">massmatrix</span><span class="p">(</span><span class="n">V_view</span><span class="p">,</span><span class="w"> </span><span class="n">F_view</span><span class="p">,</span><span class="w"> </span><span class="n">igl</span><span class="o">::</span><span class="n">MASSMATRIX_TYPE_VORONOI</span><span class="p">,</span><span class="w"> </span><span class="n">M</span><span class="p">);</span><span class="w"></span>
+</code></pre></div>
+<p>Writable reference are also available:</p>
+<!-- @views -->
+<div class="highlight"><pre><span></span><code><span class="c1">// Writable reference, creates a copy if buffer is not uniquely owned</span>
+<span class="k">auto</span><span class="w"> </span><span class="n">V_ref</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vertex_ref</span><span class="p">(</span><span class="n">mesh</span><span class="p">);</span><span class="w"></span>
+<span class="k">auto</span><span class="w"> </span><span class="n">F_ref</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">facet_ref</span><span class="p">(</span><span class="n">mesh</span><span class="p">);</span><span class="w"></span>
+
+<span class="c1">// Center mesh around vertex barycenter</span>
+<span class="n">V_ref</span><span class="p">.</span><span class="n">rowwise</span><span class="p">()</span><span class="w"> </span><span class="o">-=</span><span class="w"> </span><span class="n">V_ref</span><span class="p">.</span><span class="n">colwise</span><span class="p">().</span><span class="n">mean</span><span class="p">();</span><span class="w"></span>
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Regular Meshes Vs Hybrid Meshes</p>
+<p>On hybrid meshes, it is not possible to "view" facet indices as a 2D matrix. This is because
+each "row" of the matrix would have a variable width, due to the varying facet sizes. For this
+reason, trying to get a <code>facet_view()</code> on a hybrid mesh will throw a runtime exception.</p>
+</div>
+<h2 id="mesh-edges">Mesh Edges</h2>
+<p>By default, a mesh object is very lightweight, and does not compute edge ids or connectivity
+information. If this information is desirable, it is possible to compute it by calling the
+<code>initialize_edges()</code> method:</p>
+<!-- @edges -->
+<div class="highlight"><pre><span></span><code><span class="n">lagrange</span><span class="o">::</span><span class="n">SurfaceMesh</span><span class="o">&lt;</span><span class="n">Scalar</span><span class="p">,</span><span class="w"> </span><span class="n">Index</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mesh</span><span class="p">;</span><span class="w"></span>
+<span class="n">mesh</span><span class="p">.</span><span class="n">add_vertices</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span><span class="w"></span>
+<span class="n">mesh</span><span class="p">.</span><span class="n">add_triangle</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span><span class="w"></span>
+<span class="n">mesh</span><span class="p">.</span><span class="n">add_quad</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span><span class="w"></span>
+<span class="n">mesh</span><span class="p">.</span><span class="n">add_polygon</span><span class="p">({</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">});</span><span class="w"></span>
+
+<span class="c1">// Let Lagrange assign an id to each edge</span>
+<span class="n">mesh</span><span class="p">.</span><span class="n">initialize_edges</span><span class="p">();</span><span class="w"></span>
+
+<span class="c1">// ...</span>
+
+<span class="c1">// Once edge data is no longer needed, clear related mesh attributes:</span>
+<span class="n">mesh</span><span class="p">.</span><span class="n">clear_edges</span><span class="p">();</span><span class="w"></span>
+</code></pre></div>
+<p>In practice, edge and connectivity data are stored as special mesh attributes, which can be
+accessed/edited like any other mesh attribute!</p>
+<p>If a specific ordering of the mesh edges is desired, provide it to the <code>initialize_edges()</code> method:</p>
+<!-- @edges -->
+<div class="highlight"><pre><span></span><code><span class="c1">// Explicit edge id -&gt; vertex ids mapping</span>
+<span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">array</span><span class="o">&lt;</span><span class="n">Index</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">edges</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="mi">6</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">},</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+<span class="c1">// Passed to the mesh via a std::span&lt;&gt;</span>
+<span class="n">mesh</span><span class="p">.</span><span class="n">initialize_edges</span><span class="p">({</span><span class="o">&amp;</span><span class="n">edges</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">edges</span><span class="p">.</span><span class="n">size</span><span class="p">()});</span><span class="w"></span>
+</code></pre></div>
+<div class="admonition warning">
+<p class="admonition-title">Redundant Initialization</p>
+<p>If a mesh already contains edges information, <code>mesh.initialize_edges()</code> will not do anything. If
+you want to reorder existing edges, please clear edge attributes first, and re-initialize mesh
+edges.</p>
+</div>
+<h2 id="connectivity-and-navigation">Connectivity And Navigation</h2>
+<p>Initializing mesh edges will also equip the mesh with connectivity information. This allows you to
+navigate around mesh elements such as vertices and facets.</p>
+<p>To navigate around a given element, use the <code>foreach_xxx_around_xxx()</code> functions:</p>
+<div class="highlight"><pre><span></span><code><span class="n">lagrange</span><span class="o">::</span><span class="n">SurfaceMesh</span><span class="o">&lt;</span><span class="n">Scalar</span><span class="p">,</span><span class="w"> </span><span class="n">Index</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mesh</span><span class="p">;</span><span class="w"></span>
+
+<span class="c1">// Fill up mesh...</span>
+
+<span class="c1">// Compute vertex valence</span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Index</span><span class="o">&gt;</span><span class="w"> </span><span class="n">vertex_valence</span><span class="p">(</span><span class="n">mesh</span><span class="p">.</span><span class="n">get_num_vertices</span><span class="p">(),</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span><span class="w"></span>
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">Index</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">mesh</span><span class="p">.</span><span class="n">get_num_vertices</span><span class="p">();</span><span class="w"> </span><span class="o">++</span><span class="n">v</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">mesh</span><span class="p">.</span><span class="n">foreach_facet_around_vertex</span><span class="p">(</span><span class="n">v</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="o">&amp;</span><span class="p">](</span><span class="n">Index</span><span class="w"> </span><span class="n">f</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="o">++</span><span class="n">vertex_valence</span><span class="p">[</span><span class="n">v</span><span class="p">];</span><span class="w"></span>
+<span class="w">    </span><span class="p">});</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>In the example above, we could have use the method <code>count_num_corners_around_vertex()</code> to
+compute vertex valence directly. See <a href="../../../ref/classlagrange_1_1_surface_mesh.html">SurfaceMesh</a> class documentation for a full reference.</p>
+<div class="admonition note">
+<p class="admonition-title">Degenerate Facets</p>
+<p>If a mesh facet is degenerate, and references the same vertex several time (e.g. facet <code>f2 =
+(0, 1, 1)</code>), then <code>mesh.foreach_facet_around_vertex(1)</code> will call the facet <code>f2</code> twice.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Edges Around A Vertex</p>
+<p>To iterate over the edges incident to a given vertex, you will notice that we only provide a
+single method <code>foreach_edge_around_vertex_with_duplicates()</code>. This method will call the callback
+function repeatedly for each facet which contains an incident edge to the prescribed vertex.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Non-Manifold Surfaces</p>
+<p>Our mesh navigation methods support any type of non-manifold meshes. This is in contrast with
+some type of half-edge data structures which assume manifold surfaces.</p>
+</div>
+<h2 id="half-edges">Half-Edges</h2>
+<p>There is a natural correspondence between the usual half-edge notion and a facet corner (see figure
+below). While Lagrange currently does not offer half-edge data-structure for mesh navigation, corner
+indices can be used to navigate around mesh elements the same way a half-edge data structure does.</p>
+<figure>
+  <div style="display:flex">
+    <div>
+      <img src="../img/mesh_half_edges.svg" width=350>
+    </div>
+    <div>
+      <img src="../img/mesh_half_edges_corners.svg" width=350>
+    </div>
+  </div>
+
+  <figcaption>Half-edges can be identified with their equivalent facet corners.</figcaption>
+</figure>
+
+<div class="admonition tip">
+<p class="admonition-title">Twin Half-Edge</p>
+<p>To implement the <code>twin(h_i)</code> operation, you can use <code>SurfaceMesh::get_next_corner_around_edge()</code>.</p>
+</div>
+<p>In the future we may add a half-edge "proxy" structure to facilitate mesh navigation.</p>
+<h2 id="template-parameters">Template Parameters</h2>
+<p>While our <code>SurfaceMesh&lt;&gt;</code> class is templated by both a <code>Scalar</code> and <code>Index</code> type, we only actually
+support a finite set of template parameters. Specifically:</p>
+<ul>
+<li><strong>Scalar</strong> can only be <code>float</code> or <code>double</code>.</li>
+<li><strong>Index</strong> can only be <code>uint32_t</code> or <code>uint64_t</code>.</li>
+</ul>
+<p>We provide the following type aliases for convenience:</p>
+<table>
+<thead>
+<tr>
+<th>Alias</th>
+<th>Actual Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>SurfaceMesh32f</code></td>
+<td><code>SurfaceMesh&lt;float, uint32_t&gt;</code></td>
+</tr>
+<tr>
+<td><code>SurfaceMesh32d</code></td>
+<td><code>SurfaceMesh&lt;double, uint32_t&gt;</code></td>
+</tr>
+<tr>
+<td><code>SurfaceMesh64f</code></td>
+<td><code>SurfaceMesh&lt;float, uint64_t&gt;</code></td>
+</tr>
+<tr>
+<td><code>SurfaceMesh64d</code></td>
+<td><code>SurfaceMesh&lt;double, uint64_t&gt;</code></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">Writing Functions Taking SurfaceMesh As Parameter</p>
+<p>To write a function taking a <code>SurfaceMesh&lt;&gt;</code> as a parameter, you can use our <a href="../../../ref/group__group-surfacemesh.html">X macros</a> to
+explicitly instantiate a templated function with the supported mesh types. For example, the
+<code>vertex_view()</code> function is instantiated as follows:</p>
+<!-- TODO: Add localized code preamble... -->
+<div class="highlight"><pre><span></span><code><span class="c1">////////////////</span>
+<span class="c1">// In views.h //</span>
+<span class="c1">////////////////</span>
+
+<span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">S</span><span class="p">,</span><span class="w"> </span><span class="k">typename</span><span class="w"> </span><span class="nc">I</span><span class="o">&gt;</span><span class="w"></span>
+<span class="n">ConstRowMatrixView</span><span class="o">&lt;</span><span class="n">S</span><span class="o">&gt;</span><span class="w"> </span><span class="n">vertex_view</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">SurfaceMesh</span><span class="o">&lt;</span><span class="n">S</span><span class="p">,</span><span class="w"> </span><span class="n">I</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">mesh</span><span class="p">);</span><span class="w"></span>
+
+<span class="c1">//////////////////</span>
+<span class="c1">// In views.cpp //</span>
+<span class="c1">//////////////////</span>
+
+<span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">S</span><span class="p">,</span><span class="w"> </span><span class="k">typename</span><span class="w"> </span><span class="nc">I</span><span class="o">&gt;</span><span class="w"></span>
+<span class="n">ConstRowMatrixView</span><span class="o">&lt;</span><span class="n">S</span><span class="o">&gt;</span><span class="w"> </span><span class="n">vertex_view</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">SurfaceMesh</span><span class="o">&lt;</span><span class="n">S</span><span class="p">,</span><span class="w"> </span><span class="n">I</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">mesh</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// Function definition</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="c1">// Explicit template instantiation</span>
+<span class="cp">#define LA_X_views_mesh(_, S, I) \</span>
+<span class="cp">    template ConstRowMatrixView&lt;S&gt; vertex_view(const SurfaceMesh&lt;S, I&gt;&amp; mesh);</span>
+<span class="n">LA_SURFACE_MESH_X</span><span class="p">(</span><span class="n">views_mesh</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+</div>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p>Note that while the new polygonal mesh class is using explicit template instantiation to
+facilitate compilation, at the time most of Lagrange is still header-only and relying on our
+legacy mesh data structure. Thus overall compilation times still have room for improvement.&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+
+              
+            </article>
+          </div>
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" data-md-state="hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../../../third-party/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Third Party Libraries" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Third Party Libraries
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../attributes/" class="md-footer__link md-footer__link--next" aria-label="Next: Mesh Attributes" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Mesh Attributes
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "navigation.indexes"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.2a1c317c.min.js"}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.748e2769.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/tablesort.min.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="../../../javascripts/extra.js"></script>
+      
+        <script src="../../../javascripts/tables.js"></script>
+      
+        <script src="../../../javascripts/mathjax.js"></script>
+      
+    
+  </body>
+</html>
