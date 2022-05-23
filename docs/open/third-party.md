@@ -1,3 +1,6 @@
+{% if is_corp %}
+{% include 'corp/third-party.md' %}
+{% else %}
 ## External Dependencies
 
 Here is a list of third party libraries used in Lagrange. Those external dependencies will be
@@ -60,3 +63,4 @@ appropriate licenses and files that are affected.
 | [Shewchuk's predicates](https://www.cs.cmu.edu/~quake/robust.html)                                                             | Public domain | Core               | [predicates.cpp]({{ repo_url }}/blob/main/modules/core/src/predicates.cpp)                                                                                                                                                                                 |
 | [valuable](https://github.com/LoopPerfect/valuable)                                                                            | MIT           | Core               | [value_ptr.h]({{ repo_url }}/blob/main/modules/core/include/lagrange/utils/value_ptr.h)                                                                                                                                                                    |
 
+{% endif %}

@@ -112,10 +112,10 @@ cmake -G "Visual Studio 14 2015 Win64" ..
 
 ### Unix
 
-You may have to install GTK3, which is required by the UI module:
+You may have to install Zenity for the file dialog window to work:
 
 ```sh
-sudo apt-get install libgtk-3-dev
+sudo apt-get install zenity
 ```
 
 ## Run
