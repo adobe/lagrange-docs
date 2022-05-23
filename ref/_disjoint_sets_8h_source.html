@@ -133,7 +133,7 @@ $(function() {
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        <span class="keyword">const</span> IndexType counter = <a class="code hl_function" href="classlagrange_1_1_disjoint_sets.html#a2b32109d556b6000eee22210f9dc855a">extract_disjoint_set_indices</a>(index_map);</div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        std::vector&lt;std::vector&lt;IndexType&gt;&gt; disjoint_sets(counter);</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        <span class="keywordflow">for</span> (<span class="keyword">auto</span> i : range(num_entries)) {</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        <span class="keywordflow">for</span> (<span class="keyword">auto</span> i : <a class="code hl_function" href="group__group-utils-misc.html#ga68084717e646e9a6073e533d0b83a2b7">range</a>(num_entries)) {</div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>            disjoint_sets[index_map[i]].push_back(i);</div>
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        }</div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        <span class="keywordflow">return</span> disjoint_sets;</div>
@@ -146,7 +146,7 @@ $(function() {
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        IndexType counter = 0;</div>
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        <span class="comment">// Assign each roots a unique index.</span></div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        <span class="keywordflow">for</span> (<span class="keyword">auto</span> i : range(num_entries)) {</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        <span class="keywordflow">for</span> (<span class="keyword">auto</span> i : <a class="code hl_function" href="group__group-utils-misc.html#ga68084717e646e9a6073e533d0b83a2b7">range</a>(num_entries)) {</div>
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>            <span class="keyword">const</span> <span class="keyword">auto</span> root = find(i);</div>
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>            <span class="keywordflow">if</span> (i == root) {</div>
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>                index_map[i] = counter;</div>
@@ -155,7 +155,7 @@ $(function() {
 <div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        }</div>
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
 <div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>        <span class="comment">// Assign all members the same index as their root.</span></div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>        <span class="keywordflow">for</span> (<span class="keyword">auto</span> i : range(num_entries)) {</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>        <span class="keywordflow">for</span> (<span class="keyword">auto</span> i : <a class="code hl_function" href="group__group-utils-misc.html#ga68084717e646e9a6073e533d0b83a2b7">range</a>(num_entries)) {</div>
 <div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>            <span class="keyword">const</span> <span class="keyword">auto</span> root = find(i);</div>
 <div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>            assert(index_map[root] != invalid&lt;IndexType&gt;());</div>
 <div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>            index_map[i] = index_map[root];</div>
@@ -172,6 +172,7 @@ $(function() {
 <div class="ttc" id="aclasslagrange_1_1_disjoint_sets_html"><div class="ttname"><a href="classlagrange_1_1_disjoint_sets.html">lagrange::DisjointSets</a></div><div class="ttdef"><b>Definition:</b> DisjointSets.h:26</div></div>
 <div class="ttc" id="aclasslagrange_1_1_disjoint_sets_html_a2b32109d556b6000eee22210f9dc855a"><div class="ttname"><a href="classlagrange_1_1_disjoint_sets.html#a2b32109d556b6000eee22210f9dc855a">lagrange::DisjointSets::extract_disjoint_set_indices</a></div><div class="ttdeci">IndexType extract_disjoint_set_indices(std::vector&lt; IndexType &gt; &amp;index_map)</div><div class="ttdoc">Assign all elements their disjoint set index.</div><div class="ttdef"><b>Definition:</b> DisjointSets.h:75</div></div>
 <div class="ttc" id="agroup__group-utils-assert_html_ga1ccafcb14523a1aae57dcac3c3f32ecd"><div class="ttname"><a href="group__group-utils-assert.html#ga1ccafcb14523a1aae57dcac3c3f32ecd">la_runtime_assert</a></div><div class="ttdeci">#define la_runtime_assert(...)</div><div class="ttdoc">Runtime assertion check.</div><div class="ttdef"><b>Definition:</b> assert.h:168</div></div>
+<div class="ttc" id="agroup__group-utils-misc_html_ga68084717e646e9a6073e533d0b83a2b7"><div class="ttname"><a href="group__group-utils-misc.html#ga68084717e646e9a6073e533d0b83a2b7">lagrange::range</a></div><div class="ttdeci">internal::Range&lt; Index &gt; range(Index end)</div><div class="ttdoc">Returns an iterable object representing the range [0, end).</div><div class="ttdef"><b>Definition:</b> range.h:176</div></div>
 <div class="ttc" id="anamespacelagrange_html"><div class="ttname"><a href="namespacelagrange.html">lagrange</a></div><div class="ttdoc">Main namespace for Lagrange.</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->

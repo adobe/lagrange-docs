@@ -100,66 +100,67 @@ $(function() {
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    std::vector&lt;Chain&gt; chains;</div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    VertexAdjList next;</div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    VertexAdjList prev;</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    next.reserve(edges.size());</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    prev.reserve(edges.size());</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    std::unordered_set&lt;Index&gt; visited;</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    visited.reserve(edges.size() * 2);</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><a class="code hl_define" href="group__group-utils-warning.html#gaea1008e72c7279ac1c0683098356e09f">LA_IGNORE_RANGE_LOOP_ANALYSIS_BEGIN</a></div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; e : edges) {</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        next[e[0]] = e[1];</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        prev[e[1]] = e[0];</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    }</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>LA_IGNORE_RANGE_LOOP_ANALYSIS_END</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="keyword">auto</span> has_visited = [&amp;visited](Index id) -&gt; <span class="keywordtype">bool</span> { <span class="keywordflow">return</span> visited.find(<span class="keywordtype">id</span>) != visited.end(); };</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <span class="keyword">auto</span> grow_chain_forward = [&amp;visited, &amp;next, &amp;has_visited](Chain&amp; chain) -&gt; <span class="keywordtype">void</span> {</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        <span class="comment">// Extend chain from the end.</span></div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        assert(chain.size() &gt; 0);</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        <span class="keywordflow">while</span> (<span class="keyword">true</span>) {</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>            <span class="keyword">const</span> <span class="keyword">auto</span> curr_v = chain.back();</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>            <span class="keyword">const</span> <span class="keyword">auto</span> itr = next.find(curr_v);</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>            <span class="keywordflow">if</span> (itr != next.end() &amp;&amp; !has_visited(itr-&gt;second)) {</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>                chain.push_back(itr-&gt;second);</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>                visited.insert(itr-&gt;second);</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>                <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>            }</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        }</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    };</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    <span class="keyword">auto</span> grow_chain_backward = [&amp;visited, &amp;prev, &amp;has_visited](Chain&amp; chain) -&gt; <span class="keywordtype">void</span> {</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        <span class="comment">// Extend chain from the beginning.</span></div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        assert(chain.size() &gt; 0);</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        <span class="keywordflow">while</span> (<span class="keyword">true</span>) {</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>            <span class="keyword">const</span> <span class="keyword">auto</span> curr_v = chain.front();</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>            <span class="keyword">const</span> <span class="keyword">auto</span> itr = prev.find(curr_v);</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>            <span class="keywordflow">if</span> (itr != prev.end() &amp;&amp; !has_visited(itr-&gt;second)) {</div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>                chain.push_front(itr-&gt;second);</div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>                visited.insert(itr-&gt;second);</div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>                <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>            }</div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>        }</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    };</div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span><a class="code hl_define" href="group__group-utils-warning.html#gaea1008e72c7279ac1c0683098356e09f">LA_IGNORE_RANGE_LOOP_ANALYSIS_BEGIN</a></div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; e : edges) {</div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>        <span class="keywordflow">if</span> (!has_visited(e[0])) {</div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>            chains.emplace_back();</div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>            <span class="keyword">auto</span>&amp; chain = chains.back();</div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>            chain.push_back(e[0]);</div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>            visited.insert(e[0]);</div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span> </div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>            grow_chain_forward(chain);</div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>            grow_chain_backward(chain);</div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>        }</div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    }</div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>LA_IGNORE_RANGE_LOOP_ANALYSIS_END</div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    <span class="keywordflow">return</span> chains;</div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>}</div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>} <span class="comment">// namespace lagrange</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="keywordtype">size_t</span> num_edges = std::distance(edges.begin(), edges.end());</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    next.reserve(num_edges);</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    prev.reserve(num_edges);</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    std::unordered_set&lt;Index&gt; visited;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    visited.reserve(num_edges * 2);</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><a class="code hl_define" href="group__group-utils-warning.html#gaea1008e72c7279ac1c0683098356e09f">LA_IGNORE_RANGE_LOOP_ANALYSIS_BEGIN</a></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; e : edges) {</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        next[e[0]] = e[1];</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        prev[e[1]] = e[0];</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    }</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>LA_IGNORE_RANGE_LOOP_ANALYSIS_END</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <span class="keyword">auto</span> has_visited = [&amp;visited](Index id) -&gt; <span class="keywordtype">bool</span> { <span class="keywordflow">return</span> visited.find(<span class="keywordtype">id</span>) != visited.end(); };</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <span class="keyword">auto</span> grow_chain_forward = [&amp;visited, &amp;next, &amp;has_visited](Chain&amp; chain) -&gt; <span class="keywordtype">void</span> {</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        <span class="comment">// Extend chain from the end.</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        assert(chain.size() &gt; 0);</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        <span class="keywordflow">while</span> (<span class="keyword">true</span>) {</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>            <span class="keyword">const</span> <span class="keyword">auto</span> curr_v = chain.back();</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>            <span class="keyword">const</span> <span class="keyword">auto</span> itr = next.find(curr_v);</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>            <span class="keywordflow">if</span> (itr != next.end() &amp;&amp; !has_visited(itr-&gt;second)) {</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>                chain.push_back(itr-&gt;second);</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>                visited.insert(itr-&gt;second);</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>            } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>            }</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        }</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    };</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    <span class="keyword">auto</span> grow_chain_backward = [&amp;visited, &amp;prev, &amp;has_visited](Chain&amp; chain) -&gt; <span class="keywordtype">void</span> {</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        <span class="comment">// Extend chain from the beginning.</span></div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        assert(chain.size() &gt; 0);</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        <span class="keywordflow">while</span> (<span class="keyword">true</span>) {</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>            <span class="keyword">const</span> <span class="keyword">auto</span> curr_v = chain.front();</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>            <span class="keyword">const</span> <span class="keyword">auto</span> itr = prev.find(curr_v);</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>            <span class="keywordflow">if</span> (itr != prev.end() &amp;&amp; !has_visited(itr-&gt;second)) {</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>                chain.push_front(itr-&gt;second);</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>                visited.insert(itr-&gt;second);</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>            } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>            }</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>        }</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    };</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span> </div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span><a class="code hl_define" href="group__group-utils-warning.html#gaea1008e72c7279ac1c0683098356e09f">LA_IGNORE_RANGE_LOOP_ANALYSIS_BEGIN</a></div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; e : edges) {</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>        <span class="keywordflow">if</span> (!has_visited(e[0])) {</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>            chains.emplace_back();</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>            <span class="keyword">auto</span>&amp; chain = chains.back();</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>            chain.push_back(e[0]);</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>            visited.insert(e[0]);</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span> </div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>            grow_chain_forward(chain);</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>            grow_chain_backward(chain);</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>        }</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    }</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>LA_IGNORE_RANGE_LOOP_ANALYSIS_END</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    <span class="keywordflow">return</span> chains;</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>}</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>} <span class="comment">// namespace lagrange</span></div>
 <div class="ttc" id="agroup__group-utils-warning_html_gaea1008e72c7279ac1c0683098356e09f"><div class="ttname"><a href="group__group-utils-warning.html#gaea1008e72c7279ac1c0683098356e09f">LA_IGNORE_RANGE_LOOP_ANALYSIS_BEGIN</a></div><div class="ttdeci">#define LA_IGNORE_RANGE_LOOP_ANALYSIS_BEGIN</div><div class="ttdoc">Ignore range loop variable may be a copy.</div><div class="ttdef"><b>Definition:</b> warning.h:136</div></div>
 <div class="ttc" id="anamespacelagrange_html"><div class="ttname"><a href="namespacelagrange.html">lagrange</a></div><div class="ttdoc">Main namespace for Lagrange.</div></div>
 <div class="ttc" id="anamespacelagrange_html_a51f08afb0bde5690d5442f5b481d6cce"><div class="ttname"><a href="namespacelagrange.html#a51f08afb0bde5690d5442f5b481d6cce">lagrange::chain_edges</a></div><div class="ttdeci">std::vector&lt; std::list&lt; Index &gt; &gt; chain_edges(const Allocator &amp;edges)</div><div class="ttdoc">Chain edges into either simple linear chain or simple loops.</div><div class="ttdef"><b>Definition:</b> chain_edges.h:33</div></div>

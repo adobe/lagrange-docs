@@ -127,7 +127,7 @@ $(function() {
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        <span class="keyword">const</span> Index cj = j % vertex_per_facet;</div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        <span class="keywordflow">if</span> (facets(fi, ci) == facets(fj, cj)) {</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>            <span class="keywordflow">for</span> (<span class="keyword">auto</span> k : range(num_attrs)) {</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>            <span class="keywordflow">for</span> (<span class="keyword">auto</span> k : <a class="code hl_function" href="group__group-utils-misc.html#ga68084717e646e9a6073e533d0b83a2b7">range</a>(num_attrs)) {</div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>                <span class="keyword">const</span> <span class="keyword">auto</span>&amp; indices = std::get&lt;1&gt;(attrs[k]);</div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>                <span class="keywordflow">if</span> (indices(fi, ci) != indices(fj, cj)) {</div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>                    <span class="keywordflow">return</span> indices(fi, ci) &lt; indices(fj, cj);</div>
@@ -146,7 +146,7 @@ $(function() {
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        <span class="keyword">const</span> Index cj = j % vertex_per_facet;</div>
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        <span class="keywordflow">if</span> (facets(fi, ci) == facets(fj, cj)) {</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>            <span class="keywordflow">for</span> (<span class="keyword">auto</span> k : range(num_attrs)) {</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>            <span class="keywordflow">for</span> (<span class="keyword">auto</span> k : <a class="code hl_function" href="group__group-utils-misc.html#ga68084717e646e9a6073e533d0b83a2b7">range</a>(num_attrs)) {</div>
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>                <span class="keyword">const</span> <span class="keyword">auto</span>&amp; indices = std::get&lt;1&gt;(attrs[k]);</div>
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>                <span class="keywordflow">if</span> (indices(fi, ci) != indices(fj, cj)) {</div>
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>                    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
@@ -187,6 +187,7 @@ $(function() {
 <div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>}</div>
 <div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span> </div>
 <div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>} <span class="comment">// namespace lagrange</span></div>
+<div class="ttc" id="agroup__group-utils-misc_html_ga68084717e646e9a6073e533d0b83a2b7"><div class="ttname"><a href="group__group-utils-misc.html#ga68084717e646e9a6073e533d0b83a2b7">lagrange::range</a></div><div class="ttdeci">internal::Range&lt; Index &gt; range(Index end)</div><div class="ttdoc">Returns an iterable object representing the range [0, end).</div><div class="ttdef"><b>Definition:</b> range.h:176</div></div>
 <div class="ttc" id="anamespacelagrange_html"><div class="ttname"><a href="namespacelagrange.html">lagrange</a></div><div class="ttdoc">Main namespace for Lagrange.</div></div>
 <div class="ttc" id="anamespacelagrange_html_a634f14b2682ed9274b1a71a92ac369c2"><div class="ttname"><a href="namespacelagrange.html#a634f14b2682ed9274b1a71a92ac369c2">lagrange::unify_corner_indices</a></div><div class="ttdeci">auto unify_corner_indices(MeshType &amp;mesh, const std::vector&lt; std::string &gt; &amp;indexed_attribute_names, std::vector&lt; typename MeshType::Index &gt; &amp;corner_to_unified_index) -&gt; typename MeshType::Index</div><div class="ttdoc">Generate a mapping from mesh corner to a unified index buffer that can be used for positions and all ...</div><div class="ttdef"><b>Definition:</b> unify_corner_indices.h:31</div></div>
 </div><!-- fragment --></div><!-- contents -->

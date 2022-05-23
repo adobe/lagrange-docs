@@ -263,7 +263,7 @@ $(function() {
 <div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>    <span class="comment">//</span></div>
 <div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>    <span class="comment">// Contour all triangles</span></div>
 <div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>    <span class="comment">//</span></div>
-<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> tri : range(mesh_ref.get_num_facets())) {</div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> tri : <a class="code hl_function" href="group__group-utils-misc.html#ga68084717e646e9a6073e533d0b83a2b7">range</a>(mesh_ref.get_num_facets())) {</div>
 <div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>        contour_triangle(tri);</div>
 <div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>    }</div>
 <div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span> </div>
@@ -273,7 +273,7 @@ $(function() {
 <div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>    MarchingTrianglesOutput output;</div>
 <div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>    <span class="comment">// Output edges</span></div>
 <div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>    output.edges.resize(extracted_edges.size(), 2);</div>
-<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> i : range(extracted_edges.size())) {</div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> i : <a class="code hl_function" href="group__group-utils-misc.html#ga68084717e646e9a6073e533d0b83a2b7">range</a>(extracted_edges.size())) {</div>
 <div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>        output.edges.row(i) &lt;&lt; extracted_edges[i][0], extracted_edges[i][1];</div>
 <div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>    }</div>
 <div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>    <span class="comment">// output vertices</span></div>
@@ -282,7 +282,7 @@ $(function() {
 <div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>    output.vertices_parent_param.swap(extracted_vertices_parent_param);</div>
 <div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>    <span class="comment">// rest we have to copy</span></div>
 <div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>    output.vertices.resize(extracted_vertices.size(), mesh_ref.get_dim());</div>
-<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> i : range(extracted_vertices.size())) {</div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> i : <a class="code hl_function" href="group__group-utils-misc.html#ga68084717e646e9a6073e533d0b83a2b7">range</a>(extracted_vertices.size())) {</div>
 <div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>        output.vertices.row(i) = extracted_vertices[i];</div>
 <div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>    }</div>
 <div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>    <span class="keywordflow">return</span> output;</div>
@@ -292,6 +292,7 @@ $(function() {
 <div class="ttc" id="agroup__group-surfacemesh-attr_html_gga35b5eb426384b257452ee0ffdb732c27af60357a8d17e45793298323f1b372a74"><div class="ttname"><a href="group__group-surfacemesh-attr.html#gga35b5eb426384b257452ee0ffdb732c27af60357a8d17e45793298323f1b372a74">lagrange::AttributeUsage::Scalar</a></div><div class="ttdeci">@ Scalar</div><div class="ttdoc">Mesh attribute must have exactly 1 channel.</div></div>
 <div class="ttc" id="agroup__group-surfacemesh-attr_html_gga9d8ab208822bab9987e9652dda49d89aa7f0bc3a17ff45e6a7c3fe52b35db1888"><div class="ttname"><a href="group__group-surfacemesh-attr.html#gga9d8ab208822bab9987e9652dda49d89aa7f0bc3a17ff45e6a7c3fe52b35db1888">lagrange::Edge</a></div><div class="ttdeci">@ Edge</div><div class="ttdoc">Per-edge mesh attributes.</div><div class="ttdef"><b>Definition:</b> AttributeFwd.h:33</div></div>
 <div class="ttc" id="agroup__group-utils-assert_html_ga1ccafcb14523a1aae57dcac3c3f32ecd"><div class="ttname"><a href="group__group-utils-assert.html#ga1ccafcb14523a1aae57dcac3c3f32ecd">la_runtime_assert</a></div><div class="ttdeci">#define la_runtime_assert(...)</div><div class="ttdoc">Runtime assertion check.</div><div class="ttdef"><b>Definition:</b> assert.h:168</div></div>
+<div class="ttc" id="agroup__group-utils-misc_html_ga68084717e646e9a6073e533d0b83a2b7"><div class="ttname"><a href="group__group-utils-misc.html#ga68084717e646e9a6073e533d0b83a2b7">lagrange::range</a></div><div class="ttdeci">internal::Range&lt; Index &gt; range(Index end)</div><div class="ttdoc">Returns an iterable object representing the range [0, end).</div><div class="ttdef"><b>Definition:</b> range.h:176</div></div>
 <div class="ttc" id="agroup__group-utils-misc_html_gaf41b927eb9281c28666f47b3f04d887c"><div class="ttname"><a href="group__group-utils-misc.html#gaf41b927eb9281c28666f47b3f04d887c">lagrange::swap</a></div><div class="ttdeci">constexpr void swap(function_ref&lt; R(Args...)&gt; &amp;lhs, function_ref&lt; R(Args...)&gt; &amp;rhs) noexcept</div><div class="ttdoc">Swaps the referred callables of lhs and rhs.</div><div class="ttdef"><b>Definition:</b> function_ref.h:105</div></div>
 <div class="ttc" id="anamespacelagrange_html"><div class="ttname"><a href="namespacelagrange.html">lagrange</a></div><div class="ttdoc">Main namespace for Lagrange.</div></div>
 <div class="ttc" id="astructlagrange_1_1_marching_triangles_output_html"><div class="ttname"><a href="structlagrange_1_1_marching_triangles_output.html">lagrange::MarchingTrianglesOutput</a></div><div class="ttdef"><b>Definition:</b> marching_triangles.h:31</div></div>

@@ -10,7 +10,7 @@ var searchData=
   ['unproject_7',['unproject',['../classlagrange_1_1ui_1_1_camera.html#a05428503a3e3ba3b9ff24edc76049164',1,'lagrange::ui::Camera']]],
   ['unproject_5fpoint_8',['unproject_point',['../namespacelagrange_1_1ui.html#a97336d869842071d1a5c4b583cd2aef3',1,'lagrange::ui']]],
   ['unregister_5faction_9',['unregister_action',['../classlagrange_1_1ui_1_1_keybinds.html#ab980d9e74f20be030121dcb82a20b88b',1,'lagrange::ui::Keybinds']]],
-  ['update_10',['update',['../classlagrange_1_1_progress_callback.html#ac5c54df7ed3b930268c8d7752c101725',1,'lagrange::ProgressCallback::update()'],['../classlagrange_1_1_progress_callback.html#a81a96a37ae71e3a853625e20c0fd97d4',1,'lagrange::ProgressCallback::update(float progress)']]],
+  ['update_10',['update',['../classlagrange_1_1_progress_callback.html#a81a96a37ae71e3a853625e20c0fd97d4',1,'lagrange::ProgressCallback::update(float progress)'],['../classlagrange_1_1_progress_callback.html#ac5c54df7ed3b930268c8d7752c101725',1,'lagrange::ProgressCallback::update()']]],
   ['update_5fedges_5flast_5finternal_11',['update_edges_last_internal',['../classlagrange_1_1_surface_mesh.html#ac24ddb40fec6dd687e3372880864962c',1,'lagrange::SurfaceMesh']]],
   ['update_5fedges_5frange_5finternal_12',['update_edges_range_internal',['../classlagrange_1_1_surface_mesh.html#adf2d6175956099c2d0bc7fd3f23e54cd',1,'lagrange::SurfaceMesh']]],
   ['update_5fmesh_5fhovered_13',['update_mesh_hovered',['../namespacelagrange_1_1ui.html#abf999933cdf7fe89d1cc120db89a731b',1,'lagrange::ui']]],

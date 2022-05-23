@@ -83,6 +83,9 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlagrange_1_1io_1_1_mesh_loader_result.html">MeshLoaderResult</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlagrange_1_1io_1_1_msh_saver_options.html">MshSaverOptions</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Config options for saving mesh in .msh format.  <a href="structlagrange_1_1io_1_1_msh_saver_options.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlagrange_1_1io_1_1_obj_reader_options.html">ObjReaderOptions</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Config options for the obj mesh loader.  <a href="structlagrange_1_1io_1_1_obj_reader_options.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -127,10 +130,18 @@ template&lt;typename MeshType &gt; </td></tr>
 <tr class="memitem:adb0f52b4283c04f5b2ae0ace996d369e"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structlagrange_1_1io_1_1_mesh_loader_result.html">MeshLoaderResult</a>&lt; MeshType &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>load_mesh_ext</b> (const lagrange::fs::path &amp;filename, const <a class="el" href="structlagrange_1_1io_1_1_mesh_loader_params.html">MeshLoaderParams</a> &amp;params={}, tinyobj::MaterialReader *material_reader=nullptr)</td></tr>
 <tr class="memdesc:adb0f52b4283c04f5b2ae0ace996d369e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load .obj from disk. <br /></td></tr>
 <tr class="separator:adb0f52b4283c04f5b2ae0ace996d369e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7146cc88e6e1abd7226a8cdf49ec8911"><td class="memTemplParams" colspan="2">template&lt;typename MeshType &gt; </td></tr>
-<tr class="memitem:a7146cc88e6e1abd7226a8cdf49ec8911"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacelagrange_1_1io.html#a7146cc88e6e1abd7226a8cdf49ec8911">load_mesh_obj</a> (const std::string &amp;filename, const <a class="el" href="structlagrange_1_1io_1_1_obj_reader_options.html">ObjReaderOptions</a> &amp;options={}) -&gt; <a class="el" href="structlagrange_1_1io_1_1_obj_reader_result.html">ObjReaderResult</a>&lt; typename MeshType::Scalar, typename MeshType::Index &gt;</td></tr>
-<tr class="memdesc:a7146cc88e6e1abd7226a8cdf49ec8911"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads a .obj mesh from a stream.  <a href="namespacelagrange_1_1io.html#a7146cc88e6e1abd7226a8cdf49ec8911">More...</a><br /></td></tr>
-<tr class="separator:a7146cc88e6e1abd7226a8cdf49ec8911"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaea4dd50cde93cd0b8c327a8fd08eabb"><td class="memTemplParams" colspan="2">template&lt;typename MeshType &gt; </td></tr>
+<tr class="memitem:aaea4dd50cde93cd0b8c327a8fd08eabb"><td class="memTemplItemLeft" align="right" valign="top">MeshType&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacelagrange_1_1io.html#aaea4dd50cde93cd0b8c327a8fd08eabb">load_mesh_msh</a> (std::istream &amp;input_stream)</td></tr>
+<tr class="memdesc:aaea4dd50cde93cd0b8c327a8fd08eabb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load a .msh file.  <a href="namespacelagrange_1_1io.html#aaea4dd50cde93cd0b8c327a8fd08eabb">More...</a><br /></td></tr>
+<tr class="separator:aaea4dd50cde93cd0b8c327a8fd08eabb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16369417666dae9749175060ae48c645"><td class="memTemplParams" colspan="2">template&lt;typename MeshType &gt; </td></tr>
+<tr class="memitem:a16369417666dae9749175060ae48c645"><td class="memTemplItemLeft" align="right" valign="top">MeshType&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacelagrange_1_1io.html#a16369417666dae9749175060ae48c645">load_mesh_msh</a> (const fs::path &amp;filename)</td></tr>
+<tr class="memdesc:a16369417666dae9749175060ae48c645"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.  <a href="namespacelagrange_1_1io.html#a16369417666dae9749175060ae48c645">More...</a><br /></td></tr>
+<tr class="separator:a16369417666dae9749175060ae48c645"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a12591076fd01220e0e09eee60f28a0"><td class="memTemplParams" colspan="2">template&lt;typename MeshType &gt; </td></tr>
+<tr class="memitem:a5a12591076fd01220e0e09eee60f28a0"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacelagrange_1_1io.html#a5a12591076fd01220e0e09eee60f28a0">load_mesh_obj</a> (const fs::path &amp;filename, const <a class="el" href="structlagrange_1_1io_1_1_obj_reader_options.html">ObjReaderOptions</a> &amp;options={}) -&gt; <a class="el" href="structlagrange_1_1io_1_1_obj_reader_result.html">ObjReaderResult</a>&lt; typename MeshType::Scalar, typename MeshType::Index &gt;</td></tr>
+<tr class="memdesc:a5a12591076fd01220e0e09eee60f28a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads a .obj mesh from a file.  <a href="namespacelagrange_1_1io.html#a5a12591076fd01220e0e09eee60f28a0">More...</a><br /></td></tr>
+<tr class="separator:a5a12591076fd01220e0e09eee60f28a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5e493449aa00501c6b8e61027d5e8bbb"><td class="memTemplParams" colspan="2"><a id="a5e493449aa00501c6b8e61027d5e8bbb" name="a5e493449aa00501c6b8e61027d5e8bbb"></a>
 template&lt;typename MeshType &gt; </td></tr>
 <tr class="memitem:a5e493449aa00501c6b8e61027d5e8bbb"><td class="memTemplItemLeft" align="right" valign="top">std::unique_ptr&lt; MeshType &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>load_mesh_ply</b> (const fs::path &amp;filename)</td></tr>
@@ -140,19 +151,27 @@ template&lt;typename MeshType &gt; </td></tr>
 template&lt;typename MeshType &gt; </td></tr>
 <tr class="memitem:adea0ff2ebd5123ae5698cd634e7d187a"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>save_mesh</b> (const fs::path &amp;filename, const MeshType &amp;mesh)</td></tr>
 <tr class="separator:adea0ff2ebd5123ae5698cd634e7d187a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad63e9bceb4dfe8a9551810774f5d9b64"><td class="memTemplParams" colspan="2">template&lt;typename S , typename I &gt; </td></tr>
-<tr class="memitem:ad63e9bceb4dfe8a9551810774f5d9b64"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacelagrange_1_1io.html#ad63e9bceb4dfe8a9551810774f5d9b64">save_mesh_obj</a> (std::ostream &amp;output_stream, const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; S, I &gt; &amp;mesh)</td></tr>
-<tr class="memdesc:ad63e9bceb4dfe8a9551810774f5d9b64"><td class="mdescLeft">&#160;</td><td class="mdescRight">Saves a .obj mesh to a stream.  <a href="namespacelagrange_1_1io.html#ad63e9bceb4dfe8a9551810774f5d9b64">More...</a><br /></td></tr>
-<tr class="separator:ad63e9bceb4dfe8a9551810774f5d9b64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb5e7076c6862714c3c259fade503edd"><td class="memTemplParams" colspan="2">template&lt;typename Scalar , typename Index &gt; </td></tr>
+<tr class="memitem:acb5e7076c6862714c3c259fade503edd"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacelagrange_1_1io.html#acb5e7076c6862714c3c259fade503edd">save_mesh_msh</a> (std::ostream &amp;output_stream, const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;mesh, const <a class="el" href="structlagrange_1_1io_1_1_msh_saver_options.html">MshSaverOptions</a> &amp;options={})</td></tr>
+<tr class="memdesc:acb5e7076c6862714c3c259fade503edd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Saves a mesh to a stream in MSH format.  <a href="namespacelagrange_1_1io.html#acb5e7076c6862714c3c259fade503edd">More...</a><br /></td></tr>
+<tr class="separator:acb5e7076c6862714c3c259fade503edd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21ae42c0493bb6c67850463776426af0"><td class="memTemplParams" colspan="2">template&lt;typename Scalar , typename Index &gt; </td></tr>
+<tr class="memitem:a21ae42c0493bb6c67850463776426af0"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacelagrange_1_1io.html#a21ae42c0493bb6c67850463776426af0">save_mesh_msh</a> (const fs::path &amp;filename, const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;mesh, const <a class="el" href="structlagrange_1_1io_1_1_msh_saver_options.html">MshSaverOptions</a> &amp;options={})</td></tr>
+<tr class="memdesc:a21ae42c0493bb6c67850463776426af0"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.  <a href="namespacelagrange_1_1io.html#a21ae42c0493bb6c67850463776426af0">More...</a><br /></td></tr>
+<tr class="separator:a21ae42c0493bb6c67850463776426af0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e9e63ff4fc98ad8e697db23a43e2e28"><td class="memTemplParams" colspan="2">template&lt;typename Scalar , typename Index &gt; </td></tr>
+<tr class="memitem:a4e9e63ff4fc98ad8e697db23a43e2e28"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacelagrange_1_1io.html#a4e9e63ff4fc98ad8e697db23a43e2e28">save_mesh_obj</a> (std::ostream &amp;output_stream, const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;mesh)</td></tr>
+<tr class="memdesc:a4e9e63ff4fc98ad8e697db23a43e2e28"><td class="mdescLeft">&#160;</td><td class="mdescRight">Saves a .obj mesh to a stream.  <a href="namespacelagrange_1_1io.html#a4e9e63ff4fc98ad8e697db23a43e2e28">More...</a><br /></td></tr>
+<tr class="separator:a4e9e63ff4fc98ad8e697db23a43e2e28"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0540fb6047f7b5295b774396fb76888c"><td class="memTemplParams" colspan="2">template&lt;typename Scalar , typename Index &gt; </td></tr>
+<tr class="memitem:a0540fb6047f7b5295b774396fb76888c"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacelagrange_1_1io.html#a0540fb6047f7b5295b774396fb76888c">save_mesh_obj</a> (const fs::path &amp;filename, const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;mesh)</td></tr>
+<tr class="memdesc:a0540fb6047f7b5295b774396fb76888c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Saves a .obj mesh to a file.  <a href="namespacelagrange_1_1io.html#a0540fb6047f7b5295b774396fb76888c">More...</a><br /></td></tr>
+<tr class="separator:a0540fb6047f7b5295b774396fb76888c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0f4b70495fcb53432d7b429f885d039b"><td class="memTemplParams" colspan="2"><a id="a0f4b70495fcb53432d7b429f885d039b" name="a0f4b70495fcb53432d7b429f885d039b"></a>
 template&lt;typename MeshType &gt; </td></tr>
 <tr class="memitem:a0f4b70495fcb53432d7b429f885d039b"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>save_mesh_ply</b> (const fs::path &amp;filename, const MeshType &amp;mesh, FileEncoding encoding=FileEncoding::Binary)</td></tr>
 <tr class="memdesc:a0f4b70495fcb53432d7b429f885d039b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Save .ply with color information (if available) <br /></td></tr>
 <tr class="separator:a0f4b70495fcb53432d7b429f885d039b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a463af57c5d5d077dbc167270780447f7"><td class="memTemplParams" colspan="2"><a id="a463af57c5d5d077dbc167270780447f7" name="a463af57c5d5d077dbc167270780447f7"></a>
-template&lt;typename Scalar , typename Index &gt; </td></tr>
-<tr class="memitem:a463af57c5d5d077dbc167270780447f7"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>save_mesh_obj</b> (std::ostream &amp;output_stream, const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;mesh)</td></tr>
-<tr class="separator:a463af57c5d5d077dbc167270780447f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p ><a class="el" href="classlagrange_1_1_mesh.html">Mesh</a> input/output. </p>
@@ -210,8 +229,62 @@ template&lt;typename Scalar , typename Index &gt; </td></tr>
 
 </div>
 </div>
-<a id="a7146cc88e6e1abd7226a8cdf49ec8911" name="a7146cc88e6e1abd7226a8cdf49ec8911"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7146cc88e6e1abd7226a8cdf49ec8911">&#9670;&nbsp;</a></span>load_mesh_obj()</h2>
+<a id="aaea4dd50cde93cd0b8c327a8fd08eabb" name="aaea4dd50cde93cd0b8c327a8fd08eabb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaea4dd50cde93cd0b8c327a8fd08eabb">&#9670;&nbsp;</a></span>load_mesh_msh() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MeshType load_mesh_msh </td>
+          <td>(</td>
+          <td class="paramtype">std::istream &amp;&#160;</td>
+          <td class="paramname"><em>input_stream</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Load a .msh file. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">input_stream</td><td>Input stream</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The loaded surface mesh. </dd></dl>
+
+</div>
+</div>
+<a id="a16369417666dae9749175060ae48c645" name="a16369417666dae9749175060ae48c645"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a16369417666dae9749175060ae48c645">&#9670;&nbsp;</a></span>load_mesh_msh() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MeshType lagrange::io::load_mesh_msh </td>
+          <td>(</td>
+          <td class="paramtype">const fs::path &amp;&#160;</td>
+          <td class="paramname"><em>filename</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">filename</td><td>Input mesh filename.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="namespacelagrange_1_1io.html#aaea4dd50cde93cd0b8c327a8fd08eabb" title="Load a .msh file.">load_mesh_msh(std::istream&amp;)</a> for more info. </dd></dl>
+
+</div>
+</div>
+<a id="a5a12591076fd01220e0e09eee60f28a0" name="a5a12591076fd01220e0e09eee60f28a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a12591076fd01220e0e09eee60f28a0">&#9670;&nbsp;</a></span>load_mesh_obj()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -219,7 +292,7 @@ template&lt;typename Scalar , typename Index &gt; </td></tr>
         <tr>
           <td class="memname">auto load_mesh_obj </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramtype">const fs::path &amp;&#160;</td>
           <td class="paramname"><em>filename</em>, </td>
         </tr>
         <tr>
@@ -236,10 +309,10 @@ template&lt;typename Scalar , typename Index &gt; </td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Loads a .obj mesh from a stream. </p>
+<p>Loads a .obj mesh from a file. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">filename</td><td>The stream to read data from. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">filename</td><td>The file to read data from. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">options</td><td>Optional configuration for the loader.</td></tr>
   </table>
   </dd>
@@ -254,14 +327,14 @@ template&lt;typename Scalar , typename Index &gt; </td></tr>
 
 </div>
 </div>
-<a id="ad63e9bceb4dfe8a9551810774f5d9b64" name="ad63e9bceb4dfe8a9551810774f5d9b64"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad63e9bceb4dfe8a9551810774f5d9b64">&#9670;&nbsp;</a></span>save_mesh_obj()</h2>
+<a id="acb5e7076c6862714c3c259fade503edd" name="acb5e7076c6862714c3c259fade503edd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb5e7076c6862714c3c259fade503edd">&#9670;&nbsp;</a></span>save_mesh_msh() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void lagrange::io::save_mesh_obj </td>
+          <td class="memname">void save_mesh_msh </td>
           <td>(</td>
           <td class="paramtype">std::ostream &amp;&#160;</td>
           <td class="paramname"><em>output_stream</em>, </td>
@@ -269,7 +342,102 @@ template&lt;typename Scalar , typename Index &gt; </td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; S, I &gt; &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;&#160;</td>
+          <td class="paramname"><em>mesh</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structlagrange_1_1io_1_1_msh_saver_options.html">MshSaverOptions</a> &amp;&#160;</td>
+          <td class="paramname"><em>options</em> = <code>{}</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Saves a mesh to a stream in MSH format. </p>
+<p >If the mesh cannot be saved, an exception is raised (e.g., invalid output stream, incorrect mesh dimension, or facet size &lt; 3).</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">output_stream</td><td>Output stream to write to. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mesh</td><td>Input mesh. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">options</td><td>Option settings.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Scalar</td><td><a class="el" href="classlagrange_1_1_mesh.html">Mesh</a> scalar type. </td></tr>
+    <tr><td class="paramname">Index</td><td><a class="el" href="classlagrange_1_1_mesh.html">Mesh</a> index type. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a21ae42c0493bb6c67850463776426af0" name="a21ae42c0493bb6c67850463776426af0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a21ae42c0493bb6c67850463776426af0">&#9670;&nbsp;</a></span>save_mesh_msh() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lagrange::io::save_mesh_msh </td>
+          <td>(</td>
+          <td class="paramtype">const fs::path &amp;&#160;</td>
+          <td class="paramname"><em>filename</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;&#160;</td>
+          <td class="paramname"><em>mesh</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structlagrange_1_1io_1_1_msh_saver_options.html">MshSaverOptions</a> &amp;&#160;</td>
+          <td class="paramname"><em>options</em> = <code>{}</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">filename</td><td>Output filename.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd>save_mesh_msh(std::ostream&amp;, const SurfaceMesh&lt;S, I&gt;&amp;, const MshOptions&amp;) for more info. </dd></dl>
+
+</div>
+</div>
+<a id="a4e9e63ff4fc98ad8e697db23a43e2e28" name="a4e9e63ff4fc98ad8e697db23a43e2e28"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e9e63ff4fc98ad8e697db23a43e2e28">&#9670;&nbsp;</a></span>save_mesh_obj() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void save_mesh_obj </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>output_stream</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;&#160;</td>
           <td class="paramname"><em>mesh</em>&#160;</td>
         </tr>
         <tr>
@@ -291,8 +459,53 @@ template&lt;typename Scalar , typename Index &gt; </td></tr>
 </dl>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">S</td><td><a class="el" href="classlagrange_1_1_mesh.html">Mesh</a> scalar type. </td></tr>
-    <tr><td class="paramname">I</td><td><a class="el" href="classlagrange_1_1_mesh.html">Mesh</a> index type. </td></tr>
+    <tr><td class="paramname">Scalar</td><td><a class="el" href="classlagrange_1_1_mesh.html">Mesh</a> scalar type. </td></tr>
+    <tr><td class="paramname">Index</td><td><a class="el" href="classlagrange_1_1_mesh.html">Mesh</a> index type. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a0540fb6047f7b5295b774396fb76888c" name="a0540fb6047f7b5295b774396fb76888c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0540fb6047f7b5295b774396fb76888c">&#9670;&nbsp;</a></span>save_mesh_obj() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void save_mesh_obj </td>
+          <td>(</td>
+          <td class="paramtype">const fs::path &amp;&#160;</td>
+          <td class="paramname"><em>filename</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;&#160;</td>
+          <td class="paramname"><em>mesh</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Saves a .obj mesh to a file. </p>
+<p >If the mesh cannot be saved, an exception is raised (e.g., invalid output stream, incorrect mesh dimension, or facet size &lt; 3).</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">filename</td><td>Output filename to write to. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mesh</td><td><a class="el" href="classlagrange_1_1_mesh.html">Mesh</a> to write as an obj.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Scalar</td><td><a class="el" href="classlagrange_1_1_mesh.html">Mesh</a> scalar type. </td></tr>
+    <tr><td class="paramname">Index</td><td><a class="el" href="classlagrange_1_1_mesh.html">Mesh</a> index type. </td></tr>
   </table>
   </dd>
 </dl>

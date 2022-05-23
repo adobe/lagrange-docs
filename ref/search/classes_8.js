@@ -15,6 +15,5 @@ var searchData=
   ['is_5fnoarg_5fcallable_5ft_3c_20t_2c_20decltype_28std_3a_3adeclval_3c_20t_20_26_26_20_3e_28_29_28_29_29_3e_12',['is_noarg_callable_t&lt; T, decltype(std::declval&lt; T &amp;&amp; &gt;()())&gt;',['../structlagrange_1_1sg__detail_1_1is__noarg__callable__t_3_01_t_00_01decltype_07std_1_1declval_3_01bcde3992b6c429809f04f2639841c74.html',1,'lagrange::sg_detail']]],
   ['is_5fnothrow_5finvocable_5fif_5frequired_5ft_13',['is_nothrow_invocable_if_required_t',['../structlagrange_1_1sg__detail_1_1is__nothrow__invocable__if__required__t.html',1,'lagrange::sg_detail']]],
   ['is_5fproper_5fsg_5fcallback_5ft_14',['is_proper_sg_callback_t',['../structlagrange_1_1sg__detail_1_1is__proper__sg__callback__t.html',1,'lagrange::sg_detail']]],
-  ['iterator_15',['iterator',['../classlagrange_1_1_edge_type_1_1iterator.html',1,'EdgeType&lt; Index &gt;::iterator'],['../classlagrange_1_1internal_1_1_range_1_1iterator.html',1,'Range&lt; T, Trait &gt;::iterator'],['../classlagrange_1_1internal_1_1_row_range_1_1iterator.html',1,'RowRange&lt; Derived, Trait &gt;::iterator'],['../classlagrange_1_1internal_1_1_sparse_range_1_1iterator.html',1,'SparseRange&lt; T, Trait &gt;::iterator']]],
-  ['iteratortrait_16',['IteratorTrait',['../structlagrange_1_1internal_1_1_iterator_trait.html',1,'lagrange::internal']]]
+  ['iterator_15',['iterator',['../classlagrange_1_1_edge_type_1_1iterator.html',1,'lagrange::EdgeType']]]
 ];

@@ -176,7 +176,7 @@ $(function() {
 <div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    <span class="comment">// Otherwise we could have just used total_mesh_area = facet_area.sum().</span></div>
 <div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    <span class="comment">// In the new version of eigen, we can also use facet_area( active_facets ).sum()</span></div>
 <div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    <a class="code hl_enumvalue" href="group__group-surfacemesh-attr.html#gga35b5eb426384b257452ee0ffdb732c27af60357a8d17e45793298323f1b372a74">Scalar</a> total_mesh_area = 0;</div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> facet_id : range_facets(mesh, active_facets)) {</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> facet_id : <a class="code hl_function" href="group__group-utils-misc.html#ga0be357120afca3098d989abf97e72b13">range_sparse</a>(mesh.get_num_facets(), active_facets)) {</div>
 <div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>        total_mesh_area += facet_area(facet_id);</div>
 <div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    }</div>
 <div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span> </div>
@@ -191,8 +191,8 @@ $(function() {
 <div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span> </div>
 <div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>    <span class="comment">// Find the bounding box of the active facets on the mesh</span></div>
 <div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>    BoundingBox bounding_box(n_dims);</div>
-<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> facet_id : range_facets(mesh, active_facets)) {</div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>        <span class="keywordflow">for</span> (<span class="keyword">auto</span> vertex_offset : range(mesh.get_vertex_per_facet())) {</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> facet_id : <a class="code hl_function" href="group__group-utils-misc.html#ga0be357120afca3098d989abf97e72b13">range_sparse</a>(mesh.get_num_facets(), active_facets)) {</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>        <span class="keywordflow">for</span> (<span class="keyword">auto</span> vertex_offset : <a class="code hl_function" href="group__group-utils-misc.html#ga68084717e646e9a6073e533d0b83a2b7">range</a>(mesh.get_vertex_per_facet())) {</div>
 <div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>            <span class="keyword">const</span> Index vertex_id = facets(facet_id, vertex_offset);</div>
 <div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>            <span class="comment">// bbox needs a column vector . Hence the transpose(). Arg...</span></div>
 <div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>            bounding_box.extend(vertices.row(vertex_id).transpose());</div>
@@ -290,7 +290,7 @@ $(function() {
 <div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>    <span class="comment">// than sampling length. Then get the midpoint of that triangle if</span></div>
 <div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>    <span class="comment">// its corresponding grid cell is not marked already.</span></div>
 <div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>    <span class="comment">//</span></div>
-<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> facet_id : range_facets(mesh, active_facets)) {</div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> facet_id : <a class="code hl_function" href="group__group-utils-misc.html#ga0be357120afca3098d989abf97e72b13">range_sparse</a>(mesh.get_num_facets(), active_facets)) {</div>
 <div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>        <span class="comment">//</span></div>
 <div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>        <span class="comment">// Splitting code follows.</span></div>
 <div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>        <span class="comment">// This is done rather inefficiently using a queue. There is no need for that.</span></div>
@@ -320,7 +320,7 @@ $(function() {
 <div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>            <span class="comment">// Find the longest edge in the triangle</span></div>
 <div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>            <a class="code hl_enumvalue" href="group__group-surfacemesh-attr.html#gga35b5eb426384b257452ee0ffdb732c27af60357a8d17e45793298323f1b372a74">Scalar</a> longest_edge_length = -std::numeric_limits&lt;Scalar&gt;::max();</div>
 <div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>            Index longest_edge_offset = invalid&lt;Index&gt;();</div>
-<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>            <span class="keywordflow">for</span> (<span class="keyword">auto</span> edge_offset : range(3)) {</div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>            <span class="keywordflow">for</span> (<span class="keyword">auto</span> edge_offset : <a class="code hl_function" href="group__group-utils-misc.html#ga68084717e646e9a6073e533d0b83a2b7">range</a>(3)) {</div>
 <div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>                <span class="keyword">const</span> <span class="keyword">auto</span> edge_offset_p1 = (edge_offset + 1) % 3;</div>
 <div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>                <span class="keyword">const</span> <a class="code hl_enumvalue" href="group__group-surfacemesh-attr.html#gga35b5eb426384b257452ee0ffdb732c27af60357a8d17e45793298323f1b372a74">Scalar</a> edge_length = (get_triangle_pos(current_facet, edge_offset) <span class="comment">//</span></div>
 <div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>                                            - get_triangle_pos(current_facet, edge_offset_p1))</div>
@@ -397,7 +397,7 @@ $(function() {
 <div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span>        <span class="keyword">auto</span> it_facet_id = sample_facet_ids.begin();</div>
 <div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span>        <span class="keyword">auto</span> it_position = sample_positions.begin();</div>
 <div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span>        <span class="comment">//</span></div>
-<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span>        <span class="keywordflow">for</span> (Index i : range(num_samples)) {</div>
+<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span>        <span class="keywordflow">for</span> (Index i : <a class="code hl_function" href="group__group-utils-misc.html#ga68084717e646e9a6073e533d0b83a2b7">range</a>(num_samples)) {</div>
 <div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span>            output.barycentrics.row(i) = *it_barycentric;</div>
 <div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span>            output.facet_ids[i] = *it_facet_id;</div>
 <div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span>            output.positions.row(i) = *it_position;</div>
@@ -422,7 +422,7 @@ $(function() {
 <div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span>    <span class="keyword">const</span> std::vector&lt;bool&gt;&amp; is_facet_active)</div>
 <div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span>{</div>
 <div class="line"><a id="l00353" name="l00353"></a><span class="lineno">  353</span>    <span class="keyword">typename</span> MeshType::IndexList active_facets;</div>
-<div class="line"><a id="l00354" name="l00354"></a><span class="lineno">  354</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> i : range(safe_cast&lt;typename MeshType::Index&gt;(is_facet_active.size()))) {</div>
+<div class="line"><a id="l00354" name="l00354"></a><span class="lineno">  354</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> i : <a class="code hl_function" href="group__group-utils-misc.html#ga68084717e646e9a6073e533d0b83a2b7">range</a>(safe_cast&lt;typename MeshType::Index&gt;(is_facet_active.size()))) {</div>
 <div class="line"><a id="l00355" name="l00355"></a><span class="lineno">  355</span>        <span class="keywordflow">if</span> (is_facet_active[i]) {</div>
 <div class="line"><a id="l00356" name="l00356"></a><span class="lineno">  356</span>            active_facets.push_back(i);</div>
 <div class="line"><a id="l00357" name="l00357"></a><span class="lineno">  357</span>        }</div>
@@ -445,6 +445,8 @@ $(function() {
 <div class="line"><a id="l00374" name="l00374"></a><span class="lineno">  374</span>} <span class="comment">// namespace lagrange</span></div>
 <div class="ttc" id="agroup__group-surfacemesh-attr_html_gga35b5eb426384b257452ee0ffdb732c27af60357a8d17e45793298323f1b372a74"><div class="ttname"><a href="group__group-surfacemesh-attr.html#gga35b5eb426384b257452ee0ffdb732c27af60357a8d17e45793298323f1b372a74">lagrange::AttributeUsage::Scalar</a></div><div class="ttdeci">@ Scalar</div><div class="ttdoc">Mesh attribute must have exactly 1 channel.</div></div>
 <div class="ttc" id="agroup__group-utils-assert_html_ga1ccafcb14523a1aae57dcac3c3f32ecd"><div class="ttname"><a href="group__group-utils-assert.html#ga1ccafcb14523a1aae57dcac3c3f32ecd">la_runtime_assert</a></div><div class="ttdeci">#define la_runtime_assert(...)</div><div class="ttdoc">Runtime assertion check.</div><div class="ttdef"><b>Definition:</b> assert.h:168</div></div>
+<div class="ttc" id="agroup__group-utils-misc_html_ga0be357120afca3098d989abf97e72b13"><div class="ttname"><a href="group__group-utils-misc.html#ga0be357120afca3098d989abf97e72b13">lagrange::range_sparse</a></div><div class="ttdeci">internal::SparseRange&lt; Index &gt; range_sparse(Index max, const std::vector&lt; Index &gt; &amp;active)</div><div class="ttdoc">Returns an iterable object representing a subset of the range [0, max).</div><div class="ttdef"><b>Definition:</b> range.h:217</div></div>
+<div class="ttc" id="agroup__group-utils-misc_html_ga68084717e646e9a6073e533d0b83a2b7"><div class="ttname"><a href="group__group-utils-misc.html#ga68084717e646e9a6073e533d0b83a2b7">lagrange::range</a></div><div class="ttdeci">internal::Range&lt; Index &gt; range(Index end)</div><div class="ttdoc">Returns an iterable object representing the range [0, end).</div><div class="ttdef"><b>Definition:</b> range.h:176</div></div>
 <div class="ttc" id="anamespacelagrange_html"><div class="ttname"><a href="namespacelagrange.html">lagrange</a></div><div class="ttdoc">Main namespace for Lagrange.</div></div>
 <div class="ttc" id="anamespacelagrange_html_ab6a6397294320512fc58eec12cf5ae33"><div class="ttname"><a href="namespacelagrange.html#ab6a6397294320512fc58eec12cf5ae33">lagrange::compute_facet_area</a></div><div class="ttdeci">void compute_facet_area(MeshType &amp;mesh)</div><div class="ttdoc">Calculates the facet areas.</div><div class="ttdef"><b>Definition:</b> compute_facet_area.h:176</div></div>
 <div class="ttc" id="astructlagrange_1_1_sample_points_on_surface_output_html"><div class="ttname"><a href="structlagrange_1_1_sample_points_on_surface_output.html">lagrange::SamplePointsOnSurfaceOutput</a></div><div class="ttdef"><b>Definition:</b> sample_points_on_surface.h:34</div></div>

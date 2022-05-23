@@ -124,7 +124,7 @@ $(function() {
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    }</div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    std::vector&lt;std::unique_ptr&lt;MeshType&gt;&gt; extracted_meshes;</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> i : range(facet_groups.size())) {</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> i : <a class="code hl_function" href="group__group-utils-misc.html#ga68084717e646e9a6073e533d0b83a2b7">range</a>(facet_groups.size())) {</div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        extracted_meshes.emplace_back(extract_submesh(</div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>            mesh,</div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>            facet_groups[i],</div>
@@ -165,11 +165,11 @@ $(function() {
 <div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    }</div>
 <div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
 <div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    MeshIndex count = 0;</div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> i : range(num_selected_facets)) {</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> i : <a class="code hl_function" href="group__group-utils-misc.html#ga68084717e646e9a6073e533d0b83a2b7">range</a>(num_selected_facets)) {</div>
 <div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>        <a class="code hl_define" href="group__group-utils-assert.html#ga1ccafcb14523a1aae57dcac3c3f32ecd">la_runtime_assert</a>(</div>
 <div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>            selected_facets[i] &gt;= 0 &amp;&amp; safe_cast&lt;MeshIndex&gt;(selected_facets[i]) &lt; num_facets,</div>
 <div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>            <span class="stringliteral">&quot;Facet index out of bound for submesh extraction&quot;</span>);</div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>        <span class="keywordflow">for</span> (<span class="keyword">auto</span> j : range(vertex_per_facet)) {</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>        <span class="keywordflow">for</span> (<span class="keyword">auto</span> j : <a class="code hl_function" href="group__group-utils-misc.html#ga68084717e646e9a6073e533d0b83a2b7">range</a>(vertex_per_facet)) {</div>
 <div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>            <span class="keyword">const</span> MeshIndex idx = facets(selected_facets[i], j);</div>
 <div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>            <span class="keywordflow">if</span> (sub_vertex_indices.find(idx) == sub_vertex_indices.end()) {</div>
 <div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>                sub_vertex_indices[idx] = count;</div>
@@ -199,6 +199,7 @@ $(function() {
 <div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>}</div>
 <div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>} <span class="comment">// namespace lagrange</span></div>
 <div class="ttc" id="agroup__group-utils-assert_html_ga1ccafcb14523a1aae57dcac3c3f32ecd"><div class="ttname"><a href="group__group-utils-assert.html#ga1ccafcb14523a1aae57dcac3c3f32ecd">la_runtime_assert</a></div><div class="ttdeci">#define la_runtime_assert(...)</div><div class="ttdoc">Runtime assertion check.</div><div class="ttdef"><b>Definition:</b> assert.h:168</div></div>
+<div class="ttc" id="agroup__group-utils-misc_html_ga68084717e646e9a6073e533d0b83a2b7"><div class="ttname"><a href="group__group-utils-misc.html#ga68084717e646e9a6073e533d0b83a2b7">lagrange::range</a></div><div class="ttdeci">internal::Range&lt; Index &gt; range(Index end)</div><div class="ttdoc">Returns an iterable object representing the range [0, end).</div><div class="ttdef"><b>Definition:</b> range.h:176</div></div>
 <div class="ttc" id="anamespacelagrange_html"><div class="ttname"><a href="namespacelagrange.html">lagrange</a></div><div class="ttdoc">Main namespace for Lagrange.</div></div>
 <div class="ttc" id="anamespacelagrange_html_a5dff747c765bd02e34d420ab60c30358"><div class="ttname"><a href="namespacelagrange.html#a5dff747c765bd02e34d420ab60c30358">lagrange::create_mesh</a></div><div class="ttdeci">auto create_mesh(const Eigen::MatrixBase&lt; DerivedV &gt; &amp;vertices, const Eigen::MatrixBase&lt; DerivedF &gt; &amp;facets)</div><div class="ttdoc">This function create a new mesh given the vertex and facet arrays by copying data into the Mesh objec...</div><div class="ttdef"><b>Definition:</b> create_mesh.h:39</div></div>
 </div><!-- fragment --></div><!-- contents -->

@@ -905,6 +905,10 @@ template&lt;typename MeshType &gt; </td></tr>
 <tr class="memitem:a9b1b8edd4573422f27af875ab25bf0ed"><td class="memTemplItemLeft" align="right" valign="top">std::unique_ptr&lt; MeshType &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacelagrange.html#a9b1b8edd4573422f27af875ab25bf0ed">thicken_and_close_mesh</a> (const MeshType &amp;input_mesh, ScalarOf&lt; MeshType &gt; offset_amount, typename MeshType::Index num_segments=1)</td></tr>
 <tr class="memdesc:a9b1b8edd4573422f27af875ab25bf0ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Thicken a mesh vertices along normals, and close the shape into a thick 3D solid.  <a href="namespacelagrange.html#a9b1b8edd4573422f27af875ab25bf0ed">More...</a><br /></td></tr>
 <tr class="separator:a9b1b8edd4573422f27af875ab25bf0ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48af6105ece8a970755870c73af73ddd"><td class="memTemplParams" colspan="2">template&lt;typename Scalar , typename Index &gt; </td></tr>
+<tr class="memitem:a48af6105ece8a970755870c73af73ddd"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacelagrange.html#a48af6105ece8a970755870c73af73ddd">triangulate_polygonal_facets</a> (<a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;mesh)</td></tr>
+<tr class="memdesc:a48af6105ece8a970755870c73af73ddd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Triangulate polygonal facets of a mesh using a prescribed set of rules.  <a href="namespacelagrange.html#a48af6105ece8a970755870c73af73ddd">More...</a><br /></td></tr>
+<tr class="separator:a48af6105ece8a970755870c73af73ddd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaf0eeb4d96ed545aadd3b6bf27ed631c6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group-utils-assert.html#gaf0eeb4d96ed545aadd3b6bf27ed631c6">set_breakpoint_enabled</a> (bool enabled)</td></tr>
 <tr class="memdesc:gaf0eeb4d96ed545aadd3b6bf27ed631c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets whether to trigger a debugger breakpoint on assert failure.  <a href="group__group-utils-assert.html#gaf0eeb4d96ed545aadd3b6bf27ed631c6">More...</a><br /></td></tr>
 <tr class="separator:gaf0eeb4d96ed545aadd3b6bf27ed631c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -936,11 +940,15 @@ template&lt;typename R , typename... Args&gt; </td></tr>
 <tr class="memitem:ga7338ffd0742e51046ac43879b3f1a44c"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><b>function_ref</b> (R(*)(Args...)) -&gt; <a class="el" href="classlagrange_1_1function__ref.html">function_ref</a>&lt; R(Args...)&gt;</td></tr>
 <tr class="memdesc:ga7338ffd0742e51046ac43879b3f1a44c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deduce <a class="el" href="classlagrange_1_1function__ref.html" title="A lightweight non-owning reference to a callable.">function_ref</a> type from a function pointer. <br /></td></tr>
 <tr class="separator:ga7338ffd0742e51046ac43879b3f1a44c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a17beda6b3e8c909e80155f8b8bd4b580"><td class="memTemplParams" colspan="2"><a id="a17beda6b3e8c909e80155f8b8bd4b580" name="a17beda6b3e8c909e80155f8b8bd4b580"></a>
+<tr class="memitem:a093f51ba753b715f88611bf43dc25a89"><td class="memTemplParams" colspan="2"><a id="a093f51ba753b715f88611bf43dc25a89" name="a093f51ba753b715f88611bf43dc25a89"></a>
 template&lt;typename Scalar &gt; </td></tr>
-<tr class="memitem:a17beda6b3e8c909e80155f8b8bd4b580"><td class="memTemplItemLeft" align="right" valign="top">Scalar&#160;</td><td class="memTemplItemRight" valign="bottom"><b>sqr_minimum_distance</b> (const Eigen::Matrix&lt; Scalar, 2, 1 &gt; &amp;a, const Eigen::Matrix&lt; Scalar, 2, 1 &gt; &amp;b, const Eigen::Matrix&lt; Scalar, 2, 1 &gt; &amp;p)</td></tr>
-<tr class="memdesc:a17beda6b3e8c909e80155f8b8bd4b580"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the squared minimum distance between 2d line segment ab and point p. <br /></td></tr>
-<tr class="separator:a17beda6b3e8c909e80155f8b8bd4b580"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a093f51ba753b715f88611bf43dc25a89"><td class="memTemplItemLeft" align="right" valign="top">Scalar&#160;</td><td class="memTemplItemRight" valign="bottom"><b>sqr_minimum_distance</b> (const Eigen::Vector2&lt; Scalar &gt; &amp;a, const Eigen::Vector2&lt; Scalar &gt; &amp;b, const Eigen::Vector2&lt; Scalar &gt; &amp;p)</td></tr>
+<tr class="memdesc:a093f51ba753b715f88611bf43dc25a89"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the squared minimum distance between 2d line segment ab and point p. <br /></td></tr>
+<tr class="separator:a093f51ba753b715f88611bf43dc25a89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2e9df5173515c23f1218ff2388212a5"><td class="memTemplParams" colspan="2"><a id="ab2e9df5173515c23f1218ff2388212a5" name="ab2e9df5173515c23f1218ff2388212a5"></a>
+template&lt;typename Scalar &gt; </td></tr>
+<tr class="memitem:ab2e9df5173515c23f1218ff2388212a5"><td class="memTemplItemLeft" align="right" valign="top">Eigen::Vector2&lt; Scalar &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>triangle_circumcenter</b> (const Eigen::Vector2&lt; Scalar &gt; &amp;p1, const Eigen::Vector2&lt; Scalar &gt; &amp;p2, const Eigen::Vector2&lt; Scalar &gt; &amp;p3)</td></tr>
+<tr class="separator:ab2e9df5173515c23f1218ff2388212a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad434bb442f4626b686930e83f389bcdd"><td class="memTemplParams" colspan="2">template&lt;typename Scalar , int _Rows, int _Cols&gt; </td></tr>
 <tr class="memitem:ad434bb442f4626b686930e83f389bcdd"><td class="memTemplItemLeft" align="right" valign="top">Scalar&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacelagrange.html#ad434bb442f4626b686930e83f389bcdd">cos_angle_between</a> (const Eigen::Matrix&lt; Scalar, _Rows, _Cols &gt; &amp;v1, const Eigen::Matrix&lt; Scalar, _Rows, _Cols &gt; &amp;v2)</td></tr>
 <tr class="memdesc:ad434bb442f4626b686930e83f389bcdd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the cosine of the angle between two 3d vectors.  <a href="namespacelagrange.html#ad434bb442f4626b686930e83f389bcdd">More...</a><br /></td></tr>
@@ -978,50 +986,18 @@ template&lt;typename Scalar , int _Rows, int _Cols&gt; </td></tr>
 <tr class="memitem:ga1bcf428c70e279f7c3b8dce0f0ad88eb"><td class="memTemplItemLeft" align="right" valign="top">constexpr T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__group-utils-misc.html#ga1bcf428c70e279f7c3b8dce0f0ad88eb">invalid</a> ()</td></tr>
 <tr class="memdesc:ga1bcf428c70e279f7c3b8dce0f0ad88eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">You can use <a class="el" href="group__group-utils-misc.html#ga1bcf428c70e279f7c3b8dce0f0ad88eb" title="You can use invalid&lt;T&gt;() to get a value that can represent &quot;invalid&quot; values, such as indices.">invalid&lt;T&gt;()</a> to get a value that can represent "invalid" values, such as indices.  <a href="group__group-utils-misc.html#ga1bcf428c70e279f7c3b8dce0f0ad88eb">More...</a><br /></td></tr>
 <tr class="separator:ga1bcf428c70e279f7c3b8dce0f0ad88eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a558a09b77a14f76bebe1035406d477a1"><td class="memTemplParams" colspan="2"><a id="a558a09b77a14f76bebe1035406d477a1" name="a558a09b77a14f76bebe1035406d477a1"></a>
-template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a558a09b77a14f76bebe1035406d477a1"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classlagrange_1_1internal_1_1_range.html">internal::Range</a>&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>range</b> (T end)</td></tr>
-<tr class="separator:a558a09b77a14f76bebe1035406d477a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acc429e3488ced37f49b4972253be8ee5"><td class="memTemplParams" colspan="2"><a id="acc429e3488ced37f49b4972253be8ee5" name="acc429e3488ced37f49b4972253be8ee5"></a>
-template&lt;typename T &gt; </td></tr>
-<tr class="memitem:acc429e3488ced37f49b4972253be8ee5"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classlagrange_1_1internal_1_1_range.html">internal::Range</a>&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>range</b> (T begin, T end)</td></tr>
-<tr class="separator:acc429e3488ced37f49b4972253be8ee5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afe88ee35fc8e1a552bb00a7ed5214614"><td class="memTemplParams" colspan="2"><a id="afe88ee35fc8e1a552bb00a7ed5214614" name="afe88ee35fc8e1a552bb00a7ed5214614"></a>
-template&lt;typename Derived &gt; </td></tr>
-<tr class="memitem:afe88ee35fc8e1a552bb00a7ed5214614"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classlagrange_1_1internal_1_1_row_range.html">internal::RowRange</a>&lt; Derived &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>row_range</b> (const Derived &amp;data)</td></tr>
-<tr class="separator:afe88ee35fc8e1a552bb00a7ed5214614"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7d3af1af41a3c8ebb5b634aea4d40dd7"><td class="memTemplParams" colspan="2"><a id="a7d3af1af41a3c8ebb5b634aea4d40dd7" name="a7d3af1af41a3c8ebb5b634aea4d40dd7"></a>
-template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a7d3af1af41a3c8ebb5b634aea4d40dd7"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classlagrange_1_1internal_1_1_sparse_range.html">internal::SparseRange</a>&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>range_sparse</b> (T max, const std::vector&lt; T &gt; &amp;active)</td></tr>
-<tr class="separator:a7d3af1af41a3c8ebb5b634aea4d40dd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a57e4219b8a16abca32a3ef01e7f6896f"><td class="memTemplParams" colspan="2"><a id="a57e4219b8a16abca32a3ef01e7f6896f" name="a57e4219b8a16abca32a3ef01e7f6896f"></a>
-template&lt;typename MeshType &gt; </td></tr>
-<tr class="memitem:a57e4219b8a16abca32a3ef01e7f6896f"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classlagrange_1_1internal_1_1_range.html">internal::Range</a>&lt; typename MeshType::Index &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>range_facets</b> (const MeshType &amp;mesh)</td></tr>
-<tr class="separator:a57e4219b8a16abca32a3ef01e7f6896f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a70dc72ba540e4134c2bf8e4e72ab084d"><td class="memTemplParams" colspan="2"><a id="a70dc72ba540e4134c2bf8e4e72ab084d" name="a70dc72ba540e4134c2bf8e4e72ab084d"></a>
-template&lt;typename MeshType &gt; </td></tr>
-<tr class="memitem:a70dc72ba540e4134c2bf8e4e72ab084d"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classlagrange_1_1internal_1_1_sparse_range.html">internal::SparseRange</a>&lt; typename MeshType::Index &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>range_facets</b> (const MeshType &amp;mesh, const typename MeshType::IndexList &amp;active)</td></tr>
-<tr class="separator:a70dc72ba540e4134c2bf8e4e72ab084d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab2c2af1e0a439b15a31a6b5ef24ca380"><td class="memTemplParams" colspan="2"><a id="ab2c2af1e0a439b15a31a6b5ef24ca380" name="ab2c2af1e0a439b15a31a6b5ef24ca380"></a>
-template&lt;typename MeshType &gt; </td></tr>
-<tr class="memitem:ab2c2af1e0a439b15a31a6b5ef24ca380"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classlagrange_1_1internal_1_1_range.html">internal::Range</a>&lt; typename MeshType::Index &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>range_vertices</b> (const MeshType &amp;mesh)</td></tr>
-<tr class="separator:ab2c2af1e0a439b15a31a6b5ef24ca380"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a554777bb213d2fcb7d8f46ea17306d79"><td class="memTemplParams" colspan="2"><a id="a554777bb213d2fcb7d8f46ea17306d79" name="a554777bb213d2fcb7d8f46ea17306d79"></a>
-template&lt;typename MeshType &gt; </td></tr>
-<tr class="memitem:a554777bb213d2fcb7d8f46ea17306d79"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classlagrange_1_1internal_1_1_sparse_range.html">internal::SparseRange</a>&lt; typename MeshType::Index &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>range_vertices</b> (const MeshType &amp;mesh, const typename MeshType::IndexList &amp;active)</td></tr>
-<tr class="separator:a554777bb213d2fcb7d8f46ea17306d79"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae7515e5c767d1e8bbcde886e3e5646b3"><td class="memTemplParams" colspan="2"><a id="ae7515e5c767d1e8bbcde886e3e5646b3" name="ae7515e5c767d1e8bbcde886e3e5646b3"></a>
-template&lt;typename T &gt; </td></tr>
-<tr class="memitem:ae7515e5c767d1e8bbcde886e3e5646b3"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classlagrange_1_1internal_1_1_sparse_range.html">internal::SparseRange</a>&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>range_sparse</b> (T, std::vector&lt; T &gt; &amp;&amp;)</td></tr>
-<tr class="separator:ae7515e5c767d1e8bbcde886e3e5646b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2f8d73a77565433ceca46f24a7c6ca65"><td class="memTemplParams" colspan="2"><a id="a2f8d73a77565433ceca46f24a7c6ca65" name="a2f8d73a77565433ceca46f24a7c6ca65"></a>
-template&lt;typename MeshType &gt; </td></tr>
-<tr class="memitem:a2f8d73a77565433ceca46f24a7c6ca65"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classlagrange_1_1internal_1_1_sparse_range.html">internal::SparseRange</a>&lt; typename MeshType::Index &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>range_facets</b> (const MeshType &amp;, typename MeshType::IndexList &amp;&amp;)</td></tr>
-<tr class="separator:a2f8d73a77565433ceca46f24a7c6ca65"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af5cdbc911b4788e936fa5015e7ad12c4"><td class="memTemplParams" colspan="2"><a id="af5cdbc911b4788e936fa5015e7ad12c4" name="af5cdbc911b4788e936fa5015e7ad12c4"></a>
-template&lt;typename MeshType &gt; </td></tr>
-<tr class="memitem:af5cdbc911b4788e936fa5015e7ad12c4"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classlagrange_1_1internal_1_1_sparse_range.html">internal::SparseRange</a>&lt; typename MeshType::Index &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>range_vertices</b> (const MeshType &amp;, typename MeshType::IndexList &amp;&amp;)</td></tr>
-<tr class="separator:af5cdbc911b4788e936fa5015e7ad12c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga68084717e646e9a6073e533d0b83a2b7"><td class="memTemplParams" colspan="2">template&lt;typename Index &gt; </td></tr>
+<tr class="memitem:ga68084717e646e9a6073e533d0b83a2b7"><td class="memTemplItemLeft" align="right" valign="top">internal::Range&lt; Index &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__group-utils-misc.html#ga68084717e646e9a6073e533d0b83a2b7">range</a> (Index end)</td></tr>
+<tr class="memdesc:ga68084717e646e9a6073e533d0b83a2b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an iterable object representing the range [0, end).  <a href="group__group-utils-misc.html#ga68084717e646e9a6073e533d0b83a2b7">More...</a><br /></td></tr>
+<tr class="separator:ga68084717e646e9a6073e533d0b83a2b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga140b5693eb5f63b5e2470a300aeded12"><td class="memTemplParams" colspan="2">template&lt;typename Index &gt; </td></tr>
+<tr class="memitem:ga140b5693eb5f63b5e2470a300aeded12"><td class="memTemplItemLeft" align="right" valign="top">internal::Range&lt; Index &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__group-utils-misc.html#ga140b5693eb5f63b5e2470a300aeded12">range</a> (Index begin, Index end)</td></tr>
+<tr class="memdesc:ga140b5693eb5f63b5e2470a300aeded12"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an iterable object representing the range [begin, end).  <a href="group__group-utils-misc.html#ga140b5693eb5f63b5e2470a300aeded12">More...</a><br /></td></tr>
+<tr class="separator:ga140b5693eb5f63b5e2470a300aeded12"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0be357120afca3098d989abf97e72b13"><td class="memTemplParams" colspan="2">template&lt;typename Index &gt; </td></tr>
+<tr class="memitem:ga0be357120afca3098d989abf97e72b13"><td class="memTemplItemLeft" align="right" valign="top">internal::SparseRange&lt; Index &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__group-utils-misc.html#ga0be357120afca3098d989abf97e72b13">range_sparse</a> (Index max, const std::vector&lt; Index &gt; &amp;active)</td></tr>
+<tr class="memdesc:ga0be357120afca3098d989abf97e72b13"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an iterable object representing a subset of the range [0, max).  <a href="group__group-utils-misc.html#ga0be357120afca3098d989abf97e72b13">More...</a><br /></td></tr>
+<tr class="separator:ga0be357120afca3098d989abf97e72b13"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga2a5fd2842da78b90fdc7b959aec8036a"><td class="memTemplParams" colspan="2">template&lt;typename TargetType , typename SourceType &gt; </td></tr>
 <tr class="memitem:ga2a5fd2842da78b90fdc7b959aec8036a"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__group-utils-misc.html#ga2a5fd2842da78b90fdc7b959aec8036a">safe_cast</a> (SourceType value) -&gt; std::enable_if_t&lt;!std::is_same&lt; SourceType, TargetType &gt;::value, TargetType &gt;</td></tr>
 <tr class="memdesc:ga2a5fd2842da78b90fdc7b959aec8036a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform safe cast from <code>SourceType</code> to <code>TargetType</code>, where "safe" means:  <a href="group__group-utils-misc.html#ga2a5fd2842da78b90fdc7b959aec8036a">More...</a><br /></td></tr>
@@ -1082,9 +1058,9 @@ template&lt;typename Derived , typename Scalar &gt; </td></tr>
 template&lt;typename Derived , typename Scalar &gt; </td></tr>
 <tr class="memitem:a7379547b30927f1f52a297665054e8fc"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>eigen_to_flat_vector</b> (const Eigen::MatrixBase&lt; Derived &gt; &amp;from, std::vector&lt; Scalar &gt; &amp;to, int row_major_flag=Eigen::RowMajor)</td></tr>
 <tr class="separator:a7379547b30927f1f52a297665054e8fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6eabc7f76dfaece9420bad9ad81c844a"><td class="memItemLeft" align="right" valign="top"><a id="a6eabc7f76dfaece9420bad9ad81c844a" name="a6eabc7f76dfaece9420bad9ad81c844a"></a>
-std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>string_split</b> (const std::string &amp;s, char delimiter)</td></tr>
-<tr class="separator:a6eabc7f76dfaece9420bad9ad81c844a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad2f13bef4d8b9c7c6b2dc61b87d95bd4"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group-utils-misc.html#gad2f13bef4d8b9c7c6b2dc61b87d95bd4">string_split</a> (const std::string &amp;str, char delimiter)</td></tr>
+<tr class="memdesc:gad2f13bef4d8b9c7c6b2dc61b87d95bd4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Split a std::string using a prescribed delimiter.  <a href="group__group-utils-misc.html#gad2f13bef4d8b9c7c6b2dc61b87d95bd4">More...</a><br /></td></tr>
+<tr class="separator:gad2f13bef4d8b9c7c6b2dc61b87d95bd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaebb929afb5049cc3aaaabd296f556ac3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group-utils-misc.html#gaebb929afb5049cc3aaaabd296f556ac3">starts_with</a> (std::string_view str, std::string_view prefix)</td></tr>
 <tr class="memdesc:gaebb929afb5049cc3aaaabd296f556ac3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the string begins with the given prefix.  <a href="group__group-utils-misc.html#gaebb929afb5049cc3aaaabd296f556ac3">More...</a><br /></td></tr>
 <tr class="separator:gaebb929afb5049cc3aaaabd296f556ac3"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1243,6 +1219,22 @@ REAL&#160;</td><td class="memItemRight" valign="bottom"><b>insphereadapt</b> (co
 <tr class="memitem:afa5d5eff1af12dbe5f40292a7cfe6aec"><td class="memItemLeft" align="right" valign="top"><a id="afa5d5eff1af12dbe5f40292a7cfe6aec" name="afa5d5eff1af12dbe5f40292a7cfe6aec"></a>
 REAL&#160;</td><td class="memItemRight" valign="bottom"><b>insphere</b> (const REAL *pa, const REAL *pb, const REAL *pc, const REAL *pd, const REAL *pe)</td></tr>
 <tr class="separator:afa5d5eff1af12dbe5f40292a7cfe6aec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a970b81a3e9b0d1a44f3adc7e2cdf580c"><td class="memTemplParams" colspan="2"><a id="a970b81a3e9b0d1a44f3adc7e2cdf580c" name="a970b81a3e9b0d1a44f3adc7e2cdf580c"></a>
+template&lt;typename Scalar , typename Index &gt; </td></tr>
+<tr class="memitem:a970b81a3e9b0d1a44f3adc7e2cdf580c"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>append_triangles_from_quad</b> (const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;mesh, Index f, std::vector&lt; Index &gt; &amp;new_to_old_corners, std::vector&lt; Index &gt; &amp;new_to_old_facets)</td></tr>
+<tr class="separator:a970b81a3e9b0d1a44f3adc7e2cdf580c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a10d3207563ee43d0a8f882300041c935"><td class="memTemplParams" colspan="2"><a id="a10d3207563ee43d0a8f882300041c935" name="a10d3207563ee43d0a8f882300041c935"></a>
+template&lt;typename Scalar , typename Index &gt; </td></tr>
+<tr class="memitem:a10d3207563ee43d0a8f882300041c935"><td class="memTemplItemLeft" align="right" valign="top">Eigen::Vector3&lt; Scalar &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>facet_normal</b> (const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;mesh, Index f)</td></tr>
+<tr class="separator:a10d3207563ee43d0a8f882300041c935"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae03e8e86e41f5c73dc585d8a25c96fed"><td class="memTemplParams" colspan="2"><a id="ae03e8e86e41f5c73dc585d8a25c96fed" name="ae03e8e86e41f5c73dc585d8a25c96fed"></a>
+template&lt;typename Scalar , typename Index &gt; </td></tr>
+<tr class="memitem:ae03e8e86e41f5c73dc585d8a25c96fed"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><b>find_best_2d_axes</b> (const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;mesh, Index f)</td></tr>
+<tr class="separator:ae03e8e86e41f5c73dc585d8a25c96fed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43bece44818b45f6d459fd145debfc2a"><td class="memTemplParams" colspan="2"><a id="a43bece44818b45f6d459fd145debfc2a" name="a43bece44818b45f6d459fd145debfc2a"></a>
+template&lt;typename Scalar , typename Index &gt; </td></tr>
+<tr class="memitem:a43bece44818b45f6d459fd145debfc2a"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>append_triangles_from_polygon</b> (<a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;mesh, Index f, std::vector&lt; std::array&lt; Scalar, 2 &gt; &gt; &amp;polygon, <a class="el" href="classlagrange_1_1mapbox_1_1detail_1_1_earcut.html">mapbox::detail::Earcut</a>&lt; Index &gt; &amp;earcut, std::vector&lt; Index &gt; &amp;new_to_old_corners, std::vector&lt; Index &gt; &amp;new_to_old_facets)</td></tr>
+<tr class="separator:a43bece44818b45f6d459fd145debfc2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a543dd5597eb971f6bc033d98c43668e0"><td class="memTemplParams" colspan="2">template&lt;typename DerivedV , typename DerivedE &gt; </td></tr>
 <tr class="memitem:a543dd5597eb971f6bc033d98c43668e0"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacelagrange.html#a543dd5597eb971f6bc033d98c43668e0">save_graph_off</a> (const fs::path &amp;filename, const Eigen::MatrixBase&lt; DerivedV &gt; &amp;V, const Eigen::MatrixBase&lt; DerivedE &gt; &amp;E)</td></tr>
 <tr class="memdesc:a543dd5597eb971f6bc033d98c43668e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Saves a 2D undirected graph (V,E) using off format.  <a href="namespacelagrange.html#a543dd5597eb971f6bc033d98c43668e0">More...</a><br /></td></tr>
@@ -3210,6 +3202,39 @@ REAL&#160;</td><td class="memItemRight" valign="bottom"><b>insphere</b> (const R
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A mesh of the offset and closed surface. </dd></dl>
+
+</div>
+</div>
+<a id="a48af6105ece8a970755870c73af73ddd" name="a48af6105ece8a970755870c73af73ddd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a48af6105ece8a970755870c73af73ddd">&#9670;&nbsp;</a></span>triangulate_polygonal_facets()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void triangulate_polygonal_facets </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;&#160;</td>
+          <td class="paramname"><em>mesh</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Triangulate polygonal facets of a mesh using a prescribed set of rules. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">mesh</td><td>Polygonal mesh to triangulate in place.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Scalar</td><td><a class="el" href="classlagrange_1_1_mesh.html">Mesh</a> scalar type. </td></tr>
+    <tr><td class="paramname">Index</td><td><a class="el" href="classlagrange_1_1_mesh.html">Mesh</a> index type. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

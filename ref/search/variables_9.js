@@ -28,7 +28,7 @@ var searchData=
   ['m_5fnum_5fvertices_25',['m_num_vertices',['../classlagrange_1_1_surface_mesh.html#a3d8d10df9aa6182d07aa7e9edac1113a',1,'lagrange::SurfaceMesh']]],
   ['m_5fusage_26',['m_usage',['../classlagrange_1_1_attribute_base.html#a667161a6d4fbe00de98827ad341303d4',1,'lagrange::AttributeBase']]],
   ['m_5fv2c_27',['m_v2c',['../classlagrange_1_1_mesh_navigation.html#a5dac6fa483c83bf54ac21a8c607445d5',1,'lagrange::MeshNavigation']]],
-  ['m_5fvertex_5fper_5ffacet_28',['m_vertex_per_facet',['../classlagrange_1_1_mesh_navigation.html#a33cac9ba2ec56d46630bb3990de78881',1,'lagrange::MeshNavigation::m_vertex_per_facet()'],['../classlagrange_1_1_surface_mesh.html#a33cac9ba2ec56d46630bb3990de78881',1,'lagrange::SurfaceMesh::m_vertex_per_facet()']]],
+  ['m_5fvertex_5fper_5ffacet_28',['m_vertex_per_facet',['../classlagrange_1_1_surface_mesh.html#a33cac9ba2ec56d46630bb3990de78881',1,'lagrange::SurfaceMesh::m_vertex_per_facet()'],['../classlagrange_1_1_mesh_navigation.html#a33cac9ba2ec56d46630bb3990de78881',1,'lagrange::MeshNavigation::m_vertex_per_facet()']]],
   ['m_5fvertex_5fto_5ffirst_5fcorner_5fid_29',['m_vertex_to_first_corner_id',['../classlagrange_1_1_surface_mesh.html#ab451cac9a1719b450b8ab3982c6b9554',1,'lagrange::SurfaceMesh']]],
   ['m_5fvertex_5fto_5fposition_5fid_30',['m_vertex_to_position_id',['../classlagrange_1_1_surface_mesh.html#a766b8d537ba92821a24f5e276ba103b0',1,'lagrange::SurfaceMesh']]],
   ['m_5fview_31',['m_view',['../classlagrange_1_1_attribute.html#a06e582d328b836d89ac8e2c1d29845a5',1,'lagrange::Attribute']]],

@@ -51,9 +51,8 @@ var searchData=
   ['skyboxcubevertexdata_48',['SkyboxCubeVertexData',['../structlagrange_1_1ui_1_1_skybox_cube_vertex_data.html',1,'lagrange::ui']]],
   ['smallset_49',['SmallSet',['../structlagrange_1_1_small_set.html',1,'lagrange']]],
   ['smallvector_50',['SmallVector',['../structlagrange_1_1_small_vector.html',1,'lagrange']]],
-  ['sparserange_51',['SparseRange',['../classlagrange_1_1internal_1_1_sparse_range.html',1,'lagrange::internal']]],
-  ['staticassertablebool_52',['StaticAssertableBool',['../structlagrange_1_1_static_assertable_bool.html',1,'lagrange']]],
-  ['subselection_53',['SubSelection',['../structlagrange_1_1ui_1_1_sub_selection.html',1,'lagrange::ui']]],
-  ['surfacemesh_54',['SurfaceMesh',['../classlagrange_1_1_surface_mesh.html',1,'lagrange']]],
-  ['systems_55',['Systems',['../classlagrange_1_1ui_1_1_systems.html',1,'lagrange::ui']]]
+  ['staticassertablebool_51',['StaticAssertableBool',['../structlagrange_1_1_static_assertable_bool.html',1,'lagrange']]],
+  ['subselection_52',['SubSelection',['../structlagrange_1_1ui_1_1_sub_selection.html',1,'lagrange::ui']]],
+  ['surfacemesh_53',['SurfaceMesh',['../classlagrange_1_1_surface_mesh.html',1,'lagrange']]],
+  ['systems_54',['Systems',['../classlagrange_1_1ui_1_1_systems.html',1,'lagrange::ui']]]
 ];

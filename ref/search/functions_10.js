@@ -8,10 +8,11 @@ var searchData=
   ['to_5fradians_5',['to_radians',['../namespacelagrange.html#a47ecfc247da42a513952056dfc91da59',1,'lagrange']]],
   ['to_5fshared_5fptr_6',['to_shared_ptr',['../namespacelagrange.html#a27570b092da991a8e36c8fe8747a33dd',1,'lagrange']]],
   ['to_5fstring_7',['to_string',['../classlagrange_1_1ui_1_1_keybinds.html#a9aa0baba4873739371518a472e1c3899',1,'lagrange::ui::Keybinds::to_string(const Keybind &amp;keybind)'],['../classlagrange_1_1ui_1_1_keybinds.html#a71f0878cdea1c0a3392941bbfdbb1cfa',1,'lagrange::ui::Keybinds::to_string(int key)'],['../classlagrange_1_1ui_1_1_keybinds.html#ab98e65ba9635cdc540e24c847c25313e',1,'lagrange::ui::Keybinds::to_string(const std::string &amp;action, int limit=1) const']]],
-  ['tock_8',['tock',['../classlagrange_1_1_verbose_timer.html#afaaa29b2d16059bbf5580e31995959fa',1,'lagrange::VerboseTimer::tock()'],['../classlagrange_1_1_silent_timer.html#afaaa29b2d16059bbf5580e31995959fa',1,'lagrange::SilentTimer::tock()']]],
+  ['tock_8',['tock',['../classlagrange_1_1_silent_timer.html#afaaa29b2d16059bbf5580e31995959fa',1,'lagrange::SilentTimer::tock()'],['../classlagrange_1_1_verbose_timer.html#afaaa29b2d16059bbf5580e31995959fa',1,'lagrange::VerboseTimer::tock()']]],
   ['toggle_5fcomponent_5fevent_9',['toggle_component_event',['../namespacelagrange_1_1ui.html#a4f6e265eb0e2b73093dca70e5a484f92',1,'lagrange::ui']]],
   ['total_10',['total',['../classlagrange_1_1_silent_multi_timer.html#a85ac1d5839132d0721665e01b9249496',1,'lagrange::SilentMultiTimer']]],
   ['transformed_11',['transformed',['../classlagrange_1_1ui_1_1_camera.html#aeee9730864397c4019d1773584626770',1,'lagrange::ui::Camera']]],
-  ['trigger_5fbreakpoint_12',['trigger_breakpoint',['../group__group-utils-assert.html#ga82afecd46baab6fadf8dfa8d7dbea5ec',1,'lagrange']]],
-  ['two_5fpi_13',['two_pi',['../namespacelagrange_1_1ui.html#ab5dc91ffacc9f30a4af58def59640f5d',1,'lagrange::ui']]]
+  ['triangulate_5fpolygonal_5ffacets_12',['triangulate_polygonal_facets',['../namespacelagrange.html#a48af6105ece8a970755870c73af73ddd',1,'lagrange']]],
+  ['trigger_5fbreakpoint_13',['trigger_breakpoint',['../group__group-utils-assert.html#ga82afecd46baab6fadf8dfa8d7dbea5ec',1,'lagrange']]],
+  ['two_5fpi_14',['two_pi',['../namespacelagrange_1_1ui.html#ab5dc91ffacc9f30a4af58def59640f5d',1,'lagrange::ui']]]
 ];

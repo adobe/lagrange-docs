@@ -105,7 +105,7 @@ $(function() {
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    std::vector&lt;Index&gt; boundary_next(num_vertices, invalid&lt;Index&gt;());</div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="keyword">const</span> Index num_edges = mesh.get_num_edges();</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> ei : range(num_edges)) {</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> ei : <a class="code hl_function" href="group__group-utils-misc.html#ga68084717e646e9a6073e533d0b83a2b7">range</a>(num_edges)) {</div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        <span class="keywordflow">if</span> (mesh.is_boundary_edge(ei)) {</div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>            <span class="keyword">const</span> <span class="keyword">auto</span> edge = mesh.get_edge_vertices(ei);</div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>            <span class="keywordflow">if</span> (boundary_next[edge[0]] != invalid&lt;Index&gt;() &amp;&amp; boundary_next[edge[0]] != edge[1]) {</div>
@@ -136,6 +136,7 @@ $(function() {
 <div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    <span class="keywordflow">return</span> bd_loops;</div>
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>}</div>
 <div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>} <span class="comment">// namespace lagrange</span></div>
+<div class="ttc" id="agroup__group-utils-misc_html_ga68084717e646e9a6073e533d0b83a2b7"><div class="ttname"><a href="group__group-utils-misc.html#ga68084717e646e9a6073e533d0b83a2b7">lagrange::range</a></div><div class="ttdeci">internal::Range&lt; Index &gt; range(Index end)</div><div class="ttdoc">Returns an iterable object representing the range [0, end).</div><div class="ttdef"><b>Definition:</b> range.h:176</div></div>
 <div class="ttc" id="anamespacelagrange_html"><div class="ttname"><a href="namespacelagrange.html">lagrange</a></div><div class="ttdoc">Main namespace for Lagrange.</div></div>
 <div class="ttc" id="anamespacelagrange_html_abbf0999f20e8aa0f9e6d2a2fe6c17cd2"><div class="ttname"><a href="namespacelagrange.html#abbf0999f20e8aa0f9e6d2a2fe6c17cd2">lagrange::extract_boundary_loops</a></div><div class="ttdeci">std::vector&lt; std::vector&lt; typename MeshType::Index &gt; &gt; extract_boundary_loops(MeshType &amp;mesh)</div><div class="ttdoc">Extract boundary loops.</div><div class="ttdef"><b>Definition:</b> extract_boundary_loops.h:38</div></div>
 <div class="ttc" id="astructlagrange_1_1_mesh_trait_html"><div class="ttname"><a href="structlagrange_1_1_mesh_trait.html">lagrange::MeshTrait</a></div><div class="ttdoc">MeshTrait class provide compiler check for different mesh types.</div><div class="ttdef"><b>Definition:</b> MeshTrait.h:108</div></div>

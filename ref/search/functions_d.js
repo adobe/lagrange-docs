@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['par_5fforeach_5fattribute_5fid_0',['par_foreach_attribute_id',['../classlagrange_1_1_surface_mesh.html#a09be8d43ffe0507de31bccd15143f928',1,'lagrange::SurfaceMesh::par_foreach_attribute_id(function_ref&lt; void(AttributeId)&gt; func) const'],['../classlagrange_1_1_surface_mesh.html#a91ab5e6343f4b3c85288a7c35d2261c8',1,'lagrange::SurfaceMesh::par_foreach_attribute_id(function_ref&lt; void(std::string_view, AttributeId)&gt; func) const']]],
+  ['par_5fforeach_5fattribute_5fid_0',['par_foreach_attribute_id',['../classlagrange_1_1_surface_mesh.html#a91ab5e6343f4b3c85288a7c35d2261c8',1,'lagrange::SurfaceMesh::par_foreach_attribute_id(function_ref&lt; void(std::string_view, AttributeId)&gt; func) const'],['../classlagrange_1_1_surface_mesh.html#a09be8d43ffe0507de31bccd15143f928',1,'lagrange::SurfaceMesh::par_foreach_attribute_id(function_ref&lt; void(AttributeId)&gt; func) const']]],
   ['par_5fforeach_5fattribute_5fread_1',['par_foreach_attribute_read',['../group__group-surfacemesh-iterate.html#gaf17ea3ab86409dcf90bdf2cb9d7fd830',1,'lagrange']]],
   ['par_5fforeach_5fattribute_5fwrite_2',['par_foreach_attribute_write',['../group__group-surfacemesh-iterate.html#gab8327da1903fcb919d87b7fd6b7ea479',1,'lagrange']]],
   ['par_5fforeach_5fnamed_5fattribute_5fread_3',['par_foreach_named_attribute_read',['../group__group-surfacemesh-iterate.html#gade068c96e01f887e149c982f8179b6bf',1,'lagrange']]],

@@ -120,6 +120,18 @@ template&lt;typename R , typename... Args&gt; </td></tr>
 <tr class="memitem:ga1bcf428c70e279f7c3b8dce0f0ad88eb"><td class="memTemplItemLeft" align="right" valign="top">constexpr T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__group-utils-misc.html#ga1bcf428c70e279f7c3b8dce0f0ad88eb">invalid</a> ()</td></tr>
 <tr class="memdesc:ga1bcf428c70e279f7c3b8dce0f0ad88eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">You can use <a class="el" href="group__group-utils-misc.html#ga1bcf428c70e279f7c3b8dce0f0ad88eb" title="You can use invalid&lt;T&gt;() to get a value that can represent &quot;invalid&quot; values, such as indices.">invalid&lt;T&gt;()</a> to get a value that can represent "invalid" values, such as indices.  <a href="group__group-utils-misc.html#ga1bcf428c70e279f7c3b8dce0f0ad88eb">More...</a><br /></td></tr>
 <tr class="separator:ga1bcf428c70e279f7c3b8dce0f0ad88eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga68084717e646e9a6073e533d0b83a2b7"><td class="memTemplParams" colspan="2">template&lt;typename Index &gt; </td></tr>
+<tr class="memitem:ga68084717e646e9a6073e533d0b83a2b7"><td class="memTemplItemLeft" align="right" valign="top">internal::Range&lt; Index &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__group-utils-misc.html#ga68084717e646e9a6073e533d0b83a2b7">range</a> (Index end)</td></tr>
+<tr class="memdesc:ga68084717e646e9a6073e533d0b83a2b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an iterable object representing the range [0, end).  <a href="group__group-utils-misc.html#ga68084717e646e9a6073e533d0b83a2b7">More...</a><br /></td></tr>
+<tr class="separator:ga68084717e646e9a6073e533d0b83a2b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga140b5693eb5f63b5e2470a300aeded12"><td class="memTemplParams" colspan="2">template&lt;typename Index &gt; </td></tr>
+<tr class="memitem:ga140b5693eb5f63b5e2470a300aeded12"><td class="memTemplItemLeft" align="right" valign="top">internal::Range&lt; Index &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__group-utils-misc.html#ga140b5693eb5f63b5e2470a300aeded12">range</a> (Index begin, Index end)</td></tr>
+<tr class="memdesc:ga140b5693eb5f63b5e2470a300aeded12"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an iterable object representing the range [begin, end).  <a href="group__group-utils-misc.html#ga140b5693eb5f63b5e2470a300aeded12">More...</a><br /></td></tr>
+<tr class="separator:ga140b5693eb5f63b5e2470a300aeded12"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0be357120afca3098d989abf97e72b13"><td class="memTemplParams" colspan="2">template&lt;typename Index &gt; </td></tr>
+<tr class="memitem:ga0be357120afca3098d989abf97e72b13"><td class="memTemplItemLeft" align="right" valign="top">internal::SparseRange&lt; Index &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__group-utils-misc.html#ga0be357120afca3098d989abf97e72b13">range_sparse</a> (Index max, const std::vector&lt; Index &gt; &amp;active)</td></tr>
+<tr class="memdesc:ga0be357120afca3098d989abf97e72b13"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an iterable object representing a subset of the range [0, max).  <a href="group__group-utils-misc.html#ga0be357120afca3098d989abf97e72b13">More...</a><br /></td></tr>
+<tr class="separator:ga0be357120afca3098d989abf97e72b13"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga2a5fd2842da78b90fdc7b959aec8036a"><td class="memTemplParams" colspan="2">template&lt;typename TargetType , typename SourceType &gt; </td></tr>
 <tr class="memitem:ga2a5fd2842da78b90fdc7b959aec8036a"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__group-utils-misc.html#ga2a5fd2842da78b90fdc7b959aec8036a">safe_cast</a> (SourceType value) -&gt; std::enable_if_t&lt;!std::is_same&lt; SourceType, TargetType &gt;::value, TargetType &gt;</td></tr>
 <tr class="memdesc:ga2a5fd2842da78b90fdc7b959aec8036a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform safe cast from <code>SourceType</code> to <code>TargetType</code>, where "safe" means:  <a href="group__group-utils-misc.html#ga2a5fd2842da78b90fdc7b959aec8036a">More...</a><br /></td></tr>
@@ -136,6 +148,9 @@ template&lt;typename R , typename... Args&gt; </td></tr>
 <tr class="memitem:gae7c68fbe6cdda70f6be758396ddf9e2e"><td class="memTemplItemLeft" align="right" valign="top">constexpr T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__group-utils-misc.html#gae7c68fbe6cdda70f6be758396ddf9e2e">safe_cast_enum</a> (const U u)</td></tr>
 <tr class="memdesc:gae7c68fbe6cdda70f6be758396ddf9e2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Casting an enum to scalar and vice versa.  <a href="group__group-utils-misc.html#gae7c68fbe6cdda70f6be758396ddf9e2e">More...</a><br /></td></tr>
 <tr class="separator:gae7c68fbe6cdda70f6be758396ddf9e2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad2f13bef4d8b9c7c6b2dc61b87d95bd4"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group-utils-misc.html#gad2f13bef4d8b9c7c6b2dc61b87d95bd4">string_split</a> (const std::string &amp;str, char delimiter)</td></tr>
+<tr class="memdesc:gad2f13bef4d8b9c7c6b2dc61b87d95bd4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Split a std::string using a prescribed delimiter.  <a href="group__group-utils-misc.html#gad2f13bef4d8b9c7c6b2dc61b87d95bd4">More...</a><br /></td></tr>
+<tr class="separator:gad2f13bef4d8b9c7c6b2dc61b87d95bd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaebb929afb5049cc3aaaabd296f556ac3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group-utils-misc.html#gaebb929afb5049cc3aaaabd296f556ac3">starts_with</a> (std::string_view str, std::string_view prefix)</td></tr>
 <tr class="memdesc:gaebb929afb5049cc3aaaabd296f556ac3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the string begins with the given prefix.  <a href="group__group-utils-misc.html#gaebb929afb5049cc3aaaabd296f556ac3">More...</a><br /></td></tr>
 <tr class="separator:gaebb929afb5049cc3aaaabd296f556ac3"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -189,6 +204,136 @@ template&lt;typename... Args&gt; </td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A value considered invalid for the given type. </dd></dl>
+
+</div>
+</div>
+<a id="ga68084717e646e9a6073e533d0b83a2b7" name="ga68084717e646e9a6073e533d0b83a2b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga68084717e646e9a6073e533d0b83a2b7">&#9670;&nbsp;</a></span>range() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">internal::Range&lt; Index &gt; lagrange::range </td>
+          <td>(</td>
+          <td class="paramtype">Index&#160;</td>
+          <td class="paramname"><em>end</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;modules/core/include/lagrange/utils/range.h&gt;</code></p>
+
+<p>Returns an iterable object representing the range [0, end). </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">end</td><td>End of the range. This bound is exclusive.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Index</td><td>Index type.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Iterator for the range [0, end). </dd></dl>
+
+</div>
+</div>
+<a id="ga140b5693eb5f63b5e2470a300aeded12" name="ga140b5693eb5f63b5e2470a300aeded12"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga140b5693eb5f63b5e2470a300aeded12">&#9670;&nbsp;</a></span>range() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">internal::Range&lt; Index &gt; lagrange::range </td>
+          <td>(</td>
+          <td class="paramtype">Index&#160;</td>
+          <td class="paramname"><em>begin</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Index&#160;</td>
+          <td class="paramname"><em>end</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;modules/core/include/lagrange/utils/range.h&gt;</code></p>
+
+<p>Returns an iterable object representing the range [begin, end). </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">begin</td><td>Start of the range. This bound is inclusive. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">end</td><td>End of the range. This bound is exclusive.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Index</td><td>Index type.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Iterator for the range [start, end). </dd></dl>
+
+</div>
+</div>
+<a id="ga0be357120afca3098d989abf97e72b13" name="ga0be357120afca3098d989abf97e72b13"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga0be357120afca3098d989abf97e72b13">&#9670;&nbsp;</a></span>range_sparse()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">internal::SparseRange&lt; Index &gt; lagrange::range_sparse </td>
+          <td>(</td>
+          <td class="paramtype">Index&#160;</td>
+          <td class="paramname"><em>max</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; Index &gt; &amp;&#160;</td>
+          <td class="paramname"><em>active</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;modules/core/include/lagrange/utils/range.h&gt;</code></p>
+
+<p>Returns an iterable object representing a subset of the range [0, max). </p>
+<p >If active is non-empty, it will iterate through the elements of active. Otherwise, it will iterate from 0 to max.</p>
+<dl class="section warning"><dt>Warning</dt><dd>The <code>active</code> vector MUST exist while the range is being used. Do NOT write code such as: <div class="fragment"><div class="line">for (int i : range_sparse(n, { 0 })) { ... }   // Bad</div>
+</div><!-- fragment --> as the vector will be destructed while the iterator is still running.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">max</td><td>End of the range. This bound is exclusive. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">active</td><td>Active indices in the range. If empty, it will iterate through the whole range instead.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Index</td><td>Index type.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Sparse iterator for a subset of the range [0, max). </dd></dl>
 
 </div>
 </div>
@@ -376,6 +521,46 @@ template&lt;typename... Args&gt; </td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Casted value. </dd></dl>
+
+</div>
+</div>
+<a id="gad2f13bef4d8b9c7c6b2dc61b87d95bd4" name="gad2f13bef4d8b9c7c6b2dc61b87d95bd4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad2f13bef4d8b9c7c6b2dc61b87d95bd4">&#9670;&nbsp;</a></span>string_split()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; std::string &gt; string_split </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>str</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>delimiter</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;modules/core/include/lagrange/utils/strings.h&gt;</code></p>
+
+<p>Split a std::string using a prescribed delimiter. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">str</td><td>String to split. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">delimiter</td><td>Delimiter.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>An array of strings obtained after splitting. </dd></dl>
 
 </div>
 </div>

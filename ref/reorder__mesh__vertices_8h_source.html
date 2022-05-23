@@ -125,7 +125,7 @@ $(function() {
 <div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    <span class="comment">// Cound the number of new vertices</span></div>
 <div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    Index num_new_vertices = 0;</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> io : range(num_old_vertices)) {</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> io : <a class="code hl_function" href="group__group-utils-misc.html#ga68084717e646e9a6073e533d0b83a2b7">range</a>(num_old_vertices)) {</div>
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        num_new_vertices = std::max(num_new_vertices, forward_mapping_no_invalid(io));</div>
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    }</div>
 <div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    num_new_vertices += 1; <span class="comment">// num_of_*** = biggest index +  1</span></div>
@@ -135,7 +135,7 @@ $(function() {
 <div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    <span class="comment">// Create the backward mapping and the new vertices</span></div>
 <div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    IndexList backward_mapping(num_new_vertices, invalid&lt;Index&gt;());</div>
 <div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    VertexArray vertices_new(num_new_vertices, mesh.get_dim());</div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> io : range(num_old_vertices)) {</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> io : <a class="code hl_function" href="group__group-utils-misc.html#ga68084717e646e9a6073e533d0b83a2b7">range</a>(num_old_vertices)) {</div>
 <div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>        <span class="keyword">const</span> <span class="keyword">auto</span> in = forward_mapping_no_invalid(io);</div>
 <div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>        backward_mapping[in] = io;</div>
 <div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>        vertices_new.row(in) = vertices.row(io);</div>
@@ -148,7 +148,7 @@ $(function() {
 <div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
 <div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    <span class="comment">// Create new faces</span></div>
 <div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    FacetArray facets_new(facets.rows(), facets.cols());</div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> i : range(facets.rows())) {</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> i : <a class="code hl_function" href="group__group-utils-misc.html#ga68084717e646e9a6073e533d0b83a2b7">range</a>(facets.rows())) {</div>
 <div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>        facets_new(i, 0) = forward_mapping_no_invalid(facets(i, 0));</div>
 <div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>        facets_new(i, 1) = forward_mapping_no_invalid(facets(i, 1));</div>
 <div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>        facets_new(i, 2) = forward_mapping_no_invalid(facets(i, 2));</div>
@@ -165,6 +165,7 @@ $(function() {
 <div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span> </div>
 <div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>} <span class="comment">// namespace lagrange</span></div>
 <div class="ttc" id="agroup__group-utils-assert_html_ga1ccafcb14523a1aae57dcac3c3f32ecd"><div class="ttname"><a href="group__group-utils-assert.html#ga1ccafcb14523a1aae57dcac3c3f32ecd">la_runtime_assert</a></div><div class="ttdeci">#define la_runtime_assert(...)</div><div class="ttdoc">Runtime assertion check.</div><div class="ttdef"><b>Definition:</b> assert.h:168</div></div>
+<div class="ttc" id="agroup__group-utils-misc_html_ga68084717e646e9a6073e533d0b83a2b7"><div class="ttname"><a href="group__group-utils-misc.html#ga68084717e646e9a6073e533d0b83a2b7">lagrange::range</a></div><div class="ttdeci">internal::Range&lt; Index &gt; range(Index end)</div><div class="ttdoc">Returns an iterable object representing the range [0, end).</div><div class="ttdef"><b>Definition:</b> range.h:176</div></div>
 <div class="ttc" id="anamespacelagrange_html"><div class="ttname"><a href="namespacelagrange.html">lagrange</a></div><div class="ttdoc">Main namespace for Lagrange.</div></div>
 <div class="ttc" id="anamespacelagrange_html_a5dff747c765bd02e34d420ab60c30358"><div class="ttname"><a href="namespacelagrange.html#a5dff747c765bd02e34d420ab60c30358">lagrange::create_mesh</a></div><div class="ttdeci">auto create_mesh(const Eigen::MatrixBase&lt; DerivedV &gt; &amp;vertices, const Eigen::MatrixBase&lt; DerivedF &gt; &amp;facets)</div><div class="ttdoc">This function create a new mesh given the vertex and facet arrays by copying data into the Mesh objec...</div><div class="ttdef"><b>Definition:</b> create_mesh.h:39</div></div>
 <div class="ttc" id="anamespacelagrange_html_a97e627afa63acfb3eeb8e11dd72f9192"><div class="ttname"><a href="namespacelagrange.html#a97e627afa63acfb3eeb8e11dd72f9192">lagrange::reorder_mesh_vertices</a></div><div class="ttdeci">std::unique_ptr&lt; MeshType &gt; reorder_mesh_vertices(const MeshType &amp;mesh, const typename MeshType::IndexList &amp;forward_mapping)</div><div class="ttdoc">Reorders (possibly with shrinking) the vertices in the mesh.</div><div class="ttdef"><b>Definition:</b> reorder_mesh_vertices.h:54</div></div>

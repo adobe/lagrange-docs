@@ -135,7 +135,7 @@ $(function() {
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    };</div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    Matrix3 covariance = Matrix3::Zero();</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> facet_id : lagrange::range_facets(mesh_ref, active_facets)) {</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> facet_id : <a class="code hl_function" href="group__group-utils-misc.html#ga0be357120afca3098d989abf97e72b13">range_sparse</a>(mesh_ref.get_num_facets(), active_facets)) {</div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        <span class="keyword">const</span> Vector3 v0 = vertices.row(facets(facet_id, 0));</div>
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        <span class="keyword">const</span> Vector3 v1 = vertices.row(facets(facet_id, 1));</div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        <span class="keyword">const</span> Vector3 v2 = vertices.row(facets(facet_id, 2));</div>
@@ -150,6 +150,7 @@ $(function() {
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>} <span class="comment">// namespace lagrange</span></div>
 <div class="ttc" id="agroup__group-surfacemesh-attr_html_gga35b5eb426384b257452ee0ffdb732c27af60357a8d17e45793298323f1b372a74"><div class="ttname"><a href="group__group-surfacemesh-attr.html#gga35b5eb426384b257452ee0ffdb732c27af60357a8d17e45793298323f1b372a74">lagrange::AttributeUsage::Scalar</a></div><div class="ttdeci">@ Scalar</div><div class="ttdoc">Mesh attribute must have exactly 1 channel.</div></div>
 <div class="ttc" id="agroup__group-utils-assert_html_ga1ccafcb14523a1aae57dcac3c3f32ecd"><div class="ttname"><a href="group__group-utils-assert.html#ga1ccafcb14523a1aae57dcac3c3f32ecd">la_runtime_assert</a></div><div class="ttdeci">#define la_runtime_assert(...)</div><div class="ttdoc">Runtime assertion check.</div><div class="ttdef"><b>Definition:</b> assert.h:168</div></div>
+<div class="ttc" id="agroup__group-utils-misc_html_ga0be357120afca3098d989abf97e72b13"><div class="ttname"><a href="group__group-utils-misc.html#ga0be357120afca3098d989abf97e72b13">lagrange::range_sparse</a></div><div class="ttdeci">internal::SparseRange&lt; Index &gt; range_sparse(Index max, const std::vector&lt; Index &gt; &amp;active)</div><div class="ttdoc">Returns an iterable object representing a subset of the range [0, max).</div><div class="ttdef"><b>Definition:</b> range.h:217</div></div>
 <div class="ttc" id="anamespacelagrange_html"><div class="ttname"><a href="namespacelagrange.html">lagrange</a></div><div class="ttdoc">Main namespace for Lagrange.</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->

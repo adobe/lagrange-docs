@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['miscellaneous_0',['Miscellaneous',['../group__group-utils-misc.html',1,'']]]
+  ['polygon_20triangulation_0',['Polygon triangulation',['../group__group-surfacemesh-views.html',1,'']]]
 ];
