@@ -23,7 +23,7 @@ To build a project with Ninja, simply use the `-G Ninja` when generating the bui
 mkdir build
 cd build
 cmake -G Ninja ..
-ninja # Or Cmake --Build .
+ninja # Or cmake --build .
 ```
 
 !!! tip "Windows & Ninja"

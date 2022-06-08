@@ -384,10 +384,42 @@ mesh.initialize_edges({&edges[0][0], 2 * edges.size()});
 
 ## Connectivity And Navigation
 
-Initializing mesh edges will also equip the mesh with connectivity information. This allows you to
-navigate around mesh elements such as vertices and facets.
+!!! danger "Connectivity And Edge Information"
+    Navigating between adjacent and incident mesh elements requires building **connectivity
+    information**. Since such connectivity information is necessary to uniquely **index mesh
+    edges**, the two set of attributes are tied together. In practice, this means that calling any
+    mesh navigation method requires having called `mesh.initialize_edges()` beforehand.
 
-To navigate around a given element, use the `foreach_xxx_around_xxx()` functions:
+To efficiently navigate between adjacent facets, or between incident vertex/facets, we store
+"chains" of corners around vertices and edges as single-linked lists as follows:
+
+- **Corners Around A Vertex**. The chain of corners around a vertex can be represented by two
+  attributes. One vertex attribute giving the head of each list, and one corner attribute giving the
+  next corner in the linked list for each "chain" around a vertex. Since each corner belongs to one
+  chain only, we can store all linked lists as flattened attribute for the entire mesh.
+
+    ![](img/chain_around_vertex.svg){ width="600" }
+
+
+    !!! note "Edges Around A Vertex"
+        To iterate over the edges incident to a given vertex, you will notice that we only provide a
+        single method `foreach_edge_around_vertex_with_duplicates()`. This method will call the
+        callback function repeatedly for each facet which contains an incident edge to the
+        prescribed vertex.
+
+- **Corners Around An Edge**. The same principle can be applied to chain corners around a given
+  edge. Note that since the facets are oriented, we only chain one canonical corner per facet around
+  a given edge.
+
+    ![](img/chain_around_edge.svg){ width="600" }
+
+    !!! hint "Non-Manifold Edges"
+        A nice advantage of this connectivity representation is that we support any type of
+        non-manifold meshes. This is in contrast with most half-edge data structure implementations
+        which assume manifold surfaces.
+
+To navigate around a mesh element (vertices/edges), we provide convenience functions
+`foreach_xxx_around_xxx()`:
 
 ```c++
 lagrange::SurfaceMesh<Scalar, Index> mesh;
@@ -406,18 +438,10 @@ for (Index v = 0; v < mesh.get_num_vertices(); ++v) {
 In the example above, we could have use the method `count_num_corners_around_vertex()` to
 compute vertex valence directly. See [SurfaceMesh] class documentation for a full reference.
 
-!!! note "Degenerate Facets"
+!!! danger "Degenerate Facets"
     If a mesh facet is degenerate, and references the same vertex several time (e.g. facet `f2 =
     (0, 1, 1)`), then `mesh.foreach_facet_around_vertex(1)` will call the facet `f2` twice.
 
-!!! note "Edges Around A Vertex"
-    To iterate over the edges incident to a given vertex, you will notice that we only provide a
-    single method `foreach_edge_around_vertex_with_duplicates()`. This method will call the callback
-    function repeatedly for each facet which contains an incident edge to the prescribed vertex.
-
-!!! note "Non-Manifold Surfaces"
-    Our mesh navigation methods support any type of non-manifold meshes. This is in contrast with
-    some type of half-edge data structures which assume manifold surfaces.
 
 ## Half-Edges
 
