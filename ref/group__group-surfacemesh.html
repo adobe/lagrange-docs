@@ -79,10 +79,13 @@ Modules</h2></td></tr>
 <tr class="memitem:group__group-surfacemesh-attr"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group-surfacemesh-attr.html">Attributes</a></td></tr>
 <tr class="memdesc:group__group-surfacemesh-attr"><td class="mdescLeft">&#160;</td><td class="mdescRight">Manipulating mesh attributes. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:group__group-surfacemesh-utils"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group-surfacemesh-utils.html">Mesh utilities</a></td></tr>
+<tr class="memdesc:group__group-surfacemesh-utils"><td class="mdescLeft">&#160;</td><td class="mdescRight">Various mesh processing utilities. <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:group__group-surfacemesh-iterate"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group-surfacemesh-iterate.html">Attributes iterators</a></td></tr>
 <tr class="memdesc:group__group-surfacemesh-iterate"><td class="mdescLeft">&#160;</td><td class="mdescRight">Iterating over mesh attributes. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:group__group-surfacemesh-views"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group-surfacemesh-views.html">Polygon triangulation</a></td></tr>
+<tr class="memitem:group__group-surfacemesh-views"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group-surfacemesh-views.html">Eigen views</a></td></tr>
 <tr class="memdesc:group__group-surfacemesh-views"><td class="mdescLeft">&#160;</td><td class="mdescRight">View mesh attributes as Eigen matrices. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -158,7 +161,7 @@ using&#160;</td><td class="memItemRight" valign="bottom"><b>SurfaceMesh64d</b> =
 <p >Since other modules might need to explicitly instantiate their own functions, this file is a public header.</p>
 <p >Use in a .cpp as follows:</p>
 <div class="fragment"><div class="line"><span class="preprocessor">#include &lt;lagrange/SurfaceMeshTypes.h&gt;</span></div>
-<div class="line"><span class="preprocessor">#define LA_X_foo(_, S, I) template void my_function(const SurfaceMesh&lt;S, I&gt; &amp;);</span></div>
+<div class="line"><span class="preprocessor">#define LA_X_foo(_, Scalar, Index) template void my_function(const SurfaceMesh&lt;Scalar, Index&gt; &amp;);</span></div>
 <div class="line"><span class="preprocessor">LA_SURFACE_MESH_X(foo, 0)</span></div>
 </div><!-- fragment --><p >The optional <code>data</code> argument can forwarded to other macros, in order to implement cartesian products when instantiating nested types.</p>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -205,7 +208,7 @@ using&#160;</td><td class="memItemRight" valign="bottom"><b>SurfaceMesh64d</b> =
 <p><a href="https://en.wikipedia.org/wiki/X_Macro">X Macro</a> arguments to iterate over index types available for the SurfaceMesh&lt;&gt; class. </p>
 <p >Usage is similar to LA_SURFACE_MESH_X, but it will only iterate over each index type once:</p>
 <div class="fragment"><div class="line"><span class="preprocessor">#include &lt;lagrange/SurfaceMeshTypes.h&gt;</span></div>
-<div class="line"><span class="preprocessor">#define LA_X_foo(_, I) template void my_function(const Attribute&lt;I&gt; &amp;facet_indices);</span></div>
+<div class="line"><span class="preprocessor">#define LA_X_foo(_, Index) template void my_function(const Attribute&lt;Index&gt; &amp;facet_indices);</span></div>
 <div class="line"><span class="preprocessor">LA_SURFACE_MESH_INDEX_X(foo, 0)</span></div>
 </div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -251,7 +254,7 @@ using&#160;</td><td class="memItemRight" valign="bottom"><b>SurfaceMesh64d</b> =
 <p><a href="https://en.wikipedia.org/wiki/X_Macro">X Macro</a> arguments to iterate over scalar types available for the SurfaceMesh&lt;&gt; class. </p>
 <p >Usage is similar to LA_SURFACE_MESH_X, but it will only iterate over each scalar type once:</p>
 <div class="fragment"><div class="line"><span class="preprocessor">#include &lt;lagrange/SurfaceMeshTypes.h&gt;</span></div>
-<div class="line"><span class="preprocessor">#define LA_X_foo(_, S) template void my_function(const Attribute&lt;S&gt; &amp;vertex_positions);</span></div>
+<div class="line"><span class="preprocessor">#define LA_X_foo(_, Scalar) template void my_function(const Attribute&lt;Scalar&gt; &amp;vertex_positions);</span></div>
 <div class="line"><span class="preprocessor">LA_SURFACE_MESH_SCALAR_X(foo, 0)</span></div>
 </div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">

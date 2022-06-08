@@ -49,10 +49,12 @@ var searchData=
   ['silentmultitimer_46',['SilentMultiTimer',['../classlagrange_1_1_silent_multi_timer.html',1,'lagrange']]],
   ['silenttimer_47',['SilentTimer',['../classlagrange_1_1_silent_timer.html',1,'lagrange']]],
   ['skyboxcubevertexdata_48',['SkyboxCubeVertexData',['../structlagrange_1_1ui_1_1_skybox_cube_vertex_data.html',1,'lagrange::ui']]],
-  ['smallset_49',['SmallSet',['../structlagrange_1_1_small_set.html',1,'lagrange']]],
-  ['smallvector_50',['SmallVector',['../structlagrange_1_1_small_vector.html',1,'lagrange']]],
-  ['staticassertablebool_51',['StaticAssertableBool',['../structlagrange_1_1_static_assertable_bool.html',1,'lagrange']]],
-  ['subselection_52',['SubSelection',['../structlagrange_1_1ui_1_1_sub_selection.html',1,'lagrange::ui']]],
-  ['surfacemesh_53',['SurfaceMesh',['../classlagrange_1_1_surface_mesh.html',1,'lagrange']]],
-  ['systems_54',['Systems',['../classlagrange_1_1ui_1_1_systems.html',1,'lagrange::ui']]]
+  ['smallbufferallocator_49',['SmallBufferAllocator',['../structlagrange_1_1_small_buffer_allocator.html',1,'lagrange']]],
+  ['smallset_50',['SmallSet',['../structlagrange_1_1_small_set.html',1,'lagrange']]],
+  ['smallvector_51',['SmallVector',['../classlagrange_1_1_small_vector.html',1,'lagrange']]],
+  ['stackvector_52',['StackVector',['../structlagrange_1_1_stack_vector.html',1,'lagrange']]],
+  ['staticassertablebool_53',['StaticAssertableBool',['../structlagrange_1_1_static_assertable_bool.html',1,'lagrange']]],
+  ['subselection_54',['SubSelection',['../structlagrange_1_1ui_1_1_sub_selection.html',1,'lagrange::ui']]],
+  ['surfacemesh_55',['SurfaceMesh',['../classlagrange_1_1_surface_mesh.html',1,'lagrange']]],
+  ['systems_56',['Systems',['../classlagrange_1_1ui_1_1_systems.html',1,'lagrange::ui']]]
 ];

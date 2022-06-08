@@ -41,11 +41,12 @@ var searchData=
   ['load_5fuvs_38',['load_uvs',['../structlagrange_1_1io_1_1_obj_reader_options.html#a7e66d9711414b8cc4e8bd98b5e9c3e70',1,'lagrange::io::ObjReaderOptions']]],
   ['load_5fvertex_5fcolors_39',['load_vertex_colors',['../structlagrange_1_1io_1_1_obj_reader_options.html#a177eb10b677f5f83f6e34288d26bed89',1,'lagrange::io::ObjReaderOptions']]],
   ['local_40',['local',['../structlagrange_1_1ui_1_1_bounds.html#a63f5b0ac4528c51dc747555a8113fdc2',1,'lagrange::ui::Bounds']]],
-  ['logdata_41',['LogData',['../classlagrange_1_1ui_1_1_log_data.html',1,'lagrange::ui']]],
-  ['logger_42',['logger',['../group__group-logger.html#ga97e3b3adabf67bc7d3650ed14214ddaa',1,'lagrange']]],
-  ['loggercontextdata_43',['LoggerContextData',['../structlagrange_1_1ui_1_1_logger_context_data.html',1,'lagrange::ui']]],
-  ['loggerpanel_44',['LoggerPanel',['../structlagrange_1_1ui_1_1_logger_panel.html',1,'lagrange::ui']]],
-  ['logging_45',['Logging',['../group__group-logger.html',1,'']]],
-  ['look_5fat_46',['look_at',['../namespacelagrange_1_1ui.html#a19124179c7426f109b244c0b0c7d6461',1,'lagrange::ui']]],
-  ['ui_47',['ui',['../namespacelagrange_1_1ui.html',1,'lagrange']]]
+  ['log_5fonce_41',['log_once',['../namespacelagrange_1_1ui.html#a0a8b654e728be79a0426e82fd7a7de74',1,'lagrange::ui']]],
+  ['logdata_42',['LogData',['../classlagrange_1_1ui_1_1_log_data.html',1,'lagrange::ui']]],
+  ['logger_43',['logger',['../group__group-logger.html#ga97e3b3adabf67bc7d3650ed14214ddaa',1,'lagrange']]],
+  ['loggercontextdata_44',['LoggerContextData',['../structlagrange_1_1ui_1_1_logger_context_data.html',1,'lagrange::ui']]],
+  ['loggerpanel_45',['LoggerPanel',['../structlagrange_1_1ui_1_1_logger_panel.html',1,'lagrange::ui']]],
+  ['logging_46',['Logging',['../group__group-logger.html',1,'']]],
+  ['look_5fat_47',['look_at',['../namespacelagrange_1_1ui.html#a19124179c7426f109b244c0b0c7d6461',1,'lagrange::ui']]],
+  ['ui_48',['ui',['../namespacelagrange_1_1ui.html',1,'lagrange']]]
 ];

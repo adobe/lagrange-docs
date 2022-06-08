@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Lagrange: Polygon triangulation</title>
+<title>Lagrange: Eigen views</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -62,7 +62,7 @@ $(function() {
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">Polygon triangulation<div class="ingroups"><a class="el" href="group__module-core.html">Core Module</a> &raquo; <a class="el" href="group__group-surfacemesh.html">SurfaceMesh</a></div></div></div>
+  <div class="headertitle"><div class="title">Eigen views<div class="ingroups"><a class="el" href="group__module-core.html">Core Module</a> &raquo; <a class="el" href="group__group-surfacemesh.html">SurfaceMesh</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
@@ -118,6 +118,14 @@ template&lt;typename Scalar &gt; </td></tr>
 <tr class="memitem:ga217fb9661440df5dd7025d26cfeaf4d6"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="group__group-surfacemesh-views.html#ga8801fb865cd458d4db0c42de4bd9130a">ConstVectorView</a>&lt; ValueType &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__group-surfacemesh-views.html#ga217fb9661440df5dd7025d26cfeaf4d6">vector_view</a> (const <a class="el" href="classlagrange_1_1_attribute.html">Attribute</a>&lt; ValueType &gt; &amp;attribute)</td></tr>
 <tr class="memdesc:ga217fb9661440df5dd7025d26cfeaf4d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a read-only view of a scalar attribute in the form of an Eigen vector.  <a href="group__group-surfacemesh-views.html#ga217fb9661440df5dd7025d26cfeaf4d6">More...</a><br /></td></tr>
 <tr class="separator:ga217fb9661440df5dd7025d26cfeaf4d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8c3faebd019aa5400b5c97d8558f5f21"><td class="memTemplParams" colspan="2">template&lt;typename ValueType &gt; </td></tr>
+<tr class="memitem:ga8c3faebd019aa5400b5c97d8558f5f21"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="group__group-surfacemesh-views.html#ga06ca3172e4577c726eaf8d2ab26a1ab5">RowMatrixView</a>&lt; ValueType &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__group-surfacemesh-views.html#ga8c3faebd019aa5400b5c97d8558f5f21">reshaped_ref</a> (<a class="el" href="classlagrange_1_1_attribute.html">Attribute</a>&lt; ValueType &gt; &amp;attribute, size_t num_cols)</td></tr>
+<tr class="memdesc:ga8c3faebd019aa5400b5c97d8558f5f21"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a writable view of a given single-channel attribute in the form of an Eigen matrix with a prescribed number of columns.  <a href="group__group-surfacemesh-views.html#ga8c3faebd019aa5400b5c97d8558f5f21">More...</a><br /></td></tr>
+<tr class="separator:ga8c3faebd019aa5400b5c97d8558f5f21"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga85cdda0a43cfba607a3145feebcdb5c8"><td class="memTemplParams" colspan="2">template&lt;typename ValueType &gt; </td></tr>
+<tr class="memitem:ga85cdda0a43cfba607a3145feebcdb5c8"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="group__group-surfacemesh-views.html#gafe9823dfafe170f84504176f997c1d8c">ConstRowMatrixView</a>&lt; ValueType &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__group-surfacemesh-views.html#ga85cdda0a43cfba607a3145feebcdb5c8">reshaped_view</a> (const <a class="el" href="classlagrange_1_1_attribute.html">Attribute</a>&lt; ValueType &gt; &amp;attribute, size_t num_cols)</td></tr>
+<tr class="memdesc:ga85cdda0a43cfba607a3145feebcdb5c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a read-only view of a given single-channel attribute in the form of an Eigen matrix with a prescribed number of columns.  <a href="group__group-surfacemesh-views.html#ga85cdda0a43cfba607a3145feebcdb5c8">More...</a><br /></td></tr>
+<tr class="separator:ga85cdda0a43cfba607a3145feebcdb5c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader">Generic attribute views (mesh)</h2></td></tr>
 <tr class="memitem:ga4bef44f19fd375bf20e21bfecba3012d"><td class="memTemplParams" colspan="2">template&lt;typename ValueType , typename Scalar , typename Index &gt; </td></tr>
@@ -175,16 +183,16 @@ template&lt;typename Scalar &gt; </td></tr>
 <div class="line">Eigen::SparseMatrix&lt;Scalar&gt; M;</div>
 <div class="line">igl::massmatrix(V_view, F_view, igl::MASSMATRIX_TYPE_VORONOI, M);</div>
 <div class="ttc" id="aclasslagrange_1_1_surface_mesh_html"><div class="ttname"><a href="classlagrange_1_1_surface_mesh.html">lagrange::SurfaceMesh</a></div><div class="ttdoc">A general purpose polygonal mesh class.</div><div class="ttdef"><b>Definition:</b> SurfaceMesh.h:38</div></div>
-<div class="ttc" id="agroup__group-surfacemesh-views_html_ga2e034be5f010e6956225e15059825146"><div class="ttname"><a href="group__group-surfacemesh-views.html#ga2e034be5f010e6956225e15059825146">lagrange::vertex_view</a></div><div class="ttdeci">ConstRowMatrixView&lt; Scalar &gt; vertex_view(const SurfaceMesh&lt; Scalar, Index &gt; &amp;mesh)</div><div class="ttdoc">Returns a read-only view of the mesh vertices in the form of an Eigen matrix.</div><div class="ttdef"><b>Definition:</b> views.cpp:104</div></div>
-<div class="ttc" id="agroup__group-surfacemesh-views_html_ga8a158f542405b5b869533b691f18ed8d"><div class="ttname"><a href="group__group-surfacemesh-views.html#ga8a158f542405b5b869533b691f18ed8d">lagrange::facet_view</a></div><div class="ttdeci">ConstRowMatrixView&lt; Index &gt; facet_view(const SurfaceMesh&lt; Scalar, Index &gt; &amp;mesh)</div><div class="ttdoc">Returns a read-only view of a mesh facets in the form of an Eigen matrix.</div><div class="ttdef"><b>Definition:</b> views.cpp:121</div></div>
+<div class="ttc" id="agroup__group-surfacemesh-views_html_ga2e034be5f010e6956225e15059825146"><div class="ttname"><a href="group__group-surfacemesh-views.html#ga2e034be5f010e6956225e15059825146">lagrange::vertex_view</a></div><div class="ttdeci">ConstRowMatrixView&lt; Scalar &gt; vertex_view(const SurfaceMesh&lt; Scalar, Index &gt; &amp;mesh)</div><div class="ttdoc">Returns a read-only view of the mesh vertices in the form of an Eigen matrix.</div><div class="ttdef"><b>Definition:</b> views.cpp:132</div></div>
+<div class="ttc" id="agroup__group-surfacemesh-views_html_ga8a158f542405b5b869533b691f18ed8d"><div class="ttname"><a href="group__group-surfacemesh-views.html#ga8a158f542405b5b869533b691f18ed8d">lagrange::facet_view</a></div><div class="ttdeci">ConstRowMatrixView&lt; Index &gt; facet_view(const SurfaceMesh&lt; Scalar, Index &gt; &amp;mesh)</div><div class="ttdoc">Returns a read-only view of a mesh facets in the form of an Eigen matrix.</div><div class="ttdef"><b>Definition:</b> views.cpp:146</div></div>
 </div><!-- fragment --><p >Writable reference are also available: </p><div class="fragment"><div class="line"><span class="comment">// Writable reference, creates a copy if buffer is not uniquely owned</span></div>
 <div class="line"><span class="keyword">auto</span> V_ref = <a class="code hl_function" href="group__group-surfacemesh-views.html#ga6b51e5a79a66e11c3dff4c1d68015c1c">vertex_ref</a>(mesh);</div>
 <div class="line"><span class="keyword">auto</span> F_ref = <a class="code hl_function" href="group__group-surfacemesh-views.html#gae8c34105b292c12cff41b1dec4bca137">facet_ref</a>(mesh);</div>
 <div class="line"> </div>
 <div class="line"><span class="comment">// Center mesh around vertex barycenter</span></div>
 <div class="line">V_ref.rowwise() -= V_ref.colwise().mean();</div>
-<div class="ttc" id="agroup__group-surfacemesh-views_html_ga6b51e5a79a66e11c3dff4c1d68015c1c"><div class="ttname"><a href="group__group-surfacemesh-views.html#ga6b51e5a79a66e11c3dff4c1d68015c1c">lagrange::vertex_ref</a></div><div class="ttdeci">RowMatrixView&lt; Scalar &gt; vertex_ref(SurfaceMesh&lt; Scalar, Index &gt; &amp;mesh)</div><div class="ttdoc">Returns a writable view of the mesh vertices in the form of an Eigen matrix.</div><div class="ttdef"><b>Definition:</b> views.cpp:98</div></div>
-<div class="ttc" id="agroup__group-surfacemesh-views_html_gae8c34105b292c12cff41b1dec4bca137"><div class="ttname"><a href="group__group-surfacemesh-views.html#gae8c34105b292c12cff41b1dec4bca137">lagrange::facet_ref</a></div><div class="ttdeci">RowMatrixView&lt; Index &gt; facet_ref(SurfaceMesh&lt; Scalar, Index &gt; &amp;mesh)</div><div class="ttdoc">Returns a writable view of a mesh facets in the form of an Eigen matrix.</div><div class="ttdef"><b>Definition:</b> views.cpp:110</div></div>
+<div class="ttc" id="agroup__group-surfacemesh-views_html_ga6b51e5a79a66e11c3dff4c1d68015c1c"><div class="ttname"><a href="group__group-surfacemesh-views.html#ga6b51e5a79a66e11c3dff4c1d68015c1c">lagrange::vertex_ref</a></div><div class="ttdeci">RowMatrixView&lt; Scalar &gt; vertex_ref(SurfaceMesh&lt; Scalar, Index &gt; &amp;mesh)</div><div class="ttdoc">Returns a writable view of the mesh vertices in the form of an Eigen matrix.</div><div class="ttdef"><b>Definition:</b> views.cpp:126</div></div>
+<div class="ttc" id="agroup__group-surfacemesh-views_html_gae8c34105b292c12cff41b1dec4bca137"><div class="ttname"><a href="group__group-surfacemesh-views.html#gae8c34105b292c12cff41b1dec4bca137">lagrange::facet_ref</a></div><div class="ttdeci">RowMatrixView&lt; Index &gt; facet_ref(SurfaceMesh&lt; Scalar, Index &gt; &amp;mesh)</div><div class="ttdoc">Returns a writable view of a mesh facets in the form of an Eigen matrix.</div><div class="ttdef"><b>Definition:</b> views.cpp:138</div></div>
 </div><!-- fragment --> <h2 class="groupheader">Function Documentation</h2>
 <a id="gaf2e0d4ab50ffdc84c4431d699f6741fe" name="gaf2e0d4ab50ffdc84c4431d699f6741fe"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#gaf2e0d4ab50ffdc84c4431d699f6741fe">&#9670;&nbsp;</a></span>matrix_ref()</h2>
@@ -315,6 +323,100 @@ template&lt;typename Scalar &gt; </td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">attribute</td><td><a class="el" href="classlagrange_1_1_attribute.html" title="Derived attribute class that stores the actual information.">Attribute</a> to view.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">ValueType</td><td><a class="el" href="classlagrange_1_1_attribute.html" title="Derived attribute class that stores the actual information.">Attribute</a> scalar type.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>An Eigen::Map wrapping the attribute data. </dd></dl>
+
+</div>
+</div>
+<a id="ga8c3faebd019aa5400b5c97d8558f5f21" name="ga8c3faebd019aa5400b5c97d8558f5f21"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8c3faebd019aa5400b5c97d8558f5f21">&#9670;&nbsp;</a></span>reshaped_ref()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__group-surfacemesh-views.html#ga06ca3172e4577c726eaf8d2ab26a1ab5">RowMatrixView</a>&lt; ValueType &gt; reshaped_ref </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classlagrange_1_1_attribute.html">Attribute</a>&lt; ValueType &gt; &amp;&#160;</td>
+          <td class="paramname"><em>attribute</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>num_cols</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;modules/core/include/lagrange/views.h&gt;</code></p>
+
+<p>Returns a writable view of a given single-channel attribute in the form of an Eigen matrix with a prescribed number of columns. </p>
+<p >This is useful to view arbitrary corner attributes as 2D matrices for regular meshes.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">attribute</td><td><a class="el" href="classlagrange_1_1_attribute.html" title="Derived attribute class that stores the actual information.">Attribute</a> to view. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">num_cols</td><td>Number of columns to use. It must divide the number of elements of the prescribed attribute.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">ValueType</td><td><a class="el" href="classlagrange_1_1_attribute.html" title="Derived attribute class that stores the actual information.">Attribute</a> scalar type.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>An Eigen::Map wrapping the attribute data. </dd></dl>
+
+</div>
+</div>
+<a id="ga85cdda0a43cfba607a3145feebcdb5c8" name="ga85cdda0a43cfba607a3145feebcdb5c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga85cdda0a43cfba607a3145feebcdb5c8">&#9670;&nbsp;</a></span>reshaped_view()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__group-surfacemesh-views.html#gafe9823dfafe170f84504176f997c1d8c">ConstRowMatrixView</a>&lt; ValueType &gt; reshaped_view </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classlagrange_1_1_attribute.html">Attribute</a>&lt; ValueType &gt; &amp;&#160;</td>
+          <td class="paramname"><em>attribute</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>num_cols</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;modules/core/include/lagrange/views.h&gt;</code></p>
+
+<p>Returns a read-only view of a given single-channel attribute in the form of an Eigen matrix with a prescribed number of columns. </p>
+<p >This is useful to view arbitrary corner attributes as 2D matrices for regular meshes.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">attribute</td><td><a class="el" href="classlagrange_1_1_attribute.html" title="Derived attribute class that stores the actual information.">Attribute</a> to view. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">num_cols</td><td>Number of columns to use. It must divide the number of elements of the prescribed attribute.</td></tr>
   </table>
   </dd>
 </dl>

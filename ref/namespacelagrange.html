@@ -183,11 +183,17 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlagrange_1_1_silent_timer.html">SilentTimer</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A timer that does not print after <a class="el" href="classlagrange_1_1_silent_timer.html#afaaa29b2d16059bbf5580e31995959fa" title="Stops the timer.">tock()</a>  <a href="classlagrange_1_1_silent_timer.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlagrange_1_1_small_buffer_allocator.html">SmallBufferAllocator</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocator that uses the stack upto a maximum size, and the heap beyond that.  <a href="structlagrange_1_1_small_buffer_allocator.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlagrange_1_1_small_set.html">SmallSet</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stack-allocated set with a maximum size.  <a href="structlagrange_1_1_small_set.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlagrange_1_1_small_vector.html">SmallVector</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stack-allocated vector with a maximum size.  <a href="structlagrange_1_1_small_vector.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlagrange_1_1_small_vector.html">SmallVector</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hybrid vector that uses the stack upto a maximum size, and the heap beyond that.  <a href="classlagrange_1_1_small_vector.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlagrange_1_1_stack_vector.html">StackVector</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stack-allocated vector with a maximum size.  <a href="structlagrange_1_1_stack_vector.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlagrange_1_1_static_assertable_bool.html">StaticAssertableBool</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compilers might complain about static_assert(false, "").  <a href="structlagrange_1_1_static_assertable_bool.html#details">More...</a><br /></td></tr>
@@ -549,10 +555,14 @@ template&lt;typename MeshType &gt; </td></tr>
 <tr class="memitem:a399123992e37392b20e51735a796d2e1"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacelagrange.html#a399123992e37392b20e51735a796d2e1">chain_corners_around_vertices</a> (typename DerivedF::Scalar num_vertices, const Eigen::MatrixBase&lt; DerivedF &gt; &amp;facets, Eigen::PlainObjectBase&lt; DerivedE &gt; &amp;vertex_to_corner, Eigen::PlainObjectBase&lt; DerivedN &gt; &amp;next_corner_around_vertex)</td></tr>
 <tr class="memdesc:a399123992e37392b20e51735a796d2e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Chains facet corners around vertices of a mesh.  <a href="namespacelagrange.html#a399123992e37392b20e51735a796d2e1">More...</a><br /></td></tr>
 <tr class="separator:a399123992e37392b20e51735a796d2e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a51f08afb0bde5690d5442f5b481d6cce"><td class="memTemplParams" colspan="2">template&lt;typename Index , typename Allocator  = std::list&lt;EdgeType&lt;Index&gt;&gt;&gt; </td></tr>
-<tr class="memitem:a51f08afb0bde5690d5442f5b481d6cce"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; std::list&lt; Index &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacelagrange.html#a51f08afb0bde5690d5442f5b481d6cce">chain_edges</a> (const Allocator &amp;edges)</td></tr>
-<tr class="memdesc:a51f08afb0bde5690d5442f5b481d6cce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Chain edges into either simple linear chain or simple loops.  <a href="namespacelagrange.html#a51f08afb0bde5690d5442f5b481d6cce">More...</a><br /></td></tr>
-<tr class="separator:a51f08afb0bde5690d5442f5b481d6cce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51b77aa6ef7c915c306034bc5f873d69"><td class="memTemplParams" colspan="2">template&lt;typename Index , typename Allocator  = std::list&lt;EdgeType&lt;Index&gt;&gt;&gt; </td></tr>
+<tr class="memitem:a51b77aa6ef7c915c306034bc5f873d69"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; std::list&lt; Index &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacelagrange.html#a51b77aa6ef7c915c306034bc5f873d69">chain_edges</a> (const Allocator &amp;edges, bool close_loop=false)</td></tr>
+<tr class="memdesc:a51b77aa6ef7c915c306034bc5f873d69"><td class="mdescLeft">&#160;</td><td class="mdescRight">Chain directed edges into either simple linear chain or simple loops.  <a href="namespacelagrange.html#a51b77aa6ef7c915c306034bc5f873d69">More...</a><br /></td></tr>
+<tr class="separator:a51b77aa6ef7c915c306034bc5f873d69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5db43e2c8ec4b75143e325eeb22d0731"><td class="memTemplParams" colspan="2">template&lt;typename Index , typename Allocator  = std::vector&lt;EdgeType&lt;Index&gt;&gt;&gt; </td></tr>
+<tr class="memitem:a5db43e2c8ec4b75143e325eeb22d0731"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; std::vector&lt; Index &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacelagrange.html#a5db43e2c8ec4b75143e325eeb22d0731">chain_undirected_edges</a> (const Allocator &amp;edges, bool close_loop=false)</td></tr>
+<tr class="memdesc:a5db43e2c8ec4b75143e325eeb22d0731"><td class="mdescLeft">&#160;</td><td class="mdescRight">Chain undirected edges into chains and loops.  <a href="namespacelagrange.html#a5db43e2c8ec4b75143e325eeb22d0731">More...</a><br /></td></tr>
+<tr class="separator:a5db43e2c8ec4b75143e325eeb22d0731"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4ef73c002aad703ba18464d55e6b70c4"><td class="memTemplParams" colspan="2">template&lt;typename DerivedE , typename DerivedO &gt; </td></tr>
 <tr class="memitem:a4ef73c002aad703ba18464d55e6b70c4"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacelagrange.html#a4ef73c002aad703ba18464d55e6b70c4">chain_edges_into_simple_loops</a> (const Eigen::MatrixBase&lt; DerivedE &gt; &amp;edges, std::vector&lt; std::vector&lt; typename DerivedE::Scalar &gt; &gt; &amp;output, Eigen::PlainObjectBase&lt; DerivedO &gt; &amp;remaining_edges)</td></tr>
 <tr class="memdesc:a4ef73c002aad703ba18464d55e6b70c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Chain edges into simple loops by cutting "ears" progressively from the digraph.  <a href="namespacelagrange.html#a4ef73c002aad703ba18464d55e6b70c4">More...</a><br /></td></tr>
@@ -618,6 +628,10 @@ template&lt;typename MeshType &gt; </td></tr>
 <tr class="memitem:a435ef10e7db480d7518a0a151c6e6a94"><td class="memTemplItemLeft" align="right" valign="top">Eigen::Matrix&lt; typename DerivedUV::Scalar, Eigen::Dynamic, 1 &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacelagrange.html#a435ef10e7db480d7518a0a151c6e6a94">compute_uv_area_raw</a> (const Eigen::MatrixBase&lt; DerivedUV &gt; &amp;uv, const Eigen::MatrixBase&lt; DerivedF &gt; &amp;triangles)</td></tr>
 <tr class="memdesc:a435ef10e7db480d7518a0a151c6e6a94"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the uv areas.  <a href="namespacelagrange.html#a435ef10e7db480d7518a0a151c6e6a94">More...</a><br /></td></tr>
 <tr class="separator:a435ef10e7db480d7518a0a151c6e6a94"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga219f2db0d23b86456649478a92506997"><td class="memTemplParams" colspan="2">template&lt;typename Scalar , typename Index &gt; </td></tr>
+<tr class="memitem:ga219f2db0d23b86456649478a92506997"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="group__group-surfacemesh-attr.html#ga4d115376c2c766084ef808c837348fc3">AttributeId</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__group-surfacemesh-utils.html#ga219f2db0d23b86456649478a92506997">compute_facet_normal</a> (<a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;mesh, std::string_view name=&quot;@facet_normal&quot;)</td></tr>
+<tr class="memdesc:ga219f2db0d23b86456649478a92506997"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute facet normals.  <a href="group__group-surfacemesh-utils.html#ga219f2db0d23b86456649478a92506997">More...</a><br /></td></tr>
+<tr class="separator:ga219f2db0d23b86456649478a92506997"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa206c248b9cde673400c6c87cdecdc1e"><td class="memTemplParams" colspan="2">template&lt;typename MeshType , typename Cloud , typename Indices &gt; </td></tr>
 <tr class="memitem:aa206c248b9cde673400c6c87cdecdc1e"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacelagrange.html#aa206c248b9cde673400c6c87cdecdc1e">compute_lift_operator_from_sampling</a> (const MeshType &amp;mesh, const Cloud &amp;closest_points, const Indices &amp;element_indices)</td></tr>
 <tr class="memdesc:aa206c248b9cde673400c6c87cdecdc1e"><td class="mdescLeft">&#160;</td><td class="mdescRight">This compute the sparse bilinear map from mesh vertex attributes to point cloud attributes.  <a href="namespacelagrange.html#aa206c248b9cde673400c6c87cdecdc1e">More...</a><br /></td></tr>
@@ -765,10 +779,18 @@ template&lt;typename DerivedF &gt; </td></tr>
 <tr class="memitem:ga8f17bae29eab16304d0f5a71f383ae15"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group-logger.html#ga8f17bae29eab16304d0f5a71f383ae15">set_logger</a> (std::shared_ptr&lt; spdlog::logger &gt; <a class="el" href="group__group-logger.html#ga97e3b3adabf67bc7d3650ed14214ddaa">logger</a>)</td></tr>
 <tr class="memdesc:ga8f17bae29eab16304d0f5a71f383ae15"><td class="mdescLeft">&#160;</td><td class="mdescRight">Setup a logger object to be used by Lagrange.  <a href="group__group-logger.html#ga8f17bae29eab16304d0f5a71f383ae15">More...</a><br /></td></tr>
 <tr class="separator:ga8f17bae29eab16304d0f5a71f383ae15"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa51ee322b2cbe6d36fe651b3a6c3b016"><td class="memTemplParams" colspan="2">template&lt;typename MeshType , typename ValueFn &gt; </td></tr>
+<tr class="memitem:aa51ee322b2cbe6d36fe651b3a6c3b016"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structlagrange_1_1_marching_triangles_output.html">MarchingTrianglesOutput</a>&lt; MeshType &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacelagrange.html#aa51ee322b2cbe6d36fe651b3a6c3b016">marching_triangles_general</a> (MeshType &amp;mesh_ref, ScalarOf&lt; MeshType &gt; isovalue, const ValueFn &amp;get_value)</td></tr>
+<tr class="memdesc:aa51ee322b2cbe6d36fe651b3a6c3b016"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform marching triangles to extract isocontour on a field defined as the linear interpolation of values provided by the <code>get_value</code> function.  <a href="namespacelagrange.html#aa51ee322b2cbe6d36fe651b3a6c3b016">More...</a><br /></td></tr>
+<tr class="separator:aa51ee322b2cbe6d36fe651b3a6c3b016"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a46d040cdabfc1e30a4b49bce76d33951"><td class="memTemplParams" colspan="2"><a id="a46d040cdabfc1e30a4b49bce76d33951" name="a46d040cdabfc1e30a4b49bce76d33951"></a>
 template&lt;typename MeshType &gt; </td></tr>
 <tr class="memitem:a46d040cdabfc1e30a4b49bce76d33951"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structlagrange_1_1_marching_triangles_output.html">MarchingTrianglesOutput</a>&lt; MeshType &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>marching_triangles</b> (MeshType &amp;mesh_ref, const typename MeshType::Scalar isovalue, const std::string vertex_attribute_name, const typename MeshType::Index attribute_col_index=0)</td></tr>
 <tr class="separator:a46d040cdabfc1e30a4b49bce76d33951"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9dfb354b3bbbbf57858696d3ecd9b9a9"><td class="memTemplParams" colspan="2">template&lt;typename MeshType &gt; </td></tr>
+<tr class="memitem:a9dfb354b3bbbbf57858696d3ecd9b9a9"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structlagrange_1_1_marching_triangles_output.html">MarchingTrianglesOutput</a>&lt; MeshType &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacelagrange.html#a9dfb354b3bbbbf57858696d3ecd9b9a9">marching_triangles_indexed</a> (MeshType &amp;mesh_ref, const typename MeshType::Scalar isovalue, const std::string indexed_attribute_name, const typename MeshType::Index attribute_col_index=0)</td></tr>
+<tr class="memdesc:a9dfb354b3bbbbf57858696d3ecd9b9a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform marching triangles to extract isocontours on a field defined as the linear interpolation of an indexed attribute.  <a href="namespacelagrange.html#a9dfb354b3bbbbf57858696d3ecd9b9a9">More...</a><br /></td></tr>
+<tr class="separator:a9dfb354b3bbbbf57858696d3ecd9b9a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af647006c4fc4e0b1c0b12edb5938c6be"><td class="memTemplParams" colspan="2"><a id="af647006c4fc4e0b1c0b12edb5938c6be" name="af647006c4fc4e0b1c0b12edb5938c6be"></a>
 template&lt;typename _VertexArray , typename _FacetArray , typename Archive &gt; </td></tr>
 <tr class="memitem:af647006c4fc4e0b1c0b12edb5938c6be"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>serialize</b> (<a class="el" href="classlagrange_1_1_mesh.html">Mesh</a>&lt; _VertexArray, _FacetArray &gt; &amp;mesh, Archive &amp;ar)</td></tr>
@@ -833,6 +855,18 @@ template&lt;typename MeshType &gt; </td></tr>
 <tr class="memitem:a39496828533d9280a13d62a61809b5e2"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; Eigen::Matrix&lt; Index, 3, 1 &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacelagrange.html#a39496828533d9280a13d62a61809b5e2">split_triangle</a> (const VertexArray &amp;vertices, const std::vector&lt; Index &gt; &amp;chain, const Index v0, const Index v1, const Index v2)</td></tr>
 <tr class="memdesc:a39496828533d9280a13d62a61809b5e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Split triangle into smaller triangles based on the chain of spliting points.  <a href="namespacelagrange.html#a39496828533d9280a13d62a61809b5e2">More...</a><br /></td></tr>
 <tr class="separator:a39496828533d9280a13d62a61809b5e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb5fc3fc93e8d973bcc534398eeb0aa9"><td class="memTemplParams" colspan="2">template&lt;typename Scalar , typename Index , typename MeshType &gt; </td></tr>
+<tr class="memitem:abb5fc3fc93e8d973bcc534398eeb0aa9"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacelagrange.html#abb5fc3fc93e8d973bcc534398eeb0aa9">to_surface_mesh_copy</a> (const MeshType &amp;mesh)</td></tr>
+<tr class="memdesc:abb5fc3fc93e8d973bcc534398eeb0aa9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert a legacy mesh object to a surface mesh object.  <a href="namespacelagrange.html#abb5fc3fc93e8d973bcc534398eeb0aa9">More...</a><br /></td></tr>
+<tr class="separator:abb5fc3fc93e8d973bcc534398eeb0aa9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a68ad17ee5b7475decfbaf17fcfa63d65"><td class="memTemplParams" colspan="2">template&lt;typename Scalar , typename Index , typename MeshType &gt; </td></tr>
+<tr class="memitem:a68ad17ee5b7475decfbaf17fcfa63d65"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacelagrange.html#a68ad17ee5b7475decfbaf17fcfa63d65">to_surface_mesh_wrap</a> (MeshType &amp;&amp;mesh)</td></tr>
+<tr class="memdesc:a68ad17ee5b7475decfbaf17fcfa63d65"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wrap a legacy mesh object as a surface mesh object.  <a href="namespacelagrange.html#a68ad17ee5b7475decfbaf17fcfa63d65">More...</a><br /></td></tr>
+<tr class="separator:a68ad17ee5b7475decfbaf17fcfa63d65"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac349d354b36d62bc2efeb93dd2b7f078"><td class="memTemplParams" colspan="2">template&lt;typename MeshType , typename Scalar , typename Index &gt; </td></tr>
+<tr class="memitem:ac349d354b36d62bc2efeb93dd2b7f078"><td class="memTemplItemLeft" align="right" valign="top">std::unique_ptr&lt; MeshType &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacelagrange.html#ac349d354b36d62bc2efeb93dd2b7f078">to_legacy_mesh</a> (const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;mesh)</td></tr>
+<tr class="memdesc:ac349d354b36d62bc2efeb93dd2b7f078"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert a surface mesh object to a legacy mesh object.  <a href="namespacelagrange.html#ac349d354b36d62bc2efeb93dd2b7f078">More...</a><br /></td></tr>
+<tr class="separator:ac349d354b36d62bc2efeb93dd2b7f078"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a897193df6b6fb8692c97e481b6b291c0"><td class="memTemplParams" colspan="2"><a id="a897193df6b6fb8692c97e481b6b291c0" name="a897193df6b6fb8692c97e481b6b291c0"></a>
 template&lt;typename _VertexArray , typename _FacetArray , typename Archive &gt; </td></tr>
 <tr class="memitem:a897193df6b6fb8692c97e481b6b291c0"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>serialize</b> (<a class="el" href="classlagrange_1_1_mesh_geometry.html">MeshGeometry</a>&lt; _VertexArray, _FacetArray &gt; &amp;geometry, Archive &amp;ar)</td></tr>
@@ -905,10 +939,18 @@ template&lt;typename MeshType &gt; </td></tr>
 <tr class="memitem:a9b1b8edd4573422f27af875ab25bf0ed"><td class="memTemplItemLeft" align="right" valign="top">std::unique_ptr&lt; MeshType &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacelagrange.html#a9b1b8edd4573422f27af875ab25bf0ed">thicken_and_close_mesh</a> (const MeshType &amp;input_mesh, ScalarOf&lt; MeshType &gt; offset_amount, typename MeshType::Index num_segments=1)</td></tr>
 <tr class="memdesc:a9b1b8edd4573422f27af875ab25bf0ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Thicken a mesh vertices along normals, and close the shape into a thick 3D solid.  <a href="namespacelagrange.html#a9b1b8edd4573422f27af875ab25bf0ed">More...</a><br /></td></tr>
 <tr class="separator:a9b1b8edd4573422f27af875ab25bf0ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a48af6105ece8a970755870c73af73ddd"><td class="memTemplParams" colspan="2">template&lt;typename Scalar , typename Index &gt; </td></tr>
-<tr class="memitem:a48af6105ece8a970755870c73af73ddd"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacelagrange.html#a48af6105ece8a970755870c73af73ddd">triangulate_polygonal_facets</a> (<a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;mesh)</td></tr>
-<tr class="memdesc:a48af6105ece8a970755870c73af73ddd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Triangulate polygonal facets of a mesh using a prescribed set of rules.  <a href="namespacelagrange.html#a48af6105ece8a970755870c73af73ddd">More...</a><br /></td></tr>
-<tr class="separator:a48af6105ece8a970755870c73af73ddd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga48af6105ece8a970755870c73af73ddd"><td class="memTemplParams" colspan="2">template&lt;typename Scalar , typename Index &gt; </td></tr>
+<tr class="memitem:ga48af6105ece8a970755870c73af73ddd"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__group-surfacemesh-utils.html#ga48af6105ece8a970755870c73af73ddd">triangulate_polygonal_facets</a> (<a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;mesh)</td></tr>
+<tr class="memdesc:ga48af6105ece8a970755870c73af73ddd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Triangulate polygonal facets of a mesh using a prescribed set of rules.  <a href="group__group-surfacemesh-utils.html#ga48af6105ece8a970755870c73af73ddd">More...</a><br /></td></tr>
+<tr class="separator:ga48af6105ece8a970755870c73af73ddd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8deb2977d6d78e0b8e3a9a7773b6c72"><td class="memTemplParams" colspan="2">template&lt;typename Scalar , typename Index &gt; </td></tr>
+<tr class="memitem:ae8deb2977d6d78e0b8e3a9a7773b6c72"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacelagrange.html#ae8deb2977d6d78e0b8e3a9a7773b6c72">unify_index_buffer</a> (const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;mesh, const std::vector&lt; <a class="el" href="group__group-surfacemesh-attr.html#ga4d115376c2c766084ef808c837348fc3">AttributeId</a> &gt; &amp;attribute_ids={})</td></tr>
+<tr class="memdesc:ae8deb2977d6d78e0b8e3a9a7773b6c72"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unify index buffers of the input <code>mesh</code> for all attributes specified in <code>attribute_ids</code>.  <a href="namespacelagrange.html#ae8deb2977d6d78e0b8e3a9a7773b6c72">More...</a><br /></td></tr>
+<tr class="separator:ae8deb2977d6d78e0b8e3a9a7773b6c72"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40817d91add1d124cc9f362f019d1f0c"><td class="memTemplParams" colspan="2">template&lt;typename Scalar , typename Index &gt; </td></tr>
+<tr class="memitem:a40817d91add1d124cc9f362f019d1f0c"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacelagrange.html#a40817d91add1d124cc9f362f019d1f0c">unify_named_index_buffer</a> (const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;mesh, const std::vector&lt; std::string_view &gt; &amp;attribute_names)</td></tr>
+<tr class="memdesc:a40817d91add1d124cc9f362f019d1f0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.  <a href="namespacelagrange.html#a40817d91add1d124cc9f362f019d1f0c">More...</a><br /></td></tr>
+<tr class="separator:a40817d91add1d124cc9f362f019d1f0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaf0eeb4d96ed545aadd3b6bf27ed631c6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group-utils-assert.html#gaf0eeb4d96ed545aadd3b6bf27ed631c6">set_breakpoint_enabled</a> (bool enabled)</td></tr>
 <tr class="memdesc:gaf0eeb4d96ed545aadd3b6bf27ed631c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets whether to trigger a debugger breakpoint on assert failure.  <a href="group__group-utils-assert.html#gaf0eeb4d96ed545aadd3b6bf27ed631c6">More...</a><br /></td></tr>
 <tr class="separator:gaf0eeb4d96ed545aadd3b6bf27ed631c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1018,10 +1060,10 @@ template&lt;typename Scalar , int _Rows, int _Cols&gt; </td></tr>
 template&lt;class T , size_t N&gt; </td></tr>
 <tr class="memitem:a9409bfad59883f0a21ce87fef264866b"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator==</b> (const <a class="el" href="structlagrange_1_1_small_set.html">SmallSet</a>&lt; T, N &gt; &amp;lhs, const <a class="el" href="structlagrange_1_1_small_set.html">SmallSet</a>&lt; T, N &gt; &amp;rhs)</td></tr>
 <tr class="separator:a9409bfad59883f0a21ce87fef264866b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8fbbe196bd55b88ba048350f79a75f97"><td class="memTemplParams" colspan="2"><a id="a8fbbe196bd55b88ba048350f79a75f97" name="a8fbbe196bd55b88ba048350f79a75f97"></a>
+<tr class="memitem:a6c2fec5574044bb48e577e570bfd3676"><td class="memTemplParams" colspan="2"><a id="a6c2fec5574044bb48e577e570bfd3676" name="a6c2fec5574044bb48e577e570bfd3676"></a>
 template&lt;class T , size_t N&gt; </td></tr>
-<tr class="memitem:a8fbbe196bd55b88ba048350f79a75f97"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator==</b> (const <a class="el" href="structlagrange_1_1_small_vector.html">SmallVector</a>&lt; T, N &gt; &amp;lhs, const <a class="el" href="structlagrange_1_1_small_vector.html">SmallVector</a>&lt; T, N &gt; &amp;rhs)</td></tr>
-<tr class="separator:a8fbbe196bd55b88ba048350f79a75f97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c2fec5574044bb48e577e570bfd3676"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator==</b> (const <a class="el" href="structlagrange_1_1_stack_vector.html">StackVector</a>&lt; T, N &gt; &amp;lhs, const <a class="el" href="structlagrange_1_1_stack_vector.html">StackVector</a>&lt; T, N &gt; &amp;rhs)</td></tr>
+<tr class="separator:a6c2fec5574044bb48e577e570bfd3676"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a93a9d101295f775d612f2f787ce5b141"><td class="memTemplParams" colspan="2"><a id="a93a9d101295f775d612f2f787ce5b141" name="a93a9d101295f775d612f2f787ce5b141"></a>
 template&lt;typename Scalar , size_t N, typename Derived &gt; </td></tr>
 <tr class="memitem:a93a9d101295f775d612f2f787ce5b141"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vector_to_eigen</b> (const std::vector&lt; std::array&lt; Scalar, N &gt; &gt; &amp;from, Eigen::PlainObjectBase&lt; Derived &gt; &amp;to)</td></tr>
@@ -1296,6 +1338,14 @@ template&lt;typename Scalar , typename Index &gt; </td></tr>
 <tr class="memitem:ga217fb9661440df5dd7025d26cfeaf4d6"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="group__group-surfacemesh-views.html#ga8801fb865cd458d4db0c42de4bd9130a">ConstVectorView</a>&lt; ValueType &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__group-surfacemesh-views.html#ga217fb9661440df5dd7025d26cfeaf4d6">vector_view</a> (const <a class="el" href="classlagrange_1_1_attribute.html">Attribute</a>&lt; ValueType &gt; &amp;attribute)</td></tr>
 <tr class="memdesc:ga217fb9661440df5dd7025d26cfeaf4d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a read-only view of a scalar attribute in the form of an Eigen vector.  <a href="group__group-surfacemesh-views.html#ga217fb9661440df5dd7025d26cfeaf4d6">More...</a><br /></td></tr>
 <tr class="separator:ga217fb9661440df5dd7025d26cfeaf4d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8c3faebd019aa5400b5c97d8558f5f21"><td class="memTemplParams" colspan="2">template&lt;typename ValueType &gt; </td></tr>
+<tr class="memitem:ga8c3faebd019aa5400b5c97d8558f5f21"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="group__group-surfacemesh-views.html#ga06ca3172e4577c726eaf8d2ab26a1ab5">RowMatrixView</a>&lt; ValueType &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__group-surfacemesh-views.html#ga8c3faebd019aa5400b5c97d8558f5f21">reshaped_ref</a> (<a class="el" href="classlagrange_1_1_attribute.html">Attribute</a>&lt; ValueType &gt; &amp;attribute, size_t num_cols)</td></tr>
+<tr class="memdesc:ga8c3faebd019aa5400b5c97d8558f5f21"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a writable view of a given single-channel attribute in the form of an Eigen matrix with a prescribed number of columns.  <a href="group__group-surfacemesh-views.html#ga8c3faebd019aa5400b5c97d8558f5f21">More...</a><br /></td></tr>
+<tr class="separator:ga8c3faebd019aa5400b5c97d8558f5f21"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga85cdda0a43cfba607a3145feebcdb5c8"><td class="memTemplParams" colspan="2">template&lt;typename ValueType &gt; </td></tr>
+<tr class="memitem:ga85cdda0a43cfba607a3145feebcdb5c8"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="group__group-surfacemesh-views.html#gafe9823dfafe170f84504176f997c1d8c">ConstRowMatrixView</a>&lt; ValueType &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__group-surfacemesh-views.html#ga85cdda0a43cfba607a3145feebcdb5c8">reshaped_view</a> (const <a class="el" href="classlagrange_1_1_attribute.html">Attribute</a>&lt; ValueType &gt; &amp;attribute, size_t num_cols)</td></tr>
+<tr class="memdesc:ga85cdda0a43cfba607a3145feebcdb5c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a read-only view of a given single-channel attribute in the form of an Eigen matrix with a prescribed number of columns.  <a href="group__group-surfacemesh-views.html#ga85cdda0a43cfba607a3145feebcdb5c8">More...</a><br /></td></tr>
+<tr class="separator:ga85cdda0a43cfba607a3145feebcdb5c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Generic attribute views (mesh)</div></td></tr>
 <tr class="memitem:ga4bef44f19fd375bf20e21bfecba3012d"><td class="memTemplParams" colspan="2">template&lt;typename ValueType , typename Scalar , typename Index &gt; </td></tr>
 <tr class="memitem:ga4bef44f19fd375bf20e21bfecba3012d"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="group__group-surfacemesh-views.html#ga06ca3172e4577c726eaf8d2ab26a1ab5">RowMatrixView</a>&lt; ValueType &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__group-surfacemesh-views.html#ga4bef44f19fd375bf20e21bfecba3012d">attribute_matrix_ref</a> (<a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;mesh, std::string_view name)</td></tr>
@@ -1499,8 +1549,8 @@ template&lt;typename Scalar , typename Index &gt; </td></tr>
 
 </div>
 </div>
-<a id="a51f08afb0bde5690d5442f5b481d6cce" name="a51f08afb0bde5690d5442f5b481d6cce"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a51f08afb0bde5690d5442f5b481d6cce">&#9670;&nbsp;</a></span>chain_edges()</h2>
+<a id="a51b77aa6ef7c915c306034bc5f873d69" name="a51b77aa6ef7c915c306034bc5f873d69"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a51b77aa6ef7c915c306034bc5f873d69">&#9670;&nbsp;</a></span>chain_edges()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1509,18 +1559,74 @@ template&lt;typename Scalar , typename Index &gt; </td></tr>
           <td class="memname">std::vector&lt; std::list&lt; Index &gt; &gt; lagrange::chain_edges </td>
           <td>(</td>
           <td class="paramtype">const Allocator &amp;&#160;</td>
-          <td class="paramname"><em>edges</em></td><td>)</td>
+          <td class="paramname"><em>edges</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>close_loop</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Chain edges into either simple linear chain or simple loops. </p>
+<p>Chain directed edges into either simple linear chain or simple loops. </p>
 <p >A simple use case is to input the rim edges around a vertex. This method will return the boundary loops of the 1-ring neighborhood. If the vertex is locally manifold, only a single chain will be returned.</p>
-<p >Note that if the edges forms a complex graphs with nodes of valence more than 2, the extracted chains may not be simple. </p>
-<p >A more readable handy method.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">edges</td><td>The set of input edges. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">close_loop</td><td>Whether to mark closed loops by setting the first and last vertex to be the same.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The set of edge chains/loops.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>If the edges forms a complex graphs with nodes of valence more than 2, the extracted chains may not be simple. </dd></dl>
 <p >Extend a chain of vertices from the end based on adjacency list stored in next.</p>
 <p >Extend a chain of vertices from the front based on adjacency list stored in prev.</p>
+
+</div>
+</div>
+<a id="a5db43e2c8ec4b75143e325eeb22d0731" name="a5db43e2c8ec4b75143e325eeb22d0731"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5db43e2c8ec4b75143e325eeb22d0731">&#9670;&nbsp;</a></span>chain_undirected_edges()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; std::vector&lt; Index &gt; &gt; lagrange::chain_undirected_edges </td>
+          <td>(</td>
+          <td class="paramtype">const Allocator &amp;&#160;</td>
+          <td class="paramname"><em>edges</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>close_loop</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Chain undirected edges into chains and loops. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">edges</td><td>The set of input undirected edges. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">close_loop</td><td>Whether to mark closed loops by setting the first and last vertex to be the same.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The set of edge chains/loops.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Any vertices with more than 2 connected edges will serve as stopping vertices for the chain growing algorithm. </dd></dl>
 
 </div>
 </div>
@@ -2190,6 +2296,105 @@ template&lt;typename Scalar , typename Index &gt; </td></tr>
 
 </div>
 </div>
+<a id="aa51ee322b2cbe6d36fe651b3a6c3b016" name="aa51ee322b2cbe6d36fe651b3a6c3b016"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa51ee322b2cbe6d36fe651b3a6c3b016">&#9670;&nbsp;</a></span>marching_triangles_general()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structlagrange_1_1_marching_triangles_output.html">MarchingTrianglesOutput</a>&lt; MeshType &gt; lagrange::marching_triangles_general </td>
+          <td>(</td>
+          <td class="paramtype">MeshType &amp;&#160;</td>
+          <td class="paramname"><em>mesh_ref</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ScalarOf&lt; MeshType &gt;&#160;</td>
+          <td class="paramname"><em>isovalue</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const ValueFn &amp;&#160;</td>
+          <td class="paramname"><em>get_value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Perform marching triangles to extract isocontour on a field defined as the linear interpolation of values provided by the <code>get_value</code> function. </p>
+<p >Adapted from <a href="https://www.cs.ubc.ca/~rbridson/download/common_2008_nov_12.tar.gz">https://www.cs.ubc.ca/~rbridson/download/common_2008_nov_12.tar.gz</a> (code released to the <b>public domain</b> by Robert Bridson)</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">mesh_ref</td><td>The input mesh. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">isovalue</td><td>The isovalue of the field at which to contour. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">get_value</td><td>A function that takes the facet id and a local corner id and returns the field value at that corner.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The extracted isocontour. </dd></dl>
+
+</div>
+</div>
+<a id="a9dfb354b3bbbbf57858696d3ecd9b9a9" name="a9dfb354b3bbbbf57858696d3ecd9b9a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9dfb354b3bbbbf57858696d3ecd9b9a9">&#9670;&nbsp;</a></span>marching_triangles_indexed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structlagrange_1_1_marching_triangles_output.html">MarchingTrianglesOutput</a>&lt; MeshType &gt; lagrange::marching_triangles_indexed </td>
+          <td>(</td>
+          <td class="paramtype">MeshType &amp;&#160;</td>
+          <td class="paramname"><em>mesh_ref</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const typename MeshType::Scalar&#160;</td>
+          <td class="paramname"><em>isovalue</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string&#160;</td>
+          <td class="paramname"><em>indexed_attribute_name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const typename MeshType::Index&#160;</td>
+          <td class="paramname"><em>attribute_col_index</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Perform marching triangles to extract isocontours on a field defined as the linear interpolation of an indexed attribute. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">mesh_ref</td><td>The input triangle mesh. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">isovalue</td><td>The isovalue of the field at which to contour. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">indexed_attribute_name</td><td>The indexed attribute name defining the field. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">attribute_col_index</td><td>The attribute channel to use (for vector attributes only). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The extracted isocontour.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>The indexed attribute can be used to define fields with discontinuities. However, result may contain artifacts if the desired iso-contour passes through such discontiuity. </dd></dl>
+
+</div>
+</div>
 <a id="a0c713bb92572ae9d774b15c70e5d7b2c" name="a0c713bb92572ae9d774b15c70e5d7b2c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0c713bb92572ae9d774b15c70e5d7b2c">&#9670;&nbsp;</a></span>close_small_holes()</h2>
 
@@ -2561,6 +2766,113 @@ template&lt;typename Scalar , typename Index &gt; </td></tr>
 <p>Split triangle into smaller triangles based on the chain of spliting points. </p>
 <p >Arguments: vertices: list of vertices that contains all 3 corner of the triangle and all splitting points. chain: A chain of indices into vertices that iterates all splitting points and corners in counterclockwise order. v0: index into chain that represents corner 0. v1: index into chain that represents corner 1. v2: index into chain that represents corner 2.</p>
 <p >Returns: facets: output facets. </p>
+
+</div>
+</div>
+<a id="abb5fc3fc93e8d973bcc534398eeb0aa9" name="abb5fc3fc93e8d973bcc534398eeb0aa9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb5fc3fc93e8d973bcc534398eeb0aa9">&#9670;&nbsp;</a></span>to_surface_mesh_copy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; to_surface_mesh_copy </td>
+          <td>(</td>
+          <td class="paramtype">const MeshType &amp;&#160;</td>
+          <td class="paramname"><em>mesh</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Convert a legacy mesh object to a surface mesh object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">mesh</td><td><a class="el" href="classlagrange_1_1_mesh.html">Mesh</a> object to convert.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Scalar</td><td>Output mesh scalar type. Must be either float or double. </td></tr>
+    <tr><td class="paramname">Index</td><td>Output mesh index type. Must be either uint32_t or uint64_t. </td></tr>
+    <tr><td class="paramname">MeshType</td><td>Input mesh type.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>New mesh object. </dd></dl>
+
+</div>
+</div>
+<a id="a68ad17ee5b7475decfbaf17fcfa63d65" name="a68ad17ee5b7475decfbaf17fcfa63d65"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a68ad17ee5b7475decfbaf17fcfa63d65">&#9670;&nbsp;</a></span>to_surface_mesh_wrap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; to_surface_mesh_wrap </td>
+          <td>(</td>
+          <td class="paramtype">MeshType &amp;&amp;&#160;</td>
+          <td class="paramname"><em>mesh</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Wrap a legacy mesh object as a surface mesh object. </p>
+<p >The mesh scalar &amp; index types must match.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">mesh</td><td><a class="el" href="classlagrange_1_1_mesh.html">Mesh</a> object to convert. The mesh object must be a lvalue reference (no temporary).</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Scalar</td><td>Output mesh scalar type. Must be either float or double. </td></tr>
+    <tr><td class="paramname">Index</td><td>Output mesh index type. Must be either uint32_t or uint64_t. </td></tr>
+    <tr><td class="paramname">MeshType</td><td>Input mesh type.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>New mesh object. </dd></dl>
+
+</div>
+</div>
+<a id="ac349d354b36d62bc2efeb93dd2b7f078" name="ac349d354b36d62bc2efeb93dd2b7f078"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac349d354b36d62bc2efeb93dd2b7f078">&#9670;&nbsp;</a></span>to_legacy_mesh()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unique_ptr&lt; MeshType &gt; to_legacy_mesh </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;&#160;</td>
+          <td class="paramname"><em>mesh</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Convert a surface mesh object to a legacy mesh object. </p>
+<p >The mesh must be a regular mesh object.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">mesh</td><td><a class="el" href="classlagrange_1_1_mesh.html">Mesh</a> object to convert.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">MeshType</td><td>Output mesh type. </td></tr>
+    <tr><td class="paramname">Scalar</td><td>Input mesh scalar type. Must be either float or double. </td></tr>
+    <tr><td class="paramname">Index</td><td>Input mesh index type. Must be either uint32_t or uint64_t.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>New mesh object. </dd></dl>
 
 </div>
 </div>
@@ -3205,36 +3517,81 @@ template&lt;typename Scalar , typename Index &gt; </td></tr>
 
 </div>
 </div>
-<a id="a48af6105ece8a970755870c73af73ddd" name="a48af6105ece8a970755870c73af73ddd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a48af6105ece8a970755870c73af73ddd">&#9670;&nbsp;</a></span>triangulate_polygonal_facets()</h2>
+<a id="ae8deb2977d6d78e0b8e3a9a7773b6c72" name="ae8deb2977d6d78e0b8e3a9a7773b6c72"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae8deb2977d6d78e0b8e3a9a7773b6c72">&#9670;&nbsp;</a></span>unify_index_buffer()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void triangulate_polygonal_facets </td>
+          <td class="memname"><a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; unify_index_buffer </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;&#160;</td>
-          <td class="paramname"><em>mesh</em></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;&#160;</td>
+          <td class="paramname"><em>mesh</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="group__group-surfacemesh-attr.html#ga4d115376c2c766084ef808c837348fc3">AttributeId</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>attribute_ids</em> = <code>{}</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Triangulate polygonal facets of a mesh using a prescribed set of rules. </p>
+<p>Unify index buffers of the input <code>mesh</code> for all attributes specified in <code>attribute_ids</code>. </p>
+<dl class="section post"><dt>Postcondition</dt><dd>The attributes specified by <code>attribute_id</code> will become vertex attributes in the output mesh under the same names.</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in,out]</td><td class="paramname">mesh</td><td>Polygonal mesh to triangulate in place.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mesh</td><td>The input polygonal mesh. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">attribute_ids</td><td>The input indexed attribute ids to be unified. If empty, all indexed attributes are unified.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">Scalar</td><td><a class="el" href="classlagrange_1_1_mesh.html">Mesh</a> scalar type. </td></tr>
-    <tr><td class="paramname">Index</td><td><a class="el" href="classlagrange_1_1_mesh.html">Mesh</a> index type. </td></tr>
+<dl class="section return"><dt>Returns</dt><dd>A polygonal mesh with unified indices for position and attributes specified in <code>attribute_ids</code>. </dd></dl>
+
+</div>
+</div>
+<a id="a40817d91add1d124cc9f362f019d1f0c" name="a40817d91add1d124cc9f362f019d1f0c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a40817d91add1d124cc9f362f019d1f0c">&#9670;&nbsp;</a></span>unify_named_index_buffer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; unify_named_index_buffer </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;&#160;</td>
+          <td class="paramname"><em>mesh</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; std::string_view &gt; &amp;&#160;</td>
+          <td class="paramname"><em>attribute_names</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">mesh</td><td>The input polygonal mesh. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">attribute_names</td><td>The input indexed attribute names to be unified. If empty, all indexed attributes are unified.</td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>A polygonal mesh with unified indices for position and attributes specified in <code>attribute_names</code>.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="namespacelagrange.html#ae8deb2977d6d78e0b8e3a9a7773b6c72" title="Unify index buffers of the input mesh for all attributes specified in attribute_ids.">unify_index_buffer(const SurfaceMesh&lt;Scalar, Index&gt;&amp;, const std::vector&lt;AttributeId&gt;&amp;)</a> for more info. </dd></dl>
 
 </div>
 </div>

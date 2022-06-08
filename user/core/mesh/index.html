@@ -1715,9 +1715,45 @@ you want to reorder existing edges, please clear edge attributes first, and re-i
 edges.</p>
 </div>
 <h2 id="connectivity-and-navigation">Connectivity And Navigation</h2>
-<p>Initializing mesh edges will also equip the mesh with connectivity information. This allows you to
-navigate around mesh elements such as vertices and facets.</p>
-<p>To navigate around a given element, use the <code>foreach_xxx_around_xxx()</code> functions:</p>
+<div class="admonition danger">
+<p class="admonition-title">Connectivity And Edge Information</p>
+<p>Navigating between adjacent and incident mesh elements requires building <strong>connectivity
+information</strong>. Since such connectivity information is necessary to uniquely <strong>index mesh
+edges</strong>, the two set of attributes are tied together. In practice, this means that calling any
+mesh navigation method requires having called <code>mesh.initialize_edges()</code> beforehand.</p>
+</div>
+<p>To efficiently navigate between adjacent facets, or between incident vertex/facets, we store
+"chains" of corners around vertices and edges as single-linked lists as follows:</p>
+<ul>
+<li>
+<p><strong>Corners Around A Vertex</strong>. The chain of corners around a vertex can be represented by two
+  attributes. One vertex attribute giving the head of each list, and one corner attribute giving the
+  next corner in the linked list for each "chain" around a vertex. Since each corner belongs to one
+  chain only, we can store all linked lists as flattened attribute for the entire mesh.</p>
+<p><img alt="" src="../img/chain_around_vertex.svg" width="600" /></p>
+<div class="admonition note">
+<p class="admonition-title">Edges Around A Vertex</p>
+<p>To iterate over the edges incident to a given vertex, you will notice that we only provide a
+single method <code>foreach_edge_around_vertex_with_duplicates()</code>. This method will call the
+callback function repeatedly for each facet which contains an incident edge to the
+prescribed vertex.</p>
+</div>
+</li>
+<li>
+<p><strong>Corners Around An Edge</strong>. The same principle can be applied to chain corners around a given
+  edge. Note that since the facets are oriented, we only chain one canonical corner per facet around
+  a given edge.</p>
+<p><img alt="" src="../img/chain_around_edge.svg" width="600" /></p>
+<div class="admonition hint">
+<p class="admonition-title">Non-Manifold Edges</p>
+<p>A nice advantage of this connectivity representation is that we support any type of
+non-manifold meshes. This is in contrast with most half-edge data structure implementations
+which assume manifold surfaces.</p>
+</div>
+</li>
+</ul>
+<p>To navigate around a mesh element (vertices/edges), we provide convenience functions
+<code>foreach_xxx_around_xxx()</code>:</p>
 <div class="highlight"><pre><span></span><code><span class="n">lagrange</span><span class="o">::</span><span class="n">SurfaceMesh</span><span class="o">&lt;</span><span class="n">Scalar</span><span class="p">,</span><span class="w"> </span><span class="n">Index</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mesh</span><span class="p">;</span><span class="w"></span>
 
 <span class="c1">// Fill up mesh...</span>
@@ -1732,21 +1768,10 @@ navigate around mesh elements such as vertices and facets.</p>
 </code></pre></div>
 <p>In the example above, we could have use the method <code>count_num_corners_around_vertex()</code> to
 compute vertex valence directly. See <a href="../../../ref/classlagrange_1_1_surface_mesh.html">SurfaceMesh</a> class documentation for a full reference.</p>
-<div class="admonition note">
+<div class="admonition danger">
 <p class="admonition-title">Degenerate Facets</p>
 <p>If a mesh facet is degenerate, and references the same vertex several time (e.g. facet <code>f2 =
 (0, 1, 1)</code>), then <code>mesh.foreach_facet_around_vertex(1)</code> will call the facet <code>f2</code> twice.</p>
-</div>
-<div class="admonition note">
-<p class="admonition-title">Edges Around A Vertex</p>
-<p>To iterate over the edges incident to a given vertex, you will notice that we only provide a
-single method <code>foreach_edge_around_vertex_with_duplicates()</code>. This method will call the callback
-function repeatedly for each facet which contains an incident edge to the prescribed vertex.</p>
-</div>
-<div class="admonition note">
-<p class="admonition-title">Non-Manifold Surfaces</p>
-<p>Our mesh navigation methods support any type of non-manifold meshes. This is in contrast with
-some type of half-edge data structures which assume manifold surfaces.</p>
 </div>
 <h2 id="half-edges">Half-Edges</h2>
 <p>There is a natural correspondence between the usual half-edge notion and a facet corner (see figure
