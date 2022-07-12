@@ -196,7 +196,7 @@ constexpr <a class="el" href="group__group-surfacemesh-attr.html#ga4d115376c2c76
       </table>
 </div><div class="memdoc">
 
-<p><code>#include &lt;modules/core/include/lagrange/AttributeTypes.h&gt;</code></p>
+<p><code>#include &lt;lagrange/AttributeTypes.h&gt;</code></p>
 <b>Value:</b><div class="fragment"><div class="line">    LA_X_##mode(data, int8_t) \</div>
 <div class="line">    LA_X_##mode(data, int16_t) \</div>
 <div class="line">    LA_X_##mode(data, int32_t) \</div>
@@ -239,7 +239,7 @@ constexpr <a class="el" href="group__group-surfacemesh-attr.html#ga4d115376c2c76
       </table>
 </div><div class="memdoc">
 
-<p><code>#include &lt;modules/core/include/lagrange/AttributeFwd.h&gt;</code></p>
+<p><code>#include &lt;lagrange/AttributeFwd.h&gt;</code></p>
 
 <p>Identified to be used to access an attribute. </p>
 <p ><a class="el" href="classlagrange_1_1_attribute.html" title="Derived attribute class that stores the actual information.">Attribute</a> names are mapped to a unique identified when created. These unique identifiers can be used to more efficiently access the data (rather than rehashing the string every time). </p>
@@ -259,7 +259,7 @@ constexpr <a class="el" href="group__group-surfacemesh-attr.html#ga4d115376c2c76
       </table>
 </div><div class="memdoc">
 
-<p><code>#include &lt;modules/core/include/lagrange/AttributeFwd.h&gt;</code></p>
+<p><code>#include &lt;lagrange/AttributeFwd.h&gt;</code></p>
 
 <p>Type of element to which the attribute is attached. </p>
 <table class="fieldtable">
@@ -300,7 +300,7 @@ constexpr <a class="el" href="group__group-surfacemesh-attr.html#ga4d115376c2c76
 </table>
 </div><div class="memdoc">
 
-<p><code>#include &lt;modules/core/include/lagrange/AttributeFwd.h&gt;</code></p>
+<p><code>#include &lt;lagrange/AttributeFwd.h&gt;</code></p>
 
 <p>Usage tag indicating how the attribute should behave under mesh transformations. </p>
 <p >This tag mostly serves as a hint, and does not impact how the attribute is stored/loaded.</p>
@@ -348,7 +348,7 @@ constexpr <a class="el" href="group__group-surfacemesh-attr.html#ga4d115376c2c76
 </table>
 </div><div class="memdoc">
 
-<p><code>#include &lt;modules/core/include/lagrange/AttributeFwd.h&gt;</code></p>
+<p><code>#include &lt;lagrange/AttributeFwd.h&gt;</code></p>
 
 <p>Policy for attribute creation with reserved attribute names. </p>
 <p >By default, attribute names starting with "$" are reserved for internal use. Creating a reserved attribute name requires an explicit policy flag to be passed to the appropriate function. </p>
@@ -381,7 +381,7 @@ constexpr <a class="el" href="group__group-surfacemesh-attr.html#ga4d115376c2c76
 </table>
 </div><div class="memdoc">
 
-<p><code>#include &lt;modules/core/include/lagrange/AttributeFwd.h&gt;</code></p>
+<p><code>#include &lt;lagrange/AttributeFwd.h&gt;</code></p>
 
 <p>Policy for growing external attribute buffers. </p>
 <p >If we need to add elements to an external attribute buffer, and we have reached the capacity of the provided span, we can either throw an exception (default behavior), or warn and create an internal copy of the buffer data. </p>
@@ -420,7 +420,7 @@ constexpr <a class="el" href="group__group-surfacemesh-attr.html#ga4d115376c2c76
 </table>
 </div><div class="memdoc">
 
-<p><code>#include &lt;modules/core/include/lagrange/AttributeFwd.h&gt;</code></p>
+<p><code>#include &lt;lagrange/AttributeFwd.h&gt;</code></p>
 
 <p>Policy for attempting to write to read-only external buffers. </p>
 <p >By default any write operation on a read-only external buffer will throw an exception. Alternatively, we can issue a warning a perform a copy of the buffer data. </p>
@@ -455,7 +455,7 @@ constexpr <a class="el" href="group__group-surfacemesh-attr.html#ga4d115376c2c76
 </table>
 </div><div class="memdoc">
 
-<p><code>#include &lt;modules/core/include/lagrange/AttributeFwd.h&gt;</code></p>
+<p><code>#include &lt;lagrange/AttributeFwd.h&gt;</code></p>
 
 <p>Policy for exporting attributes that are views onto external buffers. </p>
 <p >By default, a copy is created, meaning we can use the resulting pointer to manage the lifetime of the allocated data. </p>
@@ -490,7 +490,7 @@ constexpr <a class="el" href="group__group-surfacemesh-attr.html#ga4d115376c2c76
 </table>
 </div><div class="memdoc">
 
-<p><code>#include &lt;modules/core/include/lagrange/AttributeFwd.h&gt;</code></p>
+<p><code>#include &lt;lagrange/AttributeFwd.h&gt;</code></p>
 
 <p>Policy for attribute deletion of reserved attribute names. </p>
 <p >By default, attribute names starting with "$" are reserved for internal use. Deleting a reserved attribute name requires an explicit policy flag to be passed to the appropriate function. </p>

@@ -943,14 +943,6 @@ template&lt;typename MeshType &gt; </td></tr>
 <tr class="memitem:ga48af6105ece8a970755870c73af73ddd"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__group-surfacemesh-utils.html#ga48af6105ece8a970755870c73af73ddd">triangulate_polygonal_facets</a> (<a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;mesh)</td></tr>
 <tr class="memdesc:ga48af6105ece8a970755870c73af73ddd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Triangulate polygonal facets of a mesh using a prescribed set of rules.  <a href="group__group-surfacemesh-utils.html#ga48af6105ece8a970755870c73af73ddd">More...</a><br /></td></tr>
 <tr class="separator:ga48af6105ece8a970755870c73af73ddd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae8deb2977d6d78e0b8e3a9a7773b6c72"><td class="memTemplParams" colspan="2">template&lt;typename Scalar , typename Index &gt; </td></tr>
-<tr class="memitem:ae8deb2977d6d78e0b8e3a9a7773b6c72"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacelagrange.html#ae8deb2977d6d78e0b8e3a9a7773b6c72">unify_index_buffer</a> (const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;mesh, const std::vector&lt; <a class="el" href="group__group-surfacemesh-attr.html#ga4d115376c2c766084ef808c837348fc3">AttributeId</a> &gt; &amp;attribute_ids={})</td></tr>
-<tr class="memdesc:ae8deb2977d6d78e0b8e3a9a7773b6c72"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unify index buffers of the input <code>mesh</code> for all attributes specified in <code>attribute_ids</code>.  <a href="namespacelagrange.html#ae8deb2977d6d78e0b8e3a9a7773b6c72">More...</a><br /></td></tr>
-<tr class="separator:ae8deb2977d6d78e0b8e3a9a7773b6c72"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a40817d91add1d124cc9f362f019d1f0c"><td class="memTemplParams" colspan="2">template&lt;typename Scalar , typename Index &gt; </td></tr>
-<tr class="memitem:a40817d91add1d124cc9f362f019d1f0c"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacelagrange.html#a40817d91add1d124cc9f362f019d1f0c">unify_named_index_buffer</a> (const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;mesh, const std::vector&lt; std::string_view &gt; &amp;attribute_names)</td></tr>
-<tr class="memdesc:a40817d91add1d124cc9f362f019d1f0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.  <a href="namespacelagrange.html#a40817d91add1d124cc9f362f019d1f0c">More...</a><br /></td></tr>
-<tr class="separator:a40817d91add1d124cc9f362f019d1f0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaf0eeb4d96ed545aadd3b6bf27ed631c6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group-utils-assert.html#gaf0eeb4d96ed545aadd3b6bf27ed631c6">set_breakpoint_enabled</a> (bool enabled)</td></tr>
 <tr class="memdesc:gaf0eeb4d96ed545aadd3b6bf27ed631c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets whether to trigger a debugger breakpoint on assert failure.  <a href="group__group-utils-assert.html#gaf0eeb4d96ed545aadd3b6bf27ed631c6">More...</a><br /></td></tr>
 <tr class="separator:gaf0eeb4d96ed545aadd3b6bf27ed631c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1321,6 +1313,38 @@ template&lt;typename Scalar , typename Index &gt; </td></tr>
 <tr class="memitem:gab8327da1903fcb919d87b7fd6b7ea479"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__group-surfacemesh-iterate.html#gab8327da1903fcb919d87b7fd6b7ea479">par_foreach_attribute_write</a> (<a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;mesh, Visitor &amp;&amp;vis)</td></tr>
 <tr class="memdesc:gab8327da1903fcb919d87b7fd6b7ea479"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies a function in parallel to each attribute of a mesh.  <a href="group__group-surfacemesh-iterate.html#gab8327da1903fcb919d87b7fd6b7ea479">More...</a><br /></td></tr>
 <tr class="separator:gab8327da1903fcb919d87b7fd6b7ea479"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Attribute remapping</div></td></tr>
+<tr><td colspan="2"><div class="groupText"><p >Mapping attributes between different element types.</p>
+<ul>
+<li>When mapping indexed to value attributes, values are duplicated for each corner, since otherwise the mapping corner -&gt; value would be lost.</li>
+<li>When mapping value to indexed attributes, the size of the value buffer must be equal to the number of corners. The values are not deduplicated in the new indexed attribute. </li>
+</ul>
+</div></td></tr>
+<tr class="memitem:gad7a1e90b26e460f8b9afc7efbca95cc4"><td class="memTemplParams" colspan="2">template&lt;typename Scalar , typename Index &gt; </td></tr>
+<tr class="memitem:gad7a1e90b26e460f8b9afc7efbca95cc4"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="group__group-surfacemesh-attr.html#ga4d115376c2c766084ef808c837348fc3">AttributeId</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__group-surfacemesh-attr-utils.html#gad7a1e90b26e460f8b9afc7efbca95cc4">map_attribute</a> (<a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;mesh, <a class="el" href="group__group-surfacemesh-attr.html#ga4d115376c2c766084ef808c837348fc3">AttributeId</a> id, std::string_view new_name, <a class="el" href="group__group-surfacemesh-attr.html#ga9d8ab208822bab9987e9652dda49d89a">AttributeElement</a> new_element)</td></tr>
+<tr class="memdesc:gad7a1e90b26e460f8b9afc7efbca95cc4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Map attribute values to a new attribute with a different element type.  <a href="group__group-surfacemesh-attr-utils.html#gad7a1e90b26e460f8b9afc7efbca95cc4">More...</a><br /></td></tr>
+<tr class="separator:gad7a1e90b26e460f8b9afc7efbca95cc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga38348fa42743d4cb72a1a2975483acc1"><td class="memTemplParams" colspan="2">template&lt;typename Scalar , typename Index &gt; </td></tr>
+<tr class="memitem:ga38348fa42743d4cb72a1a2975483acc1"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="group__group-surfacemesh-attr.html#ga4d115376c2c766084ef808c837348fc3">AttributeId</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__group-surfacemesh-attr-utils.html#ga38348fa42743d4cb72a1a2975483acc1">map_attribute</a> (<a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;mesh, std::string_view old_name, std::string_view new_name, <a class="el" href="group__group-surfacemesh-attr.html#ga9d8ab208822bab9987e9652dda49d89a">AttributeElement</a> new_element)</td></tr>
+<tr class="memdesc:ga38348fa42743d4cb72a1a2975483acc1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Map attribute values to a new attribute with a different element type.  <a href="group__group-surfacemesh-attr-utils.html#ga38348fa42743d4cb72a1a2975483acc1">More...</a><br /></td></tr>
+<tr class="separator:ga38348fa42743d4cb72a1a2975483acc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gacd6500c173df1a5bc53e2c9b32e08309"><td class="memTemplParams" colspan="2">template&lt;typename Scalar , typename Index &gt; </td></tr>
+<tr class="memitem:gacd6500c173df1a5bc53e2c9b32e08309"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="group__group-surfacemesh-attr.html#ga4d115376c2c766084ef808c837348fc3">AttributeId</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__group-surfacemesh-attr-utils.html#gacd6500c173df1a5bc53e2c9b32e08309">map_attribute_in_place</a> (<a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;mesh, <a class="el" href="group__group-surfacemesh-attr.html#ga4d115376c2c766084ef808c837348fc3">AttributeId</a> id, <a class="el" href="group__group-surfacemesh-attr.html#ga9d8ab208822bab9987e9652dda49d89a">AttributeElement</a> new_element)</td></tr>
+<tr class="memdesc:gacd6500c173df1a5bc53e2c9b32e08309"><td class="mdescLeft">&#160;</td><td class="mdescRight">Map attribute values to a different element type.  <a href="group__group-surfacemesh-attr-utils.html#gacd6500c173df1a5bc53e2c9b32e08309">More...</a><br /></td></tr>
+<tr class="separator:gacd6500c173df1a5bc53e2c9b32e08309"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4a2e525bede1624580d71782861b0cd6"><td class="memTemplParams" colspan="2">template&lt;typename Scalar , typename Index &gt; </td></tr>
+<tr class="memitem:ga4a2e525bede1624580d71782861b0cd6"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="group__group-surfacemesh-attr.html#ga4d115376c2c766084ef808c837348fc3">AttributeId</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__group-surfacemesh-attr-utils.html#ga4a2e525bede1624580d71782861b0cd6">map_attribute_in_place</a> (<a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;mesh, std::string_view name, <a class="el" href="group__group-surfacemesh-attr.html#ga9d8ab208822bab9987e9652dda49d89a">AttributeElement</a> new_element)</td></tr>
+<tr class="memdesc:ga4a2e525bede1624580d71782861b0cd6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Map attribute values to a different element type.  <a href="group__group-surfacemesh-attr-utils.html#ga4a2e525bede1624580d71782861b0cd6">More...</a><br /></td></tr>
+<tr class="separator:ga4a2e525bede1624580d71782861b0cd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Index buffer unification</div></td></tr>
+<tr class="memitem:gae8deb2977d6d78e0b8e3a9a7773b6c72"><td class="memTemplParams" colspan="2">template&lt;typename Scalar , typename Index &gt; </td></tr>
+<tr class="memitem:gae8deb2977d6d78e0b8e3a9a7773b6c72"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__group-surfacemesh-attr-utils.html#gae8deb2977d6d78e0b8e3a9a7773b6c72">unify_index_buffer</a> (const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;mesh, const std::vector&lt; <a class="el" href="group__group-surfacemesh-attr.html#ga4d115376c2c766084ef808c837348fc3">AttributeId</a> &gt; &amp;attribute_ids={})</td></tr>
+<tr class="memdesc:gae8deb2977d6d78e0b8e3a9a7773b6c72"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unify index buffers of the input <code>mesh</code> for all attributes specified in <code>attribute_ids</code>.  <a href="group__group-surfacemesh-attr-utils.html#gae8deb2977d6d78e0b8e3a9a7773b6c72">More...</a><br /></td></tr>
+<tr class="separator:gae8deb2977d6d78e0b8e3a9a7773b6c72"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga40817d91add1d124cc9f362f019d1f0c"><td class="memTemplParams" colspan="2">template&lt;typename Scalar , typename Index &gt; </td></tr>
+<tr class="memitem:ga40817d91add1d124cc9f362f019d1f0c"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__group-surfacemesh-attr-utils.html#ga40817d91add1d124cc9f362f019d1f0c">unify_named_index_buffer</a> (const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;mesh, const std::vector&lt; std::string_view &gt; &amp;attribute_names)</td></tr>
+<tr class="memdesc:ga40817d91add1d124cc9f362f019d1f0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.  <a href="group__group-surfacemesh-attr-utils.html#ga40817d91add1d124cc9f362f019d1f0c">More...</a><br /></td></tr>
+<tr class="separator:ga40817d91add1d124cc9f362f019d1f0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Generic attribute views</div></td></tr>
 <tr class="memitem:gaf2e0d4ab50ffdc84c4431d699f6741fe"><td class="memTemplParams" colspan="2">template&lt;typename ValueType &gt; </td></tr>
 <tr class="memitem:gaf2e0d4ab50ffdc84c4431d699f6741fe"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="group__group-surfacemesh-views.html#ga06ca3172e4577c726eaf8d2ab26a1ab5">RowMatrixView</a>&lt; ValueType &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__group-surfacemesh-views.html#gaf2e0d4ab50ffdc84c4431d699f6741fe">matrix_ref</a> (<a class="el" href="classlagrange_1_1_attribute.html">Attribute</a>&lt; ValueType &gt; &amp;attribute)</td></tr>
@@ -3514,84 +3538,6 @@ template&lt;typename Scalar , typename Index &gt; </td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A mesh of the offset and closed surface. </dd></dl>
-
-</div>
-</div>
-<a id="ae8deb2977d6d78e0b8e3a9a7773b6c72" name="ae8deb2977d6d78e0b8e3a9a7773b6c72"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae8deb2977d6d78e0b8e3a9a7773b6c72">&#9670;&nbsp;</a></span>unify_index_buffer()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; unify_index_buffer </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;&#160;</td>
-          <td class="paramname"><em>mesh</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::vector&lt; <a class="el" href="group__group-surfacemesh-attr.html#ga4d115376c2c766084ef808c837348fc3">AttributeId</a> &gt; &amp;&#160;</td>
-          <td class="paramname"><em>attribute_ids</em> = <code>{}</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Unify index buffers of the input <code>mesh</code> for all attributes specified in <code>attribute_ids</code>. </p>
-<dl class="section post"><dt>Postcondition</dt><dd>The attributes specified by <code>attribute_id</code> will become vertex attributes in the output mesh under the same names.</dd></dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">mesh</td><td>The input polygonal mesh. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">attribute_ids</td><td>The input indexed attribute ids to be unified. If empty, all indexed attributes are unified.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>A polygonal mesh with unified indices for position and attributes specified in <code>attribute_ids</code>. </dd></dl>
-
-</div>
-</div>
-<a id="a40817d91add1d124cc9f362f019d1f0c" name="a40817d91add1d124cc9f362f019d1f0c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a40817d91add1d124cc9f362f019d1f0c">&#9670;&nbsp;</a></span>unify_named_index_buffer()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; unify_named_index_buffer </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;&#160;</td>
-          <td class="paramname"><em>mesh</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::vector&lt; std::string_view &gt; &amp;&#160;</td>
-          <td class="paramname"><em>attribute_names</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">mesh</td><td>The input polygonal mesh. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">attribute_names</td><td>The input indexed attribute names to be unified. If empty, all indexed attributes are unified.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>A polygonal mesh with unified indices for position and attributes specified in <code>attribute_names</code>.</dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="namespacelagrange.html#ae8deb2977d6d78e0b8e3a9a7773b6c72" title="Unify index buffers of the input mesh for all attributes specified in attribute_ids.">unify_index_buffer(const SurfaceMesh&lt;Scalar, Index&gt;&amp;, const std::vector&lt;AttributeId&gt;&amp;)</a> for more info. </dd></dl>
 
 </div>
 </div>

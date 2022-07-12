@@ -62,7 +62,7 @@ var searchData=
   ['attribute_5ftype_59',['attribute_type',['../structlagrange_1_1ui_1_1_attribute_render.html#acb9c464bc7d6dcf2080d11a84cf109fe',1,'lagrange::ui::AttributeRender']]],
   ['attribute_5fvector_5fref_60',['attribute_vector_ref',['../group__group-surfacemesh-views.html#gaefaeba781287c06542d7cb2125c0c4d9',1,'lagrange']]],
   ['attribute_5fvector_5fview_61',['attribute_vector_view',['../group__group-surfacemesh-views.html#gad089782e732223140683ef3f5dd43aef',1,'lagrange']]],
-  ['attributebase_62',['AttributeBase',['../classlagrange_1_1_attribute_base.html#a33bea5befe677c5127810d3728498942',1,'lagrange::AttributeBase::AttributeBase(AttributeElement element, AttributeUsage usage, size_t num_channels)'],['../classlagrange_1_1_attribute_base.html#aa24a469fdd1520641ff535d0e5d110fa',1,'lagrange::AttributeBase::AttributeBase(AttributeBase &amp;&amp;other)=default'],['../classlagrange_1_1_attribute_base.html#a7a8587437336fc15c6f2b6859905f8b5',1,'lagrange::AttributeBase::AttributeBase(const AttributeBase &amp;other)=default'],['../classlagrange_1_1_attribute_base.html',1,'AttributeBase']]],
+  ['attributebase_62',['AttributeBase',['../classlagrange_1_1_attribute_base.html#aa24a469fdd1520641ff535d0e5d110fa',1,'lagrange::AttributeBase::AttributeBase(AttributeBase &amp;&amp;other)=default'],['../classlagrange_1_1_attribute_base.html#a33bea5befe677c5127810d3728498942',1,'lagrange::AttributeBase::AttributeBase(AttributeElement element, AttributeUsage usage, size_t num_channels)'],['../classlagrange_1_1_attribute_base.html#a7a8587437336fc15c6f2b6859905f8b5',1,'lagrange::AttributeBase::AttributeBase(const AttributeBase &amp;other)=default'],['../classlagrange_1_1_attribute_base.html',1,'AttributeBase']]],
   ['attributecreatepolicy_63',['AttributeCreatePolicy',['../group__group-surfacemesh-attr.html#ga809dfcec94612491ec5be8bb8614ceab',1,'lagrange']]],
   ['attributedeletepolicy_64',['AttributeDeletePolicy',['../group__group-surfacemesh-attr.html#gad17b213b11e78aeb807ad3ece7e67e84',1,'lagrange']]],
   ['attributeelement_65',['AttributeElement',['../group__group-surfacemesh-attr.html#ga9d8ab208822bab9987e9652dda49d89a',1,'lagrange']]],
@@ -73,6 +73,7 @@ var searchData=
   ['attributerender_70',['AttributeRender',['../structlagrange_1_1ui_1_1_attribute_render.html',1,'lagrange::ui']]],
   ['attributes_71',['Attributes',['../group__group-surfacemesh-attr.html',1,'(Global Namespace)'],['../classlagrange_1_1_attributes.html',1,'Attributes&lt; _AttributeArray &gt;']]],
   ['attributes_20iterators_72',['Attributes iterators',['../group__group-surfacemesh-iterate.html',1,'']]],
-  ['attributeusage_73',['AttributeUsage',['../group__group-surfacemesh-attr.html#ga35b5eb426384b257452ee0ffdb732c27',1,'lagrange']]],
-  ['attributewritepolicy_74',['AttributeWritePolicy',['../group__group-surfacemesh-attr.html#ga3018d576f81897e1712c3601b9625cb9',1,'lagrange']]]
+  ['attributes_20utilities_73',['Attributes utilities',['../group__group-surfacemesh-attr-utils.html',1,'']]],
+  ['attributeusage_74',['AttributeUsage',['../group__group-surfacemesh-attr.html#ga35b5eb426384b257452ee0ffdb732c27',1,'lagrange']]],
+  ['attributewritepolicy_75',['AttributeWritePolicy',['../group__group-surfacemesh-attr.html#ga3018d576f81897e1712c3601b9625cb9',1,'lagrange']]]
 ];

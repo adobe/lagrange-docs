@@ -632,8 +632,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#template-parameters" class="md-nav__link">
-    Template Parameters
+  <a href="#supported-types" class="md-nav__link">
+    Supported Types
   </a>
   
 </li>
@@ -1334,8 +1334,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#template-parameters" class="md-nav__link">
-    Template Parameters
+  <a href="#supported-types" class="md-nav__link">
+    Supported Types
   </a>
   
 </li>
@@ -1795,7 +1795,7 @@ indices can be used to navigate around mesh elements the same way a half-edge da
 <p>To implement the <code>twin(h_i)</code> operation, you can use <code>SurfaceMesh::get_next_corner_around_edge()</code>.</p>
 </div>
 <p>In the future we may add a half-edge "proxy" structure to facilitate mesh navigation.</p>
-<h2 id="template-parameters">Template Parameters</h2>
+<h2 id="supported-types">Supported Types</h2>
 <p>While our <code>SurfaceMesh&lt;&gt;</code> class is templated by both a <code>Scalar</code> and <code>Index</code> type, we only actually
 support a finite set of template parameters. Specifically:</p>
 <ul>
@@ -1829,6 +1829,11 @@ support a finite set of template parameters. Specifically:</p>
 </tr>
 </tbody>
 </table>
+<div class="admonition warning">
+<p class="admonition-title">Linking Error for Unsupported Types</p>
+<p>If you try to use our <code>SurfaceMesh&lt;&gt;</code> class with an unsupported Scalar/Index type,
+you will encouter a linking error due to unreferenced symbols.</p>
+</div>
 <div class="admonition tip">
 <p class="admonition-title">Writing Functions Taking SurfaceMesh As Parameter</p>
 <p>To write a function taking a <code>SurfaceMesh&lt;&gt;</code> as a parameter, you can use our <a href="../../../ref/group__group-surfacemesh.html">X macros</a> to
