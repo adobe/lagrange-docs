@@ -4,7 +4,7 @@ There are a lot of geometry processing libraries out there, and it might be a li
 Lagrange stands in the current landscape. In this page, we highlight some of the goals and key
 design principles that go into Lagrange.
 
-1. **Do No Reinvent The Wheel**. If a library exists that already solves a particular problem
+1. **Do Not Reinvent The Wheel**. If a library exists that already solves a particular problem
    (nanoflann, embree, etc.) we will use it instead of reinventing the wheel. As such, we have
    libigl-style wrappers around some common third-party libraries. Note that we only use external
    libraries that are available under *commercial friendly* licenses. Please consult our [dedicated

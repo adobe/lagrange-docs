@@ -467,7 +467,7 @@ indices can be used to navigate around mesh elements the same way a half-edge da
 
 In the future we may add a half-edge "proxy" structure to facilitate mesh navigation.
 
-## Template Parameters
+## Supported Types
 
 While our `SurfaceMesh<>` class is templated by both a `Scalar` and `Index` type, we only actually
 support a finite set of template parameters. Specifically:
@@ -483,6 +483,10 @@ We provide the following type aliases for convenience:
 | `SurfaceMesh32d` | `SurfaceMesh<double, uint32_t>` |
 | `SurfaceMesh64f` | `SurfaceMesh<float, uint64_t>`  |
 | `SurfaceMesh64d` | `SurfaceMesh<double, uint64_t>` |
+
+!!! warning "Linking Error for Unsupported Types"
+    If you try to use our `SurfaceMesh<>` class with an unsupported Scalar/Index type,
+    you will encouter a linking error due to unreferenced symbols.
 
 !!! tip "Writing Functions Taking SurfaceMesh As Parameter"
     To write a function taking a `SurfaceMesh<>` as a parameter, you can use our [X macros] to
