@@ -32,7 +32,7 @@ inconsistent code style.
 
 Try to write code that compiles without compiler warnings. Follow the general [design
 principles](../index.md). Check the [mesh class](../user/core/mesh.md) for common functionality, and
-use similar template and type names. Use [utility functions](../user/core/utility-functions.md)
+use similar template and type names. Use [utility functions](../user/core/general-utilities)
 for common functionalities such as logging, timing, casting, and optionally ranges.
 
 ## Creating New Files

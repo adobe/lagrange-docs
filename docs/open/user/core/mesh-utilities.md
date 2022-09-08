@@ -61,7 +61,8 @@ See: [Mesh Utilities][mesh-utils] documentation.
 
 ## Transfer Mesh Attributes
 
-Attributes can be mapped from one type of mesh element to another using the [`map_attribute()`][attr-utils] functions.
+Attributes can be mapped from one type of mesh element to another using the
+[`map_attribute()`][attr-utils] functions.
 
 ```c++
 #include <lagrange/compute_normal.h>
@@ -72,7 +73,8 @@ auto vid = compute_vertex_normals(mesh);
 auto fid = map_attribute(mesh, vid, "new_name", lagrange::AttributeElement::Facet);
 ```
 
-One can also transfer an attribute type in place (i.e. without creating a new attribute, just replacing the old one):
+One can also transfer an attribute type in place (i.e. without creating a new attribute, just
+replacing the old one):
 
 ```c++
 #include <lagrange/compute_normal.h>
@@ -85,7 +87,9 @@ auto &attr = mesh.get_attribute<Scalar>(id);
 assert(attr.get_element_type() == lagrange::AttributeElement::Facet);
 ```
 
-Transferring attributes from any element type to any other type is supported. The values will either be <span style="color:navy">**dispatched**</span> or <span style="color:maroon">**averaged**</span> depending on the type of operation, as summarized below:
+Transferring attributes from any element type to any other type is supported. The values will either
+be <span style="color:navy">**dispatched**</span> or <span style="color:maroon">**averaged**</span>
+depending on the type of operation, as summarized below:
 
 
 | Source\Target | Vertex   | Facet    | Edge     | Corner   | Indexed  | Value    |
@@ -99,14 +103,18 @@ Transferring attributes from any element type to any other type is supported. Th
 
 
 !!! example
-    - Transfering a vertex attribute to mesh corner elements is a _dispatch_ operation, and will not modify any value.
-    - Transfering a corner attribute to mesh vertex elements is an _averaging_ operation, and numerical changes will occur.
+    - Transfering a vertex attribute to mesh corner elements is a _dispatch_ operation, and will not
+    modify any value. - Transfering a corner attribute to mesh vertex elements is an _averaging_
+    operation, and numerical changes will occur.
 
 !!! note "Value Attributes"
     When transfering a value attribute to any other type of element, it is expected that the number
-    of entries in the source attribute matches the target number of mesh element. Similarly,
-    transferring from any other mesh element type to a value attribute will create a buffer with the
-    same number of entries as the input attribute element type.
+    of entries in the source attribute matches the target number of mesh element. When transfering a
+    value attribute to an indexed attribute, the value buffer is expected to have the same number of
+    elements as the number of mesh corners.
+
+    Conversely, transferring from any other mesh element type to a value attribute will create a
+    buffer with the same number of entries as the input attribute element type.
 
 See: [Attributes Utilities][attr-utils] documentation.
 
