@@ -132,7 +132,6 @@ auto attr_matrix = matrix_view(attr);
     Copy-on-write handling of attribute buffers is done at the mesh level, i.e. when copying a
     `SurfaceMesh` object, or when calling methods such as `SurfaceMesh::duplicate_attribute()`.
 
-
 ## Iterating Over Mesh Attributes
 
 In many situation, it is desirable to iterate over existing mesh attributes to extract some

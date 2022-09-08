@@ -1,6 +1,6 @@
 <!-- $ignore -->
 
-# Utility Functions
+# General Utility Functions
 
 ## Logging
 
@@ -63,14 +63,14 @@ Lagrange provides handy timing functions based on modern C++'s [chrono] package.
 Here is an example use case:
 
 ```c++
-#include <lagrange/timing.h>
+#include <lagrange/utils/timing.h>
 
 auto start_time = lagrange::get_timestamp();
 ...
 auto finish_time = lagrange::get_timestamp();
 
-auto duration = timestamp_diff_in_seconds(start_time, finish_time);
-lagrange::logger().info("Duration: {}s", s);
+auto duration = lagrange::timestamp_diff_in_seconds(start_time, finish_time);
+lagrange::logger().info("Duration: {}s", duration);
 ```
 
 ## Assertion
@@ -139,10 +139,7 @@ assert(shared_val.use_count() == 1);
 
 ## Range
 
-!!! warning "Legacy Mesh Only"
-    The section below only applies to our [legacy Mesh](legacy-mesh.md) data structure.
-
-Lagrange provides a handy `range` function to enable a python-like range-based
+Lagrange provides a handy [`range()`][range] function to enable a python-like range-based
 for loop:
 
 ```c++
@@ -156,17 +153,6 @@ for (auto i : lagrange::range(num_vertices)) {
 The advantage of using `range()` is that the type of the index variable `i` is
 automatically inferred from the type of `num_vertices`.  This reduces
 the amount of unnecessary implicit casts and compiler warnings.
-
-Another useful function is `row_range()` to iterate through rows of a matrix:
-
-```c++
-#include <lagrange/range.h>
-
-Eigen::MatrixXd M(m,n);
-for (const auto& row : row_range(M)) {
-    // row loops through rows of M.
-}
-```
 
 Lagrange also provide `range_sparse()` to loop through an active subset of the
 range:
@@ -183,28 +169,14 @@ for (auto i : lagrange::range_sparse(N, active_set)) {
 }
 ```
 
-If `active_set` is empty, `range_sparse(N, active_set)` will loop from 0
-to `N` (same behavior as `range(N)`).  However, if `active_set` is
-non-empty, `range_sparse(N, active_set)` will loop through the entries of
-`active_set`.
+The iterator behaves as follows:
+- If `active_set` is empty, `range_sparse(N, active_set)` will loop from 0 to `N` (same behavior as
+  `range(N)`).
+- However, if `active_set` is non-empty, `range_sparse(N, active_set)` will loop through the entries
+  of `active_set`.
 
-Additional handy methods include:
 
-```c++
-// Same as range(mesh->get_num_vertices())
-lagrange::range_vertices(mesh)
-
-// Same as range(mesh->get_num_facets())
-lagrange::range_facets(mesh)
-
-// Iterate active_set if non-empty.
-// If active_set is empty, behavior is the same as
-//   range_vertices(mesh) or
-//   range_facets(mesh)
-lagrange::range_vertices(mesh, active_set)
-lagrange::range_facets(mesh, active_set)
-```
-
+[range]: ../../../{{ dox_folder }}/group__group-utils-misc.html#ga68084717e646e9a6073e533d0b83a2b7
 [spdlog]: https://github.com/gabime/spdlog
 [CLI11]: https://github.com/CLIUtils/CLI11
 [chrono]: https://en.cppreference.com/w/cpp/chrono
