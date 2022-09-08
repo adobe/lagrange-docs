@@ -88,15 +88,16 @@ $(function() {
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacelagrange_1_1io.html">lagrange::io</a> {</div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> MeshType&gt;</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>MeshType <a class="code hl_function" href="namespacelagrange_1_1io.html#aaea4dd50cde93cd0b8c327a8fd08eabb">load_mesh_msh</a>(std::istream&amp; input_stream);</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><a class="code hl_class" href="classlagrange_1_1_mesh.html">MeshType</a> <a class="code hl_function" href="namespacelagrange_1_1io.html#aaea4dd50cde93cd0b8c327a8fd08eabb">load_mesh_msh</a>(std::istream&amp; input_stream);</div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> MeshType&gt;</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="namespacelagrange_1_1io.html#a16369417666dae9749175060ae48c645">   37</a></span>MeshType <a class="code hl_function" href="namespacelagrange_1_1io.html#aaea4dd50cde93cd0b8c327a8fd08eabb">load_mesh_msh</a>(<span class="keyword">const</span> fs::path&amp; filename) {</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="namespacelagrange_1_1io.html#a16369417666dae9749175060ae48c645">   37</a></span><a class="code hl_class" href="classlagrange_1_1_mesh.html">MeshType</a> <a class="code hl_function" href="namespacelagrange_1_1io.html#aaea4dd50cde93cd0b8c327a8fd08eabb">load_mesh_msh</a>(<span class="keyword">const</span> fs::path&amp; filename) {</div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    fs::ifstream fin(filename);</div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="keywordflow">return</span> load_mesh_msh&lt;MeshType&gt;(fin);</div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>}</div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>} <span class="comment">// namespace lagrange::io</span></div>
+<div class="ttc" id="aclasslagrange_1_1_mesh_html"><div class="ttname"><a href="classlagrange_1_1_mesh.html">lagrange::Mesh</a></div><div class="ttdef"><b>Definition:</b> Mesh.h:47</div></div>
 <div class="ttc" id="anamespacelagrange_1_1io_html"><div class="ttname"><a href="namespacelagrange_1_1io.html">lagrange::io</a></div><div class="ttdoc">Mesh input/output.</div><div class="ttdef"><b>Definition:</b> load_mesh.h:30</div></div>
 <div class="ttc" id="anamespacelagrange_1_1io_html_aaea4dd50cde93cd0b8c327a8fd08eabb"><div class="ttname"><a href="namespacelagrange_1_1io.html#aaea4dd50cde93cd0b8c327a8fd08eabb">lagrange::io::load_mesh_msh</a></div><div class="ttdeci">MeshType load_mesh_msh(std::istream &amp;input_stream)</div><div class="ttdoc">Load a .msh file.</div><div class="ttdef"><b>Definition:</b> load_mesh_msh.cpp:170</div></div>
 </div><!-- fragment --></div><!-- contents -->

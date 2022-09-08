@@ -70,7 +70,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * Copyright 2020 Adobe. All rights reserved.</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * Copyright 2019 Adobe. All rights reserved.</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> * This file is licensed to you under the Apache License, Version 2.0 (the &quot;License&quot;);</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> * you may not use this file except in compliance with the License. You may obtain a copy</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> * of the License at http://www.apache.org/licenses/LICENSE-2.0</span></div>
@@ -123,7 +123,7 @@ $(function() {
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    SearchType search_type = SearchType::DFS;</div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <span class="comment">// Set selectable facets using a vector of indices</span></div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <span class="keywordtype">void</span> set_selectable_facets(MeshType&amp; mesh_ref, <span class="keyword">const</span> std::vector&lt;Index&gt;&amp; selectable_facets)</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <span class="keywordtype">void</span> set_selectable_facets(<a class="code hl_class" href="classlagrange_1_1_mesh.html">MeshType</a>&amp; mesh_ref, <span class="keyword">const</span> std::vector&lt;Index&gt;&amp; selectable_facets)</div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    {</div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        <span class="keywordflow">if</span> (selectable_facets.empty()) {</div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>            is_facet_selectable.clear();</div>
@@ -146,7 +146,7 @@ $(function() {
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span><span class="comment">//</span></div>
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> MeshType&gt;</div>
 <div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>std::vector&lt;bool&gt; select_facets_by_normal_similarity(</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    MeshType&amp; mesh,</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    <a class="code hl_class" href="classlagrange_1_1_mesh.html">MeshType</a>&amp; mesh,</div>
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    <span class="keyword">const</span> <span class="keyword">typename</span> MeshType::Index seed_facet_id,</div>
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    <span class="keyword">const</span> <a class="code hl_struct" href="structlagrange_1_1_select_facets_by_normal_similarity_parameters.html">SelectFacetsByNormalSimilarityParameters&lt;MeshType&gt;</a>&amp; parameters)</div>
 <div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>{</div>
@@ -156,7 +156,7 @@ $(function() {
 <div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
 <div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    <span class="keyword">using</span> VertexType = <span class="keyword">typename</span> MeshType::VertexType;</div>
 <div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    <span class="keyword">using</span> Index = <span class="keyword">typename</span> MeshType::Index;</div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    <span class="keyword">using</span> <a class="code hl_enumvalue" href="group__group-surfacemesh-attr.html#gga35b5eb426384b257452ee0ffdb732c27af60357a8d17e45793298323f1b372a74">Scalar</a> = <span class="keyword">typename</span> MeshType::Scalar;</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    <span class="keyword">using</span> Scalar = <span class="keyword">typename</span> MeshType::Scalar;</div>
 <div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    <span class="keyword">using</span> IndexList = <span class="keyword">typename</span> MeshType::IndexList;</div>
 <div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    <span class="keyword">using</span> AttributeArray = <span class="keyword">typename</span> MeshType::AttributeArray;</div>
 <div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    <span class="keyword">using</span> Parameters = <a class="code hl_struct" href="structlagrange_1_1_select_facets_by_normal_similarity_parameters.html">SelectFacetsByNormalSimilarityParameters&lt;MeshType&gt;</a>;</div>
@@ -173,7 +173,7 @@ $(function() {
 <div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span> </div>
 <div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    <span class="comment">// The energy between two normals</span></div>
 <div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    <span class="keyword">auto</span> normal_direction_error = [](<span class="keyword">const</span> VertexType&amp; n1, <span class="keyword">const</span> VertexType&amp; n2) -&gt; Scalar {</div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>        <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><a class="code hl_enumvalue" href="group__group-surfacemesh-attr.html#gga35b5eb426384b257452ee0ffdb732c27af60357a8d17e45793298323f1b372a74">Scalar</a><span class="keyword">&gt;</span>(1.0) - std::abs(n1.dot(n2));</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>        <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>Scalar<span class="keyword">&gt;</span>(1.0) - std::abs(n1.dot(n2));</div>
 <div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    };</div>
 <div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span> </div>
 <div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    <span class="comment">// ===================================================</span></div>
@@ -217,7 +217,7 @@ $(function() {
 <div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>            <span class="keyword">const</span> VertexType ne_n = facet_normals.row(ne_fid);</div>
 <div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span> </div>
 <div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>            <span class="keywordflow">if</span> ((!is_facet_processed[ne_fid]) &amp;&amp; is_facet_selectable(ne_fid)) {</div>
-<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>                <a class="code hl_enumvalue" href="group__group-surfacemesh-attr.html#gga35b5eb426384b257452ee0ffdb732c27af60357a8d17e45793298323f1b372a74">Scalar</a> error = normal_direction_error(seed_n, ne_n);</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>                Scalar error = normal_direction_error(seed_n, ne_n);</div>
 <div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>                <span class="keywordflow">if</span> (error &lt; parameters.flood_error_limit) {</div>
 <div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>                    is_facet_selected[ne_fid] = <span class="keyword">true</span>;</div>
 <div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>                    search_queue.push_back(ne_fid);</div>
@@ -249,8 +249,8 @@ $(function() {
 <div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>            <span class="keyword">const</span> VertexType ne_n = facet_normals.row(ne_fid);</div>
 <div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span> </div>
 <div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>            <span class="keywordflow">if</span> ((!is_facet_processed[ne_fid]) &amp;&amp; is_facet_selectable(ne_fid)) {</div>
-<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>                <span class="keyword">const</span> <a class="code hl_enumvalue" href="group__group-surfacemesh-attr.html#gga35b5eb426384b257452ee0ffdb732c27af60357a8d17e45793298323f1b372a74">Scalar</a> error_1 = normal_direction_error(seed_n, ne_n);</div>
-<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>                <span class="keyword">const</span> <a class="code hl_enumvalue" href="group__group-surfacemesh-attr.html#gga35b5eb426384b257452ee0ffdb732c27af60357a8d17e45793298323f1b372a74">Scalar</a> error_2 = normal_direction_error(center_n, ne_n);</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>                <span class="keyword">const</span> Scalar error_1 = normal_direction_error(seed_n, ne_n);</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>                <span class="keyword">const</span> Scalar error_2 = normal_direction_error(center_n, ne_n);</div>
 <div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>                is_facet_processed[ne_fid] = <span class="keyword">true</span>;</div>
 <div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span> </div>
 <div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>                <span class="keywordflow">if</span> ((error_1 &lt; parameters.flood_error_limit) &amp;&amp;</div>
@@ -302,9 +302,9 @@ $(function() {
 <div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>                        <span class="keyword">const</span> VertexType ne_n_1 = facet_normals.row(ne_fid_1);</div>
 <div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>                        <span class="keyword">const</span> VertexType ne_n_2 = facet_normals.row(ne_fid_2);</div>
 <div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span> </div>
-<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>                        <span class="keyword">const</span> <a class="code hl_enumvalue" href="group__group-surfacemesh-attr.html#gga35b5eb426384b257452ee0ffdb732c27af60357a8d17e45793298323f1b372a74">Scalar</a> e_0 = normal_direction_error(self_n, ne_n_0);</div>
-<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>                        <span class="keyword">const</span> <a class="code hl_enumvalue" href="group__group-surfacemesh-attr.html#gga35b5eb426384b257452ee0ffdb732c27af60357a8d17e45793298323f1b372a74">Scalar</a> e_1 = normal_direction_error(self_n, ne_n_1);</div>
-<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>                        <span class="keyword">const</span> <a class="code hl_enumvalue" href="group__group-surfacemesh-attr.html#gga35b5eb426384b257452ee0ffdb732c27af60357a8d17e45793298323f1b372a74">Scalar</a> e_2 = normal_direction_error(self_n, ne_n_2);</div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>                        <span class="keyword">const</span> Scalar e_0 = normal_direction_error(self_n, ne_n_0);</div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>                        <span class="keyword">const</span> Scalar e_1 = normal_direction_error(self_n, ne_n_1);</div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>                        <span class="keyword">const</span> Scalar e_2 = normal_direction_error(self_n, ne_n_2);</div>
 <div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span> </div>
 <div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>                        <span class="keyword">const</span> <span class="keywordtype">bool</span> e_0_ok = e_0 &lt; parameters.flood_error_limit;</div>
 <div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>                        <span class="keyword">const</span> <span class="keywordtype">bool</span> e_1_ok = e_1 &lt; parameters.flood_error_limit;</div>
@@ -329,10 +329,10 @@ $(function() {
 <div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>} <span class="comment">// select_faces_by_normal_similarity</span></div>
 <div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span> </div>
 <div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>} <span class="comment">// namespace lagrange</span></div>
-<div class="ttc" id="agroup__group-surfacemesh-attr_html_gga35b5eb426384b257452ee0ffdb732c27af60357a8d17e45793298323f1b372a74"><div class="ttname"><a href="group__group-surfacemesh-attr.html#gga35b5eb426384b257452ee0ffdb732c27af60357a8d17e45793298323f1b372a74">lagrange::AttributeUsage::Scalar</a></div><div class="ttdeci">@ Scalar</div><div class="ttdoc">Mesh attribute must have exactly 1 channel.</div></div>
+<div class="ttc" id="aclasslagrange_1_1_mesh_html"><div class="ttname"><a href="classlagrange_1_1_mesh.html">lagrange::Mesh</a></div><div class="ttdef"><b>Definition:</b> Mesh.h:47</div></div>
 <div class="ttc" id="agroup__group-utils-assert_html_ga1ccafcb14523a1aae57dcac3c3f32ecd"><div class="ttname"><a href="group__group-utils-assert.html#ga1ccafcb14523a1aae57dcac3c3f32ecd">la_runtime_assert</a></div><div class="ttdeci">#define la_runtime_assert(...)</div><div class="ttdoc">Runtime assertion check.</div><div class="ttdef"><b>Definition:</b> assert.h:168</div></div>
 <div class="ttc" id="agroup__group-utils-misc_html_ga0be357120afca3098d989abf97e72b13"><div class="ttname"><a href="group__group-utils-misc.html#ga0be357120afca3098d989abf97e72b13">lagrange::range_sparse</a></div><div class="ttdeci">internal::SparseRange&lt; Index &gt; range_sparse(Index max, const std::vector&lt; Index &gt; &amp;active)</div><div class="ttdoc">Returns an iterable object representing a subset of the range [0, max).</div><div class="ttdef"><b>Definition:</b> range.h:217</div></div>
-<div class="ttc" id="anamespacelagrange_html"><div class="ttname"><a href="namespacelagrange.html">lagrange</a></div><div class="ttdoc">Main namespace for Lagrange.</div></div>
+<div class="ttc" id="anamespacelagrange_html"><div class="ttname"><a href="namespacelagrange.html">lagrange</a></div><div class="ttdoc">Main namespace for Lagrange.</div><div class="ttdef"><b>Definition:</b> AABBIGL.h:30</div></div>
 <div class="ttc" id="astructlagrange_1_1_select_facets_by_normal_similarity_parameters_html"><div class="ttname"><a href="structlagrange_1_1_select_facets_by_normal_similarity_parameters.html">lagrange::SelectFacetsByNormalSimilarityParameters</a></div><div class="ttdoc">Given a seed vertex, selects faces around it based on the change in triangle normals.</div><div class="ttdef"><b>Definition:</b> select_facets_by_normal_similarity.h:33</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->

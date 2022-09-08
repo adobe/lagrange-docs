@@ -82,23 +82,30 @@ $(function() {
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment"> */</span></div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#pragma once</span></div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;lagrange/SurfaceMesh.h&gt;</span></div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &lt;string_view&gt;</span></div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacelagrange.html">lagrange</a> {</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> Scalar, <span class="keyword">typename</span> Index&gt;</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><a class="code hl_typedef" href="group__group-surfacemesh-attr.html#ga4d115376c2c766084ef808c837348fc3">AttributeId</a> <a class="code hl_function" href="group__group-surfacemesh-utils.html#ga219f2db0d23b86456649478a92506997">compute_facet_normal</a>(</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    SurfaceMesh&lt;Scalar, Index&gt;&amp; mesh,</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    std::string_view name = <span class="stringliteral">&quot;@facet_normal&quot;</span>);</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>} <span class="comment">// namespace lagrange</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;lagrange/NormalWeightingType.h&gt;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &lt;lagrange/SurfaceMesh.h&gt;</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &lt;string_view&gt;</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacelagrange.html">lagrange</a> {</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="structlagrange_1_1_facet_normal_options.html">   32</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structlagrange_1_1_facet_normal_options.html">FacetNormalOptions</a></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>{</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="structlagrange_1_1_facet_normal_options.html#ad9fcba39803c665ca7be48a39d079f00">   35</a></span>    std::string_view <a class="code hl_variable" href="structlagrange_1_1_facet_normal_options.html#ad9fcba39803c665ca7be48a39d079f00">output_attribute_name</a> = <span class="stringliteral">&quot;@facet_normal&quot;</span>;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>};</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> Scalar, <span class="keyword">typename</span> Index&gt;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><a class="code hl_typedef" href="group__group-surfacemesh-attr.html#ga4d115376c2c766084ef808c837348fc3">AttributeId</a> <a class="code hl_function" href="group__group-surfacemesh-utils.html#ga50e835144b2dd2ad5df9848293c8b097">compute_facet_normal</a>(<a class="code hl_class" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh&lt;Scalar, Index&gt;</a>&amp; mesh, <a class="code hl_struct" href="structlagrange_1_1_facet_normal_options.html">FacetNormalOptions</a> options = {});</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>} <span class="comment">// namespace lagrange</span></div>
+<div class="ttc" id="aclasslagrange_1_1_surface_mesh_html"><div class="ttname"><a href="classlagrange_1_1_surface_mesh.html">lagrange::SurfaceMesh</a></div><div class="ttdoc">A general purpose polygonal mesh class.</div><div class="ttdef"><b>Definition:</b> SurfaceMesh.h:38</div></div>
 <div class="ttc" id="agroup__group-surfacemesh-attr_html_ga4d115376c2c766084ef808c837348fc3"><div class="ttname"><a href="group__group-surfacemesh-attr.html#ga4d115376c2c766084ef808c837348fc3">lagrange::AttributeId</a></div><div class="ttdeci">uint32_t AttributeId</div><div class="ttdoc">Identified to be used to access an attribute.</div><div class="ttdef"><b>Definition:</b> AttributeFwd.h:68</div></div>
-<div class="ttc" id="agroup__group-surfacemesh-utils_html_ga219f2db0d23b86456649478a92506997"><div class="ttname"><a href="group__group-surfacemesh-utils.html#ga219f2db0d23b86456649478a92506997">lagrange::compute_facet_normal</a></div><div class="ttdeci">AttributeId compute_facet_normal(SurfaceMesh&lt; Scalar, Index &gt; &amp;mesh, std::string_view name=&quot;@facet_normal&quot;)</div><div class="ttdoc">Compute facet normals.</div><div class="ttdef"><b>Definition:</b> compute_facet_normal.cpp:31</div></div>
-<div class="ttc" id="anamespacelagrange_html"><div class="ttname"><a href="namespacelagrange.html">lagrange</a></div><div class="ttdoc">Main namespace for Lagrange.</div></div>
+<div class="ttc" id="agroup__group-surfacemesh-utils_html_ga50e835144b2dd2ad5df9848293c8b097"><div class="ttname"><a href="group__group-surfacemesh-utils.html#ga50e835144b2dd2ad5df9848293c8b097">lagrange::compute_facet_normal</a></div><div class="ttdeci">AttributeId compute_facet_normal(SurfaceMesh&lt; Scalar, Index &gt; &amp;mesh, FacetNormalOptions options={})</div><div class="ttdoc">Compute facet normals.</div><div class="ttdef"><b>Definition:</b> compute_facet_normal.cpp:34</div></div>
+<div class="ttc" id="anamespacelagrange_html"><div class="ttname"><a href="namespacelagrange.html">lagrange</a></div><div class="ttdoc">Main namespace for Lagrange.</div><div class="ttdef"><b>Definition:</b> AABBIGL.h:30</div></div>
+<div class="ttc" id="astructlagrange_1_1_facet_normal_options_html"><div class="ttname"><a href="structlagrange_1_1_facet_normal_options.html">lagrange::FacetNormalOptions</a></div><div class="ttdoc">Option struct for computing per-facet mesh normals.</div><div class="ttdef"><b>Definition:</b> compute_facet_normal.h:33</div></div>
+<div class="ttc" id="astructlagrange_1_1_facet_normal_options_html_ad9fcba39803c665ca7be48a39d079f00"><div class="ttname"><a href="structlagrange_1_1_facet_normal_options.html#ad9fcba39803c665ca7be48a39d079f00">lagrange::FacetNormalOptions::output_attribute_name</a></div><div class="ttdeci">std::string_view output_attribute_name</div><div class="ttdoc">Output normal attribute name.</div><div class="ttdef"><b>Definition:</b> compute_facet_normal.h:35</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

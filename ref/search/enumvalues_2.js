@@ -1,8 +1,12 @@
 var searchData=
 [
-  ['edge_0',['Edge',['../group__group-surfacemesh-attr.html#gga9d8ab208822bab9987e9652dda49d89aa7f0bc3a17ff45e6a7c3fe52b35db1888',1,'lagrange']]],
-  ['edgeindex_1',['EdgeIndex',['../group__group-surfacemesh-attr.html#gga35b5eb426384b257452ee0ffdb732c27a7e0536ad6c15bf05bf40e8876b1a5c10',1,'lagrange']]],
-  ['errorifexternal_2',['ErrorIfExternal',['../group__group-surfacemesh-attr.html#ggaee0f51b5f793101c19bd6dede5db7a7aa9e7163ae7c790d007e084e24693b2303',1,'lagrange::ErrorIfExternal()'],['../group__group-surfacemesh-attr.html#ggade3ae5b7e72e9d4f92f29c6563551c10a9e7163ae7c790d007e084e24693b2303',1,'lagrange::ErrorIfExternal()']]],
-  ['errorifreadonly_3',['ErrorIfReadOnly',['../group__group-surfacemesh-attr.html#gga3018d576f81897e1712c3601b9625cb9a61eb7df0ff95cbd596ba2a4c7ee06b32',1,'lagrange']]],
-  ['errorifreserved_4',['ErrorIfReserved',['../group__group-surfacemesh-attr.html#gga809dfcec94612491ec5be8bb8614ceabafc443f72fcb562a73b40af34ddb599a3',1,'lagrange::ErrorIfReserved()'],['../group__group-surfacemesh-attr.html#ggad17b213b11e78aeb807ad3ece7e67e84afc443f72fcb562a73b40af34ddb599a3',1,'lagrange::ErrorIfReserved()']]]
+  ['closest_5fpoint_0',['CLOSEST_POINT',['../namespacelagrange_1_1raycasting.html#a1bf0ebeb95eeae0cf367574faaecd8dda5a2b10bd73e37dbac3ad940711176c29',1,'lagrange::raycasting::CLOSEST_POINT()'],['../namespacelagrange_1_1raycasting.html#a9ee2fe0bc570d84074a12e3088c7c5e4a5a2b10bd73e37dbac3ad940711176c29',1,'lagrange::raycasting::CLOSEST_POINT()']]],
+  ['closest_5fvertex_1',['CLOSEST_VERTEX',['../namespacelagrange_1_1raycasting.html#a1bf0ebeb95eeae0cf367574faaecd8ddafb31cbcd18a304c6cb21abc93fa62018',1,'lagrange::raycasting::CLOSEST_VERTEX()'],['../namespacelagrange_1_1raycasting.html#a9ee2fe0bc570d84074a12e3088c7c5e4afb31cbcd18a304c6cb21abc93fa62018',1,'lagrange::raycasting::CLOSEST_VERTEX()']]],
+  ['color_2',['Color',['../group__group-surfacemesh-attr.html#gga35b5eb426384b257452ee0ffdb732c27acb5feb1b7314637725a2e73bdc9f7295',1,'lagrange']]],
+  ['confirmoverwrite_3',['ConfirmOverwrite',['../namespacelagrange_1_1ui.html#a52d48398347230f843dc5ad2635ffdfbaead4d3581ab844941cab86ad7a7a4710',1,'lagrange::ui']]],
+  ['constant_4',['CONSTANT',['../namespacelagrange_1_1raycasting.html#a9ee2fe0bc570d84074a12e3088c7c5e4a8d6b5cada83510220f59e00ce86d4d92',1,'lagrange::raycasting']]],
+  ['copyifexternal_5',['CopyIfExternal',['../group__group-surfacemesh-attr.html#ggade3ae5b7e72e9d4f92f29c6563551c10afe72de1001d465db9eb6ce5cb874c2cb',1,'lagrange']]],
+  ['corner_6',['Corner',['../group__group-surfacemesh-attr.html#gga9d8ab208822bab9987e9652dda49d89aab9925c71d0b2b9131518c35c9ebbad92',1,'lagrange']]],
+  ['cornerindex_7',['CornerIndex',['../group__group-surfacemesh-attr.html#gga35b5eb426384b257452ee0ffdb732c27a63222a2d9c46a34b875c078c757da2e8',1,'lagrange']]],
+  ['cornertrianglearea_8',['CornerTriangleArea',['../group__group-surfacemesh-utils.html#ggaa88e833ed770762b02e187f0c2377d3da84f023fc44b6b158de6ccc157c8dab06',1,'lagrange']]]
 ];

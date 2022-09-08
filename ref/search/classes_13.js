@@ -9,9 +9,10 @@ var searchData=
   ['verbosetimer_6',['VerboseTimer',['../classlagrange_1_1_verbose_timer.html',1,'lagrange']]],
   ['vertexbuffer_7',['VertexBuffer',['../structlagrange_1_1ui_1_1_vertex_buffer.html',1,'lagrange::ui']]],
   ['vertexdata_8',['VertexData',['../structlagrange_1_1ui_1_1_vertex_data.html',1,'lagrange::ui']]],
-  ['viewer_9',['Viewer',['../classlagrange_1_1ui_1_1_viewer.html',1,'lagrange::ui']]],
-  ['viewportcomponent_10',['ViewportComponent',['../structlagrange_1_1ui_1_1_viewport_component.html',1,'lagrange::ui']]],
-  ['viewportpanel_11',['ViewportPanel',['../structlagrange_1_1ui_1_1_viewport_panel.html',1,'lagrange::ui']]],
-  ['viewporttransform_12',['ViewportTransform',['../structlagrange_1_1ui_1_1_camera_1_1_viewport_transform.html',1,'lagrange::ui::Camera']]],
-  ['void_13',['Void',['../structlagrange_1_1_mesh_trait_helper_1_1_void.html',1,'lagrange::MeshTraitHelper']]]
+  ['vertexnormaloptions_9',['VertexNormalOptions',['../structlagrange_1_1_vertex_normal_options.html',1,'lagrange']]],
+  ['viewer_10',['Viewer',['../classlagrange_1_1ui_1_1_viewer.html',1,'lagrange::ui']]],
+  ['viewportcomponent_11',['ViewportComponent',['../structlagrange_1_1ui_1_1_viewport_component.html',1,'lagrange::ui']]],
+  ['viewportpanel_12',['ViewportPanel',['../structlagrange_1_1ui_1_1_viewport_panel.html',1,'lagrange::ui']]],
+  ['viewporttransform_13',['ViewportTransform',['../structlagrange_1_1ui_1_1_camera_1_1_viewport_transform.html',1,'lagrange::ui::Camera']]],
+  ['void_14',['Void',['../structlagrange_1_1_mesh_trait_helper_1_1_void.html',1,'lagrange::MeshTraitHelper']]]
 ];

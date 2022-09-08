@@ -70,7 +70,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * Copyright 2020 Adobe. All rights reserved.</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * Copyright 2019 Adobe. All rights reserved.</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> * This file is licensed to you under the Apache License, Version 2.0 (the &quot;License&quot;);</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> * you may not use this file except in compliance with the License. You may obtain a copy</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> * of the License at http://www.apache.org/licenses/LICENSE-2.0</span></div>
@@ -98,12 +98,12 @@ $(function() {
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="comment">// Adapted from https://github.com/mkazhdan/ShapeSPH/blob/master/Util/TriangleMesh.h#L101</span></div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> MeshType&gt;</div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>Eigen::Matrix&lt;typename MeshType::Scalar, 3, 3&gt; compute_mesh_covariance( <span class="comment">//</span></div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="keyword">const</span> MeshType &amp;mesh_ref,</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="keyword">const</span> <a class="code hl_class" href="classlagrange_1_1_mesh.html">MeshType</a> &amp;mesh_ref,</div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="keyword">const</span> <span class="keyword">typename</span> MeshType::VertexType &amp;center,</div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="keyword">const</span> <span class="keyword">typename</span> MeshType::IndexList &amp;active_facets = <span class="keyword">typename</span> MeshType::IndexList())</div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>{ <span class="comment">//</span></div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="keyword">using</span> <a class="code hl_enumvalue" href="group__group-surfacemesh-attr.html#gga35b5eb426384b257452ee0ffdb732c27af60357a8d17e45793298323f1b372a74">Scalar</a> = <span class="keyword">typename</span> MeshType::Scalar;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="keyword">using</span> Scalar = <span class="keyword">typename</span> MeshType::Scalar;</div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="keyword">using</span> Vector3 = Eigen::Matrix&lt;Scalar, 1, 3&gt;;</div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="keyword">using</span> Matrix3 = Eigen::Matrix&lt;Scalar, 3, 3&gt;;</div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
@@ -114,16 +114,16 @@ $(function() {
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <a class="code hl_define" href="group__group-utils-assert.html#ga1ccafcb14523a1aae57dcac3c3f32ecd">la_runtime_assert</a>(facets.cols() == 3, <span class="stringliteral">&quot;Currently, only triangles are supported&quot;</span>);</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    Matrix3 factors;</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    factors.row(0) &lt;&lt; <a class="code hl_enumvalue" href="group__group-surfacemesh-attr.html#gga35b5eb426384b257452ee0ffdb732c27af60357a8d17e45793298323f1b372a74">Scalar</a>(1. / 2), <a class="code hl_enumvalue" href="group__group-surfacemesh-attr.html#gga35b5eb426384b257452ee0ffdb732c27af60357a8d17e45793298323f1b372a74">Scalar</a>(1. / 3), <a class="code hl_enumvalue" href="group__group-surfacemesh-attr.html#gga35b5eb426384b257452ee0ffdb732c27af60357a8d17e45793298323f1b372a74">Scalar</a>(1. / 6);</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    factors.row(1) &lt;&lt; <a class="code hl_enumvalue" href="group__group-surfacemesh-attr.html#gga35b5eb426384b257452ee0ffdb732c27af60357a8d17e45793298323f1b372a74">Scalar</a>(1. / 3), <a class="code hl_enumvalue" href="group__group-surfacemesh-attr.html#gga35b5eb426384b257452ee0ffdb732c27af60357a8d17e45793298323f1b372a74">Scalar</a>(1. / 4), <a class="code hl_enumvalue" href="group__group-surfacemesh-attr.html#gga35b5eb426384b257452ee0ffdb732c27af60357a8d17e45793298323f1b372a74">Scalar</a>(1. / 8);</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    factors.row(2) &lt;&lt; <a class="code hl_enumvalue" href="group__group-surfacemesh-attr.html#gga35b5eb426384b257452ee0ffdb732c27af60357a8d17e45793298323f1b372a74">Scalar</a>(1. / 6), <a class="code hl_enumvalue" href="group__group-surfacemesh-attr.html#gga35b5eb426384b257452ee0ffdb732c27af60357a8d17e45793298323f1b372a74">Scalar</a>(1. / 8), <a class="code hl_enumvalue" href="group__group-surfacemesh-attr.html#gga35b5eb426384b257452ee0ffdb732c27af60357a8d17e45793298323f1b372a74">Scalar</a>(1. / 12);</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    factors.row(0) &lt;&lt; Scalar(1. / 2), Scalar(1. / 3), Scalar(1. / 6);</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    factors.row(1) &lt;&lt; Scalar(1. / 3), Scalar(1. / 4), Scalar(1. / 8);</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    factors.row(2) &lt;&lt; Scalar(1. / 6), Scalar(1. / 8), Scalar(1. / 12);</div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="keyword">auto</span> triangle_covariance = [&amp;factors](</div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>                                   <span class="keyword">const</span> Vector3 &amp;v1,</div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>                                   <span class="keyword">const</span> Vector3 &amp;v2,</div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>                                   <span class="keyword">const</span> Vector3 &amp;v3,</div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>                                   <span class="keyword">const</span> Vector3 &amp;c) -&gt; Matrix3 {</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        <span class="keyword">const</span> <a class="code hl_enumvalue" href="group__group-surfacemesh-attr.html#gga35b5eb426384b257452ee0ffdb732c27af60357a8d17e45793298323f1b372a74">Scalar</a> a = (v2 - v1).cross(v3 - v1).norm();</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        <span class="keyword">const</span> Scalar a = (v2 - v1).cross(v3 - v1).norm();</div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        Matrix3 p;</div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        p.row(0) = v1 - c;</div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        p.row(1) = v3 - v1;</div>
@@ -148,10 +148,10 @@ $(function() {
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
 <div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>} <span class="comment">// namespace lagrange</span></div>
-<div class="ttc" id="agroup__group-surfacemesh-attr_html_gga35b5eb426384b257452ee0ffdb732c27af60357a8d17e45793298323f1b372a74"><div class="ttname"><a href="group__group-surfacemesh-attr.html#gga35b5eb426384b257452ee0ffdb732c27af60357a8d17e45793298323f1b372a74">lagrange::AttributeUsage::Scalar</a></div><div class="ttdeci">@ Scalar</div><div class="ttdoc">Mesh attribute must have exactly 1 channel.</div></div>
+<div class="ttc" id="aclasslagrange_1_1_mesh_html"><div class="ttname"><a href="classlagrange_1_1_mesh.html">lagrange::Mesh</a></div><div class="ttdef"><b>Definition:</b> Mesh.h:47</div></div>
 <div class="ttc" id="agroup__group-utils-assert_html_ga1ccafcb14523a1aae57dcac3c3f32ecd"><div class="ttname"><a href="group__group-utils-assert.html#ga1ccafcb14523a1aae57dcac3c3f32ecd">la_runtime_assert</a></div><div class="ttdeci">#define la_runtime_assert(...)</div><div class="ttdoc">Runtime assertion check.</div><div class="ttdef"><b>Definition:</b> assert.h:168</div></div>
 <div class="ttc" id="agroup__group-utils-misc_html_ga0be357120afca3098d989abf97e72b13"><div class="ttname"><a href="group__group-utils-misc.html#ga0be357120afca3098d989abf97e72b13">lagrange::range_sparse</a></div><div class="ttdeci">internal::SparseRange&lt; Index &gt; range_sparse(Index max, const std::vector&lt; Index &gt; &amp;active)</div><div class="ttdoc">Returns an iterable object representing a subset of the range [0, max).</div><div class="ttdef"><b>Definition:</b> range.h:217</div></div>
-<div class="ttc" id="anamespacelagrange_html"><div class="ttname"><a href="namespacelagrange.html">lagrange</a></div><div class="ttdoc">Main namespace for Lagrange.</div></div>
+<div class="ttc" id="anamespacelagrange_html"><div class="ttname"><a href="namespacelagrange.html">lagrange</a></div><div class="ttdoc">Main namespace for Lagrange.</div><div class="ttdef"><b>Definition:</b> AABBIGL.h:30</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

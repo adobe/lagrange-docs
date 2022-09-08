@@ -133,7 +133,7 @@ $(function() {
 </li>
 <li><a href="#examples">Examples</a></li>
 </ul>
-<h1><a class="anchor" id="autotoc_md4"></a>
+<h1><a class="anchor" id="autotoc_md6"></a>
 Overview</h1>
 <p >Lagrange UI uses an <b>Entity-Component-System (ECS)</b> architecture:</p><ul>
 <li>Entity is a unique identifier</li>
@@ -173,15 +173,15 @@ Overview</h1>
 <div class="line">auto entity = registry.create();</div>
 <div class="line">registry.emplace&lt;MyPositionComponent&gt;(entity, MyPositionComponent(0,0,0));</div>
 </div><!-- fragment --><p ><em>TODO: lifetime discussion</em></p>
-<h1><a class="anchor" id="autotoc_md5"></a>
+<h1><a class="anchor" id="autotoc_md7"></a>
 Geometry loading and registration</h1>
-<h2><a class="anchor" id="autotoc_md6"></a>
+<h2><a class="anchor" id="autotoc_md8"></a>
 Loading mesh</h2>
 <p >Creates and entity that represents the mesh. This entity is only a resource - it is not rendered. It can be referenced by components that need this geometry for rendering/picking/etc. These entities have <code>MeshData</code> component attached that contains a <code><a class="el" href="classlagrange_1_1_mesh_base.html">lagrange::MeshBase</a></code> pointer.</p>
 <div class="fragment"><div class="line"> {c++}</div>
 <div class="line">ui::Entity mesh_from_disk = ui::load_mesh(registry, path);</div>
 <div class="line">ui::Entity mesh_from_memory = ui::register_mesh(registry, lagrange::create_sphere());</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md7"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md9"></a>
 Retrieving and interacting with the mesh</h2>
 <p >To retrieve a mesh: </p><div class="fragment"><div class="line"> {c++}</div>
 <div class="line">MeshType &amp; mesh = ui::get_mesh&lt;MeshType&gt;(registry, mesh_entity);</div>
@@ -196,22 +196,22 @@ Retrieving and interacting with the mesh</h2>
 <div class="line">...</div>
 <div class="line">std::optional&lt;RayFacetHit&gt; intersect_ray(const MeshData&amp; d, const Eigen::Vector3f&amp; origin, const Eigen::Vector3f&amp; dir);</div>
 <div class="line">...</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md8"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md10"></a>
 Loading scene</h2>
 <p >Loads a scene using Assimp. Creates a hierarchy of entities and loads meshes, materials and textures. Returns the top-level entity.</p>
 <div class="fragment"><div class="line"> {c++}</div>
 <div class="line">ui::Entity root = ui::load_scene(registry, path);</div>
 </div><!-- fragment --><p >To iterate over the scene, see the <a href="#tree"><code>Tree</code> component</a>.</p>
-<h1><a class="anchor" id="autotoc_md9"></a>
+<h1><a class="anchor" id="autotoc_md11"></a>
 Adding geometry to scene</h1>
-<h2><a class="anchor" id="autotoc_md10"></a>
+<h2><a class="anchor" id="autotoc_md12"></a>
 Default Physically Based Render (PBR)</h2>
 <p >Adds previously registered mesh geometry to the scene. This mesh will be rendered using PBR.</p>
 <div class="fragment"><div class="line"> {c++}</div>
 <div class="line">ui::Entity scene_object = ui::show_mesh(registry, mesh_entity);</div>
 </div><!-- fragment --><p >Uses <code>DefaultShaders::PBR</code> shader.</p>
 <p >See <a href="#Materials">Materials</a> section to see how to control the appearance.</p>
-<h2><a class="anchor" id="autotoc_md11"></a>
+<h2><a class="anchor" id="autotoc_md13"></a>
 Mesh visualizations</h2>
 <p >Adds a visualization of a mesh (<a href="https://git.corp.adobe.com/lagrange/Lagrange/issues/657">Jeremie's idea</a>).</p>
 <div class="fragment"><div class="line"> {c++}</div>
@@ -220,11 +220,11 @@ Mesh visualizations</h2>
 <div class="line">auto corner_viz_entity = ui::show_corner_attribute(registry, mesh_entity, attribute_name, glyph_type);</div>
 <div class="line">auto edge_viz_entity = ui::show_edge_attribute(registry, mesh_entity, attribute_name, glyph_type);</div>
 </div><!-- fragment --><p >These functions will create a new scene object and render the supplied attribute using the selected glyph type.</p>
-<h3><a class="anchor" id="autotoc_md12"></a>
+<h3><a class="anchor" id="autotoc_md14"></a>
 &lt;tt&gt;GlyphType::Surface&lt;/tt&gt;</h3>
 <p >Renders unshaded surface with color mapped from the supplied attribute. Supports attributes of dimension: 1, 2, 3, and 4.</p>
 <p ><em>Normalization</em>: The attribute value is automatically remapped to (0,1) range. To change the range, use <code>ui::set_colormap_range</code> <em>Colormapping</em>: By default, the attribute is interpreted as R, RG, RGB or RGBA value. To use different mapping, refer to <a href="#Colormaps">Colormaps</a> section.</p>
-<h3><a class="anchor" id="autotoc_md13"></a>
+<h3><a class="anchor" id="autotoc_md15"></a>
 Colormaps</h3>
 <p >If the glyph or shader supports colormapping, use the following function to set the colormap:</p>
 <p >To use on of the default colormaps: </p><div class="fragment"><div class="line"> {c++}</div>
@@ -241,7 +241,7 @@ Colormaps</h3>
 <div class="line">colormap_inferno</div>
 <div class="line">colormap_turbo</div>
 <div class="line">colormap_coolwarm</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md14"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md16"></a>
 Materials</h1>
 <p >Any entity with <code>MeshRender</code> component has a <code>Material</code> associated with it (<code>MeshRender::material</code>).</p>
 <p >To get a reference to entity's material, use:</p>
@@ -249,7 +249,7 @@ Materials</h1>
 <div class="line">std::shared_ptr&lt;Material&gt; material_ptr = ui::get_material(r, entity_with_meshrender);</div>
 </div><!-- fragment --><p >Similarly, you may set a new material: </p><div class="fragment"><div class="line"> {c++}</div>
 <div class="line">ui::set_material(r, entity_with_mesh_render, std::make_shared&lt;ui::Material&gt;(r, DefaultShaders::PBR);</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md15"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md17"></a>
 Color/Texture Material Properties</h2>
 <p >You may set colors and textures of materials using the following API:</p>
 <div class="fragment"><div class="line"> {c++}</div>
@@ -260,7 +260,7 @@ Color/Texture Material Properties</h2>
 <div class="line"> </div>
 <div class="line">//Sets &quot;texture name&quot; to texture loaded from file</div>
 <div class="line">material.set_texture(&quot;texture name&quot;, ui::load_texture(&quot;texture.jpg&quot;));</div>
-</div><!-- fragment --><h3><a class="anchor" id="autotoc_md16"></a>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md18"></a>
 PBRMaterial</h3>
 <p >For the default <code>PBRMaterial</code>, you may use aliases for the property names: </p><div class="fragment"><div class="line"> {c++}</div>
 <div class="line"> </div>
@@ -286,23 +286,23 @@ PBRMaterial</h3>
 <div class="line">material.set_float(PBRMaterial::Opacity, 1.0f);</div>
 <div class="line">//Opacity texture</div>
 <div class="line">material.set_texture(PBRMaterial::Opacity, ui::load_texture(&quot;opacity.jpg&quot;));</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md17"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md19"></a>
 Rasterizer Properties</h2>
 <p >To control OpenGl properties, you may following syntax:</p>
 <div class="fragment"><div class="line"> {c++}</div>
 <div class="line">material.set_int(RasterizerOptions::PolygonMode, GL_LINE);</div>
 <div class="line">material.set_float(RasterizerOptions::PointSize, PointSize);</div>
 </div><!-- fragment --><p >See <code>&lt;lagrange/ui/Shader.h&gt;</code> for a list of supported <code>RasterizerOptions</code>;</p>
-<h2><a class="anchor" id="autotoc_md18"></a>
+<h2><a class="anchor" id="autotoc_md20"></a>
 Custom Shader Properties</h2>
 <p >You may set arbitrary <code>int</code> or <code>float</code> or <code>Color</code> or <code>Texture</code> to the material. It will be set as a shader uniform if it exists in the shader, otherwise there will be no effect.</p>
-<h1><a class="anchor" id="autotoc_md19"></a>
+<h1><a class="anchor" id="autotoc_md21"></a>
 Common components</h1>
 <p >Entities can have several components that define their behavior. Here is a list of the common components used throughout Lagrange UI.</p>
-<h2><a class="anchor" id="autotoc_md20"></a>
+<h2><a class="anchor" id="autotoc_md22"></a>
 &lt;tt&gt;Name&lt;/tt&gt;</h2>
 <p >Subclassed <code>std::string</code>. Acts as a display name. Will be shown in UI if it exists, otherwise a generated name will be used. Does not have to be unique.</p>
-<h2><a class="anchor" id="autotoc_md21"></a>
+<h2><a class="anchor" id="autotoc_md23"></a>
 &lt;tt&gt;Transform&lt;/tt&gt;</h2>
 <p >Contains local and global transformations and a viewport transform.</p>
 <div class="fragment"><div class="line"> {c++}</div>
@@ -310,7 +310,7 @@ Common components</h1>
 <div class="line">ui::Transform &amp; transform = registry.get&lt;ui::Transform&gt;(e);</div>
 <div class="line">transform.local = Eigen::Translation3f(1,0,0);</div>
 </div><!-- fragment --><p >Global transformation is recomputed after each <code>Simulation</code> step. Only change the <code>local</code> transform.</p>
-<h2><a class="anchor" id="autotoc_md22"></a>
+<h2><a class="anchor" id="autotoc_md24"></a>
 &lt;tt&gt;Tree&lt;/tt&gt;</h2>
 <p >Defines scene tree relationship. Data is stored using <code>parent</code>, <code>first_child</code>, <code>previous_sibling</code> and <code>next_sibling</code> entity IDs.</p>
 <p >Use helper functions to query or change the tree structure, do not change directly (unless you know what you're doing). </p><div class="fragment"><div class="line"> {c++}</div>
@@ -338,13 +338,13 @@ Common components</h1>
 <div class="line">});</div>
 <div class="line"> </div>
 <div class="line">// See utils/treenode.h for more details</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md23"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md25"></a>
 &lt;tt&gt;MeshGeometry&lt;/tt&gt;</h2>
 <p >Contains reference to geometry entity</p>
 <div class="fragment"><div class="line"> {c++}</div>
 <div class="line">MeshGeometry mg;</div>
 <div class="line">mg.entity = ..</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md24"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md26"></a>
 &lt;tt&gt;Hovered&lt;/tt&gt; and &lt;tt&gt;Selected&lt;/tt&gt;</h2>
 <p >These components acts as flags whether the entity is hovered or selected respectively.</p>
 <p >Useful helper functions </p><div class="fragment"><div class="line"> {c++}</div>
@@ -355,7 +355,7 @@ Common components</h1>
 <div class="line">std::vector&lt;Entity&gt; collect_selected(const Registry&amp; registry);</div>
 <div class="line">std::vector&lt;Entity&gt; collect_hovered(const Registry&amp; registry);</div>
 <div class="line">//See `utils/selection.h` for details</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md25"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md27"></a>
 &lt;tt&gt;Layer&lt;/tt&gt;</h2>
 <p >There are 256 layers an entity can belong to. The <code>Layer</code> component specifies which layers the entity belongs to. Entity can belong to several layers at once. There are several default layers: <code>ui::DefaultLayers::Default</code> - everything belongs to it by default <code>ui::DefaultLayers::Selection</code> - selected entities <code>ui::DefaultLayers::Hover</code> - hovered entities</p>
 <p >Default constructed <code>Layer</code> component belongs to <code>ui::DefaultLayers::Default</code>.</p>
@@ -371,13 +371,13 @@ Common components</h1>
 <div class="line">    Entity e,</div>
 <div class="line">    const Layer&amp; visible_layers,</div>
 <div class="line">    const Layer&amp; hidden_layers);</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md26"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md28"></a>
 &lt;tt&gt;UIPanel&lt;/tt&gt;</h2>
 <p >See <a href="#User-Interface-Panels">section</a> below.</p>
-<h2><a class="anchor" id="autotoc_md27"></a>
+<h2><a class="anchor" id="autotoc_md29"></a>
 &lt;tt&gt;Viewport&lt;/tt&gt;</h2>
 <p >See <a href="#Viewports">section</a> below.</p>
-<h1><a class="anchor" id="autotoc_md28"></a>
+<h1><a class="anchor" id="autotoc_md30"></a>
 User Interface Panels</h1>
 <p >UI Panels are implemented also as entities. Panels have the <code>UIPanel</code> component. The <code>UIPanel</code> components describes the ImGui information (panel title, position, etc.).</p>
 <p >To create a new UI panel: </p><div class="fragment"><div class="line"> {c++}</div>
@@ -404,15 +404,15 @@ User Interface Panels</h1>
 <div class="line"> </div>
 <div class="line">auto panel1 = ui::add_panel(registry,&quot;panel with x = 1&quot;,panel_fn);</div>
 <div class="line">registry.emplace&lt;MyPanelState&gt;(panel1, MyPanelState{1})</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md29"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md31"></a>
 Viewports</h1>
 <p >Viewports are implemented as entities with <code>ViewportComponent</code> component. Those referenced in <code>ViewportPanel</code> are rendered to screen, otherwise they are rendered off-screen. There is always one <b>focused</b> <code>ViewportPanel</code> (identified by the context variable <code>FocusedViewportPanel</code>).</p>
 <p >See <code><a class="el" href="components_2_viewport_8h_source.html">components/Viewport.h</a></code> and <code><a class="el" href="utils_2_viewport_8h_source.html">utils/viewport.h</a></code> for utility functions related to viewport, viewport panels and cameras.</p>
-<h2><a class="anchor" id="autotoc_md30"></a>
+<h2><a class="anchor" id="autotoc_md32"></a>
 Entity visibility</h2>
 <p >Each <code>ViewportComponent</code> has <code>visible_layers</code> and <code>hidden_layers</code> that control which entities can be renderer in this viewport (see <a href="#layer"><code>Layer</code> component</a> for details).</p>
 <p >The default viewport shows only <code>DefaultLayers::DefaultLayer</code></p>
-<h2><a class="anchor" id="autotoc_md31"></a>
+<h2><a class="anchor" id="autotoc_md33"></a>
 Multi viewport</h2>
 <p >Additional viewports can be created by calling </p><div class="fragment"><div class="line"> {c++}</div>
 <div class="line">ui::Entity camera_entity = add_camera(ui::Registry &amp;, ui::Camera camera); </div>
@@ -424,7 +424,7 @@ Multi viewport</h2>
 <div class="line">// Creates a UI panel that shows the viewport</div>
 <div class="line">ui::Entity viewport_entity = add_viewport_panel(ui::Registry &amp;, const std::string &amp; name, ui::Entity viewport_entity);</div>
 </div><!-- fragment --><hr  />
-<h1><a class="anchor" id="autotoc_md33"></a>
+<h1><a class="anchor" id="autotoc_md35"></a>
 Entity Component System</h1>
 <p >For more information about the ECS architecture, see:</p><ul>
 <li><a href="https://medium.com/ingeniouslysimple/entities-components-and-systems-89c31464240d">What you need to know about ECS</a> for quick overview</li>
@@ -433,19 +433,19 @@ Entity Component System</h1>
 <li><a href="https://skypjack.github.io/2019-06-25-ecs-baf-part-4/">ECS Back and Forth</a> for more details about ECS design, in particular hierarchies</li>
 <li><a href="https://docs.unity3d.com/Packages/com.unity.entities@0.1/manual/index.html">Unity ECS documentation</a> for Unity's version of ECS</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md34"></a>
+<h2><a class="anchor" id="autotoc_md36"></a>
 Registry</h2>
 <p >The <code>Viewer</code> uses a <code>Registry</code> (alias for <code>entt::registry</code>) to store all entities and their data. To manipulate entities and their components directly, use the object: </p><div class="fragment"><div class="line"> {c++}</div>
 <div class="line">auto &amp; registry = viewer.registry();</div>
 </div><!-- fragment --><p> <code>Viewer</code> class exposes API that simplifies interaction with the <code>Registry</code>, e.g. <code>Viewer::show_mesh</code>.</p>
-<h2><a class="anchor" id="autotoc_md35"></a>
+<h2><a class="anchor" id="autotoc_md37"></a>
 Entity</h2>
 <p >Unique identifier - it's just that. It's used to identify a unique "object" or "entity". Lagrange UI defines a <code>Entity</code> alias. Internally implemented as <code>std::uint32_t</code>.</p>
 <p >To create a new entity, use: </p><div class="fragment"><div class="line"> {c++}</div>
 <div class="line">Entity new_entity = registry.create();</div>
 </div><!-- fragment --><p >To destroy: </p><div class="fragment"><div class="line"> {c++}</div>
 <div class="line">registry.destroy(entity);</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md36"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md38"></a>
 Components</h2>
 <p >Any data that is attached to an <code>Entity</code>. Uniquely identified by template typename <code>&lt;T&gt;</code> and <code>Entity</code>.</p>
 <p >Components <b>don't have logic, that means no code</b>. They only store data and implicitly define behavior. Ideally, the components should be <code>structs</code> with no functions. However, it may be beneficial to have setters/getters as member functions in some cases.</p>
@@ -465,13 +465,13 @@ Components</h2>
 <div class="line">if(registry.all_of&lt;MyComponent&gt;()){</div>
 <div class="line">    MyComponent&amp; c = registry.get&lt;MyComponent&gt;(entity);</div>
 <div class="line">}</div>
-</div><!-- fragment --><h3><a class="anchor" id="autotoc_md37"></a>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md39"></a>
 Tag Components</h3>
 <p >"Empty" components may be used to tag entities, e.g. <code>Selected</code>, <code>Hovered</code>, etc. These types however must have non-zero size: </p><div class="fragment"><div class="line"> {c++}</div>
 <div class="line">struct Hidden {</div>
 <div class="line">    bool dummy;</div>
 <div class="line">}</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md38"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md40"></a>
 Systems</h2>
 <p >Systems are the logic of the application. They are defined as functions that iterate over entities that have specified components only. For example, running this system: </p><div class="fragment"><div class="line"> {c++}</div>
 <div class="line">registry.view&lt;Velocity, Position&gt;().each([](Entity e, Velocity &amp; velocity, Transform &amp; transform){</div>
@@ -484,7 +484,7 @@ Systems</h2>
 <div class="line">        //</div>
 <div class="line">    });</div>
 <div class="line">};</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md39"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md41"></a>
 Context variables</h2>
 <p >Systems <b>do not have data</b>. However, it's often useful to have some state associated with a given system, e.g. for caching. Sometimes it's useful that this state be shared among several systems. Instead of storing this state in some single instance of a component, we can use <em>context</em> variables. These can be thought of as <em>singleton</em> components - only one instance of a <code>Type</code> can exist at a given time.</p>
 <p ><code>InputState</code> is such a <em>singleton</em> component. At the beginning of the frame, it is filled with key/mouse information, including last mouse position, mouse delta, active keybinds, etc.: </p><div class="fragment"><div class="line"> {c++}</div>
@@ -500,7 +500,7 @@ Context variables</h2>
 <div class="line"> </div>
 <div class="line">    lagrange::logger().info(&quot;Mouse position: {}&quot;, input_state.mouse_pos);</div>
 <div class="line">}</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md40"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md42"></a>
 Design considerations</h2>
 <p >Rules to follow when designing components and systems:</p><ul>
 <li>Components have no functions, only data</li>
@@ -508,10 +508,10 @@ Design considerations</h2>
 <li>State associated with systems is stored as context variable (<code>registry.ctx&lt;T&gt;()</code>)</li>
 </ul>
 <p ><em>TODO: const Systems / const views</em></p>
-<h1><a class="anchor" id="autotoc_md41"></a>
+<h1><a class="anchor" id="autotoc_md43"></a>
 Customizing Lagrange UI</h1>
 <p >TODO: add more details and examples. In the meantime, refer to files named <code>default_{}</code> to see how the UI registers the default types and functionality.</p>
-<h2><a class="anchor" id="autotoc_md42"></a>
+<h2><a class="anchor" id="autotoc_md44"></a>
 Components</h2>
 <p >You may add any time of component using <code>registry.emplace&lt;ComponentType&gt;(entity)</code>. However to enable more advanced features, you may register the components in the UI:</p>
 <p ><code>register_component&lt;T&gt;</code></p><ul>
@@ -522,18 +522,18 @@ Components</h2>
 <li>defines ImGui code to render</li>
 <li>enables drag-and-drop</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md43"></a>
+<h2><a class="anchor" id="autotoc_md45"></a>
 Tools</h2>
 <p ><em>TBD</em></p>
 <p ><code>register_element_type&lt;E&gt;</code> (Object/Facet/Edge/Vertex/...)</p>
 <p ><code>register_tool&lt;E,T&gt;</code> (Select/Translate/Rotate/Scale/...)</p>
-<h2><a class="anchor" id="autotoc_md44"></a>
+<h2><a class="anchor" id="autotoc_md46"></a>
 Geometry</h2>
 <p >Lagrange meshes must be registered to work. By default, only the <code>TriangleMesh3Df</code> and <code>TriangleMesh3D</code> are registered.</p>
 <p ><code>ui::register_mesh_type&lt;MeshType&gt;()</code></p>
-<h2><a class="anchor" id="autotoc_md45"></a>
+<h2><a class="anchor" id="autotoc_md47"></a>
 Rendering</h2>
-<h3><a class="anchor" id="autotoc_md46"></a>
+<h3><a class="anchor" id="autotoc_md48"></a>
 Shader and Material properties</h3>
 <p >Material properties can be defined in the shader using the following syntax:</p>
 <div class="fragment"><div class="line">#pragma property NAME &quot;DISPLAY NAME&quot; TYPE(DEFAULT VALUE AND/OR RANGE) [TAG1, TAG2]</div>
@@ -551,7 +551,7 @@ Shader and Material properties</h3>
 </div><!-- fragment --><p> In case of <code>Texture2D</code>, these uniforms are generated: </p><div class="fragment"><div class="line">uniform sampler2D NAME;</div>
 <div class="line">uniform bool NAME_texture_bound = false;</div>
 <div class="line">uniform VEC_TYPE NAME_default_value = DEFAULT_VALUE;</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md47"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md49"></a>
 Examples</h1>
 <p >Refer to <code>modules/ui/examples</code>. Build Lagrange with <code>-DLAGRANGE_EXAMPLES=On</code>. </p>
 </div></div><!-- contents -->

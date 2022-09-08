@@ -103,8 +103,8 @@ $(function() {
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="keywordtype">bool</span> <a class="code hl_function" href="group__group-utils-misc.html#ga8eef11056e4525af0cd41aeb98869cbb">ends_with</a>(std::string_view str, std::string_view suffix);</div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="comment">// Can be replaced with std::format in C++20</span></div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span>... Args&gt;</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>std::string string_format(<span class="keyword">const</span> std::string&amp; format, Args&amp;&amp;... args)</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span>... <a class="code hl_struct" href="struct_args.html">Args</a>&gt;</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>std::string string_format(<span class="keyword">const</span> std::string&amp; format, <a class="code hl_struct" href="struct_args.html">Args</a>&amp;&amp;... args)</div>
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>{</div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    <span class="keywordflow">return</span> fmt::format(format, std::forward&lt;Args&gt;(args)...);</div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>}</div>
@@ -114,7 +114,8 @@ $(function() {
 <div class="ttc" id="agroup__group-utils-misc_html_ga8eef11056e4525af0cd41aeb98869cbb"><div class="ttname"><a href="group__group-utils-misc.html#ga8eef11056e4525af0cd41aeb98869cbb">lagrange::ends_with</a></div><div class="ttdeci">bool ends_with(std::string_view str, std::string_view suffix)</div><div class="ttdoc">Checks if the string ends with the given suffix.</div><div class="ttdef"><b>Definition:</b> strings.cpp:29</div></div>
 <div class="ttc" id="agroup__group-utils-misc_html_gad2f13bef4d8b9c7c6b2dc61b87d95bd4"><div class="ttname"><a href="group__group-utils-misc.html#gad2f13bef4d8b9c7c6b2dc61b87d95bd4">lagrange::string_split</a></div><div class="ttdeci">std::vector&lt; std::string &gt; string_split(const std::string &amp;str, char delimiter)</div><div class="ttdoc">Split a std::string using a prescribed delimiter.</div><div class="ttdef"><b>Definition:</b> strings.cpp:18</div></div>
 <div class="ttc" id="agroup__group-utils-misc_html_gaebb929afb5049cc3aaaabd296f556ac3"><div class="ttname"><a href="group__group-utils-misc.html#gaebb929afb5049cc3aaaabd296f556ac3">lagrange::starts_with</a></div><div class="ttdeci">bool starts_with(std::string_view str, std::string_view prefix)</div><div class="ttdoc">Checks if the string begins with the given prefix.</div><div class="ttdef"><b>Definition:</b> strings.cpp:36</div></div>
-<div class="ttc" id="anamespacelagrange_html"><div class="ttname"><a href="namespacelagrange.html">lagrange</a></div><div class="ttdoc">Main namespace for Lagrange.</div></div>
+<div class="ttc" id="anamespacelagrange_html"><div class="ttname"><a href="namespacelagrange.html">lagrange</a></div><div class="ttdoc">Main namespace for Lagrange.</div><div class="ttdef"><b>Definition:</b> AABBIGL.h:30</div></div>
+<div class="ttc" id="astruct_args_html"><div class="ttname"><a href="struct_args.html">Args</a></div><div class="ttdef"><b>Definition:</b> project.cpp:27</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

@@ -70,7 +70,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * Copyright 2020 Adobe. All rights reserved.</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * Copyright 2018 Adobe. All rights reserved.</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> * This file is licensed to you under the Apache License, Version 2.0 (the &quot;License&quot;);</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> * you may not use this file except in compliance with the License. You may obtain a copy</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> * of the License at http://www.apache.org/licenses/LICENSE-2.0</span></div>
@@ -105,7 +105,7 @@ $(function() {
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacelagrange.html">lagrange</a> {</div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> MeshType&gt;</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="namespacelagrange.html#a6b6edd3e50dbecc0dde32eb22a529e48">   45</a></span>std::unique_ptr&lt;MeshType&gt; <a class="code hl_function" href="namespacelagrange.html#a6b6edd3e50dbecc0dde32eb22a529e48">resolve_vertex_nonmanifoldness</a>(MeshType&amp; mesh)</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="namespacelagrange.html#a6b6edd3e50dbecc0dde32eb22a529e48">   45</a></span>std::unique_ptr&lt;MeshType&gt; <a class="code hl_function" href="namespacelagrange.html#a6b6edd3e50dbecc0dde32eb22a529e48">resolve_vertex_nonmanifoldness</a>(<a class="code hl_class" href="classlagrange_1_1_mesh.html">MeshType</a>&amp; mesh)</div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>{</div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="keywordflow">if</span> (!mesh.is_connectivity_initialized()) {</div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        mesh.initialize_connectivity();</div>
@@ -116,7 +116,7 @@ $(function() {
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    }</div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <span class="keyword">using</span> Index = <span class="keyword">typename</span> MeshType::Index;</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="keyword">using</span> <a class="code hl_enumvalue" href="group__group-surfacemesh-attr.html#gga9d8ab208822bab9987e9652dda49d89aa7f0bc3a17ff45e6a7c3fe52b35db1888">Edge</a> = <span class="keyword">typename</span> <a class="code hl_enumvalue" href="group__group-surfacemesh-attr.html#gga9d8ab208822bab9987e9652dda49d89aa7f0bc3a17ff45e6a7c3fe52b35db1888">MeshType::Edge</a>;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="keyword">using</span> <a class="code hl_enumvalue" href="group__group-surfacemesh-attr.html#gga9d8ab208822bab9987e9652dda49d89aa7f0bc3a17ff45e6a7c3fe52b35db1888">Edge</a> = <span class="keyword">typename</span> <a class="code hl_class" href="classlagrange_1_1_edge_type.html">MeshType::Edge</a>;</div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <span class="keyword">using</span> VertexArray = <span class="keyword">typename</span> MeshType::VertexArray;</div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="keyword">using</span> FacetArray = <span class="keyword">typename</span> MeshType::FacetArray;</div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
@@ -204,9 +204,11 @@ $(function() {
 <div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>    <span class="keywordflow">return</span> out_mesh;</div>
 <div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>}</div>
 <div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>} <span class="comment">// namespace lagrange</span></div>
+<div class="ttc" id="aclasslagrange_1_1_edge_type_html"><div class="ttname"><a href="classlagrange_1_1_edge_type.html">lagrange::EdgeType</a></div><div class="ttdef"><b>Definition:</b> Edge.h:29</div></div>
+<div class="ttc" id="aclasslagrange_1_1_mesh_html"><div class="ttname"><a href="classlagrange_1_1_mesh.html">lagrange::Mesh</a></div><div class="ttdef"><b>Definition:</b> Mesh.h:47</div></div>
 <div class="ttc" id="agroup__group-logger_html_ga97e3b3adabf67bc7d3650ed14214ddaa"><div class="ttname"><a href="group__group-logger.html#ga97e3b3adabf67bc7d3650ed14214ddaa">lagrange::logger</a></div><div class="ttdeci">spdlog::logger &amp; logger()</div><div class="ttdoc">Retrieves the current logger.</div><div class="ttdef"><b>Definition:</b> Logger.cpp:40</div></div>
 <div class="ttc" id="agroup__group-surfacemesh-attr_html_gga9d8ab208822bab9987e9652dda49d89aa7f0bc3a17ff45e6a7c3fe52b35db1888"><div class="ttname"><a href="group__group-surfacemesh-attr.html#gga9d8ab208822bab9987e9652dda49d89aa7f0bc3a17ff45e6a7c3fe52b35db1888">lagrange::Edge</a></div><div class="ttdeci">@ Edge</div><div class="ttdoc">Per-edge mesh attributes.</div><div class="ttdef"><b>Definition:</b> AttributeFwd.h:33</div></div>
-<div class="ttc" id="anamespacelagrange_html"><div class="ttname"><a href="namespacelagrange.html">lagrange</a></div><div class="ttdoc">Main namespace for Lagrange.</div></div>
+<div class="ttc" id="anamespacelagrange_html"><div class="ttname"><a href="namespacelagrange.html">lagrange</a></div><div class="ttdoc">Main namespace for Lagrange.</div><div class="ttdef"><b>Definition:</b> AABBIGL.h:30</div></div>
 <div class="ttc" id="anamespacelagrange_html_a5dff747c765bd02e34d420ab60c30358"><div class="ttname"><a href="namespacelagrange.html#a5dff747c765bd02e34d420ab60c30358">lagrange::create_mesh</a></div><div class="ttdeci">auto create_mesh(const Eigen::MatrixBase&lt; DerivedV &gt; &amp;vertices, const Eigen::MatrixBase&lt; DerivedF &gt; &amp;facets)</div><div class="ttdoc">This function create a new mesh given the vertex and facet arrays by copying data into the Mesh objec...</div><div class="ttdef"><b>Definition:</b> create_mesh.h:39</div></div>
 <div class="ttc" id="anamespacelagrange_html_a6b6edd3e50dbecc0dde32eb22a529e48"><div class="ttname"><a href="namespacelagrange.html#a6b6edd3e50dbecc0dde32eb22a529e48">lagrange::resolve_vertex_nonmanifoldness</a></div><div class="ttdeci">std::unique_ptr&lt; MeshType &gt; resolve_vertex_nonmanifoldness(MeshType &amp;mesh)</div><div class="ttdoc">Remove nonmanifold vertices topologically by pulling disconnected 1-ring neighborhood apart.</div><div class="ttdef"><b>Definition:</b> resolve_vertex_nonmanifoldness.h:45</div></div>
 </div><!-- fragment --></div><!-- contents -->

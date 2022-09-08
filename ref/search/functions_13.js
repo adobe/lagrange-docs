@@ -1,15 +1,15 @@
 var searchData=
 [
-  ['wrap_0',['wrap',['../classlagrange_1_1_attribute.html#a809028fdd3de22f0e33c7e97f3712578',1,'lagrange::Attribute']]],
-  ['wrap_5fas_5fattribute_1',['wrap_as_attribute',['../classlagrange_1_1_surface_mesh.html#ad3f51c7ce47c56fdd44ac7960044c277',1,'lagrange::SurfaceMesh']]],
-  ['wrap_5fas_5fconst_5fattribute_2',['wrap_as_const_attribute',['../classlagrange_1_1_surface_mesh.html#ab4273659a074810181638f86fbe4373c',1,'lagrange::SurfaceMesh']]],
-  ['wrap_5fas_5fconst_5ffacets_3',['wrap_as_const_facets',['../classlagrange_1_1_surface_mesh.html#a9b4345e9a203bea515b2290275a5faac',1,'lagrange::SurfaceMesh::wrap_as_const_facets(span&lt; const Index &gt; facets_view, Index num_facets, Index vertex_per_facet)'],['../classlagrange_1_1_surface_mesh.html#a579faf1a71ae048baabbd5faf8eb6331',1,'lagrange::SurfaceMesh::wrap_as_const_facets(span&lt; const Index &gt; offsets_view, Index num_facets, span&lt; const Index &gt; facets_view, Index num_corners)']]],
-  ['wrap_5fas_5fconst_5findexed_5fattribute_4',['wrap_as_const_indexed_attribute',['../classlagrange_1_1_surface_mesh.html#a5334d560ab700341d3deec635520057d',1,'lagrange::SurfaceMesh']]],
-  ['wrap_5fas_5fconst_5fvertices_5',['wrap_as_const_vertices',['../classlagrange_1_1_surface_mesh.html#a9990f194f65dc11e3a36c687864d8976',1,'lagrange::SurfaceMesh']]],
-  ['wrap_5fas_5ffacets_6',['wrap_as_facets',['../classlagrange_1_1_surface_mesh.html#ae70fd65a58e6c322cc359577bdf31712',1,'lagrange::SurfaceMesh::wrap_as_facets(span&lt; Index &gt; facets_view, Index num_facets, Index vertex_per_facet)'],['../classlagrange_1_1_surface_mesh.html#a52b89a6d10eee2400c2ca3d1c32dcf01',1,'lagrange::SurfaceMesh::wrap_as_facets(span&lt; Index &gt; offsets_view, Index num_facets, span&lt; Index &gt; facets_view, Index num_corners)']]],
-  ['wrap_5fas_5findexed_5fattribute_7',['wrap_as_indexed_attribute',['../classlagrange_1_1_surface_mesh.html#ac0cb4ae7ef9528cff1f5baca53711e84',1,'lagrange::SurfaceMesh']]],
-  ['wrap_5fas_5fvertices_8',['wrap_as_vertices',['../classlagrange_1_1_surface_mesh.html#ab8c6f796ec0588302d42ff96970f1bc5',1,'lagrange::SurfaceMesh']]],
-  ['wrap_5fconst_9',['wrap_const',['../classlagrange_1_1_attribute.html#a533dd1690d70c2fac47a6fcf95b31b76',1,'lagrange::Attribute']]],
-  ['wrap_5fwith_5fmesh_10',['wrap_with_mesh',['../namespacelagrange.html#abfe650b7cf9ca2f348fbf4791d148706',1,'lagrange']]],
-  ['write_5fcheck_11',['write_check',['../classlagrange_1_1_attribute.html#aa568f68fc806a5b6fb9ceff17eeb7ee5',1,'lagrange::Attribute']]]
+  ['values_0',['values',['../classlagrange_1_1_indexed_attribute.html#a302d6ff91c5792ded3bed3bde57d334c',1,'lagrange::IndexedAttribute::values()'],['../classlagrange_1_1_indexed_attribute.html#ac6b98f3d9b222556c1ae3553472db830',1,'lagrange::IndexedAttribute::values() const']]],
+  ['vector_5fangle_1',['vector_angle',['../namespacelagrange_1_1ui.html#a9713940258b9b80f77b7f9b1c4d2f133',1,'lagrange::ui']]],
+  ['vector_5fbetween_2',['vector_between',['../namespacelagrange.html#a144de9ee10e82ef7c48e7278ce2db05d',1,'lagrange']]],
+  ['vector_5fprojection_3',['vector_projection',['../namespacelagrange_1_1ui.html#a59da08d3a7630a61f181e8ab9bf49d88',1,'lagrange::ui']]],
+  ['vector_5fref_4',['vector_ref',['../group__group-surfacemesh-views.html#ga1fe8e6f4f2ff0c10903d49ec085e541a',1,'lagrange']]],
+  ['vector_5fview_5',['vector_view',['../group__group-surfacemesh-views.html#ga217fb9661440df5dd7025d26cfeaf4d6',1,'lagrange']]],
+  ['verbosetimer_6',['VerboseTimer',['../classlagrange_1_1_verbose_timer.html#a752260dc7301e097d009849c1969d40f',1,'lagrange::VerboseTimer']]],
+  ['vertex_5fref_7',['vertex_ref',['../group__group-surfacemesh-views.html#ga6b51e5a79a66e11c3dff4c1d68015c1c',1,'lagrange']]],
+  ['vertex_5fview_8',['vertex_view',['../group__group-surfacemesh-views.html#ga2e034be5f010e6956225e15059825146',1,'lagrange']]],
+  ['vertexcount_9',['vertexCount',['../classlagrange_1_1volume_1_1_mesh_adapter.html#a032a09bd4d593307502ff546dd2d019c',1,'lagrange::volume::MeshAdapter']]],
+  ['viewer_10',['Viewer',['../classlagrange_1_1ui_1_1_viewer.html#aeb730ff15c9531d9e13135b5b126cd4e',1,'lagrange::ui::Viewer::Viewer(const std::string &amp;window_title, int window_width, int window_height)'],['../classlagrange_1_1ui_1_1_viewer.html#a47e4ba2d08d9510a746f7cef766b8c98',1,'lagrange::ui::Viewer::Viewer(int argc, char **argv)'],['../classlagrange_1_1ui_1_1_viewer.html#a5d666b1765bda9bf429865fc093c0776',1,'lagrange::ui::Viewer::Viewer(const WindowOptions &amp;window_options)']]],
+  ['viewport_5fto_5fscreen_11',['viewport_to_screen',['../structlagrange_1_1ui_1_1_viewport_panel.html#ab695dcb24eda877f3a5177651aa4cb5b',1,'lagrange::ui::ViewportPanel']]]
 ];

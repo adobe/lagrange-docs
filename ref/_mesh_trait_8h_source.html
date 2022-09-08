@@ -70,7 +70,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * Copyright 2020 Adobe. All rights reserved.</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * Copyright 2019 Adobe. All rights reserved.</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> * This file is licensed to you under the Apache License, Version 2.0 (the &quot;License&quot;);</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> * you may not use this file except in compliance with the License. You may obtain a copy</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> * of the License at http://www.apache.org/licenses/LICENSE-2.0</span></div>
@@ -119,8 +119,8 @@ $(function() {
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="comment">// exist).</span></div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> MeshType&gt;</div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="structlagrange_1_1_mesh_trait_helper_1_1is__mesh__helper_3_01_mesh_type_00_01typename_01_void_3_189721d847f0585e54612704ceb864c0.html">   50</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structlagrange_1_1_mesh_trait_helper_1_1is__mesh__helper.html">is_mesh_helper</a>&lt;</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    MeshType,</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    typename <a class="code hl_struct" href="structlagrange_1_1_mesh_trait_helper_1_1_void.html">Void</a>&lt;typename MeshType::VertexArray, typename MeshType::FacetArray&gt;::type&gt;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <a class="code hl_class" href="classlagrange_1_1_mesh.html">MeshType</a>,</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    typename <a class="code hl_struct" href="structlagrange_1_1_mesh_trait_helper_1_1_void.html">Void</a>&lt;typename <a class="code hl_class" href="classlagrange_1_1_mesh.html">MeshType</a>::VertexArray, typename MeshType::FacetArray&gt;::type&gt;</div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    : <span class="keyword">public</span> std::true_type</div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>{</div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>};</div>
@@ -189,7 +189,8 @@ $(function() {
 <div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>};</div>
 <div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span> </div>
 <div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>} <span class="comment">// namespace lagrange</span></div>
-<div class="ttc" id="anamespacelagrange_html"><div class="ttname"><a href="namespacelagrange.html">lagrange</a></div><div class="ttdoc">Main namespace for Lagrange.</div></div>
+<div class="ttc" id="aclasslagrange_1_1_mesh_html"><div class="ttname"><a href="classlagrange_1_1_mesh.html">lagrange::Mesh</a></div><div class="ttdef"><b>Definition:</b> Mesh.h:47</div></div>
+<div class="ttc" id="anamespacelagrange_html"><div class="ttname"><a href="namespacelagrange.html">lagrange</a></div><div class="ttdoc">Main namespace for Lagrange.</div><div class="ttdef"><b>Definition:</b> AABBIGL.h:30</div></div>
 <div class="ttc" id="astructlagrange_1_1_mesh_trait_helper_1_1_void_html"><div class="ttname"><a href="structlagrange_1_1_mesh_trait_helper_1_1_void.html">lagrange::MeshTraitHelper::Void</a></div><div class="ttdef"><b>Definition:</b> MeshTrait.h:28</div></div>
 <div class="ttc" id="astructlagrange_1_1_mesh_trait_helper_1_1is__mesh__helper_html"><div class="ttname"><a href="structlagrange_1_1_mesh_trait_helper_1_1is__mesh__helper.html">lagrange::MeshTraitHelper::is_mesh_helper</a></div><div class="ttdef"><b>Definition:</b> MeshTrait.h:40</div></div>
 <div class="ttc" id="astructlagrange_1_1_mesh_trait_helper_1_1is__mesh__smart__ptr__helper_html"><div class="ttname"><a href="structlagrange_1_1_mesh_trait_helper_1_1is__mesh__smart__ptr__helper.html">lagrange::MeshTraitHelper::is_mesh_smart_ptr_helper</a></div><div class="ttdef"><b>Definition:</b> MeshTrait.h:70</div></div>

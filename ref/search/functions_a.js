@@ -10,5 +10,6 @@ var searchData=
   ['matrix_5fref_7',['matrix_ref',['../group__group-surfacemesh-views.html#gaf2e0d4ab50ffdc84c4431d699f6741fe',1,'lagrange']]],
   ['matrix_5fview_8',['matrix_view',['../group__group-surfacemesh-views.html#ga0ae9d0742709686405adad75e20e8bc8',1,'lagrange']]],
   ['mesh_9',['Mesh',['../classlagrange_1_1_mesh.html#a2a23c7c0c4e0da252b7bc0e13b6f81d8',1,'lagrange::Mesh']]],
-  ['move_5fdata_10',['move_data',['../namespacelagrange.html#a596b1dcf8071e6db70a89205248de29e',1,'lagrange']]]
+  ['meshadapter_10',['MeshAdapter',['../classlagrange_1_1volume_1_1_mesh_adapter.html#adc98e2a86dc99dc2c124b575b1b26e85',1,'lagrange::volume::MeshAdapter']]],
+  ['move_5fdata_11',['move_data',['../namespacelagrange.html#a596b1dcf8071e6db70a89205248de29e',1,'lagrange']]]
 ];

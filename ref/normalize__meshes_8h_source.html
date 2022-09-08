@@ -81,60 +81,30 @@ $(function() {
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment"> * governing permissions and limitations under the License.</span></div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment"> */</span></div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#pragma once</span></div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;lagrange/Mesh.h&gt;</span></div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &lt;lagrange/MeshTrait.h&gt;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#ifdef LAGRANGE_ENABLE_LEGACY_FUNCTIONS</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">    #include &lt;lagrange/legacy/normalize_meshes.h&gt;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacelagrange.html">lagrange</a> {</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> MeshTypePtr&gt;</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="namespacelagrange.html#a0498f375055e528e52af8c1e50b3f26e">   27</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="namespacelagrange.html#a0498f375055e528e52af8c1e50b3f26e">normalize_meshes</a>(<span class="keyword">const</span> std::vector&lt;MeshTypePtr&gt;&amp; meshes)</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>{</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="keyword">static_assert</span>(<a class="code hl_struct" href="structlagrange_1_1_mesh_trait.html">MeshTrait&lt;MeshTypePtr&gt;::is_mesh_ptr</a>(), <span class="stringliteral">&quot;Input type is not a Mesh pointer type&quot;</span>);</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="keyword">using</span> MeshType = <span class="keyword">typename</span> std::pointer_traits&lt;MeshTypePtr&gt;::element_type;</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="keyword">using</span> <a class="code hl_enumvalue" href="group__group-surfacemesh-attr.html#gga35b5eb426384b257452ee0ffdb732c27af60357a8d17e45793298323f1b372a74">Scalar</a> = <span class="keyword">typename</span> MeshType::Scalar;</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="keyword">using</span> VertexArray = <span class="keyword">typename</span> MeshType::VertexArray;</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="keyword">using</span> VectorType = Eigen::Matrix&lt;Scalar, 1, VertexArray::ColsAtCompileTime&gt;;</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="keywordflow">if</span> (meshes.empty()) {</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    }</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="keyword">const</span> <span class="keyword">auto</span> DIM = meshes.front()-&gt;get_vertices().cols();</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    VectorType min_pos = VectorType::Constant(DIM, std::numeric_limits&lt;Scalar&gt;::max());</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    VectorType max_pos = VectorType::Constant(DIM, std::numeric_limits&lt;Scalar&gt;::lowest());</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; mesh : meshes) {</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        <span class="keyword">const</span> <span class="keyword">auto</span>&amp; V = mesh-&gt;get_vertices();</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        min_pos = min_pos.cwiseMin(V.colwise().minCoeff());</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        max_pos = max_pos.cwiseMax(V.colwise().maxCoeff());</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    }</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="keyword">const</span> <a class="code hl_enumvalue" href="group__group-surfacemesh-attr.html#gga35b5eb426384b257452ee0ffdb732c27af60357a8d17e45793298323f1b372a74">Scalar</a> scaling = <a class="code hl_enumvalue" href="group__group-surfacemesh-attr.html#gga35b5eb426384b257452ee0ffdb732c27af60357a8d17e45793298323f1b372a74">Scalar</a>(1) / (max_pos - min_pos).maxCoeff();</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="keyword">const</span> <span class="keyword">auto</span> origin = <a class="code hl_enumvalue" href="group__group-surfacemesh-attr.html#gga35b5eb426384b257452ee0ffdb732c27af60357a8d17e45793298323f1b372a74">Scalar</a>(0.5) * (min_pos + max_pos);</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; mesh : meshes) {</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        VertexArray vertices;</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        mesh-&gt;export_vertices(vertices);</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        vertices = (vertices.array().rowwise() - origin.array()) * scaling;</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        mesh-&gt;import_vertices(vertices);</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    }</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>}</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> MeshType&gt;</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="keywordtype">void</span> normalize_mesh(MeshType&amp; mesh)</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>{</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <span class="keyword">static_assert</span>(MeshTrait&lt;MeshType&gt;::is_mesh(), <span class="stringliteral">&quot;Input type is not Mesh&quot;</span>);</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    std::vector&lt;MeshType*&gt; vec = {&amp;mesh};</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <a class="code hl_function" href="namespacelagrange.html#a0498f375055e528e52af8c1e50b3f26e">normalize_meshes</a>(vec);</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>}</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>} <span class="comment">// namespace lagrange</span></div>
-<div class="ttc" id="agroup__group-surfacemesh-attr_html_gga35b5eb426384b257452ee0ffdb732c27af60357a8d17e45793298323f1b372a74"><div class="ttname"><a href="group__group-surfacemesh-attr.html#gga35b5eb426384b257452ee0ffdb732c27af60357a8d17e45793298323f1b372a74">lagrange::AttributeUsage::Scalar</a></div><div class="ttdeci">@ Scalar</div><div class="ttdoc">Mesh attribute must have exactly 1 channel.</div></div>
-<div class="ttc" id="anamespacelagrange_html"><div class="ttname"><a href="namespacelagrange.html">lagrange</a></div><div class="ttdoc">Main namespace for Lagrange.</div></div>
-<div class="ttc" id="anamespacelagrange_html_a0498f375055e528e52af8c1e50b3f26e"><div class="ttname"><a href="namespacelagrange.html#a0498f375055e528e52af8c1e50b3f26e">lagrange::normalize_meshes</a></div><div class="ttdeci">void normalize_meshes(const std::vector&lt; MeshTypePtr &gt; &amp;meshes)</div><div class="ttdoc">Normalize a list of meshes to fit in a unit box centered at the origin.</div><div class="ttdef"><b>Definition:</b> normalize_meshes.h:27</div></div>
-<div class="ttc" id="astructlagrange_1_1_mesh_trait_html"><div class="ttname"><a href="structlagrange_1_1_mesh_trait.html">lagrange::MeshTrait</a></div><div class="ttdoc">MeshTrait class provide compiler check for different mesh types.</div><div class="ttdef"><b>Definition:</b> MeshTrait.h:108</div></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &lt;lagrange/SurfaceMesh.h&gt;</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#include &lt;lagrange/utils/span.h&gt;</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacelagrange.html">lagrange</a> {</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> Scalar, <span class="keyword">typename</span> Index&gt;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="keywordtype">void</span> <a class="code hl_function" href="group__group-surfacemesh-utils.html#gaf07b7ee38e3c92577a3cdc9a7bb38479">normalize_mesh</a>(SurfaceMesh&lt;Scalar, Index&gt;&amp; mesh);</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> Scalar, <span class="keyword">typename</span> Index&gt;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="keywordtype">void</span> <a class="code hl_function" href="group__group-surfacemesh-utils.html#gad46e0464a61ba9b6c5fd7948af53c304">normalize_meshes</a>(<a class="code hl_typedef" href="group__group-utils-misc.html#ga4afead0b9ccc53fe4fca896787595d26">span</a>&lt;SurfaceMesh&lt;Scalar, Index&gt;*&gt; meshes);</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>} <span class="comment">// namespace lagrange</span></div>
+<div class="ttc" id="agroup__group-surfacemesh-utils_html_gad46e0464a61ba9b6c5fd7948af53c304"><div class="ttname"><a href="group__group-surfacemesh-utils.html#gad46e0464a61ba9b6c5fd7948af53c304">lagrange::normalize_meshes</a></div><div class="ttdeci">void normalize_meshes(span&lt; SurfaceMesh&lt; Scalar, Index &gt; * &gt; meshes)</div><div class="ttdoc">Normalize a list of meshes to fit in a unit box centered at the origin.</div><div class="ttdef"><b>Definition:</b> normalize_meshes.cpp:37</div></div>
+<div class="ttc" id="agroup__group-surfacemesh-utils_html_gaf07b7ee38e3c92577a3cdc9a7bb38479"><div class="ttname"><a href="group__group-surfacemesh-utils.html#gaf07b7ee38e3c92577a3cdc9a7bb38479">lagrange::normalize_mesh</a></div><div class="ttdeci">void normalize_mesh(SurfaceMesh&lt; Scalar, Index &gt; &amp;mesh)</div><div class="ttdoc">Normalize a mesh to fit in a unit box centered at the origin.</div><div class="ttdef"><b>Definition:</b> normalize_meshes.cpp:23</div></div>
+<div class="ttc" id="agroup__group-utils-misc_html_ga4afead0b9ccc53fe4fca896787595d26"><div class="ttname"><a href="group__group-utils-misc.html#ga4afead0b9ccc53fe4fca896787595d26">lagrange::span</a></div><div class="ttdeci">::nonstd::span&lt; T, Extent &gt; span</div><div class="ttdoc">Type alias compatible with C++20's std::span&lt;&gt;</div><div class="ttdef"><b>Definition:</b> span.h:23</div></div>
+<div class="ttc" id="anamespacelagrange_html"><div class="ttname"><a href="namespacelagrange.html">lagrange</a></div><div class="ttdoc">Main namespace for Lagrange.</div><div class="ttdef"><b>Definition:</b> AABBIGL.h:30</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

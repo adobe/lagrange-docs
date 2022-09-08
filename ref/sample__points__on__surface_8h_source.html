@@ -70,7 +70,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * Copyright 2020 Adobe. All rights reserved.</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * Copyright 2019 Adobe. All rights reserved.</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> * This file is licensed to you under the Apache License, Version 2.0 (the &quot;License&quot;);</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> * you may not use this file except in compliance with the License. You may obtain a copy</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> * of the License at http://www.apache.org/licenses/LICENSE-2.0</span></div>
@@ -136,13 +136,13 @@ $(function() {
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="comment">// - Index of the faces to be sampled from, an empty list of indices means all faces.</span></div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> MeshType&gt;</div>
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><a class="code hl_struct" href="structlagrange_1_1_sample_points_on_surface_output.html">SamplePointsOnSurfaceOutput&lt;MeshType&gt;</a> sample_points_on_surface(</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    MeshType&amp; mesh,</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    <a class="code hl_class" href="classlagrange_1_1_mesh.html">MeshType</a>&amp; mesh,</div>
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    <span class="keyword">const</span> <span class="keyword">typename</span> MeshType::Index approx_num_points,</div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    <span class="keyword">const</span> <span class="keyword">typename</span> MeshType::IndexList&amp; active_facets)</div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>{</div>
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    <span class="comment">// Helper types</span></div>
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    <span class="keyword">using</span> Index = <span class="keyword">typename</span> MeshType::Index;</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    <span class="keyword">using</span> <a class="code hl_enumvalue" href="group__group-surfacemesh-attr.html#gga35b5eb426384b257452ee0ffdb732c27af60357a8d17e45793298323f1b372a74">Scalar</a> = <span class="keyword">typename</span> MeshType::Scalar;</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    <span class="keyword">using</span> Scalar = <span class="keyword">typename</span> MeshType::Scalar;</div>
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    <span class="keyword">using</span> VertexType = <span class="keyword">typename</span> MeshType::VertexType;</div>
 <div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    <span class="comment">//</span></div>
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    <span class="keyword">using</span> Output = <a class="code hl_struct" href="structlagrange_1_1_sample_points_on_surface_output.html">SamplePointsOnSurfaceOutput&lt;MeshType&gt;</a>;</div>
@@ -175,7 +175,7 @@ $(function() {
 <div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    <span class="comment">// Compute the total area of active part of the mesh</span></div>
 <div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    <span class="comment">// Otherwise we could have just used total_mesh_area = facet_area.sum().</span></div>
 <div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    <span class="comment">// In the new version of eigen, we can also use facet_area( active_facets ).sum()</span></div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    <a class="code hl_enumvalue" href="group__group-surfacemesh-attr.html#gga35b5eb426384b257452ee0ffdb732c27af60357a8d17e45793298323f1b372a74">Scalar</a> total_mesh_area = 0;</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    Scalar total_mesh_area = 0;</div>
 <div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> facet_id : <a class="code hl_function" href="group__group-utils-misc.html#ga0be357120afca3098d989abf97e72b13">range_sparse</a>(mesh.get_num_facets(), active_facets)) {</div>
 <div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>        total_mesh_area += facet_area(facet_id);</div>
 <div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    }</div>
@@ -187,7 +187,7 @@ $(function() {
 <div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>    <span class="comment">// If each point is a disk, what should be the radius of disks to cover  the surface</span></div>
 <div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    <span class="comment">// this radius would be the sampling length</span></div>
 <div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>    <span class="comment">// 1.5 is probably a safety factor</span></div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>    <span class="keyword">const</span> <a class="code hl_enumvalue" href="group__group-surfacemesh-attr.html#gga35b5eb426384b257452ee0ffdb732c27af60357a8d17e45793298323f1b372a74">Scalar</a> sampling_length = 1.5 * sqrt((total_mesh_area / (approx_num_points * M_PI)));</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>    <span class="keyword">const</span> Scalar sampling_length = 1.5 * sqrt((total_mesh_area / (approx_num_points * M_PI)));</div>
 <div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span> </div>
 <div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>    <span class="comment">// Find the bounding box of the active facets on the mesh</span></div>
 <div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>    BoundingBox bounding_box(n_dims);</div>
@@ -318,11 +318,11 @@ $(function() {
 <div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>            sub_triangles.pop();</div>
 <div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span> </div>
 <div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>            <span class="comment">// Find the longest edge in the triangle</span></div>
-<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>            <a class="code hl_enumvalue" href="group__group-surfacemesh-attr.html#gga35b5eb426384b257452ee0ffdb732c27af60357a8d17e45793298323f1b372a74">Scalar</a> longest_edge_length = -std::numeric_limits&lt;Scalar&gt;::max();</div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>            Scalar longest_edge_length = -std::numeric_limits&lt;Scalar&gt;::max();</div>
 <div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>            Index longest_edge_offset = invalid&lt;Index&gt;();</div>
 <div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>            <span class="keywordflow">for</span> (<span class="keyword">auto</span> edge_offset : <a class="code hl_function" href="group__group-utils-misc.html#ga68084717e646e9a6073e533d0b83a2b7">range</a>(3)) {</div>
 <div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>                <span class="keyword">const</span> <span class="keyword">auto</span> edge_offset_p1 = (edge_offset + 1) % 3;</div>
-<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>                <span class="keyword">const</span> <a class="code hl_enumvalue" href="group__group-surfacemesh-attr.html#gga35b5eb426384b257452ee0ffdb732c27af60357a8d17e45793298323f1b372a74">Scalar</a> edge_length = (get_triangle_pos(current_facet, edge_offset) <span class="comment">//</span></div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>                <span class="keyword">const</span> Scalar edge_length = (get_triangle_pos(current_facet, edge_offset) <span class="comment">//</span></div>
 <div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>                                            - get_triangle_pos(current_facet, edge_offset_p1))</div>
 <div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>                                               .norm();</div>
 <div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>                <span class="keywordflow">if</span> (edge_length &gt; longest_edge_length) {</div>
@@ -417,7 +417,7 @@ $(function() {
 <div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span><span class="comment">// - Array of bools saying whether a facet should be sampled from or not.</span></div>
 <div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> MeshType&gt;</div>
 <div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span>SamplePointsOnSurfaceOutput&lt;MeshType&gt; sample_points_on_surface(</div>
-<div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span>    MeshType&amp; mesh,</div>
+<div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span>    <a class="code hl_class" href="classlagrange_1_1_mesh.html">MeshType</a>&amp; mesh,</div>
 <div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span>    <span class="keyword">const</span> <span class="keyword">typename</span> MeshType::Index approx_num_points,</div>
 <div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span>    <span class="keyword">const</span> std::vector&lt;bool&gt;&amp; is_facet_active)</div>
 <div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span>{</div>
@@ -436,18 +436,18 @@ $(function() {
 <div class="line"><a id="l00365" name="l00365"></a><span class="lineno">  365</span><span class="comment">// - Approximate number of points to be sampled</span></div>
 <div class="line"><a id="l00366" name="l00366"></a><span class="lineno">  366</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> MeshType&gt;</div>
 <div class="line"><a id="l00367" name="l00367"></a><span class="lineno">  367</span>SamplePointsOnSurfaceOutput&lt;MeshType&gt; sample_points_on_surface(</div>
-<div class="line"><a id="l00368" name="l00368"></a><span class="lineno">  368</span>    MeshType&amp; mesh,</div>
+<div class="line"><a id="l00368" name="l00368"></a><span class="lineno">  368</span>    <a class="code hl_class" href="classlagrange_1_1_mesh.html">MeshType</a>&amp; mesh,</div>
 <div class="line"><a id="l00369" name="l00369"></a><span class="lineno">  369</span>    <span class="keyword">const</span> <span class="keyword">typename</span> MeshType::Index approx_num_points)</div>
 <div class="line"><a id="l00370" name="l00370"></a><span class="lineno">  370</span>{</div>
 <div class="line"><a id="l00371" name="l00371"></a><span class="lineno">  371</span>    <span class="keywordflow">return</span> sample_points_on_surface(mesh, approx_num_points, <span class="keyword">typename</span> MeshType::IndexList());</div>
 <div class="line"><a id="l00372" name="l00372"></a><span class="lineno">  372</span>}</div>
 <div class="line"><a id="l00373" name="l00373"></a><span class="lineno">  373</span> </div>
 <div class="line"><a id="l00374" name="l00374"></a><span class="lineno">  374</span>} <span class="comment">// namespace lagrange</span></div>
-<div class="ttc" id="agroup__group-surfacemesh-attr_html_gga35b5eb426384b257452ee0ffdb732c27af60357a8d17e45793298323f1b372a74"><div class="ttname"><a href="group__group-surfacemesh-attr.html#gga35b5eb426384b257452ee0ffdb732c27af60357a8d17e45793298323f1b372a74">lagrange::AttributeUsage::Scalar</a></div><div class="ttdeci">@ Scalar</div><div class="ttdoc">Mesh attribute must have exactly 1 channel.</div></div>
+<div class="ttc" id="aclasslagrange_1_1_mesh_html"><div class="ttname"><a href="classlagrange_1_1_mesh.html">lagrange::Mesh</a></div><div class="ttdef"><b>Definition:</b> Mesh.h:47</div></div>
 <div class="ttc" id="agroup__group-utils-assert_html_ga1ccafcb14523a1aae57dcac3c3f32ecd"><div class="ttname"><a href="group__group-utils-assert.html#ga1ccafcb14523a1aae57dcac3c3f32ecd">la_runtime_assert</a></div><div class="ttdeci">#define la_runtime_assert(...)</div><div class="ttdoc">Runtime assertion check.</div><div class="ttdef"><b>Definition:</b> assert.h:168</div></div>
 <div class="ttc" id="agroup__group-utils-misc_html_ga0be357120afca3098d989abf97e72b13"><div class="ttname"><a href="group__group-utils-misc.html#ga0be357120afca3098d989abf97e72b13">lagrange::range_sparse</a></div><div class="ttdeci">internal::SparseRange&lt; Index &gt; range_sparse(Index max, const std::vector&lt; Index &gt; &amp;active)</div><div class="ttdoc">Returns an iterable object representing a subset of the range [0, max).</div><div class="ttdef"><b>Definition:</b> range.h:217</div></div>
 <div class="ttc" id="agroup__group-utils-misc_html_ga68084717e646e9a6073e533d0b83a2b7"><div class="ttname"><a href="group__group-utils-misc.html#ga68084717e646e9a6073e533d0b83a2b7">lagrange::range</a></div><div class="ttdeci">internal::Range&lt; Index &gt; range(Index end)</div><div class="ttdoc">Returns an iterable object representing the range [0, end).</div><div class="ttdef"><b>Definition:</b> range.h:176</div></div>
-<div class="ttc" id="anamespacelagrange_html"><div class="ttname"><a href="namespacelagrange.html">lagrange</a></div><div class="ttdoc">Main namespace for Lagrange.</div></div>
+<div class="ttc" id="anamespacelagrange_html"><div class="ttname"><a href="namespacelagrange.html">lagrange</a></div><div class="ttdoc">Main namespace for Lagrange.</div><div class="ttdef"><b>Definition:</b> AABBIGL.h:30</div></div>
 <div class="ttc" id="anamespacelagrange_html_ab6a6397294320512fc58eec12cf5ae33"><div class="ttname"><a href="namespacelagrange.html#ab6a6397294320512fc58eec12cf5ae33">lagrange::compute_facet_area</a></div><div class="ttdeci">void compute_facet_area(MeshType &amp;mesh)</div><div class="ttdoc">Calculates the facet areas.</div><div class="ttdef"><b>Definition:</b> compute_facet_area.h:176</div></div>
 <div class="ttc" id="astructlagrange_1_1_sample_points_on_surface_output_html"><div class="ttname"><a href="structlagrange_1_1_sample_points_on_surface_output.html">lagrange::SamplePointsOnSurfaceOutput</a></div><div class="ttdef"><b>Definition:</b> sample_points_on_surface.h:34</div></div>
 </div><!-- fragment --></div><!-- contents -->

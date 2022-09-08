@@ -70,7 +70,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * Copyright 2020 Adobe. All rights reserved.</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * Copyright 2019 Adobe. All rights reserved.</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> * This file is licensed to you under the Apache License, Version 2.0 (the &quot;License&quot;);</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> * you may not use this file except in compliance with the License. You may obtain a copy</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> * of the License at http://www.apache.org/licenses/LICENSE-2.0</span></div>
@@ -84,91 +84,86 @@ $(function() {
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;cassert&gt;</span></div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment">// clang-format off</span></div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &lt;lagrange/utils/warnoff.h&gt;</span></div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#include &lt;igl/unique.h&gt;</span></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#include &lt;lagrange/utils/warnon.h&gt;</span></div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment">// clang-format on</span></div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &lt;lagrange/common.h&gt;</span></div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#include &lt;lagrange/create_mesh.h&gt;</span></div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#include &lt;lagrange/utils/safe_cast.h&gt;</span></div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#include &lt;lagrange/Mesh.h&gt;</span></div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include &lt;lagrange/MeshTrait.h&gt;</span></div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &lt;lagrange/attributes/map_attributes.h&gt;</span></div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacelagrange.html">lagrange</a> {</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> MeshType&gt;</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="namespacelagrange.html#a97e627afa63acfb3eeb8e11dd72f9192">   54</a></span>std::unique_ptr&lt;MeshType&gt; <a class="code hl_function" href="namespacelagrange.html#a97e627afa63acfb3eeb8e11dd72f9192">reorder_mesh_vertices</a>(</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <span class="keyword">const</span> MeshType&amp; mesh,</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="keyword">const</span> <span class="keyword">typename</span> MeshType::IndexList&amp; forward_mapping)</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>{</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="keyword">static_assert</span>(<a class="code hl_struct" href="structlagrange_1_1_mesh_trait.html">MeshTrait&lt;MeshType&gt;::is_mesh</a>(), <span class="stringliteral">&quot;Input type is not Mesh&quot;</span>);</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <a class="code hl_define" href="group__group-utils-assert.html#ga1ccafcb14523a1aae57dcac3c3f32ecd">la_runtime_assert</a>(</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        mesh.get_vertex_per_facet() == 3,</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        std::string(<span class="stringliteral">&quot;vertex per facet is &quot;</span>) + std::to_string(mesh.get_vertex_per_facet()));</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <span class="keyword">using</span> Index = <span class="keyword">typename</span> MeshType::Index;</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <span class="keyword">using</span> VertexArray = <span class="keyword">typename</span> MeshType::VertexArray;</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <span class="keyword">using</span> FacetArray = <span class="keyword">typename</span> MeshType::FacetArray;</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <span class="keyword">using</span> IndexList = <span class="keyword">typename</span> MeshType::IndexList;</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    <span class="keyword">const</span> <span class="keyword">auto</span> num_old_vertices = mesh.get_num_vertices();</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    <span class="keyword">const</span> <span class="keyword">auto</span>&amp; vertices = mesh.get_vertices();</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    <span class="keyword">const</span> <span class="keyword">auto</span>&amp; facets = mesh.get_facets();</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    <a class="code hl_define" href="group__group-utils-assert.html#ga1ccafcb14523a1aae57dcac3c3f32ecd">la_runtime_assert</a>(num_old_vertices == safe_cast&lt;Index&gt;(forward_mapping.size()));</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    <span class="keyword">auto</span> forward_mapping_no_invalid = [&amp;forward_mapping](<span class="keyword">const</span> Index io) {</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        <span class="keywordflow">return</span> forward_mapping[io] == invalid&lt;Index&gt;() ? io : forward_mapping[io];</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    };</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    <span class="comment">// Cound the number of new vertices</span></div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    Index num_new_vertices = 0;</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> io : <a class="code hl_function" href="group__group-utils-misc.html#ga68084717e646e9a6073e533d0b83a2b7">range</a>(num_old_vertices)) {</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        num_new_vertices = std::max(num_new_vertices, forward_mapping_no_invalid(io));</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    }</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    num_new_vertices += 1; <span class="comment">// num_of_*** = biggest index +  1</span></div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    <a class="code hl_define" href="group__group-utils-assert.html#ga1ccafcb14523a1aae57dcac3c3f32ecd">la_runtime_assert</a>(num_new_vertices &lt;= num_old_vertices, <span class="stringliteral">&quot;Number of vertices should not increase&quot;</span>);</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    <span class="comment">// Create the backward mapping and the new vertices</span></div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    IndexList backward_mapping(num_new_vertices, invalid&lt;Index&gt;());</div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    VertexArray vertices_new(num_new_vertices, mesh.get_dim());</div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> io : <a class="code hl_function" href="group__group-utils-misc.html#ga68084717e646e9a6073e533d0b83a2b7">range</a>(num_old_vertices)) {</div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>        <span class="keyword">const</span> <span class="keyword">auto</span> in = forward_mapping_no_invalid(io);</div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>        backward_mapping[in] = io;</div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>        vertices_new.row(in) = vertices.row(io);</div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    }</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    <span class="comment">// The mapping should be surjective.</span></div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    <a class="code hl_define" href="group__group-utils-assert.html#ga1ccafcb14523a1aae57dcac3c3f32ecd">la_runtime_assert</a>(</div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>        std::find(backward_mapping.begin(), backward_mapping.end(), invalid&lt;Index&gt;()) ==</div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>            backward_mapping.end(),</div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>        <span class="stringliteral">&quot;Forward mapping is not surjective&quot;</span>);</div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    <span class="comment">// Create new faces</span></div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    FacetArray facets_new(facets.rows(), facets.cols());</div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> i : <a class="code hl_function" href="group__group-utils-misc.html#ga68084717e646e9a6073e533d0b83a2b7">range</a>(facets.rows())) {</div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>        facets_new(i, 0) = forward_mapping_no_invalid(facets(i, 0));</div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>        facets_new(i, 1) = forward_mapping_no_invalid(facets(i, 1));</div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>        facets_new(i, 2) = forward_mapping_no_invalid(facets(i, 2));</div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    }</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &lt;lagrange/common.h&gt;</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &lt;lagrange/create_mesh.h&gt;</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#include &lt;lagrange/utils/safe_cast.h&gt;</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#include &lt;lagrange/Mesh.h&gt;</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &lt;lagrange/MeshTrait.h&gt;</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &lt;lagrange/attributes/map_attributes.h&gt;</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacelagrange.html">lagrange</a> {</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> MeshType&gt;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="namespacelagrange.html#a97e627afa63acfb3eeb8e11dd72f9192">   48</a></span>std::unique_ptr&lt;MeshType&gt; <a class="code hl_function" href="namespacelagrange.html#a97e627afa63acfb3eeb8e11dd72f9192">reorder_mesh_vertices</a>(</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="keyword">const</span> <a class="code hl_class" href="classlagrange_1_1_mesh.html">MeshType</a>&amp; mesh,</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="keyword">const</span> <span class="keyword">typename</span> MeshType::IndexList&amp; forward_mapping)</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>{</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="keyword">static_assert</span>(<a class="code hl_struct" href="structlagrange_1_1_mesh_trait.html">MeshTrait&lt;MeshType&gt;::is_mesh</a>(), <span class="stringliteral">&quot;Input type is not Mesh&quot;</span>);</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <a class="code hl_define" href="group__group-utils-assert.html#ga1ccafcb14523a1aae57dcac3c3f32ecd">la_runtime_assert</a>(</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        mesh.get_vertex_per_facet() == 3,</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        std::string(<span class="stringliteral">&quot;vertex per facet is &quot;</span>) + std::to_string(mesh.get_vertex_per_facet()));</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <span class="keyword">using</span> Index = <span class="keyword">typename</span> MeshType::Index;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="keyword">using</span> VertexArray = <span class="keyword">typename</span> MeshType::VertexArray;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <span class="keyword">using</span> FacetArray = <span class="keyword">typename</span> MeshType::FacetArray;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <span class="keyword">using</span> IndexList = <span class="keyword">typename</span> MeshType::IndexList;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <span class="keyword">const</span> <span class="keyword">auto</span> num_old_vertices = mesh.get_num_vertices();</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <span class="keyword">const</span> <span class="keyword">auto</span>&amp; vertices = mesh.get_vertices();</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <span class="keyword">const</span> <span class="keyword">auto</span>&amp; facets = mesh.get_facets();</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <a class="code hl_define" href="group__group-utils-assert.html#ga1ccafcb14523a1aae57dcac3c3f32ecd">la_runtime_assert</a>(num_old_vertices == safe_cast&lt;Index&gt;(forward_mapping.size()));</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    <span class="keyword">auto</span> forward_mapping_no_invalid = [&amp;forward_mapping](<span class="keyword">const</span> Index io) {</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        <span class="keywordflow">return</span> forward_mapping[io] == invalid&lt;Index&gt;() ? io : forward_mapping[io];</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    };</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    <span class="comment">// Cound the number of new vertices</span></div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    Index num_new_vertices = 0;</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> io : <a class="code hl_function" href="group__group-utils-misc.html#ga68084717e646e9a6073e533d0b83a2b7">range</a>(num_old_vertices)) {</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        num_new_vertices = std::max(num_new_vertices, forward_mapping_no_invalid(io));</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    }</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    num_new_vertices += 1; <span class="comment">// num_of_*** = biggest index +  1</span></div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    <a class="code hl_define" href="group__group-utils-assert.html#ga1ccafcb14523a1aae57dcac3c3f32ecd">la_runtime_assert</a>(num_new_vertices &lt;= num_old_vertices, <span class="stringliteral">&quot;Number of vertices should not increase&quot;</span>);</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    <span class="comment">// Create the backward mapping and the new vertices</span></div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    IndexList backward_mapping(num_new_vertices, invalid&lt;Index&gt;());</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    VertexArray vertices_new(num_new_vertices, mesh.get_dim());</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> io : <a class="code hl_function" href="group__group-utils-misc.html#ga68084717e646e9a6073e533d0b83a2b7">range</a>(num_old_vertices)) {</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        <span class="keyword">const</span> <span class="keyword">auto</span> in = forward_mapping_no_invalid(io);</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        backward_mapping[in] = io;</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        vertices_new.row(in) = vertices.row(io);</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    }</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    <span class="comment">// The mapping should be surjective.</span></div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    <a class="code hl_define" href="group__group-utils-assert.html#ga1ccafcb14523a1aae57dcac3c3f32ecd">la_runtime_assert</a>(</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>        std::find(backward_mapping.begin(), backward_mapping.end(), invalid&lt;Index&gt;()) ==</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>            backward_mapping.end(),</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>        <span class="stringliteral">&quot;Forward mapping is not surjective&quot;</span>);</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    <span class="comment">// Create new faces</span></div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    FacetArray facets_new(facets.rows(), facets.cols());</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> i : <a class="code hl_function" href="group__group-utils-misc.html#ga68084717e646e9a6073e533d0b83a2b7">range</a>(facets.rows())) {</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        facets_new(i, 0) = forward_mapping_no_invalid(facets(i, 0));</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>        facets_new(i, 1) = forward_mapping_no_invalid(facets(i, 1));</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>        facets_new(i, 2) = forward_mapping_no_invalid(facets(i, 2));</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    }</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    <span class="comment">// Create new mesh</span></div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    <span class="keyword">auto</span> mesh2 = <a class="code hl_function" href="namespacelagrange.html#a5dff747c765bd02e34d420ab60c30358">create_mesh</a>(std::move(vertices_new), std::move(facets_new));</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span> </div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    <span class="comment">// Port attributes</span></div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    map_attributes(mesh, *mesh2, backward_mapping);</div>
 <div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span> </div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    <span class="comment">// Create new mesh</span></div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    <span class="keyword">auto</span> mesh2 = <a class="code hl_function" href="namespacelagrange.html#a5dff747c765bd02e34d420ab60c30358">create_mesh</a>(std::move(vertices_new), std::move(facets_new));</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    <span class="keywordflow">return</span> mesh2;</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>}</div>
 <div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span> </div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    <span class="comment">// Port attributes</span></div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    map_attributes(mesh, *mesh2, backward_mapping);</div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span> </div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    <span class="keywordflow">return</span> mesh2;</div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>}</div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span> </div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>} <span class="comment">// namespace lagrange</span></div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>} <span class="comment">// namespace lagrange</span></div>
+<div class="ttc" id="aclasslagrange_1_1_mesh_html"><div class="ttname"><a href="classlagrange_1_1_mesh.html">lagrange::Mesh</a></div><div class="ttdef"><b>Definition:</b> Mesh.h:47</div></div>
 <div class="ttc" id="agroup__group-utils-assert_html_ga1ccafcb14523a1aae57dcac3c3f32ecd"><div class="ttname"><a href="group__group-utils-assert.html#ga1ccafcb14523a1aae57dcac3c3f32ecd">la_runtime_assert</a></div><div class="ttdeci">#define la_runtime_assert(...)</div><div class="ttdoc">Runtime assertion check.</div><div class="ttdef"><b>Definition:</b> assert.h:168</div></div>
 <div class="ttc" id="agroup__group-utils-misc_html_ga68084717e646e9a6073e533d0b83a2b7"><div class="ttname"><a href="group__group-utils-misc.html#ga68084717e646e9a6073e533d0b83a2b7">lagrange::range</a></div><div class="ttdeci">internal::Range&lt; Index &gt; range(Index end)</div><div class="ttdoc">Returns an iterable object representing the range [0, end).</div><div class="ttdef"><b>Definition:</b> range.h:176</div></div>
-<div class="ttc" id="anamespacelagrange_html"><div class="ttname"><a href="namespacelagrange.html">lagrange</a></div><div class="ttdoc">Main namespace for Lagrange.</div></div>
+<div class="ttc" id="anamespacelagrange_html"><div class="ttname"><a href="namespacelagrange.html">lagrange</a></div><div class="ttdoc">Main namespace for Lagrange.</div><div class="ttdef"><b>Definition:</b> AABBIGL.h:30</div></div>
 <div class="ttc" id="anamespacelagrange_html_a5dff747c765bd02e34d420ab60c30358"><div class="ttname"><a href="namespacelagrange.html#a5dff747c765bd02e34d420ab60c30358">lagrange::create_mesh</a></div><div class="ttdeci">auto create_mesh(const Eigen::MatrixBase&lt; DerivedV &gt; &amp;vertices, const Eigen::MatrixBase&lt; DerivedF &gt; &amp;facets)</div><div class="ttdoc">This function create a new mesh given the vertex and facet arrays by copying data into the Mesh objec...</div><div class="ttdef"><b>Definition:</b> create_mesh.h:39</div></div>
-<div class="ttc" id="anamespacelagrange_html_a97e627afa63acfb3eeb8e11dd72f9192"><div class="ttname"><a href="namespacelagrange.html#a97e627afa63acfb3eeb8e11dd72f9192">lagrange::reorder_mesh_vertices</a></div><div class="ttdeci">std::unique_ptr&lt; MeshType &gt; reorder_mesh_vertices(const MeshType &amp;mesh, const typename MeshType::IndexList &amp;forward_mapping)</div><div class="ttdoc">Reorders (possibly with shrinking) the vertices in the mesh.</div><div class="ttdef"><b>Definition:</b> reorder_mesh_vertices.h:54</div></div>
+<div class="ttc" id="anamespacelagrange_html_a97e627afa63acfb3eeb8e11dd72f9192"><div class="ttname"><a href="namespacelagrange.html#a97e627afa63acfb3eeb8e11dd72f9192">lagrange::reorder_mesh_vertices</a></div><div class="ttdeci">std::unique_ptr&lt; MeshType &gt; reorder_mesh_vertices(const MeshType &amp;mesh, const typename MeshType::IndexList &amp;forward_mapping)</div><div class="ttdoc">Reorders (possibly with shrinking) the vertices in the mesh.</div><div class="ttdef"><b>Definition:</b> reorder_mesh_vertices.h:48</div></div>
 <div class="ttc" id="astructlagrange_1_1_mesh_trait_html"><div class="ttname"><a href="structlagrange_1_1_mesh_trait.html">lagrange::MeshTrait</a></div><div class="ttdoc">MeshTrait class provide compiler check for different mesh types.</div><div class="ttdef"><b>Definition:</b> MeshTrait.h:108</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->

@@ -63,6 +63,8 @@ $(function() {
 
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#enum-members">Enumerations</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">Mesh utilities<div class="ingroups"><a class="el" href="group__module-core.html">Core Module</a> &raquo; <a class="el" href="group__group-surfacemesh.html">SurfaceMesh</a></div></div></div>
 </div><!--header-->
@@ -71,12 +73,57 @@ $(function() {
 <p>Various mesh processing utilities.  
 <a href="#details">More...</a></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlagrange_1_1_facet_normal_options.html">FacetNormalOptions</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Option struct for computing per-facet mesh normals.  <a href="structlagrange_1_1_facet_normal_options.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlagrange_1_1_normal_options.html">NormalOptions</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Option struct for computing indexed mesh normals.  <a href="structlagrange_1_1_normal_options.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlagrange_1_1_corner_normal_options.html">CornerNormalOptions</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Option struct for computing per-corner mesh normals.  <a href="structlagrange_1_1_corner_normal_options.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:gaa88e833ed770762b02e187f0c2377d3d"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group-surfacemesh-utils.html#gaa88e833ed770762b02e187f0c2377d3d">NormalWeightingType</a> : char { <a class="el" href="group__group-surfacemesh-utils.html#ggaa88e833ed770762b02e187f0c2377d3daf19516d11f2946f894070e92fcb56b6d">Uniform</a> = 0
+, <a class="el" href="group__group-surfacemesh-utils.html#ggaa88e833ed770762b02e187f0c2377d3da84f023fc44b6b158de6ccc157c8dab06">CornerTriangleArea</a> = 1
+, <a class="el" href="group__group-surfacemesh-utils.html#ggaa88e833ed770762b02e187f0c2377d3da45f4ce6c3306644b1efe333f4f8d6929">Angle</a> = 2
+ }</td></tr>
+<tr class="memdesc:gaa88e833ed770762b02e187f0c2377d3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Weighting types for averaging corner normals around a vertex.  <a href="group__group-surfacemesh-utils.html#gaa88e833ed770762b02e187f0c2377d3d">More...</a><br /></td></tr>
+<tr class="separator:gaa88e833ed770762b02e187f0c2377d3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ga219f2db0d23b86456649478a92506997"><td class="memTemplParams" colspan="2">template&lt;typename Scalar , typename Index &gt; </td></tr>
-<tr class="memitem:ga219f2db0d23b86456649478a92506997"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="group__group-surfacemesh-attr.html#ga4d115376c2c766084ef808c837348fc3">AttributeId</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__group-surfacemesh-utils.html#ga219f2db0d23b86456649478a92506997">compute_facet_normal</a> (<a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;mesh, std::string_view name=&quot;@facet_normal&quot;)</td></tr>
-<tr class="memdesc:ga219f2db0d23b86456649478a92506997"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute facet normals.  <a href="group__group-surfacemesh-utils.html#ga219f2db0d23b86456649478a92506997">More...</a><br /></td></tr>
-<tr class="separator:ga219f2db0d23b86456649478a92506997"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga50e835144b2dd2ad5df9848293c8b097"><td class="memTemplParams" colspan="2">template&lt;typename Scalar , typename Index &gt; </td></tr>
+<tr class="memitem:ga50e835144b2dd2ad5df9848293c8b097"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="group__group-surfacemesh-attr.html#ga4d115376c2c766084ef808c837348fc3">AttributeId</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__group-surfacemesh-utils.html#ga50e835144b2dd2ad5df9848293c8b097">compute_facet_normal</a> (<a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;mesh, <a class="el" href="structlagrange_1_1_facet_normal_options.html">FacetNormalOptions</a> options={})</td></tr>
+<tr class="memdesc:ga50e835144b2dd2ad5df9848293c8b097"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute facet normals.  <a href="group__group-surfacemesh-utils.html#ga50e835144b2dd2ad5df9848293c8b097">More...</a><br /></td></tr>
+<tr class="separator:ga50e835144b2dd2ad5df9848293c8b097"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0d1dc948d0cb8aa8b7759e34a34df7bc"><td class="memTemplParams" colspan="2">template&lt;typename Scalar , typename Index &gt; </td></tr>
+<tr class="memitem:ga0d1dc948d0cb8aa8b7759e34a34df7bc"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="group__group-surfacemesh-attr.html#ga4d115376c2c766084ef808c837348fc3">AttributeId</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__group-surfacemesh-utils.html#ga0d1dc948d0cb8aa8b7759e34a34df7bc">compute_normal</a> (<a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;mesh, <a class="el" href="classlagrange_1_1function__ref.html">function_ref</a>&lt; bool(Index)&gt; is_edge_smooth, <a class="el" href="group__group-utils-misc.html#ga4afead0b9ccc53fe4fca896787595d26">span</a>&lt; const Index &gt; cone_vertices={}, <a class="el" href="structlagrange_1_1_normal_options.html">NormalOptions</a> options={})</td></tr>
+<tr class="memdesc:ga0d1dc948d0cb8aa8b7759e34a34df7bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute smooth normals based on specified sharp edges and cone vertices.  <a href="group__group-surfacemesh-utils.html#ga0d1dc948d0cb8aa8b7759e34a34df7bc">More...</a><br /></td></tr>
+<tr class="separator:ga0d1dc948d0cb8aa8b7759e34a34df7bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gabe91547f24b4936c8feddd9b74b1aa02"><td class="memTemplParams" colspan="2">template&lt;typename Scalar , typename Index &gt; </td></tr>
+<tr class="memitem:gabe91547f24b4936c8feddd9b74b1aa02"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="group__group-surfacemesh-attr.html#ga4d115376c2c766084ef808c837348fc3">AttributeId</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__group-surfacemesh-utils.html#gabe91547f24b4936c8feddd9b74b1aa02">compute_normal</a> (<a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;mesh, <a class="el" href="classlagrange_1_1function__ref.html">function_ref</a>&lt; bool(Index, Index)&gt; is_edge_smooth, <a class="el" href="group__group-utils-misc.html#ga4afead0b9ccc53fe4fca896787595d26">span</a>&lt; const Index &gt; cone_vertices={}, <a class="el" href="structlagrange_1_1_normal_options.html">NormalOptions</a> options={})</td></tr>
+<tr class="memdesc:gabe91547f24b4936c8feddd9b74b1aa02"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute smooth normals based on specified sharp edges and cone vertices.  <a href="group__group-surfacemesh-utils.html#gabe91547f24b4936c8feddd9b74b1aa02">More...</a><br /></td></tr>
+<tr class="separator:gabe91547f24b4936c8feddd9b74b1aa02"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga668cc68bd27510b1bec92cf8dbe0e362"><td class="memTemplParams" colspan="2">template&lt;typename Scalar , typename Index &gt; </td></tr>
+<tr class="memitem:ga668cc68bd27510b1bec92cf8dbe0e362"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="group__group-surfacemesh-attr.html#ga4d115376c2c766084ef808c837348fc3">AttributeId</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__group-surfacemesh-utils.html#ga668cc68bd27510b1bec92cf8dbe0e362">compute_normal</a> (<a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;mesh, Scalar feature_angle_threshold, <a class="el" href="group__group-utils-misc.html#ga4afead0b9ccc53fe4fca896787595d26">span</a>&lt; const Index &gt; cone_vertices={}, <a class="el" href="structlagrange_1_1_normal_options.html">NormalOptions</a> options={})</td></tr>
+<tr class="memdesc:ga668cc68bd27510b1bec92cf8dbe0e362"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute smooth normal based on specified dihedral angle threshold and cone vertices.  <a href="group__group-surfacemesh-utils.html#ga668cc68bd27510b1bec92cf8dbe0e362">More...</a><br /></td></tr>
+<tr class="separator:ga668cc68bd27510b1bec92cf8dbe0e362"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa13892cc06d31d64e6613c3e48785591"><td class="memTemplParams" colspan="2">template&lt;typename Scalar , typename Index &gt; </td></tr>
+<tr class="memitem:gaa13892cc06d31d64e6613c3e48785591"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="group__group-surfacemesh-attr.html#ga4d115376c2c766084ef808c837348fc3">AttributeId</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__group-surfacemesh-utils.html#gaa13892cc06d31d64e6613c3e48785591">compute_weighted_corner_normal</a> (<a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;mesh, <a class="el" href="structlagrange_1_1_corner_normal_options.html">CornerNormalOptions</a> option={})</td></tr>
+<tr class="memdesc:gaa13892cc06d31d64e6613c3e48785591"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute corner normals.  <a href="group__group-surfacemesh-utils.html#gaa13892cc06d31d64e6613c3e48785591">More...</a><br /></td></tr>
+<tr class="separator:gaa13892cc06d31d64e6613c3e48785591"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf07b7ee38e3c92577a3cdc9a7bb38479"><td class="memTemplParams" colspan="2">template&lt;typename Scalar , typename Index &gt; </td></tr>
+<tr class="memitem:gaf07b7ee38e3c92577a3cdc9a7bb38479"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__group-surfacemesh-utils.html#gaf07b7ee38e3c92577a3cdc9a7bb38479">normalize_mesh</a> (<a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;mesh)</td></tr>
+<tr class="memdesc:gaf07b7ee38e3c92577a3cdc9a7bb38479"><td class="mdescLeft">&#160;</td><td class="mdescRight">Normalize a mesh to fit in a unit box centered at the origin.  <a href="group__group-surfacemesh-utils.html#gaf07b7ee38e3c92577a3cdc9a7bb38479">More...</a><br /></td></tr>
+<tr class="separator:gaf07b7ee38e3c92577a3cdc9a7bb38479"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad46e0464a61ba9b6c5fd7948af53c304"><td class="memTemplParams" colspan="2">template&lt;typename Scalar , typename Index &gt; </td></tr>
+<tr class="memitem:gad46e0464a61ba9b6c5fd7948af53c304"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__group-surfacemesh-utils.html#gad46e0464a61ba9b6c5fd7948af53c304">normalize_meshes</a> (<a class="el" href="group__group-utils-misc.html#ga4afead0b9ccc53fe4fca896787595d26">span</a>&lt; <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; * &gt; meshes)</td></tr>
+<tr class="memdesc:gad46e0464a61ba9b6c5fd7948af53c304"><td class="mdescLeft">&#160;</td><td class="mdescRight">Normalize a list of meshes to fit in a unit box centered at the origin.  <a href="group__group-surfacemesh-utils.html#gad46e0464a61ba9b6c5fd7948af53c304">More...</a><br /></td></tr>
+<tr class="separator:gad46e0464a61ba9b6c5fd7948af53c304"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga48af6105ece8a970755870c73af73ddd"><td class="memTemplParams" colspan="2">template&lt;typename Scalar , typename Index &gt; </td></tr>
 <tr class="memitem:ga48af6105ece8a970755870c73af73ddd"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__group-surfacemesh-utils.html#ga48af6105ece8a970755870c73af73ddd">triangulate_polygonal_facets</a> (<a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;mesh)</td></tr>
 <tr class="memdesc:ga48af6105ece8a970755870c73af73ddd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Triangulate polygonal facets of a mesh using a prescribed set of rules.  <a href="group__group-surfacemesh-utils.html#ga48af6105ece8a970755870c73af73ddd">More...</a><br /></td></tr>
@@ -84,9 +131,44 @@ Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p >Various mesh processing utilities. </p>
+<h2 class="groupheader">Enumeration Type Documentation</h2>
+<a id="gaa88e833ed770762b02e187f0c2377d3d" name="gaa88e833ed770762b02e187f0c2377d3d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa88e833ed770762b02e187f0c2377d3d">&#9670;&nbsp;</a></span>NormalWeightingType</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum class <a class="el" href="group__group-surfacemesh-utils.html#gaa88e833ed770762b02e187f0c2377d3d">NormalWeightingType</a> : char</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;lagrange/NormalWeightingType.h&gt;</code></p>
+
+<p>Weighting types for averaging corner normals around a vertex. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ggaa88e833ed770762b02e187f0c2377d3daf19516d11f2946f894070e92fcb56b6d" name="ggaa88e833ed770762b02e187f0c2377d3daf19516d11f2946f894070e92fcb56b6d"></a>Uniform&#160;</td><td class="fielddoc"><p >Incident face normals have uniform influence on vertex normal. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggaa88e833ed770762b02e187f0c2377d3da84f023fc44b6b158de6ccc157c8dab06" name="ggaa88e833ed770762b02e187f0c2377d3da84f023fc44b6b158de6ccc157c8dab06"></a>CornerTriangleArea&#160;</td><td class="fielddoc"><p >Incident face normals are averaged weighted by area of the corner triangle. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggaa88e833ed770762b02e187f0c2377d3da45f4ce6c3306644b1efe333f4f8d6929" name="ggaa88e833ed770762b02e187f0c2377d3da45f4ce6c3306644b1efe333f4f8d6929"></a>Angle&#160;</td><td class="fielddoc"><p >Incident face normals are averaged weighted by incident angle of vertex. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="ga219f2db0d23b86456649478a92506997" name="ga219f2db0d23b86456649478a92506997"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga219f2db0d23b86456649478a92506997">&#9670;&nbsp;</a></span>compute_facet_normal()</h2>
+<a id="ga50e835144b2dd2ad5df9848293c8b097" name="ga50e835144b2dd2ad5df9848293c8b097"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga50e835144b2dd2ad5df9848293c8b097">&#9670;&nbsp;</a></span>compute_facet_normal()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -100,8 +182,8 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::string_view&#160;</td>
-          <td class="paramname"><em>name</em> = <code>&quot;@facet_normal&quot;</code>&#160;</td>
+          <td class="paramtype"><a class="el" href="structlagrange_1_1_facet_normal_options.html">FacetNormalOptions</a>&#160;</td>
+          <td class="paramname"><em>options</em> = <code>{}</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -117,7 +199,7 @@ Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in,out]</td><td class="paramname">mesh</td><td>The input mesh. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>The facet normal attribute name.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">options</td><td>Optional arguments to control normal generation.</td></tr>
   </table>
   </dd>
 </dl>
@@ -129,8 +211,316 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>AttributeId The attribute id of the facet normal attribute.</dd></dl>
-<dl class="section post"><dt>Postcondition</dt><dd>The computed facet normals are stored in <code>mesh</code> as a facet attribute named <code>name</code>.</dd></dl>
-<dl class="section note"><dt>Note</dt><dd>Non-planar polygonal facet's normal is not well defined. This method can only compute an approximated normal using a triangle fan. </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd>The computed facet normals are stored in <code>mesh</code> as a facet attribute named <code>options.output_attribute_name</code>.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Non-planar polygonal facet's normal is not well defined. This method can only compute an approximated normal using a triangle fan.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><code><a class="el" href="structlagrange_1_1_facet_normal_options.html" title="Option struct for computing per-facet mesh normals.">FacetNormalOptions</a></code>. </dd></dl>
+
+</div>
+</div>
+<a id="ga0d1dc948d0cb8aa8b7759e34a34df7bc" name="ga0d1dc948d0cb8aa8b7759e34a34df7bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga0d1dc948d0cb8aa8b7759e34a34df7bc">&#9670;&nbsp;</a></span>compute_normal() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__group-surfacemesh-attr.html#ga4d115376c2c766084ef808c837348fc3">AttributeId</a> compute_normal </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;&#160;</td>
+          <td class="paramname"><em>mesh</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classlagrange_1_1function__ref.html">function_ref</a>&lt; bool(Index)&gt;&#160;</td>
+          <td class="paramname"><em>is_edge_smooth</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__group-utils-misc.html#ga4afead0b9ccc53fe4fca896787595d26">span</a>&lt; const Index &gt;&#160;</td>
+          <td class="paramname"><em>cone_vertices</em> = <code>{}</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structlagrange_1_1_normal_options.html">NormalOptions</a>&#160;</td>
+          <td class="paramname"><em>options</em> = <code>{}</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;lagrange/compute_normal.h&gt;</code></p>
+
+<p>Compute smooth normals based on specified sharp edges and cone vertices. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">mesh</td><td>The input mesh. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">is_edge_smooth</td><td>Returns true on e if the edge is smooth. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">cone_vertices</td><td>A list of cone vertices. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">options</td><td>Optional arguments to control normal generation.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Scalar</td><td><a class="el" href="classlagrange_1_1_mesh.html">Mesh</a> scalar type. </td></tr>
+    <tr><td class="paramname">Index</td><td><a class="el" href="classlagrange_1_1_mesh.html">Mesh</a> index type.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The indexed attribute id of normal attribute.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><code><a class="el" href="structlagrange_1_1_normal_options.html" title="Option struct for computing indexed mesh normals.">NormalOptions</a></code>. </dd></dl>
+
+</div>
+</div>
+<a id="gabe91547f24b4936c8feddd9b74b1aa02" name="gabe91547f24b4936c8feddd9b74b1aa02"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gabe91547f24b4936c8feddd9b74b1aa02">&#9670;&nbsp;</a></span>compute_normal() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__group-surfacemesh-attr.html#ga4d115376c2c766084ef808c837348fc3">AttributeId</a> compute_normal </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;&#160;</td>
+          <td class="paramname"><em>mesh</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classlagrange_1_1function__ref.html">function_ref</a>&lt; bool(Index, Index)&gt;&#160;</td>
+          <td class="paramname"><em>is_edge_smooth</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__group-utils-misc.html#ga4afead0b9ccc53fe4fca896787595d26">span</a>&lt; const Index &gt;&#160;</td>
+          <td class="paramname"><em>cone_vertices</em> = <code>{}</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structlagrange_1_1_normal_options.html">NormalOptions</a>&#160;</td>
+          <td class="paramname"><em>options</em> = <code>{}</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;lagrange/compute_normal.h&gt;</code></p>
+
+<p>Compute smooth normals based on specified sharp edges and cone vertices. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">mesh</td><td>The input mesh. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">is_edge_smooth</td><td>Returns true on (fi, fj) if the edge between fi and fj is smooth. Assumes fi and fi are adjacent. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">cone_vertices</td><td>A list of cone vertices. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">options</td><td>Optional arguments to control normal generation.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Scalar</td><td><a class="el" href="classlagrange_1_1_mesh.html">Mesh</a> scalar type. </td></tr>
+    <tr><td class="paramname">Index</td><td><a class="el" href="classlagrange_1_1_mesh.html">Mesh</a> index type.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The indexed attribute id of normal attribute.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><code><a class="el" href="structlagrange_1_1_normal_options.html" title="Option struct for computing indexed mesh normals.">NormalOptions</a></code>. </dd></dl>
+
+</div>
+</div>
+<a id="ga668cc68bd27510b1bec92cf8dbe0e362" name="ga668cc68bd27510b1bec92cf8dbe0e362"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga668cc68bd27510b1bec92cf8dbe0e362">&#9670;&nbsp;</a></span>compute_normal() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__group-surfacemesh-attr.html#ga4d115376c2c766084ef808c837348fc3">AttributeId</a> compute_normal </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;&#160;</td>
+          <td class="paramname"><em>mesh</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Scalar&#160;</td>
+          <td class="paramname"><em>feature_angle_threshold</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__group-utils-misc.html#ga4afead0b9ccc53fe4fca896787595d26">span</a>&lt; const Index &gt;&#160;</td>
+          <td class="paramname"><em>cone_vertices</em> = <code>{}</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structlagrange_1_1_normal_options.html">NormalOptions</a>&#160;</td>
+          <td class="paramname"><em>options</em> = <code>{}</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;lagrange/compute_normal.h&gt;</code></p>
+
+<p>Compute smooth normal based on specified dihedral angle threshold and cone vertices. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">mesh</td><td>The input mesh. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">feature_angle_threshold</td><td>An edge with dihedral angle larger than this threshold is considered as an feature edge. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">cone_vertices</td><td>A list of cone vertices. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">options</td><td>Optional arguments to control normal generation.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Scalar</td><td><a class="el" href="classlagrange_1_1_mesh.html">Mesh</a> scalar type. </td></tr>
+    <tr><td class="paramname">Index</td><td><a class="el" href="classlagrange_1_1_mesh.html">Mesh</a> index type.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The indexed attribute id of normal attribute.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><code><a class="el" href="structlagrange_1_1_normal_options.html" title="Option struct for computing indexed mesh normals.">NormalOptions</a></code>. </dd></dl>
+
+</div>
+</div>
+<a id="gaa13892cc06d31d64e6613c3e48785591" name="gaa13892cc06d31d64e6613c3e48785591"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa13892cc06d31d64e6613c3e48785591">&#9670;&nbsp;</a></span>compute_weighted_corner_normal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__group-surfacemesh-attr.html#ga4d115376c2c766084ef808c837348fc3">AttributeId</a> compute_weighted_corner_normal </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;&#160;</td>
+          <td class="paramname"><em>mesh</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structlagrange_1_1_corner_normal_options.html">CornerNormalOptions</a>&#160;</td>
+          <td class="paramname"><em>option</em> = <code>{}</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;lagrange/compute_weighted_corner_normal.h&gt;</code></p>
+
+<p>Compute corner normals. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">mesh</td><td>The input mesh. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">option</td><td>Optional arguments to control normal generation.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Scalar</td><td><a class="el" href="classlagrange_1_1_mesh.html">Mesh</a> scalar type. </td></tr>
+    <tr><td class="paramname">Index</td><td><a class="el" href="classlagrange_1_1_mesh.html">Mesh</a> index type.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The corner attribute id of corner normal attribute.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>If <code>options.weight_type</code> is not <code>Uniform</code>, the resulting corner normal's lengths encodes the corresponding weight.</dd>
+<dd>
+Corner normals around a given vertex could be different even when the vertex is at a smooth region. For computing smooth normal, use <a class="el" href="group__group-surfacemesh-utils.html#ga0d1dc948d0cb8aa8b7759e34a34df7bc">compute_normal</a> instead.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><code><a class="el" href="structlagrange_1_1_corner_normal_options.html" title="Option struct for computing per-corner mesh normals.">CornerNormalOptions</a></code>, <code><a class="el" href="group__group-surfacemesh-utils.html#ga0d1dc948d0cb8aa8b7759e34a34df7bc" title="Compute smooth normals based on specified sharp edges and cone vertices.">compute_normal</a></code>. </dd></dl>
+
+</div>
+</div>
+<a id="gaf07b7ee38e3c92577a3cdc9a7bb38479" name="gaf07b7ee38e3c92577a3cdc9a7bb38479"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf07b7ee38e3c92577a3cdc9a7bb38479">&#9670;&nbsp;</a></span>normalize_mesh()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void normalize_mesh </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;&#160;</td>
+          <td class="paramname"><em>mesh</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;lagrange/normalize_meshes.h&gt;</code></p>
+
+<p>Normalize a mesh to fit in a unit box centered at the origin. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">mesh</td><td>Input mesh.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Scalar</td><td><a class="el" href="classlagrange_1_1_mesh.html">Mesh</a> scalar type. </td></tr>
+    <tr><td class="paramname">Index</td><td><a class="el" href="classlagrange_1_1_mesh.html">Mesh</a> index type. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="gad46e0464a61ba9b6c5fd7948af53c304" name="gad46e0464a61ba9b6c5fd7948af53c304"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad46e0464a61ba9b6c5fd7948af53c304">&#9670;&nbsp;</a></span>normalize_meshes()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void normalize_meshes </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__group-utils-misc.html#ga4afead0b9ccc53fe4fca896787595d26">span</a>&lt; <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; * &gt;&#160;</td>
+          <td class="paramname"><em>meshes</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;lagrange/normalize_meshes.h&gt;</code></p>
+
+<p>Normalize a list of meshes to fit in a unit box centered at the origin. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">meshes</td><td>List of pointers to the meshes to modify.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Scalar</td><td><a class="el" href="classlagrange_1_1_mesh.html">Mesh</a> scalar type. </td></tr>
+    <tr><td class="paramname">Index</td><td><a class="el" href="classlagrange_1_1_mesh.html">Mesh</a> index type. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

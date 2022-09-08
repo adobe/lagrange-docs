@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['lastopened_0',['LastOpened',['../namespacelagrange_1_1ui.html#a2f3d3a88d3547807933bce99b10c4b25ab522390b2f201f24eaa34c68ed37b880',1,'lagrange::ui']]]
+  ['keepexternalptr_0',['KeepExternalPtr',['../group__group-surfacemesh-attr.html#ggade3ae5b7e72e9d4f92f29c6563551c10a9a526f6dc0d4d6aef1f368972f20d13e',1,'lagrange']]]
 ];

@@ -194,8 +194,8 @@ $(function() {
 <div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>        ObjectPool() {}</div>
 <div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>        ObjectPool(std::size_t blockSize_) { reset(blockSize_); }</div>
 <div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>        ~ObjectPool() { clear(); }</div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>        <span class="keyword">template</span> &lt;<span class="keyword">typename</span>... Args&gt;</div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>        T* construct(Args&amp;&amp;... args)</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>        <span class="keyword">template</span> &lt;<span class="keyword">typename</span>... <a class="code hl_struct" href="struct_args.html">Args</a>&gt;</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>        T* construct(<a class="code hl_struct" href="struct_args.html">Args</a>&amp;&amp;... args)</div>
 <div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>        {</div>
 <div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>            <span class="keywordflow">if</span> (currentIndex &gt;= blockSize) {</div>
 <div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>                currentBlock = alloc_traits::allocate(alloc, blockSize);</div>
@@ -963,8 +963,9 @@ $(function() {
 <div class="line"><a id="l00892" name="l00892"></a><span class="lineno">  892</span>} <span class="comment">// namespace mapbox</span></div>
 <div class="line"><a id="l00893" name="l00893"></a><span class="lineno">  893</span>} <span class="comment">// namespace lagrange</span></div>
 <div class="ttc" id="aclasslagrange_1_1mapbox_1_1detail_1_1_earcut_html"><div class="ttname"><a href="classlagrange_1_1mapbox_1_1detail_1_1_earcut.html">lagrange::mapbox::detail::Earcut</a></div><div class="ttdef"><b>Definition:</b> earcut.h:34</div></div>
-<div class="ttc" id="anamespacelagrange_html"><div class="ttname"><a href="namespacelagrange.html">lagrange</a></div><div class="ttdoc">Main namespace for Lagrange.</div></div>
+<div class="ttc" id="anamespacelagrange_html"><div class="ttname"><a href="namespacelagrange.html">lagrange</a></div><div class="ttdoc">Main namespace for Lagrange.</div><div class="ttdef"><b>Definition:</b> AABBIGL.h:30</div></div>
 <div class="ttc" id="anamespacelagrange_html_a3cc89f1c5d3d14cf0fc6a584d204ad27"><div class="ttname"><a href="namespacelagrange.html#a3cc89f1c5d3d14cf0fc6a584d204ad27">lagrange::sign</a></div><div class="ttdeci">int sign(T val)</div><div class="ttdoc">Get the sign of the value Returns either -1, 0, or 1.</div><div class="ttdef"><b>Definition:</b> utils.h:43</div></div>
+<div class="ttc" id="astruct_args_html"><div class="ttname"><a href="struct_args.html">Args</a></div><div class="ttdef"><b>Definition:</b> project.cpp:27</div></div>
 <div class="ttc" id="astructlagrange_1_1mapbox_1_1util_1_1nth_html"><div class="ttname"><a href="structlagrange_1_1mapbox_1_1util_1_1nth.html">lagrange::mapbox::util::nth</a></div><div class="ttdef"><b>Definition:</b> earcut.h:21</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->

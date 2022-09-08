@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['surfacemesh_0',['SurfaceMesh',['../group__group-surfacemesh.html',1,'']]]
+  ['partitioning_20module_0',['Partitioning Module',['../group__module-partitioning.html',1,'']]]
 ];
