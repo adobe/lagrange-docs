@@ -1,15 +1,13 @@
 var searchData=
 [
-  ['make_5finput_5fpath_0',['make_input_path',['../classlagrange_1_1ui_1_1_file_dialog_path.html#a311b1f7a035c8945b31b57d1f8533819',1,'lagrange::ui::FileDialogPath']]],
-  ['make_5foutput_5fpath_1',['make_output_path',['../classlagrange_1_1ui_1_1_file_dialog_path.html#a62e64bfa8bb8c54564701ccef4a3fde0',1,'lagrange::ui::FileDialogPath']]],
-  ['make_5fvalue_5fptr_2',['make_value_ptr',['../group__group-utils-misc.html#gae65678934fe4afb9cedc9b9d68d9010b',1,'lagrange']]],
-  ['map_5fattribute_3',['map_attribute',['../group__group-surfacemesh-attr-utils.html#gad7a1e90b26e460f8b9afc7efbca95cc4',1,'lagrange::map_attribute(SurfaceMesh&lt; Scalar, Index &gt; &amp;mesh, AttributeId id, std::string_view new_name, AttributeElement new_element)'],['../group__group-surfacemesh-attr-utils.html#ga38348fa42743d4cb72a1a2975483acc1',1,'lagrange::map_attribute(SurfaceMesh&lt; Scalar, Index &gt; &amp;mesh, std::string_view old_name, std::string_view new_name, AttributeElement new_element)']]],
-  ['map_5fattribute_5fin_5fplace_4',['map_attribute_in_place',['../group__group-surfacemesh-attr-utils.html#gacd6500c173df1a5bc53e2c9b32e08309',1,'lagrange::map_attribute_in_place(SurfaceMesh&lt; Scalar, Index &gt; &amp;mesh, AttributeId id, AttributeElement new_element)'],['../group__group-surfacemesh-attr-utils.html#ga4a2e525bede1624580d71782861b0cd6',1,'lagrange::map_attribute_in_place(SurfaceMesh&lt; Scalar, Index &gt; &amp;mesh, std::string_view name, AttributeElement new_element)']]],
-  ['marching_5ftriangles_5fgeneral_5',['marching_triangles_general',['../namespacelagrange.html#aa51ee322b2cbe6d36fe651b3a6c3b016',1,'lagrange']]],
-  ['marching_5ftriangles_5findexed_6',['marching_triangles_indexed',['../namespacelagrange.html#a9dfb354b3bbbbf57858696d3ecd9b9a9',1,'lagrange']]],
-  ['matrix_5fref_7',['matrix_ref',['../group__group-surfacemesh-views.html#gaf2e0d4ab50ffdc84c4431d699f6741fe',1,'lagrange']]],
-  ['matrix_5fview_8',['matrix_view',['../group__group-surfacemesh-views.html#ga0ae9d0742709686405adad75e20e8bc8',1,'lagrange']]],
-  ['mesh_9',['Mesh',['../classlagrange_1_1_mesh.html#a2a23c7c0c4e0da252b7bc0e13b6f81d8',1,'lagrange::Mesh']]],
-  ['meshadapter_10',['MeshAdapter',['../classlagrange_1_1volume_1_1_mesh_adapter.html#adc98e2a86dc99dc2c124b575b1b26e85',1,'lagrange::volume::MeshAdapter']]],
-  ['move_5fdata_11',['move_data',['../namespacelagrange.html#a596b1dcf8071e6db70a89205248de29e',1,'lagrange']]]
+  ['load_0',['load',['../classlagrange_1_1ui_1_1_keybinds.html#a685de2b8050a9c696f494428df52dec7',1,'lagrange::ui::Keybinds']]],
+  ['load_5fmesh_5fext_1',['load_mesh_ext',['../namespacelagrange_1_1io.html#a13c435d176a15a5855699b63172a0780',1,'lagrange::io::load_mesh_ext(std::istream &amp;input_stream, const MeshLoaderParams &amp;params={}, tinyobj::MaterialReader *material_reader=nullptr) -&gt; MeshLoaderResult&lt; MeshType &gt;'],['../namespacelagrange_1_1io.html#adb0f52b4283c04f5b2ae0ace996d369e',1,'lagrange::io::load_mesh_ext(const lagrange::fs::path &amp;filename, const MeshLoaderParams &amp;params={}, tinyobj::MaterialReader *material_reader=nullptr)']]],
+  ['load_5fmesh_5fmsh_2',['load_mesh_msh',['../namespacelagrange_1_1io.html#aaea4dd50cde93cd0b8c327a8fd08eabb',1,'lagrange::io::load_mesh_msh(std::istream &amp;input_stream)'],['../namespacelagrange_1_1io.html#a16369417666dae9749175060ae48c645',1,'lagrange::io::load_mesh_msh(const fs::path &amp;filename)']]],
+  ['load_5fmesh_5fobj_3',['load_mesh_obj',['../namespacelagrange_1_1io.html#a5a12591076fd01220e0e09eee60f28a0',1,'lagrange::io']]],
+  ['load_5fmesh_5fply_4',['load_mesh_ply',['../namespacelagrange_1_1io.html#a5e493449aa00501c6b8e61027d5e8bbb',1,'lagrange::io']]],
+  ['load_5fobj_5',['load_obj',['../namespacelagrange_1_1ui.html#ae55d21c243ac03bfee1e44962a485eea',1,'lagrange::ui']]],
+  ['load_5fobj_5fwith_5fmaterials_6',['load_obj_with_materials',['../namespacelagrange_1_1ui.html#ae680be33a41b4999f54fa09007020da0',1,'lagrange::ui']]],
+  ['log_5fonce_7',['log_once',['../namespacelagrange_1_1ui.html#a0a8b654e728be79a0426e82fd7a7de74',1,'lagrange::ui']]],
+  ['logger_8',['logger',['../group__group-logger.html#ga97e3b3adabf67bc7d3650ed14214ddaa',1,'lagrange']]],
+  ['look_5fat_9',['look_at',['../namespacelagrange_1_1ui.html#a19124179c7426f109b244c0b0c7d6461',1,'lagrange::ui']]]
 ];

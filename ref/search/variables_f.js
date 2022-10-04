@@ -1,21 +1,8 @@
 var searchData=
 [
-  ['s_5fcorner_5fto_5fedge_0',['s_corner_to_edge',['../classlagrange_1_1_surface_mesh.html#ada8782ebc26badd9a6ce3e6cc6f8654a',1,'lagrange::SurfaceMesh']]],
-  ['s_5fcorner_5fto_5ffacet_1',['s_corner_to_facet',['../classlagrange_1_1_surface_mesh.html#a050cc9571ebd988bda2ea3aad6e5c827',1,'lagrange::SurfaceMesh']]],
-  ['s_5fcorner_5fto_5fvertex_2',['s_corner_to_vertex',['../classlagrange_1_1_surface_mesh.html#a4d0e58d41af1773de31f34c022eb2eb1',1,'lagrange::SurfaceMesh']]],
-  ['s_5fedge_5fto_5ffirst_5fcorner_3',['s_edge_to_first_corner',['../classlagrange_1_1_surface_mesh.html#a4ca21f209edf67c602f17c7824538f9a',1,'lagrange::SurfaceMesh']]],
-  ['s_5ffacet_5fto_5ffirst_5fcorner_4',['s_facet_to_first_corner',['../classlagrange_1_1_surface_mesh.html#a194dfa5b528337b85047301bcdd0f9e8',1,'lagrange::SurfaceMesh']]],
-  ['s_5fnext_5fcorner_5faround_5fedge_5',['s_next_corner_around_edge',['../classlagrange_1_1_surface_mesh.html#a05fbb03cc8a93dd74eb72bde8e4c3767',1,'lagrange::SurfaceMesh']]],
-  ['s_5fnext_5fcorner_5faround_5fvertex_6',['s_next_corner_around_vertex',['../classlagrange_1_1_surface_mesh.html#aa3e0dff5092003b1f9b68af61dc2edce',1,'lagrange::SurfaceMesh']]],
-  ['s_5fvertex_5fto_5ffirst_5fcorner_7',['s_vertex_to_first_corner',['../classlagrange_1_1_surface_mesh.html#ae58d188cb97ca41140d834353a13a989',1,'lagrange::SurfaceMesh']]],
-  ['s_5fvertex_5fto_5fposition_8',['s_vertex_to_position',['../classlagrange_1_1_surface_mesh.html#a0d857793f66ee33122dfd9132bd636ab',1,'lagrange::SurfaceMesh']]],
-  ['screen_5fbegin_9',['screen_begin',['../structlagrange_1_1ui_1_1_selection_context.html#abc3ee3bb484bcf983aac306d561e64a5',1,'lagrange::ui::SelectionContext']]],
-  ['screen_5fend_10',['screen_end',['../structlagrange_1_1ui_1_1_selection_context.html#a8cce5322e1edf414dc4b358e4067fdb2',1,'lagrange::ui::SelectionContext']]],
-  ['screen_5fposition_11',['screen_position',['../structlagrange_1_1ui_1_1_selection_context.html#add242d8c0cf8ac1c3aaad9677ed06d63',1,'lagrange::ui::SelectionContext']]],
-  ['select_5fbackfacing_12',['select_backfacing',['../structlagrange_1_1ui_1_1_selection_context.html#a7e54329819422ab94823d6a3907db654',1,'lagrange::ui::SelectionContext']]],
-  ['show_5fdefault_5fibl_13',['show_default_ibl',['../structlagrange_1_1ui_1_1_viewer_1_1_window_options.html#ab376178f5b8acf734fe544a85bb372af',1,'lagrange::ui::Viewer::WindowOptions']]],
-  ['show_5fskybox_14',['show_skybox',['../structlagrange_1_1ui_1_1_i_b_l.html#a5adf3f08ecf7b4b75c084404ec6cff8c',1,'lagrange::ui::IBL']]],
-  ['source_5fattribute_15',['source_attribute',['../structlagrange_1_1ui_1_1_attribute_render.html#a64c4119932c0d4ab3b1f757ac0ae8488',1,'lagrange::ui::AttributeRender']]],
-  ['specular_16',['specular',['../structlagrange_1_1ui_1_1_i_b_l.html#a635b2b63b6da24aef0868e92dda57560',1,'lagrange::ui::IBL']]],
-  ['success_17',['success',['../structlagrange_1_1io_1_1_obj_reader_result.html#a7960f9c558f9ee2c3d4a8fdea096fb56',1,'lagrange::io::ObjReaderResult']]]
+  ['ray_5fdir_0',['ray_dir',['../structlagrange_1_1ui_1_1_selection_context.html#afc1775985ea3d10b40fe75ed22ac22b7',1,'lagrange::ui::SelectionContext']]],
+  ['ray_5forigin_1',['ray_origin',['../structlagrange_1_1ui_1_1_selection_context.html#a8b963fe1458b187752424884e52cc3b8',1,'lagrange::ui::SelectionContext']]],
+  ['recompute_5ffacet_5fnormals_2',['recompute_facet_normals',['../structlagrange_1_1_normal_options.html#a817eeb2e63429b8cc839da0d1e79fa2f',1,'lagrange::NormalOptions']]],
+  ['recompute_5fweighted_5fcorner_5fnormals_3',['recompute_weighted_corner_normals',['../structlagrange_1_1_vertex_normal_options.html#ae02aa7e233a85832a599dd07abee27b9',1,'lagrange::VertexNormalOptions']]],
+  ['right_4',['right',['../structlagrange_1_1bvh_1_1_edge_a_a_b_b_tree_1_1_node.html#abac8b7bcfa9b05029a3c701f166321c4',1,'lagrange::bvh::EdgeAABBTree::Node']]]
 ];

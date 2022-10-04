@@ -96,6 +96,18 @@ Enumerations</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:ga363707c2e65474638292c738c072868c"><td class="memTemplParams" colspan="2">template&lt;typename Scalar , typename Index &gt; </td></tr>
+<tr class="memitem:ga363707c2e65474638292c738c072868c"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__group-surfacemesh-utils.html#ga363707c2e65474638292c738c072868c">combine_meshes</a> (std::initializer_list&lt; const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; * &gt; meshes, bool preserve_attributes=true)</td></tr>
+<tr class="memdesc:ga363707c2e65474638292c738c072868c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Combine multiple meshes into a single mesh.  <a href="group__group-surfacemesh-utils.html#ga363707c2e65474638292c738c072868c">More...</a><br /></td></tr>
+<tr class="separator:ga363707c2e65474638292c738c072868c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga07291901c4f594454dfafb0764f4dad5"><td class="memTemplParams" colspan="2"><a id="ga07291901c4f594454dfafb0764f4dad5" name="ga07291901c4f594454dfafb0764f4dad5"></a>
+template&lt;typename Scalar , typename Index &gt; </td></tr>
+<tr class="memitem:ga07291901c4f594454dfafb0764f4dad5"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>combine_meshes</b> (<a class="el" href="group__group-utils-misc.html#ga4afead0b9ccc53fe4fca896787595d26">span</a>&lt; const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &gt; meshes, bool preserve_attributes=true)</td></tr>
+<tr class="separator:ga07291901c4f594454dfafb0764f4dad5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9e874e29c25e3a587a9352147e36772d"><td class="memTemplParams" colspan="2"><a id="ga9e874e29c25e3a587a9352147e36772d" name="ga9e874e29c25e3a587a9352147e36772d"></a>
+template&lt;typename Scalar , typename Index &gt; </td></tr>
+<tr class="memitem:ga9e874e29c25e3a587a9352147e36772d"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>combine_meshes</b> (size_t num_meshes, <a class="el" href="classlagrange_1_1function__ref.html">function_ref</a>&lt; const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;(size_t)&gt; get_mesh, bool preserve_attributes=true)</td></tr>
+<tr class="separator:ga9e874e29c25e3a587a9352147e36772d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga50e835144b2dd2ad5df9848293c8b097"><td class="memTemplParams" colspan="2">template&lt;typename Scalar , typename Index &gt; </td></tr>
 <tr class="memitem:ga50e835144b2dd2ad5df9848293c8b097"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="group__group-surfacemesh-attr.html#ga4d115376c2c766084ef808c837348fc3">AttributeId</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__group-surfacemesh-utils.html#ga50e835144b2dd2ad5df9848293c8b097">compute_facet_normal</a> (<a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;mesh, <a class="el" href="structlagrange_1_1_facet_normal_options.html">FacetNormalOptions</a> options={})</td></tr>
 <tr class="memdesc:ga50e835144b2dd2ad5df9848293c8b097"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute facet normals.  <a href="group__group-surfacemesh-utils.html#ga50e835144b2dd2ad5df9848293c8b097">More...</a><br /></td></tr>
@@ -167,6 +179,53 @@ Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="ga363707c2e65474638292c738c072868c" name="ga363707c2e65474638292c738c072868c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga363707c2e65474638292c738c072868c">&#9670;&nbsp;</a></span>combine_meshes()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; combine_meshes </td>
+          <td>(</td>
+          <td class="paramtype">std::initializer_list&lt; const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; * &gt;&#160;</td>
+          <td class="paramname"><em>meshes</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>preserve_attributes</em> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;lagrange/combine_meshes.h&gt;</code></p>
+
+<p>Combine multiple meshes into a single mesh. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Scalar</td><td><a class="el" href="classlagrange_1_1_mesh.html">Mesh</a> scalar type. </td></tr>
+    <tr><td class="paramname">Index</td><td><a class="el" href="classlagrange_1_1_mesh.html">Mesh</a> index type.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">meshes</td><td>The set of input mesh pointers. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">preserve_attributes</td><td>Preserve shared attributes and map them to the output mesh.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The combined mesh. </dd></dl>
+
+</div>
+</div>
 <a id="ga50e835144b2dd2ad5df9848293c8b097" name="ga50e835144b2dd2ad5df9848293c8b097"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga50e835144b2dd2ad5df9848293c8b097">&#9670;&nbsp;</a></span>compute_facet_normal()</h2>
 

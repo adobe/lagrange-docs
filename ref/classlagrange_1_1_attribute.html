@@ -115,9 +115,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a809028fdd3de22f0e33c7e97f3712578"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlagrange_1_1_attribute.html#a809028fdd3de22f0e33c7e97f3712578">wrap</a> (<a class="el" href="group__group-utils-misc.html#ga4afead0b9ccc53fe4fca896787595d26">span</a>&lt; <a class="el" href="classlagrange_1_1_attribute.html#a48f6eee0351a3cea4b2c4fb25705241a">ValueType</a> &gt; buffer, size_t num_elements)</td></tr>
 <tr class="memdesc:a809028fdd3de22f0e33c7e97f3712578"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wraps an external buffer into the attribute.  <a href="classlagrange_1_1_attribute.html#a809028fdd3de22f0e33c7e97f3712578">More...</a><br /></td></tr>
 <tr class="separator:a809028fdd3de22f0e33c7e97f3712578"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a55853a2d9c170bcc6150bed0869566"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlagrange_1_1_attribute.html#a0a55853a2d9c170bcc6150bed0869566">wrap</a> (<a class="el" href="classlagrange_1_1_shared_span.html">SharedSpan</a>&lt; <a class="el" href="classlagrange_1_1_attribute.html#a48f6eee0351a3cea4b2c4fb25705241a">ValueType</a> &gt; buffer_ptr, size_t num_elements)</td></tr>
+<tr class="memdesc:a0a55853a2d9c170bcc6150bed0869566"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wraps an external buffer into the attribute.  <a href="classlagrange_1_1_attribute.html#a0a55853a2d9c170bcc6150bed0869566">More...</a><br /></td></tr>
+<tr class="separator:a0a55853a2d9c170bcc6150bed0869566"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a533dd1690d70c2fac47a6fcf95b31b76"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlagrange_1_1_attribute.html#a533dd1690d70c2fac47a6fcf95b31b76">wrap_const</a> (<a class="el" href="group__group-utils-misc.html#ga4afead0b9ccc53fe4fca896787595d26">span</a>&lt; const <a class="el" href="classlagrange_1_1_attribute.html#a48f6eee0351a3cea4b2c4fb25705241a">ValueType</a> &gt; buffer, size_t num_elements)</td></tr>
 <tr class="memdesc:a533dd1690d70c2fac47a6fcf95b31b76"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wraps a const external buffer into the attribute.  <a href="classlagrange_1_1_attribute.html#a533dd1690d70c2fac47a6fcf95b31b76">More...</a><br /></td></tr>
 <tr class="separator:a533dd1690d70c2fac47a6fcf95b31b76"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07965c43f94c1a08685b3a8c442ca67e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlagrange_1_1_attribute.html#a07965c43f94c1a08685b3a8c442ca67e">wrap_const</a> (<a class="el" href="classlagrange_1_1_shared_span.html">SharedSpan</a>&lt; const <a class="el" href="classlagrange_1_1_attribute.html#a48f6eee0351a3cea4b2c4fb25705241a">ValueType</a> &gt; shared_buffer, size_t num_elements)</td></tr>
+<tr class="memdesc:a07965c43f94c1a08685b3a8c442ca67e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wraps a const external buffer into the attribute.  <a href="classlagrange_1_1_attribute.html#a07965c43f94c1a08685b3a8c442ca67e">More...</a><br /></td></tr>
+<tr class="separator:a07965c43f94c1a08685b3a8c442ca67e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Attribute growth</div></td></tr>
 <tr class="memitem:acc78331173a6d42be98215261c22e25c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlagrange_1_1_attribute.html#acc78331173a6d42be98215261c22e25c">set_default_value</a> (<a class="el" href="classlagrange_1_1_attribute.html#a48f6eee0351a3cea4b2c4fb25705241a">ValueType</a> value)</td></tr>
 <tr class="memdesc:acc78331173a6d42be98215261c22e25c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the default value to use when growing the attribute.  <a href="classlagrange_1_1_attribute.html#acc78331173a6d42be98215261c22e25c">More...</a><br /></td></tr>
@@ -138,6 +144,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ad9b8b1f723ee9f5918f8c9783fc27590"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__group-surfacemesh-attr.html#ga3018d576f81897e1712c3601b9625cb9">AttributeWritePolicy</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlagrange_1_1_attribute.html#ad9b8b1f723ee9f5918f8c9783fc27590">get_write_policy</a> () const</td></tr>
 <tr class="memdesc:ad9b8b1f723ee9f5918f8c9783fc27590"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the write policy for read-only external buffers.  <a href="classlagrange_1_1_attribute.html#ad9b8b1f723ee9f5918f8c9783fc27590">More...</a><br /></td></tr>
 <tr class="separator:ad9b8b1f723ee9f5918f8c9783fc27590"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab098c8a7d3c8e9b496f98d6a3f67d8c6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlagrange_1_1_attribute.html#ab098c8a7d3c8e9b496f98d6a3f67d8c6">set_copy_policy</a> (<a class="el" href="group__group-surfacemesh-attr.html#ga450ef027eac01dd93a89a15ff55de63f">AttributeCopyPolicy</a> policy)</td></tr>
+<tr class="memdesc:ab098c8a7d3c8e9b496f98d6a3f67d8c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set copy policy for external buffers.  <a href="classlagrange_1_1_attribute.html#ab098c8a7d3c8e9b496f98d6a3f67d8c6">More...</a><br /></td></tr>
+<tr class="separator:ab098c8a7d3c8e9b496f98d6a3f67d8c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a092f27d0f1e475f8faf46c6c804fafd1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__group-surfacemesh-attr.html#ga450ef027eac01dd93a89a15ff55de63f">AttributeCopyPolicy</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlagrange_1_1_attribute.html#a092f27d0f1e475f8faf46c6c804fafd1">get_copy_policy</a> () const</td></tr>
+<tr class="memdesc:a092f27d0f1e475f8faf46c6c804fafd1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the copy policy for external buffers.  <a href="classlagrange_1_1_attribute.html#a092f27d0f1e475f8faf46c6c804fafd1">More...</a><br /></td></tr>
+<tr class="separator:a092f27d0f1e475f8faf46c6c804fafd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a65f3d917d55163cf642f8b3f95fb583a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlagrange_1_1_attribute.html#a65f3d917d55163cf642f8b3f95fb583a">create_internal_copy</a> ()</td></tr>
 <tr class="memdesc:a65f3d917d55163cf642f8b3f95fb583a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates an internal copy of the attribute data.  <a href="classlagrange_1_1_attribute.html#a65f3d917d55163cf642f8b3f95fb583a">More...</a><br /></td></tr>
 <tr class="separator:a65f3d917d55163cf642f8b3f95fb583a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -272,6 +284,10 @@ Protected Attributes</h2></td></tr>
 std::vector&lt; <a class="el" href="classlagrange_1_1_attribute.html#a48f6eee0351a3cea4b2c4fb25705241a">ValueType</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>m_data</b></td></tr>
 <tr class="memdesc:ac0d9d9c9d4af92322ac48bfaf13455c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Internal buffer storing the data (when the attribute is not external). <br /></td></tr>
 <tr class="separator:ac0d9d9c9d4af92322ac48bfaf13455c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c4a8a00a3734750a3ef882eb3725768"><td class="memItemLeft" align="right" valign="top"><a id="a9c4a8a00a3734750a3ef882eb3725768" name="a9c4a8a00a3734750a3ef882eb3725768"></a>
+std::shared_ptr&lt; const <a class="el" href="classlagrange_1_1_attribute.html#a48f6eee0351a3cea4b2c4fb25705241a">ValueType</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>m_owner</b></td></tr>
+<tr class="memdesc:a9c4a8a00a3734750a3ef882eb3725768"><td class="mdescLeft">&#160;</td><td class="mdescRight">Optional aliased ptr to extend the lifetime of memory owner object of external buffer. <br /></td></tr>
+<tr class="separator:a9c4a8a00a3734750a3ef882eb3725768"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acb9be5a80775fdd2a40d3de682e9f23d"><td class="memItemLeft" align="right" valign="top"><a id="acb9be5a80775fdd2a40d3de682e9f23d" name="acb9be5a80775fdd2a40d3de682e9f23d"></a>
 <a class="el" href="classlagrange_1_1_attribute.html#a48f6eee0351a3cea4b2c4fb25705241a">ValueType</a>&#160;</td><td class="memItemRight" valign="bottom"><b>m_default_value</b> = <a class="el" href="classlagrange_1_1_attribute.html#a48f6eee0351a3cea4b2c4fb25705241a">ValueType</a>(0)</td></tr>
 <tr class="memdesc:acb9be5a80775fdd2a40d3de682e9f23d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default values used to populate buffer when the attribute grows. <br /></td></tr>
@@ -290,6 +306,10 @@ std::vector&lt; <a class="el" href="classlagrange_1_1_attribute.html#a48f6eee035
 <a class="el" href="group__group-surfacemesh-attr.html#ga3018d576f81897e1712c3601b9625cb9">AttributeWritePolicy</a>&#160;</td><td class="memItemRight" valign="bottom"><b>m_write_policy</b> = <a class="el" href="group__group-surfacemesh-attr.html#gga3018d576f81897e1712c3601b9625cb9a61eb7df0ff95cbd596ba2a4c7ee06b32">AttributeWritePolicy::ErrorIfReadOnly</a></td></tr>
 <tr class="memdesc:a81ac5e6e4ab023885c334c86e1325744"><td class="mdescLeft">&#160;</td><td class="mdescRight">Policy for write access to read-only external buffers. <br /></td></tr>
 <tr class="separator:a81ac5e6e4ab023885c334c86e1325744"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb40e84a56364071d899e534183777b2"><td class="memItemLeft" align="right" valign="top"><a id="aeb40e84a56364071d899e534183777b2" name="aeb40e84a56364071d899e534183777b2"></a>
+<a class="el" href="group__group-surfacemesh-attr.html#ga450ef027eac01dd93a89a15ff55de63f">AttributeCopyPolicy</a>&#160;</td><td class="memItemRight" valign="bottom"><b>m_copy_policy</b> = <a class="el" href="group__group-surfacemesh-attr.html#gga450ef027eac01dd93a89a15ff55de63fafe72de1001d465db9eb6ce5cb874c2cb">AttributeCopyPolicy::CopyIfExternal</a></td></tr>
+<tr class="memdesc:aeb40e84a56364071d899e534183777b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy policy for external buffers. <br /></td></tr>
+<tr class="separator:aeb40e84a56364071d899e534183777b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1f1b1142d86a16ba5d18fd334bf83fdc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlagrange_1_1_attribute.html#a1f1b1142d86a16ba5d18fd334bf83fdc">m_is_external</a> = false</td></tr>
 <tr class="memdesc:a1f1b1142d86a16ba5d18fd334bf83fdc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag to determine whether an attribute is using an external or internal buffer.  <a href="classlagrange_1_1_attribute.html#a1f1b1142d86a16ba5d18fd334bf83fdc">More...</a><br /></td></tr>
 <tr class="separator:a1f1b1142d86a16ba5d18fd334bf83fdc"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -504,7 +524,7 @@ class lagrange::Attribute&lt; ValueType_ &gt;</div><p >Derived attribute class t
 </div>
 </div>
 <a id="a809028fdd3de22f0e33c7e97f3712578" name="a809028fdd3de22f0e33c7e97f3712578"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a809028fdd3de22f0e33c7e97f3712578">&#9670;&nbsp;</a></span>wrap()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a809028fdd3de22f0e33c7e97f3712578">&#9670;&nbsp;</a></span>wrap() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -541,8 +561,46 @@ class lagrange::Attribute&lt; ValueType_ &gt;</div><p >Derived attribute class t
 
 </div>
 </div>
+<a id="a0a55853a2d9c170bcc6150bed0869566" name="a0a55853a2d9c170bcc6150bed0869566"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a55853a2d9c170bcc6150bed0869566">&#9670;&nbsp;</a></span>wrap() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void wrap </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classlagrange_1_1_shared_span.html">SharedSpan</a>&lt; <a class="el" href="classlagrange_1_1_attribute.html#a48f6eee0351a3cea4b2c4fb25705241a">ValueType</a> &gt;&#160;</td>
+          <td class="paramname"><em>buffer_ptr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>num_elements</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Wraps an external buffer into the attribute. </p>
+<p >The buffer ownership is shared with the attribute. Note that only the number of element is allowed to change when wrapping an external buffer (the number of channels is fixed during the attribute construction).</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">shared_buffer</td><td>Pointer to an external buffer managed by a <a class="el" href="classlagrange_1_1_shared_span.html" title="Shared span with ownership tracking.">SharedSpan</a> to be used as storage. This pointer exposes a view of the buffer managed by the owner. The buffer must have a capacity (determined by buffer_ptr.size()) that is large enough to store num elements x num channels entries. The buffer can be larger than required, in which case the padding capacity can be used to grow the attribute, as determined by the AttributeGrowthPolicy. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">num_elements</td><td>New number of elements associated with the attribute. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a533dd1690d70c2fac47a6fcf95b31b76" name="a533dd1690d70c2fac47a6fcf95b31b76"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a533dd1690d70c2fac47a6fcf95b31b76">&#9670;&nbsp;</a></span>wrap_const()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a533dd1690d70c2fac47a6fcf95b31b76">&#9670;&nbsp;</a></span>wrap_const() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -572,6 +630,44 @@ class lagrange::Attribute&lt; ValueType_ &gt;</div><p >Derived attribute class t
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">buffer</td><td>Pointer to an external buffer to be used as storage. The pointed buffer must have a capacity (determined by span::size()) that is large enough to store num elements x num channels entries. The pointed buffer can be larger than required, in which case the padding capacity can be used to grow the attribute, as determined by the AttributeGrowthPolicy. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">num_elements</td><td>New number of elements associated with the attribute. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a07965c43f94c1a08685b3a8c442ca67e" name="a07965c43f94c1a08685b3a8c442ca67e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a07965c43f94c1a08685b3a8c442ca67e">&#9670;&nbsp;</a></span>wrap_const() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void wrap_const </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classlagrange_1_1_shared_span.html">SharedSpan</a>&lt; const <a class="el" href="classlagrange_1_1_attribute.html#a48f6eee0351a3cea4b2c4fb25705241a">ValueType</a> &gt;&#160;</td>
+          <td class="paramname"><em>shared_buffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>num_elements</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Wraps a const external buffer into the attribute. </p>
+<p >The buffer ownership is shared with the attribute. Note that only the number of element is allowed to change when wrapping an external buffer (the number of channels is fixed during the attribute construction).</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">shared_buffer</td><td>Pointer to an external buffer managed by a <a class="el" href="classlagrange_1_1_shared_span.html" title="Shared span with ownership tracking.">SharedSpan</a> to be used as storage. This pointer exposes a view of the buffer managed by the owner. The buffer must have a capacity (determined by shared_buffer.size()) that is large enough to store num elements x num channels entries. The buffer can be larger than required, in which case the padding capacity can be used to grow the attribute, as determined by the AttributeGrowthPolicy. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">num_elements</td><td>New number of elements associated with the attribute. </td></tr>
   </table>
   </dd>
@@ -734,6 +830,68 @@ class lagrange::Attribute&lt; ValueType_ &gt;</div><p >Derived attribute class t
 
 <p>Gets the write policy for read-only external buffers. </p>
 <dl class="section return"><dt>Returns</dt><dd>The attribute write policy. </dd></dl>
+
+</div>
+</div>
+<a id="ab098c8a7d3c8e9b496f98d6a3f67d8c6" name="ab098c8a7d3c8e9b496f98d6a3f67d8c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab098c8a7d3c8e9b496f98d6a3f67d8c6">&#9670;&nbsp;</a></span>set_copy_policy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void set_copy_policy </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__group-surfacemesh-attr.html#ga450ef027eac01dd93a89a15ff55de63f">AttributeCopyPolicy</a>&#160;</td>
+          <td class="paramname"><em>policy</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set copy policy for external buffers. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">policy</td><td>New policy </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a092f27d0f1e475f8faf46c6c804fafd1" name="a092f27d0f1e475f8faf46c6c804fafd1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a092f27d0f1e475f8faf46c6c804fafd1">&#9670;&nbsp;</a></span>get_copy_policy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__group-surfacemesh-attr.html#ga450ef027eac01dd93a89a15ff55de63f">AttributeCopyPolicy</a> get_copy_policy </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the copy policy for external buffers. </p>
+<dl class="section return"><dt>Returns</dt><dd>The attribute copy policy. </dd></dl>
 
 </div>
 </div>

@@ -153,6 +153,12 @@ Enumerations</h2></td></tr>
  }</td></tr>
 <tr class="memdesc:gade3ae5b7e72e9d4f92f29c6563551c10"><td class="mdescLeft">&#160;</td><td class="mdescRight">Policy for exporting attributes that are views onto external buffers.  <a href="group__group-surfacemesh-attr.html#gade3ae5b7e72e9d4f92f29c6563551c10">More...</a><br /></td></tr>
 <tr class="separator:gade3ae5b7e72e9d4f92f29c6563551c10"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga450ef027eac01dd93a89a15ff55de63f"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group-surfacemesh-attr.html#ga450ef027eac01dd93a89a15ff55de63f">AttributeCopyPolicy</a> { <a class="el" href="group__group-surfacemesh-attr.html#gga450ef027eac01dd93a89a15ff55de63fafe72de1001d465db9eb6ce5cb874c2cb">CopyIfExternal</a>
+, <a class="el" href="group__group-surfacemesh-attr.html#gga450ef027eac01dd93a89a15ff55de63fa9a526f6dc0d4d6aef1f368972f20d13e">KeepExternalPtr</a>
+, <a class="el" href="group__group-surfacemesh-attr.html#gga450ef027eac01dd93a89a15ff55de63fa9e7163ae7c790d007e084e24693b2303">ErrorIfExternal</a>
+ }</td></tr>
+<tr class="memdesc:ga450ef027eac01dd93a89a15ff55de63f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Policy for copying attribute that are views onto external buffers.  <a href="group__group-surfacemesh-attr.html#ga450ef027eac01dd93a89a15ff55de63f">More...</a><br /></td></tr>
+<tr class="separator:ga450ef027eac01dd93a89a15ff55de63f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gad17b213b11e78aeb807ad3ece7e67e84"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group-surfacemesh-attr.html#gad17b213b11e78aeb807ad3ece7e67e84">AttributeDeletePolicy</a> { <a class="el" href="group__group-surfacemesh-attr.html#ggad17b213b11e78aeb807ad3ece7e67e84afc443f72fcb562a73b40af34ddb599a3">ErrorIfReserved</a>
 , <a class="el" href="group__group-surfacemesh-attr.html#ggad17b213b11e78aeb807ad3ece7e67e84a9eb6b78a99cdb6ffd3d40d18621d9f80">Force</a>
  }</td></tr>
@@ -465,6 +471,41 @@ constexpr <a class="el" href="group__group-surfacemesh-attr.html#ga4d115376c2c76
 <tr><td class="fieldname"><a id="ggade3ae5b7e72e9d4f92f29c6563551c10a9a526f6dc0d4d6aef1f368972f20d13e" name="ggade3ae5b7e72e9d4f92f29c6563551c10a9a526f6dc0d4d6aef1f368972f20d13e"></a>KeepExternalPtr&#160;</td><td class="fielddoc"><p >Keep the raw pointer to the external buffer data. Use with caution. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="ggade3ae5b7e72e9d4f92f29c6563551c10a9e7163ae7c790d007e084e24693b2303" name="ggade3ae5b7e72e9d4f92f29c6563551c10a9e7163ae7c790d007e084e24693b2303"></a>ErrorIfExternal&#160;</td><td class="fielddoc"><p >Throw an exception if the attribute points to an external buffer. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="ga450ef027eac01dd93a89a15ff55de63f" name="ga450ef027eac01dd93a89a15ff55de63f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga450ef027eac01dd93a89a15ff55de63f">&#9670;&nbsp;</a></span>AttributeCopyPolicy</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum class <a class="el" href="group__group-surfacemesh-attr.html#ga450ef027eac01dd93a89a15ff55de63f">AttributeCopyPolicy</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;lagrange/AttributeFwd.h&gt;</code></p>
+
+<p>Policy for copying attribute that are views onto external buffers. </p>
+<p >By default, a copy is created, meaning we can use the copied attribute to manage the lifetime of the allocated data. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="gga450ef027eac01dd93a89a15ff55de63fafe72de1001d465db9eb6ce5cb874c2cb" name="gga450ef027eac01dd93a89a15ff55de63fafe72de1001d465db9eb6ce5cb874c2cb"></a>CopyIfExternal&#160;</td><td class="fielddoc"><p >Copy the buffer during copy if the attribute points to an external buffer. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga450ef027eac01dd93a89a15ff55de63fa9a526f6dc0d4d6aef1f368972f20d13e" name="gga450ef027eac01dd93a89a15ff55de63fa9a526f6dc0d4d6aef1f368972f20d13e"></a>KeepExternalPtr&#160;</td><td class="fielddoc"><p >Keep the raw pointer to the external buffer data. Use with caution. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga450ef027eac01dd93a89a15ff55de63fa9e7163ae7c790d007e084e24693b2303" name="gga450ef027eac01dd93a89a15ff55de63fa9e7163ae7c790d007e084e24693b2303"></a>ErrorIfExternal&#160;</td><td class="fielddoc"><p >Throw an exception if the attribute points to an external buffer. </p>
 </td></tr>
 </table>
 

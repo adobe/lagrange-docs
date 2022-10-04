@@ -1406,7 +1406,7 @@ replacing the old one):</p>
 <span class="n">assert</span><span class="p">(</span><span class="n">attr</span><span class="p">.</span><span class="n">get_element_type</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">lagrange</span><span class="o">::</span><span class="n">AttributeElement</span><span class="o">::</span><span class="n">Facet</span><span class="p">);</span><span class="w"></span>
 </code></pre></div>
 <p>Transferring attributes from any element type to any other type is supported. The values will either
-be <span style="color:navy"><strong>dispatched</strong></span> or <span style="color:maroon"><strong>averaged</strong></span>
+be <span style="color:navy"><strong>dispatched</strong></span> or <span style="color:maroon"><strong>gathered</strong></span>
 depending on the type of operation, as summarized below:</p>
 <table>
 <thead>
@@ -1424,25 +1424,25 @@ depending on the type of operation, as summarized below:</p>
 <tr>
 <td>Vertex</td>
 <td>∅</td>
-<td><span style="color:maroon">Average</span></td>
-<td><span style="color:maroon">Average</span></td>
+<td><span style="color:maroon">Gather</span></td>
+<td><span style="color:maroon">Gather</span></td>
 <td><span style="color:navy">Dispatch<span></td>
 <td><span style="color:navy">Dispatch<span></td>
 <td><span style="color:navy">Dispatch<span></td>
 </tr>
 <tr>
 <td>Facet</td>
-<td><span style="color:maroon">Average</span></td>
+<td><span style="color:maroon">Gather</span></td>
 <td>∅</td>
-<td><span style="color:maroon">Average</span></td>
+<td><span style="color:maroon">Gather</span></td>
 <td><span style="color:navy">Dispatch<span></td>
 <td><span style="color:navy">Dispatch<span></td>
 <td><span style="color:navy">Dispatch<span></td>
 </tr>
 <tr>
 <td>Edge</td>
-<td><span style="color:maroon">Average</span></td>
-<td><span style="color:maroon">Average</span></td>
+<td><span style="color:maroon">Gather</span></td>
+<td><span style="color:maroon">Gather</span></td>
 <td>∅</td>
 <td><span style="color:navy">Dispatch<span></td>
 <td><span style="color:navy">Dispatch<span></td>
@@ -1450,18 +1450,18 @@ depending on the type of operation, as summarized below:</p>
 </tr>
 <tr>
 <td>Corner</td>
-<td><span style="color:maroon">Average</span></td>
-<td><span style="color:maroon">Average</span></td>
-<td><span style="color:maroon">Average</span></td>
+<td><span style="color:maroon">Gather</span></td>
+<td><span style="color:maroon">Gather</span></td>
+<td><span style="color:maroon">Gather</span></td>
 <td>∅</td>
 <td><span style="color:navy">Dispatch<span></td>
 <td><span style="color:navy">Dispatch<span></td>
 </tr>
 <tr>
 <td>Index</td>
-<td><span style="color:maroon">Average</span></td>
-<td><span style="color:maroon">Average</span></td>
-<td><span style="color:maroon">Average</span></td>
+<td><span style="color:maroon">Gather</span></td>
+<td><span style="color:maroon">Gather</span></td>
+<td><span style="color:maroon">Gather</span></td>
 <td><span style="color:navy">Dispatch<span></td>
 <td>∅</td>
 <td><span style="color:navy">Dispatch<span></td>
@@ -1481,18 +1481,28 @@ depending on the type of operation, as summarized below:</p>
 <p class="admonition-title">Example</p>
 <ul>
 <li>Transfering a vertex attribute to mesh corner elements is a <em>dispatch</em> operation, and will not
-modify any value. - Transfering a corner attribute to mesh vertex elements is an <em>averaging</em>
-operation, and numerical changes will occur.</li>
+modify any value.</li>
+<li>Transfering a corner attribute to mesh vertex elements is an <em>gather</em> operation, and
+numerical values will be averaged.</li>
 </ul>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Value Attributes</p>
 <p>When transfering a value attribute to any other type of element, it is expected that the number
-of entries in the source attribute matches the target number of mesh element. When transfering a
-value attribute to an indexed attribute, the value buffer is expected to have the same number of
-elements as the number of mesh corners.</p>
+of entries in the source attribute matches the target number of mesh element.</p>
 <p>Conversely, transferring from any other mesh element type to a value attribute will create a
 buffer with the same number of entries as the input attribute element type.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Indexed Attributes and Value Attributes</p>
+<p>When transfering a value attribute to an indexed attribute (and vice-versa), the value attribute
+is expected to have a number of elements equals to the number of <em>mesh corners</em>.</p>
+<ul>
+<li>Transfering <code>Value</code> -&gt; <code>Indexed</code> will create an indexed attribute with a trivial index buffer
+(identity mapping corner <span class="arithmatex">\(c_i\)</span> <span class="arithmatex">\(\to\)</span> value <span class="arithmatex">\(i\)</span>).</li>
+<li>Transfering <code>Indexed</code> -&gt; <code>Value</code> will interpret the indexed attribute as if it were a corner
+attribute. The indexing will be lost on conversion.</li>
+</ul>
 </div>
 <p>See: <a href="../../../ref/group__group-surfacemesh-attr-utils.html">Attributes Utilities</a> documentation.</p>
 <h2 id="unify-index-buffers">Unify Index Buffers</h2>

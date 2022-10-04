@@ -161,7 +161,7 @@ $(function() {
 <div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    <span class="keyword">const</span> Index num_input_vertices = input_mesh.get_num_vertices();</div>
 <div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    <span class="keyword">const</span> Index num_input_facets = input_mesh.get_num_facets();</div>
 <div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    <span class="keyword">const</span> <span class="keywordtype">bool</span> has_uvs = input_mesh.is_uv_initialized();</div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    <span class="keyword">const</span> Index num_input_uvs = (has_uvs ? input_mesh.get_uv().rows() : 0);</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    <span class="keyword">const</span> Index num_input_uvs = <span class="keyword">static_cast&lt;</span>Index<span class="keyword">&gt;</span>(has_uvs ? input_mesh.get_uv().rows() : 0);</div>
 <div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span> </div>
 <div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    <span class="comment">// Count boundary edges and vertices in the input mesh</span></div>
 <div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    Index num_boundary_edges = 0;</div>
@@ -176,7 +176,7 @@ $(function() {
 <div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>            }</div>
 <div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>        }</div>
 <div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>    }</div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>    num_boundary_vertices = boundary_vertices.size();</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>    num_boundary_vertices = <span class="keyword">static_cast&lt;</span>Index<span class="keyword">&gt;</span>(boundary_vertices.size());</div>
 <div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span> </div>
 <div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>    <span class="comment">// Vertices</span></div>
 <div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>    <span class="comment">// output vertices are packed as follows:</span></div>
@@ -334,115 +334,117 @@ $(function() {
 <div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>        }</div>
 <div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span> </div>
 <div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>        <span class="comment">// Stitch</span></div>
-<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>        Index uvbstart = 2 * input_uv_values.rows();</div>
-<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>        <span class="keywordflow">for</span> (Index e = 0, f_uv = 2 * input_uv_indices.rows(); e &lt; input_mesh.<a class="code hl_function" href="classlagrange_1_1_mesh.html#ab4b72663d159f5e5280c524fab4cebc3">get_num_edges</a>(); ++e) {</div>
-<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>            <span class="keywordflow">if</span> (input_mesh.<a class="code hl_function" href="classlagrange_1_1_mesh.html#a0b2c302edb050ad26ee7bd0b163ce049">is_boundary_edge</a>(e)) {</div>
-<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>                <span class="comment">// Find first and only face on this edge</span></div>
-<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>                <span class="keyword">const</span> Index f = input_mesh.<a class="code hl_function" href="classlagrange_1_1_mesh.html#a9319875568c308aebf33469e0b4bab08">get_one_facet_around_edge</a>(e);</div>
-<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>                assert(f != lagrange::invalid&lt;Index&gt;());</div>
-<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>                <span class="keyword">const</span> <span class="keyword">auto</span>&amp; facet = input_mesh.get_facets().row(f);</div>
-<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>                assert((facet.array() &lt; num_input_vertices).all());</div>
-<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>                <span class="keyword">const</span> <span class="keyword">auto</span>&amp; uv_facet = input_uv_indices.row(f);</div>
-<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>                assert((uv_facet.array() &lt; num_input_uvs).all());</div>
-<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>                <span class="comment">// Find vertices on this edge</span></div>
-<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>                <span class="keyword">auto</span> edge_vertices = input_mesh.<a class="code hl_function" href="classlagrange_1_1_mesh.html#a48561aea426ebc930310440779429692">get_edge_vertices</a>(e);</div>
-<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>                <span class="comment">// Now find corresponding uvs on this edge</span></div>
-<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>                Index uv_index_0 = lagrange::invalid&lt;Index&gt;();</div>
-<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>                Index uv_index_1 = lagrange::invalid&lt;Index&gt;();</div>
-<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>                <span class="keywordflow">for</span> (Index i = 0; i &lt; 3; ++i) {</div>
-<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>                    Index vtx_index = facet[i];</div>
-<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span>                    Index uv_index = uv_facet[i];</div>
-<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span>                    <span class="keywordflow">if</span> (vtx_index == edge_vertices[0]) {</div>
-<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span>                        uv_index_0 = uv_index;</div>
-<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span>                    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (vtx_index == edge_vertices[1]) {</div>
-<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>                        uv_index_1 = uv_index;</div>
-<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>                    }</div>
-<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span>                }</div>
-<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span>                assert(uv_index_0 != lagrange::invalid&lt;Index&gt;());</div>
-<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span>                assert(uv_index_1 != lagrange::invalid&lt;Index&gt;());</div>
-<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span> </div>
-<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span>                assert(boundary_vertices.find(edge_vertices[0]) != boundary_vertices.end());</div>
-<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span>                assert(boundary_vertices.find(edge_vertices[1]) != boundary_vertices.end());</div>
-<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span>                assert(f_uv + 1 &lt; uv_facets.rows());</div>
-<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span> </div>
-<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span>                <span class="keywordflow">for</span> (Index is = 0; is &lt; num_segments; ++is) {</div>
-<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span>                    Index uvbstart_on_this_segment = uvbstart + (is - 1) * num_boundary_vertices;</div>
-<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span>                    Index uvbstart_on_next_segment = uvbstart + is * num_boundary_vertices;</div>
-<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span>                    <span class="keywordtype">bool</span> is_first_segment = (is == 0);</div>
-<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span>                    <span class="keywordtype">bool</span> is_last_segment = (is == num_segments - 1);</div>
-<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span> </div>
-<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span>                    Index uv0 = is_first_segment ? uv_index_0</div>
-<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span>                                                 : uvbstart_on_this_segment +</div>
-<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span>                                                       boundary_vertices[edge_vertices[0]];</div>
-<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span>                    Index uv1 = is_first_segment ? uv_index_1</div>
-<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span>                                                 : uvbstart_on_this_segment +</div>
-<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span>                                                       boundary_vertices[edge_vertices[1]];</div>
-<div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span>                    Index uv2 = is_last_segment ? uv_index_0 + num_input_vertices</div>
-<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span>                                                : uvbstart_on_next_segment +</div>
-<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span>                                                      boundary_vertices[edge_vertices[0]];</div>
-<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span>                    Index uv3 = is_last_segment ? uv_index_1 + num_input_vertices</div>
-<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span>                                                : uvbstart_on_next_segment +</div>
-<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span>                                                      boundary_vertices[edge_vertices[1]];</div>
-<div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span> </div>
-<div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span>                    assert(uv0 &lt; uv_values.rows());</div>
-<div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span>                    assert(uv1 &lt; uv_values.rows());</div>
-<div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span>                    assert(uv2 &lt; uv_values.rows());</div>
-<div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span>                    assert(uv3 &lt; uv_values.rows());</div>
-<div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span> </div>
-<div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span>                    uv_facets.row(f_uv++) &lt;&lt; uv0, uv2, uv1;</div>
-<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span>                    uv_facets.row(f_uv++) &lt;&lt; uv1, uv2, uv3;</div>
-<div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span>                }</div>
-<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span>            }</div>
-<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span>        }</div>
-<div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span> </div>
-<div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span>        <span class="comment">// Apply UVs</span></div>
-<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span>        assert(uv_values.rows() == num_input_uvs * 2 + (num_segments - 1) * num_boundary_vertices);</div>
-<div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span>        offset_mesh-&gt;initialize_uv(std::move(uv_values), std::move(uv_facets));</div>
-<div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span>    }</div>
-<div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span> </div>
-<div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span>    <span class="comment">// sanity check</span></div>
-<div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span>    assert(</div>
-<div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span>        offset_mesh-&gt;get_num_vertices() ==</div>
-<div class="line"><a id="l00353" name="l00353"></a><span class="lineno">  353</span>        num_input_vertices * 2 + num_boundary_vertices * (num_segments - 1));</div>
-<div class="line"><a id="l00354" name="l00354"></a><span class="lineno">  354</span> </div>
-<div class="line"><a id="l00355" name="l00355"></a><span class="lineno">  355</span>    <span class="keywordflow">return</span> offset_mesh;</div>
-<div class="line"><a id="l00356" name="l00356"></a><span class="lineno">  356</span>}</div>
-<div class="line"><a id="l00357" name="l00357"></a><span class="lineno">  357</span> </div>
-<div class="line"><a id="l00358" name="l00358"></a><span class="lineno">  358</span>} <span class="comment">// namespace</span></div>
+<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>        Index uvbstart = <span class="keyword">static_cast&lt;</span>Index<span class="keyword">&gt;</span>(2 * input_uv_values.rows());</div>
+<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>        <span class="keywordflow">for</span> (Index e = 0, f_uv = 2 * <span class="keyword">static_cast&lt;</span>Index<span class="keyword">&gt;</span>(input_uv_indices.rows());</div>
+<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>             e &lt; input_mesh.<a class="code hl_function" href="classlagrange_1_1_mesh.html#ab4b72663d159f5e5280c524fab4cebc3">get_num_edges</a>();</div>
+<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>             ++e) {</div>
+<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>            <span class="keywordflow">if</span> (input_mesh.<a class="code hl_function" href="classlagrange_1_1_mesh.html#a0b2c302edb050ad26ee7bd0b163ce049">is_boundary_edge</a>(e)) {</div>
+<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>                <span class="comment">// Find first and only face on this edge</span></div>
+<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>                <span class="keyword">const</span> Index f = input_mesh.<a class="code hl_function" href="classlagrange_1_1_mesh.html#a9319875568c308aebf33469e0b4bab08">get_one_facet_around_edge</a>(e);</div>
+<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>                assert(f != lagrange::invalid&lt;Index&gt;());</div>
+<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>                <span class="keyword">const</span> <span class="keyword">auto</span>&amp; facet = input_mesh.get_facets().row(f);</div>
+<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>                assert((facet.array() &lt; num_input_vertices).all());</div>
+<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>                <span class="keyword">const</span> <span class="keyword">auto</span>&amp; uv_facet = input_uv_indices.row(f);</div>
+<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>                assert((uv_facet.array() &lt; num_input_uvs).all());</div>
+<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>                <span class="comment">// Find vertices on this edge</span></div>
+<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>                <span class="keyword">auto</span> edge_vertices = input_mesh.<a class="code hl_function" href="classlagrange_1_1_mesh.html#a48561aea426ebc930310440779429692">get_edge_vertices</a>(e);</div>
+<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>                <span class="comment">// Now find corresponding uvs on this edge</span></div>
+<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>                Index uv_index_0 = lagrange::invalid&lt;Index&gt;();</div>
+<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>                Index uv_index_1 = lagrange::invalid&lt;Index&gt;();</div>
+<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span>                <span class="keywordflow">for</span> (Index i = 0; i &lt; 3; ++i) {</div>
+<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span>                    Index vtx_index = facet[i];</div>
+<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span>                    Index uv_index = uv_facet[i];</div>
+<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span>                    <span class="keywordflow">if</span> (vtx_index == edge_vertices[0]) {</div>
+<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>                        uv_index_0 = uv_index;</div>
+<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>                    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (vtx_index == edge_vertices[1]) {</div>
+<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span>                        uv_index_1 = uv_index;</div>
+<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span>                    }</div>
+<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span>                }</div>
+<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span>                assert(uv_index_0 != lagrange::invalid&lt;Index&gt;());</div>
+<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span>                assert(uv_index_1 != lagrange::invalid&lt;Index&gt;());</div>
+<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span> </div>
+<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span>                assert(boundary_vertices.find(edge_vertices[0]) != boundary_vertices.end());</div>
+<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span>                assert(boundary_vertices.find(edge_vertices[1]) != boundary_vertices.end());</div>
+<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span>                assert(f_uv + 1 &lt; uv_facets.rows());</div>
+<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span> </div>
+<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span>                <span class="keywordflow">for</span> (Index is = 0; is &lt; num_segments; ++is) {</div>
+<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span>                    Index uvbstart_on_this_segment = uvbstart + (is - 1) * num_boundary_vertices;</div>
+<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span>                    Index uvbstart_on_next_segment = uvbstart + is * num_boundary_vertices;</div>
+<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span>                    <span class="keywordtype">bool</span> is_first_segment = (is == 0);</div>
+<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span>                    <span class="keywordtype">bool</span> is_last_segment = (is == num_segments - 1);</div>
+<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span> </div>
+<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span>                    Index uv0 = is_first_segment ? uv_index_0</div>
+<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span>                                                 : uvbstart_on_this_segment +</div>
+<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span>                                                       boundary_vertices[edge_vertices[0]];</div>
+<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span>                    Index uv1 = is_first_segment ? uv_index_1</div>
+<div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span>                                                 : uvbstart_on_this_segment +</div>
+<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span>                                                       boundary_vertices[edge_vertices[1]];</div>
+<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span>                    Index uv2 = is_last_segment ? uv_index_0 + num_input_vertices</div>
+<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span>                                                : uvbstart_on_next_segment +</div>
+<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span>                                                      boundary_vertices[edge_vertices[0]];</div>
+<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span>                    Index uv3 = is_last_segment ? uv_index_1 + num_input_vertices</div>
+<div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span>                                                : uvbstart_on_next_segment +</div>
+<div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span>                                                      boundary_vertices[edge_vertices[1]];</div>
+<div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span> </div>
+<div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span>                    assert(uv0 &lt; uv_values.rows());</div>
+<div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span>                    assert(uv1 &lt; uv_values.rows());</div>
+<div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span>                    assert(uv2 &lt; uv_values.rows());</div>
+<div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span>                    assert(uv3 &lt; uv_values.rows());</div>
+<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span> </div>
+<div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span>                    uv_facets.row(f_uv++) &lt;&lt; uv0, uv2, uv1;</div>
+<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span>                    uv_facets.row(f_uv++) &lt;&lt; uv1, uv2, uv3;</div>
+<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span>                }</div>
+<div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span>            }</div>
+<div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span>        }</div>
+<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span> </div>
+<div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span>        <span class="comment">// Apply UVs</span></div>
+<div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span>        assert(uv_values.rows() == num_input_uvs * 2 + (num_segments - 1) * num_boundary_vertices);</div>
+<div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span>        offset_mesh-&gt;initialize_uv(std::move(uv_values), std::move(uv_facets));</div>
+<div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span>    }</div>
+<div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span> </div>
+<div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span>    <span class="comment">// sanity check</span></div>
+<div class="line"><a id="l00353" name="l00353"></a><span class="lineno">  353</span>    assert(</div>
+<div class="line"><a id="l00354" name="l00354"></a><span class="lineno">  354</span>        offset_mesh-&gt;get_num_vertices() ==</div>
+<div class="line"><a id="l00355" name="l00355"></a><span class="lineno">  355</span>        num_input_vertices * 2 + num_boundary_vertices * (num_segments - 1));</div>
+<div class="line"><a id="l00356" name="l00356"></a><span class="lineno">  356</span> </div>
+<div class="line"><a id="l00357" name="l00357"></a><span class="lineno">  357</span>    <span class="keywordflow">return</span> offset_mesh;</div>
+<div class="line"><a id="l00358" name="l00358"></a><span class="lineno">  358</span>}</div>
 <div class="line"><a id="l00359" name="l00359"></a><span class="lineno">  359</span> </div>
-<div class="line"><a id="l00378" name="l00378"></a><span class="lineno">  378</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> MeshType&gt;</div>
-<div class="line"><a id="l00379" name="l00379"></a><span class="lineno"><a class="line" href="namespacelagrange.html#a1792d2f3110525eca0fac87988584e82">  379</a></span>std::unique_ptr&lt;MeshType&gt; <a class="code hl_function" href="namespacelagrange.html#a1792d2f3110525eca0fac87988584e82">thicken_and_close_mesh</a>(</div>
-<div class="line"><a id="l00380" name="l00380"></a><span class="lineno">  380</span>    <span class="keyword">const</span> <a class="code hl_class" href="classlagrange_1_1_mesh.html">MeshType</a>&amp; input_mesh,</div>
-<div class="line"><a id="l00381" name="l00381"></a><span class="lineno">  381</span>    Eigen::Matrix&lt;ScalarOf&lt;MeshType&gt;, 3, 1&gt; direction,</div>
-<div class="line"><a id="l00382" name="l00382"></a><span class="lineno">  382</span>    ScalarOf&lt;MeshType&gt; offset_amount,</div>
-<div class="line"><a id="l00383" name="l00383"></a><span class="lineno">  383</span>    ScalarOf&lt;MeshType&gt; mirror_amount,</div>
-<div class="line"><a id="l00384" name="l00384"></a><span class="lineno">  384</span>    <span class="keyword">typename</span> MeshType::Index num_segments = 1)</div>
-<div class="line"><a id="l00385" name="l00385"></a><span class="lineno">  385</span>{</div>
-<div class="line"><a id="l00386" name="l00386"></a><span class="lineno">  386</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="namespacelagrange.html#a1792d2f3110525eca0fac87988584e82">thicken_and_close_mesh</a>(</div>
-<div class="line"><a id="l00387" name="l00387"></a><span class="lineno">  387</span>        input_mesh,</div>
-<div class="line"><a id="l00388" name="l00388"></a><span class="lineno">  388</span>        <span class="keyword">true</span>,</div>
-<div class="line"><a id="l00389" name="l00389"></a><span class="lineno">  389</span>        direction,</div>
-<div class="line"><a id="l00390" name="l00390"></a><span class="lineno">  390</span>        offset_amount,</div>
-<div class="line"><a id="l00391" name="l00391"></a><span class="lineno">  391</span>        mirror_amount,</div>
-<div class="line"><a id="l00392" name="l00392"></a><span class="lineno">  392</span>        num_segments);</div>
-<div class="line"><a id="l00393" name="l00393"></a><span class="lineno">  393</span>}</div>
-<div class="line"><a id="l00394" name="l00394"></a><span class="lineno">  394</span> </div>
-<div class="line"><a id="l00408" name="l00408"></a><span class="lineno">  408</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> MeshType&gt;</div>
-<div class="line"><a id="l00409" name="l00409"></a><span class="lineno"><a class="line" href="namespacelagrange.html#a9b1b8edd4573422f27af875ab25bf0ed">  409</a></span>std::unique_ptr&lt;MeshType&gt; <a class="code hl_function" href="namespacelagrange.html#a1792d2f3110525eca0fac87988584e82">thicken_and_close_mesh</a>(</div>
-<div class="line"><a id="l00410" name="l00410"></a><span class="lineno">  410</span>    <span class="keyword">const</span> <a class="code hl_class" href="classlagrange_1_1_mesh.html">MeshType</a>&amp; input_mesh,</div>
-<div class="line"><a id="l00411" name="l00411"></a><span class="lineno">  411</span>    ScalarOf&lt;MeshType&gt; offset_amount,</div>
-<div class="line"><a id="l00412" name="l00412"></a><span class="lineno">  412</span>    <span class="keyword">typename</span> MeshType::Index num_segments = 1)</div>
-<div class="line"><a id="l00413" name="l00413"></a><span class="lineno">  413</span>{</div>
-<div class="line"><a id="l00414" name="l00414"></a><span class="lineno">  414</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="namespacelagrange.html#a1792d2f3110525eca0fac87988584e82">thicken_and_close_mesh</a>(</div>
-<div class="line"><a id="l00415" name="l00415"></a><span class="lineno">  415</span>        input_mesh,</div>
-<div class="line"><a id="l00416" name="l00416"></a><span class="lineno">  416</span>        <span class="keyword">false</span>,</div>
-<div class="line"><a id="l00417" name="l00417"></a><span class="lineno">  417</span>        Eigen::Matrix&lt;ScalarOf&lt;MeshType&gt;, 3, 1&gt;(0.0, 1.0, 0.0),</div>
-<div class="line"><a id="l00418" name="l00418"></a><span class="lineno">  418</span>        offset_amount,</div>
-<div class="line"><a id="l00419" name="l00419"></a><span class="lineno">  419</span>        0.f,</div>
-<div class="line"><a id="l00420" name="l00420"></a><span class="lineno">  420</span>        num_segments);</div>
-<div class="line"><a id="l00421" name="l00421"></a><span class="lineno">  421</span>}</div>
-<div class="line"><a id="l00422" name="l00422"></a><span class="lineno">  422</span> </div>
-<div class="line"><a id="l00423" name="l00423"></a><span class="lineno">  423</span>} <span class="comment">// namespace lagrange</span></div>
+<div class="line"><a id="l00360" name="l00360"></a><span class="lineno">  360</span>} <span class="comment">// namespace</span></div>
+<div class="line"><a id="l00361" name="l00361"></a><span class="lineno">  361</span> </div>
+<div class="line"><a id="l00380" name="l00380"></a><span class="lineno">  380</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> MeshType&gt;</div>
+<div class="line"><a id="l00381" name="l00381"></a><span class="lineno"><a class="line" href="namespacelagrange.html#a1792d2f3110525eca0fac87988584e82">  381</a></span>std::unique_ptr&lt;MeshType&gt; <a class="code hl_function" href="namespacelagrange.html#a1792d2f3110525eca0fac87988584e82">thicken_and_close_mesh</a>(</div>
+<div class="line"><a id="l00382" name="l00382"></a><span class="lineno">  382</span>    <span class="keyword">const</span> <a class="code hl_class" href="classlagrange_1_1_mesh.html">MeshType</a>&amp; input_mesh,</div>
+<div class="line"><a id="l00383" name="l00383"></a><span class="lineno">  383</span>    Eigen::Matrix&lt;ScalarOf&lt;MeshType&gt;, 3, 1&gt; direction,</div>
+<div class="line"><a id="l00384" name="l00384"></a><span class="lineno">  384</span>    ScalarOf&lt;MeshType&gt; offset_amount,</div>
+<div class="line"><a id="l00385" name="l00385"></a><span class="lineno">  385</span>    ScalarOf&lt;MeshType&gt; mirror_amount,</div>
+<div class="line"><a id="l00386" name="l00386"></a><span class="lineno">  386</span>    <span class="keyword">typename</span> MeshType::Index num_segments = 1)</div>
+<div class="line"><a id="l00387" name="l00387"></a><span class="lineno">  387</span>{</div>
+<div class="line"><a id="l00388" name="l00388"></a><span class="lineno">  388</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="namespacelagrange.html#a1792d2f3110525eca0fac87988584e82">thicken_and_close_mesh</a>(</div>
+<div class="line"><a id="l00389" name="l00389"></a><span class="lineno">  389</span>        input_mesh,</div>
+<div class="line"><a id="l00390" name="l00390"></a><span class="lineno">  390</span>        <span class="keyword">true</span>,</div>
+<div class="line"><a id="l00391" name="l00391"></a><span class="lineno">  391</span>        direction,</div>
+<div class="line"><a id="l00392" name="l00392"></a><span class="lineno">  392</span>        offset_amount,</div>
+<div class="line"><a id="l00393" name="l00393"></a><span class="lineno">  393</span>        mirror_amount,</div>
+<div class="line"><a id="l00394" name="l00394"></a><span class="lineno">  394</span>        num_segments);</div>
+<div class="line"><a id="l00395" name="l00395"></a><span class="lineno">  395</span>}</div>
+<div class="line"><a id="l00396" name="l00396"></a><span class="lineno">  396</span> </div>
+<div class="line"><a id="l00410" name="l00410"></a><span class="lineno">  410</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> MeshType&gt;</div>
+<div class="line"><a id="l00411" name="l00411"></a><span class="lineno"><a class="line" href="namespacelagrange.html#a9b1b8edd4573422f27af875ab25bf0ed">  411</a></span>std::unique_ptr&lt;MeshType&gt; <a class="code hl_function" href="namespacelagrange.html#a1792d2f3110525eca0fac87988584e82">thicken_and_close_mesh</a>(</div>
+<div class="line"><a id="l00412" name="l00412"></a><span class="lineno">  412</span>    <span class="keyword">const</span> <a class="code hl_class" href="classlagrange_1_1_mesh.html">MeshType</a>&amp; input_mesh,</div>
+<div class="line"><a id="l00413" name="l00413"></a><span class="lineno">  413</span>    ScalarOf&lt;MeshType&gt; offset_amount,</div>
+<div class="line"><a id="l00414" name="l00414"></a><span class="lineno">  414</span>    <span class="keyword">typename</span> MeshType::Index num_segments = 1)</div>
+<div class="line"><a id="l00415" name="l00415"></a><span class="lineno">  415</span>{</div>
+<div class="line"><a id="l00416" name="l00416"></a><span class="lineno">  416</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="namespacelagrange.html#a1792d2f3110525eca0fac87988584e82">thicken_and_close_mesh</a>(</div>
+<div class="line"><a id="l00417" name="l00417"></a><span class="lineno">  417</span>        input_mesh,</div>
+<div class="line"><a id="l00418" name="l00418"></a><span class="lineno">  418</span>        <span class="keyword">false</span>,</div>
+<div class="line"><a id="l00419" name="l00419"></a><span class="lineno">  419</span>        Eigen::Matrix&lt;ScalarOf&lt;MeshType&gt;, 3, 1&gt;(0.0, 1.0, 0.0),</div>
+<div class="line"><a id="l00420" name="l00420"></a><span class="lineno">  420</span>        offset_amount,</div>
+<div class="line"><a id="l00421" name="l00421"></a><span class="lineno">  421</span>        0.f,</div>
+<div class="line"><a id="l00422" name="l00422"></a><span class="lineno">  422</span>        num_segments);</div>
+<div class="line"><a id="l00423" name="l00423"></a><span class="lineno">  423</span>}</div>
+<div class="line"><a id="l00424" name="l00424"></a><span class="lineno">  424</span> </div>
+<div class="line"><a id="l00425" name="l00425"></a><span class="lineno">  425</span>} <span class="comment">// namespace lagrange</span></div>
 <div class="ttc" id="aclasslagrange_1_1_mesh_html"><div class="ttname"><a href="classlagrange_1_1_mesh.html">lagrange::Mesh</a></div><div class="ttdef"><b>Definition:</b> Mesh.h:47</div></div>
 <div class="ttc" id="aclasslagrange_1_1_mesh_html_a0b2c302edb050ad26ee7bd0b163ce049"><div class="ttname"><a href="classlagrange_1_1_mesh.html#a0b2c302edb050ad26ee7bd0b163ce049">lagrange::Mesh::is_boundary_edge</a></div><div class="ttdeci">bool is_boundary_edge(Index e) const</div><div class="ttdoc">Determines whether the specified edge e is a boundary edge.</div><div class="ttdef"><b>Definition:</b> Mesh.h:820</div></div>
 <div class="ttc" id="aclasslagrange_1_1_mesh_html_a2b9dea5d2dd1c67ac34229382baa4dda"><div class="ttname"><a href="classlagrange_1_1_mesh.html#a2b9dea5d2dd1c67ac34229382baa4dda">lagrange::Mesh::is_edge_data_initialized</a></div><div class="ttdeci">bool is_edge_data_initialized() const</div><div class="ttdoc">Edge data accessors (const)</div><div class="ttdef"><b>Definition:</b> Mesh.h:642</div></div>
@@ -451,9 +453,9 @@ $(function() {
 <div class="ttc" id="aclasslagrange_1_1_mesh_html_ab4b72663d159f5e5280c524fab4cebc3"><div class="ttname"><a href="classlagrange_1_1_mesh.html#ab4b72663d159f5e5280c524fab4cebc3">lagrange::Mesh::get_num_edges</a></div><div class="ttdeci">Index get_num_edges() const</div><div class="ttdoc">Gets the number of edges.</div><div class="ttdef"><b>Definition:</b> Mesh.h:649</div></div>
 <div class="ttc" id="agroup__group-utils-assert_html_ga1ccafcb14523a1aae57dcac3c3f32ecd"><div class="ttname"><a href="group__group-utils-assert.html#ga1ccafcb14523a1aae57dcac3c3f32ecd">la_runtime_assert</a></div><div class="ttdeci">#define la_runtime_assert(...)</div><div class="ttdoc">Runtime assertion check.</div><div class="ttdef"><b>Definition:</b> assert.h:168</div></div>
 <div class="ttc" id="anamespacelagrange_html"><div class="ttname"><a href="namespacelagrange.html">lagrange</a></div><div class="ttdoc">Main namespace for Lagrange.</div><div class="ttdef"><b>Definition:</b> AABBIGL.h:30</div></div>
-<div class="ttc" id="anamespacelagrange_html_a1792d2f3110525eca0fac87988584e82"><div class="ttname"><a href="namespacelagrange.html#a1792d2f3110525eca0fac87988584e82">lagrange::thicken_and_close_mesh</a></div><div class="ttdeci">std::unique_ptr&lt; MeshType &gt; thicken_and_close_mesh(const MeshType &amp;input_mesh, Eigen::Matrix&lt; ScalarOf&lt; MeshType &gt;, 3, 1 &gt; direction, ScalarOf&lt; MeshType &gt; offset_amount, ScalarOf&lt; MeshType &gt; mirror_amount, typename MeshType::Index num_segments=1)</div><div class="ttdoc">Thicken a mesh by offsetting it in a fixed direction.</div><div class="ttdef"><b>Definition:</b> thicken_and_close_mesh.h:379</div></div>
+<div class="ttc" id="anamespacelagrange_html_a1792d2f3110525eca0fac87988584e82"><div class="ttname"><a href="namespacelagrange.html#a1792d2f3110525eca0fac87988584e82">lagrange::thicken_and_close_mesh</a></div><div class="ttdeci">std::unique_ptr&lt; MeshType &gt; thicken_and_close_mesh(const MeshType &amp;input_mesh, Eigen::Matrix&lt; ScalarOf&lt; MeshType &gt;, 3, 1 &gt; direction, ScalarOf&lt; MeshType &gt; offset_amount, ScalarOf&lt; MeshType &gt; mirror_amount, typename MeshType::Index num_segments=1)</div><div class="ttdoc">Thicken a mesh by offsetting it in a fixed direction.</div><div class="ttdef"><b>Definition:</b> thicken_and_close_mesh.h:381</div></div>
 <div class="ttc" id="anamespacelagrange_html_a5dff747c765bd02e34d420ab60c30358"><div class="ttname"><a href="namespacelagrange.html#a5dff747c765bd02e34d420ab60c30358">lagrange::create_mesh</a></div><div class="ttdeci">auto create_mesh(const Eigen::MatrixBase&lt; DerivedV &gt; &amp;vertices, const Eigen::MatrixBase&lt; DerivedF &gt; &amp;facets)</div><div class="ttdoc">This function create a new mesh given the vertex and facet arrays by copying data into the Mesh objec...</div><div class="ttdef"><b>Definition:</b> create_mesh.h:39</div></div>
-<div class="ttc" id="anamespacelagrange_html_a8c1ac1ec1658273f6e6bb312dd2b0718"><div class="ttname"><a href="namespacelagrange.html#a8c1ac1ec1658273f6e6bb312dd2b0718">lagrange::compute_vertex_normal</a></div><div class="ttdeci">AttributeId compute_vertex_normal(SurfaceMesh&lt; Scalar, Index &gt; &amp;mesh, VertexNormalOptions options={})</div><div class="ttdoc">Compute per-vertex normals based on specified weighting type.</div><div class="ttdef"><b>Definition:</b> compute_vertex_normal.cpp:31</div></div>
+<div class="ttc" id="anamespacelagrange_html_a8c1ac1ec1658273f6e6bb312dd2b0718"><div class="ttname"><a href="namespacelagrange.html#a8c1ac1ec1658273f6e6bb312dd2b0718">lagrange::compute_vertex_normal</a></div><div class="ttdeci">AttributeId compute_vertex_normal(SurfaceMesh&lt; Scalar, Index &gt; &amp;mesh, VertexNormalOptions options={})</div><div class="ttdoc">Compute per-vertex normals based on specified weighting type.</div><div class="ttdef"><b>Definition:</b> compute_vertex_normal.cpp:33</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

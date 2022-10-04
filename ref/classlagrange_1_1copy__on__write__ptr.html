@@ -155,6 +155,12 @@ template&lt;typename Derived &gt; </td></tr>
 <tr class="memitem:a7847055c21a131cd93a1397f13072235"><td class="memTemplItemLeft" align="right" valign="top">std::shared_ptr&lt; Derived &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>release_ptr</b> ()</td></tr>
 <tr class="memdesc:a7847055c21a131cd93a1397f13072235"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a writable smart pointer to the data. Will cause a copy if ownership is shared. <br /></td></tr>
 <tr class="separator:a7847055c21a131cd93a1397f13072235"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a910f23197e0a0f42ecf6a916c3d8099d"><td class="memItemLeft" align="right" valign="top">std::weak_ptr&lt; const T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlagrange_1_1copy__on__write__ptr.html#a910f23197e0a0f42ecf6a916c3d8099d">_get_weak_ptr</a> () const</td></tr>
+<tr class="memdesc:a910f23197e0a0f42ecf6a916c3d8099d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a weak pointer to the data.  <a href="classlagrange_1_1copy__on__write__ptr.html#a910f23197e0a0f42ecf6a916c3d8099d">More...</a><br /></td></tr>
+<tr class="separator:a910f23197e0a0f42ecf6a916c3d8099d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a700d392aafd40c1252c572b69bea6de9"><td class="memItemLeft" align="right" valign="top">std::weak_ptr&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlagrange_1_1copy__on__write__ptr.html#a700d392aafd40c1252c572b69bea6de9">_get_weak_ptr</a> ()</td></tr>
+<tr class="memdesc:a700d392aafd40c1252c572b69bea6de9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a weak pointer to the data.  <a href="classlagrange_1_1copy__on__write__ptr.html#a700d392aafd40c1252c572b69bea6de9">More...</a><br /></td></tr>
+<tr class="separator:a700d392aafd40c1252c572b69bea6de9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
@@ -181,7 +187,66 @@ class lagrange::copy_on_write_ptr&lt; T &gt;</div><p >A handle type with copy-on
   </table>
   </dd>
 </dl>
-</div></div><!-- contents -->
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a910f23197e0a0f42ecf6a916c3d8099d" name="a910f23197e0a0f42ecf6a916c3d8099d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a910f23197e0a0f42ecf6a916c3d8099d">&#9670;&nbsp;</a></span>_get_weak_ptr() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::weak_ptr&lt; const T &gt; _get_weak_ptr </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Return a weak pointer to the data. </p>
+<dl class="section warning"><dt>Warning</dt><dd>This method is for internal usage purposes.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classlagrange_1_1copy__on__write__ptr.html#a2da66f5c15551ef367198a7a504eb38d" title="Returns a const pointer to the data. Does not require ownership and will not lead to any copy.">read()</a> for preferred way of accessing data. </dd></dl>
+
+</div>
+</div>
+<a id="a700d392aafd40c1252c572b69bea6de9" name="a700d392aafd40c1252c572b69bea6de9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a700d392aafd40c1252c572b69bea6de9">&#9670;&nbsp;</a></span>_get_weak_ptr() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::weak_ptr&lt; T &gt; _get_weak_ptr </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Return a weak pointer to the data. </p>
+<dl class="section warning"><dt>Warning</dt><dd>This method is for internal usage purposes.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classlagrange_1_1copy__on__write__ptr.html#a2da66f5c15551ef367198a7a504eb38d" title="Returns a const pointer to the data. Does not require ownership and will not lead to any copy.">read()</a> for preferred way of accessing data. </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2

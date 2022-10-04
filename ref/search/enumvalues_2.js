@@ -5,7 +5,7 @@ var searchData=
   ['color_2',['Color',['../group__group-surfacemesh-attr.html#gga35b5eb426384b257452ee0ffdb732c27acb5feb1b7314637725a2e73bdc9f7295',1,'lagrange']]],
   ['confirmoverwrite_3',['ConfirmOverwrite',['../namespacelagrange_1_1ui.html#a52d48398347230f843dc5ad2635ffdfbaead4d3581ab844941cab86ad7a7a4710',1,'lagrange::ui']]],
   ['constant_4',['CONSTANT',['../namespacelagrange_1_1raycasting.html#a9ee2fe0bc570d84074a12e3088c7c5e4a8d6b5cada83510220f59e00ce86d4d92',1,'lagrange::raycasting']]],
-  ['copyifexternal_5',['CopyIfExternal',['../group__group-surfacemesh-attr.html#ggade3ae5b7e72e9d4f92f29c6563551c10afe72de1001d465db9eb6ce5cb874c2cb',1,'lagrange']]],
+  ['copyifexternal_5',['CopyIfExternal',['../group__group-surfacemesh-attr.html#ggade3ae5b7e72e9d4f92f29c6563551c10afe72de1001d465db9eb6ce5cb874c2cb',1,'lagrange::CopyIfExternal()'],['../group__group-surfacemesh-attr.html#gga450ef027eac01dd93a89a15ff55de63fafe72de1001d465db9eb6ce5cb874c2cb',1,'lagrange::CopyIfExternal()']]],
   ['corner_6',['Corner',['../group__group-surfacemesh-attr.html#gga9d8ab208822bab9987e9652dda49d89aab9925c71d0b2b9131518c35c9ebbad92',1,'lagrange']]],
   ['cornerindex_7',['CornerIndex',['../group__group-surfacemesh-attr.html#gga35b5eb426384b257452ee0ffdb732c27a63222a2d9c46a34b875c078c757da2e8',1,'lagrange']]],
   ['cornertrianglearea_8',['CornerTriangleArea',['../group__group-surfacemesh-utils.html#ggaa88e833ed770762b02e187f0c2377d3da84f023fc44b6b158de6ccc157c8dab06',1,'lagrange']]]

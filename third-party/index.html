@@ -1323,7 +1323,7 @@ are not listed there. </p>
 <tr>
 <td><a href="https://github.com/CLIUtils/CLI11">CLI11</a></td>
 <td>BSD-3</td>
-<td>Examples (Core, UI), Performance Tests (Core)</td>
+<td>Examples<sup id="fnref:2_cli11_examples"><a class="footnote-ref" href="#fn:2_cli11_examples">3</a></sup>, Performance Tests (Core)</td>
 </tr>
 <tr>
 <td><a href="https://github.com/catchorg/Catch2">Catch2</a></td>
@@ -1341,12 +1341,17 @@ are not listed there. </p>
 <td>Core, UI</td>
 </tr>
 <tr>
+<td><a href="https://github.com/embree/embree">Embree</a></td>
+<td>Apache 2</td>
+<td>Raycasting</td>
+</tr>
+<tr>
 <td><a href="https://github.com/skypjack/entt">EnTT</a></td>
 <td>MIT</td>
 <td>UI</td>
 </tr>
 <tr>
-<td><a href="https://github.com/gulrak/filesystem">Filesystem</a><sup id="fnref:2_filesystem"><a class="footnote-ref" href="#fn:2_filesystem">3</a></sup></td>
+<td><a href="https://github.com/gulrak/filesystem">Filesystem</a><sup id="fnref:3_filesystem"><a class="footnote-ref" href="#fn:3_filesystem">4</a></sup></td>
 <td>MIT</td>
 <td>FS</td>
 </tr>
@@ -1368,7 +1373,7 @@ are not listed there. </p>
 <tr>
 <td><a href="https://github.com/libigl/libigl/">Libigl</a></td>
 <td>MPL2</td>
-<td>Core, IO</td>
+<td>BVH, IO</td>
 </tr>
 <tr>
 <td><a href="https://developer.nvidia.com/mdl-sdk">MDL SDK</a></td>
@@ -1376,9 +1381,24 @@ are not listed there. </p>
 <td>UI</td>
 </tr>
 <tr>
+<td><a href="http://glaros.dtc.umn.edu/gkhome/metis/metis/overview">METIS</a></td>
+<td>Apache 2</td>
+<td>Partitioning</td>
+</tr>
+<tr>
 <td><a href="https://github.com/qnzhou/MshIO">MshIO</a></td>
 <td>Apache 2</td>
 <td>IO</td>
+</tr>
+<tr>
+<td><a href="https://github.com/PixarAnimationStudios/OpenSubdiv">OpenSubdiv</a></td>
+<td>Apache 2</td>
+<td>Subdivision</td>
+</tr>
+<tr>
+<td><a href="https://github.com/AcademySoftwareFoundation/openvdb">OpenVDB</a></td>
+<td>MPL2</td>
+<td>Volume</td>
 </tr>
 <tr>
 <td><a href="https://github.com/samhocevar/portable-file-dialogs">Portable File Dialogs</a></td>
@@ -1396,9 +1416,14 @@ are not listed there. </p>
 <td>Core</td>
 </tr>
 <tr>
-<td><a href="https://github.com/wolfpld/tracy">Tracy</a><sup id="fnref:3_tracy"><a class="footnote-ref" href="#fn:3_tracy">4</a></sup></td>
+<td><a href="https://github.com/wolfpld/tracy">Tracy</a><sup id="fnref:4_tracy"><a class="footnote-ref" href="#fn:4_tracy">5</a></sup></td>
 <td>BSD-3</td>
 <td>Core</td>
+</tr>
+<tr>
+<td><a href="https://github.com/sideeffects/WindingNumber">WindingNumber</a></td>
+<td>MIT</td>
+<td>Volume</td>
 </tr>
 <tr>
 <td><a href="https://github.com/skaslev/gl3w">gl3w</a></td>
@@ -1413,7 +1438,7 @@ are not listed there. </p>
 <tr>
 <td><a href="https://github.com/jlblancoc/nanoflann">nanoflann</a></td>
 <td>BSD-2</td>
-<td>UI</td>
+<td>BVH, UI</td>
 </tr>
 <tr>
 <td><a href="https://github.com/martinmoene/span-lite">span-lite</a></td>
@@ -1465,6 +1490,12 @@ appropriate licenses and files that are affected.</p>
 <td><a href="https://github.com/adobe/lagrange/blob/main/modules/core/src/mapbox/earcut.h">earcut.h</a></td>
 </tr>
 <tr>
+<td><a href="https://github.com/embree/embree/blob/ae029e2ff83bebbbe8742c88aba5b0521aba1a23/tutorials/closest_point/closest_point_device.cpp#L261-L341">Embree</a></td>
+<td>Apache 2</td>
+<td>Raycasting</td>
+<td><a href="https://github.com/adobe/lagrange/blob/main/modules/raycasting/include/lagrange/raycasting/embree_closest_point.h">embree_closest_point.h</a></td>
+</tr>
+<tr>
 <td><a href="http://www-personal.umich.edu/~williams/archive/computation/fe-handling-example.c">Floating-point exception handling example</a></td>
 <td>Public domain</td>
 <td>Core</td>
@@ -1489,6 +1520,12 @@ appropriate licenses and files that are affected.</p>
 <td><a href="https://github.com/adobe/lagrange/blob/main/modules/ui/include/lagrange/ui/imgui/progress.h">progress.h</a>, <a href="https://github.com/adobe/lagrange/blob/main/modules/ui/src/imgui/progress.cpp">progress.cpp</a></td>
 </tr>
 <tr>
+<td><a href="https://github.com/libigl/libigl">Libigl</a></td>
+<td>MPL-2.0</td>
+<td>Core</td>
+<td><a href="https://github.com/adobe/lagrange/blob/main/modules/core/include/lagrange/internal/bfs_orient.h">bfs_orient.h</a>, <a href="https://github.com/adobe/lagrange/blob/main/modules/core/include/lagrange/internal/doublearea.h">doublearea.h</a>, <a href="https://github.com/adobe/lagrange/blob/main/modules/core/include/lagrange/internal/orientable_patches.h">orientable_patches.h</a>, <a href="https://github.com/adobe/lagrange/blob/main/modules/core/include/lagrange/internal/unique_rows.h">unique_rows.h</a>, <a href="https://github.com/adobe/lagrange/blob/main/modules/core/include/lagrange/internal/vertex_components.h">vertex_components.h</a></td>
+</tr>
+<tr>
 <td><a href="https://github.com/ricab/scope_guard/blob/master/scope_guard.hpp">scope_guard</a></td>
 <td>Public domain</td>
 <td>Core</td>
@@ -1499,6 +1536,12 @@ appropriate licenses and files that are affected.</p>
 <td>Public domain</td>
 <td>Core</td>
 <td><a href="https://github.com/adobe/lagrange/blob/main/modules/core/src/predicates.cpp">predicates.cpp</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/KonanM/small_vector">small_vector</a></td>
+<td>Unlicense</td>
+<td>Core</td>
+<td><a href="https://github.com/adobe/lagrange/blob/main/modules/core/include/lagrange/utils/SmallVector.h">SmallVector.h</a></td>
 </tr>
 <tr>
 <td><a href="https://github.com/LoopPerfect/valuable">valuable</a></td>
@@ -1517,11 +1560,14 @@ appropriate licenses and files that are affected.</p>
 <li id="fn:1_boost">
 <p>Boost::filesystem is an optional backend of the FS module.&#160;<a class="footnote-backref" href="#fnref:1_boost" title="Jump back to footnote 2 in the text">&#8617;</a></p>
 </li>
-<li id="fn:2_filesystem">
-<p><code>gulrak/filesystem</code> is only needed when the IO module is compiled in C++14 mode. In C++17 mode, the IO module will defaults to <code>std::filesystem</code>.&#160;<a class="footnote-backref" href="#fnref:2_filesystem" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+<li id="fn:2_cli11_examples">
+<p>CLI11 is used by the examples in the following modules: BVH, Core, Partitioning, Raycasting, Subdivision, UI, Volume&#160;<a class="footnote-backref" href="#fnref:2_cli11_examples" title="Jump back to footnote 3 in the text">&#8617;</a></p>
 </li>
-<li id="fn:3_tracy">
-<p>Tracy is an optional dependency of the core module.&#160;<a class="footnote-backref" href="#fnref:3_tracy" title="Jump back to footnote 4 in the text">&#8617;</a></p>
+<li id="fn:3_filesystem">
+<p><code>gulrak/filesystem</code> is only needed when the IO module is compiled in C++14 mode. In C++17 mode, the IO module will defaults to <code>std::filesystem</code>.&#160;<a class="footnote-backref" href="#fnref:3_filesystem" title="Jump back to footnote 4 in the text">&#8617;</a></p>
+</li>
+<li id="fn:4_tracy">
+<p>Tracy is an optional dependency of the core module.&#160;<a class="footnote-backref" href="#fnref:4_tracy" title="Jump back to footnote 5 in the text">&#8617;</a></p>
 </li>
 </ol>
 </div>

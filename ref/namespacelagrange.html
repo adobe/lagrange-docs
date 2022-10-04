@@ -192,6 +192,9 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlagrange_1_1_select_facets_by_normal_similarity_parameters.html">SelectFacetsByNormalSimilarityParameters</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given a seed vertex, selects faces around it based on the change in triangle normals.  <a href="structlagrange_1_1_select_facets_by_normal_similarity_parameters.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlagrange_1_1_shared_span.html">SharedSpan</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shared span with ownership tracking.  <a href="classlagrange_1_1_shared_span.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlagrange_1_1_silent_multi_timer.html">SilentMultiTimer</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A timer that keeps track of a total time as well as intervals.  <a href="classlagrange_1_1_silent_multi_timer.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -411,6 +414,12 @@ Enumerations</h2></td></tr>
  }</td></tr>
 <tr class="memdesc:gade3ae5b7e72e9d4f92f29c6563551c10"><td class="mdescLeft">&#160;</td><td class="mdescRight">Policy for exporting attributes that are views onto external buffers.  <a href="group__group-surfacemesh-attr.html#gade3ae5b7e72e9d4f92f29c6563551c10">More...</a><br /></td></tr>
 <tr class="separator:gade3ae5b7e72e9d4f92f29c6563551c10"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga450ef027eac01dd93a89a15ff55de63f"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group-surfacemesh-attr.html#ga450ef027eac01dd93a89a15ff55de63f">AttributeCopyPolicy</a> { <a class="el" href="group__group-surfacemesh-attr.html#gga450ef027eac01dd93a89a15ff55de63fafe72de1001d465db9eb6ce5cb874c2cb">CopyIfExternal</a>
+, <a class="el" href="group__group-surfacemesh-attr.html#gga450ef027eac01dd93a89a15ff55de63fa9a526f6dc0d4d6aef1f368972f20d13e">KeepExternalPtr</a>
+, <a class="el" href="group__group-surfacemesh-attr.html#gga450ef027eac01dd93a89a15ff55de63fa9e7163ae7c790d007e084e24693b2303">ErrorIfExternal</a>
+ }</td></tr>
+<tr class="memdesc:ga450ef027eac01dd93a89a15ff55de63f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Policy for copying attribute that are views onto external buffers.  <a href="group__group-surfacemesh-attr.html#ga450ef027eac01dd93a89a15ff55de63f">More...</a><br /></td></tr>
+<tr class="separator:ga450ef027eac01dd93a89a15ff55de63f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gad17b213b11e78aeb807ad3ece7e67e84"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group-surfacemesh-attr.html#gad17b213b11e78aeb807ad3ece7e67e84">AttributeDeletePolicy</a> { <a class="el" href="group__group-surfacemesh-attr.html#ggad17b213b11e78aeb807ad3ece7e67e84afc443f72fcb562a73b40af34ddb599a3">ErrorIfReserved</a>
 , <a class="el" href="group__group-surfacemesh-attr.html#ggad17b213b11e78aeb807ad3ece7e67e84a9eb6b78a99cdb6ffd3d40d18621d9f80">Force</a>
  }</td></tr>
@@ -591,10 +600,18 @@ template&lt;typename <a class="el" href="classlagrange_1_1_mesh.html">MeshType</
 <tr class="memitem:a4ef73c002aad703ba18464d55e6b70c4"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacelagrange.html#a4ef73c002aad703ba18464d55e6b70c4">chain_edges_into_simple_loops</a> (const Eigen::MatrixBase&lt; DerivedE &gt; &amp;edges, std::vector&lt; std::vector&lt; typename DerivedE::Scalar &gt; &gt; &amp;output, Eigen::PlainObjectBase&lt; DerivedO &gt; &amp;remaining_edges)</td></tr>
 <tr class="memdesc:a4ef73c002aad703ba18464d55e6b70c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Chain edges into simple loops by cutting "ears" progressively from the digraph.  <a href="namespacelagrange.html#a4ef73c002aad703ba18464d55e6b70c4">More...</a><br /></td></tr>
 <tr class="separator:a4ef73c002aad703ba18464d55e6b70c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab121b7dfe97e3712bc85c55d0b99a189"><td class="memTemplParams" colspan="2">template&lt;typename MeshTypePtr &gt; </td></tr>
-<tr class="memitem:ab121b7dfe97e3712bc85c55d0b99a189"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacelagrange.html#ab121b7dfe97e3712bc85c55d0b99a189">combine_mesh_list</a> (const std::vector&lt; MeshTypePtr &gt; &amp;mesh_list, bool preserve_attributes=false) -&gt; std::unique_ptr&lt; std::decay_t&lt; typename std::pointer_traits&lt; MeshTypePtr &gt;::element_type &gt; &gt;</td></tr>
-<tr class="memdesc:ab121b7dfe97e3712bc85c55d0b99a189"><td class="mdescLeft">&#160;</td><td class="mdescRight">Combines vector of meshes (represented by any pointer type, smart or raw) Returns unique_ptr to combined mesh.  <a href="namespacelagrange.html#ab121b7dfe97e3712bc85c55d0b99a189">More...</a><br /></td></tr>
-<tr class="separator:ab121b7dfe97e3712bc85c55d0b99a189"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga363707c2e65474638292c738c072868c"><td class="memTemplParams" colspan="2">template&lt;typename Scalar , typename Index &gt; </td></tr>
+<tr class="memitem:ga363707c2e65474638292c738c072868c"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__group-surfacemesh-utils.html#ga363707c2e65474638292c738c072868c">combine_meshes</a> (std::initializer_list&lt; const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; * &gt; meshes, bool preserve_attributes=true)</td></tr>
+<tr class="memdesc:ga363707c2e65474638292c738c072868c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Combine multiple meshes into a single mesh.  <a href="group__group-surfacemesh-utils.html#ga363707c2e65474638292c738c072868c">More...</a><br /></td></tr>
+<tr class="separator:ga363707c2e65474638292c738c072868c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga07291901c4f594454dfafb0764f4dad5"><td class="memTemplParams" colspan="2">
+template&lt;typename Scalar , typename Index &gt; </td></tr>
+<tr class="memitem:ga07291901c4f594454dfafb0764f4dad5"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>combine_meshes</b> (<a class="el" href="group__group-utils-misc.html#ga4afead0b9ccc53fe4fca896787595d26">span</a>&lt; const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &gt; meshes, bool preserve_attributes=true)</td></tr>
+<tr class="separator:ga07291901c4f594454dfafb0764f4dad5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9e874e29c25e3a587a9352147e36772d"><td class="memTemplParams" colspan="2">
+template&lt;typename Scalar , typename Index &gt; </td></tr>
+<tr class="memitem:ga9e874e29c25e3a587a9352147e36772d"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>combine_meshes</b> (size_t num_meshes, <a class="el" href="classlagrange_1_1function__ref.html">function_ref</a>&lt; const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;(size_t)&gt; get_mesh, bool preserve_attributes=true)</td></tr>
+<tr class="separator:ga9e874e29c25e3a587a9352147e36772d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a596b1dcf8071e6db70a89205248de29e"><td class="memTemplParams" colspan="2">template&lt;typename Derived1 , typename Derived2 &gt; </td></tr>
 <tr class="memitem:a596b1dcf8071e6db70a89205248de29e"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacelagrange.html#a596b1dcf8071e6db70a89205248de29e">move_data</a> (Eigen::DenseBase&lt; Derived1 &gt; &amp;from, Eigen::DenseBase&lt; Derived2 &gt; &amp;to)</td></tr>
 <tr class="memdesc:a596b1dcf8071e6db70a89205248de29e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Move data from one Eigen obj to another.  <a href="namespacelagrange.html#a596b1dcf8071e6db70a89205248de29e">More...</a><br /></td></tr>
@@ -1064,6 +1081,10 @@ template&lt;typename Scalar , int _Rows, int _Cols&gt; </td></tr>
 <tr class="memitem:gae7c68fbe6cdda70f6be758396ddf9e2e"><td class="memTemplItemLeft" align="right" valign="top">constexpr T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__group-utils-misc.html#gae7c68fbe6cdda70f6be758396ddf9e2e">safe_cast_enum</a> (const U u)</td></tr>
 <tr class="memdesc:gae7c68fbe6cdda70f6be758396ddf9e2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Casting an enum to scalar and vice versa.  <a href="group__group-utils-misc.html#gae7c68fbe6cdda70f6be758396ddf9e2e">More...</a><br /></td></tr>
 <tr class="separator:gae7c68fbe6cdda70f6be758396ddf9e2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6c028e62a13f2bce6d3775809cf47125"><td class="memTemplParams" colspan="2">template&lt;typename T , typename Y &gt; </td></tr>
+<tr class="memitem:ga6c028e62a13f2bce6d3775809cf47125"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classlagrange_1_1_shared_span.html">SharedSpan</a>&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__group-utils-misc.html#ga6c028e62a13f2bce6d3775809cf47125">make_shared_span</a> (const std::shared_ptr&lt; Y &gt; &amp;r, T *element_ptr, size_t size)</td></tr>
+<tr class="memdesc:ga6c028e62a13f2bce6d3775809cf47125"><td class="mdescLeft">&#160;</td><td class="mdescRight">Created a <a class="el" href="classlagrange_1_1_shared_span.html" title="Shared span with ownership tracking.">SharedSpan</a> object around an internal buffer of a parent object.  <a href="group__group-utils-misc.html#ga6c028e62a13f2bce6d3775809cf47125">More...</a><br /></td></tr>
+<tr class="separator:ga6c028e62a13f2bce6d3775809cf47125"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9409bfad59883f0a21ce87fef264866b"><td class="memTemplParams" colspan="2"><a id="a9409bfad59883f0a21ce87fef264866b" name="a9409bfad59883f0a21ce87fef264866b"></a>
 template&lt;class T , size_t N&gt; </td></tr>
 <tr class="memitem:a9409bfad59883f0a21ce87fef264866b"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator==</b> (const <a class="el" href="structlagrange_1_1_small_set.html">SmallSet</a>&lt; T, N &gt; &amp;lhs, const <a class="el" href="structlagrange_1_1_small_set.html">SmallSet</a>&lt; T, N &gt; &amp;rhs)</td></tr>
@@ -1720,39 +1741,6 @@ template&lt;typename Scalar , typename Index &gt; </td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>True in case of success, False otherwise. </dd></dl>
-
-</div>
-</div>
-<a id="ab121b7dfe97e3712bc85c55d0b99a189" name="ab121b7dfe97e3712bc85c55d0b99a189"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab121b7dfe97e3712bc85c55d0b99a189">&#9670;&nbsp;</a></span>combine_mesh_list()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto lagrange::combine_mesh_list </td>
-          <td>(</td>
-          <td class="paramtype">const std::vector&lt; MeshTypePtr &gt; &amp;&#160;</td>
-          <td class="paramname"><em>mesh_list</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>preserve_attributes</em> = <code>false</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> -&gt; std::unique_ptr&lt;std::decay_t&lt;typename std::pointer_traits&lt;MeshTypePtr&gt;::element_type&gt;&gt;
-</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Combines vector of meshes (represented by any pointer type, smart or raw) Returns unique_ptr to combined mesh. </p>
-<p >nullptr's are ignored.</p>
-<p >All valid vertex/facet/corner/edge attributes are combined and forwarded to the output mesh. An attribute is considered as valid iff it is set for all meshes in <code>mesh_list</code>. </p>
 
 </div>
 </div>

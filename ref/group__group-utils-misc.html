@@ -92,6 +92,9 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlagrange_1_1function__ref_3_01_r_07_args_8_8_8_08_4.html">function_ref&lt; R(Args...)&gt;</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specialization for function types.  <a href="classlagrange_1_1function__ref_3_01_r_07_args_8_8_8_08_4.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlagrange_1_1_shared_span.html">SharedSpan&lt; T &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shared span with ownership tracking.  <a href="classlagrange_1_1_shared_span.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlagrange_1_1value__ptr.html">value_ptr&lt; T, Cloner, Deleter &gt;</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Smart pointer with value semantics.  <a href="classlagrange_1_1value__ptr.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -148,6 +151,10 @@ template&lt;typename R , typename... Args&gt; </td></tr>
 <tr class="memitem:gae7c68fbe6cdda70f6be758396ddf9e2e"><td class="memTemplItemLeft" align="right" valign="top">constexpr T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__group-utils-misc.html#gae7c68fbe6cdda70f6be758396ddf9e2e">safe_cast_enum</a> (const U u)</td></tr>
 <tr class="memdesc:gae7c68fbe6cdda70f6be758396ddf9e2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Casting an enum to scalar and vice versa.  <a href="group__group-utils-misc.html#gae7c68fbe6cdda70f6be758396ddf9e2e">More...</a><br /></td></tr>
 <tr class="separator:gae7c68fbe6cdda70f6be758396ddf9e2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6c028e62a13f2bce6d3775809cf47125"><td class="memTemplParams" colspan="2">template&lt;typename T , typename Y &gt; </td></tr>
+<tr class="memitem:ga6c028e62a13f2bce6d3775809cf47125"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classlagrange_1_1_shared_span.html">SharedSpan</a>&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__group-utils-misc.html#ga6c028e62a13f2bce6d3775809cf47125">make_shared_span</a> (const std::shared_ptr&lt; Y &gt; &amp;r, T *element_ptr, size_t size)</td></tr>
+<tr class="memdesc:ga6c028e62a13f2bce6d3775809cf47125"><td class="mdescLeft">&#160;</td><td class="mdescRight">Created a <a class="el" href="classlagrange_1_1_shared_span.html" title="Shared span with ownership tracking.">SharedSpan</a> object around an internal buffer of a parent object.  <a href="group__group-utils-misc.html#ga6c028e62a13f2bce6d3775809cf47125">More...</a><br /></td></tr>
+<tr class="separator:ga6c028e62a13f2bce6d3775809cf47125"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gad2f13bef4d8b9c7c6b2dc61b87d95bd4"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group-utils-misc.html#gad2f13bef4d8b9c7c6b2dc61b87d95bd4">string_split</a> (const std::string &amp;str, char delimiter)</td></tr>
 <tr class="memdesc:gad2f13bef4d8b9c7c6b2dc61b87d95bd4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Split a std::string using a prescribed delimiter.  <a href="group__group-utils-misc.html#gad2f13bef4d8b9c7c6b2dc61b87d95bd4">More...</a><br /></td></tr>
 <tr class="separator:gad2f13bef4d8b9c7c6b2dc61b87d95bd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -522,6 +529,60 @@ template&lt;typename... Args&gt; </td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Casted value. </dd></dl>
+
+</div>
+</div>
+<a id="ga6c028e62a13f2bce6d3775809cf47125" name="ga6c028e62a13f2bce6d3775809cf47125"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga6c028e62a13f2bce6d3775809cf47125">&#9670;&nbsp;</a></span>make_shared_span()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classlagrange_1_1_shared_span.html">SharedSpan</a>&lt; T &gt; lagrange::make_shared_span </td>
+          <td>(</td>
+          <td class="paramtype">const std::shared_ptr&lt; Y &gt; &amp;&#160;</td>
+          <td class="paramname"><em>r</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T *&#160;</td>
+          <td class="paramname"><em>element_ptr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;lagrange/utils/SharedSpan.h&gt;</code></p>
+
+<p>Created a <a class="el" href="classlagrange_1_1_shared_span.html" title="Shared span with ownership tracking.">SharedSpan</a> object around an internal buffer of a parent object. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The <code>element_type</code> of internal buffer. </td></tr>
+    <tr><td class="paramname">Y</td><td>The type of the parent object containing the buffer.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">r</td><td>A shared pointer of the parent object owning the buffer. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">element_ptr</td><td>A raw pointer to the internal buffer contained in the parent object. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">size</td><td>The size of the internal buffer.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="classlagrange_1_1_shared_span.html" title="Shared span with ownership tracking.">SharedSpan</a> that shares the memory ownership of the internal buffer. </dd></dl>
 
 </div>
 </div>

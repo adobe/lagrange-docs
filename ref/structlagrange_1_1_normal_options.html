@@ -91,6 +91,13 @@ std::string_view&#160;</td><td class="memItemRight" valign="bottom"><b>output_at
 <tr class="memitem:a4c122150ae238de703e9610a0bc2469d"><td class="memItemLeft" align="right" valign="top">std::string_view&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlagrange_1_1_normal_options.html#a4c122150ae238de703e9610a0bc2469d">facet_normal_attribute_name</a> = &quot;@facet_normal&quot;</td></tr>
 <tr class="memdesc:a4c122150ae238de703e9610a0bc2469d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Precomputed facet normal attribute name.  <a href="structlagrange_1_1_normal_options.html#a4c122150ae238de703e9610a0bc2469d">More...</a><br /></td></tr>
 <tr class="separator:a4c122150ae238de703e9610a0bc2469d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a817eeb2e63429b8cc839da0d1e79fa2f"><td class="memItemLeft" align="right" valign="top"><a id="a817eeb2e63429b8cc839da0d1e79fa2f" name="a817eeb2e63429b8cc839da0d1e79fa2f"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>recompute_facet_normals</b> = false</td></tr>
+<tr class="memdesc:a817eeb2e63429b8cc839da0d1e79fa2f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether to recompute the facet normal attribute, or reuse existing cached values if present. <br /></td></tr>
+<tr class="separator:a817eeb2e63429b8cc839da0d1e79fa2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a352c5412d6b65484c180375041e6c255"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlagrange_1_1_normal_options.html#a352c5412d6b65484c180375041e6c255">keep_facet_normals</a> = false</td></tr>
+<tr class="memdesc:a352c5412d6b65484c180375041e6c255"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether to keep any newly added facet normal attribute.  <a href="structlagrange_1_1_normal_options.html#a352c5412d6b65484c180375041e6c255">More...</a><br /></td></tr>
+<tr class="separator:a352c5412d6b65484c180375041e6c255"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Option struct for computing indexed mesh normals. </p>
@@ -108,7 +115,24 @@ std::string_view&#160;</td><td class="memItemRight" valign="bottom"><b>output_at
 </div><div class="memdoc">
 
 <p>Precomputed facet normal attribute name. </p>
-<p >If the attribute does not exist, the algorithm will compute it. </p>
+<p >Used to determine the orientation of accumulated corner normals. If the attribute does not exist, the algorithm will compute it. </p>
+
+</div>
+</div>
+<a id="a352c5412d6b65484c180375041e6c255" name="a352c5412d6b65484c180375041e6c255"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a352c5412d6b65484c180375041e6c255">&#9670;&nbsp;</a></span>keep_facet_normals</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool keep_facet_normals = false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Whether to keep any newly added facet normal attribute. </p>
+<p >If such an attribute is already present in the input mesh, it will not be removed, even if this argument is set to false. </p>
 
 </div>
 </div>

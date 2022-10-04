@@ -318,11 +318,11 @@ $(function() {
 <div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>                } <span class="keywordflow">else</span> {</div>
 <div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>                    <span class="comment">// Copy attributes from opposite facets</span></div>
 <div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>                    <span class="keywordflow">for</span> (<span class="keyword">auto</span> e : loop) {</div>
-<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>                        <span class="keyword">const</span> Index v0 = reduced_to_vertex[boundary_edges[e][0]];</div>
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>                        <span class="keyword">const</span> Index v0 = reduced_to_vertex[boundary_edges[e][0]]; (void)v0;</div>
 <div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>                        <span class="keyword">const</span> Index c = boundary_corners[e][1];</div>
-<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>                        <span class="keyword">const</span> Index f = c / nvpf;</div>
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>                        <span class="keyword">const</span> Index f = c / nvpf; (void)f;</div>
 <div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>                        assert(f == boundary_corners[e][0] / nvpf);</div>
-<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>                        <span class="keyword">const</span> Index lv = c % nvpf;</div>
+<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>                        <span class="keyword">const</span> Index lv = c % nvpf; (void)lv;</div>
 <div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>                        <a class="code hl_define" href="group__group-utils-assert.html#ga5b5259c4072f1caaa696e074f2f7ea15">la_debug_assert</a>(mesh.get_facets()(f, (lv + 1) % nvpf) == v0);</div>
 <div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>                        <span class="keyword">const</span> Index e0 = new_mesh-&gt;get_edge(facet_counter, 0);</div>
 <div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>                        <span class="keyword">const</span> Index e1 = new_mesh-&gt;get_edge(facet_counter, 1);</div>

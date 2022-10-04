@@ -1433,7 +1433,7 @@ Here is an example use case:</p>
   the programmer's code, and should be fixed accordingly.</p>
 </li>
 </ul>
-<div class="admonition note">
+<div class="admonition info">
 <p class="admonition-title">Usage In Expressions</p>
 <p>Our assert macros behave as functions, meaning they expand to a <code>void</code> expression and can be
 used in an expression such as <code>y = (la_debug_assert(true), x)</code>.</p>
@@ -1457,9 +1457,11 @@ such cast is safe, Lagrange provides an explicit casting function:</p>
 <span class="c1">// Cast variable y into variable x of type `type1`</span>
 <span class="n">type1</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lagrange</span><span class="o">::</span><span class="n">safe_cast</span><span class="o">&lt;</span><span class="n">type1</span><span class="o">&gt;</span><span class="p">(</span><span class="n">y</span><span class="p">);</span><span class="w"></span>
 </code></pre></div>
-<p><strong>Implementation details:</strong> <code>safe_cast</code> checks for type compatibility, sign
-consistency and truncation error.  We recommended to use code that
-avoids casting in the first place.</p>
+<div class="admonition note">
+<p class="admonition-title">Implementation Details</p>
+<p><code>safe_cast</code> checks for type compatibility, sign consistency and truncation error.  We
+recommended to use code that avoids casting in the first place.</p>
+</div>
 <h2 id="pointer-type-conversion">Pointer Type Conversion</h2>
 <p>It often necessary to convert a <code>std::unique_ptr</code> to <code>std::shared_ptr</code>.
 Lagrange provide a handy function that avoid repeated type specification:</p>

@@ -1,17 +1,18 @@
 var searchData=
 [
-  ['edgeaabbtree_0',['EdgeAABBTree',['../structlagrange_1_1bvh_1_1_edge_a_a_b_b_tree.html#add5d672df21cf5d9157453f22576742f',1,'lagrange::bvh::EdgeAABBTree']]],
-  ['embreeraycaster_1',['EmbreeRayCaster',['../classlagrange_1_1raycasting_1_1_embree_ray_caster.html#ab3221c3d429d0073beaf6c3d2c26ef39',1,'lagrange::raycasting::EmbreeRayCaster']]],
-  ['empty_2',['empty',['../structlagrange_1_1bvh_1_1_edge_a_a_b_b_tree.html#a644718bb2fb240de962dc3c9a1fdf0dc',1,'lagrange::bvh::EdgeAABBTree::empty()'],['../classlagrange_1_1_attribute.html#a644718bb2fb240de962dc3c9a1fdf0dc',1,'lagrange::Attribute::empty()']]],
-  ['enable_3',['enable',['../classlagrange_1_1ui_1_1_keybinds.html#a7e5392905b5def023b52e1a60cc62d61',1,'lagrange::ui::Keybinds::enable()'],['../classlagrange_1_1ui_1_1_systems.html#a174af31501762b5effab834474556ce3',1,'lagrange::ui::Systems::enable()']]],
-  ['enable_5faccelerated_5fpicking_4',['enable_accelerated_picking',['../namespacelagrange_1_1ui.html#a309badd51fbfcc8859a5eaaee568af79',1,'lagrange::ui']]],
-  ['enable_5ffpe_5',['enable_fpe',['../namespacelagrange.html#a19b64389774c826a71abae902e0b46b9',1,'lagrange']]],
-  ['end_5fupdate_6',['end_update',['../classlagrange_1_1ui_1_1_keybinds.html#a8ad87eb9e243bcf6314e08ef17c598ff',1,'lagrange::ui::Keybinds']]],
-  ['ends_5fwith_7',['ends_with',['../group__group-utils-misc.html#ga8eef11056e4525af0cd41aeb98869cbb',1,'lagrange']]],
-  ['ensure_5fno_5ferrors_8',['ensure_no_errors',['../classlagrange_1_1raycasting_1_1_embree_ray_caster.html#aa1f8381e37f38a65e0d57f7519f96f6d',1,'lagrange::raycasting::EmbreeRayCaster']]],
-  ['ensure_5funique_5fowner_9',['ensure_unique_owner',['../classlagrange_1_1copy__on__write__ptr.html#ace507ce8f8222149bb2e8b7b9faa1025',1,'lagrange::copy_on_write_ptr']]],
-  ['extract_5fboundary_5floops_10',['extract_boundary_loops',['../namespacelagrange.html#abbf0999f20e8aa0f9e6d2a2fe6c17cd2',1,'lagrange']]],
-  ['extract_5fdisjoint_5fset_5findices_11',['extract_disjoint_set_indices',['../classlagrange_1_1_disjoint_sets.html#a2b32109d556b6000eee22210f9dc855a',1,'lagrange::DisjointSets']]],
-  ['extract_5ffloat_5fdata_12',['extract_float_data',['../classlagrange_1_1raycasting_1_1_embree_ray_caster.html#a677cb1c6755add458b91bb9bdc565192',1,'lagrange::raycasting::EmbreeRayCaster']]],
-  ['extract_5fint_5fdata_13',['extract_int_data',['../classlagrange_1_1raycasting_1_1_embree_ray_caster.html#aeb50d64946302a4799a82778edaed1de',1,'lagrange::raycasting::EmbreeRayCaster']]]
+  ['default_5fcamera_0',['default_camera',['../classlagrange_1_1ui_1_1_camera.html#a99634f9f6fa71e9c2d1a3e058a5457e4',1,'lagrange::ui::Camera']]],
+  ['delete_5fand_5fexport_5fattribute_1',['delete_and_export_attribute',['../classlagrange_1_1_surface_mesh.html#a28d0478f3b515915db6dede4b645966c',1,'lagrange::SurfaceMesh']]],
+  ['delete_5fand_5fexport_5fconst_5fattribute_2',['delete_and_export_const_attribute',['../classlagrange_1_1_surface_mesh.html#a545ec348c92a85cc38a6c6d3f5277535',1,'lagrange::SurfaceMesh']]],
+  ['delete_5fand_5fexport_5fconst_5findexed_5fattribute_3',['delete_and_export_const_indexed_attribute',['../classlagrange_1_1_surface_mesh.html#af5e377cd17d586686cb6dcd2293c587b',1,'lagrange::SurfaceMesh']]],
+  ['delete_5fand_5fexport_5findexed_5fattribute_4',['delete_and_export_indexed_attribute',['../classlagrange_1_1_surface_mesh.html#aacb851b667e316033ab311cb13ed0241',1,'lagrange::SurfaceMesh']]],
+  ['delete_5fattribute_5',['delete_attribute',['../classlagrange_1_1_surface_mesh.html#a1d338472b33656740632fd6d58dfc9a7',1,'lagrange::SurfaceMesh']]],
+  ['detect_5fdegenerate_5ftriangles_6',['detect_degenerate_triangles',['../namespacelagrange.html#a0adc3699819a2561aa851032f55258bb',1,'lagrange']]],
+  ['disable_5ffpe_7',['disable_fpe',['../namespacelagrange.html#abe7e2f24aa07f2b2e38829ef368a0f59',1,'lagrange']]],
+  ['does_5fsupport_5fpointcloud_8',['does_support_pointcloud',['../classlagrange_1_1bvh_1_1_b_v_h_nanoflann.html#a12330ba11afd4b586e83b376117bbce9',1,'lagrange::bvh::BVHNanoflann::does_support_pointcloud()'],['../classlagrange_1_1bvh_1_1_b_v_h.html#a0b38f5664343a28163b9a304f9dd83fd',1,'lagrange::bvh::BVH::does_support_pointcloud()'],['../classlagrange_1_1bvh_1_1_a_a_b_b_i_g_l.html#a12330ba11afd4b586e83b376117bbce9',1,'lagrange::bvh::AABBIGL::does_support_pointcloud() const override']]],
+  ['does_5fsupport_5fquery_5fclosest_5fpoint_9',['does_support_query_closest_point',['../classlagrange_1_1bvh_1_1_a_a_b_b_i_g_l.html#aa5143dfb1f113244a946bf6749c0f89d',1,'lagrange::bvh::AABBIGL::does_support_query_closest_point()'],['../classlagrange_1_1bvh_1_1_b_v_h.html#a700dcea7de134b2f39b9ff433b11c14e',1,'lagrange::bvh::BVH::does_support_query_closest_point()'],['../classlagrange_1_1bvh_1_1_b_v_h_nanoflann.html#aa5143dfb1f113244a946bf6749c0f89d',1,'lagrange::bvh::BVHNanoflann::does_support_query_closest_point()']]],
+  ['does_5fsupport_5fquery_5fin_5fsphere_5fneighbours_10',['does_support_query_in_sphere_neighbours',['../classlagrange_1_1bvh_1_1_a_a_b_b_i_g_l.html#ac759d15b3e57b89887848e61522427e3',1,'lagrange::bvh::AABBIGL::does_support_query_in_sphere_neighbours()'],['../classlagrange_1_1bvh_1_1_b_v_h.html#a06fca157661f774b4632cdcddcf94d63',1,'lagrange::bvh::BVH::does_support_query_in_sphere_neighbours()'],['../classlagrange_1_1bvh_1_1_b_v_h_nanoflann.html#ac759d15b3e57b89887848e61522427e3',1,'lagrange::bvh::BVHNanoflann::does_support_query_in_sphere_neighbours()']]],
+  ['does_5fsupport_5fquery_5fk_5fnearest_5fneighbours_11',['does_support_query_k_nearest_neighbours',['../classlagrange_1_1bvh_1_1_a_a_b_b_i_g_l.html#a2975e07d4488b6525158a1af151a3a83',1,'lagrange::bvh::AABBIGL::does_support_query_k_nearest_neighbours()'],['../classlagrange_1_1bvh_1_1_b_v_h.html#ac0647d592af0ee70de8d27facacd0eb8',1,'lagrange::bvh::BVH::does_support_query_k_nearest_neighbours()'],['../classlagrange_1_1bvh_1_1_b_v_h_nanoflann.html#a2975e07d4488b6525158a1af151a3a83',1,'lagrange::bvh::BVHNanoflann::does_support_query_k_nearest_neighbours()']]],
+  ['duplicate_5fattribute_12',['duplicate_attribute',['../classlagrange_1_1_surface_mesh.html#ac105eafb5fa2eab8e87215d26ebb21c0',1,'lagrange::SurfaceMesh']]],
+  ['dynamic_5fread_13',['dynamic_read',['../classlagrange_1_1copy__on__write__ptr.html#a29864a127922b330deb3ae17dfcb5170',1,'lagrange::copy_on_write_ptr']]],
+  ['dynamic_5fwrite_14',['dynamic_write',['../classlagrange_1_1copy__on__write__ptr.html#a8844dee82f6db8f43cac9e9715b5966d',1,'lagrange::copy_on_write_ptr']]]
 ];
