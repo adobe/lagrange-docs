@@ -87,7 +87,7 @@ Lagrange provide two types of assertion macros:
   be triggered under any circumstance by client code. A failed debug assert indicates an error in
   the programmer's code, and should be fixed accordingly.
 
-!!! note "Usage In Expressions"
+!!! info "Usage In Expressions"
     Our assert macros behave as functions, meaning they expand to a `void` expression and can be
     used in an expression such as `y = (la_debug_assert(true), x)`.
 
@@ -119,9 +119,10 @@ such cast is safe, Lagrange provides an explicit casting function:
 type1 x = lagrange::safe_cast<type1>(y);
 ```
 
-__Implementation details:__ `safe_cast` checks for type compatibility, sign
-consistency and truncation error.  We recommended to use code that
-avoids casting in the first place.
+
+!!! note "Implementation Details"
+    `safe_cast` checks for type compatibility, sign consistency and truncation error.  We
+    recommended to use code that avoids casting in the first place.
 
 ## Pointer Type Conversion
 

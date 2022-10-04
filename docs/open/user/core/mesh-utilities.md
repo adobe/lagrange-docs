@@ -88,33 +88,41 @@ assert(attr.get_element_type() == lagrange::AttributeElement::Facet);
 ```
 
 Transferring attributes from any element type to any other type is supported. The values will either
-be <span style="color:navy">**dispatched**</span> or <span style="color:maroon">**averaged**</span>
+be <span style="color:navy">**dispatched**</span> or <span style="color:maroon">**gathered**</span>
 depending on the type of operation, as summarized below:
 
 
 | Source\Target | Vertex   | Facet    | Edge     | Corner   | Indexed  | Value    |
 |---------------|----------|----------|----------|----------|----------|----------|
-| Vertex        |   ∅      | <span style="color:maroon">Average</span>  | <span style="color:maroon">Average</span>  | <span style="color:navy">Dispatch<span> | <span style="color:navy">Dispatch<span> | <span style="color:navy">Dispatch<span> |
-| Facet         | <span style="color:maroon">Average</span>  |    ∅     | <span style="color:maroon">Average</span>  | <span style="color:navy">Dispatch<span> | <span style="color:navy">Dispatch<span> | <span style="color:navy">Dispatch<span> |
-| Edge          | <span style="color:maroon">Average</span>  | <span style="color:maroon">Average</span>  |    ∅     | <span style="color:navy">Dispatch<span> | <span style="color:navy">Dispatch<span> | <span style="color:navy">Dispatch<span> |
-| Corner        | <span style="color:maroon">Average</span>  | <span style="color:maroon">Average</span>  | <span style="color:maroon">Average</span>  |    ∅     | <span style="color:navy">Dispatch<span> | <span style="color:navy">Dispatch<span> |
-| Index         | <span style="color:maroon">Average</span>  | <span style="color:maroon">Average</span>  | <span style="color:maroon">Average</span>  | <span style="color:navy">Dispatch<span> |    ∅     | <span style="color:navy">Dispatch<span> |
+| Vertex        |   ∅      | <span style="color:maroon">Gather</span>  | <span style="color:maroon">Gather</span>  | <span style="color:navy">Dispatch<span> | <span style="color:navy">Dispatch<span> | <span style="color:navy">Dispatch<span> |
+| Facet         | <span style="color:maroon">Gather</span>  |    ∅     | <span style="color:maroon">Gather</span>  | <span style="color:navy">Dispatch<span> | <span style="color:navy">Dispatch<span> | <span style="color:navy">Dispatch<span> |
+| Edge          | <span style="color:maroon">Gather</span>  | <span style="color:maroon">Gather</span>  |    ∅     | <span style="color:navy">Dispatch<span> | <span style="color:navy">Dispatch<span> | <span style="color:navy">Dispatch<span> |
+| Corner        | <span style="color:maroon">Gather</span>  | <span style="color:maroon">Gather</span>  | <span style="color:maroon">Gather</span>  |    ∅     | <span style="color:navy">Dispatch<span> | <span style="color:navy">Dispatch<span> |
+| Index         | <span style="color:maroon">Gather</span>  | <span style="color:maroon">Gather</span>  | <span style="color:maroon">Gather</span>  | <span style="color:navy">Dispatch<span> |    ∅     | <span style="color:navy">Dispatch<span> |
 | Value         | <span style="color:navy">Dispatch<span> | <span style="color:navy">Dispatch<span> | <span style="color:navy">Dispatch<span> | <span style="color:navy">Dispatch<span> | <span style="color:navy">Dispatch<span> |    ∅     |
 
 
 !!! example
     - Transfering a vertex attribute to mesh corner elements is a _dispatch_ operation, and will not
-    modify any value. - Transfering a corner attribute to mesh vertex elements is an _averaging_
-    operation, and numerical changes will occur.
+    modify any value.
+    - Transfering a corner attribute to mesh vertex elements is an _gather_ operation, and
+    numerical values will be averaged.
 
 !!! note "Value Attributes"
     When transfering a value attribute to any other type of element, it is expected that the number
-    of entries in the source attribute matches the target number of mesh element. When transfering a
-    value attribute to an indexed attribute, the value buffer is expected to have the same number of
-    elements as the number of mesh corners.
+    of entries in the source attribute matches the target number of mesh element.
 
     Conversely, transferring from any other mesh element type to a value attribute will create a
     buffer with the same number of entries as the input attribute element type.
+
+!!! note "Indexed Attributes and Value Attributes"
+    When transfering a value attribute to an indexed attribute (and vice-versa), the value attribute
+    is expected to have a number of elements equals to the number of _mesh corners_.
+
+    - Transfering `Value` -> `Indexed` will create an indexed attribute with a trivial index buffer
+    (identity mapping corner $c_i$ $\to$ value $i$).
+    - Transfering `Indexed` -> `Value` will interpret the indexed attribute as if it were a corner
+    attribute. The indexing will be lost on conversion.
 
 See: [Attributes Utilities][attr-utils] documentation.
 
