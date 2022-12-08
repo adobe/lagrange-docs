@@ -1910,10 +1910,10 @@ object and let the compiler deduce the <code>Scalar</code> type template argumen
 <div class="admonition tip">
 <p class="admonition-title">Tracking Ownership And Moving Eigen Matrices</p>
 <p>If you need to track the ownership of an external buffer being wrapped as a mesh attribute,
-please read our documentation about <a href="general-utilities.md/#shared-span">SharedSpan</a> objects. Any
+please read our documentation about <a href="../general-utilities/#shared-span">SharedSpan</a> objects. Any
 <code>wrap_*</code> method that accepts a regular <code>span&lt;&gt;</code> object should also work with a managed
 <code>SharedSpan</code> object.</p>
-<p>Using a <a href="general-utilities.md/#shared-span">SharedSpan</a> object to wrap an external object as
+<p>Using a <a href="../general-utilities/#shared-span">SharedSpan</a> object to wrap an external object as
 attribute allows moving a Eigen::Matrix and other arbitrary objects into mesh attributes without
 any extra buffer copy, as long as the memory layout of the coordinates are compatible.</p>
 </div>
