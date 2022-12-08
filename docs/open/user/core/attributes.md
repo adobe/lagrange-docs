@@ -375,11 +375,11 @@ mesh.wrap_as_const_attribute(
 
 !!! tip "Tracking Ownership And Moving Eigen Matrices"
     If you need to track the ownership of an external buffer being wrapped as a mesh attribute,
-    please read our documentation about [SharedSpan](general-utilities.md/#shared-span) objects. Any
+    please read our documentation about [SharedSpan](../general-utilities/#shared-span) objects. Any
     `wrap_*` method that accepts a regular `span<>` object should also work with a managed
     `SharedSpan` object.
 
-    Using a [SharedSpan](general-utilities.md/#shared-span) object to wrap an external object as
+    Using a [SharedSpan](../general-utilities/#shared-span) object to wrap an external object as
     attribute allows moving a Eigen::Matrix and other arbitrary objects into mesh attributes without
     any extra buffer copy, as long as the memory layout of the coordinates are compatible.
 
