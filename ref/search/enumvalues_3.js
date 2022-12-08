@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['edge_0',['Edge',['../group__group-surfacemesh-attr.html#gga9d8ab208822bab9987e9652dda49d89aa7f0bc3a17ff45e6a7c3fe52b35db1888',1,'lagrange']]],
+  ['edge_0',['Edge',['../structlagrange_1_1_component_options.html#a312f57b0318728667933d7254778058bae4a297a0f76119a442c2595ac040673e',1,'lagrange::ComponentOptions::Edge()'],['../group__group-surfacemesh-attr.html#gga9d8ab208822bab9987e9652dda49d89aa7f0bc3a17ff45e6a7c3fe52b35db1888',1,'lagrange::Edge()']]],
   ['edgeindex_1',['EdgeIndex',['../group__group-surfacemesh-attr.html#gga35b5eb426384b257452ee0ffdb732c27a7e0536ad6c15bf05bf40e8876b1a5c10',1,'lagrange']]],
   ['embree_5fcompact_2',['EMBREE_COMPACT',['../namespacelagrange_1_1raycasting.html#a38a39963b8927ab590044bc2a70498c8ae69cc058d46087ede00d3fd0c7bdc4bd',1,'lagrange::raycasting']]],
   ['embree_5fdefault_3',['EMBREE_DEFAULT',['../namespacelagrange_1_1raycasting.html#a38a39963b8927ab590044bc2a70498c8ac6c8431ad98ec732235ac1b5114316f3',1,'lagrange::raycasting']]],

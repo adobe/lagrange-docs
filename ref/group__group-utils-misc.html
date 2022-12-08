@@ -63,6 +63,7 @@ $(function() {
 
 <div class="header">
   <div class="summary">
+<a href="#groups">Modules</a> &#124;
 <a href="#namespaces">Namespaces</a> &#124;
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#define-members">Macros</a> &#124;
@@ -75,6 +76,12 @@ $(function() {
 <p>Useful functions that don't have their place anywhere else.  
 <a href="#details">More...</a></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="groups" name="groups"></a>
+Modules</h2></td></tr>
+<tr class="memitem:group__group-utils-misc-functionref"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group-utils-misc-functionref.html">function_ref</a></td></tr>
+<tr class="memdesc:group__group-utils-misc-functionref"><td class="mdescLeft">&#160;</td><td class="mdescRight">A lightweight non-owning reference to a callable. <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
 Namespaces</h2></td></tr>
 <tr class="memitem:namespacelagrange"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelagrange.html">lagrange</a></td></tr>
@@ -86,12 +93,6 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlagrange_1_1copy__on__write__ptr.html">copy_on_write_ptr&lt; T &gt;</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A handle type with copy-on-write semantics.  <a href="classlagrange_1_1copy__on__write__ptr.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlagrange_1_1function__ref.html">function_ref&lt; F &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A lightweight non-owning reference to a callable.  <a href="classlagrange_1_1function__ref.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlagrange_1_1function__ref_3_01_r_07_args_8_8_8_08_4.html">function_ref&lt; R(Args...)&gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specialization for function types.  <a href="classlagrange_1_1function__ref_3_01_r_07_args_8_8_8_08_4.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlagrange_1_1_shared_span.html">SharedSpan&lt; T &gt;</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shared span with ownership tracking.  <a href="classlagrange_1_1_shared_span.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -101,24 +102,19 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:ga4afead0b9ccc53fe4fca896787595d26"><td class="memTemplParams" colspan="2"><a id="ga4afead0b9ccc53fe4fca896787595d26" name="ga4afead0b9ccc53fe4fca896787595d26"></a>
-template&lt;class T , ::nonstd::span_lite::extent_t Extent = ::nonstd::dynamic_extent&gt; </td></tr>
-<tr class="memitem:ga4afead0b9ccc53fe4fca896787595d26"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><b>span</b> = ::nonstd::span&lt; T, Extent &gt;</td></tr>
-<tr class="memdesc:ga4afead0b9ccc53fe4fca896787595d26"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type alias compatible with C++20's std::span&lt;&gt; <br /></td></tr>
+<tr class="memitem:ga4afead0b9ccc53fe4fca896787595d26"><td class="memTemplParams" colspan="2">template&lt;class T , ::nonstd::span_lite::extent_t Extent = ::nonstd::dynamic_extent&gt; </td></tr>
+<tr class="memitem:ga4afead0b9ccc53fe4fca896787595d26"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__group-utils-misc.html#ga4afead0b9ccc53fe4fca896787595d26">span</a> = ::nonstd::span&lt; T, Extent &gt;</td></tr>
+<tr class="memdesc:ga4afead0b9ccc53fe4fca896787595d26"><td class="mdescLeft">&#160;</td><td class="mdescRight">A bounds-safe view for sequences of objects.  <a href="group__group-utils-misc.html#ga4afead0b9ccc53fe4fca896787595d26">More...</a><br /></td></tr>
 <tr class="separator:ga4afead0b9ccc53fe4fca896787595d26"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:gaf41b927eb9281c28666f47b3f04d887c"><td class="memTemplParams" colspan="2"><a id="gaf41b927eb9281c28666f47b3f04d887c" name="gaf41b927eb9281c28666f47b3f04d887c"></a>
-template&lt;typename R , typename... Args&gt; </td></tr>
-<tr class="memitem:gaf41b927eb9281c28666f47b3f04d887c"><td class="memTemplItemLeft" align="right" valign="top">constexpr void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>swap</b> (<a class="el" href="classlagrange_1_1function__ref.html">function_ref</a>&lt; R(Args...)&gt; &amp;lhs, <a class="el" href="classlagrange_1_1function__ref.html">function_ref</a>&lt; R(Args...)&gt; &amp;rhs) noexcept</td></tr>
-<tr class="memdesc:gaf41b927eb9281c28666f47b3f04d887c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Swaps the referred callables of <code>lhs</code> and <code>rhs</code>. <br /></td></tr>
-<tr class="separator:gaf41b927eb9281c28666f47b3f04d887c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga7338ffd0742e51046ac43879b3f1a44c"><td class="memTemplParams" colspan="2"><a id="ga7338ffd0742e51046ac43879b3f1a44c" name="ga7338ffd0742e51046ac43879b3f1a44c"></a>
-template&lt;typename R , typename... Args&gt; </td></tr>
-<tr class="memitem:ga7338ffd0742e51046ac43879b3f1a44c"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><b>function_ref</b> (R(*)(Args...)) -&gt; <a class="el" href="classlagrange_1_1function__ref.html">function_ref</a>&lt; R(Args...)&gt;</td></tr>
-<tr class="memdesc:ga7338ffd0742e51046ac43879b3f1a44c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deduce <a class="el" href="classlagrange_1_1function__ref.html" title="A lightweight non-owning reference to a callable.">function_ref</a> type from a function pointer. <br /></td></tr>
-<tr class="separator:ga7338ffd0742e51046ac43879b3f1a44c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga19b64389774c826a71abae902e0b46b9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group-utils-misc.html#ga19b64389774c826a71abae902e0b46b9">enable_fpe</a> ()</td></tr>
+<tr class="memdesc:ga19b64389774c826a71abae902e0b46b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable floating-point exceptions (useful for debugging).  <a href="group__group-utils-misc.html#ga19b64389774c826a71abae902e0b46b9">More...</a><br /></td></tr>
+<tr class="separator:ga19b64389774c826a71abae902e0b46b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gabe7e2f24aa07f2b2e38829ef368a0f59"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group-utils-misc.html#gabe7e2f24aa07f2b2e38829ef368a0f59">disable_fpe</a> ()</td></tr>
+<tr class="memdesc:gabe7e2f24aa07f2b2e38829ef368a0f59"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disable previously-enabled fpe.  <a href="group__group-utils-misc.html#gabe7e2f24aa07f2b2e38829ef368a0f59">More...</a><br /></td></tr>
+<tr class="separator:gabe7e2f24aa07f2b2e38829ef368a0f59"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga1bcf428c70e279f7c3b8dce0f0ad88eb"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:ga1bcf428c70e279f7c3b8dce0f0ad88eb"><td class="memTemplItemLeft" align="right" valign="top">constexpr T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__group-utils-misc.html#ga1bcf428c70e279f7c3b8dce0f0ad88eb">invalid</a> ()</td></tr>
 <tr class="memdesc:ga1bcf428c70e279f7c3b8dce0f0ad88eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">You can use <a class="el" href="group__group-utils-misc.html#ga1bcf428c70e279f7c3b8dce0f0ad88eb" title="You can use invalid&lt;T&gt;() to get a value that can represent &quot;invalid&quot; values, such as indices.">invalid&lt;T&gt;()</a> to get a value that can represent "invalid" values, such as indices.  <a href="group__group-utils-misc.html#ga1bcf428c70e279f7c3b8dce0f0ad88eb">More...</a><br /></td></tr>
@@ -151,6 +147,10 @@ template&lt;typename R , typename... Args&gt; </td></tr>
 <tr class="memitem:gae7c68fbe6cdda70f6be758396ddf9e2e"><td class="memTemplItemLeft" align="right" valign="top">constexpr T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__group-utils-misc.html#gae7c68fbe6cdda70f6be758396ddf9e2e">safe_cast_enum</a> (const U u)</td></tr>
 <tr class="memdesc:gae7c68fbe6cdda70f6be758396ddf9e2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Casting an enum to scalar and vice versa.  <a href="group__group-utils-misc.html#gae7c68fbe6cdda70f6be758396ddf9e2e">More...</a><br /></td></tr>
 <tr class="separator:gae7c68fbe6cdda70f6be758396ddf9e2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa7964d08c7668de8c554fb249e3f6c84"><td class="memTemplParams" colspan="2">template&lt;typename Callback &gt; </td></tr>
+<tr class="memitem:gaa7964d08c7668de8c554fb249e3f6c84"><td class="memTemplItemLeft" align="right" valign="top">sg_detail::scope_guard&lt; Callback &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__group-utils-misc.html#gaa7964d08c7668de8c554fb249e3f6c84">make_scope_guard</a> (Callback &amp;&amp;callback) noexcept(std::is_nothrow_constructible&lt; Callback, Callback &amp;&amp; &gt;::value)</td></tr>
+<tr class="memdesc:gaa7964d08c7668de8c554fb249e3f6c84"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a scope guard around a callable object.  <a href="group__group-utils-misc.html#gaa7964d08c7668de8c554fb249e3f6c84">More...</a><br /></td></tr>
+<tr class="separator:gaa7964d08c7668de8c554fb249e3f6c84"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga6c028e62a13f2bce6d3775809cf47125"><td class="memTemplParams" colspan="2">template&lt;typename T , typename Y &gt; </td></tr>
 <tr class="memitem:ga6c028e62a13f2bce6d3775809cf47125"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classlagrange_1_1_shared_span.html">SharedSpan</a>&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__group-utils-misc.html#ga6c028e62a13f2bce6d3775809cf47125">make_shared_span</a> (const std::shared_ptr&lt; Y &gt; &amp;r, T *element_ptr, size_t size)</td></tr>
 <tr class="memdesc:ga6c028e62a13f2bce6d3775809cf47125"><td class="mdescLeft">&#160;</td><td class="mdescRight">Created a <a class="el" href="classlagrange_1_1_shared_span.html" title="Shared span with ownership tracking.">SharedSpan</a> object around an internal buffer of a parent object.  <a href="group__group-utils-misc.html#ga6c028e62a13f2bce6d3775809cf47125">More...</a><br /></td></tr>
@@ -164,9 +164,9 @@ template&lt;typename R , typename... Args&gt; </td></tr>
 <tr class="memitem:ga8eef11056e4525af0cd41aeb98869cbb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group-utils-misc.html#ga8eef11056e4525af0cd41aeb98869cbb">ends_with</a> (std::string_view str, std::string_view suffix)</td></tr>
 <tr class="memdesc:ga8eef11056e4525af0cd41aeb98869cbb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the string ends with the given suffix.  <a href="group__group-utils-misc.html#ga8eef11056e4525af0cd41aeb98869cbb">More...</a><br /></td></tr>
 <tr class="separator:ga8eef11056e4525af0cd41aeb98869cbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gace21fe897e9a93ce34d7f21264db19b4"><td class="memTemplParams" colspan="2"><a id="gace21fe897e9a93ce34d7f21264db19b4" name="gace21fe897e9a93ce34d7f21264db19b4"></a>
-template&lt;typename... Args&gt; </td></tr>
-<tr class="memitem:gace21fe897e9a93ce34d7f21264db19b4"><td class="memTemplItemLeft" align="right" valign="top">std::string&#160;</td><td class="memTemplItemRight" valign="bottom"><b>string_format</b> (const std::string &amp;format, <a class="el" href="struct_args.html">Args</a> &amp;&amp;... args)</td></tr>
+<tr class="memitem:gace21fe897e9a93ce34d7f21264db19b4"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
+<tr class="memitem:gace21fe897e9a93ce34d7f21264db19b4"><td class="memTemplItemLeft" align="right" valign="top">std::string&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__group-utils-misc.html#gace21fe897e9a93ce34d7f21264db19b4">string_format</a> (const std::string &amp;format, <a class="el" href="struct_args.html">Args</a> &amp;&amp;... args)</td></tr>
+<tr class="memdesc:gace21fe897e9a93ce34d7f21264db19b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Format args according to the format string fmt, and return the result as a string.  <a href="group__group-utils-misc.html#gace21fe897e9a93ce34d7f21264db19b4">More...</a><br /></td></tr>
 <tr class="separator:gace21fe897e9a93ce34d7f21264db19b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gae65678934fe4afb9cedc9b9d68d9010b"><td class="memTemplParams" colspan="2">template&lt;class T , class... Args&gt; </td></tr>
 <tr class="memitem:gae65678934fe4afb9cedc9b9d68d9010b"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classlagrange_1_1value__ptr.html">value_ptr</a>&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__group-utils-misc.html#gae65678934fe4afb9cedc9b9d68d9010b">make_value_ptr</a> (<a class="el" href="struct_args.html">Args</a> &amp;&amp;... args)</td></tr>
@@ -175,7 +175,69 @@ template&lt;typename... Args&gt; </td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p >Useful functions that don't have their place anywhere else. </p>
+<h2 class="groupheader">Typedef Documentation</h2>
+<a id="ga4afead0b9ccc53fe4fca896787595d26" name="ga4afead0b9ccc53fe4fca896787595d26"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4afead0b9ccc53fe4fca896787595d26">&#9670;&nbsp;</a></span>span</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="group__group-utils-misc.html#ga4afead0b9ccc53fe4fca896787595d26">span</a> =  ::nonstd::span&lt;T, Extent&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;lagrange/utils/span.h&gt;</code></p>
+
+<p>A bounds-safe view for sequences of objects. </p>
+<dl class="section note"><dt>Note</dt><dd>The current implementation is intended to be compatible with C++20's std::span&lt;&gt;. </dd></dl>
+
+</div>
+</div>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="ga19b64389774c826a71abae902e0b46b9" name="ga19b64389774c826a71abae902e0b46b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga19b64389774c826a71abae902e0b46b9">&#9670;&nbsp;</a></span>enable_fpe()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void enable_fpe </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;lagrange/utils/fpe.h&gt;</code></p>
+
+<p>Enable floating-point exceptions (useful for debugging). </p>
+
+</div>
+</div>
+<a id="gabe7e2f24aa07f2b2e38829ef368a0f59" name="gabe7e2f24aa07f2b2e38829ef368a0f59"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gabe7e2f24aa07f2b2e38829ef368a0f59">&#9670;&nbsp;</a></span>disable_fpe()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void disable_fpe </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;lagrange/utils/fpe.h&gt;</code></p>
+
+<p>Disable previously-enabled fpe. </p>
+
+</div>
+</div>
 <a id="ga1bcf428c70e279f7c3b8dce0f0ad88eb" name="ga1bcf428c70e279f7c3b8dce0f0ad88eb"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga1bcf428c70e279f7c3b8dce0f0ad88eb">&#9670;&nbsp;</a></span>invalid()</h2>
 
@@ -532,6 +594,50 @@ template&lt;typename... Args&gt; </td></tr>
 
 </div>
 </div>
+<a id="gaa7964d08c7668de8c554fb249e3f6c84" name="gaa7964d08c7668de8c554fb249e3f6c84"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa7964d08c7668de8c554fb249e3f6c84">&#9670;&nbsp;</a></span>make_scope_guard()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">sg_detail::scope_guard&lt; Callback &gt; lagrange::make_scope_guard </td>
+          <td>(</td>
+          <td class="paramtype">Callback &amp;&amp;&#160;</td>
+          <td class="paramname"><em>callback</em></td><td>)</td>
+          <td> const &amp;&amp;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;lagrange/utils/scope_guard.h&gt;</code></p>
+
+<p>Creates a scope guard around a callable object. </p>
+<p >A scope guard is an object that employs RAII to execute a provided callback when leaving scope, be it through a fall-through, a return, or an exception. That callback can be a function, a function pointer, a functor, a lambda, a bind result, a std::function, a reference to any of these, or any other callable, as long as it respects a few preconditions – most of which are enforced during compilation, the rest being hopefully intuitive.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">callback</td><td>Callable object to execute when leaving scope.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Callback</td><td>Callable object type.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A scope guard object protecting the execution of the callable via RAII. </dd></dl>
+
+</div>
+</div>
 <a id="ga6c028e62a13f2bce6d3775809cf47125" name="ga6c028e62a13f2bce6d3775809cf47125"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga6c028e62a13f2bce6d3775809cf47125">&#9670;&nbsp;</a></span>make_shared_span()</h2>
 
@@ -705,6 +811,53 @@ template&lt;typename... Args&gt; </td></tr>
 </dl>
 <dl class="section note"><dt>Note</dt><dd>Can be replaced with the standard library in C++20</dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>true if the string end with the provided suffix, false otherwise. </dd></dl>
+
+</div>
+</div>
+<a id="gace21fe897e9a93ce34d7f21264db19b4" name="gace21fe897e9a93ce34d7f21264db19b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gace21fe897e9a93ce34d7f21264db19b4">&#9670;&nbsp;</a></span>string_format()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string lagrange::string_format </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>format</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_args.html">Args</a> &amp;&amp;...&#160;</td>
+          <td class="paramname"><em>args</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;lagrange/utils/strings.h&gt;</code></p>
+
+<p>Format args according to the format string fmt, and return the result as a string. </p>
+<dl class="section note"><dt>Note</dt><dd>Can be replaced with std::format in C++20</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">format</td><td>An object that represents the format string. </td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">args</td><td>Arguments to be formatted.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname"><a class="el" href="struct_args.html">Args</a></td><td>Types of the arguments to be formatted.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A string object holding the formatted result. </dd></dl>
 
 </div>
 </div>

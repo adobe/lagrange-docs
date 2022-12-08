@@ -665,6 +665,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#copy-policy" class="md-nav__link">
+    Copy Policy
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#growth-policy" class="md-nav__link">
     Growth Policy
   </a>
@@ -1455,6 +1462,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#copy-policy" class="md-nav__link">
+    Copy Policy
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#growth-policy" class="md-nav__link">
     Growth Policy
   </a>
@@ -1884,7 +1898,8 @@ user could decide to update the attribute itself to wrap another non-const buffe
 <p>Alternatively, instead of implicitly converting to a <code>span&lt;&gt;</code>, you can explicitly pass a <code>span&lt;&gt;</code>
 object and let the compiler deduce the <code>Scalar</code> type template argument:</p>
 <!-- @attr -->
-<div class="highlight"><pre><span></span><code><span class="c1">// Pass a `span&lt;&gt;` object directly to let the compiler deduce the template value type</span>
+<div class="highlight"><pre><span></span><code><span class="c1">// Pass a `span&lt;&gt;` object directly to let the compiler deduce</span>
+<span class="c1">// the template value type</span>
 <span class="n">mesh</span><span class="p">.</span><span class="n">wrap_as_const_attribute</span><span class="p">(</span><span class="w"></span>
 <span class="w">    </span><span class="s">&quot;normals&quot;</span><span class="p">,</span><span class="w"></span>
 <span class="w">    </span><span class="n">lagrange</span><span class="o">::</span><span class="n">AttributeElement</span><span class="o">::</span><span class="n">Vertex</span><span class="p">,</span><span class="w"></span>
@@ -1892,13 +1907,15 @@ object and let the compiler deduce the <code>Scalar</code> type template argumen
 <span class="w">    </span><span class="n">num_coords</span><span class="p">,</span><span class="w"></span>
 <span class="w">    </span><span class="n">lagrange</span><span class="o">::</span><span class="n">span</span><span class="o">&lt;</span><span class="k">const</span><span class="w"> </span><span class="n">Scalar</span><span class="o">&gt;</span><span class="p">(</span><span class="n">normals</span><span class="p">));</span><span class="w"></span>
 </code></pre></div>
-<div class="admonition note">
-<p class="admonition-title">Lifetime Management</p>
-<p>Our API assumes that the external buffer remains valid for the lifetime of the mesh object
-wrapping the external data. We do not pass any counter, smart pointer or custom deleter function
-that would allow to track or keep alive the external data. This is because most of the time we
-just need to create a Lagrange Mesh wrapping an existing buffer, process it with Lagrange, and
-extract the results. If more advanced lifetime management is desirable, please let us know.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tracking Ownership And Moving Eigen Matrices</p>
+<p>If you need to track the ownership of an external buffer being wrapped as a mesh attribute,
+please read our documentation about <a href="general-utilities.md/#shared-span">SharedSpan</a> objects. Any
+<code>wrap_*</code> method that accepts a regular <code>span&lt;&gt;</code> object should also work with a managed
+<code>SharedSpan</code> object.</p>
+<p>Using a <a href="general-utilities.md/#shared-span">SharedSpan</a> object to wrap an external object as
+attribute allows moving a Eigen::Matrix and other arbitrary objects into mesh attributes without
+any extra buffer copy, as long as the memory layout of the coordinates are compatible.</p>
 </div>
 <h2 id="delete-and-export-attributes">Delete And Export Attributes</h2>
 <p>To delete an attribute, simply call the eponymous method:</p>
@@ -1934,6 +1951,9 @@ via our copy-on-write mechanism.</p>
 <h3 id="create-policy">Create Policy</h3>
 <p>Controls the behavior when creating an attribute with a reserved name (starting with <code>$</code>). The
 default is to throw an exception. See <a href="../../../ref/group__group-surfacemesh-attr.html#ga809dfcec94612491ec5be8bb8614ceab">reference documentation</a> for more details.</p>
+<h3 id="copy-policy">Copy Policy</h3>
+<p>Controls the behavior when copying an attribute that wraps an external buffer. By default, a deep
+copy of the buffer will be created. See <a href="../../../ref/group__group-surfacemesh-attr.html#ga450ef027eac01dd93a89a15ff55de63f">reference documentation</a> for more details.</p>
 <h3 id="growth-policy">Growth Policy</h3>
 <p>Controls the behavior when adding element to an attribute that wrap an external buffer. The default
 behavior is to throw an exception. See <a href="../../../ref/group__group-surfacemesh-attr.html#gaee0f51b5f793101c19bd6dede5db7a7a">reference documentation</a> for more details.</p>

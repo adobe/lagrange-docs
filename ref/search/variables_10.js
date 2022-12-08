@@ -13,9 +13,12 @@ var searchData=
   ['screen_5fend_10',['screen_end',['../structlagrange_1_1ui_1_1_selection_context.html#a8cce5322e1edf414dc4b358e4067fdb2',1,'lagrange::ui::SelectionContext']]],
   ['screen_5fposition_11',['screen_position',['../structlagrange_1_1ui_1_1_selection_context.html#add242d8c0cf8ac1c3aaad9677ed06d63',1,'lagrange::ui::SelectionContext']]],
   ['select_5fbackfacing_12',['select_backfacing',['../structlagrange_1_1ui_1_1_selection_context.html#a7e54329819422ab94823d6a3907db654',1,'lagrange::ui::SelectionContext']]],
-  ['show_5fdefault_5fibl_13',['show_default_ibl',['../structlagrange_1_1ui_1_1_viewer_1_1_window_options.html#ab376178f5b8acf734fe544a85bb372af',1,'lagrange::ui::Viewer::WindowOptions']]],
-  ['show_5fskybox_14',['show_skybox',['../structlagrange_1_1ui_1_1_i_b_l.html#a5adf3f08ecf7b4b75c084404ec6cff8c',1,'lagrange::ui::IBL']]],
-  ['source_5fattribute_15',['source_attribute',['../structlagrange_1_1ui_1_1_attribute_render.html#a64c4119932c0d4ab3b1f757ac0ae8488',1,'lagrange::ui::AttributeRender']]],
-  ['specular_16',['specular',['../structlagrange_1_1ui_1_1_i_b_l.html#a635b2b63b6da24aef0868e92dda57560',1,'lagrange::ui::IBL']]],
-  ['success_17',['success',['../structlagrange_1_1io_1_1_obj_reader_result.html#a7960f9c558f9ee2c3d4a8fdea096fb56',1,'lagrange::io::ObjReaderResult']]]
+  ['selection_5fcolor_13',['selection_color',['../structlagrange_1_1ui_1_1_viewer_1_1_window_options.html#a14735a1871357ee8391f5b4ef4492ece',1,'lagrange::ui::Viewer::WindowOptions']]],
+  ['show_5fdefault_5fibl_14',['show_default_ibl',['../structlagrange_1_1ui_1_1_viewer_1_1_window_options.html#ab376178f5b8acf734fe544a85bb372af',1,'lagrange::ui::Viewer::WindowOptions']]],
+  ['show_5fskybox_15',['show_skybox',['../structlagrange_1_1ui_1_1_i_b_l.html#a5adf3f08ecf7b4b75c084404ec6cff8c',1,'lagrange::ui::IBL']]],
+  ['show_5ftopbar_5fmenu_16',['show_topbar_menu',['../structlagrange_1_1ui_1_1_viewer_1_1_window_options.html#adfe6971e32e47cd23b1b4013a0932c55',1,'lagrange::ui::Viewer::WindowOptions']]],
+  ['sorted_5felements_17',['sorted_elements',['../structlagrange_1_1internal_1_1_bucket_sort_result.html#a40cc4064e70c0d5ba60c8d3c1b53c033',1,'lagrange::internal::BucketSortResult']]],
+  ['source_5fattribute_18',['source_attribute',['../structlagrange_1_1ui_1_1_attribute_render.html#a64c4119932c0d4ab3b1f757ac0ae8488',1,'lagrange::ui::AttributeRender']]],
+  ['specular_19',['specular',['../structlagrange_1_1ui_1_1_i_b_l.html#a635b2b63b6da24aef0868e92dda57560',1,'lagrange::ui::IBL']]],
+  ['success_20',['success',['../structlagrange_1_1io_1_1_obj_reader_result.html#a7960f9c558f9ee2c3d4a8fdea096fb56',1,'lagrange::io::ObjReaderResult']]]
 ];

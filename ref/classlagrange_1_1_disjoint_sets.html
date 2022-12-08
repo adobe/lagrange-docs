@@ -69,40 +69,63 @@ $(function() {
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="classlagrange_1_1_disjoint_sets-members.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">DisjointSets&lt; IndexType &gt; Class Template Reference</div></div>
+  <div class="headertitle"><div class="title">DisjointSets&lt; IndexType &gt; Class Template Reference<div class="ingroups"><a class="el" href="group__module-core.html">Core Module</a> &raquo; <a class="el" href="group__group-utils.html">Utilites</a></div></div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Disjoint sets computation.  
+ <a href="classlagrange_1_1_disjoint_sets.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="utils_2_disjoint_sets_8h_source.html">lagrange/utils/DisjointSets.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a3474cd05f310d47df2ccabf80283b804"><td class="memItemLeft" align="right" valign="top"><a id="a3474cd05f310d47df2ccabf80283b804" name="a3474cd05f310d47df2ccabf80283b804"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>DisjointSets</b> (IndexType n)</td></tr>
-<tr class="separator:a3474cd05f310d47df2ccabf80283b804"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9a7c1b4ef2220eea708f4b6791cf9590"><td class="memItemLeft" align="right" valign="top"><a id="a9a7c1b4ef2220eea708f4b6791cf9590" name="a9a7c1b4ef2220eea708f4b6791cf9590"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>init</b> (IndexType n)</td></tr>
-<tr class="separator:a9a7c1b4ef2220eea708f4b6791cf9590"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1df2b3a4485e328397fda9b5f9b3ea2b"><td class="memItemLeft" align="right" valign="top"><a id="a1df2b3a4485e328397fda9b5f9b3ea2b" name="a1df2b3a4485e328397fda9b5f9b3ea2b"></a>
-IndexType&#160;</td><td class="memItemRight" valign="bottom"><b>size</b> () const</td></tr>
-<tr class="separator:a1df2b3a4485e328397fda9b5f9b3ea2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4093e2fd37ea3ba9f1512436b5911650"><td class="memItemLeft" align="right" valign="top"><a id="a4093e2fd37ea3ba9f1512436b5911650" name="a4093e2fd37ea3ba9f1512436b5911650"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>DisjointSets</b> ()=default</td></tr>
+<tr class="memdesc:a4093e2fd37ea3ba9f1512436b5911650"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize an empty disjoint sets. <br /></td></tr>
+<tr class="separator:a4093e2fd37ea3ba9f1512436b5911650"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa7e84823e600fe5ade68b6bc46e7727b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlagrange_1_1_disjoint_sets.html#aa7e84823e600fe5ade68b6bc46e7727b">DisjointSets</a> (size_t n)</td></tr>
+<tr class="memdesc:aa7e84823e600fe5ade68b6bc46e7727b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize disjoint sets that contains <code>n</code> entries.  <a href="classlagrange_1_1_disjoint_sets.html#aa7e84823e600fe5ade68b6bc46e7727b">More...</a><br /></td></tr>
+<tr class="separator:aa7e84823e600fe5ade68b6bc46e7727b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace79f0ccdb43ddb42cd4d2d95e4d151b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlagrange_1_1_disjoint_sets.html#ace79f0ccdb43ddb42cd4d2d95e4d151b">init</a> (size_t n)</td></tr>
+<tr class="memdesc:ace79f0ccdb43ddb42cd4d2d95e4d151b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize disjoint sets that contains <code>n</code> entries.  <a href="classlagrange_1_1_disjoint_sets.html#ace79f0ccdb43ddb42cd4d2d95e4d151b">More...</a><br /></td></tr>
+<tr class="separator:ace79f0ccdb43ddb42cd4d2d95e4d151b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a259cb5a711406a8c3e5d937eb9350cca"><td class="memItemLeft" align="right" valign="top"><a id="a259cb5a711406a8c3e5d937eb9350cca" name="a259cb5a711406a8c3e5d937eb9350cca"></a>
+size_t&#160;</td><td class="memItemRight" valign="bottom"><b>size</b> () const</td></tr>
+<tr class="memdesc:a259cb5a711406a8c3e5d937eb9350cca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the number of entries in total. <br /></td></tr>
+<tr class="separator:a259cb5a711406a8c3e5d937eb9350cca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac8bb3912a3ce86b15842e79d0b421204"><td class="memItemLeft" align="right" valign="top"><a id="ac8bb3912a3ce86b15842e79d0b421204" name="ac8bb3912a3ce86b15842e79d0b421204"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>clear</b> ()</td></tr>
+<tr class="memdesc:ac8bb3912a3ce86b15842e79d0b421204"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear all entries in the disjoint sets. <br /></td></tr>
 <tr class="separator:ac8bb3912a3ce86b15842e79d0b421204"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4daf8f5375f7d11dcf5d9e0826697bcd"><td class="memItemLeft" align="right" valign="top"><a id="a4daf8f5375f7d11dcf5d9e0826697bcd" name="a4daf8f5375f7d11dcf5d9e0826697bcd"></a>
-IndexType&#160;</td><td class="memItemRight" valign="bottom"><b>find</b> (IndexType i)</td></tr>
+<tr class="memitem:a4daf8f5375f7d11dcf5d9e0826697bcd"><td class="memItemLeft" align="right" valign="top">IndexType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlagrange_1_1_disjoint_sets.html#a4daf8f5375f7d11dcf5d9e0826697bcd">find</a> (IndexType i)</td></tr>
+<tr class="memdesc:a4daf8f5375f7d11dcf5d9e0826697bcd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Find the root index corresponding to index <code>i</code>.  <a href="classlagrange_1_1_disjoint_sets.html#a4daf8f5375f7d11dcf5d9e0826697bcd">More...</a><br /></td></tr>
 <tr class="separator:a4daf8f5375f7d11dcf5d9e0826697bcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3ee2d4bff5bd1dc9d4f8b7eecd8e3dbc"><td class="memItemLeft" align="right" valign="top"><a id="a3ee2d4bff5bd1dc9d4f8b7eecd8e3dbc" name="a3ee2d4bff5bd1dc9d4f8b7eecd8e3dbc"></a>
-IndexType&#160;</td><td class="memItemRight" valign="bottom"><b>merge</b> (IndexType i, IndexType j)</td></tr>
+<tr class="memitem:a3ee2d4bff5bd1dc9d4f8b7eecd8e3dbc"><td class="memItemLeft" align="right" valign="top">IndexType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlagrange_1_1_disjoint_sets.html#a3ee2d4bff5bd1dc9d4f8b7eecd8e3dbc">merge</a> (IndexType i, IndexType j)</td></tr>
+<tr class="memdesc:a3ee2d4bff5bd1dc9d4f8b7eecd8e3dbc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Merge the disjoint set containing entry <code>i</code> and the disjoint set containing entry <code>j</code>.  <a href="classlagrange_1_1_disjoint_sets.html#a3ee2d4bff5bd1dc9d4f8b7eecd8e3dbc">More...</a><br /></td></tr>
 <tr class="separator:a3ee2d4bff5bd1dc9d4f8b7eecd8e3dbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acf6e61dfdcdf34a6df2810a4e5bc0cc4"><td class="memItemLeft" align="right" valign="top"><a id="acf6e61dfdcdf34a6df2810a4e5bc0cc4" name="acf6e61dfdcdf34a6df2810a4e5bc0cc4"></a>
-std::vector&lt; std::vector&lt; IndexType &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>extract_disjoint_sets</b> ()</td></tr>
+<tr class="memitem:acf6e61dfdcdf34a6df2810a4e5bc0cc4"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::vector&lt; IndexType &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlagrange_1_1_disjoint_sets.html#acf6e61dfdcdf34a6df2810a4e5bc0cc4">extract_disjoint_sets</a> ()</td></tr>
+<tr class="memdesc:acf6e61dfdcdf34a6df2810a4e5bc0cc4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Extract disjoint sets.  <a href="classlagrange_1_1_disjoint_sets.html#acf6e61dfdcdf34a6df2810a4e5bc0cc4">More...</a><br /></td></tr>
 <tr class="separator:acf6e61dfdcdf34a6df2810a4e5bc0cc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2b32109d556b6000eee22210f9dc855a"><td class="memItemLeft" align="right" valign="top">IndexType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlagrange_1_1_disjoint_sets.html#a2b32109d556b6000eee22210f9dc855a">extract_disjoint_set_indices</a> (std::vector&lt; IndexType &gt; &amp;index_map)</td></tr>
-<tr class="memdesc:a2b32109d556b6000eee22210f9dc855a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assign all elements their disjoint set index.  <a href="classlagrange_1_1_disjoint_sets.html#a2b32109d556b6000eee22210f9dc855a">More...</a><br /></td></tr>
-<tr class="separator:a2b32109d556b6000eee22210f9dc855a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7469236831f4b539a43f0d9c7a0e05b"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlagrange_1_1_disjoint_sets.html#ac7469236831f4b539a43f0d9c7a0e05b">extract_disjoint_set_indices</a> (std::vector&lt; IndexType &gt; &amp;index_map)</td></tr>
+<tr class="memdesc:ac7469236831f4b539a43f0d9c7a0e05b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assign all elements their disjoint set index.  <a href="classlagrange_1_1_disjoint_sets.html#ac7469236831f4b539a43f0d9c7a0e05b">More...</a><br /></td></tr>
+<tr class="separator:ac7469236831f4b539a43f0d9c7a0e05b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0888a853dffc980087a239f70077b83a"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlagrange_1_1_disjoint_sets.html#a0888a853dffc980087a239f70077b83a">extract_disjoint_set_indices</a> (<a class="el" href="group__group-utils-misc.html#ga4afead0b9ccc53fe4fca896787595d26">span</a>&lt; IndexType &gt; index_map)</td></tr>
+<tr class="memdesc:a0888a853dffc980087a239f70077b83a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assign all elements their disjoint set index.  <a href="classlagrange_1_1_disjoint_sets.html#a0888a853dffc980087a239f70077b83a">More...</a><br /></td></tr>
+<tr class="separator:a0888a853dffc980087a239f70077b83a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
-<a id="a2b32109d556b6000eee22210f9dc855a" name="a2b32109d556b6000eee22210f9dc855a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2b32109d556b6000eee22210f9dc855a">&#9670;&nbsp;</a></span>extract_disjoint_set_indices()</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><div class="compoundTemplParams">template&lt;typename IndexType&gt;<br />
+class lagrange::DisjointSets&lt; IndexType &gt;</div><p >Disjoint sets computation. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">IndexType</td><td>Index type. </td></tr>
+  </table>
+  </dd>
+</dl>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="aa7e84823e600fe5ade68b6bc46e7727b" name="aa7e84823e600fe5ade68b6bc46e7727b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa7e84823e600fe5ade68b6bc46e7727b">&#9670;&nbsp;</a></span>DisjointSets()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -111,11 +134,109 @@ std::vector&lt; std::vector&lt; IndexType &gt; &gt;&#160;</td><td class="memItem
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">IndexType extract_disjoint_set_indices </td>
+          <td class="memname"><a class="el" href="classlagrange_1_1_disjoint_sets.html">DisjointSets</a> </td>
           <td>(</td>
-          <td class="paramtype">std::vector&lt; IndexType &gt; &amp;&#160;</td>
-          <td class="paramname"><em>index_map</em></td><td>)</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>n</em></td><td>)</td>
           <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Initialize disjoint sets that contains <code>n</code> entries. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">n</td><td>The number of entries. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="ace79f0ccdb43ddb42cd4d2d95e4d151b" name="ace79f0ccdb43ddb42cd4d2d95e4d151b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace79f0ccdb43ddb42cd4d2d95e4d151b">&#9670;&nbsp;</a></span>init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void init </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>n</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initialize disjoint sets that contains <code>n</code> entries. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">n</td><td>The number of entries. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a4daf8f5375f7d11dcf5d9e0826697bcd" name="a4daf8f5375f7d11dcf5d9e0826697bcd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4daf8f5375f7d11dcf5d9e0826697bcd">&#9670;&nbsp;</a></span>find()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">IndexType find </td>
+          <td>(</td>
+          <td class="paramtype">IndexType&#160;</td>
+          <td class="paramname"><em>i</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Find the root index corresponding to index <code>i</code>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">i</td><td>The qurey index.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The root index that is in the same disjoint set as entry <code>i</code>. </dd></dl>
+
+</div>
+</div>
+<a id="a3ee2d4bff5bd1dc9d4f8b7eecd8e3dbc" name="a3ee2d4bff5bd1dc9d4f8b7eecd8e3dbc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ee2d4bff5bd1dc9d4f8b7eecd8e3dbc">&#9670;&nbsp;</a></span>merge()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">IndexType merge </td>
+          <td>(</td>
+          <td class="paramtype">IndexType&#160;</td>
+          <td class="paramname"><em>i</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">IndexType&#160;</td>
+          <td class="paramname"><em>j</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -125,8 +246,89 @@ std::vector&lt; std::vector&lt; IndexType &gt; &gt;&#160;</td><td class="memItem
 </table>
 </div><div class="memdoc">
 
+<p>Merge the disjoint set containing entry <code>i</code> and the disjoint set containing entry <code>j</code>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">i</td><td>Entry index i. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">i</td><td>Entry index j.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The root entry index of the merged set. </dd></dl>
+
+</div>
+</div>
+<a id="acf6e61dfdcdf34a6df2810a4e5bc0cc4" name="acf6e61dfdcdf34a6df2810a4e5bc0cc4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf6e61dfdcdf34a6df2810a4e5bc0cc4">&#9670;&nbsp;</a></span>extract_disjoint_sets()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; std::vector&lt; IndexType &gt; &gt; extract_disjoint_sets</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Extract disjoint sets. </p>
+<dl class="section return"><dt>Returns</dt><dd>A vector of disjoint sets.</dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000003">Deprecated:</a></b></dt><dd>This function is deprecated and may be removed in a future version. </dd></dl>
+
+</div>
+</div>
+<a id="ac7469236831f4b539a43f0d9c7a0e05b" name="ac7469236831f4b539a43f0d9c7a0e05b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac7469236831f4b539a43f0d9c7a0e05b">&#9670;&nbsp;</a></span>extract_disjoint_set_indices() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t extract_disjoint_set_indices </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; IndexType &gt; &amp;&#160;</td>
+          <td class="paramname"><em>index_map</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
 <p>Assign all elements their disjoint set index. </p>
-<p >Each disjoint set index ranges from 0 to k-1, where k is the number of disjoint sets. </p>
+<p >Each disjoint set index ranges from 0 to k-1, where k is the number of disjoint sets.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">index_map</td><td>The result buffer to hold the index.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The number of disjoint sets. </dd></dl>
+
+</div>
+</div>
+<a id="a0888a853dffc980087a239f70077b83a" name="a0888a853dffc980087a239f70077b83a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0888a853dffc980087a239f70077b83a">&#9670;&nbsp;</a></span>extract_disjoint_set_indices() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t extract_disjoint_set_indices </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__group-utils-misc.html#ga4afead0b9ccc53fe4fca896787595d26">span</a>&lt; IndexType &gt;&#160;</td>
+          <td class="paramname"><em>index_map</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Assign all elements their disjoint set index. </p>
+<p >Each disjoint set index ranges from 0 to k-1, where k is the number of disjoint sets.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">index_map</td><td>The result buffer to hold the index.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The number of disjoint sets. </dd></dl>
 
 </div>
 </div>

@@ -86,15 +86,15 @@ $(function() {
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &lt;limits&gt;</span></div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &lt;memory&gt;</span></div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#include &lt;lagrange/DisjointSets.h&gt;</span></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#include &lt;lagrange/Mesh.h&gt;</span></div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &lt;lagrange/MeshTrait.h&gt;</span></div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &lt;lagrange/attributes/map_attributes.h&gt;</span></div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &lt;lagrange/common.h&gt;</span></div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#include &lt;lagrange/compute_edge_lengths.h&gt;</span></div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#include &lt;lagrange/create_mesh.h&gt;</span></div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#include &lt;lagrange/mesh_cleanup/remove_isolated_vertices.h&gt;</span></div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include &lt;lagrange/mesh_cleanup/remove_topologically_degenerate_triangles.h&gt;</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#include &lt;lagrange/Mesh.h&gt;</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#include &lt;lagrange/MeshTrait.h&gt;</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &lt;lagrange/attributes/map_attributes.h&gt;</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &lt;lagrange/common.h&gt;</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &lt;lagrange/compute_edge_lengths.h&gt;</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#include &lt;lagrange/create_mesh.h&gt;</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#include &lt;lagrange/mesh_cleanup/remove_isolated_vertices.h&gt;</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#include &lt;lagrange/mesh_cleanup/remove_topologically_degenerate_triangles.h&gt;</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include &lt;lagrange/utils/DisjointSets.h&gt;</span></div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &lt;lagrange/utils/safe_cast.h&gt;</span></div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacelagrange.html">lagrange</a> {</div>
@@ -127,7 +127,7 @@ $(function() {
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        <span class="keyword">const</span> <span class="keyword">auto</span>&amp; edge = mesh.get_edge_vertices(edge_idx);</div>
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        <span class="keyword">const</span> <span class="keyword">auto</span>&amp; length = edge_lengths(edge_idx);</div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        <span class="keywordflow">if</span> (length &lt;= tol) {</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>            clusters.merge(edge[0], edge[1]);</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>            clusters.<a class="code hl_function" href="classlagrange_1_1_disjoint_sets.html#a3ee2d4bff5bd1dc9d4f8b7eecd8e3dbc">merge</a>(edge[0], edge[1]);</div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        }</div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    }</div>
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
@@ -149,7 +149,8 @@ $(function() {
 <div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>}</div>
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
 <div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>} <span class="comment">// namespace lagrange</span></div>
-<div class="ttc" id="aclasslagrange_1_1_disjoint_sets_html"><div class="ttname"><a href="classlagrange_1_1_disjoint_sets.html">lagrange::DisjointSets</a></div><div class="ttdef"><b>Definition:</b> DisjointSets.h:26</div></div>
+<div class="ttc" id="aclasslagrange_1_1_disjoint_sets_html"><div class="ttname"><a href="classlagrange_1_1_disjoint_sets.html">lagrange::DisjointSets</a></div><div class="ttdoc">Disjoint sets computation.</div><div class="ttdef"><b>Definition:</b> DisjointSets.h:32</div></div>
+<div class="ttc" id="aclasslagrange_1_1_disjoint_sets_html_a3ee2d4bff5bd1dc9d4f8b7eecd8e3dbc"><div class="ttname"><a href="classlagrange_1_1_disjoint_sets.html#a3ee2d4bff5bd1dc9d4f8b7eecd8e3dbc">lagrange::DisjointSets::merge</a></div><div class="ttdeci">IndexType merge(IndexType i, IndexType j)</div><div class="ttdoc">Merge the disjoint set containing entry i and the disjoint set containing entry j.</div><div class="ttdef"><b>Definition:</b> DisjointSets.h:83</div></div>
 <div class="ttc" id="aclasslagrange_1_1_mesh_html"><div class="ttname"><a href="classlagrange_1_1_mesh.html">lagrange::Mesh</a></div><div class="ttdef"><b>Definition:</b> Mesh.h:47</div></div>
 <div class="ttc" id="agroup__group-logger_html_ga97e3b3adabf67bc7d3650ed14214ddaa"><div class="ttname"><a href="group__group-logger.html#ga97e3b3adabf67bc7d3650ed14214ddaa">lagrange::logger</a></div><div class="ttdeci">spdlog::logger &amp; logger()</div><div class="ttdoc">Retrieves the current logger.</div><div class="ttdef"><b>Definition:</b> Logger.cpp:40</div></div>
 <div class="ttc" id="anamespacelagrange_html"><div class="ttname"><a href="namespacelagrange.html">lagrange</a></div><div class="ttdoc">Main namespace for Lagrange.</div><div class="ttdef"><b>Definition:</b> AABBIGL.h:30</div></div>

@@ -115,7 +115,7 @@ $(function() {
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>            view&lt;TransposedType&gt;() = data;</div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        }</div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        <span class="keywordflow">throw</span> std::runtime_error(string_format(</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        <span class="keywordflow">throw</span> std::runtime_error(<a class="code hl_function" href="group__group-utils-misc.html#gace21fe897e9a93ce34d7f21264db19b4">string_format</a>(</div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>            <span class="stringliteral">&quot;Unsupported type passed to ArrayBase::set().  Expecting {}&quot;</span>,</div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>            type_name()));</div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    }</div>
@@ -152,7 +152,7 @@ $(function() {
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>            view&lt;TransposedType&gt;() = std::move(data);</div>
 <div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        }</div>
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        <span class="keywordflow">throw</span> std::runtime_error(string_format(</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        <span class="keywordflow">throw</span> std::runtime_error(<a class="code hl_function" href="group__group-utils-misc.html#gace21fe897e9a93ce34d7f21264db19b4">string_format</a>(</div>
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>            <span class="stringliteral">&quot;Unsupported type passed to ArrayBase::set().  Expecting {}&quot;</span>,</div>
 <div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>            type_name()));</div>
 <div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    }</div>
@@ -167,7 +167,7 @@ $(function() {
 <div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<span class="keyword">auto</span> ptr2 = <span class="keyword">dynamic_cast&lt;</span>EigenArrayRef&lt;TargetType&gt;*<span class="keyword">&gt;</span>(<span class="keyword">this</span>)) {</div>
 <div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        <span class="keywordflow">return</span> ptr2-&gt;get_ref();</div>
 <div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>        <span class="keywordflow">throw</span> std::runtime_error(string_format(</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>        <span class="keywordflow">throw</span> std::runtime_error(<a class="code hl_function" href="group__group-utils-misc.html#gace21fe897e9a93ce34d7f21264db19b4">string_format</a>(</div>
 <div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>            <span class="stringliteral">&quot;Unsupported type passed to ArrayBase::get().  Expecting {}&quot;</span>,</div>
 <div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>            type_name()));</div>
 <div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    }</div>
@@ -184,7 +184,7 @@ $(function() {
 <div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<span class="keyword">auto</span> ptr4 = <span class="keyword">dynamic_cast&lt;</span><span class="keyword">const </span>EigenArrayRef&lt;const TargetType&gt;*<span class="keyword">&gt;</span>(<span class="keyword">this</span>)) {</div>
 <div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>        <span class="keywordflow">return</span> ptr4-&gt;get_ref();</div>
 <div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>    } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>        <span class="keywordflow">throw</span> std::runtime_error(string_format(</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>        <span class="keywordflow">throw</span> std::runtime_error(<a class="code hl_function" href="group__group-utils-misc.html#gace21fe897e9a93ce34d7f21264db19b4">string_format</a>(</div>
 <div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>            <span class="stringliteral">&quot;Unsupported type passed to ArrayBase::get().  Expecting {}&quot;</span>,</div>
 <div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>            type_name()));</div>
 <div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>    }</div>
@@ -318,6 +318,7 @@ $(function() {
 <div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>} <span class="comment">// namespace lagrange</span></div>
 <div class="ttc" id="agroup__group-logger_html_ga97e3b3adabf67bc7d3650ed14214ddaa"><div class="ttname"><a href="group__group-logger.html#ga97e3b3adabf67bc7d3650ed14214ddaa">lagrange::logger</a></div><div class="ttdeci">spdlog::logger &amp; logger()</div><div class="ttdoc">Retrieves the current logger.</div><div class="ttdef"><b>Definition:</b> Logger.cpp:40</div></div>
 <div class="ttc" id="agroup__group-utils-assert_html_ga1ccafcb14523a1aae57dcac3c3f32ecd"><div class="ttname"><a href="group__group-utils-assert.html#ga1ccafcb14523a1aae57dcac3c3f32ecd">la_runtime_assert</a></div><div class="ttdeci">#define la_runtime_assert(...)</div><div class="ttdoc">Runtime assertion check.</div><div class="ttdef"><b>Definition:</b> assert.h:168</div></div>
+<div class="ttc" id="agroup__group-utils-misc_html_gace21fe897e9a93ce34d7f21264db19b4"><div class="ttname"><a href="group__group-utils-misc.html#gace21fe897e9a93ce34d7f21264db19b4">lagrange::string_format</a></div><div class="ttdeci">std::string string_format(const std::string &amp;format, Args &amp;&amp;... args)</div><div class="ttdoc">Format args according to the format string fmt, and return the result as a string.</div><div class="ttdef"><b>Definition:</b> strings.h:79</div></div>
 <div class="ttc" id="anamespacelagrange_html"><div class="ttname"><a href="namespacelagrange.html">lagrange</a></div><div class="ttdoc">Main namespace for Lagrange.</div><div class="ttdef"><b>Definition:</b> AABBIGL.h:30</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->

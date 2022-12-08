@@ -71,7 +71,6 @@ $(function() {
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
-<a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="classlagrange_1_1ui_1_1_keybinds-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">Keybinds Class Reference</div></div>
 </div><!--header-->
@@ -103,12 +102,9 @@ using&#160;</td><td class="memItemRight" valign="bottom"><b>MapType</b> = std::m
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a1d418408a83d2b7a0e9208c71227d58b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlagrange_1_1ui_1_1_keybinds.html#a1d418408a83d2b7a0e9208c71227d58b">begin_update</a> ()</td></tr>
-<tr class="memdesc:a1d418408a83d2b7a0e9208c71227d58b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start updating key states.  <a href="classlagrange_1_1ui_1_1_keybinds.html#a1d418408a83d2b7a0e9208c71227d58b">More...</a><br /></td></tr>
-<tr class="separator:a1d418408a83d2b7a0e9208c71227d58b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8ad87eb9e243bcf6314e08ef17c598ff"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlagrange_1_1ui_1_1_keybinds.html#a8ad87eb9e243bcf6314e08ef17c598ff">end_update</a> ()</td></tr>
-<tr class="memdesc:a8ad87eb9e243bcf6314e08ef17c598ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ends updating key states.  <a href="classlagrange_1_1ui_1_1_keybinds.html#a8ad87eb9e243bcf6314e08ef17c598ff">More...</a><br /></td></tr>
-<tr class="separator:a8ad87eb9e243bcf6314e08ef17c598ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5c54df7ed3b930268c8d7752c101725"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlagrange_1_1ui_1_1_keybinds.html#ac5c54df7ed3b930268c8d7752c101725">update</a> ()</td></tr>
+<tr class="memdesc:ac5c54df7ed3b930268c8d7752c101725"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updating key states.  <a href="classlagrange_1_1ui_1_1_keybinds.html#ac5c54df7ed3b930268c8d7752c101725">More...</a><br /></td></tr>
+<tr class="separator:ac5c54df7ed3b930268c8d7752c101725"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af7a5ff700dee6d52dd76bf29cd662a28"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlagrange_1_1ui_1_1_keybinds.html#af7a5ff700dee6d52dd76bf29cd662a28">push_context</a> (const std::string &amp;context)</td></tr>
 <tr class="memdesc:af7a5ff700dee6d52dd76bf29cd662a28"><td class="mdescLeft">&#160;</td><td class="mdescRight">Changes current context.  <a href="classlagrange_1_1ui_1_1_keybinds.html#af7a5ff700dee6d52dd76bf29cd662a28">More...</a><br /></td></tr>
 <tr class="separator:af7a5ff700dee6d52dd76bf29cd662a28"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -118,12 +114,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aeca61f858b8bace68abd835e149c5a30"><td class="memItemLeft" align="right" valign="top"><a id="aeca61f858b8bace68abd835e149c5a30" name="aeca61f858b8bace68abd835e149c5a30"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>reset_context</b> ()</td></tr>
 <tr class="separator:aeca61f858b8bace68abd835e149c5a30"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1276f94ebae76b6de465410b10caefef"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlagrange_1_1ui_1_1_keybinds.html#a1276f94ebae76b6de465410b10caefef">add</a> (const std::string &amp;action, int button, const std::vector&lt; int &gt; &amp;modifiers={})</td></tr>
-<tr class="memdesc:a1276f94ebae76b6de465410b10caefef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a key binding for given action.  <a href="classlagrange_1_1ui_1_1_keybinds.html#a1276f94ebae76b6de465410b10caefef">More...</a><br /></td></tr>
-<tr class="separator:a1276f94ebae76b6de465410b10caefef"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5c323a56fce8b6b0d2e58a2729457dd1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlagrange_1_1ui_1_1_keybinds.html#a5c323a56fce8b6b0d2e58a2729457dd1">has</a> (const std::string &amp;action, int button, const std::vector&lt; int &gt; &amp;modifiers={}) const</td></tr>
-<tr class="memdesc:a5c323a56fce8b6b0d2e58a2729457dd1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if an exact keybinding exists for given action.  <a href="classlagrange_1_1ui_1_1_keybinds.html#a5c323a56fce8b6b0d2e58a2729457dd1">More...</a><br /></td></tr>
-<tr class="separator:a5c323a56fce8b6b0d2e58a2729457dd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3515d52aa0912e694cc31f122fb55153"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlagrange_1_1ui_1_1_keybinds.html#a3515d52aa0912e694cc31f122fb55153">add</a> (const std::string &amp;action, ImGuiKey button, const std::vector&lt; ImGuiKey &gt; &amp;modifiers={})</td></tr>
+<tr class="memdesc:a3515d52aa0912e694cc31f122fb55153"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a key binding for given action.  <a href="classlagrange_1_1ui_1_1_keybinds.html#a3515d52aa0912e694cc31f122fb55153">More...</a><br /></td></tr>
+<tr class="separator:a3515d52aa0912e694cc31f122fb55153"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf4bb11a374b3f6ae568b6b77cbf98d7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlagrange_1_1ui_1_1_keybinds.html#adf4bb11a374b3f6ae568b6b77cbf98d7">has</a> (const std::string &amp;action, ImGuiKey button, const std::vector&lt; ImGuiKey &gt; &amp;modifiers={}) const</td></tr>
+<tr class="memdesc:adf4bb11a374b3f6ae568b6b77cbf98d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if an exact keybinding exists for given action.  <a href="classlagrange_1_1ui_1_1_keybinds.html#adf4bb11a374b3f6ae568b6b77cbf98d7">More...</a><br /></td></tr>
+<tr class="separator:adf4bb11a374b3f6ae568b6b77cbf98d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab1ae9df2d554308cbed6c5fbfada2505"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlagrange_1_1ui_1_1_keybinds.html#ab1ae9df2d554308cbed6c5fbfada2505">add</a> (const std::string &amp;action, const <a class="el" href="structlagrange_1_1ui_1_1_keybinds_1_1_keybind.html">Keybind</a> &amp;keybind)</td></tr>
 <tr class="memdesc:ab1ae9df2d554308cbed6c5fbfada2505"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a key binding for given action.  <a href="classlagrange_1_1ui_1_1_keybinds.html#ab1ae9df2d554308cbed6c5fbfada2505">More...</a><br /></td></tr>
 <tr class="separator:ab1ae9df2d554308cbed6c5fbfada2505"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -142,21 +138,21 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>reset_context</b> ()<
 <tr class="memitem:a182c71e92968f9d892b82e69946b0980"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlagrange_1_1ui_1_1_keybinds.html#a182c71e92968f9d892b82e69946b0980">is_pressed</a> (const std::string &amp;action) const</td></tr>
 <tr class="memdesc:a182c71e92968f9d892b82e69946b0980"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if action was just pressed.  <a href="classlagrange_1_1ui_1_1_keybinds.html#a182c71e92968f9d892b82e69946b0980">More...</a><br /></td></tr>
 <tr class="separator:a182c71e92968f9d892b82e69946b0980"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a025c6b245eac0c83f3ed0908509e96b5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlagrange_1_1ui_1_1_keybinds.html#a025c6b245eac0c83f3ed0908509e96b5">is_pressed</a> (int key_code) const</td></tr>
-<tr class="memdesc:a025c6b245eac0c83f3ed0908509e96b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if key was just pressed.  <a href="classlagrange_1_1ui_1_1_keybinds.html#a025c6b245eac0c83f3ed0908509e96b5">More...</a><br /></td></tr>
-<tr class="separator:a025c6b245eac0c83f3ed0908509e96b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ddd73627c0ea1b5a0220d0b1f5449b6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlagrange_1_1ui_1_1_keybinds.html#a6ddd73627c0ea1b5a0220d0b1f5449b6">is_pressed</a> (ImGuiKey key_code) const</td></tr>
+<tr class="memdesc:a6ddd73627c0ea1b5a0220d0b1f5449b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if key was just pressed.  <a href="classlagrange_1_1ui_1_1_keybinds.html#a6ddd73627c0ea1b5a0220d0b1f5449b6">More...</a><br /></td></tr>
+<tr class="separator:a6ddd73627c0ea1b5a0220d0b1f5449b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7497f6c979c04a19184340bc75d987d3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlagrange_1_1ui_1_1_keybinds.html#a7497f6c979c04a19184340bc75d987d3">is_down</a> (const std::string &amp;action) const</td></tr>
 <tr class="memdesc:a7497f6c979c04a19184340bc75d987d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if action is held down.  <a href="classlagrange_1_1ui_1_1_keybinds.html#a7497f6c979c04a19184340bc75d987d3">More...</a><br /></td></tr>
 <tr class="separator:a7497f6c979c04a19184340bc75d987d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a371c4490631ef92a8283f58ff4b50af6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlagrange_1_1ui_1_1_keybinds.html#a371c4490631ef92a8283f58ff4b50af6">is_down</a> (int key_code) const</td></tr>
-<tr class="memdesc:a371c4490631ef92a8283f58ff4b50af6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if key is held down.  <a href="classlagrange_1_1ui_1_1_keybinds.html#a371c4490631ef92a8283f58ff4b50af6">More...</a><br /></td></tr>
-<tr class="separator:a371c4490631ef92a8283f58ff4b50af6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad0c57bf59b5f953cfc1c94ed25d50146"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlagrange_1_1ui_1_1_keybinds.html#ad0c57bf59b5f953cfc1c94ed25d50146">is_down</a> (ImGuiKey key_code) const</td></tr>
+<tr class="memdesc:ad0c57bf59b5f953cfc1c94ed25d50146"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if key is held down.  <a href="classlagrange_1_1ui_1_1_keybinds.html#ad0c57bf59b5f953cfc1c94ed25d50146">More...</a><br /></td></tr>
+<tr class="separator:ad0c57bf59b5f953cfc1c94ed25d50146"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6c9dddb28b68699898009fc185cbc158"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlagrange_1_1ui_1_1_keybinds.html#a6c9dddb28b68699898009fc185cbc158">is_released</a> (const std::string &amp;action) const</td></tr>
 <tr class="memdesc:a6c9dddb28b68699898009fc185cbc158"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if action was just released.  <a href="classlagrange_1_1ui_1_1_keybinds.html#a6c9dddb28b68699898009fc185cbc158">More...</a><br /></td></tr>
 <tr class="separator:a6c9dddb28b68699898009fc185cbc158"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab4ce70d61675d96cda1044951a8dd64a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlagrange_1_1ui_1_1_keybinds.html#ab4ce70d61675d96cda1044951a8dd64a">is_released</a> (int key_code) const</td></tr>
-<tr class="memdesc:ab4ce70d61675d96cda1044951a8dd64a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if key was just released.  <a href="classlagrange_1_1ui_1_1_keybinds.html#ab4ce70d61675d96cda1044951a8dd64a">More...</a><br /></td></tr>
-<tr class="separator:ab4ce70d61675d96cda1044951a8dd64a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7722790e068b94ba288f6ff1dfdf54fe"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlagrange_1_1ui_1_1_keybinds.html#a7722790e068b94ba288f6ff1dfdf54fe">is_released</a> (ImGuiKey key_code) const</td></tr>
+<tr class="memdesc:a7722790e068b94ba288f6ff1dfdf54fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if key was just released.  <a href="classlagrange_1_1ui_1_1_keybinds.html#a7722790e068b94ba288f6ff1dfdf54fe">More...</a><br /></td></tr>
+<tr class="separator:a7722790e068b94ba288f6ff1dfdf54fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad7190bb2087827159cab27e2a07821b0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlagrange_1_1ui_1_1_keybinds.html#ad7190bb2087827159cab27e2a07821b0">save</a> (std::ostream &amp;out) const</td></tr>
 <tr class="memdesc:ad7190bb2087827159cab27e2a07821b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Saves to output stream using JSON.  <a href="classlagrange_1_1ui_1_1_keybinds.html#ad7190bb2087827159cab27e2a07821b0">More...</a><br /></td></tr>
 <tr class="separator:ad7190bb2087827159cab27e2a07821b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -174,10 +170,6 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_enabled</b> () con
 std::string&#160;</td><td class="memItemRight" valign="bottom"><b>to_string</b> (const std::string &amp;action, int limit=1) const</td></tr>
 <tr class="memdesc:ab98e65ba9635cdc540e24c847c25313e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a string with keybinds for given action, up to a limit. <br /></td></tr>
 <tr class="separator:ab98e65ba9635cdc540e24c847c25313e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abf5b72f1818f3b28dddac6906357ac11"><td class="memItemLeft" align="right" valign="top"><a id="abf5b72f1818f3b28dddac6906357ac11" name="abf5b72f1818f3b28dddac6906357ac11"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>set_key_state</b> (int key, int action)</td></tr>
-<tr class="memdesc:abf5b72f1818f3b28dddac6906357ac11"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates key map from glfw callback. <br /></td></tr>
-<tr class="separator:abf5b72f1818f3b28dddac6906357ac11"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -185,29 +177,23 @@ Static Public Member Functions</h2></td></tr>
 static std::string&#160;</td><td class="memItemRight" valign="bottom"><b>to_string</b> (const <a class="el" href="structlagrange_1_1ui_1_1_keybinds_1_1_keybind.html">Keybind</a> &amp;keybind)</td></tr>
 <tr class="memdesc:a9aa0baba4873739371518a472e1c3899"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts keybind to string. <br /></td></tr>
 <tr class="separator:a9aa0baba4873739371518a472e1c3899"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a71f0878cdea1c0a3392941bbfdbb1cfa"><td class="memItemLeft" align="right" valign="top"><a id="a71f0878cdea1c0a3392941bbfdbb1cfa" name="a71f0878cdea1c0a3392941bbfdbb1cfa"></a>
-static std::string&#160;</td><td class="memItemRight" valign="bottom"><b>to_string</b> (int key)</td></tr>
-<tr class="memdesc:a71f0878cdea1c0a3392941bbfdbb1cfa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts GLFW key to string. <br /></td></tr>
-<tr class="separator:a71f0878cdea1c0a3392941bbfdbb1cfa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
-Static Public Attributes</h2></td></tr>
-<tr class="memitem:a6f932e7af5f01b68cce6c4887da6e61d"><td class="memItemLeft" align="right" valign="top"><a id="a6f932e7af5f01b68cce6c4887da6e61d" name="a6f932e7af5f01b68cce6c4887da6e61d"></a>
-static const int&#160;</td><td class="memItemRight" valign="bottom"><b>keymap_size</b> = GLFW_KEY_LAST</td></tr>
-<tr class="separator:a6f932e7af5f01b68cce6c4887da6e61d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab88b77fc57da3e84f25a153098a8003e"><td class="memItemLeft" align="right" valign="top"><a id="ab88b77fc57da3e84f25a153098a8003e" name="ab88b77fc57da3e84f25a153098a8003e"></a>
+static std::string&#160;</td><td class="memItemRight" valign="bottom"><b>to_string</b> (ImGuiKey key)</td></tr>
+<tr class="memdesc:ab88b77fc57da3e84f25a153098a8003e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts ImGui key to string. <br /></td></tr>
+<tr class="separator:ab88b77fc57da3e84f25a153098a8003e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Stores keybinds for actions. </p>
 <p >Actions are identified using strings Use syntax "context.optional_category.action", e.g. "viewport.camera.pan" Use "global" context for keybinds to be available everywhere </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a1d418408a83d2b7a0e9208c71227d58b" name="a1d418408a83d2b7a0e9208c71227d58b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1d418408a83d2b7a0e9208c71227d58b">&#9670;&nbsp;</a></span>begin_update()</h2>
+<a id="ac5c54df7ed3b930268c8d7752c101725" name="ac5c54df7ed3b930268c8d7752c101725"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5c54df7ed3b930268c8d7752c101725">&#9670;&nbsp;</a></span>update()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void begin_update </td>
+          <td class="memname">void update </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -215,28 +201,8 @@ static const int&#160;</td><td class="memItemRight" valign="bottom"><b>keymap_si
       </table>
 </div><div class="memdoc">
 
-<p>Start updating key states. </p>
-<p >Call at the beginning of every frame, update with set_key_state call end_update when done updating key states. </p>
-
-</div>
-</div>
-<a id="a8ad87eb9e243bcf6314e08ef17c598ff" name="a8ad87eb9e243bcf6314e08ef17c598ff"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8ad87eb9e243bcf6314e08ef17c598ff">&#9670;&nbsp;</a></span>end_update()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void end_update </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Ends updating key states. </p>
-<p >Must be called after begin_update </p>
+<p>Updating key states. </p>
+<p >Updates keybinds state based on key states </p>
 
 </div>
 </div>
@@ -291,8 +257,8 @@ static const int&#160;</td><td class="memItemRight" valign="bottom"><b>keymap_si
 
 </div>
 </div>
-<a id="a1276f94ebae76b6de465410b10caefef" name="a1276f94ebae76b6de465410b10caefef"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1276f94ebae76b6de465410b10caefef">&#9670;&nbsp;</a></span>add() <span class="overload">[1/2]</span></h2>
+<a id="a3515d52aa0912e694cc31f122fb55153" name="a3515d52aa0912e694cc31f122fb55153"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3515d52aa0912e694cc31f122fb55153">&#9670;&nbsp;</a></span>add() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -306,13 +272,13 @@ static const int&#160;</td><td class="memItemRight" valign="bottom"><b>keymap_si
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
+          <td class="paramtype">ImGuiKey&#160;</td>
           <td class="paramname"><em>button</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::vector&lt; int &gt; &amp;&#160;</td>
+          <td class="paramtype">const std::vector&lt; ImGuiKey &gt; &amp;&#160;</td>
           <td class="paramname"><em>modifiers</em> = <code>{}</code>&#160;</td>
         </tr>
         <tr>
@@ -336,8 +302,8 @@ static const int&#160;</td><td class="memItemRight" valign="bottom"><b>keymap_si
 
 </div>
 </div>
-<a id="a5c323a56fce8b6b0d2e58a2729457dd1" name="a5c323a56fce8b6b0d2e58a2729457dd1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5c323a56fce8b6b0d2e58a2729457dd1">&#9670;&nbsp;</a></span>has()</h2>
+<a id="adf4bb11a374b3f6ae568b6b77cbf98d7" name="adf4bb11a374b3f6ae568b6b77cbf98d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf4bb11a374b3f6ae568b6b77cbf98d7">&#9670;&nbsp;</a></span>has()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -351,13 +317,13 @@ static const int&#160;</td><td class="memItemRight" valign="bottom"><b>keymap_si
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
+          <td class="paramtype">ImGuiKey&#160;</td>
           <td class="paramname"><em>button</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::vector&lt; int &gt; &amp;&#160;</td>
+          <td class="paramtype">const std::vector&lt; ImGuiKey &gt; &amp;&#160;</td>
           <td class="paramname"><em>modifiers</em> = <code>{}</code>&#160;</td>
         </tr>
         <tr>
@@ -546,26 +512,34 @@ static const int&#160;</td><td class="memItemRight" valign="bottom"><b>keymap_si
 
 </div>
 </div>
-<a id="a025c6b245eac0c83f3ed0908509e96b5" name="a025c6b245eac0c83f3ed0908509e96b5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a025c6b245eac0c83f3ed0908509e96b5">&#9670;&nbsp;</a></span>is_pressed() <span class="overload">[2/2]</span></h2>
+<a id="a6ddd73627c0ea1b5a0220d0b1f5449b6" name="a6ddd73627c0ea1b5a0220d0b1f5449b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ddd73627c0ea1b5a0220d0b1f5449b6">&#9670;&nbsp;</a></span>is_pressed() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">bool is_pressed </td>
           <td>(</td>
-          <td class="paramtype">int&#160;</td>
+          <td class="paramtype">ImGuiKey&#160;</td>
           <td class="paramname"><em>key_code</em></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Returns true if key was just pressed. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">key_code</td><td>GLFW key code </td></tr>
+    <tr><td class="paramname">key_code</td><td>ImGui key code </td></tr>
   </table>
   </dd>
 </dl>
@@ -600,26 +574,34 @@ static const int&#160;</td><td class="memItemRight" valign="bottom"><b>keymap_si
 
 </div>
 </div>
-<a id="a371c4490631ef92a8283f58ff4b50af6" name="a371c4490631ef92a8283f58ff4b50af6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a371c4490631ef92a8283f58ff4b50af6">&#9670;&nbsp;</a></span>is_down() <span class="overload">[2/2]</span></h2>
+<a id="ad0c57bf59b5f953cfc1c94ed25d50146" name="ad0c57bf59b5f953cfc1c94ed25d50146"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad0c57bf59b5f953cfc1c94ed25d50146">&#9670;&nbsp;</a></span>is_down() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">bool is_down </td>
           <td>(</td>
-          <td class="paramtype">int&#160;</td>
+          <td class="paramtype">ImGuiKey&#160;</td>
           <td class="paramname"><em>key_code</em></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Returns true if key is held down. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">key_code</td><td>GLFW key code </td></tr>
+    <tr><td class="paramname">key_code</td><td>ImGui key code </td></tr>
   </table>
   </dd>
 </dl>
@@ -654,26 +636,34 @@ static const int&#160;</td><td class="memItemRight" valign="bottom"><b>keymap_si
 
 </div>
 </div>
-<a id="ab4ce70d61675d96cda1044951a8dd64a" name="ab4ce70d61675d96cda1044951a8dd64a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab4ce70d61675d96cda1044951a8dd64a">&#9670;&nbsp;</a></span>is_released() <span class="overload">[2/2]</span></h2>
+<a id="a7722790e068b94ba288f6ff1dfdf54fe" name="a7722790e068b94ba288f6ff1dfdf54fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7722790e068b94ba288f6ff1dfdf54fe">&#9670;&nbsp;</a></span>is_released() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">bool is_released </td>
           <td>(</td>
-          <td class="paramtype">int&#160;</td>
+          <td class="paramtype">ImGuiKey&#160;</td>
           <td class="paramname"><em>key_code</em></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Returns true if key was just released. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">key_code</td><td>GLFW key code </td></tr>
+    <tr><td class="paramname">key_code</td><td>ImGui key code </td></tr>
   </table>
   </dd>
 </dl>

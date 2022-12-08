@@ -136,7 +136,7 @@ $(function() {
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>            <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        }</div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        <span class="keywordtype">bool</span> operator!=(<span class="keyword">const</span> iterator other)<span class="keyword"> const</span></div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="namespacelagrange_1_1internal.html#ae513f6584104034f265c6f3caf564810">operator!=</a>(<span class="keyword">const</span> iterator other)<span class="keyword"> const</span></div>
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span><span class="keyword">        </span>{</div>
 <div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>            <span class="keywordflow">if</span> (m_context == other.m_context) {</div>
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>                <span class="keywordflow">return</span> m_value &lt; other.m_value;</div>
@@ -154,7 +154,7 @@ $(function() {
 <div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
 <div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    iterator end()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> iterator(m_end, *<span class="keyword">this</span>); }</div>
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    <span class="keywordtype">bool</span> operator==(<span class="keyword">const</span> Range&lt;T&gt;&amp; other)<span class="keyword"> const</span></div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="namespacelagrange_1_1internal.html#a51b3d9be30d2364d90d3a79f8040562a">operator==</a>(<span class="keyword">const</span> Range&lt;T&gt;&amp; other)<span class="keyword"> const</span></div>
 <div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span><span class="keyword">    </span>{</div>
 <div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>        <span class="keywordflow">return</span> m_begin == other.m_begin &amp;&amp; m_end == other.m_end;</div>
 <div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    }</div>
@@ -191,7 +191,7 @@ $(function() {
 <div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>            , i(val)</div>
 <div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>        {}</div>
 <div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span> </div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>        <span class="keywordtype">bool</span> operator!=(<span class="keyword">const</span> iterator&amp; rhs)<span class="keyword"> const</span></div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="namespacelagrange_1_1internal.html#ae513f6584104034f265c6f3caf564810">operator!=</a>(<span class="keyword">const</span> iterator&amp; rhs)<span class="keyword"> const</span></div>
 <div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span><span class="keyword">        </span>{</div>
 <div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>            <span class="keywordflow">return</span> (m_context != rhs.m_context) || (i != rhs.i);</div>
 <div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>        }</div>
@@ -219,7 +219,7 @@ $(function() {
 <div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>        <span class="keywordflow">return</span> iterator(m_active.empty() ? m_max : safe_cast&lt;T&gt;(m_active.size()), *<span class="keyword">this</span>);</div>
 <div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>    }</div>
 <div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span> </div>
-<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>    <span class="keywordtype">bool</span> operator!=(<span class="keyword">const</span> SparseRange&lt;T&gt; other)<span class="keyword"> const</span></div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="namespacelagrange_1_1internal.html#ae513f6584104034f265c6f3caf564810">operator!=</a>(<span class="keyword">const</span> SparseRange&lt;T&gt; other)<span class="keyword"> const</span></div>
 <div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span><span class="keyword">    </span>{</div>
 <div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>        <span class="keywordflow">return</span> m_max != other.m_max || m_active.size() != other.m_active.size();</div>
 <div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>    }</div>
@@ -252,6 +252,8 @@ $(function() {
 <div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>} <span class="comment">// namespace lagrange</span></div>
 <div class="ttc" id="agroup__group-utils-misc_html_ga0be357120afca3098d989abf97e72b13"><div class="ttname"><a href="group__group-utils-misc.html#ga0be357120afca3098d989abf97e72b13">lagrange::range_sparse</a></div><div class="ttdeci">internal::SparseRange&lt; Index &gt; range_sparse(Index max, const std::vector&lt; Index &gt; &amp;active)</div><div class="ttdoc">Returns an iterable object representing a subset of the range [0, max).</div><div class="ttdef"><b>Definition:</b> range.h:217</div></div>
 <div class="ttc" id="agroup__group-utils-misc_html_ga68084717e646e9a6073e533d0b83a2b7"><div class="ttname"><a href="group__group-utils-misc.html#ga68084717e646e9a6073e533d0b83a2b7">lagrange::range</a></div><div class="ttdeci">internal::Range&lt; Index &gt; range(Index end)</div><div class="ttdoc">Returns an iterable object representing the range [0, end).</div><div class="ttdef"><b>Definition:</b> range.h:176</div></div>
+<div class="ttc" id="anamespacelagrange_1_1internal_html_a51b3d9be30d2364d90d3a79f8040562a"><div class="ttname"><a href="namespacelagrange_1_1internal.html#a51b3d9be30d2364d90d3a79f8040562a">lagrange::internal::operator==</a></div><div class="ttdeci">bool operator==(const shared_ptr&lt; T &gt; &amp;sp1, const shared_ptr&lt; U &gt; &amp;sp2)</div><div class="ttdoc">Operator == overloading.</div><div class="ttdef"><b>Definition:</b> shared_ptr.h:344</div></div>
+<div class="ttc" id="anamespacelagrange_1_1internal_html_ae513f6584104034f265c6f3caf564810"><div class="ttname"><a href="namespacelagrange_1_1internal.html#ae513f6584104034f265c6f3caf564810">lagrange::internal::operator!=</a></div><div class="ttdeci">bool operator!=(const shared_ptr&lt; T &gt; &amp;sp1, const shared_ptr&lt; U &gt; &amp;sp2)</div><div class="ttdoc">Operator != overloading.</div><div class="ttdef"><b>Definition:</b> shared_ptr.h:363</div></div>
 <div class="ttc" id="anamespacelagrange_html"><div class="ttname"><a href="namespacelagrange.html">lagrange</a></div><div class="ttdoc">Main namespace for Lagrange.</div><div class="ttdef"><b>Definition:</b> AABBIGL.h:30</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->

@@ -602,6 +602,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#compute-tangent-space" class="md-nav__link">
+    Compute Tangent Space
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#normalize-meshes" class="md-nav__link">
     Normalize Meshes
   </a>
@@ -625,6 +632,34 @@
         <li class="md-nav__item">
   <a href="#unify-index-buffers" class="md-nav__link">
     Unify Index Buffers
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#connected-components" class="md-nav__link">
+    Connected Components
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#combine-meshes" class="md-nav__link">
+    Combine Meshes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vertex-valence" class="md-nav__link">
+    Vertex Valence
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adjacency-graph" class="md-nav__link">
+    Adjacency Graph
   </a>
   
 </li>
@@ -1296,6 +1331,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#compute-tangent-space" class="md-nav__link">
+    Compute Tangent Space
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#normalize-meshes" class="md-nav__link">
     Normalize Meshes
   </a>
@@ -1323,6 +1365,34 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#connected-components" class="md-nav__link">
+    Connected Components
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#combine-meshes" class="md-nav__link">
+    Combine Meshes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vertex-valence" class="md-nav__link">
+    Vertex Valence
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adjacency-graph" class="md-nav__link">
+    Adjacency Graph
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1344,17 +1414,94 @@
 <h1 id="mesh-utility-functions">Mesh Utility Functions</h1>
 <p>This page describes various mesh and attribute utilities available in Lagrange's core module.</p>
 <h2 id="compute-mesh-normals">Compute Mesh Normals</h2>
-<p>As described in our <a href="../../../ref/group__group-surfacemesh-utils.html">Mesh Utilities</a> page, normals can be computed using on of the
+<p>As described in our <a href="../../../ref/group__group-surfacemesh-utils.html">Mesh Utilities</a> page, mesh normals can be computed using on of the
 following function:</p>
 <div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;lagrange/compute_normal.h&gt;</span><span class="cp"></span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;lagrange/compute_facet_normal.h&gt;</span><span class="cp"></span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;lagrange/compute_vertex_normal.h&gt;</span><span class="cp"></span>
 
-<span class="k">auto</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">compute_facet_normal</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span><span class="w"> </span><span class="n">options</span><span class="p">);</span><span class="w"></span>
-<span class="k">auto</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">compute_vertex_normal</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span><span class="w"> </span><span class="n">options</span><span class="p">);</span><span class="w"></span>
-<span class="k">auto</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">compute_normal</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span><span class="w"> </span><span class="n">options</span><span class="p">);</span><span class="w"></span>
+<span class="n">lagrange</span><span class="o">::</span><span class="n">SurfaceMesh</span><span class="o">&lt;</span><span class="n">Scalar</span><span class="p">,</span><span class="w"> </span><span class="n">Index</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mesh</span><span class="p">;</span><span class="w"></span>
+
+<span class="c1">// Compute per-facet normals</span>
+<span class="n">lagrange</span><span class="o">::</span><span class="n">FacetNormalOptions</span><span class="w"> </span><span class="n">facet_options</span><span class="p">;</span><span class="w"></span>
+<span class="k">auto</span><span class="w"> </span><span class="n">fid</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">compute_facet_normal</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span><span class="w"> </span><span class="n">facet_options</span><span class="p">);</span><span class="w"></span>
+
+<span class="c1">// Compute per-vertex normals using a uniform weight for each incident triangle</span>
+<span class="n">VertexNormalOptions</span><span class="w"> </span><span class="n">vertex_options</span><span class="p">;</span><span class="w"></span>
+<span class="n">vertex_options</span><span class="p">.</span><span class="n">weight_type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lagrange</span><span class="o">::</span><span class="n">NormalWeightingType</span><span class="o">::</span><span class="n">Uniform</span><span class="p">;</span><span class="w"></span>
+<span class="k">auto</span><span class="w"> </span><span class="n">vid</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">compute_vertex_normal</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span><span class="w"> </span><span class="n">vertex_options</span><span class="p">);</span><span class="w"></span>
+
+<span class="c1">// Compute indexed per-corner normals. Edges with a dihedral</span>
+<span class="c1">// angle smaller than π/2 will be considered smooth</span>
+<span class="n">Scalar</span><span class="w"> </span><span class="n">angle_threshold_rad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">M_PI</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">0.5</span><span class="p">;</span><span class="w"></span>
+<span class="k">auto</span><span class="w"> </span><span class="n">cid</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">compute_normal</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span><span class="w"> </span><span class="n">angle_threshold_rad</span><span class="p">);</span><span class="w"></span>
 </code></pre></div>
-<p>See: <a href="../../../ref/group__group-surfacemesh-utils.html">Mesh Utilities</a> documentation.</p>
+<p>See <a href="../../../ref/group__group-surfacemesh-utils.html">Mesh Utilities</a> reference documentation for more details.</p>
+<h2 id="compute-tangent-space">Compute Tangent Space</h2>
+<p>Lagrange offers a function to compute tangent-space information, following [Mikkelsen 2008]<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>:</p>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;lagrange/compute_tangent_bitangent.h&gt;</span><span class="cp"></span>
+
+<span class="n">lagrange</span><span class="o">::</span><span class="n">SurfaceMesh</span><span class="o">&lt;</span><span class="n">Scalar</span><span class="p">,</span><span class="w"> </span><span class="n">Index</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mesh</span><span class="p">;</span><span class="w"></span>
+<span class="n">lagrange</span><span class="o">::</span><span class="n">TangentBitangentOptions</span><span class="w"> </span><span class="n">options</span><span class="p">;</span><span class="w"></span>
+
+<span class="c1">// Pad the 4th channel of the output attributes with</span>
+<span class="c1">// a ±1 indicating the sign of the UV triangle</span>
+<span class="n">options</span><span class="p">.</span><span class="n">pad_with_sign</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span><span class="w"></span>
+
+<span class="k">auto</span><span class="w"> </span><span class="n">btn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">compute_tangent_bitangent</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span><span class="w"> </span><span class="n">options</span><span class="p">);</span><span class="w"></span>
+<span class="n">btn</span><span class="p">.</span><span class="n">tangent_id</span><span class="p">;</span><span class="w"> </span><span class="c1">// id of the generated tangent vector attribute</span>
+<span class="n">btn</span><span class="p">.</span><span class="n">bitangent_id</span><span class="p">;</span><span class="w"> </span><span class="c1">// id of the generated bitangent vector attribute</span>
+</code></pre></div>
+<p>The input mesh must have an existing indexed UV and normal attribute. The
+<code>options.output_element_type</code> can be either <code>Indexed</code> (default), or <code>Corner</code>:</p>
+<ul>
+<li>If the output type is <code>Corner</code>, no averaging is performed, and the output attribute contains
+  directly the per-corner tangent space.</li>
+<li>If the output type is <code>Indexed</code>, averaging is performed based on the provided indexed attributes.
+  Corners with identical normals and UVs will be considered as a single smoothing group for tangent
+  space computation.</li>
+</ul>
+<figure>
+<div style="display:flex">
+    <div>
+      <img src="../../core/img/tangent_groups.png" width=500>
+    </div>
+</div>
+<figcaption>
+<p>Corners are grouped into different smoothing groups, based on provided
+  UV and normal attributes. Image from [Mikkelsen 2008]<sup id="fnref3:1"><a class="footnote-ref" href="#fn:1">1</a></sup></p>
+</figcaption>
+</figure>
+<div class="admonition info">
+<p class="admonition-title">Accuracy vs Mikktspace</p>
+<p>We have <a href="https://github.com/adobe/lagrange/blob/e69058be8153d0a600e3e073740a93cd972da89c/modules/core/tests/test_compute_tangent_bitangent.cpp#L382-L385">unit
+tests</a>
+comparing our results with the original <a href="https://github.com/mmikk/MikkTSpace">mikktspace</a> code [Mikkelsen 2008]<sup id="fnref2:1"><a class="footnote-ref" href="#fn:1">1</a></sup>. We found that, in
+floating points, we have a max error of <code>1e-6f</code>.</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Performance vs Mikktspace</p>
+<p>Our
+<a href="https://github.com/adobe/lagrange/blob/e69058be8153d0a600e3e073740a93cd972da89c/modules/core/tests/test_compute_tangent_bitangent.cpp#L471">benchmark</a>
+shows that we are 5x-6x faster than mikktspace, mostly due to the addition of multithreading.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Welding Attributes</p>
+<p>The original mikktspace code expects the input UV/normals as a per-corner value, and will always
+weld corners sharing identical UV/normal values. In contrast, our mesh data structure uses a
+more generic indexed attribute, and we use an attribute's index to identify and group together
+identical corners.</p>
+<p>In practice, this means that you will need to weld together any identical attribute that do not
+share the same indices, or you may end up with different result compared to mikktspace.</p>
+</div>
+<div class="admonition caution">
+<p class="admonition-title">Limitations: Triangle Meshes vs Quad Meshes</p>
+<ul>
+<li>Our code for averaging tangent vectors only support triangle meshes at the moment.</li>
+<li>Quad meshes and quad-dominant meshes can be used, but only with <code>output_element_type = Corner</code> (no averaging will be performed).</li>
+<li>General polyhedral facets (with &gt; 4 vertices) are not supported at the moment.</li>
+</ul>
+</div>
 <h2 id="normalize-meshes">Normalize Meshes</h2>
 <p>Meshes can be normalized to fit in a unit box centered at the origin using the <code>normalize_meshes()</code>
 function, which modifies the mesh in place:</p>
@@ -1381,7 +1528,7 @@ function, which modifies the mesh in place:</p>
 <span class="c1">// Modifies the mesh in place</span>
 <span class="n">triangulate_polygonal_facets</span><span class="p">(</span><span class="n">mesh</span><span class="p">);</span><span class="w"></span>
 </code></pre></div>
-<p>Under the hood we use <a href="https://github.com/mapbox/earcut.hpp">Mapbox's Earcut</a> immplementation for
+<p>Under the hood we use <a href="https://github.com/mapbox/earcut.hpp">Mapbox's Earcut</a> implementation for
 polygonal facets with 5 vertices or more.</p>
 <p>See: <a href="../../../ref/group__group-surfacemesh-utils.html">Mesh Utilities</a> documentation.</p>
 <h2 id="transfer-mesh-attributes">Transfer Mesh Attributes</h2>
@@ -1524,6 +1671,107 @@ indexed attributes. As a result, some vertices might be duplicated (e.g. if two 
 have different normals, or a UV seam).</p>
 </div>
 <p>See: <a href="../../../ref/group__group-surfacemesh-attr-utils.html">Attributes Utilities</a> documentation.</p>
+<h2 id="connected-components">Connected Components</h2>
+<p>Connected components can be computed via the <a href="../../../ref/group__group-surfacemesh-utils.html#gafedc8c0d66af62d6f3d540465c0018c6">compute_components()</a> function:</p>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;lagrange/compute_components.h&gt;</span><span class="cp"></span>
+
+<span class="n">lagrange</span><span class="o">::</span><span class="n">SurfaceMesh</span><span class="o">&lt;</span><span class="n">Scalar</span><span class="p">,</span><span class="w"> </span><span class="n">Index</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mesh</span><span class="p">;</span><span class="w"></span>
+
+<span class="c1">// Consider facets to be connected if they are touching by a common vertex</span>
+<span class="n">lagrange</span><span class="o">::</span><span class="n">ComponentOptions</span><span class="w"> </span><span class="n">options</span><span class="p">;</span><span class="w"></span>
+<span class="n">options</span><span class="p">.</span><span class="n">connectivity_type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lagrange</span><span class="o">::</span><span class="n">ComponentOption</span><span class="o">::</span><span class="n">ConnectivityType</span><span class="o">::</span><span class="n">Vertex</span><span class="p">;</span><span class="w"></span>
+
+<span class="c1">// Compute connected components as a per-facet attribute</span>
+<span class="k">auto</span><span class="w"> </span><span class="n">num_components</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lagrange</span><span class="o">::</span><span class="n">compute_components</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span><span class="w"> </span><span class="n">options</span><span class="p">);</span><span class="w"></span>
+<span class="k">auto</span><span class="w"> </span><span class="o">&amp;</span><span class="n">component_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mesh</span><span class="p">.</span><span class="n">get_attribute</span><span class="o">&lt;</span><span class="n">Index</span><span class="o">&gt;</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span><span class="w"> </span><span class="n">options</span><span class="p">.</span><span class="n">output_attribute_name</span><span class="p">).</span><span class="n">get_all</span><span class="p">();</span><span class="w"></span>
+
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">Index</span><span class="w"> </span><span class="n">f</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">f</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">mesh</span><span class="p">.</span><span class="n">get_num_facets</span><span class="p">();</span><span class="w"> </span><span class="o">++</span><span class="n">f</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">assert</span><span class="p">(</span><span class="mi">0</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">component_id</span><span class="p">[</span><span class="n">f</span><span class="p">]</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">component_id</span><span class="p">[</span><span class="n">f</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">num_components</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>You can choose between edge-connected and vertex-connected components via the
+<code>options.connectivity_type</code> parameter.</p>
+<h2 id="combine-meshes">Combine Meshes</h2>
+<p>It is possible to combine multiple meshes into a single aggregated mesh via the
+<a href="../../../ref/group__group-surfacemesh-utils.html#ga363707c2e65474638292c738c072868c">combine_meshes()</a> function. This function preserves attributes by default, unless
+called with <code>preserve_attributes = false</code>. When preserving input mesh attributes, all attributes in
+the input meshes must be compatible (i.e. all meshes share the same attributes, with the same
+type/number of channels, etc.).</p>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;lagrange/combine_meshes.h&gt;</span><span class="cp"></span>
+
+<span class="n">lagrange</span><span class="o">::</span><span class="n">SurfaceMesh</span><span class="o">&lt;</span><span class="n">Scalar</span><span class="p">,</span><span class="w"> </span><span class="n">Index</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mesh1</span><span class="p">,</span><span class="w"> </span><span class="n">mesh2</span><span class="p">,</span><span class="w"> </span><span class="n">mesh3</span><span class="p">;</span><span class="w"></span>
+
+<span class="c1">// Call via initializer list of mesh pointers</span>
+<span class="k">auto</span><span class="w"> </span><span class="n">aggregate_mesh1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lagrange</span><span class="o">::</span><span class="n">combine_meshes</span><span class="p">({</span><span class="o">&amp;</span><span class="n">mesh1</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">mesh2</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">mesh3</span><span class="p">});</span><span class="w"></span>
+
+<span class="c1">// Call via an array of meshes (meshes are shallow-copied in this example)</span>
+<span class="k">constexpr</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">num_meshes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">array</span><span class="o">&lt;</span><span class="k">const</span><span class="w"> </span><span class="n">SurfaceMesh</span><span class="o">&lt;</span><span class="n">Scalar</span><span class="p">,</span><span class="w"> </span><span class="n">Index</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span><span class="n">num_meshes</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mesh_list</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">mesh1</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="n">mesh2</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="n">mesh3</span><span class="p">};</span><span class="w"></span>
+<span class="k">auto</span><span class="w"> </span><span class="n">aggregate_mesh2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lagrange</span><span class="o">::</span><span class="n">combine_meshes</span><span class="p">(</span><span class="n">mesh_list</span><span class="p">);</span><span class="w"></span>
+
+<span class="c1">// Call via generic callbacks</span>
+<span class="k">auto</span><span class="w"> </span><span class="n">aggregate_mesh3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lagrange</span><span class="o">::</span><span class="n">combine_meshes</span><span class="p">(</span><span class="n">num_meshes</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="p">[](</span><span class="kt">size_t</span><span class="w"> </span><span class="n">idx</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">SurfaceMesh</span><span class="o">&lt;</span><span class="n">Scalar</span><span class="p">,</span><span class="w"> </span><span class="n">Index</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="n">mesh_list</span><span class="p">[</span><span class="n">idx</span><span class="p">];</span><span class="w"></span>
+<span class="w">    </span><span class="p">});</span><span class="w"></span>
+</code></pre></div>
+<h2 id="vertex-valence">Vertex Valence</h2>
+<p>Vertex valence can be computed using the <a href="../../../ref/group__group-surfacemesh-utils.html#ga6a2a7d7f5165ef7f5433ef67efad4306">compute_vertex_valence()</a>
+function:</p>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;lagrange/compute_vertex_valence.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;lagrange/views.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;lagrange/Logger.h&gt;</span><span class="cp"></span>
+
+<span class="n">lagrange</span><span class="o">::</span><span class="n">SurfaceMesh</span><span class="o">&lt;</span><span class="n">Scalar</span><span class="p">,</span><span class="w"> </span><span class="n">Index</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mesh</span><span class="p">;</span><span class="w"></span>
+
+<span class="c1">// Compute vertex valence as a per-vertex attribute</span>
+<span class="k">auto</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lagrange</span><span class="o">::</span><span class="n">compute_vertex_valence</span><span class="p">(</span><span class="n">mesh</span><span class="p">);</span><span class="w"></span>
+
+<span class="c1">// Count regular vertices using a Eigen::Map view of the attribute</span>
+<span class="n">vertex_valence</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">attribute_vector_view</span><span class="o">&lt;</span><span class="n">Index</span><span class="o">&gt;</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span><span class="w"> </span><span class="n">id</span><span class="p">);</span><span class="w"></span>
+<span class="k">auto</span><span class="w"> </span><span class="n">num_regular_vertices</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">vertex_valence</span><span class="p">.</span><span class="n">array</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">6</span><span class="p">).</span><span class="n">count</span><span class="p">();</span><span class="w"></span>
+
+<span class="n">lagrange</span><span class="o">::</span><span class="n">logger</span><span class="p">().</span><span class="n">info</span><span class="p">(</span><span class="s">&quot;The mesh has {} regular vertices&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">num_regular_vertices</span><span class="p">);</span><span class="w"></span>
+</code></pre></div>
+<h2 id="adjacency-graph">Adjacency Graph</h2>
+<p>While our mesh class offers some low-level <a href="../mesh/#connectivity-and-navigation">navigation
+methods</a>, sometimes it beneficial to operate on an explicit
+adjacency list representation of a connectivity graph. Currently we offer the function
+<a href="../../../ref/group__group-surfacemesh-utils.html#ga203af050581e879b52d339558b788a08">compute_vertex_vertex_adjacency()</a> to compute the corresponding
+adjacency list graph:</p>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;lagrange/compute_vertex_vertex_adjacency.h&gt;</span><span class="cp"></span>
+
+<span class="n">lagrange</span><span class="o">::</span><span class="n">SurfaceMesh</span><span class="o">&lt;</span><span class="n">Scalar</span><span class="p">,</span><span class="w"> </span><span class="n">Index</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mesh</span><span class="p">;</span><span class="w"></span>
+
+<span class="c1">// Build adjacency list representation of the vertex-vertex connectivity graph</span>
+<span class="k">auto</span><span class="w"> </span><span class="n">graph</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lagrange</span><span class="o">::</span><span class="n">compute_vertex_vertex_adjacency</span><span class="p">(</span><span class="n">mesh</span><span class="p">);</span><span class="w"></span>
+
+<span class="c1">// Display all edges of the graph</span>
+<span class="n">assert</span><span class="p">(</span><span class="n">graph</span><span class="p">.</span><span class="n">get_num_entries</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">mesh</span><span class="p">.</span><span class="n">get_num_vertices</span><span class="p">());</span><span class="w"></span>
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">Index</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">mesh</span><span class="p">.</span><span class="n">get_num_vertices</span><span class="p">();</span><span class="w"> </span><span class="o">++</span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">lagrange</span><span class="o">::</span><span class="n">logger</span><span class="p">().</span><span class="n">info</span><span class="p">(</span><span class="s">&quot;Vertex v{} has {} neighbors&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">graph</span><span class="p">.</span><span class="n">get_num_neighbors</span><span class="p">(</span><span class="n">x</span><span class="p">));</span><span class="w"></span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">Index</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">graph</span><span class="p">.</span><span class="n">get_neighbors</span><span class="p">(</span><span class="n">x</span><span class="p">))</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">lagrange</span><span class="o">::</span><span class="n">logger</span><span class="p">().</span><span class="n">info</span><span class="p">(</span><span class="s">&quot;Edge v{} -&gt; v{}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Connectivity &amp; Edge Information</p>
+<p>While our <a href="../mesh/#connectivity-and-navigation">mesh navigation</a> methods require the user to
+call <code>mesh.initialize_edges()</code> beforehand, <code>compute_vertex_vertex_adjacency()</code> does not have
+such a requirement, and will compute vertex-vertex connectivity information directly.</p>
+</div>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p><span class="smallcaps">Mikkelsen, M.</span> 2008. <a href="http://image.diku.dk/projects/media/morten.mikkelsen.08.pdf">Simulation of wrinkled surfaces revisited</a>. <em><a href="http://image.diku.dk/projects/media/morten.mikkelsen.08.pdf">Simulation of wrinkled surfaces revisited</a></em>. Master’s thesis, University of Copenhagen, Universitetsparken 1, 2100 København, Denmark, rl̆http://www.mikktspace.com/.&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
 
               
             </article>

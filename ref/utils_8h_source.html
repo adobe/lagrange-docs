@@ -105,22 +105,20 @@ $(function() {
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="keywordflow">return</span> (T(0) &lt; val) - (val &lt; T(0));</div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>}</div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> Scalar&gt;</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="namespacelagrange.html#af8cf8d410e6e6c0686b0d618c52811c7">   51</a></span>Scalar <a class="code hl_function" href="namespacelagrange.html#af8cf8d410e6e6c0686b0d618c52811c7">gaussian</a>(Scalar x, Scalar sigma, Scalar center = 0)</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>{</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    Scalar x2 = (x - center) * (x - center);</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    Scalar exponent = x2 / (2 * sigma * sigma);</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <span class="keywordflow">return</span> std::exp(-exponent);</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>}</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>} <span class="comment">// namespace lagrange</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> Scalar&gt;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="namespacelagrange.html#af8cf8d410e6e6c0686b0d618c52811c7">   50</a></span>Scalar <a class="code hl_function" href="namespacelagrange.html#af8cf8d410e6e6c0686b0d618c52811c7">gaussian</a>(Scalar x, Scalar sigma, Scalar center = 0)</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>{</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    Scalar x2 = (x - center) * (x - center);</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    Scalar exponent = x2 / (2 * sigma * sigma);</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <span class="keywordflow">return</span> std::exp(-exponent);</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>}</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>} <span class="comment">// namespace lagrange</span></div>
 <div class="ttc" id="anamespacelagrange_html"><div class="ttname"><a href="namespacelagrange.html">lagrange</a></div><div class="ttdoc">Main namespace for Lagrange.</div><div class="ttdef"><b>Definition:</b> AABBIGL.h:30</div></div>
 <div class="ttc" id="anamespacelagrange_html_a3cc89f1c5d3d14cf0fc6a584d204ad27"><div class="ttname"><a href="namespacelagrange.html#a3cc89f1c5d3d14cf0fc6a584d204ad27">lagrange::sign</a></div><div class="ttdeci">int sign(T val)</div><div class="ttdoc">Get the sign of the value Returns either -1, 0, or 1.</div><div class="ttdef"><b>Definition:</b> utils.h:43</div></div>
 <div class="ttc" id="anamespacelagrange_html_a47ecfc247da42a513952056dfc91da59"><div class="ttname"><a href="namespacelagrange.html#a47ecfc247da42a513952056dfc91da59">lagrange::to_radians</a></div><div class="ttdeci">Scalar to_radians(Scalar deg=1)</div><div class="ttdoc">Convert degrees to radians.</div><div class="ttdef"><b>Definition:</b> utils.h:35</div></div>
 <div class="ttc" id="anamespacelagrange_html_aeb9bf3ea770e7954ffd59b6c35620110"><div class="ttname"><a href="namespacelagrange.html#aeb9bf3ea770e7954ffd59b6c35620110">lagrange::to_degrees</a></div><div class="ttdeci">Scalar to_degrees(Scalar rad=1)</div><div class="ttdoc">Convert radians to degrees.</div><div class="ttdef"><b>Definition:</b> utils.h:27</div></div>
-<div class="ttc" id="anamespacelagrange_html_af8cf8d410e6e6c0686b0d618c52811c7"><div class="ttname"><a href="namespacelagrange.html#af8cf8d410e6e6c0686b0d618c52811c7">lagrange::gaussian</a></div><div class="ttdeci">Scalar gaussian(Scalar x, Scalar sigma, Scalar center=0)</div><div class="ttdoc">Simple evaluation of Gaussian function.</div><div class="ttdef"><b>Definition:</b> utils.h:51</div></div>
+<div class="ttc" id="anamespacelagrange_html_af8cf8d410e6e6c0686b0d618c52811c7"><div class="ttname"><a href="namespacelagrange.html#af8cf8d410e6e6c0686b0d618c52811c7">lagrange::gaussian</a></div><div class="ttdeci">Scalar gaussian(Scalar x, Scalar sigma, Scalar center=0)</div><div class="ttdoc">Simple evaluation of Gaussian function.</div><div class="ttdef"><b>Definition:</b> utils.h:50</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

@@ -86,34 +86,43 @@ $(function() {
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &lt;lagrange/ui/Entity.h&gt;</span></div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &lt;lagrange/ui/components/Layer.h&gt;</span></div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacelagrange.html">lagrange</a> {</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacelagrange_1_1ui.html">ui</a> {</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="structlagrange_1_1ui_1_1_scene_panel.html">   21</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structlagrange_1_1ui_1_1_scene_panel.html">ScenePanel</a></div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>{</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <a class="code hl_struct" href="structlagrange_1_1ui_1_1_scene_panel.html">ScenePanel</a>()</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    {</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        mesh_params.<a class="code hl_variable" href="structlagrange_1_1io_1_1_mesh_loader_params.html#af605523fa15cd8296704092afd159029">normalize</a> = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        <span class="comment">// Set visible layers to every layer</span></div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        visible_layers.reset();</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        visible_layers.flip();</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    }</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <a class="code hl_struct" href="structlagrange_1_1io_1_1_mesh_loader_params.html">io::MeshLoaderParams</a> mesh_params;</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <a class="code hl_struct" href="structlagrange_1_1ui_1_1_layer.html">ui::Layer</a> visible_layers;</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>};</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#include &lt;unordered_set&gt;</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacelagrange.html">lagrange</a> {</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacelagrange_1_1ui.html">ui</a> {</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="structlagrange_1_1ui_1_1_scene_panel.html">   23</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structlagrange_1_1ui_1_1_scene_panel.html">ScenePanel</a></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>{</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <a class="code hl_struct" href="structlagrange_1_1ui_1_1_scene_panel.html">ScenePanel</a>()</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    {</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        mesh_params.<a class="code hl_variable" href="structlagrange_1_1io_1_1_mesh_loader_params.html#af605523fa15cd8296704092afd159029">normalize</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        <span class="comment">// Set visible layers to every layer</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        visible_layers.reset();</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        visible_layers.flip();</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    }</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <a class="code hl_struct" href="structlagrange_1_1io_1_1_mesh_loader_params.html">io::MeshLoaderParams</a> mesh_params;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <a class="code hl_struct" href="structlagrange_1_1ui_1_1_layer.html">ui::Layer</a> visible_layers;</div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>Entity add_scene_panel(Registry&amp; r, <span class="keyword">const</span> std::string&amp; name = <span class="stringliteral">&quot;Scene&quot;</span>);</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>} <span class="comment">// namespace ui</span></div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>} <span class="comment">// namespace lagrange</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="keywordtype">bool</span> show_tree_view = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="keywordtype">bool</span> show_mesh_entities = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="keywordtype">bool</span> show_scene_panel_layers = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="keywordtype">bool</span> show_all_entities = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    std::unordered_set&lt;Entity&gt; tree_view_ignored_entities;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>};</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>Entity add_scene_panel(Registry&amp; r, <span class="keyword">const</span> std::string&amp; name = <span class="stringliteral">&quot;Scene&quot;</span>);</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>} <span class="comment">// namespace ui</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>} <span class="comment">// namespace lagrange</span></div>
 <div class="ttc" id="anamespacelagrange_1_1ui_html"><div class="ttname"><a href="namespacelagrange_1_1ui.html">lagrange::ui</a></div><div class="ttdoc">Lagrange UI Viewer and mini 3D engine.</div><div class="ttdef"><b>Definition:</b> AcceleratedPicking.h:22</div></div>
 <div class="ttc" id="anamespacelagrange_html"><div class="ttname"><a href="namespacelagrange.html">lagrange</a></div><div class="ttdoc">Main namespace for Lagrange.</div><div class="ttdef"><b>Definition:</b> AABBIGL.h:30</div></div>
 <div class="ttc" id="astructlagrange_1_1io_1_1_mesh_loader_params_html"><div class="ttname"><a href="structlagrange_1_1io_1_1_mesh_loader_params.html">lagrange::io::MeshLoaderParams</a></div><div class="ttdef"><b>Definition:</b> load_mesh_ext.h:33</div></div>
 <div class="ttc" id="astructlagrange_1_1io_1_1_mesh_loader_params_html_af605523fa15cd8296704092afd159029"><div class="ttname"><a href="structlagrange_1_1io_1_1_mesh_loader_params.html#af605523fa15cd8296704092afd159029">lagrange::io::MeshLoaderParams::normalize</a></div><div class="ttdeci">bool normalize</div><div class="ttdoc">Normalize each object to a unit box around the origin.</div><div class="ttdef"><b>Definition:</b> load_mesh_ext.h:43</div></div>
 <div class="ttc" id="astructlagrange_1_1ui_1_1_layer_html"><div class="ttname"><a href="structlagrange_1_1ui_1_1_layer.html">lagrange::ui::Layer</a></div><div class="ttdef"><b>Definition:</b> Layer.h:29</div></div>
-<div class="ttc" id="astructlagrange_1_1ui_1_1_scene_panel_html"><div class="ttname"><a href="structlagrange_1_1ui_1_1_scene_panel.html">lagrange::ui::ScenePanel</a></div><div class="ttdef"><b>Definition:</b> ScenePanel.h:22</div></div>
+<div class="ttc" id="astructlagrange_1_1ui_1_1_scene_panel_html"><div class="ttname"><a href="structlagrange_1_1ui_1_1_scene_panel.html">lagrange::ui::ScenePanel</a></div><div class="ttdef"><b>Definition:</b> ScenePanel.h:24</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

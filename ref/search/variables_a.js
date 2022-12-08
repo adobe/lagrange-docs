@@ -7,7 +7,7 @@ var searchData=
   ['m_5fcorner_5fto_5fedge_5fid_4',['m_corner_to_edge_id',['../classlagrange_1_1_surface_mesh.html#afc16ef5f6e0f90e512bb2a1aaebd14e4',1,'lagrange::SurfaceMesh']]],
   ['m_5fcorner_5fto_5ffacet_5fid_5',['m_corner_to_facet_id',['../classlagrange_1_1_surface_mesh.html#a69900ffcacd435fa449cf237910ac8fc',1,'lagrange::SurfaceMesh']]],
   ['m_5fcorner_5fto_5fvertex_5fid_6',['m_corner_to_vertex_id',['../classlagrange_1_1_surface_mesh.html#ac3fb19ce9e7ab94713c46c37259549aa',1,'lagrange::SurfaceMesh']]],
-  ['m_5fdata_7',['m_data',['../classlagrange_1_1_attribute.html#ac0d9d9c9d4af92322ac48bfaf13455c6',1,'lagrange::Attribute::m_data()'],['../classlagrange_1_1copy__on__write__ptr.html#a3110b7858a645c01045902b719bb52e2',1,'lagrange::copy_on_write_ptr::m_data()']]],
+  ['m_5fdata_7',['m_data',['../classlagrange_1_1_attribute.html#ac0d9d9c9d4af92322ac48bfaf13455c6',1,'lagrange::Attribute']]],
   ['m_5fdefault_5fvalue_8',['m_default_value',['../classlagrange_1_1_attribute.html#acb9be5a80775fdd2a40d3de682e9f23d',1,'lagrange::Attribute']]],
   ['m_5fdimension_9',['m_dimension',['../classlagrange_1_1_surface_mesh.html#acd7623669a52f06362e2d6c394e72ca8',1,'lagrange::SurfaceMesh']]],
   ['m_5fe2c_10',['m_e2c',['../classlagrange_1_1_mesh_navigation.html#a9b8ec3071778ec94579d97efff17230e',1,'lagrange::MeshNavigation']]],

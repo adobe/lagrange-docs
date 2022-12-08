@@ -21,7 +21,7 @@ var searchData=
   ['project_5fattributes_5fclosest_5fpoint_18',['project_attributes_closest_point',['../namespacelagrange_1_1raycasting.html#a86b38d16a911e93099503d70b4956751',1,'lagrange::raycasting']]],
   ['project_5fattributes_5fdirectional_19',['project_attributes_directional',['../namespacelagrange_1_1raycasting.html#a4abdfbbccfdca07a118b793e0fe028f0',1,'lagrange::raycasting']]],
   ['project_5fon_5fline_20',['project_on_line',['../namespacelagrange.html#ad2be8e67fb8aad9e857a7569a9c8477c',1,'lagrange']]],
-  ['project_5fon_5fplane_21',['project_on_plane',['../namespacelagrange.html#a96fd1e76e0c5a85c99702d69e54795c5',1,'lagrange']]],
+  ['project_5fon_5fplane_21',['project_on_plane',['../namespacelagrange.html#a79e84808ffea64e176275f0a37d7f1bf',1,'lagrange']]],
   ['project_5fparticles_5fdirectional_22',['project_particles_directional',['../namespacelagrange_1_1raycasting.html#a844b13d855b3b9b26682628988bebbfc',1,'lagrange::raycasting']]],
   ['project_5fwith_5fdepth_23',['project_with_depth',['../classlagrange_1_1ui_1_1_camera.html#a60bf737c769d7556af57aca7cbc84f7a',1,'lagrange::ui::Camera']]],
   ['projected_5fangle_5fbetween_24',['projected_angle_between',['../namespacelagrange.html#a89990d08ad7825dd7562410acc88828f',1,'lagrange']]],

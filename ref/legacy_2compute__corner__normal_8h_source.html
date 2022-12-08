@@ -128,7 +128,7 @@ $(function() {
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <span class="comment">// Compute corner angles</span></div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    AttributeArray corner_angles;</div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    {</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        lagrange::internal::internal_angles(mesh.get_vertices(), mesh.get_facets(), corner_angles);</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        <a class="code hl_function" href="namespacelagrange_1_1internal.html#a42f31f304c06ec267113e8de9bda65c8">lagrange::internal::internal_angles</a>(mesh.get_vertices(), mesh.get_facets(), corner_angles);</div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        assert(corner_angles.rows() == facets.rows());</div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        assert(corner_angles.cols() == facets.cols());</div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    }</div>
@@ -282,6 +282,7 @@ $(function() {
 <div class="ttc" id="aclasslagrange_1_1_mesh_html"><div class="ttname"><a href="classlagrange_1_1_mesh.html">lagrange::Mesh</a></div><div class="ttdef"><b>Definition:</b> Mesh.h:47</div></div>
 <div class="ttc" id="agroup__group-utils-assert_html_ga1ccafcb14523a1aae57dcac3c3f32ecd"><div class="ttname"><a href="group__group-utils-assert.html#ga1ccafcb14523a1aae57dcac3c3f32ecd">la_runtime_assert</a></div><div class="ttdeci">#define la_runtime_assert(...)</div><div class="ttdoc">Runtime assertion check.</div><div class="ttdef"><b>Definition:</b> assert.h:168</div></div>
 <div class="ttc" id="agroup__group-utils-misc_html_ga68084717e646e9a6073e533d0b83a2b7"><div class="ttname"><a href="group__group-utils-misc.html#ga68084717e646e9a6073e533d0b83a2b7">lagrange::range</a></div><div class="ttdeci">internal::Range&lt; Index &gt; range(Index end)</div><div class="ttdoc">Returns an iterable object representing the range [0, end).</div><div class="ttdef"><b>Definition:</b> range.h:176</div></div>
+<div class="ttc" id="anamespacelagrange_1_1internal_html_a42f31f304c06ec267113e8de9bda65c8"><div class="ttname"><a href="namespacelagrange_1_1internal.html#a42f31f304c06ec267113e8de9bda65c8">lagrange::internal::internal_angles</a></div><div class="ttdeci">void internal_angles(const Eigen::MatrixBase&lt; DerivedV &gt; &amp;vertices, const Eigen::MatrixBase&lt; DerivedF &gt; &amp;facets, Eigen::PlainObjectBase&lt; DerivedK &gt; &amp;angles)</div><div class="ttdoc">Compute internal angles for a triangle mesh.</div><div class="ttdef"><b>Definition:</b> internal_angles.h:39</div></div>
 <div class="ttc" id="anamespacelagrange_html"><div class="ttname"><a href="namespacelagrange.html">lagrange</a></div><div class="ttdoc">Main namespace for Lagrange.</div><div class="ttdef"><b>Definition:</b> AABBIGL.h:30</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->

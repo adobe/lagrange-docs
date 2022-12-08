@@ -650,6 +650,48 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#disjoint-set-union-find" class="md-nav__link">
+    Disjoint-Set / Union-Find
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bitfield" class="md-nav__link">
+    BitField
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#floating-point-exceptions" class="md-nav__link">
+    Floating Point Exceptions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scope-guard" class="md-nav__link">
+    Scope Guard
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stack-allocated-containers" class="md-nav__link">
+    Stack-Allocated Containers
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shared-span" class="md-nav__link">
+    Shared Span
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1337,6 +1379,48 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#disjoint-set-union-find" class="md-nav__link">
+    Disjoint-Set / Union-Find
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bitfield" class="md-nav__link">
+    BitField
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#floating-point-exceptions" class="md-nav__link">
+    Floating Point Exceptions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scope-guard" class="md-nav__link">
+    Scope Guard
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stack-allocated-containers" class="md-nav__link">
+    Stack-Allocated Containers
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shared-span" class="md-nav__link">
+    Shared Span
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1447,10 +1531,13 @@ message. To conveniently format assertion messages with a printf-like syntax, us
 <span class="n">la_debug_assert</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Error message&quot;</span><span class="p">);</span><span class="w"></span>
 <span class="n">la_debug_assert</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="n">fmt</span><span class="o">::</span><span class="n">format</span><span class="p">(</span><span class="s">&quot;Incorrect value of x: {}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="p">));</span><span class="w"></span>
 </code></pre></div>
-<p>It is possible to have assert macros break into the debugger upon failure. To do that, enable the
-CMake option <code>LAGRANGE_ASSERT_DEBUG_BREAK</code> when compiling Lagrange into your project.</p>
+<div class="admonition tip">
+<p class="admonition-title">Break Into Debugger</p>
+<p>It is possible to have assert macros break into the debugger upon failure. To do that, enable
+the CMake option <code>LAGRANGE_ASSERT_DEBUG_BREAK</code> when compiling Lagrange into your project.</p>
+</div>
 <h2 id="type-cast">Type Cast</h2>
-<p>It is often necessary to cast a variable from one type to another.  To ensure
+<p>It is often necessary to cast a variable from one type to another. To ensure
 such cast is safe, Lagrange provides an explicit casting function:</p>
 <div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;lagrange/utils/safe_cast.h&gt;</span><span class="cp"></span>
 
@@ -1458,7 +1545,7 @@ such cast is safe, Lagrange provides an explicit casting function:</p>
 <span class="n">type1</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lagrange</span><span class="o">::</span><span class="n">safe_cast</span><span class="o">&lt;</span><span class="n">type1</span><span class="o">&gt;</span><span class="p">(</span><span class="n">y</span><span class="p">);</span><span class="w"></span>
 </code></pre></div>
 <div class="admonition note">
-<p class="admonition-title">Implementation Details</p>
+<p class="admonition-title">Implementation Detail</p>
 <p><code>safe_cast</code> checks for type compatibility, sign consistency and truncation error.  We
 recommended to use code that avoids casting in the first place.</p>
 </div>
@@ -1496,11 +1583,198 @@ range:</p>
 <span class="w">    </span><span class="c1">// i will loop through only the active entries.</span>
 <span class="p">}</span><span class="w"></span>
 </code></pre></div>
-<p>The iterator behaves as follows:
-- If <code>active_set</code> is empty, <code>range_sparse(N, active_set)</code> will loop from 0 to <code>N</code> (same behavior as
-  <code>range(N)</code>).
-- However, if <code>active_set</code> is non-empty, <code>range_sparse(N, active_set)</code> will loop through the entries
-  of <code>active_set</code>.</p>
+<p>The iterator behaves as follows:</p>
+<ul>
+<li>If <code>active_set</code> is empty, <code>range_sparse(N, active_set)</code> will loop from 0 to <code>N</code> (same behavior as
+  <code>range(N)</code>).</li>
+<li>However, if <code>active_set</code> is non-empty, <code>range_sparse(N, active_set)</code> will loop through the entries
+  of <code>active_set</code>.</li>
+</ul>
+<h2 id="disjoint-set-union-find">Disjoint-Set / Union-Find</h2>
+<p>Lagrange provide a simple <a href="../../../ref/classlagrange_1_1_disjoint_sets.html">Disjoint-Set</a> data-structure that can be used to implement
+algorithms such as Kruskal's minimum spanning tree.</p>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;lagrange/utils/DisjointSets.h&gt;</span><span class="cp"></span>
+
+<span class="k">using</span><span class="w"> </span><span class="n">Edge</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">array</span><span class="o">&lt;</span><span class="n">Index</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="o">&gt;</span><span class="p">;</span><span class="w"></span>
+
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Edge</span><span class="o">&gt;</span><span class="w"> </span><span class="n">min_spanning_tree</span><span class="p">(</span><span class="w"></span>
+<span class="w">    </span><span class="n">Index</span><span class="w"> </span><span class="n">num_vertices</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Edge</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">sorted_edges</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// Disjoint-sets for efficient union-find operations</span>
+<span class="w">    </span><span class="n">DisjointSets</span><span class="o">&lt;</span><span class="n">Index</span><span class="o">&gt;</span><span class="w"> </span><span class="n">union_find</span><span class="p">(</span><span class="n">num_vertices</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Edge</span><span class="o">&gt;</span><span class="w"> </span><span class="n">output_edges</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// Iterate over all input edges in ascending order</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">auto</span><span class="w"> </span><span class="p">[</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">]</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">sorted_edges</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="p">[</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sorted_edges</span><span class="p">[</span><span class="n">e</span><span class="p">];</span><span class="w"></span>
+
+<span class="w">        </span><span class="c1">// If vertices belong to disconnected unrooted trees,</span>
+<span class="w">        </span><span class="c1">// merge them and add edge (x, y) to the solution</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">union_find</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">union_find</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="n">y</span><span class="p">))</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="n">output_edges</span><span class="p">.</span><span class="n">emplace_back</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">);</span><span class="w"></span>
+<span class="w">            </span><span class="n">union_find</span><span class="p">.</span><span class="n">merge</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">output_edges</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Implementation Detail</p>
+<p>For simplicity, our Disjoint-Set data structure currently only implements <em>path compression</em>,
+but not union by rank.</p>
+</div>
+<h2 id="bitfield">BitField</h2>
+<p>The <a href="../../../ref/classlagrange_1_1_bit_field.html">BitField</a> class can be used to implement convenient bitwise boolean operations over
+an enum type.</p>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;lagrange/utils/BitField.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;lagrange/Logger.h&gt;</span><span class="cp"></span>
+
+<span class="k">enum</span><span class="w"> </span><span class="nc">Operation</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">Translation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="mi">0</span><span class="p">),</span><span class="w"></span>
+<span class="w">    </span><span class="n">Rotation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="mi">1</span><span class="p">),</span><span class="w"></span>
+<span class="w">    </span><span class="n">Scaling</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="mi">2</span><span class="p">),,</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+<span class="n">BitField</span><span class="o">&lt;</span><span class="n">Operation</span><span class="o">&gt;</span><span class="w"> </span><span class="n">op</span><span class="p">;</span><span class="w"></span>
+<span class="n">op</span><span class="p">.</span><span class="n">set</span><span class="p">(</span><span class="n">Operation</span><span class="o">::</span><span class="n">Translation</span><span class="p">);</span><span class="w"></span>
+<span class="n">op</span><span class="p">.</span><span class="n">set</span><span class="p">(</span><span class="n">Operation</span><span class="o">::</span><span class="n">Scaling</span><span class="p">);</span><span class="w"></span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">op</span><span class="p">.</span><span class="n">test</span><span class="p">(</span><span class="n">Operation</span><span class="o">::</span><span class="n">Scaling</span><span class="p">))</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">lagrange</span><span class="o">::</span><span class="n">logger</span><span class="p">().</span><span class="n">info</span><span class="p">(</span><span class="s">&quot;Scaling bit is set&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<h2 id="floating-point-exceptions">Floating Point Exceptions</h2>
+<p>On certain platforms, it is possible to trap <a href="https://en.wikipedia.org/wiki/IEEE_754#Exception_handling">floating point
+exceptions</a> using <a href="https://en.cppreference.com/w/cpp/numeric/fenv">compiler-specific
+functions</a>. This is useful for debugging purposes,
+e.g. to detect when a NaN is emitted during numerical computation.</p>
+<p>Lagrange provide a convenient platform-agnostic function called <a href="../../../ref/group__group-utils-misc.html#ga19b64389774c826a71abae902e0b46b9">enable_fpe()</a> /
+<a href="../../../ref/group__group-utils-misc.html#ga19b64389774c826a71abae902e0b46b9">disable_fpe()</a> to enable/disable trapping floating point exceptions. Our implementation
+currently supports Linux and macOS. On non-supported platform, calling the function is a no-op.</p>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;lagrange/utils/fpe.h&gt;</span><span class="cp"></span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">my_main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">lagrange</span><span class="o">::</span><span class="n">enable_fpe</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// call problematic operation []...]</span>
+<span class="w">    </span><span class="n">lagrange</span><span class="o">::</span><span class="n">disable_fpe</span><span class="p">();</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">Compilation Issues</p>
+<p>If our implementation of <code>enable_fpe()</code> casues compilation issues on your target platform (e.g.
+macOS M1, Emscripten, etc.), it is possible to disable the feature explicitly by setting the
+CMake option <code>LAGRANGE_DISABLE_FPE=ON</code>. In this case, calling <code>enable_fpe()</code> will do nothing.</p>
+</div>
+<h2 id="scope-guard">Scope Guard</h2>
+<p>Sometimes it is necessary to ensure that certain resources are properly deallocated when leaving the
+scope of a function. This typically happens when dealing with C API that provide abstract object
+handling functions such as:</p>
+<div class="highlight"><pre><span></span><code><span class="k">struct</span><span class="w"> </span><span class="nc">MyObject</span><span class="p">;</span><span class="w"></span>
+
+<span class="n">MyObject</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nf">create_object</span><span class="p">();</span><span class="w"></span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">delete_object</span><span class="p">(</span><span class="n">MyObject</span><span class="w"> </span><span class="o">*</span><span class="p">);</span><span class="w"></span>
+</code></pre></div>
+<p>To make object deletion exception-safe in C++, one must ensure that the <code>delete_object()</code> function
+is called even if an exception is raised. One possibility is to use a
+<a href="https://en.cppreference.com/w/cpp/language/raii">RAII</a> class. Lagrange provides a simple
+<a href="../../../ref/group__group-utils-misc.html#ga473b5d2b31badd808124196a21ce0b45">make_scope_guard()</a> function that wraps an arbitrary callable using RAII:</p>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;lagrange/utils/scope_guard.h&gt;</span><span class="cp"></span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">my_function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">MyObject</span><span class="w"> </span><span class="o">*</span><span class="n">obj</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">create_object</span><span class="p">();</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// Deferred called to `delete_object()` destructor.</span>
+<span class="w">    </span><span class="c1">// Called when `guard` goes out of scope.</span>
+<span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">guard</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lagrange</span><span class="o">::</span><span class="n">make_scope_guard</span><span class="p">([</span><span class="o">&amp;</span><span class="p">](</span><span class="w"> </span><span class="n">delete_object</span><span class="p">(</span><span class="n">obj</span><span class="p">);</span><span class="w"> </span><span class="p">));</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// Use `obj` ...</span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>This paradigm is also useful when using imperative programming, e.g. when implementing an "editable
+state" in an object, and you want to ensure the <code>begin_edit()</code> and <code>end_edit()</code> methods are always
+called together. It can also be use to wrap calls to <code>glBegin()</code> and <code>glEnd()</code> in OpenGL, ensuring
+the state machine stays consistent.</p>
+<h2 id="stack-allocated-containers">Stack-Allocated Containers</h2>
+<p>Lagrange provides different implementations of stack-allocated containers. Such containers are
+extremely useful when dealing with many small buffers with a known upper-limit size, or at least a
+good initial guess. For example if the nodes of a graph have at most 6 neighbors, you can use a
+stack-allocated containers to store the neighbor indices. Another example is storing a quad-dominant
+mesh, where facets can have a size 3 or 4.</p>
+<p>Lagrange currently provide the following implementations:</p>
+<ul>
+<li><strong><a href="../../../ref/classlagrange_1_1_small_vector.html">SmallVector</a></strong>. An implementation of a <code>std::vector&lt;&gt;</code> with a pre-allocated stack
+  buffer that grow on the heap beyond the initial upper limit.</li>
+<li><strong><a href="../../../ref/structlagrange_1_1_stack_vector.html">StackVector</a></strong>. An implementation of a <code>std::vector&lt;&gt;</code> with a fixed upper size
+  provided at compile-time. Inserting new elements beyond the limit will throw an exception.</li>
+<li><strong><a href="../../../ref/structlagrange_1_1_stack_set.html">StackSet</a></strong>. An implementation of a <code>std::set&lt;&gt;</code> with a fixed upper size provided at
+  compile-time. Inserting new elements beyond the limit will throw an exception.</li>
+</ul>
+<h2 id="shared-span">Shared Span</h2>
+<p>Lagrange's <a href="../mesh/">SurfaceMesh</a> class relies heavily on a <a href="../../../ref/group__group-utils-misc.html#ga4afead0b9ccc53fe4fca896787595d26">span&lt;&gt;</a> implementation to provide
+bounds-safe view over raw pointers. Since our mesh attribute supports copy-on-write and wrapping of
+external buffers, it can be desirable to wrap external buffers as attribute while managing their
+lifetime.</p>
+<p>To this end, Lagrange implements a <a href="../../../ref/classlagrange_1_1_shared_span.html">SharedSpan</a> object that offers a bounds-safe view
+over a raw pointer, while tracking the actual owner object via a different <code>std::shared_ptr&lt;&gt;</code>.</p>
+<div class="admonition example">
+<p class="admonition-title">Example 1: Buffer Created via a C-style API</p>
+<div class="highlight"><pre><span></span><code><span class="k">struct</span><span class="w"> </span><span class="nc">MyMesh</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;</span><span class="w"> </span><span class="n">vertices</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">uint32_t</span><span class="o">&gt;</span><span class="w"> </span><span class="n">facets</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+
+<span class="c1">// Create a new mesh instance</span>
+<span class="n">MyMesh</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nf">mesh_new</span><span class="p">();</span><span class="w"></span>
+
+<span class="c1">// Free previously allocated mesh instance</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">mesh_free</span><span class="p">(</span><span class="n">MyMesh</span><span class="o">*</span><span class="w"> </span><span class="n">obj</span><span class="p">);</span><span class="w"></span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">wrap_mesh</span><span class="p">(</span><span class="n">lagrange</span><span class="o">::</span><span class="n">SurfaceMesh</span><span class="o">&lt;</span><span class="kt">float</span><span class="p">,</span><span class="w"> </span><span class="kt">uint32_t</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="n">mesh</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// Create vertex buffer via abstract C API</span>
+<span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">owner_obj</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">MyObject</span><span class="o">&gt;</span><span class="p">(</span><span class="n">mesh_new</span><span class="p">(),</span><span class="w"> </span><span class="o">&amp;</span><span class="n">mesh_free</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// Number of vertices is number of coordinates divided by 3</span>
+<span class="w">    </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">num_vertices</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">owner_obj</span><span class="o">-&gt;</span><span class="n">vertices</span><span class="p">.</span><span class="n">size</span><span class="p">()</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// Create a &quot;view&quot; of the raw vertices pointer while tracking ownership information</span>
+<span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">vertices_vew</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">make_shared_span</span><span class="p">(</span><span class="w"></span>
+<span class="w">        </span><span class="n">owner_obj</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="n">owner_obj</span><span class="o">-&gt;</span><span class="n">vertices</span><span class="p">.</span><span class="n">data</span><span class="p">(),</span><span class="w"></span>
+<span class="w">        </span><span class="n">owner_obj</span><span class="o">-&gt;</span><span class="n">vertices</span><span class="p">.</span><span class="n">size</span><span class="p">());</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">mesh</span><span class="p">.</span><span class="n">wrap_as_vertices</span><span class="p">(</span><span class="n">vertices_vew</span><span class="p">,</span><span class="w"> </span><span class="n">num_vertices</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// Wrap facet buffer sharing the same owner object</span>
+<span class="w">    </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">num_facets</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">owner_obj</span><span class="o">-&gt;</span><span class="n">facets</span><span class="p">.</span><span class="n">size</span><span class="p">()</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">facets_vew</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">make_shared_span</span><span class="p">(</span><span class="w"></span>
+<span class="w">        </span><span class="n">owner_obj</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="n">owner_obj</span><span class="o">-&gt;</span><span class="n">facets</span><span class="p">.</span><span class="n">data</span><span class="p">(),</span><span class="w"></span>
+<span class="w">        </span><span class="n">owner_obj</span><span class="o">-&gt;</span><span class="n">facets</span><span class="p">.</span><span class="n">size</span><span class="p">());</span><span class="w"></span>
+<span class="w">    </span><span class="n">mesh</span><span class="p">.</span><span class="n">wrap_as_facets</span><span class="p">(</span><span class="n">facets_view</span><span class="p">,</span><span class="w"> </span><span class="n">num_facets</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Example 2: Buffer Stored as an Eigen Matrix</p>
+<div class="highlight"><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="n">RowMatrixXd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Eigen</span><span class="o">::</span><span class="n">Matrix</span><span class="o">&lt;</span><span class="kt">double</span><span class="p">,</span><span class="w"> </span><span class="n">Eigen</span><span class="o">::</span><span class="n">Dynamic</span><span class="p">,</span><span class="w"> </span><span class="n">Eigen</span><span class="o">::</span><span class="n">Dynamic</span><span class="p">,</span><span class="w"> </span><span class="n">Eigen</span><span class="o">::</span><span class="n">RowMajor</span><span class="o">&gt;</span><span class="p">;</span><span class="w"></span>
+
+<span class="c1">// Moves a N x 3 matrix of vertex positions into a Lagrange SurfaceMesh</span>
+<span class="c1">// without copying the underlying buffer</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">wrap_vertices</span><span class="p">(</span><span class="n">lagrange</span><span class="o">::</span><span class="n">SurfaceMesh32d</span><span class="o">&amp;</span><span class="w"> </span><span class="n">mesh</span><span class="p">,</span><span class="w"> </span><span class="n">RowMatrixXd</span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">V</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// Take ownership of the input matrix V</span>
+<span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">eigen_matrix</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">RowMatrixXd</span><span class="o">&gt;</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">move</span><span class="p">(</span><span class="n">V</span><span class="p">));</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// Create a safe view of the raw position data</span>
+<span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">vertices_view</span><span class="w"> </span><span class="o">=</span><span class="w"></span>
+<span class="w">        </span><span class="n">lagrange</span><span class="o">::</span><span class="n">make_shared_span</span><span class="p">(</span><span class="n">eigen_matrix</span><span class="p">,</span><span class="w"> </span><span class="n">eigen_matrix</span><span class="o">-&gt;</span><span class="n">data</span><span class="p">(),</span><span class="w"> </span><span class="n">eigen_matrix</span><span class="o">-&gt;</span><span class="n">size</span><span class="p">());</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// Wrap raw position data as vertices without any copy</span>
+<span class="w">    </span><span class="n">mesh</span><span class="p">.</span><span class="n">wrap_as_vertices</span><span class="p">(</span><span class="n">vertices_view</span><span class="p">,</span><span class="w"> </span><span class="n">eigen_matrix</span><span class="o">-&gt;</span><span class="n">rows</span><span class="p">());</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+</div>
 
               
             </article>

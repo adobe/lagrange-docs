@@ -52,6 +52,7 @@ var menudata={children:[
 {text:"w",url:"namespacemembers_w.html#index_w"}]},
 {text:"Functions",url:"namespacemembers_func.html",children:[
 {text:"a",url:"namespacemembers_func.html#index_a"},
+{text:"b",url:"namespacemembers_func_b.html#index_b"},
 {text:"c",url:"namespacemembers_func_c.html#index_c"},
 {text:"d",url:"namespacemembers_func_d.html#index_d"},
 {text:"e",url:"namespacemembers_func_e.html#index_e"},
@@ -146,6 +147,7 @@ var menudata={children:[
 {text:"r",url:"functions_vars.html#index_r"},
 {text:"s",url:"functions_vars.html#index_s"},
 {text:"t",url:"functions_vars.html#index_t"},
+{text:"u",url:"functions_vars.html#index_u"},
 {text:"v",url:"functions_vars.html#index_v"},
 {text:"w",url:"functions_vars.html#index_w"}]},
 {text:"Typedefs",url:"functions_type.html"},

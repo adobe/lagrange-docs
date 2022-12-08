@@ -81,15 +81,15 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ad43975e3c4d5cb4a35a7a9c673d6dc7a"><td class="memItemLeft" align="right" valign="top"><a id="ad43975e3c4d5cb4a35a7a9c673d6dc7a" name="ad43975e3c4d5cb4a35a7a9c673d6dc7a"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Keybind</b> (int btn, const std::vector&lt; int &gt; &amp;modifier_keys={})</td></tr>
-<tr class="separator:ad43975e3c4d5cb4a35a7a9c673d6dc7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada7afc9c05a2f3faafad98697e6c64b8"><td class="memItemLeft" align="right" valign="top"><a id="ada7afc9c05a2f3faafad98697e6c64b8" name="ada7afc9c05a2f3faafad98697e6c64b8"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Keybind</b> (ImGuiKey btn, const std::vector&lt; ImGuiKey &gt; &amp;modifier_keys={})</td></tr>
+<tr class="separator:ada7afc9c05a2f3faafad98697e6c64b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a3f1d7c7ce1dbabebcc4bcaee4404f201"><td class="memItemLeft" align="right" valign="top"><a id="a3f1d7c7ce1dbabebcc4bcaee4404f201" name="a3f1d7c7ce1dbabebcc4bcaee4404f201"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>button</b> = -1</td></tr>
-<tr class="separator:a3f1d7c7ce1dbabebcc4bcaee4404f201"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1deca77d99e0d83d9d532c06ac2b05c1"><td class="memItemLeft" align="right" valign="top"><a id="a1deca77d99e0d83d9d532c06ac2b05c1" name="a1deca77d99e0d83d9d532c06ac2b05c1"></a>
+ImGuiKey&#160;</td><td class="memItemRight" valign="bottom"><b>button</b> = ImGuiKey_None</td></tr>
+<tr class="separator:a1deca77d99e0d83d9d532c06ac2b05c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a505ddd3bc247427f0c0d8be4560d4949"><td class="memItemLeft" align="right" valign="top"><a id="a505ddd3bc247427f0c0d8be4560d4949" name="a505ddd3bc247427f0c0d8be4560d4949"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>modifier_count</b> = 0</td></tr>
 <tr class="separator:a505ddd3bc247427f0c0d8be4560d4949"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -99,31 +99,31 @@ KeyState&#160;</td><td class="memItemRight" valign="bottom"><b>previous_state</b
 <tr class="memitem:ab8422f1499490a5a11e0ed1a81958517"><td class="memItemLeft" align="right" valign="top"><a id="ab8422f1499490a5a11e0ed1a81958517" name="ab8422f1499490a5a11e0ed1a81958517"></a>
 KeyState&#160;</td><td class="memItemRight" valign="bottom"><b>current_state</b> = KeyState::NONE</td></tr>
 <tr class="separator:ab8422f1499490a5a11e0ed1a81958517"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a43e8d22e10af64147ba673f2f3277537"><td class="memItemLeft" align="right" valign="top">std::array&lt; int, 6 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlagrange_1_1ui_1_1_keybinds_1_1_keybind.html#a43e8d22e10af64147ba673f2f3277537">modifiers</a></td></tr>
-<tr class="separator:a43e8d22e10af64147ba673f2f3277537"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a5d787aa5ccd4d9f6529afb42913e50"><td class="memItemLeft" align="right" valign="top">std::array&lt; ImGuiKey, 6 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlagrange_1_1ui_1_1_keybinds_1_1_keybind.html#a9a5d787aa5ccd4d9f6529afb42913e50">modifiers</a></td></tr>
+<tr class="separator:a9a5d787aa5ccd4d9f6529afb42913e50"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Key/mouse shortcut. </p>
 <p >Stores main button, modifiers and current and previous state </p>
 </div><h2 class="groupheader">Member Data Documentation</h2>
-<a id="a43e8d22e10af64147ba673f2f3277537" name="a43e8d22e10af64147ba673f2f3277537"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a43e8d22e10af64147ba673f2f3277537">&#9670;&nbsp;</a></span>modifiers</h2>
+<a id="a9a5d787aa5ccd4d9f6529afb42913e50" name="a9a5d787aa5ccd4d9f6529afb42913e50"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a5d787aa5ccd4d9f6529afb42913e50">&#9670;&nbsp;</a></span>modifiers</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::array&lt;int, 6&gt; modifiers</td>
+          <td class="memname">std::array&lt;ImGuiKey, 6&gt; modifiers</td>
         </tr>
       </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">            -1,</div>
-<div class="line">            -1,</div>
-<div class="line">            -1,</div>
-<div class="line">            -1,</div>
-<div class="line">            -1,</div>
-<div class="line">            -1,</div>
+<div class="line">            ImGuiKey_None,</div>
+<div class="line">            ImGuiKey_None,</div>
+<div class="line">            ImGuiKey_None,</div>
+<div class="line">            ImGuiKey_None,</div>
+<div class="line">            ImGuiKey_None,</div>
+<div class="line">            ImGuiKey_None,</div>
 <div class="line">        }</div>
 </div><!-- fragment -->
 </div>
