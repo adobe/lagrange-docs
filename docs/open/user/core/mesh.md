@@ -200,6 +200,12 @@ mesh.add_hybrid(4,
 });
 ```
 
+!!! tip "Wrapping External Buffers ans Eigen Matrices"
+    Please read our dedicated section on [wrapping external
+    buffer](attributes.md/#wrapping-external-buffers), as well as our documentation on
+    [SharedSpan](general-utilities.md/#shared-span) for tracking ownership of shared objects when
+    wrapping external buffers.
+
 ## Removing Vertices/Facets
 
 !!! attention "Batch Removal Only"

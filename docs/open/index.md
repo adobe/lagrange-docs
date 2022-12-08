@@ -11,9 +11,7 @@ principles:
 
 {% if is_corp %}
 
-<figure markdown>
 ![](../corp/img/intro.png){ width=600 }
-</figure>
 
 {% endif %}
 

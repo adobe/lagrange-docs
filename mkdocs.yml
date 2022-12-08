@@ -39,6 +39,10 @@ markdown_extensions:
 
 plugins:
   - search
+  - bibtex:
+      bib_file: "refs.bib"
+      csl_file: acm-siggraph.csl
+      cite_inline: True
   - macros:
       include_yaml:
         - macros.open.yml

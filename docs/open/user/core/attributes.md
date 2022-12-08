@@ -363,7 +363,8 @@ object and let the compiler deduce the `Scalar` type template argument:
 
 <!-- @attr -->
 ```c++
-// Pass a `span<>` object directly to let the compiler deduce the template value type
+// Pass a `span<>` object directly to let the compiler deduce
+// the template value type
 mesh.wrap_as_const_attribute(
     "normals",
     lagrange::AttributeElement::Vertex,
@@ -372,13 +373,15 @@ mesh.wrap_as_const_attribute(
     lagrange::span<const Scalar>(normals));
 ```
 
-!!! note "Lifetime Management"
-    Our API assumes that the external buffer remains valid for the lifetime of the mesh object
-    wrapping the external data. We do not pass any counter, smart pointer or custom deleter function
-    that would allow to track or keep alive the external data. This is because most of the time we
-    just need to create a Lagrange Mesh wrapping an existing buffer, process it with Lagrange, and
-    extract the results. If more advanced lifetime management is desirable, please let us know.
+!!! tip "Tracking Ownership And Moving Eigen Matrices"
+    If you need to track the ownership of an external buffer being wrapped as a mesh attribute,
+    please read our documentation about [SharedSpan](general-utilities.md/#shared-span) objects. Any
+    `wrap_*` method that accepts a regular `span<>` object should also work with a managed
+    `SharedSpan` object.
 
+    Using a [SharedSpan](general-utilities.md/#shared-span) object to wrap an external object as
+    attribute allows moving a Eigen::Matrix and other arbitrary objects into mesh attributes without
+    any extra buffer copy, as long as the memory layout of the coordinates are compatible.
 
 ## Delete And Export Attributes
 
@@ -426,6 +429,11 @@ via our copy-on-write mechanism.
 
 Controls the behavior when creating an attribute with a reserved name (starting with `$`). The
 default is to throw an exception. See [reference documentation][Create policy] for more details.
+
+### Copy Policy
+
+Controls the behavior when copying an attribute that wraps an external buffer. By default, a deep
+copy of the buffer will be created. See [reference documentation][Copy policy] for more details.
 
 ### Growth Policy
 
@@ -544,3 +552,4 @@ auto attr_ptr3 = mesh.delete_and_export_attribute<Scalar>(
 [Write policy]: ../../../{{ dox_folder }}/group__group-surfacemesh-attr.html#ga3018d576f81897e1712c3601b9625cb9
 [Export policy]: ../../../{{ dox_folder }}/group__group-surfacemesh-attr.html#gade3ae5b7e72e9d4f92f29c6563551c10
 [Delete policy]: ../../../{{ dox_folder }}/group__group-surfacemesh-attr.html#gad17b213b11e78aeb807ad3ece7e67e84
+[Copy policy]: ../../../{{ dox_folder }}/group__group-surfacemesh-attr.html#ga450ef027eac01dd93a89a15ff55de63f
