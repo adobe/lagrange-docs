@@ -364,9 +364,54 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Goals
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         Goals
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#legacy-mesh-io" class="md-nav__link">
+    Legacy Mesh IO
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#surface-mesh-io" class="md-nav__link">
+    Surface Mesh IO
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#simple-scene-io" class="md-nav__link">
+    Simple Scene IO
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1221,6 +1266,35 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#legacy-mesh-io" class="md-nav__link">
+    Legacy Mesh IO
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#surface-mesh-io" class="md-nav__link">
+    Surface Mesh IO
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#simple-scene-io" class="md-nav__link">
+    Simple Scene IO
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1341,6 +1415,8 @@ be easy to add them to your build system, provided you can compile the required 
    tinyobj to provide IO functionalities.</p>
 <details class="info">
 <summary>Supported File Formats</summary>
+<h4 id="legacy-mesh-io">Legacy Mesh IO</h4>
+<p>IO for our legacy Mesh class (will be retired in the future).</p>
 <table>
 <thead>
 <tr>
@@ -1352,28 +1428,10 @@ be easy to add them to your build system, provided you can compile the required 
 </thead>
 <tbody>
 <tr>
-<td>OBJ</td>
+<td>FBX</td>
 <td><img alt="✔" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2714.svg" title=":heavy_check_mark:" /></td>
-<td><img alt="✔" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2714.svg" title=":heavy_check_mark:" /></td>
-<td>Via tinyobj/libigl</td>
-</tr>
-<tr>
-<td>VTK</td>
 <td><img alt="❌" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/274c.svg" title=":x:" /></td>
-<td><img alt="✔" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2714.svg" title=":heavy_check_mark:" /></td>
-<td>Custom writer</td>
-</tr>
-<tr>
-<td>PLY</td>
-<td><img alt="✔" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2714.svg" title=":heavy_check_mark:" /></td>
-<td><img alt="✔" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2714.svg" title=":heavy_check_mark:" /></td>
-<td>Via tinyply/libigl</td>
-</tr>
-<tr>
-<td>OFF</td>
-<td><img alt="✔" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2714.svg" title=":heavy_check_mark:" /></td>
-<td><img alt="✔" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2714.svg" title=":heavy_check_mark:" /></td>
-<td>Via libigl</td>
+<td>Via Assimp</td>
 </tr>
 <tr>
 <td>glTF</td>
@@ -1382,10 +1440,28 @@ be easy to add them to your build system, provided you can compile the required 
 <td>Via Assimp</td>
 </tr>
 <tr>
-<td>FBX</td>
-<td><img alt="✔" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2714.svg" title=":heavy_check_mark:" /></td>
+<td>HDF5</td>
 <td><img alt="❌" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/274c.svg" title=":x:" /></td>
-<td>Via Assimp</td>
+<td><img alt="❌" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/274c.svg" title=":x:" /></td>
+<td>Planned</td>
+</tr>
+<tr>
+<td>OBJ</td>
+<td><img alt="✔" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2714.svg" title=":heavy_check_mark:" /></td>
+<td><img alt="✔" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2714.svg" title=":heavy_check_mark:" /></td>
+<td>Via tinyobj/libigl</td>
+</tr>
+<tr>
+<td>OFF</td>
+<td><img alt="✔" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2714.svg" title=":heavy_check_mark:" /></td>
+<td><img alt="✔" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2714.svg" title=":heavy_check_mark:" /></td>
+<td>Via libigl</td>
+</tr>
+<tr>
+<td>PLY</td>
+<td><img alt="✔" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2714.svg" title=":heavy_check_mark:" /></td>
+<td><img alt="✔" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2714.svg" title=":heavy_check_mark:" /></td>
+<td>Via tinyply/libigl</td>
 </tr>
 <tr>
 <td>USD</td>
@@ -1394,10 +1470,104 @@ be easy to add them to your build system, provided you can compile the required 
 <td>Planned</td>
 </tr>
 <tr>
+<td>VTK</td>
+<td><img alt="❌" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/274c.svg" title=":x:" /></td>
+<td><img alt="✔" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2714.svg" title=":heavy_check_mark:" /></td>
+<td>Custom writer</td>
+</tr>
+</tbody>
+</table>
+<h4 id="surface-mesh-io">Surface Mesh IO</h4>
+<p>IO for our new polygonal mesh class.</p>
+<table>
+<thead>
+<tr>
+<th>Format</th>
+<th>Read</th>
+<th>Write</th>
+<th>Comment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FBX</td>
+<td><img alt="✔" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2714.svg" title=":heavy_check_mark:" /><sup id="fnref4:io"><a class="footnote-ref" href="#fn:io">1</a></sup></td>
+<td><img alt="❌" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/274c.svg" title=":x:" /></td>
+<td>Via Assimp</td>
+</tr>
+<tr>
+<td>glTF</td>
+<td><img alt="✔" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2714.svg" title=":heavy_check_mark:" /></td>
+<td><img alt="✔" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2714.svg" title=":heavy_check_mark:" /></td>
+<td>Via tinygltf</td>
+</tr>
+<tr>
 <td>HDF5</td>
 <td><img alt="❌" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/274c.svg" title=":x:" /></td>
 <td><img alt="❌" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/274c.svg" title=":x:" /></td>
 <td>Planned</td>
+</tr>
+<tr>
+<td>MSH</td>
+<td><img alt="✔" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2714.svg" title=":heavy_check_mark:" /></td>
+<td><img alt="✔" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2714.svg" title=":heavy_check_mark:" /></td>
+<td>Via MshIO</td>
+</tr>
+<tr>
+<td>OBJ</td>
+<td><img alt="✔" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2714.svg" title=":heavy_check_mark:" /></td>
+<td><img alt="✔" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2714.svg" title=":heavy_check_mark:" /></td>
+<td>Read via tinyobj, custom writer</td>
+</tr>
+<tr>
+<td>PLY</td>
+<td><img alt="✔" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2714.svg" title=":heavy_check_mark:" /></td>
+<td><img alt="✔" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2714.svg" title=":heavy_check_mark:" /></td>
+<td>Read via libigl, write via happly</td>
+</tr>
+<tr>
+<td>USD</td>
+<td><img alt="❌" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/274c.svg" title=":x:" /></td>
+<td><img alt="❌" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/274c.svg" title=":x:" /></td>
+<td>Planned</td>
+</tr>
+<tr>
+<td>Other</td>
+<td><img alt="✔" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2714.svg" title=":heavy_check_mark:" /><sup id="fnref3:io"><a class="footnote-ref" href="#fn:io">1</a></sup></td>
+<td><img alt="❌" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/274c.svg" title=":x:" /></td>
+<td>Via Assimp</td>
+</tr>
+</tbody>
+</table>
+<h4 id="simple-scene-io">Simple Scene IO</h4>
+<p>IO for our simple scene class, supporting a list of instanced meshes.</p>
+<table>
+<thead>
+<tr>
+<th>Format</th>
+<th>Read</th>
+<th>Write</th>
+<th>Comment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>glTF</td>
+<td><img alt="✔" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2714.svg" title=":heavy_check_mark:" /></td>
+<td><img alt="✔" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2714.svg" title=":heavy_check_mark:" /></td>
+<td>Via tinygtlf</td>
+</tr>
+<tr>
+<td>FBX</td>
+<td><img alt="✔" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2714.svg" title=":heavy_check_mark:" /><sup id="fnref2:io"><a class="footnote-ref" href="#fn:io">1</a></sup></td>
+<td><img alt="❌" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/274c.svg" title=":x:" /></td>
+<td>Via Assimp</td>
+</tr>
+<tr>
+<td>Other</td>
+<td><img alt="✔" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2714.svg" title=":heavy_check_mark:" /><sup id="fnref:io"><a class="footnote-ref" href="#fn:io">1</a></sup></td>
+<td><img alt="❌" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/274c.svg" title=":x:" /></td>
+<td>Via Assimp</td>
 </tr>
 </tbody>
 </table>
@@ -1440,6 +1610,14 @@ be easy to add them to your build system, provided you can compile the required 
 </li>
 <li><strong>Documentation/Code Style</strong>. Our codebase is formatted via clang-format for consistency. We aim to provide both libigl-style tutorials to get started using Lagrange, as well as detailed API documentation written in Doxygen.</li>
 </ol>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:io">
+<p>Requires Assimp to be enabled.&#160;<a class="footnote-backref" href="#fnref:io" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:io" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:io" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref4:io" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
 
               
             </article>
