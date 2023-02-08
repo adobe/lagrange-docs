@@ -23,13 +23,13 @@ design principles that go into Lagrange.
    planning to implement conversion functions for other mesh processing libraries in the future.
 
     ??? info "Interoperability With Others Libraries"
-        | Name | From Lagrange Mesh | To Lagrange Mesh | Comment |
-        |------|--------------------|------------------|---------|
-        | [cinolib](https://github.com/mlivesu/cinolib)                         | :x: | :x: | |
-        | [geogram](http://alice.loria.fr/software/geogram/doc/html/index.html) | :x: | :x: | Planned. |
-        | [geometry-central](http://geometry-central.net/)                      | :x: | :x: | Planned. |
-        | [libigl](https://libigl.github.io/)                                   | :heavy_check_mark: (no copy) | :heavy_check_mark: (may copy) | |
-        | [pmp-library](http://www.pmp-library.org/)                            | :x: | :x: | |
+        | Name                                                                  | From Lagrange Mesh           | To Lagrange Mesh              | Comment  |
+        | --------------------------------------------------------------------- | ---------------------------- | ----------------------------- | -------- |
+        | [cinolib](https://github.com/mlivesu/cinolib)                         | :x:                          | :x:                           |          |
+        | [geogram](http://alice.loria.fr/software/geogram/doc/html/index.html) | :x:                          | :x:                           | Planned. |
+        | [geometry-central](http://geometry-central.net/)                      | :x:                          | :x:                           | Planned. |
+        | [libigl](https://libigl.github.io/)                                   | :heavy_check_mark: (no copy) | :heavy_check_mark: (may copy) |          |
+        | [pmp-library](http://www.pmp-library.org/)                            | :x:                          | :x:                           |          |
 
 4. **Clean Build System**. Lagrange has a clean and polished CMake build system. Getting started
    with Lagrange is incredibly simple, just add 5 lines to your CMake project (no git submodule
@@ -63,23 +63,51 @@ design principles that go into Lagrange.
    tinyobj to provide IO functionalities.
 
     ??? info "Supported File Formats"
-        | Format | Read | Write | Comment            |
-        |--------|------|-------|--------------------|
-        | OBJ    | :heavy_check_mark: | :heavy_check_mark: | Via tinyobj/libigl |
-        | VTK    | :x:                | :heavy_check_mark: | Custom writer      |
-        | PLY    | :heavy_check_mark: | :heavy_check_mark: | Via tinyply/libigl |
-        | OFF    | :heavy_check_mark: | :heavy_check_mark: | Via libigl         |
-        | glTF   | :heavy_check_mark: | :x:                | Via Assimp         |
-        | FBX    | :heavy_check_mark: | :x:                | Via Assimp         |
-        | USD    | :x:                | :x:                | Planned            |
-        | HDF5   | :x:                | :x:                | Planned            |
+        #### Legacy Mesh IO
+        IO for our legacy Mesh class (will be retired in the future).
 
-8. **Performance**. Lagrange functions are written with performance in mind. We use TBB for
+        | Format | Read               | Write              | Comment            |
+        | ------ | ------------------ | ------------------ | ------------------ |
+        | FBX    | :heavy_check_mark: | :x:                | Via Assimp         |
+        | glTF   | :heavy_check_mark: | :x:                | Via Assimp         |
+        | HDF5   | :x:                | :x:                | Planned            |
+        | OBJ    | :heavy_check_mark: | :heavy_check_mark: | Via tinyobj/libigl |
+        | OFF    | :heavy_check_mark: | :heavy_check_mark: | Via libigl         |
+        | PLY    | :heavy_check_mark: | :heavy_check_mark: | Via tinyply/libigl |
+        | USD    | :x:                | :x:                | Planned            |
+        | VTK    | :x:                | :heavy_check_mark: | Custom writer      |
+
+        #### Surface Mesh IO
+        IO for our new polygonal mesh class.
+
+        | Format | Read                    | Write              | Comment                           |
+        | ------ | ----------------------- | ------------------ | --------------------------------- |
+        | FBX    | :heavy_check_mark:[^io] | :x:                | Via Assimp                        |
+        | glTF   | :heavy_check_mark:      | :heavy_check_mark: | Via tinygltf                      |
+        | HDF5   | :x:                     | :x:                | Planned                           |
+        | MSH    | :heavy_check_mark:      | :heavy_check_mark: | Via MshIO                         |
+        | OBJ    | :heavy_check_mark:      | :heavy_check_mark: | Read via tinyobj, custom writer   |
+        | PLY    | :heavy_check_mark:      | :heavy_check_mark: | Read via libigl, write via happly |
+        | USD    | :x:                     | :x:                | Planned                           |
+        | Other  | :heavy_check_mark:[^io] | :x:                | Via Assimp                        |
+
+        #### Simple Scene IO
+        IO for our simple scene class, supporting a list of instanced meshes.
+
+        | Format | Read                    | Write              | Comment      |
+        | ------ | ----------------------- | ------------------ | ------------ |
+        | glTF   | :heavy_check_mark:      | :heavy_check_mark: | Via tinygtlf |
+        | FBX    | :heavy_check_mark:[^io] | :x:                | Via Assimp   |
+        | Other  | :heavy_check_mark:[^io] | :x:                | Via Assimp   |
+
+[^io]: Requires Assimp to be enabled.
+
+1. **Performance**. Lagrange functions are written with performance in mind. We use TBB for
    multithreading, and avoid unnecessary heap memory allocation or data copies. Lagrange should be
    able to process large assets that are often encountered in the industry. If you encounter any
    performance limitation, please reach out to us.
 
-9. **Advanced Viewer**. We provide an advanced mesh viewer for building interactive applications with realistic shading. We use a modified ImGui that conforms to the [Spectrum](https://spectrum.adobe.com/) specification to provide a user experience more consistent with Adobe products.
+2. **Advanced Viewer**. We provide an advanced mesh viewer for building interactive applications with realistic shading. We use a modified ImGui that conforms to the [Spectrum](https://spectrum.adobe.com/) specification to provide a user experience more consistent with Adobe products.
 
     ??? info "Viewer Key Features"
         - Support for all lagrange mesh types
