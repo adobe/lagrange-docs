@@ -7,7 +7,7 @@ var searchData=
   ['delete_5fand_5fexport_5fconst_5findexed_5fattribute_4',['delete_and_export_const_indexed_attribute',['../classlagrange_1_1_surface_mesh.html#af5e377cd17d586686cb6dcd2293c587b',1,'lagrange::SurfaceMesh']]],
   ['delete_5fand_5fexport_5findexed_5fattribute_5',['delete_and_export_indexed_attribute',['../classlagrange_1_1_surface_mesh.html#aacb851b667e316033ab311cb13ed0241',1,'lagrange::SurfaceMesh']]],
   ['delete_5fattribute_6',['delete_attribute',['../classlagrange_1_1_surface_mesh.html#a1d338472b33656740632fd6d58dfc9a7',1,'lagrange::SurfaceMesh']]],
-  ['detect_5fdegenerate_5ftriangles_7',['detect_degenerate_triangles',['../namespacelagrange.html#a0adc3699819a2561aa851032f55258bb',1,'lagrange']]],
+  ['detect_5fdegenerate_5ftriangles_7',['detect_degenerate_triangles',['../namespacelagrange.html#af1fcee6c943558c6a34537d4e7e84a00',1,'lagrange']]],
   ['dijkstra_8',['dijkstra',['../namespacelagrange_1_1internal.html#a318ef64371a044ade0e7bf035cd67490',1,'lagrange::internal']]],
   ['disable_5ffpe_9',['disable_fpe',['../group__group-utils-misc.html#gabe7e2f24aa07f2b2e38829ef368a0f59',1,'lagrange']]],
   ['disjointsets_10',['DisjointSets',['../classlagrange_1_1_disjoint_sets.html#a4093e2fd37ea3ba9f1512436b5911650',1,'lagrange::DisjointSets::DisjointSets()=default'],['../classlagrange_1_1_disjoint_sets.html#aa7e84823e600fe5ade68b6bc46e7727b',1,'lagrange::DisjointSets::DisjointSets(size_t n)']]],

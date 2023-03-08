@@ -13,7 +13,7 @@ var searchData=
   ['componentpanel_10',['ComponentPanel',['../structlagrange_1_1ui_1_1_component_panel.html',1,'lagrange::ui']]],
   ['components_11',['Components',['../classlagrange_1_1legacy_1_1_components.html',1,'lagrange::legacy']]],
   ['computeborderedcomponentsoutput_12',['ComputeBorderedComponentsOutput',['../structlagrange_1_1_compute_bordered_components_output.html',1,'lagrange']]],
-  ['computemeshcentroidoutput_13',['ComputeMeshCentroidOutput',['../structlagrange_1_1_compute_mesh_centroid_output.html',1,'lagrange']]],
+  ['computemeshcentroidoutput_13',['ComputeMeshCentroidOutput',['../structlagrange_1_1legacy_1_1_compute_mesh_centroid_output.html',1,'lagrange::legacy']]],
   ['computepointcloudpcaoutput_14',['ComputePointcloudPCAOutput',['../structlagrange_1_1_compute_pointcloud_p_c_a_output.html',1,'lagrange']]],
   ['connectivity_15',['Connectivity',['../classlagrange_1_1_connectivity.html',1,'lagrange']]],
   ['control_5fblock_16',['control_block',['../classlagrange_1_1internal_1_1control__block.html',1,'lagrange::internal']]],

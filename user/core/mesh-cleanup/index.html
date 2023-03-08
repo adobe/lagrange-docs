@@ -10,8 +10,14 @@
       
         <link rel="canonical" href="https://opensource.adobe.com/lagrange-docs/user/core/mesh-cleanup/">
       
+      
+        <link rel="prev" href="../legacy-attributes/">
+      
+      
+        <link rel="next" href="../../ui/overview/">
+      
       <link rel="icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.2.4, mkdocs-material-8.2.11">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.11">
     
     
       
@@ -19,16 +25,13 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.8c5ef100.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.0d440cfe.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.9647289d.min.css">
-        
-          
-          
-          <meta name="theme-color" content="#ef5552">
-        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.2505c338.min.css">
       
+      
+
     
     
     
@@ -43,10 +46,11 @@
     
       <link rel="stylesheet" href="../../../stylesheets/extra.css">
     
-    <script>__md_scope=new URL("../../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
+    
     
     
   </head>
@@ -57,7 +61,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="red" data-md-color-accent="red">
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="red" data-md-color-accent="red">
   
     
     
@@ -122,7 +126,7 @@
       </label>
       <nav class="md-search__options" aria-label="Search">
         
-        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
         </button>
       </nav>
@@ -134,7 +138,7 @@
           <div class="md-search-result__meta">
             Initializing search
           </div>
-          <ol class="md-search-result__list"></ol>
+          <ol class="md-search-result__list" role="presentation"></ol>
         </div>
       </div>
     </div>
@@ -143,10 +147,10 @@
     
     
       <div class="md-header__source">
-        <a href="https://github.com/adobe/lagrange/" title="Go to repository" class="md-source" data-md-component="source">
+        <a href="https://github.com/adobe/lagrange" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
   </div>
   <div class="md-source__repository">
     adobe/lagrange
@@ -278,10 +282,10 @@
   </label>
   
     <div class="md-nav__source">
-      <a href="https://github.com/adobe/lagrange/" title="Go to repository" class="md-source" data-md-component="source">
+      <a href="https://github.com/adobe/lagrange" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
   </div>
   <div class="md-source__repository">
     adobe/lagrange
@@ -302,8 +306,11 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" data-md-state="indeterminate" type="checkbox" id="__nav_1" checked>
       
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1" >
       
       
         
@@ -338,7 +345,7 @@
           
         </div>
       
-      <nav class="md-nav" aria-label="Home" data-md-level="1">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_1">
           <span class="md-nav__icon md-icon"></span>
           Home
@@ -424,7 +431,7 @@
   
     <li class="md-nav__item">
       <a href="https://github.com/adobe/lagrange/releases" class="md-nav__link">
-        Releases
+        Changelog
       </a>
     </li>
   
@@ -464,8 +471,9 @@
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
       
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
       
       
         
@@ -475,12 +483,12 @@
         
       
       
-        <label class="md-nav__link" for="__nav_2">
+        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
           User Guide
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="User Guide" data-md-level="1">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_2">
           <span class="md-nav__icon md-icon"></span>
           User Guide
@@ -498,8 +506,9 @@
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" checked>
       
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" checked>
       
       
         
@@ -515,12 +524,12 @@
         
       
       
-        <label class="md-nav__link" for="__nav_2_1">
+        <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
           General
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="General" data-md-level="2">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_2_1">
           <span class="md-nav__icon md-icon"></span>
           General
@@ -594,8 +603,9 @@
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1_5" type="checkbox" id="__nav_2_1_5" checked>
       
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_5" checked>
       
       
         
@@ -607,12 +617,12 @@
         
       
       
-        <label class="md-nav__link" for="__nav_2_1_5">
+        <label class="md-nav__link" for="__nav_2_1_5" id="__nav_2_1_5_label" tabindex="0">
           Legacy Features
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Legacy Features" data-md-level="3">
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_5_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_2_1_5">
           <span class="md-nav__icon md-icon"></span>
           Legacy Features
@@ -656,7 +666,7 @@
   
     <li class="md-nav__item md-nav__item--active">
       
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
         
@@ -788,37 +798,40 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" data-md-state="indeterminate" type="checkbox" id="__nav_2_2" checked>
       
       
-      
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
         
       
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_2" >
       
-        <label class="md-nav__link" for="__nav_2_2">
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
           UI
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="UI" data-md-level="2">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_2_2">
           <span class="md-nav__icon md-icon"></span>
           UI
@@ -975,8 +988,11 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" data-md-state="indeterminate" type="checkbox" id="__nav_3" checked>
       
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
       
       
         
@@ -988,12 +1004,12 @@
         
       
       
-        <label class="md-nav__link" for="__nav_3">
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
           Dev Guide
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Dev Guide" data-md-level="1">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_3">
           <span class="md-nav__icon md-icon"></span>
           Dev Guide
@@ -1009,8 +1025,11 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1" data-md-state="indeterminate" type="checkbox" id="__nav_3_1" checked>
       
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_1" >
       
       
         
@@ -1022,12 +1041,12 @@
         
       
       
-        <label class="md-nav__link" for="__nav_3_1">
+        <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
           Lagrange
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Lagrange" data-md-level="2">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_3_1">
           <span class="md-nav__icon md-icon"></span>
           Lagrange
@@ -1092,8 +1111,11 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" data-md-state="indeterminate" type="checkbox" id="__nav_3_2" checked>
       
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_2" >
       
       
         
@@ -1105,12 +1127,12 @@
         
       
       
-        <label class="md-nav__link" for="__nav_3_2">
+        <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
           Performance
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Performance" data-md-level="2">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_3_2">
           <span class="md-nav__icon md-icon"></span>
           Performance
@@ -1175,8 +1197,11 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3" data-md-state="indeterminate" type="checkbox" id="__nav_3_3" checked>
       
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_3" >
       
       
         
@@ -1188,12 +1213,12 @@
         
       
       
-        <label class="md-nav__link" for="__nav_3_3">
+        <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
           Development
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Development" data-md-level="2">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_3_3">
           <span class="md-nav__icon md-icon"></span>
           Development
@@ -1266,8 +1291,11 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" data-md-state="indeterminate" type="checkbox" id="__nav_4" checked>
       
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
       
       
         
@@ -1284,7 +1312,7 @@
           
         </div>
       
-      <nav class="md-nav" aria-label="Reference Documentation" data-md-level="1">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_4">
           <span class="md-nav__icon md-icon"></span>
           Reference Documentation
@@ -1403,27 +1431,33 @@
               </div>
             
           
-          <div class="md-content" data-md-component="content">
-            <article class="md-content__inner md-typeset">
-              
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
                 
-  <a href="https://github.com/adobe/lagrange-docs/edit/docs/docs/user/core/mesh-cleanup.md" title="Edit this page" class="md-content__button md-icon">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
-  </a>
+                  
+
+  
+    <a href="https://github.com/adobe/lagrange-docs/edit/docs/docs/open/user/core/mesh-cleanup.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
+    </a>
+  
+  
 
 
 
 <!-- $ignore -->
 
 <h1 id="mesh-cleanup">Mesh Cleanup</h1>
-<div class="admonition attention">
-<p class="admonition-title">Attention</p>
+<div class="admonition warning">
+<p class="admonition-title">Legacy Mesh</p>
 <p>Documentation on this page relies on our <a href="../legacy-mesh/">legacy mesh</a> data structure.</p>
 </div>
 <p>Lagrange supports a number of mesh cleanup operations.  Typically, a mesh
 cleanup operation takes an mesh object as input and creates a new <a href="../legacy-mesh/">Mesh</a> object.
 For example, all mesh cleanup functions have the same function signature:</p>
-<div class="highlight"><pre><span></span><code><span class="k">auto</span><span class="w"> </span><span class="n">out_mesh_unique</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lagrange</span><span class="o">::</span><span class="n">function_name</span><span class="p">(</span><span class="n">in_mesh</span><span class="p">);</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="k">auto</span><span class="w"> </span><span class="n">out_mesh_unique</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lagrange</span><span class="o">::</span><span class="n">function_name</span><span class="p">(</span><span class="n">in_mesh</span><span class="p">);</span>
 </code></pre></div>
 <p>Therefore, it is possible to combine mesh cleanup operations by chaining them.
 Existing vertex/facet/corner attributes can be seamless ported from the input
@@ -1435,33 +1469,33 @@ mesh to the output mesh.</p>
 <h2 id="remove-isolated-vertices">Remove Isolated Vertices</h2>
 <p>An isolated vertex is a vertex that is not adjacent to any facet.  It can be
 removed with <code>remove_isolated_vertex</code> function:</p>
-<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;lagrange/mesh_cleanup/remove_isolated_vertices.h&gt;</span><span class="cp"></span>
-<span class="k">auto</span><span class="w"> </span><span class="n">mesh2_unique</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lagrange</span><span class="o">::</span><span class="n">remove_isolated_vertices</span><span class="p">(</span><span class="w"></span>
-<span class="w">        </span><span class="n">mesh</span><span class="p">);</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;lagrange/mesh_cleanup/remove_isolated_vertices.h&gt;</span>
+<span class="k">auto</span><span class="w"> </span><span class="n">mesh2_unique</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lagrange</span><span class="o">::</span><span class="n">remove_isolated_vertices</span><span class="p">(</span>
+<span class="w">        </span><span class="n">mesh</span><span class="p">);</span>
 </code></pre></div>
 <h2 id="remove-duplicate-vertices">Remove Duplicate Vertices</h2>
 <p>Two vertices are considered duplicates if they have <em>exactly</em> the same
 coordinates.  To remove duplicate vertices:</p>
-<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;lagrange/mesh_cleanup/remove_duplicate_vertices.h&gt;</span><span class="cp"></span>
-<span class="k">auto</span><span class="w"> </span><span class="n">mesh_unique</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lagrange</span><span class="o">::</span><span class="n">remove_duplicate_vertices</span><span class="p">(</span><span class="w"></span>
-<span class="w">        </span><span class="n">mesh</span><span class="p">);</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;lagrange/mesh_cleanup/remove_duplicate_vertices.h&gt;</span>
+<span class="k">auto</span><span class="w"> </span><span class="n">mesh_unique</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lagrange</span><span class="o">::</span><span class="n">remove_duplicate_vertices</span><span class="p">(</span>
+<span class="w">        </span><span class="n">mesh</span><span class="p">);</span>
 </code></pre></div>
 <p>It is also possible to add an extra condition when checking for vertex
 duplicates.  By specifying a vertex attribute, two vertices are considered
 duplicates if they have <em>exactly</em> the same coordinates and attribute values.
 For example:</p>
-<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;lagrange/mesh_cleanup/remove_duplicate_vertices.h&gt;</span><span class="cp"></span>
-<span class="k">auto</span><span class="w"> </span><span class="n">mesh2_unique</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lagrange</span><span class="o">::</span><span class="n">remove_duplicate_vertices</span><span class="p">(</span><span class="w"></span>
-<span class="w">    </span><span class="n">mesh</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;color&quot;</span><span class="p">);</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;lagrange/mesh_cleanup/remove_duplicate_vertices.h&gt;</span>
+<span class="k">auto</span><span class="w"> </span><span class="n">mesh2_unique</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lagrange</span><span class="o">::</span><span class="n">remove_duplicate_vertices</span><span class="p">(</span>
+<span class="w">    </span><span class="n">mesh</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;color&quot;</span><span class="p">);</span>
 </code></pre></div>
 <p>This call will remove all duplicate vertices that have the same coordinates and
 color as defined by the "color" vertex attribute.</p>
 <h2 id="remove-degenerate-triangles">Remove Degenerate Triangles</h2>
 <p>A triangle is called degenerate if all of its vertices are <em>exactly</em> collinear.
 Lagrange relies on exact predicates to check collinearity.</p>
-<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;lagrange/mesh_cleanup/remove_degenerate_triangles.h&gt;</span><span class="cp"></span>
-<span class="k">auto</span><span class="w"> </span><span class="n">mesh2_unique</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lagrange</span><span class="o">::</span><span class="n">remove_degenerate_triangles</span><span class="p">(</span><span class="w"></span>
-<span class="w">        </span><span class="n">mesh</span><span class="p">);</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;lagrange/mesh_cleanup/remove_degenerate_triangles.h&gt;</span>
+<span class="k">auto</span><span class="w"> </span><span class="n">mesh2_unique</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lagrange</span><span class="o">::</span><span class="n">remove_degenerate_triangles</span><span class="p">(</span>
+<span class="w">        </span><span class="n">mesh</span><span class="p">);</span>
 </code></pre></div>
 <h2 id="remove-topologically-degenerate-triangles">Remove Topologically Degenerate Triangles</h2>
 <p>A triangle is called <em>topologically</em> degenerate if two or more of its vertices
@@ -1469,24 +1503,24 @@ are the same topologically.  For example, a triangle <code>[1, 1, 2]</code> is
 topologically degenerate because two of its vertices are referring to the same
 vertex (the vertex with index <code>1</code>).  Topological degeneracy is a special case of
 general degeneracy and it is possible to identify it from connectivity alone.</p>
-<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;lagrange/mesh_cleanup/remove_topologically_degenerate_triangles.h&gt;</span><span class="cp"></span>
-<span class="k">auto</span><span class="w"> </span><span class="n">mesh2_unique</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lagrange</span><span class="o">::</span><span class="n">remove_topologically_degenerate_triangles</span><span class="p">(</span><span class="w"></span>
-<span class="w">        </span><span class="n">mesh</span><span class="p">);</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;lagrange/mesh_cleanup/remove_topologically_degenerate_triangles.h&gt;</span>
+<span class="k">auto</span><span class="w"> </span><span class="n">mesh2_unique</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lagrange</span><span class="o">::</span><span class="n">remove_topologically_degenerate_triangles</span><span class="p">(</span>
+<span class="w">        </span><span class="n">mesh</span><span class="p">);</span>
 </code></pre></div>
 <h2 id="remove-short-edges">Remove Short Edges</h2>
 <p>To remove all edges shorter than a given threshold:</p>
-<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;lagrange/mesh_cleanup/remove_short_edges.h&gt;</span><span class="cp"></span>
-<span class="k">auto</span><span class="w"> </span><span class="n">mesh2_unqiue</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lagrange</span><span class="o">::</span><span class="n">remove_short_edges</span><span class="p">(</span><span class="w"></span>
-<span class="w">        </span><span class="n">mesh</span><span class="p">,</span><span class="w"> </span><span class="n">tol</span><span class="p">);</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;lagrange/mesh_cleanup/remove_short_edges.h&gt;</span>
+<span class="k">auto</span><span class="w"> </span><span class="n">mesh2_unqiue</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lagrange</span><span class="o">::</span><span class="n">remove_short_edges</span><span class="p">(</span>
+<span class="w">        </span><span class="n">mesh</span><span class="p">,</span><span class="w"> </span><span class="n">tol</span><span class="p">);</span>
 </code></pre></div>
 <p>where <code>tol</code> is the target edge length threshold.</p>
 <h2 id="remove-duplicate-facets">Remove Duplicate Facets</h2>
 <p>Two facets are considered duplicates of each other if they are formed by the
 combination of vertices.  E.g. facet <code>[1, 2, 3]</code> is considered as duplicate of
 facet <code>[3, 2, 1]</code>.  To remove all duplicate facets:</p>
-<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;lagrange/mesh_cleanup/remove_duplicate_facets.h&gt;</span><span class="cp"></span>
-<span class="k">auto</span><span class="w"> </span><span class="n">mesh2_unique</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lagrange</span><span class="o">::</span><span class="n">remove_duplicate_facets</span><span class="p">(</span><span class="w"></span>
-<span class="w">        </span><span class="n">mesh</span><span class="p">);</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;lagrange/mesh_cleanup/remove_duplicate_facets.h&gt;</span>
+<span class="k">auto</span><span class="w"> </span><span class="n">mesh2_unique</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lagrange</span><span class="o">::</span><span class="n">remove_duplicate_facets</span><span class="p">(</span>
+<span class="w">        </span><span class="n">mesh</span><span class="p">);</span>
 </code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -1495,9 +1529,9 @@ and <code>[3, 2, 1]</code> have opposite orientations, they are considered as du
 </div>
 <h2 id="split-long-edges">Split Long Edges</h2>
 <p>It is often that we need to refine a triangular mesh by splitting long edges:</p>
-<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;lagrange/mesh_cleanup/split_long_edges.h&gt;</span><span class="cp"></span>
-<span class="k">auto</span><span class="w"> </span><span class="n">mesh2_unique</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lagrange</span><span class="o">::</span><span class="n">split_long_edges</span><span class="p">(</span><span class="w"></span>
-<span class="w">    </span><span class="n">mesh</span><span class="p">,</span><span class="w"> </span><span class="n">sq_tol</span><span class="p">,</span><span class="w"> </span><span class="nb">true</span><span class="p">);</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;lagrange/mesh_cleanup/split_long_edges.h&gt;</span>
+<span class="k">auto</span><span class="w"> </span><span class="n">mesh2_unique</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lagrange</span><span class="o">::</span><span class="n">split_long_edges</span><span class="p">(</span>
+<span class="w">    </span><span class="n">mesh</span><span class="p">,</span><span class="w"> </span><span class="n">sq_tol</span><span class="p">,</span><span class="w"> </span><span class="nb">true</span><span class="p">);</span>
 </code></pre></div>
 <p>Other than the input mesh, <code>lagrange::split_long_edges</code> takes two more
 parameters:</p>
@@ -1516,9 +1550,9 @@ refinement where all edges are split.</p>
 </div>
 <h2 id="resolve-nonmanifoldness">Resolve Nonmanifoldness</h2>
 <p>Lagrange can convert a <a href="../legacy-mesh/#topology">nonmanifold mesh</a> to a <a href="../legacy-mesh/#topology">manifold mesh</a>:</p>
-<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;lagrange/mesh_cleanup/resolve_nonmanifoldness.h&gt;</span><span class="cp"></span>
-<span class="k">auto</span><span class="w"> </span><span class="n">mesh2_unique</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lagrange</span><span class="o">::</span><span class="n">resolve_nonmanifoldness</span><span class="p">(</span><span class="w"></span>
-<span class="w">        </span><span class="n">mesh</span><span class="p">);</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;lagrange/mesh_cleanup/resolve_nonmanifoldness.h&gt;</span>
+<span class="k">auto</span><span class="w"> </span><span class="n">mesh2_unique</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lagrange</span><span class="o">::</span><span class="n">resolve_nonmanifoldness</span><span class="p">(</span>
+<span class="w">        </span><span class="n">mesh</span><span class="p">);</span>
 </code></pre></div>
 <p>where nonmanifold vertices and edges are "pulled apart".</p>
 <div class="admonition example">
@@ -1529,8 +1563,8 @@ refinement where all edges are split.</p>
 </div>
 <h2 id="convert-quad-mesh-to-triangular-mesh">Convert Quad Mesh To Triangular Mesh</h2>
 <p>Lagrange also provide handy function to convert a quad to a triangular mesh:</p>
-<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;lagrange/quad_to_tri.h&gt;</span><span class="cp"></span>
-<span class="k">auto</span><span class="w"> </span><span class="n">mesh2_unique</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lagrange</span><span class="o">::</span><span class="n">quad_to_tri</span><span class="p">(</span><span class="n">mesh</span><span class="p">);</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;lagrange/quad_to_tri.h&gt;</span>
+<span class="k">auto</span><span class="w"> </span><span class="n">mesh2_unique</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lagrange</span><span class="o">::</span><span class="n">quad_to_tri</span><span class="p">(</span><span class="n">mesh</span><span class="p">);</span>
 </code></pre></div>
 <div class="admonition example">
 <p class="admonition-title">Implementation details</p>
@@ -1540,21 +1574,27 @@ one of its diagonals procedurally.</p>
 <h2 id="submesh-extraction">Submesh Extraction</h2>
 <p>It is often necessary to extract a subset of the facets from a given mesh.  Such
 operation is supported via <code>lagrange::extract_submesh</code> function:</p>
-<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;lagrange/extract_submesh.h&gt;</span><span class="cp"></span>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;lagrange/extract_submesh.h&gt;</span>
 
-<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">selected_facets</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">selected_facets</span><span class="p">;</span>
 <span class="c1">// Populate selected_facets with facet indices.</span>
 
-<span class="k">auto</span><span class="w"> </span><span class="n">submesh_unique</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lagrange</span><span class="o">::</span><span class="n">extract_submesh</span><span class="p">(</span><span class="w"></span>
-<span class="w">    </span><span class="n">mesh</span><span class="p">,</span><span class="w"> </span><span class="n">selected_facets</span><span class="p">);</span><span class="w"></span>
+<span class="k">auto</span><span class="w"> </span><span class="n">submesh_unique</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lagrange</span><span class="o">::</span><span class="n">extract_submesh</span><span class="p">(</span>
+<span class="w">    </span><span class="n">mesh</span><span class="p">,</span><span class="w"> </span><span class="n">selected_facets</span><span class="p">);</span>
 </code></pre></div>
 
-              
-            </article>
-          </div>
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
         </div>
         
-          <a href="#" class="md-top md-icon" data-md-component="top" data-md-state="hidden">
+          <a href="#" class="md-top md-icon" data-md-component="top" hidden>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
             Back to top
           </a>
@@ -1562,41 +1602,6 @@ operation is supported via <code>lagrange::extract_submesh</code> function:</p>
       </main>
       
         <footer class="md-footer">
-  
-    <nav class="md-footer__inner md-grid" aria-label="Footer">
-      
-        
-        <a href="../legacy-attributes/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Legacy Mesh Attributes" rel="prev">
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
-          </div>
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Previous
-              </span>
-              Legacy Mesh Attributes
-            </div>
-          </div>
-        </a>
-      
-      
-        
-        <a href="../../ui/overview/" class="md-footer__link md-footer__link--next" aria-label="Next: Overview" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              Overview
-            </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
-          </div>
-        </a>
-      
-    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -1618,10 +1623,11 @@ operation is supported via <code>lagrange::extract_submesh</code> function:</p>
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "navigation.indexes"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.2a1c317c.min.js"}</script>
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "navigation.indexes", "content.action.edit"], "search": "../../../assets/javascripts/workers/search.db81ec45.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.748e2769.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.6df46069.min.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/tablesort.min.js"></script>
       

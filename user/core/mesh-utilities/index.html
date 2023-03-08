@@ -10,8 +10,14 @@
       
         <link rel="canonical" href="https://opensource.adobe.com/lagrange-docs/user/core/mesh-utilities/">
       
+      
+        <link rel="prev" href="../attributes/">
+      
+      
+        <link rel="next" href="../general-utilities/">
+      
       <link rel="icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.2.4, mkdocs-material-8.2.11">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.11">
     
     
       
@@ -19,16 +25,13 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.8c5ef100.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.0d440cfe.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.9647289d.min.css">
-        
-          
-          
-          <meta name="theme-color" content="#ef5552">
-        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.2505c338.min.css">
       
+      
+
     
     
     
@@ -43,10 +46,11 @@
     
       <link rel="stylesheet" href="../../../stylesheets/extra.css">
     
-    <script>__md_scope=new URL("../../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
+    
     
     
   </head>
@@ -57,7 +61,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="red" data-md-color-accent="red">
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="red" data-md-color-accent="red">
   
     
     
@@ -122,7 +126,7 @@
       </label>
       <nav class="md-search__options" aria-label="Search">
         
-        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
         </button>
       </nav>
@@ -134,7 +138,7 @@
           <div class="md-search-result__meta">
             Initializing search
           </div>
-          <ol class="md-search-result__list"></ol>
+          <ol class="md-search-result__list" role="presentation"></ol>
         </div>
       </div>
     </div>
@@ -143,10 +147,10 @@
     
     
       <div class="md-header__source">
-        <a href="https://github.com/adobe/lagrange/" title="Go to repository" class="md-source" data-md-component="source">
+        <a href="https://github.com/adobe/lagrange" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
   </div>
   <div class="md-source__repository">
     adobe/lagrange
@@ -278,10 +282,10 @@
   </label>
   
     <div class="md-nav__source">
-      <a href="https://github.com/adobe/lagrange/" title="Go to repository" class="md-source" data-md-component="source">
+      <a href="https://github.com/adobe/lagrange" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
   </div>
   <div class="md-source__repository">
     adobe/lagrange
@@ -302,8 +306,11 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" data-md-state="indeterminate" type="checkbox" id="__nav_1" checked>
       
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1" >
       
       
         
@@ -338,7 +345,7 @@
           
         </div>
       
-      <nav class="md-nav" aria-label="Home" data-md-level="1">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_1">
           <span class="md-nav__icon md-icon"></span>
           Home
@@ -424,7 +431,7 @@
   
     <li class="md-nav__item">
       <a href="https://github.com/adobe/lagrange/releases" class="md-nav__link">
-        Releases
+        Changelog
       </a>
     </li>
   
@@ -464,8 +471,9 @@
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
       
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
       
       
         
@@ -475,12 +483,12 @@
         
       
       
-        <label class="md-nav__link" for="__nav_2">
+        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
           User Guide
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="User Guide" data-md-level="1">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_2">
           <span class="md-nav__icon md-icon"></span>
           User Guide
@@ -498,8 +506,9 @@
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" checked>
       
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" checked>
       
       
         
@@ -515,12 +524,12 @@
         
       
       
-        <label class="md-nav__link" for="__nav_2_1">
+        <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
           General
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="General" data-md-level="2">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_2_1">
           <span class="md-nav__icon md-icon"></span>
           General
@@ -564,7 +573,7 @@
   
     <li class="md-nav__item md-nav__item--active">
       
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
         
@@ -696,8 +705,11 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1_5" data-md-state="indeterminate" type="checkbox" id="__nav_2_1_5" checked>
       
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_1_5" >
       
       
         
@@ -709,12 +721,12 @@
         
       
       
-        <label class="md-nav__link" for="__nav_2_1_5">
+        <label class="md-nav__link" for="__nav_2_1_5" id="__nav_2_1_5_label" tabindex="0">
           Legacy Features
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Legacy Features" data-md-level="3">
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_5_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_2_1_5">
           <span class="md-nav__icon md-icon"></span>
           Legacy Features
@@ -786,37 +798,40 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" data-md-state="indeterminate" type="checkbox" id="__nav_2_2" checked>
       
       
-      
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
         
       
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_2" >
       
-        <label class="md-nav__link" for="__nav_2_2">
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
           UI
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="UI" data-md-level="2">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_2_2">
           <span class="md-nav__icon md-icon"></span>
           UI
@@ -973,8 +988,11 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" data-md-state="indeterminate" type="checkbox" id="__nav_3" checked>
       
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
       
       
         
@@ -986,12 +1004,12 @@
         
       
       
-        <label class="md-nav__link" for="__nav_3">
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
           Dev Guide
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Dev Guide" data-md-level="1">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_3">
           <span class="md-nav__icon md-icon"></span>
           Dev Guide
@@ -1007,8 +1025,11 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1" data-md-state="indeterminate" type="checkbox" id="__nav_3_1" checked>
       
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_1" >
       
       
         
@@ -1020,12 +1041,12 @@
         
       
       
-        <label class="md-nav__link" for="__nav_3_1">
+        <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
           Lagrange
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Lagrange" data-md-level="2">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_3_1">
           <span class="md-nav__icon md-icon"></span>
           Lagrange
@@ -1090,8 +1111,11 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" data-md-state="indeterminate" type="checkbox" id="__nav_3_2" checked>
       
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_2" >
       
       
         
@@ -1103,12 +1127,12 @@
         
       
       
-        <label class="md-nav__link" for="__nav_3_2">
+        <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
           Performance
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Performance" data-md-level="2">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_3_2">
           <span class="md-nav__icon md-icon"></span>
           Performance
@@ -1173,8 +1197,11 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3" data-md-state="indeterminate" type="checkbox" id="__nav_3_3" checked>
       
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_3" >
       
       
         
@@ -1186,12 +1213,12 @@
         
       
       
-        <label class="md-nav__link" for="__nav_3_3">
+        <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
           Development
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Development" data-md-level="2">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_3_3">
           <span class="md-nav__icon md-icon"></span>
           Development
@@ -1264,8 +1291,11 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" data-md-state="indeterminate" type="checkbox" id="__nav_4" checked>
       
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
       
       
         
@@ -1282,7 +1312,7 @@
           
         </div>
       
-      <nav class="md-nav" aria-label="Reference Documentation" data-md-level="1">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_4">
           <span class="md-nav__icon md-icon"></span>
           Reference Documentation
@@ -1401,13 +1431,19 @@
               </div>
             
           
-          <div class="md-content" data-md-component="content">
-            <article class="md-content__inner md-typeset">
-              
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
                 
-  <a href="https://github.com/adobe/lagrange-docs/edit/docs/docs/user/core/mesh-utilities.md" title="Edit this page" class="md-content__button md-icon">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
-  </a>
+                  
+
+  
+    <a href="https://github.com/adobe/lagrange-docs/edit/docs/docs/open/user/core/mesh-utilities.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
+    </a>
+  
+  
 
 
 
@@ -1416,39 +1452,39 @@
 <h2 id="compute-mesh-normals">Compute Mesh Normals</h2>
 <p>As described in our <a href="../../../ref/group__group-surfacemesh-utils.html">Mesh Utilities</a> page, mesh normals can be computed using on of the
 following function:</p>
-<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;lagrange/compute_normal.h&gt;</span><span class="cp"></span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;lagrange/compute_facet_normal.h&gt;</span><span class="cp"></span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;lagrange/compute_vertex_normal.h&gt;</span><span class="cp"></span>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;lagrange/compute_normal.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;lagrange/compute_facet_normal.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;lagrange/compute_vertex_normal.h&gt;</span>
 
-<span class="n">lagrange</span><span class="o">::</span><span class="n">SurfaceMesh</span><span class="o">&lt;</span><span class="n">Scalar</span><span class="p">,</span><span class="w"> </span><span class="n">Index</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mesh</span><span class="p">;</span><span class="w"></span>
+<span class="n">lagrange</span><span class="o">::</span><span class="n">SurfaceMesh</span><span class="o">&lt;</span><span class="n">Scalar</span><span class="p">,</span><span class="w"> </span><span class="n">Index</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mesh</span><span class="p">;</span>
 
 <span class="c1">// Compute per-facet normals</span>
-<span class="n">lagrange</span><span class="o">::</span><span class="n">FacetNormalOptions</span><span class="w"> </span><span class="n">facet_options</span><span class="p">;</span><span class="w"></span>
-<span class="k">auto</span><span class="w"> </span><span class="n">fid</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">compute_facet_normal</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span><span class="w"> </span><span class="n">facet_options</span><span class="p">);</span><span class="w"></span>
+<span class="n">lagrange</span><span class="o">::</span><span class="n">FacetNormalOptions</span><span class="w"> </span><span class="n">facet_options</span><span class="p">;</span>
+<span class="k">auto</span><span class="w"> </span><span class="n">fid</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">compute_facet_normal</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span><span class="w"> </span><span class="n">facet_options</span><span class="p">);</span>
 
 <span class="c1">// Compute per-vertex normals using a uniform weight for each incident triangle</span>
-<span class="n">VertexNormalOptions</span><span class="w"> </span><span class="n">vertex_options</span><span class="p">;</span><span class="w"></span>
-<span class="n">vertex_options</span><span class="p">.</span><span class="n">weight_type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lagrange</span><span class="o">::</span><span class="n">NormalWeightingType</span><span class="o">::</span><span class="n">Uniform</span><span class="p">;</span><span class="w"></span>
-<span class="k">auto</span><span class="w"> </span><span class="n">vid</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">compute_vertex_normal</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span><span class="w"> </span><span class="n">vertex_options</span><span class="p">);</span><span class="w"></span>
+<span class="n">VertexNormalOptions</span><span class="w"> </span><span class="n">vertex_options</span><span class="p">;</span>
+<span class="n">vertex_options</span><span class="p">.</span><span class="n">weight_type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lagrange</span><span class="o">::</span><span class="n">NormalWeightingType</span><span class="o">::</span><span class="n">Uniform</span><span class="p">;</span>
+<span class="k">auto</span><span class="w"> </span><span class="n">vid</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">compute_vertex_normal</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span><span class="w"> </span><span class="n">vertex_options</span><span class="p">);</span>
 
 <span class="c1">// Compute indexed per-corner normals. Edges with a dihedral</span>
 <span class="c1">// angle smaller than π/2 will be considered smooth</span>
-<span class="n">Scalar</span><span class="w"> </span><span class="n">angle_threshold_rad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">M_PI</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">0.5</span><span class="p">;</span><span class="w"></span>
-<span class="k">auto</span><span class="w"> </span><span class="n">cid</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">compute_normal</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span><span class="w"> </span><span class="n">angle_threshold_rad</span><span class="p">);</span><span class="w"></span>
+<span class="n">Scalar</span><span class="w"> </span><span class="n">angle_threshold_rad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">M_PI</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">0.5</span><span class="p">;</span>
+<span class="k">auto</span><span class="w"> </span><span class="n">cid</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">compute_normal</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span><span class="w"> </span><span class="n">angle_threshold_rad</span><span class="p">);</span>
 </code></pre></div>
 <p>See <a href="../../../ref/group__group-surfacemesh-utils.html">Mesh Utilities</a> reference documentation for more details.</p>
 <h2 id="compute-tangent-space">Compute Tangent Space</h2>
 <p>Lagrange offers a function to compute tangent-space information, following [Mikkelsen 2008]<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>:</p>
-<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;lagrange/compute_tangent_bitangent.h&gt;</span><span class="cp"></span>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;lagrange/compute_tangent_bitangent.h&gt;</span>
 
-<span class="n">lagrange</span><span class="o">::</span><span class="n">SurfaceMesh</span><span class="o">&lt;</span><span class="n">Scalar</span><span class="p">,</span><span class="w"> </span><span class="n">Index</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mesh</span><span class="p">;</span><span class="w"></span>
-<span class="n">lagrange</span><span class="o">::</span><span class="n">TangentBitangentOptions</span><span class="w"> </span><span class="n">options</span><span class="p">;</span><span class="w"></span>
+<span class="n">lagrange</span><span class="o">::</span><span class="n">SurfaceMesh</span><span class="o">&lt;</span><span class="n">Scalar</span><span class="p">,</span><span class="w"> </span><span class="n">Index</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mesh</span><span class="p">;</span>
+<span class="n">lagrange</span><span class="o">::</span><span class="n">TangentBitangentOptions</span><span class="w"> </span><span class="n">options</span><span class="p">;</span>
 
 <span class="c1">// Pad the 4th channel of the output attributes with</span>
 <span class="c1">// a ±1 indicating the sign of the UV triangle</span>
-<span class="n">options</span><span class="p">.</span><span class="n">pad_with_sign</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span><span class="w"></span>
+<span class="n">options</span><span class="p">.</span><span class="n">pad_with_sign</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span>
 
-<span class="k">auto</span><span class="w"> </span><span class="n">btn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">compute_tangent_bitangent</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span><span class="w"> </span><span class="n">options</span><span class="p">);</span><span class="w"></span>
+<span class="k">auto</span><span class="w"> </span><span class="n">btn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">compute_tangent_bitangent</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span><span class="w"> </span><span class="n">options</span><span class="p">);</span>
 <span class="n">btn</span><span class="p">.</span><span class="n">tangent_id</span><span class="p">;</span><span class="w"> </span><span class="c1">// id of the generated tangent vector attribute</span>
 <span class="n">btn</span><span class="p">.</span><span class="n">bitangent_id</span><span class="p">;</span><span class="w"> </span><span class="c1">// id of the generated bitangent vector attribute</span>
 </code></pre></div>
@@ -1494,7 +1530,7 @@ identical corners.</p>
 <p>In practice, this means that you will need to weld together any identical attribute that do not
 share the same indices, or you may end up with different result compared to mikktspace.</p>
 </div>
-<div class="admonition caution">
+<div class="admonition warning">
 <p class="admonition-title">Limitations: Triangle Meshes vs Quad Meshes</p>
 <ul>
 <li>Our code for averaging tangent vectors only support triangle meshes at the moment.</li>
@@ -1505,28 +1541,28 @@ share the same indices, or you may end up with different result compared to mikk
 <h2 id="normalize-meshes">Normalize Meshes</h2>
 <p>Meshes can be normalized to fit in a unit box centered at the origin using the <code>normalize_meshes()</code>
 function, which modifies the mesh in place:</p>
-<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;lagrange/normalize_meshes.h&gt;</span><span class="cp"></span>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;lagrange/normalize_meshes.h&gt;</span>
 
 <span class="c1">// Normalize a single mesh</span>
-<span class="n">normalize_mesh</span><span class="p">(</span><span class="n">mesh</span><span class="p">);</span><span class="w"></span>
+<span class="n">normalize_mesh</span><span class="p">(</span><span class="n">mesh</span><span class="p">);</span>
 
 <span class="c1">// Normalize a list of meshes using the same transform for all meshes</span>
-<span class="k">using</span><span class="w"> </span><span class="n">MeshType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">SurfaceMesh32f</span><span class="p">;</span><span class="w"></span>
-<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">MeshType</span><span class="w"> </span><span class="o">*&gt;</span><span class="w"> </span><span class="n">meshes</span><span class="p">;</span><span class="w"></span>
-<span class="n">meshes</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="o">&amp;</span><span class="n">mesh1</span><span class="p">);</span><span class="w"></span>
-<span class="n">meshes</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="o">&amp;</span><span class="n">mesh2</span><span class="p">);</span><span class="w"></span>
-<span class="n">meshes</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="o">&amp;</span><span class="n">mesh3</span><span class="p">);</span><span class="w"></span>
-<span class="n">normalize_meshes</span><span class="p">(</span><span class="n">meshes</span><span class="p">);</span><span class="w"></span>
+<span class="k">using</span><span class="w"> </span><span class="n">MeshType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">SurfaceMesh32f</span><span class="p">;</span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">MeshType</span><span class="w"> </span><span class="o">*&gt;</span><span class="w"> </span><span class="n">meshes</span><span class="p">;</span>
+<span class="n">meshes</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="o">&amp;</span><span class="n">mesh1</span><span class="p">);</span>
+<span class="n">meshes</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="o">&amp;</span><span class="n">mesh2</span><span class="p">);</span>
+<span class="n">meshes</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="o">&amp;</span><span class="n">mesh3</span><span class="p">);</span>
+<span class="n">normalize_meshes</span><span class="p">(</span><span class="n">meshes</span><span class="p">);</span>
 </code></pre></div>
 <!-- Note: We should add a initializer list overload to `normalize_meshes()` ... :) -->
 
 <p>See: <a href="../../../ref/group__group-surfacemesh-utils.html">Mesh Utilities</a> documentation.</p>
 <h2 id="triangulate-polygonal-facets">Triangulate Polygonal Facets</h2>
 <p>A mesh with polygonal facets can be turned into a pure triangle mesh by calling the following code:</p>
-<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;lagrange/triangulate_polygonal_facets.h&gt;</span><span class="cp"></span>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;lagrange/triangulate_polygonal_facets.h&gt;</span>
 
 <span class="c1">// Modifies the mesh in place</span>
-<span class="n">triangulate_polygonal_facets</span><span class="p">(</span><span class="n">mesh</span><span class="p">);</span><span class="w"></span>
+<span class="n">triangulate_polygonal_facets</span><span class="p">(</span><span class="n">mesh</span><span class="p">);</span>
 </code></pre></div>
 <p>Under the hood we use <a href="https://github.com/mapbox/earcut.hpp">Mapbox's Earcut</a> implementation for
 polygonal facets with 5 vertices or more.</p>
@@ -1534,23 +1570,23 @@ polygonal facets with 5 vertices or more.</p>
 <h2 id="transfer-mesh-attributes">Transfer Mesh Attributes</h2>
 <p>Attributes can be mapped from one type of mesh element to another using the
 <a href="../../../ref/group__group-surfacemesh-attr-utils.html"><code>map_attribute()</code></a> functions.</p>
-<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;lagrange/compute_normal.h&gt;</span><span class="cp"></span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;lagrange/map_attribute.h&gt;</span><span class="cp"></span>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;lagrange/compute_normal.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;lagrange/map_attribute.h&gt;</span>
 
 <span class="c1">// Transfer vertex normal attribute onto mesh facets (values will be averaged)</span>
-<span class="k">auto</span><span class="w"> </span><span class="n">vid</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">compute_vertex_normals</span><span class="p">(</span><span class="n">mesh</span><span class="p">);</span><span class="w"></span>
-<span class="k">auto</span><span class="w"> </span><span class="n">fid</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">map_attribute</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span><span class="w"> </span><span class="n">vid</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;new_name&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">lagrange</span><span class="o">::</span><span class="n">AttributeElement</span><span class="o">::</span><span class="n">Facet</span><span class="p">);</span><span class="w"></span>
+<span class="k">auto</span><span class="w"> </span><span class="n">vid</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">compute_vertex_normals</span><span class="p">(</span><span class="n">mesh</span><span class="p">);</span>
+<span class="k">auto</span><span class="w"> </span><span class="n">fid</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">map_attribute</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span><span class="w"> </span><span class="n">vid</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;new_name&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">lagrange</span><span class="o">::</span><span class="n">AttributeElement</span><span class="o">::</span><span class="n">Facet</span><span class="p">);</span>
 </code></pre></div>
 <p>One can also transfer an attribute type in place (i.e. without creating a new attribute, just
 replacing the old one):</p>
-<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;lagrange/compute_normal.h&gt;</span><span class="cp"></span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;lagrange/map_attribute.h&gt;</span><span class="cp"></span>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;lagrange/compute_normal.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;lagrange/map_attribute.h&gt;</span>
 
 <span class="c1">// Transfer vertex normal attribute onto mesh facets (values will be averaged)</span>
-<span class="k">auto</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">compute_vertex_normals</span><span class="p">(</span><span class="n">mesh</span><span class="p">);</span><span class="w"></span>
-<span class="n">map_attribute_in_place</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span><span class="w"> </span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="n">lagrange</span><span class="o">::</span><span class="n">AttributeElement</span><span class="o">::</span><span class="n">Facet</span><span class="p">);</span><span class="w"></span>
-<span class="k">auto</span><span class="w"> </span><span class="o">&amp;</span><span class="n">attr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mesh</span><span class="p">.</span><span class="n">get_attribute</span><span class="o">&lt;</span><span class="n">Scalar</span><span class="o">&gt;</span><span class="p">(</span><span class="n">id</span><span class="p">);</span><span class="w"></span>
-<span class="n">assert</span><span class="p">(</span><span class="n">attr</span><span class="p">.</span><span class="n">get_element_type</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">lagrange</span><span class="o">::</span><span class="n">AttributeElement</span><span class="o">::</span><span class="n">Facet</span><span class="p">);</span><span class="w"></span>
+<span class="k">auto</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">compute_vertex_normals</span><span class="p">(</span><span class="n">mesh</span><span class="p">);</span>
+<span class="n">map_attribute_in_place</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span><span class="w"> </span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="n">lagrange</span><span class="o">::</span><span class="n">AttributeElement</span><span class="o">::</span><span class="n">Facet</span><span class="p">);</span>
+<span class="k">auto</span><span class="w"> </span><span class="o">&amp;</span><span class="n">attr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mesh</span><span class="p">.</span><span class="n">get_attribute</span><span class="o">&lt;</span><span class="n">Scalar</span><span class="o">&gt;</span><span class="p">(</span><span class="n">id</span><span class="p">);</span>
+<span class="n">assert</span><span class="p">(</span><span class="n">attr</span><span class="p">.</span><span class="n">get_element_type</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">lagrange</span><span class="o">::</span><span class="n">AttributeElement</span><span class="o">::</span><span class="n">Facet</span><span class="p">);</span>
 </code></pre></div>
 <p>Transferring attributes from any element type to any other type is supported. The values will either
 be <span style="color:navy"><strong>dispatched</strong></span> or <span style="color:maroon"><strong>gathered</strong></span>
@@ -1656,13 +1692,13 @@ attribute. The indexing will be lost on conversion.</li>
 <p>It is possible to unify various indexed attributes so they can share the same index buffer. This is
 especially useful for rendering, e.g. to turn a mesh with different indexing for normals, uv, etc.
 into something suitable for the GPU.</p>
-<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;lagrange/unify_index_buffer.h&gt;</span><span class="cp"></span>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;lagrange/unify_index_buffer.h&gt;</span>
 
 <span class="c1">// Using attribute id to identify indexed attribute to unify</span>
-<span class="k">auto</span><span class="w"> </span><span class="n">unified_mesh</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">unify_index_buffer</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="n">normal_id</span><span class="p">,</span><span class="w"> </span><span class="n">uv_id</span><span class="p">});</span><span class="w"></span>
+<span class="k">auto</span><span class="w"> </span><span class="n">unified_mesh</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">unify_index_buffer</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="n">normal_id</span><span class="p">,</span><span class="w"> </span><span class="n">uv_id</span><span class="p">});</span>
 
 <span class="c1">// Using attribute names instead</span>
-<span class="k">auto</span><span class="w"> </span><span class="n">unified_mesh</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">unify_index_buffer</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="s">&quot;normals&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;uv&quot;</span><span class="p">});</span><span class="w"></span>
+<span class="k">auto</span><span class="w"> </span><span class="n">unified_mesh</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">unify_index_buffer</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="s">&quot;normals&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;uv&quot;</span><span class="p">});</span>
 </code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Vertex Indices</p>
@@ -1673,21 +1709,21 @@ have different normals, or a UV seam).</p>
 <p>See: <a href="../../../ref/group__group-surfacemesh-attr-utils.html">Attributes Utilities</a> documentation.</p>
 <h2 id="connected-components">Connected Components</h2>
 <p>Connected components can be computed via the <a href="../../../ref/group__group-surfacemesh-utils.html#gafedc8c0d66af62d6f3d540465c0018c6">compute_components()</a> function:</p>
-<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;lagrange/compute_components.h&gt;</span><span class="cp"></span>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;lagrange/compute_components.h&gt;</span>
 
-<span class="n">lagrange</span><span class="o">::</span><span class="n">SurfaceMesh</span><span class="o">&lt;</span><span class="n">Scalar</span><span class="p">,</span><span class="w"> </span><span class="n">Index</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mesh</span><span class="p">;</span><span class="w"></span>
+<span class="n">lagrange</span><span class="o">::</span><span class="n">SurfaceMesh</span><span class="o">&lt;</span><span class="n">Scalar</span><span class="p">,</span><span class="w"> </span><span class="n">Index</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mesh</span><span class="p">;</span>
 
 <span class="c1">// Consider facets to be connected if they are touching by a common vertex</span>
-<span class="n">lagrange</span><span class="o">::</span><span class="n">ComponentOptions</span><span class="w"> </span><span class="n">options</span><span class="p">;</span><span class="w"></span>
-<span class="n">options</span><span class="p">.</span><span class="n">connectivity_type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lagrange</span><span class="o">::</span><span class="n">ComponentOption</span><span class="o">::</span><span class="n">ConnectivityType</span><span class="o">::</span><span class="n">Vertex</span><span class="p">;</span><span class="w"></span>
+<span class="n">lagrange</span><span class="o">::</span><span class="n">ComponentOptions</span><span class="w"> </span><span class="n">options</span><span class="p">;</span>
+<span class="n">options</span><span class="p">.</span><span class="n">connectivity_type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lagrange</span><span class="o">::</span><span class="n">ComponentOption</span><span class="o">::</span><span class="n">ConnectivityType</span><span class="o">::</span><span class="n">Vertex</span><span class="p">;</span>
 
 <span class="c1">// Compute connected components as a per-facet attribute</span>
-<span class="k">auto</span><span class="w"> </span><span class="n">num_components</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lagrange</span><span class="o">::</span><span class="n">compute_components</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span><span class="w"> </span><span class="n">options</span><span class="p">);</span><span class="w"></span>
-<span class="k">auto</span><span class="w"> </span><span class="o">&amp;</span><span class="n">component_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mesh</span><span class="p">.</span><span class="n">get_attribute</span><span class="o">&lt;</span><span class="n">Index</span><span class="o">&gt;</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span><span class="w"> </span><span class="n">options</span><span class="p">.</span><span class="n">output_attribute_name</span><span class="p">).</span><span class="n">get_all</span><span class="p">();</span><span class="w"></span>
+<span class="k">auto</span><span class="w"> </span><span class="n">num_components</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lagrange</span><span class="o">::</span><span class="n">compute_components</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span><span class="w"> </span><span class="n">options</span><span class="p">);</span>
+<span class="k">auto</span><span class="w"> </span><span class="o">&amp;</span><span class="n">component_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mesh</span><span class="p">.</span><span class="n">get_attribute</span><span class="o">&lt;</span><span class="n">Index</span><span class="o">&gt;</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span><span class="w"> </span><span class="n">options</span><span class="p">.</span><span class="n">output_attribute_name</span><span class="p">).</span><span class="n">get_all</span><span class="p">();</span>
 
-<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">Index</span><span class="w"> </span><span class="n">f</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">f</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">mesh</span><span class="p">.</span><span class="n">get_num_facets</span><span class="p">();</span><span class="w"> </span><span class="o">++</span><span class="n">f</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="n">assert</span><span class="p">(</span><span class="mi">0</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">component_id</span><span class="p">[</span><span class="n">f</span><span class="p">]</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">component_id</span><span class="p">[</span><span class="n">f</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">num_components</span><span class="p">);</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">Index</span><span class="w"> </span><span class="n">f</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">f</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">mesh</span><span class="p">.</span><span class="n">get_num_facets</span><span class="p">();</span><span class="w"> </span><span class="o">++</span><span class="n">f</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">assert</span><span class="p">(</span><span class="mi">0</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">component_id</span><span class="p">[</span><span class="n">f</span><span class="p">]</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">component_id</span><span class="p">[</span><span class="n">f</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">num_components</span><span class="p">);</span>
+<span class="p">}</span>
 </code></pre></div>
 <p>You can choose between edge-connected and vertex-connected components via the
 <code>options.connectivity_type</code> parameter.</p>
@@ -1697,44 +1733,44 @@ have different normals, or a UV seam).</p>
 called with <code>preserve_attributes = false</code>. When preserving input mesh attributes, all attributes in
 the input meshes must be compatible (i.e. all meshes share the same attributes, with the same
 type/number of channels, etc.).</p>
-<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;lagrange/combine_meshes.h&gt;</span><span class="cp"></span>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;lagrange/combine_meshes.h&gt;</span>
 
-<span class="n">lagrange</span><span class="o">::</span><span class="n">SurfaceMesh</span><span class="o">&lt;</span><span class="n">Scalar</span><span class="p">,</span><span class="w"> </span><span class="n">Index</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mesh1</span><span class="p">,</span><span class="w"> </span><span class="n">mesh2</span><span class="p">,</span><span class="w"> </span><span class="n">mesh3</span><span class="p">;</span><span class="w"></span>
+<span class="n">lagrange</span><span class="o">::</span><span class="n">SurfaceMesh</span><span class="o">&lt;</span><span class="n">Scalar</span><span class="p">,</span><span class="w"> </span><span class="n">Index</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mesh1</span><span class="p">,</span><span class="w"> </span><span class="n">mesh2</span><span class="p">,</span><span class="w"> </span><span class="n">mesh3</span><span class="p">;</span>
 
 <span class="c1">// Call via initializer list of mesh pointers</span>
-<span class="k">auto</span><span class="w"> </span><span class="n">aggregate_mesh1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lagrange</span><span class="o">::</span><span class="n">combine_meshes</span><span class="p">({</span><span class="o">&amp;</span><span class="n">mesh1</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">mesh2</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">mesh3</span><span class="p">});</span><span class="w"></span>
+<span class="k">auto</span><span class="w"> </span><span class="n">aggregate_mesh1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lagrange</span><span class="o">::</span><span class="n">combine_meshes</span><span class="p">({</span><span class="o">&amp;</span><span class="n">mesh1</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">mesh2</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">mesh3</span><span class="p">});</span>
 
 <span class="c1">// Call via an array of meshes (meshes are shallow-copied in this example)</span>
-<span class="k">constexpr</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">num_meshes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w"></span>
-<span class="n">std</span><span class="o">::</span><span class="n">array</span><span class="o">&lt;</span><span class="k">const</span><span class="w"> </span><span class="n">SurfaceMesh</span><span class="o">&lt;</span><span class="n">Scalar</span><span class="p">,</span><span class="w"> </span><span class="n">Index</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span><span class="n">num_meshes</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mesh_list</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="n">mesh1</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="n">mesh2</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="n">mesh3</span><span class="p">};</span><span class="w"></span>
-<span class="k">auto</span><span class="w"> </span><span class="n">aggregate_mesh2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lagrange</span><span class="o">::</span><span class="n">combine_meshes</span><span class="p">(</span><span class="n">mesh_list</span><span class="p">);</span><span class="w"></span>
+<span class="k">constexpr</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">num_meshes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span>
+<span class="n">std</span><span class="o">::</span><span class="n">array</span><span class="o">&lt;</span><span class="k">const</span><span class="w"> </span><span class="n">SurfaceMesh</span><span class="o">&lt;</span><span class="n">Scalar</span><span class="p">,</span><span class="w"> </span><span class="n">Index</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span><span class="n">num_meshes</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mesh_list</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">mesh1</span><span class="p">,</span>
+<span class="w">    </span><span class="n">mesh2</span><span class="p">,</span>
+<span class="w">    </span><span class="n">mesh3</span><span class="p">};</span>
+<span class="k">auto</span><span class="w"> </span><span class="n">aggregate_mesh2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lagrange</span><span class="o">::</span><span class="n">combine_meshes</span><span class="p">(</span><span class="n">mesh_list</span><span class="p">);</span>
 
 <span class="c1">// Call via generic callbacks</span>
-<span class="k">auto</span><span class="w"> </span><span class="n">aggregate_mesh3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lagrange</span><span class="o">::</span><span class="n">combine_meshes</span><span class="p">(</span><span class="n">num_meshes</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="p">[](</span><span class="kt">size_t</span><span class="w"> </span><span class="n">idx</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">SurfaceMesh</span><span class="o">&lt;</span><span class="n">Scalar</span><span class="p">,</span><span class="w"> </span><span class="n">Index</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="n">mesh_list</span><span class="p">[</span><span class="n">idx</span><span class="p">];</span><span class="w"></span>
-<span class="w">    </span><span class="p">});</span><span class="w"></span>
+<span class="k">auto</span><span class="w"> </span><span class="n">aggregate_mesh3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lagrange</span><span class="o">::</span><span class="n">combine_meshes</span><span class="p">(</span><span class="n">num_meshes</span><span class="p">,</span>
+<span class="w">    </span><span class="p">[](</span><span class="kt">size_t</span><span class="w"> </span><span class="n">idx</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">SurfaceMesh</span><span class="o">&lt;</span><span class="n">Scalar</span><span class="p">,</span><span class="w"> </span><span class="n">Index</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="n">mesh_list</span><span class="p">[</span><span class="n">idx</span><span class="p">];</span>
+<span class="w">    </span><span class="p">});</span>
 </code></pre></div>
 <h2 id="vertex-valence">Vertex Valence</h2>
 <p>Vertex valence can be computed using the <a href="../../../ref/group__group-surfacemesh-utils.html#ga6a2a7d7f5165ef7f5433ef67efad4306">compute_vertex_valence()</a>
 function:</p>
-<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;lagrange/compute_vertex_valence.h&gt;</span><span class="cp"></span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;lagrange/views.h&gt;</span><span class="cp"></span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;lagrange/Logger.h&gt;</span><span class="cp"></span>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;lagrange/compute_vertex_valence.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;lagrange/views.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;lagrange/Logger.h&gt;</span>
 
-<span class="n">lagrange</span><span class="o">::</span><span class="n">SurfaceMesh</span><span class="o">&lt;</span><span class="n">Scalar</span><span class="p">,</span><span class="w"> </span><span class="n">Index</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mesh</span><span class="p">;</span><span class="w"></span>
+<span class="n">lagrange</span><span class="o">::</span><span class="n">SurfaceMesh</span><span class="o">&lt;</span><span class="n">Scalar</span><span class="p">,</span><span class="w"> </span><span class="n">Index</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mesh</span><span class="p">;</span>
 
 <span class="c1">// Compute vertex valence as a per-vertex attribute</span>
-<span class="k">auto</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lagrange</span><span class="o">::</span><span class="n">compute_vertex_valence</span><span class="p">(</span><span class="n">mesh</span><span class="p">);</span><span class="w"></span>
+<span class="k">auto</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lagrange</span><span class="o">::</span><span class="n">compute_vertex_valence</span><span class="p">(</span><span class="n">mesh</span><span class="p">);</span>
 
 <span class="c1">// Count regular vertices using a Eigen::Map view of the attribute</span>
-<span class="n">vertex_valence</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">attribute_vector_view</span><span class="o">&lt;</span><span class="n">Index</span><span class="o">&gt;</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span><span class="w"> </span><span class="n">id</span><span class="p">);</span><span class="w"></span>
-<span class="k">auto</span><span class="w"> </span><span class="n">num_regular_vertices</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">vertex_valence</span><span class="p">.</span><span class="n">array</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">6</span><span class="p">).</span><span class="n">count</span><span class="p">();</span><span class="w"></span>
+<span class="n">vertex_valence</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">attribute_vector_view</span><span class="o">&lt;</span><span class="n">Index</span><span class="o">&gt;</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span><span class="w"> </span><span class="n">id</span><span class="p">);</span>
+<span class="k">auto</span><span class="w"> </span><span class="n">num_regular_vertices</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">vertex_valence</span><span class="p">.</span><span class="n">array</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">6</span><span class="p">).</span><span class="n">count</span><span class="p">();</span>
 
-<span class="n">lagrange</span><span class="o">::</span><span class="n">logger</span><span class="p">().</span><span class="n">info</span><span class="p">(</span><span class="s">&quot;The mesh has {} regular vertices&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">num_regular_vertices</span><span class="p">);</span><span class="w"></span>
+<span class="n">lagrange</span><span class="o">::</span><span class="n">logger</span><span class="p">().</span><span class="n">info</span><span class="p">(</span><span class="s">&quot;The mesh has {} regular vertices&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">num_regular_vertices</span><span class="p">);</span>
 </code></pre></div>
 <h2 id="adjacency-graph">Adjacency Graph</h2>
 <p>While our mesh class offers some low-level <a href="../mesh/#connectivity-and-navigation">navigation
@@ -1742,21 +1778,21 @@ methods</a>, sometimes it beneficial to operate on an explicit
 adjacency list representation of a connectivity graph. Currently we offer the function
 <a href="../../../ref/group__group-surfacemesh-utils.html#ga203af050581e879b52d339558b788a08">compute_vertex_vertex_adjacency()</a> to compute the corresponding
 adjacency list graph:</p>
-<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;lagrange/compute_vertex_vertex_adjacency.h&gt;</span><span class="cp"></span>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;lagrange/compute_vertex_vertex_adjacency.h&gt;</span>
 
-<span class="n">lagrange</span><span class="o">::</span><span class="n">SurfaceMesh</span><span class="o">&lt;</span><span class="n">Scalar</span><span class="p">,</span><span class="w"> </span><span class="n">Index</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mesh</span><span class="p">;</span><span class="w"></span>
+<span class="n">lagrange</span><span class="o">::</span><span class="n">SurfaceMesh</span><span class="o">&lt;</span><span class="n">Scalar</span><span class="p">,</span><span class="w"> </span><span class="n">Index</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mesh</span><span class="p">;</span>
 
 <span class="c1">// Build adjacency list representation of the vertex-vertex connectivity graph</span>
-<span class="k">auto</span><span class="w"> </span><span class="n">graph</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lagrange</span><span class="o">::</span><span class="n">compute_vertex_vertex_adjacency</span><span class="p">(</span><span class="n">mesh</span><span class="p">);</span><span class="w"></span>
+<span class="k">auto</span><span class="w"> </span><span class="n">graph</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lagrange</span><span class="o">::</span><span class="n">compute_vertex_vertex_adjacency</span><span class="p">(</span><span class="n">mesh</span><span class="p">);</span>
 
 <span class="c1">// Display all edges of the graph</span>
-<span class="n">assert</span><span class="p">(</span><span class="n">graph</span><span class="p">.</span><span class="n">get_num_entries</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">mesh</span><span class="p">.</span><span class="n">get_num_vertices</span><span class="p">());</span><span class="w"></span>
-<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">Index</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">mesh</span><span class="p">.</span><span class="n">get_num_vertices</span><span class="p">();</span><span class="w"> </span><span class="o">++</span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="n">lagrange</span><span class="o">::</span><span class="n">logger</span><span class="p">().</span><span class="n">info</span><span class="p">(</span><span class="s">&quot;Vertex v{} has {} neighbors&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">graph</span><span class="p">.</span><span class="n">get_num_neighbors</span><span class="p">(</span><span class="n">x</span><span class="p">));</span><span class="w"></span>
-<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">Index</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">graph</span><span class="p">.</span><span class="n">get_neighbors</span><span class="p">(</span><span class="n">x</span><span class="p">))</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="n">lagrange</span><span class="o">::</span><span class="n">logger</span><span class="p">().</span><span class="n">info</span><span class="p">(</span><span class="s">&quot;Edge v{} -&gt; v{}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="n">assert</span><span class="p">(</span><span class="n">graph</span><span class="p">.</span><span class="n">get_num_entries</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">mesh</span><span class="p">.</span><span class="n">get_num_vertices</span><span class="p">());</span>
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">Index</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">mesh</span><span class="p">.</span><span class="n">get_num_vertices</span><span class="p">();</span><span class="w"> </span><span class="o">++</span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">lagrange</span><span class="o">::</span><span class="n">logger</span><span class="p">().</span><span class="n">info</span><span class="p">(</span><span class="s">&quot;Vertex v{} has {} neighbors&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">graph</span><span class="p">.</span><span class="n">get_num_neighbors</span><span class="p">(</span><span class="n">x</span><span class="p">));</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">Index</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">graph</span><span class="p">.</span><span class="n">get_neighbors</span><span class="p">(</span><span class="n">x</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">lagrange</span><span class="o">::</span><span class="n">logger</span><span class="p">().</span><span class="n">info</span><span class="p">(</span><span class="s">&quot;Edge v{} -&gt; v{}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
 </code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Connectivity &amp; Edge Information</p>
@@ -1768,17 +1804,23 @@ such a requirement, and will compute vertex-vertex connectivity information dire
 <hr />
 <ol>
 <li id="fn:1">
-<p><span class="smallcaps">Mikkelsen, M.</span> 2008. <a href="http://image.diku.dk/projects/media/morten.mikkelsen.08.pdf">Simulation of wrinkled surfaces revisited</a>. <em><a href="http://image.diku.dk/projects/media/morten.mikkelsen.08.pdf">Simulation of wrinkled surfaces revisited</a></em>. Master’s thesis, University of Copenhagen, Universitetsparken 1, 2100 København, Denmark, rl̆http://www.mikktspace.com/.&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+<p><span class="smallcaps">Mikkelsen, M.</span> 2008. <a href="http://image.diku.dk/projects/media/morten.mikkelsen.08.pdf">Simulation of wrinkled surfaces revisited</a>. <em><a href="http://image.diku.dk/projects/media/morten.mikkelsen.08.pdf">Simulation of wrinkled surfaces revisited</a></em>. Master’s thesis, University of Copenhagen, Universitetsparken 1, 2100 København, Denmark, <a href="http://www.mikktspace.com/">http://www.mikktspace.com/</a>.&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
 </li>
 </ol>
 </div>
 
-              
-            </article>
-          </div>
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
         </div>
         
-          <a href="#" class="md-top md-icon" data-md-component="top" data-md-state="hidden">
+          <a href="#" class="md-top md-icon" data-md-component="top" hidden>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
             Back to top
           </a>
@@ -1786,41 +1828,6 @@ such a requirement, and will compute vertex-vertex connectivity information dire
       </main>
       
         <footer class="md-footer">
-  
-    <nav class="md-footer__inner md-grid" aria-label="Footer">
-      
-        
-        <a href="../attributes/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Mesh Attributes" rel="prev">
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
-          </div>
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Previous
-              </span>
-              Mesh Attributes
-            </div>
-          </div>
-        </a>
-      
-      
-        
-        <a href="../general-utilities/" class="md-footer__link md-footer__link--next" aria-label="Next: General Utilities" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              General Utilities
-            </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
-          </div>
-        </a>
-      
-    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -1842,10 +1849,11 @@ such a requirement, and will compute vertex-vertex connectivity information dire
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "navigation.indexes"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.2a1c317c.min.js"}</script>
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "navigation.indexes", "content.action.edit"], "search": "../../../assets/javascripts/workers/search.db81ec45.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.748e2769.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.6df46069.min.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/tablesort.min.js"></script>
       

@@ -7,7 +7,8 @@ var searchData=
   ['library_4',['Library',['../structlagrange_1_1ui_1_1_m_d_l_1_1_library.html',1,'lagrange::ui::MDL']]],
   ['lightcomponent_5',['LightComponent',['../structlagrange_1_1ui_1_1_light_component.html',1,'lagrange::ui']]],
   ['lightcomponentchangedevent_6',['LightComponentChangedEvent',['../structlagrange_1_1ui_1_1_light_component_changed_event.html',1,'lagrange::ui']]],
-  ['logdata_7',['LogData',['../classlagrange_1_1ui_1_1_log_data.html',1,'lagrange::ui']]],
-  ['loggercontextdata_8',['LoggerContextData',['../structlagrange_1_1ui_1_1_logger_context_data.html',1,'lagrange::ui']]],
-  ['loggerpanel_9',['LoggerPanel',['../structlagrange_1_1ui_1_1_logger_panel.html',1,'lagrange::ui']]]
+  ['loadoptions_7',['LoadOptions',['../structlagrange_1_1io_1_1_load_options.html',1,'lagrange::io']]],
+  ['logdata_8',['LogData',['../classlagrange_1_1ui_1_1_log_data.html',1,'lagrange::ui']]],
+  ['loggercontextdata_9',['LoggerContextData',['../structlagrange_1_1ui_1_1_logger_context_data.html',1,'lagrange::ui']]],
+  ['loggerpanel_10',['LoggerPanel',['../structlagrange_1_1ui_1_1_logger_panel.html',1,'lagrange::ui']]]
 ];

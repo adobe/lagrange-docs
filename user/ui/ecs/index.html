@@ -10,8 +10,14 @@
       
         <link rel="canonical" href="https://opensource.adobe.com/lagrange-docs/user/ui/ecs/">
       
+      
+        <link rel="prev" href="../overview/">
+      
+      
+        <link rel="next" href="../mesh-visualization/">
+      
       <link rel="icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.2.4, mkdocs-material-8.2.11">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.11">
     
     
       
@@ -19,16 +25,13 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.8c5ef100.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.0d440cfe.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.9647289d.min.css">
-        
-          
-          
-          <meta name="theme-color" content="#ef5552">
-        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.2505c338.min.css">
       
+      
+
     
     
     
@@ -43,10 +46,11 @@
     
       <link rel="stylesheet" href="../../../stylesheets/extra.css">
     
-    <script>__md_scope=new URL("../../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
+    
     
     
   </head>
@@ -57,7 +61,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="red" data-md-color-accent="red">
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="red" data-md-color-accent="red">
   
     
     
@@ -122,7 +126,7 @@
       </label>
       <nav class="md-search__options" aria-label="Search">
         
-        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
         </button>
       </nav>
@@ -134,7 +138,7 @@
           <div class="md-search-result__meta">
             Initializing search
           </div>
-          <ol class="md-search-result__list"></ol>
+          <ol class="md-search-result__list" role="presentation"></ol>
         </div>
       </div>
     </div>
@@ -143,10 +147,10 @@
     
     
       <div class="md-header__source">
-        <a href="https://github.com/adobe/lagrange/" title="Go to repository" class="md-source" data-md-component="source">
+        <a href="https://github.com/adobe/lagrange" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
   </div>
   <div class="md-source__repository">
     adobe/lagrange
@@ -278,10 +282,10 @@
   </label>
   
     <div class="md-nav__source">
-      <a href="https://github.com/adobe/lagrange/" title="Go to repository" class="md-source" data-md-component="source">
+      <a href="https://github.com/adobe/lagrange" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
   </div>
   <div class="md-source__repository">
     adobe/lagrange
@@ -302,8 +306,11 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" data-md-state="indeterminate" type="checkbox" id="__nav_1" checked>
       
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1" >
       
       
         
@@ -338,7 +345,7 @@
           
         </div>
       
-      <nav class="md-nav" aria-label="Home" data-md-level="1">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_1">
           <span class="md-nav__icon md-icon"></span>
           Home
@@ -424,7 +431,7 @@
   
     <li class="md-nav__item">
       <a href="https://github.com/adobe/lagrange/releases" class="md-nav__link">
-        Releases
+        Changelog
       </a>
     </li>
   
@@ -464,8 +471,9 @@
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
       
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
       
       
         
@@ -475,12 +483,12 @@
         
       
       
-        <label class="md-nav__link" for="__nav_2">
+        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
           User Guide
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="User Guide" data-md-level="1">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_2">
           <span class="md-nav__icon md-icon"></span>
           User Guide
@@ -496,8 +504,11 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" data-md-state="indeterminate" type="checkbox" id="__nav_2_1" checked>
       
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_1" >
       
       
         
@@ -513,12 +524,12 @@
         
       
       
-        <label class="md-nav__link" for="__nav_2_1">
+        <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
           General
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="General" data-md-level="2">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_2_1">
           <span class="md-nav__icon md-icon"></span>
           General
@@ -590,8 +601,11 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1_5" data-md-state="indeterminate" type="checkbox" id="__nav_2_1_5" checked>
       
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_1_5" >
       
       
         
@@ -603,12 +617,12 @@
         
       
       
-        <label class="md-nav__link" for="__nav_2_1_5">
+        <label class="md-nav__link" for="__nav_2_1_5" id="__nav_2_1_5_label" tabindex="0">
           Legacy Features
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Legacy Features" data-md-level="3">
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_5_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_2_1_5">
           <span class="md-nav__icon md-icon"></span>
           Legacy Features
@@ -682,37 +696,38 @@
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" checked>
       
       
-      
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
       
       
-        <label class="md-nav__link" for="__nav_2_2">
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
           UI
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="UI" data-md-level="2">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_2_2">
           <span class="md-nav__icon md-icon"></span>
           UI
@@ -742,7 +757,7 @@
   
     <li class="md-nav__item md-nav__item--active">
       
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
         
@@ -958,8 +973,11 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" data-md-state="indeterminate" type="checkbox" id="__nav_3" checked>
       
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
       
       
         
@@ -971,12 +989,12 @@
         
       
       
-        <label class="md-nav__link" for="__nav_3">
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
           Dev Guide
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Dev Guide" data-md-level="1">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_3">
           <span class="md-nav__icon md-icon"></span>
           Dev Guide
@@ -992,8 +1010,11 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1" data-md-state="indeterminate" type="checkbox" id="__nav_3_1" checked>
       
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_1" >
       
       
         
@@ -1005,12 +1026,12 @@
         
       
       
-        <label class="md-nav__link" for="__nav_3_1">
+        <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
           Lagrange
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Lagrange" data-md-level="2">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_3_1">
           <span class="md-nav__icon md-icon"></span>
           Lagrange
@@ -1075,8 +1096,11 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" data-md-state="indeterminate" type="checkbox" id="__nav_3_2" checked>
       
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_2" >
       
       
         
@@ -1088,12 +1112,12 @@
         
       
       
-        <label class="md-nav__link" for="__nav_3_2">
+        <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
           Performance
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Performance" data-md-level="2">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_3_2">
           <span class="md-nav__icon md-icon"></span>
           Performance
@@ -1158,8 +1182,11 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3" data-md-state="indeterminate" type="checkbox" id="__nav_3_3" checked>
       
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_3" >
       
       
         
@@ -1171,12 +1198,12 @@
         
       
       
-        <label class="md-nav__link" for="__nav_3_3">
+        <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
           Development
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Development" data-md-level="2">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_3_3">
           <span class="md-nav__icon md-icon"></span>
           Development
@@ -1249,8 +1276,11 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" data-md-state="indeterminate" type="checkbox" id="__nav_4" checked>
       
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
       
       
         
@@ -1267,7 +1297,7 @@
           
         </div>
       
-      <nav class="md-nav" aria-label="Reference Documentation" data-md-level="1">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_4">
           <span class="md-nav__icon md-icon"></span>
           Reference Documentation
@@ -1371,13 +1401,19 @@
               </div>
             
           
-          <div class="md-content" data-md-component="content">
-            <article class="md-content__inner md-typeset">
-              
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
                 
-  <a href="https://github.com/adobe/lagrange-docs/edit/docs/docs/user/ui/ecs.md" title="Edit this page" class="md-content__button md-icon">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
-  </a>
+                  
+
+  
+    <a href="https://github.com/adobe/lagrange-docs/edit/docs/docs/open/user/ui/ecs.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
+    </a>
+  
+  
 
 
 
@@ -1394,75 +1430,75 @@
 </ul>
 <h2 id="registry">Registry</h2>
 <p>The <code>Viewer</code> uses a <code>Registry</code> (alias for <code>entt::registry</code>) to store all entities and their data. To manipulate entities and their components directly, use the object:
-<div class="highlight"><pre><span></span><code><span class="k">auto</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">registry</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">viewer</span><span class="p">.</span><span class="n">registry</span><span class="p">();</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="k">auto</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">registry</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">viewer</span><span class="p">.</span><span class="n">registry</span><span class="p">();</span>
 </code></pre></div>
 <code>Viewer</code> class exposes API that simplifies interaction with the <code>Registry</code>, e.g. <code>Viewer::show_mesh</code>.</p>
 <h2 id="entity">Entity</h2>
 <p>Unique identifier - it's just that. It's used to identify a unique "object" or "entity". Lagrange UI defines a <code>Entity</code> alias. Internally implemented as <code>std::uint32_t</code>.</p>
 <p>To create a new entity, use:
-<div class="highlight"><pre><span></span><code><span class="n">Entity</span><span class="w"> </span><span class="n">new_entity</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">registry</span><span class="p">.</span><span class="n">create</span><span class="p">();</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="n">Entity</span><span class="w"> </span><span class="n">new_entity</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">registry</span><span class="p">.</span><span class="n">create</span><span class="p">();</span>
 </code></pre></div></p>
 <p>To destroy:
-<div class="highlight"><pre><span></span><code><span class="n">registry</span><span class="p">.</span><span class="n">destroy</span><span class="p">(</span><span class="n">entity</span><span class="p">);</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="n">registry</span><span class="p">.</span><span class="n">destroy</span><span class="p">(</span><span class="n">entity</span><span class="p">);</span>
 </code></pre></div></p>
 <h2 id="components">Components</h2>
 <p>Any data that is attached to an <code>Entity</code>. Uniquely identified by template typename <code>&lt;T&gt;</code> and <code>Entity</code>.</p>
 <p>Components <strong>don't have logic, that means no code</strong>. They only store data and implicitly define behavior. Ideally, the components should be <code>structs</code> with no functions. However, it may be beneficial to have setters/getters as member functions in some cases.</p>
 <p>To attach a component of type <code>MyComponent</code> to an entity :
 <div class="highlight"><pre><span></span><code><span class="c1">// When it doesn&#39;t exist</span>
-<span class="n">registry</span><span class="p">.</span><span class="n">emplace</span><span class="o">&lt;</span><span class="n">MyComponent</span><span class="o">&gt;</span><span class="p">(</span><span class="n">entity</span><span class="p">,</span><span class="w"> </span><span class="n">MyComponent</span><span class="p">(</span><span class="mi">42</span><span class="p">))</span><span class="w"></span>
+<span class="n">registry</span><span class="p">.</span><span class="n">emplace</span><span class="o">&lt;</span><span class="n">MyComponent</span><span class="o">&gt;</span><span class="p">(</span><span class="n">entity</span><span class="p">,</span><span class="w"> </span><span class="n">MyComponent</span><span class="p">(</span><span class="mi">42</span><span class="p">))</span>
 
 <span class="c1">// When it might exist already</span>
-<span class="n">registry</span><span class="p">.</span><span class="n">emplace_or_replace</span><span class="o">&lt;</span><span class="n">MyComponent</span><span class="o">&gt;</span><span class="p">(</span><span class="n">entity</span><span class="p">,</span><span class="w"> </span><span class="n">MyComponent</span><span class="p">(</span><span class="mi">42</span><span class="p">))</span><span class="w"></span>
+<span class="n">registry</span><span class="p">.</span><span class="n">emplace_or_replace</span><span class="o">&lt;</span><span class="n">MyComponent</span><span class="o">&gt;</span><span class="p">(</span><span class="n">entity</span><span class="p">,</span><span class="w"> </span><span class="n">MyComponent</span><span class="p">(</span><span class="mi">42</span><span class="p">))</span>
 </code></pre></div></p>
 <p>To retrieve a component:
 <div class="highlight"><pre><span></span><code><span class="c1">// If it exists already</span>
-<span class="n">MyComponent</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">registry</span><span class="p">.</span><span class="n">get</span><span class="o">&lt;</span><span class="n">MyComponent</span><span class="o">&gt;</span><span class="p">(</span><span class="n">entity</span><span class="p">);</span><span class="w"></span>
+<span class="n">MyComponent</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">registry</span><span class="p">.</span><span class="n">get</span><span class="o">&lt;</span><span class="n">MyComponent</span><span class="o">&gt;</span><span class="p">(</span><span class="n">entity</span><span class="p">);</span>
 
 <span class="c1">// If you&#39;re not sure it exists</span>
-<span class="n">MyComponent</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">registry</span><span class="p">.</span><span class="n">try_get</span><span class="o">&lt;</span><span class="n">MyComponent</span><span class="o">&gt;</span><span class="p">(</span><span class="n">entity</span><span class="p">);</span><span class="w"></span>
+<span class="n">MyComponent</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">registry</span><span class="p">.</span><span class="n">try_get</span><span class="o">&lt;</span><span class="n">MyComponent</span><span class="o">&gt;</span><span class="p">(</span><span class="n">entity</span><span class="p">);</span>
 <span class="c1">//or</span>
-<span class="k">if</span><span class="p">(</span><span class="n">registry</span><span class="p">.</span><span class="n">has</span><span class="o">&lt;</span><span class="n">MyComponent</span><span class="o">&gt;</span><span class="p">()){</span><span class="w"></span>
-<span class="w">    </span><span class="n">MyComponent</span><span class="o">&amp;</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">registry</span><span class="p">.</span><span class="n">get</span><span class="o">&lt;</span><span class="n">MyComponent</span><span class="o">&gt;</span><span class="p">(</span><span class="n">entity</span><span class="p">);</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="k">if</span><span class="p">(</span><span class="n">registry</span><span class="p">.</span><span class="n">has</span><span class="o">&lt;</span><span class="n">MyComponent</span><span class="o">&gt;</span><span class="p">()){</span>
+<span class="w">    </span><span class="n">MyComponent</span><span class="o">&amp;</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">registry</span><span class="p">.</span><span class="n">get</span><span class="o">&lt;</span><span class="n">MyComponent</span><span class="o">&gt;</span><span class="p">(</span><span class="n">entity</span><span class="p">);</span>
+<span class="p">}</span>
 </code></pre></div></p>
 <h3 id="tag-components">Tag Components</h3>
 <p>"Empty" components may be used to tag entities, e.g. <code>Selected</code>, <code>Hovered</code>, etc. These types however must have non-zero size:
-<div class="highlight"><pre><span></span><code><span class="k">struct</span><span class="w"> </span><span class="nc">Hidden</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">dummy</span><span class="p">;</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="k">struct</span><span class="w"> </span><span class="nc">Hidden</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">dummy</span><span class="p">;</span>
+<span class="p">}</span>
 </code></pre></div></p>
 <h2 id="systems">Systems</h2>
 <p>Systems are the logic of the application. They are defined as functions that iterate over entities that have specified components only.
 For example, running this system:
-<div class="highlight"><pre><span></span><code><span class="n">registry</span><span class="p">.</span><span class="n">view</span><span class="o">&lt;</span><span class="n">Velocity</span><span class="p">,</span><span class="w"> </span><span class="n">Position</span><span class="o">&gt;</span><span class="p">().</span><span class="n">each</span><span class="p">([](</span><span class="n">Entity</span><span class="w"> </span><span class="n">e</span><span class="p">,</span><span class="w"> </span><span class="n">Velocity</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">velocity</span><span class="p">,</span><span class="w"> </span><span class="n">Transform</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">transform</span><span class="p">){</span><span class="w"></span>
-<span class="w">    </span><span class="n">transform</span><span class="p">.</span><span class="n">local</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Eigen</span><span class="o">::</span><span class="n">Translation3f</span><span class="p">(</span><span class="n">velocity</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">transform</span><span class="p">.</span><span class="n">local</span><span class="p">;</span><span class="w"></span>
-<span class="p">});</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="n">registry</span><span class="p">.</span><span class="n">view</span><span class="o">&lt;</span><span class="n">Velocity</span><span class="p">,</span><span class="w"> </span><span class="n">Position</span><span class="o">&gt;</span><span class="p">().</span><span class="n">each</span><span class="p">([](</span><span class="n">Entity</span><span class="w"> </span><span class="n">e</span><span class="p">,</span><span class="w"> </span><span class="n">Velocity</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">velocity</span><span class="p">,</span><span class="w"> </span><span class="n">Transform</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">transform</span><span class="p">){</span>
+<span class="w">    </span><span class="n">transform</span><span class="p">.</span><span class="n">local</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Eigen</span><span class="o">::</span><span class="n">Translation3f</span><span class="p">(</span><span class="n">velocity</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">transform</span><span class="p">.</span><span class="n">local</span><span class="p">;</span>
+<span class="p">});</span>
 </code></pre></div>
 will iterate over all entities that have both <code>Velocity</code> and <code>Transform</code> and apply the velocity vector to the transform.</p>
 <p>Lagrange UI defines <code>System</code> as alias to <code>std::function&lt;void(Registry&amp;)&gt;</code>, that is, a function that does something with the <code>Registry</code>. Typically these will be defined as:
-<div class="highlight"><pre><span></span><code><span class="n">System</span><span class="w"> </span><span class="n">my_system</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[](</span><span class="n">Registry</span><span class="w"> </span><span class="o">&amp;</span><span class="n">w</span><span class="p">){</span><span class="w"></span>
-<span class="w">    </span><span class="n">w</span><span class="p">.</span><span class="n">view</span><span class="o">&lt;</span><span class="n">Component1</span><span class="p">,</span><span class="w"> </span><span class="n">Component2</span><span class="p">,</span><span class="w"> </span><span class="p">...</span><span class="o">&gt;</span><span class="p">.</span><span class="n">each</span><span class="p">([](</span><span class="n">Entity</span><span class="w"> </span><span class="n">e</span><span class="p">,</span><span class="w"> </span><span class="n">Component1</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">c1</span><span class="p">,</span><span class="w"> </span><span class="n">Component2</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">c2</span><span class="p">,</span><span class="w"> </span><span class="p">...){</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="n">System</span><span class="w"> </span><span class="n">my_system</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[](</span><span class="n">Registry</span><span class="w"> </span><span class="o">&amp;</span><span class="n">w</span><span class="p">){</span>
+<span class="w">    </span><span class="n">w</span><span class="p">.</span><span class="n">view</span><span class="o">&lt;</span><span class="n">Component1</span><span class="p">,</span><span class="w"> </span><span class="n">Component2</span><span class="p">,</span><span class="w"> </span><span class="p">...</span><span class="o">&gt;</span><span class="p">.</span><span class="n">each</span><span class="p">([](</span><span class="n">Entity</span><span class="w"> </span><span class="n">e</span><span class="p">,</span><span class="w"> </span><span class="n">Component1</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">c1</span><span class="p">,</span><span class="w"> </span><span class="n">Component2</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">c2</span><span class="p">,</span><span class="w"> </span><span class="p">...){</span>
 <span class="w">        </span><span class="c1">//</span>
-<span class="w">    </span><span class="p">});</span><span class="w"></span>
-<span class="p">};</span><span class="w"></span>
+<span class="w">    </span><span class="p">});</span>
+<span class="p">};</span>
 </code></pre></div></p>
 <h2 id="context-variables">Context Variables</h2>
 <p>Systems <strong>do not have data</strong>. However, it's often useful to have some state associated with a given system, e.g. for caching. Sometimes it's useful that this state be shared among several systems. Instead of storing this state in some single instance of a component, we can use <em>context</em> variables. These can be thought of as <em>singleton</em> components - only one instance of a <code>Type</code> can exist at a given time.</p>
 <p><code>InputState</code> is such a <em>singleton</em> component. At the beginning of the frame, it is filled with key/mouse information, including last mouse position, mouse delta, active keybinds, etc.:
-<div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">update_input_system</span><span class="p">(</span><span class="n">Registry</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">registry</span><span class="p">){</span><span class="w"></span>
-<span class="w">    </span><span class="n">InputState</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">input_state</span><span class="w"> </span><span class="o">=</span><span class="w">  </span><span class="n">registry</span><span class="p">.</span><span class="n">ctx_or_set</span><span class="o">&lt;</span><span class="n">InputState</span><span class="o">&gt;</span><span class="p">();</span><span class="w"></span>
-<span class="w">    </span><span class="n">input_state</span><span class="p">.</span><span class="n">mouse_pos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">...</span><span class="w"></span>
-<span class="w">    </span><span class="n">input_state</span><span class="p">.</span><span class="n">mouse_delta</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">...</span><span class="w"></span>
-<span class="w">    </span><span class="n">input_state</span><span class="p">.</span><span class="n">keybinds</span><span class="p">.</span><span class="n">update</span><span class="p">(...);</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">update_input_system</span><span class="p">(</span><span class="n">Registry</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">registry</span><span class="p">){</span>
+<span class="w">    </span><span class="n">InputState</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">input_state</span><span class="w"> </span><span class="o">=</span><span class="w">  </span><span class="n">registry</span><span class="p">.</span><span class="n">ctx_or_set</span><span class="o">&lt;</span><span class="n">InputState</span><span class="o">&gt;</span><span class="p">();</span>
+<span class="w">    </span><span class="n">input_state</span><span class="p">.</span><span class="n">mouse_pos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">...</span>
+<span class="w">    </span><span class="n">input_state</span><span class="p">.</span><span class="n">mouse_delta</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">...</span>
+<span class="w">    </span><span class="n">input_state</span><span class="p">.</span><span class="n">keybinds</span><span class="p">.</span><span class="n">update</span><span class="p">(...);</span>
+<span class="p">}</span>
 </code></pre></div></p>
 <p>It can then be used by any other system down the line:
-<div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">print_mouse_position</span><span class="p">(</span><span class="n">Registry</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">registry</span><span class="p">){</span><span class="w"></span>
-<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">input_state</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">registry</span><span class="p">.</span><span class="n">ctx</span><span class="o">&lt;</span><span class="n">InputState</span><span class="o">&gt;</span><span class="p">();</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">print_mouse_position</span><span class="p">(</span><span class="n">Registry</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">registry</span><span class="p">){</span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">input_state</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">registry</span><span class="p">.</span><span class="n">ctx</span><span class="o">&lt;</span><span class="n">InputState</span><span class="o">&gt;</span><span class="p">();</span>
 
-<span class="w">    </span><span class="n">lagrange</span><span class="o">::</span><span class="n">logger</span><span class="p">().</span><span class="n">info</span><span class="p">(</span><span class="s">&quot;Mouse position: {}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">input_state</span><span class="p">.</span><span class="n">mouse_pos</span><span class="p">);</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="n">lagrange</span><span class="o">::</span><span class="n">logger</span><span class="p">().</span><span class="n">info</span><span class="p">(</span><span class="s">&quot;Mouse position: {}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">input_state</span><span class="p">.</span><span class="n">mouse_pos</span><span class="p">);</span>
+<span class="p">}</span>
 </code></pre></div></p>
 <h2 id="design-considerations">Design Considerations</h2>
 <p>Rules to follow when designing components and systems:</p>
@@ -1472,12 +1508,18 @@ will iterate over all entities that have both <code>Velocity</code> and <code>Tr
 <li>State associated with systems is stored as context variable (<code>registry.ctx&lt;T&gt;()</code>)</li>
 </ul>
 
-              
-            </article>
-          </div>
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
         </div>
         
-          <a href="#" class="md-top md-icon" data-md-component="top" data-md-state="hidden">
+          <a href="#" class="md-top md-icon" data-md-component="top" hidden>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
             Back to top
           </a>
@@ -1485,41 +1527,6 @@ will iterate over all entities that have both <code>Velocity</code> and <code>Tr
       </main>
       
         <footer class="md-footer">
-  
-    <nav class="md-footer__inner md-grid" aria-label="Footer">
-      
-        
-        <a href="../overview/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Overview" rel="prev">
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
-          </div>
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Previous
-              </span>
-              Overview
-            </div>
-          </div>
-        </a>
-      
-      
-        
-        <a href="../mesh-visualization/" class="md-footer__link md-footer__link--next" aria-label="Next: Mesh Visualization" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              Mesh Visualization
-            </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
-          </div>
-        </a>
-      
-    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -1541,10 +1548,11 @@ will iterate over all entities that have both <code>Velocity</code> and <code>Tr
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "navigation.indexes"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.2a1c317c.min.js"}</script>
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "navigation.indexes", "content.action.edit"], "search": "../../../assets/javascripts/workers/search.db81ec45.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.748e2769.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.6df46069.min.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/tablesort.min.js"></script>
       

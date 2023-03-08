@@ -2,8 +2,8 @@ var searchData=
 [
   ['uiwidget_0',['UIWidget',['../classlagrange_1_1ui_1_1_u_i_widget.html#a14511cf0ba99175a0ffe42bc00761a92',1,'lagrange::ui::UIWidget']]],
   ['ungroup_1',['ungroup',['../namespacelagrange_1_1ui.html#a57db003f1a25650af9e71a40cc0303e7',1,'lagrange::ui']]],
-  ['unify_5fcorner_5findices_2',['unify_corner_indices',['../namespacelagrange.html#a634f14b2682ed9274b1a71a92ac369c2',1,'lagrange']]],
-  ['unify_5findex_5fbuffer_3',['unify_index_buffer',['../namespacelagrange.html#a70c96924879ca0c7a4ff7c71ca41be10',1,'lagrange::unify_index_buffer(const MeshType &amp;mesh, const std::vector&lt; std::string &gt; &amp;indexed_attribute_names)'],['../group__group-surfacemesh-attr-utils.html#gae8deb2977d6d78e0b8e3a9a7773b6c72',1,'lagrange::unify_index_buffer(const SurfaceMesh&lt; Scalar, Index &gt; &amp;mesh, const std::vector&lt; AttributeId &gt; &amp;attribute_ids={})']]],
+  ['unify_5fcorner_5findices_2',['unify_corner_indices',['../namespacelagrange.html#a4ba838587d8e6479d32534409cb7c59b',1,'lagrange']]],
+  ['unify_5findex_5fbuffer_3',['unify_index_buffer',['../namespacelagrange.html#a5b8ece65ca9443d0144b247efda76971',1,'lagrange::unify_index_buffer(const MeshType &amp;mesh, const std::vector&lt; std::string &gt; &amp;indexed_attribute_names)'],['../group__group-surfacemesh-attr-utils.html#gae8deb2977d6d78e0b8e3a9a7773b6c72',1,'lagrange::unify_index_buffer(const SurfaceMesh&lt; Scalar, Index &gt; &amp;mesh, const std::vector&lt; AttributeId &gt; &amp;attribute_ids={})']]],
   ['unify_5fnamed_5findex_5fbuffer_4',['unify_named_index_buffer',['../group__group-surfacemesh-attr-utils.html#ga40817d91add1d124cc9f362f019d1f0c',1,'lagrange']]],
   ['unique_5',['unique',['../classlagrange_1_1internal_1_1shared__ptr.html#a17f79efcc0f2e0d5cb9afcdee013e64c',1,'lagrange::internal::shared_ptr']]],
   ['unproject_6',['unproject',['../classlagrange_1_1ui_1_1_camera.html#a05428503a3e3ba3b9ff24edc76049164',1,'lagrange::ui::Camera']]],

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['wrapmode_0',['WrapMode',['../namespacelagrange_1_1raycasting.html#a9ee2fe0bc570d84074a12e3088c7c5e4',1,'lagrange::raycasting']]]
+  ['sign_0',['Sign',['../structlagrange_1_1volume_1_1_mesh_to_volume_options.html#ad870f3a2c3baacb65e34071ae73c66cb',1,'lagrange::volume::MeshToVolumeOptions']]]
 ];

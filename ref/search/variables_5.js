@@ -1,6 +1,9 @@
 var searchData=
 [
-  ['gl_5fversion_5fmajor_0',['gl_version_major',['../structlagrange_1_1ui_1_1_viewer_1_1_window_options.html#a921f43e46b969551cd946f522d072f3a',1,'lagrange::ui::Viewer::WindowOptions']]],
-  ['gl_5fversion_5fminor_1',['gl_version_minor',['../structlagrange_1_1ui_1_1_viewer_1_1_window_options.html#add8ee26bd02e156f6d1422bbf60b22a3',1,'lagrange::ui::Viewer::WindowOptions']]],
-  ['global_2',['global',['../structlagrange_1_1ui_1_1_bounds.html#a8d90039cc574781897501adf0c3a8310',1,'lagrange::ui::Bounds::global()'],['../structlagrange_1_1ui_1_1_transform.html#a480d1bba1bace165418cc7a3c4d4181b',1,'lagrange::ui::Transform::global()']]]
+  ['facet_5farea_5fattribute_5fname_0',['facet_area_attribute_name',['../structlagrange_1_1_mesh_centroid_options.html#ad81ac470ed28f1c4e417d0925b5274e3',1,'lagrange::MeshCentroidOptions']]],
+  ['facet_5fcentroid_5fattribute_5fname_1',['facet_centroid_attribute_name',['../structlagrange_1_1_mesh_centroid_options.html#a557068639911fb69ab0a964bf88dcf9e',1,'lagrange::MeshCentroidOptions']]],
+  ['facet_5fnormal_5fattribute_5fname_2',['facet_normal_attribute_name',['../structlagrange_1_1_normal_options.html#a4c122150ae238de703e9610a0bc2469d',1,'lagrange::NormalOptions']]],
+  ['focus_5fon_5fshow_3',['focus_on_show',['../structlagrange_1_1ui_1_1_viewer_1_1_window_options.html#ab6a258228bcf9430de46ab783bc265ef',1,'lagrange::ui::Viewer::WindowOptions']]],
+  ['frustum_4',['frustum',['../structlagrange_1_1ui_1_1_selection_context.html#abe1837a57eb3e099b7b2ef01334bd01d',1,'lagrange::ui::SelectionContext']]],
+  ['fullscreen_5',['fullscreen',['../structlagrange_1_1ui_1_1_viewer_1_1_window_options.html#a5a9147cb82d1cbeefadd62beb9e6910b',1,'lagrange::ui::Viewer::WindowOptions']]]
 ];
