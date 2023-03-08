@@ -1,10 +1,12 @@
 site_name: Lagrange
 site_url: 'https://opensource.adobe.com/lagrange-docs/'
-edit_uri: 'https://github.com/adobe/lagrange-docs/edit/docs/docs/'
+edit_uri: 'https://github.com/adobe/lagrange-docs/edit/docs/docs/open'
 docs_dir: 'docs/open'
 theme:
   name: 'material'
   logo: img/Lagrange-logo.svg
+  icon:
+    repo: fontawesome/brands/github
   palette:
     primary: red
     accent: red
@@ -14,6 +16,7 @@ theme:
     - navigation.expand
     - navigation.top
     - navigation.indexes
+    - content.action.edit
 
 repo_name: adobe/lagrange
 repo_url: https://github.com/adobe/lagrange
@@ -50,6 +53,7 @@ plugins:
       redirect_maps:
         'UserGuide/Core/Attributes.md': 'user/core/attributes.md'
         'user/core/utility-functions.md': 'user/core/general-utilities.md'
+        'Releases': 'Changelog'
 
 extra_javascript:
   - https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/tablesort.min.js
@@ -70,7 +74,7 @@ nav:
     - Build: build.md
     - Contribute: dev/contribute.md
     - Code Style: dev/code-style.md
-    - Releases: https://github.com/adobe/lagrange/releases
+    - Changelog: https://github.com/adobe/lagrange/releases
     - Third Party Libraries: third-party.md
   - User Guide:
     - General:

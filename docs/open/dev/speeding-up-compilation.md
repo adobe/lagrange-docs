@@ -122,7 +122,7 @@ endif()
 
 ## Real Solutions
 
-!!! important "Profile Compilation Times First!"
+!!! tip "Profile Compilation Times First!"
     Before going head-over-heel and refactor all your code, it is essential that you run some simple
     [profiling tools](compilation-profiling.md) to help you analyze what parts of your project are
     slow to compile.
@@ -248,7 +248,7 @@ If you absolutely need do use templates, consider the following:
 To avoid repeating explicit template instantiations for various types, we can use a [cool macro
 trick](#x-macro-trick-for-explicit-instantiations) described at the end of this page.
 
-!!! caution "Definitions In Header Files"
+!!! warning "Definitions In Header Files"
     One could also envision using separate header files for the declaration/definition of a
     templated function (as opposed to a header file + source file). But this gets tricky when
     nesting templated function calls and trying to instantiate them with new types.
@@ -289,7 +289,7 @@ To limit compilation overhead due to header parsing, you can do the following:
     type function(type);
     ```
 
-!!! caution "Forward Declarations And Circular Dependencies"
+!!! warning "Forward Declarations And Circular Dependencies"
     The Google C++ Style Guide cautions [against using forward
     declarations](https://google.github.io/styleguide/cppguide.html#Forward_Declarations) whenever
     possible. Forward declaration can hide circular dependencies which should be a red flag in your
@@ -363,7 +363,7 @@ There are several ways to implement a PIMPL in your code (from bad to good):
       post](https://hackernoon.com/value-ptr-the-missing-c-smart-pointer-1f515664153e)).
     - [spimpl::impl_ptr<>](https://github.com/oliora/samples) very similar.
 
-!!! caution "Pointers & Const-Correctness"
+!!! warning "Pointers & Const-Correctness"
     When storing member variables that are pointers to data, you need to be very careful regarding
     **const-correctness**.
     ```c++

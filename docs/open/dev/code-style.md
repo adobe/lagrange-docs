@@ -81,7 +81,7 @@ Here are a few items to highlight:
 - Member variables are prefixed with `m_`.
 - The opening bracket placement is dictated by our `.clang-format`: always attach braces to surrounding context, except for functions and classes, where it is placed on a newline.
 - Commented/dead code should be removed.
-- New code is encouraged to use Doxygen-style comments if possible, in particular for public headers. Here is an example for a [function]({{ repo_url }}/modules/core/include/lagrange/utils/strings.h), and for a [class]({{ repo_url }}/modules/core/include/lagrange/SurfaceMesh.h).
+- New code is encouraged to use Doxygen-style comments if possible, in particular for public headers. Here is an example for a [function]({{ repo_url }}/blob/main/modules/core/include/lagrange/utils/strings.h), and for a [class]({{ repo_url }}/blob/main/modules/core/include/lagrange/SurfaceMesh.h).
 - When in doubt, we recommend using fenced `/** */` blocks for function/class descriptions, and `//` for inline comments.
 - `#include` statement uses full path in angle brackets, for example:
   ```cpp

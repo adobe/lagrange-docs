@@ -2,7 +2,7 @@
 
 # Legacy Mesh Attributes
 
-!!! attention
+!!! warning "Legacy Mesh"
     Since v6.0.0, Lagrange introduced a new [polygonal mesh](mesh.md) class that is meant to
     replace the original mesh class used throughout Lagrange. The old `lagrange::Mesh<>` class is
     thus **deprecated**, but will be kept around for a while until we can transition all our code to

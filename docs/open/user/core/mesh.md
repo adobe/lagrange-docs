@@ -1,6 +1,6 @@
 # Mesh Class
 
-!!! attention
+!!! warning "Legacy Mesh vs Surface Mesh"
     Since v6.0.0, Lagrange introduced a new polygonal mesh class that is meant to replace the
     original mesh class used throughout Lagrange. While currently few of the Lagrange functions use
     this new mesh class, over time old and new features will transition to use this new data
@@ -208,7 +208,7 @@ mesh.add_hybrid(4,
 
 ## Removing Vertices/Facets
 
-!!! attention "Batch Removal Only"
+!!! warning "Batch Removal Only"
     Currently, we only support efficient **batch** removal of vertices/facets. This is because
     removing any mesh element will cause **reindexing** of **all** mesh attributes referencing a
     mesh element (e.g. vertex indices). To allow for "lazy" deletion, you can use an attribute to
@@ -419,7 +419,7 @@ To efficiently navigate between adjacent facets, or between incident vertex/face
 
     ![](img/chain_around_edge.svg){ width="600" }
 
-    !!! hint "Non-Manifold Edges"
+    !!! tip "Non-Manifold Edges"
         A nice advantage of this connectivity representation is that we support any type of
         non-manifold meshes. This is in contrast with most half-edge data structure implementations
         which assume manifold surfaces.

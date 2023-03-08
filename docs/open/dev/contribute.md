@@ -62,13 +62,13 @@ the `modules` directory. Each module has similar subdirectory setup:
 
 {% if is_corp %}
 
-!!! important "License Considerations"
+!!! tip "License Considerations"
     Make sure the third-party code uses an acceptable license as defined by the [Open Source
     Guidelines](https://wiki.corp.adobe.com/display/legalwiki/Open+Source+Guidelines+for+use+in+Adobe+Products+and+Services).
 
 {% else %}
 
-!!! important "License Considerations"
+!!! tip "License Considerations"
     Make sure the third-party code uses an acceptable license. Please open an issue to discuss the
     matter if you are unsure about it.
 
@@ -99,7 +99,7 @@ run all of them.
 In case you also develop a small application that uses your new feature, feel free to include that
 in `modules/<module_name>/examples`.
 
-!!! important "Legacy Performance Tests"
+!!! tip "Legacy Performance Tests"
     Some modules have a `modules/<module_name>/performance` subfolder containing some "performance"
     tests. This is legacy code. New benchmarking tests should be written along with other unit
     tests, use [Catch2's benchmarking

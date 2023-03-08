@@ -2,7 +2,7 @@
 
 # Mesh Cleanup
 
-!!! attention
+!!! warning "Legacy Mesh"
     Documentation on this page relies on our [legacy mesh](legacy-mesh.md) data structure.
 
 Lagrange supports a number of mesh cleanup operations.  Typically, a mesh

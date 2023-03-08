@@ -94,7 +94,7 @@ The input mesh must have an existing indexed UV and normal attribute. The
     In practice, this means that you will need to weld together any identical attribute that do not
     share the same indices, or you may end up with different result compared to mikktspace.
 
-!!! caution "Limitations: Triangle Meshes vs Quad Meshes"
+!!! warning "Limitations: Triangle Meshes vs Quad Meshes"
     - Our code for averaging tangent vectors only support triangle meshes at the moment.
     - Quad meshes and quad-dominant meshes can be used, but only with `output_element_type = Corner` (no averaging will be performed).
     - General polyhedral facets (with > 4 vertices) are not supported at the moment.

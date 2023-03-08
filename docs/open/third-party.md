@@ -6,7 +6,7 @@
 Here is a list of third party libraries used in Lagrange. Those external dependencies will be
 automatically downloaded by our CMake system depending on which Lagrange module is enabled.
 
-!!! important
+!!! tip "Direct vs Indirect Dependencies"
     This table only lists **direct** dependencies of various Lagrange modules. Indirect dependencies
     are not listed there. {% if is_corp %} For example, OpenVDB depends on Boost, TBB and IlmBase.
     Anorigami depends on Armadillo, SuperLU, Vc, etc. {% endif %}

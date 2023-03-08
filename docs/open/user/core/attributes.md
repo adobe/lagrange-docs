@@ -1,6 +1,6 @@
 # Mesh Attributes
 
-!!! attention
+!!! warning "Legacy Mesh vs Surface Mesh"
     Since v6.0.0, Lagrange introduced a new polygonal mesh class that is meant to replace the
     original mesh class used throughout Lagrange. While currently few of the Lagrange functions use
     this new mesh class, over time old and new features will transition to use this new data
@@ -118,7 +118,7 @@ auto attr_matrix = matrix_view(attr);
     attribute ids are guaranteed to not be invalidated, you may also store it in your application
     (e.g. UI menus, etc.).
 
-!!! important "Disabled Implicit Copies"
+!!! tip "Disabled Implicit Copies"
     It is important to note that implicit copies of an `Attribute` object is forbidden. Since
     Attribute buffers have value semantics (like `std::vector<>`), storing the result of
     `mesh.get_attribute<>()` in a `auto attr` variable would lead to an implicit copy. For this
@@ -289,7 +289,7 @@ Note that if two meshes are shallow copies of each other, it is perfectly safe t
 each of them concurrently. The same goes for writing in parallel to mesh attributes that are
 duplicates of each others: each attribute behaves as if it owns its own copy of the data.
 
-!!! attention "Temporary Copy On Concurrent Writes"
+!!! warning "Temporary Copy On Concurrent Writes"
     While concurrent writing to mesh attributes is a thread-safe operation, note that it may
     sometimes create an unnecessary temporary copy of the data. To avoid this, we would need to
     block every write operation with a mutex, which would involve an expensive [context

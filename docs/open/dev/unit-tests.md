@@ -2,7 +2,7 @@
 
 {% if is_corp %}
 
-!!! caution "Artifactory Access"
+!!! warning "Artifactory Access"
     Building unit tests requires Artifactory to be setup. Please read our [Getting
     Started](../setup.md) page for instructions on how to configure your API key.
 
@@ -125,6 +125,9 @@ benchmark takes some time to run, you might want to use fewer samples.
 ./tests/test_lagrange_hull "ConvexDecomposition: Benchmark" --benchmark-samples 10
 ```
 
-{% include 'corp/dev/unit-tests.md' %}
+## Unit Test Data & Artifactory
+
+Please read our [dedicated page](../../corp/dev/artifactory.md) about working with unit test data and
+Artifactory inside Lagrange.
 
 {% endif %}

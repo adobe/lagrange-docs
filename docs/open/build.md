@@ -38,7 +38,7 @@ To see available CMake options, please take a look at the file [{{ cmake_option_
 
 {% if is_corp %}
 
-!!! hint "Network Connection"
+!!! tip "Network Connection"
     Since CMake will download third-party dependencies via
     [FetchContent](https://cmake.org/cmake/help/latest/module/FetchContent.html), you need to be on
     the Adobe VPN when running the initial CMake configuration & download of unit test data.
@@ -71,7 +71,7 @@ Finally, build with
 cmake --build .
 ```
 
-!!! faq "Compilation Issues"
+!!! question "Compilation Issues"
     If an issue occurs during compilation, especially after an update, try to
 
     1. Delete your `<build>/CMakeCache.txt` and re-run CMake to configure your project.
@@ -83,7 +83,7 @@ cmake --build .
 
 {% if is_corp %}
 
-!!! caution "Artifactory Access"
+!!! warning "Artifactory Access"
     Building unit tests requires Artifactory to be setup. Please read our [Getting
     Started](setup.md) page for instructions on how to configure your API key.
 

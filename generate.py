@@ -25,7 +25,6 @@ def prepare_open():
     script_dir = Path(__file__).parent.resolve()
     (script_dir / "mkdocs.yml").unlink()
     (script_dir / "mkdocs.open.yml").rename("mkdocs.yml")
-    (script_dir / ".gitchangelog.rc").unlink()
 
 
 def main():
@@ -39,7 +38,7 @@ def main():
 
     script_dir = Path(__file__).parent.resolve()
 
-    is_corp = Path(script_dir / ".gitchangelog.rc").exists()
+    is_corp = Path(script_dir / "mkdocs.open.yml").exists()
 
     if is_corp:
         docs_dir = str(script_dir / "docs")
@@ -69,15 +68,6 @@ def main():
             "doc",
         ]
     )
-
-    # Generates git changelog
-    if is_corp:
-        os.chdir(lagrange_dir)
-        os.environ["GITCHANGELOG_CONFIG_FILENAME"] = str(script_dir / ".gitchangelog.rc")
-        os.environ["PYTHONIOENCODING"] = "UTF-8"
-        subprocess.run(["git", "config", "--global", "--add", "gitchangelog.template-path", str(script_dir)])
-        with open(script_dir / "docs/changelog.md", "w") as f:
-            subprocess.run(["gitchangelog"], stdout=f)
 
     print("run `mkdocs serve` and open http://127.0.0.1:8000/")
 

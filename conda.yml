@@ -2,21 +2,20 @@ name: lagrange-website
 channels:
   - conda-forge
 dependencies:
-  - python=3.10
-  - doxygen=1.9.2
-  - ghp-import=2.0.2
+  - python=3.11
+  - doxygen=1.9.4
+  - ghp-import=2.1.0
   - mkdocs-exclude=1.0.2
   - mkdocs-macros-plugin=0.7.0
-  - mkdocs-material=8.2.11
-  - mkdocs=1.2.4
-  - pygments=2.11.2
-  - pymdown-extensions=9.3
-  - pystache=0.5.4
+  - mkdocs=1.4.2
+  - pygments=2.14.0
+  - pymdown-extensions=9.9.2
   - pypandoc=1.10
-  - pip=22.0.4
+  - pystache=0.5.4
+  - pip=23.0
   - pip:
-      - mkdocs-redirects==1.0.3
-      - gitchangelog==3.0.4
-      - LinkChecker==10.1.0
-      - mkdocs-bibtex==2.8.5
-      - mkdocs-img2figv2-plugin==0.0.2
+    - mkdocs-material==9.0.11 # conda recipe is broken...
+    - LinkChecker==10.2.1
+    - mkdocs-bibtex==2.8.12
+    - mkdocs-img2figv2-plugin==0.0.2
+    - mkdocs-redirects==1.2.0

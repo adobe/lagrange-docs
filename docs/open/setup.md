@@ -14,3 +14,6 @@
 
 - Read our [contributing page](dev/contribute.md).
 - Read our [code style guide](dev/code-style.md).
+{% if is_corp %}
+- How to upload new test data to [Artifactory](../corp/dev/artifactory.md).
+{% endif %}
