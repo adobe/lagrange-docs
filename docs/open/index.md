@@ -1,7 +1,7 @@
 # Lagrange
 
 {% if is_corp %}
-{{ jenkins_build_status }}
+{% include 'corp/badges.md' %}
 {% endif %}
 
 Project Lagrange is an initiative to bring the power of robust geometry
@@ -11,7 +11,7 @@ principles:
 
 {% if is_corp %}
 
-![](../corp/img/intro.png){ width=600 }
+![](corp/img/intro.png){ width=600 }
 
 {% endif %}
 
