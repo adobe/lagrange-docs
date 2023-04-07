@@ -20,5 +20,6 @@ var searchData=
   ['control_5fblock_5fbase_17',['control_block_base',['../classlagrange_1_1internal_1_1control__block__base.html',1,'lagrange::internal']]],
   ['convert_5fimplicit_18',['convert_implicit',['../structlagrange_1_1ui_1_1detail_1_1convert__implicit.html',1,'lagrange::ui::detail']]],
   ['copy_5fon_5fwrite_5fptr_19',['copy_on_write_ptr',['../classlagrange_1_1copy__on__write__ptr.html',1,'lagrange']]],
-  ['cornernormaloptions_20',['CornerNormalOptions',['../structlagrange_1_1_corner_normal_options.html',1,'lagrange']]]
+  ['cornernormaloptions_20',['CornerNormalOptions',['../structlagrange_1_1_corner_normal_options.html',1,'lagrange']]],
+  ['createoptions_21',['CreateOptions',['../structlagrange_1_1testing_1_1_create_options.html',1,'lagrange::testing']]]
 ];

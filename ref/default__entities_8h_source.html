@@ -1,3 +1,4 @@
+<!-- HTML header for doxygen 1.9.4-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -9,10 +10,41 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+</script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+</script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeParagraphLink.init()
+</script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeInteractiveToc.init()
+</script>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -46,6 +78,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('default__entities_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -60,11 +109,6 @@ $(function() {
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_95d3c4dd232e168482f385e9dcc567c0.html">lagrange</a></li><li class="navelem"><a class="el" href="dir_840af7a4c0a0a7d566e78cb58e0e071b.html">ui</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="headertitle"><div class="title">default_entities.h</div></div>
 </div><!--header-->
@@ -247,7 +291,7 @@ $(function() {
 <div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>            <span class="keyword">auto</span> e = create_scene_node(r, name);</div>
 <div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>            <span class="keywordflow">for</span> (<span class="keyword">auto</span> mat_index = 0; mat_index &lt; mats.size(); mat_index++) {</div>
 <div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>                <span class="keyword">auto</span> sub = ui::show_submesh(r, me, mats[mat_index], mat_index);</div>
-<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>                ui::set_name(r, sub, <a class="code hl_function" href="group__group-utils-misc.html#gac6b91ad082b88be0563681d17f2feefd">lagrange::string_format</a>(<span class="stringliteral">&quot;{} submesh {}&quot;</span>, name, mat_index));</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>                ui::set_name(r, sub, <a class="code hl_function" href="group__group-utils-misc.html#ga45e3802af95f6c48e3f3173abe05e488">lagrange::string_format</a>(<span class="stringliteral">&quot;{} submesh {}&quot;</span>, name, mat_index));</div>
 <div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>                <a class="code hl_function" href="namespacelagrange_1_1ui.html#a1fd8a60561e4207b204e4edb32119131">ui::set_parent</a>(r, sub, e);</div>
 <div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>            }</div>
 <div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>            <span class="keywordflow">return</span> e;</div>
@@ -301,16 +345,20 @@ $(function() {
 <div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>} <span class="comment">// namespace lagrange</span></div>
 <div class="ttc" id="aclasslagrange_1_1ui_1_1_camera_html_a99634f9f6fa71e9c2d1a3e058a5457e4"><div class="ttname"><a href="classlagrange_1_1ui_1_1_camera.html#a99634f9f6fa71e9c2d1a3e058a5457e4">lagrange::ui::Camera::default_camera</a></div><div class="ttdeci">static Camera default_camera(float width, float height, Type type=Type::PERSPECTIVE)</div><div class="ttdoc">Initializes default view.</div><div class="ttdef"><b>Definition:</b> Camera.cpp:29</div></div>
 <div class="ttc" id="agroup__group-utils-misc_html_ga41568d17fc48cea4a31db0e40cd93cf8"><div class="ttname"><a href="group__group-utils-misc.html#ga41568d17fc48cea4a31db0e40cd93cf8">lagrange::range</a></div><div class="ttdeci">internal::Range&lt; Index &gt; range(Index end)</div><div class="ttdoc">Returns an iterable object representing the range [0, end).</div><div class="ttdef"><b>Definition:</b> range.h:176</div></div>
-<div class="ttc" id="agroup__group-utils-misc_html_gac6b91ad082b88be0563681d17f2feefd"><div class="ttname"><a href="group__group-utils-misc.html#gac6b91ad082b88be0563681d17f2feefd">lagrange::string_format</a></div><div class="ttdeci">std::string string_format(const std::string &amp;format, Args &amp;&amp;... args)</div><div class="ttdoc">Format args according to the format string fmt, and return the result as a string.</div><div class="ttdef"><b>Definition:</b> strings.h:79</div></div>
+<div class="ttc" id="agroup__group-utils-misc_html_ga45e3802af95f6c48e3f3173abe05e488"><div class="ttname"><a href="group__group-utils-misc.html#ga45e3802af95f6c48e3f3173abe05e488">lagrange::string_format</a></div><div class="ttdeci">std::string string_format(fmt::format_string&lt; Args... &gt; format, Args &amp;&amp;... args)</div><div class="ttdoc">Format args according to the format string fmt, and return the result as a string.</div><div class="ttdef"><b>Definition:</b> strings.h:101</div></div>
 <div class="ttc" id="anamespacelagrange_1_1ui_html"><div class="ttname"><a href="namespacelagrange_1_1ui.html">lagrange::ui</a></div><div class="ttdoc">Lagrange UI Viewer and mini 3D engine.</div><div class="ttdef"><b>Definition:</b> AcceleratedPicking.h:22</div></div>
 <div class="ttc" id="anamespacelagrange_1_1ui_html_a1fd8a60561e4207b204e4edb32119131"><div class="ttname"><a href="namespacelagrange_1_1ui.html#a1fd8a60561e4207b204e4edb32119131">lagrange::ui::set_parent</a></div><div class="ttdeci">void set_parent(Registry &amp;registry, Entity child, Entity new_parent)</div><div class="ttdoc">Sets new_parent as as child's new parent.</div><div class="ttdef"><b>Definition:</b> treenode.cpp:155</div></div>
 <div class="ttc" id="anamespacelagrange_1_1ui_html_ab4f41f2999785e53ffabaa5fefc466d8"><div class="ttname"><a href="namespacelagrange_1_1ui.html#ab4f41f2999785e53ffabaa5fefc466d8">lagrange::ui::intersect_ray</a></div><div class="ttdeci">std::optional&lt; std::pair&lt; Entity, RayFacetHit &gt; &gt; intersect_ray(Registry &amp;r, const Eigen::Vector3f &amp;origin, const Eigen::Vector3f &amp;dir, ui::Entity root=ui::NullEntity, Layer visible_layers=Layer(true), Layer hidden_layers=Layer(false))</div><div class="ttdoc">Intersect ray with meshes in root's hierarchy Returns a pair of intersected entity and the correspond...</div><div class="ttdef"><b>Definition:</b> default_entities.cpp:502</div></div>
 <div class="ttc" id="anamespacelagrange_html"><div class="ttname"><a href="namespacelagrange.html">lagrange</a></div><div class="ttdoc">Main namespace for Lagrange.</div><div class="ttdef"><b>Definition:</b> AABBIGL.h:30</div></div>
 <div class="ttc" id="anamespacelagrange_html_a3d708c9fd9f08299ea623082bd61cb5e"><div class="ttname"><a href="namespacelagrange.html#a3d708c9fd9f08299ea623082bd61cb5e">lagrange::to_shared_ptr</a></div><div class="ttdeci">std::shared_ptr&lt; T &gt; to_shared_ptr(std::unique_ptr&lt; T &gt; &amp;&amp;ptr)</div><div class="ttdoc">Helper for automatic type deduction for unique_ptr to shared_ptr conversion.</div><div class="ttdef"><b>Definition:</b> common.h:84</div></div>
 </div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_95d3c4dd232e168482f385e9dcc567c0.html">lagrange</a></li><li class="navelem"><a class="el" href="dir_840af7a4c0a0a7d566e78cb58e0e071b.html">ui</a></li><li class="navelem"><b>default_entities.h</b></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
+  </ul>
+</div>
 </body>
 </html>

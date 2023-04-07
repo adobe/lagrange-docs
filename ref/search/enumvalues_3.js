@@ -1,13 +1,4 @@
 var searchData=
 [
-  ['edge_0',['Edge',['../structlagrange_1_1_component_options.html#a312f57b0318728667933d7254778058bae4a297a0f76119a442c2595ac040673e',1,'lagrange::ComponentOptions::Edge()'],['../group__group-surfacemesh-attr.html#gga9d8ab208822bab9987e9652dda49d89aa7f0bc3a17ff45e6a7c3fe52b35db1888',1,'lagrange::Edge()']]],
-  ['edgeindex_1',['EdgeIndex',['../group__group-surfacemesh-attr.html#gga35b5eb426384b257452ee0ffdb732c27a7e0536ad6c15bf05bf40e8876b1a5c10',1,'lagrange']]],
-  ['embree_5fcompact_2',['EMBREE_COMPACT',['../namespacelagrange_1_1raycasting.html#a38a39963b8927ab590044bc2a70498c8ae69cc058d46087ede00d3fd0c7bdc4bd',1,'lagrange::raycasting']]],
-  ['embree_5fdefault_3',['EMBREE_DEFAULT',['../namespacelagrange_1_1raycasting.html#a38a39963b8927ab590044bc2a70498c8ac6c8431ad98ec732235ac1b5114316f3',1,'lagrange::raycasting']]],
-  ['embree_5fdynamic_4',['EMBREE_DYNAMIC',['../namespacelagrange_1_1raycasting.html#a38a39963b8927ab590044bc2a70498c8a763da725144c4f1aa45f8d76be86d870',1,'lagrange::raycasting']]],
-  ['embree_5frobust_5',['EMBREE_ROBUST',['../namespacelagrange_1_1raycasting.html#a38a39963b8927ab590044bc2a70498c8af313b3cc96ac28f4b25935219399c04d',1,'lagrange::raycasting']]],
-  ['error_6',['Error',['../structlagrange_1_1_remap_vertices_options.html#a87c5910d10cf3f1b3451247225123c22a902b0d55fddef6f8d651fe1035b7d4bd',1,'lagrange::RemapVerticesOptions']]],
-  ['errorifexternal_7',['ErrorIfExternal',['../group__group-surfacemesh-attr.html#ggaee0f51b5f793101c19bd6dede5db7a7aa9e7163ae7c790d007e084e24693b2303',1,'lagrange::ErrorIfExternal()'],['../group__group-surfacemesh-attr.html#ggade3ae5b7e72e9d4f92f29c6563551c10a9e7163ae7c790d007e084e24693b2303',1,'lagrange::ErrorIfExternal()'],['../group__group-surfacemesh-attr.html#gga450ef027eac01dd93a89a15ff55de63fa9e7163ae7c790d007e084e24693b2303',1,'lagrange::ErrorIfExternal()']]],
-  ['errorifreadonly_8',['ErrorIfReadOnly',['../group__group-surfacemesh-attr.html#gga3018d576f81897e1712c3601b9625cb9a61eb7df0ff95cbd596ba2a4c7ee06b32',1,'lagrange']]],
-  ['errorifreserved_9',['ErrorIfReserved',['../group__group-surfacemesh-attr.html#gga809dfcec94612491ec5be8bb8614ceabafc443f72fcb562a73b40af34ddb599a3',1,'lagrange::ErrorIfReserved()'],['../group__group-surfacemesh-attr.html#ggad17b213b11e78aeb807ad3ece7e67e84afc443f72fcb562a73b40af34ddb599a3',1,'lagrange::ErrorIfReserved()']]]
+  ['dirichlet_0',['Dirichlet',['../group__group-surfacemesh-utils.html#ggadab1480827f4522cbf1f9e1d4c28db91abac152b762896edff34ed668ae1a546f',1,'lagrange']]]
 ];

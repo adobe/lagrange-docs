@@ -1,3 +1,4 @@
+<!-- HTML header for doxygen 1.9.4-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -9,10 +10,41 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+</script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+</script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeParagraphLink.init()
+</script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeInteractiveToc.init()
+</script>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -46,6 +78,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('mesh__convert_8impl_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -60,11 +109,6 @@ $(function() {
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_e277d0e790805391a364b883bec7db94.html">lagrange</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="headertitle"><div class="title">mesh_convert.impl.h</div></div>
 </div><!--header-->
@@ -216,7 +260,7 @@ $(function() {
 <div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>                    <span class="keywordflow">return</span> new_name;</div>
 <div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>                }</div>
 <div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>            }</div>
-<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>            <span class="keywordflow">throw</span> Error(fmt::format(<span class="stringliteral">&quot;Could not assign a unique attribute name for: {}&quot;</span>, name));</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>            <span class="keywordflow">throw</span> <a class="code hl_enumvalue" href="namespacelagrange.html#af15e960c877b7516935402a9080b7e1aa902b0d55fddef6f8d651fe1035b7d4bd">Error</a>(fmt::format(<span class="stringliteral">&quot;Could not assign a unique attribute name for: {}&quot;</span>, name));</div>
 <div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>        }</div>
 <div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>    };</div>
 <div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span> </div>
@@ -557,20 +601,25 @@ $(function() {
 <div class="ttc" id="agroup__group-surfacemesh_html_gacb583f57a271a079d42d9130c0da7f11"><div class="ttname"><a href="group__group-surfacemesh.html#gacb583f57a271a079d42d9130c0da7f11">LA_SURFACE_MESH_SCALAR_X</a></div><div class="ttdeci">#define LA_SURFACE_MESH_SCALAR_X(mode, data)</div><div class="ttdoc">X Macro arguments to iterate over scalar types available for the SurfaceMesh&lt;&gt; class.</div><div class="ttdef"><b>Definition:</b> SurfaceMeshTypes.h:87</div></div>
 <div class="ttc" id="agroup__group-utils-assert_html_ga1ccafcb14523a1aae57dcac3c3f32ecd"><div class="ttname"><a href="group__group-utils-assert.html#ga1ccafcb14523a1aae57dcac3c3f32ecd">la_runtime_assert</a></div><div class="ttdeci">#define la_runtime_assert(...)</div><div class="ttdoc">Runtime assertion check.</div><div class="ttdef"><b>Definition:</b> assert.h:168</div></div>
 <div class="ttc" id="agroup__group-utils-misc-functionref_html_ga626fd0cc926eb83e8adb607687c3c8e2"><div class="ttname"><a href="group__group-utils-misc-functionref.html#ga626fd0cc926eb83e8adb607687c3c8e2">lagrange::swap</a></div><div class="ttdeci">constexpr void swap(function_ref&lt; R(Args...)&gt; &amp;lhs, function_ref&lt; R(Args...)&gt; &amp;rhs) noexcept</div><div class="ttdoc">Swaps the referred callables of lhs and rhs.</div><div class="ttdef"><b>Definition:</b> function_ref.h:114</div></div>
-<div class="ttc" id="agroup__group-utils-misc_html_gaebb929afb5049cc3aaaabd296f556ac3"><div class="ttname"><a href="group__group-utils-misc.html#gaebb929afb5049cc3aaaabd296f556ac3">lagrange::starts_with</a></div><div class="ttdeci">bool starts_with(std::string_view str, std::string_view prefix)</div><div class="ttdoc">Checks if the string begins with the given prefix.</div><div class="ttdef"><b>Definition:</b> strings.cpp:36</div></div>
+<div class="ttc" id="agroup__group-utils-misc_html_gaebb929afb5049cc3aaaabd296f556ac3"><div class="ttname"><a href="group__group-utils-misc.html#gaebb929afb5049cc3aaaabd296f556ac3">lagrange::starts_with</a></div><div class="ttdeci">bool starts_with(std::string_view str, std::string_view prefix)</div><div class="ttdoc">Checks if the string begins with the given prefix.</div><div class="ttdef"><b>Definition:</b> strings.cpp:38</div></div>
 <div class="ttc" id="agroup__group-utils-warning_html_gab4318b2844c981f0adf329ddf66b14e7"><div class="ttname"><a href="group__group-utils-warning.html#gab4318b2844c981f0adf329ddf66b14e7">LA_IGNORE</a></div><div class="ttdeci">#define LA_IGNORE(x)</div><div class="ttdoc">Ignore x to avoid an unused variable warning.</div><div class="ttdef"><b>Definition:</b> warning.h:132</div></div>
 <div class="ttc" id="anamespacelagrange_html"><div class="ttname"><a href="namespacelagrange.html">lagrange</a></div><div class="ttdoc">Main namespace for Lagrange.</div><div class="ttdef"><b>Definition:</b> AABBIGL.h:30</div></div>
 <div class="ttc" id="anamespacelagrange_html_a68ad17ee5b7475decfbaf17fcfa63d65"><div class="ttname"><a href="namespacelagrange.html#a68ad17ee5b7475decfbaf17fcfa63d65">lagrange::to_surface_mesh_wrap</a></div><div class="ttdeci">SurfaceMesh&lt; Scalar, Index &gt; to_surface_mesh_wrap(MeshType &amp;&amp;mesh)</div><div class="ttdoc">Wrap a legacy mesh object as a surface mesh object.</div><div class="ttdef"><b>Definition:</b> mesh_convert.impl.h:260</div></div>
 <div class="ttc" id="anamespacelagrange_html_abb5fc3fc93e8d973bcc534398eeb0aa9"><div class="ttname"><a href="namespacelagrange.html#abb5fc3fc93e8d973bcc534398eeb0aa9">lagrange::to_surface_mesh_copy</a></div><div class="ttdeci">SurfaceMesh&lt; Scalar, Index &gt; to_surface_mesh_copy(const MeshType &amp;mesh)</div><div class="ttdoc">Convert a legacy mesh object to a surface mesh object.</div><div class="ttdef"><b>Definition:</b> mesh_convert.impl.h:253</div></div>
 <div class="ttc" id="anamespacelagrange_html_ac349d354b36d62bc2efeb93dd2b7f078"><div class="ttname"><a href="namespacelagrange.html#ac349d354b36d62bc2efeb93dd2b7f078">lagrange::to_legacy_mesh</a></div><div class="ttdeci">std::unique_ptr&lt; MeshType &gt; to_legacy_mesh(const SurfaceMesh&lt; Scalar, Index &gt; &amp;mesh)</div><div class="ttdoc">Convert a surface mesh object to a legacy mesh object.</div><div class="ttdef"><b>Definition:</b> mesh_convert.impl.h:341</div></div>
+<div class="ttc" id="anamespacelagrange_html_af15e960c877b7516935402a9080b7e1aa902b0d55fddef6f8d651fe1035b7d4bd"><div class="ttname"><a href="namespacelagrange.html#af15e960c877b7516935402a9080b7e1aa902b0d55fddef6f8d651fe1035b7d4bd">lagrange::MappingPolicy::Error</a></div><div class="ttdeci">@ Error</div><div class="ttdoc">Throw an error if collision is detected.</div></div>
 <div class="ttc" id="astructlagrange_1_1_attribute_name_html_a29fc2366719c877b731e125ebc94b5b2"><div class="ttname"><a href="structlagrange_1_1_attribute_name.html#a29fc2366719c877b731e125ebc94b5b2">lagrange::AttributeName::normal</a></div><div class="ttdeci">static constexpr std::string_view normal</div><div class="ttdoc">Normal.</div><div class="ttdef"><b>Definition:</b> attribute_names.h:27</div></div>
 <div class="ttc" id="astructlagrange_1_1_attribute_name_html_a41c9e95cdb2dd1e4fd6daf0f8a845743"><div class="ttname"><a href="structlagrange_1_1_attribute_name.html#a41c9e95cdb2dd1e4fd6daf0f8a845743">lagrange::AttributeName::color</a></div><div class="ttdeci">static constexpr std::string_view color</div><div class="ttdoc">Color.</div><div class="ttdef"><b>Definition:</b> attribute_names.h:32</div></div>
 <div class="ttc" id="astructlagrange_1_1_attribute_name_html_a89974aafa583f7a43d53b3894eda5d89"><div class="ttname"><a href="structlagrange_1_1_attribute_name.html#a89974aafa583f7a43d53b3894eda5d89">lagrange::AttributeName::texcoord</a></div><div class="ttdeci">static constexpr std::string_view texcoord</div><div class="ttdoc">Texture coordinates.</div><div class="ttdef"><b>Definition:</b> attribute_names.h:37</div></div>
 <div class="ttc" id="astructlagrange_1_1_mesh_trait_html"><div class="ttname"><a href="structlagrange_1_1_mesh_trait.html">lagrange::MeshTrait</a></div><div class="ttdoc">MeshTrait class provide compiler check for different mesh types.</div><div class="ttdef"><b>Definition:</b> MeshTrait.h:108</div></div>
 </div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_e277d0e790805391a364b883bec7db94.html">lagrange</a></li><li class="navelem"><b>mesh_convert.impl.h</b></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
+  </ul>
+</div>
 </body>
 </html>

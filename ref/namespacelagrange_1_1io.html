@@ -1,3 +1,4 @@
+<!-- HTML header for doxygen 1.9.4-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -9,10 +10,41 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+</script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+</script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeParagraphLink.init()
+</script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeInteractiveToc.init()
+</script>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -46,6 +78,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('namespacelagrange_1_1io.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -60,11 +109,6 @@ $(function() {
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="namespacelagrange.html">lagrange</a></li><li class="navelem"><a class="el" href="namespacelagrange_1_1io.html">io</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
@@ -99,6 +143,10 @@ Functions</h2></td></tr>
 <tr class="memitem:a07188a43fac8198fd7d97a6d9f2b222f"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classlagrange_1_1_mesh.html">MeshType</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacelagrange_1_1io.html#a07188a43fac8198fd7d97a6d9f2b222f">load_mesh</a> (const fs::path &amp;filename, const <a class="el" href="structlagrange_1_1io_1_1_load_options.html">LoadOptions</a> &amp;={})</td></tr>
 <tr class="memdesc:a07188a43fac8198fd7d97a6d9f2b222f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load a mesh from a file.  <a href="namespacelagrange_1_1io.html#a07188a43fac8198fd7d97a6d9f2b222f">More...</a><br /></td></tr>
 <tr class="separator:a07188a43fac8198fd7d97a6d9f2b222f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af12e799e867e6df806caf32848f1d89d"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="classlagrange_1_1_mesh.html">MeshType</a> &gt; </td></tr>
+<tr class="memitem:af12e799e867e6df806caf32848f1d89d"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classlagrange_1_1_mesh.html">MeshType</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacelagrange_1_1io.html#af12e799e867e6df806caf32848f1d89d">load_mesh_gltf</a> (std::istream &amp;input_stream, const <a class="el" href="structlagrange_1_1io_1_1_load_options.html">LoadOptions</a> &amp;options={})</td></tr>
+<tr class="memdesc:af12e799e867e6df806caf32848f1d89d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads a mesh from an input stream in glTF or GLB format.  <a href="namespacelagrange_1_1io.html#af12e799e867e6df806caf32848f1d89d">More...</a><br /></td></tr>
+<tr class="separator:af12e799e867e6df806caf32848f1d89d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0cbdc00628d1109f3544090e26769f90"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="classlagrange_1_1_mesh.html">MeshType</a> &gt; </td></tr>
 <tr class="memitem:a0cbdc00628d1109f3544090e26769f90"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classlagrange_1_1_mesh.html">MeshType</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacelagrange_1_1io.html#a0cbdc00628d1109f3544090e26769f90">load_mesh_gltf</a> (const fs::path &amp;filename, const <a class="el" href="structlagrange_1_1io_1_1_load_options.html">LoadOptions</a> &amp;options={})</td></tr>
 <tr class="memdesc:a0cbdc00628d1109f3544090e26769f90"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads a mesh from a file in glTF or GLB format.  <a href="namespacelagrange_1_1io.html#a0cbdc00628d1109f3544090e26769f90">More...</a><br /></td></tr>
@@ -111,6 +159,10 @@ Functions</h2></td></tr>
 <tr class="memitem:a3cdfe41629b2e53a2763fcad35b3527a"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classlagrange_1_1_mesh.html">MeshType</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacelagrange_1_1io.html#a3cdfe41629b2e53a2763fcad35b3527a">load_mesh_msh</a> (const fs::path &amp;filename, const <a class="el" href="structlagrange_1_1io_1_1_load_options.html">LoadOptions</a> &amp;options={})</td></tr>
 <tr class="memdesc:a3cdfe41629b2e53a2763fcad35b3527a"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.Loads a mesh from a file in MSH format.  <a href="namespacelagrange_1_1io.html#a3cdfe41629b2e53a2763fcad35b3527a">More...</a><br /></td></tr>
 <tr class="separator:a3cdfe41629b2e53a2763fcad35b3527a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc96c769e4dda21321be45706af1a42f"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="classlagrange_1_1_mesh.html">MeshType</a> &gt; </td></tr>
+<tr class="memitem:abc96c769e4dda21321be45706af1a42f"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classlagrange_1_1_mesh.html">MeshType</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacelagrange_1_1io.html#abc96c769e4dda21321be45706af1a42f">load_mesh_obj</a> (std::istream &amp;input_stream, const <a class="el" href="structlagrange_1_1io_1_1_load_options.html">LoadOptions</a> &amp;options={})</td></tr>
+<tr class="memdesc:abc96c769e4dda21321be45706af1a42f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads a mesh from a file in MSH format.  <a href="namespacelagrange_1_1io.html#abc96c769e4dda21321be45706af1a42f">More...</a><br /></td></tr>
+<tr class="separator:abc96c769e4dda21321be45706af1a42f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:addd53774d944f8306ca4da9e7f9b277e"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="classlagrange_1_1_mesh.html">MeshType</a> &gt; </td></tr>
 <tr class="memitem:addd53774d944f8306ca4da9e7f9b277e"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classlagrange_1_1_mesh.html">MeshType</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacelagrange_1_1io.html#addd53774d944f8306ca4da9e7f9b277e">load_mesh_obj</a> (const fs::path &amp;filename, const <a class="el" href="structlagrange_1_1io_1_1_load_options.html">LoadOptions</a> &amp;options={})</td></tr>
 <tr class="memdesc:addd53774d944f8306ca4da9e7f9b277e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads a mesh from a file in MSH format.  <a href="namespacelagrange_1_1io.html#addd53774d944f8306ca4da9e7f9b277e">More...</a><br /></td></tr>
@@ -127,6 +179,10 @@ Functions</h2></td></tr>
 <tr class="memitem:a59d6b08204508eecdf805ee9c257613e"><td class="memTemplItemLeft" align="right" valign="top">SceneType&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacelagrange_1_1io.html#a59d6b08204508eecdf805ee9c257613e">load_simple_scene</a> (const fs::path &amp;filename, const <a class="el" href="structlagrange_1_1io_1_1_load_options.html">LoadOptions</a> &amp;options={})</td></tr>
 <tr class="memdesc:a59d6b08204508eecdf805ee9c257613e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load a simple scene.  <a href="namespacelagrange_1_1io.html#a59d6b08204508eecdf805ee9c257613e">More...</a><br /></td></tr>
 <tr class="separator:a59d6b08204508eecdf805ee9c257613e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6205e0931ff898b57295fbca9bf86292"><td class="memTemplParams" colspan="2">template&lt;typename SceneType &gt; </td></tr>
+<tr class="memitem:a6205e0931ff898b57295fbca9bf86292"><td class="memTemplItemLeft" align="right" valign="top">SceneType&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacelagrange_1_1io.html#a6205e0931ff898b57295fbca9bf86292">load_simple_scene_gltf</a> (std::ifstream &amp;input_stream, const <a class="el" href="structlagrange_1_1io_1_1_load_options.html">LoadOptions</a> &amp;options={})</td></tr>
+<tr class="memdesc:a6205e0931ff898b57295fbca9bf86292"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load a simple scene with gltf.  <a href="namespacelagrange_1_1io.html#a6205e0931ff898b57295fbca9bf86292">More...</a><br /></td></tr>
+<tr class="separator:a6205e0931ff898b57295fbca9bf86292"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab57e5a417e429d912c0d2c7af5f637eb"><td class="memTemplParams" colspan="2">template&lt;typename SceneType &gt; </td></tr>
 <tr class="memitem:ab57e5a417e429d912c0d2c7af5f637eb"><td class="memTemplItemLeft" align="right" valign="top">SceneType&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacelagrange_1_1io.html#ab57e5a417e429d912c0d2c7af5f637eb">load_simple_scene_gltf</a> (const fs::path &amp;filename, const <a class="el" href="structlagrange_1_1io_1_1_load_options.html">LoadOptions</a> &amp;options={})</td></tr>
 <tr class="memdesc:ab57e5a417e429d912c0d2c7af5f637eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load a simple scene with gltf.  <a href="namespacelagrange_1_1io.html#ab57e5a417e429d912c0d2c7af5f637eb">More...</a><br /></td></tr>
@@ -135,6 +191,10 @@ Functions</h2></td></tr>
 <tr class="memitem:a3d820dd6a5ce1ffc8f4e8f9f08d05a5b"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacelagrange_1_1io.html#a3d820dd6a5ce1ffc8f4e8f9f08d05a5b">save_mesh</a> (const fs::path &amp;filename, const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;mesh, const <a class="el" href="structlagrange_1_1io_1_1_save_options.html">SaveOptions</a> &amp;options={})</td></tr>
 <tr class="memdesc:a3d820dd6a5ce1ffc8f4e8f9f08d05a5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Save a mesh to a file.  <a href="namespacelagrange_1_1io.html#a3d820dd6a5ce1ffc8f4e8f9f08d05a5b">More...</a><br /></td></tr>
 <tr class="separator:a3d820dd6a5ce1ffc8f4e8f9f08d05a5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a92d9ed7dedce77061a4ae4b48cf1e696"><td class="memTemplParams" colspan="2">template&lt;typename Scalar , typename Index &gt; </td></tr>
+<tr class="memitem:a92d9ed7dedce77061a4ae4b48cf1e696"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacelagrange_1_1io.html#a92d9ed7dedce77061a4ae4b48cf1e696">save_mesh_gltf</a> (std::ostream &amp;output_stream, const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;mesh, const <a class="el" href="structlagrange_1_1io_1_1_save_options.html">SaveOptions</a> &amp;options={})</td></tr>
+<tr class="memdesc:a92d9ed7dedce77061a4ae4b48cf1e696"><td class="mdescLeft">&#160;</td><td class="mdescRight">Saves a mesh to an output stream in glTF or GLB format.  <a href="namespacelagrange_1_1io.html#a92d9ed7dedce77061a4ae4b48cf1e696">More...</a><br /></td></tr>
+<tr class="separator:a92d9ed7dedce77061a4ae4b48cf1e696"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7fb0b3af07a6113763244f7935d34fb9"><td class="memTemplParams" colspan="2">template&lt;typename Scalar , typename Index &gt; </td></tr>
 <tr class="memitem:a7fb0b3af07a6113763244f7935d34fb9"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacelagrange_1_1io.html#a7fb0b3af07a6113763244f7935d34fb9">save_mesh_gltf</a> (const fs::path &amp;filename, const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;mesh, const <a class="el" href="structlagrange_1_1io_1_1_save_options.html">SaveOptions</a> &amp;options={})</td></tr>
 <tr class="memdesc:a7fb0b3af07a6113763244f7935d34fb9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Saves a mesh to a file in glTF or GLB format.  <a href="namespacelagrange_1_1io.html#a7fb0b3af07a6113763244f7935d34fb9">More...</a><br /></td></tr>
@@ -155,10 +215,10 @@ Functions</h2></td></tr>
 <tr class="memitem:a654cbb2f2cf7f00a83f21825cd2fb5bf"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacelagrange_1_1io.html#a654cbb2f2cf7f00a83f21825cd2fb5bf">save_mesh_obj</a> (const fs::path &amp;filename, const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;mesh, const <a class="el" href="structlagrange_1_1io_1_1_save_options.html">SaveOptions</a> &amp;options={})</td></tr>
 <tr class="memdesc:a654cbb2f2cf7f00a83f21825cd2fb5bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.Saves a mesh to a file in OBJ format.  <a href="namespacelagrange_1_1io.html#a654cbb2f2cf7f00a83f21825cd2fb5bf">More...</a><br /></td></tr>
 <tr class="separator:a654cbb2f2cf7f00a83f21825cd2fb5bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a67905d39f94c934ac56f5e434cab749c"><td class="memTemplParams" colspan="2">template&lt;typename Scalar , typename Index &gt; </td></tr>
-<tr class="memitem:a67905d39f94c934ac56f5e434cab749c"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacelagrange_1_1io.html#a67905d39f94c934ac56f5e434cab749c">save_mesh_ply</a> (std::ofstream &amp;output_stream, const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;mesh, const <a class="el" href="structlagrange_1_1io_1_1_save_options.html">SaveOptions</a> &amp;options={})</td></tr>
-<tr class="memdesc:a67905d39f94c934ac56f5e434cab749c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Saves a mesh to a stream in PLY format.  <a href="namespacelagrange_1_1io.html#a67905d39f94c934ac56f5e434cab749c">More...</a><br /></td></tr>
-<tr class="separator:a67905d39f94c934ac56f5e434cab749c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c3ba13751c3f7592ebb762fde9bbfd2"><td class="memTemplParams" colspan="2">template&lt;typename Scalar , typename Index &gt; </td></tr>
+<tr class="memitem:a9c3ba13751c3f7592ebb762fde9bbfd2"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacelagrange_1_1io.html#a9c3ba13751c3f7592ebb762fde9bbfd2">save_mesh_ply</a> (std::ostream &amp;output_stream, const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;mesh, const <a class="el" href="structlagrange_1_1io_1_1_save_options.html">SaveOptions</a> &amp;options={})</td></tr>
+<tr class="memdesc:a9c3ba13751c3f7592ebb762fde9bbfd2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Saves a mesh to a stream in PLY format.  <a href="namespacelagrange_1_1io.html#a9c3ba13751c3f7592ebb762fde9bbfd2">More...</a><br /></td></tr>
+<tr class="separator:a9c3ba13751c3f7592ebb762fde9bbfd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0228c35e32ef99743f66f7bf774dc6ae"><td class="memTemplParams" colspan="2">template&lt;typename Scalar , typename Index &gt; </td></tr>
 <tr class="memitem:a0228c35e32ef99743f66f7bf774dc6ae"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacelagrange_1_1io.html#a0228c35e32ef99743f66f7bf774dc6ae">save_mesh_ply</a> (const fs::path &amp;filename, const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;mesh, const <a class="el" href="structlagrange_1_1io_1_1_save_options.html">SaveOptions</a> &amp;options={})</td></tr>
 <tr class="memdesc:a0228c35e32ef99743f66f7bf774dc6ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.Saves a mesh to a file in PLY format.  <a href="namespacelagrange_1_1io.html#a0228c35e32ef99743f66f7bf774dc6ae">More...</a><br /></td></tr>
@@ -167,24 +227,71 @@ Functions</h2></td></tr>
 <tr class="memitem:a4f81766d0511e2289153f3a9e20ec589"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacelagrange_1_1io.html#a4f81766d0511e2289153f3a9e20ec589">save_simple_scene</a> (const fs::path &amp;filename, const <a class="el" href="classlagrange_1_1scene_1_1_simple_scene.html">scene::SimpleScene</a>&lt; Scalar, Index, Dimension &gt; &amp;scene, const <a class="el" href="structlagrange_1_1io_1_1_save_options.html">SaveOptions</a> &amp;options={})</td></tr>
 <tr class="memdesc:a4f81766d0511e2289153f3a9e20ec589"><td class="mdescLeft">&#160;</td><td class="mdescRight">Save a mesh to a file.  <a href="namespacelagrange_1_1io.html#a4f81766d0511e2289153f3a9e20ec589">More...</a><br /></td></tr>
 <tr class="separator:a4f81766d0511e2289153f3a9e20ec589"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e02b963e18a80664a94233d613014cb"><td class="memTemplParams" colspan="2">template&lt;typename Scalar , typename Index , size_t Dimension = 3&gt; </td></tr>
+<tr class="memitem:a5e02b963e18a80664a94233d613014cb"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacelagrange_1_1io.html#a5e02b963e18a80664a94233d613014cb">save_simple_scene_gltf</a> (std::ostream &amp;output_stream, const <a class="el" href="classlagrange_1_1scene_1_1_simple_scene.html">scene::SimpleScene</a>&lt; Scalar, Index, Dimension &gt; &amp;scene, const <a class="el" href="structlagrange_1_1io_1_1_save_options.html">SaveOptions</a> &amp;options={})</td></tr>
+<tr class="memdesc:a5e02b963e18a80664a94233d613014cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Save a simple scene to a gltf or glb file.  <a href="namespacelagrange_1_1io.html#a5e02b963e18a80664a94233d613014cb">More...</a><br /></td></tr>
+<tr class="separator:a5e02b963e18a80664a94233d613014cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa14d5abea45ab83e5a405fe623938d5b"><td class="memTemplParams" colspan="2">template&lt;typename Scalar , typename Index , size_t Dimension = 3&gt; </td></tr>
 <tr class="memitem:aa14d5abea45ab83e5a405fe623938d5b"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacelagrange_1_1io.html#aa14d5abea45ab83e5a405fe623938d5b">save_simple_scene_gltf</a> (const fs::path &amp;filename, const <a class="el" href="classlagrange_1_1scene_1_1_simple_scene.html">scene::SimpleScene</a>&lt; Scalar, Index, Dimension &gt; &amp;scene, const <a class="el" href="structlagrange_1_1io_1_1_save_options.html">SaveOptions</a> &amp;options={})</td></tr>
 <tr class="memdesc:aa14d5abea45ab83e5a405fe623938d5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Save a simple scene to a gltf or glb file.  <a href="namespacelagrange_1_1io.html#aa14d5abea45ab83e5a405fe623938d5b">More...</a><br /></td></tr>
 <tr class="separator:aa14d5abea45ab83e5a405fe623938d5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc6cb4fdc294e887b7166355d849339c"><td class="memTemplParams" colspan="2"><a id="abc6cb4fdc294e887b7166355d849339c" name="abc6cb4fdc294e887b7166355d849339c"></a>
+template&lt;typename Scalar , typename Index &gt; </td></tr>
+<tr class="memitem:abc6cb4fdc294e887b7166355d849339c"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><b>involve_indexed_attribute</b> (const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;mesh, <a class="el" href="group__group-utils-misc.html#ga4afead0b9ccc53fe4fca896787595d26">span</a>&lt; const <a class="el" href="group__group-surfacemesh-attr.html#ga4d115376c2c766084ef808c837348fc3">AttributeId</a> &gt; attr_ids)</td></tr>
+<tr class="separator:abc6cb4fdc294e887b7166355d849339c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a450c59495c2db8ab6a70029d3af8c1"><td class="memTemplParams" colspan="2"><a id="a8a450c59495c2db8ab6a70029d3af8c1" name="a8a450c59495c2db8ab6a70029d3af8c1"></a>
+template&lt;typename Scalar , typename Index &gt; </td></tr>
+<tr class="memitem:a8a450c59495c2db8ab6a70029d3af8c1"><td class="memTemplItemLeft" align="right" valign="top">std::tuple&lt; <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt;, std::vector&lt; <a class="el" href="group__group-surfacemesh-attr.html#ga4d115376c2c766084ef808c837348fc3">AttributeId</a> &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>remap_indexed_attributes</b> (const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;in_mesh, <a class="el" href="group__group-utils-misc.html#ga4afead0b9ccc53fe4fca896787595d26">span</a>&lt; const <a class="el" href="group__group-surfacemesh-attr.html#ga4d115376c2c766084ef808c837348fc3">AttributeId</a> &gt; in_attr_ids)</td></tr>
+<tr class="separator:a8a450c59495c2db8ab6a70029d3af8c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6bef47dca0d8a54525a2c2c060d1c1bc"><td class="memItemLeft" align="right" valign="top"><a id="a6bef47dca0d8a54525a2c2c060d1c1bc" name="a6bef47dca0d8a54525a2c2c060d1c1bc"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>LA_SURFACE_MESH_X</b> (<a class="el" href="namespacelagrange_1_1io.html#a0cbdc00628d1109f3544090e26769f90">load_mesh_gltf</a>, 0)</td></tr>
+&#160;</td><td class="memItemRight" valign="bottom"><b>LA_SURFACE_MESH_X</b> (<a class="el" href="namespacelagrange_1_1io.html#af12e799e867e6df806caf32848f1d89d">load_mesh_gltf</a>, 0)</td></tr>
 <tr class="separator:a6bef47dca0d8a54525a2c2c060d1c1bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a63c10eb41f302bb7c5326144a95c6a"><td class="memTemplParams" colspan="2"><a id="a9a63c10eb41f302bb7c5326144a95c6a" name="a9a63c10eb41f302bb7c5326144a95c6a"></a>
+template&lt;typename SceneType &gt; </td></tr>
+<tr class="memitem:a9a63c10eb41f302bb7c5326144a95c6a"><td class="memTemplItemLeft" align="right" valign="top">SceneType&#160;</td><td class="memTemplItemRight" valign="bottom"><b>load_simple_scene_gltf</b> (std::istream &amp;input_stream, const <a class="el" href="structlagrange_1_1io_1_1_load_options.html">LoadOptions</a> &amp;options)</td></tr>
+<tr class="separator:a9a63c10eb41f302bb7c5326144a95c6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a16f6bddf38c5a60286bdd18514f0b93a"><td class="memItemLeft" align="right" valign="top"><a id="a16f6bddf38c5a60286bdd18514f0b93a" name="a16f6bddf38c5a60286bdd18514f0b93a"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>LA_SIMPLE_SCENE_X</b> (<a class="el" href="namespacelagrange_1_1io.html#ab57e5a417e429d912c0d2c7af5f637eb">load_simple_scene_gltf</a>, 0)</td></tr>
+&#160;</td><td class="memItemRight" valign="bottom"><b>LA_SIMPLE_SCENE_X</b> (<a class="el" href="namespacelagrange_1_1io.html#a6205e0931ff898b57295fbca9bf86292">load_simple_scene_gltf</a>, 0)</td></tr>
 <tr class="separator:a16f6bddf38c5a60286bdd18514f0b93a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a27cab658c8b8d3b80b182e07a19d2744"><td class="memItemLeft" align="right" valign="top"><a id="a27cab658c8b8d3b80b182e07a19d2744" name="a27cab658c8b8d3b80b182e07a19d2744"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>LA_SURFACE_MESH_X</b> (<a class="el" href="namespacelagrange_1_1io.html#a07188a43fac8198fd7d97a6d9f2b222f">load_mesh</a>, 0)</td></tr>
 <tr class="separator:a27cab658c8b8d3b80b182e07a19d2744"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2448874d0ce92958d73625fe810b5e99"><td class="memItemLeft" align="right" valign="top"><a id="a2448874d0ce92958d73625fe810b5e99" name="a2448874d0ce92958d73625fe810b5e99"></a>
+std::string_view&#160;</td><td class="memItemRight" valign="bottom"><b>get_suffix</b> (std::string_view name)</td></tr>
+<tr class="separator:a2448874d0ce92958d73625fe810b5e99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8767cba48b100fc41c0236660237546f"><td class="memTemplParams" colspan="2"><a id="a8767cba48b100fc41c0236660237546f" name="a8767cba48b100fc41c0236660237546f"></a>
+template&lt;typename Scalar , typename Index , typename ValueType , <a class="el" href="group__group-surfacemesh-attr.html#ga9d8ab208822bab9987e9652dda49d89a">AttributeElement</a> element&gt; </td></tr>
+<tr class="memitem:a8767cba48b100fc41c0236660237546f"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>extract_normal</b> (happly::Element &amp;ply_element, const std::string_view name, <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;mesh)</td></tr>
+<tr class="separator:a8767cba48b100fc41c0236660237546f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9675606d98630550de8d4549860e58a"><td class="memTemplParams" colspan="2"><a id="ab9675606d98630550de8d4549860e58a" name="ab9675606d98630550de8d4549860e58a"></a>
+template&lt;typename Scalar , typename Index , typename ValueType &gt; </td></tr>
+<tr class="memitem:ab9675606d98630550de8d4549860e58a"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>extract_vertex_uv</b> (happly::Element &amp;vertex_element, const std::string_view name, <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;mesh)</td></tr>
+<tr class="separator:ab9675606d98630550de8d4549860e58a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f1b75482442d0eec84d35ae1b1b9ae5"><td class="memTemplParams" colspan="2"><a id="a7f1b75482442d0eec84d35ae1b1b9ae5" name="a7f1b75482442d0eec84d35ae1b1b9ae5"></a>
+template&lt;typename Scalar , typename Index , typename ValueType , <a class="el" href="group__group-surfacemesh-attr.html#ga9d8ab208822bab9987e9652dda49d89a">AttributeElement</a> element&gt; </td></tr>
+<tr class="memitem:a7f1b75482442d0eec84d35ae1b1b9ae5"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>extract_color</b> (happly::Element &amp;ply_element, const std::string_view name, <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;mesh)</td></tr>
+<tr class="separator:a7f1b75482442d0eec84d35ae1b1b9ae5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06a43ae05ccde79d799f682140453649"><td class="memTemplParams" colspan="2"><a id="a06a43ae05ccde79d799f682140453649" name="a06a43ae05ccde79d799f682140453649"></a>
+template&lt;<a class="el" href="group__group-surfacemesh-attr.html#ga9d8ab208822bab9987e9652dda49d89a">AttributeElement</a> element, typename Scalar , typename Index &gt; </td></tr>
+<tr class="memitem:a06a43ae05ccde79d799f682140453649"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>extract_property</b> (happly::Element &amp;ply_element, const std::string &amp;name, <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;mesh)</td></tr>
+<tr class="separator:a06a43ae05ccde79d799f682140453649"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa7e9ebce8431a920dfc50ec7189a8cc6"><td class="memTemplParams" colspan="2"><a id="aa7e9ebce8431a920dfc50ec7189a8cc6" name="aa7e9ebce8431a920dfc50ec7189a8cc6"></a>
+template&lt;typename Scalar , typename Index &gt; </td></tr>
+<tr class="memitem:aa7e9ebce8431a920dfc50ec7189a8cc6"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>extract_vertex_properties</b> (happly::Element &amp;vertex_element, <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;mesh, const <a class="el" href="structlagrange_1_1io_1_1_load_options.html">LoadOptions</a> &amp;options)</td></tr>
+<tr class="separator:aa7e9ebce8431a920dfc50ec7189a8cc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a29c9687bf89d6133a818413483195531"><td class="memTemplParams" colspan="2"><a id="a29c9687bf89d6133a818413483195531" name="a29c9687bf89d6133a818413483195531"></a>
+template&lt;typename Scalar , typename Index &gt; </td></tr>
+<tr class="memitem:a29c9687bf89d6133a818413483195531"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>extract_facet_properties</b> (happly::Element &amp;facet_element, <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;mesh, const <a class="el" href="structlagrange_1_1io_1_1_load_options.html">LoadOptions</a> &amp;options)</td></tr>
+<tr class="separator:a29c9687bf89d6133a818413483195531"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a593d341a38caa953b3aa8fe4d88da14b"><td class="memItemLeft" align="right" valign="top"><a id="a593d341a38caa953b3aa8fe4d88da14b" name="a593d341a38caa953b3aa8fe4d88da14b"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>LA_SIMPLE_SCENE_X</b> (<a class="el" href="namespacelagrange_1_1io.html#a59d6b08204508eecdf805ee9c257613e">load_simple_scene</a>, 0)</td></tr>
 <tr class="separator:a593d341a38caa953b3aa8fe4d88da14b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aacd9a94be75b15110b78b4a3807ab4ec"><td class="memTemplParams" colspan="2"><a id="aacd9a94be75b15110b78b4a3807ab4ec" name="aacd9a94be75b15110b78b4a3807ab4ec"></a>
+template&lt;typename Scalar , typename Index , size_t Dimension&gt; </td></tr>
+<tr class="memitem:aacd9a94be75b15110b78b4a3807ab4ec"><td class="memTemplItemLeft" align="right" valign="top">tinygltf::Model&#160;</td><td class="memTemplItemRight" valign="bottom"><b>scene2model</b> (const <a class="el" href="classlagrange_1_1scene_1_1_simple_scene.html">scene::SimpleScene</a>&lt; Scalar, Index, Dimension &gt; &amp;lscene, const <a class="el" href="structlagrange_1_1io_1_1_save_options.html">SaveOptions</a> &amp;options)</td></tr>
+<tr class="separator:aacd9a94be75b15110b78b4a3807ab4ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8807bfd703544dc91748850ef7cf6634"><td class="memItemLeft" align="right" valign="top"><a id="a8807bfd703544dc91748850ef7cf6634" name="a8807bfd703544dc91748850ef7cf6634"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>LA_SIMPLE_SCENE_X</b> (<a class="el" href="namespacelagrange_1_1io.html#aa14d5abea45ab83e5a405fe623938d5b">save_simple_scene_gltf</a>, 0)</td></tr>
+&#160;</td><td class="memItemRight" valign="bottom"><b>LA_SIMPLE_SCENE_X</b> (<a class="el" href="namespacelagrange_1_1io.html#a5e02b963e18a80664a94233d613014cb">save_simple_scene_gltf</a>, 0)</td></tr>
 <tr class="separator:a8807bfd703544dc91748850ef7cf6634"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9540f24ad1ce8994846490ccd265021d"><td class="memItemLeft" align="right" valign="top"><a id="a9540f24ad1ce8994846490ccd265021d" name="a9540f24ad1ce8994846490ccd265021d"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>LA_SURFACE_MESH_X</b> (<a class="el" href="namespacelagrange_1_1io.html#a3d820dd6a5ce1ffc8f4e8f9f08d05a5b">save_mesh</a>, 0)</td></tr>
@@ -223,12 +330,65 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Load a mesh from a file. </p>
-<p >The loader will be chosen depending on the file extension. </p>
+<p >The loader will be chosen depending on the file extension.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">filename</td><td>Input file name. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">options</td><td>Extra options related to loading.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A <code><a class="el" href="classlagrange_1_1_surface_mesh.html" title="A general purpose polygonal mesh class.">SurfaceMesh</a></code> object loaded from the input file. </dd></dl>
+
+</div>
+</div>
+<a id="af12e799e867e6df806caf32848f1d89d" name="af12e799e867e6df806caf32848f1d89d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af12e799e867e6df806caf32848f1d89d">&#9670;&nbsp;</a></span>load_mesh_gltf() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classlagrange_1_1_mesh.html">MeshType</a> load_mesh_gltf </td>
+          <td>(</td>
+          <td class="paramtype">std::istream &amp;&#160;</td>
+          <td class="paramname"><em>input_stream</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structlagrange_1_1io_1_1_load_options.html">LoadOptions</a> &amp;&#160;</td>
+          <td class="paramname"><em>options</em> = <code>{}</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Loads a mesh from an input stream in glTF or GLB format. </p>
+<p >If the scene contains multiple meshes, they will be merged into one.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">input_stream</td><td>Input data stream. </td></tr>
+    <tr><td class="paramname">options</td><td>Load options.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">MeshType</td><td><a class="el" href="classlagrange_1_1_mesh.html">Mesh</a> type to load.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Loaded mesh. </dd></dl>
 
 </div>
 </div>
 <a id="a0cbdc00628d1109f3544090e26769f90" name="a0cbdc00628d1109f3544090e26769f90"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0cbdc00628d1109f3544090e26769f90">&#9670;&nbsp;</a></span>load_mesh_gltf()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a0cbdc00628d1109f3544090e26769f90">&#9670;&nbsp;</a></span>load_mesh_gltf() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -361,8 +521,52 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="abc96c769e4dda21321be45706af1a42f" name="abc96c769e4dda21321be45706af1a42f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc96c769e4dda21321be45706af1a42f">&#9670;&nbsp;</a></span>load_mesh_obj() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classlagrange_1_1_mesh.html">MeshType</a> load_mesh_obj </td>
+          <td>(</td>
+          <td class="paramtype">std::istream &amp;&#160;</td>
+          <td class="paramname"><em>input_stream</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structlagrange_1_1io_1_1_load_options.html">LoadOptions</a> &amp;&#160;</td>
+          <td class="paramname"><em>options</em> = <code>{}</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Loads a mesh from a file in MSH format. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">input_stream</td><td>Input stream. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">options</td><td>Load options.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">MeshType</td><td><a class="el" href="classlagrange_1_1_mesh.html">Mesh</a> type to load.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Loaded mesh. </dd></dl>
+
+</div>
+</div>
 <a id="addd53774d944f8306ca4da9e7f9b277e" name="addd53774d944f8306ca4da9e7f9b277e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#addd53774d944f8306ca4da9e7f9b277e">&#9670;&nbsp;</a></span>load_mesh_obj()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#addd53774d944f8306ca4da9e7f9b277e">&#9670;&nbsp;</a></span>load_mesh_obj() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -522,17 +726,55 @@ Functions</h2></td></tr>
 <p>Load a simple scene. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">filename</td><td>path to file </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">filename</td><td>Input scene file. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">options</td><td>Extra options related to loading.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A <code>SimpleScene</code> object created from the input scene file. </dd></dl>
+
+</div>
+</div>
+<a id="a6205e0931ff898b57295fbca9bf86292" name="a6205e0931ff898b57295fbca9bf86292"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6205e0931ff898b57295fbca9bf86292">&#9670;&nbsp;</a></span>load_simple_scene_gltf() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SceneType load_simple_scene_gltf </td>
+          <td>(</td>
+          <td class="paramtype">std::ifstream &amp;&#160;</td>
+          <td class="paramname"><em>input_stream</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structlagrange_1_1io_1_1_load_options.html">LoadOptions</a> &amp;&#160;</td>
+          <td class="paramname"><em>options</em> = <code>{}</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Load a simple scene with gltf. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">filename</td><td>input file </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">options</td><td></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>SceneType scene. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>scene </dd></dl>
 
 </div>
 </div>
 <a id="ab57e5a417e429d912c0d2c7af5f637eb" name="ab57e5a417e429d912c0d2c7af5f637eb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab57e5a417e429d912c0d2c7af5f637eb">&#9670;&nbsp;</a></span>load_simple_scene_gltf()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ab57e5a417e429d912c0d2c7af5f637eb">&#9670;&nbsp;</a></span>load_simple_scene_gltf() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -606,7 +848,58 @@ Functions</h2></td></tr>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">filename</td><td>path to output </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">mesh</td><td>mesh to save </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">encoding</td><td>If supported, pick whether to save binary or plain text. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">options</td><td>Extra options related to saving. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a92d9ed7dedce77061a4ae4b48cf1e696" name="a92d9ed7dedce77061a4ae4b48cf1e696"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a92d9ed7dedce77061a4ae4b48cf1e696">&#9670;&nbsp;</a></span>save_mesh_gltf() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void save_mesh_gltf </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>output_stream</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;&#160;</td>
+          <td class="paramname"><em>mesh</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structlagrange_1_1io_1_1_save_options.html">SaveOptions</a> &amp;&#160;</td>
+          <td class="paramname"><em>options</em> = <code>{}</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Saves a mesh to an output stream in glTF or GLB format. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">output_stream</td><td>Output data stream. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mesh</td><td><a class="el" href="classlagrange_1_1_mesh.html">Mesh</a> to write. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">options</td><td>Save options.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Scalar</td><td><a class="el" href="classlagrange_1_1_mesh.html">Mesh</a> scalar type. </td></tr>
+    <tr><td class="paramname">Index</td><td><a class="el" href="classlagrange_1_1_mesh.html">Mesh</a> index type. </td></tr>
   </table>
   </dd>
 </dl>
@@ -614,7 +907,7 @@ Functions</h2></td></tr>
 </div>
 </div>
 <a id="a7fb0b3af07a6113763244f7935d34fb9" name="a7fb0b3af07a6113763244f7935d34fb9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7fb0b3af07a6113763244f7935d34fb9">&#9670;&nbsp;</a></span>save_mesh_gltf()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a7fb0b3af07a6113763244f7935d34fb9">&#9670;&nbsp;</a></span>save_mesh_gltf() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -873,8 +1166,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a67905d39f94c934ac56f5e434cab749c" name="a67905d39f94c934ac56f5e434cab749c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a67905d39f94c934ac56f5e434cab749c">&#9670;&nbsp;</a></span>save_mesh_ply() <span class="overload">[1/2]</span></h2>
+<a id="a9c3ba13751c3f7592ebb762fde9bbfd2" name="a9c3ba13751c3f7592ebb762fde9bbfd2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c3ba13751c3f7592ebb762fde9bbfd2">&#9670;&nbsp;</a></span>save_mesh_ply() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -882,7 +1175,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void save_mesh_ply </td>
           <td>(</td>
-          <td class="paramtype">std::ofstream &amp;&#160;</td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
           <td class="paramname"><em>output_stream</em>, </td>
         </tr>
         <tr>
@@ -1019,8 +1312,52 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a5e02b963e18a80664a94233d613014cb" name="a5e02b963e18a80664a94233d613014cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e02b963e18a80664a94233d613014cb">&#9670;&nbsp;</a></span>save_simple_scene_gltf() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void save_simple_scene_gltf </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>output_stream</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classlagrange_1_1scene_1_1_simple_scene.html">scene::SimpleScene</a>&lt; Scalar, Index, Dimension &gt; &amp;&#160;</td>
+          <td class="paramname"><em>scene</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structlagrange_1_1io_1_1_save_options.html">SaveOptions</a> &amp;&#160;</td>
+          <td class="paramname"><em>options</em> = <code>{}</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Save a simple scene to a gltf or glb file. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">output_stream</td><td>Stream to output data </td></tr>
+    <tr><td class="paramname">scene</td><td>Scene to save </td></tr>
+    <tr><td class="paramname">options</td><td><a class="el" href="structlagrange_1_1io_1_1_save_options.html" title="Options used when saving a mesh or a scene.">SaveOptions</a>, check the struct for more details. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="aa14d5abea45ab83e5a405fe623938d5b" name="aa14d5abea45ab83e5a405fe623938d5b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa14d5abea45ab83e5a405fe623938d5b">&#9670;&nbsp;</a></span>save_simple_scene_gltf()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aa14d5abea45ab83e5a405fe623938d5b">&#9670;&nbsp;</a></span>save_simple_scene_gltf() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1064,9 +1401,13 @@ Functions</h2></td></tr>
 </div>
 </div>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespacelagrange.html">lagrange</a></li><li class="navelem"><a class="el" href="namespacelagrange_1_1io.html">io</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
+  </ul>
+</div>
 </body>
 </html>

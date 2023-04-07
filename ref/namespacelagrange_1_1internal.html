@@ -1,3 +1,4 @@
+<!-- HTML header for doxygen 1.9.4-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -9,10 +10,41 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+</script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+</script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeParagraphLink.init()
+</script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeInteractiveToc.init()
+</script>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -46,6 +78,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('namespacelagrange_1_1internal.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -60,11 +109,6 @@ $(function() {
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="namespacelagrange.html">lagrange</a></li><li class="navelem"><a class="el" href="namespacelagrange_1_1internal.html">internal</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
@@ -90,6 +134,9 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlagrange_1_1internal_1_1default__delete.html">default_delete</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlagrange_1_1internal_1_1default__delete_3_01_t_0f_0e_4.html">default_delete&lt; T[]&gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlagrange_1_1internal_1_1_map_attributes_options.html">MapAttributesOptions</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classlagrange_1_1_attribute.html" title="Derived attribute class that stores the actual information.">Attribute</a> mapping options.  <a href="structlagrange_1_1internal_1_1_map_attributes_options.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlagrange_1_1internal_1_1ptr.html">ptr</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -141,10 +188,10 @@ template&lt;typename DerivedV , typename DerivedF , typename DeriveddblA &gt; </
 <tr class="memitem:aae5d3bb97af070a81d6a1d624fce12af"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="group__group-surfacemesh-attr.html#ga4d115376c2c766084ef808c837348fc3">AttributeId</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacelagrange_1_1internal.html#aae5d3bb97af070a81d6a1d624fce12af">find_matching_attribute</a> (const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;mesh, std::string_view name, <a class="el" href="classlagrange_1_1_bit_field.html">BitField</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#ga9d8ab208822bab9987e9652dda49d89a">AttributeElement</a> &gt; expected_element, <a class="el" href="group__group-surfacemesh-attr.html#ga35b5eb426384b257452ee0ffdb732c27">AttributeUsage</a> expected_usage, size_t expected_channels)</td></tr>
 <tr class="memdesc:aae5d3bb97af070a81d6a1d624fce12af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Find an attribute with a given name, ensuring the usage and element type match an expected target.  <a href="namespacelagrange_1_1internal.html#aae5d3bb97af070a81d6a1d624fce12af">More...</a><br /></td></tr>
 <tr class="separator:aae5d3bb97af070a81d6a1d624fce12af"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae817d4592e0b52986df43e5cb1311db4"><td class="memTemplParams" colspan="2">template&lt;typename ExpectedValueType , typename Scalar , typename Index &gt; </td></tr>
-<tr class="memitem:ae817d4592e0b52986df43e5cb1311db4"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="group__group-surfacemesh-attr.html#ga4d115376c2c766084ef808c837348fc3">AttributeId</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacelagrange_1_1internal.html#ae817d4592e0b52986df43e5cb1311db4">find_matching_attribute</a> (const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;mesh, const std::unordered_set&lt; <a class="el" href="group__group-surfacemesh-attr.html#ga4d115376c2c766084ef808c837348fc3">AttributeId</a> &gt; &amp;selected_ids, <a class="el" href="classlagrange_1_1_bit_field.html">BitField</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#ga9d8ab208822bab9987e9652dda49d89a">AttributeElement</a> &gt; expected_element, <a class="el" href="group__group-surfacemesh-attr.html#ga35b5eb426384b257452ee0ffdb732c27">AttributeUsage</a> expected_usage, size_t expected_channels)</td></tr>
-<tr class="memdesc:ae817d4592e0b52986df43e5cb1311db4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Find an attribute from a selected set of ids, ensuring the usage and element type match an expected target.  <a href="namespacelagrange_1_1internal.html#ae817d4592e0b52986df43e5cb1311db4">More...</a><br /></td></tr>
-<tr class="separator:ae817d4592e0b52986df43e5cb1311db4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8107009117bbde794f9885c9b11c29d8"><td class="memTemplParams" colspan="2">template&lt;typename ExpectedValueType , typename Scalar , typename Index &gt; </td></tr>
+<tr class="memitem:a8107009117bbde794f9885c9b11c29d8"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="group__group-surfacemesh-attr.html#ga4d115376c2c766084ef808c837348fc3">AttributeId</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacelagrange_1_1internal.html#a8107009117bbde794f9885c9b11c29d8">find_matching_attribute</a> (const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;mesh, <a class="el" href="group__group-utils-misc.html#ga4afead0b9ccc53fe4fca896787595d26">span</a>&lt; const <a class="el" href="group__group-surfacemesh-attr.html#ga4d115376c2c766084ef808c837348fc3">AttributeId</a> &gt; selected_ids, <a class="el" href="classlagrange_1_1_bit_field.html">BitField</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#ga9d8ab208822bab9987e9652dda49d89a">AttributeElement</a> &gt; expected_element, <a class="el" href="group__group-surfacemesh-attr.html#ga35b5eb426384b257452ee0ffdb732c27">AttributeUsage</a> expected_usage, size_t expected_channels)</td></tr>
+<tr class="memdesc:a8107009117bbde794f9885c9b11c29d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Find an attribute from a selected set of ids, ensuring the usage and element type match an expected target.  <a href="namespacelagrange_1_1internal.html#a8107009117bbde794f9885c9b11c29d8">More...</a><br /></td></tr>
+<tr class="separator:a8107009117bbde794f9885c9b11c29d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4e449214cdb7a7f4c42a69d9eb718483"><td class="memTemplParams" colspan="2">template&lt;typename ExpectedValueType , typename Scalar , typename Index &gt; </td></tr>
 <tr class="memitem:a4e449214cdb7a7f4c42a69d9eb718483"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="group__group-surfacemesh-attr.html#ga4d115376c2c766084ef808c837348fc3">AttributeId</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacelagrange_1_1internal.html#a4e449214cdb7a7f4c42a69d9eb718483">find_attribute</a> (const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;mesh, std::string_view name, <a class="el" href="classlagrange_1_1_bit_field.html">BitField</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#ga9d8ab208822bab9987e9652dda49d89a">AttributeElement</a> &gt; expected_element, <a class="el" href="group__group-surfacemesh-attr.html#ga35b5eb426384b257452ee0ffdb732c27">AttributeUsage</a> expected_usage, size_t expected_channels)</td></tr>
 <tr class="memdesc:a4e449214cdb7a7f4c42a69d9eb718483"><td class="mdescLeft">&#160;</td><td class="mdescRight">Find an attribute with a given name, ensuring the usage and element type match an expected target.  <a href="namespacelagrange_1_1internal.html#a4e449214cdb7a7f4c42a69d9eb718483">More...</a><br /></td></tr>
@@ -157,6 +204,14 @@ template&lt;typename DerivedV , typename DerivedF , typename DeriveddblA &gt; </
 <tr class="memitem:a8d8b8c95bd1fe5343f763045a81314ee"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacelagrange_1_1internal.html#a8d8b8c95bd1fe5343f763045a81314ee">internal_angles</a> (const Eigen::MatrixBase&lt; DerivedV &gt; &amp;vertices, const Eigen::MatrixBase&lt; DerivedF &gt; &amp;facets, Eigen::PlainObjectBase&lt; DerivedK &gt; &amp;angles)</td></tr>
 <tr class="memdesc:a8d8b8c95bd1fe5343f763045a81314ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute internal angles for a triangle mesh.  <a href="namespacelagrange_1_1internal.html#a8d8b8c95bd1fe5343f763045a81314ee">More...</a><br /></td></tr>
 <tr class="separator:a8d8b8c95bd1fe5343f763045a81314ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a483149cef61e7cd6355dd8e90055d297"><td class="memTemplParams" colspan="2">template&lt;typename Index &gt; </td></tr>
+<tr class="memitem:a483149cef61e7cd6355dd8e90055d297"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacelagrange_1_1internal.html#a483149cef61e7cd6355dd8e90055d297">invert_mapping</a> (<a class="el" href="group__group-utils-misc.html#ga4afead0b9ccc53fe4fca896787595d26">span</a>&lt; Index &gt; old2new, Index num_target_entries) -&gt; std::tuple&lt; std::vector&lt; Index &gt;, std::vector&lt; Index &gt; &gt;</td></tr>
+<tr class="memdesc:a483149cef61e7cd6355dd8e90055d297"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the target-to-source (i.e.  <a href="namespacelagrange_1_1internal.html#a483149cef61e7cd6355dd8e90055d297">More...</a><br /></td></tr>
+<tr class="separator:a483149cef61e7cd6355dd8e90055d297"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaef57d47fd036494daf8bf23f015dd07"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="group__group-surfacemesh-attr.html#ga9d8ab208822bab9987e9652dda49d89a">AttributeElement</a> element, typename Scalar , typename Index &gt; </td></tr>
+<tr class="memitem:aaef57d47fd036494daf8bf23f015dd07"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacelagrange_1_1internal.html#aaef57d47fd036494daf8bf23f015dd07">map_attributes</a> (const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;source_mesh, <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;target_mesh, <a class="el" href="group__group-utils-misc.html#ga4afead0b9ccc53fe4fca896787595d26">span</a>&lt; const Index &gt; mapping_data, <a class="el" href="group__group-utils-misc.html#ga4afead0b9ccc53fe4fca896787595d26">span</a>&lt; const Index &gt; mapping_offsets={}, const <a class="el" href="structlagrange_1_1internal_1_1_map_attributes_options.html">MapAttributesOptions</a> &amp;options={})</td></tr>
+<tr class="memdesc:aaef57d47fd036494daf8bf23f015dd07"><td class="mdescLeft">&#160;</td><td class="mdescRight">Map vertex attributes from the source mesh to the target mesh.  <a href="namespacelagrange_1_1internal.html#aaef57d47fd036494daf8bf23f015dd07">More...</a><br /></td></tr>
+<tr class="separator:aaef57d47fd036494daf8bf23f015dd07"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa7d6dc48e6ba95a80b253104e1e86b79"><td class="memTemplParams" colspan="2"><a id="aa7d6dc48e6ba95a80b253104e1e86b79" name="aa7d6dc48e6ba95a80b253104e1e86b79"></a>
 template&lt;typename DerivedF , typename DerivedC , typename AScalar &gt; </td></tr>
 <tr class="memitem:aa7d6dc48e6ba95a80b253104e1e86b79"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>orientable_patches</b> (const Eigen::MatrixBase&lt; DerivedF &gt; &amp;F, Eigen::PlainObjectBase&lt; DerivedC &gt; &amp;C, Eigen::SparseMatrix&lt; AScalar &gt; &amp;A)</td></tr>
@@ -529,8 +584,8 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>point_on_segment_3d</
 
 </div>
 </div>
-<a id="ae817d4592e0b52986df43e5cb1311db4" name="ae817d4592e0b52986df43e5cb1311db4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae817d4592e0b52986df43e5cb1311db4">&#9670;&nbsp;</a></span>find_matching_attribute() <span class="overload">[2/2]</span></h2>
+<a id="a8107009117bbde794f9885c9b11c29d8" name="a8107009117bbde794f9885c9b11c29d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8107009117bbde794f9885c9b11c29d8">&#9670;&nbsp;</a></span>find_matching_attribute() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -544,7 +599,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>point_on_segment_3d</
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::unordered_set&lt; <a class="el" href="group__group-surfacemesh-attr.html#ga4d115376c2c766084ef808c837348fc3">AttributeId</a> &gt; &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="group__group-utils-misc.html#ga4afead0b9ccc53fe4fca896787595d26">span</a>&lt; const <a class="el" href="group__group-surfacemesh-attr.html#ga4d115376c2c766084ef808c837348fc3">AttributeId</a> &gt;&#160;</td>
           <td class="paramname"><em>selected_ids</em>, </td>
         </tr>
         <tr>
@@ -574,7 +629,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>point_on_segment_3d</
 </div><div class="memdoc">
 
 <p>Find an attribute from a selected set of ids, ensuring the usage and element type match an expected target. </p>
-<p >If the provided name is empty, the first attribute with matching properties is returned. If no such attribute is found, <a class="el" href="group__group-surfacemesh-attr.html#gaaf6e674ed673001dca1c6390bc0e0fc9" title="Invalid attribute id.">invalid_attribute_id()</a> is returned instead.</p>
+<p >If the provided <code>selected_ids</code> is empty, it will search all attributes. Otherwise, only attributes corresponding to <code>selected_ids</code> are searched. The first attribute with matching properties is returned. If no such attribute is found, <a class="el" href="group__group-surfacemesh-attr.html#gaaf6e674ed673001dca1c6390bc0e0fc9" title="Invalid attribute id.">invalid_attribute_id()</a> is returned instead.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir"></td><td class="paramname">mesh</td><td><a class="el" href="classlagrange_1_1_mesh.html">Mesh</a> where to look for attributes. </td></tr>
@@ -789,6 +844,121 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>point_on_segment_3d</
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="a483149cef61e7cd6355dd8e90055d297" name="a483149cef61e7cd6355dd8e90055d297"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a483149cef61e7cd6355dd8e90055d297">&#9670;&nbsp;</a></span>invert_mapping()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto invert_mapping </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__group-utils-misc.html#ga4afead0b9ccc53fe4fca896787595d26">span</a>&lt; Index &gt;&#160;</td>
+          <td class="paramname"><em>old2new</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Index&#160;</td>
+          <td class="paramname"><em>num_target_entries</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> -&gt; std::tuple&lt;std::vector&lt;Index&gt;, std::vector&lt;Index&gt;&gt;
+</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Compute the target-to-source (i.e. </p>
+<p >backward) mapping from an input source-to-target (i.e. forward) mapping.</p>
+<dl class="section note"><dt>Note</dt><dd>The input source-to-target mapping may be a 1-to-many mapping, where multiple source elements may be mapped to a single target element.</dd></dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Index</td><td>The index type.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">source2target</td><td>The source-to-target element mapping. </td></tr>
+    <tr><td class="paramname">num_target_entries</td><td>The total number of target elements.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The target-to-source mapping, which is a tuple consists of 2 index arrays, mapping_data and mapping_offsets.</dd></dl>
+<p><code>mapping_data</code> is a flat array of indices of the source elements. <code>mapping_offsets</code> is an array of <code>mapping_data</code> offset indices. It is of size <code>num_target_entires + 1</code>. Target element <code>i</code> is mapped to source elements with index in the range from <code>mapping_data[mapping_offsets[i]]</code> to <code>mapping_data[mapping_offsets[i+1]]</code>. </p>
+
+</div>
+</div>
+<a id="aaef57d47fd036494daf8bf23f015dd07" name="aaef57d47fd036494daf8bf23f015dd07"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaef57d47fd036494daf8bf23f015dd07">&#9670;&nbsp;</a></span>map_attributes()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void map_attributes </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;&#160;</td>
+          <td class="paramname"><em>source_mesh</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;&#160;</td>
+          <td class="paramname"><em>target_mesh</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__group-utils-misc.html#ga4afead0b9ccc53fe4fca896787595d26">span</a>&lt; const Index &gt;&#160;</td>
+          <td class="paramname"><em>mapping_data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__group-utils-misc.html#ga4afead0b9ccc53fe4fca896787595d26">span</a>&lt; const Index &gt;&#160;</td>
+          <td class="paramname"><em>mapping_offsets</em> = <code>{}</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structlagrange_1_1internal_1_1_map_attributes_options.html">MapAttributesOptions</a> &amp;&#160;</td>
+          <td class="paramname"><em>options</em> = <code>{}</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Map vertex attributes from the source mesh to the target mesh. </p>
+<p >This is the most general version that supports many-to-many mapping. Collision policy settings in <code>options</code> define the behavior when multiple source vertices are mapped to the same target vertex.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Scalar</td><td>The scalar type. </td></tr>
+    <tr><td class="paramname">Index</td><td>The index type.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">source_mesh</td><td>The source mesh. </td></tr>
+    <tr><td class="paramname">target_mesh</td><td>The target mesh. </td></tr>
+    <tr><td class="paramname">mapping_data</td><td>A flat array of source vertex indices. </td></tr>
+    <tr><td class="paramname">mapping_offsets</td><td>The offset index array into the <code>mapping_data</code>. Source vertices with index listed from <code>mapping_data[mapping_offset[i]]</code> to <code>mapping_data[mapping_offset[i+1]]</code> are mapped to target vertex <code>i</code>. If empty, source vertex with index <code>mapping_data[i]</code> is mapped to target vertex <code>i</code>. </td></tr>
+    <tr><td class="paramname">options</td><td>Option settings.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd><code><a class="el" href="structlagrange_1_1internal_1_1_map_attributes_options.html" title="Attribute mapping options.">MapAttributesOptions</a></code>. </dd></dl>
 
 </div>
 </div>
@@ -1206,9 +1376,13 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>point_on_segment_3d</
 </div>
 </div>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespacelagrange.html">lagrange</a></li><li class="navelem"><a class="el" href="namespacelagrange_1_1internal.html">internal</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
+  </ul>
+</div>
 </body>
 </html>

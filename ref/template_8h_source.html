@@ -1,3 +1,4 @@
+<!-- HTML header for doxygen 1.9.4-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -9,10 +10,41 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+</script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+</script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeParagraphLink.init()
+</script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeInteractiveToc.init()
+</script>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -46,6 +78,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('template_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -60,11 +109,6 @@ $(function() {
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_95d3c4dd232e168482f385e9dcc567c0.html">lagrange</a></li><li class="navelem"><a class="el" href="dir_840af7a4c0a0a7d566e78cb58e0e071b.html">ui</a></li><li class="navelem"><a class="el" href="dir_4279db23ab8e957d4bbb511db489e1df.html">utils</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="headertitle"><div class="title">template.h</div></div>
 </div><!--header-->
@@ -171,7 +215,7 @@ $(function() {
 <div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span> </div>
 <div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    <a class="code hl_define" href="group__group-utils-assert.html#ga1ccafcb14523a1aae57dcac3c3f32ecd">la_runtime_assert</a>(</div>
 <div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>        <span class="keyword">false</span>,</div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>        <a class="code hl_function" href="group__group-utils-misc.html#gac6b91ad082b88be0563681d17f2feefd">lagrange::string_format</a>(</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>        <a class="code hl_function" href="group__group-utils-misc.html#ga45e3802af95f6c48e3f3173abe05e488">lagrange::string_format</a>(</div>
 <div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>            <span class="stringliteral">&quot;Cannot default construct type {}, provide a realization function to ResourceFactory&quot;</span>,</div>
 <div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>            <span class="keyword">typeid</span>(T).name()));</div>
 <div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
@@ -218,7 +262,7 @@ $(function() {
 <div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>    unused_variadic(std::forward&lt;Args&gt;(args)...);</div>
 <div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>    <a class="code hl_define" href="group__group-utils-assert.html#ga1ccafcb14523a1aae57dcac3c3f32ecd">la_runtime_assert</a>(</div>
 <div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>        <span class="keyword">false</span>,</div>
-<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>        <a class="code hl_function" href="group__group-utils-misc.html#gac6b91ad082b88be0563681d17f2feefd">lagrange::string_format</a>(</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>        <a class="code hl_function" href="group__group-utils-misc.html#ga45e3802af95f6c48e3f3173abe05e488">lagrange::string_format</a>(</div>
 <div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>            <span class="stringliteral">&quot;Cannot construct type {} from given arguments {}, provide a realization function to &quot;</span></div>
 <div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>            <span class="stringliteral">&quot;ResourceFactory&quot;</span>,</div>
 <div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>            <span class="keyword">typeid</span>(T).name(),</div>
@@ -297,7 +341,7 @@ $(function() {
 <div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>} <span class="comment">// namespace ui</span></div>
 <div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>} <span class="comment">// namespace lagrange</span></div>
 <div class="ttc" id="agroup__group-utils-assert_html_ga1ccafcb14523a1aae57dcac3c3f32ecd"><div class="ttname"><a href="group__group-utils-assert.html#ga1ccafcb14523a1aae57dcac3c3f32ecd">la_runtime_assert</a></div><div class="ttdeci">#define la_runtime_assert(...)</div><div class="ttdoc">Runtime assertion check.</div><div class="ttdef"><b>Definition:</b> assert.h:168</div></div>
-<div class="ttc" id="agroup__group-utils-misc_html_gac6b91ad082b88be0563681d17f2feefd"><div class="ttname"><a href="group__group-utils-misc.html#gac6b91ad082b88be0563681d17f2feefd">lagrange::string_format</a></div><div class="ttdeci">std::string string_format(const std::string &amp;format, Args &amp;&amp;... args)</div><div class="ttdoc">Format args according to the format string fmt, and return the result as a string.</div><div class="ttdef"><b>Definition:</b> strings.h:79</div></div>
+<div class="ttc" id="agroup__group-utils-misc_html_ga45e3802af95f6c48e3f3173abe05e488"><div class="ttname"><a href="group__group-utils-misc.html#ga45e3802af95f6c48e3f3173abe05e488">lagrange::string_format</a></div><div class="ttdeci">std::string string_format(fmt::format_string&lt; Args... &gt; format, Args &amp;&amp;... args)</div><div class="ttdoc">Format args according to the format string fmt, and return the result as a string.</div><div class="ttdef"><b>Definition:</b> strings.h:101</div></div>
 <div class="ttc" id="agroup__group-utils-warning_html_gab4318b2844c981f0adf329ddf66b14e7"><div class="ttname"><a href="group__group-utils-warning.html#gab4318b2844c981f0adf329ddf66b14e7">LA_IGNORE</a></div><div class="ttdeci">#define LA_IGNORE(x)</div><div class="ttdoc">Ignore x to avoid an unused variable warning.</div><div class="ttdef"><b>Definition:</b> warning.h:132</div></div>
 <div class="ttc" id="anamespacelagrange_1_1ui_html"><div class="ttname"><a href="namespacelagrange_1_1ui.html">lagrange::ui</a></div><div class="ttdoc">Lagrange UI Viewer and mini 3D engine.</div><div class="ttdef"><b>Definition:</b> AcceleratedPicking.h:22</div></div>
 <div class="ttc" id="anamespacelagrange_html"><div class="ttname"><a href="namespacelagrange.html">lagrange</a></div><div class="ttdoc">Main namespace for Lagrange.</div><div class="ttdef"><b>Definition:</b> AABBIGL.h:30</div></div>
@@ -307,9 +351,13 @@ $(function() {
 <div class="ttc" id="astructlagrange_1_1ui_1_1util_1_1_as_function_html"><div class="ttname"><a href="structlagrange_1_1ui_1_1util_1_1_as_function.html">lagrange::ui::util::AsFunction</a></div><div class="ttdef"><b>Definition:</b> template.h:41</div></div>
 <div class="ttc" id="astructlagrange_1_1ui_1_1util_1_1lambda__helper_html"><div class="ttname"><a href="structlagrange_1_1ui_1_1util_1_1lambda__helper.html">lagrange::ui::util::lambda_helper</a></div><div class="ttdef"><b>Definition:</b> template.h:28</div></div>
 </div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_95d3c4dd232e168482f385e9dcc567c0.html">lagrange</a></li><li class="navelem"><a class="el" href="dir_840af7a4c0a0a7d566e78cb58e0e071b.html">ui</a></li><li class="navelem"><a class="el" href="dir_4279db23ab8e957d4bbb511db489e1df.html">utils</a></li><li class="navelem"><b>template.h</b></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
+  </ul>
+</div>
 </body>
 </html>

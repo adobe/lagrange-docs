@@ -1,3 +1,4 @@
+<!-- HTML header for doxygen 1.9.4-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -9,10 +10,41 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+</script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+</script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeParagraphLink.init()
+</script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeInteractiveToc.init()
+</script>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -46,6 +78,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('compute__tangent__bitangent__mikktspace_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -60,11 +109,6 @@ $(function() {
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_cda9008a25c30768c6bfe2da24ccc3e3.html">tests</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="headertitle"><div class="title">compute_tangent_bitangent_mikktspace.h</div></div>
 </div><!--header-->
@@ -175,8 +219,8 @@ $(function() {
 <div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span> </div>
 <div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>    SMikkTSpaceInterface mk_interface;</div>
 <div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>    mk_interface.m_getNumFaces = [](<span class="keyword">const</span> SMikkTSpaceContext* pContext) {</div>
-<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>        <span class="keyword">auto</span> data = <span class="keyword">reinterpret_cast&lt;</span><span class="keyword">const </span>LocalData*<span class="keyword">&gt;</span>(pContext-&gt;m_pUserData);</div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>        <span class="keywordflow">return</span> data-&gt;num_facets;</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>        <span class="keyword">auto</span> _data = <span class="keyword">reinterpret_cast&lt;</span><span class="keyword">const </span>LocalData*<span class="keyword">&gt;</span>(pContext-&gt;m_pUserData);</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>        <span class="keywordflow">return</span> _data-&gt;num_facets;</div>
 <div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>    };</div>
 <div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>    mk_interface.m_getNumVerticesOfFace = [](<span class="keyword">const</span> SMikkTSpaceContext* pContext, <span class="keyword">const</span> <span class="keywordtype">int</span> iFace) {</div>
 <div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>        (void)pContext;</div>
@@ -185,9 +229,9 @@ $(function() {
 <div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>    };</div>
 <div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>    mk_interface.m_getPosition =</div>
 <div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>        [](<span class="keyword">const</span> SMikkTSpaceContext* pContext, <span class="keywordtype">float</span> fvPosOut[], <span class="keyword">const</span> <span class="keywordtype">int</span> iFace, <span class="keyword">const</span> <span class="keywordtype">int</span> iVert) {</div>
-<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>            <span class="keyword">auto</span> data = <span class="keyword">reinterpret_cast&lt;</span><span class="keyword">const </span>LocalData*<span class="keyword">&gt;</span>(pContext-&gt;m_pUserData);</div>
-<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>            <span class="keyword">const</span> Index v = data-&gt;position_indices[iFace * NVPF + iVert];</div>
-<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>            <span class="keyword">auto</span> pos = data-&gt;position_values.subspan(v * DIM, DIM);</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>            <span class="keyword">auto</span> _data = <span class="keyword">reinterpret_cast&lt;</span><span class="keyword">const </span>LocalData*<span class="keyword">&gt;</span>(pContext-&gt;m_pUserData);</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>            <span class="keyword">const</span> Index v = _data-&gt;position_indices[iFace * NVPF + iVert];</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>            <span class="keyword">auto</span> pos = _data-&gt;position_values.subspan(v * DIM, DIM);</div>
 <div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>            fvPosOut[0] = <span class="keyword">static_cast&lt;</span><span class="keywordtype">float</span><span class="keyword">&gt;</span>(pos[0]);</div>
 <div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>            fvPosOut[1] = <span class="keyword">static_cast&lt;</span><span class="keywordtype">float</span><span class="keyword">&gt;</span>(pos[1]);</div>
 <div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>            fvPosOut[2] = <span class="keyword">static_cast&lt;</span><span class="keywordtype">float</span><span class="keyword">&gt;</span>(pos[2]);</div>
@@ -196,9 +240,9 @@ $(function() {
 <div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>                                  <span class="keywordtype">float</span> fvNormOut[],</div>
 <div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>                                  <span class="keyword">const</span> <span class="keywordtype">int</span> iFace,</div>
 <div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>                                  <span class="keyword">const</span> <span class="keywordtype">int</span> iVert) {</div>
-<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>        <span class="keyword">auto</span> data = <span class="keyword">reinterpret_cast&lt;</span><span class="keyword">const </span>LocalData*<span class="keyword">&gt;</span>(pContext-&gt;m_pUserData);</div>
-<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>        <span class="keyword">const</span> Index v = data-&gt;normal_indices[iFace * NVPF + iVert];</div>
-<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>        <span class="keyword">auto</span> nrm = data-&gt;normal_values.subspan(v * DIM, DIM);</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>        <span class="keyword">auto</span> _data = <span class="keyword">reinterpret_cast&lt;</span><span class="keyword">const </span>LocalData*<span class="keyword">&gt;</span>(pContext-&gt;m_pUserData);</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>        <span class="keyword">const</span> Index v = _data-&gt;normal_indices[iFace * NVPF + iVert];</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>        <span class="keyword">auto</span> nrm = _data-&gt;normal_values.subspan(v * DIM, DIM);</div>
 <div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>        fvNormOut[0] = <span class="keyword">static_cast&lt;</span><span class="keywordtype">float</span><span class="keyword">&gt;</span>(nrm[0]);</div>
 <div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>        fvNormOut[1] = <span class="keyword">static_cast&lt;</span><span class="keywordtype">float</span><span class="keyword">&gt;</span>(nrm[1]);</div>
 <div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>        fvNormOut[2] = <span class="keyword">static_cast&lt;</span><span class="keywordtype">float</span><span class="keyword">&gt;</span>(nrm[2]);</div>
@@ -207,9 +251,9 @@ $(function() {
 <div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>                                    <span class="keywordtype">float</span> fvTexcOut[],</div>
 <div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>                                    <span class="keyword">const</span> <span class="keywordtype">int</span> iFace,</div>
 <div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>                                    <span class="keyword">const</span> <span class="keywordtype">int</span> iVert) {</div>
-<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>        <span class="keyword">auto</span> data = <span class="keyword">reinterpret_cast&lt;</span><span class="keyword">const </span>LocalData*<span class="keyword">&gt;</span>(pContext-&gt;m_pUserData);</div>
-<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>        <span class="keyword">const</span> Index v = data-&gt;uv_indices[iFace * NVPF + iVert];</div>
-<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>        <span class="keyword">auto</span> uv = data-&gt;uv_values.subspan(v * UV_DIM, UV_DIM);</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>        <span class="keyword">auto</span> _data = <span class="keyword">reinterpret_cast&lt;</span><span class="keyword">const </span>LocalData*<span class="keyword">&gt;</span>(pContext-&gt;m_pUserData);</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>        <span class="keyword">const</span> Index v = _data-&gt;uv_indices[iFace * NVPF + iVert];</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>        <span class="keyword">auto</span> uv = _data-&gt;uv_values.subspan(v * UV_DIM, UV_DIM);</div>
 <div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>        fvTexcOut[0] = <span class="keyword">static_cast&lt;</span><span class="keywordtype">float</span><span class="keyword">&gt;</span>(uv[0]);</div>
 <div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>        fvTexcOut[1] = <span class="keyword">static_cast&lt;</span><span class="keywordtype">float</span><span class="keyword">&gt;</span>(uv[1]);</div>
 <div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>    };</div>
@@ -218,9 +262,9 @@ $(function() {
 <div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>                                       <span class="keyword">const</span> <span class="keywordtype">float</span> fSign,</div>
 <div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>                                       <span class="keyword">const</span> <span class="keywordtype">int</span> iFace,</div>
 <div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>                                       <span class="keyword">const</span> <span class="keywordtype">int</span> iVert) {</div>
-<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>        <span class="keyword">auto</span> data = <span class="keyword">reinterpret_cast&lt;</span>LocalData*<span class="keyword">&gt;</span>(pContext-&gt;m_pUserData);</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>        <span class="keyword">auto</span> _data = <span class="keyword">reinterpret_cast&lt;</span>LocalData*<span class="keyword">&gt;</span>(pContext-&gt;m_pUserData);</div>
 <div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>        <span class="keyword">auto</span> tangent =</div>
-<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>            data-&gt;tangents.subspan((iFace * NVPF + iVert) * data-&gt;num_channels, data-&gt;num_channels);</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>            _data-&gt;tangents.subspan((iFace * NVPF + iVert) * _data-&gt;num_channels, _data-&gt;num_channels);</div>
 <div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>        tangent[0] = <span class="keyword">static_cast&lt;</span>Scalar<span class="keyword">&gt;</span>(fvTangent[0]);</div>
 <div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>        tangent[1] = <span class="keyword">static_cast&lt;</span>Scalar<span class="keyword">&gt;</span>(fvTangent[1]);</div>
 <div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>        tangent[2] = <span class="keyword">static_cast&lt;</span>Scalar<span class="keyword">&gt;</span>(fvTangent[2]);</div>
@@ -238,11 +282,11 @@ $(function() {
 <div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>                                  <span class="keyword">const</span> <span class="keywordtype">int</span> iVert) {</div>
 <div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>        (void)fMagS;</div>
 <div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>        (void)fMagT;</div>
-<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>        <span class="keyword">auto</span> data = <span class="keyword">reinterpret_cast&lt;</span>LocalData*<span class="keyword">&gt;</span>(pContext-&gt;m_pUserData);</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>        <span class="keyword">auto</span> _data = <span class="keyword">reinterpret_cast&lt;</span>LocalData*<span class="keyword">&gt;</span>(pContext-&gt;m_pUserData);</div>
 <div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>        <span class="keyword">const</span> <span class="keywordtype">float</span> fSign = bIsOrientationPreserving ? 1.0f : (-1.0f);</div>
 <div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span> </div>
 <div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>        <span class="keyword">auto</span> tangent =</div>
-<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>            data-&gt;tangents.subspan((iFace * NVPF + iVert) * data-&gt;num_channels, data-&gt;num_channels);</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>            _data-&gt;tangents.subspan((iFace * NVPF + iVert) * _data-&gt;num_channels, _data-&gt;num_channels);</div>
 <div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>        tangent[0] = <span class="keyword">static_cast&lt;</span>Scalar<span class="keyword">&gt;</span>(fvTangent[0]);</div>
 <div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>        tangent[1] = <span class="keyword">static_cast&lt;</span>Scalar<span class="keyword">&gt;</span>(fvTangent[1]);</div>
 <div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>        tangent[2] = <span class="keyword">static_cast&lt;</span>Scalar<span class="keyword">&gt;</span>(fvTangent[2]);</div>
@@ -250,9 +294,9 @@ $(function() {
 <div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>            tangent[3] = <span class="keyword">static_cast&lt;</span>Scalar<span class="keyword">&gt;</span>(fSign);</div>
 <div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>        }</div>
 <div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span> </div>
-<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>        <span class="keyword">auto</span> bitangent = data-&gt;bitangents.subspan(</div>
-<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>            (iFace * NVPF + iVert) * data-&gt;num_channels,</div>
-<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>            data-&gt;num_channels);</div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>        <span class="keyword">auto</span> bitangent = _data-&gt;bitangents.subspan(</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>            (iFace * NVPF + iVert) * _data-&gt;num_channels,</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>            _data-&gt;num_channels);</div>
 <div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>        bitangent[0] = <span class="keyword">static_cast&lt;</span>Scalar<span class="keyword">&gt;</span>(fvBiTangent[0]);</div>
 <div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>        bitangent[1] = <span class="keyword">static_cast&lt;</span>Scalar<span class="keyword">&gt;</span>(fvBiTangent[1]);</div>
 <div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>        bitangent[2] = <span class="keyword">static_cast&lt;</span>Scalar<span class="keyword">&gt;</span>(fvBiTangent[2]);</div>
@@ -293,9 +337,13 @@ $(function() {
 <div class="ttc" id="astructlagrange_1_1_tangent_bitangent_result_html_a46c2f467917671e030772bb7a6b65ac4"><div class="ttname"><a href="structlagrange_1_1_tangent_bitangent_result.html#a46c2f467917671e030772bb7a6b65ac4">lagrange::TangentBitangentResult::tangent_id</a></div><div class="ttdeci">AttributeId tangent_id</div><div class="ttdoc">Tangent vector attribute id.</div><div class="ttdef"><b>Definition:</b> compute_tangent_bitangent.h:66</div></div>
 <div class="ttc" id="astructlagrange_1_1_tangent_bitangent_result_html_ac83f6c18baa7406972b12445f0799343"><div class="ttname"><a href="structlagrange_1_1_tangent_bitangent_result.html#ac83f6c18baa7406972b12445f0799343">lagrange::TangentBitangentResult::bitangent_id</a></div><div class="ttdeci">AttributeId bitangent_id</div><div class="ttdoc">Bitangent vector attribute id.</div><div class="ttdef"><b>Definition:</b> compute_tangent_bitangent.h:69</div></div>
 </div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_cda9008a25c30768c6bfe2da24ccc3e3.html">tests</a></li><li class="navelem"><b>compute_tangent_bitangent_mikktspace.h</b></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
+  </ul>
+</div>
 </body>
 </html>

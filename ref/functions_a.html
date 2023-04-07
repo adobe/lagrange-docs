@@ -1,3 +1,4 @@
+<!-- HTML header for doxygen 1.9.4-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -9,10 +10,41 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+</script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+</script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeParagraphLink.init()
+</script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeInteractiveToc.init()
+</script>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -47,6 +79,22 @@ $(function() {
 </script>
 <div id="main-nav"></div>
 </div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('functions_a.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -74,10 +122,10 @@ $(function() {
 <li>add_instance()&#160;:&#160;<a class="el" href="classlagrange_1_1scene_1_1_simple_scene.html#aee865214b169909469888a928e60b0f5">SimpleScene&lt; Scalar, Index, Dimension &gt;</a></li>
 <li>add_mesh()&#160;:&#160;<a class="el" href="classlagrange_1_1raycasting_1_1_embree_ray_caster.html#a094888507f6f6296368eec468b98dda6">EmbreeRayCaster&lt; ScalarType &gt;</a>, <a class="el" href="classlagrange_1_1scene_1_1_simple_scene.html#a40303f37a752174425f83343cb6852eb">SimpleScene&lt; Scalar, Index, Dimension &gt;</a></li>
 <li>add_meshes()&#160;:&#160;<a class="el" href="classlagrange_1_1raycasting_1_1_embree_ray_caster.html#a046d44f4d2e373b236c89b511c2c33de">EmbreeRayCaster&lt; ScalarType &gt;</a></li>
-<li>add_polygon()&#160;:&#160;<a class="el" href="classlagrange_1_1_surface_mesh.html#a5b293b572411c9c95744b5b720c36466">SurfaceMesh&lt; Scalar_, Index_ &gt;</a></li>
+<li>add_polygon()&#160;:&#160;<a class="el" href="classlagrange_1_1_surface_mesh.html#a1bd57ef1e8c1b66caad4e4cfd142b851">SurfaceMesh&lt; Scalar_, Index_ &gt;</a></li>
 <li>add_polygons()&#160;:&#160;<a class="el" href="classlagrange_1_1_surface_mesh.html#af7fe8ccea4a8bb761b9a914e7098e8e7">SurfaceMesh&lt; Scalar_, Index_ &gt;</a></li>
 <li>add_quad()&#160;:&#160;<a class="el" href="classlagrange_1_1_surface_mesh.html#a59058cae85488a247f116f9acbdbe026">SurfaceMesh&lt; Scalar_, Index_ &gt;</a></li>
-<li>add_quads()&#160;:&#160;<a class="el" href="classlagrange_1_1_surface_mesh.html#a057ba271be050a99a0d6ed57b5ba4fbd">SurfaceMesh&lt; Scalar_, Index_ &gt;</a></li>
+<li>add_quads()&#160;:&#160;<a class="el" href="classlagrange_1_1_surface_mesh.html#a0af8af91d5f216f96046f12cf4b66aff">SurfaceMesh&lt; Scalar_, Index_ &gt;</a></li>
 <li>add_raycasting_mesh()&#160;:&#160;<a class="el" href="classlagrange_1_1raycasting_1_1_embree_ray_caster.html#a0797a52ec90f432f341526d970067ac8">EmbreeRayCaster&lt; ScalarType &gt;</a></li>
 <li>add_triangle()&#160;:&#160;<a class="el" href="classlagrange_1_1_surface_mesh.html#a7260f42ee2a672a47f03a9f7d4222e86">SurfaceMesh&lt; Scalar_, Index_ &gt;</a></li>
 <li>add_triangles()&#160;:&#160;<a class="el" href="classlagrange_1_1_surface_mesh.html#a7bfdace2787040a67ac3c70549f6bc96">SurfaceMesh&lt; Scalar_, Index_ &gt;</a></li>
@@ -108,13 +156,18 @@ $(function() {
 <li>attr_name_vertex_to_first_corner()&#160;:&#160;<a class="el" href="classlagrange_1_1_surface_mesh.html#ac3e433d78196b31d1b5618822e3f6b0c">SurfaceMesh&lt; Scalar_, Index_ &gt;</a></li>
 <li>attr_name_vertex_to_position()&#160;:&#160;<a class="el" href="classlagrange_1_1_surface_mesh.html#a1609392d5977b255613678a98a71c5fe">SurfaceMesh&lt; Scalar_, Index_ &gt;</a></li>
 <li>Attribute()&#160;:&#160;<a class="el" href="classlagrange_1_1_attribute.html#aee32f8ed0d360430ede9bf7e8d93feb0">Attribute&lt; ValueType_ &gt;</a></li>
+<li>attribute_conversion_policy&#160;:&#160;<a class="el" href="structlagrange_1_1io_1_1_save_options.html#ab63d6003b0205ae82e5a7e4055a30bd0">SaveOptions</a></li>
 <li>attribute_type&#160;:&#160;<a class="el" href="structlagrange_1_1ui_1_1_attribute_render.html#acb9c464bc7d6dcf2080d11a84cf109fe">AttributeRender</a></li>
 <li>AttributeBase()&#160;:&#160;<a class="el" href="classlagrange_1_1_attribute_base.html#a33bea5befe677c5127810d3728498942">AttributeBase</a></li>
+<li>AttributeConversionPolicy&#160;:&#160;<a class="el" href="structlagrange_1_1io_1_1_save_options.html#a0499c692f6cd7738a8051378e29f122c">SaveOptions</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
+  </ul>
+</div>
 </body>
 </html>

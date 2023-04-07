@@ -1,3 +1,4 @@
+<!-- HTML header for doxygen 1.9.4-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -9,10 +10,41 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+</script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+</script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeParagraphLink.init()
+</script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeInteractiveToc.init()
+</script>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -47,6 +79,22 @@ $(function() {
 </script>
 <div id="main-nav"></div>
 </div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('group__group-surfacemesh-attr-utils.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -62,6 +110,9 @@ $(function() {
 </div>
 
 <div class="header">
+  <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">Attributes utilities<div class="ingroups"><a class="el" href="group__module-core.html">Core Module</a> &raquo; <a class="el" href="group__group-surfacemesh.html">SurfaceMesh</a></div></div></div>
 </div><!--header-->
 <div class="contents">
@@ -69,6 +120,41 @@ $(function() {
 <p>Various attribute processing utilities.  
 <a href="#details">More...</a></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlagrange_1_1_submesh_options.html">SubmeshOptions</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Options for extract submesh.  <a href="structlagrange_1_1_submesh_options.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlagrange_1_1_separate_by_components_options.html">SeparateByComponentsOptions</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Option settings for <code>separate_by_components</code>.  <a href="structlagrange_1_1_separate_by_components_options.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlagrange_1_1_separate_by_facet_groups_options.html">SeparateByFacetGroupsOptions</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Option settings for <code>separate_by_facet_groups</code>.  <a href="structlagrange_1_1_separate_by_facet_groups_options.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:ga6f1b4f791ba72765e9c19df688bffd1c"><td class="memTemplParams" colspan="2">template&lt;typename Scalar , typename Index &gt; </td></tr>
+<tr class="memitem:ga6f1b4f791ba72765e9c19df688bffd1c"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__group-surfacemesh-attr-utils.html#ga6f1b4f791ba72765e9c19df688bffd1c">extract_submesh</a> (const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;mesh, <a class="el" href="group__group-utils-misc.html#ga4afead0b9ccc53fe4fca896787595d26">span</a>&lt; const Index &gt; selected_facets, const <a class="el" href="structlagrange_1_1_submesh_options.html">SubmeshOptions</a> &amp;options={})</td></tr>
+<tr class="memdesc:ga6f1b4f791ba72765e9c19df688bffd1c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Extract a submesh that consists of a subset of the facets of the source mesh.  <a href="group__group-surfacemesh-attr-utils.html#ga6f1b4f791ba72765e9c19df688bffd1c">More...</a><br /></td></tr>
+<tr class="separator:ga6f1b4f791ba72765e9c19df688bffd1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga954105400081aec257b861eabc11caa4"><td class="memTemplParams" colspan="2">template&lt;typename Scalar , typename Index &gt; </td></tr>
+<tr class="memitem:ga954105400081aec257b861eabc11caa4"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__group-surfacemesh-attr-utils.html#ga954105400081aec257b861eabc11caa4">separate_by_components</a> (const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;mesh, const <a class="el" href="structlagrange_1_1_separate_by_components_options.html">SeparateByComponentsOptions</a> &amp;options={})</td></tr>
+<tr class="memdesc:ga954105400081aec257b861eabc11caa4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Separate a mesh by connected components.  <a href="group__group-surfacemesh-attr-utils.html#ga954105400081aec257b861eabc11caa4">More...</a><br /></td></tr>
+<tr class="separator:ga954105400081aec257b861eabc11caa4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3a916fec3d88a2f142479beb6d1dabbc"><td class="memTemplParams" colspan="2">template&lt;typename Scalar , typename Index &gt; </td></tr>
+<tr class="memitem:ga3a916fec3d88a2f142479beb6d1dabbc"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__group-surfacemesh-attr-utils.html#ga3a916fec3d88a2f142479beb6d1dabbc">separate_by_facet_groups</a> (const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;mesh, size_t num_groups, <a class="el" href="group__group-utils-misc.html#ga4afead0b9ccc53fe4fca896787595d26">span</a>&lt; const Index &gt; facet_group_indices, const <a class="el" href="structlagrange_1_1_separate_by_facet_groups_options.html">SeparateByFacetGroupsOptions</a> &amp;options={})</td></tr>
+<tr class="memdesc:ga3a916fec3d88a2f142479beb6d1dabbc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Extract a set of submeshes based on facet groups.  <a href="group__group-surfacemesh-attr-utils.html#ga3a916fec3d88a2f142479beb6d1dabbc">More...</a><br /></td></tr>
+<tr class="separator:ga3a916fec3d88a2f142479beb6d1dabbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8bfc61d050dfff96cd48f72f4bd4b149"><td class="memTemplParams" colspan="2">template&lt;typename Scalar , typename Index &gt; </td></tr>
+<tr class="memitem:ga8bfc61d050dfff96cd48f72f4bd4b149"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__group-surfacemesh-attr-utils.html#ga8bfc61d050dfff96cd48f72f4bd4b149">separate_by_facet_groups</a> (const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;mesh, <a class="el" href="group__group-utils-misc.html#ga4afead0b9ccc53fe4fca896787595d26">span</a>&lt; const Index &gt; facet_group_indices, const <a class="el" href="structlagrange_1_1_separate_by_facet_groups_options.html">SeparateByFacetGroupsOptions</a> &amp;options={})</td></tr>
+<tr class="memdesc:ga8bfc61d050dfff96cd48f72f4bd4b149"><td class="mdescLeft">&#160;</td><td class="mdescRight">Extract a set of submeshes based on facet groups.  <a href="group__group-surfacemesh-attr-utils.html#ga8bfc61d050dfff96cd48f72f4bd4b149">More...</a><br /></td></tr>
+<tr class="separator:ga8bfc61d050dfff96cd48f72f4bd4b149"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga987e83dd82916a9347d04f1d45a7934e"><td class="memTemplParams" colspan="2">template&lt;typename Scalar , typename Index &gt; </td></tr>
+<tr class="memitem:ga987e83dd82916a9347d04f1d45a7934e"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__group-surfacemesh-attr-utils.html#ga987e83dd82916a9347d04f1d45a7934e">separate_by_facet_groups</a> (const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;mesh, size_t num_groups, <a class="el" href="classlagrange_1_1function__ref.html">function_ref</a>&lt; Index(Index)&gt; get_facet_group, const <a class="el" href="structlagrange_1_1_separate_by_facet_groups_options.html">SeparateByFacetGroupsOptions</a> &amp;options={})</td></tr>
+<tr class="memdesc:ga987e83dd82916a9347d04f1d45a7934e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Extract a set of submeshes based on facet groups.  <a href="group__group-surfacemesh-attr-utils.html#ga987e83dd82916a9347d04f1d45a7934e">More...</a><br /></td></tr>
+<tr class="separator:ga987e83dd82916a9347d04f1d45a7934e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader">Attribute remapping</h2></td></tr>
 <tr><td class="ititle" colspan="2"><p >Mapping attributes between different element types.</p>
 <ul>
@@ -106,6 +192,61 @@ $(function() {
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p >Various attribute processing utilities. </p>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="ga6f1b4f791ba72765e9c19df688bffd1c" name="ga6f1b4f791ba72765e9c19df688bffd1c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga6f1b4f791ba72765e9c19df688bffd1c">&#9670;&nbsp;</a></span>extract_submesh()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; extract_submesh </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;&#160;</td>
+          <td class="paramname"><em>mesh</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__group-utils-misc.html#ga4afead0b9ccc53fe4fca896787595d26">span</a>&lt; const Index &gt;&#160;</td>
+          <td class="paramname"><em>selected_facets</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structlagrange_1_1_submesh_options.html">SubmeshOptions</a> &amp;&#160;</td>
+          <td class="paramname"><em>options</em> = <code>{}</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;lagrange/extract_submesh.h&gt;</code></p>
+
+<p>Extract a submesh that consists of a subset of the facets of the source mesh. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Scalar</td><td>The scalar type. </td></tr>
+    <tr><td class="paramname">Index</td><td>The index type.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">mesh</td><td>The source mesh. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">selected_facets</td><td>The set of selected facets to extract. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">options</td><td>Extraction options.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The mesh containing the selected facets.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><code><a class="el" href="structlagrange_1_1_submesh_options.html" title="Options for extract submesh.">SubmeshOptions</a></code> </dd></dl>
+
+</div>
+</div>
 <a id="gad7a1e90b26e460f8b9afc7efbca95cc4" name="gad7a1e90b26e460f8b9afc7efbca95cc4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#gad7a1e90b26e460f8b9afc7efbca95cc4">&#9670;&nbsp;</a></span>map_attribute() <span class="overload">[1/2]</span></h2>
 
@@ -340,6 +481,233 @@ $(function() {
 
 </div>
 </div>
+<a id="ga954105400081aec257b861eabc11caa4" name="ga954105400081aec257b861eabc11caa4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga954105400081aec257b861eabc11caa4">&#9670;&nbsp;</a></span>separate_by_components()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &gt; separate_by_components </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;&#160;</td>
+          <td class="paramname"><em>mesh</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structlagrange_1_1_separate_by_components_options.html">SeparateByComponentsOptions</a> &amp;&#160;</td>
+          <td class="paramname"><em>options</em> = <code>{}</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;lagrange/separate_by_components.h&gt;</code></p>
+
+<p>Separate a mesh by connected components. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Scalar</td><td>The scalar type. </td></tr>
+    <tr><td class="paramname">Index</td><td>The index type.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">mesh</td><td>The source mesh. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">options</td><td>Option settings.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A list of meshes representing the set of connected components.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><code><a class="el" href="structlagrange_1_1_submesh_options.html" title="Options for extract submesh.">SubmeshOptions</a></code> </dd></dl>
+
+</div>
+</div>
+<a id="ga3a916fec3d88a2f142479beb6d1dabbc" name="ga3a916fec3d88a2f142479beb6d1dabbc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3a916fec3d88a2f142479beb6d1dabbc">&#9670;&nbsp;</a></span>separate_by_facet_groups() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &gt; separate_by_facet_groups </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;&#160;</td>
+          <td class="paramname"><em>mesh</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>num_groups</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__group-utils-misc.html#ga4afead0b9ccc53fe4fca896787595d26">span</a>&lt; const Index &gt;&#160;</td>
+          <td class="paramname"><em>facet_group_indices</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structlagrange_1_1_separate_by_facet_groups_options.html">SeparateByFacetGroupsOptions</a> &amp;&#160;</td>
+          <td class="paramname"><em>options</em> = <code>{}</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;lagrange/separate_by_facet_groups.h&gt;</code></p>
+
+<p>Extract a set of submeshes based on facet groups. </p>
+<p >Facets with the same group index are grouped together in a single submesh.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Scalar</td><td>The scalar type. </td></tr>
+    <tr><td class="paramname">Index</td><td>The index type.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">mesh</td><td>The source mesh. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">num_groups</td><td>The number of face groups. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">facet_group_indices</td><td>The group index of each facet. Each group index must be in the range of [0, num_groups - 1]. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">options</td><td>Extraction options.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A list of submeshes representing each facet group. </dd></dl>
+
+</div>
+</div>
+<a id="ga8bfc61d050dfff96cd48f72f4bd4b149" name="ga8bfc61d050dfff96cd48f72f4bd4b149"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8bfc61d050dfff96cd48f72f4bd4b149">&#9670;&nbsp;</a></span>separate_by_facet_groups() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &gt; separate_by_facet_groups </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;&#160;</td>
+          <td class="paramname"><em>mesh</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__group-utils-misc.html#ga4afead0b9ccc53fe4fca896787595d26">span</a>&lt; const Index &gt;&#160;</td>
+          <td class="paramname"><em>facet_group_indices</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structlagrange_1_1_separate_by_facet_groups_options.html">SeparateByFacetGroupsOptions</a> &amp;&#160;</td>
+          <td class="paramname"><em>options</em> = <code>{}</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;lagrange/separate_by_facet_groups.h&gt;</code></p>
+
+<p>Extract a set of submeshes based on facet groups. </p>
+<p >Facets with the same group index are grouped together in a single submesh.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Scalar</td><td>The scalar type. </td></tr>
+    <tr><td class="paramname">Index</td><td>The index type.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">mesh</td><td>The source mesh. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">facet_group_indices</td><td>The group index of each facet. Each group index must be in the range of [0, max(facet_group_indices)]. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">options</td><td>Extraction options.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A list of submeshes representing each facet group. </dd></dl>
+
+</div>
+</div>
+<a id="ga987e83dd82916a9347d04f1d45a7934e" name="ga987e83dd82916a9347d04f1d45a7934e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga987e83dd82916a9347d04f1d45a7934e">&#9670;&nbsp;</a></span>separate_by_facet_groups() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &gt; separate_by_facet_groups </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;&#160;</td>
+          <td class="paramname"><em>mesh</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>num_groups</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classlagrange_1_1function__ref.html">function_ref</a>&lt; Index(Index)&gt;&#160;</td>
+          <td class="paramname"><em>get_facet_group</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structlagrange_1_1_separate_by_facet_groups_options.html">SeparateByFacetGroupsOptions</a> &amp;&#160;</td>
+          <td class="paramname"><em>options</em> = <code>{}</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;lagrange/separate_by_facet_groups.h&gt;</code></p>
+
+<p>Extract a set of submeshes based on facet groups. </p>
+<p >Facets with the same group index are grouped together in a single submesh.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Scalar</td><td>The scalar type. </td></tr>
+    <tr><td class="paramname">Index</td><td>The index type.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">mesh</td><td>The source mesh. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">num_groups</td><td>The number of face groups. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">get_facet_group</td><td>Function that returns the facet group id from facet id. The groud id must be in [0, num_groups - 1]. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">options</td><td>Extraction options.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A list of submeshes representing each facet group. </dd></dl>
+
+</div>
+</div>
 <a id="gae8deb2977d6d78e0b8e3a9a7773b6c72" name="gae8deb2977d6d78e0b8e3a9a7773b6c72"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#gae8deb2977d6d78e0b8e3a9a7773b6c72">&#9670;&nbsp;</a></span>unify_index_buffer()</h2>
 
@@ -423,9 +791,12 @@ $(function() {
 </div>
 </div>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
+  </ul>
+</div>
 </body>
 </html>

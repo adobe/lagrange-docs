@@ -8,5 +8,7 @@ var searchData=
   ['wheel_5fhorizontal_5',['wheel_horizontal',['../structlagrange_1_1ui_1_1_input_state_1_1_mouse.html#a00dde4d404c8cbc0140241d8016581f6',1,'lagrange::ui::InputState::Mouse']]],
   ['width_6',['width',['../structlagrange_1_1ui_1_1_viewer_1_1_window_options.html#a2474a5474cbff19523a51eb1de01cda4',1,'lagrange::ui::Viewer::WindowOptions']]],
   ['window_5ffullscreen_7',['window_fullscreen',['../structlagrange_1_1ui_1_1_viewer_1_1_window_options.html#a87f23fdcd4a30726eeade0a04faaa0fc',1,'lagrange::ui::Viewer::WindowOptions']]],
-  ['window_5ftitle_8',['window_title',['../structlagrange_1_1ui_1_1_viewer_1_1_window_options.html#a0eb02ce03ec18a375c3f31d1f3e473f6',1,'lagrange::ui::Viewer::WindowOptions']]]
+  ['window_5ftitle_8',['window_title',['../structlagrange_1_1ui_1_1_viewer_1_1_window_options.html#a0eb02ce03ec18a375c3f31d1f3e473f6',1,'lagrange::ui::Viewer::WindowOptions']]],
+  ['with_5findexed_5fnormal_9',['with_indexed_normal',['../structlagrange_1_1testing_1_1_create_options.html#ab9e1f0a8c656339294777c77bdfc8958',1,'lagrange::testing::CreateOptions']]],
+  ['with_5findexed_5fuv_10',['with_indexed_uv',['../structlagrange_1_1testing_1_1_create_options.html#a999b2e354435f874d83972e53b11391b',1,'lagrange::testing::CreateOptions']]]
 ];

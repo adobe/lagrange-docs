@@ -9,6 +9,7 @@ var searchData=
   ['raycastermeshderived_6',['RaycasterMeshDerived',['../classlagrange_1_1raycasting_1_1_raycaster_mesh_derived.html',1,'lagrange::raycasting']]],
   ['rayfacethit_7',['RayFacetHit',['../structlagrange_1_1ui_1_1_ray_facet_hit.html',1,'lagrange::ui']]],
   ['remapverticesoptions_8',['RemapVerticesOptions',['../structlagrange_1_1_remap_vertices_options.html',1,'lagrange']]],
-  ['rendercontext_9',['RenderContext',['../structlagrange_1_1ui_1_1_render_context.html',1,'lagrange::ui']]],
-  ['rotatetooltag_10',['RotateToolTag',['../structlagrange_1_1ui_1_1_rotate_tool_tag.html',1,'lagrange::ui']]]
+  ['remeshingoptions_9',['RemeshingOptions',['../structlagrange_1_1scene_1_1_remeshing_options.html',1,'lagrange::scene']]],
+  ['rendercontext_10',['RenderContext',['../structlagrange_1_1ui_1_1_render_context.html',1,'lagrange::ui']]],
+  ['rotatetooltag_11',['RotateToolTag',['../structlagrange_1_1ui_1_1_rotate_tool_tag.html',1,'lagrange::ui']]]
 ];

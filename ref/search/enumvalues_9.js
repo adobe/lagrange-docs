@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['one_5fway_0',['ONE_WAY',['../namespacelagrange_1_1raycasting.html#a4cacb45d286bda3567a5eedf0ea57c9aaaa30404ca3fb4604d829dacae0444dd1',1,'lagrange::raycasting']]]
+  ['mips_0',['MIPS',['../group__group-surfacemesh-utils.html#ggadab1480827f4522cbf1f9e1d4c28db91a16c8e070f0f6edd7ac0ae016e9bf2997',1,'lagrange']]]
 ];

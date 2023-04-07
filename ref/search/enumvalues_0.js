@@ -5,5 +5,5 @@ var searchData=
   ['angle_2',['Angle',['../group__group-surfacemesh-utils.html#ggaa88e833ed770762b02e187f0c2377d3da45f4ce6c3306644b1efe333f4f8d6929',1,'lagrange']]],
   ['arcball_3',['ARCBALL',['../classlagrange_1_1ui_1_1_camera.html#a5d23a7630269796dc6f79f68f8689869a631cfa3b4e20e0e844711e8dcfa7d361',1,'lagrange::ui::Camera']]],
   ['area_4',['Area',['../structlagrange_1_1_mesh_centroid_options.html#a8ef3cb3f56dc8aba3f2dc87664f7bfffa0e21a695eb09681881cc31bb221fb174',1,'lagrange::MeshCentroidOptions']]],
-  ['average_5',['Average',['../structlagrange_1_1_remap_vertices_options.html#a87c5910d10cf3f1b3451247225123c22ab1897515d548a960afe49ecf66a29021',1,'lagrange::RemapVerticesOptions']]]
+  ['average_5',['Average',['../namespacelagrange.html#af15e960c877b7516935402a9080b7e1aab1897515d548a960afe49ecf66a29021',1,'lagrange']]]
 ];

@@ -1,3 +1,4 @@
+<!-- HTML header for doxygen 1.9.4-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -9,10 +10,41 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+</script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+</script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeParagraphLink.init()
+</script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeInteractiveToc.init()
+</script>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -47,6 +79,22 @@ $(function() {
 </script>
 <div id="main-nav"></div>
 </div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('functions_func_s.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -69,6 +117,7 @@ $(function() {
 <li>ScopedLogLevel()&#160;:&#160;<a class="el" href="classlagrange_1_1_scoped_log_level.html#ad968b5b3830a6732b89a8d808f5bc305">ScopedLogLevel</a></li>
 <li>ScopedTimer()&#160;:&#160;<a class="el" href="classlagrange_1_1_scoped_timer.html#a728abfec532f072ec91f8217d7a6c95b">ScopedTimer</a></li>
 <li>screen_to_viewport()&#160;:&#160;<a class="el" href="structlagrange_1_1ui_1_1_viewport_panel.html#a024624581ad4e8176eaf303811220442">ViewportPanel</a></li>
+<li>SeparateByFacetGroupsOptions()&#160;:&#160;<a class="el" href="structlagrange_1_1_separate_by_facet_groups_options.html#a3a224e206678eedc8e44bb213a5a1eb1">SeparateByFacetGroupsOptions</a></li>
 <li>seq_foreach_attribute_id()&#160;:&#160;<a class="el" href="classlagrange_1_1_surface_mesh.html#affeb2a94afa3e342e3adf7f5351c4e5f">SurfaceMesh&lt; Scalar_, Index_ &gt;</a></li>
 <li>set()&#160;:&#160;<a class="el" href="classlagrange_1_1_bit_field.html#a6f02149aa1249514489e73f8a2b3da7e">BitField&lt; EnumType_ &gt;</a></li>
 <li>set_attribute_default_internal()&#160;:&#160;<a class="el" href="classlagrange_1_1_surface_mesh.html#a1ace702355c3de9c126c3c1a267f1a98">SurfaceMesh&lt; Scalar_, Index_ &gt;</a></li>
@@ -99,15 +148,19 @@ $(function() {
 <li>static_read()&#160;:&#160;<a class="el" href="classlagrange_1_1copy__on__write__ptr.html#ab8f76b4b53855ba7eb492409637082d1">copy_on_write_ptr&lt; T &gt;</a></li>
 <li>static_write()&#160;:&#160;<a class="el" href="classlagrange_1_1copy__on__write__ptr.html#aadedf4e4515d7b9f2bd328d40f6715e2">copy_on_write_ptr&lt; T &gt;</a></li>
 <li>string()&#160;:&#160;<a class="el" href="classlagrange_1_1ui_1_1_file_dialog_path.html#ae358189e220bbef556bffd966496ce28">FileDialogPath</a></li>
+<li>SubmeshOptions()&#160;:&#160;<a class="el" href="structlagrange_1_1_submesh_options.html#a98857c3e0ea471a5dc0af5aef9050ff5">SubmeshOptions</a></li>
 <li>succeeds()&#160;:&#160;<a class="el" href="classlagrange_1_1ui_1_1_systems.html#a3b88fdb6388206bb28c9084774911c61">Systems</a></li>
 <li>SurfaceMesh()&#160;:&#160;<a class="el" href="classlagrange_1_1_surface_mesh.html#a690cbdbb73863039c0a9efd804f17060">SurfaceMesh&lt; Scalar_, Index_ &gt;</a></li>
 <li>swap()&#160;:&#160;<a class="el" href="classlagrange_1_1function__ref_3_01_r_07_args_8_8_8_08_4.html#aa3ff002e75ec17482c16ce347e7933a6">function_ref&lt; R(Args...)&gt;</a>, <a class="el" href="classlagrange_1_1internal_1_1shared__ptr.html#ab8e997a74e163f0c0d427b0c6a8c0026">shared_ptr&lt; T &gt;</a>, <a class="el" href="classlagrange_1_1internal_1_1weak__ptr.html#aff4f688f66b334c7803c7f3967b9b20e">weak_ptr&lt; T &gt;</a></li>
 <li>systems()&#160;:&#160;<a class="el" href="classlagrange_1_1ui_1_1_viewer.html#a7ed87d8e7521782b2c94a0be8902dafb">Viewer</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
+  </ul>
+</div>
 </body>
 </html>

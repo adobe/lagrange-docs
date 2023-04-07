@@ -1,3 +1,4 @@
+<!-- HTML header for doxygen 1.9.4-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -9,10 +10,41 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+</script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+</script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeParagraphLink.init()
+</script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeInteractiveToc.init()
+</script>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -46,6 +78,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('remove__duplicate__vertices_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -60,11 +109,6 @@ $(function() {
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_e277d0e790805391a364b883bec7db94.html">lagrange</a></li><li class="navelem"><a class="el" href="dir_75e0496104c9e7e6e5aa94b4468f4343.html">mesh_cleanup</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="headertitle"><div class="title">remove_duplicate_vertices.h</div></div>
 </div><!--header-->
@@ -152,12 +196,12 @@ $(function() {
 <div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    Index num_cols = dim;</div>
 <div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; attr_name : vertex_attribute_names) {</div>
 <div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>        <a class="code hl_define" href="group__group-utils-assert.html#ga1ccafcb14523a1aae57dcac3c3f32ecd">la_runtime_assert</a>(mesh.has_vertex_attribute(attr_name));</div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>        num_cols += mesh.get_vertex_attribute(attr_name).cols();</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>        num_cols += <span class="keyword">static_cast&lt;</span>Index<span class="keyword">&gt;</span>(mesh.get_vertex_attribute(attr_name).cols());</div>
 <div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    }</div>
 <div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; attr_name : indexed_attribute_names) {</div>
 <div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>        <a class="code hl_define" href="group__group-utils-assert.html#ga1ccafcb14523a1aae57dcac3c3f32ecd">la_runtime_assert</a>(mesh.has_indexed_attribute(attr_name));</div>
 <div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>        <span class="keyword">auto</span> attr = mesh.get_indexed_attribute(attr_name);</div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>        num_cols += std::get&lt;0&gt;(attr).cols();</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>        num_cols += <span class="keyword">static_cast&lt;</span>Index<span class="keyword">&gt;</span>(std::get&lt;0&gt;(attr).cols());</div>
 <div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    }</div>
 <div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span> </div>
 <div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    Eigen::Matrix&lt;Scalar, Eigen::Dynamic, Eigen::Dynamic, Eigen::RowMajor&gt; vertices_and_keys;</div>
@@ -168,7 +212,7 @@ $(function() {
 <div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; attr_name : vertex_attribute_names) {</div>
 <div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>        <span class="keyword">const</span> <span class="keyword">auto</span>&amp; attr = mesh.get_vertex_attribute(attr_name);</div>
 <div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>        vertices_and_keys.block(0, col_count, num_vertices, attr.cols()) = attr;</div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>        col_count += attr.cols();</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>        col_count += <span class="keyword">static_cast&lt;</span>Index<span class="keyword">&gt;</span>(attr.cols());</div>
 <div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    }</div>
 <div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; attr_name : indexed_attribute_names) {</div>
 <div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>        <span class="keyword">const</span> <span class="keyword">auto</span> attr = mesh.get_indexed_attribute(attr_name);</div>
@@ -182,7 +226,7 @@ $(function() {
 <div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>            vertices_and_keys.row(facets(i, 2)).segment(col_count, attr_values.cols()) =</div>
 <div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>                attr_values.row(attr_indices(i, 2));</div>
 <div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>        }</div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>        col_count += attr_values.cols();</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>        col_count += <span class="keyword">static_cast&lt;</span>Index<span class="keyword">&gt;</span>(attr_values.cols());</div>
 <div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>    }</div>
 <div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span> </div>
 <div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>    Entries unique_vertices_and_keys;</div>
@@ -229,9 +273,13 @@ $(function() {
 <div class="ttc" id="anamespacelagrange_html_a8432a4c9351f42fbe5c8c2613f647fa2"><div class="ttname"><a href="namespacelagrange.html#a8432a4c9351f42fbe5c8c2613f647fa2">lagrange::remove_duplicate_vertices</a></div><div class="ttdeci">std::unique_ptr&lt; MeshType &gt; remove_duplicate_vertices(const MeshType &amp;mesh, const std::vector&lt; std::string &gt; &amp;vertex_attribute_names, const std::vector&lt; std::string &gt; &amp;indexed_attribute_names={})</div><div class="ttdoc">Remove duplicated vertices.</div><div class="ttdef"><b>Definition:</b> remove_duplicate_vertices.h:73</div></div>
 <div class="ttc" id="anamespacelagrange_html_a9a4e0328e98859931047b51f9096260e"><div class="ttname"><a href="namespacelagrange.html#a9a4e0328e98859931047b51f9096260e">lagrange::remove_topologically_degenerate_triangles</a></div><div class="ttdeci">std::unique_ptr&lt; MeshType &gt; remove_topologically_degenerate_triangles(const MeshType &amp;mesh)</div><div class="ttdoc">Remove topologically degenerate triangles.</div><div class="ttdef"><b>Definition:</b> remove_topologically_degenerate_triangles.h:35</div></div>
 </div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_e277d0e790805391a364b883bec7db94.html">lagrange</a></li><li class="navelem"><a class="el" href="dir_75e0496104c9e7e6e5aa94b4468f4343.html">mesh_cleanup</a></li><li class="navelem"><b>remove_duplicate_vertices.h</b></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
+  </ul>
+</div>
 </body>
 </html>

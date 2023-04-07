@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['keepexternalptr_0',['KeepExternalPtr',['../group__group-surfacemesh-attr.html#ggade3ae5b7e72e9d4f92f29c6563551c10a9a526f6dc0d4d6aef1f368972f20d13e',1,'lagrange::KeepExternalPtr()'],['../group__group-surfacemesh-attr.html#gga450ef027eac01dd93a89a15ff55de63fa9a526f6dc0d4d6aef1f368972f20d13e',1,'lagrange::KeepExternalPtr()']]],
-  ['keepfirst_1',['KeepFirst',['../structlagrange_1_1_remap_vertices_options.html#a87c5910d10cf3f1b3451247225123c22a0e86b31f0ceff2268f199fa31e7b1369',1,'lagrange::RemapVerticesOptions']]]
+  ['indexed_0',['Indexed',['../group__group-surfacemesh-attr.html#gga9d8ab208822bab9987e9652dda49d89aa93747573a820d43208a296f9f56bf54e',1,'lagrange']]],
+  ['inversedirichlet_1',['InverseDirichlet',['../group__group-surfacemesh-utils.html#ggadab1480827f4522cbf1f9e1d4c28db91a541c024e21b5989aa74764f7c362dfd2',1,'lagrange']]]
 ];
