@@ -1665,6 +1665,14 @@ the <code>Color</code> tag can have between 1 and 4 channels.</p>
 </div>
 </li>
 </ul>
+<div class="admonition note">
+<p class="admonition-title">Memory Layout</p>
+<p>Mesh attributes are stored continuous in memory. For example, the vertex positions of a 3D mesh
+will be stored in memory as <code>[x0, y0, z0, x1, y1, z1, ...]</code> etc. If you need to wrap external
+data with a compatible memory layout, please read our dedicated section on <a href="#wrapping-external-buffers">wrapping external
+buffers</a>. If you need to track ownership, you can use a
+<a href="../general-utilities/#shared-span">SharedSpan</a> object.</p>
+</div>
 <h2 id="attribute-creation">Attribute Creation</h2>
 <p>To create a new attribute and return its id:</p>
 <div class="highlight"><pre><span></span><code><span class="n">lagrange</span><span class="o">::</span><span class="n">SurfaceMesh</span><span class="o">&lt;</span><span class="n">Scalar</span><span class="p">,</span><span class="w"> </span><span class="n">Index</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mesh</span><span class="p">;</span>

@@ -1766,6 +1766,12 @@ we provide read-only views as <code>Eigen::Map&lt;const ...&gt;</code>:</p>
 each "row" of the matrix would have a variable width, due to the varying facet sizes. For this
 reason, trying to get a <code>facet_view()</code> on a hybrid mesh will throw a runtime exception.</p>
 </div>
+<div class="admonition tip">
+<p class="admonition-title">Mesh Attributes</p>
+<p>Arbitrary mesh attributes can be viewed as Eigen matrices via the <code>matrix_view()</code> and
+<code>matrix_ref()</code> functions. Please read our <a href="../attributes">attribute documentation</a> for some
+examples.</p>
+</div>
 <h2 id="mesh-edges">Mesh Edges</h2>
 <p>By default, a mesh object is very lightweight, and does not compute edge ids or connectivity
 information. If this information is desirable, it is possible to compute it by calling the
