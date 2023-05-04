@@ -338,6 +338,11 @@ V_ref.rowwise() -= V_ref.colwise().mean();
     each "row" of the matrix would have a variable width, due to the varying facet sizes. For this
     reason, trying to get a `facet_view()` on a hybrid mesh will throw a runtime exception.
 
+!!! tip "Mesh Attributes"
+    Arbitrary mesh attributes can be viewed as Eigen matrices via the `matrix_view()` and
+    `matrix_ref()` functions. Please read our [attribute documentation](../attributes) for some
+    examples.
+
 ## Mesh Edges
 
 By default, a mesh object is very lightweight, and does not compute edge ids or connectivity

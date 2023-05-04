@@ -23,13 +23,13 @@ design principles that go into Lagrange.
    planning to implement conversion functions for other mesh processing libraries in the future.
 
     ??? info "Interoperability With Others Libraries"
-        | Name                                                                  | From Lagrange Mesh           | To Lagrange Mesh              | Comment  |
-        | --------------------------------------------------------------------- | ---------------------------- | ----------------------------- | -------- |
-        | [cinolib](https://github.com/mlivesu/cinolib)                         | :x:                          | :x:                           |          |
-        | [geogram](http://alice.loria.fr/software/geogram/doc/html/index.html) | :x:                          | :x:                           | Planned. |
-        | [geometry-central](http://geometry-central.net/)                      | :x:                          | :x:                           | Planned. |
-        | [libigl](https://libigl.github.io/)                                   | :heavy_check_mark: (no copy) | :heavy_check_mark: (may copy) |          |
-        | [pmp-library](http://www.pmp-library.org/)                            | :x:                          | :x:                           |          |
+        | Name                                             | From Lagrange Mesh           | To Lagrange Mesh              | Comment  |
+        | ------------------------------------------------ | ---------------------------- | ----------------------------- | -------- |
+        | [cinolib](https://github.com/mlivesu/cinolib)    | :x:                          | :x:                           |          |
+        | [geogram](https://github.com/BrunoLevy/geogram)  | :x:                          | :x:                           | Planned. |
+        | [geometry-central](http://geometry-central.net/) | :x:                          | :x:                           | Planned. |
+        | [libigl](https://libigl.github.io/)              | :heavy_check_mark: (no copy) | :heavy_check_mark: (may copy) |          |
+        | [pmp-library](http://www.pmp-library.org/)       | :x:                          | :x:                           |          |
 
 4. **Clean Build System**. Lagrange has a clean and polished CMake build system. Getting started
    with Lagrange is incredibly simple, just add 5 lines to your CMake project (no git submodule
@@ -115,7 +115,6 @@ design principles that go into Lagrange.
         - Gizmos for interactive mesh and element manipulation
         - Easy to add your own UI via ImGui
         - Variety of visualization options - mix and match indexing/colormapping/rendered primitive/shading.
-
 
 10. **Robustness/Support**. Being backed by a company, Lagrange has a strong focus on correctness/being as bug free as possible. We have extensive unit testing internally, with more than 400 unit tests. Specifically, we try to ensure the following:
     - **Corner Cases**. Special cases should not crash the program. Incorrect inputs may result in exceptions being thrown.

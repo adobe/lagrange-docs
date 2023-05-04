@@ -68,7 +68,7 @@ To see available CMake options, please take a look at the file [{{ cmake_option_
 Finally, build with
 
 ```sh
-cmake --build .
+cmake --build . -j 8
 ```
 
 !!! question "Compilation Issues"

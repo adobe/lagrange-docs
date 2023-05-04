@@ -6,7 +6,7 @@
 Here is a list of third party libraries used in Lagrange. Those external dependencies will be
 automatically downloaded by our CMake system depending on which Lagrange module is enabled.
 
-!!! tip "Direct vs Indirect Dependencies"
+!!! important
     This table only lists **direct** dependencies of various Lagrange modules. Indirect dependencies
     are not listed there. {% if is_corp %} For example, OpenVDB depends on Boost, TBB and IlmBase.
     Anorigami depends on Armadillo, SuperLU, Vc, etc. {% endif %}
@@ -43,7 +43,7 @@ automatically downloaded by our CMake system depending on which Lagrange module 
 | [nanoflann](https://github.com/jlblancoc/nanoflann)                          | BSD-2                 | BVH, UI                                               |
 | [span-lite](https://github.com/martinmoene/span-lite)                        | Boost                 | Core                                                  |
 | [spdlog](https://github.com/gabime/spdlog)                                   | MIT                   | Core                                                  |
-| [stb](https://github.com/nothings/stb)                                       | Public domain         | UI                                                    |
+| [stb](https://github.com/nothings/stb)                                       | Public domain         | UI, Unit Tests (IO)                                   |
 | [tinygltf](https://github.com/syoyo/tinygltf)                                | MIT                   | IO                                                    |
 | [tinyobjloader](https://github.com/tinyobjloader/tinyobjloader)              | MIT                   | IO                                                    |
 

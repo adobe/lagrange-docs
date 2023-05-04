@@ -72,6 +72,13 @@ Mesh attributes are buffers of data associated to a mesh element. They are chara
         An attribute with the `VertexIndex` tag must have a single channel, while attributes with
         the `Color` tag can have between 1 and 4 channels.
 
+!!! note "Memory Layout"
+    Mesh attributes are stored continuous in memory. For example, the vertex positions of a 3D mesh
+    will be stored in memory as `[x0, y0, z0, x1, y1, z1, ...]` etc. If you need to wrap external
+    data with a compatible memory layout, please read our dedicated section on [wrapping external
+    buffers](#wrapping-external-buffers). If you need to track ownership, you can use a
+    [SharedSpan](../general-utilities/#shared-span) object.
+
 ## Attribute Creation
 
 To create a new attribute and return its id:
