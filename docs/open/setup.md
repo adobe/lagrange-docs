@@ -8,7 +8,14 @@
 
 - How to [compile Lagrange](build.md).
 - How to [run unit tests](dev/unit-tests.md).
-- [Example project template]({{ example_project_url }}) using Lagrange.
+{% if is_corp %}
+- Example project templates using Lagrange:
+    - [C++ Project]({{ cpp_project_url }})
+    - [Python Project]({{ python_project_url }})
+    - [C++/Python Bindings]({{ binding_project_url }})
+{% else %}
+- [Example project template]({{ cpp_project_url }}) using Lagrange.
+{% endif %}
 
 ## Contributing
 
