@@ -210,7 +210,7 @@ template&lt;typename DerivedV , typename DerivedF , typename DeriveddblA &gt; </
 <tr class="separator:a483149cef61e7cd6355dd8e90055d297"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaef57d47fd036494daf8bf23f015dd07"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="group__group-surfacemesh-attr.html#ga9d8ab208822bab9987e9652dda49d89a">AttributeElement</a> element, typename Scalar , typename Index &gt; </td></tr>
 <tr class="memitem:aaef57d47fd036494daf8bf23f015dd07"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacelagrange_1_1internal.html#aaef57d47fd036494daf8bf23f015dd07">map_attributes</a> (const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;source_mesh, <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;target_mesh, <a class="el" href="group__group-utils-misc.html#ga4afead0b9ccc53fe4fca896787595d26">span</a>&lt; const Index &gt; mapping_data, <a class="el" href="group__group-utils-misc.html#ga4afead0b9ccc53fe4fca896787595d26">span</a>&lt; const Index &gt; mapping_offsets={}, const <a class="el" href="structlagrange_1_1internal_1_1_map_attributes_options.html">MapAttributesOptions</a> &amp;options={})</td></tr>
-<tr class="memdesc:aaef57d47fd036494daf8bf23f015dd07"><td class="mdescLeft">&#160;</td><td class="mdescRight">Map vertex attributes from the source mesh to the target mesh.  <a href="namespacelagrange_1_1internal.html#aaef57d47fd036494daf8bf23f015dd07">More...</a><br /></td></tr>
+<tr class="memdesc:aaef57d47fd036494daf8bf23f015dd07"><td class="mdescLeft">&#160;</td><td class="mdescRight">Map attributes from the source mesh to the target mesh.  <a href="namespacelagrange_1_1internal.html#aaef57d47fd036494daf8bf23f015dd07">More...</a><br /></td></tr>
 <tr class="separator:aaef57d47fd036494daf8bf23f015dd07"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa7d6dc48e6ba95a80b253104e1e86b79"><td class="memTemplParams" colspan="2"><a id="aa7d6dc48e6ba95a80b253104e1e86b79" name="aa7d6dc48e6ba95a80b253104e1e86b79"></a>
 template&lt;typename DerivedF , typename DerivedC , typename AScalar &gt; </td></tr>
@@ -337,10 +337,6 @@ template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a18efc9f6e2bdf77c1b85bc5c3794edd1"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacelagrange_1_1internal.html#a18efc9f6e2bdf77c1b85bc5c3794edd1">compute_quad_areas</a> (const <a class="el" href="classlagrange_1_1_mesh.html">MeshType</a> &amp;mesh) -&gt; AttributeArrayOf&lt; <a class="el" href="classlagrange_1_1_mesh.html">MeshType</a> &gt;</td></tr>
 <tr class="memdesc:a18efc9f6e2bdf77c1b85bc5c3794edd1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the quad areas.  <a href="namespacelagrange_1_1internal.html#a18efc9f6e2bdf77c1b85bc5c3794edd1">More...</a><br /></td></tr>
 <tr class="separator:a18efc9f6e2bdf77c1b85bc5c3794edd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0debd360bb35cf42cd5b59ec1656eb07"><td class="memTemplParams" colspan="2"><a id="a0debd360bb35cf42cd5b59ec1656eb07" name="a0debd360bb35cf42cd5b59ec1656eb07"></a>
-template&lt;typename DerivedA , typename Index &gt; </td></tr>
-<tr class="memitem:a0debd360bb35cf42cd5b59ec1656eb07"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>unique_rows</b> (const Eigen::DenseBase&lt; DerivedA &gt; &amp;A, Index &amp;num_unique_vertices, std::vector&lt; Index &gt; &amp;forward_mapping)</td></tr>
-<tr class="separator:a0debd360bb35cf42cd5b59ec1656eb07"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac1913ecb96655b3d75c05d2814d01e8d"><td class="memItemLeft" align="right" valign="top"><a id="ac1913ecb96655b3d75c05d2814d01e8d" name="ac1913ecb96655b3d75c05d2814d01e8d"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>point_on_segment_2d</b> (Eigen::Vector2d p, Eigen::Vector2d a, Eigen::Vector2d b)</td></tr>
 <tr class="separator:ac1913ecb96655b3d75c05d2814d01e8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -355,6 +351,14 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>point_on_segment_3d</
 <tr class="memitem:a425b6670a3b7465f0b6a712b35f91b7c"><td class="memTemplItemLeft" align="right" valign="top">Eigen::Matrix&lt; Scalar, 3, 1 &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacelagrange_1_1internal.html#a425b6670a3b7465f0b6a712b35f91b7c">compute_weighted_corner_normal</a> (<a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;mesh, Index ci, <a class="el" href="group__group-surfacemesh-utils.html#gaa88e833ed770762b02e187f0c2377d3d">NormalWeightingType</a> weighting=<a class="el" href="group__group-surfacemesh-utils.html#ggaa88e833ed770762b02e187f0c2377d3da84f023fc44b6b158de6ccc157c8dab06">NormalWeightingType::CornerTriangleArea</a>)</td></tr>
 <tr class="memdesc:a425b6670a3b7465f0b6a712b35f91b7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute weighted corner normal based on the weighting type.  <a href="namespacelagrange_1_1internal.html#a425b6670a3b7465f0b6a712b35f91b7c">More...</a><br /></td></tr>
 <tr class="separator:a425b6670a3b7465f0b6a712b35f91b7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a37c5d2a9463c0ede0593a8c564e0e58a"><td class="memTemplParams" colspan="2">template&lt;typename Scalar , typename Index &gt; </td></tr>
+<tr class="memitem:a37c5d2a9463c0ede0593a8c564e0e58a"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacelagrange_1_1internal.html#a37c5d2a9463c0ede0593a8c564e0e58a">recompute_facet_normal_if_needed</a> (<a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;mesh, std::string_view facet_normal_attribute_name, bool recompute_facet_normals)</td></tr>
+<tr class="memdesc:a37c5d2a9463c0ede0593a8c564e0e58a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute facet normal attribute if necessary or as requested.  <a href="namespacelagrange_1_1internal.html#a37c5d2a9463c0ede0593a8c564e0e58a">More...</a><br /></td></tr>
+<tr class="separator:a37c5d2a9463c0ede0593a8c564e0e58a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5ad6c926e4a0aa8b443685e2b183b78"><td class="memTemplParams" colspan="2"><a id="af5ad6c926e4a0aa8b443685e2b183b78" name="af5ad6c926e4a0aa8b443685e2b183b78"></a>
+template&lt;typename ValueType , typename Scalar , typename Index &gt; </td></tr>
+<tr class="memitem:af5ad6c926e4a0aa8b443685e2b183b78"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>weld_indexed_attribute</b> (<a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;mesh, <a class="el" href="group__group-surfacemesh-attr.html#ga4d115376c2c766084ef808c837348fc3">AttributeId</a> attr_id, <a class="el" href="classlagrange_1_1function__ref.html">function_ref</a>&lt; bool(Index, Index)&gt; equal)</td></tr>
+<tr class="separator:af5ad6c926e4a0aa8b443685e2b183b78"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >nullptr_t, size_t, ptrdiff_t basic_ostream bad_weak_ptr extent, remove_extent, is_array, is_void, common_type move, forward, swap </p>
@@ -939,7 +943,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>point_on_segment_3d</
       </table>
 </div><div class="memdoc">
 
-<p>Map vertex attributes from the source mesh to the target mesh. </p>
+<p>Map attributes from the source mesh to the target mesh. </p>
 <p >This is the most general version that supports many-to-many mapping. Collision policy settings in <code>options</code> define the behavior when multiple source vertices are mapped to the same target vertex.</p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
@@ -952,8 +956,8 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>point_on_segment_3d</
   <table class="params">
     <tr><td class="paramname">source_mesh</td><td>The source mesh. </td></tr>
     <tr><td class="paramname">target_mesh</td><td>The target mesh. </td></tr>
-    <tr><td class="paramname">mapping_data</td><td>A flat array of source vertex indices. </td></tr>
-    <tr><td class="paramname">mapping_offsets</td><td>The offset index array into the <code>mapping_data</code>. Source vertices with index listed from <code>mapping_data[mapping_offset[i]]</code> to <code>mapping_data[mapping_offset[i+1]]</code> are mapped to target vertex <code>i</code>. If empty, source vertex with index <code>mapping_data[i]</code> is mapped to target vertex <code>i</code>. </td></tr>
+    <tr><td class="paramname">mapping_data</td><td>A flat array of source element indices. </td></tr>
+    <tr><td class="paramname">mapping_offsets</td><td>The offset index array into the <code>mapping_data</code>. Source element with index listed from <code>mapping_data[mapping_offset[i]]</code> to <code>mapping_data[mapping_offset[i+1]]</code> are mapped to target element <code>i</code>. If empty, source element with index <code>mapping_data[i]</code> is mapped to target element <code>i</code>. </td></tr>
     <tr><td class="paramname">options</td><td>Option settings.</td></tr>
   </table>
   </dd>
@@ -1372,6 +1376,58 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>point_on_segment_3d</
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>the weighted normal vector corresponding to the target corner. </dd></dl>
+
+</div>
+</div>
+<a id="a37c5d2a9463c0ede0593a8c564e0e58a" name="a37c5d2a9463c0ede0593a8c564e0e58a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a37c5d2a9463c0ede0593a8c564e0e58a">&#9670;&nbsp;</a></span>recompute_facet_normal_if_needed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto recompute_facet_normal_if_needed </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;&#160;</td>
+          <td class="paramname"><em>mesh</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string_view&#160;</td>
+          <td class="paramname"><em>facet_normal_attribute_name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>recompute_facet_normals</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Compute facet normal attribute if necessary or as requested. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Scalar</td><td><a class="el" href="classlagrange_1_1_mesh.html">Mesh</a> scalar type </td></tr>
+    <tr><td class="paramname">Index</td><td><a class="el" href="classlagrange_1_1_mesh.html">Mesh</a> index type</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mesh</td><td>The input mesh. </td></tr>
+    <tr><td class="paramname">facet_normal_attribute_name</td><td>The facet normal attribute name. </td></tr>
+    <tr><td class="paramname">recompute_facet_normals</td><td>Whether to recompute facet normals if one already exists.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A pair of the facet normal attribute id and a boolean indicating whether the facet </dd></dl>
 
 </div>
 </div>

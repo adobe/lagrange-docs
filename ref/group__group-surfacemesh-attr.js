@@ -30,12 +30,15 @@ var group__group_surfacemesh_attr =
       [ "get_default_value", "classlagrange_1_1_attribute.html#a05bd22f7a3d9badd5bac97646ecafbeb", null ],
       [ "set_growth_policy", "classlagrange_1_1_attribute.html#ab217d2294fbc0b513b2e35991d292640", null ],
       [ "get_growth_policy", "classlagrange_1_1_attribute.html#aff5e8940561ba85ef8174da10b27179b", null ],
+      [ "set_shrink_policy", "classlagrange_1_1_attribute.html#ae91e4be8b2212c4aeffcf996019e246c", null ],
+      [ "get_shrink_policy", "classlagrange_1_1_attribute.html#ab2770cd6936e0cb0936256189a4025fe", null ],
       [ "set_write_policy", "classlagrange_1_1_attribute.html#a75d9dce1d7bce7980490806a26832306", null ],
       [ "get_write_policy", "classlagrange_1_1_attribute.html#ad9b8b1f723ee9f5918f8c9783fc27590", null ],
       [ "set_copy_policy", "classlagrange_1_1_attribute.html#ab098c8a7d3c8e9b496f98d6a3f67d8c6", null ],
       [ "get_copy_policy", "classlagrange_1_1_attribute.html#a092f27d0f1e475f8faf46c6c804fafd1", null ],
       [ "create_internal_copy", "classlagrange_1_1_attribute.html#a65f3d917d55163cf642f8b3f95fb583a", null ],
       [ "clear", "classlagrange_1_1_attribute.html#ac8bb3912a3ce86b15842e79d0b421204", null ],
+      [ "shrink_to_fit", "classlagrange_1_1_attribute.html#a5f16304f80b6fb253c7b0ead3e16dd18", null ],
       [ "reserve_entries", "classlagrange_1_1_attribute.html#a318ea0f5c0a5892eb442deb175c35439", null ],
       [ "resize_elements", "classlagrange_1_1_attribute.html#accb16830f4b56571d337453087b87ea8", null ],
       [ "insert_elements", "classlagrange_1_1_attribute.html#afd4ebaf0e6c604542ea044f3c4334648", null ],
@@ -44,6 +47,7 @@ var group__group_surfacemesh_attr =
       [ "empty", "classlagrange_1_1_attribute.html#a644718bb2fb240de962dc3c9a1fdf0dc", null ],
       [ "get_num_elements", "classlagrange_1_1_attribute.html#aa687c94558309a2124106fff7a36b852", null ],
       [ "is_external", "classlagrange_1_1_attribute.html#aa89c7d479fb5c57df5f6525997ea5af1", null ],
+      [ "is_managed", "classlagrange_1_1_attribute.html#a006833340d60ba36eb12567741fca0c7", null ],
       [ "is_read_only", "classlagrange_1_1_attribute.html#a73708b428a01b492a77edcaf123955d9", null ],
       [ "get", "classlagrange_1_1_attribute.html#abbea9191f90ddaa1966796e870cf3cdd", null ],
       [ "ref", "classlagrange_1_1_attribute.html#af90e74057b85e5df3435cf0ce63fe2c6", null ],
@@ -69,6 +73,7 @@ var group__group_surfacemesh_attr =
       [ "m_view", "classlagrange_1_1_attribute.html#a06e582d328b836d89ac8e2c1d29845a5", null ],
       [ "m_const_view", "classlagrange_1_1_attribute.html#ae33ae349a8a8fbd1b41b029ba8054484", null ],
       [ "m_growth_policy", "classlagrange_1_1_attribute.html#a32db6c310b29fb0f13d594c667abfcf4", null ],
+      [ "m_shrink_policy", "classlagrange_1_1_attribute.html#a8e2066426e5ee0b662e282e2236cc423", null ],
       [ "m_write_policy", "classlagrange_1_1_attribute.html#a81ac5e6e4ab023885c334c86e1325744", null ],
       [ "m_copy_policy", "classlagrange_1_1_attribute.html#aeb40e84a56364071d899e534183777b2", null ],
       [ "m_is_external", "classlagrange_1_1_attribute.html#a1f1b1142d86a16ba5d18fd334bf83fdc", null ],
@@ -124,6 +129,12 @@ var group__group_surfacemesh_attr =
       [ "lagrange::AttributeGrowthPolicy::WarnAndCopy", "group__group-surfacemesh-attr.html#ggaee0f51b5f793101c19bd6dede5db7a7aaef773dc1e1097301a1bf955bfa9857ec", null ],
       [ "lagrange::AttributeGrowthPolicy::SilentCopy", "group__group-surfacemesh-attr.html#ggaee0f51b5f793101c19bd6dede5db7a7aae1ed7e29bdcf7fc9d30c50447e35ab92", null ]
     ] ],
+    [ "lagrange::AttributeShrinkPolicy", "group__group-surfacemesh-attr.html#ga7f2b557c48ed06d24e17c4da83b77ed6", [
+      [ "lagrange::AttributeShrinkPolicy::ErrorIfExternal", "group__group-surfacemesh-attr.html#gga7f2b557c48ed06d24e17c4da83b77ed6a9e7163ae7c790d007e084e24693b2303", null ],
+      [ "lagrange::AttributeShrinkPolicy::IgnoreIfExternal", "group__group-surfacemesh-attr.html#gga7f2b557c48ed06d24e17c4da83b77ed6a410c5804c7d350b6891cb8c15fdf97e8", null ],
+      [ "lagrange::AttributeShrinkPolicy::WarnAndCopy", "group__group-surfacemesh-attr.html#gga7f2b557c48ed06d24e17c4da83b77ed6aef773dc1e1097301a1bf955bfa9857ec", null ],
+      [ "lagrange::AttributeShrinkPolicy::SilentCopy", "group__group-surfacemesh-attr.html#gga7f2b557c48ed06d24e17c4da83b77ed6ae1ed7e29bdcf7fc9d30c50447e35ab92", null ]
+    ] ],
     [ "lagrange::AttributeWritePolicy", "group__group-surfacemesh-attr.html#ga3018d576f81897e1712c3601b9625cb9", [
       [ "lagrange::AttributeWritePolicy::ErrorIfReadOnly", "group__group-surfacemesh-attr.html#gga3018d576f81897e1712c3601b9625cb9a61eb7df0ff95cbd596ba2a4c7ee06b32", null ],
       [ "lagrange::AttributeWritePolicy::WarnAndCopy", "group__group-surfacemesh-attr.html#gga3018d576f81897e1712c3601b9625cb9aef773dc1e1097301a1bf955bfa9857ec", null ],
@@ -131,6 +142,7 @@ var group__group_surfacemesh_attr =
     ] ],
     [ "lagrange::AttributeExportPolicy", "group__group-surfacemesh-attr.html#gade3ae5b7e72e9d4f92f29c6563551c10", [
       [ "lagrange::AttributeExportPolicy::CopyIfExternal", "group__group-surfacemesh-attr.html#ggade3ae5b7e72e9d4f92f29c6563551c10afe72de1001d465db9eb6ce5cb874c2cb", null ],
+      [ "lagrange::AttributeExportPolicy::CopyIfUnmanaged", "group__group-surfacemesh-attr.html#ggade3ae5b7e72e9d4f92f29c6563551c10a2bdb7937b8109f604fbf49e7c1ad1aa3", null ],
       [ "lagrange::AttributeExportPolicy::KeepExternalPtr", "group__group-surfacemesh-attr.html#ggade3ae5b7e72e9d4f92f29c6563551c10a9a526f6dc0d4d6aef1f368972f20d13e", null ],
       [ "lagrange::AttributeExportPolicy::ErrorIfExternal", "group__group-surfacemesh-attr.html#ggade3ae5b7e72e9d4f92f29c6563551c10a9e7163ae7c790d007e084e24693b2303", null ]
     ] ],

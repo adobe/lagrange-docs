@@ -28,5 +28,6 @@ var group__group_surfacemesh_attr_utils =
     [ "lagrange::separate_by_facet_groups", "group__group-surfacemesh-attr-utils.html#ga8bfc61d050dfff96cd48f72f4bd4b149", null ],
     [ "lagrange::separate_by_facet_groups", "group__group-surfacemesh-attr-utils.html#ga987e83dd82916a9347d04f1d45a7934e", null ],
     [ "lagrange::unify_index_buffer", "group__group-surfacemesh-attr-utils.html#gae8deb2977d6d78e0b8e3a9a7773b6c72", null ],
-    [ "lagrange::unify_named_index_buffer", "group__group-surfacemesh-attr-utils.html#ga40817d91add1d124cc9f362f019d1f0c", null ]
+    [ "lagrange::unify_named_index_buffer", "group__group-surfacemesh-attr-utils.html#ga40817d91add1d124cc9f362f019d1f0c", null ],
+    [ "lagrange::weld_indexed_attribute", "group__group-surfacemesh-attr-utils.html#gaad759b003a1c91b6070358d952f22874", null ]
 ];

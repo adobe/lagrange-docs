@@ -17,5 +17,6 @@ var searchData=
   ['normaloptions_14',['NormalOptions',['../structlagrange_1_1_normal_options.html',1,'lagrange']]],
   ['normalweightingtype_15',['NormalWeightingType',['../group__group-surfacemesh-utils.html#gaa88e833ed770762b02e187f0c2377d3d',1,'lagrange']]],
   ['nth_16',['nth',['../structlagrange_1_1mapbox_1_1util_1_1nth.html',1,'lagrange::mapbox::util']]],
-  ['num_5frepresentatives_17',['num_representatives',['../structlagrange_1_1internal_1_1_bucket_sort_result.html#ab3caef73b39b6c78fef58146d093e08d',1,'lagrange::internal::BucketSortResult']]]
+  ['null_5farea_5fthreshold_17',['null_area_threshold',['../structlagrange_1_1_remove_null_area_facets_options.html#ad49f5977fbc988e5d27cb0ece3e6cb00',1,'lagrange::RemoveNullAreaFacetsOptions']]],
+  ['num_5frepresentatives_18',['num_representatives',['../structlagrange_1_1internal_1_1_bucket_sort_result.html#ab3caef73b39b6c78fef58146d093e08d',1,'lagrange::internal::BucketSortResult']]]
 ];

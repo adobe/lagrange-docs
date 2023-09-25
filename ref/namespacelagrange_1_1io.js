@@ -2,6 +2,7 @@ var namespacelagrange_1_1io =
 [
     [ "LoadOptions", "structlagrange_1_1io_1_1_load_options.html", "structlagrange_1_1io_1_1_load_options" ],
     [ "SaveOptions", "structlagrange_1_1io_1_1_save_options.html", "structlagrange_1_1io_1_1_save_options" ],
+    [ "load_mesh", "namespacelagrange_1_1io.html#a8606d6ccb4929c6235b3ef15991d5326", null ],
     [ "load_mesh", "namespacelagrange_1_1io.html#a07188a43fac8198fd7d97a6d9f2b222f", null ],
     [ "load_mesh_gltf", "namespacelagrange_1_1io.html#af12e799e867e6df806caf32848f1d89d", null ],
     [ "load_mesh_gltf", "namespacelagrange_1_1io.html#a0cbdc00628d1109f3544090e26769f90", null ],
@@ -14,6 +15,7 @@ var namespacelagrange_1_1io =
     [ "load_simple_scene", "namespacelagrange_1_1io.html#a59d6b08204508eecdf805ee9c257613e", null ],
     [ "load_simple_scene_gltf", "namespacelagrange_1_1io.html#a6205e0931ff898b57295fbca9bf86292", null ],
     [ "load_simple_scene_gltf", "namespacelagrange_1_1io.html#ab57e5a417e429d912c0d2c7af5f637eb", null ],
+    [ "save_mesh", "namespacelagrange_1_1io.html#a373189140dbd23699f1a5f0e959f2267", null ],
     [ "save_mesh", "namespacelagrange_1_1io.html#a3d820dd6a5ce1ffc8f4e8f9f08d05a5b", null ],
     [ "save_mesh_gltf", "namespacelagrange_1_1io.html#a92d9ed7dedce77061a4ae4b48cf1e696", null ],
     [ "save_mesh_gltf", "namespacelagrange_1_1io.html#a7fb0b3af07a6113763244f7935d34fb9", null ],

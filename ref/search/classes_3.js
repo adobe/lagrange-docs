@@ -12,7 +12,9 @@ var searchData=
   ['defaulttools_9',['DefaultTools',['../structlagrange_1_1ui_1_1_default_tools.html',1,'lagrange::ui']]],
   ['dehoveredevent_10',['DehoveredEvent',['../structlagrange_1_1ui_1_1_dehovered_event.html',1,'lagrange::ui']]],
   ['deselectedevent_11',['DeselectedEvent',['../structlagrange_1_1ui_1_1_deselected_event.html',1,'lagrange::ui']]],
-  ['disjointsets_12',['DisjointSets',['../classlagrange_1_1_disjoint_sets.html',1,'lagrange']]],
-  ['dockspace_13',['Dockspace',['../structlagrange_1_1ui_1_1_dockspace.html',1,'lagrange::ui']]],
-  ['downloadresult_14',['DownloadResult',['../structlagrange_1_1ui_1_1_texture_1_1_download_result.html',1,'lagrange::ui::Texture']]]
+  ['dihedralangleoptions_12',['DihedralAngleOptions',['../structlagrange_1_1_dihedral_angle_options.html',1,'lagrange']]],
+  ['dijkstradistanceoptions_13',['DijkstraDistanceOptions',['../structlagrange_1_1_dijkstra_distance_options.html',1,'lagrange']]],
+  ['disjointsets_14',['DisjointSets',['../classlagrange_1_1_disjoint_sets.html',1,'lagrange']]],
+  ['dockspace_15',['Dockspace',['../structlagrange_1_1ui_1_1_dockspace.html',1,'lagrange::ui']]],
+  ['downloadresult_16',['DownloadResult',['../structlagrange_1_1ui_1_1_texture_1_1_download_result.html',1,'lagrange::ui::Texture']]]
 ];

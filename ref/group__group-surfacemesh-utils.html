@@ -138,6 +138,11 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlagrange_1_1_component_options.html">ComponentOptions</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Options to control connected components computation.  <a href="structlagrange_1_1_component_options.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlagrange_1_1_dihedral_angle_options.html">DihedralAngleOptions</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Option struct for computing dihedral angles.  <a href="structlagrange_1_1_dihedral_angle_options.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlagrange_1_1_edge_length_options.html">EdgeLengthOptions</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlagrange_1_1_facet_normal_options.html">FacetNormalOptions</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Option struct for computing per-facet mesh normals.  <a href="structlagrange_1_1_facet_normal_options.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -228,6 +233,14 @@ Functions</h2></td></tr>
 <tr class="memitem:gafedc8c0d66af62d6f3d540465c0018c6"><td class="memTemplItemLeft" align="right" valign="top">size_t&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__group-surfacemesh-utils.html#gafedc8c0d66af62d6f3d540465c0018c6">compute_components</a> (<a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;mesh, <a class="el" href="structlagrange_1_1_component_options.html">ComponentOptions</a> options={})</td></tr>
 <tr class="memdesc:gafedc8c0d66af62d6f3d540465c0018c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute connected components of an input mesh.  <a href="group__group-surfacemesh-utils.html#gafedc8c0d66af62d6f3d540465c0018c6">More...</a><br /></td></tr>
 <tr class="separator:gafedc8c0d66af62d6f3d540465c0018c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab65464571f0034e009273ade90fcb4bf"><td class="memTemplParams" colspan="2">template&lt;typename Scalar , typename Index &gt; </td></tr>
+<tr class="memitem:gab65464571f0034e009273ade90fcb4bf"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="group__group-surfacemesh-attr.html#ga4d115376c2c766084ef808c837348fc3">AttributeId</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__group-surfacemesh-utils.html#gab65464571f0034e009273ade90fcb4bf">compute_dihedral_angles</a> (<a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;mesh, const <a class="el" href="structlagrange_1_1_dihedral_angle_options.html">DihedralAngleOptions</a> &amp;options={})</td></tr>
+<tr class="memdesc:gab65464571f0034e009273ade90fcb4bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes dihedral angles for each edge in the mesh.  <a href="group__group-surfacemesh-utils.html#gab65464571f0034e009273ade90fcb4bf">More...</a><br /></td></tr>
+<tr class="separator:gab65464571f0034e009273ade90fcb4bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga58593e3709263771bc25ff51f473c92a"><td class="memTemplParams" colspan="2">template&lt;typename Scalar , typename Index &gt; </td></tr>
+<tr class="memitem:ga58593e3709263771bc25ff51f473c92a"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="group__group-surfacemesh-attr.html#ga4d115376c2c766084ef808c837348fc3">AttributeId</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__group-surfacemesh-utils.html#ga58593e3709263771bc25ff51f473c92a">compute_edge_lengths</a> (<a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;mesh, const <a class="el" href="structlagrange_1_1_edge_length_options.html">EdgeLengthOptions</a> &amp;options={})</td></tr>
+<tr class="memdesc:ga58593e3709263771bc25ff51f473c92a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes edge lengths attribute.  <a href="group__group-surfacemesh-utils.html#ga58593e3709263771bc25ff51f473c92a">More...</a><br /></td></tr>
+<tr class="separator:ga58593e3709263771bc25ff51f473c92a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga50e835144b2dd2ad5df9848293c8b097"><td class="memTemplParams" colspan="2">template&lt;typename Scalar , typename Index &gt; </td></tr>
 <tr class="memitem:ga50e835144b2dd2ad5df9848293c8b097"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="group__group-surfacemesh-attr.html#ga4d115376c2c766084ef808c837348fc3">AttributeId</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__group-surfacemesh-utils.html#ga50e835144b2dd2ad5df9848293c8b097">compute_facet_normal</a> (<a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;mesh, <a class="el" href="structlagrange_1_1_facet_normal_options.html">FacetNormalOptions</a> options={})</td></tr>
 <tr class="memdesc:ga50e835144b2dd2ad5df9848293c8b097"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute facet normals.  <a href="group__group-surfacemesh-utils.html#ga50e835144b2dd2ad5df9848293c8b097">More...</a><br /></td></tr>
@@ -268,6 +281,10 @@ Functions</h2></td></tr>
 <tr class="memitem:gaa13892cc06d31d64e6613c3e48785591"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="group__group-surfacemesh-attr.html#ga4d115376c2c766084ef808c837348fc3">AttributeId</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__group-surfacemesh-utils.html#gaa13892cc06d31d64e6613c3e48785591">compute_weighted_corner_normal</a> (<a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;mesh, <a class="el" href="structlagrange_1_1_corner_normal_options.html">CornerNormalOptions</a> option={})</td></tr>
 <tr class="memdesc:gaa13892cc06d31d64e6613c3e48785591"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute corner normals.  <a href="group__group-surfacemesh-utils.html#gaa13892cc06d31d64e6613c3e48785591">More...</a><br /></td></tr>
 <tr class="separator:gaa13892cc06d31d64e6613c3e48785591"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab32ca760af612ea529943197c79f719b"><td class="memTemplParams" colspan="2">template&lt;typename Scalar , typename Index &gt; </td></tr>
+<tr class="memitem:gab32ca760af612ea529943197c79f719b"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; std::vector&lt; Index &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__group-surfacemesh-utils.html#gab32ca760af612ea529943197c79f719b">extract_boundary_loops</a> (const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;mesh)</td></tr>
+<tr class="memdesc:gab32ca760af612ea529943197c79f719b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Extract boundary loops from a surface mesh.  <a href="group__group-surfacemesh-utils.html#gab32ca760af612ea529943197c79f719b">More...</a><br /></td></tr>
+<tr class="separator:gab32ca760af612ea529943197c79f719b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaf07b7ee38e3c92577a3cdc9a7bb38479"><td class="memTemplParams" colspan="2">template&lt;typename Scalar , typename Index &gt; </td></tr>
 <tr class="memitem:gaf07b7ee38e3c92577a3cdc9a7bb38479"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__group-surfacemesh-utils.html#gaf07b7ee38e3c92577a3cdc9a7bb38479">normalize_mesh</a> (<a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;mesh)</td></tr>
 <tr class="memdesc:gaf07b7ee38e3c92577a3cdc9a7bb38479"><td class="mdescLeft">&#160;</td><td class="mdescRight">Normalize a mesh to fit in a unit box centered at the origin.  <a href="group__group-surfacemesh-utils.html#gaf07b7ee38e3c92577a3cdc9a7bb38479">More...</a><br /></td></tr>
@@ -276,6 +293,10 @@ Functions</h2></td></tr>
 <tr class="memitem:gad46e0464a61ba9b6c5fd7948af53c304"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__group-surfacemesh-utils.html#gad46e0464a61ba9b6c5fd7948af53c304">normalize_meshes</a> (<a class="el" href="group__group-utils-misc.html#ga4afead0b9ccc53fe4fca896787595d26">span</a>&lt; <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; * &gt; meshes)</td></tr>
 <tr class="memdesc:gad46e0464a61ba9b6c5fd7948af53c304"><td class="mdescLeft">&#160;</td><td class="mdescRight">Normalize a list of meshes to fit in a unit box centered at the origin.  <a href="group__group-surfacemesh-utils.html#gad46e0464a61ba9b6c5fd7948af53c304">More...</a><br /></td></tr>
 <tr class="separator:gad46e0464a61ba9b6c5fd7948af53c304"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4bb6f1ff87f6aac0062ac21dba0f2349"><td class="memTemplParams" colspan="2">template&lt;typename Scalar , typename Index &gt; </td></tr>
+<tr class="memitem:ga4bb6f1ff87f6aac0062ac21dba0f2349"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__group-surfacemesh-utils.html#ga4bb6f1ff87f6aac0062ac21dba0f2349">permute_facets</a> (<a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;mesh, <a class="el" href="group__group-utils-misc.html#ga4afead0b9ccc53fe4fca896787595d26">span</a>&lt; const Index &gt; new_to_old)</td></tr>
+<tr class="memdesc:ga4bb6f1ff87f6aac0062ac21dba0f2349"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reorder facets of a mesh based on a given permutation.  <a href="group__group-surfacemesh-utils.html#ga4bb6f1ff87f6aac0062ac21dba0f2349">More...</a><br /></td></tr>
+<tr class="separator:ga4bb6f1ff87f6aac0062ac21dba0f2349"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga8aea6bef4481de2ace23921d95fdc8fe"><td class="memTemplParams" colspan="2">template&lt;typename Scalar , typename Index &gt; </td></tr>
 <tr class="memitem:ga8aea6bef4481de2ace23921d95fdc8fe"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__group-surfacemesh-utils.html#ga8aea6bef4481de2ace23921d95fdc8fe">permute_vertices</a> (<a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;mesh, <a class="el" href="group__group-utils-misc.html#ga4afead0b9ccc53fe4fca896787595d26">span</a>&lt; const Index &gt; new_to_old)</td></tr>
 <tr class="memdesc:ga8aea6bef4481de2ace23921d95fdc8fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reorder vertices of a mesh based on a given permutation.  <a href="group__group-surfacemesh-utils.html#ga8aea6bef4481de2ace23921d95fdc8fe">More...</a><br /></td></tr>
@@ -873,6 +894,102 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="gab65464571f0034e009273ade90fcb4bf" name="gab65464571f0034e009273ade90fcb4bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab65464571f0034e009273ade90fcb4bf">&#9670;&nbsp;</a></span>compute_dihedral_angles()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__group-surfacemesh-attr.html#ga4d115376c2c766084ef808c837348fc3">AttributeId</a> compute_dihedral_angles </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;&#160;</td>
+          <td class="paramname"><em>mesh</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structlagrange_1_1_dihedral_angle_options.html">DihedralAngleOptions</a> &amp;&#160;</td>
+          <td class="paramname"><em>options</em> = <code>{}</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;lagrange/compute_dihedral_angles.h&gt;</code></p>
+
+<p>Computes dihedral angles for each edge in the mesh. </p>
+<p >The dihedral angle of an edge is defined as the angle between the <b>normals</b> of two facets adjacent to the edge. The dihedral angle is always in the range \([0, \pi]\) for manifold edges. For boundary edges, the dihedral angle defaults to 0. For non-manifold edges, the dihedral angle is not well-defined and will be set to the special value \( 2\pi \).</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Scalar</td><td><a class="el" href="classlagrange_1_1_mesh.html">Mesh</a> scalar type </td></tr>
+    <tr><td class="paramname">Index</td><td><a class="el" href="classlagrange_1_1_mesh.html">Mesh</a> index type</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">mesh</td><td>The input mesh. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">options</td><td>Options for computing dihedral angles.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The id of the dihedral angle attribute.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="structlagrange_1_1_dihedral_angle_options.html" title="Option struct for computing dihedral angles.">DihedralAngleOptions</a> </dd></dl>
+
+</div>
+</div>
+<a id="ga58593e3709263771bc25ff51f473c92a" name="ga58593e3709263771bc25ff51f473c92a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga58593e3709263771bc25ff51f473c92a">&#9670;&nbsp;</a></span>compute_edge_lengths()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__group-surfacemesh-attr.html#ga4d115376c2c766084ef808c837348fc3">AttributeId</a> compute_edge_lengths </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;&#160;</td>
+          <td class="paramname"><em>mesh</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structlagrange_1_1_edge_length_options.html">EdgeLengthOptions</a> &amp;&#160;</td>
+          <td class="paramname"><em>options</em> = <code>{}</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;lagrange/compute_edge_lengths.h&gt;</code></p>
+
+<p>Computes edge lengths attribute. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Scalar</td><td><a class="el" href="classlagrange_1_1_mesh.html">Mesh</a> scalar type </td></tr>
+    <tr><td class="paramname">Index</td><td><a class="el" href="classlagrange_1_1_mesh.html">Mesh</a> index type</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mesh</td><td>The input mesh </td></tr>
+    <tr><td class="paramname">options</td><td>Options for computing edge lengths.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="classlagrange_1_1_attribute.html" title="Derived attribute class that stores the actual information.">Attribute</a> ID of the computed edge lengths attribute. </dd></dl>
+
+</div>
+</div>
 <a id="ga50e835144b2dd2ad5df9848293c8b097" name="ga50e835144b2dd2ad5df9848293c8b097"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga50e835144b2dd2ad5df9848293c8b097">&#9670;&nbsp;</a></span>compute_facet_normal()</h2>
 
@@ -1389,6 +1506,42 @@ Corner normals around a given vertex could be different even when the vertex is 
 
 </div>
 </div>
+<a id="gab32ca760af612ea529943197c79f719b" name="gab32ca760af612ea529943197c79f719b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab32ca760af612ea529943197c79f719b">&#9670;&nbsp;</a></span>extract_boundary_loops()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; std::vector&lt; Index &gt; &gt; extract_boundary_loops </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;&#160;</td>
+          <td class="paramname"><em>mesh</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;lagrange/extract_boundary_loops.h&gt;</code></p>
+
+<p>Extract boundary loops from a surface mesh. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Scalar</td><td>The scalar type of the mesh. </td></tr>
+    <tr><td class="paramname">Index</td><td>The index type of the mesh.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mesh</td><td>The input surface mesh.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A vector of boundary loops, each represented by a vector of vertex indices. </dd></dl>
+
+</div>
+</div>
 <a id="gaf07b7ee38e3c92577a3cdc9a7bb38479" name="gaf07b7ee38e3c92577a3cdc9a7bb38479"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#gaf07b7ee38e3c92577a3cdc9a7bb38479">&#9670;&nbsp;</a></span>normalize_mesh()</h2>
 
@@ -1459,6 +1612,47 @@ Corner normals around a given vertex could be different even when the vertex is 
 
 </div>
 </div>
+<a id="ga4bb6f1ff87f6aac0062ac21dba0f2349" name="ga4bb6f1ff87f6aac0062ac21dba0f2349"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4bb6f1ff87f6aac0062ac21dba0f2349">&#9670;&nbsp;</a></span>permute_facets()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void permute_facets </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;&#160;</td>
+          <td class="paramname"><em>mesh</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__group-utils-misc.html#ga4afead0b9ccc53fe4fca896787595d26">span</a>&lt; const Index &gt;&#160;</td>
+          <td class="paramname"><em>new_to_old</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;lagrange/permute_facets.h&gt;</code></p>
+
+<p>Reorder facets of a mesh based on a given permutation. </p>
+<p >i.e. rearrangement facets so that they are ordered as specified by the <code>new_to_old</code> index array. The total number of facets is unchanged.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">mesh</td><td>The target mesh whose facets will be reordered in place. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">new_to_old</td><td>The permutation index array specifying the new facet order. This array can often be obtained via index-based sorting of the facets with customized comparison.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd><code><a class="el" href="group__group-surfacemesh-attr-utils.html#ga6f1b4f791ba72765e9c19df688bffd1c" title="Extract a submesh that consists of a subset of the facets of the source mesh.">extract_submesh</a></code> to extract a subset of the facets. </dd></dl>
+
+</div>
+</div>
 <a id="ga8aea6bef4481de2ace23921d95fdc8fe" name="ga8aea6bef4481de2ace23921d95fdc8fe"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga8aea6bef4481de2ace23921d95fdc8fe">&#9670;&nbsp;</a></span>permute_vertices()</h2>
 
@@ -1488,11 +1682,11 @@ Corner normals around a given vertex could be different even when the vertex is 
 <p><code>#include &lt;lagrange/permute_vertices.h&gt;</code></p>
 
 <p>Reorder vertices of a mesh based on a given permutation. </p>
-<p >i.e. rearrangement vertices so that they are ordered as specified by the <code>new_to_old</code> index array. The total number of vertices is unchnaged.</p>
+<p >i.e. rearrangement vertices so that they are ordered as specified by the <code>new_to_old</code> index array. The total number of vertices is unchanged.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in,out]</td><td class="paramname">mesh</td><td>The target mesh whose vertices will be reordered in place. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">new_to_old</td><td>The permutation index array specifying the new vertex order. This array can often be obteined via index-based sorting of the vertices with customized comparison.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">new_to_old</td><td>The permutation index array specifying the new vertex order. This array can often be obtained via index-based sorting of the vertices with customized comparison.</td></tr>
   </table>
   </dd>
 </dl>

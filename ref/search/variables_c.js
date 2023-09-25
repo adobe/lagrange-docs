@@ -6,5 +6,6 @@ var searchData=
   ['normal_3',['normal',['../structlagrange_1_1_attribute_name.html#a29fc2366719c877b731e125ebc94b5b2',1,'lagrange::AttributeName::normal()'],['../structlagrange_1_1ui_1_1_shader_texture_property.html#adc15d79fa0f367652c8455ef7c5b32c1',1,'lagrange::ui::ShaderTextureProperty::normal()']]],
   ['normal_5fattribute_5fname_4',['normal_attribute_name',['../structlagrange_1_1_tangent_bitangent_options.html#a51066a9b87ceffa1db37243770584972',1,'lagrange::TangentBitangentOptions']]],
   ['normalize_5',['normalize',['../structlagrange_1_1io_1_1legacy_1_1_mesh_loader_params.html#af605523fa15cd8296704092afd159029',1,'lagrange::io::legacy::MeshLoaderParams']]],
-  ['num_5frepresentatives_6',['num_representatives',['../structlagrange_1_1internal_1_1_bucket_sort_result.html#ab3caef73b39b6c78fef58146d093e08d',1,'lagrange::internal::BucketSortResult']]]
+  ['null_5farea_5fthreshold_6',['null_area_threshold',['../structlagrange_1_1_remove_null_area_facets_options.html#ad49f5977fbc988e5d27cb0ece3e6cb00',1,'lagrange::RemoveNullAreaFacetsOptions']]],
+  ['num_5frepresentatives_7',['num_representatives',['../structlagrange_1_1internal_1_1_bucket_sort_result.html#ab3caef73b39b6c78fef58146d093e08d',1,'lagrange::internal::BucketSortResult']]]
 ];

@@ -154,6 +154,10 @@ Functions</h2></td></tr>
 <tr class="memitem:ga987e83dd82916a9347d04f1d45a7934e"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__group-surfacemesh-attr-utils.html#ga987e83dd82916a9347d04f1d45a7934e">separate_by_facet_groups</a> (const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;mesh, size_t num_groups, <a class="el" href="classlagrange_1_1function__ref.html">function_ref</a>&lt; Index(Index)&gt; get_facet_group, const <a class="el" href="structlagrange_1_1_separate_by_facet_groups_options.html">SeparateByFacetGroupsOptions</a> &amp;options={})</td></tr>
 <tr class="memdesc:ga987e83dd82916a9347d04f1d45a7934e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Extract a set of submeshes based on facet groups.  <a href="group__group-surfacemesh-attr-utils.html#ga987e83dd82916a9347d04f1d45a7934e">More...</a><br /></td></tr>
 <tr class="separator:ga987e83dd82916a9347d04f1d45a7934e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaad759b003a1c91b6070358d952f22874"><td class="memTemplParams" colspan="2">template&lt;typename Scalar , typename Index &gt; </td></tr>
+<tr class="memitem:gaad759b003a1c91b6070358d952f22874"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__group-surfacemesh-attr-utils.html#gaad759b003a1c91b6070358d952f22874">weld_indexed_attribute</a> (<a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;mesh, <a class="el" href="group__group-surfacemesh-attr.html#ga4d115376c2c766084ef808c837348fc3">AttributeId</a> attr_id)</td></tr>
+<tr class="memdesc:gaad759b003a1c91b6070358d952f22874"><td class="mdescLeft">&#160;</td><td class="mdescRight">Weld an indexed attribute by combining all corners around a vertex with the same attribute value.  <a href="group__group-surfacemesh-attr-utils.html#gaad759b003a1c91b6070358d952f22874">More...</a><br /></td></tr>
+<tr class="separator:gaad759b003a1c91b6070358d952f22874"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader">Attribute remapping</h2></td></tr>
 <tr><td class="ititle" colspan="2"><p >Mapping attributes between different element types.</p>
@@ -787,6 +791,52 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A polygonal mesh with unified indices for position and attributes specified in <code>attribute_names</code>.</dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="group__group-surfacemesh-attr-utils.html#gae8deb2977d6d78e0b8e3a9a7773b6c72" title="Unify index buffers of the input mesh for all attributes specified in attribute_ids.">unify_index_buffer(const SurfaceMesh&lt;Scalar, Index&gt;&amp;, const std::vector&lt;AttributeId&gt;&amp;)</a> for more info. </dd></dl>
+
+</div>
+</div>
+<a id="gaad759b003a1c91b6070358d952f22874" name="gaad759b003a1c91b6070358d952f22874"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaad759b003a1c91b6070358d952f22874">&#9670;&nbsp;</a></span>weld_indexed_attribute()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void weld_indexed_attribute </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;&#160;</td>
+          <td class="paramname"><em>mesh</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__group-surfacemesh-attr.html#ga4d115376c2c766084ef808c837348fc3">AttributeId</a>&#160;</td>
+          <td class="paramname"><em>attr_id</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;lagrange/weld_indexed_attribute.h&gt;</code></p>
+
+<p>Weld an indexed attribute by combining all corners around a vertex with the same attribute value. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Scalar</td><td>The mesh scalar type. </td></tr>
+    <tr><td class="paramname">Index</td><td>The mesh index type.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mesh</td><td>The source mesh. </td></tr>
+    <tr><td class="paramname">attr_id</td><td>The indexed attribute id. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

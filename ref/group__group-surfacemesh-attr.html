@@ -197,6 +197,13 @@ Enumerations</h2></td></tr>
  }</td></tr>
 <tr class="memdesc:gaee0f51b5f793101c19bd6dede5db7a7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Policy for growing external attribute buffers.  <a href="group__group-surfacemesh-attr.html#gaee0f51b5f793101c19bd6dede5db7a7a">More...</a><br /></td></tr>
 <tr class="separator:gaee0f51b5f793101c19bd6dede5db7a7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7f2b557c48ed06d24e17c4da83b77ed6"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group-surfacemesh-attr.html#ga7f2b557c48ed06d24e17c4da83b77ed6">AttributeShrinkPolicy</a> { <a class="el" href="group__group-surfacemesh-attr.html#gga7f2b557c48ed06d24e17c4da83b77ed6a9e7163ae7c790d007e084e24693b2303">ErrorIfExternal</a>
+, <a class="el" href="group__group-surfacemesh-attr.html#gga7f2b557c48ed06d24e17c4da83b77ed6a410c5804c7d350b6891cb8c15fdf97e8">IgnoreIfExternal</a>
+, <a class="el" href="group__group-surfacemesh-attr.html#gga7f2b557c48ed06d24e17c4da83b77ed6aef773dc1e1097301a1bf955bfa9857ec">WarnAndCopy</a>
+, <a class="el" href="group__group-surfacemesh-attr.html#gga7f2b557c48ed06d24e17c4da83b77ed6ae1ed7e29bdcf7fc9d30c50447e35ab92">SilentCopy</a>
+ }</td></tr>
+<tr class="memdesc:ga7f2b557c48ed06d24e17c4da83b77ed6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Policy for shrinking external attribute buffers.  <a href="group__group-surfacemesh-attr.html#ga7f2b557c48ed06d24e17c4da83b77ed6">More...</a><br /></td></tr>
+<tr class="separator:ga7f2b557c48ed06d24e17c4da83b77ed6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga3018d576f81897e1712c3601b9625cb9"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group-surfacemesh-attr.html#ga3018d576f81897e1712c3601b9625cb9">AttributeWritePolicy</a> { <a class="el" href="group__group-surfacemesh-attr.html#gga3018d576f81897e1712c3601b9625cb9a61eb7df0ff95cbd596ba2a4c7ee06b32">ErrorIfReadOnly</a>
 , <a class="el" href="group__group-surfacemesh-attr.html#gga3018d576f81897e1712c3601b9625cb9aef773dc1e1097301a1bf955bfa9857ec">WarnAndCopy</a>
 , <a class="el" href="group__group-surfacemesh-attr.html#gga3018d576f81897e1712c3601b9625cb9ae1ed7e29bdcf7fc9d30c50447e35ab92">SilentCopy</a>
@@ -204,6 +211,7 @@ Enumerations</h2></td></tr>
 <tr class="memdesc:ga3018d576f81897e1712c3601b9625cb9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Policy for attempting to write to read-only external buffers.  <a href="group__group-surfacemesh-attr.html#ga3018d576f81897e1712c3601b9625cb9">More...</a><br /></td></tr>
 <tr class="separator:ga3018d576f81897e1712c3601b9625cb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gade3ae5b7e72e9d4f92f29c6563551c10"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group-surfacemesh-attr.html#gade3ae5b7e72e9d4f92f29c6563551c10">AttributeExportPolicy</a> { <a class="el" href="group__group-surfacemesh-attr.html#ggade3ae5b7e72e9d4f92f29c6563551c10afe72de1001d465db9eb6ce5cb874c2cb">CopyIfExternal</a>
+, <a class="el" href="group__group-surfacemesh-attr.html#ggade3ae5b7e72e9d4f92f29c6563551c10a2bdb7937b8109f604fbf49e7c1ad1aa3">CopyIfUnmanaged</a>
 , <a class="el" href="group__group-surfacemesh-attr.html#ggade3ae5b7e72e9d4f92f29c6563551c10a9a526f6dc0d4d6aef1f368972f20d13e">KeepExternalPtr</a>
 , <a class="el" href="group__group-surfacemesh-attr.html#ggade3ae5b7e72e9d4f92f29c6563551c10a9e7163ae7c790d007e084e24693b2303">ErrorIfExternal</a>
  }</td></tr>
@@ -276,7 +284,7 @@ constexpr <a class="el" href="group__group-surfacemesh-attr.html#ga4d115376c2c76
 <div class="fragment"><div class="line"><span class="preprocessor">#include &lt;lagrange/AttributeTypes.h&gt;</span></div>
 <div class="line"><span class="preprocessor">#define LA_X_foo(_, ValueType) template void my_function(const Attribute&lt;ValueType&gt; &amp;);</span></div>
 <div class="line"><a class="code hl_define" href="group__group-surfacemesh-attr.html#gabdd5375a7155af710e703e21e723e834">LA_ATTRIBUTE_X</a>(foo, 0)</div>
-<div class="ttc" id="agroup__group-surfacemesh-attr_html_gabdd5375a7155af710e703e21e723e834"><div class="ttname"><a href="group__group-surfacemesh-attr.html#gabdd5375a7155af710e703e21e723e834">LA_ATTRIBUTE_X</a></div><div class="ttdeci">#define LA_ATTRIBUTE_X(mode, data)</div><div class="ttdoc">X Macro arguments for the Attribute&lt;&gt; class.</div><div class="ttdef"><b>Definition:</b> AttributeTypes.h:44</div></div>
+<div class="ttc" id="agroup__group-surfacemesh-attr_html_gabdd5375a7155af710e703e21e723e834"><div class="ttname"><a href="group__group-surfacemesh-attr.html#gabdd5375a7155af710e703e21e723e834">LA_ATTRIBUTE_X</a></div><div class="ttdeci">#define LA_ATTRIBUTE_X(mode, data)</div><div class="ttdoc">X Macro arguments for the Attribute&lt;&gt; class.</div><div class="ttdef"><b>Definition:</b> AttributeTypes.h:46</div></div>
 </div><!-- fragment --><p >The optional <code>data</code> argument can forwarded to other macros, in order to implement cartesian products when instantiating nested types.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -331,7 +339,7 @@ constexpr <a class="el" href="group__group-surfacemesh-attr.html#ga4d115376c2c76
 <div class="fragment"><div class="line"><span class="preprocessor">#include &lt;lagrange/AttributeTypes.h&gt;</span></div>
 <div class="line"><span class="preprocessor">#define LA_X_foo(_, IndexType) template void my_function(const Attribute&lt;IndexType&gt; &amp;);</span></div>
 <div class="line"><a class="code hl_define" href="group__group-surfacemesh-attr.html#ga6a2732db7fadf7b5c1f4d16e2e7a5eed">LA_ATTRIBUTE_INDEX_X</a>(foo, 0)</div>
-<div class="ttc" id="agroup__group-surfacemesh-attr_html_ga6a2732db7fadf7b5c1f4d16e2e7a5eed"><div class="ttname"><a href="group__group-surfacemesh-attr.html#ga6a2732db7fadf7b5c1f4d16e2e7a5eed">LA_ATTRIBUTE_INDEX_X</a></div><div class="ttdeci">#define LA_ATTRIBUTE_INDEX_X(mode, data)</div><div class="ttdoc">X Macro arguments for the Attribute&lt;&gt; class.</div><div class="ttdef"><b>Definition:</b> AttributeTypes.h:76</div></div>
+<div class="ttc" id="agroup__group-surfacemesh-attr_html_ga6a2732db7fadf7b5c1f4d16e2e7a5eed"><div class="ttname"><a href="group__group-surfacemesh-attr.html#ga6a2732db7fadf7b5c1f4d16e2e7a5eed">LA_ATTRIBUTE_INDEX_X</a></div><div class="ttdeci">#define LA_ATTRIBUTE_INDEX_X(mode, data)</div><div class="ttdoc">X Macro arguments for the Attribute&lt;&gt; class.</div><div class="ttdef"><b>Definition:</b> AttributeTypes.h:78</div></div>
 </div><!-- fragment --><p >The optional <code>data</code> argument can forwarded to other macros, in order to implement cartesian products when instantiating nested types.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -380,7 +388,7 @@ constexpr <a class="el" href="group__group-surfacemesh-attr.html#ga4d115376c2c76
 <div class="fragment"><div class="line"><span class="preprocessor">#include &lt;lagrange/AttributeTypes.h&gt;</span></div>
 <div class="line"><span class="preprocessor">#define LA_X_foo(_, IndexType) template void my_function(const Attribute&lt;IndexType&gt; &amp;);</span></div>
 <div class="line"><a class="code hl_define" href="group__group-surfacemesh-attr.html#gad3337e2189efa530a8a1c2834a2a84e2">LA_ATTRIBUTE_SCALAR_X</a>(foo, 0)</div>
-<div class="ttc" id="agroup__group-surfacemesh-attr_html_gad3337e2189efa530a8a1c2834a2a84e2"><div class="ttname"><a href="group__group-surfacemesh-attr.html#gad3337e2189efa530a8a1c2834a2a84e2">LA_ATTRIBUTE_SCALAR_X</a></div><div class="ttdeci">#define LA_ATTRIBUTE_SCALAR_X(mode, data)</div><div class="ttdoc">X Macro arguments for the Attribute&lt;&gt; class.</div><div class="ttdef"><b>Definition:</b> AttributeTypes.h:106</div></div>
+<div class="ttc" id="agroup__group-surfacemesh-attr_html_gad3337e2189efa530a8a1c2834a2a84e2"><div class="ttname"><a href="group__group-surfacemesh-attr.html#gad3337e2189efa530a8a1c2834a2a84e2">LA_ATTRIBUTE_SCALAR_X</a></div><div class="ttdeci">#define LA_ATTRIBUTE_SCALAR_X(mode, data)</div><div class="ttdoc">X Macro arguments for the Attribute&lt;&gt; class.</div><div class="ttdef"><b>Definition:</b> AttributeTypes.h:108</div></div>
 </div><!-- fragment --><p >The optional <code>data</code> argument can forwarded to other macros, in order to implement cartesian products when instantiating nested types.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -571,6 +579,44 @@ constexpr <a class="el" href="group__group-surfacemesh-attr.html#ga4d115376c2c76
 
 </div>
 </div>
+<a id="ga7f2b557c48ed06d24e17c4da83b77ed6" name="ga7f2b557c48ed06d24e17c4da83b77ed6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga7f2b557c48ed06d24e17c4da83b77ed6">&#9670;&nbsp;</a></span>AttributeShrinkPolicy</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum class <a class="el" href="group__group-surfacemesh-attr.html#ga7f2b557c48ed06d24e17c4da83b77ed6">AttributeShrinkPolicy</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;lagrange/AttributeFwd.h&gt;</code></p>
+
+<p>Policy for shrinking external attribute buffers. </p>
+<p >This policy controls what happens when calling <code>shrink_to_fit()</code> to save memory. Shrinkage can happen either when mesh elements have been removed by another operation, or if the attribute has been created with additional capacity. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="gga7f2b557c48ed06d24e17c4da83b77ed6a9e7163ae7c790d007e084e24693b2303" name="gga7f2b557c48ed06d24e17c4da83b77ed6a9e7163ae7c790d007e084e24693b2303"></a>ErrorIfExternal&#160;</td><td class="fielddoc"><p >Throws an exception when trying to shrink an external buffer (even if the new size is. </p>
+<p >still within the buffer capacity). This is the default policy. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga7f2b557c48ed06d24e17c4da83b77ed6a410c5804c7d350b6891cb8c15fdf97e8" name="gga7f2b557c48ed06d24e17c4da83b77ed6a410c5804c7d350b6891cb8c15fdf97e8"></a>IgnoreIfExternal&#160;</td><td class="fielddoc"><p >Ignore external buffers when trying to shrink an attribute. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga7f2b557c48ed06d24e17c4da83b77ed6aef773dc1e1097301a1bf955bfa9857ec" name="gga7f2b557c48ed06d24e17c4da83b77ed6aef773dc1e1097301a1bf955bfa9857ec"></a>WarnAndCopy&#160;</td><td class="fielddoc"><p >Logs a warning and creates an internal copy of the buffer data when shrinking below capacity. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga7f2b557c48ed06d24e17c4da83b77ed6ae1ed7e29bdcf7fc9d30c50447e35ab92" name="gga7f2b557c48ed06d24e17c4da83b77ed6ae1ed7e29bdcf7fc9d30c50447e35ab92"></a>SilentCopy&#160;</td><td class="fielddoc"><p >Silently copy the buffer data when shrinking below capacity. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
 <a id="ga3018d576f81897e1712c3601b9625cb9" name="ga3018d576f81897e1712c3601b9625cb9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga3018d576f81897e1712c3601b9625cb9">&#9670;&nbsp;</a></span>AttributeWritePolicy</h2>
 
@@ -632,6 +678,8 @@ constexpr <a class="el" href="group__group-surfacemesh-attr.html#ga4d115376c2c76
 <p >By default, a copy is created, meaning we can use the resulting pointer to manage the lifetime of the allocated data. </p>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ggade3ae5b7e72e9d4f92f29c6563551c10afe72de1001d465db9eb6ce5cb874c2cb" name="ggade3ae5b7e72e9d4f92f29c6563551c10afe72de1001d465db9eb6ce5cb874c2cb"></a>CopyIfExternal&#160;</td><td class="fielddoc"><p >Copy the buffer during export if the attribute points to an external buffer. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggade3ae5b7e72e9d4f92f29c6563551c10a2bdb7937b8109f604fbf49e7c1ad1aa3" name="ggade3ae5b7e72e9d4f92f29c6563551c10a2bdb7937b8109f604fbf49e7c1ad1aa3"></a>CopyIfUnmanaged&#160;</td><td class="fielddoc"><p >Copy the buffer during export if the attribute points to an unmanaged external buffer. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="ggade3ae5b7e72e9d4f92f29c6563551c10a9a526f6dc0d4d6aef1f368972f20d13e" name="ggade3ae5b7e72e9d4f92f29c6563551c10a9a526f6dc0d4d6aef1f368972f20d13e"></a>KeepExternalPtr&#160;</td><td class="fielddoc"><p >Keep the raw pointer to the external buffer data. Use with caution. </p>
 </td></tr>

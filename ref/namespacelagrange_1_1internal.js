@@ -38,5 +38,6 @@ var namespacelagrange_1_1internal =
     [ "compute_triangle_areas", "namespacelagrange_1_1internal.html#ad476d3f6a2e97576948cbeb2d7d4f269", null ],
     [ "compute_quad_areas", "namespacelagrange_1_1internal.html#a18efc9f6e2bdf77c1b85bc5c3794edd1", null ],
     [ "bucket_sort", "namespacelagrange_1_1internal.html#a87a49ab6f672c04f4f72e198181a887c", null ],
-    [ "compute_weighted_corner_normal", "namespacelagrange_1_1internal.html#a425b6670a3b7465f0b6a712b35f91b7c", null ]
+    [ "compute_weighted_corner_normal", "namespacelagrange_1_1internal.html#a425b6670a3b7465f0b6a712b35f91b7c", null ],
+    [ "recompute_facet_normal_if_needed", "namespacelagrange_1_1internal.html#a37c5d2a9463c0ede0593a8c564e0e58a", null ]
 ];

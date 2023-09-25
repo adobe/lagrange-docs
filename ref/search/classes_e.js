@@ -11,5 +11,6 @@ var searchData=
   ['ptr_8',['ptr',['../classlagrange_1_1internal_1_1ptr.html',1,'lagrange::internal']]],
   ['ptr_3c_20t_2c_20default_5fdelete_3c_20t_20_3e_20_3e_9',['ptr&lt; T, default_delete&lt; T &gt; &gt;',['../classlagrange_1_1internal_1_1ptr.html',1,'lagrange::internal']]],
   ['pyattribute_10',['PyAttribute',['../classlagrange_1_1python_1_1_py_attribute.html',1,'lagrange::python']]],
-  ['pyindexedattribute_11',['PyIndexedAttribute',['../classlagrange_1_1python_1_1_py_indexed_attribute.html',1,'lagrange::python']]]
+  ['pyindexedattribute_11',['PyIndexedAttribute',['../classlagrange_1_1python_1_1_py_indexed_attribute.html',1,'lagrange::python']]],
+  ['pythonloggingsink_12',['PythonLoggingSink',['../classlagrange_1_1python_1_1_python_logging_sink.html',1,'lagrange::python']]]
 ];

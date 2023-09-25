@@ -30,6 +30,9 @@ var hierarchy =
     [ "AttributeName", "structlagrange_1_1_attribute_name.html", null ],
     [ "AttributeRender", "structlagrange_1_1ui_1_1_attribute_render.html", null ],
     [ "Attributes< _AttributeArray >", "classlagrange_1_1_attributes.html", null ],
+    [ "base_sink", null, [
+      [ "PythonLoggingSink", "classlagrange_1_1python_1_1_python_logging_sink.html", null ]
+    ] ],
     [ "BitField< EnumType_ >", "classlagrange_1_1_bit_field.html", null ],
     [ "bitset", null, [
       [ "Layer", "structlagrange_1_1ui_1_1_layer.html", null ]
@@ -46,6 +49,8 @@ var hierarchy =
     [ "CameraController", "structlagrange_1_1ui_1_1_camera_controller.html", null ],
     [ "CameraFocusAndFit", "structlagrange_1_1ui_1_1_camera_focus_and_fit.html", null ],
     [ "CameraTurntable", "structlagrange_1_1ui_1_1_camera_turntable.html", null ],
+    [ "ChainEdgesOptions", "structlagrange_1_1_chain_edges_options.html", null ],
+    [ "ChainEdgesResult< Index >", "structlagrange_1_1_chain_edges_result.html", null ],
     [ "BVH< _VertexArray, _ElementArray >::ClosestPoint", "structlagrange_1_1bvh_1_1_b_v_h_1_1_closest_point.html", null ],
     [ "ClosestPointResult< Scalar >", "structlagrange_1_1raycasting_1_1_closest_point_result.html", null ],
     [ "ColormapShaderMode", "structlagrange_1_1ui_1_1_colormap_shader_mode.html", null ],
@@ -75,11 +80,14 @@ var hierarchy =
     [ "DefaultTools", "structlagrange_1_1ui_1_1_default_tools.html", null ],
     [ "DehoveredEvent", "structlagrange_1_1ui_1_1_dehovered_event.html", null ],
     [ "DeselectedEvent", "structlagrange_1_1ui_1_1_deselected_event.html", null ],
+    [ "DihedralAngleOptions", "structlagrange_1_1_dihedral_angle_options.html", null ],
+    [ "DijkstraDistanceOptions< Scalar, Index >", "structlagrange_1_1_dijkstra_distance_options.html", null ],
     [ "DisjointSets< IndexType >", "classlagrange_1_1_disjoint_sets.html", null ],
     [ "Dockspace", "structlagrange_1_1ui_1_1_dockspace.html", null ],
     [ "Texture::DownloadResult", "structlagrange_1_1ui_1_1_texture_1_1_download_result.html", null ],
     [ "Earcut< N >", "classlagrange_1_1mapbox_1_1detail_1_1_earcut.html", null ],
     [ "EdgeAABBTree< VertexArray, EdgeArray, DIM >", "structlagrange_1_1bvh_1_1_edge_a_a_b_b_tree.html", null ],
+    [ "EdgeLengthOptions", "structlagrange_1_1_edge_length_options.html", null ],
     [ "EdgeType< Index >", "classlagrange_1_1_edge_type.html", null ],
     [ "EigenArrayRef< _EigenType, IsConst >", "classlagrange_1_1experimental_1_1_eigen_array_ref.html", null ],
     [ "ElementEdge", "structlagrange_1_1ui_1_1_element_edge.html", null ],
@@ -116,6 +124,9 @@ var hierarchy =
     [ "FileDialogPath::FileDialogPathImpl", "structlagrange_1_1ui_1_1_file_dialog_path_1_1_file_dialog_path_impl.html", null ],
     [ "FileFilter", "structlagrange_1_1ui_1_1_file_filter.html", null ],
     [ "FocusedViewportPanel", "structlagrange_1_1ui_1_1_focused_viewport_panel.html", null ],
+    [ "Formatter", null, [
+      [ "ColorFormatter", "classlagrange_1_1__logging_1_1_color_formatter.html", null ]
+    ] ],
     [ "FrameBuffer", "classlagrange_1_1ui_1_1_frame_buffer.html", null ],
     [ "Frustum", "classlagrange_1_1ui_1_1_frustum.html", null ],
     [ "function_ref< F >", "classlagrange_1_1function__ref.html", null ],
@@ -179,15 +190,15 @@ var hierarchy =
     [ "MeshInstance< Scalar, Index, Dimension >", "structlagrange_1_1scene_1_1_mesh_instance.html", null ],
     [ "MeshLoaderParams", "structlagrange_1_1io_1_1legacy_1_1_mesh_loader_params.html", null ],
     [ "MeshLoaderResult< MeshType >", "structlagrange_1_1io_1_1legacy_1_1_mesh_loader_result.html", null ],
-    [ "MeshMapping< MeshType >", "structlagrange_1_1_mesh_mapping.html", [
-      [ "BackwardMeshMapping< MeshType >", "structlagrange_1_1_backward_mesh_mapping.html", null ],
-      [ "ForwardMeshMapping< MeshType >", "structlagrange_1_1_forward_mesh_mapping.html", null ]
+    [ "MeshMapping< MeshType >", "structlagrange_1_1legacy_1_1_mesh_mapping.html", [
+      [ "BackwardMeshMapping< MeshType >", "structlagrange_1_1legacy_1_1_backward_mesh_mapping.html", null ],
+      [ "ForwardMeshMapping< MeshType >", "structlagrange_1_1legacy_1_1_forward_mesh_mapping.html", null ]
     ] ],
     [ "MeshNavigation< MeshType >", "classlagrange_1_1_mesh_navigation.html", null ],
     [ "MeshRender", "structlagrange_1_1ui_1_1_mesh_render.html", null ],
     [ "MeshRenderChangedEvent", "structlagrange_1_1ui_1_1_mesh_render_changed_event.html", null ],
     [ "MeshSelectionRender", "structlagrange_1_1ui_1_1_mesh_selection_render.html", null ],
-    [ "MeshTopology< MeshType >", "classlagrange_1_1_mesh_topology.html", null ],
+    [ "MeshTopology< MeshType >", "classlagrange_1_1legacy_1_1_mesh_topology.html", null ],
     [ "MeshToVolumeOptions", "structlagrange_1_1volume_1_1_mesh_to_volume_options.html", null ],
     [ "MeshTrait< MeshType_ >", "structlagrange_1_1_mesh_trait.html", null ],
     [ "InputState::Mouse", "structlagrange_1_1ui_1_1_input_state_1_1_mouse.html", null ],
@@ -221,6 +232,8 @@ var hierarchy =
     [ "RayFacetHit", "structlagrange_1_1ui_1_1_ray_facet_hit.html", null ],
     [ "RemapVerticesOptions", "structlagrange_1_1_remap_vertices_options.html", null ],
     [ "RemeshingOptions", "structlagrange_1_1scene_1_1_remeshing_options.html", null ],
+    [ "RemoveDuplicateVerticesOptions", "structlagrange_1_1_remove_duplicate_vertices_options.html", null ],
+    [ "RemoveNullAreaFacetsOptions", "structlagrange_1_1_remove_null_area_facets_options.html", null ],
     [ "RenderContext", "structlagrange_1_1ui_1_1_render_context.html", null ],
     [ "resource_loader", null, [
       [ "ShaderLoader", "structlagrange_1_1ui_1_1_shader_loader.html", null ]
@@ -311,22 +324,29 @@ var hierarchy =
     [ "TestCombineMeshes", "classtests_1_1test__combine__meshes_1_1_test_combine_meshes.html", null ],
     [ "TestComputeCentroid", "classtests_1_1test__compute__centroid_1_1_test_compute_centroid.html", null ],
     [ "TestComputeComponents", "classtests_1_1test__compute__components_1_1_test_compute_components.html", null ],
+    [ "TestComputeDihedralAngles", "classtests_1_1test__compute__dihedral__angles_1_1_test_compute_dihedral_angles.html", null ],
+    [ "TestComputeEdgeLengths", "classtests_1_1test__compute__edge__lengths_1_1_test_compute_edge_lengths.html", null ],
     [ "TestComputeFacetArea", "classtests_1_1test__compute__facet__area_1_1_test_compute_facet_area.html", null ],
     [ "TestComputeFacetNormal", "classtests_1_1test__compute__facet__normal_1_1_test_compute_facet_normal.html", null ],
     [ "TestComputeNormal", "classtests_1_1test__compute__normal_1_1_test_compute_normal.html", null ],
     [ "TestComputeTangentBitangent", "classtests_1_1test__compute__tangent__bitangent_1_1_test_compute_tangent_bitangent.html", null ],
     [ "TestComputeVertexNormal", "classtests_1_1test__compute__vertex__normal_1_1_test_compute_vertex_normal.html", null ],
     [ "TestComputeVertexValence", "classtests_1_1test__compute__vertex__valence_1_1_test_compute_vertex_valence.html", null ],
+    [ "TestDetectDegenerateFacets", "classtests_1_1test__detect__degenerate__facets_1_1_test_detect_degenerate_facets.html", null ],
     [ "TestIndexedAttribute", "classtests_1_1test__indexed__attribute_1_1_test_indexed_attribute.html", null ],
     [ "TestIO", "classtest__io_1_1_test_i_o.html", null ],
     [ "TestMeshInstance", "classtest__mesh__instance_1_1_test_mesh_instance.html", null ],
     [ "TestNormalizeMeshes", "classtests_1_1test__normalize__meshes_1_1_test_normalize_meshes.html", null ],
+    [ "TestPermuteFacets", "classtests_1_1test__permute__facets_1_1_test_permute_facets.html", null ],
     [ "TestPermuteVertices", "classtests_1_1test__permute__vertices_1_1_test_permute_vertices.html", null ],
     [ "TestRemapVertices", "classtests_1_1test__remap__vertices_1_1_test_remap_vertices.html", null ],
+    [ "TestRemoveDuplicateVertices", "classtests_1_1test__remove__duplicate__vertices_1_1_test_remove_duplicate_vertices.html", null ],
+    [ "TestRemoveNullAreaFacets", "classtests_1_1test__remove__null__area__facets_1_1_test_remove_null_area_facets.html", null ],
     [ "TestSimpleScene", "classtest__simple__scene_1_1_test_simple_scene.html", null ],
     [ "TestSurfaceMesh", "classtests_1_1test__surface__mesh_1_1_test_surface_mesh.html", null ],
     [ "TestTriangulatePolygonalFacets", "classtests_1_1test__triangulate__polygonal__facets_1_1_test_triangulate_polygonal_facets.html", null ],
     [ "TestUnifyIndexBuffer", "classtests_1_1test__unify__index__buffer_1_1_test_unify_index_buffer.html", null ],
+    [ "TestWeldIndexedAttribute", "classtests_1_1test__weld__indexed__attribute_1_1_test_weld_indexed_attribute.html", null ],
     [ "Texture", "classlagrange_1_1ui_1_1_texture.html", null ],
     [ "ToolbarPanel", "structlagrange_1_1ui_1_1_toolbar_panel.html", null ],
     [ "Tools", "classlagrange_1_1ui_1_1_tools.html", null ],
@@ -360,6 +380,7 @@ var hierarchy =
     [ "value_ptr< lagrange::winding::FastWindingNumber::Impl >", "classlagrange_1_1value__ptr.html", null ],
     [ "VAO", "structlagrange_1_1ui_1_1_v_a_o.html", null ],
     [ "vector", null, [
+      [ "SmallVector< Scalar, 3 >", "classlagrange_1_1_small_vector.html", null ],
       [ "SmallVector< T, N >", "classlagrange_1_1_small_vector.html", null ]
     ] ],
     [ "Vector4f", null, [

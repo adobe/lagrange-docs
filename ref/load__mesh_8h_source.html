@@ -126,29 +126,34 @@ $(document).ready(function(){initNavTree('load__mesh_8h_source.html',''); initRe
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment"> */</span></div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#pragma once</span></div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;lagrange/SurfaceMesh.h&gt;</span></div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &lt;lagrange/fs/filesystem.h&gt;</span></div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &lt;lagrange/MeshTrait.h&gt;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;lagrange/MeshTrait.h&gt;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &lt;lagrange/SurfaceMesh.h&gt;</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &lt;lagrange/fs/filesystem.h&gt;</span></div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &lt;lagrange/io/types.h&gt;</span></div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#ifdef LAGRANGE_ENABLE_LEGACY_FUNCTIONS</span></div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &lt;lagrange/io/legacy/load_mesh.h&gt;</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">    #include &lt;lagrange/io/legacy/load_mesh.h&gt;</span></div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacelagrange_1_1io.html">lagrange::io</a> {</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#include &lt;iosfwd&gt;</span></div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="comment">// The input stream version of load_mesh does not exist because it cannot determine the file type.</span></div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="comment">// If you want to load a mesh from an input stream, use a specific `load_mesh_type` function.</span></div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="keyword">template</span> &lt;</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="keyword">typename</span> <a class="code hl_class" href="classlagrange_1_1_mesh.html">MeshType</a>,</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    std::enable_if_t&lt;!lagrange::MeshTraitHelper::is_mesh&lt;MeshType&gt;::value&gt;* = <span class="keyword">nullptr</span>&gt;</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><a class="code hl_class" href="classlagrange_1_1_mesh.html">MeshType</a> <a class="code hl_function" href="namespacelagrange_1_1io.html#a07188a43fac8198fd7d97a6d9f2b222f">load_mesh</a>(<span class="keyword">const</span> fs::path&amp; filename, <span class="keyword">const</span> LoadOptions&amp; = {});</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>} <span class="comment">// namespace lagrange::io</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacelagrange_1_1io.html">lagrange::io</a> {</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="keyword">template</span> &lt;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="keyword">typename</span> <a class="code hl_class" href="classlagrange_1_1_mesh.html">MeshType</a>,</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    std::enable_if_t&lt;!lagrange::MeshTraitHelper::is_mesh&lt;MeshType&gt;::value&gt;* = <span class="keyword">nullptr</span>&gt;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><a class="code hl_class" href="classlagrange_1_1_mesh.html">MeshType</a> <a class="code hl_function" href="namespacelagrange_1_1io.html#a8606d6ccb4929c6235b3ef15991d5326">load_mesh</a>(std::istream&amp; input_stream, <span class="keyword">const</span> LoadOptions&amp; options = {});</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="keyword">template</span> &lt;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <span class="keyword">typename</span> <a class="code hl_class" href="classlagrange_1_1_mesh.html">MeshType</a>,</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    std::enable_if_t&lt;!lagrange::MeshTraitHelper::is_mesh&lt;MeshType&gt;::value&gt;* = <span class="keyword">nullptr</span>&gt;</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><a class="code hl_class" href="classlagrange_1_1_mesh.html">MeshType</a> <a class="code hl_function" href="namespacelagrange_1_1io.html#a8606d6ccb4929c6235b3ef15991d5326">load_mesh</a>(<span class="keyword">const</span> fs::path&amp; filename, <span class="keyword">const</span> LoadOptions&amp; = {});</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>} <span class="comment">// namespace lagrange::io</span></div>
 <div class="ttc" id="aclasslagrange_1_1_mesh_html"><div class="ttname"><a href="classlagrange_1_1_mesh.html">lagrange::Mesh</a></div><div class="ttdef"><b>Definition:</b> Mesh.h:47</div></div>
-<div class="ttc" id="anamespacelagrange_1_1io_html"><div class="ttname"><a href="namespacelagrange_1_1io.html">lagrange::io</a></div><div class="ttdoc">Mesh input/output.</div><div class="ttdef"><b>Definition:</b> load_gltf.h:21</div></div>
-<div class="ttc" id="anamespacelagrange_1_1io_html_a07188a43fac8198fd7d97a6d9f2b222f"><div class="ttname"><a href="namespacelagrange_1_1io.html#a07188a43fac8198fd7d97a6d9f2b222f">lagrange::io::load_mesh</a></div><div class="ttdeci">MeshType load_mesh(const fs::path &amp;filename, const LoadOptions &amp;={})</div><div class="ttdoc">Load a mesh from a file.</div><div class="ttdef"><b>Definition:</b> load_mesh.cpp:31</div></div>
+<div class="ttc" id="anamespacelagrange_1_1io_html"><div class="ttname"><a href="namespacelagrange_1_1io.html">lagrange::io</a></div><div class="ttdoc">Mesh input/output.</div><div class="ttdef"><b>Definition:</b> detect_file_format.h:18</div></div>
+<div class="ttc" id="anamespacelagrange_1_1io_html_a8606d6ccb4929c6235b3ef15991d5326"><div class="ttname"><a href="namespacelagrange_1_1io.html#a8606d6ccb4929c6235b3ef15991d5326">lagrange::io::load_mesh</a></div><div class="ttdeci">MeshType load_mesh(std::istream &amp;input_stream, const LoadOptions &amp;options={})</div><div class="ttdoc">Load a mesh from a stream.</div><div class="ttdef"><b>Definition:</b> load_mesh.cpp:33</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

@@ -1,6 +1,9 @@
 var annotated_dup =
 [
     [ "lagrange", "namespacelagrange.html", [
+      [ "_logging", null, [
+        [ "ColorFormatter", "classlagrange_1_1__logging_1_1_color_formatter.html", null ]
+      ] ],
       [ "bvh", null, [
         [ "AABBIGL", "classlagrange_1_1bvh_1_1_a_a_b_b_i_g_l.html", "classlagrange_1_1bvh_1_1_a_a_b_b_i_g_l" ],
         [ "BVH", "classlagrange_1_1bvh_1_1_b_v_h.html", "classlagrange_1_1bvh_1_1_b_v_h" ],
@@ -73,8 +76,12 @@ var annotated_dup =
         [ "SaveOptions", "structlagrange_1_1io_1_1_save_options.html", "structlagrange_1_1io_1_1_save_options" ]
       ] ],
       [ "legacy", null, [
+        [ "BackwardMeshMapping", "structlagrange_1_1legacy_1_1_backward_mesh_mapping.html", null ],
         [ "Components", "classlagrange_1_1legacy_1_1_components.html", null ],
-        [ "ComputeMeshCentroidOutput", "structlagrange_1_1legacy_1_1_compute_mesh_centroid_output.html", null ]
+        [ "ComputeMeshCentroidOutput", "structlagrange_1_1legacy_1_1_compute_mesh_centroid_output.html", null ],
+        [ "ForwardMeshMapping", "structlagrange_1_1legacy_1_1_forward_mesh_mapping.html", null ],
+        [ "MeshMapping", "structlagrange_1_1legacy_1_1_mesh_mapping.html", null ],
+        [ "MeshTopology", "classlagrange_1_1legacy_1_1_mesh_topology.html", "classlagrange_1_1legacy_1_1_mesh_topology" ]
       ] ],
       [ "mapbox", null, [
         [ "detail", null, [
@@ -93,7 +100,8 @@ var annotated_dup =
       ] ],
       [ "python", null, [
         [ "PyAttribute", "classlagrange_1_1python_1_1_py_attribute.html", null ],
-        [ "PyIndexedAttribute", "classlagrange_1_1python_1_1_py_indexed_attribute.html", null ]
+        [ "PyIndexedAttribute", "classlagrange_1_1python_1_1_py_indexed_attribute.html", null ],
+        [ "PythonLoggingSink", "classlagrange_1_1python_1_1_python_logging_sink.html", null ]
       ] ],
       [ "raycasting", "namespacelagrange_1_1raycasting.html", [
         [ "ClosestPointResult", "structlagrange_1_1raycasting_1_1_closest_point_result.html", null ],
@@ -284,16 +292,20 @@ var annotated_dup =
       [ "AttributeBase", "classlagrange_1_1_attribute_base.html", "classlagrange_1_1_attribute_base" ],
       [ "AttributeName", "structlagrange_1_1_attribute_name.html", null ],
       [ "Attributes", "classlagrange_1_1_attributes.html", null ],
-      [ "BackwardMeshMapping", "structlagrange_1_1_backward_mesh_mapping.html", null ],
       [ "BadCastError", "structlagrange_1_1_bad_cast_error.html", null ],
       [ "BitField", "classlagrange_1_1_bit_field.html", "classlagrange_1_1_bit_field" ],
+      [ "ChainEdgesOptions", "structlagrange_1_1_chain_edges_options.html", "structlagrange_1_1_chain_edges_options" ],
+      [ "ChainEdgesResult", "structlagrange_1_1_chain_edges_result.html", null ],
       [ "ComponentOptions", "structlagrange_1_1_component_options.html", "structlagrange_1_1_component_options" ],
       [ "ComputeBorderedComponentsOutput", "structlagrange_1_1_compute_bordered_components_output.html", null ],
       [ "ComputePointcloudPCAOutput", "structlagrange_1_1_compute_pointcloud_p_c_a_output.html", null ],
       [ "Connectivity", "classlagrange_1_1_connectivity.html", null ],
       [ "copy_on_write_ptr", "classlagrange_1_1copy__on__write__ptr.html", "classlagrange_1_1copy__on__write__ptr" ],
       [ "CornerNormalOptions", "structlagrange_1_1_corner_normal_options.html", "structlagrange_1_1_corner_normal_options" ],
+      [ "DihedralAngleOptions", "structlagrange_1_1_dihedral_angle_options.html", "structlagrange_1_1_dihedral_angle_options" ],
+      [ "DijkstraDistanceOptions", "structlagrange_1_1_dijkstra_distance_options.html", "structlagrange_1_1_dijkstra_distance_options" ],
       [ "DisjointSets", "classlagrange_1_1_disjoint_sets.html", "classlagrange_1_1_disjoint_sets" ],
+      [ "EdgeLengthOptions", "structlagrange_1_1_edge_length_options.html", "structlagrange_1_1_edge_length_options" ],
       [ "EdgeType", "classlagrange_1_1_edge_type.html", "classlagrange_1_1_edge_type" ],
       [ "Error", "structlagrange_1_1_error.html", null ],
       [ "ExactPredicates", "classlagrange_1_1_exact_predicates.html", "classlagrange_1_1_exact_predicates" ],
@@ -301,7 +313,6 @@ var annotated_dup =
       [ "FacetAreaOptions", "structlagrange_1_1_facet_area_options.html", "structlagrange_1_1_facet_area_options" ],
       [ "FacetCentroidOptions", "structlagrange_1_1_facet_centroid_options.html", "structlagrange_1_1_facet_centroid_options" ],
       [ "FacetNormalOptions", "structlagrange_1_1_facet_normal_options.html", "structlagrange_1_1_facet_normal_options" ],
-      [ "ForwardMeshMapping", "structlagrange_1_1_forward_mesh_mapping.html", null ],
       [ "function_ref", "classlagrange_1_1function__ref.html", null ],
       [ "function_ref< R(Args...)>", "classlagrange_1_1function__ref_3_01_r_07_args_8_8_8_08_4.html", "classlagrange_1_1function__ref_3_01_r_07_args_8_8_8_08_4" ],
       [ "GenuineMeshGeometry", "classlagrange_1_1_genuine_mesh_geometry.html", null ],
@@ -313,15 +324,15 @@ var annotated_dup =
       [ "MeshBase", "classlagrange_1_1_mesh_base.html", null ],
       [ "MeshCentroidOptions", "structlagrange_1_1_mesh_centroid_options.html", "structlagrange_1_1_mesh_centroid_options" ],
       [ "MeshGeometry", "classlagrange_1_1_mesh_geometry.html", null ],
-      [ "MeshMapping", "structlagrange_1_1_mesh_mapping.html", null ],
       [ "MeshNavigation", "classlagrange_1_1_mesh_navigation.html", "classlagrange_1_1_mesh_navigation" ],
-      [ "MeshTopology", "classlagrange_1_1_mesh_topology.html", "classlagrange_1_1_mesh_topology" ],
       [ "MeshTrait", "structlagrange_1_1_mesh_trait.html", null ],
       [ "NormalOptions", "structlagrange_1_1_normal_options.html", "structlagrange_1_1_normal_options" ],
       [ "OrderedPairHash", "structlagrange_1_1_ordered_pair_hash.html", null ],
       [ "OrderedPairHash< std::pair< U, V > >", "structlagrange_1_1_ordered_pair_hash_3_01std_1_1pair_3_01_u_00_01_v_01_4_01_4.html", null ],
       [ "ProgressCallback", "classlagrange_1_1_progress_callback.html", "classlagrange_1_1_progress_callback" ],
       [ "RemapVerticesOptions", "structlagrange_1_1_remap_vertices_options.html", "structlagrange_1_1_remap_vertices_options" ],
+      [ "RemoveDuplicateVerticesOptions", "structlagrange_1_1_remove_duplicate_vertices_options.html", "structlagrange_1_1_remove_duplicate_vertices_options" ],
+      [ "RemoveNullAreaFacetsOptions", "structlagrange_1_1_remove_null_area_facets_options.html", "structlagrange_1_1_remove_null_area_facets_options" ],
       [ "SamplePointsOnSurfaceOutput", "structlagrange_1_1_sample_points_on_surface_output.html", null ],
       [ "ScopedLogLevel", "classlagrange_1_1_scoped_log_level.html", "classlagrange_1_1_scoped_log_level" ],
       [ "ScopedTimer", "classlagrange_1_1_scoped_timer.html", "classlagrange_1_1_scoped_timer" ],
@@ -370,6 +381,12 @@ var annotated_dup =
       [ "test_compute_components", null, [
         [ "TestComputeComponents", "classtests_1_1test__compute__components_1_1_test_compute_components.html", null ]
       ] ],
+      [ "test_compute_dihedral_angles", null, [
+        [ "TestComputeDihedralAngles", "classtests_1_1test__compute__dihedral__angles_1_1_test_compute_dihedral_angles.html", null ]
+      ] ],
+      [ "test_compute_edge_lengths", null, [
+        [ "TestComputeEdgeLengths", "classtests_1_1test__compute__edge__lengths_1_1_test_compute_edge_lengths.html", null ]
+      ] ],
       [ "test_compute_facet_area", null, [
         [ "TestComputeFacetArea", "classtests_1_1test__compute__facet__area_1_1_test_compute_facet_area.html", null ]
       ] ],
@@ -388,17 +405,29 @@ var annotated_dup =
       [ "test_compute_vertex_valence", null, [
         [ "TestComputeVertexValence", "classtests_1_1test__compute__vertex__valence_1_1_test_compute_vertex_valence.html", null ]
       ] ],
+      [ "test_detect_degenerate_facets", null, [
+        [ "TestDetectDegenerateFacets", "classtests_1_1test__detect__degenerate__facets_1_1_test_detect_degenerate_facets.html", null ]
+      ] ],
       [ "test_indexed_attribute", null, [
         [ "TestIndexedAttribute", "classtests_1_1test__indexed__attribute_1_1_test_indexed_attribute.html", null ]
       ] ],
       [ "test_normalize_meshes", null, [
         [ "TestNormalizeMeshes", "classtests_1_1test__normalize__meshes_1_1_test_normalize_meshes.html", null ]
       ] ],
+      [ "test_permute_facets", null, [
+        [ "TestPermuteFacets", "classtests_1_1test__permute__facets_1_1_test_permute_facets.html", null ]
+      ] ],
       [ "test_permute_vertices", null, [
         [ "TestPermuteVertices", "classtests_1_1test__permute__vertices_1_1_test_permute_vertices.html", null ]
       ] ],
       [ "test_remap_vertices", null, [
         [ "TestRemapVertices", "classtests_1_1test__remap__vertices_1_1_test_remap_vertices.html", null ]
+      ] ],
+      [ "test_remove_duplicate_vertices", null, [
+        [ "TestRemoveDuplicateVertices", "classtests_1_1test__remove__duplicate__vertices_1_1_test_remove_duplicate_vertices.html", null ]
+      ] ],
+      [ "test_remove_null_area_facets", null, [
+        [ "TestRemoveNullAreaFacets", "classtests_1_1test__remove__null__area__facets_1_1_test_remove_null_area_facets.html", null ]
       ] ],
       [ "test_surface_mesh", null, [
         [ "TestSurfaceMesh", "classtests_1_1test__surface__mesh_1_1_test_surface_mesh.html", null ]
@@ -408,6 +437,9 @@ var annotated_dup =
       ] ],
       [ "test_unify_index_buffer", null, [
         [ "TestUnifyIndexBuffer", "classtests_1_1test__unify__index__buffer_1_1_test_unify_index_buffer.html", null ]
+      ] ],
+      [ "test_weld_indexed_attribute", null, [
+        [ "TestWeldIndexedAttribute", "classtests_1_1test__weld__indexed__attribute_1_1_test_weld_indexed_attribute.html", null ]
       ] ]
     ] ],
     [ "Args", "struct_args.html", null ],

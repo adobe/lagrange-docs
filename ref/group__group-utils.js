@@ -30,6 +30,10 @@ var group__group_utils =
       [ "operator^", "classlagrange_1_1_bit_field.html#a0d3bba4adba1fab368cdc3b17de43892", null ],
       [ "operator~", "classlagrange_1_1_bit_field.html#abefdb69eb214ece2bee29f733c3c7a6b", null ]
     ] ],
+    [ "ChainEdgesOptions", "structlagrange_1_1_chain_edges_options.html", [
+      [ "output_edge_index", "structlagrange_1_1_chain_edges_options.html#acf021c0cc9bd78f90ec3a4a492ccc850", null ],
+      [ "close_loop_with_identical_vertices", "structlagrange_1_1_chain_edges_options.html#aa7cff3abc485cc580e790f40e1927389", null ]
+    ] ],
     [ "DisjointSets< IndexType >", "classlagrange_1_1_disjoint_sets.html", [
       [ "DisjointSets", "classlagrange_1_1_disjoint_sets.html#a4093e2fd37ea3ba9f1512436b5911650", null ],
       [ "DisjointSets", "classlagrange_1_1_disjoint_sets.html#aa7e84823e600fe5ade68b6bc46e7727b", null ],

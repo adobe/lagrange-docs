@@ -1,7 +1,7 @@
 var searchData=
 [
   ['load_0',['load',['../classlagrange_1_1ui_1_1_keybinds.html#a685de2b8050a9c696f494428df52dec7',1,'lagrange::ui::Keybinds']]],
-  ['load_5fmesh_1',['load_mesh',['../namespacelagrange_1_1io.html#a07188a43fac8198fd7d97a6d9f2b222f',1,'lagrange::io']]],
+  ['load_5fmesh_1',['load_mesh',['../namespacelagrange_1_1io.html#a8606d6ccb4929c6235b3ef15991d5326',1,'lagrange::io::load_mesh(std::istream &amp;input_stream, const LoadOptions &amp;options={})'],['../namespacelagrange_1_1io.html#a07188a43fac8198fd7d97a6d9f2b222f',1,'lagrange::io::load_mesh(const fs::path &amp;filename, const LoadOptions &amp;={})']]],
   ['load_5fmesh_5fgltf_2',['load_mesh_gltf',['../namespacelagrange_1_1io.html#af12e799e867e6df806caf32848f1d89d',1,'lagrange::io::load_mesh_gltf(std::istream &amp;input_stream, const LoadOptions &amp;options={})'],['../namespacelagrange_1_1io.html#a0cbdc00628d1109f3544090e26769f90',1,'lagrange::io::load_mesh_gltf(const fs::path &amp;filename, const LoadOptions &amp;options={})']]],
   ['load_5fmesh_5fmsh_3',['load_mesh_msh',['../namespacelagrange_1_1io.html#a8f40b611bc61e0ebdfc7cf7d6767534d',1,'lagrange::io::load_mesh_msh(std::istream &amp;input_stream, const LoadOptions &amp;options={})'],['../namespacelagrange_1_1io.html#a3cdfe41629b2e53a2763fcad35b3527a',1,'lagrange::io::load_mesh_msh(const fs::path &amp;filename, const LoadOptions &amp;options={})']]],
   ['load_5fmesh_5fobj_4',['load_mesh_obj',['../namespacelagrange_1_1io.html#abc96c769e4dda21321be45706af1a42f',1,'lagrange::io::load_mesh_obj(std::istream &amp;input_stream, const LoadOptions &amp;options={})'],['../namespacelagrange_1_1io.html#addd53774d944f8306ca4da9e7f9b277e',1,'lagrange::io::load_mesh_obj(const fs::path &amp;filename, const LoadOptions &amp;options={})']]],

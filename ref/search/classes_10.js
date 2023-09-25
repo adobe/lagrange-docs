@@ -58,12 +58,13 @@ var searchData=
   ['skinningextractnresult_55',['SkinningExtractNResult',['../structlagrange_1_1internal_1_1_skinning_extract_n_result.html',1,'lagrange::internal']]],
   ['skyboxcubevertexdata_56',['SkyboxCubeVertexData',['../structlagrange_1_1ui_1_1_skybox_cube_vertex_data.html',1,'lagrange::ui']]],
   ['smallvector_57',['SmallVector',['../classlagrange_1_1_small_vector.html',1,'lagrange']]],
-  ['stackset_58',['StackSet',['../structlagrange_1_1_stack_set.html',1,'lagrange']]],
-  ['stackvector_59',['StackVector',['../structlagrange_1_1_stack_vector.html',1,'lagrange']]],
-  ['staticassertablebool_60',['StaticAssertableBool',['../structlagrange_1_1_static_assertable_bool.html',1,'lagrange']]],
-  ['submeshoptions_61',['SubmeshOptions',['../structlagrange_1_1_submesh_options.html',1,'lagrange']]],
-  ['subselection_62',['SubSelection',['../structlagrange_1_1ui_1_1_sub_selection.html',1,'lagrange::ui']]],
-  ['surfacemesh_63',['SurfaceMesh',['../classlagrange_1_1_surface_mesh.html',1,'lagrange']]],
-  ['surfacemesh_3c_20scalar_2c_20index_20_3e_64',['SurfaceMesh&lt; Scalar, Index &gt;',['../classlagrange_1_1_surface_mesh.html',1,'lagrange']]],
-  ['systems_65',['Systems',['../classlagrange_1_1ui_1_1_systems.html',1,'lagrange::ui']]]
+  ['smallvector_3c_20scalar_2c_203_20_3e_58',['SmallVector&lt; Scalar, 3 &gt;',['../classlagrange_1_1_small_vector.html',1,'lagrange']]],
+  ['stackset_59',['StackSet',['../structlagrange_1_1_stack_set.html',1,'lagrange']]],
+  ['stackvector_60',['StackVector',['../structlagrange_1_1_stack_vector.html',1,'lagrange']]],
+  ['staticassertablebool_61',['StaticAssertableBool',['../structlagrange_1_1_static_assertable_bool.html',1,'lagrange']]],
+  ['submeshoptions_62',['SubmeshOptions',['../structlagrange_1_1_submesh_options.html',1,'lagrange']]],
+  ['subselection_63',['SubSelection',['../structlagrange_1_1ui_1_1_sub_selection.html',1,'lagrange::ui']]],
+  ['surfacemesh_64',['SurfaceMesh',['../classlagrange_1_1_surface_mesh.html',1,'lagrange']]],
+  ['surfacemesh_3c_20scalar_2c_20index_20_3e_65',['SurfaceMesh&lt; Scalar, Index &gt;',['../classlagrange_1_1_surface_mesh.html',1,'lagrange']]],
+  ['systems_66',['Systems',['../classlagrange_1_1ui_1_1_systems.html',1,'lagrange::ui']]]
 ];
