@@ -233,6 +233,10 @@ Functions</h2></td></tr>
 <tr class="memitem:gafedc8c0d66af62d6f3d540465c0018c6"><td class="memTemplItemLeft" align="right" valign="top">size_t&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__group-surfacemesh-utils.html#gafedc8c0d66af62d6f3d540465c0018c6">compute_components</a> (<a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;mesh, <a class="el" href="structlagrange_1_1_component_options.html">ComponentOptions</a> options={})</td></tr>
 <tr class="memdesc:gafedc8c0d66af62d6f3d540465c0018c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute connected components of an input mesh.  <a href="group__group-surfacemesh-utils.html#gafedc8c0d66af62d6f3d540465c0018c6">More...</a><br /></td></tr>
 <tr class="separator:gafedc8c0d66af62d6f3d540465c0018c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gabe6250f56cb0f4cfbde68b857321d107"><td class="memTemplParams" colspan="2">template&lt;typename Scalar , typename Index &gt; </td></tr>
+<tr class="memitem:gabe6250f56cb0f4cfbde68b857321d107"><td class="memTemplItemLeft" align="right" valign="top">size_t&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__group-surfacemesh-utils.html#gabe6250f56cb0f4cfbde68b857321d107">compute_components</a> (<a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;mesh, <a class="el" href="group__group-utils-misc.html#ga4afead0b9ccc53fe4fca896787595d26">span</a>&lt; const Index &gt; blocker_elements, <a class="el" href="structlagrange_1_1_component_options.html">ComponentOptions</a> options={})</td></tr>
+<tr class="memdesc:gabe6250f56cb0f4cfbde68b857321d107"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute connected components of an input mesh.  <a href="group__group-surfacemesh-utils.html#gabe6250f56cb0f4cfbde68b857321d107">More...</a><br /></td></tr>
+<tr class="separator:gabe6250f56cb0f4cfbde68b857321d107"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gab65464571f0034e009273ade90fcb4bf"><td class="memTemplParams" colspan="2">template&lt;typename Scalar , typename Index &gt; </td></tr>
 <tr class="memitem:gab65464571f0034e009273ade90fcb4bf"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="group__group-surfacemesh-attr.html#ga4d115376c2c766084ef808c837348fc3">AttributeId</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__group-surfacemesh-utils.html#gab65464571f0034e009273ade90fcb4bf">compute_dihedral_angles</a> (<a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;mesh, const <a class="el" href="structlagrange_1_1_dihedral_angle_options.html">DihedralAngleOptions</a> &amp;options={})</td></tr>
 <tr class="memdesc:gab65464571f0034e009273ade90fcb4bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes dihedral angles for each edge in the mesh.  <a href="group__group-surfacemesh-utils.html#gab65464571f0034e009273ade90fcb4bf">More...</a><br /></td></tr>
@@ -846,7 +850,7 @@ Functions</h2></td></tr>
 </div>
 </div>
 <a id="gafedc8c0d66af62d6f3d540465c0018c6" name="gafedc8c0d66af62d6f3d540465c0018c6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gafedc8c0d66af62d6f3d540465c0018c6">&#9670;&nbsp;</a></span>compute_components()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#gafedc8c0d66af62d6f3d540465c0018c6">&#9670;&nbsp;</a></span>compute_components() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -874,10 +878,66 @@ Functions</h2></td></tr>
 <p><code>#include &lt;lagrange/compute_components.h&gt;</code></p>
 
 <p>Compute connected components of an input mesh. </p>
-<p >This methods will create a per-facet component id in an attributed named <code><a class="el" href="structlagrange_1_1_component_options.html#ad9fcba39803c665ca7be48a39d079f00" title="Ouptut component id attribute name.">ComponentOptions::output_attribute_name</a></code>. Each component id is in [0, num_components).</p>
+<p >This method will create a per-facet component id in an attribute named <code><a class="el" href="structlagrange_1_1_component_options.html#ad9fcba39803c665ca7be48a39d079f00" title="Output component id attribute name.">ComponentOptions::output_attribute_name</a></code>. Each component id is in [0, num_components-1].</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">mesh</td><td>Input mesh. </td></tr>
+    <tr><td class="paramname">options</td><td>Options to control component computation.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Scalar</td><td><a class="el" href="classlagrange_1_1_mesh.html">Mesh</a> scalar type. </td></tr>
+    <tr><td class="paramname">Index</td><td><a class="el" href="classlagrange_1_1_mesh.html">Mesh</a> index type.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The total number of connected components.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><code><a class="el" href="structlagrange_1_1_component_options.html" title="Options to control connected components computation.">ComponentOptions</a></code> </dd></dl>
+
+</div>
+</div>
+<a id="gabe6250f56cb0f4cfbde68b857321d107" name="gabe6250f56cb0f4cfbde68b857321d107"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gabe6250f56cb0f4cfbde68b857321d107">&#9670;&nbsp;</a></span>compute_components() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t compute_components </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;&#160;</td>
+          <td class="paramname"><em>mesh</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__group-utils-misc.html#ga4afead0b9ccc53fe4fca896787595d26">span</a>&lt; const Index &gt;&#160;</td>
+          <td class="paramname"><em>blocker_elements</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structlagrange_1_1_component_options.html">ComponentOptions</a>&#160;</td>
+          <td class="paramname"><em>options</em> = <code>{}</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;lagrange/compute_components.h&gt;</code></p>
+
+<p>Compute connected components of an input mesh. </p>
+<p >This method will create a per-facet component id in an attribute named <code><a class="el" href="structlagrange_1_1_component_options.html#ad9fcba39803c665ca7be48a39d079f00" title="Output component id attribute name.">ComponentOptions::output_attribute_name</a></code>. Each component id is in [0, num_components-1].</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mesh</td><td>Input mesh. </td></tr>
+    <tr><td class="paramname">blocker_elements</td><td>An array of blocker element indices. The blocker element index is either a vertex index or an edge index depending on <code>options.connectivity_type</code>. If <code>options.connectivity_type</code> is <code><a class="el" href="namespacelagrange.html#a312f57b0318728667933d7254778058bae4a297a0f76119a442c2595ac040673e" title="Two facets are considered connected if they share an edge.">ConnectivityType::Edge</a></code>, facets adjacent to a blocker edge are not considered as connected through this edge. If <code>options.connectivity_type</code> is <code><a class="el" href="namespacelagrange.html#a312f57b0318728667933d7254778058bab22b929ba52471a02d18bb3a4e4472e6" title="Two facets are considered connected if they share a vertex.">ConnectivityType::Vertex</a></code>, facets sharing a blocker vertex are not considered as connected through this vertex. If empty, no blocker elements are used. </td></tr>
     <tr><td class="paramname">options</td><td>Options to control component computation.</td></tr>
   </table>
   </dd>

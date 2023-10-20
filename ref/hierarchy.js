@@ -57,7 +57,7 @@ var hierarchy =
     [ "ComponentOptions", "structlagrange_1_1_component_options.html", null ],
     [ "ComponentPanel", "structlagrange_1_1ui_1_1_component_panel.html", null ],
     [ "Components< GeometryType >", "classlagrange_1_1legacy_1_1_components.html", null ],
-    [ "ComputeBorderedComponentsOutput< Index >", "structlagrange_1_1_compute_bordered_components_output.html", null ],
+    [ "ComputeBorderedComponentsOutput< Index >", "structlagrange_1_1legacy_1_1_compute_bordered_components_output.html", null ],
     [ "ComputeMeshCentroidOutput< Scalar >", "structlagrange_1_1legacy_1_1_compute_mesh_centroid_output.html", null ],
     [ "ComputePointcloudPCAOutput< Scalar >", "structlagrange_1_1_compute_pointcloud_p_c_a_output.html", null ],
     [ "Connectivity< GeometryType >", "classlagrange_1_1_connectivity.html", null ],
@@ -82,7 +82,9 @@ var hierarchy =
     [ "DeselectedEvent", "structlagrange_1_1ui_1_1_deselected_event.html", null ],
     [ "DihedralAngleOptions", "structlagrange_1_1_dihedral_angle_options.html", null ],
     [ "DijkstraDistanceOptions< Scalar, Index >", "structlagrange_1_1_dijkstra_distance_options.html", null ],
-    [ "DisjointSets< IndexType >", "classlagrange_1_1_disjoint_sets.html", null ],
+    [ "DisjointSets< IndexType >", "classlagrange_1_1_disjoint_sets.html", [
+      [ "DisjointSetsWithSize< IndexType >", "classlagrange_1_1_disjoint_sets_with_size.html", null ]
+    ] ],
     [ "Dockspace", "structlagrange_1_1ui_1_1_dockspace.html", null ],
     [ "Texture::DownloadResult", "structlagrange_1_1ui_1_1_texture_1_1_download_result.html", null ],
     [ "Earcut< N >", "classlagrange_1_1mapbox_1_1detail_1_1_earcut.html", null ],
@@ -158,7 +160,6 @@ var hierarchy =
     [ "lambda_helper< F >", "structlagrange_1_1ui_1_1util_1_1lambda__helper.html", null ],
     [ "lambda_helper< Result(F::*)(Args...) const >", "structlagrange_1_1ui_1_1util_1_1lambda__helper_3_01_result_07_f_1_1_5_08_07_args_8_8_8_08_01const_01_4.html", null ],
     [ "LastTool", "structlagrange_1_1ui_1_1_last_tool.html", null ],
-    [ "MDL::Library", "structlagrange_1_1ui_1_1_m_d_l_1_1_library.html", null ],
     [ "LightComponent", "structlagrange_1_1ui_1_1_light_component.html", null ],
     [ "LightComponentChangedEvent", "structlagrange_1_1ui_1_1_light_component_changed_event.html", null ],
     [ "list_caster", null, [
@@ -172,8 +173,6 @@ var hierarchy =
     [ "MapAttributesOptions", "structlagrange_1_1internal_1_1_map_attributes_options.html", null ],
     [ "MarchingTrianglesOutput< MeshType_ >", "structlagrange_1_1_marching_triangles_output.html", null ],
     [ "Material", "classlagrange_1_1ui_1_1_material.html", null ],
-    [ "MDL", "classlagrange_1_1ui_1_1_m_d_l.html", null ],
-    [ "MDLImpl", "structlagrange_1_1ui_1_1_m_d_l_impl.html", null ],
     [ "MeshAdapter< MeshType >", "classlagrange_1_1volume_1_1legacy_1_1_mesh_adapter.html", null ],
     [ "MeshAreaOptions", "structlagrange_1_1_mesh_area_options.html", null ],
     [ "MeshBase", "classlagrange_1_1_mesh_base.html", [

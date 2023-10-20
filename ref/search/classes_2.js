@@ -15,7 +15,7 @@ var searchData=
   ['componentoptions_12',['ComponentOptions',['../structlagrange_1_1_component_options.html',1,'lagrange']]],
   ['componentpanel_13',['ComponentPanel',['../structlagrange_1_1ui_1_1_component_panel.html',1,'lagrange::ui']]],
   ['components_14',['Components',['../classlagrange_1_1legacy_1_1_components.html',1,'lagrange::legacy']]],
-  ['computeborderedcomponentsoutput_15',['ComputeBorderedComponentsOutput',['../structlagrange_1_1_compute_bordered_components_output.html',1,'lagrange']]],
+  ['computeborderedcomponentsoutput_15',['ComputeBorderedComponentsOutput',['../structlagrange_1_1legacy_1_1_compute_bordered_components_output.html',1,'lagrange::legacy']]],
   ['computemeshcentroidoutput_16',['ComputeMeshCentroidOutput',['../structlagrange_1_1legacy_1_1_compute_mesh_centroid_output.html',1,'lagrange::legacy']]],
   ['computepointcloudpcaoutput_17',['ComputePointcloudPCAOutput',['../structlagrange_1_1_compute_pointcloud_p_c_a_output.html',1,'lagrange']]],
   ['connectivity_18',['Connectivity',['../classlagrange_1_1_connectivity.html',1,'lagrange']]],

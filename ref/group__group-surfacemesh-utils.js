@@ -98,6 +98,7 @@ var group__group_surfacemesh_utils =
     [ "lagrange::compute_facet_centroid", "group__group-surfacemesh-utils.html#ga9362d326a1cbd65aca95f481bc2d5e3c", null ],
     [ "lagrange::compute_mesh_centroid", "group__group-surfacemesh-utils.html#gae64040c03275b07fff5b820f2a61d0ba", null ],
     [ "lagrange::compute_components", "group__group-surfacemesh-utils.html#gafedc8c0d66af62d6f3d540465c0018c6", null ],
+    [ "lagrange::compute_components", "group__group-surfacemesh-utils.html#gabe6250f56cb0f4cfbde68b857321d107", null ],
     [ "lagrange::compute_dihedral_angles", "group__group-surfacemesh-utils.html#gab65464571f0034e009273ade90fcb4bf", null ],
     [ "lagrange::compute_edge_lengths", "group__group-surfacemesh-utils.html#ga58593e3709263771bc25ff51f473c92a", null ],
     [ "lagrange::compute_facet_normal", "group__group-surfacemesh-utils.html#ga50e835144b2dd2ad5df9848293c8b097", null ],

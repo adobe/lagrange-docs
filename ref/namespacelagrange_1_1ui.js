@@ -58,8 +58,6 @@ var namespacelagrange_1_1ui =
     [ "LoggerPanel", "structlagrange_1_1ui_1_1_logger_panel.html", null ],
     [ "MainMenuHeight", "structlagrange_1_1ui_1_1_main_menu_height.html", null ],
     [ "Material", "classlagrange_1_1ui_1_1_material.html", null ],
-    [ "MDL", "classlagrange_1_1ui_1_1_m_d_l.html", "classlagrange_1_1ui_1_1_m_d_l" ],
-    [ "MDLImpl", "structlagrange_1_1ui_1_1_m_d_l_impl.html", null ],
     [ "MeshData", "structlagrange_1_1ui_1_1_mesh_data.html", null ],
     [ "MeshDataDirty", "structlagrange_1_1ui_1_1_mesh_data_dirty.html", null ],
     [ "MeshGeometry", "structlagrange_1_1ui_1_1_mesh_geometry.html", null ],

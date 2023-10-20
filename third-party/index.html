@@ -1335,7 +1335,7 @@
 <p>Here is a list of third party libraries used in Lagrange. Those external dependencies will be
 automatically downloaded by our CMake system depending on which Lagrange module is enabled.</p>
 <div class="admonition important">
-<p class="admonition-title">Important</p>
+<p class="admonition-title">Direct vs Indirect Dependencies</p>
 <p>This table only lists <strong>direct</strong> dependencies of various Lagrange modules. Indirect dependencies
 are not listed there. </p>
 </div>
@@ -1417,11 +1417,6 @@ are not listed there. </p>
 <td><a href="https://github.com/libigl/libigl/">Libigl</a></td>
 <td>MPL2</td>
 <td>BVH, IO</td>
-</tr>
-<tr>
-<td><a href="https://developer.nvidia.com/mdl-sdk">MDL SDK</a></td>
-<td>BSD-3</td>
-<td>UI</td>
 </tr>
 <tr>
 <td><a href="http://glaros.dtc.umn.edu/gkhome/metis/metis/overview">METIS</a></td>
@@ -1547,6 +1542,12 @@ appropriate licenses and files that are affected.</p>
 <td>Apache 2</td>
 <td>CMake Build System</td>
 <td><a href="https://github.com/adobe/lagrange/blob/main/cmake/recipes/external/sanitizers.cmake">sanitizers.cmake</a>, <a href="https://github.com/adobe/lagrange/blob/main/cmake/recipes/external/code-coverage.cmake">code-coverage.cmake</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/cpm-cmake/CPM.cmake">CPM</a></td>
+<td>MIT</td>
+<td>CMake Build System</td>
+<td><a href="https://github.com/adobe/lagrange/blob/main/cmake/recipes/external/CPM.cmake">CPM.cmake</a></td>
 </tr>
 <tr>
 <td><a href="https://github.com/mapbox/earcut.hpp">Earcut</a></td>

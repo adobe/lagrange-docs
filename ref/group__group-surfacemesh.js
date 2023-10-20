@@ -157,6 +157,7 @@ var group__group_surfacemesh =
       [ "get_corner_edge", "classlagrange_1_1_surface_mesh.html#a24975f9d8e5adf7f621c29f2f75b7fdd", null ],
       [ "get_edge_from_corner", "classlagrange_1_1_surface_mesh.html#a491ff4636c29460975186cac5cdccaf4", null ],
       [ "get_edge_vertices", "classlagrange_1_1_surface_mesh.html#a29302efd8dd0d5b7c28f28f901b62d36", null ],
+      [ "find_edge_from_vertices", "classlagrange_1_1_surface_mesh.html#a032a198e720a57c9e22327a8dc2ad1b9", null ],
       [ "get_first_corner_around_edge", "classlagrange_1_1_surface_mesh.html#a757f13e26354a83f93e1ac0b276a55a6", null ],
       [ "get_next_corner_around_edge", "classlagrange_1_1_surface_mesh.html#a42ea64462a4c107f838ae2758e178bda", null ],
       [ "get_first_corner_around_vertex", "classlagrange_1_1_surface_mesh.html#a86a57db26b350768afb4ff0a7c7802c5", null ],
