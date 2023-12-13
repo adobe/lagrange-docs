@@ -50,6 +50,7 @@ var annotated_dup =
         [ "ScalarToEnum< uint8_t, void >", "structlagrange_1_1experimental_1_1_scalar_to_enum_3_01uint8__t_00_01void_01_4.html", null ]
       ] ],
       [ "internal", "namespacelagrange_1_1internal.html", [
+        [ "BucketSortOffset", "structlagrange_1_1internal_1_1_bucket_sort_offset.html", "structlagrange_1_1internal_1_1_bucket_sort_offset" ],
         [ "BucketSortResult", "structlagrange_1_1internal_1_1_bucket_sort_result.html", "structlagrange_1_1internal_1_1_bucket_sort_result" ],
         [ "control_block", "classlagrange_1_1internal_1_1control__block.html", null ],
         [ "control_block_base", "classlagrange_1_1internal_1_1control__block__base.html", null ],
@@ -330,6 +331,7 @@ var annotated_dup =
       [ "OrderedPairHash< std::pair< U, V > >", "structlagrange_1_1_ordered_pair_hash_3_01std_1_1pair_3_01_u_00_01_v_01_4_01_4.html", null ],
       [ "ProgressCallback", "classlagrange_1_1_progress_callback.html", "classlagrange_1_1_progress_callback" ],
       [ "RemapVerticesOptions", "structlagrange_1_1_remap_vertices_options.html", "structlagrange_1_1_remap_vertices_options" ],
+      [ "RemoveDuplicateFacetOptions", "structlagrange_1_1_remove_duplicate_facet_options.html", "structlagrange_1_1_remove_duplicate_facet_options" ],
       [ "RemoveDuplicateVerticesOptions", "structlagrange_1_1_remove_duplicate_vertices_options.html", "structlagrange_1_1_remove_duplicate_vertices_options" ],
       [ "RemoveNullAreaFacetsOptions", "structlagrange_1_1_remove_null_area_facets_options.html", "structlagrange_1_1_remove_null_area_facets_options" ],
       [ "SamplePointsOnSurfaceOutput", "structlagrange_1_1_sample_points_on_surface_output.html", null ],
@@ -349,6 +351,7 @@ var annotated_dup =
       [ "SurfaceMesh", "classlagrange_1_1_surface_mesh.html", "classlagrange_1_1_surface_mesh" ],
       [ "TangentBitangentOptions", "structlagrange_1_1_tangent_bitangent_options.html", "structlagrange_1_1_tangent_bitangent_options" ],
       [ "TangentBitangentResult", "structlagrange_1_1_tangent_bitangent_result.html", "structlagrange_1_1_tangent_bitangent_result" ],
+      [ "TransformOptions", "structlagrange_1_1_transform_options.html", "structlagrange_1_1_transform_options" ],
       [ "UVDistortionOptions", "structlagrange_1_1_u_v_distortion_options.html", "structlagrange_1_1_u_v_distortion_options" ],
       [ "value_ptr", "classlagrange_1_1value__ptr.html", null ],
       [ "VerboseTimer", "classlagrange_1_1_verbose_timer.html", "classlagrange_1_1_verbose_timer" ],
@@ -428,8 +431,14 @@ var annotated_dup =
       [ "test_remove_null_area_facets", null, [
         [ "TestRemoveNullAreaFacets", "classtests_1_1test__remove__null__area__facets_1_1_test_remove_null_area_facets.html", null ]
       ] ],
+      [ "test_remove_topologically_degenerate_facets", null, [
+        [ "TestRemoveTopologicallyDegenerateFacets", "classtests_1_1test__remove__topologically__degenerate__facets_1_1_test_remove_topologically_degenerate_facets.html", null ]
+      ] ],
       [ "test_surface_mesh", null, [
         [ "TestSurfaceMesh", "classtests_1_1test__surface__mesh_1_1_test_surface_mesh.html", null ]
+      ] ],
+      [ "test_transform_mesh", null, [
+        [ "TestTransformMesh", "classtests_1_1test__transform__mesh_1_1_test_transform_mesh.html", null ]
       ] ],
       [ "test_triangulate_polygonal_facets", null, [
         [ "TestTriangulatePolygonalFacets", "classtests_1_1test__triangulate__polygonal__facets_1_1_test_triangulate_polygonal_facets.html", null ]

@@ -38,6 +38,7 @@ var hierarchy =
       [ "Layer", "structlagrange_1_1ui_1_1_layer.html", null ]
     ] ],
     [ "Bounds", "structlagrange_1_1ui_1_1_bounds.html", null ],
+    [ "BucketSortOffset< Index >", "structlagrange_1_1internal_1_1_bucket_sort_offset.html", null ],
     [ "BucketSortResult< Index >", "structlagrange_1_1internal_1_1_bucket_sort_result.html", null ],
     [ "BVH< _VertexArray, _ElementArray >", "classlagrange_1_1bvh_1_1_b_v_h.html", null ],
     [ "BVH< _VertexArray, lagrange::Triangles >", "classlagrange_1_1bvh_1_1_b_v_h.html", [
@@ -231,6 +232,7 @@ var hierarchy =
     [ "RayFacetHit", "structlagrange_1_1ui_1_1_ray_facet_hit.html", null ],
     [ "RemapVerticesOptions", "structlagrange_1_1_remap_vertices_options.html", null ],
     [ "RemeshingOptions", "structlagrange_1_1scene_1_1_remeshing_options.html", null ],
+    [ "RemoveDuplicateFacetOptions", "structlagrange_1_1_remove_duplicate_facet_options.html", null ],
     [ "RemoveDuplicateVerticesOptions", "structlagrange_1_1_remove_duplicate_vertices_options.html", null ],
     [ "RemoveNullAreaFacetsOptions", "structlagrange_1_1_remove_null_area_facets_options.html", null ],
     [ "RenderContext", "structlagrange_1_1ui_1_1_render_context.html", null ],
@@ -341,8 +343,10 @@ var hierarchy =
     [ "TestRemapVertices", "classtests_1_1test__remap__vertices_1_1_test_remap_vertices.html", null ],
     [ "TestRemoveDuplicateVertices", "classtests_1_1test__remove__duplicate__vertices_1_1_test_remove_duplicate_vertices.html", null ],
     [ "TestRemoveNullAreaFacets", "classtests_1_1test__remove__null__area__facets_1_1_test_remove_null_area_facets.html", null ],
+    [ "TestRemoveTopologicallyDegenerateFacets", "classtests_1_1test__remove__topologically__degenerate__facets_1_1_test_remove_topologically_degenerate_facets.html", null ],
     [ "TestSimpleScene", "classtest__simple__scene_1_1_test_simple_scene.html", null ],
     [ "TestSurfaceMesh", "classtests_1_1test__surface__mesh_1_1_test_surface_mesh.html", null ],
+    [ "TestTransformMesh", "classtests_1_1test__transform__mesh_1_1_test_transform_mesh.html", null ],
     [ "TestTriangulatePolygonalFacets", "classtests_1_1test__triangulate__polygonal__facets_1_1_test_triangulate_polygonal_facets.html", null ],
     [ "TestUnifyIndexBuffer", "classtests_1_1test__unify__index__buffer_1_1_test_unify_index_buffer.html", null ],
     [ "TestWeldIndexedAttribute", "classtests_1_1test__weld__indexed__attribute_1_1_test_weld_indexed_attribute.html", null ],
@@ -352,6 +356,7 @@ var hierarchy =
     [ "Texture::Transform", "structlagrange_1_1ui_1_1_texture_1_1_transform.html", null ],
     [ "Transform", "structlagrange_1_1ui_1_1_transform.html", null ],
     [ "TransformChangedEvent", "structlagrange_1_1ui_1_1_transform_changed_event.html", null ],
+    [ "TransformOptions", "structlagrange_1_1_transform_options.html", null ],
     [ "TranslateToolTag", "structlagrange_1_1ui_1_1_translate_tool_tag.html", null ],
     [ "TreeNode", "structlagrange_1_1ui_1_1_tree_node.html", null ],
     [ "true_type", null, [

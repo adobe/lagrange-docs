@@ -8,7 +8,7 @@ var searchData=
   ['uniform_5',['Uniform',['../structlagrange_1_1_mesh_centroid_options.html#a8ef3cb3f56dc8aba3f2dc87664f7bfffa7736d52add43418b88f40ba8c8148ad8',1,'lagrange::MeshCentroidOptions::Uniform()'],['../group__group-surfacemesh-utils.html#ggaa88e833ed770762b02e187f0c2377d3daf19516d11f2946f894070e92fcb56b6d',1,'lagrange::Uniform()']]],
   ['unify_5findex_5fbuffer_6',['unify_index_buffer',['../group__group-surfacemesh-attr-utils.html#gae8deb2977d6d78e0b8e3a9a7773b6c72',1,'lagrange']]],
   ['unify_5fnamed_5findex_5fbuffer_7',['unify_named_index_buffer',['../group__group-surfacemesh-attr-utils.html#ga40817d91add1d124cc9f362f019d1f0c',1,'lagrange']]],
-  ['uninstanciated_5fmeshes_5fstrategy_8',['uninstanciated_meshes_strategy',['../structlagrange_1_1scene_1_1_remeshing_options.html#a6746e1ac4de4f009e5aad97ce7415de8',1,'lagrange::scene::RemeshingOptions']]],
+  ['uninstantiated_5fmeshes_5fstrategy_8',['uninstantiated_meshes_strategy',['../structlagrange_1_1scene_1_1_remeshing_options.html#ae1a1cecc9638ff87a210ad863bfed8a3',1,'lagrange::scene::RemeshingOptions']]],
   ['unique_9',['unique',['../classlagrange_1_1internal_1_1shared__ptr.html#a17f79efcc0f2e0d5cb9afcdee013e64c',1,'lagrange::internal::shared_ptr']]],
   ['unproject_10',['unproject',['../classlagrange_1_1ui_1_1_camera.html#a05428503a3e3ba3b9ff24edc76049164',1,'lagrange::ui::Camera']]],
   ['unproject_5fpoint_11',['unproject_point',['../namespacelagrange_1_1ui.html#a97336d869842071d1a5c4b583cd2aef3',1,'lagrange::ui']]],

@@ -10,8 +10,9 @@ var searchData=
   ['rayfacethit_7',['RayFacetHit',['../structlagrange_1_1ui_1_1_ray_facet_hit.html',1,'lagrange::ui']]],
   ['remapverticesoptions_8',['RemapVerticesOptions',['../structlagrange_1_1_remap_vertices_options.html',1,'lagrange']]],
   ['remeshingoptions_9',['RemeshingOptions',['../structlagrange_1_1scene_1_1_remeshing_options.html',1,'lagrange::scene']]],
-  ['removeduplicateverticesoptions_10',['RemoveDuplicateVerticesOptions',['../structlagrange_1_1_remove_duplicate_vertices_options.html',1,'lagrange']]],
-  ['removenullareafacetsoptions_11',['RemoveNullAreaFacetsOptions',['../structlagrange_1_1_remove_null_area_facets_options.html',1,'lagrange']]],
-  ['rendercontext_12',['RenderContext',['../structlagrange_1_1ui_1_1_render_context.html',1,'lagrange::ui']]],
-  ['rotatetooltag_13',['RotateToolTag',['../structlagrange_1_1ui_1_1_rotate_tool_tag.html',1,'lagrange::ui']]]
+  ['removeduplicatefacetoptions_10',['RemoveDuplicateFacetOptions',['../structlagrange_1_1_remove_duplicate_facet_options.html',1,'lagrange']]],
+  ['removeduplicateverticesoptions_11',['RemoveDuplicateVerticesOptions',['../structlagrange_1_1_remove_duplicate_vertices_options.html',1,'lagrange']]],
+  ['removenullareafacetsoptions_12',['RemoveNullAreaFacetsOptions',['../structlagrange_1_1_remove_null_area_facets_options.html',1,'lagrange']]],
+  ['rendercontext_13',['RenderContext',['../structlagrange_1_1ui_1_1_render_context.html',1,'lagrange::ui']]],
+  ['rotatetooltag_14',['RotateToolTag',['../structlagrange_1_1ui_1_1_rotate_tool_tag.html',1,'lagrange::ui']]]
 ];

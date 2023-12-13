@@ -123,6 +123,9 @@ $(document).ready(function(){initNavTree('namespacelagrange_1_1internal.html',''
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlagrange_1_1internal_1_1_bucket_sort_offset.html">BucketSortOffset</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bucket sort offset infos.  <a href="structlagrange_1_1internal_1_1_bucket_sort_offset.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlagrange_1_1internal_1_1_bucket_sort_result.html">BucketSortResult</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bucket sort result object.  <a href="structlagrange_1_1internal_1_1_bucket_sort_result.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -172,6 +175,10 @@ Functions</h2></td></tr>
 <tr class="memitem:ad1ef58c4f14fd3da88c3ddfb8541c1fb"><td class="memItemLeft" align="right" valign="top">std::string_view&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelagrange_1_1internal.html#ad1ef58c4f14fd3da88c3ddfb8541c1fb">to_string</a> (<a class="el" href="group__group-surfacemesh-attr.html#ga35b5eb426384b257452ee0ffdb732c27">AttributeUsage</a> usage)</td></tr>
 <tr class="memdesc:ad1ef58c4f14fd3da88c3ddfb8541c1fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a string representation of an attribute usage.  <a href="namespacelagrange_1_1internal.html#ad1ef58c4f14fd3da88c3ddfb8541c1fb">More...</a><br /></td></tr>
 <tr class="separator:ad1ef58c4f14fd3da88c3ddfb8541c1fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a365755bee2e12743525ba9d78a556c09"><td class="memTemplParams" colspan="2">template&lt;typename ValueType &gt; </td></tr>
+<tr class="memitem:a365755bee2e12743525ba9d78a556c09"><td class="memTemplItemLeft" align="right" valign="top">std::string_view&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacelagrange_1_1internal.html#a365755bee2e12743525ba9d78a556c09">value_type_name</a> (const <a class="el" href="classlagrange_1_1_attribute.html">lagrange::Attribute</a>&lt; ValueType &gt; &amp;attr)</td></tr>
+<tr class="memdesc:a365755bee2e12743525ba9d78a556c09"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a string representation of the attribute value type.  <a href="namespacelagrange_1_1internal.html#a365755bee2e12743525ba9d78a556c09">More...</a><br /></td></tr>
+<tr class="separator:a365755bee2e12743525ba9d78a556c09"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a10b9d17084e2958faea52fd3672dea5f"><td class="memTemplParams" colspan="2"><a id="a10b9d17084e2958faea52fd3672dea5f" name="a10b9d17084e2958faea52fd3672dea5f"></a>
 template&lt;typename DerivedF , typename DerivedFF , typename DerivedC &gt; </td></tr>
 <tr class="memitem:a10b9d17084e2958faea52fd3672dea5f"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>bfs_orient</b> (const Eigen::MatrixBase&lt; DerivedF &gt; &amp;F, Eigen::PlainObjectBase&lt; DerivedFF &gt; &amp;FF, Eigen::PlainObjectBase&lt; DerivedC &gt; &amp;C)</td></tr>
@@ -204,6 +211,10 @@ template&lt;typename DerivedV , typename DerivedF , typename DeriveddblA &gt; </
 <tr class="memitem:a8d8b8c95bd1fe5343f763045a81314ee"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacelagrange_1_1internal.html#a8d8b8c95bd1fe5343f763045a81314ee">internal_angles</a> (const Eigen::MatrixBase&lt; DerivedV &gt; &amp;vertices, const Eigen::MatrixBase&lt; DerivedF &gt; &amp;facets, Eigen::PlainObjectBase&lt; DerivedK &gt; &amp;angles)</td></tr>
 <tr class="memdesc:a8d8b8c95bd1fe5343f763045a81314ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute internal angles for a triangle mesh.  <a href="namespacelagrange_1_1internal.html#a8d8b8c95bd1fe5343f763045a81314ee">More...</a><br /></td></tr>
 <tr class="separator:a8d8b8c95bd1fe5343f763045a81314ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a816e515c3b9d808526087b1c58b37fdd"><td class="memTemplParams" colspan="2">template&lt;typename Index , typename Function &gt; </td></tr>
+<tr class="memitem:a816e515c3b9d808526087b1c58b37fdd"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacelagrange_1_1internal.html#a816e515c3b9d808526087b1c58b37fdd">invert_mapping</a> (Index num_source_entries, Function old2new, Index num_target_entries) -&gt; std::tuple&lt; std::vector&lt; Index &gt;, std::vector&lt; Index &gt; &gt;</td></tr>
+<tr class="memdesc:a816e515c3b9d808526087b1c58b37fdd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the target-to-source (i.e.  <a href="namespacelagrange_1_1internal.html#a816e515c3b9d808526087b1c58b37fdd">More...</a><br /></td></tr>
+<tr class="separator:a816e515c3b9d808526087b1c58b37fdd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a483149cef61e7cd6355dd8e90055d297"><td class="memTemplParams" colspan="2">template&lt;typename Index &gt; </td></tr>
 <tr class="memitem:a483149cef61e7cd6355dd8e90055d297"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacelagrange_1_1internal.html#a483149cef61e7cd6355dd8e90055d297">invert_mapping</a> (<a class="el" href="group__group-utils-misc.html#ga4afead0b9ccc53fe4fca896787595d26">span</a>&lt; Index &gt; old2new, Index num_target_entries) -&gt; std::tuple&lt; std::vector&lt; Index &gt;, std::vector&lt; Index &gt; &gt;</td></tr>
 <tr class="memdesc:a483149cef61e7cd6355dd8e90055d297"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the target-to-source (i.e.  <a href="namespacelagrange_1_1internal.html#a483149cef61e7cd6355dd8e90055d297">More...</a><br /></td></tr>
@@ -347,6 +358,10 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>point_on_segment_3d</
 <tr class="memitem:a87a49ab6f672c04f4f72e198181a887c"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structlagrange_1_1internal_1_1_bucket_sort_result.html">BucketSortResult</a>&lt; Index &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacelagrange_1_1internal.html#a87a49ab6f672c04f4f72e198181a887c">bucket_sort</a> (<a class="el" href="classlagrange_1_1_disjoint_sets.html">DisjointSets</a>&lt; Index &gt; &amp;unified_indices, <a class="el" href="group__group-utils-misc.html#ga4afead0b9ccc53fe4fca896787595d26">span</a>&lt; Index &gt; element_representative)</td></tr>
 <tr class="memdesc:a87a49ab6f672c04f4f72e198181a887c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs a bucket sort over a range of elements.  <a href="namespacelagrange_1_1internal.html#a87a49ab6f672c04f4f72e198181a887c">More...</a><br /></td></tr>
 <tr class="separator:a87a49ab6f672c04f4f72e198181a887c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c60561ca55faebfa701db5f3c0100c2"><td class="memTemplParams" colspan="2">template&lt;typename Index , typename Function &gt; </td></tr>
+<tr class="memitem:a9c60561ca55faebfa701db5f3c0100c2"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structlagrange_1_1internal_1_1_bucket_sort_offset.html">BucketSortOffset</a>&lt; Index &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacelagrange_1_1internal.html#a9c60561ca55faebfa701db5f3c0100c2">bucket_sort</a> (std::vector&lt; Index &gt; &amp;elements, Index num_buckets, Function get_representative)</td></tr>
+<tr class="memdesc:a9c60561ca55faebfa701db5f3c0100c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform a bucket sort over a range of elements in place.  <a href="namespacelagrange_1_1internal.html#a9c60561ca55faebfa701db5f3c0100c2">More...</a><br /></td></tr>
+<tr class="separator:a9c60561ca55faebfa701db5f3c0100c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a425b6670a3b7465f0b6a712b35f91b7c"><td class="memTemplParams" colspan="2">template&lt;typename Scalar , typename Index &gt; </td></tr>
 <tr class="memitem:a425b6670a3b7465f0b6a712b35f91b7c"><td class="memTemplItemLeft" align="right" valign="top">Eigen::Matrix&lt; Scalar, 3, 1 &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacelagrange_1_1internal.html#a425b6670a3b7465f0b6a712b35f91b7c">compute_weighted_corner_normal</a> (<a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;mesh, Index ci, <a class="el" href="group__group-surfacemesh-utils.html#gaa88e833ed770762b02e187f0c2377d3d">NormalWeightingType</a> weighting=<a class="el" href="group__group-surfacemesh-utils.html#ggaa88e833ed770762b02e187f0c2377d3da84f023fc44b6b158de6ccc157c8dab06">NormalWeightingType::CornerTriangleArea</a>)</td></tr>
 <tr class="memdesc:a425b6670a3b7465f0b6a712b35f91b7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute weighted corner normal based on the weighting type.  <a href="namespacelagrange_1_1internal.html#a425b6670a3b7465f0b6a712b35f91b7c">More...</a><br /></td></tr>
@@ -441,6 +456,39 @@ template&lt;typename ValueType , typename Scalar , typename Index &gt; </td></tr
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">usage</td><td><a class="el" href="classlagrange_1_1_attribute.html" title="Derived attribute class that stores the actual information.">Attribute</a> usage.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>String representation. </dd></dl>
+
+</div>
+</div>
+<a id="a365755bee2e12743525ba9d78a556c09" name="a365755bee2e12743525ba9d78a556c09"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a365755bee2e12743525ba9d78a556c09">&#9670;&nbsp;</a></span>value_type_name()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string_view value_type_name </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classlagrange_1_1_attribute.html">lagrange::Attribute</a>&lt; ValueType &gt; &amp;&#160;</td>
+          <td class="paramname"><em>attr</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a string representation of the attribute value type. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">attr</td><td>Input attribute.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">ValueType</td><td><a class="el" href="classlagrange_1_1_attribute.html" title="Derived attribute class that stores the actual information.">Attribute</a> value type.</td></tr>
   </table>
   </dd>
 </dl>
@@ -851,8 +899,64 @@ template&lt;typename ValueType , typename Scalar , typename Index &gt; </td></tr
 
 </div>
 </div>
+<a id="a816e515c3b9d808526087b1c58b37fdd" name="a816e515c3b9d808526087b1c58b37fdd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a816e515c3b9d808526087b1c58b37fdd">&#9670;&nbsp;</a></span>invert_mapping() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto invert_mapping </td>
+          <td>(</td>
+          <td class="paramtype">Index&#160;</td>
+          <td class="paramname"><em>num_source_entries</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Function&#160;</td>
+          <td class="paramname"><em>old2new</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Index&#160;</td>
+          <td class="paramname"><em>num_target_entries</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> -&gt; std::tuple&lt;std::vector&lt;Index&gt;, std::vector&lt;Index&gt;&gt;
+</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Compute the target-to-source (i.e. </p>
+<p >backward) mapping from an input source-to-target (i.e. forward) mapping.</p>
+<dl class="section note"><dt>Note</dt><dd>The input source-to-target mapping may be a 1-to-many mapping, where multiple source elements may be mapped to a single target element.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">num_source_entries</td><td>The number source entries. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">old2new</td><td>Source-to-target mapping function. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">num_target_entries</td><td>The total number of target elements.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Index</td><td>The index type. </td></tr>
+    <tr><td class="paramname">Function</td><td>Mapping function type.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The target-to-source mapping, which is a tuple consists of 2 index arrays, mapping_data and mapping_offsets.</dd></dl>
+<p><code>mapping_data</code> is a flat array of indices of the source elements. <code>mapping_offsets</code> is an array of <code>mapping_data</code> offset indices. It is of size <code>num_target_entires + 1</code>. Target element <code>i</code> is mapped to source elements with index in the range from <code>mapping_data[mapping_offsets[i]]</code> to <code>mapping_data[mapping_offsets[i+1]]</code>. </p>
+
+</div>
+</div>
 <a id="a483149cef61e7cd6355dd8e90055d297" name="a483149cef61e7cd6355dd8e90055d297"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a483149cef61e7cd6355dd8e90055d297">&#9670;&nbsp;</a></span>invert_mapping()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a483149cef61e7cd6355dd8e90055d297">&#9670;&nbsp;</a></span>invert_mapping() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -881,21 +985,22 @@ template&lt;typename ValueType , typename Scalar , typename Index &gt; </td></tr
 <p>Compute the target-to-source (i.e. </p>
 <p >backward) mapping from an input source-to-target (i.e. forward) mapping.</p>
 <dl class="section note"><dt>Note</dt><dd>The input source-to-target mapping may be a 1-to-many mapping, where multiple source elements may be mapped to a single target element.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">old2new</td><td>Source-to-target mapping. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">num_target_entries</td><td>The total number of target elements.</td></tr>
+  </table>
+  </dd>
+</dl>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">Index</td><td>The index type.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">source2target</td><td>The source-to-target element mapping. </td></tr>
-    <tr><td class="paramname">num_target_entries</td><td>The total number of target elements.</td></tr>
-  </table>
-  </dd>
-</dl>
 <dl class="section return"><dt>Returns</dt><dd>The target-to-source mapping, which is a tuple consists of 2 index arrays, mapping_data and mapping_offsets.</dd></dl>
-<p><code>mapping_data</code> is a flat array of indices of the source elements. <code>mapping_offsets</code> is an array of <code>mapping_data</code> offset indices. It is of size <code>num_target_entires + 1</code>. Target element <code>i</code> is mapped to source elements with index in the range from <code>mapping_data[mapping_offsets[i]]</code> to <code>mapping_data[mapping_offsets[i+1]]</code>. </p>
+<p><code>mapping_data</code> is a flat array of indices of the source elements. <code>mapping_offsets</code> is an array of <code>mapping_data</code> offset indices. It is of size <code>num_target_entires + 1</code>. Target element <code>i</code> is mapped to source elements with index in the range from <code>mapping_data[mapping_offsets[i]]</code> to <code>mapping_data[mapping_offsets[i+1]]</code>.</p>
+<p >This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </p>
 
 </div>
 </div>
@@ -1291,7 +1396,7 @@ template&lt;typename ValueType , typename Scalar , typename Index &gt; </td></tr
 </div>
 </div>
 <a id="a87a49ab6f672c04f4f72e198181a887c" name="a87a49ab6f672c04f4f72e198181a887c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a87a49ab6f672c04f4f72e198181a887c">&#9670;&nbsp;</a></span>bucket_sort()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a87a49ab6f672c04f4f72e198181a887c">&#9670;&nbsp;</a></span>bucket_sort() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1331,6 +1436,58 @@ template&lt;typename ValueType , typename Scalar , typename Index &gt; </td></tr
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Bucket sort result containing a list of sorted element indices and an offset for each representative element. </dd></dl>
+
+</div>
+</div>
+<a id="a9c60561ca55faebfa701db5f3c0100c2" name="a9c60561ca55faebfa701db5f3c0100c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c60561ca55faebfa701db5f3c0100c2">&#9670;&nbsp;</a></span>bucket_sort() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structlagrange_1_1internal_1_1_bucket_sort_offset.html">BucketSortOffset</a>&lt; Index &gt; bucket_sort </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; Index &gt; &amp;&#160;</td>
+          <td class="paramname"><em>elements</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Index&#160;</td>
+          <td class="paramname"><em>num_buckets</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Function&#160;</td>
+          <td class="paramname"><em>get_representative</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Perform a bucket sort over a range of elements in place. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">elements</td><td>Elements to sort. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">num_buckets</td><td>Number of buckets (max element in the range + 1). </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">get_representative</td><td>Function to get the representative bucket for a given element.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Index</td><td>Index type. </td></tr>
+    <tr><td class="paramname">Function</td><td>Callback function type.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Info about the sorted buckets. </dd></dl>
 
 </div>
 </div>

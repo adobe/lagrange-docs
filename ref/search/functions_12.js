@@ -16,12 +16,14 @@ var searchData=
   ['tock_13',['tock',['../classlagrange_1_1_silent_timer.html#afaaa29b2d16059bbf5580e31995959fa',1,'lagrange::SilentTimer::tock()'],['../classlagrange_1_1_verbose_timer.html#afaaa29b2d16059bbf5580e31995959fa',1,'lagrange::VerboseTimer::tock()']]],
   ['toggle_5fcomponent_5fevent_14',['toggle_component_event',['../namespacelagrange_1_1ui.html#afe6a00fd8a5cc2a22a39074227668fc0',1,'lagrange::ui']]],
   ['total_15',['total',['../classlagrange_1_1_silent_multi_timer.html#a85ac1d5839132d0721665e01b9249496',1,'lagrange::SilentMultiTimer']]],
-  ['transformed_16',['transformed',['../classlagrange_1_1ui_1_1_camera.html#aeee9730864397c4019d1773584626770',1,'lagrange::ui::Camera']]],
-  ['triangle_5farea_5f2d_17',['triangle_area_2d',['../namespacelagrange.html#a49eca467681fb7600745af55571bd0f3',1,'lagrange']]],
-  ['triangle_5farea_5f3d_18',['triangle_area_3d',['../namespacelagrange.html#ad6b4dc54ffcfd57bf369e3044f567467',1,'lagrange']]],
-  ['triangle_5forientation_19',['triangle_orientation',['../namespacelagrange.html#aba6eab98907ea478e363a44023b4dd1a',1,'lagrange']]],
-  ['triangle_5fuv_5fdistortion_20',['triangle_uv_distortion',['../namespacelagrange.html#ab63029c7c83fee8c6f3bf5de81e4353c',1,'lagrange::triangle_uv_distortion(span&lt; const Scalar, 3 &gt; V0, span&lt; const Scalar, 3 &gt; V1, span&lt; const Scalar, 3 &gt; V2, span&lt; const Scalar, 2 &gt; v0, span&lt; const Scalar, 2 &gt; v1, span&lt; const Scalar, 2 &gt; v2)'],['../namespacelagrange.html#a8536342d5f43c6fd93cf888e97aa7873',1,'lagrange::triangle_uv_distortion(span&lt; const Scalar, 3 &gt; V0, span&lt; const Scalar, 3 &gt; V1, span&lt; const Scalar, 3 &gt; V2, span&lt; const Scalar, 2 &gt; v0, span&lt; const Scalar, 2 &gt; v1, span&lt; const Scalar, 2 &gt; v2, DistortionMetric metric)']]],
-  ['triangulate_5fpolygonal_5ffacets_21',['triangulate_polygonal_facets',['../group__group-surfacemesh-utils.html#ga48af6105ece8a970755870c73af73ddd',1,'lagrange']]],
-  ['trigger_5fbreakpoint_22',['trigger_breakpoint',['../group__group-utils-assert.html#ga82afecd46baab6fadf8dfa8d7dbea5ec',1,'lagrange']]],
-  ['two_5fpi_23',['two_pi',['../namespacelagrange_1_1ui.html#ab5dc91ffacc9f30a4af58def59640f5d',1,'lagrange::ui']]]
+  ['transform_5fmesh_16',['transform_mesh',['../group__group-surfacemesh-utils.html#gacf1d47b2a4ef430e40d1725766a13508',1,'lagrange']]],
+  ['transformed_17',['transformed',['../classlagrange_1_1ui_1_1_camera.html#aeee9730864397c4019d1773584626770',1,'lagrange::ui::Camera']]],
+  ['transformed_5fmesh_18',['transformed_mesh',['../group__group-surfacemesh-utils.html#ga6dde867eed122f72ca82a6de8b7ab2af',1,'lagrange']]],
+  ['triangle_5farea_5f2d_19',['triangle_area_2d',['../namespacelagrange.html#a49eca467681fb7600745af55571bd0f3',1,'lagrange']]],
+  ['triangle_5farea_5f3d_20',['triangle_area_3d',['../namespacelagrange.html#ad6b4dc54ffcfd57bf369e3044f567467',1,'lagrange']]],
+  ['triangle_5forientation_21',['triangle_orientation',['../namespacelagrange.html#aba6eab98907ea478e363a44023b4dd1a',1,'lagrange']]],
+  ['triangle_5fuv_5fdistortion_22',['triangle_uv_distortion',['../namespacelagrange.html#ab63029c7c83fee8c6f3bf5de81e4353c',1,'lagrange::triangle_uv_distortion(span&lt; const Scalar, 3 &gt; V0, span&lt; const Scalar, 3 &gt; V1, span&lt; const Scalar, 3 &gt; V2, span&lt; const Scalar, 2 &gt; v0, span&lt; const Scalar, 2 &gt; v1, span&lt; const Scalar, 2 &gt; v2)'],['../namespacelagrange.html#a8536342d5f43c6fd93cf888e97aa7873',1,'lagrange::triangle_uv_distortion(span&lt; const Scalar, 3 &gt; V0, span&lt; const Scalar, 3 &gt; V1, span&lt; const Scalar, 3 &gt; V2, span&lt; const Scalar, 2 &gt; v0, span&lt; const Scalar, 2 &gt; v1, span&lt; const Scalar, 2 &gt; v2, DistortionMetric metric)']]],
+  ['triangulate_5fpolygonal_5ffacets_23',['triangulate_polygonal_facets',['../group__group-surfacemesh-utils.html#ga48af6105ece8a970755870c73af73ddd',1,'lagrange']]],
+  ['trigger_5fbreakpoint_24',['trigger_breakpoint',['../group__group-utils-assert.html#ga82afecd46baab6fadf8dfa8d7dbea5ec',1,'lagrange']]],
+  ['two_5fpi_25',['two_pi',['../namespacelagrange_1_1ui.html#ab5dc91ffacc9f30a4af58def59640f5d',1,'lagrange::ui']]]
 ];

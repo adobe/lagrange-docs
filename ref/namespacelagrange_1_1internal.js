@@ -1,5 +1,6 @@
 var namespacelagrange_1_1internal =
 [
+    [ "BucketSortOffset", "structlagrange_1_1internal_1_1_bucket_sort_offset.html", "structlagrange_1_1internal_1_1_bucket_sort_offset" ],
     [ "BucketSortResult", "structlagrange_1_1internal_1_1_bucket_sort_result.html", "structlagrange_1_1internal_1_1_bucket_sort_result" ],
     [ "control_block", "classlagrange_1_1internal_1_1control__block.html", null ],
     [ "control_block_base", "classlagrange_1_1internal_1_1control__block__base.html", null ],
@@ -16,12 +17,14 @@ var namespacelagrange_1_1internal =
     [ "to_string", "namespacelagrange_1_1internal.html#a1094c838f626d32cbbd591b269c17aba", null ],
     [ "to_string", "namespacelagrange_1_1internal.html#a1bf501173c662983dbe2e4436cd90f35", null ],
     [ "to_string", "namespacelagrange_1_1internal.html#ad1ef58c4f14fd3da88c3ddfb8541c1fb", null ],
+    [ "value_type_name", "namespacelagrange_1_1internal.html#a365755bee2e12743525ba9d78a556c09", null ],
     [ "dijkstra", "namespacelagrange_1_1internal.html#a318ef64371a044ade0e7bf035cd67490", null ],
     [ "find_matching_attribute", "namespacelagrange_1_1internal.html#aae5d3bb97af070a81d6a1d624fce12af", null ],
     [ "find_matching_attribute", "namespacelagrange_1_1internal.html#a8107009117bbde794f9885c9b11c29d8", null ],
     [ "find_attribute", "namespacelagrange_1_1internal.html#a4e449214cdb7a7f4c42a69d9eb718483", null ],
     [ "find_or_create_attribute", "namespacelagrange_1_1internal.html#adbcff88ab81e30f4cd399e5fd3fb2ab2", null ],
     [ "internal_angles", "namespacelagrange_1_1internal.html#a8d8b8c95bd1fe5343f763045a81314ee", null ],
+    [ "invert_mapping", "namespacelagrange_1_1internal.html#a816e515c3b9d808526087b1c58b37fdd", null ],
     [ "invert_mapping", "namespacelagrange_1_1internal.html#a483149cef61e7cd6355dd8e90055d297", null ],
     [ "map_attributes", "namespacelagrange_1_1internal.html#aaef57d47fd036494daf8bf23f015dd07", null ],
     [ "make_shared", "namespacelagrange_1_1internal.html#aa6ef256275abbacbafd29fa49b709b7f", null ],
@@ -38,6 +41,7 @@ var namespacelagrange_1_1internal =
     [ "compute_triangle_areas", "namespacelagrange_1_1internal.html#ad476d3f6a2e97576948cbeb2d7d4f269", null ],
     [ "compute_quad_areas", "namespacelagrange_1_1internal.html#a18efc9f6e2bdf77c1b85bc5c3794edd1", null ],
     [ "bucket_sort", "namespacelagrange_1_1internal.html#a87a49ab6f672c04f4f72e198181a887c", null ],
+    [ "bucket_sort", "namespacelagrange_1_1internal.html#a9c60561ca55faebfa701db5f3c0100c2", null ],
     [ "compute_weighted_corner_normal", "namespacelagrange_1_1internal.html#a425b6670a3b7465f0b6a712b35f91b7c", null ],
     [ "recompute_facet_normal_if_needed", "namespacelagrange_1_1internal.html#a37c5d2a9463c0ede0593a8c564e0e58a", null ]
 ];

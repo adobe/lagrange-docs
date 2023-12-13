@@ -212,10 +212,9 @@ template&lt;typename Derived &gt; </td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:ace507ce8f8222149bb2e8b7b9faa1025"><td class="memTemplParams" colspan="2"><a id="ace507ce8f8222149bb2e8b7b9faa1025" name="ace507ce8f8222149bb2e8b7b9faa1025"></a>
-template&lt;typename Derived &gt; </td></tr>
-<tr class="memitem:ace507ce8f8222149bb2e8b7b9faa1025"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>ensure_unique_owner</b> ()</td></tr>
-<tr class="memdesc:ace507ce8f8222149bb2e8b7b9faa1025"><td class="mdescLeft">&#160;</td><td class="mdescRight">If we are not the owner of the shared object, make a private copy of it. <br /></td></tr>
+<tr class="memitem:ace507ce8f8222149bb2e8b7b9faa1025"><td class="memTemplParams" colspan="2">template&lt;typename Derived &gt; </td></tr>
+<tr class="memitem:ace507ce8f8222149bb2e8b7b9faa1025"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classlagrange_1_1copy__on__write__ptr.html#ace507ce8f8222149bb2e8b7b9faa1025">ensure_unique_owner</a> ()</td></tr>
+<tr class="memdesc:ace507ce8f8222149bb2e8b7b9faa1025"><td class="mdescLeft">&#160;</td><td class="mdescRight">Protect from data races when acquiring ownership to the same object from multiple threads.  <a href="classlagrange_1_1copy__on__write__ptr.html#ace507ce8f8222149bb2e8b7b9faa1025">More...</a><br /></td></tr>
 <tr class="separator:ace507ce8f8222149bb2e8b7b9faa1025"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
@@ -290,6 +289,34 @@ class lagrange::copy_on_write_ptr&lt; T &gt;</div><p >A handle type with copy-on
 <p>Return a weak pointer to the data. </p>
 <dl class="section warning"><dt>Warning</dt><dd>This method is for internal usage purposes.</dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classlagrange_1_1copy__on__write__ptr.html#a2da66f5c15551ef367198a7a504eb38d" title="Returns a const pointer to the data. Does not require ownership and will not lead to any copy.">read()</a> for preferred way of accessing data. </dd></dl>
+
+</div>
+</div>
+<a id="ace507ce8f8222149bb2e8b7b9faa1025" name="ace507ce8f8222149bb2e8b7b9faa1025"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace507ce8f8222149bb2e8b7b9faa1025">&#9670;&nbsp;</a></span>ensure_unique_owner()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ensure_unique_owner </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Protect from data races when acquiring ownership to the same object from multiple threads. </p>
+<p >If we are not the owner of the shared object, make a private copy of it </p>
 
 </div>
 </div>

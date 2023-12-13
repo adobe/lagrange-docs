@@ -139,8 +139,11 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ab285e5ec25ee52dc8e723961d4eb37eb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlagrange_1_1_progress_callback.html#ab285e5ec25ee52dc8e723961d4eb37eb">set_num_iterations</a> (size_t num_iterations)</td></tr>
 <tr class="memdesc:ab285e5ec25ee52dc8e723961d4eb37eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the number iterations for this section.  <a href="classlagrange_1_1_progress_callback.html#ab285e5ec25ee52dc8e723961d4eb37eb">More...</a><br /></td></tr>
 <tr class="separator:ab285e5ec25ee52dc8e723961d4eb37eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d2ea1ec99bcb6f49026ddc8f6366d62"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlagrange_1_1_progress_callback.html#a9d2ea1ec99bcb6f49026ddc8f6366d62">advance</a> (size_t increment)</td></tr>
+<tr class="memdesc:a9d2ea1ec99bcb6f49026ddc8f6366d62"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the current iteration number by a fixed amount, and sends a notification.  <a href="classlagrange_1_1_progress_callback.html#a9d2ea1ec99bcb6f49026ddc8f6366d62">More...</a><br /></td></tr>
+<tr class="separator:a9d2ea1ec99bcb6f49026ddc8f6366d62"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac5c54df7ed3b930268c8d7752c101725"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlagrange_1_1_progress_callback.html#ac5c54df7ed3b930268c8d7752c101725">update</a> ()</td></tr>
-<tr class="memdesc:ac5c54df7ed3b930268c8d7752c101725"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the current iteration number, and sends a notification.  <a href="classlagrange_1_1_progress_callback.html#ac5c54df7ed3b930268c8d7752c101725">More...</a><br /></td></tr>
+<tr class="memdesc:ac5c54df7ed3b930268c8d7752c101725"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the current iteration number by one, and sends a notification.  <a href="classlagrange_1_1_progress_callback.html#ac5c54df7ed3b930268c8d7752c101725">More...</a><br /></td></tr>
 <tr class="separator:ac5c54df7ed3b930268c8d7752c101725"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a81a96a37ae71e3a853625e20c0fd97d4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlagrange_1_1_progress_callback.html#a81a96a37ae71e3a853625e20c0fd97d4">update</a> (float progress)</td></tr>
 <tr class="memdesc:a81a96a37ae71e3a853625e20c0fd97d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the current progress to a fixed percentage.  <a href="classlagrange_1_1_progress_callback.html#a81a96a37ae71e3a853625e20c0fd97d4">More...</a><br /></td></tr>
@@ -187,7 +190,7 @@ Public Member Functions</h2></td></tr>
 <p>Constructs a new instance. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">func</td><td>Notification callback. This callback function will be called in a thread-safe manner by the <a class="el" href="classlagrange_1_1_progress_callback.html#ac5c54df7ed3b930268c8d7752c101725" title="Updates the current iteration number, and sends a notification.">update()</a> method. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">func</td><td>Notification callback. This callback function will be called in a thread-safe manner by the <a class="el" href="classlagrange_1_1_progress_callback.html#ac5c54df7ed3b930268c8d7752c101725" title="Updates the current iteration number by one, and sends a notification.">update()</a> method. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>Default section name. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">num_iterations</td><td>Number of iterations for this section. </td></tr>
   </table>
@@ -216,7 +219,7 @@ Public Member Functions</h2></td></tr>
 <p>Set notification callback. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">func</td><td>Notification callback. This callback function will be called in a thread-safe manner by the <a class="el" href="classlagrange_1_1_progress_callback.html#ac5c54df7ed3b930268c8d7752c101725" title="Updates the current iteration number, and sends a notification.">update()</a> method. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">func</td><td>Notification callback. This callback function will be called in a thread-safe manner by the <a class="el" href="classlagrange_1_1_progress_callback.html#ac5c54df7ed3b930268c8d7752c101725" title="Updates the current iteration number by one, and sends a notification.">update()</a> method. </td></tr>
   </table>
   </dd>
 </dl>
@@ -316,6 +319,27 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a9d2ea1ec99bcb6f49026ddc8f6366d62" name="a9d2ea1ec99bcb6f49026ddc8f6366d62"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d2ea1ec99bcb6f49026ddc8f6366d62">&#9670;&nbsp;</a></span>advance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void advance </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>increment</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Updates the current iteration number by a fixed amount, and sends a notification. </p>
+<p >It is safe to call this method from multiple threads. </p>
+
+</div>
+</div>
 <a id="ac5c54df7ed3b930268c8d7752c101725" name="ac5c54df7ed3b930268c8d7752c101725"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac5c54df7ed3b930268c8d7752c101725">&#9670;&nbsp;</a></span>update() <span class="overload">[1/2]</span></h2>
 
@@ -331,7 +355,7 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Updates the current iteration number, and sends a notification. </p>
+<p>Updates the current iteration number by one, and sends a notification. </p>
 <p >It is safe to call this method from multiple threads. </p>
 
 </div>

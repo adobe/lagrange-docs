@@ -115,13 +115,17 @@ $(document).ready(function(){initNavTree('todo.html',''); initResizable(); });
 <div class="contents">
 <div class="textblock"><dl class="reflist">
 <dt>Member <a class="el" href="classlagrange_1_1raycasting_1_1_embree_ray_caster.html#ab3f429768257565881f062d0de81c6b2">EmbreeRayCaster&lt; ScalarType &gt;::commit_scene_changes</a>  ()</dt>
-<dd><a class="anchor" id="_todo000004"></a>Now that this is automatically called by <a class="el" href="classlagrange_1_1raycasting_1_1_embree_ray_caster.html#a9197169586df2f668825a83a359cc2a3" title="Update all internal structures based on the current dirty flags.">update_internal()</a> based on a dirty flag, can we make this a protected/private function? That would break the API so maybe reserve it for a major version.  </dd>
+<dd><a class="anchor" id="_todo000006"></a>Now that this is automatically called by <a class="el" href="classlagrange_1_1raycasting_1_1_embree_ray_caster.html#a9197169586df2f668825a83a359cc2a3" title="Update all internal structures based on the current dirty flags.">update_internal()</a> based on a dirty flag, can we make this a protected/private function? That would break the API so maybe reserve it for a major version.  </dd>
 <dt>Member <a class="el" href="classlagrange_1_1raycasting_1_1_embree_ray_caster.html#a4c3f921b5e18d96abdd45cbc9564de6c">EmbreeRayCaster&lt; ScalarType &gt;::generate_scene</a>  ()</dt>
-<dd><a class="anchor" id="_todo000005"></a>Make the dirty flags more fine-grained so that only the changed meshes are re-sent to Embree.  </dd>
+<dd><a class="anchor" id="_todo000007"></a>Make the dirty flags more fine-grained so that only the changed meshes are re-sent to Embree.  </dd>
 <dt>Member <a class="el" href="group__group-surfacemesh-attr.html#ga35b5eb426384b257452ee0ffdb732c27">lagrange::AttributeUsage</a>  </dt>
 <dd><a class="anchor" id="_todo000001"></a>Add skinning weights + others?  </dd>
 <dt>Member <a class="el" href="namespacelagrange.html#ac88e5e2a3cb45c21980d4d676a08c8b3">lagrange::close_small_holes</a>  (MeshType &amp;mesh, size_t max_hole_size)</dt>
 <dd><a class="anchor" id="_todo000003"></a>Remap attribute. For now all input mesh attributes are dropped. </dd>
+<dt>Member <a class="el" href="group__group-surfacemesh-utils.html#gacf1d47b2a4ef430e40d1725766a13508">lagrange::transform_mesh</a>  (<a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh&lt; Scalar, Index &gt;</a> &amp;mesh, const Eigen::Transform&lt; Scalar, 3, Eigen::Affine &gt; &amp;transform, const <a class="el" href="structlagrange_1_1_transform_options.html" title="Options available when applying affine transforms to a mesh.">TransformOptions</a> &amp;options={})</dt>
+<dd><a class="anchor" id="_todo000004"></a>Add an overload for 2D transforms. </dd>
+<dt>Member <a class="el" href="group__group-surfacemesh-utils.html#ga6dde867eed122f72ca82a6de8b7ab2af">lagrange::transformed_mesh</a>  (<a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh&lt; Scalar, Index &gt;</a> mesh, const Eigen::Transform&lt; Scalar, 3, Eigen::Affine &gt; &amp;transform, const <a class="el" href="structlagrange_1_1_transform_options.html" title="Options available when applying affine transforms to a mesh.">TransformOptions</a> &amp;options={})</dt>
+<dd><a class="anchor" id="_todo000005"></a>Add an overload for 2D transforms. </dd>
 <dt>Member <a class="el" href="classlagrange_1_1_mesh.html#a032a198e720a57c9e22327a8dc2ad1b9">Mesh&lt; _VertexArray, _FacetArray &gt;::find_edge_from_vertices</a>  (Index v0, Index v1) const</dt>
 <dd><a class="anchor" id="_todo000002"></a>Move this to <a class="el" href="classlagrange_1_1_mesh_navigation.html" title="This class is used to navigate elements of a mesh.">MeshNavigation</a>?</dd>
 </dl>

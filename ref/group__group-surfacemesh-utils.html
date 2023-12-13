@@ -118,7 +118,7 @@ $(document).ready(function(){initNavTree('group__group-surfacemesh-utils.html','
 </div><!--header-->
 <div class="contents">
 
-<p>Various mesh processing utilities.  
+<p>Various attribute processing utilities.  
 <a href="#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
@@ -170,6 +170,9 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlagrange_1_1_remap_vertices_options.html">RemapVerticesOptions</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remap vertices options.  <a href="structlagrange_1_1_remap_vertices_options.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlagrange_1_1_transform_options.html">TransformOptions</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Options available when applying affine transforms to a mesh.  <a href="structlagrange_1_1_transform_options.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
 Enumerations</h2></td></tr>
@@ -193,6 +196,10 @@ Enumerations</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:ga9b0ca524ff616cdc04cefb724d6c6cf7"><td class="memTemplParams" colspan="2">template&lt;typename ToScalar , typename ToIndex , typename FromScalar , typename FromIndex &gt; </td></tr>
+<tr class="memitem:ga9b0ca524ff616cdc04cefb724d6c6cf7"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; ToScalar, ToIndex &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__group-surfacemesh-utils.html#ga9b0ca524ff616cdc04cefb724d6c6cf7">cast</a> (const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; FromScalar, FromIndex &gt; &amp;mesh)</td></tr>
+<tr class="memdesc:ga9b0ca524ff616cdc04cefb724d6c6cf7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cast a mesh to a mesh of different scalar and/or index type.  <a href="group__group-surfacemesh-utils.html#ga9b0ca524ff616cdc04cefb724d6c6cf7">More...</a><br /></td></tr>
+<tr class="separator:ga9b0ca524ff616cdc04cefb724d6c6cf7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga363707c2e65474638292c738c072868c"><td class="memTemplParams" colspan="2">template&lt;typename Scalar , typename Index &gt; </td></tr>
 <tr class="memitem:ga363707c2e65474638292c738c072868c"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__group-surfacemesh-utils.html#ga363707c2e65474638292c738c072868c">combine_meshes</a> (std::initializer_list&lt; const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; * &gt; meshes, bool preserve_attributes=true)</td></tr>
 <tr class="memdesc:ga363707c2e65474638292c738c072868c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Combine multiple meshes into a single mesh.  <a href="group__group-surfacemesh-utils.html#ga363707c2e65474638292c738c072868c">More...</a><br /></td></tr>
@@ -309,13 +316,22 @@ Functions</h2></td></tr>
 <tr class="memitem:ga78898b0da8d43677481cdc176f2391f8"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__group-surfacemesh-utils.html#ga78898b0da8d43677481cdc176f2391f8">remap_vertices</a> (<a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;mesh, <a class="el" href="group__group-utils-misc.html#ga4afead0b9ccc53fe4fca896787595d26">span</a>&lt; const Index &gt; forward_mapping, <a class="el" href="structlagrange_1_1_remap_vertices_options.html">RemapVerticesOptions</a> options={})</td></tr>
 <tr class="memdesc:ga78898b0da8d43677481cdc176f2391f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remap vertices of a mesh based on provided forward mapping.  <a href="group__group-surfacemesh-utils.html#ga78898b0da8d43677481cdc176f2391f8">More...</a><br /></td></tr>
 <tr class="separator:ga78898b0da8d43677481cdc176f2391f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gacf1d47b2a4ef430e40d1725766a13508"><td class="memTemplParams" colspan="2">template&lt;typename Scalar , typename Index &gt; </td></tr>
+<tr class="memitem:gacf1d47b2a4ef430e40d1725766a13508"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__group-surfacemesh-utils.html#gacf1d47b2a4ef430e40d1725766a13508">transform_mesh</a> (<a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;mesh, const Eigen::Transform&lt; Scalar, 3, Eigen::Affine &gt; &amp;transform, const <a class="el" href="structlagrange_1_1_transform_options.html">TransformOptions</a> &amp;options={})</td></tr>
+<tr class="memdesc:gacf1d47b2a4ef430e40d1725766a13508"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply an affine transform \( M \) to a mesh in-place.  <a href="group__group-surfacemesh-utils.html#gacf1d47b2a4ef430e40d1725766a13508">More...</a><br /></td></tr>
+<tr class="separator:gacf1d47b2a4ef430e40d1725766a13508"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6dde867eed122f72ca82a6de8b7ab2af"><td class="memTemplParams" colspan="2">template&lt;typename Scalar , typename Index &gt; </td></tr>
+<tr class="memitem:ga6dde867eed122f72ca82a6de8b7ab2af"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__group-surfacemesh-utils.html#ga6dde867eed122f72ca82a6de8b7ab2af">transformed_mesh</a> (<a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; mesh, const Eigen::Transform&lt; Scalar, 3, Eigen::Affine &gt; &amp;transform, const <a class="el" href="structlagrange_1_1_transform_options.html">TransformOptions</a> &amp;options={})</td></tr>
+<tr class="memdesc:ga6dde867eed122f72ca82a6de8b7ab2af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply an affine transform to a mesh and return the transformed mesh.  <a href="group__group-surfacemesh-utils.html#ga6dde867eed122f72ca82a6de8b7ab2af">More...</a><br /></td></tr>
+<tr class="separator:ga6dde867eed122f72ca82a6de8b7ab2af"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga48af6105ece8a970755870c73af73ddd"><td class="memTemplParams" colspan="2">template&lt;typename Scalar , typename Index &gt; </td></tr>
 <tr class="memitem:ga48af6105ece8a970755870c73af73ddd"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__group-surfacemesh-utils.html#ga48af6105ece8a970755870c73af73ddd">triangulate_polygonal_facets</a> (<a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;mesh)</td></tr>
 <tr class="memdesc:ga48af6105ece8a970755870c73af73ddd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Triangulate polygonal facets of a mesh using a prescribed set of rules.  <a href="group__group-surfacemesh-utils.html#ga48af6105ece8a970755870c73af73ddd">More...</a><br /></td></tr>
 <tr class="separator:ga48af6105ece8a970755870c73af73ddd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p >Various mesh processing utilities. </p>
+<p >Various attribute processing utilities. </p>
+<p >Various mesh processing utilities.</p>
 <h2 class="groupheader">Enumeration Type Documentation</h2>
 <a id="gadab1480827f4522cbf1f9e1d4c28db91" name="gadab1480827f4522cbf1f9e1d4c28db91"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#gadab1480827f4522cbf1f9e1d4c28db91">&#9670;&nbsp;</a></span>DistortionMetric</h2>
@@ -388,6 +404,44 @@ Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="ga9b0ca524ff616cdc04cefb724d6c6cf7" name="ga9b0ca524ff616cdc04cefb724d6c6cf7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9b0ca524ff616cdc04cefb724d6c6cf7">&#9670;&nbsp;</a></span>cast()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; ToScalar, ToIndex &gt; cast </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; FromScalar, FromIndex &gt; &amp;&#160;</td>
+          <td class="paramname"><em>mesh</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;lagrange/cast.h&gt;</code></p>
+
+<p>Cast a mesh to a mesh of different scalar and/or index type. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">ToScalar</td><td>Scalar type of the output mesh. </td></tr>
+    <tr><td class="paramname">ToIndex</td><td>Index type of the output mesh. </td></tr>
+    <tr><td class="paramname">FromScalar</td><td>Scalar type of the input mesh. </td></tr>
+    <tr><td class="paramname">FromIndex</td><td>Index type of the input mesh.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mesh</td><td>Input mesh.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Output mesh. </dd></dl>
+
+</div>
+</div>
 <a id="ga363707c2e65474638292c738c072868c" name="ga363707c2e65474638292c738c072868c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga363707c2e65474638292c738c072868c">&#9670;&nbsp;</a></span>combine_meshes() <span class="overload">[1/3]</span></h2>
 
@@ -1810,6 +1864,131 @@ Corner normals around a given vertex could be different even when the vertex is 
 <dl class="section see"><dt>See also</dt><dd><code><a class="el" href="group__group-surfacemesh-utils.html#ga8aea6bef4481de2ace23921d95fdc8fe" title="Reorder vertices of a mesh based on a given permutation.">permute_vertices</a></code> for simply permuting the vertex order. </dd>
 <dd>
 <code><a class="el" href="structlagrange_1_1_remap_vertices_options.html" title="Remap vertices options.">RemapVerticesOptions</a></code>. </dd></dl>
+
+</div>
+</div>
+<a id="gacf1d47b2a4ef430e40d1725766a13508" name="gacf1d47b2a4ef430e40d1725766a13508"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gacf1d47b2a4ef430e40d1725766a13508">&#9670;&nbsp;</a></span>transform_mesh()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void transform_mesh </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;&#160;</td>
+          <td class="paramname"><em>mesh</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Transform&lt; Scalar, 3, Eigen::Affine &gt; &amp;&#160;</td>
+          <td class="paramname"><em>transform</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structlagrange_1_1_transform_options.html">TransformOptions</a> &amp;&#160;</td>
+          <td class="paramname"><em>options</em> = <code>{}</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;lagrange/transform_mesh.h&gt;</code></p>
+
+<p>Apply an affine transform \( M \) to a mesh in-place. </p>
+<p >All mesh attributes are transformed based on their usage tags:</p>
+<ul>
+<li>Position: Applies \( P \to M * P \)</li>
+<li>Normal: Applies \( P \to \det(M) M^{-T} * P \)</li>
+<li>Tangent: Applies \( P \to normalize(M * P) \)</li>
+<li><p class="startli">Bitangent: Applies \( P \to normalize(M * P) \)</p>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000004">Todo:</a></b></dt><dd>Add an overload for 2D transforms.</dd></dl>
+</li>
+</ul>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">mesh</td><td><a class="el" href="classlagrange_1_1_mesh.html">Mesh</a> to transform in-place. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">transform</td><td>Affine transform to apply. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">options</td><td>Transform options.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Scalar</td><td><a class="el" href="classlagrange_1_1_mesh.html">Mesh</a> scalar type. </td></tr>
+    <tr><td class="paramname">Index</td><td><a class="el" href="classlagrange_1_1_mesh.html">Mesh</a> index type. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga6dde867eed122f72ca82a6de8b7ab2af" name="ga6dde867eed122f72ca82a6de8b7ab2af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga6dde867eed122f72ca82a6de8b7ab2af">&#9670;&nbsp;</a></span>transformed_mesh()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; transformed_mesh </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt;&#160;</td>
+          <td class="paramname"><em>mesh</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Transform&lt; Scalar, 3, Eigen::Affine &gt; &amp;&#160;</td>
+          <td class="paramname"><em>transform</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structlagrange_1_1_transform_options.html">TransformOptions</a> &amp;&#160;</td>
+          <td class="paramname"><em>options</em> = <code>{}</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;lagrange/transform_mesh.h&gt;</code></p>
+
+<p>Apply an affine transform to a mesh and return the transformed mesh. </p>
+<p >All mesh attributes are transformed based on their usage tags:</p>
+<ul>
+<li>Position: Applies \( P \to M * P \)</li>
+<li>Normal: Applies \( P \to \det(M) M^{-T} * P \)</li>
+<li>Tangent: Applies \( P \to normalize(M * P) \)</li>
+<li><p class="startli">Bitangent: Applies \( P \to normalize(M * P) \)</p>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000005">Todo:</a></b></dt><dd>Add an overload for 2D transforms.</dd></dl>
+</li>
+</ul>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">mesh</td><td><a class="el" href="classlagrange_1_1_mesh.html">Mesh</a> to transform in-place. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">transform</td><td>Affine transform to apply. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">options</td><td>Transform options.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Scalar</td><td><a class="el" href="classlagrange_1_1_mesh.html">Mesh</a> scalar type. </td></tr>
+    <tr><td class="paramname">Index</td><td><a class="el" href="classlagrange_1_1_mesh.html">Mesh</a> index type.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Transformed mesh. </dd></dl>
 
 </div>
 </div>

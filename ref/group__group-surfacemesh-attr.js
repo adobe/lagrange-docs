@@ -109,6 +109,7 @@ var group__group_surfacemesh_attr =
     [ "lagrange::AttributeUsage", "group__group-surfacemesh-attr.html#ga35b5eb426384b257452ee0ffdb732c27", [
       [ "lagrange::AttributeUsage::Vector", "group__group-surfacemesh-attr.html#gga35b5eb426384b257452ee0ffdb732c27a57dea6f5039281b7fee517fc43bf3110", null ],
       [ "lagrange::AttributeUsage::Scalar", "group__group-surfacemesh-attr.html#gga35b5eb426384b257452ee0ffdb732c27af60357a8d17e45793298323f1b372a74", null ],
+      [ "lagrange::AttributeUsage::Position", "group__group-surfacemesh-attr.html#gga35b5eb426384b257452ee0ffdb732c27a52f5e0bc3859bc5f5e25130b6c7e8881", null ],
       [ "lagrange::AttributeUsage::Normal", "group__group-surfacemesh-attr.html#gga35b5eb426384b257452ee0ffdb732c27a960b44c579bc2f6818d2daaf9e4c16f0", null ],
       [ "lagrange::AttributeUsage::Tangent", "group__group-surfacemesh-attr.html#gga35b5eb426384b257452ee0ffdb732c27a541671cb1be09d76a84ba1a873ec3fc8", null ],
       [ "lagrange::AttributeUsage::Bitangent", "group__group-surfacemesh-attr.html#gga35b5eb426384b257452ee0ffdb732c27ae3e73a4b6e7cfd12008a35f6a051b319", null ],

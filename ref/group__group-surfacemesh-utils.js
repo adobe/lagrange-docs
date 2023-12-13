@@ -77,6 +77,10 @@ var group__group_surfacemesh_utils =
       [ "collision_policy_float", "structlagrange_1_1_remap_vertices_options.html#afefe76052ce1fa3ed45b6aee79876855", null ],
       [ "collision_policy_integral", "structlagrange_1_1_remap_vertices_options.html#adfe0aeb79b764bf99539a0f3ca973207", null ]
     ] ],
+    [ "TransformOptions", "structlagrange_1_1_transform_options.html", [
+      [ "normalize_normals", "structlagrange_1_1_transform_options.html#ab325d5223b6259782405a0d4d87a6540", null ],
+      [ "normalize_tangents_bitangents", "structlagrange_1_1_transform_options.html#adb325bf37307e1d4836ea6886c266e83", null ]
+    ] ],
     [ "lagrange::DistortionMetric", "group__group-surfacemesh-utils.html#gadab1480827f4522cbf1f9e1d4c28db91", [
       [ "lagrange::DistortionMetric::Dirichlet", "group__group-surfacemesh-utils.html#ggadab1480827f4522cbf1f9e1d4c28db91abac152b762896edff34ed668ae1a546f", null ],
       [ "lagrange::DistortionMetric::InverseDirichlet", "group__group-surfacemesh-utils.html#ggadab1480827f4522cbf1f9e1d4c28db91a541c024e21b5989aa74764f7c362dfd2", null ],
@@ -88,6 +92,7 @@ var group__group_surfacemesh_utils =
       [ "lagrange::NormalWeightingType::CornerTriangleArea", "group__group-surfacemesh-utils.html#ggaa88e833ed770762b02e187f0c2377d3da84f023fc44b6b158de6ccc157c8dab06", null ],
       [ "lagrange::NormalWeightingType::Angle", "group__group-surfacemesh-utils.html#ggaa88e833ed770762b02e187f0c2377d3da45f4ce6c3306644b1efe333f4f8d6929", null ]
     ] ],
+    [ "lagrange::cast", "group__group-surfacemesh-utils.html#ga9b0ca524ff616cdc04cefb724d6c6cf7", null ],
     [ "lagrange::combine_meshes", "group__group-surfacemesh-utils.html#ga363707c2e65474638292c738c072868c", null ],
     [ "lagrange::combine_meshes", "group__group-surfacemesh-utils.html#ga07291901c4f594454dfafb0764f4dad5", null ],
     [ "lagrange::combine_meshes", "group__group-surfacemesh-utils.html#ga9e874e29c25e3a587a9352147e36772d", null ],
@@ -117,5 +122,7 @@ var group__group_surfacemesh_utils =
     [ "lagrange::permute_facets", "group__group-surfacemesh-utils.html#ga4bb6f1ff87f6aac0062ac21dba0f2349", null ],
     [ "lagrange::permute_vertices", "group__group-surfacemesh-utils.html#ga8aea6bef4481de2ace23921d95fdc8fe", null ],
     [ "lagrange::remap_vertices", "group__group-surfacemesh-utils.html#ga78898b0da8d43677481cdc176f2391f8", null ],
+    [ "lagrange::transform_mesh", "group__group-surfacemesh-utils.html#gacf1d47b2a4ef430e40d1725766a13508", null ],
+    [ "lagrange::transformed_mesh", "group__group-surfacemesh-utils.html#ga6dde867eed122f72ca82a6de8b7ab2af", null ],
     [ "lagrange::triangulate_polygonal_facets", "group__group-surfacemesh-utils.html#ga48af6105ece8a970755870c73af73ddd", null ]
 ];

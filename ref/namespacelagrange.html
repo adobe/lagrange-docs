@@ -263,6 +263,9 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlagrange_1_1_remap_vertices_options.html">RemapVerticesOptions</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remap vertices options.  <a href="structlagrange_1_1_remap_vertices_options.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlagrange_1_1_remove_duplicate_facet_options.html">RemoveDuplicateFacetOptions</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Options for remove_duplicate_facets.  <a href="structlagrange_1_1_remove_duplicate_facet_options.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlagrange_1_1_remove_duplicate_vertices_options.html">RemoveDuplicateVerticesOptions</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Option struct for remove_duplicate_vertices.  <a href="structlagrange_1_1_remove_duplicate_vertices_options.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -318,6 +321,9 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlagrange_1_1_tangent_bitangent_result.html">TangentBitangentResult</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Result type of the compute_tangent_bitangent function.  <a href="structlagrange_1_1_tangent_bitangent_result.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlagrange_1_1_transform_options.html">TransformOptions</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Options available when applying affine transforms to a mesh.  <a href="structlagrange_1_1_transform_options.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlagrange_1_1_u_v_distortion_options.html">UVDistortionOptions</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Option struct for compute uv distortion.  <a href="structlagrange_1_1_u_v_distortion_options.html#details">More...</a><br /></td></tr>
@@ -482,15 +488,16 @@ Enumerations</h2></td></tr>
 <tr class="memitem:ga35b5eb426384b257452ee0ffdb732c27"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group-surfacemesh-attr.html#ga35b5eb426384b257452ee0ffdb732c27">AttributeUsage</a> { <br />
 &#160;&#160;<a class="el" href="group__group-surfacemesh-attr.html#gga35b5eb426384b257452ee0ffdb732c27a57dea6f5039281b7fee517fc43bf3110">Vector</a>
 , <a class="el" href="group__group-surfacemesh-attr.html#gga35b5eb426384b257452ee0ffdb732c27af60357a8d17e45793298323f1b372a74">Scalar</a>
+, <a class="el" href="group__group-surfacemesh-attr.html#gga35b5eb426384b257452ee0ffdb732c27a52f5e0bc3859bc5f5e25130b6c7e8881">Position</a>
 , <a class="el" href="group__group-surfacemesh-attr.html#gga35b5eb426384b257452ee0ffdb732c27a960b44c579bc2f6818d2daaf9e4c16f0">Normal</a>
-, <a class="el" href="group__group-surfacemesh-attr.html#gga35b5eb426384b257452ee0ffdb732c27a541671cb1be09d76a84ba1a873ec3fc8">Tangent</a>
 , <br />
-&#160;&#160;<a class="el" href="group__group-surfacemesh-attr.html#gga35b5eb426384b257452ee0ffdb732c27ae3e73a4b6e7cfd12008a35f6a051b319">Bitangent</a>
+&#160;&#160;<a class="el" href="group__group-surfacemesh-attr.html#gga35b5eb426384b257452ee0ffdb732c27a541671cb1be09d76a84ba1a873ec3fc8">Tangent</a>
+, <a class="el" href="group__group-surfacemesh-attr.html#gga35b5eb426384b257452ee0ffdb732c27ae3e73a4b6e7cfd12008a35f6a051b319">Bitangent</a>
 , <a class="el" href="group__group-surfacemesh-attr.html#gga35b5eb426384b257452ee0ffdb732c27acb5feb1b7314637725a2e73bdc9f7295">Color</a>
 , <a class="el" href="group__group-surfacemesh-attr.html#gga35b5eb426384b257452ee0ffdb732c27adeaa2adbeb26802ae61609c3f3642d82">UV</a>
-, <a class="el" href="group__group-surfacemesh-attr.html#gga35b5eb426384b257452ee0ffdb732c27a7302d7da6a3804b1edf63b4b16198d80">VertexIndex</a>
 , <br />
-&#160;&#160;<a class="el" href="group__group-surfacemesh-attr.html#gga35b5eb426384b257452ee0ffdb732c27aa3dfb9f32b810b4277c5c8387d7f03f5">FacetIndex</a>
+&#160;&#160;<a class="el" href="group__group-surfacemesh-attr.html#gga35b5eb426384b257452ee0ffdb732c27a7302d7da6a3804b1edf63b4b16198d80">VertexIndex</a>
+, <a class="el" href="group__group-surfacemesh-attr.html#gga35b5eb426384b257452ee0ffdb732c27aa3dfb9f32b810b4277c5c8387d7f03f5">FacetIndex</a>
 , <a class="el" href="group__group-surfacemesh-attr.html#gga35b5eb426384b257452ee0ffdb732c27a63222a2d9c46a34b875c078c757da2e8">CornerIndex</a>
 , <a class="el" href="group__group-surfacemesh-attr.html#gga35b5eb426384b257452ee0ffdb732c27a7e0536ad6c15bf05bf40e8876b1a5c10">EdgeIndex</a>
 <br />
@@ -584,6 +591,10 @@ constexpr <a class="el" href="group__group-surfacemesh-attr.html#ga4d115376c2c76
 template&lt;typename AttributeArray , typename Archive &gt; </td></tr>
 <tr class="memitem:a540c0cc95b91cae8f14fa3fddafef3e2"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>serialize</b> (<a class="el" href="classlagrange_1_1_attributes.html">Attributes</a>&lt; AttributeArray &gt; &amp;attributes, Archive &amp;ar)</td></tr>
 <tr class="separator:a540c0cc95b91cae8f14fa3fddafef3e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9b0ca524ff616cdc04cefb724d6c6cf7"><td class="memTemplParams" colspan="2">template&lt;typename ToScalar , typename ToIndex , typename FromScalar , typename FromIndex &gt; </td></tr>
+<tr class="memitem:ga9b0ca524ff616cdc04cefb724d6c6cf7"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; ToScalar, ToIndex &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__group-surfacemesh-utils.html#ga9b0ca524ff616cdc04cefb724d6c6cf7">cast</a> (const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; FromScalar, FromIndex &gt; &amp;mesh)</td></tr>
+<tr class="memdesc:ga9b0ca524ff616cdc04cefb724d6c6cf7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cast a mesh to a mesh of different scalar and/or index type.  <a href="group__group-surfacemesh-utils.html#ga9b0ca524ff616cdc04cefb724d6c6cf7">More...</a><br /></td></tr>
+<tr class="separator:ga9b0ca524ff616cdc04cefb724d6c6cf7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad919806f4b5cd1dfc507fe3e9173a5f8"><td class="memTemplParams" colspan="2">template&lt;typename DerivedF , typename DerivedC , typename DerivedE , typename DerivedN &gt; </td></tr>
 <tr class="memitem:ad919806f4b5cd1dfc507fe3e9173a5f8"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacelagrange.html#ad919806f4b5cd1dfc507fe3e9173a5f8">chain_corners_around_edges</a> (const Eigen::MatrixBase&lt; DerivedF &gt; &amp;facets, const Eigen::MatrixBase&lt; DerivedC &gt; &amp;corner_to_edge, Eigen::PlainObjectBase&lt; DerivedE &gt; &amp;edge_to_corner, Eigen::PlainObjectBase&lt; DerivedN &gt; &amp;next_corner_around_edge)</td></tr>
 <tr class="memdesc:ad919806f4b5cd1dfc507fe3e9173a5f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Chains facet corners around edges of a mesh.  <a href="namespacelagrange.html#ad919806f4b5cd1dfc507fe3e9173a5f8">More...</a><br /></td></tr>
@@ -828,10 +839,10 @@ template&lt;typename _VertexArray , typename _FacetArray , typename Archive &gt;
 <tr class="memitem:ae47e0b414a04c27b736ffb61985ae3e1"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; Index &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacelagrange.html#ae47e0b414a04c27b736ffb61985ae3e1">detect_degenerate_facets</a> (const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;mesh)</td></tr>
 <tr class="memdesc:ae47e0b414a04c27b736ffb61985ae3e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Detects degenerate facets in a mesh.  <a href="namespacelagrange.html#ae47e0b414a04c27b736ffb61985ae3e1">More...</a><br /></td></tr>
 <tr class="separator:ae47e0b414a04c27b736ffb61985ae3e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad6fd3adb44b0b3a38ad087cb6f631b16"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="classlagrange_1_1_mesh.html">MeshType</a> &gt; </td></tr>
-<tr class="memitem:ad6fd3adb44b0b3a38ad087cb6f631b16"><td class="memTemplItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classlagrange_1_1_mesh.html">MeshType</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacelagrange.html#ad6fd3adb44b0b3a38ad087cb6f631b16">remove_duplicate_facets</a> (const <a class="el" href="classlagrange_1_1_mesh.html">MeshType</a> &amp;mesh)</td></tr>
-<tr class="memdesc:ad6fd3adb44b0b3a38ad087cb6f631b16"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removal all duplicate facets from the mesh.  <a href="namespacelagrange.html#ad6fd3adb44b0b3a38ad087cb6f631b16">More...</a><br /></td></tr>
-<tr class="separator:ad6fd3adb44b0b3a38ad087cb6f631b16"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a144f50badc977a6cc9e3b61b66dc2bec"><td class="memTemplParams" colspan="2">template&lt;typename Scalar , typename Index &gt; </td></tr>
+<tr class="memitem:a144f50badc977a6cc9e3b61b66dc2bec"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacelagrange.html#a144f50badc977a6cc9e3b61b66dc2bec">remove_duplicate_facets</a> (<a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;mesh, const <a class="el" href="structlagrange_1_1_remove_duplicate_facet_options.html">RemoveDuplicateFacetOptions</a> &amp;opts={})</td></tr>
+<tr class="memdesc:a144f50badc977a6cc9e3b61b66dc2bec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove duplicate facets in the mesh.  <a href="namespacelagrange.html#a144f50badc977a6cc9e3b61b66dc2bec">More...</a><br /></td></tr>
+<tr class="separator:a144f50badc977a6cc9e3b61b66dc2bec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a027de7d500f4a17245fa0f7450a1d433"><td class="memTemplParams" colspan="2">template&lt;typename Scalar , typename Index &gt; </td></tr>
 <tr class="memitem:a027de7d500f4a17245fa0f7450a1d433"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacelagrange.html#a027de7d500f4a17245fa0f7450a1d433">remove_duplicate_vertices</a> (<a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;mesh, const <a class="el" href="structlagrange_1_1_remove_duplicate_vertices_options.html">RemoveDuplicateVerticesOptions</a> &amp;options={})</td></tr>
 <tr class="memdesc:a027de7d500f4a17245fa0f7450a1d433"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes duplicate vertices from a mesh.  <a href="namespacelagrange.html#a027de7d500f4a17245fa0f7450a1d433">More...</a><br /></td></tr>
@@ -848,10 +859,10 @@ template&lt;typename _VertexArray , typename _FacetArray , typename Archive &gt;
 <tr class="memitem:a221bf945904e20d8ba77a7661247a226"><td class="memTemplItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classlagrange_1_1_mesh.html">MeshType</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacelagrange.html#a221bf945904e20d8ba77a7661247a226">remove_short_edges</a> (const <a class="el" href="classlagrange_1_1_mesh.html">MeshType</a> &amp;in_mesh, typename MeshType::Scalar tol=0.0)</td></tr>
 <tr class="memdesc:a221bf945904e20d8ba77a7661247a226"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove edges shorter than a given tolerance.  <a href="namespacelagrange.html#a221bf945904e20d8ba77a7661247a226">More...</a><br /></td></tr>
 <tr class="separator:a221bf945904e20d8ba77a7661247a226"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9a4e0328e98859931047b51f9096260e"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="classlagrange_1_1_mesh.html">MeshType</a> &gt; </td></tr>
-<tr class="memitem:a9a4e0328e98859931047b51f9096260e"><td class="memTemplItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classlagrange_1_1_mesh.html">MeshType</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacelagrange.html#a9a4e0328e98859931047b51f9096260e">remove_topologically_degenerate_triangles</a> (const <a class="el" href="classlagrange_1_1_mesh.html">MeshType</a> &amp;mesh)</td></tr>
-<tr class="memdesc:a9a4e0328e98859931047b51f9096260e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove topologically degenerate triangles.  <a href="namespacelagrange.html#a9a4e0328e98859931047b51f9096260e">More...</a><br /></td></tr>
-<tr class="separator:a9a4e0328e98859931047b51f9096260e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a524a3bb96df80562c5ab14a870bdbed7"><td class="memTemplParams" colspan="2">template&lt;typename Scalar , typename Index &gt; </td></tr>
+<tr class="memitem:a524a3bb96df80562c5ab14a870bdbed7"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacelagrange.html#a524a3bb96df80562c5ab14a870bdbed7">remove_topologically_degenerate_facets</a> (<a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;mesh)</td></tr>
+<tr class="memdesc:a524a3bb96df80562c5ab14a870bdbed7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove topologically degenerate facets (i.e.  <a href="namespacelagrange.html#a524a3bb96df80562c5ab14a870bdbed7">More...</a><br /></td></tr>
+<tr class="separator:a524a3bb96df80562c5ab14a870bdbed7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1f7a74bc68094461dfaa0ee5914be465"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="classlagrange_1_1_mesh.html">MeshType</a> &gt; </td></tr>
 <tr class="memitem:a1f7a74bc68094461dfaa0ee5914be465"><td class="memTemplItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classlagrange_1_1_mesh.html">MeshType</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacelagrange.html#a1f7a74bc68094461dfaa0ee5914be465">resolve_nonmanifoldness</a> (<a class="el" href="classlagrange_1_1_mesh.html">MeshType</a> &amp;mesh)</td></tr>
 <tr class="memdesc:a1f7a74bc68094461dfaa0ee5914be465"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resolve <b>all</b> non-manifold edges and vertices in the mesh.  <a href="namespacelagrange.html#a1f7a74bc68094461dfaa0ee5914be465">More...</a><br /></td></tr>
@@ -972,6 +983,14 @@ template&lt;typename <a class="el" href="classlagrange_1_1_mesh.html">MeshType</
 <tr class="memitem:a4b70a6e7c30cd0524e2fc2490f280b69"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacelagrange.html#a4b70a6e7c30cd0524e2fc2490f280b69">is_manifold</a> (const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;mesh)</td></tr>
 <tr class="memdesc:a4b70a6e7c30cd0524e2fc2490f280b69"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if a mesh is both vertex-manifold and edge-manifold.  <a href="namespacelagrange.html#a4b70a6e7c30cd0524e2fc2490f280b69">More...</a><br /></td></tr>
 <tr class="separator:a4b70a6e7c30cd0524e2fc2490f280b69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gacf1d47b2a4ef430e40d1725766a13508"><td class="memTemplParams" colspan="2">template&lt;typename Scalar , typename Index &gt; </td></tr>
+<tr class="memitem:gacf1d47b2a4ef430e40d1725766a13508"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__group-surfacemesh-utils.html#gacf1d47b2a4ef430e40d1725766a13508">transform_mesh</a> (<a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;mesh, const Eigen::Transform&lt; Scalar, 3, Eigen::Affine &gt; &amp;transform, const <a class="el" href="structlagrange_1_1_transform_options.html">TransformOptions</a> &amp;options={})</td></tr>
+<tr class="memdesc:gacf1d47b2a4ef430e40d1725766a13508"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply an affine transform \( M \) to a mesh in-place.  <a href="group__group-surfacemesh-utils.html#gacf1d47b2a4ef430e40d1725766a13508">More...</a><br /></td></tr>
+<tr class="separator:gacf1d47b2a4ef430e40d1725766a13508"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6dde867eed122f72ca82a6de8b7ab2af"><td class="memTemplParams" colspan="2">template&lt;typename Scalar , typename Index &gt; </td></tr>
+<tr class="memitem:ga6dde867eed122f72ca82a6de8b7ab2af"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__group-surfacemesh-utils.html#ga6dde867eed122f72ca82a6de8b7ab2af">transformed_mesh</a> (<a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; mesh, const Eigen::Transform&lt; Scalar, 3, Eigen::Affine &gt; &amp;transform, const <a class="el" href="structlagrange_1_1_transform_options.html">TransformOptions</a> &amp;options={})</td></tr>
+<tr class="memdesc:ga6dde867eed122f72ca82a6de8b7ab2af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply an affine transform to a mesh and return the transformed mesh.  <a href="group__group-surfacemesh-utils.html#ga6dde867eed122f72ca82a6de8b7ab2af">More...</a><br /></td></tr>
+<tr class="separator:ga6dde867eed122f72ca82a6de8b7ab2af"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga48af6105ece8a970755870c73af73ddd"><td class="memTemplParams" colspan="2">template&lt;typename Scalar , typename Index &gt; </td></tr>
 <tr class="memitem:ga48af6105ece8a970755870c73af73ddd"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__group-surfacemesh-utils.html#ga48af6105ece8a970755870c73af73ddd">triangulate_polygonal_facets</a> (<a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;mesh)</td></tr>
 <tr class="memdesc:ga48af6105ece8a970755870c73af73ddd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Triangulate polygonal facets of a mesh using a prescribed set of rules.  <a href="group__group-surfacemesh-utils.html#ga48af6105ece8a970755870c73af73ddd">More...</a><br /></td></tr>
@@ -2244,26 +2263,47 @@ template&lt;class T , size_t N&gt; </td></tr>
 
 </div>
 </div>
-<a id="ad6fd3adb44b0b3a38ad087cb6f631b16" name="ad6fd3adb44b0b3a38ad087cb6f631b16"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad6fd3adb44b0b3a38ad087cb6f631b16">&#9670;&nbsp;</a></span>remove_duplicate_facets()</h2>
+<a id="a144f50badc977a6cc9e3b61b66dc2bec" name="a144f50badc977a6cc9e3b61b66dc2bec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a144f50badc977a6cc9e3b61b66dc2bec">&#9670;&nbsp;</a></span>remove_duplicate_facets()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::unique_ptr&lt; <a class="el" href="classlagrange_1_1_mesh.html">MeshType</a> &gt; remove_duplicate_facets </td>
+          <td class="memname">void remove_duplicate_facets </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classlagrange_1_1_mesh.html">MeshType</a> &amp;&#160;</td>
-          <td class="paramname"><em>mesh</em></td><td>)</td>
+          <td class="paramtype"><a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;&#160;</td>
+          <td class="paramname"><em>mesh</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const <a class="el" href="structlagrange_1_1_remove_duplicate_facet_options.html">RemoveDuplicateFacetOptions</a> &amp;&#160;</td>
+          <td class="paramname"><em>opts</em> = <code>{}</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Removal all duplicate facets from the mesh. </p>
-<p >Arguments: input_mesh</p>
-<p >Returns: output_mesh without any duplicate facets.</p>
-<p >All vertex/facet/corner attributes are mapped from the input to the output. For facet/corner attributes, only the attributes for one of the duplicate facets are used in the output. The ordering of the facets may change even if the input contains no duplicate facets. </p>
+<p>Remove duplicate facets in the mesh. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Scalar</td><td><a class="el" href="classlagrange_1_1_mesh.html">Mesh</a> scalar type </td></tr>
+    <tr><td class="paramname">Index</td><td><a class="el" href="classlagrange_1_1_mesh.html">Mesh</a> index type</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>@paramp[in,out] mesh Input mesh </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">opts</td><td>Options</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>If <code>opts.consider_orientation</code> is false, facets with opposite orientations (e.g. (0, 1, 2) and (2, 1, 0)) are considered as duplicates. If the two orientations have equal number of duplicate facets, all of them will be removed. Otherwise, only one facet with the majority orientation will be kept. </dd></dl>
 
 </div>
 </div>
@@ -2421,26 +2461,38 @@ template&lt;class T , size_t N&gt; </td></tr>
 
 </div>
 </div>
-<a id="a9a4e0328e98859931047b51f9096260e" name="a9a4e0328e98859931047b51f9096260e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9a4e0328e98859931047b51f9096260e">&#9670;&nbsp;</a></span>remove_topologically_degenerate_triangles()</h2>
+<a id="a524a3bb96df80562c5ab14a870bdbed7" name="a524a3bb96df80562c5ab14a870bdbed7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a524a3bb96df80562c5ab14a870bdbed7">&#9670;&nbsp;</a></span>remove_topologically_degenerate_facets()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::unique_ptr&lt; <a class="el" href="classlagrange_1_1_mesh.html">MeshType</a> &gt; remove_topologically_degenerate_triangles </td>
+          <td class="memname">void remove_topologically_degenerate_facets </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classlagrange_1_1_mesh.html">MeshType</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;&#160;</td>
           <td class="paramname"><em>mesh</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Remove topologically degenerate triangles. </p>
-<p >Arguments: input_mesh</p>
-<p >Returns: output_mesh without any topologically degnerate facets.</p>
-<p >All vertex and facet attributes are mapped over. The output_mesh's vertices are exactly the same as input_mesh's vertices. The output_mesh's facets are a subset of input_mesh's facets. </p>
+<p>Remove topologically degenerate facets (i.e. </p>
+<p >triangles like (0, 1, 1)).</p>
+<p >Non-triangle polygons are not handled at the moment.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Scalar</td><td>The surface mesh scalar type. </td></tr>
+    <tr><td class="paramname">Index</td><td>The surface mesh index type.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">mesh</td><td>The surface mesh (for in-place modification). </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

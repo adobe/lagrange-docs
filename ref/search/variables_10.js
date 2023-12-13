@@ -7,6 +7,6 @@ var searchData=
   ['recompute_5fweighted_5fcorner_5fnormals_4',['recompute_weighted_corner_normals',['../structlagrange_1_1_vertex_normal_options.html#ae02aa7e233a85832a599dd07abee27b9',1,'lagrange::VertexNormalOptions']]],
   ['relax_5fdisoriented_5ftriangles_5',['relax_disoriented_triangles',['../structlagrange_1_1volume_1_1_volume_to_mesh_options.html#a33c670c8edf0ebdf667dc5103097dc14',1,'lagrange::volume::VolumeToMeshOptions']]],
   ['remove_5fisolated_5fvertices_6',['remove_isolated_vertices',['../structlagrange_1_1_remove_null_area_facets_options.html#a7912fd3c8e4930cec8ed8c05567434a4',1,'lagrange::RemoveNullAreaFacetsOptions']]],
-  ['representative_5foffsets_7',['representative_offsets',['../structlagrange_1_1internal_1_1_bucket_sort_result.html#ae2a4cebc3b9b9b3b1e03fe54b2be4692',1,'lagrange::internal::BucketSortResult']]],
+  ['representative_5foffsets_7',['representative_offsets',['../structlagrange_1_1internal_1_1_bucket_sort_result.html#ae2a4cebc3b9b9b3b1e03fe54b2be4692',1,'lagrange::internal::BucketSortResult::representative_offsets()'],['../structlagrange_1_1internal_1_1_bucket_sort_offset.html#ae2a4cebc3b9b9b3b1e03fe54b2be4692',1,'lagrange::internal::BucketSortOffset::representative_offsets()']]],
   ['right_8',['right',['../structlagrange_1_1bvh_1_1_edge_a_a_b_b_tree_1_1_node.html#abac8b7bcfa9b05029a3c701f166321c4',1,'lagrange::bvh::EdgeAABBTree::Node']]]
 ];

@@ -58,14 +58,14 @@ var NAVTREEINDEX =
 [
 "../",
 "classlagrange_1_1_mesh_navigation.html#a9319875568c308aebf33469e0b4bab08",
-"classlagrange_1_1_surface_mesh.html#ade4cc8868c8cc2a8cf4078b06e2cc9fe",
-"classlagrange_1_1raycasting_1_1_embree_ray_caster.html#a7106fc40cfae3b6ab06c04267ad08412",
-"classlagrange_1_1ui_1_1_viewer.html#a47e4ba2d08d9510a746f7cef766b8c98",
-"group__group-surfacemesh-utils.html#ga8c1ac1ec1658273f6e6bb312dd2b0718",
-"namespacelagrange_1_1raycasting.html#a38a39963b8927ab590044bc2a70498c8af313b3cc96ac28f4b25935219399c04d",
-"structlagrange_1_1_remove_null_area_facets_options.html#ad49f5977fbc988e5d27cb0ece3e6cb00",
-"structlagrange_1_1ui_1_1_focused_viewport_panel.html",
-"structlagrange_1_1ui_1_1_viewer_1_1_window_options.html#a989d3e09b707fb1f4bc2355ba5855a0c"
+"classlagrange_1_1_surface_mesh.html#ada20815c5104580b91eb5a733548a746",
+"classlagrange_1_1raycasting_1_1_embree_ray_caster.html#a709ae0324587579f07e49f842250b786",
+"classlagrange_1_1ui_1_1_viewer.html#a46c170e410ce577e279fa31321c44d9f",
+"group__group-surfacemesh-utils.html#ga685d104f63c148710e7f8e3ffb2bb779",
+"namespacelagrange_1_1partitioning.html#a6030f0216cd8733bfe6f0e1692572b72",
+"structlagrange_1_1_remap_vertices_options.html#adfe0aeb79b764bf99539a0f3ca973207",
+"structlagrange_1_1ui_1_1_dehovered_event.html",
+"structlagrange_1_1ui_1_1_vertex_data.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

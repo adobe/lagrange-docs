@@ -135,42 +135,52 @@ $(document).ready(function(){initNavTree('invert__mapping_8h_source.html',''); i
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacelagrange_1_1internal.html">lagrange::internal</a> {</div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> Index&gt;</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="namespacelagrange_1_1internal.html#a483149cef61e7cd6355dd8e90055d297">   44</a></span><span class="keyword">auto</span> <a class="code hl_function" href="namespacelagrange_1_1internal.html#a483149cef61e7cd6355dd8e90055d297">invert_mapping</a>(<a class="code hl_typedef" href="group__group-utils-misc.html#ga4afead0b9ccc53fe4fca896787595d26">span&lt;Index&gt;</a> old2new, Index num_target_entries)</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    -&gt; std::tuple&lt;std::vector&lt;Index&gt;, std::vector&lt;Index&gt;&gt;</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>{</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    Index num_source_entries = <span class="keyword">static_cast&lt;</span>Index<span class="keyword">&gt;</span>(old2new.size());</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    std::vector&lt;Index&gt; mapping_offsets(num_target_entries + 1, 0);</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    std::vector&lt;Index&gt; mapping_data;</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="keywordflow">for</span> (Index i = 0; i &lt; num_source_entries; ++i) {</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        Index j = old2new[i];</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        <span class="keywordflow">if</span> (j == invalid&lt;Index&gt;()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        <a class="code hl_define" href="group__group-utils-assert.html#ga1ccafcb14523a1aae57dcac3c3f32ecd">la_runtime_assert</a>(</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>            j &lt; num_target_entries,</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>            <span class="stringliteral">&quot;Mapped element index cannot exceeds target number of elements!&quot;</span>);</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        ++mapping_offsets[j + 1];</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    }</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    std::partial_sum(mapping_offsets.begin(), mapping_offsets.end(), mapping_offsets.begin());</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    mapping_data.resize(mapping_offsets.back());</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <span class="keywordflow">for</span> (Index i = 0; i &lt; num_source_entries; i++) {</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        Index j = old2new[i];</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        <span class="keywordflow">if</span> (j == invalid&lt;Index&gt;()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        mapping_data[mapping_offsets[j]++] = i;</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    }</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    std::rotate(mapping_offsets.begin(), std::prev(mapping_offsets.end()), mapping_offsets.end());</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    mapping_offsets[0] = 0;</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    <span class="keywordflow">return</span> {std::move(mapping_data), std::move(mapping_offsets)};</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>}</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>} <span class="comment">// namespace lagrange::internal</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> Index, <span class="keyword">typename</span> Function&gt;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="namespacelagrange_1_1internal.html#a816e515c3b9d808526087b1c58b37fdd">   46</a></span><span class="keyword">auto</span> <a class="code hl_function" href="namespacelagrange_1_1internal.html#a816e515c3b9d808526087b1c58b37fdd">invert_mapping</a>(Index num_source_entries, Function old2new, Index num_target_entries)</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    -&gt; std::tuple&lt;std::vector&lt;Index&gt;, std::vector&lt;Index&gt;&gt;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>{</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    std::vector&lt;Index&gt; mapping_offsets(num_target_entries + 1, 0);</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    std::vector&lt;Index&gt; mapping_data;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="keywordflow">for</span> (Index i = 0; i &lt; num_source_entries; ++i) {</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        Index j = old2new(i);</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        <span class="keywordflow">if</span> (j == invalid&lt;Index&gt;()) <span class="keywordflow">continue</span>;</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        <a class="code hl_define" href="group__group-utils-assert.html#ga1ccafcb14523a1aae57dcac3c3f32ecd">la_runtime_assert</a>(</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>            j &lt; num_target_entries,</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>            <span class="stringliteral">&quot;Mapped element index cannot exceeds target number of elements!&quot;</span>);</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        ++mapping_offsets[j + 1];</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    }</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    std::partial_sum(mapping_offsets.begin(), mapping_offsets.end(), mapping_offsets.begin());</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    mapping_data.resize(mapping_offsets.back());</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <span class="keywordflow">for</span> (Index i = 0; i &lt; num_source_entries; i++) {</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        Index j = old2new(i);</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        <span class="keywordflow">if</span> (j == invalid&lt;Index&gt;()) <span class="keywordflow">continue</span>;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        mapping_data[mapping_offsets[j]++] = i;</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    }</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    std::rotate(mapping_offsets.begin(), std::prev(mapping_offsets.end()), mapping_offsets.end());</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    mapping_offsets[0] = 0;</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    <span class="keywordflow">return</span> {std::move(mapping_data), std::move(mapping_offsets)};</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>}</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> Index&gt;</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno"><a class="line" href="namespacelagrange_1_1internal.html#a483149cef61e7cd6355dd8e90055d297">   98</a></span><span class="keyword">auto</span> <a class="code hl_function" href="namespacelagrange_1_1internal.html#a816e515c3b9d808526087b1c58b37fdd">invert_mapping</a>(<a class="code hl_typedef" href="group__group-utils-misc.html#ga4afead0b9ccc53fe4fca896787595d26">span&lt;Index&gt;</a> old2new, Index num_target_entries)</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    -&gt; std::tuple&lt;std::vector&lt;Index&gt;, std::vector&lt;Index&gt;&gt;</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>{</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    Index num_source_entries = <span class="keyword">static_cast&lt;</span>Index<span class="keyword">&gt;</span>(old2new.size());</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="namespacelagrange_1_1internal.html#a816e515c3b9d808526087b1c58b37fdd">invert_mapping</a>(</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>        num_source_entries,</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>        [&amp;](Index i) { <span class="keywordflow">return</span> old2new[i]; },</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>        num_target_entries);</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>}</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span> </div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>} <span class="comment">// namespace lagrange::internal</span></div>
 <div class="ttc" id="agroup__group-utils-assert_html_ga1ccafcb14523a1aae57dcac3c3f32ecd"><div class="ttname"><a href="group__group-utils-assert.html#ga1ccafcb14523a1aae57dcac3c3f32ecd">la_runtime_assert</a></div><div class="ttdeci">#define la_runtime_assert(...)</div><div class="ttdoc">Runtime assertion check.</div><div class="ttdef"><b>Definition:</b> assert.h:168</div></div>
 <div class="ttc" id="agroup__group-utils-misc_html_ga4afead0b9ccc53fe4fca896787595d26"><div class="ttname"><a href="group__group-utils-misc.html#ga4afead0b9ccc53fe4fca896787595d26">lagrange::span</a></div><div class="ttdeci">::nonstd::span&lt; T, Extent &gt; span</div><div class="ttdoc">A bounds-safe view for sequences of objects.</div><div class="ttdef"><b>Definition:</b> span.h:27</div></div>
 <div class="ttc" id="anamespacelagrange_1_1internal_html"><div class="ttname"><a href="namespacelagrange_1_1internal.html">lagrange::internal</a></div><div class="ttdoc">nullptr_t, size_t, ptrdiff_t basic_ostream bad_weak_ptr extent, remove_extent, is_array,...</div><div class="ttdef"><b>Definition:</b> attribute_string_utils.h:20</div></div>
-<div class="ttc" id="anamespacelagrange_1_1internal_html_a483149cef61e7cd6355dd8e90055d297"><div class="ttname"><a href="namespacelagrange_1_1internal.html#a483149cef61e7cd6355dd8e90055d297">lagrange::internal::invert_mapping</a></div><div class="ttdeci">auto invert_mapping(span&lt; Index &gt; old2new, Index num_target_entries) -&gt; std::tuple&lt; std::vector&lt; Index &gt;, std::vector&lt; Index &gt; &gt;</div><div class="ttdoc">Compute the target-to-source (i.e.</div><div class="ttdef"><b>Definition:</b> invert_mapping.h:44</div></div>
+<div class="ttc" id="anamespacelagrange_1_1internal_html_a816e515c3b9d808526087b1c58b37fdd"><div class="ttname"><a href="namespacelagrange_1_1internal.html#a816e515c3b9d808526087b1c58b37fdd">lagrange::internal::invert_mapping</a></div><div class="ttdeci">auto invert_mapping(Index num_source_entries, Function old2new, Index num_target_entries) -&gt; std::tuple&lt; std::vector&lt; Index &gt;, std::vector&lt; Index &gt; &gt;</div><div class="ttdoc">Compute the target-to-source (i.e.</div><div class="ttdef"><b>Definition:</b> invert_mapping.h:46</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
