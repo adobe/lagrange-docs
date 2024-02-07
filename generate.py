@@ -9,15 +9,19 @@
 # it.
 
 import subprocess
-import os
 import argparse
 from pathlib import Path
+import shutil
 
 
 def parse_args():
     parser = argparse.ArgumentParser(description="Generate documentation for Lagrange.")
     parser.add_argument("path", type=str, help="Path to lagrange repository")
-    parser.add_argument("--open", action="store_true", help="Prepare repo for open-source version of the website")
+    parser.add_argument(
+        "--open",
+        action="store_true",
+        help="Prepare repo for open-source version of the website",
+    )
     return parser.parse_args()
 
 
@@ -45,7 +49,7 @@ def main():
     else:
         docs_dir = str(script_dir / "docs/open")
 
-    # Generates doxygen html files
+    # Generates Doxygen C++ documentation
     build_dir = script_dir / "build"
     build_dir.mkdir(exist_ok=True)
     subprocess.run(
@@ -54,10 +58,11 @@ def main():
             "-B",
             str(build_dir),
             "-S",
-            str(lagrange_dir / "docs"),
+            str(lagrange_dir / "docs/cpp"),
             "-DDOXYGEN_OUTPUT_DIR=" + docs_dir,
-            "-DDOXYGEN_OUTPUT_HTML=ref",
-        ]
+            "-DDOXYGEN_OUTPUT_HTML=cpp",
+        ],
+        check=True,
     )
     subprocess.run(
         [
@@ -66,7 +71,18 @@ def main():
             str(build_dir),
             "--target",
             "doc",
-        ]
+        ],
+        check=True,
+    )
+
+    # Generates Sphinx Python documentation
+    subprocess.run(
+        ["make", "-C", str(lagrange_dir / "docs/python"), "html"], check=True
+    )
+    shutil.copytree(
+        lagrange_dir / "docs/python/build/html",
+        Path(docs_dir) / "python",
+        dirs_exist_ok=True,
     )
 
     print("run `mkdocs serve` and open http://127.0.0.1:8000/")
