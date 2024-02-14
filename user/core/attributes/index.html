@@ -245,8 +245,24 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../ref/" class="md-tabs__link">
-        Reference Documentation
+      <a href="../../../cpp/" class="md-tabs__link">
+        C++ Reference
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../python/" class="md-tabs__link">
+        Python Reference
       </a>
     </li>
   
@@ -1362,14 +1378,61 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../ref/">Reference Documentation</a>
+          <a href="../../../cpp/">C++ Reference</a>
           
         </div>
       
       <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_4">
           <span class="md-nav__icon md-icon"></span>
-          Reference Documentation
+          C++ Reference
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+      
+      
+        
+          
+            
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../python/">Python Reference</a>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Python Reference
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -1646,7 +1709,7 @@ is never resized automatically.</p>
 </li>
 <li>
 <p><strong>Usage</strong>: A usage tag is an optional tag that can be used to determine how attribute values are
-  affected by other mesh operations. See the <a href="../../../ref/group__group-surfacemesh-attr.html#ga35b5eb426384b257452ee0ffdb732c27">reference documentation</a> for a list
+  affected by other mesh operations. See the <a href="../../../cpp/group__group-surfacemesh-attr.html#ga35b5eb426384b257452ee0ffdb732c27">reference documentation</a> for a list
   of available usage tags.</p>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
@@ -1771,7 +1834,7 @@ mesh attributes, with additional filtering based on element types.</p>
 </tr>
 </tbody>
 </table>
-<p>See <a href="../../../ref/group__group-surfacemesh-iterate.html">reference documentation</a> for additional details.</p>
+<p>See <a href="../../../cpp/group__group-surfacemesh-iterate.html">reference documentation</a> for additional details.</p>
 <h3 id="inferring-value-type">Inferring Value Type</h3>
 <p>Since we use generic lambda to iterate over attributes of different types, it is possible to deduce
 the value type of the current attribute in the following manner:</p>
@@ -1994,13 +2057,13 @@ need to be set for each attribute separately. They are copied over when an attri
 via our copy-on-write mechanism.</p>
 <h3 id="create-policy">Create Policy</h3>
 <p>Controls the behavior when creating an attribute with a reserved name (starting with <code>$</code>). The
-default is to throw an exception. See <a href="../../../ref/group__group-surfacemesh-attr.html#ga809dfcec94612491ec5be8bb8614ceab">reference documentation</a> for more details.</p>
+default is to throw an exception. See <a href="../../../cpp/group__group-surfacemesh-attr.html#ga809dfcec94612491ec5be8bb8614ceab">reference documentation</a> for more details.</p>
 <h3 id="copy-policy">Copy Policy</h3>
 <p>Controls the behavior when copying an attribute that wraps an external buffer. By default, a deep
-copy of the buffer will be created. See <a href="../../../ref/group__group-surfacemesh-attr.html#ga450ef027eac01dd93a89a15ff55de63f">reference documentation</a> for more details.</p>
+copy of the buffer will be created. See <a href="../../../cpp/group__group-surfacemesh-attr.html#ga450ef027eac01dd93a89a15ff55de63f">reference documentation</a> for more details.</p>
 <h3 id="growth-policy">Growth Policy</h3>
 <p>Controls the behavior when adding element to an attribute that wrap an external buffer. The default
-behavior is to throw an exception. See <a href="../../../ref/group__group-surfacemesh-attr.html#gaee0f51b5f793101c19bd6dede5db7a7a">reference documentation</a> for more details.</p>
+behavior is to throw an exception. See <a href="../../../cpp/group__group-surfacemesh-attr.html#gaee0f51b5f793101c19bd6dede5db7a7a">reference documentation</a> for more details.</p>
 <div class="highlight"><pre><span></span><code><span class="n">Index</span><span class="w"> </span><span class="n">dim</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span>
 <span class="n">Index</span><span class="w"> </span><span class="n">num_vertices</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
 <span class="n">lagrange</span><span class="o">::</span><span class="n">SurfaceMesh</span><span class="o">&lt;</span><span class="n">Scalar</span><span class="p">,</span><span class="w"> </span><span class="n">Index</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mesh</span><span class="p">(</span><span class="n">dim</span><span class="p">);</span>
@@ -2026,7 +2089,7 @@ behavior is to throw an exception. See <a href="../../../ref/group__group-surfac
 </code></pre></div>
 <h3 id="write-policy">Write Policy</h3>
 <p>Controls the behavior when providing writable access to an attribute wrapping a const external
-buffer. The default behavior is to throw an exception. See <a href="../../../ref/group__group-surfacemesh-attr.html#ga3018d576f81897e1712c3601b9625cb9">reference documentation</a>
+buffer. The default behavior is to throw an exception. See <a href="../../../cpp/group__group-surfacemesh-attr.html#ga3018d576f81897e1712c3601b9625cb9">reference documentation</a>
 for more details.</p>
 <div class="highlight"><pre><span></span><code><span class="n">Index</span><span class="w"> </span><span class="n">dim</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span>
 <span class="n">Index</span><span class="w"> </span><span class="n">num_vertices</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
@@ -2056,10 +2119,10 @@ for more details.</p>
 </code></pre></div>
 <h3 id="delete-policy">Delete Policy</h3>
 <p>Controls the behavior when deleting an attribute with a reserved name. The default behavior is to
-throw an exception. See <a href="../../../ref/group__group-surfacemesh-attr.html#gad17b213b11e78aeb807ad3ece7e67e84">reference documentation</a> for more details.</p>
+throw an exception. See <a href="../../../cpp/group__group-surfacemesh-attr.html#gad17b213b11e78aeb807ad3ece7e67e84">reference documentation</a> for more details.</p>
 <h3 id="export-policy">Export Policy</h3>
 <p>Controls the behavior when exporting an attribute wrapping an external buffer. The default behavior
-is to create an internal copy to ensure lifetime of the data is preserved. See <a href="../../../ref/group__group-surfacemesh-attr.html#gade3ae5b7e72e9d4f92f29c6563551c10">reference
+is to create an internal copy to ensure lifetime of the data is preserved. See <a href="../../../cpp/group__group-surfacemesh-attr.html#gade3ae5b7e72e9d4f92f29c6563551c10">reference
 documentation</a> for more details.</p>
 <div class="highlight"><pre><span></span><code><span class="n">Index</span><span class="w"> </span><span class="n">dim</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span>
 <span class="n">Index</span><span class="w"> </span><span class="n">num_vertices</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>

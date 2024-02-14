@@ -245,8 +245,24 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../ref/" class="md-tabs__link">
-        Reference Documentation
+      <a href="../../cpp/" class="md-tabs__link">
+        C++ Reference
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../python/" class="md-tabs__link">
+        Python Reference
       </a>
     </li>
   
@@ -1279,14 +1295,61 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../ref/">Reference Documentation</a>
+          <a href="../../cpp/">C++ Reference</a>
           
         </div>
       
       <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_4">
           <span class="md-nav__icon md-icon"></span>
-          Reference Documentation
+          C++ Reference
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+      
+      
+        
+          
+            
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../python/">Python Reference</a>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Python Reference
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -1398,7 +1461,8 @@ for some tips on how to improve this.</p>
 <p>When compiling a CMake project using Ninja instead of Make or MSBuild, one can use
 <a href="https://github.com/nico/ninjatracing">ninjatracing</a> to convert ninja log files to chrome's
 <code>about:tracing</code> format:</p>
-<p><img alt="" src="../img/profile_ninjatracing_global.png" /></p>
+<figure class="figure-image">  <img src="../img/profile_ninjatracing_global.png" alt="" >  <figcaption></figcaption></figure>
+
 <p>To build a project with Ninja, simply use the <code>-G Ninja</code> when generating the build system:</p>
 <div class="highlight"><pre><span></span><code>mkdir<span class="w"> </span>build
 <span class="nb">cd</span><span class="w"> </span>build
@@ -1430,8 +1494,9 @@ ninja
 <p>Then, simply add <code>-e</code> to the <code>ninjatracing</code> call:</p>
 <div class="highlight"><pre><span></span><code>ninjatracing<span class="w"> </span>-e<span class="w"> </span><span class="nv">$BUILD_DIR</span>/.ninja_log<span class="w"> </span>&gt;<span class="w"> </span>trace.json
 </code></pre></div>
-<p>Open the resulting trace file in Chrome:
-<img alt="" src="../img/profile_ninjatracing_detail.png" /></p>
+<p>Open the resulting trace file in Chrome:</p>
+<figure class="figure-image">  <img src="../img/profile_ninjatracing_detail.png" alt="" >  <figcaption></figcaption></figure>
+
 <h2 id="using-the-clang-build-analyzer">Using The Clang Build Analyzer</h2>
 <p>Go to the <a href="https://github.com/aras-p/ClangBuildAnalyzer">Clang Build Analyzer</a> repository and
 compile the tool, then simply follow the instructions in the README (copied below):</p>

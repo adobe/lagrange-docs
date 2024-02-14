@@ -1,0 +1,119 @@
+:py:mod:`image`
+===============
+
+.. py:module:: image
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   image.ImageChannel
+   image.ImagePrecision
+   image.ImageStorage
+
+
+
+
+.. py:class:: ImageChannel(*args, **kwds)
+
+
+   Bases: :py:obj:`enum.Enum`
+
+   <attribute '__doc__' of 'ImageChannel' objects>
+
+   .. py:attribute:: four
+      :type: Any
+
+      
+
+   .. py:attribute:: one
+      :type: Any
+
+      
+
+   .. py:attribute:: three
+      :type: Any
+
+      
+
+   .. py:attribute:: unknown
+      :type: Any
+
+      
+
+
+.. py:class:: ImagePrecision(*args, **kwds)
+
+
+   Bases: :py:obj:`enum.Enum`
+
+   <attribute '__doc__' of 'ImagePrecision' objects>
+
+   .. py:attribute:: float16
+      :type: Any
+
+      
+
+   .. py:attribute:: float32
+      :type: Any
+
+      
+
+   .. py:attribute:: float64
+      :type: Any
+
+      
+
+   .. py:attribute:: int32
+      :type: Any
+
+      
+
+   .. py:attribute:: int8
+      :type: Any
+
+      
+
+   .. py:attribute:: uint32
+      :type: Any
+
+      
+
+   .. py:attribute:: uint8
+      :type: Any
+
+      
+
+   .. py:attribute:: unknown
+      :type: Any
+
+      
+
+
+.. py:class:: ImageStorage(arg0: int, arg1: int, arg2: int, /)
+
+
+   None
+
+   .. py:property:: data
+      :type: numpy.typing.NDArray
+
+
+   .. py:property:: height
+      :type: int
+
+
+   .. py:property:: stride
+      :type: int
+
+
+   .. py:property:: width
+      :type: int
+
+
+

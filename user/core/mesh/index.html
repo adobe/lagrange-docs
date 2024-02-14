@@ -245,8 +245,24 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../ref/" class="md-tabs__link">
-        Reference Documentation
+      <a href="../../../cpp/" class="md-tabs__link">
+        C++ Reference
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../python/" class="md-tabs__link">
+        Python Reference
       </a>
     </li>
   
@@ -1308,14 +1324,61 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../ref/">Reference Documentation</a>
+          <a href="../../../cpp/">C++ Reference</a>
           
         </div>
       
       <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_4">
           <span class="md-nav__icon md-icon"></span>
-          Reference Documentation
+          C++ Reference
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+      
+      
+        
+          
+            
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../python/">Python Reference</a>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Python Reference
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -1471,13 +1534,13 @@ template <typename Scalar>
 using ConstRowMatrixView = Eigen::Map<const RowMatrix<Scalar>, Eigen::Unaligned>;
 -->
 
-<p>The <a href="../../../ref/classlagrange_1_1_surface_mesh.html">SurfaceMesh</a> class is the new generic mesh class in Lagrange to represent meshes. It is a very
+<p>The <a href="../../../cpp/classlagrange_1_1_surface_mesh.html">SurfaceMesh</a> class is the new generic mesh class in Lagrange to represent meshes. It is a very
 generic class that supports triangle meshes, quad meshes, as well as quad-dominant and arbitrary
 polygonal meshes. This new data structure was designed with a couple of key features in mind:</p>
 <ul>
 <li><strong>Generic and powerful API</strong>:<ul>
 <li>A generic mesh API that works in 2D, 3D, ND with triangles/quad/hybrid meshes using the same
-  <a href="../../../ref/classlagrange_1_1_surface_mesh.html">SurfaceMesh</a> type.</li>
+  <a href="../../../cpp/classlagrange_1_1_surface_mesh.html">SurfaceMesh</a> type.</li>
 <li>A simple API based on <code>std::span&lt;&gt;</code> (pointer + size). This avoids a lot of header-only
   template shenanigans, while providing a low-overhead but secure interface to manipulate
   continuous buffers.</li>
@@ -1524,7 +1587,7 @@ polygonal meshes. This new data structure was designed with a couple of key feat
 <li>Clean separation between class declaration/definition allows for faster build times.</li>
 <li>Explicit template instantiation is used to limit available types usable with our
   <code>SurfaceMesh&lt;&gt;</code> and <code>Attribute&lt;&gt;</code> class.</li>
-<li><a href="../../../ref/group__group-surfacemesh.html">X macros</a> are used to facilitate explicit template instantiation of predetermined types (can
+<li><a href="../../../cpp/group__group-surfacemesh.html">X macros</a> are used to facilitate explicit template instantiation of predetermined types (can
   be used by client code).</li>
 </ul>
 </li>
@@ -1542,23 +1605,23 @@ define the following elements:</p>
 <li>
 <p><strong>Vertices</strong>: Points used to form the facets of the mesh. Typically associated with a 2D or 3D
   position attribute.</p>
-<p><img alt="" src="../img/mesh_vertices.svg" width="300" /></p>
+<p><figure class="figure-image">  <img src="../img/mesh_vertices.svg" alt=""  width="300" >  <figcaption></figcaption></figure></p>
 </li>
 <li>
 <p><strong>Facets</strong>: Polygons formed by connecting mesh vertices together. In a triangle mesh, all facets
   are 3-gons.</p>
-<p><img alt="" src="../img/mesh_facets.svg" width="300" /></p>
+<p><figure class="figure-image">  <img src="../img/mesh_facets.svg" alt=""  width="300" >  <figcaption></figcaption></figure></p>
 </li>
 <li>
 <p><strong>Edges</strong>: Edges are formed by unordered pairs of consecutive vertices in a mesh facet. The set of
   mesh edges is defined implicitly from the mesh facets. See <a href="#mesh-edges">Mesh Edges</a> for more
   details.</p>
-<p><img alt="" src="../img/mesh_edges.svg" width="300" /></p>
+<p><figure class="figure-image">  <img src="../img/mesh_edges.svg" alt=""  width="300" >  <figcaption></figcaption></figure></p>
 </li>
 <li>
 <p><strong>Corners</strong>: Facet corner elements can be used to reference vertices in a specific facet. Corners
   from the same facets are indexed contiguously in a flat list containing all facet corners.</p>
-<p><img alt="" src="../img/mesh_corners.svg" width="300" /></p>
+<p><figure class="figure-image">  <img src="../img/mesh_corners.svg" alt=""  width="300" >  <figcaption></figcaption></figure></p>
 </li>
 </ul>
 <p>Our mesh data structure is very generic, and can represent any kind of polygonal mesh, non-manifold
@@ -1582,8 +1645,8 @@ facet starts/ends in the attribute buffer storing vertex indices.</p>
 <p>In the following mesh, facets <code>[f0, f1, f2]</code> have an "offset" attribute of <code>[0, 3, 7]</code>. This
 means that the first corner of <code>f0</code> is <code>c0</code>, the first corner of <code>f1</code> is <code>c3</code>, etc. The size of
 a facet can be computed from the difference between two consecutive offsets.</p>
-<p><img alt="" src="../img/mesh_facets.svg" width="300" />
-<img alt="" src="../img/mesh_corners.svg" width="300" /></p>
+<p><figure class="figure-image">  <img src="../img/mesh_facets.svg" alt=""  width="300" >  <figcaption></figcaption></figure>
+<figure class="figure-image">  <img src="../img/mesh_corners.svg" alt=""  width="300" >  <figcaption></figcaption></figure></p>
 </div>
 <h2 id="adding-verticesfacets">Adding Vertices/Facets</h2>
 <p>Simple version:</p>
@@ -1693,7 +1756,7 @@ remove:</p>
 floating/isolated vertices after facet removal. Consider filtering them as a post-processing.</p>
 </div>
 <h2 id="copy-on-write">Copy-On-Write</h2>
-<p>All mesh data is stored in an <a href="../../../ref/classlagrange_1_1_attribute.html">Attribute</a> object, including vertex positions, facet indices, etc.
+<p>All mesh data is stored in an <a href="../../../cpp/classlagrange_1_1_attribute.html">Attribute</a> object, including vertex positions, facet indices, etc.
 These mesh attributes are handled via a copy-on-write mechanism, meaning that copying a mesh is a
 cheap operation by default: no buffer is actually duplicated until you start writing to it. For this
 reason, we distinguish most accessors between <strong>getters</strong> and <strong>setters</strong>:</p>
@@ -1832,7 +1895,7 @@ mesh navigation method requires having called <code>mesh.initialize_edges()</cod
   attributes. One vertex attribute giving the head of each list, and one corner attribute giving the
   next corner in the linked list for each "chain" around a vertex. Since each corner belongs to one
   chain only, we can store all linked lists as flattened attribute for the entire mesh.</p>
-<p><img alt="" src="../img/chain_around_vertex.svg" width="600" /></p>
+<p><figure class="figure-image">  <img src="../img/chain_around_vertex.svg" alt=""  width="600" >  <figcaption></figcaption></figure></p>
 <div class="admonition note">
 <p class="admonition-title">Edges Around A Vertex</p>
 <p>To iterate over the edges incident to a given vertex, you will notice that we only provide a
@@ -1845,7 +1908,7 @@ prescribed vertex.</p>
 <p><strong>Corners Around An Edge</strong>. The same principle can be applied to chain corners around a given
   edge. Note that since the facets are oriented, we only chain one canonical corner per facet around
   a given edge.</p>
-<p><img alt="" src="../img/chain_around_edge.svg" width="600" /></p>
+<p><figure class="figure-image">  <img src="../img/chain_around_edge.svg" alt=""  width="600" >  <figcaption></figcaption></figure></p>
 <div class="admonition tip">
 <p class="admonition-title">Non-Manifold Edges</p>
 <p>A nice advantage of this connectivity representation is that we support any type of
@@ -1869,7 +1932,7 @@ which assume manifold surfaces.</p>
 <span class="p">}</span>
 </code></pre></div>
 <p>In the example above, we could have use the method <code>count_num_corners_around_vertex()</code> to
-compute vertex valence directly. See <a href="../../../ref/classlagrange_1_1_surface_mesh.html">SurfaceMesh</a> class documentation for a full reference.</p>
+compute vertex valence directly. See <a href="../../../cpp/classlagrange_1_1_surface_mesh.html">SurfaceMesh</a> class documentation for a full reference.</p>
 <div class="admonition danger">
 <p class="admonition-title">Degenerate Facets</p>
 <p>If a mesh facet is degenerate, and references the same vertex several time (e.g. facet <code>f2 =
@@ -1938,7 +2001,7 @@ you will encouter a linking error due to unreferenced symbols.</p>
 </div>
 <div class="admonition tip">
 <p class="admonition-title">Writing Functions Taking SurfaceMesh As Parameter</p>
-<p>To write a function taking a <code>SurfaceMesh&lt;&gt;</code> as a parameter, you can use our <a href="../../../ref/group__group-surfacemesh.html">X macros</a> to
+<p>To write a function taking a <code>SurfaceMesh&lt;&gt;</code> as a parameter, you can use our <a href="../../../cpp/group__group-surfacemesh.html">X macros</a> to
 explicitly instantiate a templated function with the supported mesh types. For example, the
 <code>vertex_view()</code> function is instantiated as follows:</p>
 <!-- TODO: Add localized code preamble... -->

@@ -1,0 +1,770 @@
+:py:mod:`scene`
+===============
+
+.. py:module:: scene
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   scene.Animation
+   scene.Camera
+   scene.FacetAllocationStrategy
+   scene.ImageLegacy
+   scene.Light
+   scene.Material
+   scene.MeshInstance3D
+   scene.Node
+   scene.RemeshingOptions
+   scene.Scene
+   scene.SceneMeshInstance
+   scene.SimpleScene3D
+   scene.Skeleton
+   scene.Texture
+   scene.TextureInfo
+
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   scene.add_child
+   scene.add_mesh
+   scene.compute_global_node_transform
+   scene.mesh_to_simple_scene
+   scene.meshes_to_simple_scene
+   scene.simple_scene_to_mesh
+
+
+
+.. py:class:: Animation
+
+
+   .. py:property:: name
+      :type: str
+
+
+
+.. py:class:: Camera
+
+
+   Camera
+
+   .. py:class:: Type(*args, **kwds)
+
+
+      Bases: :py:obj:`enum.Enum`
+
+      <attribute '__doc__' of 'Type' objects>
+
+      .. py:attribute:: Orthographic
+         :type: Any
+
+         
+
+      .. py:attribute:: Perspective
+         :type: Any
+
+         
+
+
+   .. py:property:: aspect_ratio
+      :type: float
+
+
+   .. py:property:: far_plane
+      :type: float
+
+
+   .. py:property:: get_vertical_fov
+      :type: float
+
+
+   .. py:property:: horizontal_fov
+      :type: float
+
+
+   .. py:property:: look_at
+      :type: numpy.typing.NDArray
+
+
+   .. py:property:: name
+      :type: str
+
+
+   .. py:property:: near_plane
+      :type: float
+
+
+   .. py:property:: orthographic_width
+      :type: float
+
+
+   .. py:property:: position
+      :type: numpy.typing.NDArray
+
+
+   .. py:property:: set_horizontal_fov_from_vertical_fov
+      :type: None
+
+
+   .. py:property:: type
+      :type: lagrange.scene.Camera.Type
+
+
+   .. py:property:: up
+      :type: numpy.typing.NDArray
+
+
+
+.. py:class:: FacetAllocationStrategy(*args, **kwds)
+
+
+   Bases: :py:obj:`enum.Enum`
+
+   <attribute '__doc__' of 'FacetAllocationStrategy' objects>
+
+   .. py:attribute:: EvenSplit
+      :type: Any
+
+      
+
+   .. py:attribute:: RelativeToMeshArea
+      :type: Any
+
+      
+
+   .. py:attribute:: RelativeToNumFacets
+      :type: Any
+
+      
+
+   .. py:attribute:: Synchronized
+      :type: Any
+
+      
+
+
+.. py:class:: ImageLegacy
+
+
+   None
+
+   .. py:class:: Type(*args, **kwds)
+
+
+      Bases: :py:obj:`enum.Enum`
+
+      <attribute '__doc__' of 'Type' objects>
+
+      .. py:attribute:: Bmp
+         :type: Any
+
+         
+
+      .. py:attribute:: Gif
+         :type: Any
+
+         
+
+      .. py:attribute:: Jpeg
+         :type: Any
+
+         
+
+      .. py:attribute:: Png
+         :type: Any
+
+         
+
+      .. py:attribute:: Unknown
+         :type: Any
+
+         
+
+
+   .. py:property:: channel
+      :type: lagrange.image.ImageChannel
+
+
+   .. py:property:: data
+      :type: lagrange.image.ImageStorage
+
+
+   .. py:property:: element_size
+      :type: int
+
+
+   .. py:property:: height
+      :type: int
+
+
+   .. py:property:: name
+      :type: str
+
+
+   .. py:property:: num_channels
+      :type: int
+
+
+   .. py:property:: precision
+      :type: lagrange.image.ImagePrecision
+
+
+   .. py:property:: type
+      :type: lagrange.scene.ImageLegacy.Type
+
+
+   .. py:property:: uri
+      :type: str
+
+
+   .. py:property:: width
+      :type: int
+
+
+
+.. py:class:: Light
+
+
+   Light
+
+   .. py:class:: Type(*args, **kwds)
+
+
+      Bases: :py:obj:`enum.Enum`
+
+      <attribute '__doc__' of 'Type' objects>
+
+      .. py:attribute:: Ambient
+         :type: Any
+
+         
+
+      .. py:attribute:: Area
+         :type: Any
+
+         
+
+      .. py:attribute:: Directional
+         :type: Any
+
+         
+
+      .. py:attribute:: Point
+         :type: Any
+
+         
+
+      .. py:attribute:: Spot
+         :type: Any
+
+         
+
+      .. py:attribute:: Undefined
+         :type: Any
+
+         
+
+
+   .. py:property:: angle_inner_cone
+      :type: float
+
+
+   .. py:property:: angle_outer_cone
+      :type: float
+
+
+   .. py:property:: attenuation_constant
+      :type: float
+
+
+   .. py:property:: attenuation_cubic
+      :type: float
+
+
+   .. py:property:: attenuation_linear
+      :type: float
+
+
+   .. py:property:: attenuation_quadratic
+      :type: float
+
+
+   .. py:property:: color_ambient
+      :type: numpy.typing.NDArray
+
+
+   .. py:property:: color_diffuse
+      :type: numpy.typing.NDArray
+
+
+   .. py:property:: color_specular
+      :type: numpy.typing.NDArray
+
+
+   .. py:property:: direction
+      :type: numpy.typing.NDArray
+
+
+   .. py:property:: intensity
+      :type: float
+
+
+   .. py:property:: name
+      :type: str
+
+
+   .. py:property:: position
+      :type: numpy.typing.NDArray
+
+
+   .. py:property:: range
+      :type: float
+
+
+   .. py:property:: size
+      :type: numpy.typing.NDArray
+
+
+   .. py:property:: type
+      :type: lagrange.scene.Light.Type
+
+
+   .. py:property:: up
+      :type: numpy.typing.NDArray
+
+
+
+.. py:class:: Material
+
+
+   None
+
+   .. py:class:: AlphaMode(*args, **kwds)
+
+
+      Bases: :py:obj:`enum.Enum`
+
+      <attribute '__doc__' of 'AlphaMode' objects>
+
+      .. py:attribute:: Blend
+         :type: Any
+
+         
+
+      .. py:attribute:: Mask
+         :type: Any
+
+         
+
+      .. py:attribute:: Opaque
+         :type: Any
+
+         
+
+
+   .. py:property:: alpha_cutoff
+      :type: float
+
+
+   .. py:property:: alpha_mode
+      :type: lagrange.scene.Material.AlphaMode
+
+
+   .. py:property:: base_color_texture
+      :type: lagrange.scene.TextureInfo
+
+
+   .. py:property:: base_color_value
+      :type: numpy.typing.NDArray
+
+
+   .. py:property:: double_sided
+      :type: bool
+
+
+   .. py:property:: emissive_texture
+      :type: lagrange.scene.TextureInfo
+
+
+   .. py:property:: emissive_value
+      :type: numpy.typing.NDArray
+
+
+   .. py:property:: metallic_roughness_texture
+      :type: lagrange.scene.TextureInfo
+
+
+   .. py:property:: metallic_value
+      :type: float
+
+
+   .. py:property:: name
+      :type: str
+
+
+   .. py:property:: normal_scale
+      :type: float
+
+
+   .. py:property:: normal_texture
+      :type: lagrange.scene.TextureInfo
+
+
+   .. py:property:: occlusion_strength
+      :type: float
+
+
+   .. py:property:: occlusion_texture
+      :type: lagrange.scene.TextureInfo
+
+
+   .. py:property:: roughness_value
+      :type: float
+
+
+
+.. py:class:: MeshInstance3D
+
+
+   A single mesh instance in a scene
+
+   .. py:property:: mesh_index
+      :type: int
+
+
+   .. py:property:: transform
+      :type: numpy.typing.NDArray
+
+
+
+.. py:class:: Node
+
+
+   None
+
+   .. py:property:: cameras
+      :type: list[int]
+
+
+   .. py:property:: children
+      :type: list[int]
+
+
+   .. py:property:: lights
+      :type: list[int]
+
+
+   .. py:property:: meshes
+      :type: list[lagrange.scene.SceneMeshInstance]
+
+
+   .. py:property:: name
+      :type: str
+
+
+   .. py:property:: parent
+      :type: int
+
+
+   .. py:property:: transform
+      :type: list[list[float]]
+
+
+
+.. py:class:: RemeshingOptions
+
+
+   None
+
+   .. py:property:: facet_allocation_strategy
+      :type: lagrange.scene.FacetAllocationStrategy
+
+
+   .. py:property:: min_facets
+      :type: int
+
+
+
+.. py:class:: Scene
+
+
+   A 3D scene
+
+   .. py:property:: animations
+      :type: list[lagrange.scene.Animation]
+
+
+   .. py:property:: cameras
+      :type: list[lagrange.scene.Camera]
+
+
+   .. py:property:: images
+      :type: list[lagrange.scene.ImageLegacy]
+
+
+   .. py:property:: lights
+      :type: list[lagrange.scene.Light]
+
+
+   .. py:property:: materials
+      :type: list[lagrange.scene.Material]
+
+
+   .. py:property:: meshes
+      :type: list[lagrange.core.SurfaceMesh]
+
+
+   .. py:property:: name
+      :type: str
+
+
+   .. py:property:: nodes
+      :type: list[lagrange.scene.Node]
+
+
+   .. py:property:: skeletons
+      :type: list[lagrange.scene.Skeleton]
+
+
+   .. py:property:: textures
+      :type: list[lagrange.scene.Texture]
+
+
+
+.. py:class:: SceneMeshInstance
+
+
+   Mesh and material index of a node
+
+   .. py:property:: materials
+      :type: list[int]
+
+
+   .. py:property:: mesh
+      :type: int
+
+
+
+.. py:class:: SimpleScene3D
+
+
+   Simple scene container for instanced meshes
+
+   .. py:property:: num_meshes
+      :type: int
+
+      Number of meshes in the scene
+
+   .. py:property:: total_num_instances
+      :type: int
+
+      Total number of instances for all meshes in the scene
+
+   .. py:method:: add_instance(instance: lagrange.scene.MeshInstance3D) -> int
+
+
+   .. py:method:: add_mesh(mesh: lagrange.core.SurfaceMesh) -> int
+
+
+   .. py:method:: get_instance(mesh_index: int, instance_index: int) -> lagrange.scene.MeshInstance3D
+
+
+   .. py:method:: get_mesh(mesh_index: int) -> lagrange.core.SurfaceMesh
+
+
+   .. py:method:: num_instances(mesh_index: int) -> int
+
+
+   .. py:method:: ref_mesh(mesh_index: int) -> lagrange.core.SurfaceMesh
+
+
+   .. py:method:: reserve_instances(mesh_index: int, num_instances: int) -> None
+
+
+   .. py:method:: reserve_meshes(num_meshes: int) -> None
+
+
+
+.. py:class:: Skeleton
+
+
+   .. py:property:: meshes
+      :type: list[int]
+
+
+
+.. py:class:: Texture
+
+
+   Texture
+
+   .. py:class:: TextureFilter(*args, **kwds)
+
+
+      Bases: :py:obj:`enum.Enum`
+
+      <attribute '__doc__' of 'TextureFilter' objects>
+
+      .. py:attribute:: Linear
+         :type: Any
+
+         
+
+      .. py:attribute:: LinearMipmapLinear
+         :type: Any
+
+         
+
+      .. py:attribute:: LinearMipmapNearest
+         :type: Any
+
+         
+
+      .. py:attribute:: Nearest
+         :type: Any
+
+         
+
+      .. py:attribute:: NearestMimpapNearest
+         :type: Any
+
+         
+
+      .. py:attribute:: NearestMipmapLinear
+         :type: Any
+
+         
+
+      .. py:attribute:: Undefined
+         :type: Any
+
+         
+
+
+   .. py:class:: WrapMode(*args, **kwds)
+
+
+      Bases: :py:obj:`enum.Enum`
+
+      <attribute '__doc__' of 'WrapMode' objects>
+
+      .. py:attribute:: Clamp
+         :type: Any
+
+         
+
+      .. py:attribute:: Decal
+         :type: Any
+
+         
+
+      .. py:attribute:: Mirror
+         :type: Any
+
+         
+
+      .. py:attribute:: Wrap
+         :type: Any
+
+         
+
+
+   .. py:property:: image
+      :type: int
+
+
+   .. py:property:: mag_filter
+      :type: lagrange.scene.Texture.TextureFilter
+
+
+   .. py:property:: min_filter
+      :type: lagrange.scene.Texture.TextureFilter
+
+
+   .. py:property:: name
+      :type: str
+
+
+   .. py:property:: offset
+      :type: numpy.typing.NDArray
+
+
+   .. py:property:: rotation
+      :type: float
+
+
+   .. py:property:: scale
+      :type: numpy.typing.NDArray
+
+
+   .. py:property:: wrap_u
+      :type: lagrange.scene.Texture.WrapMode
+
+
+   .. py:property:: wrap_v
+      :type: lagrange.scene.Texture.WrapMode
+
+
+
+.. py:class:: TextureInfo
+
+
+   None
+
+   .. py:property:: index
+      :type: int
+
+
+   .. py:property:: texcoord
+      :type: int
+
+
+
+.. py:function:: add_child(arg0: lagrange.scene.Scene, arg1: lagrange.scene.Node, arg2: lagrange.scene.Node, /) -> int
+
+
+.. py:function:: add_mesh(arg0: lagrange.scene.Scene, arg1: lagrange.core.SurfaceMesh, /) -> int
+
+
+.. py:function:: compute_global_node_transform(arg0: lagrange.scene.Scene, arg1: int, /) -> list[list[float]]
+
+
+.. py:function:: mesh_to_simple_scene(mesh: lagrange.core.SurfaceMesh) -> lagrange.scene.SimpleScene3D
+
+   Converts a single mesh into a simple scene with a single identity instance of the input mesh.
+
+   :param mesh: Input mesh to convert.
+
+   :return: Simple scene containing the input mesh.
+
+
+.. py:function:: meshes_to_simple_scene(meshes: list[lagrange.core.SurfaceMesh]) -> lagrange.scene.SimpleScene3D
+
+   Converts a list of meshes into a simple scene with a single identity instance of each input mesh.
+
+   :param meshes: Input meshes to convert.
+
+   :return: Simple scene containing the input meshes.
+
+
+.. py:function:: simple_scene_to_mesh(scene: lagrange.scene.SimpleScene3D, normalize_normals: bool = True, normalize_tangents_bitangents: bool = True, preserve_attributes: bool = True) -> lagrange.core.SurfaceMesh
+
+   Converts a scene into a concatenated mesh with all the transforms applied.
+
+   :param scene: Scene to convert.
+   :param normalize_normals: If enabled, normals are normalized after transformation.
+   :param normalize_tangents_bitangents: If enabled, tangents and bitangents are normalized after transformation.
+   :param preserve_attributes: Preserve shared attributes and map them to the output mesh.
+
+   :return: Concatenated mesh.
+
+

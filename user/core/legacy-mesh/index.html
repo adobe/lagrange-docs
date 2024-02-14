@@ -245,8 +245,24 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../ref/" class="md-tabs__link">
-        Reference Documentation
+      <a href="../../../cpp/" class="md-tabs__link">
+        C++ Reference
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../python/" class="md-tabs__link">
+        Python Reference
       </a>
     </li>
   
@@ -1315,14 +1331,61 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../ref/">Reference Documentation</a>
+          <a href="../../../cpp/">C++ Reference</a>
           
         </div>
       
       <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_4">
           <span class="md-nav__icon md-icon"></span>
-          Reference Documentation
+          C++ Reference
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+      
+      
+        
+          
+            
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../python/">Python Reference</a>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Python Reference
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -1476,7 +1539,7 @@ replace the original mesh class used throughout Lagrange. The old <code>lagrange
 thus <strong>deprecated</strong>, but will be kept around for a while until we can transition all our code to
 the new data structure.</p>
 </div>
-<p>The <a href="../../../ref/classlagrange_1_1_mesh.html">Mesh class</a> is one of the key data structures used in Lagrange.
+<p>The <a href="../../../cpp/classlagrange_1_1_mesh.html">Mesh class</a> is one of the key data structures used in Lagrange.
 It provides a standard representation of discretized (triangle or quad)
 surfaces in 2D and 3D. It is used by nearly all Lagrange functionalities.</p>
 <p>It consists of the following components</p>
@@ -1489,7 +1552,8 @@ surfaces in 2D and 3D. It is used by nearly all Lagrange functionalities.</p>
 <li><strong>UV</strong>: UV coordinates and indices.</li>
 <li><strong>Matrices</strong>: Cache for discrete differential geometry matrices such as Laplacian.</li>
 </ul>
-<p><img alt="Mesh class design" src="../img/legacy_mesh.png" /></p>
+<figure class="figure-image">  <img src="../img/legacy_mesh.png" alt="Mesh class design" >  <figcaption>Mesh class design</figcaption></figure>
+
 <h2 id="terminology">Terminology</h2>
 <p>Throughout the documentation, we will consistently use the following terms:</p>
 <ul>
@@ -1505,7 +1569,7 @@ surfaces in 2D and 3D. It is used by nearly all Lagrange functionalities.</p>
 </li>
 </ul>
 <h2 id="template-parameters">Template Parameters</h2>
-<p>The <a href="../../../ref/classlagrange_1_1_mesh.html">Mesh class</a>'s full signature is</p>
+<p>The <a href="../../../cpp/classlagrange_1_1_mesh.html">Mesh class</a>'s full signature is</p>
 <div class="highlight"><pre><span></span><code><span class="n">lagrange</span><span class="o">::</span><span class="n">Mesh</span><span class="o">&lt;</span><span class="n">VertexArray</span><span class="p">,</span><span class="w"> </span><span class="n">FacetArray</span><span class="o">&gt;</span><span class="p">;</span>
 </code></pre></div>
 <p>It takes two template parameters, both are based on <a href="http://eigen.tuxfamily.org">Eigen</a> matrix type:</p>
@@ -1542,7 +1606,7 @@ surfaces in 2D and 3D. It is used by nearly all Lagrange functionalities.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>In Lagrange, we often use the type alias <code>MeshType</code> to represent a
-specific instantiation of the <a href="../../../ref/classlagrange_1_1_mesh.html">Mesh class</a>. It is equivalent to:</p>
+specific instantiation of the <a href="../../../cpp/classlagrange_1_1_mesh.html">Mesh class</a>. It is equivalent to:</p>
 </div>
 <div class="highlight"><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="n">MeshType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Mesh</span><span class="o">&lt;</span><span class="n">VertexArray</span><span class="p">,</span><span class="w"> </span><span class="n">FacetArray</span><span class="o">&gt;</span><span class="p">;</span>
 </code></pre></div>
@@ -1557,7 +1621,7 @@ objects:</p>
 <li><code>mesh_unique</code> is used for shared pointers (<code>std::unique_ptr&lt;MeshType&gt;</code>).</li>
 </ul>
 <h2 id="creation">Creation</h2>
-<p>It is easy to create a <a href="../../../ref/classlagrange_1_1_mesh.html">Mesh</a> object from raw data:</p>
+<p>It is easy to create a <a href="../../../cpp/classlagrange_1_1_mesh.html">Mesh</a> object from raw data:</p>
 <div class="highlight"><pre><span></span><code><span class="c1">// Generate raw data for a single triangle.</span>
 <span class="n">lagrange</span><span class="o">::</span><span class="n">Vertices3D</span><span class="w"> </span><span class="nf">vertices</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">);</span>
 <span class="n">vertices</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span>
@@ -1570,7 +1634,7 @@ objects:</p>
 <span class="k">auto</span><span class="w"> </span><span class="n">mesh_unique</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lagrange</span><span class="o">::</span><span class="n">create_mesh</span><span class="p">(</span><span class="n">vertices</span><span class="p">,</span><span class="w"> </span><span class="n">facets</span><span class="p">);</span>
 </code></pre></div>
 <p>The return type of <code>lagrange::create_mesh</code> method is a unique pointer of a
-<a href="../../../ref/classlagrange_1_1_mesh.html">Mesh</a> object.  Note in this case, the matrices <code>vertices</code> and
+<a href="../../../cpp/classlagrange_1_1_mesh.html">Mesh</a> object.  Note in this case, the matrices <code>vertices</code> and
 <code>facets</code> are copied into the <code>mesh</code> object.  If we are certain these matrices
 will outlive the <code>mesh</code> object, we can avoid the copies with:</p>
 <!-- @preamble
@@ -1589,7 +1653,7 @@ lagrange::Triangles facets;
 <span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">move</span><span class="p">(</span><span class="n">vertices</span><span class="p">),</span>
 <span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">move</span><span class="p">(</span><span class="n">facets</span><span class="p">));</span>
 </code></pre></div>
-<p>A <a href="../../../ref/classlagrange_1_1_mesh.html">Mesh class</a> object can also be loaded from a file. In this case, one needs
+<p>A <a href="../../../cpp/classlagrange_1_1_mesh.html">Mesh class</a> object can also be loaded from a file. In this case, one needs
 to explicitly specify the <code>VertexArray</code> and <code>FacetArray</code> types:</p>
 <!-- @group1 -->
 <div class="highlight"><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="n">VertexArray</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lagrange</span><span class="o">::</span><span class="n">Vertices3D</span><span class="p">;</span>
@@ -1618,7 +1682,7 @@ pointer to invoke Lagrange functions.  It can be done easily:</p>
 <span class="n">MeshType</span><span class="o">*</span><span class="w"> </span><span class="n">mesh_ptr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mesh_shared</span><span class="p">.</span><span class="n">get</span><span class="p">();</span>
 </code></pre></div>
 <h2 id="geometry">Geometry</h2>
-<p>The <a href="../../../ref/classlagrange_1_1_mesh.html">Mesh class</a> provides a number of handy functions for access geometric data
+<p>The <a href="../../../cpp/classlagrange_1_1_mesh.html">Mesh class</a> provides a number of handy functions for access geometric data
 stored in it, for example:</p>
 <!-- @preamble
 lagrange::TriangleMesh3D mesh; -->
@@ -1633,7 +1697,7 @@ lagrange::TriangleMesh3D mesh; -->
 <span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="o">&amp;</span><span class="w"> </span><span class="n">facets</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mesh</span><span class="p">.</span><span class="n">get_facets</span><span class="p">();</span>
 </code></pre></div>
 <h2 id="connectivity">Connectivity</h2>
-<p>Connectivity can be optionally initialized and stored in the <a href="../../../ref/classlagrange_1_1_mesh.html">Mesh class</a> as
+<p>Connectivity can be optionally initialized and stored in the <a href="../../../cpp/classlagrange_1_1_mesh.html">Mesh class</a> as
 adjacency lists. For example:</p>
 <div class="highlight"><pre><span></span><code><span class="n">mesh</span><span class="p">.</span><span class="n">initialize_connectivity</span><span class="p">();</span>
 <span class="n">assert</span><span class="p">(</span><span class="n">mesh</span><span class="p">.</span><span class="n">is_connectivity_initialized</span><span class="p">());</span>
@@ -1663,7 +1727,7 @@ alias of <code>std::vector&lt;MeshType::Index&gt;</code>.</p>
 <h2 id="edge-data">Edge Data</h2>
 <p>An edge in lagrange is an object containing two vertex indices. <code>lagrange::EdgeType</code> takes an <code>Index</code> as a template parameter (e.g. <code>lagrange::EdgeType&lt;int&gt;(0, 1)</code>). <code>Edge</code> is defined in <code>lagrange::Mesh</code> class as an alias to <code>lagrange::EdgeType&lt;Index&gt;</code>.</p>
 <p>Note that an edge does not define a direction, and <code>Edge(v1, v2) == Edge(v2, v1)</code>. Never use <code>Edge</code> to represent a directed edge.</p>
-<p>Edge data can be initialized and stored in the <a href="../../../ref/classlagrange_1_1_mesh.html">Mesh class</a>. This consists of the following data:</p>
+<p>Edge data can be initialized and stored in the <a href="../../../cpp/classlagrange_1_1_mesh.html">Mesh class</a>. This consists of the following data:</p>
 <ul>
 <li><code>std::vector&lt;Edge&gt;</code>: A list of edges of the mesh. Edge indices indicate positions in this vector. Edge data below and edge attributes use the same indices.</li>
 <li><code>std::vector&lt;std::vector&lt;Index&gt;&gt;</code>: Lists the facets adjacent to each edge.</li>
@@ -1717,7 +1781,7 @@ indices:</p>
 its vertices are topologically equivalent to a disc.  Similarly, a mesh is
 called <em>edge-manifold</em> if and only if all of its edges are adjacent to at most 2
 facets.</p>
-<p><a href="../../../ref/classlagrange_1_1_mesh.html">Lagrange mesh</a> has build-in supports for querying these topological
+<p><a href="../../../cpp/classlagrange_1_1_mesh.html">Lagrange mesh</a> has build-in supports for querying these topological
 properties:</p>
 <div class="highlight"><pre><span></span><code><span class="n">mesh</span><span class="p">.</span><span class="n">initialize_topology</span><span class="p">();</span>
 <span class="n">assert</span><span class="p">(</span><span class="n">mesh</span><span class="p">.</span><span class="n">is_topology_initialized</span><span class="p">());</span>
@@ -1736,7 +1800,7 @@ properties:</p>
 vertex-manifold, it is automatically implies it is also edge-manifold.</p>
 </div>
 <h2 id="uv">UV</h2>
-<p><a href="../../../ref/classlagrange_1_1_mesh.html">Lagrange mesh</a> has direct support for UV coordinates:</p>
+<p><a href="../../../cpp/classlagrange_1_1_mesh.html">Lagrange mesh</a> has direct support for UV coordinates:</p>
 <div class="highlight"><pre><span></span><code><span class="n">assert</span><span class="p">(</span><span class="n">mesh</span><span class="p">.</span><span class="n">is_uv_initialized</span><span class="p">());</span>
 
 <span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="o">&amp;</span><span class="w"> </span><span class="n">uv_coords</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mesh</span><span class="p">.</span><span class="n">get_uv</span><span class="p">();</span>
@@ -1756,7 +1820,7 @@ facet <code>i</code> has UV coordinates <code>uv_coords.row(uv_indices(i,j))</co
 </code></pre></div>
 <h2 id="attributes">Attributes</h2>
 <p>It is often useful to assign spatially varying scalar field or vector over the
-surface of the mesh.  Lagrange's <a href="../../../ref/classlagrange_1_1_mesh.html">Mesh class</a> support 4 types of attributes:</p>
+surface of the mesh.  Lagrange's <a href="../../../cpp/classlagrange_1_1_mesh.html">Mesh class</a> support 4 types of attributes:</p>
 <ul>
 <li>Per-vertex attribute: One value per vertex.</li>
 <li>Per-facet attribute: One value per facet.</li>

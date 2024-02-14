@@ -1,0 +1,276 @@
+:py:mod:`io`
+============
+
+.. py:module:: io
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   io.FileEncoding
+   io.FileFormat
+   io.LoadOptions
+   io.SaveOptions
+
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   io.load_mesh
+   io.load_scene
+   io.load_simple_scene
+   io.mesh_to_string
+   io.save_mesh
+   io.save_scene
+   io.save_simple_scene
+   io.string_to_mesh
+
+
+
+.. py:class:: FileEncoding(*args, **kwds)
+
+
+   Bases: :py:obj:`enum.Enum`
+
+   <attribute '__doc__' of 'FileEncoding' objects>
+
+   .. py:attribute:: Ascii
+      :type: Any
+
+      
+
+   .. py:attribute:: Binary
+      :type: Any
+
+      
+
+
+.. py:class:: FileFormat(*args, **kwds)
+
+
+   Bases: :py:obj:`enum.Enum`
+
+   <attribute '__doc__' of 'FileFormat' objects>
+
+   .. py:attribute:: Gltf
+      :type: Any
+
+      
+
+   .. py:attribute:: Msh
+      :type: Any
+
+      
+
+   .. py:attribute:: Obj
+      :type: Any
+
+      
+
+   .. py:attribute:: Ply
+      :type: Any
+
+      
+
+   .. py:attribute:: Unknown
+      :type: Any
+
+      
+
+
+.. py:class:: LoadOptions
+
+
+   None
+
+   .. py:property:: load_materials
+      :type: bool
+
+
+   .. py:property:: load_normals
+      :type: bool
+
+
+   .. py:property:: load_object_id
+      :type: bool
+
+
+   .. py:property:: load_tangents
+      :type: bool
+
+
+   .. py:property:: load_uvs
+      :type: bool
+
+
+   .. py:property:: load_vertex_colors
+      :type: bool
+
+
+   .. py:property:: load_weights
+      :type: bool
+
+
+   .. py:property:: search_path
+      :type: os.PathLike
+
+
+   .. py:property:: triangulate
+      :type: bool
+
+
+
+.. py:class:: SaveOptions
+
+
+   None
+
+   .. py:class:: AttributeConversionPolicy(*args, **kwds)
+
+
+      Bases: :py:obj:`enum.Enum`
+
+      <attribute '__doc__' of 'AttributeConversionPolicy' objects>
+
+      .. py:attribute:: ConvertAsNeeded
+         :type: Any
+
+         
+
+      .. py:attribute:: ExactMatchOnly
+         :type: Any
+
+         
+
+
+   .. py:class:: OutputAttributes(*args, **kwds)
+
+
+      Bases: :py:obj:`enum.Enum`
+
+      <attribute '__doc__' of 'OutputAttributes' objects>
+
+      .. py:attribute:: All
+         :type: Any
+
+         
+
+      .. py:attribute:: SelectedOnly
+         :type: Any
+
+         
+
+
+   .. py:property:: attribute_conversion_policy
+      :type: lagrange.io.SaveOptions.AttributeConversionPolicy
+
+
+   .. py:property:: encoding
+      :type: lagrange.io.FileEncoding
+
+
+   .. py:property:: output_attributes
+      :type: lagrange.io.SaveOptions.OutputAttributes
+
+
+   .. py:property:: selected_attributes
+      :type: list[int]
+
+
+
+.. py:function:: load_mesh(filename: os.PathLike, triangulate: bool = False) -> lagrange.core.SurfaceMesh
+
+   Load mesh from a file.
+
+   :param filename:    The input file name.
+   :param triangulate: Whether to triangulate the mesh if it is not already triangulated. Defaults to False.
+
+   :return SurfaceMesh: The mesh object extracted from the input string.
+
+
+.. py:function:: load_scene(filename: os.PathLike, options: lagrange.io.LoadOptions = ...) -> lagrange.scene.Scene
+
+   Load a scene.
+
+   :param filename:    The input file name.
+   :param options:     Load scene options. Check the class for more details.
+
+   :return Scene: The loaded scene object.
+
+
+.. py:function:: load_simple_scene(filename: os.PathLike, triangulate: bool = False, search_path: Optional[os.PathLike] = None) -> lagrange.scene.SimpleScene3D
+
+   Load a simple scene from file.
+
+   :param filename:    The input file name.
+   :param triangulate: Whether to triangulate the scene if it is not already triangulated. Defaults to False.
+   :param search_path: Optional search path for external references (e.g. .mtl, .bin, etc.). Defaults to None.
+
+   :return SimpleScene: The scene object extracted from the input string.
+
+
+.. py:function:: mesh_to_string(mesh: lagrange.core.SurfaceMesh, format: str = 'ply', binary: bool = True, exact_match: bool = True, selected_attributes: Optional[list[int]] = None) -> bytes
+
+   Convert a mesh to a binary string based on specified format.
+
+   :param mesh: The input mesh.
+   :param format: Format to use. Supported formats are "obj", "ply", "gltf" and "msh".
+   :param binary: Whether to save the mesh in binary format if supported. Defaults to True. Only `msh`, `ply` and `glb` support binary format.
+   :param exact_match: Whether to save attributes in their exact form. Some mesh formats may not support all the attribute types. If set to False, attributes will be converted to the closest supported attribute type. Defaults to True.
+   :param selected_attributes: A list of attribute ids to save. If not specified, all attributes will be saved. Defaults to None.
+
+   :return str: The string representing the input mesh.
+
+
+.. py:function:: save_mesh(filename: os.PathLike, mesh: lagrange.core.SurfaceMesh, binary: bool = True, exact_match: bool = True, selected_attributes: Optional[list[int]] = None) -> None
+
+   Save mesh to file.
+
+   Filename extension determines the file format. Supported formats are: `obj`, `ply`, `msh`, `glb` and `gltf`.
+
+   :param filename: The output file name.
+   :param mesh: The input mesh.
+   :param binary: Whether to save the mesh in binary format if supported. Defaults to True. Only `msh`, `ply` and `glb` support binary format.
+   :param exact_match: Whether to save attributes in their exact form. Some mesh formats may not support all the attribute types. If set to False, attributes will be converted to the closest supported attribute type. Defaults to True.
+   :param selected_attributes: A list of attribute ids to save. If not specified, all attributes will be saved. Defaults to None.
+
+
+.. py:function:: save_scene(filename: os.PathLike, scene: lagrange.scene.Scene, options: lagrange.io.SaveOptions = ...) -> None
+
+   Save a scene.
+
+   :param filename:    The output file name.
+   :param scene:       The scene to save.
+   :param options:     Save options. Check the class for more details.
+
+
+.. py:function:: save_simple_scene(filename: os.PathLike, scene: lagrange.scene.SimpleScene3D, binary: bool = True) -> None
+
+   Save a simple scene to file.
+
+   :param filename: The output file name.
+   :param scene:    The input scene.
+   :param binary:   Whether to save the scene in binary format if supported. Defaults to True. Only `glb` supports binary format.
+
+
+.. py:function:: string_to_mesh(data: bytes, triangulate: bool = False) -> lagrange.core.SurfaceMesh
+
+   Convert a binary string to a mesh.
+
+   The binary string should use one of the supported formats. Supported formats include `obj`, `ply`,
+   `gltf`, `glb` and `msh`. Format is automatically detected.
+
+   :param data:        A binary string representing the mesh data in a supported format.
+   :param triangulate: Whether to triangulate the mesh if it is not already triangulated. Defaults to False.
+
+   :return SurfaceMesh: The mesh object extracted from the input string.
+
+

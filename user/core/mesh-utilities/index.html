@@ -245,8 +245,24 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../ref/" class="md-tabs__link">
-        Reference Documentation
+      <a href="../../../cpp/" class="md-tabs__link">
+        C++ Reference
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../python/" class="md-tabs__link">
+        Python Reference
       </a>
     </li>
   
@@ -1308,14 +1324,61 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../ref/">Reference Documentation</a>
+          <a href="../../../cpp/">C++ Reference</a>
           
         </div>
       
       <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_4">
           <span class="md-nav__icon md-icon"></span>
-          Reference Documentation
+          C++ Reference
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+      
+      
+        
+          
+            
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../python/">Python Reference</a>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Python Reference
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -1450,7 +1513,7 @@
 <h1 id="mesh-utility-functions">Mesh Utility Functions</h1>
 <p>This page describes various mesh and attribute utilities available in Lagrange's core module.</p>
 <h2 id="compute-mesh-normals">Compute Mesh Normals</h2>
-<p>As described in our <a href="../../../ref/group__group-surfacemesh-utils.html">Mesh Utilities</a> page, mesh normals can be computed using on of the
+<p>As described in our <a href="../../../cpp/group__group-surfacemesh-utils.html">Mesh Utilities</a> page, mesh normals can be computed using on of the
 following function:</p>
 <div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;lagrange/compute_normal.h&gt;</span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;lagrange/compute_facet_normal.h&gt;</span>
@@ -1472,7 +1535,7 @@ following function:</p>
 <span class="n">Scalar</span><span class="w"> </span><span class="n">angle_threshold_rad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">M_PI</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">0.5</span><span class="p">;</span>
 <span class="k">auto</span><span class="w"> </span><span class="n">cid</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">compute_normal</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span><span class="w"> </span><span class="n">angle_threshold_rad</span><span class="p">);</span>
 </code></pre></div>
-<p>See <a href="../../../ref/group__group-surfacemesh-utils.html">Mesh Utilities</a> reference documentation for more details.</p>
+<p>See <a href="../../../cpp/group__group-surfacemesh-utils.html">Mesh Utilities</a> reference documentation for more details.</p>
 <h2 id="compute-tangent-space">Compute Tangent Space</h2>
 <p>Lagrange offers a function to compute tangent-space information, following [Mikkelsen 2008]<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>:</p>
 <div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;lagrange/compute_tangent_bitangent.h&gt;</span>
@@ -1556,7 +1619,7 @@ function, which modifies the mesh in place:</p>
 </code></pre></div>
 <!-- Note: We should add a initializer list overload to `normalize_meshes()` ... :) -->
 
-<p>See: <a href="../../../ref/group__group-surfacemesh-utils.html">Mesh Utilities</a> documentation.</p>
+<p>See: <a href="../../../cpp/group__group-surfacemesh-utils.html">Mesh Utilities</a> documentation.</p>
 <h2 id="triangulate-polygonal-facets">Triangulate Polygonal Facets</h2>
 <p>A mesh with polygonal facets can be turned into a pure triangle mesh by calling the following code:</p>
 <div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;lagrange/triangulate_polygonal_facets.h&gt;</span>
@@ -1566,10 +1629,10 @@ function, which modifies the mesh in place:</p>
 </code></pre></div>
 <p>Under the hood we use <a href="https://github.com/mapbox/earcut.hpp">Mapbox's Earcut</a> implementation for
 polygonal facets with 5 vertices or more.</p>
-<p>See: <a href="../../../ref/group__group-surfacemesh-utils.html">Mesh Utilities</a> documentation.</p>
+<p>See: <a href="../../../cpp/group__group-surfacemesh-utils.html">Mesh Utilities</a> documentation.</p>
 <h2 id="transfer-mesh-attributes">Transfer Mesh Attributes</h2>
 <p>Attributes can be mapped from one type of mesh element to another using the
-<a href="../../../ref/group__group-surfacemesh-attr-utils.html"><code>map_attribute()</code></a> functions.</p>
+<a href="../../../cpp/group__group-surfacemesh-attr-utils.html"><code>map_attribute()</code></a> functions.</p>
 <div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;lagrange/compute_normal.h&gt;</span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;lagrange/map_attribute.h&gt;</span>
 
@@ -1687,7 +1750,7 @@ is expected to have a number of elements equals to the number of <em>mesh corner
 attribute. The indexing will be lost on conversion.</li>
 </ul>
 </div>
-<p>See: <a href="../../../ref/group__group-surfacemesh-attr-utils.html">Attributes Utilities</a> documentation.</p>
+<p>See: <a href="../../../cpp/group__group-surfacemesh-attr-utils.html">Attributes Utilities</a> documentation.</p>
 <h2 id="unify-index-buffers">Unify Index Buffers</h2>
 <p>It is possible to unify various indexed attributes so they can share the same index buffer. This is
 especially useful for rendering, e.g. to turn a mesh with different indexing for normals, uv, etc.
@@ -1706,9 +1769,9 @@ into something suitable for the GPU.</p>
 indexed attributes. As a result, some vertices might be duplicated (e.g. if two incident corners
 have different normals, or a UV seam).</p>
 </div>
-<p>See: <a href="../../../ref/group__group-surfacemesh-attr-utils.html">Attributes Utilities</a> documentation.</p>
+<p>See: <a href="../../../cpp/group__group-surfacemesh-attr-utils.html">Attributes Utilities</a> documentation.</p>
 <h2 id="connected-components">Connected Components</h2>
-<p>Connected components can be computed via the <a href="../../../ref/group__group-surfacemesh-utils.html#gafedc8c0d66af62d6f3d540465c0018c6">compute_components()</a> function:</p>
+<p>Connected components can be computed via the <a href="../../../cpp/group__group-surfacemesh-utils.html#gafedc8c0d66af62d6f3d540465c0018c6">compute_components()</a> function:</p>
 <div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;lagrange/compute_components.h&gt;</span>
 
 <span class="n">lagrange</span><span class="o">::</span><span class="n">SurfaceMesh</span><span class="o">&lt;</span><span class="n">Scalar</span><span class="p">,</span><span class="w"> </span><span class="n">Index</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mesh</span><span class="p">;</span>
@@ -1729,7 +1792,7 @@ have different normals, or a UV seam).</p>
 <code>options.connectivity_type</code> parameter.</p>
 <h2 id="combine-meshes">Combine Meshes</h2>
 <p>It is possible to combine multiple meshes into a single aggregated mesh via the
-<a href="../../../ref/group__group-surfacemesh-utils.html#ga363707c2e65474638292c738c072868c">combine_meshes()</a> function. This function preserves attributes by default, unless
+<a href="../../../cpp/group__group-surfacemesh-utils.html#ga363707c2e65474638292c738c072868c">combine_meshes()</a> function. This function preserves attributes by default, unless
 called with <code>preserve_attributes = false</code>. When preserving input mesh attributes, all attributes in
 the input meshes must be compatible (i.e. all meshes share the same attributes, with the same
 type/number of channels, etc.).</p>
@@ -1755,7 +1818,7 @@ type/number of channels, etc.).</p>
 <span class="w">    </span><span class="p">});</span>
 </code></pre></div>
 <h2 id="vertex-valence">Vertex Valence</h2>
-<p>Vertex valence can be computed using the <a href="../../../ref/group__group-surfacemesh-utils.html#ga6a2a7d7f5165ef7f5433ef67efad4306">compute_vertex_valence()</a>
+<p>Vertex valence can be computed using the <a href="../../../cpp/group__group-surfacemesh-utils.html#ga6a2a7d7f5165ef7f5433ef67efad4306">compute_vertex_valence()</a>
 function:</p>
 <div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;lagrange/compute_vertex_valence.h&gt;</span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;lagrange/views.h&gt;</span>
@@ -1776,7 +1839,7 @@ function:</p>
 <p>While our mesh class offers some low-level <a href="../mesh/#connectivity-and-navigation">navigation
 methods</a>, sometimes it beneficial to operate on an explicit
 adjacency list representation of a connectivity graph. Currently we offer the function
-<a href="../../../ref/group__group-surfacemesh-utils.html#ga203af050581e879b52d339558b788a08">compute_vertex_vertex_adjacency()</a> to compute the corresponding
+<a href="../../../cpp/group__group-surfacemesh-utils.html#ga203af050581e879b52d339558b788a08">compute_vertex_vertex_adjacency()</a> to compute the corresponding
 adjacency list graph:</p>
 <div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;lagrange/compute_vertex_vertex_adjacency.h&gt;</span>
 

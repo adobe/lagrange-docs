@@ -1,0 +1,691 @@
+<!doctype html>
+<html class="no-js" lang="en" data-content_root="../../">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="next" title="core" href="../core/index.html" /><link rel="prev" title="scene" href="../scene/index.html" />
+
+    <!-- Generated with Sphinx 7.2.6 and Furo 2023.09.10 -->
+        <title>io - Lagrange documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=362ab14a" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?v=135e06be" />
+    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=eafc0fe6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?v=36a5483c" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+      }
+    }
+  }
+</style></head>
+  <body>
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-half" viewBox="0 0 24 24">
+    <title>Auto light/dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M13 12h5" />
+      <path d="M13 15h4" />
+      <path d="M13 18h1" />
+      <path d="M13 9h4" />
+      <path d="M13 6h1" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../../index.html"><div class="brand">Lagrange  documentation</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="../../index.html">
+  
+  
+  <span class="sidebar-brand-text">Lagrange  documentation</span>
+  
+</a><form class="sidebar-search-container" method="get" action="../../search.html" role="search">
+  <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current has-children"><a class="reference internal" href="../index.html">API Reference</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of API Reference</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../subdivision/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">subdivision</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../image/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">image</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../scene/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">scene</span></code></a></li>
+<li class="toctree-l2 current current-page"><a class="current reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">io</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../core/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">core</span></code></a></li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container">
+          
+<div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main">
+          <section id="module-io">
+<span id="io"></span><h1><a class="reference internal" href="#module-io" title="io"><code class="xref py py-mod docutils literal notranslate"><span class="pre">io</span></code></a><a class="headerlink" href="#module-io" title="Link to this heading">#</a></h1>
+<section id="module-contents">
+<h2>Module Contents<a class="headerlink" href="#module-contents" title="Link to this heading">#</a></h2>
+<section id="classes">
+<h3>Classes<a class="headerlink" href="#classes" title="Link to this heading">#</a></h3>
+<div class="table-wrapper autosummary longtable docutils container">
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#io.FileEncoding" title="io.FileEncoding"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FileEncoding</span></code></a></p></td>
+<td><p>&lt;attribute '__doc__' of 'FileEncoding' objects&gt;</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#io.FileFormat" title="io.FileFormat"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FileFormat</span></code></a></p></td>
+<td><p>&lt;attribute '__doc__' of 'FileFormat' objects&gt;</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#io.LoadOptions" title="io.LoadOptions"><code class="xref py py-obj docutils literal notranslate"><span class="pre">LoadOptions</span></code></a></p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#io.SaveOptions" title="io.SaveOptions"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SaveOptions</span></code></a></p></td>
+<td><p>None</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="functions">
+<h3>Functions<a class="headerlink" href="#functions" title="Link to this heading">#</a></h3>
+<div class="table-wrapper autosummary longtable docutils container">
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#io.load_mesh" title="io.load_mesh"><code class="xref py py-obj docutils literal notranslate"><span class="pre">load_mesh</span></code></a>(→ lagrange.core.SurfaceMesh)</p></td>
+<td><p>Load mesh from a file.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#io.load_scene" title="io.load_scene"><code class="xref py py-obj docutils literal notranslate"><span class="pre">load_scene</span></code></a>(→ lagrange.scene.Scene)</p></td>
+<td><p>Load a scene.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#io.load_simple_scene" title="io.load_simple_scene"><code class="xref py py-obj docutils literal notranslate"><span class="pre">load_simple_scene</span></code></a>(→ lagrange.scene.SimpleScene3D)</p></td>
+<td><p>Load a simple scene from file.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#io.mesh_to_string" title="io.mesh_to_string"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mesh_to_string</span></code></a>(→ bytes)</p></td>
+<td><p>Convert a mesh to a binary string based on specified format.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#io.save_mesh" title="io.save_mesh"><code class="xref py py-obj docutils literal notranslate"><span class="pre">save_mesh</span></code></a>(→ None)</p></td>
+<td><p>Save mesh to file.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#io.save_scene" title="io.save_scene"><code class="xref py py-obj docutils literal notranslate"><span class="pre">save_scene</span></code></a>(→ None)</p></td>
+<td><p>Save a scene.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#io.save_simple_scene" title="io.save_simple_scene"><code class="xref py py-obj docutils literal notranslate"><span class="pre">save_simple_scene</span></code></a>(→ None)</p></td>
+<td><p>Save a simple scene to file.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#io.string_to_mesh" title="io.string_to_mesh"><code class="xref py py-obj docutils literal notranslate"><span class="pre">string_to_mesh</span></code></a>(→ lagrange.core.SurfaceMesh)</p></td>
+<td><p>Convert a binary string to a mesh.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<dl class="py class">
+<dt class="sig sig-object py" id="io.FileEncoding">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">io.</span></span><span class="sig-name descname"><span class="pre">FileEncoding</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwds</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#io.FileEncoding" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">enum.Enum</span></code></p>
+<p>&lt;attribute ‘__doc__’ of ‘FileEncoding’ objects&gt;</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="io.FileEncoding.Ascii">
+<span class="sig-name descname"><span class="pre">Ascii</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Any</span></em><a class="headerlink" href="#io.FileEncoding.Ascii" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="io.FileEncoding.Binary">
+<span class="sig-name descname"><span class="pre">Binary</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Any</span></em><a class="headerlink" href="#io.FileEncoding.Binary" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="io.FileFormat">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">io.</span></span><span class="sig-name descname"><span class="pre">FileFormat</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwds</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#io.FileFormat" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">enum.Enum</span></code></p>
+<p>&lt;attribute ‘__doc__’ of ‘FileFormat’ objects&gt;</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="io.FileFormat.Gltf">
+<span class="sig-name descname"><span class="pre">Gltf</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Any</span></em><a class="headerlink" href="#io.FileFormat.Gltf" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="io.FileFormat.Msh">
+<span class="sig-name descname"><span class="pre">Msh</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Any</span></em><a class="headerlink" href="#io.FileFormat.Msh" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="io.FileFormat.Obj">
+<span class="sig-name descname"><span class="pre">Obj</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Any</span></em><a class="headerlink" href="#io.FileFormat.Obj" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="io.FileFormat.Ply">
+<span class="sig-name descname"><span class="pre">Ply</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Any</span></em><a class="headerlink" href="#io.FileFormat.Ply" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="io.FileFormat.Unknown">
+<span class="sig-name descname"><span class="pre">Unknown</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Any</span></em><a class="headerlink" href="#io.FileFormat.Unknown" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="io.LoadOptions">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">io.</span></span><span class="sig-name descname"><span class="pre">LoadOptions</span></span><a class="headerlink" href="#io.LoadOptions" title="Link to this definition">#</a></dt>
+<dd><p>None</p>
+<dl class="py property">
+<dt class="sig sig-object py" id="io.LoadOptions.load_materials">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">load_materials</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#io.LoadOptions.load_materials" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="io.LoadOptions.load_normals">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">load_normals</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#io.LoadOptions.load_normals" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="io.LoadOptions.load_object_id">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">load_object_id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#io.LoadOptions.load_object_id" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="io.LoadOptions.load_tangents">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">load_tangents</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#io.LoadOptions.load_tangents" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="io.LoadOptions.load_uvs">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">load_uvs</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#io.LoadOptions.load_uvs" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="io.LoadOptions.load_vertex_colors">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">load_vertex_colors</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#io.LoadOptions.load_vertex_colors" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="io.LoadOptions.load_weights">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">load_weights</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#io.LoadOptions.load_weights" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="io.LoadOptions.search_path">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">search_path</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">os.PathLike</span></em><a class="headerlink" href="#io.LoadOptions.search_path" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="io.LoadOptions.triangulate">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">triangulate</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#io.LoadOptions.triangulate" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="io.SaveOptions">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">io.</span></span><span class="sig-name descname"><span class="pre">SaveOptions</span></span><a class="headerlink" href="#io.SaveOptions" title="Link to this definition">#</a></dt>
+<dd><p>None</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="io.SaveOptions.AttributeConversionPolicy">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">AttributeConversionPolicy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwds</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#io.SaveOptions.AttributeConversionPolicy" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">enum.Enum</span></code></p>
+<p>&lt;attribute ‘__doc__’ of ‘AttributeConversionPolicy’ objects&gt;</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="io.SaveOptions.AttributeConversionPolicy.ConvertAsNeeded">
+<span class="sig-name descname"><span class="pre">ConvertAsNeeded</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Any</span></em><a class="headerlink" href="#io.SaveOptions.AttributeConversionPolicy.ConvertAsNeeded" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="io.SaveOptions.AttributeConversionPolicy.ExactMatchOnly">
+<span class="sig-name descname"><span class="pre">ExactMatchOnly</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Any</span></em><a class="headerlink" href="#io.SaveOptions.AttributeConversionPolicy.ExactMatchOnly" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="io.SaveOptions.OutputAttributes">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">OutputAttributes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwds</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#io.SaveOptions.OutputAttributes" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">enum.Enum</span></code></p>
+<p>&lt;attribute ‘__doc__’ of ‘OutputAttributes’ objects&gt;</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="io.SaveOptions.OutputAttributes.All">
+<span class="sig-name descname"><span class="pre">All</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Any</span></em><a class="headerlink" href="#io.SaveOptions.OutputAttributes.All" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="io.SaveOptions.OutputAttributes.SelectedOnly">
+<span class="sig-name descname"><span class="pre">SelectedOnly</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Any</span></em><a class="headerlink" href="#io.SaveOptions.OutputAttributes.SelectedOnly" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="io.SaveOptions.attribute_conversion_policy">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">attribute_conversion_policy</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">lagrange.io.SaveOptions.AttributeConversionPolicy</span></em><a class="headerlink" href="#io.SaveOptions.attribute_conversion_policy" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="io.SaveOptions.encoding">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">encoding</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">lagrange.io.FileEncoding</span></em><a class="headerlink" href="#io.SaveOptions.encoding" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="io.SaveOptions.output_attributes">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">output_attributes</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">lagrange.io.SaveOptions.OutputAttributes</span></em><a class="headerlink" href="#io.SaveOptions.output_attributes" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="io.SaveOptions.selected_attributes">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">selected_attributes</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#io.SaveOptions.selected_attributes" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="io.load_mesh">
+<span class="sig-prename descclassname"><span class="pre">io.</span></span><span class="sig-name descname"><span class="pre">load_mesh</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">os.PathLike</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">triangulate</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">lagrange.core.SurfaceMesh</span></span></span><a class="headerlink" href="#io.load_mesh" title="Link to this definition">#</a></dt>
+<dd><p>Load mesh from a file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filename</strong> – The input file name.</p></li>
+<li><p><strong>triangulate</strong> – Whether to triangulate the mesh if it is not already triangulated. Defaults to False.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return SurfaceMesh<span class="colon">:</span></dt>
+<dd class="field-even"><p>The mesh object extracted from the input string.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="io.load_scene">
+<span class="sig-prename descclassname"><span class="pre">io.</span></span><span class="sig-name descname"><span class="pre">load_scene</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">os.PathLike</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">options</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">lagrange.io.LoadOptions</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">...</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">lagrange.scene.Scene</span></span></span><a class="headerlink" href="#io.load_scene" title="Link to this definition">#</a></dt>
+<dd><p>Load a scene.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filename</strong> – The input file name.</p></li>
+<li><p><strong>options</strong> – Load scene options. Check the class for more details.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return Scene<span class="colon">:</span></dt>
+<dd class="field-even"><p>The loaded scene object.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="io.load_simple_scene">
+<span class="sig-prename descclassname"><span class="pre">io.</span></span><span class="sig-name descname"><span class="pre">load_simple_scene</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">os.PathLike</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">triangulate</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">search_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">os.PathLike</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">lagrange.scene.SimpleScene3D</span></span></span><a class="headerlink" href="#io.load_simple_scene" title="Link to this definition">#</a></dt>
+<dd><p>Load a simple scene from file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filename</strong> – The input file name.</p></li>
+<li><p><strong>triangulate</strong> – Whether to triangulate the scene if it is not already triangulated. Defaults to False.</p></li>
+<li><p><strong>search_path</strong> – Optional search path for external references (e.g. .mtl, .bin, etc.). Defaults to None.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return SimpleScene<span class="colon">:</span></dt>
+<dd class="field-even"><p>The scene object extracted from the input string.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="io.mesh_to_string">
+<span class="sig-prename descclassname"><span class="pre">io.</span></span><span class="sig-name descname"><span class="pre">mesh_to_string</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mesh</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">lagrange.core.SurfaceMesh</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">format</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'ply'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">binary</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exact_match</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">selected_attributes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bytes</span></span></span><a class="headerlink" href="#io.mesh_to_string" title="Link to this definition">#</a></dt>
+<dd><p>Convert a mesh to a binary string based on specified format.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>mesh</strong> – The input mesh.</p></li>
+<li><p><strong>format</strong> – Format to use. Supported formats are “obj”, “ply”, “gltf” and “msh”.</p></li>
+<li><p><strong>binary</strong> – Whether to save the mesh in binary format if supported. Defaults to True. Only <cite>msh</cite>, <cite>ply</cite> and <cite>glb</cite> support binary format.</p></li>
+<li><p><strong>exact_match</strong> – Whether to save attributes in their exact form. Some mesh formats may not support all the attribute types. If set to False, attributes will be converted to the closest supported attribute type. Defaults to True.</p></li>
+<li><p><strong>selected_attributes</strong> – A list of attribute ids to save. If not specified, all attributes will be saved. Defaults to None.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return str<span class="colon">:</span></dt>
+<dd class="field-even"><p>The string representing the input mesh.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="io.save_mesh">
+<span class="sig-prename descclassname"><span class="pre">io.</span></span><span class="sig-name descname"><span class="pre">save_mesh</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">os.PathLike</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mesh</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">lagrange.core.SurfaceMesh</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">binary</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exact_match</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">selected_attributes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#io.save_mesh" title="Link to this definition">#</a></dt>
+<dd><p>Save mesh to file.</p>
+<p>Filename extension determines the file format. Supported formats are: <cite>obj</cite>, <cite>ply</cite>, <cite>msh</cite>, <cite>glb</cite> and <cite>gltf</cite>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filename</strong> – The output file name.</p></li>
+<li><p><strong>mesh</strong> – The input mesh.</p></li>
+<li><p><strong>binary</strong> – Whether to save the mesh in binary format if supported. Defaults to True. Only <cite>msh</cite>, <cite>ply</cite> and <cite>glb</cite> support binary format.</p></li>
+<li><p><strong>exact_match</strong> – Whether to save attributes in their exact form. Some mesh formats may not support all the attribute types. If set to False, attributes will be converted to the closest supported attribute type. Defaults to True.</p></li>
+<li><p><strong>selected_attributes</strong> – A list of attribute ids to save. If not specified, all attributes will be saved. Defaults to None.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="io.save_scene">
+<span class="sig-prename descclassname"><span class="pre">io.</span></span><span class="sig-name descname"><span class="pre">save_scene</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">os.PathLike</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scene</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">lagrange.scene.Scene</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">options</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">lagrange.io.SaveOptions</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">...</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#io.save_scene" title="Link to this definition">#</a></dt>
+<dd><p>Save a scene.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filename</strong> – The output file name.</p></li>
+<li><p><strong>scene</strong> – The scene to save.</p></li>
+<li><p><strong>options</strong> – Save options. Check the class for more details.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="io.save_simple_scene">
+<span class="sig-prename descclassname"><span class="pre">io.</span></span><span class="sig-name descname"><span class="pre">save_simple_scene</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">os.PathLike</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scene</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">lagrange.scene.SimpleScene3D</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">binary</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#io.save_simple_scene" title="Link to this definition">#</a></dt>
+<dd><p>Save a simple scene to file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filename</strong> – The output file name.</p></li>
+<li><p><strong>scene</strong> – The input scene.</p></li>
+<li><p><strong>binary</strong> – Whether to save the scene in binary format if supported. Defaults to True. Only <cite>glb</cite> supports binary format.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="io.string_to_mesh">
+<span class="sig-prename descclassname"><span class="pre">io.</span></span><span class="sig-name descname"><span class="pre">string_to_mesh</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bytes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">triangulate</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">lagrange.core.SurfaceMesh</span></span></span><a class="headerlink" href="#io.string_to_mesh" title="Link to this definition">#</a></dt>
+<dd><p>Convert a binary string to a mesh.</p>
+<p>The binary string should use one of the supported formats. Supported formats include <cite>obj</cite>, <cite>ply</cite>,
+<cite>gltf</cite>, <cite>glb</cite> and <cite>msh</cite>. Format is automatically detected.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> – A binary string representing the mesh data in a supported format.</p></li>
+<li><p><strong>triangulate</strong> – Whether to triangulate the mesh if it is not already triangulated. Defaults to False.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return SurfaceMesh<span class="colon">:</span></dt>
+<dd class="field-even"><p>The mesh object extracted from the input string.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+</section>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          <a class="next-page" href="../core/index.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title"><code class="xref py py-mod docutils literal notranslate"><span class="pre">core</span></code></div>
+              </div>
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="../scene/index.html">
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title"><code class="xref py py-mod docutils literal notranslate"><span class="pre">scene</span></code></div>
+                
+              </div>
+            </a>
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2023, Adobe
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">io</span></code></a><ul>
+<li><a class="reference internal" href="#module-contents">Module Contents</a><ul>
+<li><a class="reference internal" href="#classes">Classes</a></li>
+<li><a class="reference internal" href="#functions">Functions</a><ul>
+<li><a class="reference internal" href="#io.FileEncoding"><code class="docutils literal notranslate"><span class="pre">FileEncoding</span></code></a><ul>
+<li><a class="reference internal" href="#io.FileEncoding.Ascii"><code class="docutils literal notranslate"><span class="pre">FileEncoding.Ascii</span></code></a></li>
+<li><a class="reference internal" href="#io.FileEncoding.Binary"><code class="docutils literal notranslate"><span class="pre">FileEncoding.Binary</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#io.FileFormat"><code class="docutils literal notranslate"><span class="pre">FileFormat</span></code></a><ul>
+<li><a class="reference internal" href="#io.FileFormat.Gltf"><code class="docutils literal notranslate"><span class="pre">FileFormat.Gltf</span></code></a></li>
+<li><a class="reference internal" href="#io.FileFormat.Msh"><code class="docutils literal notranslate"><span class="pre">FileFormat.Msh</span></code></a></li>
+<li><a class="reference internal" href="#io.FileFormat.Obj"><code class="docutils literal notranslate"><span class="pre">FileFormat.Obj</span></code></a></li>
+<li><a class="reference internal" href="#io.FileFormat.Ply"><code class="docutils literal notranslate"><span class="pre">FileFormat.Ply</span></code></a></li>
+<li><a class="reference internal" href="#io.FileFormat.Unknown"><code class="docutils literal notranslate"><span class="pre">FileFormat.Unknown</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#io.LoadOptions"><code class="docutils literal notranslate"><span class="pre">LoadOptions</span></code></a><ul>
+<li><a class="reference internal" href="#io.LoadOptions.load_materials"><code class="docutils literal notranslate"><span class="pre">LoadOptions.load_materials</span></code></a></li>
+<li><a class="reference internal" href="#io.LoadOptions.load_normals"><code class="docutils literal notranslate"><span class="pre">LoadOptions.load_normals</span></code></a></li>
+<li><a class="reference internal" href="#io.LoadOptions.load_object_id"><code class="docutils literal notranslate"><span class="pre">LoadOptions.load_object_id</span></code></a></li>
+<li><a class="reference internal" href="#io.LoadOptions.load_tangents"><code class="docutils literal notranslate"><span class="pre">LoadOptions.load_tangents</span></code></a></li>
+<li><a class="reference internal" href="#io.LoadOptions.load_uvs"><code class="docutils literal notranslate"><span class="pre">LoadOptions.load_uvs</span></code></a></li>
+<li><a class="reference internal" href="#io.LoadOptions.load_vertex_colors"><code class="docutils literal notranslate"><span class="pre">LoadOptions.load_vertex_colors</span></code></a></li>
+<li><a class="reference internal" href="#io.LoadOptions.load_weights"><code class="docutils literal notranslate"><span class="pre">LoadOptions.load_weights</span></code></a></li>
+<li><a class="reference internal" href="#io.LoadOptions.search_path"><code class="docutils literal notranslate"><span class="pre">LoadOptions.search_path</span></code></a></li>
+<li><a class="reference internal" href="#io.LoadOptions.triangulate"><code class="docutils literal notranslate"><span class="pre">LoadOptions.triangulate</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#io.SaveOptions"><code class="docutils literal notranslate"><span class="pre">SaveOptions</span></code></a><ul>
+<li><a class="reference internal" href="#io.SaveOptions.AttributeConversionPolicy"><code class="docutils literal notranslate"><span class="pre">SaveOptions.AttributeConversionPolicy</span></code></a><ul>
+<li><a class="reference internal" href="#io.SaveOptions.AttributeConversionPolicy.ConvertAsNeeded"><code class="docutils literal notranslate"><span class="pre">SaveOptions.AttributeConversionPolicy.ConvertAsNeeded</span></code></a></li>
+<li><a class="reference internal" href="#io.SaveOptions.AttributeConversionPolicy.ExactMatchOnly"><code class="docutils literal notranslate"><span class="pre">SaveOptions.AttributeConversionPolicy.ExactMatchOnly</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#io.SaveOptions.OutputAttributes"><code class="docutils literal notranslate"><span class="pre">SaveOptions.OutputAttributes</span></code></a><ul>
+<li><a class="reference internal" href="#io.SaveOptions.OutputAttributes.All"><code class="docutils literal notranslate"><span class="pre">SaveOptions.OutputAttributes.All</span></code></a></li>
+<li><a class="reference internal" href="#io.SaveOptions.OutputAttributes.SelectedOnly"><code class="docutils literal notranslate"><span class="pre">SaveOptions.OutputAttributes.SelectedOnly</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#io.SaveOptions.attribute_conversion_policy"><code class="docutils literal notranslate"><span class="pre">SaveOptions.attribute_conversion_policy</span></code></a></li>
+<li><a class="reference internal" href="#io.SaveOptions.encoding"><code class="docutils literal notranslate"><span class="pre">SaveOptions.encoding</span></code></a></li>
+<li><a class="reference internal" href="#io.SaveOptions.output_attributes"><code class="docutils literal notranslate"><span class="pre">SaveOptions.output_attributes</span></code></a></li>
+<li><a class="reference internal" href="#io.SaveOptions.selected_attributes"><code class="docutils literal notranslate"><span class="pre">SaveOptions.selected_attributes</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#io.load_mesh"><code class="docutils literal notranslate"><span class="pre">load_mesh()</span></code></a></li>
+<li><a class="reference internal" href="#io.load_scene"><code class="docutils literal notranslate"><span class="pre">load_scene()</span></code></a></li>
+<li><a class="reference internal" href="#io.load_simple_scene"><code class="docutils literal notranslate"><span class="pre">load_simple_scene()</span></code></a></li>
+<li><a class="reference internal" href="#io.mesh_to_string"><code class="docutils literal notranslate"><span class="pre">mesh_to_string()</span></code></a></li>
+<li><a class="reference internal" href="#io.save_mesh"><code class="docutils literal notranslate"><span class="pre">save_mesh()</span></code></a></li>
+<li><a class="reference internal" href="#io.save_scene"><code class="docutils literal notranslate"><span class="pre">save_scene()</span></code></a></li>
+<li><a class="reference internal" href="#io.save_simple_scene"><code class="docutils literal notranslate"><span class="pre">save_simple_scene()</span></code></a></li>
+<li><a class="reference internal" href="#io.string_to_mesh"><code class="docutils literal notranslate"><span class="pre">string_to_mesh()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/scripts/furo.js?v=32e29ea5"></script>
+    </body>
+</html>

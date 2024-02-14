@@ -1,0 +1,1419 @@
+<!doctype html>
+<html class="no-js" lang="en" data-content_root="../../">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="next" title="io" href="../io/index.html" /><link rel="prev" title="image" href="../image/index.html" />
+
+    <!-- Generated with Sphinx 7.2.6 and Furo 2023.09.10 -->
+        <title>scene - Lagrange documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=362ab14a" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?v=135e06be" />
+    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=eafc0fe6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?v=36a5483c" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+      }
+    }
+  }
+</style></head>
+  <body>
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-half" viewBox="0 0 24 24">
+    <title>Auto light/dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M13 12h5" />
+      <path d="M13 15h4" />
+      <path d="M13 18h1" />
+      <path d="M13 9h4" />
+      <path d="M13 6h1" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../../index.html"><div class="brand">Lagrange  documentation</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="../../index.html">
+  
+  
+  <span class="sidebar-brand-text">Lagrange  documentation</span>
+  
+</a><form class="sidebar-search-container" method="get" action="../../search.html" role="search">
+  <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current has-children"><a class="reference internal" href="../index.html">API Reference</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of API Reference</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../subdivision/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">subdivision</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../image/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">image</span></code></a></li>
+<li class="toctree-l2 current current-page"><a class="current reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">scene</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../io/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">io</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../core/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">core</span></code></a></li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container">
+          
+<div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main">
+          <section id="module-scene">
+<span id="scene"></span><h1><a class="reference internal" href="#module-scene" title="scene"><code class="xref py py-mod docutils literal notranslate"><span class="pre">scene</span></code></a><a class="headerlink" href="#module-scene" title="Link to this heading">#</a></h1>
+<section id="module-contents">
+<h2>Module Contents<a class="headerlink" href="#module-contents" title="Link to this heading">#</a></h2>
+<section id="classes">
+<h3>Classes<a class="headerlink" href="#classes" title="Link to this heading">#</a></h3>
+<div class="table-wrapper autosummary longtable docutils container">
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#scene.Animation" title="scene.Animation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Animation</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#scene.Camera" title="scene.Camera"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Camera</span></code></a></p></td>
+<td><p>Camera</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#scene.FacetAllocationStrategy" title="scene.FacetAllocationStrategy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FacetAllocationStrategy</span></code></a></p></td>
+<td><p>&lt;attribute '__doc__' of 'FacetAllocationStrategy' objects&gt;</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#scene.ImageLegacy" title="scene.ImageLegacy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ImageLegacy</span></code></a></p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#scene.Light" title="scene.Light"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Light</span></code></a></p></td>
+<td><p>Light</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#scene.Material" title="scene.Material"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Material</span></code></a></p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#scene.MeshInstance3D" title="scene.MeshInstance3D"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MeshInstance3D</span></code></a></p></td>
+<td><p>A single mesh instance in a scene</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#scene.Node" title="scene.Node"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Node</span></code></a></p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#scene.RemeshingOptions" title="scene.RemeshingOptions"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RemeshingOptions</span></code></a></p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#scene.Scene" title="scene.Scene"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Scene</span></code></a></p></td>
+<td><p>A 3D scene</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#scene.SceneMeshInstance" title="scene.SceneMeshInstance"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SceneMeshInstance</span></code></a></p></td>
+<td><p>Mesh and material index of a node</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#scene.SimpleScene3D" title="scene.SimpleScene3D"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SimpleScene3D</span></code></a></p></td>
+<td><p>Simple scene container for instanced meshes</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#scene.Skeleton" title="scene.Skeleton"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Skeleton</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#scene.Texture" title="scene.Texture"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Texture</span></code></a></p></td>
+<td><p>Texture</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#scene.TextureInfo" title="scene.TextureInfo"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TextureInfo</span></code></a></p></td>
+<td><p>None</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="functions">
+<h3>Functions<a class="headerlink" href="#functions" title="Link to this heading">#</a></h3>
+<div class="table-wrapper autosummary longtable docutils container">
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#scene.add_child" title="scene.add_child"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_child</span></code></a>(→ int)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#scene.add_mesh" title="scene.add_mesh"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_mesh</span></code></a>(→ int)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#scene.compute_global_node_transform" title="scene.compute_global_node_transform"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compute_global_node_transform</span></code></a>(→ list[list[float]])</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#scene.mesh_to_simple_scene" title="scene.mesh_to_simple_scene"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mesh_to_simple_scene</span></code></a>(→ lagrange.scene.SimpleScene3D)</p></td>
+<td><p>Converts a single mesh into a simple scene with a single identity instance of the input mesh.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#scene.meshes_to_simple_scene" title="scene.meshes_to_simple_scene"><code class="xref py py-obj docutils literal notranslate"><span class="pre">meshes_to_simple_scene</span></code></a>(→ lagrange.scene.SimpleScene3D)</p></td>
+<td><p>Converts a list of meshes into a simple scene with a single identity instance of each input mesh.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#scene.simple_scene_to_mesh" title="scene.simple_scene_to_mesh"><code class="xref py py-obj docutils literal notranslate"><span class="pre">simple_scene_to_mesh</span></code></a>(→ lagrange.core.SurfaceMesh)</p></td>
+<td><p>Converts a scene into a concatenated mesh with all the transforms applied.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<dl class="py class">
+<dt class="sig sig-object py" id="scene.Animation">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">scene.</span></span><span class="sig-name descname"><span class="pre">Animation</span></span><a class="headerlink" href="#scene.Animation" title="Link to this definition">#</a></dt>
+<dd><dl class="py property">
+<dt class="sig sig-object py" id="scene.Animation.name">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#scene.Animation.name" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="scene.Camera">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">scene.</span></span><span class="sig-name descname"><span class="pre">Camera</span></span><a class="headerlink" href="#scene.Camera" title="Link to this definition">#</a></dt>
+<dd><p>Camera</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="scene.Camera.Type">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Type</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwds</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#scene.Camera.Type" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">enum.Enum</span></code></p>
+<p>&lt;attribute ‘__doc__’ of ‘Type’ objects&gt;</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="scene.Camera.Type.Orthographic">
+<span class="sig-name descname"><span class="pre">Orthographic</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Any</span></em><a class="headerlink" href="#scene.Camera.Type.Orthographic" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="scene.Camera.Type.Perspective">
+<span class="sig-name descname"><span class="pre">Perspective</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Any</span></em><a class="headerlink" href="#scene.Camera.Type.Perspective" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="scene.Camera.aspect_ratio">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">aspect_ratio</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#scene.Camera.aspect_ratio" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="scene.Camera.far_plane">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">far_plane</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#scene.Camera.far_plane" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="scene.Camera.get_vertical_fov">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_vertical_fov</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#scene.Camera.get_vertical_fov" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="scene.Camera.horizontal_fov">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">horizontal_fov</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#scene.Camera.horizontal_fov" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="scene.Camera.look_at">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">look_at</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">numpy.typing.NDArray</span></em><a class="headerlink" href="#scene.Camera.look_at" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="scene.Camera.name">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#scene.Camera.name" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="scene.Camera.near_plane">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">near_plane</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#scene.Camera.near_plane" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="scene.Camera.orthographic_width">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">orthographic_width</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#scene.Camera.orthographic_width" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="scene.Camera.position">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">position</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">numpy.typing.NDArray</span></em><a class="headerlink" href="#scene.Camera.position" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="scene.Camera.set_horizontal_fov_from_vertical_fov">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">set_horizontal_fov_from_vertical_fov</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#scene.Camera.set_horizontal_fov_from_vertical_fov" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="scene.Camera.type">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">type</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">lagrange.scene.Camera.Type</span></em><a class="headerlink" href="#scene.Camera.type" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="scene.Camera.up">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">up</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">numpy.typing.NDArray</span></em><a class="headerlink" href="#scene.Camera.up" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="scene.FacetAllocationStrategy">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">scene.</span></span><span class="sig-name descname"><span class="pre">FacetAllocationStrategy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwds</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#scene.FacetAllocationStrategy" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">enum.Enum</span></code></p>
+<p>&lt;attribute ‘__doc__’ of ‘FacetAllocationStrategy’ objects&gt;</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="scene.FacetAllocationStrategy.EvenSplit">
+<span class="sig-name descname"><span class="pre">EvenSplit</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Any</span></em><a class="headerlink" href="#scene.FacetAllocationStrategy.EvenSplit" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="scene.FacetAllocationStrategy.RelativeToMeshArea">
+<span class="sig-name descname"><span class="pre">RelativeToMeshArea</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Any</span></em><a class="headerlink" href="#scene.FacetAllocationStrategy.RelativeToMeshArea" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="scene.FacetAllocationStrategy.RelativeToNumFacets">
+<span class="sig-name descname"><span class="pre">RelativeToNumFacets</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Any</span></em><a class="headerlink" href="#scene.FacetAllocationStrategy.RelativeToNumFacets" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="scene.FacetAllocationStrategy.Synchronized">
+<span class="sig-name descname"><span class="pre">Synchronized</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Any</span></em><a class="headerlink" href="#scene.FacetAllocationStrategy.Synchronized" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="scene.ImageLegacy">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">scene.</span></span><span class="sig-name descname"><span class="pre">ImageLegacy</span></span><a class="headerlink" href="#scene.ImageLegacy" title="Link to this definition">#</a></dt>
+<dd><p>None</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="scene.ImageLegacy.Type">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Type</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwds</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#scene.ImageLegacy.Type" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">enum.Enum</span></code></p>
+<p>&lt;attribute ‘__doc__’ of ‘Type’ objects&gt;</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="scene.ImageLegacy.Type.Bmp">
+<span class="sig-name descname"><span class="pre">Bmp</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Any</span></em><a class="headerlink" href="#scene.ImageLegacy.Type.Bmp" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="scene.ImageLegacy.Type.Gif">
+<span class="sig-name descname"><span class="pre">Gif</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Any</span></em><a class="headerlink" href="#scene.ImageLegacy.Type.Gif" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="scene.ImageLegacy.Type.Jpeg">
+<span class="sig-name descname"><span class="pre">Jpeg</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Any</span></em><a class="headerlink" href="#scene.ImageLegacy.Type.Jpeg" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="scene.ImageLegacy.Type.Png">
+<span class="sig-name descname"><span class="pre">Png</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Any</span></em><a class="headerlink" href="#scene.ImageLegacy.Type.Png" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="scene.ImageLegacy.Type.Unknown">
+<span class="sig-name descname"><span class="pre">Unknown</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Any</span></em><a class="headerlink" href="#scene.ImageLegacy.Type.Unknown" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="scene.ImageLegacy.channel">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">channel</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">lagrange.image.ImageChannel</span></em><a class="headerlink" href="#scene.ImageLegacy.channel" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="scene.ImageLegacy.data">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">data</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">lagrange.image.ImageStorage</span></em><a class="headerlink" href="#scene.ImageLegacy.data" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="scene.ImageLegacy.element_size">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">element_size</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#scene.ImageLegacy.element_size" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="scene.ImageLegacy.height">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">height</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#scene.ImageLegacy.height" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="scene.ImageLegacy.name">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#scene.ImageLegacy.name" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="scene.ImageLegacy.num_channels">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">num_channels</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#scene.ImageLegacy.num_channels" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="scene.ImageLegacy.precision">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">precision</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">lagrange.image.ImagePrecision</span></em><a class="headerlink" href="#scene.ImageLegacy.precision" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="scene.ImageLegacy.type">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">type</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">lagrange.scene.ImageLegacy.Type</span></em><a class="headerlink" href="#scene.ImageLegacy.type" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="scene.ImageLegacy.uri">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">uri</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#scene.ImageLegacy.uri" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="scene.ImageLegacy.width">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">width</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#scene.ImageLegacy.width" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="scene.Light">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">scene.</span></span><span class="sig-name descname"><span class="pre">Light</span></span><a class="headerlink" href="#scene.Light" title="Link to this definition">#</a></dt>
+<dd><p>Light</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="scene.Light.Type">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Type</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwds</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#scene.Light.Type" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">enum.Enum</span></code></p>
+<p>&lt;attribute ‘__doc__’ of ‘Type’ objects&gt;</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="scene.Light.Type.Ambient">
+<span class="sig-name descname"><span class="pre">Ambient</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Any</span></em><a class="headerlink" href="#scene.Light.Type.Ambient" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="scene.Light.Type.Area">
+<span class="sig-name descname"><span class="pre">Area</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Any</span></em><a class="headerlink" href="#scene.Light.Type.Area" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="scene.Light.Type.Directional">
+<span class="sig-name descname"><span class="pre">Directional</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Any</span></em><a class="headerlink" href="#scene.Light.Type.Directional" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="scene.Light.Type.Point">
+<span class="sig-name descname"><span class="pre">Point</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Any</span></em><a class="headerlink" href="#scene.Light.Type.Point" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="scene.Light.Type.Spot">
+<span class="sig-name descname"><span class="pre">Spot</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Any</span></em><a class="headerlink" href="#scene.Light.Type.Spot" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="scene.Light.Type.Undefined">
+<span class="sig-name descname"><span class="pre">Undefined</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Any</span></em><a class="headerlink" href="#scene.Light.Type.Undefined" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="scene.Light.angle_inner_cone">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">angle_inner_cone</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#scene.Light.angle_inner_cone" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="scene.Light.angle_outer_cone">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">angle_outer_cone</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#scene.Light.angle_outer_cone" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="scene.Light.attenuation_constant">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">attenuation_constant</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#scene.Light.attenuation_constant" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="scene.Light.attenuation_cubic">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">attenuation_cubic</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#scene.Light.attenuation_cubic" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="scene.Light.attenuation_linear">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">attenuation_linear</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#scene.Light.attenuation_linear" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="scene.Light.attenuation_quadratic">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">attenuation_quadratic</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#scene.Light.attenuation_quadratic" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="scene.Light.color_ambient">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">color_ambient</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">numpy.typing.NDArray</span></em><a class="headerlink" href="#scene.Light.color_ambient" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="scene.Light.color_diffuse">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">color_diffuse</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">numpy.typing.NDArray</span></em><a class="headerlink" href="#scene.Light.color_diffuse" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="scene.Light.color_specular">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">color_specular</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">numpy.typing.NDArray</span></em><a class="headerlink" href="#scene.Light.color_specular" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="scene.Light.direction">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">direction</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">numpy.typing.NDArray</span></em><a class="headerlink" href="#scene.Light.direction" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="scene.Light.intensity">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">intensity</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#scene.Light.intensity" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="scene.Light.name">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#scene.Light.name" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="scene.Light.position">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">position</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">numpy.typing.NDArray</span></em><a class="headerlink" href="#scene.Light.position" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="scene.Light.range">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">range</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#scene.Light.range" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="scene.Light.size">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">size</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">numpy.typing.NDArray</span></em><a class="headerlink" href="#scene.Light.size" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="scene.Light.type">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">type</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">lagrange.scene.Light.Type</span></em><a class="headerlink" href="#scene.Light.type" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="scene.Light.up">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">up</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">numpy.typing.NDArray</span></em><a class="headerlink" href="#scene.Light.up" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="scene.Material">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">scene.</span></span><span class="sig-name descname"><span class="pre">Material</span></span><a class="headerlink" href="#scene.Material" title="Link to this definition">#</a></dt>
+<dd><p>None</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="scene.Material.AlphaMode">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">AlphaMode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwds</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#scene.Material.AlphaMode" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">enum.Enum</span></code></p>
+<p>&lt;attribute ‘__doc__’ of ‘AlphaMode’ objects&gt;</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="scene.Material.AlphaMode.Blend">
+<span class="sig-name descname"><span class="pre">Blend</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Any</span></em><a class="headerlink" href="#scene.Material.AlphaMode.Blend" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="scene.Material.AlphaMode.Mask">
+<span class="sig-name descname"><span class="pre">Mask</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Any</span></em><a class="headerlink" href="#scene.Material.AlphaMode.Mask" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="scene.Material.AlphaMode.Opaque">
+<span class="sig-name descname"><span class="pre">Opaque</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Any</span></em><a class="headerlink" href="#scene.Material.AlphaMode.Opaque" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="scene.Material.alpha_cutoff">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">alpha_cutoff</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#scene.Material.alpha_cutoff" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="scene.Material.alpha_mode">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">alpha_mode</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">lagrange.scene.Material.AlphaMode</span></em><a class="headerlink" href="#scene.Material.alpha_mode" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="scene.Material.base_color_texture">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">base_color_texture</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">lagrange.scene.TextureInfo</span></em><a class="headerlink" href="#scene.Material.base_color_texture" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="scene.Material.base_color_value">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">base_color_value</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">numpy.typing.NDArray</span></em><a class="headerlink" href="#scene.Material.base_color_value" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="scene.Material.double_sided">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">double_sided</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#scene.Material.double_sided" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="scene.Material.emissive_texture">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">emissive_texture</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">lagrange.scene.TextureInfo</span></em><a class="headerlink" href="#scene.Material.emissive_texture" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="scene.Material.emissive_value">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">emissive_value</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">numpy.typing.NDArray</span></em><a class="headerlink" href="#scene.Material.emissive_value" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="scene.Material.metallic_roughness_texture">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">metallic_roughness_texture</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">lagrange.scene.TextureInfo</span></em><a class="headerlink" href="#scene.Material.metallic_roughness_texture" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="scene.Material.metallic_value">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">metallic_value</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#scene.Material.metallic_value" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="scene.Material.name">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#scene.Material.name" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="scene.Material.normal_scale">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">normal_scale</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#scene.Material.normal_scale" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="scene.Material.normal_texture">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">normal_texture</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">lagrange.scene.TextureInfo</span></em><a class="headerlink" href="#scene.Material.normal_texture" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="scene.Material.occlusion_strength">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">occlusion_strength</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#scene.Material.occlusion_strength" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="scene.Material.occlusion_texture">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">occlusion_texture</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">lagrange.scene.TextureInfo</span></em><a class="headerlink" href="#scene.Material.occlusion_texture" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="scene.Material.roughness_value">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">roughness_value</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#scene.Material.roughness_value" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="scene.MeshInstance3D">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">scene.</span></span><span class="sig-name descname"><span class="pre">MeshInstance3D</span></span><a class="headerlink" href="#scene.MeshInstance3D" title="Link to this definition">#</a></dt>
+<dd><p>A single mesh instance in a scene</p>
+<dl class="py property">
+<dt class="sig sig-object py" id="scene.MeshInstance3D.mesh_index">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">mesh_index</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#scene.MeshInstance3D.mesh_index" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="scene.MeshInstance3D.transform">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">transform</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">numpy.typing.NDArray</span></em><a class="headerlink" href="#scene.MeshInstance3D.transform" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="scene.Node">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">scene.</span></span><span class="sig-name descname"><span class="pre">Node</span></span><a class="headerlink" href="#scene.Node" title="Link to this definition">#</a></dt>
+<dd><p>None</p>
+<dl class="py property">
+<dt class="sig sig-object py" id="scene.Node.cameras">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">cameras</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#scene.Node.cameras" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="scene.Node.children">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">children</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#scene.Node.children" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="scene.Node.lights">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">lights</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#scene.Node.lights" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="scene.Node.meshes">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">meshes</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">lagrange.scene.SceneMeshInstance</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#scene.Node.meshes" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="scene.Node.name">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#scene.Node.name" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="scene.Node.parent">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">parent</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#scene.Node.parent" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="scene.Node.transform">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">transform</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#scene.Node.transform" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="scene.RemeshingOptions">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">scene.</span></span><span class="sig-name descname"><span class="pre">RemeshingOptions</span></span><a class="headerlink" href="#scene.RemeshingOptions" title="Link to this definition">#</a></dt>
+<dd><p>None</p>
+<dl class="py property">
+<dt class="sig sig-object py" id="scene.RemeshingOptions.facet_allocation_strategy">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">facet_allocation_strategy</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">lagrange.scene.FacetAllocationStrategy</span></em><a class="headerlink" href="#scene.RemeshingOptions.facet_allocation_strategy" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="scene.RemeshingOptions.min_facets">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">min_facets</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#scene.RemeshingOptions.min_facets" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="scene.Scene">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">scene.</span></span><span class="sig-name descname"><span class="pre">Scene</span></span><a class="headerlink" href="#scene.Scene" title="Link to this definition">#</a></dt>
+<dd><p>A 3D scene</p>
+<dl class="py property">
+<dt class="sig sig-object py" id="scene.Scene.animations">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">animations</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">lagrange.scene.Animation</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#scene.Scene.animations" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="scene.Scene.cameras">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">cameras</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">lagrange.scene.Camera</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#scene.Scene.cameras" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="scene.Scene.images">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">images</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">lagrange.scene.ImageLegacy</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#scene.Scene.images" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="scene.Scene.lights">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">lights</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">lagrange.scene.Light</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#scene.Scene.lights" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="scene.Scene.materials">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">materials</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">lagrange.scene.Material</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#scene.Scene.materials" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="scene.Scene.meshes">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">meshes</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">lagrange.core.SurfaceMesh</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#scene.Scene.meshes" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="scene.Scene.name">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#scene.Scene.name" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="scene.Scene.nodes">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">nodes</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">lagrange.scene.Node</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#scene.Scene.nodes" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="scene.Scene.skeletons">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">skeletons</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">lagrange.scene.Skeleton</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#scene.Scene.skeletons" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="scene.Scene.textures">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">textures</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">lagrange.scene.Texture</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#scene.Scene.textures" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="scene.SceneMeshInstance">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">scene.</span></span><span class="sig-name descname"><span class="pre">SceneMeshInstance</span></span><a class="headerlink" href="#scene.SceneMeshInstance" title="Link to this definition">#</a></dt>
+<dd><p>Mesh and material index of a node</p>
+<dl class="py property">
+<dt class="sig sig-object py" id="scene.SceneMeshInstance.materials">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">materials</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#scene.SceneMeshInstance.materials" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="scene.SceneMeshInstance.mesh">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">mesh</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#scene.SceneMeshInstance.mesh" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="scene.SimpleScene3D">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">scene.</span></span><span class="sig-name descname"><span class="pre">SimpleScene3D</span></span><a class="headerlink" href="#scene.SimpleScene3D" title="Link to this definition">#</a></dt>
+<dd><p>Simple scene container for instanced meshes</p>
+<dl class="py property">
+<dt class="sig sig-object py" id="scene.SimpleScene3D.num_meshes">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">num_meshes</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#scene.SimpleScene3D.num_meshes" title="Link to this definition">#</a></dt>
+<dd><p>Number of meshes in the scene</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="scene.SimpleScene3D.total_num_instances">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">total_num_instances</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#scene.SimpleScene3D.total_num_instances" title="Link to this definition">#</a></dt>
+<dd><p>Total number of instances for all meshes in the scene</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="scene.SimpleScene3D.add_instance">
+<span class="sig-name descname"><span class="pre">add_instance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">instance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">lagrange.scene.MeshInstance3D</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#scene.SimpleScene3D.add_instance" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="scene.SimpleScene3D.add_mesh">
+<span class="sig-name descname"><span class="pre">add_mesh</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mesh</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">lagrange.core.SurfaceMesh</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#scene.SimpleScene3D.add_mesh" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="scene.SimpleScene3D.get_instance">
+<span class="sig-name descname"><span class="pre">get_instance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mesh_index</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">instance_index</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">lagrange.scene.MeshInstance3D</span></span></span><a class="headerlink" href="#scene.SimpleScene3D.get_instance" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="scene.SimpleScene3D.get_mesh">
+<span class="sig-name descname"><span class="pre">get_mesh</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mesh_index</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">lagrange.core.SurfaceMesh</span></span></span><a class="headerlink" href="#scene.SimpleScene3D.get_mesh" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="scene.SimpleScene3D.num_instances">
+<span class="sig-name descname"><span class="pre">num_instances</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mesh_index</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#scene.SimpleScene3D.num_instances" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="scene.SimpleScene3D.ref_mesh">
+<span class="sig-name descname"><span class="pre">ref_mesh</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mesh_index</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">lagrange.core.SurfaceMesh</span></span></span><a class="headerlink" href="#scene.SimpleScene3D.ref_mesh" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="scene.SimpleScene3D.reserve_instances">
+<span class="sig-name descname"><span class="pre">reserve_instances</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mesh_index</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_instances</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#scene.SimpleScene3D.reserve_instances" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="scene.SimpleScene3D.reserve_meshes">
+<span class="sig-name descname"><span class="pre">reserve_meshes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">num_meshes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#scene.SimpleScene3D.reserve_meshes" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="scene.Skeleton">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">scene.</span></span><span class="sig-name descname"><span class="pre">Skeleton</span></span><a class="headerlink" href="#scene.Skeleton" title="Link to this definition">#</a></dt>
+<dd><dl class="py property">
+<dt class="sig sig-object py" id="scene.Skeleton.meshes">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">meshes</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#scene.Skeleton.meshes" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="scene.Texture">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">scene.</span></span><span class="sig-name descname"><span class="pre">Texture</span></span><a class="headerlink" href="#scene.Texture" title="Link to this definition">#</a></dt>
+<dd><p>Texture</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="scene.Texture.TextureFilter">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">TextureFilter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwds</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#scene.Texture.TextureFilter" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">enum.Enum</span></code></p>
+<p>&lt;attribute ‘__doc__’ of ‘TextureFilter’ objects&gt;</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="scene.Texture.TextureFilter.Linear">
+<span class="sig-name descname"><span class="pre">Linear</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Any</span></em><a class="headerlink" href="#scene.Texture.TextureFilter.Linear" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="scene.Texture.TextureFilter.LinearMipmapLinear">
+<span class="sig-name descname"><span class="pre">LinearMipmapLinear</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Any</span></em><a class="headerlink" href="#scene.Texture.TextureFilter.LinearMipmapLinear" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="scene.Texture.TextureFilter.LinearMipmapNearest">
+<span class="sig-name descname"><span class="pre">LinearMipmapNearest</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Any</span></em><a class="headerlink" href="#scene.Texture.TextureFilter.LinearMipmapNearest" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="scene.Texture.TextureFilter.Nearest">
+<span class="sig-name descname"><span class="pre">Nearest</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Any</span></em><a class="headerlink" href="#scene.Texture.TextureFilter.Nearest" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="scene.Texture.TextureFilter.NearestMimpapNearest">
+<span class="sig-name descname"><span class="pre">NearestMimpapNearest</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Any</span></em><a class="headerlink" href="#scene.Texture.TextureFilter.NearestMimpapNearest" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="scene.Texture.TextureFilter.NearestMipmapLinear">
+<span class="sig-name descname"><span class="pre">NearestMipmapLinear</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Any</span></em><a class="headerlink" href="#scene.Texture.TextureFilter.NearestMipmapLinear" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="scene.Texture.TextureFilter.Undefined">
+<span class="sig-name descname"><span class="pre">Undefined</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Any</span></em><a class="headerlink" href="#scene.Texture.TextureFilter.Undefined" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="scene.Texture.WrapMode">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">WrapMode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwds</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#scene.Texture.WrapMode" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">enum.Enum</span></code></p>
+<p>&lt;attribute ‘__doc__’ of ‘WrapMode’ objects&gt;</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="scene.Texture.WrapMode.Clamp">
+<span class="sig-name descname"><span class="pre">Clamp</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Any</span></em><a class="headerlink" href="#scene.Texture.WrapMode.Clamp" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="scene.Texture.WrapMode.Decal">
+<span class="sig-name descname"><span class="pre">Decal</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Any</span></em><a class="headerlink" href="#scene.Texture.WrapMode.Decal" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="scene.Texture.WrapMode.Mirror">
+<span class="sig-name descname"><span class="pre">Mirror</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Any</span></em><a class="headerlink" href="#scene.Texture.WrapMode.Mirror" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="scene.Texture.WrapMode.Wrap">
+<span class="sig-name descname"><span class="pre">Wrap</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Any</span></em><a class="headerlink" href="#scene.Texture.WrapMode.Wrap" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="scene.Texture.image">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">image</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#scene.Texture.image" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="scene.Texture.mag_filter">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">mag_filter</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">lagrange.scene.Texture.TextureFilter</span></em><a class="headerlink" href="#scene.Texture.mag_filter" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="scene.Texture.min_filter">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">min_filter</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">lagrange.scene.Texture.TextureFilter</span></em><a class="headerlink" href="#scene.Texture.min_filter" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="scene.Texture.name">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#scene.Texture.name" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="scene.Texture.offset">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">offset</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">numpy.typing.NDArray</span></em><a class="headerlink" href="#scene.Texture.offset" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="scene.Texture.rotation">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">rotation</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#scene.Texture.rotation" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="scene.Texture.scale">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">scale</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">numpy.typing.NDArray</span></em><a class="headerlink" href="#scene.Texture.scale" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="scene.Texture.wrap_u">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">wrap_u</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">lagrange.scene.Texture.WrapMode</span></em><a class="headerlink" href="#scene.Texture.wrap_u" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="scene.Texture.wrap_v">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">wrap_v</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">lagrange.scene.Texture.WrapMode</span></em><a class="headerlink" href="#scene.Texture.wrap_v" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="scene.TextureInfo">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">scene.</span></span><span class="sig-name descname"><span class="pre">TextureInfo</span></span><a class="headerlink" href="#scene.TextureInfo" title="Link to this definition">#</a></dt>
+<dd><p>None</p>
+<dl class="py property">
+<dt class="sig sig-object py" id="scene.TextureInfo.index">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">index</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#scene.TextureInfo.index" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="scene.TextureInfo.texcoord">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">texcoord</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#scene.TextureInfo.texcoord" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="scene.add_child">
+<span class="sig-prename descclassname"><span class="pre">scene.</span></span><span class="sig-name descname"><span class="pre">add_child</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">lagrange.scene.Scene</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">lagrange.scene.Node</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">lagrange.scene.Node</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">/</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#scene.add_child" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="scene.add_mesh">
+<span class="sig-prename descclassname"><span class="pre">scene.</span></span><span class="sig-name descname"><span class="pre">add_mesh</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">lagrange.scene.Scene</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">lagrange.core.SurfaceMesh</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">/</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#scene.add_mesh" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="scene.compute_global_node_transform">
+<span class="sig-prename descclassname"><span class="pre">scene.</span></span><span class="sig-name descname"><span class="pre">compute_global_node_transform</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">lagrange.scene.Scene</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">/</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#scene.compute_global_node_transform" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="scene.mesh_to_simple_scene">
+<span class="sig-prename descclassname"><span class="pre">scene.</span></span><span class="sig-name descname"><span class="pre">mesh_to_simple_scene</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mesh</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">lagrange.core.SurfaceMesh</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">lagrange.scene.SimpleScene3D</span></span></span><a class="headerlink" href="#scene.mesh_to_simple_scene" title="Link to this definition">#</a></dt>
+<dd><p>Converts a single mesh into a simple scene with a single identity instance of the input mesh.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>mesh</strong> – Input mesh to convert.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Simple scene containing the input mesh.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="scene.meshes_to_simple_scene">
+<span class="sig-prename descclassname"><span class="pre">scene.</span></span><span class="sig-name descname"><span class="pre">meshes_to_simple_scene</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">meshes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">lagrange.core.SurfaceMesh</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">lagrange.scene.SimpleScene3D</span></span></span><a class="headerlink" href="#scene.meshes_to_simple_scene" title="Link to this definition">#</a></dt>
+<dd><p>Converts a list of meshes into a simple scene with a single identity instance of each input mesh.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>meshes</strong> – Input meshes to convert.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Simple scene containing the input meshes.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="scene.simple_scene_to_mesh">
+<span class="sig-prename descclassname"><span class="pre">scene.</span></span><span class="sig-name descname"><span class="pre">simple_scene_to_mesh</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">scene</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">lagrange.scene.SimpleScene3D</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normalize_normals</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normalize_tangents_bitangents</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">preserve_attributes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">lagrange.core.SurfaceMesh</span></span></span><a class="headerlink" href="#scene.simple_scene_to_mesh" title="Link to this definition">#</a></dt>
+<dd><p>Converts a scene into a concatenated mesh with all the transforms applied.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>scene</strong> – Scene to convert.</p></li>
+<li><p><strong>normalize_normals</strong> – If enabled, normals are normalized after transformation.</p></li>
+<li><p><strong>normalize_tangents_bitangents</strong> – If enabled, tangents and bitangents are normalized after transformation.</p></li>
+<li><p><strong>preserve_attributes</strong> – Preserve shared attributes and map them to the output mesh.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Concatenated mesh.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+</section>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          <a class="next-page" href="../io/index.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title"><code class="xref py py-mod docutils literal notranslate"><span class="pre">io</span></code></div>
+              </div>
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="../image/index.html">
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title"><code class="xref py py-mod docutils literal notranslate"><span class="pre">image</span></code></div>
+                
+              </div>
+            </a>
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2023, Adobe
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">scene</span></code></a><ul>
+<li><a class="reference internal" href="#module-contents">Module Contents</a><ul>
+<li><a class="reference internal" href="#classes">Classes</a></li>
+<li><a class="reference internal" href="#functions">Functions</a><ul>
+<li><a class="reference internal" href="#scene.Animation"><code class="docutils literal notranslate"><span class="pre">Animation</span></code></a><ul>
+<li><a class="reference internal" href="#scene.Animation.name"><code class="docutils literal notranslate"><span class="pre">Animation.name</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#scene.Camera"><code class="docutils literal notranslate"><span class="pre">Camera</span></code></a><ul>
+<li><a class="reference internal" href="#scene.Camera.Type"><code class="docutils literal notranslate"><span class="pre">Camera.Type</span></code></a><ul>
+<li><a class="reference internal" href="#scene.Camera.Type.Orthographic"><code class="docutils literal notranslate"><span class="pre">Camera.Type.Orthographic</span></code></a></li>
+<li><a class="reference internal" href="#scene.Camera.Type.Perspective"><code class="docutils literal notranslate"><span class="pre">Camera.Type.Perspective</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#scene.Camera.aspect_ratio"><code class="docutils literal notranslate"><span class="pre">Camera.aspect_ratio</span></code></a></li>
+<li><a class="reference internal" href="#scene.Camera.far_plane"><code class="docutils literal notranslate"><span class="pre">Camera.far_plane</span></code></a></li>
+<li><a class="reference internal" href="#scene.Camera.get_vertical_fov"><code class="docutils literal notranslate"><span class="pre">Camera.get_vertical_fov</span></code></a></li>
+<li><a class="reference internal" href="#scene.Camera.horizontal_fov"><code class="docutils literal notranslate"><span class="pre">Camera.horizontal_fov</span></code></a></li>
+<li><a class="reference internal" href="#scene.Camera.look_at"><code class="docutils literal notranslate"><span class="pre">Camera.look_at</span></code></a></li>
+<li><a class="reference internal" href="#scene.Camera.name"><code class="docutils literal notranslate"><span class="pre">Camera.name</span></code></a></li>
+<li><a class="reference internal" href="#scene.Camera.near_plane"><code class="docutils literal notranslate"><span class="pre">Camera.near_plane</span></code></a></li>
+<li><a class="reference internal" href="#scene.Camera.orthographic_width"><code class="docutils literal notranslate"><span class="pre">Camera.orthographic_width</span></code></a></li>
+<li><a class="reference internal" href="#scene.Camera.position"><code class="docutils literal notranslate"><span class="pre">Camera.position</span></code></a></li>
+<li><a class="reference internal" href="#scene.Camera.set_horizontal_fov_from_vertical_fov"><code class="docutils literal notranslate"><span class="pre">Camera.set_horizontal_fov_from_vertical_fov</span></code></a></li>
+<li><a class="reference internal" href="#scene.Camera.type"><code class="docutils literal notranslate"><span class="pre">Camera.type</span></code></a></li>
+<li><a class="reference internal" href="#scene.Camera.up"><code class="docutils literal notranslate"><span class="pre">Camera.up</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#scene.FacetAllocationStrategy"><code class="docutils literal notranslate"><span class="pre">FacetAllocationStrategy</span></code></a><ul>
+<li><a class="reference internal" href="#scene.FacetAllocationStrategy.EvenSplit"><code class="docutils literal notranslate"><span class="pre">FacetAllocationStrategy.EvenSplit</span></code></a></li>
+<li><a class="reference internal" href="#scene.FacetAllocationStrategy.RelativeToMeshArea"><code class="docutils literal notranslate"><span class="pre">FacetAllocationStrategy.RelativeToMeshArea</span></code></a></li>
+<li><a class="reference internal" href="#scene.FacetAllocationStrategy.RelativeToNumFacets"><code class="docutils literal notranslate"><span class="pre">FacetAllocationStrategy.RelativeToNumFacets</span></code></a></li>
+<li><a class="reference internal" href="#scene.FacetAllocationStrategy.Synchronized"><code class="docutils literal notranslate"><span class="pre">FacetAllocationStrategy.Synchronized</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#scene.ImageLegacy"><code class="docutils literal notranslate"><span class="pre">ImageLegacy</span></code></a><ul>
+<li><a class="reference internal" href="#scene.ImageLegacy.Type"><code class="docutils literal notranslate"><span class="pre">ImageLegacy.Type</span></code></a><ul>
+<li><a class="reference internal" href="#scene.ImageLegacy.Type.Bmp"><code class="docutils literal notranslate"><span class="pre">ImageLegacy.Type.Bmp</span></code></a></li>
+<li><a class="reference internal" href="#scene.ImageLegacy.Type.Gif"><code class="docutils literal notranslate"><span class="pre">ImageLegacy.Type.Gif</span></code></a></li>
+<li><a class="reference internal" href="#scene.ImageLegacy.Type.Jpeg"><code class="docutils literal notranslate"><span class="pre">ImageLegacy.Type.Jpeg</span></code></a></li>
+<li><a class="reference internal" href="#scene.ImageLegacy.Type.Png"><code class="docutils literal notranslate"><span class="pre">ImageLegacy.Type.Png</span></code></a></li>
+<li><a class="reference internal" href="#scene.ImageLegacy.Type.Unknown"><code class="docutils literal notranslate"><span class="pre">ImageLegacy.Type.Unknown</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#scene.ImageLegacy.channel"><code class="docutils literal notranslate"><span class="pre">ImageLegacy.channel</span></code></a></li>
+<li><a class="reference internal" href="#scene.ImageLegacy.data"><code class="docutils literal notranslate"><span class="pre">ImageLegacy.data</span></code></a></li>
+<li><a class="reference internal" href="#scene.ImageLegacy.element_size"><code class="docutils literal notranslate"><span class="pre">ImageLegacy.element_size</span></code></a></li>
+<li><a class="reference internal" href="#scene.ImageLegacy.height"><code class="docutils literal notranslate"><span class="pre">ImageLegacy.height</span></code></a></li>
+<li><a class="reference internal" href="#scene.ImageLegacy.name"><code class="docutils literal notranslate"><span class="pre">ImageLegacy.name</span></code></a></li>
+<li><a class="reference internal" href="#scene.ImageLegacy.num_channels"><code class="docutils literal notranslate"><span class="pre">ImageLegacy.num_channels</span></code></a></li>
+<li><a class="reference internal" href="#scene.ImageLegacy.precision"><code class="docutils literal notranslate"><span class="pre">ImageLegacy.precision</span></code></a></li>
+<li><a class="reference internal" href="#scene.ImageLegacy.type"><code class="docutils literal notranslate"><span class="pre">ImageLegacy.type</span></code></a></li>
+<li><a class="reference internal" href="#scene.ImageLegacy.uri"><code class="docutils literal notranslate"><span class="pre">ImageLegacy.uri</span></code></a></li>
+<li><a class="reference internal" href="#scene.ImageLegacy.width"><code class="docutils literal notranslate"><span class="pre">ImageLegacy.width</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#scene.Light"><code class="docutils literal notranslate"><span class="pre">Light</span></code></a><ul>
+<li><a class="reference internal" href="#scene.Light.Type"><code class="docutils literal notranslate"><span class="pre">Light.Type</span></code></a><ul>
+<li><a class="reference internal" href="#scene.Light.Type.Ambient"><code class="docutils literal notranslate"><span class="pre">Light.Type.Ambient</span></code></a></li>
+<li><a class="reference internal" href="#scene.Light.Type.Area"><code class="docutils literal notranslate"><span class="pre">Light.Type.Area</span></code></a></li>
+<li><a class="reference internal" href="#scene.Light.Type.Directional"><code class="docutils literal notranslate"><span class="pre">Light.Type.Directional</span></code></a></li>
+<li><a class="reference internal" href="#scene.Light.Type.Point"><code class="docutils literal notranslate"><span class="pre">Light.Type.Point</span></code></a></li>
+<li><a class="reference internal" href="#scene.Light.Type.Spot"><code class="docutils literal notranslate"><span class="pre">Light.Type.Spot</span></code></a></li>
+<li><a class="reference internal" href="#scene.Light.Type.Undefined"><code class="docutils literal notranslate"><span class="pre">Light.Type.Undefined</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#scene.Light.angle_inner_cone"><code class="docutils literal notranslate"><span class="pre">Light.angle_inner_cone</span></code></a></li>
+<li><a class="reference internal" href="#scene.Light.angle_outer_cone"><code class="docutils literal notranslate"><span class="pre">Light.angle_outer_cone</span></code></a></li>
+<li><a class="reference internal" href="#scene.Light.attenuation_constant"><code class="docutils literal notranslate"><span class="pre">Light.attenuation_constant</span></code></a></li>
+<li><a class="reference internal" href="#scene.Light.attenuation_cubic"><code class="docutils literal notranslate"><span class="pre">Light.attenuation_cubic</span></code></a></li>
+<li><a class="reference internal" href="#scene.Light.attenuation_linear"><code class="docutils literal notranslate"><span class="pre">Light.attenuation_linear</span></code></a></li>
+<li><a class="reference internal" href="#scene.Light.attenuation_quadratic"><code class="docutils literal notranslate"><span class="pre">Light.attenuation_quadratic</span></code></a></li>
+<li><a class="reference internal" href="#scene.Light.color_ambient"><code class="docutils literal notranslate"><span class="pre">Light.color_ambient</span></code></a></li>
+<li><a class="reference internal" href="#scene.Light.color_diffuse"><code class="docutils literal notranslate"><span class="pre">Light.color_diffuse</span></code></a></li>
+<li><a class="reference internal" href="#scene.Light.color_specular"><code class="docutils literal notranslate"><span class="pre">Light.color_specular</span></code></a></li>
+<li><a class="reference internal" href="#scene.Light.direction"><code class="docutils literal notranslate"><span class="pre">Light.direction</span></code></a></li>
+<li><a class="reference internal" href="#scene.Light.intensity"><code class="docutils literal notranslate"><span class="pre">Light.intensity</span></code></a></li>
+<li><a class="reference internal" href="#scene.Light.name"><code class="docutils literal notranslate"><span class="pre">Light.name</span></code></a></li>
+<li><a class="reference internal" href="#scene.Light.position"><code class="docutils literal notranslate"><span class="pre">Light.position</span></code></a></li>
+<li><a class="reference internal" href="#scene.Light.range"><code class="docutils literal notranslate"><span class="pre">Light.range</span></code></a></li>
+<li><a class="reference internal" href="#scene.Light.size"><code class="docutils literal notranslate"><span class="pre">Light.size</span></code></a></li>
+<li><a class="reference internal" href="#scene.Light.type"><code class="docutils literal notranslate"><span class="pre">Light.type</span></code></a></li>
+<li><a class="reference internal" href="#scene.Light.up"><code class="docutils literal notranslate"><span class="pre">Light.up</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#scene.Material"><code class="docutils literal notranslate"><span class="pre">Material</span></code></a><ul>
+<li><a class="reference internal" href="#scene.Material.AlphaMode"><code class="docutils literal notranslate"><span class="pre">Material.AlphaMode</span></code></a><ul>
+<li><a class="reference internal" href="#scene.Material.AlphaMode.Blend"><code class="docutils literal notranslate"><span class="pre">Material.AlphaMode.Blend</span></code></a></li>
+<li><a class="reference internal" href="#scene.Material.AlphaMode.Mask"><code class="docutils literal notranslate"><span class="pre">Material.AlphaMode.Mask</span></code></a></li>
+<li><a class="reference internal" href="#scene.Material.AlphaMode.Opaque"><code class="docutils literal notranslate"><span class="pre">Material.AlphaMode.Opaque</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#scene.Material.alpha_cutoff"><code class="docutils literal notranslate"><span class="pre">Material.alpha_cutoff</span></code></a></li>
+<li><a class="reference internal" href="#scene.Material.alpha_mode"><code class="docutils literal notranslate"><span class="pre">Material.alpha_mode</span></code></a></li>
+<li><a class="reference internal" href="#scene.Material.base_color_texture"><code class="docutils literal notranslate"><span class="pre">Material.base_color_texture</span></code></a></li>
+<li><a class="reference internal" href="#scene.Material.base_color_value"><code class="docutils literal notranslate"><span class="pre">Material.base_color_value</span></code></a></li>
+<li><a class="reference internal" href="#scene.Material.double_sided"><code class="docutils literal notranslate"><span class="pre">Material.double_sided</span></code></a></li>
+<li><a class="reference internal" href="#scene.Material.emissive_texture"><code class="docutils literal notranslate"><span class="pre">Material.emissive_texture</span></code></a></li>
+<li><a class="reference internal" href="#scene.Material.emissive_value"><code class="docutils literal notranslate"><span class="pre">Material.emissive_value</span></code></a></li>
+<li><a class="reference internal" href="#scene.Material.metallic_roughness_texture"><code class="docutils literal notranslate"><span class="pre">Material.metallic_roughness_texture</span></code></a></li>
+<li><a class="reference internal" href="#scene.Material.metallic_value"><code class="docutils literal notranslate"><span class="pre">Material.metallic_value</span></code></a></li>
+<li><a class="reference internal" href="#scene.Material.name"><code class="docutils literal notranslate"><span class="pre">Material.name</span></code></a></li>
+<li><a class="reference internal" href="#scene.Material.normal_scale"><code class="docutils literal notranslate"><span class="pre">Material.normal_scale</span></code></a></li>
+<li><a class="reference internal" href="#scene.Material.normal_texture"><code class="docutils literal notranslate"><span class="pre">Material.normal_texture</span></code></a></li>
+<li><a class="reference internal" href="#scene.Material.occlusion_strength"><code class="docutils literal notranslate"><span class="pre">Material.occlusion_strength</span></code></a></li>
+<li><a class="reference internal" href="#scene.Material.occlusion_texture"><code class="docutils literal notranslate"><span class="pre">Material.occlusion_texture</span></code></a></li>
+<li><a class="reference internal" href="#scene.Material.roughness_value"><code class="docutils literal notranslate"><span class="pre">Material.roughness_value</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#scene.MeshInstance3D"><code class="docutils literal notranslate"><span class="pre">MeshInstance3D</span></code></a><ul>
+<li><a class="reference internal" href="#scene.MeshInstance3D.mesh_index"><code class="docutils literal notranslate"><span class="pre">MeshInstance3D.mesh_index</span></code></a></li>
+<li><a class="reference internal" href="#scene.MeshInstance3D.transform"><code class="docutils literal notranslate"><span class="pre">MeshInstance3D.transform</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#scene.Node"><code class="docutils literal notranslate"><span class="pre">Node</span></code></a><ul>
+<li><a class="reference internal" href="#scene.Node.cameras"><code class="docutils literal notranslate"><span class="pre">Node.cameras</span></code></a></li>
+<li><a class="reference internal" href="#scene.Node.children"><code class="docutils literal notranslate"><span class="pre">Node.children</span></code></a></li>
+<li><a class="reference internal" href="#scene.Node.lights"><code class="docutils literal notranslate"><span class="pre">Node.lights</span></code></a></li>
+<li><a class="reference internal" href="#scene.Node.meshes"><code class="docutils literal notranslate"><span class="pre">Node.meshes</span></code></a></li>
+<li><a class="reference internal" href="#scene.Node.name"><code class="docutils literal notranslate"><span class="pre">Node.name</span></code></a></li>
+<li><a class="reference internal" href="#scene.Node.parent"><code class="docutils literal notranslate"><span class="pre">Node.parent</span></code></a></li>
+<li><a class="reference internal" href="#scene.Node.transform"><code class="docutils literal notranslate"><span class="pre">Node.transform</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#scene.RemeshingOptions"><code class="docutils literal notranslate"><span class="pre">RemeshingOptions</span></code></a><ul>
+<li><a class="reference internal" href="#scene.RemeshingOptions.facet_allocation_strategy"><code class="docutils literal notranslate"><span class="pre">RemeshingOptions.facet_allocation_strategy</span></code></a></li>
+<li><a class="reference internal" href="#scene.RemeshingOptions.min_facets"><code class="docutils literal notranslate"><span class="pre">RemeshingOptions.min_facets</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#scene.Scene"><code class="docutils literal notranslate"><span class="pre">Scene</span></code></a><ul>
+<li><a class="reference internal" href="#scene.Scene.animations"><code class="docutils literal notranslate"><span class="pre">Scene.animations</span></code></a></li>
+<li><a class="reference internal" href="#scene.Scene.cameras"><code class="docutils literal notranslate"><span class="pre">Scene.cameras</span></code></a></li>
+<li><a class="reference internal" href="#scene.Scene.images"><code class="docutils literal notranslate"><span class="pre">Scene.images</span></code></a></li>
+<li><a class="reference internal" href="#scene.Scene.lights"><code class="docutils literal notranslate"><span class="pre">Scene.lights</span></code></a></li>
+<li><a class="reference internal" href="#scene.Scene.materials"><code class="docutils literal notranslate"><span class="pre">Scene.materials</span></code></a></li>
+<li><a class="reference internal" href="#scene.Scene.meshes"><code class="docutils literal notranslate"><span class="pre">Scene.meshes</span></code></a></li>
+<li><a class="reference internal" href="#scene.Scene.name"><code class="docutils literal notranslate"><span class="pre">Scene.name</span></code></a></li>
+<li><a class="reference internal" href="#scene.Scene.nodes"><code class="docutils literal notranslate"><span class="pre">Scene.nodes</span></code></a></li>
+<li><a class="reference internal" href="#scene.Scene.skeletons"><code class="docutils literal notranslate"><span class="pre">Scene.skeletons</span></code></a></li>
+<li><a class="reference internal" href="#scene.Scene.textures"><code class="docutils literal notranslate"><span class="pre">Scene.textures</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#scene.SceneMeshInstance"><code class="docutils literal notranslate"><span class="pre">SceneMeshInstance</span></code></a><ul>
+<li><a class="reference internal" href="#scene.SceneMeshInstance.materials"><code class="docutils literal notranslate"><span class="pre">SceneMeshInstance.materials</span></code></a></li>
+<li><a class="reference internal" href="#scene.SceneMeshInstance.mesh"><code class="docutils literal notranslate"><span class="pre">SceneMeshInstance.mesh</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#scene.SimpleScene3D"><code class="docutils literal notranslate"><span class="pre">SimpleScene3D</span></code></a><ul>
+<li><a class="reference internal" href="#scene.SimpleScene3D.num_meshes"><code class="docutils literal notranslate"><span class="pre">SimpleScene3D.num_meshes</span></code></a></li>
+<li><a class="reference internal" href="#scene.SimpleScene3D.total_num_instances"><code class="docutils literal notranslate"><span class="pre">SimpleScene3D.total_num_instances</span></code></a></li>
+<li><a class="reference internal" href="#scene.SimpleScene3D.add_instance"><code class="docutils literal notranslate"><span class="pre">SimpleScene3D.add_instance()</span></code></a></li>
+<li><a class="reference internal" href="#scene.SimpleScene3D.add_mesh"><code class="docutils literal notranslate"><span class="pre">SimpleScene3D.add_mesh()</span></code></a></li>
+<li><a class="reference internal" href="#scene.SimpleScene3D.get_instance"><code class="docutils literal notranslate"><span class="pre">SimpleScene3D.get_instance()</span></code></a></li>
+<li><a class="reference internal" href="#scene.SimpleScene3D.get_mesh"><code class="docutils literal notranslate"><span class="pre">SimpleScene3D.get_mesh()</span></code></a></li>
+<li><a class="reference internal" href="#scene.SimpleScene3D.num_instances"><code class="docutils literal notranslate"><span class="pre">SimpleScene3D.num_instances()</span></code></a></li>
+<li><a class="reference internal" href="#scene.SimpleScene3D.ref_mesh"><code class="docutils literal notranslate"><span class="pre">SimpleScene3D.ref_mesh()</span></code></a></li>
+<li><a class="reference internal" href="#scene.SimpleScene3D.reserve_instances"><code class="docutils literal notranslate"><span class="pre">SimpleScene3D.reserve_instances()</span></code></a></li>
+<li><a class="reference internal" href="#scene.SimpleScene3D.reserve_meshes"><code class="docutils literal notranslate"><span class="pre">SimpleScene3D.reserve_meshes()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#scene.Skeleton"><code class="docutils literal notranslate"><span class="pre">Skeleton</span></code></a><ul>
+<li><a class="reference internal" href="#scene.Skeleton.meshes"><code class="docutils literal notranslate"><span class="pre">Skeleton.meshes</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#scene.Texture"><code class="docutils literal notranslate"><span class="pre">Texture</span></code></a><ul>
+<li><a class="reference internal" href="#scene.Texture.TextureFilter"><code class="docutils literal notranslate"><span class="pre">Texture.TextureFilter</span></code></a><ul>
+<li><a class="reference internal" href="#scene.Texture.TextureFilter.Linear"><code class="docutils literal notranslate"><span class="pre">Texture.TextureFilter.Linear</span></code></a></li>
+<li><a class="reference internal" href="#scene.Texture.TextureFilter.LinearMipmapLinear"><code class="docutils literal notranslate"><span class="pre">Texture.TextureFilter.LinearMipmapLinear</span></code></a></li>
+<li><a class="reference internal" href="#scene.Texture.TextureFilter.LinearMipmapNearest"><code class="docutils literal notranslate"><span class="pre">Texture.TextureFilter.LinearMipmapNearest</span></code></a></li>
+<li><a class="reference internal" href="#scene.Texture.TextureFilter.Nearest"><code class="docutils literal notranslate"><span class="pre">Texture.TextureFilter.Nearest</span></code></a></li>
+<li><a class="reference internal" href="#scene.Texture.TextureFilter.NearestMimpapNearest"><code class="docutils literal notranslate"><span class="pre">Texture.TextureFilter.NearestMimpapNearest</span></code></a></li>
+<li><a class="reference internal" href="#scene.Texture.TextureFilter.NearestMipmapLinear"><code class="docutils literal notranslate"><span class="pre">Texture.TextureFilter.NearestMipmapLinear</span></code></a></li>
+<li><a class="reference internal" href="#scene.Texture.TextureFilter.Undefined"><code class="docutils literal notranslate"><span class="pre">Texture.TextureFilter.Undefined</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#scene.Texture.WrapMode"><code class="docutils literal notranslate"><span class="pre">Texture.WrapMode</span></code></a><ul>
+<li><a class="reference internal" href="#scene.Texture.WrapMode.Clamp"><code class="docutils literal notranslate"><span class="pre">Texture.WrapMode.Clamp</span></code></a></li>
+<li><a class="reference internal" href="#scene.Texture.WrapMode.Decal"><code class="docutils literal notranslate"><span class="pre">Texture.WrapMode.Decal</span></code></a></li>
+<li><a class="reference internal" href="#scene.Texture.WrapMode.Mirror"><code class="docutils literal notranslate"><span class="pre">Texture.WrapMode.Mirror</span></code></a></li>
+<li><a class="reference internal" href="#scene.Texture.WrapMode.Wrap"><code class="docutils literal notranslate"><span class="pre">Texture.WrapMode.Wrap</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#scene.Texture.image"><code class="docutils literal notranslate"><span class="pre">Texture.image</span></code></a></li>
+<li><a class="reference internal" href="#scene.Texture.mag_filter"><code class="docutils literal notranslate"><span class="pre">Texture.mag_filter</span></code></a></li>
+<li><a class="reference internal" href="#scene.Texture.min_filter"><code class="docutils literal notranslate"><span class="pre">Texture.min_filter</span></code></a></li>
+<li><a class="reference internal" href="#scene.Texture.name"><code class="docutils literal notranslate"><span class="pre">Texture.name</span></code></a></li>
+<li><a class="reference internal" href="#scene.Texture.offset"><code class="docutils literal notranslate"><span class="pre">Texture.offset</span></code></a></li>
+<li><a class="reference internal" href="#scene.Texture.rotation"><code class="docutils literal notranslate"><span class="pre">Texture.rotation</span></code></a></li>
+<li><a class="reference internal" href="#scene.Texture.scale"><code class="docutils literal notranslate"><span class="pre">Texture.scale</span></code></a></li>
+<li><a class="reference internal" href="#scene.Texture.wrap_u"><code class="docutils literal notranslate"><span class="pre">Texture.wrap_u</span></code></a></li>
+<li><a class="reference internal" href="#scene.Texture.wrap_v"><code class="docutils literal notranslate"><span class="pre">Texture.wrap_v</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#scene.TextureInfo"><code class="docutils literal notranslate"><span class="pre">TextureInfo</span></code></a><ul>
+<li><a class="reference internal" href="#scene.TextureInfo.index"><code class="docutils literal notranslate"><span class="pre">TextureInfo.index</span></code></a></li>
+<li><a class="reference internal" href="#scene.TextureInfo.texcoord"><code class="docutils literal notranslate"><span class="pre">TextureInfo.texcoord</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#scene.add_child"><code class="docutils literal notranslate"><span class="pre">add_child()</span></code></a></li>
+<li><a class="reference internal" href="#scene.add_mesh"><code class="docutils literal notranslate"><span class="pre">add_mesh()</span></code></a></li>
+<li><a class="reference internal" href="#scene.compute_global_node_transform"><code class="docutils literal notranslate"><span class="pre">compute_global_node_transform()</span></code></a></li>
+<li><a class="reference internal" href="#scene.mesh_to_simple_scene"><code class="docutils literal notranslate"><span class="pre">mesh_to_simple_scene()</span></code></a></li>
+<li><a class="reference internal" href="#scene.meshes_to_simple_scene"><code class="docutils literal notranslate"><span class="pre">meshes_to_simple_scene()</span></code></a></li>
+<li><a class="reference internal" href="#scene.simple_scene_to_mesh"><code class="docutils literal notranslate"><span class="pre">simple_scene_to_mesh()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/scripts/furo.js?v=32e29ea5"></script>
+    </body>
+</html>
