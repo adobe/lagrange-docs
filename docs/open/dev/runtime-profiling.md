@@ -7,7 +7,7 @@ how to use Tracy with Lagrange.
 {% if is_corp %}
 ![](../../corp/dev/img/tracy.png)
 {% else %}
-![](https://raw.githubusercontent.com/wolfpld/tracy/master/doc/profiler.png)
+![](../../open/dev/img/tracy.png)
 {% endif %}
 
 ## Enabling The Tracy Client

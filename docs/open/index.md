@@ -11,7 +11,7 @@ principles:
 
 {% if is_corp %}
 
-![](corp/img/intro.png){ width=600 }
+![](open/img/intro.png){ width=600 }
 
 {% endif %}
 
