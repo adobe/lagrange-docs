@@ -27,5 +27,6 @@ var searchData=
   ['merge_24',['merge',['../classlagrange_1_1_disjoint_sets.html#a3ee2d4bff5bd1dc9d4f8b7eecd8e3dbc',1,'lagrange::DisjointSets']]],
   ['mesh_25',['Mesh',['../classlagrange_1_1_mesh.html#a2a23c7c0c4e0da252b7bc0e13b6f81d8',1,'lagrange::Mesh']]],
   ['meshadapter_26',['MeshAdapter',['../classlagrange_1_1volume_1_1legacy_1_1_mesh_adapter.html#adc98e2a86dc99dc2c124b575b1b26e85',1,'lagrange::volume::legacy::MeshAdapter']]],
-  ['move_5fdata_27',['move_data',['../namespacelagrange.html#a45f1c6cc55a36fae54bcd3723d8255e2',1,'lagrange']]]
+  ['midpoint_5fsubdivision_27',['midpoint_subdivision',['../group__module-subdivision.html#ga5bb45b1783fc315efefb291e2d2dbd9f',1,'lagrange::subdivision']]],
+  ['move_5fdata_28',['move_data',['../namespacelagrange.html#a45f1c6cc55a36fae54bcd3723d8255e2',1,'lagrange']]]
 ];

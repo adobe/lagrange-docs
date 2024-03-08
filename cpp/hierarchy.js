@@ -28,14 +28,18 @@ var hierarchy =
       [ "Attribute< ValueType_ >", "classlagrange_1_1_attribute.html", null ],
       [ "IndexedAttribute< ValueType_, Index_ >", "classlagrange_1_1_indexed_attribute.html", null ]
     ] ],
+    [ "AttributeFilter", "structlagrange_1_1_attribute_filter.html", null ],
     [ "AttributeManager", "classlagrange_1_1experimental_1_1_attribute_manager.html", null ],
     [ "AttributeName", "structlagrange_1_1_attribute_name.html", null ],
     [ "AttributeRender", "structlagrange_1_1ui_1_1_attribute_render.html", null ],
     [ "Attributes< _AttributeArray >", "classlagrange_1_1_attributes.html", null ],
+    [ "SurfaceMesh< Scalar_, Index_ >::BareMeshTag", "structlagrange_1_1_surface_mesh_1_1_bare_mesh_tag.html", null ],
     [ "base_sink", null, [
       [ "PythonLoggingSink", "classlagrange_1_1python_1_1_python_logging_sink.html", null ]
     ] ],
     [ "BitField< EnumType_ >", "classlagrange_1_1_bit_field.html", null ],
+    [ "BitField< AttributeElement >", "classlagrange_1_1_bit_field.html", null ],
+    [ "BitField< AttributeUsage >", "classlagrange_1_1_bit_field.html", null ],
     [ "bitset", null, [
       [ "Layer", "structlagrange_1_1ui_1_1_layer.html", null ]
     ] ],
@@ -119,6 +123,7 @@ var hierarchy =
     [ "ExactPredicates", "classlagrange_1_1_exact_predicates.html", [
       [ "ExactPredicatesShewchuk", "classlagrange_1_1_exact_predicates_shewchuk.html", null ]
     ] ],
+    [ "Extensions", "structlagrange_1_1scene_1_1_extensions.html", null ],
     [ "FacetAreaOptions", "structlagrange_1_1_facet_area_options.html", null ],
     [ "FacetCentroidOptions", "structlagrange_1_1_facet_centroid_options.html", null ],
     [ "FacetNormalOptions", "structlagrange_1_1_facet_normal_options.html", null ],
@@ -257,6 +262,7 @@ var hierarchy =
     [ "RemoveDuplicateVerticesOptions", "structlagrange_1_1_remove_duplicate_vertices_options.html", null ],
     [ "RemoveNullAreaFacetsOptions", "structlagrange_1_1_remove_null_area_facets_options.html", null ],
     [ "RenderContext", "structlagrange_1_1ui_1_1_render_context.html", null ],
+    [ "SurfaceMesh< Scalar_, Index_ >::ReservedAttributeIds", "structlagrange_1_1_surface_mesh_1_1_reserved_attribute_ids.html", null ],
     [ "resource_loader", null, [
       [ "ShaderLoader", "structlagrange_1_1ui_1_1_shader_loader.html", null ]
     ] ],
@@ -358,9 +364,11 @@ var hierarchy =
     [ "TestComputeFacetNormal", "classtests_1_1test__compute__facet__normal_1_1_test_compute_facet_normal.html", null ],
     [ "TestComputeNormal", "classtests_1_1test__compute__normal_1_1_test_compute_normal.html", null ],
     [ "TestComputeTangentBitangent", "classtests_1_1test__compute__tangent__bitangent_1_1_test_compute_tangent_bitangent.html", null ],
+    [ "TestComputeUVDistortion", "classtests_1_1test__compute__uv__distortion_1_1_test_compute_u_v_distortion.html", null ],
     [ "TestComputeVertexNormal", "classtests_1_1test__compute__vertex__normal_1_1_test_compute_vertex_normal.html", null ],
     [ "TestComputeVertexValence", "classtests_1_1test__compute__vertex__valence_1_1_test_compute_vertex_valence.html", null ],
     [ "TestDetectDegenerateFacets", "classtests_1_1test__detect__degenerate__facets_1_1_test_detect_degenerate_facets.html", null ],
+    [ "TestFilterAttributes", "classtests_1_1test__filter__attributes_1_1_test_filter_attributes.html", null ],
     [ "TestIndexedAttribute", "classtests_1_1test__indexed__attribute_1_1_test_indexed_attribute.html", null ],
     [ "TestIO", "classtest__io_1_1_test_i_o.html", null ],
     [ "TestMeshInstance", "classtest__mesh__instance_1_1_test_mesh_instance.html", null ],
@@ -404,7 +412,13 @@ var hierarchy =
     [ "type_traits< uint8_t >", "structlagrange_1_1ui_1_1type__traits_3_01uint8__t_01_4.html", null ],
     [ "UIPanel", "structlagrange_1_1ui_1_1_u_i_panel.html", null ],
     [ "UIWidget", "classlagrange_1_1ui_1_1_u_i_widget.html", null ],
+    [ "UserDataConverter", "structlagrange_1_1scene_1_1_user_data_converter.html", [
+      [ "UserDataConverterTrampoline", "structlagrange_1_1python_1_1_user_data_converter_trampoline.html", null ]
+    ] ],
     [ "UVDistortionOptions", "structlagrange_1_1_u_v_distortion_options.html", null ],
+    [ "Value", "classlagrange_1_1scene_1_1_value.html", [
+      [ "ValuePublicist", "classlagrange_1_1python_1_1_value_publicist.html", null ]
+    ] ],
     [ "value_field< T >", "structlagrange_1_1ui_1_1utils_1_1value__field.html", null ],
     [ "value_field< double >", "structlagrange_1_1ui_1_1utils_1_1value__field_3_01double_01_4.html", null ],
     [ "value_field< float >", "structlagrange_1_1ui_1_1utils_1_1value__field_3_01float_01_4.html", null ],

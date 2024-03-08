@@ -28,7 +28,7 @@ var searchData=
   ['is_5fbreakpoint_5fenabled_25',['is_breakpoint_enabled',['../group__group-utils-assert.html#gac1d763e905c12a114bb94a8f38227094',1,'lagrange']]],
   ['is_5fdown_26',['is_down',['../classlagrange_1_1ui_1_1_keybinds.html#ad0c57bf59b5f953cfc1c94ed25d50146',1,'lagrange::ui::Keybinds::is_down(ImGuiKey key_code) const'],['../classlagrange_1_1ui_1_1_keybinds.html#a7497f6c979c04a19184340bc75d987d3',1,'lagrange::ui::Keybinds::is_down(const std::string &amp;action) const']]],
   ['is_5fedge_5fdata_5finitialized_27',['is_edge_data_initialized',['../classlagrange_1_1_mesh.html#a2b9dea5d2dd1c67ac34229382baa4dda',1,'lagrange::Mesh']]],
-  ['is_5fedge_5fmanifold_28',['is_edge_manifold',['../namespacelagrange.html#a52aec6a70ed2240fe977f81f393d1259',1,'lagrange']]],
+  ['is_5fedge_5fmanifold_28',['is_edge_manifold',['../group__group-surfacemesh-utils.html#ga52aec6a70ed2240fe977f81f393d1259',1,'lagrange']]],
   ['is_5fenabled_29',['is_enabled',['../classlagrange_1_1ui_1_1_keybinds.html#a6507f40ddf408e1f124cb84fa5cbfd1e',1,'lagrange::ui::Keybinds']]],
   ['is_5fexternal_30',['is_external',['../classlagrange_1_1_attribute.html#aa89c7d479fb5c57df5f6525997ea5af1',1,'lagrange::Attribute']]],
   ['is_5fhybrid_31',['is_hybrid',['../classlagrange_1_1_surface_mesh.html#ab428865a842b8f10664c5ef5c6fb5bb8',1,'lagrange::SurfaceMesh']]],
@@ -36,7 +36,7 @@ var searchData=
   ['is_5finitialized_33',['is_initialized',['../classlagrange_1_1ui_1_1_viewer.html#a7a2108348656c73efe1d72702c96d5c5',1,'lagrange::ui::Viewer']]],
   ['is_5finside_34',['is_inside',['../classlagrange_1_1winding_1_1_fast_winding_number.html#a98749bbea63ce074f66b599d942eabdb',1,'lagrange::winding::FastWindingNumber']]],
   ['is_5fmanaged_35',['is_managed',['../classlagrange_1_1_attribute.html#a006833340d60ba36eb12567741fca0c7',1,'lagrange::Attribute']]],
-  ['is_5fmanifold_36',['is_manifold',['../namespacelagrange.html#a4b70a6e7c30cd0524e2fc2490f280b69',1,'lagrange']]],
+  ['is_5fmanifold_36',['is_manifold',['../group__group-surfacemesh-utils.html#ga4b70a6e7c30cd0524e2fc2490f280b69',1,'lagrange']]],
   ['is_5forphan_37',['is_orphan',['../namespacelagrange_1_1ui.html#aad9f621d59f79f45345d82270c2f0340',1,'lagrange::ui']]],
   ['is_5forthogonal_5fdirection_38',['is_orthogonal_direction',['../classlagrange_1_1ui_1_1_camera.html#ae8bd2b2016f71aa4ffd01cea60bbc0a3',1,'lagrange::ui::Camera']]],
   ['is_5fover_5fviewport_39',['is_over_viewport',['../structlagrange_1_1ui_1_1_viewport_panel.html#aff818706283a8cc7e890ccc93f6308ec',1,'lagrange::ui::ViewportPanel']]],
@@ -47,9 +47,10 @@ var searchData=
   ['is_5fregular_44',['is_regular',['../classlagrange_1_1_surface_mesh.html#a83fe6c77afa1adfe15669fd0e1a492a4',1,'lagrange::SurfaceMesh']]],
   ['is_5freleased_45',['is_released',['../classlagrange_1_1ui_1_1_keybinds.html#a7722790e068b94ba288f6ff1dfdf54fe',1,'lagrange::ui::Keybinds::is_released(ImGuiKey key_code) const'],['../classlagrange_1_1ui_1_1_keybinds.html#a6c9dddb28b68699898009fc185cbc158',1,'lagrange::ui::Keybinds::is_released(const std::string &amp;action) const']]],
   ['is_5fshow_5ftopbar_5fmenu_46',['is_show_topbar_menu',['../classlagrange_1_1ui_1_1_viewer.html#a00c8d9d6e90108876302fe7f238f69e4',1,'lagrange::ui::Viewer']]],
-  ['is_5ftool_5factivated_47',['is_tool_activated',['../namespacelagrange_1_1ui.html#a3293afd379232ec984e90acd97012695',1,'lagrange::ui::is_tool_activated(const ui::Registry &amp;r, entt::id_type tool_type)'],['../namespacelagrange_1_1ui.html#aa84b7ae2acdc2d57cfe44dfc6aac8353',1,'lagrange::ui::is_tool_activated(const ui::Registry &amp;r, entt::id_type tool_type, entt::id_type element_type)']]],
+  ['is_5ftool_5factivated_47',['is_tool_activated',['../namespacelagrange_1_1ui.html#aa84b7ae2acdc2d57cfe44dfc6aac8353',1,'lagrange::ui::is_tool_activated(const ui::Registry &amp;r, entt::id_type tool_type, entt::id_type element_type)'],['../namespacelagrange_1_1ui.html#a3293afd379232ec984e90acd97012695',1,'lagrange::ui::is_tool_activated(const ui::Registry &amp;r, entt::id_type tool_type)']]],
   ['is_5ftool_5fdeactivated_48',['is_tool_deactivated',['../namespacelagrange_1_1ui.html#af68fbf16576562a4ee9fbeca6d2cf546',1,'lagrange::ui::is_tool_deactivated(const ui::Registry &amp;r, entt::id_type tool_type)'],['../namespacelagrange_1_1ui.html#a04c8773ceabc4c1099748df28202ee63',1,'lagrange::ui::is_tool_deactivated(const ui::Registry &amp;r, entt::id_type tool_type, entt::id_type element_type)']]],
   ['is_5ftriangle_5fmesh_49',['is_triangle_mesh',['../classlagrange_1_1_surface_mesh.html#a9cede937c41f63448522e8522f7d65a5',1,'lagrange::SurfaceMesh']]],
-  ['is_5fvertex_5fmanifold_50',['is_vertex_manifold',['../namespacelagrange.html#a8c7a15cae60d68a94bac4068de177b4a',1,'lagrange']]],
-  ['iterate_5finorder_51',['iterate_inorder',['../namespacelagrange_1_1ui.html#a0568f287b6fe1e72b929e798861811b5',1,'lagrange::ui']]]
+  ['is_5fvariant_5ftype_50',['is_variant_type',['../classlagrange_1_1scene_1_1_value.html#a14b0a544e25f6619eb0196c94f379a06',1,'lagrange::scene::Value']]],
+  ['is_5fvertex_5fmanifold_51',['is_vertex_manifold',['../group__group-surfacemesh-utils.html#ga8c7a15cae60d68a94bac4068de177b4a',1,'lagrange']]],
+  ['iterate_5finorder_52',['iterate_inorder',['../namespacelagrange_1_1ui.html#a0568f287b6fe1e72b929e798861811b5',1,'lagrange::ui']]]
 ];

@@ -57,16 +57,16 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "../",
-"classlagrange_1_1_mesh_navigation.html#a8316e8d0bde5a7a8c8ef2feaa6b75f53",
-"classlagrange_1_1_surface_mesh.html#ad3cd66ddb6e7a1f1023d197653a9d02e",
-"classlagrange_1_1internal_1_1shared__ptr.html#ad760f68584c60d24fb58f9f8cc2944f5",
-"classlagrange_1_1ui_1_1_frame_buffer.html",
-"group__group-logger.html",
-"namespacelagrange.html#a8c7a15cae60d68a94bac4068de177b4a",
-"namespacelagrange_1_1ui.html#ac577d5a4adbc0f15743e1461c79c4d13",
-"structlagrange_1_1image_1_1_image_histogram.html#aad5729d76ea20f8aded557bc39d776bf",
-"structlagrange_1_1ui_1_1_hovered.html",
-"structlagrange_1_1ui_1_1_window_resize_event.html"
+"classlagrange_1_1_mesh_navigation.html#a9319875568c308aebf33469e0b4bab08",
+"classlagrange_1_1_surface_mesh.html#aeced0acd223fc3b2c198bdff67199dea",
+"classlagrange_1_1internal_1_1shared__ptr__access_3_01_t_00_01false_00_01true_01_4.html",
+"classlagrange_1_1ui_1_1_keybinds.html#a182c71e92968f9d892b82e69946b0980",
+"group__group-surfacemesh-attr-utils.html#ga4a2e525bede1624580d71782861b0cd6",
+"namespacelagrange.html#a312f57b0318728667933d7254778058b",
+"namespacelagrange_1_1ui.html#a9edcbc2592f83f6b2f1030d5dd345251",
+"structlagrange_1_1experimental_1_1_enum_to_scalar_3_01_scalar_enum_1_1_u_i_n_t8_01_4.html",
+"structlagrange_1_1ui_1_1_g_l_mesh.html",
+"structlagrange_1_1ui_1_1_viewer_1_1_window_options.html#a989d3e09b707fb1f4bc2355ba5855a0c"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

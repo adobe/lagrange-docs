@@ -70,7 +70,10 @@ var searchData=
   ['loggerpanel_67',['LoggerPanel',['../structlagrange_1_1ui_1_1_logger_panel.html',1,'lagrange::ui']]],
   ['logging_68',['Logging',['../group__group-logger.html',1,'']]],
   ['look_5fat_69',['look_at',['../namespacelagrange_1_1ui.html#a19124179c7426f109b244c0b0c7d6461',1,'lagrange::ui']]],
-  ['partitioning_70',['partitioning',['../namespacelagrange_1_1partitioning.html',1,'lagrange']]],
-  ['raycasting_71',['raycasting',['../namespacelagrange_1_1raycasting.html',1,'lagrange']]],
-  ['ui_72',['ui',['../namespacelagrange_1_1ui.html',1,'lagrange']]]
+  ['loop_70',['Loop',['../group__module-subdivision.html#ggaa3daa2f428c6be2b1cb394f3a525833da89d7b10cb4238977d2b523dfd9ea7745',1,'lagrange::subdivision']]],
+  ['loops_71',['loops',['../structlagrange_1_1_chain_edges_result.html#ac3c860fbe799df4f6a3849d51e08dfd4',1,'lagrange::ChainEdgesResult']]],
+  ['partitioning_72',['partitioning',['../namespacelagrange_1_1partitioning.html',1,'lagrange']]],
+  ['raycasting_73',['raycasting',['../namespacelagrange_1_1raycasting.html',1,'lagrange']]],
+  ['subdivision_74',['subdivision',['../namespacelagrange_1_1subdivision.html',1,'lagrange']]],
+  ['ui_75',['ui',['../namespacelagrange_1_1ui.html',1,'lagrange']]]
 ];

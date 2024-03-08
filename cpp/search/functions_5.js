@@ -1,7 +1,7 @@
 var searchData=
 [
   ['edgeaabbtree_0',['EdgeAABBTree',['../structlagrange_1_1bvh_1_1_edge_a_a_b_b_tree.html#add5d672df21cf5d9157453f22576742f',1,'lagrange::bvh::EdgeAABBTree']]],
-  ['eigen_5fto_5fsurface_5fmesh_1',['eigen_to_surface_mesh',['../namespacelagrange.html#a7934b43c189ee9cbc1a684ee38ac026c',1,'lagrange']]],
+  ['eigen_5fto_5fsurface_5fmesh_1',['eigen_to_surface_mesh',['../group__group-surfacemesh-utils.html#ga7934b43c189ee9cbc1a684ee38ac026c',1,'lagrange']]],
   ['embreeraycaster_2',['EmbreeRayCaster',['../classlagrange_1_1raycasting_1_1_embree_ray_caster.html#ab3221c3d429d0073beaf6c3d2c26ef39',1,'lagrange::raycasting::EmbreeRayCaster']]],
   ['empty_3',['empty',['../structlagrange_1_1bvh_1_1_edge_a_a_b_b_tree.html#a644718bb2fb240de962dc3c9a1fdf0dc',1,'lagrange::bvh::EdgeAABBTree::empty()'],['../classlagrange_1_1_attribute.html#a644718bb2fb240de962dc3c9a1fdf0dc',1,'lagrange::Attribute::empty()']]],
   ['enable_4',['enable',['../classlagrange_1_1ui_1_1_keybinds.html#a7e5392905b5def023b52e1a60cc62d61',1,'lagrange::ui::Keybinds::enable()'],['../classlagrange_1_1ui_1_1_systems.html#a174af31501762b5effab834474556ce3',1,'lagrange::ui::Systems::enable()']]],
@@ -16,5 +16,5 @@ var searchData=
   ['extract_5fdisjoint_5fsets_13',['extract_disjoint_sets',['../classlagrange_1_1_disjoint_sets.html#acf6e61dfdcdf34a6df2810a4e5bc0cc4',1,'lagrange::DisjointSets']]],
   ['extract_5ffloat_5fdata_14',['extract_float_data',['../classlagrange_1_1raycasting_1_1_embree_ray_caster.html#a677cb1c6755add458b91bb9bdc565192',1,'lagrange::raycasting::EmbreeRayCaster']]],
   ['extract_5fint_5fdata_15',['extract_int_data',['../classlagrange_1_1raycasting_1_1_embree_ray_caster.html#aeb50d64946302a4799a82778edaed1de',1,'lagrange::raycasting::EmbreeRayCaster']]],
-  ['extract_5fsubmesh_16',['extract_submesh',['../group__group-surfacemesh-attr-utils.html#ga6f1b4f791ba72765e9c19df688bffd1c',1,'lagrange']]]
+  ['extract_5fsubmesh_16',['extract_submesh',['../group__group-surfacemesh-utils.html#ga6f1b4f791ba72765e9c19df688bffd1c',1,'lagrange']]]
 ];

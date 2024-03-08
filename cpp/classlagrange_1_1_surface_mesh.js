@@ -1,5 +1,7 @@
 var classlagrange_1_1_surface_mesh =
 [
+    [ "BareMeshTag", "structlagrange_1_1_surface_mesh_1_1_bare_mesh_tag.html", null ],
+    [ "ReservedAttributeIds", "structlagrange_1_1_surface_mesh_1_1_reserved_attribute_ids.html", null ],
     [ "Scalar", "classlagrange_1_1_surface_mesh.html#a6e7ee8ed1fabd5e89d353a7e9596009e", null ],
     [ "Index", "classlagrange_1_1_surface_mesh.html#a726cb631080e40f5e472e0c3f6e59eda", null ],
     [ "SignedIndex", "classlagrange_1_1_surface_mesh.html#a423755e96078d85e91c2a579dfa884a8", null ],
@@ -12,6 +14,7 @@ var classlagrange_1_1_surface_mesh =
     [ "~SurfaceMesh", "classlagrange_1_1_surface_mesh.html#a80462de7e77a5231315f0e93e69fc1d2", null ],
     [ "SurfaceMesh", "classlagrange_1_1_surface_mesh.html#aab5f3271851e9674d6854d3be68b028c", null ],
     [ "SurfaceMesh", "classlagrange_1_1_surface_mesh.html#abe79736e3cd24cd01a150f9024122a97", null ],
+    [ "SurfaceMesh", "classlagrange_1_1_surface_mesh.html#afcce031cac2089eb461de50514ce32d3", null ],
     [ "operator=", "classlagrange_1_1_surface_mesh.html#a92946ffa35c6d3863f9784b858575cd9", null ],
     [ "operator=", "classlagrange_1_1_surface_mesh.html#a6282f62f8ac4dc937bd7881bc6e93a92", null ],
     [ "add_vertex", "classlagrange_1_1_surface_mesh.html#a676e602bf7c9e51e79980dabd1ade6e5", null ],
@@ -134,6 +137,7 @@ var classlagrange_1_1_surface_mesh =
     [ "ref_vertex_to_position", "classlagrange_1_1_surface_mesh.html#a0b8e21c22801c3e1b32392c15c4c9e05", null ],
     [ "get_corner_to_vertex", "classlagrange_1_1_surface_mesh.html#a8a4de76f0e87a0509babc2bd81c0abaf", null ],
     [ "ref_corner_to_vertex", "classlagrange_1_1_surface_mesh.html#ad3cd66ddb6e7a1f1023d197653a9d02e", null ],
+    [ "attr_id_vertex_to_position", "classlagrange_1_1_surface_mesh.html#a0453afe84f040b43f9c7cfa670065d4d", null ],
     [ "attr_id_vertex_to_positions", "classlagrange_1_1_surface_mesh.html#a5f1d893c997417a38024fd08c22fe42b", null ],
     [ "attr_id_corner_to_vertex", "classlagrange_1_1_surface_mesh.html#a3c2c966fb4632c7ed1f17c24cab22393", null ],
     [ "attr_id_facet_to_first_corner", "classlagrange_1_1_surface_mesh.html#a288fb4645b935efb8651c99c4e491844", null ],
@@ -194,14 +198,5 @@ var classlagrange_1_1_surface_mesh =
     [ "m_num_edges", "classlagrange_1_1_surface_mesh.html#af36a6efbaaf333de19eddd8f994b73fb", null ],
     [ "m_dimension", "classlagrange_1_1_surface_mesh.html#acd7623669a52f06362e2d6c394e72ca8", null ],
     [ "m_vertex_per_facet", "classlagrange_1_1_surface_mesh.html#a33cac9ba2ec56d46630bb3990de78881", null ],
-    [ "m_attributes", "classlagrange_1_1_surface_mesh.html#a584adfdcc5cb904c7f2699b82e2be777", null ],
-    [ "m_vertex_to_position_id", "classlagrange_1_1_surface_mesh.html#a766b8d537ba92821a24f5e276ba103b0", null ],
-    [ "m_corner_to_vertex_id", "classlagrange_1_1_surface_mesh.html#ac3fb19ce9e7ab94713c46c37259549aa", null ],
-    [ "m_facet_to_first_corner_id", "classlagrange_1_1_surface_mesh.html#a647fb2bd5d1a828f98d454f360c935bd", null ],
-    [ "m_corner_to_facet_id", "classlagrange_1_1_surface_mesh.html#a69900ffcacd435fa449cf237910ac8fc", null ],
-    [ "m_corner_to_edge_id", "classlagrange_1_1_surface_mesh.html#afc16ef5f6e0f90e512bb2a1aaebd14e4", null ],
-    [ "m_edge_to_first_corner_id", "classlagrange_1_1_surface_mesh.html#aae64205aa9a1d4624b8b38146fe7de68", null ],
-    [ "m_next_corner_around_edge_id", "classlagrange_1_1_surface_mesh.html#a79a86ca9a64aea592b1537231a5eb2cf", null ],
-    [ "m_vertex_to_first_corner_id", "classlagrange_1_1_surface_mesh.html#ab451cac9a1719b450b8ab3982c6b9554", null ],
-    [ "m_next_corner_around_vertex_id", "classlagrange_1_1_surface_mesh.html#ab8d35f6ecf3ce54e288a32a9df94785b", null ]
+    [ "m_attributes", "classlagrange_1_1_surface_mesh.html#a584adfdcc5cb904c7f2699b82e2be777", null ]
 ];

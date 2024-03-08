@@ -117,7 +117,9 @@ var annotated_dup =
       [ "python", null, [
         [ "PyAttribute", "classlagrange_1_1python_1_1_py_attribute.html", null ],
         [ "PyIndexedAttribute", "classlagrange_1_1python_1_1_py_indexed_attribute.html", null ],
-        [ "PythonLoggingSink", "classlagrange_1_1python_1_1_python_logging_sink.html", null ]
+        [ "PythonLoggingSink", "classlagrange_1_1python_1_1_python_logging_sink.html", null ],
+        [ "UserDataConverterTrampoline", "structlagrange_1_1python_1_1_user_data_converter_trampoline.html", null ],
+        [ "ValuePublicist", "classlagrange_1_1python_1_1_value_publicist.html", null ]
       ] ],
       [ "raycasting", "namespacelagrange_1_1raycasting.html", [
         [ "ClosestPointResult", "structlagrange_1_1raycasting_1_1_closest_point_result.html", null ],
@@ -128,6 +130,7 @@ var annotated_dup =
       [ "scene", null, [
         [ "Animation", "structlagrange_1_1scene_1_1_animation.html", null ],
         [ "Camera", "structlagrange_1_1scene_1_1_camera.html", null ],
+        [ "Extensions", "structlagrange_1_1scene_1_1_extensions.html", "structlagrange_1_1scene_1_1_extensions" ],
         [ "ImageLegacy", "structlagrange_1_1scene_1_1_image_legacy.html", null ],
         [ "Light", "structlagrange_1_1scene_1_1_light.html", null ],
         [ "MaterialExperimental", "structlagrange_1_1scene_1_1_material_experimental.html", null ],
@@ -139,9 +142,11 @@ var annotated_dup =
         [ "SimpleScene", "classlagrange_1_1scene_1_1_simple_scene.html", "classlagrange_1_1scene_1_1_simple_scene" ],
         [ "Skeleton", "structlagrange_1_1scene_1_1_skeleton.html", null ],
         [ "Texture", "structlagrange_1_1scene_1_1_texture.html", null ],
-        [ "TextureInfo", "structlagrange_1_1scene_1_1_texture_info.html", null ]
+        [ "TextureInfo", "structlagrange_1_1scene_1_1_texture_info.html", null ],
+        [ "UserDataConverter", "structlagrange_1_1scene_1_1_user_data_converter.html", null ],
+        [ "Value", "classlagrange_1_1scene_1_1_value.html", null ]
       ] ],
-      [ "subdivision", null, [
+      [ "subdivision", "namespacelagrange_1_1subdivision.html", [
         [ "internal", null, [
           [ "OSDUV", "structlagrange_1_1subdivision_1_1internal_1_1_o_s_d_u_v.html", null ],
           [ "OSDVertex", "structlagrange_1_1subdivision_1_1internal_1_1_o_s_d_vertex.html", null ]
@@ -319,12 +324,13 @@ var annotated_dup =
       [ "AdjacencyList", "classlagrange_1_1_adjacency_list.html", "classlagrange_1_1_adjacency_list" ],
       [ "Attribute", "classlagrange_1_1_attribute.html", "classlagrange_1_1_attribute" ],
       [ "AttributeBase", "classlagrange_1_1_attribute_base.html", "classlagrange_1_1_attribute_base" ],
+      [ "AttributeFilter", "structlagrange_1_1_attribute_filter.html", "structlagrange_1_1_attribute_filter" ],
       [ "AttributeName", "structlagrange_1_1_attribute_name.html", null ],
       [ "Attributes", "classlagrange_1_1_attributes.html", null ],
       [ "BadCastError", "structlagrange_1_1_bad_cast_error.html", null ],
       [ "BitField", "classlagrange_1_1_bit_field.html", "classlagrange_1_1_bit_field" ],
       [ "ChainEdgesOptions", "structlagrange_1_1_chain_edges_options.html", "structlagrange_1_1_chain_edges_options" ],
-      [ "ChainEdgesResult", "structlagrange_1_1_chain_edges_result.html", null ],
+      [ "ChainEdgesResult", "structlagrange_1_1_chain_edges_result.html", "structlagrange_1_1_chain_edges_result" ],
       [ "ComponentOptions", "structlagrange_1_1_component_options.html", "structlagrange_1_1_component_options" ],
       [ "ComputePointcloudPCAOutput", "structlagrange_1_1_compute_pointcloud_p_c_a_output.html", null ],
       [ "Connectivity", "classlagrange_1_1_connectivity.html", null ],
@@ -436,6 +442,9 @@ var annotated_dup =
       [ "test_compute_tangent_bitangent", null, [
         [ "TestComputeTangentBitangent", "classtests_1_1test__compute__tangent__bitangent_1_1_test_compute_tangent_bitangent.html", null ]
       ] ],
+      [ "test_compute_uv_distortion", null, [
+        [ "TestComputeUVDistortion", "classtests_1_1test__compute__uv__distortion_1_1_test_compute_u_v_distortion.html", null ]
+      ] ],
       [ "test_compute_vertex_normal", null, [
         [ "TestComputeVertexNormal", "classtests_1_1test__compute__vertex__normal_1_1_test_compute_vertex_normal.html", null ]
       ] ],
@@ -444,6 +453,9 @@ var annotated_dup =
       ] ],
       [ "test_detect_degenerate_facets", null, [
         [ "TestDetectDegenerateFacets", "classtests_1_1test__detect__degenerate__facets_1_1_test_detect_degenerate_facets.html", null ]
+      ] ],
+      [ "test_filter_attributes", null, [
+        [ "TestFilterAttributes", "classtests_1_1test__filter__attributes_1_1_test_filter_attributes.html", null ]
       ] ],
       [ "test_indexed_attribute", null, [
         [ "TestIndexedAttribute", "classtests_1_1test__indexed__attribute_1_1_test_indexed_attribute.html", null ]

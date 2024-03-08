@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.4"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Lagrange: /home/runner/work/lagrange-docs/lagrange-docs/lagrange_tmp/modules/subdivision/src/MeshConverter.h Source File</title>
+<title>Lagrange: MeshConverter.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -113,32 +113,44 @@ $(document).ready(function(){initNavTree('_mesh_converter_8h_source.html',''); i
   <div class="headertitle"><div class="title">MeshConverter.h</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;lagrange/subdivision/mesh_subdivision.h&gt;</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">namespace </span>lagrange::subdivision {</div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment">// Proxy type to forward both mesh + user options to TopologyRefinerFactory</span></div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> SurfaceMeshT&gt;</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="structlagrange_1_1subdivision_1_1_mesh_converter.html">    9</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structlagrange_1_1subdivision_1_1_mesh_converter.html">MeshConverter</a></div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>{</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    <span class="keyword">using </span>SurfaceMeshType = SurfaceMeshT;</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <span class="keyword">const</span> SurfaceMeshType&amp; mesh;</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <span class="keyword">const</span> <a class="code hl_struct" href="structlagrange_1_1subdivision_1_1_subdivision_options.html">SubdivisionOptions</a>&amp; options;</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    <span class="keyword">const</span> std::vector&lt;AttributeId&gt;&amp; face_varying_attributes;</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>};</div>
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * Copyright 2024 Adobe. All rights reserved.</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> * This file is licensed to you under the Apache License, Version 2.0 (the &quot;License&quot;);</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> * you may not use this file except in compliance with the License. You may obtain a copy</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> * of the License at http://www.apache.org/licenses/LICENSE-2.0</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment"> * Unless required by applicable law or agreed to in writing, software distributed under</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment"> * the License is distributed on an &quot;AS IS&quot; BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment"> * OF ANY KIND, either express or implied. See the License for the specific language</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment"> * governing permissions and limitations under the License.</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;lagrange/subdivision/mesh_subdivision.h&gt;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacelagrange_1_1subdivision.html">lagrange::subdivision</a> {</div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>} <span class="comment">// namespace lagrange::subdivision</span></div>
-<div class="ttc" id="astructlagrange_1_1subdivision_1_1_mesh_converter_html"><div class="ttname"><a href="structlagrange_1_1subdivision_1_1_mesh_converter.html">lagrange::subdivision::MeshConverter</a></div><div class="ttdef"><b>Definition:</b> MeshConverter.h:10</div></div>
-<div class="ttc" id="astructlagrange_1_1subdivision_1_1_subdivision_options_html"><div class="ttname"><a href="structlagrange_1_1subdivision_1_1_subdivision_options.html">lagrange::subdivision::SubdivisionOptions</a></div><div class="ttdoc">Mesh subdivision options.</div><div class="ttdef"><b>Definition:</b> mesh_subdivision.h:162</div></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment">// Proxy type to forward both mesh + user options to TopologyRefinerFactory</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> SurfaceMeshT&gt;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="structlagrange_1_1subdivision_1_1_mesh_converter.html">   20</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structlagrange_1_1subdivision_1_1_mesh_converter.html">MeshConverter</a></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>{</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <span class="keyword">using </span>SurfaceMeshType = SurfaceMeshT;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="keyword">const</span> SurfaceMeshType&amp; mesh;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="keyword">const</span> <a class="code hl_struct" href="structlagrange_1_1subdivision_1_1_subdivision_options.html">SubdivisionOptions</a>&amp; options;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="keyword">const</span> std::vector&lt;AttributeId&gt;&amp; face_varying_attributes;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>};</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>} <span class="comment">// namespace lagrange::subdivision</span></div>
+<div class="ttc" id="anamespacelagrange_1_1subdivision_html"><div class="ttname"><a href="namespacelagrange_1_1subdivision.html">lagrange::subdivision</a></div><div class="ttdoc">Subdivision surfaces.</div><div class="ttdef"><b>Definition:</b> mesh_subdivision.h:32</div></div>
+<div class="ttc" id="astructlagrange_1_1subdivision_1_1_mesh_converter_html"><div class="ttname"><a href="structlagrange_1_1subdivision_1_1_mesh_converter.html">lagrange::subdivision::MeshConverter</a></div><div class="ttdef"><b>Definition:</b> MeshConverter.h:21</div></div>
+<div class="ttc" id="astructlagrange_1_1subdivision_1_1_subdivision_options_html"><div class="ttname"><a href="structlagrange_1_1subdivision_1_1_subdivision_options.html">lagrange::subdivision::SubdivisionOptions</a></div><div class="ttdoc">Mesh subdivision options.</div><div class="ttdef"><b>Definition:</b> mesh_subdivision.h:165</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_ffe0c5b59ab296f5b60af44b6910d9b9.html">src</a></li><li class="navelem"><b>MeshConverter.h</b></li>
+    <li class="navelem"><b>MeshConverter.h</b></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
   </ul>
 </div>

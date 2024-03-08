@@ -10,5 +10,6 @@ var searchData=
   ['load_5fuvs_7',['load_uvs',['../structlagrange_1_1io_1_1_load_options.html#a7e66d9711414b8cc4e8bd98b5e9c3e70',1,'lagrange::io::LoadOptions']]],
   ['load_5fvertex_5fcolors_8',['load_vertex_colors',['../structlagrange_1_1io_1_1_load_options.html#a177eb10b677f5f83f6e34288d26bed89',1,'lagrange::io::LoadOptions']]],
   ['load_5fweights_9',['load_weights',['../structlagrange_1_1io_1_1_load_options.html#a2ac615607c358099b3f2e2c4a06599ed',1,'lagrange::io::LoadOptions']]],
-  ['local_10',['local',['../structlagrange_1_1ui_1_1_bounds.html#a63f5b0ac4528c51dc747555a8113fdc2',1,'lagrange::ui::Bounds']]]
+  ['local_10',['local',['../structlagrange_1_1ui_1_1_bounds.html#a63f5b0ac4528c51dc747555a8113fdc2',1,'lagrange::ui::Bounds']]],
+  ['loops_11',['loops',['../structlagrange_1_1_chain_edges_result.html#ac3c860fbe799df4f6a3849d51e08dfd4',1,'lagrange::ChainEdgesResult']]]
 ];

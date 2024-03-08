@@ -34,6 +34,10 @@ var group__group_utils =
       [ "output_edge_index", "structlagrange_1_1_chain_edges_options.html#acf021c0cc9bd78f90ec3a4a492ccc850", null ],
       [ "close_loop_with_identical_vertices", "structlagrange_1_1_chain_edges_options.html#aa7cff3abc485cc580e790f40e1927389", null ]
     ] ],
+    [ "ChainEdgesResult< Index >", "structlagrange_1_1_chain_edges_result.html", [
+      [ "loops", "structlagrange_1_1_chain_edges_result.html#ac3c860fbe799df4f6a3849d51e08dfd4", null ],
+      [ "chains", "structlagrange_1_1_chain_edges_result.html#a77557eee4ea17c27d3c6a5405d0111ca", null ]
+    ] ],
     [ "DisjointSets< IndexType >", "classlagrange_1_1_disjoint_sets.html", [
       [ "DisjointSets", "classlagrange_1_1_disjoint_sets.html#a4093e2fd37ea3ba9f1512436b5911650", null ],
       [ "DisjointSets", "classlagrange_1_1_disjoint_sets.html#aa7e84823e600fe5ade68b6bc46e7727b", null ],
@@ -48,5 +52,7 @@ var group__group_utils =
     ] ],
     [ "SmallVector< T, N >", "classlagrange_1_1_small_vector.html", null ],
     [ "StackSet< T, N >", "structlagrange_1_1_stack_set.html", null ],
-    [ "StackVector< T, N >", "structlagrange_1_1_stack_vector.html", null ]
+    [ "StackVector< T, N >", "structlagrange_1_1_stack_vector.html", null ],
+    [ "lagrange::chain_directed_edges", "group__group-utils.html#gadc37a853021fc87c80d53f7cb0a21ae5", null ],
+    [ "lagrange::chain_undirected_edges", "group__group-utils.html#ga85a228fdc8080ef275f963576cd9b4c9", null ]
 ];

@@ -27,5 +27,6 @@ var searchData=
   ['error_24',['Error',['../structlagrange_1_1_error.html',1,'lagrange']]],
   ['eventemitter_25',['EventEmitter',['../structlagrange_1_1ui_1_1_event_emitter.html',1,'lagrange::ui']]],
   ['exactpredicates_26',['ExactPredicates',['../classlagrange_1_1_exact_predicates.html',1,'lagrange']]],
-  ['exactpredicatesshewchuk_27',['ExactPredicatesShewchuk',['../classlagrange_1_1_exact_predicates_shewchuk.html',1,'lagrange']]]
+  ['exactpredicatesshewchuk_27',['ExactPredicatesShewchuk',['../classlagrange_1_1_exact_predicates_shewchuk.html',1,'lagrange']]],
+  ['extensions_28',['Extensions',['../structlagrange_1_1scene_1_1_extensions.html',1,'lagrange::scene']]]
 ];
