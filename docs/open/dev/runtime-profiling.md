@@ -60,17 +60,19 @@ CMake when building Lagrange with `LAGRANGE_WITH_TRACY=ON`.
 
 ### macOS
 
-1. Install prerequisites using homebrew
+1. Install the Tracy profiler with Homebrew
+
     ```
-    brew install freetype capstone gtk glfw
+    brew install tracy
     ```
-2. Build the profiler (server):
+    !!! warning "Version Mismatch"
+        When installing the Tracy profiler via this method, make sure that the version installed
+        by Homebrew matches the version used in your CMake project.
+
+2. Run the profiler:
+
     ```
-    cd <build>/_deps/tracy-src/profiler/build/unix
-    make release -j8
+    tracy
     ```
-3. Run the profiler:
-    ```
-    ./Tracy-release
-    ```
-4. Run your program, and click "Connect" in the Tracy profiler.
+
+3. Run your program, and click "Connect" in the Tracy profiler.
