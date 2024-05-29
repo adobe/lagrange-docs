@@ -1502,17 +1502,24 @@ CMake when building Lagrange with <code>LAGRANGE_WITH_TRACY=ON</code>.</p>
 </ol>
 <h3 id="macos">macOS</h3>
 <ol>
-<li>Install prerequisites using homebrew
-    <div class="highlight"><pre><span></span><code>brew install freetype capstone gtk glfw
-</code></pre></div></li>
-<li>Build the profiler (server):
-    <div class="highlight"><pre><span></span><code>cd &lt;build&gt;/_deps/tracy-src/profiler/build/unix
-make release -j8
-</code></pre></div></li>
-<li>Run the profiler:
-    <div class="highlight"><pre><span></span><code>./Tracy-release
-</code></pre></div></li>
-<li>Run your program, and click "Connect" in the Tracy profiler.</li>
+<li>
+<p>Install the Tracy profiler with Homebrew</p>
+<div class="highlight"><pre><span></span><code>brew install tracy
+</code></pre></div>
+<div class="admonition warning">
+<p class="admonition-title">Version Mismatch</p>
+<p>When installing the Tracy profiler via this method, make sure that the version installed
+by Homebrew matches the version used in your CMake project.</p>
+</div>
+</li>
+<li>
+<p>Run the profiler:</p>
+<div class="highlight"><pre><span></span><code>tracy
+</code></pre></div>
+</li>
+<li>
+<p>Run your program, and click "Connect" in the Tracy profiler.</p>
+</li>
 </ol>
 
 

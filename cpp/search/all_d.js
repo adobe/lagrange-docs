@@ -1,7 +1,7 @@
 var searchData=
 [
   ['name_0',['Name',['../structlagrange_1_1ui_1_1_name.html',1,'lagrange::ui']]],
-  ['name_1',['name',['../structlagrange_1_1ui_1_1_file_filter.html#a9b45b3e13bd9167aab02e17e08916231',1,'lagrange::ui::FileFilter']]],
+  ['name_1',['name',['../structlagrange_1_1scene_1_1_image_experimental.html#a9b45b3e13bd9167aab02e17e08916231',1,'lagrange::scene::ImageExperimental::name()'],['../structlagrange_1_1ui_1_1_file_filter.html#a9b45b3e13bd9167aab02e17e08916231',1,'lagrange::ui::FileFilter::name()']]],
   ['names_2',['names',['../structlagrange_1_1io_1_1internal_1_1_obj_reader_result.html#a9c4192866025823ecd5592526c757c0b',1,'lagrange::io::internal::ObjReaderResult']]],
   ['nearest_3',['nearest',['../classlagrange_1_1image_1_1_raw_input_image.html#a87f005e6dc003d6a0a87499d9fb40590ad879c351426770bc0b13c3628db1e636',1,'lagrange::image::RawInputImage']]],
   ['nearest_5fneighbor_5finterpolation_4',['nearest_neighbor_interpolation',['../namespacelagrange_1_1image.html#a273722587069b6e7262b36efee33088f',1,'lagrange::image']]],
@@ -24,6 +24,8 @@ var searchData=
   ['normalweightingtype_21',['NormalWeightingType',['../group__group-surfacemesh-utils.html#gaa88e833ed770762b02e187f0c2377d3d',1,'lagrange']]],
   ['nth_22',['nth',['../structlagrange_1_1mapbox_1_1util_1_1nth.html',1,'lagrange::mapbox::util']]],
   ['null_5farea_5fthreshold_23',['null_area_threshold',['../structlagrange_1_1_remove_null_area_facets_options.html#ad49f5977fbc988e5d27cb0ece3e6cb00',1,'lagrange::RemoveNullAreaFacetsOptions']]],
-  ['num_5flevels_24',['num_levels',['../structlagrange_1_1subdivision_1_1_subdivision_options.html#a2b40d61424462dd2754d3417e3176afd',1,'lagrange::subdivision::SubdivisionOptions']]],
-  ['num_5frepresentatives_25',['num_representatives',['../structlagrange_1_1internal_1_1_bucket_sort_offset.html#ab3caef73b39b6c78fef58146d093e08d',1,'lagrange::internal::BucketSortOffset::num_representatives()'],['../structlagrange_1_1internal_1_1_bucket_sort_result.html#ab3caef73b39b6c78fef58146d093e08d',1,'lagrange::internal::BucketSortResult::num_representatives()']]]
+  ['num_5fchannels_24',['num_channels',['../structlagrange_1_1scene_1_1_image_buffer_experimental.html#ae072a7d737d3528b7abe7833ccba24a7',1,'lagrange::scene::ImageBufferExperimental']]],
+  ['num_5fcolor_5fused_25',['num_color_used',['../structlagrange_1_1_greedy_coloring_options.html#a81f5acc6d6adddb797813a0eb72a1d47',1,'lagrange::GreedyColoringOptions']]],
+  ['num_5flevels_26',['num_levels',['../structlagrange_1_1subdivision_1_1_subdivision_options.html#a2b40d61424462dd2754d3417e3176afd',1,'lagrange::subdivision::SubdivisionOptions']]],
+  ['num_5frepresentatives_27',['num_representatives',['../structlagrange_1_1internal_1_1_bucket_sort_result.html#ab3caef73b39b6c78fef58146d093e08d',1,'lagrange::internal::BucketSortResult::num_representatives()'],['../structlagrange_1_1internal_1_1_bucket_sort_offset.html#ab3caef73b39b6c78fef58146d093e08d',1,'lagrange::internal::BucketSortOffset::num_representatives()']]]
 ];

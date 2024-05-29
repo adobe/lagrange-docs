@@ -23,6 +23,5 @@ var namespacelagrange_1_1subdivision =
     ] ],
     [ "subdivide_mesh", "group__module-subdivision.html#ga1cc8ac3c87ed90dbc6e657b3ddd87c1d", null ],
     [ "midpoint_subdivision", "group__module-subdivision.html#ga5bb45b1783fc315efefb291e2d2dbd9f", null ],
-    [ "sqrt_subdivision", "group__module-subdivision.html#ga956eef31bf35351dff901a7f4d758f5f", null ],
-    [ "visit_attribute", "namespacelagrange_1_1subdivision.html#a21f5f7e62db26fb62f258a8d072ed640", null ]
+    [ "sqrt_subdivision", "group__module-subdivision.html#ga956eef31bf35351dff901a7f4d758f5f", null ]
 ];

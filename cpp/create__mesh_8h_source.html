@@ -245,14 +245,13 @@ $(document).ready(function(){initNavTree('create__mesh_8h_source.html',''); init
 <div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>        <span class="stringliteral">&quot;vertices cannot be an rvalue&quot;</span>);</div>
 <div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>}</div>
 <div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span> </div>
-<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span> </div>
-<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>std::unique_ptr&lt;TriangleMesh3D&gt; create_cube();</div>
-<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span> </div>
-<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>std::unique_ptr&lt;TriangleMesh3D&gt; create_quad(<span class="keywordtype">bool</span> with_center_vertex);</div>
-<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span> </div>
-<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>std::unique_ptr&lt;TriangleMesh3D&gt; create_sphere(<span class="keywordtype">double</span> refine_order = 2);</div>
-<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span> </div>
-<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>} <span class="comment">// namespace lagrange</span></div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>std::unique_ptr&lt;TriangleMesh3D&gt; LA_CORE_API create_cube();</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span> </div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>std::unique_ptr&lt;TriangleMesh3D&gt; LA_CORE_API create_quad(<span class="keywordtype">bool</span> with_center_vertex);</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span> </div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>std::unique_ptr&lt;TriangleMesh3D&gt; LA_CORE_API create_sphere(<span class="keywordtype">double</span> refine_order = 2);</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span> </div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>} <span class="comment">// namespace lagrange</span></div>
 <div class="ttc" id="aclasslagrange_1_1_mesh_html"><div class="ttname"><a href="classlagrange_1_1_mesh.html">lagrange::Mesh</a></div><div class="ttdef"><b>Definition:</b> Mesh.h:48</div></div>
 <div class="ttc" id="anamespacelagrange_html"><div class="ttname"><a href="namespacelagrange.html">lagrange</a></div><div class="ttdoc">Main namespace for Lagrange.</div><div class="ttdef"><b>Definition:</b> AABBIGL.h:30</div></div>
 <div class="ttc" id="anamespacelagrange_html_a01a55c916bd22d4ee64baa54c4993344"><div class="ttname"><a href="namespacelagrange.html#a01a55c916bd22d4ee64baa54c4993344">lagrange::create_mesh</a></div><div class="ttdeci">auto create_mesh(const Eigen::MatrixBase&lt; DerivedV &gt; &amp;vertices, const Eigen::MatrixBase&lt; DerivedF &gt; &amp;facets)</div><div class="ttdoc">This function create a new mesh given the vertex and facet arrays by copying data into the Mesh objec...</div><div class="ttdef"><b>Definition:</b> create_mesh.h:39</div></div>

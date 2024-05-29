@@ -13,20 +13,37 @@ Classes
 .. autoapisummary::
 
    scene.Animation
+   scene.AnimationList
+   scene.BufferList
    scene.Camera
+   scene.CameraList
+   scene.ElementIdList
+   scene.Extensions
    scene.FacetAllocationStrategy
-   scene.ImageLegacy
+   scene.Image
+   scene.ImageBuffer
+   scene.ImageList
    scene.Light
+   scene.LightList
    scene.Material
+   scene.MaterialList
    scene.MeshInstance3D
    scene.Node
+   scene.NodeList
    scene.RemeshingOptions
    scene.Scene
    scene.SceneMeshInstance
+   scene.SceneMeshInstanceList
    scene.SimpleScene3D
    scene.Skeleton
+   scene.SkeletonList
+   scene.SurfaceMeshList
    scene.Texture
    scene.TextureInfo
+   scene.TextureList
+   scene.ValueList
+   scene.ValueMap
+   scene.ValueUnorderedMap
 
 
 
@@ -35,8 +52,6 @@ Functions
 
 .. autoapisummary::
 
-   scene.add_child
-   scene.add_mesh
    scene.compute_global_node_transform
    scene.mesh_to_simple_scene
    scene.meshes_to_simple_scene
@@ -47,8 +62,84 @@ Functions
 .. py:class:: Animation
 
 
+   .. py:property:: extensions
+      :type: lagrange.scene.Extensions
+
+
    .. py:property:: name
       :type: str
+
+
+
+.. py:class:: AnimationList(arg: Iterable[lagrange.scene.Animation], /)
+
+
+   None
+
+   .. py:method:: append(arg: lagrange.scene.Animation, /) -> None
+
+      Append `arg` to the end of the list.
+
+
+   .. py:method:: clear() -> None
+
+      Remove all items from list.
+
+
+   .. py:method:: extend(arg: lagrange.scene.AnimationList, /) -> None
+
+      Extend `self` by appending elements from `arg`.
+
+
+   .. py:method:: insert(arg0: int, arg1: lagrange.scene.Animation, /) -> None
+
+      Insert object `arg1` before index `arg0`.
+
+
+   .. py:method:: pop(index: int = -1) -> lagrange.scene.Animation
+
+      Remove and return item at `index` (default last).
+
+
+
+.. py:class:: BufferList(arg: Iterable[int], /)
+
+
+   None
+
+   .. py:method:: append(arg: int, /) -> None
+
+      Append `arg` to the end of the list.
+
+
+   .. py:method:: clear() -> None
+
+      Remove all items from list.
+
+
+   .. py:method:: count(arg: int, /) -> int
+
+      Return number of occurrences of `arg`.
+
+
+   .. py:method:: extend(arg: lagrange.scene.BufferList, /) -> None
+
+      Extend `self` by appending elements from `arg`.
+
+
+   .. py:method:: insert(arg0: int, arg1: int, /) -> None
+
+      Insert object `arg1` before index `arg0`.
+
+
+   .. py:method:: pop(index: int = -1) -> int
+
+      Remove and return item at `index` (default last).
+
+
+   .. py:method:: remove(arg: int, /) -> None
+
+      Remove first occurrence of `arg`.
 
 
 
@@ -77,6 +168,10 @@ Functions
 
    .. py:property:: aspect_ratio
       :type: float
+
+
+   .. py:property:: extensions
+      :type: lagrange.scene.Extensions
 
 
    .. py:property:: far_plane
@@ -124,6 +219,96 @@ Functions
 
 
 
+.. py:class:: CameraList(arg: Iterable[lagrange.scene.Camera], /)
+
+
+   None
+
+   .. py:method:: append(arg: lagrange.scene.Camera, /) -> None
+
+      Append `arg` to the end of the list.
+
+
+   .. py:method:: clear() -> None
+
+      Remove all items from list.
+
+
+   .. py:method:: extend(arg: lagrange.scene.CameraList, /) -> None
+
+      Extend `self` by appending elements from `arg`.
+
+
+   .. py:method:: insert(arg0: int, arg1: lagrange.scene.Camera, /) -> None
+
+      Insert object `arg1` before index `arg0`.
+
+
+   .. py:method:: pop(index: int = -1) -> lagrange.scene.Camera
+
+      Remove and return item at `index` (default last).
+
+
+
+.. py:class:: ElementIdList(arg: Iterable[int], /)
+
+
+   None
+
+   .. py:method:: append(arg: int, /) -> None
+
+      Append `arg` to the end of the list.
+
+
+   .. py:method:: clear() -> None
+
+      Remove all items from list.
+
+
+   .. py:method:: count(arg: int, /) -> int
+
+      Return number of occurrences of `arg`.
+
+
+   .. py:method:: extend(arg: lagrange.scene.ElementIdList, /) -> None
+
+      Extend `self` by appending elements from `arg`.
+
+
+   .. py:method:: insert(arg0: int, arg1: int, /) -> None
+
+      Insert object `arg1` before index `arg0`.
+
+
+   .. py:method:: pop(index: int = -1) -> int
+
+      Remove and return item at `index` (default last).
+
+
+   .. py:method:: remove(arg: int, /) -> None
+
+      Remove first occurrence of `arg`.
+
+
+
+.. py:class:: Extensions(**kwargs)
+
+
+   None
+
+   .. py:property:: data
+      :type: lagrange.scene.ValueUnorderedMap
+
+
+   .. py:property:: empty
+      :type: bool
+
+
+   .. py:property:: size
+      :type: int
+
+
+
 .. py:class:: FacetAllocationStrategy(*args, **kwds)
 
 
@@ -152,82 +337,91 @@ Functions
       
 
 
-.. py:class:: ImageLegacy
+.. py:class:: Image
 
 
    None
 
-   .. py:class:: Type(*args, **kwds)
+   .. py:property:: extensions
+      :type: lagrange.scene.Extensions
 
+      Additional data associated with the image
 
-      Bases: :py:obj:`enum.Enum`
+   .. py:property:: image
+      :type: lagrange.scene.ImageBuffer
 
-      <attribute '__doc__' of 'Type' objects>
-
-      .. py:attribute:: Bmp
-         :type: Any
-
-         
-
-      .. py:attribute:: Gif
-         :type: Any
-
-         
-
-      .. py:attribute:: Jpeg
-         :type: Any
-
-         
-
-      .. py:attribute:: Png
-         :type: Any
-
-         
-
-      .. py:attribute:: Unknown
-         :type: Any
-
-         
-
-
-   .. py:property:: channel
-      :type: lagrange.image.ImageChannel
-
-
-   .. py:property:: data
-      :type: lagrange.image.ImageStorage
-
-
-   .. py:property:: element_size
-      :type: int
-
-
-   .. py:property:: height
-      :type: int
-
+      Image buffer
 
    .. py:property:: name
       :type: str
 
+      Name of the image object
+
+   .. py:property:: uri
+      :type: os.PathLike
+
+      URI of the image file
+
+
+.. py:class:: ImageBuffer
+
+
+   None
+
+   .. py:property:: data
+      :type: object
+
+      Raw image data.
+
+   .. py:property:: dtype
+      :type: Optional[type]
+
+      The element data type of the image buffer.
+
+   .. py:property:: height
+      :type: int
+
+      Image height
 
    .. py:property:: num_channels
       :type: int
 
-
-   .. py:property:: precision
-      :type: lagrange.image.ImagePrecision
-
-
-   .. py:property:: type
-      :type: lagrange.scene.ImageLegacy.Type
-
-
-   .. py:property:: uri
-      :type: str
-
+      Number of channels in each pixel
 
    .. py:property:: width
       :type: int
+
+      Image width
+
+
+.. py:class:: ImageList(arg: Iterable[lagrange.scene.Image], /)
+
+
+   None
+
+   .. py:method:: append(arg: lagrange.scene.Image, /) -> None
+
+      Append `arg` to the end of the list.
+
+
+   .. py:method:: clear() -> None
+
+      Remove all items from list.
+
+
+   .. py:method:: extend(arg: lagrange.scene.ImageList, /) -> None
+
+      Extend `self` by appending elements from `arg`.
+
+
+   .. py:method:: insert(arg0: int, arg1: lagrange.scene.Image, /) -> None
+
+      Insert object `arg1` before index `arg0`.
+
+
+   .. py:method:: pop(index: int = -1) -> lagrange.scene.Image
+
+      Remove and return item at `index` (default last).
 
 
 
@@ -314,6 +508,10 @@ Functions
       :type: numpy.typing.NDArray
 
 
+   .. py:property:: extensions
+      :type: lagrange.scene.Extensions
+
+
    .. py:property:: intensity
       :type: float
 
@@ -340,6 +538,37 @@ Functions
 
    .. py:property:: up
       :type: numpy.typing.NDArray
+
+
+
+.. py:class:: LightList(arg: Iterable[lagrange.scene.Light], /)
+
+
+   None
+
+   .. py:method:: append(arg: lagrange.scene.Light, /) -> None
+
+      Append `arg` to the end of the list.
+
+
+   .. py:method:: clear() -> None
+
+      Remove all items from list.
+
+
+   .. py:method:: extend(arg: lagrange.scene.LightList, /) -> None
+
+      Extend `self` by appending elements from `arg`.
+
+
+   .. py:method:: insert(arg0: int, arg1: lagrange.scene.Light, /) -> None
+
+      Insert object `arg1` before index `arg0`.
+
+
+   .. py:method:: pop(index: int = -1) -> lagrange.scene.Light
+
+      Remove and return item at `index` (default last).
 
 
 
@@ -399,6 +628,10 @@ Functions
       :type: numpy.typing.NDArray
 
 
+   .. py:property:: extensions
+      :type: lagrange.scene.Extensions
+
+
    .. py:property:: metallic_roughness_texture
       :type: lagrange.scene.TextureInfo
 
@@ -432,6 +665,37 @@ Functions
 
 
 
+.. py:class:: MaterialList(arg: Iterable[lagrange.scene.Material], /)
+
+
+   None
+
+   .. py:method:: append(arg: lagrange.scene.Material, /) -> None
+
+      Append `arg` to the end of the list.
+
+
+   .. py:method:: clear() -> None
+
+      Remove all items from list.
+
+
+   .. py:method:: extend(arg: lagrange.scene.MaterialList, /) -> None
+
+      Extend `self` by appending elements from `arg`.
+
+
+   .. py:method:: insert(arg0: int, arg1: lagrange.scene.Material, /) -> None
+
+      Insert object `arg1` before index `arg0`.
+
+
+   .. py:method:: pop(index: int = -1) -> lagrange.scene.Material
+
+      Remove and return item at `index` (default last).
+
+
+
 .. py:class:: MeshInstance3D
 
 
@@ -452,19 +716,23 @@ Functions
    None
 
    .. py:property:: cameras
-      :type: list[int]
+      :type: lagrange.scene.ElementIdList
 
 
    .. py:property:: children
-      :type: list[int]
+      :type: lagrange.scene.ElementIdList
+
+
+   .. py:property:: extensions
+      :type: lagrange.scene.Extensions
 
 
    .. py:property:: lights
-      :type: list[int]
+      :type: lagrange.scene.ElementIdList
 
 
    .. py:property:: meshes
-      :type: list[lagrange.scene.SceneMeshInstance]
+      :type: lagrange.scene.SceneMeshInstanceList
 
 
    .. py:property:: name
@@ -476,7 +744,39 @@ Functions
 
 
    .. py:property:: transform
-      :type: list[list[float]]
+      :type: numpy.typing.NDArray
+
+      The affine transform associated with this node
+
+
+.. py:class:: NodeList(arg: Iterable[lagrange.scene.Node], /)
+
+
+   None
+
+   .. py:method:: append(arg: lagrange.scene.Node, /) -> None
+
+      Append `arg` to the end of the list.
+
+
+   .. py:method:: clear() -> None
+
+      Remove all items from list.
+
+
+   .. py:method:: extend(arg: lagrange.scene.NodeList, /) -> None
+
+      Extend `self` by appending elements from `arg`.
+
+
+   .. py:method:: insert(arg0: int, arg1: lagrange.scene.Node, /) -> None
+
+      Insert object `arg1` before index `arg0`.
+
+
+   .. py:method:: pop(index: int = -1) -> lagrange.scene.Node
+
+      Remove and return item at `index` (default last).
 
 
 
@@ -500,27 +800,31 @@ Functions
    A 3D scene
 
    .. py:property:: animations
-      :type: list[lagrange.scene.Animation]
+      :type: lagrange.scene.AnimationList
 
 
    .. py:property:: cameras
-      :type: list[lagrange.scene.Camera]
+      :type: lagrange.scene.CameraList
+
+
+   .. py:property:: extensions
+      :type: lagrange.scene.Extensions
 
 
    .. py:property:: images
-      :type: list[lagrange.scene.ImageLegacy]
+      :type: lagrange.scene.ImageList
 
 
    .. py:property:: lights
-      :type: list[lagrange.scene.Light]
+      :type: lagrange.scene.LightList
 
 
    .. py:property:: materials
-      :type: list[lagrange.scene.Material]
+      :type: lagrange.scene.MaterialList
 
 
    .. py:property:: meshes
-      :type: list[lagrange.core.SurfaceMesh]
+      :type: lagrange.scene.SurfaceMeshList
 
 
    .. py:property:: name
@@ -528,15 +832,38 @@ Functions
 
 
    .. py:property:: nodes
-      :type: list[lagrange.scene.Node]
+      :type: lagrange.scene.NodeList
+
+
+   .. py:property:: root_nodes
+      :type: lagrange.scene.ElementIdList
 
 
    .. py:property:: skeletons
-      :type: list[lagrange.scene.Skeleton]
+      :type: lagrange.scene.SkeletonList
 
 
    .. py:property:: textures
-      :type: list[lagrange.scene.Texture]
+      :type: lagrange.scene.TextureList
+
+
+   .. py:method:: add(element: Union[lagrange.scene.Node, lagrange.core.SurfaceMesh, lagrange.scene.Image, lagrange.scene.Texture, lagrange.scene.Material, lagrange.scene.Light, lagrange.scene.Camera, lagrange.scene.Skeleton, lagrange.scene.Animation]) -> int
+
+      Add an element to the scene.
+
+      :param element: The element to add to the scene. E.g. node, mesh, image, texture, material, light, camera, skeleton, or animation.
+
+      :returns: The id of the added element.
+
+
+   .. py:method:: add_child(parent_id: int, child_id: int) -> None
+
+      Add a child node to a parent node.
+
+      :param parent_id: The parent node id.
+      :param child_id: The child node id.
+
+      :returns: The id of the added child node.
 
 
 
@@ -546,11 +873,42 @@ Functions
    Mesh and material index of a node
 
    .. py:property:: materials
-      :type: list[int]
+      :type: lagrange.scene.ElementIdList
 
 
    .. py:property:: mesh
       :type: int
+
+
+
+.. py:class:: SceneMeshInstanceList(arg: Iterable[lagrange.scene.SceneMeshInstance], /)
+
+
+   None
+
+   .. py:method:: append(arg: lagrange.scene.SceneMeshInstance, /) -> None
+
+      Append `arg` to the end of the list.
+
+
+   .. py:method:: clear() -> None
+
+      Remove all items from list.
+
+
+   .. py:method:: extend(arg: lagrange.scene.SceneMeshInstanceList, /) -> None
+
+      Extend `self` by appending elements from `arg`.
+
+
+   .. py:method:: insert(arg0: int, arg1: lagrange.scene.SceneMeshInstance, /) -> None
+
+      Insert object `arg1` before index `arg0`.
+
+
+   .. py:method:: pop(index: int = -1) -> lagrange.scene.SceneMeshInstance
+
+      Remove and return item at `index` (default last).
 
 
 
@@ -597,8 +955,74 @@ Functions
 .. py:class:: Skeleton
 
 
+   .. py:property:: extensions
+      :type: lagrange.scene.Extensions
+
+
    .. py:property:: meshes
-      :type: list[int]
+      :type: lagrange.scene.ElementIdList
+
+
+
+.. py:class:: SkeletonList(arg: Iterable[lagrange.scene.Skeleton], /)
+
+
+   None
+
+   .. py:method:: append(arg: lagrange.scene.Skeleton, /) -> None
+
+      Append `arg` to the end of the list.
+
+
+   .. py:method:: clear() -> None
+
+      Remove all items from list.
+
+
+   .. py:method:: extend(arg: lagrange.scene.SkeletonList, /) -> None
+
+      Extend `self` by appending elements from `arg`.
+
+
+   .. py:method:: insert(arg0: int, arg1: lagrange.scene.Skeleton, /) -> None
+
+      Insert object `arg1` before index `arg0`.
+
+
+   .. py:method:: pop(index: int = -1) -> lagrange.scene.Skeleton
+
+      Remove and return item at `index` (default last).
+
+
+
+.. py:class:: SurfaceMeshList(arg: Iterable[lagrange.core.SurfaceMesh], /)
+
+
+   None
+
+   .. py:method:: append(arg: lagrange.core.SurfaceMesh, /) -> None
+
+      Append `arg` to the end of the list.
+
+
+   .. py:method:: clear() -> None
+
+      Remove all items from list.
+
+
+   .. py:method:: extend(arg: lagrange.scene.SurfaceMeshList, /) -> None
+
+      Extend `self` by appending elements from `arg`.
+
+
+   .. py:method:: insert(arg0: int, arg1: lagrange.core.SurfaceMesh, /) -> None
+
+      Insert object `arg1` before index `arg0`.
+
+
+   .. py:method:: pop(index: int = -1) -> lagrange.core.SurfaceMesh
+
+      Remove and return item at `index` (default last).
 
 
 
@@ -678,6 +1102,10 @@ Functions
          
 
 
+   .. py:property:: extensions
+      :type: lagrange.scene.Extensions
+
+
    .. py:property:: image
       :type: int
 
@@ -729,13 +1157,174 @@ Functions
 
 
 
-.. py:function:: add_child(arg0: lagrange.scene.Scene, arg1: lagrange.scene.Node, arg2: lagrange.scene.Node, /) -> int
+.. py:class:: TextureList(arg: Iterable[lagrange.scene.Texture], /)
 
 
-.. py:function:: add_mesh(arg0: lagrange.scene.Scene, arg1: lagrange.core.SurfaceMesh, /) -> int
+   None
+
+   .. py:method:: append(arg: lagrange.scene.Texture, /) -> None
+
+      Append `arg` to the end of the list.
 
 
-.. py:function:: compute_global_node_transform(arg0: lagrange.scene.Scene, arg1: int, /) -> list[list[float]]
+   .. py:method:: clear() -> None
+
+      Remove all items from list.
+
+
+   .. py:method:: extend(arg: lagrange.scene.TextureList, /) -> None
+
+      Extend `self` by appending elements from `arg`.
+
+
+   .. py:method:: insert(arg0: int, arg1: lagrange.scene.Texture, /) -> None
+
+      Insert object `arg1` before index `arg0`.
+
+
+   .. py:method:: pop(index: int = -1) -> lagrange.scene.Texture
+
+      Remove and return item at `index` (default last).
+
+
+
+.. py:class:: ValueList(arg: Iterable[Value], /)
+
+
+   None
+
+   .. py:method:: append(arg: Value, /) -> None
+
+      Append `arg` to the end of the list.
+
+
+   .. py:method:: clear() -> None
+
+      Remove all items from list.
+
+
+   .. py:method:: extend(arg: lagrange.scene.ValueList, /) -> None
+
+      Extend `self` by appending elements from `arg`.
+
+
+   .. py:method:: insert(arg0: int, arg1: Value, /) -> None
+
+      Insert object `arg1` before index `arg0`.
+
+
+   .. py:method:: pop(index: int = -1) -> Value
+
+      Remove and return item at `index` (default last).
+
+
+
+.. py:class:: ValueMap(arg: dict[str, Value], /)
+
+
+   None
+
+   .. py:class:: ItemView(**kwargs)
+
+
+      None
+
+
+   .. py:class:: KeyView(**kwargs)
+
+
+      None
+
+
+   .. py:class:: ValueView(**kwargs)
+
+
+      None
+
+
+   .. py:method:: clear() -> None
+
+      Remove all items
+
+
+   .. py:method:: items() -> lagrange.scene.ValueMap.ItemView
+
+      Returns an iterable view of the map's items.
+
+
+   .. py:method:: keys() -> lagrange.scene.ValueMap.KeyView
+
+      Returns an iterable view of the map's keys.
+
+
+   .. py:method:: update(arg: lagrange.scene.ValueMap, /) -> None
+
+      Update the map with element from `arg`
+
+
+   .. py:method:: values() -> lagrange.scene.ValueMap.ValueView
+
+      Returns an iterable view of the map's values.
+
+
+
+.. py:class:: ValueUnorderedMap(arg: dict[str, Value], /)
+
+
+   None
+
+   .. py:class:: ItemView(**kwargs)
+
+
+      None
+
+
+   .. py:class:: KeyView(**kwargs)
+
+
+      None
+
+
+   .. py:class:: ValueView(**kwargs)
+
+
+      None
+
+
+   .. py:method:: clear() -> None
+
+      Remove all items
+
+
+   .. py:method:: items() -> lagrange.scene.ValueUnorderedMap.ItemView
+
+      Returns an iterable view of the map's items.
+
+
+   .. py:method:: keys() -> lagrange.scene.ValueUnorderedMap.KeyView
+
+      Returns an iterable view of the map's keys.
+
+
+   .. py:method:: update(arg: lagrange.scene.ValueUnorderedMap, /) -> None
+
+      Update the map with element from `arg`
+
+
+   .. py:method:: values() -> lagrange.scene.ValueUnorderedMap.ValueView
+
+      Returns an iterable view of the map's values.
+
+
+
+.. py:function:: compute_global_node_transform(scene: lagrange.scene.Scene, node_idx: int) -> numpy.typing.NDArray
+
+   Compute the global transform associated with a node.
+
+   :param scene: The input node.
+   :param node_idx: The index of the taget node.
+
+   :returns: The global transform of the target node, which is the combination of transforms from this node all the way to the root.
 
 
 .. py:function:: mesh_to_simple_scene(mesh: lagrange.core.SurfaceMesh) -> lagrange.scene.SimpleScene3D
@@ -747,7 +1336,7 @@ Functions
    :return: Simple scene containing the input mesh.
 
 
-.. py:function:: meshes_to_simple_scene(meshes: list[lagrange.core.SurfaceMesh]) -> lagrange.scene.SimpleScene3D
+.. py:function:: meshes_to_simple_scene(meshes: lagrange.scene.SurfaceMeshList) -> lagrange.scene.SimpleScene3D
 
    Converts a list of meshes into a simple scene with a single identity instance of each input mesh.
 

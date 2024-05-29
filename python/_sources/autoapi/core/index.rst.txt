@@ -19,10 +19,12 @@ Classes
    core.AttributeElement
    core.AttributeExportPolicy
    core.AttributeGrowthPolicy
+   core.AttributeShrinkPolicy
    core.AttributeUsage
    core.AttributeWritePolicy
    core.CentroidWeightingType
    core.ConnectivityType
+   core.DistortionMetric
    core.FacetAreaOptions
    core.FacetCentroidOptions
    core.FacetNormalOptions
@@ -46,6 +48,7 @@ Functions
 
 .. autoapisummary::
 
+   core.cast_attribute
    core.combine_meshes
    core.compute_components
    core.compute_dihedral_angles
@@ -53,16 +56,29 @@ Functions
    core.compute_edge_lengths
    core.compute_euler
    core.compute_facet_area
+   core.compute_facet_area
+   core.compute_facet_centroid
    core.compute_facet_centroid
    core.compute_facet_normal
+   core.compute_facet_normal
+   core.compute_greedy_coloring
+   core.compute_mesh_area
    core.compute_mesh_area
    core.compute_mesh_centroid
+   core.compute_mesh_centroid
    core.compute_normal
+   core.compute_normal
+   core.compute_seam_edges
    core.compute_tangent_bitangent
+   core.compute_tangent_bitangent
+   core.compute_uv_distortion
    core.compute_vertex_normal
+   core.compute_vertex_normal
+   core.compute_vertex_valence
    core.compute_vertex_valence
    core.detect_degenerate_facets
    core.extract_submesh
+   core.filter_attributes
    core.is_edge_manifold
    core.is_manifold
    core.is_vertex_manifold
@@ -74,6 +90,7 @@ Functions
    core.normalize_meshes
    core.permute_facets
    core.permute_vertices
+   core.remap_vertices
    core.remap_vertices
    core.remove_duplicate_facets
    core.remove_duplicate_vertices
@@ -102,72 +119,107 @@ Attributes
 .. py:class:: Attribute(**kwargs)
 
 
-   None
+   Mesh attribute
 
    .. py:property:: copy_policy
       :type: lagrange.core.AttributeCopyPolicy
 
+      Copy policy of the attribute.
 
    .. py:property:: data
       :type: object
 
+      Raw data buffer of the attribute.
 
    .. py:property:: default_value
       :type: object
 
+      Default value of the attribute.
+
+   .. py:property:: dtype
+      :type: Optional[type]
+
+      Value type of the attribute.
 
    .. py:property:: element_type
       :type: lagrange.core.AttributeElement
 
+      Element type of the attribute.
 
    .. py:property:: external
       :type: bool
 
+      Return true if the attribute wraps external buffer.
 
    .. py:property:: growth_policy
       :type: lagrange.core.AttributeGrowthPolicy
 
+      Growth policy of the attribute.
 
    .. py:property:: num_channels
       :type: int
 
+      Number of channels in the attribute.
 
    .. py:property:: num_elements
       :type: int
 
+      Number of elements in the attribute.
 
    .. py:property:: readonly
       :type: bool
 
+      Return true if the attribute is read-only.
+
+   .. py:property:: shrink_policy
+      :type: lagrange.core.AttributeShrinkPolicy
+
+      Shrink policy of the attribute.
 
    .. py:property:: usage
       :type: lagrange.core.AttributeUsage
 
+      Usage of the attribute.
 
    .. py:property:: write_policy
       :type: lagrange.core.AttributeWritePolicy
 
+      Write policy of the attribute.
 
    .. py:method:: clear() -> None
+
+      Clear the attribute so it has no elements.
 
 
    .. py:method:: create_internal_copy() -> None
 
+      Create an internal copy of the attribute.
+
 
    .. py:method:: empty() -> bool
 
-
-   .. py:method:: insert_elements(tensor: numpy.typing.NDArray) -> None
-
-      insert_elements(self, tensor: numpy.ndarray[order='C', device='cpu']) -> None
+      Return true if the attribute is empty.
 
 
-   .. py:method:: insert_elements(arg: int, /) -> None
+   .. py:method:: insert_elements(tensor: object) -> None
 
-      insert_elements(self, arg: int, /) -> None
+      Insert new elements to the attribute.
+
+      :param tensor: A tensor with shape (num_elements, num_channels) or (num_elements,).
 
 
-   .. py:method:: reserve_entries(arg: int, /) -> None
+   .. py:method:: insert_elements(num_elements: int) -> None
+
+      Insert new elements with default value to the attribute.
+
+      :param num_elements: Number of elements to insert.
+
+
+   .. py:method:: reserve_entries(num_entries: int) -> None
+
+      Reserve enough memory for `num_entries` entries.
+
+      :param num_entries: Number of entries to reserve. It does not need to be a multiple of `num_channels`.
 
 
 
@@ -280,6 +332,11 @@ Attributes
 
       
 
+   .. py:attribute:: CopyIfUnmanaged
+      :type: Any
+
+      
+
    .. py:attribute:: ErrorIfExternal
       :type: Any
 
@@ -304,6 +361,34 @@ Attributes
       
 
    .. py:attribute:: ErrorIfExtenal
+      :type: Any
+
+      
+
+   .. py:attribute:: SilentCopy
+      :type: Any
+
+      
+
+   .. py:attribute:: WarnAndCopy
+      :type: Any
+
+      
+
+
+.. py:class:: AttributeShrinkPolicy(*args, **kwds)
+
+
+   Bases: :py:obj:`enum.Enum`
+
+   <attribute '__doc__' of 'AttributeShrinkPolicy' objects>
+
+   .. py:attribute:: ErrorIfExternal
+      :type: Any
+
+      
+
+   .. py:attribute:: IgnoreIfExternal
       :type: Any
 
       
@@ -446,34 +531,72 @@ Attributes
       
 
 
+.. py:class:: DistortionMetric(*args, **kwds)
+
+
+   Bases: :py:obj:`enum.Enum`
+
+   <attribute '__doc__' of 'DistortionMetric' objects>
+
+   .. py:attribute:: AreaRatio
+      :type: Any
+
+      
+
+   .. py:attribute:: Dirichlet
+      :type: Any
+
+      
+
+   .. py:attribute:: InverseDirichlet
+      :type: Any
+
+      
+
+   .. py:attribute:: MIPS
+      :type: Any
+
+      
+
+   .. py:attribute:: SymmetricDirichlet
+      :type: Any
+
+      
+
+
 .. py:class:: FacetAreaOptions
 
 
-   None
+   Options for computing facet area.
 
    .. py:property:: output_attribute_name
       :type: str
 
+      The name of the output attribute.
 
 
 .. py:class:: FacetCentroidOptions
 
 
-   None
+   Facet centroid options.
 
    .. py:property:: output_attribute_name
       :type: str
 
+      The name of the output attribute.
 
 
 .. py:class:: FacetNormalOptions
 
 
-   None
+   Facet normal computation options.
 
    .. py:property:: output_attribute_name
       :type: str
 
+      '@facet_normal'
+
+      :type: Output attribute name. Default
 
 
 .. py:class:: IndexedAttribute(**kwargs)
@@ -528,55 +651,71 @@ Attributes
 .. py:class:: MeshAreaOptions
 
 
-   None
+   Options for computing mesh area.
 
    .. py:property:: input_attribute_name
       :type: str
 
+      The name of the pre-computed facet area attribute, default is '@facet_area'.
+
+   .. py:property:: use_signed_area
+      :type: bool
+
+      Whether to use signed area.
 
 
 .. py:class:: MeshCentroidOptions
 
 
-   None
+   Mesh centroid options.
 
    .. py:property:: facet_area_attribute_name
       :type: str
 
+      The name of the pre-computed facet area attribute if available.
 
    .. py:property:: facet_centroid_attribute_name
       :type: str
 
+      The name of the pre-computed facet centroid attribute if available.
 
    .. py:property:: weighting_type
       :type: lagrange.core.CentroidWeightingType
 
+      The weighting type.
 
 
 .. py:class:: NormalOptions
 
 
-   None
+   Normal computation options.
 
    .. py:property:: facet_normal_attribute_name
       :type: str
 
+      Facet normal attribute name to use. Default is '@facet_normal'.
 
    .. py:property:: keep_facet_normals
       :type: bool
 
+      Whether to keep the computed facet normal attribute. Default is false.
 
    .. py:property:: output_attribute_name
       :type: str
 
+      '@normal'
+
+      :type: Output attribute name. Default
 
    .. py:property:: recompute_facet_normals
       :type: bool
 
+      Whether to recompute facet normals. Default is false.
 
    .. py:property:: weight_type
       :type: lagrange.core.NormalWeightingType
 
+      Weighting type for normal computation. Default is Angle.
 
 
 .. py:class:: NormalWeightingType(*args, **kwds)
@@ -605,15 +744,17 @@ Attributes
 .. py:class:: RemapVerticesOptions
 
 
-   None
+   Options for remapping vertices.
 
    .. py:property:: collision_policy_float
       :type: lagrange.core.MappingPolicy
 
+      The collision policy for float attributes.
 
    .. py:property:: collision_policy_integral
       :type: lagrange.core.MappingPolicy
 
+      The collision policy for integral attributes.
 
 
 .. py:class:: SurfaceMesh(dimension: int = 3)
@@ -653,7 +794,7 @@ Attributes
       :type: int
 
 
-   .. py:property:: attr_id_vertex_to_positions
+   .. py:property:: attr_id_vertex_to_position
       :type: int
 
 
@@ -840,16 +981,16 @@ Attributes
    .. py:method:: count_num_corners_around_vertex(arg: int, /) -> int
 
 
-   .. py:method:: create_attribute(name: str, element: lagrange.core.AttributeElement, usage: lagrange.core.AttributeUsage, initial_values: Optional[numpy.typing.NDArray] = None, initial_indices: Optional[numpy.typing.NDArray] = None, num_channels: Optional[int] = None, dtype: Optional[type] = None) -> int
+   .. py:method:: create_attribute(name: str, element: Optional[lagrange.core.AttributeElement] = None, usage: Optional[lagrange.core.AttributeUsage] = None, initial_values: Optional[Union[numpy.typing.NDArray, list]] = None, initial_indices: Optional[Union[numpy.typing.NDArray, numpy.typing.NDArray, list]] = None, num_channels: Optional[int] = None, dtype: Optional[type] = None) -> int
 
       Create an attribute.
 
       :param name: Name of the attribute.
       :type name: str
-      :param element: Element type of the attribute.
-      :type element: AttributeElement
-      :param usage: Usage type of the attribute.
-      :type usage: AttributeUsage
+      :param element: Element type of the attribute. If None, derive from the shape of initial values.
+      :type element: AttributeElement, optional
+      :param usage: Usage type of the attribute. If None, derive from the shape of initial values or the number of channels.
+      :type usage: AttributeUsage, optional
       :param initial_values: Initial values of the attribute.
       :type initial_values: numpy.ndarray, optional
       :param initial_indices: Initial indices of the attribute (Indexed attribute only).
@@ -858,6 +999,14 @@ Attributes
       :type num_channels: int, optional
       :param dtype: Data type of the attribute.
       :type dtype: valid numpy.dtype, optional
+
+      .. note::
+      If `element` is None, it will be derived based on the cardinality of the mesh elements.
+      If there is an ambiguity, an exception will be raised.
+      In addition, explicit `element` specification is required for value attributes.
+
+      .. note::
+      If `usage` is None, it will be derived based on the shape of `initial_values` or `num_channels` if specified.
 
       :returns: The id of the created attribute.
 
@@ -1122,84 +1271,119 @@ Attributes
 .. py:class:: TangentBitangentOptions
 
 
-   None
+   Tangent bitangent options
 
    .. py:property:: bitangent_attribute_name
       :type: str
 
+      The name of the output bitangent attribute, default is '@bitangent'
 
    .. py:property:: normal_attribute_name
       :type: str
 
+      The name of the normal attribute
 
    .. py:property:: output_element_type
       :type: lagrange.core.AttributeElement
 
+      The output element type
 
    .. py:property:: pad_with_sign
       :type: bool
 
+      Whether to pad the output tangent/bitangent with sign
 
    .. py:property:: tangent_attribute_name
       :type: str
 
+      The name of the output tangent attribute, default is '@tangent'
 
    .. py:property:: uv_attribute_name
       :type: str
 
+      The name of the uv attribute
 
 
 .. py:class:: TangentBitangentResult
 
 
-   None
+   Tangent bitangent result
 
    .. py:property:: bitangent_id
       :type: int
 
+      The output bitangent attribute id
 
    .. py:property:: tangent_id
       :type: int
 
+      The output tangent attribute id
 
 
 .. py:class:: VertexNormalOptions
 
 
-   None
+   Options for computing vertex normals
 
    .. py:property:: keep_weighted_corner_normals
       :type: bool
 
+      Whether to keep the weighted corner normal attribute. Default is false.
 
    .. py:property:: output_attribute_name
       :type: str
 
+      Output attribute name. Default is '@vertex_normal'.
 
    .. py:property:: recompute_weighted_corner_normals
       :type: bool
 
+      Whether to recompute weighted corner normals. Default is false
 
    .. py:property:: weight_type
       :type: lagrange.core.NormalWeightingType
 
+      Weighting type for normal computation. Default is Angle.
 
    .. py:property:: weighted_corner_normal_attribute_name
       :type: str
 
+      Precomputed weighted corner normals attribute name.Default is '@weighted_corner_normal'. If attribute exists, the weighted corner normals will be used instead of recomputing them.
 
 
 .. py:class:: VertexValenceOptions
 
 
-   None
+   Vertex valence options
 
    .. py:property:: output_attribute_name
       :type: str
 
+      The name of the output attribute
+
+
+.. py:function:: cast_attribute(mesh: lagrange.core.SurfaceMesh, input_attribute: Union[int, str], dtype: type, output_attribute_name: Optional[str] = None) -> int
+
+   Cast an attribute to a new dtype.
+
+   :param mesh:            The input mesh.
+   :param input_attribute: The input attribute id or name.
+   :param dtype:           The new dtype.
+   :param output_attribute_name: The output attribute name. If none, cast will replace the input attribute.
+
+   :returns: The id of the new attribute.
 
 
 .. py:function:: combine_meshes(meshes: list[lagrange.core.SurfaceMesh], preserve_attributes: bool = True) -> lagrange.core.SurfaceMesh
+
+   Combine a list of meshes into a single mesh.
+
+   :param meshes: input meshes
+   :type meshes: list[SurfaceMesh]
+   :param preserve_attributes: whether to preserve attributes
+   :type preserve_attributes: bool
+
+   :returns: the combined mesh
 
 
 .. py:function:: compute_components(mesh: lagrange.core.SurfaceMesh, output_attribute_name: Optional[str] = None, connectivity_type: Optional[lagrange.core.ConnectivityType] = None, blocker_elements: Optional[list] = None) -> int
@@ -1259,20 +1443,150 @@ Attributes
 
 .. py:function:: compute_euler(mesh: lagrange.core.SurfaceMesh) -> int
 
+   Compute the Euler characteristic.
+
+   :param mesh: The source mesh.
+
+   :return: The Euler characteristic.
+
+
+.. py:function:: compute_facet_area(mesh: lagrange.core.SurfaceMesh, output_attribute_name: Optional[str] = None) -> int
+
+   Compute facet area (Pythonic API).
+
+   :param mesh: The input mesh.
+   :param output_attribute_name: The name of the output attribute.
+
+   :returns: The id of the new attribute.
+
 
 .. py:function:: compute_facet_area(mesh: lagrange.core.SurfaceMesh, options: lagrange.core.FacetAreaOptions = ...) -> int
+
+   Compute facet area.
+
+   :param mesh: The input mesh.
+   :param options: The options for computing facet area.
+
+   :returns: The id of the new attribute.
+
+
+.. py:function:: compute_facet_centroid(mesh: lagrange.core.SurfaceMesh, output_attribute_name: Optional[str] = None) -> int
+
+   Compute facet centroid (Pythonic API).
+
+   :param mesh: The input mesh.
+   :param output_attribute_name: The name of the output attribute.
+
+   :returns: The id of the new attribute.
 
 
 .. py:function:: compute_facet_centroid(mesh: lagrange.core.SurfaceMesh, options: lagrange.core.FacetCentroidOptions = ...) -> int
 
+   Compute facet centroid.
+
+   :param mesh: The input mesh.
+   :param options: The options for computing facet centroid.
+
+   :returns: The id of the new attribute.
+
+
+.. py:function:: compute_facet_normal(mesh: lagrange.core.SurfaceMesh, output_attribute_name: Optional[str] = None) -> int
+
+   Compute facet normal (Pythonic API).
+
+   :param mesh: Input mesh.
+   :param output_attribute_name: Output attribute name.
+
+   :returns: Facet normal attribute id.
+
 
 .. py:function:: compute_facet_normal(mesh: lagrange.core.SurfaceMesh, options: lagrange.core.FacetNormalOptions = ...) -> int
+
+   Compute facet normal.
+
+   :param mesh: Input mesh.
+   :param options: Options for computing facet normals.
+
+   :returns: Facet normal attribute id.
+
+
+.. py:function:: compute_greedy_coloring(mesh: lagrange.core.SurfaceMesh, element_type: lagrange.core.AttributeElement = lagrange.core.AttributeElement.Facet, num_color_used: int = 8, output_attribute_name: Optional[str] = None) -> int
+
+   Compute greedy coloring of mesh elements.
+
+   :param mesh: Input mesh.
+   :param element_type: Element type to be colored. Can be either Vertex or Facet.
+   :param num_color_used: Minimum number of colors to use. The algorithm will cycle through them but may use more.
+   :param output_attribute_name: Output attribute name.
+
+   :returns: Color attribute id.
+
+
+.. py:function:: compute_mesh_area(mesh: lagrange.core.SurfaceMesh, input_attribute_name: Optional[str] = None, use_signed_area: Optional[bool] = None) -> float
+
+   Compute mesh area (Pythonic API).
+
+   :param mesh: The input mesh.
+   :param input_attribute_name: The name of the pre-computed facet area attribute.
+   :param use_signed_area: Whether to use signed area.
+
+   :returns: The mesh area.
 
 
 .. py:function:: compute_mesh_area(mesh: lagrange.core.SurfaceMesh, options: lagrange.core.MeshAreaOptions = ...) -> float
 
+   Compute mesh area.
+
+   :param mesh: The input mesh.
+   :param options: The options for computing mesh area.
+
+   :returns: The mesh area.
+
+
+.. py:function:: compute_mesh_centroid(mesh: lagrange.core.SurfaceMesh, weighting_type: Optional[lagrange.core.CentroidWeightingType] = None, facet_centroid_attribute_name: Optional[str] = None, facet_area_attribute_name: Optional[str] = None) -> list[float]
+
+   Compute mesh centroid (Pythonic API).
+
+   :param mesh: The input mesh.
+   :param weighting_type: The weighting type. Default is `Area`.
+   :param facet_centroid_attribute_name: The name of the pre-computed facet centroid attribute if available. Default is '@facet_centroid'.
+   :param facet_area_attribute_name: The name of the pre-computed facet area attribute if available. Default is '@facet_area'.
+
+   :returns: The mesh centroid.
+
 
 .. py:function:: compute_mesh_centroid(mesh: lagrange.core.SurfaceMesh, options: lagrange.core.MeshCentroidOptions = ...) -> list[float]
+
+   Compute mesh centroid.
+
+   :param mesh: The input mesh.
+   :param options: The options for computing mesh centroid.
+
+   :returns: The mesh centroid.
+
+
+.. py:function:: compute_normal(mesh: lagrange.core.SurfaceMesh, feature_angle_threshold: float = 0.7853981633974483, cone_vertices: Optional[object] = None, output_attribute_name: Optional[str] = None, weight_type: Optional[lagrange.core.NormalWeightingType] = None, facet_normal_attribute_name: Optional[str] = None, recompute_facet_normals: Optional[bool] = None, keep_facet_normals: Optional[bool] = None) -> int
+
+   Compute indexed normal attribute (Pythonic API).
+
+   :param mesh: input mesh
+   :type mesh: SurfaceMesh
+   :param feature_angle_threshold: feature angle threshold
+   :type feature_angle_threshold: float, optional
+   :param cone_vertices: cone vertices
+   :type cone_vertices: list[int] or numpy.ndarray, optional
+   :param output_attribute_name: output normal attribute name
+   :type output_attribute_name: str, optional
+   :param weight_type: normal weighting type
+   :type weight_type: NormalWeightingType, optional
+   :param facet_normal_attribute_name: facet normal attribute name
+   :type facet_normal_attribute_name: str, optional
+   :param recompute_facet_normals: whether to recompute facet normals
+   :type recompute_facet_normals: bool, optional
+   :param keep_facet_normals: whether to keep the computed facet normal attribute
+   :type keep_facet_normals: bool, optional
+
+   :returns: the id of the indexed normal attribute.
 
 
 .. py:function:: compute_normal(mesh: lagrange.core.SurfaceMesh, feature_angle_threshold: float = 0.7853981633974483, cone_vertices: Optional[object] = None, options: Optional[lagrange.core.NormalOptions] = None) -> int
@@ -1289,21 +1603,113 @@ Attributes
    :param cone_vertices: cone vertices
    :type cone_vertices: list[int] or numpy.ndarray, optional
    :param options: normal options
-   :type optionas: NormalOptions, optional
+   :type optional: NormalOptions, optional
 
    :returns: the id of the indexed normal attribute.
 
 
+.. py:function:: compute_seam_edges(mesh: lagrange.core.SurfaceMesh, indexed_attribute_id: int, output_attribute_name: Optional[str] = None) -> int
+
+   Computer seam edges for a given indexed attribute.
+
+   :param mesh: Input mesh.
+   :param indexed_attribute_id: Input indexed attribute id.
+   :param output_attribute_name: Output attribute name.
+
+   :returns: Attribute id for the output per-edge seam attribute (1 is a seam, 0 is not).
+
+
+.. py:function:: compute_tangent_bitangent(mesh: lagrange.core.SurfaceMesh, tangent_attribute_name: Optional[str] = None, bitangent_attribute_name: Optional[str] = None, uv_attribute_name: Optional[str] = None, normal_attribute_name: Optional[str] = None, output_attribute_type: Optional[lagrange.core.AttributeElement] = None, pad_with_sign: Optional[bool] = None) -> tuple[int, int]
+
+   Compute tangent and bitangent vector attributes (Pythonic API).
+
+   :param mesh: The input mesh.
+   :param tangent_attribute_name: The name of the output tangent attribute.
+   :param bitangent_attribute_name: The name of the output bitangent attribute.
+   :param uv_attribute_name: The name of the uv attribute.
+   :param normal_attribute_name: The name of the normal attribute.
+   :param output_attribute_type: The output element type.
+   :param pad_with_sign: Whether to pad the output tangent/bitangent with sign.
+
+   :returns: The tangent and bitangent attribute ids
+
+
 .. py:function:: compute_tangent_bitangent(mesh: lagrange.core.SurfaceMesh, options: lagrange.core.TangentBitangentOptions = ...) -> lagrange.core.TangentBitangentResult
+
+   Compute tangent and bitangent vector attributes.
+
+   :param mesh: The input mesh.
+   :param options: The tangent bitangent options.
+
+   :returns: The tangent and bitangent attribute ids
+
+
+.. py:function:: compute_uv_distortion(mesh: lagrange.core.SurfaceMesh, uv_attribute_name: str = '@uv', output_attribute_name: str = '@uv_measure', metric: lagrange.core.DistortionMetric = lagrange.core.DistortionMetric.MIPS) -> int
+
+   Compute UV distortion.
+
+   :param mesh:                  The source mesh.
+   :param uv_attribute_name:     The input UV attribute name. Default is "@uv".
+   :param output_attribute_name: The output attribute name to store the distortion. Default is "@uv_measure".
+   :param metric:                The distortion metric. Default is MIPS.
+
+   :return: The facet attribute id for distortion.
+
+
+.. py:function:: compute_vertex_normal(mesh: lagrange.core.SurfaceMesh, output_attribute_name: Optional[str] = None, weight_type: Optional[lagrange.core.NormalWeightingType] = None, weighted_corner_normal_attribute_name: Optional[str] = None, recompute_weighted_corner_normals: Optional[bool] = None, keep_weighted_corner_normals: Optional[bool] = None) -> int
+
+   Computer vertex normal (Pythonic API).
+
+   :param mesh: Input mesh.
+   :param output_attribute_name: Output attribute name.
+   :param weight_type: Weighting type for normal computation.
+   :param weighted_corner_normal_attribute_name: Precomputed weighted corner normals attribute name.
+   :param recompute_weighted_corner_normals: Whether to recompute weighted corner normals.
+   :param keep_weighted_corner_normals: Whether to keep the weighted corner normal attribute.
+
+   :returns: Vertex normal attribute id.
 
 
 .. py:function:: compute_vertex_normal(mesh: lagrange.core.SurfaceMesh, options: lagrange.core.VertexNormalOptions = ...) -> int
 
+   Computer vertex normal.
+
+   :param mesh: Input mesh.
+   :param options: Options for computing vertex normals.
+
+   :returns: Vertex normal attribute id.
+
+
+.. py:function:: compute_vertex_valence(mesh: lagrange.core.SurfaceMesh, output_attribute_name: Optional[str] = None) -> int
+
+   Compute vertex valence);
+
+   :param mesh: The input mesh.
+   :param output_attribute_name: The name of the output attribute.
+
+   :returns: The vertex valence attribute id
+
 
 .. py:function:: compute_vertex_valence(mesh: lagrange.core.SurfaceMesh, options: lagrange.core.VertexValenceOptions = ...) -> int
 
+   Compute vertex valence
+
+   :param mesh: The input mesh.
+   :param options: The vertex valence options.
+
+   :returns: The vertex valence attribute id.
+
 
 .. py:function:: detect_degenerate_facets(mesh: lagrange.core.SurfaceMesh) -> list[int]
+
+   Detect degenerate facets in a mesh.
+
+   .. note:
+   Only __exaxtly__ degenerate facets are detected.
+
+   :param mesh: The input mesh.
+
+   :returns: A list of indices of degenerate facets.
 
 
 .. py:function:: extract_submesh(mesh: lagrange.core.SurfaceMesh, selected_facets: numpy.typing.NDArray, source_vertex_attr_name: str = '', source_facet_attr_name: str = '', map_attributes: bool = False) -> lagrange.core.SurfaceMesh
@@ -1319,39 +1725,104 @@ Attributes
    :returns: A mesh that contains only the selected facets.
 
 
+.. py:function:: filter_attributes(mesh: lagrange.core.SurfaceMesh, included_attributes: Optional[list[Union[int, str]]] = None, excluded_attributes: Optional[list[Union[int, str]]] = None, included_usages: Optional[set[lagrange.core.AttributeUsage]] = None, included_element_types: Optional[set[lagrange.core.AttributeElement]] = None) -> lagrange.core.SurfaceMesh
+
+   Filters the attributes of mesh according to user specifications.
+
+   :param mesh: Input mesh.
+   :param included_attributes: List of attribute names or ids to include. By default, all attributes are included.
+   :param excluded_attributes: List of attribute names or ids to exclude. By default, no attribute is excluded.
+   :param included_usages: List of attribute usages to include. By default, all usages are included.
+   :param included_element_types: List of attribute element types to include. By default, all element types are included.
+
+
 .. py:function:: is_edge_manifold(mesh: lagrange.core.SurfaceMesh) -> bool
+
+   Check if the mesh is edge manifold.
+
+   :param mesh: The source mesh.
+
+   :return: Whether the mesh is edge manifold.
 
 
 .. py:function:: is_manifold(mesh: lagrange.core.SurfaceMesh) -> bool
 
+   Check if the mesh is manifold.
+
+   A mesh considered as manifold if it is both vertex and edge manifold.
+
+   :param mesh: The source mesh.
+
+   :return: Whether the mesh is manifold.
+
 
 .. py:function:: is_vertex_manifold(mesh: lagrange.core.SurfaceMesh) -> bool
+
+   Check if the mesh is vertex manifold.
+
+   :param mesh: The source mesh.
+
+   :return: Whether the mesh is vertex manifold.
 
 
 .. py:function:: map_attribute(mesh: lagrange.core.SurfaceMesh, old_attribute_name: str, new_attribute_name: str, new_element: lagrange.core.AttributeElement) -> int
 
-   map_attribute(mesh: lagrange.core.SurfaceMesh, old_attribute_name: str, new_attribute_name: str, new_element: lagrange.core.AttributeElement) -> int
+   Map an attribute to a new element type.
+
+   :param mesh: The input mesh.
+   :param old_attribute_name: The name of the input attribute.
+   :param new_attribute_name: The name of the new attribute.
+   :param new_element: The new element type.
+
+   :returns: The id of the new attribute.
 
 
 .. py:function:: map_attribute(mesh: lagrange.core.SurfaceMesh, old_attribute_id: int, new_attribute_name: str, new_element: lagrange.core.AttributeElement) -> int
 
-   map_attribute(mesh: lagrange.core.SurfaceMesh, old_attribute_id: int, new_attribute_name: str, new_element: lagrange.core.AttributeElement) -> int
+   Map an attribute to a new element type.
+
+   :param mesh: The input mesh.
+   :param old_attribute_id: The id of the input attribute.
+   :param new_attribute_name: The name of the new attribute.
+   :param new_element: The new element type.
+
+   :returns: The id of the new attribute.
 
 
 .. py:function:: map_attribute_in_place(mesh: lagrange.core.SurfaceMesh, name: str, new_element: lagrange.core.AttributeElement) -> int
 
-   map_attribute_in_place(mesh: lagrange.core.SurfaceMesh, name: str, new_element: lagrange.core.AttributeElement) -> int
+   Map an attribute to a new element type in place.
+
+   :param mesh: The input mesh.
+   :param name: The name of the input attribute.
+   :param new_element: The new element type.
+
+   :returns: The id of the new attribute.
 
 
 .. py:function:: map_attribute_in_place(mesh: lagrange.core.SurfaceMesh, id: int, new_element: lagrange.core.AttributeElement) -> int
 
-   map_attribute_in_place(mesh: lagrange.core.SurfaceMesh, id: int, new_element: lagrange.core.AttributeElement) -> int
+   Map an attribute to a new element type in place.
+
+   :param mesh: The input mesh.
+   :param id: The id of the input attribute.
+   :param new_element: The new element type.
+
+   :returns: The id of the new attribute.
 
 
-.. py:function:: normalize_mesh(arg: lagrange.core.SurfaceMesh, /) -> None
+.. py:function:: normalize_mesh(mesh: lagrange.core.SurfaceMesh) -> None
+
+   Normalize a mesh to fit into a unit box centered at the origin.
+
+   :param mesh: input mesh
 
 
-.. py:function:: normalize_meshes(arg: list[lagrange.core.SurfaceMesh], /) -> None
+.. py:function:: normalize_meshes(meshes: list[lagrange.core.SurfaceMesh]) -> None
+
+   Normalize a list of meshes to fit into a unit box centered at the origin.
+
+   :param meshes: input meshes
 
 
 .. py:function:: permute_facets(mesh: lagrange.core.SurfaceMesh, new_to_old: numpy.typing.NDArray) -> None
@@ -1370,7 +1841,23 @@ Attributes
    :param new_to_old: permutation vector for vertices
 
 
+.. py:function:: remap_vertices(mesh: lagrange.core.SurfaceMesh, old_to_new: numpy.typing.NDArray, collision_policy_float: Optional[lagrange.core.MappingPolicy] = None, collision_policy_integral: Optional[lagrange.core.MappingPolicy] = None) -> None
+
+   Remap vertices of a mesh in place based on a permutation (Pythonic API).
+
+   :param mesh: input mesh
+   :param old_to_new: permutation vector for vertices
+   :param collision_policy_float: The collision policy for float attributes.
+   :param collision_policy_integral: The collision policy for integral attributes.
+
+
 .. py:function:: remap_vertices(mesh: lagrange.core.SurfaceMesh, old_to_new: numpy.typing.NDArray, options: lagrange.core.RemapVerticesOptions = ...) -> None
+
+   Remap vertices of a mesh in place based on a permutation.
+
+   :param mesh: input mesh
+   :param old_to_new: permutation vector for vertices
+   :param options: options for remapping vertices
 
 
 .. py:function:: remove_duplicate_facets(mesh: lagrange.core.SurfaceMesh, consider_orientation: bool = False) -> None
@@ -1394,6 +1881,13 @@ Attributes
 
 
 .. py:function:: remove_isolated_vertices(mesh: lagrange.core.SurfaceMesh) -> None
+
+   Remove isolated vertices from a mesh.
+
+   .. note:
+   A vertex is considered isolated if it is not referenced by any facet.
+
+   :param mesh: The input mesh for inplace modification.
 
 
 .. py:function:: remove_null_area_facets(mesh: lagrange.core.SurfaceMesh, null_area_threshold: float = 0, remove_isolated_vertices: bool = False) -> None
@@ -1455,6 +1949,10 @@ Attributes
 
 
 .. py:function:: triangulate_polygonal_facets(mesh: lagrange.core.SurfaceMesh) -> None
+
+   Triangulate polygonal facets of the mesh.
+
+   :param mesh: The input mesh.
 
 
 .. py:function:: unify_index_buffer(mesh: lagrange.core.SurfaceMesh, attribute_names: list[str]) -> lagrange.core.SurfaceMesh

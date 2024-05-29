@@ -201,7 +201,7 @@ Overview</h1>
 <div class="line">//Or</div>
 <div class="line"> </div>
 <div class="line">viewer.run([](ui::Registry &amp; r){</div>
-<div class="line">    //Main loop code    </div>
+<div class="line">    //Main loop code</div>
 <div class="line">    return should_continue_running;</div>
 <div class="line">});</div>
 </div><!-- fragment --><p >The API to interact with the UI follows this pattern </p><div class="fragment"><div class="line"> {c++}</div>
@@ -326,7 +326,7 @@ PBRMaterial</h3>
 <div class="line">material.set_texture(PBRMaterial::Roughness, ui::load_texture(&quot;metallic.jpg&quot;));</div>
 <div class="line"> </div>
 <div class="line">//Uniform roughness</div>
-<div class="line">material.set_float(PBRMaterial::Metallic, 0.75f); </div>
+<div class="line">material.set_float(PBRMaterial::Metallic, 0.75f);</div>
 <div class="line">//Metallic texture</div>
 <div class="line">material.set_texture(PBRMaterial::Metallic, ui::load_texture(&quot;metallic.jpg&quot;));</div>
 <div class="line"> </div>
@@ -435,7 +435,7 @@ User Interface Panels</h1>
 <div class="line">});</div>
 <div class="line">//or</div>
 <div class="line">auto panel_entity = ui::add_panel(registry, &quot;Title of the panel&quot;, [](Registry &amp;registry, Entity e){</div>
-<div class="line">    //Entity e is the panel_entity    </div>
+<div class="line">    //Entity e is the panel_entity</div>
 <div class="line">});</div>
 </div><!-- fragment --><p >Example of multiple instances of a same "type" of panel:</p>
 <div class="fragment"><div class="line"> {c++}</div>
@@ -455,7 +455,7 @@ User Interface Panels</h1>
 </div><!-- fragment --><h1><a class="anchor" id="autotoc_md32"></a>
 Viewports</h1>
 <p >Viewports are implemented as entities with <code>ViewportComponent</code> component. Those referenced in <code>ViewportPanel</code> are rendered to screen, otherwise they are rendered off-screen. There is always one <b>focused</b> <code>ViewportPanel</code> (identified by the context variable <code>FocusedViewportPanel</code>).</p>
-<p >See <code><a class="el" href="components_2_viewport_8h_source.html">components/Viewport.h</a></code> and <code><a class="el" href="utils_2_viewport_8h_source.html">utils/viewport.h</a></code> for utility functions related to viewport, viewport panels and cameras.</p>
+<p >See <code><a class="el" href="components_2viewport_8h_source.html">components/Viewport.h</a></code> and <code><a class="el" href="utils_2viewport_8h_source.html">utils/viewport.h</a></code> for utility functions related to viewport, viewport panels and cameras.</p>
 <h2><a class="anchor" id="autotoc_md33"></a>
 Entity visibility</h2>
 <p >Each <code>ViewportComponent</code> has <code>visible_layers</code> and <code>hidden_layers</code> that control which entities can be renderer in this viewport (see `Layer` component for details).</p>
@@ -463,7 +463,7 @@ Entity visibility</h2>
 <h2><a class="anchor" id="autotoc_md34"></a>
 Multi viewport</h2>
 <p >Additional viewports can be created by calling </p><div class="fragment"><div class="line"> {c++}</div>
-<div class="line">ui::Entity camera_entity = add_camera(ui::Registry &amp;, ui::Camera camera); </div>
+<div class="line">ui::Entity camera_entity = add_camera(ui::Registry &amp;, ui::Camera camera);</div>
 <div class="line">// or use get_focused_camera_entity(ui::Registry &amp;)  to reuse current camera</div>
 <div class="line"> </div>
 <div class="line">// Creates an offscreen viewport with the specified camera</div>
@@ -509,7 +509,7 @@ Components</h2>
 <div class="line"> </div>
 <div class="line">// If you&#39;re not sure it exists</div>
 <div class="line">MyComponent * c = registry.try_get&lt;MyComponent&gt;(entity);</div>
-<div class="line">//or </div>
+<div class="line">//or</div>
 <div class="line">if(registry.all_of&lt;MyComponent&gt;()){</div>
 <div class="line">    MyComponent&amp; c = registry.get&lt;MyComponent&gt;(entity);</div>
 <div class="line">}</div>
@@ -537,14 +537,14 @@ Context variables</h2>
 <p >Systems <b>do not have data</b>. However, it's often useful to have some state associated with a given system, e.g. for caching. Sometimes it's useful that this state be shared among several systems. Instead of storing this state in some single instance of a component, we can use <em>context</em> variables. These can be thought of as <em>singleton</em> components - only one instance of a <code>Type</code> can exist at a given time.</p>
 <p ><code>InputState</code> is such a <em>singleton</em> component. At the beginning of the frame, it is filled with key/mouse information, including last mouse position, mouse delta, active keybinds, etc.: </p><div class="fragment"><div class="line"> {c++}</div>
 <div class="line">void update_input_system(Registry &amp; registry){</div>
-<div class="line">    InputState &amp; input_state =  registry.ctx_or_set&lt;InputState&gt;();</div>
+<div class="line">    InputState &amp; input_state =  registry.ctx().emplace&lt;InputState&gt;();</div>
 <div class="line">    input_state.mouse.position = ...</div>
 <div class="line">    input_state.mouse.delta = ...</div>
 <div class="line">    input_state.keybinds.update(...);</div>
 <div class="line">}</div>
 </div><!-- fragment --><p >It can then be used by any other system down the line: </p><div class="fragment"><div class="line"> {c++}</div>
 <div class="line">void print_mouse_position(Registry &amp; registry){</div>
-<div class="line">    const auto &amp; input_state = registry.ctx&lt;InputState&gt;();</div>
+<div class="line">    const auto &amp; input_state = registry.ctx().get&lt;InputState&gt;();</div>
 <div class="line"> </div>
 <div class="line">    lagrange::logger().info(&quot;Mouse position: {}&quot;, input_state.mouse_pos);</div>
 <div class="line">}</div>
@@ -553,7 +553,7 @@ Design considerations</h2>
 <p >Rules to follow when designing components and systems:</p><ul>
 <li>Components have no functions, only data</li>
 <li>Systems have no data</li>
-<li>State associated with systems is stored as context variable (<code>registry.ctx&lt;T&gt;()</code>)</li>
+<li>State associated with systems is stored as context variable (<code>registry.ctx().get&lt;T&gt;()</code>)</li>
 </ul>
 <p ><em>TODO: const Systems / const views</em></p>
 <h1><a class="anchor" id="autotoc_md44"></a>
@@ -586,7 +586,7 @@ Shader and Material properties</h3>
 <p >Material properties can be defined in the shader using the following syntax:</p>
 <div class="fragment"><div class="line">#pragma property NAME &quot;DISPLAY NAME&quot; TYPE(DEFAULT VALUE AND/OR RANGE) [TAG1, TAG2]</div>
 </div><!-- fragment --><p >For example: </p><div class="fragment"><div class="line">//Defines a 2D texture property with the default value of rgba(0.7,0.7,0.7,1) if no texture is bound</div>
-<div class="line">#pragma property material_base_color &quot;Base Color&quot; Texture2D(0.7,0.7,0.7,1) </div>
+<div class="line">#pragma property material_base_color &quot;Base Color&quot; Texture2D(0.7,0.7,0.7,1)</div>
 <div class="line">//Defines a 2D texture property with the default value of red=0.4 if no texture is bound</div>
 <div class="line">#pragma property material_roughness &quot;Roughness&quot; Texture2D(0.4)</div>
 <div class="line">//Defines a 2D texture property with the default value of red=0.1 if no texture is bound</div>
@@ -594,7 +594,7 @@ Shader and Material properties</h3>
 <div class="line">//Defines a 2D texture property that is to be interpreted as normal texture</div>
 <div class="line">#pragma property material_normal &quot;Normal&quot; Texture2D [normal]</div>
 <div class="line">//Defines a float property, with the default value of 1 and range 0,1</div>
-<div class="line">#pragma property material_opacity &quot;Opacity&quot; float(1,0,1) </div>
+<div class="line">#pragma property material_opacity &quot;Opacity&quot; float(1,0,1)</div>
 </div><!-- fragment --><p >The pragmas are parsed whenever a shader is loaded and replaced with: </p><div class="fragment"><div class="line">uniform TYPE NAME = DEFAULT_VALUE</div>
 </div><!-- fragment --><p> In case of <code>Texture2D</code>, these uniforms are generated: </p><div class="fragment"><div class="line">uniform sampler2D NAME;</div>
 <div class="line">uniform bool NAME_texture_bound = false;</div>

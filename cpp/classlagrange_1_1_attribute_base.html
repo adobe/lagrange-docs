@@ -112,7 +112,7 @@ $(document).ready(function(){initNavTree('classlagrange_1_1_attribute_base.html'
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="classlagrange_1_1_attribute_base-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">AttributeBase Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span><div class="ingroups"><a class="el" href="group__module-core.html">Core Module</a> &raquo; <a class="el" href="group__group-surfacemesh.html">SurfaceMesh</a> &raquo; <a class="el" href="group__group-surfacemesh-attr.html">Attributes</a></div></div></div>
 </div><!--header-->
@@ -158,9 +158,15 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><b>~AttributeBase</b>
 <tr class="memitem:ae6969f569ccb3c2f203e06a5264eec62"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlagrange_1_1_attribute_base.html#ae6969f569ccb3c2f203e06a5264eec62">get_num_channels</a> () const</td></tr>
 <tr class="memdesc:ae6969f569ccb3c2f203e06a5264eec62"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the number of channels for the attribute.  <a href="classlagrange_1_1_attribute_base.html#ae6969f569ccb3c2f203e06a5264eec62">More...</a><br /></td></tr>
 <tr class="separator:ae6969f569ccb3c2f203e06a5264eec62"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d2be69d14ad3b4e2a8f9affa0ad00b4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlagrange_1_1_attribute_base.html#a2d2be69d14ad3b4e2a8f9affa0ad00b4">unsafe_set_usage</a> (<a class="el" href="group__group-surfacemesh-attr.html#ga5a2f28c8b9e2f8fce6e70b2418c46e45">AttributeUsage</a> usage)</td></tr>
+<tr class="memdesc:a2d2be69d14ad3b4e2a8f9affa0ad00b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the attribute usage tag.  <a href="classlagrange_1_1_attribute_base.html#a2d2be69d14ad3b4e2a8f9affa0ad00b4">More...</a><br /></td></tr>
+<tr class="separator:a2d2be69d14ad3b4e2a8f9affa0ad00b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25001160b4e0939739be75d9d0dd7c82"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlagrange_1_1_attribute_base.html#a25001160b4e0939739be75d9d0dd7c82">unsafe_set_element_type</a> (<a class="el" href="group__group-surfacemesh-attr.html#ga9d8ab208822bab9987e9652dda49d89a">AttributeElement</a> element)</td></tr>
+<tr class="memdesc:a25001160b4e0939739be75d9d0dd7c82"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the attribute element type.  <a href="classlagrange_1_1_attribute_base.html#a25001160b4e0939739be75d9d0dd7c82">More...</a><br /></td></tr>
+<tr class="separator:a25001160b4e0939739be75d9d0dd7c82"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
-Public Attributes</h2></td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
 <tr class="memitem:ab96049351278e6ab09908af721d6e680"><td class="memItemLeft" align="right" valign="top"><a id="ab96049351278e6ab09908af721d6e680" name="ab96049351278e6ab09908af721d6e680"></a>
 <a class="el" href="group__group-surfacemesh-attr.html#ga9d8ab208822bab9987e9652dda49d89a">AttributeElement</a>&#160;</td><td class="memItemRight" valign="bottom"><b>m_element</b></td></tr>
 <tr class="memdesc:ab96049351278e6ab09908af721d6e680"><td class="mdescLeft">&#160;</td><td class="mdescRight">Element type (vertex, facet, indexed, etc.). <br /></td></tr>
@@ -472,6 +478,76 @@ size_t&#160;</td><td class="memItemRight" valign="bottom"><b>m_num_channels</b> 
 
 <p>Gets the number of channels for the attribute. </p>
 <dl class="section return"><dt>Returns</dt><dd>The number of channels. </dd></dl>
+
+</div>
+</div>
+<a id="a2d2be69d14ad3b4e2a8f9affa0ad00b4" name="a2d2be69d14ad3b4e2a8f9affa0ad00b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d2be69d14ad3b4e2a8f9affa0ad00b4">&#9670;&nbsp;</a></span>unsafe_set_usage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void unsafe_set_usage </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__group-surfacemesh-attr.html#ga5a2f28c8b9e2f8fce6e70b2418c46e45">AttributeUsage</a>&#160;</td>
+          <td class="paramname"><em>usage</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets the attribute usage tag. </p>
+<dl class="section note"><dt>Note</dt><dd>No check is performed, use with caution!</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">usage</td><td>New usage tag. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a25001160b4e0939739be75d9d0dd7c82" name="a25001160b4e0939739be75d9d0dd7c82"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a25001160b4e0939739be75d9d0dd7c82">&#9670;&nbsp;</a></span>unsafe_set_element_type()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void unsafe_set_element_type </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__group-surfacemesh-attr.html#ga9d8ab208822bab9987e9652dda49d89a">AttributeElement</a>&#160;</td>
+          <td class="paramname"><em>element</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets the attribute element type. </p>
+<dl class="section note"><dt>Note</dt><dd>No check is performed, use with caution!</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">element</td><td>New element type. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

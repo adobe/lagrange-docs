@@ -15,5 +15,6 @@ var structlagrange_1_1ui_1_1_viewer_1_1_window_options =
     [ "show_default_ibl", "structlagrange_1_1ui_1_1_viewer_1_1_window_options.html#ab376178f5b8acf734fe544a85bb372af", null ],
     [ "show_topbar_menu", "structlagrange_1_1ui_1_1_viewer_1_1_window_options.html#adfe6971e32e47cd23b1b4013a0932c55", null ],
     [ "imgui_ini_path", "structlagrange_1_1ui_1_1_viewer_1_1_window_options.html#a75e9dfc8388a73f6cf39934767425e9d", null ],
-    [ "selection_color", "structlagrange_1_1ui_1_1_viewer_1_1_window_options.html#a14735a1871357ee8391f5b4ef4492ece", null ]
+    [ "selection_color", "structlagrange_1_1ui_1_1_viewer_1_1_window_options.html#a14735a1871357ee8391f5b4ef4492ece", null ],
+    [ "use_srgb", "structlagrange_1_1ui_1_1_viewer_1_1_window_options.html#af679737dc7d151f5a8fc60f6df9b5d47", null ]
 ];

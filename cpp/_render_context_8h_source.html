@@ -145,7 +145,7 @@ $(document).ready(function(){initNavTree('_render_context_8h_source.html',''); i
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="keyword">inline</span> <a class="code hl_struct" href="structlagrange_1_1ui_1_1_render_context.html">RenderContext</a>&amp; get_render_context(Registry&amp; r)</div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>{</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="keywordflow">return</span> r.ctx_or_set&lt;<a class="code hl_struct" href="structlagrange_1_1ui_1_1_render_context.html">RenderContext</a>&gt;();</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="keywordflow">return</span> r.ctx().emplace&lt;<a class="code hl_struct" href="structlagrange_1_1ui_1_1_render_context.html">RenderContext</a>&gt;();</div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>}</div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="keyword">inline</span> ViewportComponent&amp; get_render_context_viewport(Registry&amp; r)</div>

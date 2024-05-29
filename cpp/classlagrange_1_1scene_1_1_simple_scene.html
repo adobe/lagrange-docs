@@ -160,6 +160,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a7331288c5db7acbcb0def3a31c50b415"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classlagrange_1_1scene_1_1_simple_scene.html#a042153808e72744a2a3dbdb1a7ed02c7">InstanceType</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlagrange_1_1scene_1_1_simple_scene.html#a7331288c5db7acbcb0def3a31c50b415">get_instance</a> (Index mesh_index, Index instance_index) const</td></tr>
 <tr class="memdesc:a7331288c5db7acbcb0def3a31c50b415"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a const reference to a mesh instance in the scene.  <a href="classlagrange_1_1scene_1_1_simple_scene.html#a7331288c5db7acbcb0def3a31c50b415">More...</a><br /></td></tr>
 <tr class="separator:a7331288c5db7acbcb0def3a31c50b415"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36002d8c92dc2ca76ed022b00798eea6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classlagrange_1_1scene_1_1_simple_scene.html#a042153808e72744a2a3dbdb1a7ed02c7">InstanceType</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlagrange_1_1scene_1_1_simple_scene.html#a36002d8c92dc2ca76ed022b00798eea6">ref_instance</a> (Index mesh_index, Index instance_index)</td></tr>
+<tr class="memdesc:a36002d8c92dc2ca76ed022b00798eea6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a reference to a mesh instance in the scene.  <a href="classlagrange_1_1scene_1_1_simple_scene.html#a36002d8c92dc2ca76ed022b00798eea6">More...</a><br /></td></tr>
+<tr class="separator:a36002d8c92dc2ca76ed022b00798eea6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6afd650291863f55553e7ac081235444"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlagrange_1_1scene_1_1_simple_scene.html#a6afd650291863f55553e7ac081235444">reserve_meshes</a> (Index num_meshes)</td></tr>
 <tr class="memdesc:a6afd650291863f55553e7ac081235444"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pre-allocate a number of meshes in the scene.  <a href="classlagrange_1_1scene_1_1_simple_scene.html#a6afd650291863f55553e7ac081235444">More...</a><br /></td></tr>
 <tr class="separator:a6afd650291863f55553e7ac081235444"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -394,6 +397,52 @@ class lagrange::scene::SimpleScene&lt; Scalar, Index, Dimension &gt;</div><p >Si
 </div><div class="memdoc">
 
 <p>Get a const reference to a mesh instance in the scene. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">mesh_index</td><td>Index of the parent mesh in the scene. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">instance_index</td><td>Local instance index respective to the parent mesh.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Reference to the specified mesh instance. </dd></dl>
+
+</div>
+</div>
+<a id="a36002d8c92dc2ca76ed022b00798eea6" name="a36002d8c92dc2ca76ed022b00798eea6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a36002d8c92dc2ca76ed022b00798eea6">&#9670;&nbsp;</a></span>ref_instance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classlagrange_1_1scene_1_1_simple_scene.html#a042153808e72744a2a3dbdb1a7ed02c7">InstanceType</a> &amp; ref_instance </td>
+          <td>(</td>
+          <td class="paramtype">Index&#160;</td>
+          <td class="paramname"><em>mesh_index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Index&#160;</td>
+          <td class="paramname"><em>instance_index</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get a reference to a mesh instance in the scene. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">mesh_index</td><td>Index of the parent mesh in the scene. </td></tr>

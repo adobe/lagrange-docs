@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.4"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Lagrange: visit_attribute.h Source File</title>
+<title>Lagrange: lagrange/internal/visit_attribute.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -132,42 +132,64 @@ $(document).ready(function(){initNavTree('visit__attribute_8h_source.html',''); 
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &lt;lagrange/IndexedAttribute.h&gt;</span></div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#include &lt;lagrange/SurfaceMesh.h&gt;</span></div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacelagrange_1_1subdivision.html">lagrange::subdivision</a> {</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacelagrange_1_1internal.html">lagrange::internal</a> {</div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> Func, <span class="keyword">typename</span> Scalar, <span class="keyword">typename</span> Index&gt;</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="namespacelagrange_1_1subdivision.html#a21f5f7e62db26fb62f258a8d072ed640">   34</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="namespacelagrange_1_1subdivision.html#a21f5f7e62db26fb62f258a8d072ed640">visit_attribute</a>(<span class="keyword">const</span> <a class="code hl_class" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh&lt;Scalar, Index&gt;</a>&amp; mesh, <a class="code hl_typedef" href="group__group-surfacemesh-attr.html#ga4d115376c2c766084ef808c837348fc3">AttributeId</a> <span class="keywordtype">id</span>, Func&amp;&amp; func)</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>{</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="keyword">const</span> <span class="keyword">auto</span>&amp; attr = mesh.get_attribute_base(<span class="keywordtype">id</span>);</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="keyword">auto</span> type = attr.get_value_type();</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="keywordtype">bool</span> is_indexed = (attr.get_element_type() == <a class="code hl_enumvalue" href="group__group-surfacemesh-attr.html#gga9d8ab208822bab9987e9652dda49d89aa93747573a820d43208a296f9f56bf54e">AttributeElement::Indexed</a>);</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="keywordflow">switch</span> (type) {</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="preprocessor">#define LA_X_visit(_, ValueType)                                                \</span></div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="preprocessor">    case make_attribute_value_type&lt;ValueType&gt;(): {                              \</span></div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="preprocessor">        if (is_indexed) {                                                       \</span></div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="preprocessor">            func(static_cast&lt;const IndexedAttribute&lt;ValueType, Index&gt;&amp;&gt;(attr)); \</span></div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="preprocessor">        } else {                                                                \</span></div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="preprocessor">            func(static_cast&lt;const Attribute&lt;ValueType&gt;&amp;&gt;(attr));               \</span></div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="preprocessor">        }                                                                       \</span></div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="preprocessor">        break;                                                                  \</span></div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="preprocessor">    }</span></div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        <a class="code hl_define" href="group__group-surfacemesh-attr.html#gabdd5375a7155af710e703e21e723e834">LA_ATTRIBUTE_X</a>(visit, 0)</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="preprocessor">#undef LA_X_visit</span></div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    }</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>}</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>} <span class="comment">// namespace lagrange::subdivision</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> Func, <span class="keyword">typename</span> Scalar, <span class="keyword">typename</span> Index&gt;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="namespacelagrange_1_1internal.html#ac4b70a7b72930733983ddcd0c3f0b32c">   39</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="namespacelagrange_1_1internal.html#ac4b70a7b72930733983ddcd0c3f0b32c">visit_attribute_read</a>(<span class="keyword">const</span> <a class="code hl_class" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh&lt;Scalar, Index&gt;</a>&amp; mesh, <a class="code hl_typedef" href="group__group-surfacemesh-attr.html#ga4d115376c2c766084ef808c837348fc3">AttributeId</a> <span class="keywordtype">id</span>, Func&amp;&amp; func)</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>{</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="keyword">const</span> <span class="keyword">auto</span>&amp; attr = mesh.get_attribute_base(<span class="keywordtype">id</span>);</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="keyword">auto</span> type = attr.get_value_type();</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <span class="keywordtype">bool</span> is_indexed = (attr.get_element_type() == <a class="code hl_enumvalue" href="group__group-surfacemesh-attr.html#gga9d8ab208822bab9987e9652dda49d89aa93747573a820d43208a296f9f56bf54e">AttributeElement::Indexed</a>);</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="keywordflow">switch</span> (type) {</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="preprocessor">#define LA_X_visit(_, ValueType)                                                \</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="preprocessor">    case make_attribute_value_type&lt;ValueType&gt;(): {                              \</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="preprocessor">        if (is_indexed) {                                                       \</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="preprocessor">            func(static_cast&lt;const IndexedAttribute&lt;ValueType, Index&gt;&amp;&gt;(attr)); \</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="preprocessor">        } else {                                                                \</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="preprocessor">            func(static_cast&lt;const Attribute&lt;ValueType&gt;&amp;&gt;(attr));               \</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="preprocessor">        }                                                                       \</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="preprocessor">        break;                                                                  \</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="preprocessor">    }</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        <a class="code hl_define" href="group__group-surfacemesh-attr.html#gabdd5375a7155af710e703e21e723e834">LA_ATTRIBUTE_X</a>(visit, 0)</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="preprocessor">#undef LA_X_visit</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    }</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>}</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> Func, <span class="keyword">typename</span> Scalar, <span class="keyword">typename</span> Index&gt;</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno"><a class="line" href="namespacelagrange_1_1internal.html#a3a774b57c59de368ea2facf37a3fa27b">   76</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="namespacelagrange_1_1internal.html#a3a774b57c59de368ea2facf37a3fa27b">visit_attribute_write</a>(<a class="code hl_class" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh&lt;Scalar, Index&gt;</a>&amp; mesh, <a class="code hl_typedef" href="group__group-surfacemesh-attr.html#ga4d115376c2c766084ef808c837348fc3">AttributeId</a> <span class="keywordtype">id</span>, Func&amp;&amp; func)</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>{</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    <span class="keyword">const</span> <span class="keyword">auto</span>&amp; attr = mesh.get_attribute_base(<span class="keywordtype">id</span>);</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    <span class="keyword">auto</span> type = attr.get_value_type();</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    <span class="keywordtype">bool</span> is_indexed = (attr.get_element_type() == <a class="code hl_enumvalue" href="group__group-surfacemesh-attr.html#gga9d8ab208822bab9987e9652dda49d89aa93747573a820d43208a296f9f56bf54e">AttributeElement::Indexed</a>);</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    <span class="keywordflow">switch</span> (type) {</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span><span class="preprocessor">#define LA_X_visit(_, ValueType)                                      \</span></div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span><span class="preprocessor">    case make_attribute_value_type&lt;ValueType&gt;(): {                    \</span></div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span><span class="preprocessor">        if (is_indexed) {                                             \</span></div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span><span class="preprocessor">            func(mesh.template ref_indexed_attribute&lt;ValueType&gt;(id)); \</span></div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span><span class="preprocessor">        } else {                                                      \</span></div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span><span class="preprocessor">            func(mesh.template ref_attribute&lt;ValueType&gt;(id));       \</span></div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span><span class="preprocessor">        }                                                             \</span></div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span><span class="preprocessor">        break;                                                        \</span></div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span><span class="preprocessor">    }</span></div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>        <a class="code hl_define" href="group__group-surfacemesh-attr.html#gabdd5375a7155af710e703e21e723e834">LA_ATTRIBUTE_X</a>(visit, 0)</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span><span class="preprocessor">#undef LA_X_visit</span></div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    }</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>}</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>} <span class="comment">// namespace lagrange::internal</span></div>
 <div class="ttc" id="aclasslagrange_1_1_surface_mesh_html"><div class="ttname"><a href="classlagrange_1_1_surface_mesh.html">lagrange::SurfaceMesh&lt; Scalar, Index &gt;</a></div></div>
 <div class="ttc" id="agroup__group-surfacemesh-attr_html_ga4d115376c2c766084ef808c837348fc3"><div class="ttname"><a href="group__group-surfacemesh-attr.html#ga4d115376c2c766084ef808c837348fc3">lagrange::AttributeId</a></div><div class="ttdeci">uint32_t AttributeId</div><div class="ttdoc">Identified to be used to access an attribute.</div><div class="ttdef"><b>Definition:</b> AttributeFwd.h:72</div></div>
-<div class="ttc" id="agroup__group-surfacemesh-attr_html_gabdd5375a7155af710e703e21e723e834"><div class="ttname"><a href="group__group-surfacemesh-attr.html#gabdd5375a7155af710e703e21e723e834">LA_ATTRIBUTE_X</a></div><div class="ttdeci">#define LA_ATTRIBUTE_X(mode, data)</div><div class="ttdoc">X Macro arguments for the Attribute&lt;&gt; class.</div><div class="ttdef"><b>Definition:</b> AttributeTypes.h:46</div></div>
+<div class="ttc" id="agroup__group-surfacemesh-attr_html_gabdd5375a7155af710e703e21e723e834"><div class="ttname"><a href="group__group-surfacemesh-attr.html#gabdd5375a7155af710e703e21e723e834">LA_ATTRIBUTE_X</a></div><div class="ttdeci">#define LA_ATTRIBUTE_X(mode, data)</div><div class="ttdoc">X Macro arguments for the Attribute&lt;&gt; class.</div><div class="ttdef"><b>Definition:</b> AttributeTypes.h:48</div></div>
 <div class="ttc" id="agroup__group-surfacemesh-attr_html_gga9d8ab208822bab9987e9652dda49d89aa93747573a820d43208a296f9f56bf54e"><div class="ttname"><a href="group__group-surfacemesh-attr.html#gga9d8ab208822bab9987e9652dda49d89aa93747573a820d43208a296f9f56bf54e">lagrange::Indexed</a></div><div class="ttdeci">@ Indexed</div><div class="ttdoc">Indexed mesh attributes.</div><div class="ttdef"><b>Definition:</b> AttributeFwd.h:45</div></div>
-<div class="ttc" id="anamespacelagrange_1_1subdivision_html"><div class="ttname"><a href="namespacelagrange_1_1subdivision.html">lagrange::subdivision</a></div><div class="ttdoc">Subdivision surfaces.</div><div class="ttdef"><b>Definition:</b> mesh_subdivision.h:32</div></div>
-<div class="ttc" id="anamespacelagrange_1_1subdivision_html_a21f5f7e62db26fb62f258a8d072ed640"><div class="ttname"><a href="namespacelagrange_1_1subdivision.html#a21f5f7e62db26fb62f258a8d072ed640">lagrange::subdivision::visit_attribute</a></div><div class="ttdeci">void visit_attribute(const SurfaceMesh&lt; Scalar, Index &gt; &amp;mesh, AttributeId id, Func &amp;&amp;func)</div><div class="ttdoc">Apply a function to a mesh attribute.</div><div class="ttdef"><b>Definition:</b> visit_attribute.h:34</div></div>
+<div class="ttc" id="anamespacelagrange_1_1internal_html"><div class="ttname"><a href="namespacelagrange_1_1internal.html">lagrange::internal</a></div><div class="ttdoc">nullptr_t, size_t, ptrdiff_t basic_ostream bad_weak_ptr extent, remove_extent, is_array,...</div><div class="ttdef"><b>Definition:</b> attribute_string_utils.h:21</div></div>
+<div class="ttc" id="anamespacelagrange_1_1internal_html_a3a774b57c59de368ea2facf37a3fa27b"><div class="ttname"><a href="namespacelagrange_1_1internal.html#a3a774b57c59de368ea2facf37a3fa27b">lagrange::internal::visit_attribute_write</a></div><div class="ttdeci">void visit_attribute_write(SurfaceMesh&lt; Scalar, Index &gt; &amp;mesh, AttributeId id, Func &amp;&amp;func)</div><div class="ttdoc">Apply a function to a writeable mesh attribute.</div><div class="ttdef"><b>Definition:</b> visit_attribute.h:76</div></div>
+<div class="ttc" id="anamespacelagrange_1_1internal_html_ac4b70a7b72930733983ddcd0c3f0b32c"><div class="ttname"><a href="namespacelagrange_1_1internal.html#ac4b70a7b72930733983ddcd0c3f0b32c">lagrange::internal::visit_attribute_read</a></div><div class="ttdeci">void visit_attribute_read(const SurfaceMesh&lt; Scalar, Index &gt; &amp;mesh, AttributeId id, Func &amp;&amp;func)</div><div class="ttdoc">Apply a function to a read-only mesh attribute.</div><div class="ttdef"><b>Definition:</b> visit_attribute.h:39</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><b>visit_attribute.h</b></li>
+    <li class="navelem"><a class="el" href="dir_e277d0e790805391a364b883bec7db94.html">lagrange</a></li><li class="navelem"><a class="el" href="dir_f868e3065168465c1bbcc3009ef2971c.html">internal</a></li><li class="navelem"><b>visit_attribute.h</b></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
   </ul>
 </div>

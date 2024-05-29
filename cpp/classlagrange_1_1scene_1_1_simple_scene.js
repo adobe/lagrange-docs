@@ -9,6 +9,7 @@ var classlagrange_1_1scene_1_1_simple_scene =
     [ "get_mesh", "classlagrange_1_1scene_1_1_simple_scene.html#aa2350e78d3a9f786ea429950f906e425", null ],
     [ "ref_mesh", "classlagrange_1_1scene_1_1_simple_scene.html#a558ad6321d3d4545e54de012280b3d22", null ],
     [ "get_instance", "classlagrange_1_1scene_1_1_simple_scene.html#a7331288c5db7acbcb0def3a31c50b415", null ],
+    [ "ref_instance", "classlagrange_1_1scene_1_1_simple_scene.html#a36002d8c92dc2ca76ed022b00798eea6", null ],
     [ "reserve_meshes", "classlagrange_1_1scene_1_1_simple_scene.html#a6afd650291863f55553e7ac081235444", null ],
     [ "add_mesh", "classlagrange_1_1scene_1_1_simple_scene.html#a40303f37a752174425f83343cb6852eb", null ],
     [ "reserve_instances", "classlagrange_1_1scene_1_1_simple_scene.html#ae45490471f2135a4ab325dc5ee8c3835", null ],

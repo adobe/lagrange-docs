@@ -166,7 +166,7 @@ var namespacelagrange_1_1ui =
     [ "get_scene_bounding_box", "namespacelagrange_1_1ui.html#a6760f7a3d6b6e87406203ff2c896850c", null ],
     [ "get_scene_bounds", "namespacelagrange_1_1ui.html#a7287194c2810a95cfd61b59aa52aca44", null ],
     [ "get_scene_bounds", "namespacelagrange_1_1ui.html#a18c5afaf4a172057fad3bd4e6c330089", null ],
-    [ "on", "namespacelagrange_1_1ui.html#ae1a7fe8235eba6ef4d85ef2102f5fe74", null ],
+    [ "on", "namespacelagrange_1_1ui.html#a1bee0cc5e58b82ee0ecfcb833d48f008", null ],
     [ "publish", "namespacelagrange_1_1ui.html#a36e5624fbced4d83d418db72dd328e2d", null ],
     [ "forward_entity_event", "namespacelagrange_1_1ui.html#a65cf6bc00f6d7ed35bde3c5f20500860", null ],
     [ "toggle_component_event", "namespacelagrange_1_1ui.html#afe6a00fd8a5cc2a22a39074227668fc0", null ],

@@ -1,5 +1,9 @@
 var annotated_dup =
 [
+    [ "fmt", null, [
+      [ "formatter< T, std::enable_if_t< std::is_base_of< Eigen::DenseBase< T >, T >::value, char > >", "structfmt_1_1formatter_3_01_t_00_01std_1_1enable__if__t_3_01std_1_1is__base__of_3_01_eigen_1_1_d4cad164886cc373111d40252deee7ffc.html", null ],
+      [ "is_range< Derived, std::enable_if_t< std::is_base_of< Eigen::DenseBase< Derived >, Derived >::value, char > >", "structfmt_1_1is__range_3_01_derived_00_01std_1_1enable__if__t_3_01std_1_1is__base__of_3_01_eigen8831e8e9466b492bd5196648eda925fb.html", null ]
+    ] ],
     [ "lagrange", "namespacelagrange.html", [
       [ "_logging", null, [
         [ "ColorFormatter", "classlagrange_1_1__logging_1_1_color_formatter.html", null ]
@@ -70,6 +74,7 @@ var annotated_dup =
         [ "control_block_base", "classlagrange_1_1internal_1_1control__block__base.html", null ],
         [ "default_delete", "classlagrange_1_1internal_1_1default__delete.html", "classlagrange_1_1internal_1_1default__delete" ],
         [ "default_delete< T[]>", "classlagrange_1_1internal_1_1default__delete_3_01_t_0f_0e_4.html", "classlagrange_1_1internal_1_1default__delete_3_01_t_0f_0e_4" ],
+        [ "InverseMapping", "structlagrange_1_1internal_1_1_inverse_mapping.html", "structlagrange_1_1internal_1_1_inverse_mapping" ],
         [ "MapAttributesOptions", "structlagrange_1_1internal_1_1_map_attributes_options.html", "structlagrange_1_1internal_1_1_map_attributes_options" ],
         [ "ptr", "classlagrange_1_1internal_1_1ptr.html", null ],
         [ "shared_ptr", "classlagrange_1_1internal_1_1shared__ptr.html", "classlagrange_1_1internal_1_1shared__ptr" ],
@@ -77,6 +82,7 @@ var annotated_dup =
         [ "shared_ptr_access< T, false, true >", "classlagrange_1_1internal_1_1shared__ptr__access_3_01_t_00_01false_00_01true_01_4.html", "classlagrange_1_1internal_1_1shared__ptr__access_3_01_t_00_01false_00_01true_01_4" ],
         [ "shared_ptr_access< T, true, false >", "classlagrange_1_1internal_1_1shared__ptr__access_3_01_t_00_01true_00_01false_01_4.html", "classlagrange_1_1internal_1_1shared__ptr__access_3_01_t_00_01true_00_01false_01_4" ],
         [ "SkinningExtractNResult", "structlagrange_1_1internal_1_1_skinning_extract_n_result.html", "structlagrange_1_1internal_1_1_skinning_extract_n_result" ],
+        [ "UnorientedEdge", "structlagrange_1_1internal_1_1_unoriented_edge.html", null ],
         [ "weak_ptr", "classlagrange_1_1internal_1_1weak__ptr.html", "classlagrange_1_1internal_1_1weak__ptr" ]
       ] ],
       [ "io", "namespacelagrange_1_1io.html", [
@@ -118,8 +124,7 @@ var annotated_dup =
         [ "PyAttribute", "classlagrange_1_1python_1_1_py_attribute.html", null ],
         [ "PyIndexedAttribute", "classlagrange_1_1python_1_1_py_indexed_attribute.html", null ],
         [ "PythonLoggingSink", "classlagrange_1_1python_1_1_python_logging_sink.html", null ],
-        [ "UserDataConverterTrampoline", "structlagrange_1_1python_1_1_user_data_converter_trampoline.html", null ],
-        [ "ValuePublicist", "classlagrange_1_1python_1_1_value_publicist.html", null ]
+        [ "UserDataConverterTrampoline", "structlagrange_1_1python_1_1_user_data_converter_trampoline.html", null ]
       ] ],
       [ "raycasting", "namespacelagrange_1_1raycasting.html", [
         [ "ClosestPointResult", "structlagrange_1_1raycasting_1_1_closest_point_result.html", null ],
@@ -131,13 +136,14 @@ var annotated_dup =
         [ "Animation", "structlagrange_1_1scene_1_1_animation.html", null ],
         [ "Camera", "structlagrange_1_1scene_1_1_camera.html", null ],
         [ "Extensions", "structlagrange_1_1scene_1_1_extensions.html", "structlagrange_1_1scene_1_1_extensions" ],
-        [ "ImageLegacy", "structlagrange_1_1scene_1_1_image_legacy.html", null ],
+        [ "ImageBufferExperimental", "structlagrange_1_1scene_1_1_image_buffer_experimental.html", "structlagrange_1_1scene_1_1_image_buffer_experimental" ],
+        [ "ImageExperimental", "structlagrange_1_1scene_1_1_image_experimental.html", "structlagrange_1_1scene_1_1_image_experimental" ],
         [ "Light", "structlagrange_1_1scene_1_1_light.html", null ],
         [ "MaterialExperimental", "structlagrange_1_1scene_1_1_material_experimental.html", null ],
         [ "MeshInstance", "structlagrange_1_1scene_1_1_mesh_instance.html", "structlagrange_1_1scene_1_1_mesh_instance" ],
         [ "Node", "structlagrange_1_1scene_1_1_node.html", null ],
         [ "RemeshingOptions", "structlagrange_1_1scene_1_1_remeshing_options.html", "structlagrange_1_1scene_1_1_remeshing_options" ],
-        [ "Scene", "structlagrange_1_1scene_1_1_scene.html", null ],
+        [ "Scene", "structlagrange_1_1scene_1_1_scene.html", "structlagrange_1_1scene_1_1_scene" ],
         [ "SceneMeshInstance", "structlagrange_1_1scene_1_1_scene_mesh_instance.html", null ],
         [ "SimpleScene", "classlagrange_1_1scene_1_1_simple_scene.html", "classlagrange_1_1scene_1_1_simple_scene" ],
         [ "Skeleton", "structlagrange_1_1scene_1_1_skeleton.html", null ],
@@ -348,9 +354,12 @@ var annotated_dup =
       [ "FacetAreaOptions", "structlagrange_1_1_facet_area_options.html", "structlagrange_1_1_facet_area_options" ],
       [ "FacetCentroidOptions", "structlagrange_1_1_facet_centroid_options.html", "structlagrange_1_1_facet_centroid_options" ],
       [ "FacetNormalOptions", "structlagrange_1_1_facet_normal_options.html", "structlagrange_1_1_facet_normal_options" ],
+      [ "Frustum", "structlagrange_1_1_frustum.html", "structlagrange_1_1_frustum" ],
+      [ "FrustumSelectionOptions", "structlagrange_1_1_frustum_selection_options.html", "structlagrange_1_1_frustum_selection_options" ],
       [ "function_ref", "classlagrange_1_1function__ref.html", null ],
       [ "function_ref< R(Args...)>", "classlagrange_1_1function__ref_3_01_r_07_args_8_8_8_08_4.html", "classlagrange_1_1function__ref_3_01_r_07_args_8_8_8_08_4" ],
       [ "GenuineMeshGeometry", "classlagrange_1_1_genuine_mesh_geometry.html", null ],
+      [ "GreedyColoringOptions", "structlagrange_1_1_greedy_coloring_options.html", "structlagrange_1_1_greedy_coloring_options" ],
       [ "IndexedAttribute", "classlagrange_1_1_indexed_attribute.html", "classlagrange_1_1_indexed_attribute" ],
       [ "IndexedAttributes", "classlagrange_1_1_indexed_attributes.html", null ],
       [ "MarchingTrianglesOutput", "structlagrange_1_1_marching_triangles_output.html", null ],
@@ -372,6 +381,7 @@ var annotated_dup =
       [ "SamplePointsOnSurfaceOutput", "structlagrange_1_1_sample_points_on_surface_output.html", null ],
       [ "ScopedLogLevel", "classlagrange_1_1_scoped_log_level.html", "classlagrange_1_1_scoped_log_level" ],
       [ "ScopedTimer", "classlagrange_1_1_scoped_timer.html", "classlagrange_1_1_scoped_timer" ],
+      [ "SeamEdgesOptions", "structlagrange_1_1_seam_edges_options.html", "structlagrange_1_1_seam_edges_options" ],
       [ "SelectFacetsByNormalSimilarityParameters", "structlagrange_1_1_select_facets_by_normal_similarity_parameters.html", null ],
       [ "SeparateByComponentsOptions", "structlagrange_1_1_separate_by_components_options.html", "structlagrange_1_1_separate_by_components_options" ],
       [ "SeparateByFacetGroupsOptions", "structlagrange_1_1_separate_by_facet_groups_options.html", "structlagrange_1_1_separate_by_facet_groups_options" ],
@@ -405,12 +415,18 @@ var annotated_dup =
     [ "test_mesh_subdivision", null, [
       [ "TestMeshSubdivision", "classtest__mesh__subdivision_1_1_test_mesh_subdivision.html", null ]
     ] ],
+    [ "test_scene", null, [
+      [ "TestScene", "classtest__scene_1_1_test_scene.html", null ]
+    ] ],
     [ "test_simple_scene", null, [
       [ "TestSimpleScene", "classtest__simple__scene_1_1_test_simple_scene.html", null ]
     ] ],
     [ "tests", null, [
       [ "test_attribute", null, [
         [ "TestAttribute", "classtests_1_1test__attribute_1_1_test_attribute.html", null ]
+      ] ],
+      [ "test_cast_attribute", null, [
+        [ "TestCastAttribute", "classtests_1_1test__cast__attribute_1_1_test_cast_attribute.html", null ]
       ] ],
       [ "test_combine_meshes", null, [
         [ "TestCombineMeshes", "classtests_1_1test__combine__meshes_1_1_test_combine_meshes.html", null ]
@@ -438,6 +454,9 @@ var annotated_dup =
       ] ],
       [ "test_compute_normal", null, [
         [ "TestComputeNormal", "classtests_1_1test__compute__normal_1_1_test_compute_normal.html", null ]
+      ] ],
+      [ "test_compute_seam_edges", null, [
+        [ "TestComputeCentroid", "classtests_1_1test__compute__seam__edges_1_1_test_compute_centroid.html", null ]
       ] ],
       [ "test_compute_tangent_bitangent", null, [
         [ "TestComputeTangentBitangent", "classtests_1_1test__compute__tangent__bitangent_1_1_test_compute_tangent_bitangent.html", null ]
@@ -498,5 +517,6 @@ var annotated_dup =
       ] ]
     ] ],
     [ "Args", "struct_args.html", null ],
+    [ "type_caster< lagrange::scene::Value >", "structtype__caster_3_01lagrange_1_1scene_1_1_value_01_4.html", null ],
     [ "type_caster< lagrange::StackVector< T, N > >", "structtype__caster_3_01lagrange_1_1_stack_vector_3_01_t_00_01_n_01_4_01_4.html", null ]
 ];

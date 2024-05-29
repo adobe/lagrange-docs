@@ -3,7 +3,7 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="prev" title="scene" href="../scene/index.html" />
+<link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="prev" title="subdivision" href="../subdivision/index.html" />
 
     <!-- Generated with Sphinx 7.2.6 and Furo 2023.09.10 -->
         <title>io - Lagrange documentation</title>
@@ -158,10 +158,10 @@
   <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
 <li class="toctree-l1 current has-children"><a class="reference internal" href="../index.html">API Reference</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of API Reference</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../subdivision/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">subdivision</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../scene/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">scene</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="../image/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">image</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="../core/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">core</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="../scene/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">scene</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../subdivision/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">subdivision</span></code></a></li>
 <li class="toctree-l2 current current-page"><a class="current reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">io</span></code></a></li>
 </ul>
 </li>
@@ -229,8 +229,8 @@
 <div class="table-wrapper autosummary longtable docutils container">
 <table class="autosummary longtable docutils align-default">
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#io.load_mesh" title="io.load_mesh"><code class="xref py py-obj docutils literal notranslate"><span class="pre">load_mesh</span></code></a>(→ lagrange.core.SurfaceMesh)</p></td>
-<td><p>Load mesh from a file.</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#io.load_mesh" title="io.load_mesh"><code class="xref py py-obj docutils literal notranslate"><span class="pre">load_mesh</span></code></a>(*args, **kwargs)</p></td>
+<td><p>load_mesh(filename: os.PathLike, triangulate: bool = False, load_normals: bool = True, load_tangents: bool = True, load_uvs: bool = True, load_weights: bool = True, load_materials: bool = True, load_vertex_colors: bool = True, load_object_ids: bool = True, load_images: bool = True, search_path: os.PathLike = .) -&gt; lagrange.core.SurfaceMesh</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#io.load_scene" title="io.load_scene"><code class="xref py py-obj docutils literal notranslate"><span class="pre">load_scene</span></code></a>(→ lagrange.scene.Scene)</p></td>
 <td><p>Load a scene.</p></td>
@@ -320,8 +320,8 @@
 <dd></dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="io.LoadOptions.load_object_id">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">load_object_id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#io.LoadOptions.load_object_id" title="Link to this definition">#</a></dt>
+<dt class="sig sig-object py" id="io.LoadOptions.load_object_ids">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">load_object_ids</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#io.LoadOptions.load_object_ids" title="Link to this definition">#</a></dt>
 <dd></dd></dl>
 
 <dl class="py property">
@@ -400,6 +400,11 @@
 <dd></dd></dl>
 
 <dl class="py property">
+<dt class="sig sig-object py" id="io.SaveOptions.embed_images">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">embed_images</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#io.SaveOptions.embed_images" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
 <dt class="sig sig-object py" id="io.SaveOptions.encoding">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">encoding</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">lagrange.io.FileEncoding</span></em><a class="headerlink" href="#io.SaveOptions.encoding" title="Link to this definition">#</a></dt>
 <dd></dd></dl>
@@ -418,13 +423,22 @@
 
 <dl class="py function">
 <dt class="sig sig-object py" id="io.load_mesh">
-<span class="sig-prename descclassname"><span class="pre">io.</span></span><span class="sig-name descname"><span class="pre">load_mesh</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">os.PathLike</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">triangulate</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">lagrange.core.SurfaceMesh</span></span></span><a class="headerlink" href="#io.load_mesh" title="Link to this definition">#</a></dt>
-<dd><p>Load mesh from a file.</p>
+<span class="sig-prename descclassname"><span class="pre">io.</span></span><span class="sig-name descname"><span class="pre">load_mesh</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#io.load_mesh" title="Link to this definition">#</a></dt>
+<dd><p>load_mesh(filename: os.PathLike, triangulate: bool = False, load_normals: bool = True, load_tangents: bool = True, load_uvs: bool = True, load_weights: bool = True, load_materials: bool = True, load_vertex_colors: bool = True, load_object_ids: bool = True, load_images: bool = True, search_path: os.PathLike = .) -&gt; lagrange.core.SurfaceMesh</p>
+<p>Load mesh from a file.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>filename</strong> – The input file name.</p></li>
 <li><p><strong>triangulate</strong> – Whether to triangulate the mesh if it is not already triangulated. Defaults to False.</p></li>
+<li><p><strong>load_normals</strong> – Whether to load vertex normals from mesh if available. Defaults to True.</p></li>
+<li><p><strong>load_tangents</strong> – Whether to load tangents and bitangents from mesh if available. Defaults to True.</p></li>
+<li><p><strong>load_uvs</strong> – Whether to load texture coordinates from mesh if available. Defaults to True.</p></li>
+<li><p><strong>load_weights</strong> – Whether to load skinning weights attributes from mesh if available. Defaults to True.</p></li>
+<li><p><strong>load_materials</strong> – Whether to load material ids from mesh if available. Defaults to True.</p></li>
+<li><p><strong>load_vertex_colors</strong> – Whether to load vertex colors from mesh if available. Defaults to True.</p></li>
+<li><p><strong>load_object_id</strong> – Whether to load object ids from mesh if available. Defaults to True.</p></li>
+<li><p><strong>load_images</strong> – Whether to load external images if available. Defaults to True.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Return SurfaceMesh<span class="colon">:</span></dt>
@@ -565,14 +579,14 @@
         
         <div class="related-pages">
           
-          <a class="prev-page" href="../scene/index.html">
+          <a class="prev-page" href="../subdivision/index.html">
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
                   <span>Previous</span>
                 </div>
                 
-                <div class="title"><code class="xref py py-mod docutils literal notranslate"><span class="pre">scene</span></code></div>
+                <div class="title"><code class="xref py py-mod docutils literal notranslate"><span class="pre">subdivision</span></code></div>
                 
               </div>
             </a>
@@ -626,7 +640,7 @@
 <li><a class="reference internal" href="#io.LoadOptions"><code class="docutils literal notranslate"><span class="pre">LoadOptions</span></code></a><ul>
 <li><a class="reference internal" href="#io.LoadOptions.load_materials"><code class="docutils literal notranslate"><span class="pre">LoadOptions.load_materials</span></code></a></li>
 <li><a class="reference internal" href="#io.LoadOptions.load_normals"><code class="docutils literal notranslate"><span class="pre">LoadOptions.load_normals</span></code></a></li>
-<li><a class="reference internal" href="#io.LoadOptions.load_object_id"><code class="docutils literal notranslate"><span class="pre">LoadOptions.load_object_id</span></code></a></li>
+<li><a class="reference internal" href="#io.LoadOptions.load_object_ids"><code class="docutils literal notranslate"><span class="pre">LoadOptions.load_object_ids</span></code></a></li>
 <li><a class="reference internal" href="#io.LoadOptions.load_tangents"><code class="docutils literal notranslate"><span class="pre">LoadOptions.load_tangents</span></code></a></li>
 <li><a class="reference internal" href="#io.LoadOptions.load_uvs"><code class="docutils literal notranslate"><span class="pre">LoadOptions.load_uvs</span></code></a></li>
 <li><a class="reference internal" href="#io.LoadOptions.load_vertex_colors"><code class="docutils literal notranslate"><span class="pre">LoadOptions.load_vertex_colors</span></code></a></li>
@@ -647,6 +661,7 @@
 </ul>
 </li>
 <li><a class="reference internal" href="#io.SaveOptions.attribute_conversion_policy"><code class="docutils literal notranslate"><span class="pre">SaveOptions.attribute_conversion_policy</span></code></a></li>
+<li><a class="reference internal" href="#io.SaveOptions.embed_images"><code class="docutils literal notranslate"><span class="pre">SaveOptions.embed_images</span></code></a></li>
 <li><a class="reference internal" href="#io.SaveOptions.encoding"><code class="docutils literal notranslate"><span class="pre">SaveOptions.encoding</span></code></a></li>
 <li><a class="reference internal" href="#io.SaveOptions.output_attributes"><code class="docutils literal notranslate"><span class="pre">SaveOptions.output_attributes</span></code></a></li>
 <li><a class="reference internal" href="#io.SaveOptions.selected_attributes"><code class="docutils literal notranslate"><span class="pre">SaveOptions.selected_attributes</span></code></a></li>

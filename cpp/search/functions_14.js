@@ -12,7 +12,8 @@ var searchData=
   ['vertex_5fref_9',['vertex_ref',['../group__group-surfacemesh-views.html#ga6b51e5a79a66e11c3dff4c1d68015c1c',1,'lagrange']]],
   ['vertex_5fview_10',['vertex_view',['../group__group-surfacemesh-views.html#ga2e034be5f010e6956225e15059825146',1,'lagrange']]],
   ['vertexcount_11',['vertexCount',['../classlagrange_1_1volume_1_1legacy_1_1_mesh_adapter.html#a032a09bd4d593307502ff546dd2d019c',1,'lagrange::volume::legacy::MeshAdapter']]],
-  ['viewer_12',['Viewer',['../classlagrange_1_1ui_1_1_viewer.html#aeb730ff15c9531d9e13135b5b126cd4e',1,'lagrange::ui::Viewer::Viewer(const std::string &amp;window_title, int window_width, int window_height)'],['../classlagrange_1_1ui_1_1_viewer.html#a47e4ba2d08d9510a746f7cef766b8c98',1,'lagrange::ui::Viewer::Viewer(int argc, char **argv)'],['../classlagrange_1_1ui_1_1_viewer.html#a5d666b1765bda9bf429865fc093c0776',1,'lagrange::ui::Viewer::Viewer(const WindowOptions &amp;window_options)']]],
+  ['viewer_12',['Viewer',['../classlagrange_1_1ui_1_1_viewer.html#a5d666b1765bda9bf429865fc093c0776',1,'lagrange::ui::Viewer::Viewer(const WindowOptions &amp;window_options)'],['../classlagrange_1_1ui_1_1_viewer.html#a47e4ba2d08d9510a746f7cef766b8c98',1,'lagrange::ui::Viewer::Viewer(int argc, char **argv)'],['../classlagrange_1_1ui_1_1_viewer.html#aeb730ff15c9531d9e13135b5b126cd4e',1,'lagrange::ui::Viewer::Viewer(const std::string &amp;window_title, int window_width, int window_height)']]],
   ['viewport_5fto_5fscreen_13',['viewport_to_screen',['../structlagrange_1_1ui_1_1_viewport_panel.html#ab695dcb24eda877f3a5177651aa4cb5b',1,'lagrange::ui::ViewportPanel']]],
-  ['visit_5fattribute_14',['visit_attribute',['../namespacelagrange_1_1subdivision.html#a21f5f7e62db26fb62f258a8d072ed640',1,'lagrange::subdivision']]]
+  ['visit_5fattribute_5fread_14',['visit_attribute_read',['../namespacelagrange_1_1internal.html#ac4b70a7b72930733983ddcd0c3f0b32c',1,'lagrange::internal']]],
+  ['visit_5fattribute_5fwrite_15',['visit_attribute_write',['../namespacelagrange_1_1internal.html#a3a774b57c59de368ea2facf37a3fa27b',1,'lagrange::internal']]]
 ];

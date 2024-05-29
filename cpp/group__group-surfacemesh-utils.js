@@ -42,6 +42,11 @@ var group__group_surfacemesh_utils =
     [ "FacetNormalOptions", "structlagrange_1_1_facet_normal_options.html", [
       [ "output_attribute_name", "structlagrange_1_1_facet_normal_options.html#ad9fcba39803c665ca7be48a39d079f00", null ]
     ] ],
+    [ "GreedyColoringOptions", "structlagrange_1_1_greedy_coloring_options.html", [
+      [ "output_attribute_name", "structlagrange_1_1_greedy_coloring_options.html#ad9fcba39803c665ca7be48a39d079f00", null ],
+      [ "element_type", "structlagrange_1_1_greedy_coloring_options.html#ae25137421e69fb211c5fd3bf517b2829", null ],
+      [ "num_color_used", "structlagrange_1_1_greedy_coloring_options.html#a81f5acc6d6adddb797813a0eb72a1d47", null ]
+    ] ],
     [ "NormalOptions", "structlagrange_1_1_normal_options.html", [
       [ "output_attribute_name", "structlagrange_1_1_normal_options.html#ad9fcba39803c665ca7be48a39d079f00", null ],
       [ "weight_type", "structlagrange_1_1_normal_options.html#aedcf335906b67a37d8680b02b3a2a58a", null ],
@@ -97,6 +102,14 @@ var group__group_surfacemesh_utils =
       [ "collision_policy_float", "structlagrange_1_1_remap_vertices_options.html#afefe76052ce1fa3ed45b6aee79876855", null ],
       [ "collision_policy_integral", "structlagrange_1_1_remap_vertices_options.html#adfe0aeb79b764bf99539a0f3ca973207", null ]
     ] ],
+    [ "Frustum< Scalar >", "structlagrange_1_1_frustum.html", [
+      [ "Plane", "structlagrange_1_1_frustum_1_1_plane.html", null ],
+      [ "planes", "structlagrange_1_1_frustum.html#a4bb431445b1380df42262843e690bccf", null ]
+    ] ],
+    [ "FrustumSelectionOptions", "structlagrange_1_1_frustum_selection_options.html", [
+      [ "greedy", "structlagrange_1_1_frustum_selection_options.html#ab88d48acadd0e9697398bded9513de2f", null ],
+      [ "output_attribute_name", "structlagrange_1_1_frustum_selection_options.html#ad9fcba39803c665ca7be48a39d079f00", null ]
+    ] ],
     [ "SeparateByComponentsOptions", "structlagrange_1_1_separate_by_components_options.html", [
       [ "source_vertex_attr_name", "structlagrange_1_1_separate_by_components_options.html#a7995267babac2c065f47ff9096d7f517", null ],
       [ "source_facet_attr_name", "structlagrange_1_1_separate_by_components_options.html#a09443d2b35a544bc3b02fa83f747535d", null ],
@@ -125,6 +138,10 @@ var group__group_surfacemesh_utils =
       [ "lagrange::NormalWeightingType::Angle", "group__group-surfacemesh-utils.html#ggaa88e833ed770762b02e187f0c2377d3da45f4ce6c3306644b1efe333f4f8d6929", null ]
     ] ],
     [ "lagrange::cast", "group__group-surfacemesh-utils.html#gab7596be540e8db5808abc8c322fd7460", null ],
+    [ "lagrange::cast_attribute", "group__group-surfacemesh-utils.html#ga5ad144e6af73b1f97c048b3ee5ccc1d2", null ],
+    [ "lagrange::cast_attribute", "group__group-surfacemesh-utils.html#ga0e111d74e63f3fa93543c7f4bae3d8e7", null ],
+    [ "lagrange::cast_attribute_in_place", "group__group-surfacemesh-utils.html#ga12f4ef03251b7be96fe1c67e16649ea5", null ],
+    [ "lagrange::cast_attribute_in_place", "group__group-surfacemesh-utils.html#ga304ef489e9af8297e5f295e5bbacc31a", null ],
     [ "lagrange::combine_meshes", "group__group-surfacemesh-utils.html#ga363707c2e65474638292c738c072868c", null ],
     [ "lagrange::combine_meshes", "group__group-surfacemesh-utils.html#ga07291901c4f594454dfafb0764f4dad5", null ],
     [ "lagrange::combine_meshes", "group__group-surfacemesh-utils.html#ga9e874e29c25e3a587a9352147e36772d", null ],
@@ -140,6 +157,7 @@ var group__group_surfacemesh_utils =
     [ "lagrange::compute_dijkstra_distance", "group__group-surfacemesh-utils.html#ga63cc672971ecc26849450a45db354f6b", null ],
     [ "lagrange::compute_edge_lengths", "group__group-surfacemesh-utils.html#ga58593e3709263771bc25ff51f473c92a", null ],
     [ "lagrange::compute_facet_normal", "group__group-surfacemesh-utils.html#ga50e835144b2dd2ad5df9848293c8b097", null ],
+    [ "lagrange::compute_greedy_coloring", "group__group-surfacemesh-utils.html#ga2d693ab4db6092d9984a55b6073c2d8f", null ],
     [ "lagrange::compute_normal", "group__group-surfacemesh-utils.html#ga0d1dc948d0cb8aa8b7759e34a34df7bc", null ],
     [ "lagrange::compute_normal", "group__group-surfacemesh-utils.html#gabe91547f24b4936c8feddd9b74b1aa02", null ],
     [ "lagrange::compute_normal", "group__group-surfacemesh-utils.html#ga668cc68bd27510b1bec92cf8dbe0e362", null ],
@@ -163,6 +181,7 @@ var group__group_surfacemesh_utils =
     [ "lagrange::permute_facets", "group__group-surfacemesh-utils.html#ga4bb6f1ff87f6aac0062ac21dba0f2349", null ],
     [ "lagrange::permute_vertices", "group__group-surfacemesh-utils.html#ga8aea6bef4481de2ace23921d95fdc8fe", null ],
     [ "lagrange::remap_vertices", "group__group-surfacemesh-utils.html#ga78898b0da8d43677481cdc176f2391f8", null ],
+    [ "lagrange::select_facets_in_frustum", "group__group-surfacemesh-utils.html#ga2a4c19c8eb140fe6e67990da8b65736e", null ],
     [ "lagrange::separate_by_components", "group__group-surfacemesh-utils.html#ga954105400081aec257b861eabc11caa4", null ],
     [ "lagrange::separate_by_facet_groups", "group__group-surfacemesh-utils.html#ga3a916fec3d88a2f142479beb6d1dabbc", null ],
     [ "lagrange::separate_by_facet_groups", "group__group-surfacemesh-utils.html#ga8bfc61d050dfff96cd48f72f4bd4b149", null ],

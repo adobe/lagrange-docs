@@ -57,16 +57,16 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "../",
-"classlagrange_1_1_mesh_navigation.html#a9319875568c308aebf33469e0b4bab08",
-"classlagrange_1_1_surface_mesh.html#aeced0acd223fc3b2c198bdff67199dea",
-"classlagrange_1_1internal_1_1shared__ptr__access_3_01_t_00_01false_00_01true_01_4.html",
-"classlagrange_1_1ui_1_1_keybinds.html#a182c71e92968f9d892b82e69946b0980",
-"group__group-surfacemesh-attr-utils.html#ga4a2e525bede1624580d71782861b0cd6",
-"namespacelagrange.html#a312f57b0318728667933d7254778058b",
-"namespacelagrange_1_1ui.html#a9edcbc2592f83f6b2f1030d5dd345251",
-"structlagrange_1_1experimental_1_1_enum_to_scalar_3_01_scalar_enum_1_1_u_i_n_t8_01_4.html",
-"structlagrange_1_1ui_1_1_g_l_mesh.html",
-"structlagrange_1_1ui_1_1_viewer_1_1_window_options.html#a989d3e09b707fb1f4bc2355ba5855a0c"
+"classlagrange_1_1_mesh_navigation.html#a8316e8d0bde5a7a8c8ef2feaa6b75f53",
+"classlagrange_1_1_surface_mesh.html#aeb2d4b3e2b0b9b3fba297a8f6eea0981",
+"classlagrange_1_1internal_1_1shared__ptr__access.html#ac664e14fad0c2c90120c66aaad6226a3",
+"classlagrange_1_1ui_1_1_keybinds.html#a0ae57b3de75fbad6f81633bb76fb6b2c",
+"group__group-logger.html#ga8f17bae29eab16304d0f5a71f383ae15",
+"namespacelagrange.html#a144f50badc977a6cc9e3b61b66dc2bec",
+"namespacelagrange_1_1ui.html#a6dd81f5614b357748e204d8f3d766400",
+"structlagrange_1_1_vertex_normal_options.html#a2d79834ef253c9c4e2af9de59ab8354f",
+"structlagrange_1_1ui_1_1_camera_1_1_viewport_transform.html#aa95b44777caefd6beb9d0d038d72e7f4",
+"structlagrange_1_1ui_1_1_texture_1_1_download_result.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

@@ -99,7 +99,7 @@ Functions
       :type: bool
 
 
-   .. py:property:: load_object_id
+   .. py:property:: load_object_ids
       :type: bool
 
 
@@ -173,6 +173,10 @@ Functions
       :type: lagrange.io.SaveOptions.AttributeConversionPolicy
 
 
+   .. py:property:: embed_images
+      :type: bool
+
+
    .. py:property:: encoding
       :type: lagrange.io.FileEncoding
 
@@ -186,12 +190,22 @@ Functions
 
 
 
-.. py:function:: load_mesh(filename: os.PathLike, triangulate: bool = False) -> lagrange.core.SurfaceMesh
+.. py:function:: load_mesh(*args, **kwargs)
+
+   load_mesh(filename: os.PathLike, triangulate: bool = False, load_normals: bool = True, load_tangents: bool = True, load_uvs: bool = True, load_weights: bool = True, load_materials: bool = True, load_vertex_colors: bool = True, load_object_ids: bool = True, load_images: bool = True, search_path: os.PathLike = .) -> lagrange.core.SurfaceMesh
 
    Load mesh from a file.
 
-   :param filename:    The input file name.
-   :param triangulate: Whether to triangulate the mesh if it is not already triangulated. Defaults to False.
+   :param filename:           The input file name.
+   :param triangulate:        Whether to triangulate the mesh if it is not already triangulated. Defaults to False.
+   :param load_normals:       Whether to load vertex normals from mesh if available. Defaults to True.
+   :param load_tangents:      Whether to load tangents and bitangents from mesh if available. Defaults to True.
+   :param load_uvs:           Whether to load texture coordinates from mesh if available. Defaults to True.
+   :param load_weights:       Whether to load skinning weights attributes from mesh if available. Defaults to True.
+   :param load_materials:     Whether to load material ids from mesh if available. Defaults to True.
+   :param load_vertex_colors: Whether to load vertex colors from mesh if available. Defaults to True.
+   :param load_object_id:     Whether to load object ids from mesh if available. Defaults to True.
+   :param load_images:        Whether to load external images if available. Defaults to True.
 
    :return SurfaceMesh: The mesh object extracted from the input string.
 

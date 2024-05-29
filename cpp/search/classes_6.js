@@ -9,5 +9,6 @@ var searchData=
   ['glrenderqueueitem_6',['GLRenderQueueItem',['../structlagrange_1_1ui_1_1_g_l_render_queue_item.html',1,'lagrange::ui']]],
   ['glscope_7',['GLScope',['../structlagrange_1_1ui_1_1_g_l_scope.html',1,'lagrange::ui']]],
   ['glstate_8',['GLState',['../structlagrange_1_1ui_1_1_g_l_state.html',1,'lagrange::ui']]],
-  ['gpubuffer_9',['GPUBuffer',['../structlagrange_1_1ui_1_1_g_p_u_buffer.html',1,'lagrange::ui']]]
+  ['gpubuffer_9',['GPUBuffer',['../structlagrange_1_1ui_1_1_g_p_u_buffer.html',1,'lagrange::ui']]],
+  ['greedycoloringoptions_10',['GreedyColoringOptions',['../structlagrange_1_1_greedy_coloring_options.html',1,'lagrange']]]
 ];

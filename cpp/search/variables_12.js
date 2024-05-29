@@ -7,5 +7,5 @@ var searchData=
   ['texcoord_4',['texcoord',['../structlagrange_1_1_attribute_name.html#a89974aafa583f7a43d53b3894eda5d89',1,'lagrange::AttributeName']]],
   ['title_5',['title',['../structlagrange_1_1ui_1_1_u_i_panel.html#ac30fed21fe991cc8475ce543929f8b72',1,'lagrange::ui::UIPanel']]],
   ['transform_6',['transform',['../structlagrange_1_1scene_1_1_mesh_instance.html#abbd6ccea530a2fa33fb91927d25eee36',1,'lagrange::scene::MeshInstance']]],
-  ['triangulate_7',['triangulate',['../structlagrange_1_1io_1_1legacy_1_1_mesh_loader_params.html#abe2f6144e25d7ce8c9d818b3926a5a39',1,'lagrange::io::legacy::MeshLoaderParams::triangulate()'],['../structlagrange_1_1io_1_1_load_options.html#abe2f6144e25d7ce8c9d818b3926a5a39',1,'lagrange::io::LoadOptions::triangulate()']]]
+  ['triangulate_7',['triangulate',['../structlagrange_1_1io_1_1legacy_1_1_mesh_loader_params.html#abe2f6144e25d7ce8c9d818b3926a5a39',1,'lagrange::io::legacy::MeshLoaderParams::triangulate()'],['../structlagrange_1_1io_1_1_load_options.html#a28b75c7a2a709f010d24914838a8acdb',1,'lagrange::io::LoadOptions::triangulate()']]]
 ];

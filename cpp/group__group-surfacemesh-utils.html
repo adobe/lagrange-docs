@@ -149,6 +149,9 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlagrange_1_1_facet_normal_options.html">FacetNormalOptions</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Option struct for computing per-facet mesh normals.  <a href="structlagrange_1_1_facet_normal_options.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlagrange_1_1_greedy_coloring_options.html">GreedyColoringOptions</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Option struct for computing dihedral angles.  <a href="structlagrange_1_1_greedy_coloring_options.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlagrange_1_1_normal_options.html">NormalOptions</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Option struct for computing indexed mesh normals.  <a href="structlagrange_1_1_normal_options.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -178,6 +181,12 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlagrange_1_1_remap_vertices_options.html">RemapVerticesOptions</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remap vertices options.  <a href="structlagrange_1_1_remap_vertices_options.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlagrange_1_1_frustum.html">Frustum&lt; Scalar &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">An array of four planes that define a frustum.  <a href="structlagrange_1_1_frustum.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlagrange_1_1_frustum_selection_options.html">FrustumSelectionOptions</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Option struct for selecting facets.  <a href="structlagrange_1_1_frustum_selection_options.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlagrange_1_1_separate_by_components_options.html">SeparateByComponentsOptions</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Option settings for <code>separate_by_components</code>.  <a href="structlagrange_1_1_separate_by_components_options.html#details">More...</a><br /></td></tr>
@@ -215,6 +224,22 @@ Functions</h2></td></tr>
 <tr class="memitem:gab7596be540e8db5808abc8c322fd7460"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; ToScalar, ToIndex &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__group-surfacemesh-utils.html#gab7596be540e8db5808abc8c322fd7460">cast</a> (const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; FromScalar, FromIndex &gt; &amp;source_mesh, const <a class="el" href="structlagrange_1_1_attribute_filter.html">AttributeFilter</a> &amp;convertible_attributes={}, std::vector&lt; std::string &gt; *converted_attributes_names=nullptr)</td></tr>
 <tr class="memdesc:gab7596be540e8db5808abc8c322fd7460"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cast a mesh to a mesh of different scalar and/or index type.  <a href="group__group-surfacemesh-utils.html#gab7596be540e8db5808abc8c322fd7460">More...</a><br /></td></tr>
 <tr class="separator:gab7596be540e8db5808abc8c322fd7460"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5ad144e6af73b1f97c048b3ee5ccc1d2"><td class="memTemplParams" colspan="2">template&lt;typename ToValueType , typename Scalar , typename Index &gt; </td></tr>
+<tr class="memitem:ga5ad144e6af73b1f97c048b3ee5ccc1d2"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="group__group-surfacemesh-attr.html#ga4d115376c2c766084ef808c837348fc3">AttributeId</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__group-surfacemesh-utils.html#ga5ad144e6af73b1f97c048b3ee5ccc1d2">cast_attribute</a> (<a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;mesh, <a class="el" href="group__group-surfacemesh-attr.html#ga4d115376c2c766084ef808c837348fc3">AttributeId</a> source_id, std::string_view target_name)</td></tr>
+<tr class="memdesc:ga5ad144e6af73b1f97c048b3ee5ccc1d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cast an attribute in place to a different value type.  <a href="group__group-surfacemesh-utils.html#ga5ad144e6af73b1f97c048b3ee5ccc1d2">More...</a><br /></td></tr>
+<tr class="separator:ga5ad144e6af73b1f97c048b3ee5ccc1d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0e111d74e63f3fa93543c7f4bae3d8e7"><td class="memTemplParams" colspan="2">template&lt;typename ToValueType , typename Scalar , typename Index &gt; </td></tr>
+<tr class="memitem:ga0e111d74e63f3fa93543c7f4bae3d8e7"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="group__group-surfacemesh-attr.html#ga4d115376c2c766084ef808c837348fc3">AttributeId</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__group-surfacemesh-utils.html#ga0e111d74e63f3fa93543c7f4bae3d8e7">cast_attribute</a> (<a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;mesh, std::string_view source_name, std::string_view target_name)</td></tr>
+<tr class="memdesc:ga0e111d74e63f3fa93543c7f4bae3d8e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cast an attribute in place to a different value type.  <a href="group__group-surfacemesh-utils.html#ga0e111d74e63f3fa93543c7f4bae3d8e7">More...</a><br /></td></tr>
+<tr class="separator:ga0e111d74e63f3fa93543c7f4bae3d8e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga12f4ef03251b7be96fe1c67e16649ea5"><td class="memTemplParams" colspan="2">template&lt;typename ToValueType , typename Scalar , typename Index &gt; </td></tr>
+<tr class="memitem:ga12f4ef03251b7be96fe1c67e16649ea5"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="group__group-surfacemesh-attr.html#ga4d115376c2c766084ef808c837348fc3">AttributeId</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__group-surfacemesh-utils.html#ga12f4ef03251b7be96fe1c67e16649ea5">cast_attribute_in_place</a> (<a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;mesh, <a class="el" href="group__group-surfacemesh-attr.html#ga4d115376c2c766084ef808c837348fc3">AttributeId</a> attribute_id)</td></tr>
+<tr class="memdesc:ga12f4ef03251b7be96fe1c67e16649ea5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cast an attribute in place to a different value type.  <a href="group__group-surfacemesh-utils.html#ga12f4ef03251b7be96fe1c67e16649ea5">More...</a><br /></td></tr>
+<tr class="separator:ga12f4ef03251b7be96fe1c67e16649ea5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga304ef489e9af8297e5f295e5bbacc31a"><td class="memTemplParams" colspan="2">template&lt;typename ToValueType , typename Scalar , typename Index &gt; </td></tr>
+<tr class="memitem:ga304ef489e9af8297e5f295e5bbacc31a"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="group__group-surfacemesh-attr.html#ga4d115376c2c766084ef808c837348fc3">AttributeId</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__group-surfacemesh-utils.html#ga304ef489e9af8297e5f295e5bbacc31a">cast_attribute_in_place</a> (<a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;mesh, std::string_view name)</td></tr>
+<tr class="memdesc:ga304ef489e9af8297e5f295e5bbacc31a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cast an attribute in place to a different value type.  <a href="group__group-surfacemesh-utils.html#ga304ef489e9af8297e5f295e5bbacc31a">More...</a><br /></td></tr>
+<tr class="separator:ga304ef489e9af8297e5f295e5bbacc31a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga363707c2e65474638292c738c072868c"><td class="memTemplParams" colspan="2">template&lt;typename Scalar , typename Index &gt; </td></tr>
 <tr class="memitem:ga363707c2e65474638292c738c072868c"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__group-surfacemesh-utils.html#ga363707c2e65474638292c738c072868c">combine_meshes</a> (std::initializer_list&lt; const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; * &gt; meshes, bool preserve_attributes=true)</td></tr>
 <tr class="memdesc:ga363707c2e65474638292c738c072868c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Combine multiple meshes into a single mesh.  <a href="group__group-surfacemesh-utils.html#ga363707c2e65474638292c738c072868c">More...</a><br /></td></tr>
@@ -275,6 +300,10 @@ Functions</h2></td></tr>
 <tr class="memitem:ga50e835144b2dd2ad5df9848293c8b097"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="group__group-surfacemesh-attr.html#ga4d115376c2c766084ef808c837348fc3">AttributeId</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__group-surfacemesh-utils.html#ga50e835144b2dd2ad5df9848293c8b097">compute_facet_normal</a> (<a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;mesh, <a class="el" href="structlagrange_1_1_facet_normal_options.html">FacetNormalOptions</a> options={})</td></tr>
 <tr class="memdesc:ga50e835144b2dd2ad5df9848293c8b097"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute facet normals.  <a href="group__group-surfacemesh-utils.html#ga50e835144b2dd2ad5df9848293c8b097">More...</a><br /></td></tr>
 <tr class="separator:ga50e835144b2dd2ad5df9848293c8b097"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2d693ab4db6092d9984a55b6073c2d8f"><td class="memTemplParams" colspan="2">template&lt;typename Scalar , typename Index &gt; </td></tr>
+<tr class="memitem:ga2d693ab4db6092d9984a55b6073c2d8f"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="group__group-surfacemesh-attr.html#ga4d115376c2c766084ef808c837348fc3">AttributeId</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__group-surfacemesh-utils.html#ga2d693ab4db6092d9984a55b6073c2d8f">compute_greedy_coloring</a> (<a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;mesh, const <a class="el" href="structlagrange_1_1_greedy_coloring_options.html">GreedyColoringOptions</a> &amp;options={})</td></tr>
+<tr class="memdesc:ga2d693ab4db6092d9984a55b6073c2d8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute a greedy graph coloring of the mesh.  <a href="group__group-surfacemesh-utils.html#ga2d693ab4db6092d9984a55b6073c2d8f">More...</a><br /></td></tr>
+<tr class="separator:ga2d693ab4db6092d9984a55b6073c2d8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga0d1dc948d0cb8aa8b7759e34a34df7bc"><td class="memTemplParams" colspan="2">template&lt;typename Scalar , typename Index &gt; </td></tr>
 <tr class="memitem:ga0d1dc948d0cb8aa8b7759e34a34df7bc"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="group__group-surfacemesh-attr.html#ga4d115376c2c766084ef808c837348fc3">AttributeId</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__group-surfacemesh-utils.html#ga0d1dc948d0cb8aa8b7759e34a34df7bc">compute_normal</a> (<a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;mesh, <a class="el" href="classlagrange_1_1function__ref.html">function_ref</a>&lt; bool(Index)&gt; is_edge_smooth, <a class="el" href="group__group-utils-misc.html#ga4afead0b9ccc53fe4fca896787595d26">span</a>&lt; const Index &gt; cone_vertices={}, <a class="el" href="structlagrange_1_1_normal_options.html">NormalOptions</a> options={})</td></tr>
 <tr class="memdesc:ga0d1dc948d0cb8aa8b7759e34a34df7bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute smooth normals based on specified sharp edges and cone vertices.  <a href="group__group-surfacemesh-utils.html#ga0d1dc948d0cb8aa8b7759e34a34df7bc">More...</a><br /></td></tr>
@@ -367,6 +396,10 @@ Functions</h2></td></tr>
 <tr class="memitem:ga78898b0da8d43677481cdc176f2391f8"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__group-surfacemesh-utils.html#ga78898b0da8d43677481cdc176f2391f8">remap_vertices</a> (<a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;mesh, <a class="el" href="group__group-utils-misc.html#ga4afead0b9ccc53fe4fca896787595d26">span</a>&lt; const Index &gt; forward_mapping, <a class="el" href="structlagrange_1_1_remap_vertices_options.html">RemapVerticesOptions</a> options={})</td></tr>
 <tr class="memdesc:ga78898b0da8d43677481cdc176f2391f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remap vertices of a mesh based on provided forward mapping.  <a href="group__group-surfacemesh-utils.html#ga78898b0da8d43677481cdc176f2391f8">More...</a><br /></td></tr>
 <tr class="separator:ga78898b0da8d43677481cdc176f2391f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2a4c19c8eb140fe6e67990da8b65736e"><td class="memTemplParams" colspan="2">template&lt;typename Scalar , typename Index &gt; </td></tr>
+<tr class="memitem:ga2a4c19c8eb140fe6e67990da8b65736e"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__group-surfacemesh-utils.html#ga2a4c19c8eb140fe6e67990da8b65736e">select_facets_in_frustum</a> (<a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;mesh, const <a class="el" href="structlagrange_1_1_frustum.html">Frustum</a>&lt; Scalar &gt; &amp;frustum, const <a class="el" href="structlagrange_1_1_frustum_selection_options.html">FrustumSelectionOptions</a> &amp;options={})</td></tr>
+<tr class="memdesc:ga2a4c19c8eb140fe6e67990da8b65736e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Select all facets that intersect the cone/frustrum bounded by 4 planes defined by (n_i, p_i), where n_i is the plane normal and p_i is a point on the plane.  <a href="group__group-surfacemesh-utils.html#ga2a4c19c8eb140fe6e67990da8b65736e">More...</a><br /></td></tr>
+<tr class="separator:ga2a4c19c8eb140fe6e67990da8b65736e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga954105400081aec257b861eabc11caa4"><td class="memTemplParams" colspan="2">template&lt;typename Scalar , typename Index &gt; </td></tr>
 <tr class="memitem:ga954105400081aec257b861eabc11caa4"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__group-surfacemesh-utils.html#ga954105400081aec257b861eabc11caa4">separate_by_components</a> (const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;mesh, const <a class="el" href="structlagrange_1_1_separate_by_components_options.html">SeparateByComponentsOptions</a> &amp;options={})</td></tr>
 <tr class="memdesc:ga954105400081aec257b861eabc11caa4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Separate a mesh by connected components.  <a href="group__group-surfacemesh-utils.html#ga954105400081aec257b861eabc11caa4">More...</a><br /></td></tr>
@@ -542,6 +575,212 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Output mesh.</dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="group__group-surfacemesh-utils.html#gac94fc907068f80f41ede4fabca362289" title="Filters the attributes of mesh according to user specifications.">filter_attributes</a> </dd></dl>
+
+</div>
+</div>
+<a id="ga5ad144e6af73b1f97c048b3ee5ccc1d2" name="ga5ad144e6af73b1f97c048b3ee5ccc1d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5ad144e6af73b1f97c048b3ee5ccc1d2">&#9670;&nbsp;</a></span>cast_attribute() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__group-surfacemesh-attr.html#ga4d115376c2c766084ef808c837348fc3">AttributeId</a> cast_attribute </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;&#160;</td>
+          <td class="paramname"><em>mesh</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__group-surfacemesh-attr.html#ga4d115376c2c766084ef808c837348fc3">AttributeId</a>&#160;</td>
+          <td class="paramname"><em>source_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string_view&#160;</td>
+          <td class="paramname"><em>target_name</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;lagrange/cast_attribute.h&gt;</code></p>
+
+<p>Cast an attribute in place to a different value type. </p>
+<p >This effectively replaces the existing attribute with a new one.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">mesh</td><td>Input mesh. Modified to replace the attribute being cast. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">source_id</td><td>Id of the source attribute to cast. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">target_name</td><td>Name of the target attribute to be created.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">ToValueType</td><td>Target value type for the attribute. </td></tr>
+    <tr><td class="paramname">Scalar</td><td><a class="el" href="classlagrange_1_1_mesh.html">Mesh</a> scalar type. </td></tr>
+    <tr><td class="paramname">Index</td><td><a class="el" href="classlagrange_1_1_mesh.html">Mesh</a> value type. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga0e111d74e63f3fa93543c7f4bae3d8e7" name="ga0e111d74e63f3fa93543c7f4bae3d8e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga0e111d74e63f3fa93543c7f4bae3d8e7">&#9670;&nbsp;</a></span>cast_attribute() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__group-surfacemesh-attr.html#ga4d115376c2c766084ef808c837348fc3">AttributeId</a> cast_attribute </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;&#160;</td>
+          <td class="paramname"><em>mesh</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string_view&#160;</td>
+          <td class="paramname"><em>source_name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string_view&#160;</td>
+          <td class="paramname"><em>target_name</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;lagrange/cast_attribute.h&gt;</code></p>
+
+<p>Cast an attribute in place to a different value type. </p>
+<p >This effectively replaces the existing attribute with a new one.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">mesh</td><td>Input mesh. Modified to replace the attribute being cast. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">source_name</td><td>Name of the source attribute being cast. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">target_name</td><td>Name of the target attribute to be created.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">ToValueType</td><td>Target value type for the attribute. </td></tr>
+    <tr><td class="paramname">Scalar</td><td><a class="el" href="classlagrange_1_1_mesh.html">Mesh</a> scalar type. </td></tr>
+    <tr><td class="paramname">Index</td><td><a class="el" href="classlagrange_1_1_mesh.html">Mesh</a> value type. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga12f4ef03251b7be96fe1c67e16649ea5" name="ga12f4ef03251b7be96fe1c67e16649ea5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga12f4ef03251b7be96fe1c67e16649ea5">&#9670;&nbsp;</a></span>cast_attribute_in_place() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__group-surfacemesh-attr.html#ga4d115376c2c766084ef808c837348fc3">AttributeId</a> cast_attribute_in_place </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;&#160;</td>
+          <td class="paramname"><em>mesh</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__group-surfacemesh-attr.html#ga4d115376c2c766084ef808c837348fc3">AttributeId</a>&#160;</td>
+          <td class="paramname"><em>attribute_id</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;lagrange/cast_attribute.h&gt;</code></p>
+
+<p>Cast an attribute in place to a different value type. </p>
+<p >This effectively replaces the existing attribute with a new one.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">mesh</td><td>Input mesh. Modified to replace the attribute being cast. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">attribute_id</td><td>Id of the attribute to cast.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">ToValueType</td><td>Target value type for the attribute. </td></tr>
+    <tr><td class="paramname">Scalar</td><td><a class="el" href="classlagrange_1_1_mesh.html">Mesh</a> scalar type. </td></tr>
+    <tr><td class="paramname">Index</td><td><a class="el" href="classlagrange_1_1_mesh.html">Mesh</a> value type. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga304ef489e9af8297e5f295e5bbacc31a" name="ga304ef489e9af8297e5f295e5bbacc31a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga304ef489e9af8297e5f295e5bbacc31a">&#9670;&nbsp;</a></span>cast_attribute_in_place() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__group-surfacemesh-attr.html#ga4d115376c2c766084ef808c837348fc3">AttributeId</a> cast_attribute_in_place </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;&#160;</td>
+          <td class="paramname"><em>mesh</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string_view&#160;</td>
+          <td class="paramname"><em>name</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;lagrange/cast_attribute.h&gt;</code></p>
+
+<p>Cast an attribute in place to a different value type. </p>
+<p >This effectively replaces the existing attribute with a new one.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">mesh</td><td>Input mesh. Modified to replace the attribute being cast. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>Name of the attribute to cast.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">ToValueType</td><td>Target value type for the attribute. </td></tr>
+    <tr><td class="paramname">Scalar</td><td><a class="el" href="classlagrange_1_1_mesh.html">Mesh</a> scalar type. </td></tr>
+    <tr><td class="paramname">Index</td><td><a class="el" href="classlagrange_1_1_mesh.html">Mesh</a> value type. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -1301,6 +1540,54 @@ Functions</h2></td></tr>
 <dl class="section post"><dt>Postcondition</dt><dd>The computed facet normals are stored in <code>mesh</code> as a facet attribute named <code>options.output_attribute_name</code>.</dd></dl>
 <dl class="section note"><dt>Note</dt><dd>Non-planar polygonal facet's normal is not well defined. This method can only compute an approximated normal using a triangle fan.</dd></dl>
 <dl class="section see"><dt>See also</dt><dd><code><a class="el" href="structlagrange_1_1_facet_normal_options.html" title="Option struct for computing per-facet mesh normals.">FacetNormalOptions</a></code>. </dd></dl>
+
+</div>
+</div>
+<a id="ga2d693ab4db6092d9984a55b6073c2d8f" name="ga2d693ab4db6092d9984a55b6073c2d8f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2d693ab4db6092d9984a55b6073c2d8f">&#9670;&nbsp;</a></span>compute_greedy_coloring()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__group-surfacemesh-attr.html#ga4d115376c2c766084ef808c837348fc3">AttributeId</a> compute_greedy_coloring </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;&#160;</td>
+          <td class="paramname"><em>mesh</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structlagrange_1_1_greedy_coloring_options.html">GreedyColoringOptions</a> &amp;&#160;</td>
+          <td class="paramname"><em>options</em> = <code>{}</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;lagrange/compute_greedy_coloring.h&gt;</code></p>
+
+<p>Compute a greedy graph coloring of the mesh. </p>
+<p >The selected mesh element type (either Vertex or Facet) will be colored in such a way that no two adjacent element share the same color.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">mesh</td><td>Input mesh to be colored. Modified to compute edge information and the new color attribute. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">options</td><td>Coloring options.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Scalar</td><td><a class="el" href="classlagrange_1_1_mesh.html">Mesh</a> scalar type. </td></tr>
+    <tr><td class="paramname">Index</td><td><a class="el" href="classlagrange_1_1_mesh.html">Mesh</a> index type.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Id of the newly computed color attribute. The value type of the created attribute will be the same as the mesh index type. </dd></dl>
 
 </div>
 </div>
@@ -2363,6 +2650,63 @@ To convert a mesh and its attributes to different types, use the cast function.<
 
 </div>
 </div>
+<a id="ga2a4c19c8eb140fe6e67990da8b65736e" name="ga2a4c19c8eb140fe6e67990da8b65736e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2a4c19c8eb140fe6e67990da8b65736e">&#9670;&nbsp;</a></span>select_facets_in_frustum()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool select_facets_in_frustum </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;&#160;</td>
+          <td class="paramname"><em>mesh</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structlagrange_1_1_frustum.html">Frustum</a>&lt; Scalar &gt; &amp;&#160;</td>
+          <td class="paramname"><em>frustum</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structlagrange_1_1_frustum_selection_options.html">FrustumSelectionOptions</a> &amp;&#160;</td>
+          <td class="paramname"><em>options</em> = <code>{}</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;lagrange/select_facets_in_frustum.h&gt;</code></p>
+
+<p>Select all facets that intersect the cone/frustrum bounded by 4 planes defined by (n_i, p_i), where n_i is the plane normal and p_i is a point on the plane. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">mesh</td><td>The input mesh. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">frustum</td><td>A collection of four planes. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">options</td><td>Optional arguments (greedy, output_attribute_name).</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Scalar</td><td><a class="el" href="classlagrange_1_1_mesh.html">Mesh</a> scalar type. </td></tr>
+    <tr><td class="paramname">Index</td><td><a class="el" href="classlagrange_1_1_mesh.html">Mesh</a> index type.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>bool Whether any facet is selected.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>When <code>options.greedy</code> is true, this function returns as soon as the first facet is selected.</dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd>If <code>options.greedy</code> is false, the computed selection is stored in <code>mesh</code> as a facet attribute named <code>options.output_attribute_name</code>.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="structlagrange_1_1_frustum.html" title="An array of four planes that define a frustum.">Frustum</a> and <a class="el" href="structlagrange_1_1_frustum_selection_options.html" title="Option struct for selecting facets.">FrustumSelectionOptions</a>. </dd></dl>
+
+</div>
+</div>
 <a id="ga954105400081aec257b861eabc11caa4" name="ga954105400081aec257b861eabc11caa4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga954105400081aec257b861eabc11caa4">&#9670;&nbsp;</a></span>separate_by_components()</h2>
 
@@ -2779,7 +3123,7 @@ To convert a mesh and its attributes to different types, use the cast function.<
 <li>Normal: Applies \( P \to \det(M) M^{-T} * P \)</li>
 <li>Tangent: Applies \( P \to normalize(M * P) \)</li>
 <li><p class="startli">Bitangent: Applies \( P \to normalize(M * P) \)</p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000004">Todo:</a></b></dt><dd>Add an overload for 2D transforms.</dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000007">Todo:</a></b></dt><dd>Add an overload for 2D transforms.</dd></dl>
 </li>
 </ul>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -2842,7 +3186,7 @@ To convert a mesh and its attributes to different types, use the cast function.<
 <li>Normal: Applies \( P \to \det(M) M^{-T} * P \)</li>
 <li>Tangent: Applies \( P \to normalize(M * P) \)</li>
 <li><p class="startli">Bitangent: Applies \( P \to normalize(M * P) \)</p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000005">Todo:</a></b></dt><dd>Add an overload for 2D transforms.</dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000008">Todo:</a></b></dt><dd>Add an overload for 2D transforms.</dd></dl>
 </li>
 </ul>
 <dl class="params"><dt>Parameters</dt><dd>
