@@ -163,13 +163,13 @@ $(document).ready(function(){initNavTree('events_8h_source.html',''); initResiza
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> Component, <span class="keyword">typename</span> ConstructEvent, <span class="keyword">typename</span> DestroyEvent&gt;</div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="namespacelagrange_1_1ui.html#afe6a00fd8a5cc2a22a39074227668fc0">   61</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="namespacelagrange_1_1ui.html#afe6a00fd8a5cc2a22a39074227668fc0">toggle_component_event</a>(Registry&amp; r)</div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>{</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <span class="keywordflow">if</span> (!get_event_emitter(r).contains&lt;ConstructEvent&gt;()) {</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <span class="keywordflow">if</span> (get_event_emitter(r).contains&lt;ConstructEvent&gt;()) {</div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        r.on_construct&lt;Component&gt;().<span class="keyword">template</span> connect&lt;&amp;forward_entity_event&lt;ConstructEvent&gt;&gt;();</div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    } <span class="keywordflow">else</span> {</div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        r.on_construct&lt;Component&gt;().<span class="keyword">template</span> disconnect&lt;&amp;forward_entity_event&lt;ConstructEvent&gt;&gt;();</div>
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    }</div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    <span class="keywordflow">if</span> (!get_event_emitter(r).contains&lt;DestroyEvent&gt;()) {</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    <span class="keywordflow">if</span> (get_event_emitter(r).contains&lt;DestroyEvent&gt;()) {</div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        r.on_destroy&lt;Component&gt;().<span class="keyword">template</span> connect&lt;&amp;forward_entity_event&lt;DestroyEvent&gt;&gt;();</div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    } <span class="keywordflow">else</span> {</div>
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        r.on_destroy&lt;Component&gt;().<span class="keyword">template</span> disconnect&lt;&amp;forward_entity_event&lt;DestroyEvent&gt;&gt;();</div>

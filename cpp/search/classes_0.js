@@ -21,7 +21,8 @@ var searchData=
   ['attributebase_18',['AttributeBase',['../classlagrange_1_1_attribute_base.html',1,'lagrange']]],
   ['attributefilter_19',['AttributeFilter',['../structlagrange_1_1_attribute_filter.html',1,'lagrange']]],
   ['attributemanager_20',['AttributeManager',['../classlagrange_1_1experimental_1_1_attribute_manager.html',1,'lagrange::experimental']]],
-  ['attributename_21',['AttributeName',['../structlagrange_1_1_attribute_name.html',1,'lagrange']]],
-  ['attributerender_22',['AttributeRender',['../structlagrange_1_1ui_1_1_attribute_render.html',1,'lagrange::ui']]],
-  ['attributes_23',['Attributes',['../classlagrange_1_1_attributes.html',1,'lagrange']]]
+  ['attributematcher_21',['AttributeMatcher',['../structlagrange_1_1_attribute_matcher.html',1,'lagrange']]],
+  ['attributename_22',['AttributeName',['../structlagrange_1_1_attribute_name.html',1,'lagrange']]],
+  ['attributerender_23',['AttributeRender',['../structlagrange_1_1ui_1_1_attribute_render.html',1,'lagrange::ui']]],
+  ['attributes_24',['Attributes',['../classlagrange_1_1_attributes.html',1,'lagrange']]]
 ];

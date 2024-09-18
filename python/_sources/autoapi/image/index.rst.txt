@@ -24,25 +24,60 @@ Classes
 
    Bases: :py:obj:`enum.Enum`
 
-   <attribute '__doc__' of 'ImageChannel' objects>
+   Create a collection of name/value pairs.
+
+   Example enumeration:
+
+   >>> class Color(Enum):
+   ...     RED = 1
+   ...     BLUE = 2
+   ...     GREEN = 3
+
+   Access them by:
+
+   - attribute access::
+
+   >>> Color.RED
+   <Color.RED: 1>
+
+   - value lookup:
+
+   >>> Color(1)
+   <Color.RED: 1>
+
+   - name lookup:
+
+   >>> Color['RED']
+   <Color.RED: 1>
+
+   Enumerations can be iterated over, and know how many members they have:
+
+   >>> len(Color)
+   3
+
+   >>> list(Color)
+   [<Color.RED: 1>, <Color.BLUE: 2>, <Color.GREEN: 3>]
+
+   Methods can be added to enumerations, and members can have their own
+   attributes -- see the documentation for details.
 
    .. py:attribute:: four
-      :type: Any
+      :value: 4
 
       
 
    .. py:attribute:: one
-      :type: Any
+      :value: 1
 
       
 
    .. py:attribute:: three
-      :type: Any
+      :value: 3
 
       
 
    .. py:attribute:: unknown
-      :type: Any
+      :value: 5
 
       
 
@@ -52,56 +87,89 @@ Classes
 
    Bases: :py:obj:`enum.Enum`
 
-   <attribute '__doc__' of 'ImagePrecision' objects>
+   Create a collection of name/value pairs.
+
+   Example enumeration:
+
+   >>> class Color(Enum):
+   ...     RED = 1
+   ...     BLUE = 2
+   ...     GREEN = 3
+
+   Access them by:
+
+   - attribute access::
+
+   >>> Color.RED
+   <Color.RED: 1>
+
+   - value lookup:
+
+   >>> Color(1)
+   <Color.RED: 1>
+
+   - name lookup:
+
+   >>> Color['RED']
+   <Color.RED: 1>
+
+   Enumerations can be iterated over, and know how many members they have:
+
+   >>> len(Color)
+   3
+
+   >>> list(Color)
+   [<Color.RED: 1>, <Color.BLUE: 2>, <Color.GREEN: 3>]
+
+   Methods can be added to enumerations, and members can have their own
+   attributes -- see the documentation for details.
 
    .. py:attribute:: float16
-      :type: Any
+      :value: 6
 
       
 
    .. py:attribute:: float32
-      :type: Any
+      :value: 4
 
       
 
    .. py:attribute:: float64
-      :type: Any
+      :value: 5
 
       
 
    .. py:attribute:: int32
-      :type: Any
+      :value: 3
 
       
 
    .. py:attribute:: int8
-      :type: Any
+      :value: 1
 
       
 
    .. py:attribute:: uint32
-      :type: Any
+      :value: 2
 
       
 
    .. py:attribute:: uint8
-      :type: Any
+      :value: 0
 
       
 
    .. py:attribute:: unknown
-      :type: Any
+      :value: 7
 
       
 
 
-.. py:class:: ImageStorage(arg0: int, arg1: int, arg2: int, /)
+.. py:class:: ImageStorage(arg0, arg1, arg2, /)
 
-
-   None
 
    .. py:property:: data
-      :type: numpy.typing.NDArray
+      :type: Annotated[numpy.typing.ArrayLike, dict(dtype='uint8', order='C', device='cpu')]
 
 
    .. py:property:: height

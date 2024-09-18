@@ -131,6 +131,14 @@ Public Attributes</h2></td></tr>
 unsigned&#160;</td><td class="memItemRight" valign="bottom"><b>num_levels</b> = 1</td></tr>
 <tr class="memdesc:a2b40d61424462dd2754d3417e3176afd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of subdivision level requested. <br /></td></tr>
 <tr class="separator:a2b40d61424462dd2754d3417e3176afd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac29dbec90f9bb71496e1c60960739e7d"><td class="memItemLeft" align="right" valign="top"><a id="ac29dbec90f9bb71496e1c60960739e7d" name="ac29dbec90f9bb71496e1c60960739e7d"></a>
+<a class="el" href="group__module-subdivision.html#gaac5ae01fdafef92da6cdf7fcaa27bed2">RefinementType</a>&#160;</td><td class="memItemRight" valign="bottom"><b>refinement</b> = <a class="el" href="group__module-subdivision.html#ggaac5ae01fdafef92da6cdf7fcaa27bed2af19516d11f2946f894070e92fcb56b6d">RefinementType::Uniform</a></td></tr>
+<tr class="memdesc:ac29dbec90f9bb71496e1c60960739e7d"><td class="mdescLeft">&#160;</td><td class="mdescRight">How to refine the mesh topology. <br /></td></tr>
+<tr class="separator:ac29dbec90f9bb71496e1c60960739e7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Adaptive tessellation options</div></td></tr>
+<tr class="memitem:a3e8bcbb0c92920e576a6a8a024260590"><td class="memItemLeft" align="right" valign="top">std::optional&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlagrange_1_1subdivision_1_1_subdivision_options.html#a3e8bcbb0c92920e576a6a8a024260590">max_edge_length</a></td></tr>
+<tr class="memdesc:a3e8bcbb0c92920e576a6a8a024260590"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum edge length for adaptive tessellation.  <a href="structlagrange_1_1subdivision_1_1_subdivision_options.html#a3e8bcbb0c92920e576a6a8a024260590">More...</a><br /></td></tr>
+<tr class="separator:a3e8bcbb0c92920e576a6a8a024260590"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Interpolation Rules</div></td></tr>
 <tr class="memitem:a56ecf395ef5c7f6bca751e06c42f02a2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__module-subdivision.html#ga4189a9f8863a8107f9686281bdbe9364">VertexBoundaryInterpolation</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlagrange_1_1subdivision_1_1_subdivision_options.html#a56ecf395ef5c7f6bca751e06c42f02a2">vertex_boundary_interpolation</a></td></tr>
 <tr class="memdesc:a56ecf395ef5c7f6bca751e06c42f02a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vertex boundary interpolation rule.  <a href="structlagrange_1_1subdivision_1_1_subdivision_options.html#a56ecf395ef5c7f6bca751e06c42f02a2">More...</a><br /></td></tr>
@@ -158,6 +166,9 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>use_limit_surface</b>
 <tr class="memdesc:a18896d3cb0645d219adf1880f24842f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Per-face integer attribute denoting face holes.  <a href="structlagrange_1_1subdivision_1_1_subdivision_options.html#a18896d3cb0645d219adf1880f24842f2">More...</a><br /></td></tr>
 <tr class="separator:a18896d3cb0645d219adf1880f24842f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Output Attributes</div></td></tr>
+<tr class="memitem:a125a455b3b6c3394a1d6a77e09034994"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlagrange_1_1subdivision_1_1_subdivision_options.html#a125a455b3b6c3394a1d6a77e09034994">preserve_shared_indices</a> = false</td></tr>
+<tr class="memdesc:a125a455b3b6c3394a1d6a77e09034994"><td class="mdescLeft">&#160;</td><td class="mdescRight">[Adaptive subdivision only] Whether to preserve shared indices when interpolating indexed attributes.  <a href="structlagrange_1_1subdivision_1_1_subdivision_options.html#a125a455b3b6c3394a1d6a77e09034994">More...</a><br /></td></tr>
+<tr class="separator:a125a455b3b6c3394a1d6a77e09034994"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a009da3916b6b7822db358c51eed05fb9"><td class="memItemLeft" align="right" valign="top">std::string_view&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlagrange_1_1subdivision_1_1_subdivision_options.html#a009da3916b6b7822db358c51eed05fb9">output_limit_normals</a></td></tr>
 <tr class="memdesc:a009da3916b6b7822db358c51eed05fb9"><td class="mdescLeft">&#160;</td><td class="mdescRight">A newly computed per-vertex attribute containing the normals to the limit surface.  <a href="structlagrange_1_1subdivision_1_1_subdivision_options.html#a009da3916b6b7822db358c51eed05fb9">More...</a><br /></td></tr>
 <tr class="separator:a009da3916b6b7822db358c51eed05fb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -167,6 +178,10 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>use_limit_surface</b>
 <tr class="memitem:a5102f2d51412de4e0b0a0bda934279e8"><td class="memItemLeft" align="right" valign="top">std::string_view&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlagrange_1_1subdivision_1_1_subdivision_options.html#a5102f2d51412de4e0b0a0bda934279e8">output_limit_bitangents</a></td></tr>
 <tr class="memdesc:a5102f2d51412de4e0b0a0bda934279e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">A newly computed per-vertex attribute containing the bitangents (second derivative) to the limit surface.  <a href="structlagrange_1_1subdivision_1_1_subdivision_options.html#a5102f2d51412de4e0b0a0bda934279e8">More...</a><br /></td></tr>
 <tr class="separator:a5102f2d51412de4e0b0a0bda934279e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Debugging options</div></td></tr>
+<tr class="memitem:a33182352a8f094352602fa671575a2cb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlagrange_1_1subdivision_1_1_subdivision_options.html#a33182352a8f094352602fa671575a2cb">validate_topology</a> = false</td></tr>
+<tr class="memdesc:a33182352a8f094352602fa671575a2cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Validate topology of the subdivision surface.  <a href="structlagrange_1_1subdivision_1_1_subdivision_options.html#a33182352a8f094352602fa671575a2cb">More...</a><br /></td></tr>
+<tr class="separator:a33182352a8f094352602fa671575a2cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p ><a class="el" href="classlagrange_1_1_mesh.html">Mesh</a> subdivision options. </p>
@@ -185,6 +200,23 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>use_limit_surface</b>
 
 <p>Subvision scheme. </p>
 <p >If not provided, will use Loop for triangle meshes, and CatmullCark for quad-dominant meshes. </p>
+
+</div>
+</div>
+<a id="a3e8bcbb0c92920e576a6a8a024260590" name="a3e8bcbb0c92920e576a6a8a024260590"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e8bcbb0c92920e576a6a8a024260590">&#9670;&nbsp;</a></span>max_edge_length</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::optional&lt;float&gt; max_edge_length</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Maximum edge length for adaptive tessellation. </p>
+<p >If not specified, it is set to the longest edge length divided by num_levels. </p>
 
 </div>
 </div>
@@ -276,6 +308,23 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>use_limit_surface</b>
 
 </div>
 </div>
+<a id="a125a455b3b6c3394a1d6a77e09034994" name="a125a455b3b6c3394a1d6a77e09034994"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a125a455b3b6c3394a1d6a77e09034994">&#9670;&nbsp;</a></span>preserve_shared_indices</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool preserve_shared_indices = false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>[Adaptive subdivision only] Whether to preserve shared indices when interpolating indexed attributes. </p>
+<p >Turn this off if your input UVs are overlapping, or the output UVs will not be correctly interpolated. </p>
+
+</div>
+</div>
 <a id="a009da3916b6b7822db358c51eed05fb9" name="a009da3916b6b7822db358c51eed05fb9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a009da3916b6b7822db358c51eed05fb9">&#9670;&nbsp;</a></span>output_limit_normals</h2>
 
@@ -327,6 +376,23 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>use_limit_surface</b>
 <p>A newly computed per-vertex attribute containing the bitangents (second derivative) to the limit surface. </p>
 <p >Skipped if left empty.</p>
 <dl class="section note"><dt>Note</dt><dd>It is strongly recommended to use limit bitangents only when interpolating positions to the limit surface. Otherwise this can lead to visual artifacts if the positions and the normals don't match. </dd></dl>
+
+</div>
+</div>
+<a id="a33182352a8f094352602fa671575a2cb" name="a33182352a8f094352602fa671575a2cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a33182352a8f094352602fa671575a2cb">&#9670;&nbsp;</a></span>validate_topology</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool validate_topology = false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Validate topology of the subdivision surface. </p>
+<p >For debugging only. </p>
 
 </div>
 </div>

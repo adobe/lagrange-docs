@@ -377,6 +377,22 @@ template&lt;typename SourceScalar , typename SourceIndex &gt; </td></tr>
 <tr class="memitem:af5e377cd17d586686cb6dcd2293c587b"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classlagrange_1_1_surface_mesh.html#af5e377cd17d586686cb6dcd2293c587b">delete_and_export_const_indexed_attribute</a> (std::string_view name, <a class="el" href="group__group-surfacemesh-attr.html#gade3ae5b7e72e9d4f92f29c6563551c10">AttributeExportPolicy</a> policy=<a class="el" href="group__group-surfacemesh-attr.html#ggade3ae5b7e72e9d4f92f29c6563551c10afe72de1001d465db9eb6ce5cb874c2cb">AttributeExportPolicy::CopyIfExternal</a>) -&gt; std::shared_ptr&lt; const <a class="el" href="classlagrange_1_1_indexed_attribute.html">IndexedAttribute</a>&lt; ValueType, <a class="el" href="classlagrange_1_1_surface_mesh.html#a726cb631080e40f5e472e0c3f6e59eda">Index</a> &gt; &gt;</td></tr>
 <tr class="memdesc:af5e377cd17d586686cb6dcd2293c587b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Delete an indexed attribute and export its content in a read-only shared_ptr.  <a href="classlagrange_1_1_surface_mesh.html#af5e377cd17d586686cb6dcd2293c587b">More...</a><br /></td></tr>
 <tr class="separator:af5e377cd17d586686cb6dcd2293c587b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Metadata attributes</div></td></tr>
+<tr class="memitem:a55d04e6dc421b4a9e55da0c17f9a2194"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__group-surfacemesh-attr.html#ga4d115376c2c766084ef808c837348fc3">AttributeId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlagrange_1_1_surface_mesh.html#a55d04e6dc421b4a9e55da0c17f9a2194">create_metadata</a> (std::string_view name, std::string_view value)</td></tr>
+<tr class="memdesc:a55d04e6dc421b4a9e55da0c17f9a2194"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a metadata attribute.  <a href="classlagrange_1_1_surface_mesh.html#a55d04e6dc421b4a9e55da0c17f9a2194">More...</a><br /></td></tr>
+<tr class="separator:a55d04e6dc421b4a9e55da0c17f9a2194"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a83f9a9a97b305bf15d885aea6f97c29c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlagrange_1_1_surface_mesh.html#a83f9a9a97b305bf15d885aea6f97c29c">set_metadata</a> (<a class="el" href="group__group-surfacemesh-attr.html#ga4d115376c2c766084ef808c837348fc3">AttributeId</a> id, std::string_view value)</td></tr>
+<tr class="memdesc:a83f9a9a97b305bf15d885aea6f97c29c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write metadata attribute value.  <a href="classlagrange_1_1_surface_mesh.html#a83f9a9a97b305bf15d885aea6f97c29c">More...</a><br /></td></tr>
+<tr class="separator:a83f9a9a97b305bf15d885aea6f97c29c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a117337c541585045ceb9cd5d291d6d69"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlagrange_1_1_surface_mesh.html#a117337c541585045ceb9cd5d291d6d69">set_metadata</a> (std::string_view name, std::string_view value)</td></tr>
+<tr class="memdesc:a117337c541585045ceb9cd5d291d6d69"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write metadata attribute value.  <a href="classlagrange_1_1_surface_mesh.html#a117337c541585045ceb9cd5d291d6d69">More...</a><br /></td></tr>
+<tr class="separator:a117337c541585045ceb9cd5d291d6d69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55bff4bcd3fa03f4dec3867ee42f7fb2"><td class="memItemLeft" align="right" valign="top">std::string_view&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlagrange_1_1_surface_mesh.html#a55bff4bcd3fa03f4dec3867ee42f7fb2">get_metadata</a> (<a class="el" href="group__group-surfacemesh-attr.html#ga4d115376c2c766084ef808c837348fc3">AttributeId</a> id) const</td></tr>
+<tr class="memdesc:a55bff4bcd3fa03f4dec3867ee42f7fb2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read metadata attribute value.  <a href="classlagrange_1_1_surface_mesh.html#a55bff4bcd3fa03f4dec3867ee42f7fb2">More...</a><br /></td></tr>
+<tr class="separator:a55bff4bcd3fa03f4dec3867ee42f7fb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e81eea133f9b73ca51143493411eb39"><td class="memItemLeft" align="right" valign="top">std::string_view&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlagrange_1_1_surface_mesh.html#a8e81eea133f9b73ca51143493411eb39">get_metadata</a> (std::string_view name) const</td></tr>
+<tr class="memdesc:a8e81eea133f9b73ca51143493411eb39"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read metadata attribute value.  <a href="classlagrange_1_1_surface_mesh.html#a8e81eea133f9b73ca51143493411eb39">More...</a><br /></td></tr>
+<tr class="separator:a8e81eea133f9b73ca51143493411eb39"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Attribute accessors</div></td></tr>
 <tr class="memitem:a50303aab396d555e2ad0e6fa1f7d4b58"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlagrange_1_1_surface_mesh.html#a50303aab396d555e2ad0e6fa1f7d4b58">has_attribute</a> (std::string_view name) const</td></tr>
 <tr class="memdesc:a50303aab396d555e2ad0e6fa1f7d4b58"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if an attribute of a given name is attached to the mesh.  <a href="classlagrange_1_1_surface_mesh.html#a50303aab396d555e2ad0e6fa1f7d4b58">More...</a><br /></td></tr>
@@ -497,6 +513,9 @@ template&lt;typename SourceScalar , typename SourceIndex &gt; </td></tr>
 <tr class="memitem:a032a198e720a57c9e22327a8dc2ad1b9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classlagrange_1_1_surface_mesh.html#a726cb631080e40f5e472e0c3f6e59eda">Index</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlagrange_1_1_surface_mesh.html#a032a198e720a57c9e22327a8dc2ad1b9">find_edge_from_vertices</a> (<a class="el" href="classlagrange_1_1_surface_mesh.html#a726cb631080e40f5e472e0c3f6e59eda">Index</a> v0, <a class="el" href="classlagrange_1_1_surface_mesh.html#a726cb631080e40f5e472e0c3f6e59eda">Index</a> v1) const</td></tr>
 <tr class="memdesc:a032a198e720a57c9e22327a8dc2ad1b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve the edge index corresponding to (v0, v1).  <a href="classlagrange_1_1_surface_mesh.html#a032a198e720a57c9e22327a8dc2ad1b9">More...</a><br /></td></tr>
 <tr class="separator:a032a198e720a57c9e22327a8dc2ad1b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06d61ba48cdbd6a2a2fbacea5daf33bc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classlagrange_1_1_surface_mesh.html#a726cb631080e40f5e472e0c3f6e59eda">Index</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlagrange_1_1_surface_mesh.html#a06d61ba48cdbd6a2a2fbacea5daf33bc">get_next_corner_around_facet</a> (<a class="el" href="classlagrange_1_1_surface_mesh.html#a726cb631080e40f5e472e0c3f6e59eda">Index</a> c) const</td></tr>
+<tr class="memdesc:a06d61ba48cdbd6a2a2fbacea5daf33bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the next corner around the facet associated to a corner.  <a href="classlagrange_1_1_surface_mesh.html#a06d61ba48cdbd6a2a2fbacea5daf33bc">More...</a><br /></td></tr>
+<tr class="separator:a06d61ba48cdbd6a2a2fbacea5daf33bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a757f13e26354a83f93e1ac0b276a55a6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classlagrange_1_1_surface_mesh.html#a726cb631080e40f5e472e0c3f6e59eda">Index</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlagrange_1_1_surface_mesh.html#a757f13e26354a83f93e1ac0b276a55a6">get_first_corner_around_edge</a> (<a class="el" href="classlagrange_1_1_surface_mesh.html#a726cb631080e40f5e472e0c3f6e59eda">Index</a> e) const</td></tr>
 <tr class="memdesc:a757f13e26354a83f93e1ac0b276a55a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the index of the first corner around a given edge.  <a href="classlagrange_1_1_surface_mesh.html#a757f13e26354a83f93e1ac0b276a55a6">More...</a><br /></td></tr>
 <tr class="separator:a757f13e26354a83f93e1ac0b276a55a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -2505,7 +2524,7 @@ class lagrange::SurfaceMesh&lt; Scalar_, Index_ &gt;</div><p >A general purpose 
 </div><div class="memdoc">
 
 <p>Retrieves the number of vertex per facet in a regular mesh. </p>
-<p >If the mesh is a hybrid mesh, an exception is thrown.s</p>
+<p >If the mesh is a hybrid mesh, an exception is thrown.</p>
 <dl class="section return"><dt>Returns</dt><dd>The number of vertices per facet. </dd></dl>
 
 </div>
@@ -4914,6 +4933,180 @@ class lagrange::SurfaceMesh&lt; Scalar_, Index_ &gt;</div><p >A general purpose 
 
 </div>
 </div>
+<a id="a55d04e6dc421b4a9e55da0c17f9a2194" name="a55d04e6dc421b4a9e55da0c17f9a2194"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a55d04e6dc421b4a9e55da0c17f9a2194">&#9670;&nbsp;</a></span>create_metadata()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__group-surfacemesh-attr.html#ga4d115376c2c766084ef808c837348fc3">AttributeId</a> create_metadata </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string_view&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Create a metadata attribute. </p>
+<p >Internally, a metadata attribute is simply a regular mesh attribute with the following properties:</p>
+<ul>
+<li>Element type is <code>AttributeElement::Value</code></li>
+<li>Usage is <code><a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45a27118326006d3829667a400ad23d5d98" title="Mesh attribute is a metadata string (stored as a uint8_t buffer).">AttributeUsage::String</a></code></li>
+<li>ValueType is <code>uint8_t</code></li>
+<li>Number of channels is 1.</li>
+</ul>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td><a class="el" href="classlagrange_1_1_attribute.html" title="Derived attribute class that stores the actual information.">Attribute</a> name. </td></tr>
+    <tr><td class="paramname">value</td><td><a class="el" href="classlagrange_1_1_attribute.html" title="Derived attribute class that stores the actual information.">Attribute</a> default value.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>AttributeId Id of the newly created attribute </dd></dl>
+
+</div>
+</div>
+<a id="a83f9a9a97b305bf15d885aea6f97c29c" name="a83f9a9a97b305bf15d885aea6f97c29c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a83f9a9a97b305bf15d885aea6f97c29c">&#9670;&nbsp;</a></span>set_metadata() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void set_metadata </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__group-surfacemesh-attr.html#ga4d115376c2c766084ef808c837348fc3">AttributeId</a>&#160;</td>
+          <td class="paramname"><em>id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string_view&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Write metadata attribute value. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td><a class="el" href="classlagrange_1_1_attribute.html" title="Derived attribute class that stores the actual information.">Attribute</a> id. </td></tr>
+    <tr><td class="paramname">value</td><td><a class="el" href="classlagrange_1_1_attribute.html" title="Derived attribute class that stores the actual information.">Attribute</a> value. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a117337c541585045ceb9cd5d291d6d69" name="a117337c541585045ceb9cd5d291d6d69"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a117337c541585045ceb9cd5d291d6d69">&#9670;&nbsp;</a></span>set_metadata() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void set_metadata </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string_view&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Write metadata attribute value. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>The name </td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">value</td><td><a class="el" href="classlagrange_1_1_attribute.html" title="Derived attribute class that stores the actual information.">Attribute</a> value. </td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">id</td><td><a class="el" href="classlagrange_1_1_attribute.html" title="Derived attribute class that stores the actual information.">Attribute</a> id. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a55bff4bcd3fa03f4dec3867ee42f7fb2" name="a55bff4bcd3fa03f4dec3867ee42f7fb2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a55bff4bcd3fa03f4dec3867ee42f7fb2">&#9670;&nbsp;</a></span>get_metadata() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string_view get_metadata </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__group-surfacemesh-attr.html#ga4d115376c2c766084ef808c837348fc3">AttributeId</a>&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Read metadata attribute value. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td><a class="el" href="classlagrange_1_1_attribute.html" title="Derived attribute class that stores the actual information.">Attribute</a> id.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="classlagrange_1_1_attribute.html" title="Derived attribute class that stores the actual information.">Attribute</a> value. </dd></dl>
+
+</div>
+</div>
+<a id="a8e81eea133f9b73ca51143493411eb39" name="a8e81eea133f9b73ca51143493411eb39"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e81eea133f9b73ca51143493411eb39">&#9670;&nbsp;</a></span>get_metadata() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string_view get_metadata </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Read metadata attribute value. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td><a class="el" href="classlagrange_1_1_attribute.html" title="Derived attribute class that stores the actual information.">Attribute</a> name.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="classlagrange_1_1_attribute.html" title="Derived attribute class that stores the actual information.">Attribute</a> value. </dd></dl>
+
+</div>
+</div>
 <a id="a50303aab396d555e2ad0e6fa1f7d4b58" name="a50303aab396d555e2ad0e6fa1f7d4b58"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a50303aab396d555e2ad0e6fa1f7d4b58">&#9670;&nbsp;</a></span>has_attribute()</h2>
 
@@ -6519,6 +6712,34 @@ class lagrange::SurfaceMesh&lt; Scalar_, Index_ &gt;</div><p >A general purpose 
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The edge index if found, otherwise <code>invalid&lt;Index&gt;()</code>. </dd></dl>
+
+</div>
+</div>
+<a id="a06d61ba48cdbd6a2a2fbacea5daf33bc" name="a06d61ba48cdbd6a2a2fbacea5daf33bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06d61ba48cdbd6a2a2fbacea5daf33bc">&#9670;&nbsp;</a></span>get_next_corner_around_facet()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classlagrange_1_1_surface_mesh.html#a726cb631080e40f5e472e0c3f6e59eda">Index</a> get_next_corner_around_facet </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classlagrange_1_1_surface_mesh.html#a726cb631080e40f5e472e0c3f6e59eda">Index</a>&#160;</td>
+          <td class="paramname"><em>c</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gets the next corner around the facet associated to a corner. </p>
+<p >If the corner <code>c</code> has local index <code>lv</code>, the first corner of the facet is <code>c0</code>, and the facet has <code>nv</code> vertices, this function returns <code>c0 + (lv + 1) % nv</code>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">c</td><td>Corner index.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The next corner around facet. </dd></dl>
 
 </div>
 </div>

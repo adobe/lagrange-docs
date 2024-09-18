@@ -6,5 +6,6 @@ var searchData=
   ['silentoverwrite_3',['SilentOverwrite',['../namespacelagrange_1_1ui.html#a52d48398347230f843dc5ad2635ffdfba4f84b2462bdf64b68ecfd7939cb11b6b',1,'lagrange::ui']]],
   ['single_5fp_4',['single_p',['../classlagrange_1_1image_1_1_raw_input_image.html#a9787de65a5d182eca6c2d71efc190779acb30f91034ce024e3c059693de0bcb7e',1,'lagrange::image::RawInputImage']]],
   ['srgb_5',['sRGB',['../classlagrange_1_1image_1_1_raw_input_image.html#a609c1f2c8828267fe31da1947b988a36a9ed33d9be17d174aeb4393a989586ed9',1,'lagrange::image::RawInputImage']]],
-  ['symmetricdirichlet_6',['SymmetricDirichlet',['../group__group-surfacemesh-utils.html#ggadab1480827f4522cbf1f9e1d4c28db91a6043446227f6a89342620a00a131257f',1,'lagrange']]]
+  ['string_6',['String',['../group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45a27118326006d3829667a400ad23d5d98',1,'lagrange']]],
+  ['symmetricdirichlet_7',['SymmetricDirichlet',['../group__group-surfacemesh-utils.html#ggadab1480827f4522cbf1f9e1d4c28db91a6043446227f6a89342620a00a131257f',1,'lagrange']]]
 ];

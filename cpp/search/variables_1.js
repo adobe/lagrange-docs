@@ -10,5 +10,6 @@ var searchData=
   ['blendsrcrgb_7',['BlendSrcRGB',['../structlagrange_1_1ui_1_1_rasterizer_options.html#afe571c7fe2561615d9b2806910902646',1,'lagrange::ui::RasterizerOptions']]],
   ['blur_8',['blur',['../structlagrange_1_1ui_1_1_i_b_l.html#ad9e062b9cbfcb76867efd5516d959f8a',1,'lagrange::ui::IBL']]],
   ['boundaries_9',['boundaries',['../structlagrange_1_1image_1_1_image_histogram.html#a3abac854e82a547116393afdd2619d76',1,'lagrange::image::ImageHistogram']]],
-  ['bvh_5fnode_10',['bvh_node',['../structlagrange_1_1ui_1_1_bounds.html#a37bf951ca9b8214e30525f900e4b2bf6',1,'lagrange::ui::Bounds']]]
+  ['boundary_5fonly_10',['boundary_only',['../structlagrange_1_1_remove_duplicate_vertices_options.html#abe1380fd152e7c39c5509136339422d0',1,'lagrange::RemoveDuplicateVerticesOptions']]],
+  ['bvh_5fnode_11',['bvh_node',['../structlagrange_1_1ui_1_1_bounds.html#a37bf951ca9b8214e30525f900e4b2bf6',1,'lagrange::ui::Bounds']]]
 ];

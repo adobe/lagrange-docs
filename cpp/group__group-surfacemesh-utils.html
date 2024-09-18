@@ -179,6 +179,12 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlagrange_1_1_attribute_filter.html">AttributeFilter</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper object to filter attributes based on name, id, usage or element type.  <a href="structlagrange_1_1_attribute_filter.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlagrange_1_1_attribute_matcher.html">AttributeMatcher</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper object to match attributes based on usage, element type, and number of channels.  <a href="structlagrange_1_1_attribute_matcher.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlagrange_1_1_orientation_options.html">OrientationOptions</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Option struct for computing if edges are oriented.  <a href="structlagrange_1_1_orientation_options.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlagrange_1_1_remap_vertices_options.html">RemapVerticesOptions</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remap vertices options.  <a href="structlagrange_1_1_remap_vertices_options.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -193,6 +199,9 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlagrange_1_1_separate_by_facet_groups_options.html">SeparateByFacetGroupsOptions</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Option settings for <code>separate_by_facet_groups</code>.  <a href="structlagrange_1_1_separate_by_facet_groups_options.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlagrange_1_1_vertex_manifold_options.html">VertexManifoldOptions</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Option struct for computing manifold flags.  <a href="structlagrange_1_1_vertex_manifold_options.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlagrange_1_1_transform_options.html">TransformOptions</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Options available when applying affine transforms to a mesh.  <a href="structlagrange_1_1_transform_options.html#details">More...</a><br /></td></tr>
@@ -364,6 +373,30 @@ Functions</h2></td></tr>
 <tr class="memitem:gac94fc907068f80f41ede4fabca362289"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__group-surfacemesh-utils.html#gac94fc907068f80f41ede4fabca362289">filter_attributes</a> (<a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; source_mesh, const <a class="el" href="structlagrange_1_1_attribute_filter.html">AttributeFilter</a> &amp;options={})</td></tr>
 <tr class="memdesc:gac94fc907068f80f41ede4fabca362289"><td class="mdescLeft">&#160;</td><td class="mdescRight">Filters the attributes of mesh according to user specifications.  <a href="group__group-surfacemesh-utils.html#gac94fc907068f80f41ede4fabca362289">More...</a><br /></td></tr>
 <tr class="separator:gac94fc907068f80f41ede4fabca362289"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga873bcef943334f351e11bd312d105385"><td class="memTemplParams" colspan="2">template&lt;typename Scalar , typename Index &gt; </td></tr>
+<tr class="memitem:ga873bcef943334f351e11bd312d105385"><td class="memTemplItemLeft" align="right" valign="top">std::optional&lt; <a class="el" href="group__group-surfacemesh-attr.html#ga4d115376c2c766084ef808c837348fc3">AttributeId</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__group-surfacemesh-utils.html#ga873bcef943334f351e11bd312d105385">find_matching_attribute</a> (const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;mesh, const <a class="el" href="structlagrange_1_1_attribute_matcher.html">AttributeMatcher</a> &amp;options)</td></tr>
+<tr class="memdesc:ga873bcef943334f351e11bd312d105385"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finds the first attribute with the specified usage/element type/number of channels.  <a href="group__group-surfacemesh-utils.html#ga873bcef943334f351e11bd312d105385">More...</a><br /></td></tr>
+<tr class="separator:ga873bcef943334f351e11bd312d105385"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga799b09fc2760e460bbc2b229ba404066"><td class="memTemplParams" colspan="2"><a id="ga799b09fc2760e460bbc2b229ba404066" name="ga799b09fc2760e460bbc2b229ba404066"></a>
+template&lt;typename Scalar , typename Index &gt; </td></tr>
+<tr class="memitem:ga799b09fc2760e460bbc2b229ba404066"><td class="memTemplItemLeft" align="right" valign="top">std::optional&lt; <a class="el" href="group__group-surfacemesh-attr.html#ga4d115376c2c766084ef808c837348fc3">AttributeId</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>find_matching_attribute</b> (const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;mesh, <a class="el" href="group__group-surfacemesh-attr.html#ga5a2f28c8b9e2f8fce6e70b2418c46e45">AttributeUsage</a> usage)</td></tr>
+<tr class="separator:ga799b09fc2760e460bbc2b229ba404066"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga726704f2228b069cf9b312db76e4a191"><td class="memTemplParams" colspan="2"><a id="ga726704f2228b069cf9b312db76e4a191" name="ga726704f2228b069cf9b312db76e4a191"></a>
+template&lt;typename Scalar , typename Index &gt; </td></tr>
+<tr class="memitem:ga726704f2228b069cf9b312db76e4a191"><td class="memTemplItemLeft" align="right" valign="top">std::optional&lt; <a class="el" href="group__group-surfacemesh-attr.html#ga4d115376c2c766084ef808c837348fc3">AttributeId</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>find_matching_attribute</b> (const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;mesh, <a class="el" href="classlagrange_1_1_bit_field.html">BitField</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#ga9d8ab208822bab9987e9652dda49d89a">AttributeElement</a> &gt; element_types)</td></tr>
+<tr class="separator:ga726704f2228b069cf9b312db76e4a191"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga30ee6653cef2bd30115135b678a70163"><td class="memTemplParams" colspan="2">template&lt;typename Scalar , typename Index &gt; </td></tr>
+<tr class="memitem:ga30ee6653cef2bd30115135b678a70163"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="group__group-surfacemesh-attr.html#ga4d115376c2c766084ef808c837348fc3">AttributeId</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__group-surfacemesh-utils.html#ga30ee6653cef2bd30115135b678a70163">find_matching_attributes</a> (const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;mesh, const <a class="el" href="structlagrange_1_1_attribute_matcher.html">AttributeMatcher</a> &amp;options)</td></tr>
+<tr class="memdesc:ga30ee6653cef2bd30115135b678a70163"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finds all attributes with the specified usage/element type/number of channels.  <a href="group__group-surfacemesh-utils.html#ga30ee6653cef2bd30115135b678a70163">More...</a><br /></td></tr>
+<tr class="separator:ga30ee6653cef2bd30115135b678a70163"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1cf4187a53e6f6a8df3a2d34f45c7dbd"><td class="memTemplParams" colspan="2">template&lt;typename Scalar , typename Index &gt; </td></tr>
+<tr class="memitem:ga1cf4187a53e6f6a8df3a2d34f45c7dbd"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="group__group-surfacemesh-attr.html#ga4d115376c2c766084ef808c837348fc3">AttributeId</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__group-surfacemesh-utils.html#ga1cf4187a53e6f6a8df3a2d34f45c7dbd">find_matching_attributes</a> (const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;mesh, <a class="el" href="group__group-surfacemesh-attr.html#ga5a2f28c8b9e2f8fce6e70b2418c46e45">AttributeUsage</a> usage)</td></tr>
+<tr class="memdesc:ga1cf4187a53e6f6a8df3a2d34f45c7dbd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finds all attributes with the specified usage.  <a href="group__group-surfacemesh-utils.html#ga1cf4187a53e6f6a8df3a2d34f45c7dbd">More...</a><br /></td></tr>
+<tr class="separator:ga1cf4187a53e6f6a8df3a2d34f45c7dbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5f8560d698163d4c9d75d3b8ed9de3ed"><td class="memTemplParams" colspan="2">template&lt;typename Scalar , typename Index &gt; </td></tr>
+<tr class="memitem:ga5f8560d698163d4c9d75d3b8ed9de3ed"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="group__group-surfacemesh-attr.html#ga4d115376c2c766084ef808c837348fc3">AttributeId</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__group-surfacemesh-utils.html#ga5f8560d698163d4c9d75d3b8ed9de3ed">find_matching_attributes</a> (const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;mesh, <a class="el" href="classlagrange_1_1_bit_field.html">BitField</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#ga9d8ab208822bab9987e9652dda49d89a">AttributeElement</a> &gt; element_types)</td></tr>
+<tr class="memdesc:ga5f8560d698163d4c9d75d3b8ed9de3ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finds all attributes with the specified element types.  <a href="group__group-surfacemesh-utils.html#ga5f8560d698163d4c9d75d3b8ed9de3ed">More...</a><br /></td></tr>
+<tr class="separator:ga5f8560d698163d4c9d75d3b8ed9de3ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gabb5fc3fc93e8d973bcc534398eeb0aa9"><td class="memTemplParams" colspan="2">template&lt;typename Scalar , typename Index , typename <a class="el" href="classlagrange_1_1_mesh.html">MeshType</a> &gt; </td></tr>
 <tr class="memitem:gabb5fc3fc93e8d973bcc534398eeb0aa9"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__group-surfacemesh-utils.html#gabb5fc3fc93e8d973bcc534398eeb0aa9">to_surface_mesh_copy</a> (const <a class="el" href="classlagrange_1_1_mesh.html">MeshType</a> &amp;mesh)</td></tr>
 <tr class="memdesc:gabb5fc3fc93e8d973bcc534398eeb0aa9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert a legacy mesh object to a surface mesh object.  <a href="group__group-surfacemesh-utils.html#gabb5fc3fc93e8d973bcc534398eeb0aa9">More...</a><br /></td></tr>
@@ -384,6 +417,14 @@ Functions</h2></td></tr>
 <tr class="memitem:gad46e0464a61ba9b6c5fd7948af53c304"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__group-surfacemesh-utils.html#gad46e0464a61ba9b6c5fd7948af53c304">normalize_meshes</a> (<a class="el" href="group__group-utils-misc.html#ga4afead0b9ccc53fe4fca896787595d26">span</a>&lt; <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; * &gt; meshes)</td></tr>
 <tr class="memdesc:gad46e0464a61ba9b6c5fd7948af53c304"><td class="mdescLeft">&#160;</td><td class="mdescRight">Normalize a list of meshes to fit in a unit box centered at the origin.  <a href="group__group-surfacemesh-utils.html#gad46e0464a61ba9b6c5fd7948af53c304">More...</a><br /></td></tr>
 <tr class="separator:gad46e0464a61ba9b6c5fd7948af53c304"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga40b789004d6fc0e7ca4cf13fd0c811e8"><td class="memTemplParams" colspan="2">template&lt;typename Scalar , typename Index &gt; </td></tr>
+<tr class="memitem:ga40b789004d6fc0e7ca4cf13fd0c811e8"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__group-surfacemesh-utils.html#ga40b789004d6fc0e7ca4cf13fd0c811e8">is_oriented</a> (const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;mesh)</td></tr>
+<tr class="memdesc:ga40b789004d6fc0e7ca4cf13fd0c811e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if a mesh is oriented.  <a href="group__group-surfacemesh-utils.html#ga40b789004d6fc0e7ca4cf13fd0c811e8">More...</a><br /></td></tr>
+<tr class="separator:ga40b789004d6fc0e7ca4cf13fd0c811e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3424db415f75216333a8568e158d2832"><td class="memTemplParams" colspan="2">template&lt;typename Scalar , typename Index &gt; </td></tr>
+<tr class="memitem:ga3424db415f75216333a8568e158d2832"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="group__group-surfacemesh-attr.html#ga4d115376c2c766084ef808c837348fc3">AttributeId</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__group-surfacemesh-utils.html#ga3424db415f75216333a8568e158d2832">compute_edge_is_oriented</a> (<a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;mesh, const <a class="el" href="structlagrange_1_1_orientation_options.html">OrientationOptions</a> &amp;options={})</td></tr>
+<tr class="memdesc:ga3424db415f75216333a8568e158d2832"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute a mesh attribute indicating whether an edge is oriented.  <a href="group__group-surfacemesh-utils.html#ga3424db415f75216333a8568e158d2832">More...</a><br /></td></tr>
+<tr class="separator:ga3424db415f75216333a8568e158d2832"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga4bb6f1ff87f6aac0062ac21dba0f2349"><td class="memTemplParams" colspan="2">template&lt;typename Scalar , typename Index &gt; </td></tr>
 <tr class="memitem:ga4bb6f1ff87f6aac0062ac21dba0f2349"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__group-surfacemesh-utils.html#ga4bb6f1ff87f6aac0062ac21dba0f2349">permute_facets</a> (<a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;mesh, <a class="el" href="group__group-utils-misc.html#ga4afead0b9ccc53fe4fca896787595d26">span</a>&lt; const Index &gt; new_to_old)</td></tr>
 <tr class="memdesc:ga4bb6f1ff87f6aac0062ac21dba0f2349"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reorder facets of a mesh based on a given permutation.  <a href="group__group-surfacemesh-utils.html#ga4bb6f1ff87f6aac0062ac21dba0f2349">More...</a><br /></td></tr>
@@ -432,6 +473,10 @@ Functions</h2></td></tr>
 <tr class="memitem:ga4b70a6e7c30cd0524e2fc2490f280b69"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__group-surfacemesh-utils.html#ga4b70a6e7c30cd0524e2fc2490f280b69">is_manifold</a> (const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;mesh)</td></tr>
 <tr class="memdesc:ga4b70a6e7c30cd0524e2fc2490f280b69"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if a mesh is both vertex-manifold and edge-manifold.  <a href="group__group-surfacemesh-utils.html#ga4b70a6e7c30cd0524e2fc2490f280b69">More...</a><br /></td></tr>
 <tr class="separator:ga4b70a6e7c30cd0524e2fc2490f280b69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9a5f380272eec2f91bbcdf4eeb04f591"><td class="memTemplParams" colspan="2">template&lt;typename Scalar , typename Index &gt; </td></tr>
+<tr class="memitem:ga9a5f380272eec2f91bbcdf4eeb04f591"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="group__group-surfacemesh-attr.html#ga4d115376c2c766084ef808c837348fc3">AttributeId</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__group-surfacemesh-utils.html#ga9a5f380272eec2f91bbcdf4eeb04f591">compute_vertex_is_manifold</a> (<a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;mesh, const <a class="el" href="structlagrange_1_1_vertex_manifold_options.html">VertexManifoldOptions</a> &amp;options={})</td></tr>
+<tr class="memdesc:ga9a5f380272eec2f91bbcdf4eeb04f591"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute a mesh attribute indicating vertex and edge manifoldness.  <a href="group__group-surfacemesh-utils.html#ga9a5f380272eec2f91bbcdf4eeb04f591">More...</a><br /></td></tr>
+<tr class="separator:ga9a5f380272eec2f91bbcdf4eeb04f591"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gacc5a05b5bc041f50fbff82c00e18c631"><td class="memTemplParams" colspan="2">template&lt;typename Scalar , typename Index , int Dimension&gt; </td></tr>
 <tr class="memitem:gacc5a05b5bc041f50fbff82c00e18c631"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__group-surfacemesh-utils.html#gacc5a05b5bc041f50fbff82c00e18c631">transform_mesh</a> (<a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;mesh, const Eigen::Transform&lt; Scalar, Dimension, Eigen::Affine &gt; &amp;transform, const <a class="el" href="structlagrange_1_1_transform_options.html">TransformOptions</a> &amp;options={})</td></tr>
 <tr class="memdesc:gacc5a05b5bc041f50fbff82c00e18c631"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply an affine transform \( M \) to a mesh in-place.  <a href="group__group-surfacemesh-utils.html#gacc5a05b5bc041f50fbff82c00e18c631">More...</a><br /></td></tr>
@@ -2326,6 +2371,194 @@ To convert a mesh and its attributes to different types, use the cast function.<
 
 </div>
 </div>
+<a id="ga873bcef943334f351e11bd312d105385" name="ga873bcef943334f351e11bd312d105385"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga873bcef943334f351e11bd312d105385">&#9670;&nbsp;</a></span>find_matching_attribute()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::optional&lt; <a class="el" href="group__group-surfacemesh-attr.html#ga4d115376c2c766084ef808c837348fc3">AttributeId</a> &gt; find_matching_attribute </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;&#160;</td>
+          <td class="paramname"><em>mesh</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structlagrange_1_1_attribute_matcher.html">AttributeMatcher</a> &amp;&#160;</td>
+          <td class="paramname"><em>options</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;lagrange/find_matching_attributes.h&gt;</code></p>
+
+<p>Finds the first attribute with the specified usage/element type/number of channels. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">mesh</td><td><a class="el" href="classlagrange_1_1_mesh.html">Mesh</a> whose attribute to retrieve. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">options</td><td><a class="el" href="classlagrange_1_1_attribute.html" title="Derived attribute class that stores the actual information.">Attribute</a> properties to match against.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Scalar</td><td><a class="el" href="classlagrange_1_1_mesh.html">Mesh</a> scalar type. </td></tr>
+    <tr><td class="paramname">Index</td><td><a class="el" href="classlagrange_1_1_mesh.html">Mesh</a> index type.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The attribute id of the first matching attribute. </dd></dl>
+
+</div>
+</div>
+<a id="ga30ee6653cef2bd30115135b678a70163" name="ga30ee6653cef2bd30115135b678a70163"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga30ee6653cef2bd30115135b678a70163">&#9670;&nbsp;</a></span>find_matching_attributes() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; <a class="el" href="group__group-surfacemesh-attr.html#ga4d115376c2c766084ef808c837348fc3">AttributeId</a> &gt; find_matching_attributes </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;&#160;</td>
+          <td class="paramname"><em>mesh</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structlagrange_1_1_attribute_matcher.html">AttributeMatcher</a> &amp;&#160;</td>
+          <td class="paramname"><em>options</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;lagrange/find_matching_attributes.h&gt;</code></p>
+
+<p>Finds all attributes with the specified usage/element type/number of channels. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">mesh</td><td><a class="el" href="classlagrange_1_1_mesh.html">Mesh</a> whose attribute to retrieve. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">options</td><td><a class="el" href="classlagrange_1_1_attribute.html" title="Derived attribute class that stores the actual information.">Attribute</a> properties to match against.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Scalar</td><td><a class="el" href="classlagrange_1_1_mesh.html">Mesh</a> scalar type. </td></tr>
+    <tr><td class="paramname">Index</td><td><a class="el" href="classlagrange_1_1_mesh.html">Mesh</a> index type.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A list of attribute ids of each matching attribute. </dd></dl>
+
+</div>
+</div>
+<a id="ga1cf4187a53e6f6a8df3a2d34f45c7dbd" name="ga1cf4187a53e6f6a8df3a2d34f45c7dbd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1cf4187a53e6f6a8df3a2d34f45c7dbd">&#9670;&nbsp;</a></span>find_matching_attributes() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; <a class="el" href="group__group-surfacemesh-attr.html#ga4d115376c2c766084ef808c837348fc3">AttributeId</a> &gt; find_matching_attributes </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;&#160;</td>
+          <td class="paramname"><em>mesh</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__group-surfacemesh-attr.html#ga5a2f28c8b9e2f8fce6e70b2418c46e45">AttributeUsage</a>&#160;</td>
+          <td class="paramname"><em>usage</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;lagrange/find_matching_attributes.h&gt;</code></p>
+
+<p>Finds all attributes with the specified usage. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">mesh</td><td><a class="el" href="classlagrange_1_1_mesh.html">Mesh</a> whose attribute to retrieve. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">usage</td><td><a class="el" href="classlagrange_1_1_attribute.html" title="Derived attribute class that stores the actual information.">Attribute</a> usage to match against.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Scalar</td><td><a class="el" href="classlagrange_1_1_mesh.html">Mesh</a> scalar type. </td></tr>
+    <tr><td class="paramname">Index</td><td><a class="el" href="classlagrange_1_1_mesh.html">Mesh</a> index type.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A list of attribute ids of each matching attribute. </dd></dl>
+
+</div>
+</div>
+<a id="ga5f8560d698163d4c9d75d3b8ed9de3ed" name="ga5f8560d698163d4c9d75d3b8ed9de3ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5f8560d698163d4c9d75d3b8ed9de3ed">&#9670;&nbsp;</a></span>find_matching_attributes() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; <a class="el" href="group__group-surfacemesh-attr.html#ga4d115376c2c766084ef808c837348fc3">AttributeId</a> &gt; find_matching_attributes </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;&#160;</td>
+          <td class="paramname"><em>mesh</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classlagrange_1_1_bit_field.html">BitField</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#ga9d8ab208822bab9987e9652dda49d89a">AttributeElement</a> &gt;&#160;</td>
+          <td class="paramname"><em>element_types</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;lagrange/find_matching_attributes.h&gt;</code></p>
+
+<p>Finds all attributes with the specified element types. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">mesh</td><td><a class="el" href="classlagrange_1_1_mesh.html">Mesh</a> whose attribute to retrieve. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">element_types</td><td>Element types to match against.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Scalar</td><td><a class="el" href="classlagrange_1_1_mesh.html">Mesh</a> scalar type. </td></tr>
+    <tr><td class="paramname">Index</td><td><a class="el" href="classlagrange_1_1_mesh.html">Mesh</a> index type.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A list of attribute ids of each matching attribute. </dd></dl>
+
+</div>
+</div>
 <a id="gabb5fc3fc93e8d973bcc534398eeb0aa9" name="gabb5fc3fc93e8d973bcc534398eeb0aa9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#gabb5fc3fc93e8d973bcc534398eeb0aa9">&#9670;&nbsp;</a></span>to_surface_mesh_copy()</h2>
 
@@ -2506,6 +2739,92 @@ To convert a mesh and its attributes to different types, use the cast function.<
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="ga40b789004d6fc0e7ca4cf13fd0c811e8" name="ga40b789004d6fc0e7ca4cf13fd0c811e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga40b789004d6fc0e7ca4cf13fd0c811e8">&#9670;&nbsp;</a></span>is_oriented()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool is_oriented </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;&#160;</td>
+          <td class="paramname"><em>mesh</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;lagrange/orientation.h&gt;</code></p>
+
+<p>Check if a mesh is oriented. </p>
+<p >A mesh is oriented if interior edges have the same number of half-edges for each of the edge direction.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mesh</td><td>The input mesh.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Scalar</td><td>The scalar type of the mesh. </td></tr>
+    <tr><td class="paramname">Index</td><td>The index type of the mesh.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if the mesh is oriented. </dd></dl>
+<p >&lt; initial value of the result.</p>
+<p >&lt; initial value of the result.</p>
+
+</div>
+</div>
+<a id="ga3424db415f75216333a8568e158d2832" name="ga3424db415f75216333a8568e158d2832"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3424db415f75216333a8568e158d2832">&#9670;&nbsp;</a></span>compute_edge_is_oriented()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__group-surfacemesh-attr.html#ga4d115376c2c766084ef808c837348fc3">AttributeId</a> compute_edge_is_oriented </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;&#160;</td>
+          <td class="paramname"><em>mesh</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structlagrange_1_1_orientation_options.html">OrientationOptions</a> &amp;&#160;</td>
+          <td class="paramname"><em>options</em> = <code>{}</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;lagrange/orientation.h&gt;</code></p>
+
+<p>Compute a mesh attribute indicating whether an edge is oriented. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">mesh</td><td>Input mesh. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">options</td><td>Output attribute options.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Scalar</td><td><a class="el" href="classlagrange_1_1_mesh.html">Mesh</a> scalar type. </td></tr>
+    <tr><td class="paramname">Index</td><td><a class="el" href="classlagrange_1_1_mesh.html">Mesh</a> index type.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Id of the newly added per-edge attribute, of type uint8_t. </dd></dl>
 
 </div>
 </div>
@@ -3079,6 +3398,53 @@ To convert a mesh and its attributes to different types, use the cast function.<
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>True if the mesh is both vertex-manifold and edge-manifold. </dd></dl>
+
+</div>
+</div>
+<a id="ga9a5f380272eec2f91bbcdf4eeb04f591" name="ga9a5f380272eec2f91bbcdf4eeb04f591"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9a5f380272eec2f91bbcdf4eeb04f591">&#9670;&nbsp;</a></span>compute_vertex_is_manifold()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__group-surfacemesh-attr.html#ga4d115376c2c766084ef808c837348fc3">AttributeId</a> compute_vertex_is_manifold </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;&#160;</td>
+          <td class="paramname"><em>mesh</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structlagrange_1_1_vertex_manifold_options.html">VertexManifoldOptions</a> &amp;&#160;</td>
+          <td class="paramname"><em>options</em> = <code>{}</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;lagrange/topology.h&gt;</code></p>
+
+<p>Compute a mesh attribute indicating vertex and edge manifoldness. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">mesh</td><td>Input mesh. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">options</td><td>Output attribute options.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Scalar</td><td><a class="el" href="classlagrange_1_1_mesh.html">Mesh</a> scalar type. </td></tr>
+    <tr><td class="paramname">Index</td><td><a class="el" href="classlagrange_1_1_mesh.html">Mesh</a> index type.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Id of the newly added per-vertex attribute, of type uint8_t. </dd></dl>
 
 </div>
 </div>

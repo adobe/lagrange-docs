@@ -10,7 +10,7 @@ var searchData=
   ['closestpoint_7',['ClosestPoint',['../structlagrange_1_1bvh_1_1_b_v_h_1_1_closest_point.html',1,'lagrange::bvh::BVH']]],
   ['closestpointresult_8',['ClosestPointResult',['../structlagrange_1_1raycasting_1_1_closest_point_result.html',1,'lagrange::raycasting']]],
   ['color_9',['Color',['../classlagrange_1_1ui_1_1_color.html',1,'lagrange::ui']]],
-  ['colorformatter_10',['ColorFormatter',['../classlagrange_1_1__logging_1_1_color_formatter.html',1,'lagrange::_logging']]],
+  ['colorformatter_10',['ColorFormatter',['../class__logging_1_1_color_formatter.html',1,'_logging']]],
   ['colormapshadermode_11',['ColormapShaderMode',['../structlagrange_1_1ui_1_1_colormap_shader_mode.html',1,'lagrange::ui']]],
   ['componentoptions_12',['ComponentOptions',['../structlagrange_1_1_component_options.html',1,'lagrange']]],
   ['componentpanel_13',['ComponentPanel',['../structlagrange_1_1ui_1_1_component_panel.html',1,'lagrange::ui']]],

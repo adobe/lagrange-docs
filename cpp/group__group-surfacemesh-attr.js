@@ -120,7 +120,8 @@ var group__group_surfacemesh_attr =
       [ "lagrange::AttributeUsage::VertexIndex", "group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45a7302d7da6a3804b1edf63b4b16198d80", null ],
       [ "lagrange::AttributeUsage::FacetIndex", "group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45aa3dfb9f32b810b4277c5c8387d7f03f5", null ],
       [ "lagrange::AttributeUsage::CornerIndex", "group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45a63222a2d9c46a34b875c078c757da2e8", null ],
-      [ "lagrange::AttributeUsage::EdgeIndex", "group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45a7e0536ad6c15bf05bf40e8876b1a5c10", null ]
+      [ "lagrange::AttributeUsage::EdgeIndex", "group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45a7e0536ad6c15bf05bf40e8876b1a5c10", null ],
+      [ "lagrange::AttributeUsage::String", "group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45a27118326006d3829667a400ad23d5d98", null ]
     ] ],
     [ "lagrange::AttributeCreatePolicy", "group__group-surfacemesh-attr.html#ga809dfcec94612491ec5be8bb8614ceab", [
       [ "lagrange::AttributeCreatePolicy::ErrorIfReserved", "group__group-surfacemesh-attr.html#gga809dfcec94612491ec5be8bb8614ceabafc443f72fcb562a73b40af34ddb599a3", null ],

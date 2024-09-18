@@ -79,6 +79,7 @@ var group__group_surfacemesh_utils =
       [ "keep_weighted_corner_normals", "structlagrange_1_1_vertex_normal_options.html#a06e5a379f00572d4e9e497c8b35d091f", null ]
     ] ],
     [ "VertexValenceOptions", "structlagrange_1_1_vertex_valence_options.html", [
+      [ "induced_by_attribute", "structlagrange_1_1_vertex_valence_options.html#a0c68ff2e50c68dc1d809aa0081dadbe2", null ],
       [ "output_attribute_name", "structlagrange_1_1_vertex_valence_options.html#ad9fcba39803c665ca7be48a39d079f00", null ]
     ] ],
     [ "CornerNormalOptions", "structlagrange_1_1_corner_normal_options.html", [
@@ -96,7 +97,17 @@ var group__group_surfacemesh_utils =
       [ "included_attributes", "structlagrange_1_1_attribute_filter.html#ab210f39ad6f5d8bfa52cdc4cc3a914b4", null ],
       [ "excluded_attributes", "structlagrange_1_1_attribute_filter.html#a4aa22445446ec6fa89194d60fc8ee9e3", null ],
       [ "included_usages", "structlagrange_1_1_attribute_filter.html#a62fe4611a0ae2b6922d5cc7a47931ee5", null ],
-      [ "included_element_types", "structlagrange_1_1_attribute_filter.html#a57f5b0bb09b3f21091e682f265b10b96", null ]
+      [ "included_element_types", "structlagrange_1_1_attribute_filter.html#a57f5b0bb09b3f21091e682f265b10b96", null ],
+      [ "or_filters", "structlagrange_1_1_attribute_filter.html#a2c4593e7ef5ae930a64a3557c9265c0b", null ],
+      [ "and_filters", "structlagrange_1_1_attribute_filter.html#af506671fd3483ecdc257a2a205e45dd4", null ]
+    ] ],
+    [ "AttributeMatcher", "structlagrange_1_1_attribute_matcher.html", [
+      [ "usages", "structlagrange_1_1_attribute_matcher.html#ab234de094dc5e6baf6210d7554e0d681", null ],
+      [ "element_types", "structlagrange_1_1_attribute_matcher.html#a12e65d80f75698f2ba11b13bdaa5c25f", null ],
+      [ "num_channels", "structlagrange_1_1_attribute_matcher.html#ae072a7d737d3528b7abe7833ccba24a7", null ]
+    ] ],
+    [ "OrientationOptions", "structlagrange_1_1_orientation_options.html", [
+      [ "output_attribute_name", "structlagrange_1_1_orientation_options.html#ad9fcba39803c665ca7be48a39d079f00", null ]
     ] ],
     [ "RemapVerticesOptions", "structlagrange_1_1_remap_vertices_options.html", [
       [ "collision_policy_float", "structlagrange_1_1_remap_vertices_options.html#afefe76052ce1fa3ed45b6aee79876855", null ],
@@ -121,6 +132,9 @@ var group__group_surfacemesh_utils =
       [ "source_vertex_attr_name", "structlagrange_1_1_separate_by_facet_groups_options.html#a7995267babac2c065f47ff9096d7f517", null ],
       [ "source_facet_attr_name", "structlagrange_1_1_separate_by_facet_groups_options.html#a09443d2b35a544bc3b02fa83f747535d", null ],
       [ "map_attributes", "structlagrange_1_1_separate_by_facet_groups_options.html#a2faf2887807897e0dd2c8e403a6c2a20", null ]
+    ] ],
+    [ "VertexManifoldOptions", "structlagrange_1_1_vertex_manifold_options.html", [
+      [ "output_attribute_name", "structlagrange_1_1_vertex_manifold_options.html#ad9fcba39803c665ca7be48a39d079f00", null ]
     ] ],
     [ "TransformOptions", "structlagrange_1_1_transform_options.html", [
       [ "normalize_normals", "structlagrange_1_1_transform_options.html#ab325d5223b6259782405a0d4d87a6540", null ],
@@ -173,11 +187,17 @@ var group__group_surfacemesh_utils =
     [ "lagrange::extract_submesh", "group__group-surfacemesh-utils.html#ga6f1b4f791ba72765e9c19df688bffd1c", null ],
     [ "lagrange::filtered_attribute_ids", "group__group-surfacemesh-utils.html#gacfe7b2432f1f1a2cdd4c9b75dc2dec31", null ],
     [ "lagrange::filter_attributes", "group__group-surfacemesh-utils.html#gac94fc907068f80f41ede4fabca362289", null ],
+    [ "lagrange::find_matching_attribute", "group__group-surfacemesh-utils.html#ga873bcef943334f351e11bd312d105385", null ],
+    [ "lagrange::find_matching_attributes", "group__group-surfacemesh-utils.html#ga30ee6653cef2bd30115135b678a70163", null ],
+    [ "lagrange::find_matching_attributes", "group__group-surfacemesh-utils.html#ga1cf4187a53e6f6a8df3a2d34f45c7dbd", null ],
+    [ "lagrange::find_matching_attributes", "group__group-surfacemesh-utils.html#ga5f8560d698163d4c9d75d3b8ed9de3ed", null ],
     [ "lagrange::to_surface_mesh_copy", "group__group-surfacemesh-utils.html#gabb5fc3fc93e8d973bcc534398eeb0aa9", null ],
     [ "lagrange::to_surface_mesh_wrap", "group__group-surfacemesh-utils.html#ga68ad17ee5b7475decfbaf17fcfa63d65", null ],
     [ "lagrange::to_legacy_mesh", "group__group-surfacemesh-utils.html#gac349d354b36d62bc2efeb93dd2b7f078", null ],
     [ "lagrange::normalize_mesh", "group__group-surfacemesh-utils.html#gaf07b7ee38e3c92577a3cdc9a7bb38479", null ],
     [ "lagrange::normalize_meshes", "group__group-surfacemesh-utils.html#gad46e0464a61ba9b6c5fd7948af53c304", null ],
+    [ "lagrange::is_oriented", "group__group-surfacemesh-utils.html#ga40b789004d6fc0e7ca4cf13fd0c811e8", null ],
+    [ "lagrange::compute_edge_is_oriented", "group__group-surfacemesh-utils.html#ga3424db415f75216333a8568e158d2832", null ],
     [ "lagrange::permute_facets", "group__group-surfacemesh-utils.html#ga4bb6f1ff87f6aac0062ac21dba0f2349", null ],
     [ "lagrange::permute_vertices", "group__group-surfacemesh-utils.html#ga8aea6bef4481de2ace23921d95fdc8fe", null ],
     [ "lagrange::remap_vertices", "group__group-surfacemesh-utils.html#ga78898b0da8d43677481cdc176f2391f8", null ],
@@ -190,6 +210,7 @@ var group__group_surfacemesh_utils =
     [ "lagrange::is_vertex_manifold", "group__group-surfacemesh-utils.html#ga8c7a15cae60d68a94bac4068de177b4a", null ],
     [ "lagrange::is_edge_manifold", "group__group-surfacemesh-utils.html#ga52aec6a70ed2240fe977f81f393d1259", null ],
     [ "lagrange::is_manifold", "group__group-surfacemesh-utils.html#ga4b70a6e7c30cd0524e2fc2490f280b69", null ],
+    [ "lagrange::compute_vertex_is_manifold", "group__group-surfacemesh-utils.html#ga9a5f380272eec2f91bbcdf4eeb04f591", null ],
     [ "lagrange::transform_mesh", "group__group-surfacemesh-utils.html#gacc5a05b5bc041f50fbff82c00e18c631", null ],
     [ "lagrange::transformed_mesh", "group__group-surfacemesh-utils.html#gac646c16958d9cb11644e1c9e72e305dc", null ],
     [ "lagrange::triangulate_polygonal_facets", "group__group-surfacemesh-utils.html#ga48af6105ece8a970755870c73af73ddd", null ]

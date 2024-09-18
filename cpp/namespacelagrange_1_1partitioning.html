@@ -129,13 +129,6 @@ using&#160;</td><td class="memItemRight" valign="bottom"><b>index_t</b> = int32_
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a640841ae30aef996644ff941619e4667"><td class="memTemplParams" colspan="2">template&lt;typename DerivedF &gt; </td></tr>
-<tr class="memitem:a640841ae30aef996644ff941619e4667"><td class="memTemplItemLeft" align="right" valign="top">std::pair&lt; std::unique_ptr&lt; <a class="el" href="namespacelagrange_1_1partitioning.html#a4700ac660399d98cc72056f1ed6449ff">index_t</a>[]&gt;, std::unique_ptr&lt; <a class="el" href="namespacelagrange_1_1partitioning.html#a4700ac660399d98cc72056f1ed6449ff">index_t</a>[]&gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacelagrange_1_1partitioning.html#a640841ae30aef996644ff941619e4667">convert_index_buffer</a> (const Eigen::MatrixBase&lt; DerivedF &gt; &amp;facets)</td></tr>
-<tr class="memdesc:a640841ae30aef996644ff941619e4667"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a list of facet indices into flat buffers suitable to be used by METIS.  <a href="namespacelagrange_1_1partitioning.html#a640841ae30aef996644ff941619e4667">More...</a><br /></td></tr>
-<tr class="separator:a640841ae30aef996644ff941619e4667"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6030f0216cd8733bfe6f0e1692572b72"><td class="memItemLeft" align="right" valign="top">Eigen::Matrix&lt; <a class="el" href="namespacelagrange_1_1partitioning.html#a4700ac660399d98cc72056f1ed6449ff">index_t</a>, Eigen::Dynamic, 1 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelagrange_1_1partitioning.html#a6030f0216cd8733bfe6f0e1692572b72">partition_mesh_vertices_raw</a> (<a class="el" href="namespacelagrange_1_1partitioning.html#a4700ac660399d98cc72056f1ed6449ff">index_t</a> num_elems, <a class="el" href="namespacelagrange_1_1partitioning.html#a4700ac660399d98cc72056f1ed6449ff">index_t</a> num_nodes, <a class="el" href="namespacelagrange_1_1partitioning.html#a4700ac660399d98cc72056f1ed6449ff">index_t</a> *e_ptr, <a class="el" href="namespacelagrange_1_1partitioning.html#a4700ac660399d98cc72056f1ed6449ff">index_t</a> *e_ind, <a class="el" href="namespacelagrange_1_1partitioning.html#a4700ac660399d98cc72056f1ed6449ff">index_t</a> num_partitions)</td></tr>
-<tr class="memdesc:a6030f0216cd8733bfe6f0e1692572b72"><td class="mdescLeft">&#160;</td><td class="mdescRight">Low-level function wrapping partitioning call to METIS.  <a href="namespacelagrange_1_1partitioning.html#a6030f0216cd8733bfe6f0e1692572b72">More...</a><br /></td></tr>
-<tr class="separator:a6030f0216cd8733bfe6f0e1692572b72"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a09e8dc3cefeb36db96cd82eb06093b18"><td class="memTemplParams" colspan="2">template&lt;typename DerivedF &gt; </td></tr>
 <tr class="memitem:a09e8dc3cefeb36db96cd82eb06093b18"><td class="memTemplItemLeft" align="right" valign="top">Eigen::Matrix&lt; <a class="el" href="namespacelagrange_1_1partitioning.html#a4700ac660399d98cc72056f1ed6449ff">index_t</a>, Eigen::Dynamic, 1 &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacelagrange_1_1partitioning.html#a09e8dc3cefeb36db96cd82eb06093b18">partition_mesh_vertices</a> (const Eigen::MatrixBase&lt; DerivedF &gt; &amp;facets, <a class="el" href="namespacelagrange_1_1partitioning.html#a4700ac660399d98cc72056f1ed6449ff">index_t</a> num_partitions)</td></tr>
 <tr class="memdesc:a09e8dc3cefeb36db96cd82eb06093b18"><td class="mdescLeft">&#160;</td><td class="mdescRight">Partition mesh vertices into num_partitions using METIS.  <a href="namespacelagrange_1_1partitioning.html#a09e8dc3cefeb36db96cd82eb06093b18">More...</a><br /></td></tr>
@@ -144,98 +137,6 @@ Functions</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p ><a class="el" href="classlagrange_1_1_mesh.html">Mesh</a> partitioning using METIS. </p>
 </div><h2 class="groupheader">Function Documentation</h2>
-<a id="a640841ae30aef996644ff941619e4667" name="a640841ae30aef996644ff941619e4667"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a640841ae30aef996644ff941619e4667">&#9670;&nbsp;</a></span>convert_index_buffer()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::pair&lt; std::unique_ptr&lt; <a class="el" href="namespacelagrange_1_1partitioning.html#a4700ac660399d98cc72056f1ed6449ff">index_t</a>[]&gt;, std::unique_ptr&lt; <a class="el" href="namespacelagrange_1_1partitioning.html#a4700ac660399d98cc72056f1ed6449ff">index_t</a>[]&gt; &gt; convert_index_buffer </td>
-          <td>(</td>
-          <td class="paramtype">const Eigen::MatrixBase&lt; DerivedF &gt; &amp;&#160;</td>
-          <td class="paramname"><em>facets</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Converts a list of facet indices into flat buffers suitable to be used by METIS. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">facets</td><td>#F x k array of face indices.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">DerivedF</td><td>Facet array type.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>A pair of buffers (eptr, eind) following the data structure explained in Section 5.6 of the <a href="http://glaros.dtc.umn.edu/gkhome/fetch/sw/metis/manual.pdf">METIS manual</a>. </dd></dl>
-
-</div>
-</div>
-<a id="a6030f0216cd8733bfe6f0e1692572b72" name="a6030f0216cd8733bfe6f0e1692572b72"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6030f0216cd8733bfe6f0e1692572b72">&#9670;&nbsp;</a></span>partition_mesh_vertices_raw()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">Eigen::Matrix&lt; <a class="el" href="namespacelagrange_1_1partitioning.html#a4700ac660399d98cc72056f1ed6449ff">index_t</a>, Eigen::Dynamic, 1 &gt; partition_mesh_vertices_raw </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="namespacelagrange_1_1partitioning.html#a4700ac660399d98cc72056f1ed6449ff">index_t</a>&#160;</td>
-          <td class="paramname"><em>num_elems</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="namespacelagrange_1_1partitioning.html#a4700ac660399d98cc72056f1ed6449ff">index_t</a>&#160;</td>
-          <td class="paramname"><em>num_nodes</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="namespacelagrange_1_1partitioning.html#a4700ac660399d98cc72056f1ed6449ff">index_t</a> *&#160;</td>
-          <td class="paramname"><em>e_ptr</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="namespacelagrange_1_1partitioning.html#a4700ac660399d98cc72056f1ed6449ff">index_t</a> *&#160;</td>
-          <td class="paramname"><em>e_ind</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="namespacelagrange_1_1partitioning.html#a4700ac660399d98cc72056f1ed6449ff">index_t</a>&#160;</td>
-          <td class="paramname"><em>num_partitions</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Low-level function wrapping partitioning call to METIS. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">num_elems</td><td>Number of elements in the mesh. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">num_nodes</td><td>Number of nodes in the mesh. </td></tr>
-    <tr><td class="paramdir">[in,out]</td><td class="paramname">e_ptr</td><td>Offset array indicating where each element index starts. </td></tr>
-    <tr><td class="paramdir">[in,out]</td><td class="paramname">e_ind</td><td>Flat array of vertex indices for each element. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">num_partitions</td><td>Number of partitions to produce.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>#V x 1 array of partition ids. </dd></dl>
-
-</div>
-</div>
 <a id="a09e8dc3cefeb36db96cd82eb06093b18" name="a09e8dc3cefeb36db96cd82eb06093b18"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a09e8dc3cefeb36db96cd82eb06093b18">&#9670;&nbsp;</a></span>partition_mesh_vertices()</h2>
 

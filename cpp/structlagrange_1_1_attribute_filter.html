@@ -148,10 +148,51 @@ std::optional&lt; std::vector&lt; <a class="el" href="structlagrange_1_1_attribu
 <a class="el" href="classlagrange_1_1_bit_field.html">BitField</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#ga9d8ab208822bab9987e9652dda49d89a">AttributeElement</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>included_element_types</b> = <a class="el" href="classlagrange_1_1_bit_field.html">BitField</a>&lt;<a class="el" href="group__group-surfacemesh-attr.html#ga9d8ab208822bab9987e9652dda49d89a">AttributeElement</a>&gt;::all()</td></tr>
 <tr class="memdesc:a57f5b0bb09b3f21091e682f265b10b96"><td class="mdescLeft">&#160;</td><td class="mdescRight">List of attribute element types to include. By default, all element types are included. <br /></td></tr>
 <tr class="separator:a57f5b0bb09b3f21091e682f265b10b96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c4593e7ef5ae930a64a3557c9265c0b"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="structlagrange_1_1_attribute_filter.html">AttributeFilter</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlagrange_1_1_attribute_filter.html#a2c4593e7ef5ae930a64a3557c9265c0b">or_filters</a></td></tr>
+<tr class="memdesc:a2c4593e7ef5ae930a64a3557c9265c0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">If set, match all attributes that satisfy any of the filters in this list.  <a href="structlagrange_1_1_attribute_filter.html#a2c4593e7ef5ae930a64a3557c9265c0b">More...</a><br /></td></tr>
+<tr class="separator:a2c4593e7ef5ae930a64a3557c9265c0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af506671fd3483ecdc257a2a205e45dd4"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="structlagrange_1_1_attribute_filter.html">AttributeFilter</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlagrange_1_1_attribute_filter.html#af506671fd3483ecdc257a2a205e45dd4">and_filters</a></td></tr>
+<tr class="memdesc:af506671fd3483ecdc257a2a205e45dd4"><td class="mdescLeft">&#160;</td><td class="mdescRight">If set, match all attributes that satisfy all of the filters in this list.  <a href="structlagrange_1_1_attribute_filter.html#af506671fd3483ecdc257a2a205e45dd4">More...</a><br /></td></tr>
+<tr class="separator:af506671fd3483ecdc257a2a205e45dd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Helper object to filter attributes based on name, id, usage or element type. </p>
-</div><hr/>The documentation for this struct was generated from the following file:<ul>
+</div><h2 class="groupheader">Member Data Documentation</h2>
+<a id="a2c4593e7ef5ae930a64a3557c9265c0b" name="a2c4593e7ef5ae930a64a3557c9265c0b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c4593e7ef5ae930a64a3557c9265c0b">&#9670;&nbsp;</a></span>or_filters</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="structlagrange_1_1_attribute_filter.html">AttributeFilter</a>&gt; or_filters</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>If set, match all attributes that satisfy any of the filters in this list. </p>
+<dl class="section note"><dt>Note</dt><dd>A filter cannot contain both or_filters and and_filters. </dd></dl>
+
+</div>
+</div>
+<a id="af506671fd3483ecdc257a2a205e45dd4" name="af506671fd3483ecdc257a2a205e45dd4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af506671fd3483ecdc257a2a205e45dd4">&#9670;&nbsp;</a></span>and_filters</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="structlagrange_1_1_attribute_filter.html">AttributeFilter</a>&gt; and_filters</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>If set, match all attributes that satisfy all of the filters in this list. </p>
+<dl class="section note"><dt>Note</dt><dd>A filter cannot contain both or_filters and and_filters. </dd></dl>
+
+</div>
+</div>
+<hr/>The documentation for this struct was generated from the following file:<ul>
 <li>lagrange/<a class="el" href="filter__attributes_8h_source.html">filter_attributes.h</a></li>
 </ul>
 </div><!-- contents -->

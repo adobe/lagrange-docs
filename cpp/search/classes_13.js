@@ -12,12 +12,13 @@ var searchData=
   ['verbosetimer_9',['VerboseTimer',['../classlagrange_1_1_verbose_timer.html',1,'lagrange']]],
   ['vertexbuffer_10',['VertexBuffer',['../structlagrange_1_1ui_1_1_vertex_buffer.html',1,'lagrange::ui']]],
   ['vertexdata_11',['VertexData',['../structlagrange_1_1ui_1_1_vertex_data.html',1,'lagrange::ui']]],
-  ['vertexnormaloptions_12',['VertexNormalOptions',['../structlagrange_1_1_vertex_normal_options.html',1,'lagrange']]],
-  ['vertexvalenceoptions_13',['VertexValenceOptions',['../structlagrange_1_1_vertex_valence_options.html',1,'lagrange']]],
-  ['viewer_14',['Viewer',['../classlagrange_1_1ui_1_1_viewer.html',1,'lagrange::ui']]],
-  ['viewportcomponent_15',['ViewportComponent',['../structlagrange_1_1ui_1_1_viewport_component.html',1,'lagrange::ui']]],
-  ['viewportpanel_16',['ViewportPanel',['../structlagrange_1_1ui_1_1_viewport_panel.html',1,'lagrange::ui']]],
-  ['viewporttransform_17',['ViewportTransform',['../structlagrange_1_1ui_1_1_camera_1_1_viewport_transform.html',1,'lagrange::ui::Camera']]],
-  ['void_18',['Void',['../structlagrange_1_1_mesh_trait_helper_1_1_void.html',1,'lagrange::MeshTraitHelper']]],
-  ['volumetomeshoptions_19',['VolumeToMeshOptions',['../structlagrange_1_1volume_1_1_volume_to_mesh_options.html',1,'lagrange::volume']]]
+  ['vertexmanifoldoptions_12',['VertexManifoldOptions',['../structlagrange_1_1_vertex_manifold_options.html',1,'lagrange']]],
+  ['vertexnormaloptions_13',['VertexNormalOptions',['../structlagrange_1_1_vertex_normal_options.html',1,'lagrange']]],
+  ['vertexvalenceoptions_14',['VertexValenceOptions',['../structlagrange_1_1_vertex_valence_options.html',1,'lagrange']]],
+  ['viewer_15',['Viewer',['../classlagrange_1_1ui_1_1_viewer.html',1,'lagrange::ui']]],
+  ['viewportcomponent_16',['ViewportComponent',['../structlagrange_1_1ui_1_1_viewport_component.html',1,'lagrange::ui']]],
+  ['viewportpanel_17',['ViewportPanel',['../structlagrange_1_1ui_1_1_viewport_panel.html',1,'lagrange::ui']]],
+  ['viewporttransform_18',['ViewportTransform',['../structlagrange_1_1ui_1_1_camera_1_1_viewport_transform.html',1,'lagrange::ui::Camera']]],
+  ['void_19',['Void',['../structlagrange_1_1_mesh_trait_helper_1_1_void.html',1,'lagrange::MeshTraitHelper']]],
+  ['volumetomeshoptions_20',['VolumeToMeshOptions',['../structlagrange_1_1volume_1_1_volume_to_mesh_options.html',1,'lagrange::volume']]]
 ];

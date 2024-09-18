@@ -58,15 +58,15 @@ var NAVTREEINDEX =
 [
 "../",
 "classlagrange_1_1_mesh_navigation.html#a8316e8d0bde5a7a8c8ef2feaa6b75f53",
-"classlagrange_1_1_surface_mesh.html#aeb2d4b3e2b0b9b3fba297a8f6eea0981",
-"classlagrange_1_1internal_1_1shared__ptr__access.html#ac664e14fad0c2c90120c66aaad6226a3",
-"classlagrange_1_1ui_1_1_keybinds.html#a0ae57b3de75fbad6f81633bb76fb6b2c",
-"group__group-logger.html#ga8f17bae29eab16304d0f5a71f383ae15",
-"namespacelagrange.html#a144f50badc977a6cc9e3b61b66dc2bec",
-"namespacelagrange_1_1ui.html#a6dd81f5614b357748e204d8f3d766400",
-"structlagrange_1_1_vertex_normal_options.html#a2d79834ef253c9c4e2af9de59ab8354f",
-"structlagrange_1_1ui_1_1_camera_1_1_viewport_transform.html#aa95b44777caefd6beb9d0d038d72e7f4",
-"structlagrange_1_1ui_1_1_texture_1_1_download_result.html"
+"classlagrange_1_1_surface_mesh.html#ad5fc1c7d6ff27a9a400dbe4382aefbf7",
+"classlagrange_1_1internal_1_1shared__ptr.html#ae5a7880488bb1f238e73e5ad26a2cf3d",
+"classlagrange_1_1ui_1_1_frame_buffer.html",
+"functions_vars_r.html",
+"group__module-subdivision.html#gga18fb36949d8541f36a871b958052e9cda1299749c8483efe1ddbd40a5886eae6f",
+"namespacelagrange_1_1ui.html#a4392bf38acedc6dd21b6c7e8b61efe0b",
+"structlagrange_1_1_separate_by_facet_groups_options.html#a09443d2b35a544bc3b02fa83f747535d",
+"structlagrange_1_1scene_1_1_image_experimental.html#a75da4193b541086a645bae2f0b7a6846",
+"structlagrange_1_1ui_1_1_selection_context.html#a1d47c816cbdb4f6b82e720ef46d4de92"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

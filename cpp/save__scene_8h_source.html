@@ -130,17 +130,26 @@ $(document).ready(function(){initNavTree('save__scene_8h_source.html',''); initR
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &lt;lagrange/io/types.h&gt;</span></div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &lt;lagrange/scene/Scene.h&gt;</span></div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacelagrange_1_1io.html">lagrange::io</a> {</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#include &lt;iosfwd&gt;</span></div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> Scalar, <span class="keyword">typename</span> Index&gt;</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="keywordtype">void</span> <a class="code hl_function" href="namespacelagrange_1_1io.html#a637317230163bf7f291d7b512ebdaff6">save_scene</a>(</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="keyword">const</span> fs::path&amp; filename,</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="keyword">const</span> scene::Scene&lt;Scalar, Index&gt;&amp; scene,</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="keyword">const</span> SaveOptions&amp; options = {});</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>} <span class="comment">// namespace lagrange::io</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacelagrange_1_1io.html">lagrange::io</a> {</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> Scalar, <span class="keyword">typename</span> Index&gt;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="keywordtype">void</span> <a class="code hl_function" href="namespacelagrange_1_1io.html#a637317230163bf7f291d7b512ebdaff6">save_scene</a>(</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="keyword">const</span> fs::path&amp; filename,</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="keyword">const</span> scene::Scene&lt;Scalar, Index&gt;&amp; scene,</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="keyword">const</span> SaveOptions&amp; options = {});</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> Scalar, <span class="keyword">typename</span> Index&gt;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="keywordtype">void</span> <a class="code hl_function" href="namespacelagrange_1_1io.html#a637317230163bf7f291d7b512ebdaff6">save_scene</a>(</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    std::ostream&amp; output_stream,</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="keyword">const</span> scene::Scene&lt;Scalar, Index&gt;&amp; scene,</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    FileFormat format,</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="keyword">const</span> SaveOptions&amp; options = {});</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>} <span class="comment">// namespace lagrange::io</span></div>
 <div class="ttc" id="anamespacelagrange_1_1io_html"><div class="ttname"><a href="namespacelagrange_1_1io.html">lagrange::io</a></div><div class="ttdoc">Mesh input/output.</div><div class="ttdef"><b>Definition:</b> detect_file_format.h:18</div></div>
-<div class="ttc" id="anamespacelagrange_1_1io_html_a637317230163bf7f291d7b512ebdaff6"><div class="ttname"><a href="namespacelagrange_1_1io.html#a637317230163bf7f291d7b512ebdaff6">lagrange::io::save_scene</a></div><div class="ttdeci">void save_scene(const fs::path &amp;filename, const scene::Scene&lt; Scalar, Index &gt; &amp;scene, const SaveOptions &amp;options={})</div><div class="ttdoc">Save a scene to a file.</div><div class="ttdef"><b>Definition:</b> save_scene.cpp:23</div></div>
+<div class="ttc" id="anamespacelagrange_1_1io_html_a637317230163bf7f291d7b512ebdaff6"><div class="ttname"><a href="namespacelagrange_1_1io.html#a637317230163bf7f291d7b512ebdaff6">lagrange::io::save_scene</a></div><div class="ttdeci">void save_scene(const fs::path &amp;filename, const scene::Scene&lt; Scalar, Index &gt; &amp;scene, const SaveOptions &amp;options={})</div><div class="ttdoc">Save a scene to a file.</div><div class="ttdef"><b>Definition:</b> save_scene.cpp:25</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

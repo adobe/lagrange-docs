@@ -16,6 +16,8 @@ var group__module_subdivision =
     [ "SubdivisionOptions", "structlagrange_1_1subdivision_1_1_subdivision_options.html", [
       [ "scheme", "structlagrange_1_1subdivision_1_1_subdivision_options.html#a52d2f1ab792a874c99611cd057b3986d", null ],
       [ "num_levels", "structlagrange_1_1subdivision_1_1_subdivision_options.html#a2b40d61424462dd2754d3417e3176afd", null ],
+      [ "refinement", "structlagrange_1_1subdivision_1_1_subdivision_options.html#ac29dbec90f9bb71496e1c60960739e7d", null ],
+      [ "max_edge_length", "structlagrange_1_1subdivision_1_1_subdivision_options.html#a3e8bcbb0c92920e576a6a8a024260590", null ],
       [ "vertex_boundary_interpolation", "structlagrange_1_1subdivision_1_1_subdivision_options.html#a56ecf395ef5c7f6bca751e06c42f02a2", null ],
       [ "face_varying_interpolation", "structlagrange_1_1subdivision_1_1_subdivision_options.html#af579dd0506d1dcc4da54734113dd1cae", null ],
       [ "use_limit_surface", "structlagrange_1_1subdivision_1_1_subdivision_options.html#ae6dff69007ad483b891625f80f0320dc", null ],
@@ -23,9 +25,11 @@ var group__module_subdivision =
       [ "edge_sharpness_attr", "structlagrange_1_1subdivision_1_1_subdivision_options.html#a1f54c0b91b23661df594458959dfba70", null ],
       [ "vertex_sharpness_attr", "structlagrange_1_1subdivision_1_1_subdivision_options.html#a63d403295b7ddae95fee09538bb46cfe", null ],
       [ "face_hole_attr", "structlagrange_1_1subdivision_1_1_subdivision_options.html#a18896d3cb0645d219adf1880f24842f2", null ],
+      [ "preserve_shared_indices", "structlagrange_1_1subdivision_1_1_subdivision_options.html#a125a455b3b6c3394a1d6a77e09034994", null ],
       [ "output_limit_normals", "structlagrange_1_1subdivision_1_1_subdivision_options.html#a009da3916b6b7822db358c51eed05fb9", null ],
       [ "output_limit_tangents", "structlagrange_1_1subdivision_1_1_subdivision_options.html#acd0629b5ca9a2258e89573a9f4177e25", null ],
-      [ "output_limit_bitangents", "structlagrange_1_1subdivision_1_1_subdivision_options.html#a5102f2d51412de4e0b0a0bda934279e8", null ]
+      [ "output_limit_bitangents", "structlagrange_1_1subdivision_1_1_subdivision_options.html#a5102f2d51412de4e0b0a0bda934279e8", null ],
+      [ "validate_topology", "structlagrange_1_1subdivision_1_1_subdivision_options.html#a33182352a8f094352602fa671575a2cb", null ]
     ] ],
     [ "lagrange::subdivision::SchemeType", "group__module-subdivision.html#gaa3daa2f428c6be2b1cb394f3a525833d", [
       [ "lagrange::subdivision::SchemeType::CatmullClark", "group__module-subdivision.html#ggaa3daa2f428c6be2b1cb394f3a525833da2c09a969b30a9a12caf39ee2a398597a", null ],
@@ -44,7 +48,11 @@ var group__module_subdivision =
       [ "lagrange::subdivision::FaceVaryingInterpolation::Boundaries", "group__module-subdivision.html#gga18fb36949d8541f36a871b958052e9cda8c0d5bd10a22aaaa32f275d92436f5f3", null ],
       [ "lagrange::subdivision::FaceVaryingInterpolation::All", "group__module-subdivision.html#gga18fb36949d8541f36a871b958052e9cdab1c94ca2fbc3e78fc30069c8d0f01680", null ]
     ] ],
-    [ "lagrange::subdivision::subdivide_mesh", "group__module-subdivision.html#ga1cc8ac3c87ed90dbc6e657b3ddd87c1d", null ],
+    [ "lagrange::subdivision::RefinementType", "group__module-subdivision.html#gaac5ae01fdafef92da6cdf7fcaa27bed2", [
+      [ "lagrange::subdivision::RefinementType::Uniform", "group__module-subdivision.html#ggaac5ae01fdafef92da6cdf7fcaa27bed2af19516d11f2946f894070e92fcb56b6d", null ],
+      [ "lagrange::subdivision::RefinementType::EdgeAdaptive", "group__module-subdivision.html#ggaac5ae01fdafef92da6cdf7fcaa27bed2a231aed9401f31afda5dc12fd6952e324", null ]
+    ] ],
+    [ "lagrange::subdivision::subdivide_mesh", "group__module-subdivision.html#gab830dbf13f0590f7397036d72e396d0d", null ],
     [ "lagrange::subdivision::midpoint_subdivision", "group__module-subdivision.html#ga5bb45b1783fc315efefb291e2d2dbd9f", null ],
     [ "lagrange::subdivision::sqrt_subdivision", "group__module-subdivision.html#ga956eef31bf35351dff901a7f4d758f5f", null ]
 ];

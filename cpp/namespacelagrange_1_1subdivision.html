@@ -124,6 +124,8 @@ $(document).ready(function(){initNavTree('namespacelagrange_1_1subdivision.html'
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlagrange_1_1subdivision_1_1_interpolated_attribute_ids.html">InterpolatedAttributeIds</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlagrange_1_1subdivision_1_1_interpolated_attributes.html">InterpolatedAttributes</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper class to select which attributes to interpolate.  <a href="classlagrange_1_1subdivision_1_1_interpolated_attributes.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -165,6 +167,11 @@ Enumerations</h2></td></tr>
  }</td></tr>
 <tr class="memdesc:ga18fb36949d8541f36a871b958052e9cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Face-varying Interpolation Rules.  <a href="group__module-subdivision.html#ga18fb36949d8541f36a871b958052e9cd">More...</a><br /></td></tr>
 <tr class="separator:ga18fb36949d8541f36a871b958052e9cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaac5ae01fdafef92da6cdf7fcaa27bed2"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__module-subdivision.html#gaac5ae01fdafef92da6cdf7fcaa27bed2">RefinementType</a> { <a class="el" href="group__module-subdivision.html#ggaac5ae01fdafef92da6cdf7fcaa27bed2af19516d11f2946f894070e92fcb56b6d">Uniform</a>
+, <a class="el" href="group__module-subdivision.html#ggaac5ae01fdafef92da6cdf7fcaa27bed2a231aed9401f31afda5dc12fd6952e324">EdgeAdaptive</a>
+ }</td></tr>
+<tr class="memdesc:gaac5ae01fdafef92da6cdf7fcaa27bed2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Topology refinement method.  <a href="group__module-subdivision.html#gaac5ae01fdafef92da6cdf7fcaa27bed2">More...</a><br /></td></tr>
+<tr class="separator:gaac5ae01fdafef92da6cdf7fcaa27bed2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
@@ -172,10 +179,10 @@ Functions</h2></td></tr>
 template&lt;typename input_meshType , typename output_meshType &gt; </td></tr>
 <tr class="memitem:acfed8fc28e1669e42b22e1f5df90172c"><td class="memTemplItemLeft" align="right" valign="top">std::unique_ptr&lt; output_meshType &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>subdivide_mesh</b> (const input_meshType &amp;input_mesh, SubdivisionScheme scheme_type, int maxlevel, OpenSubdiv::Sdc::Options::VtxBoundaryInterpolation vertexInterp=OpenSubdiv::Sdc::Options::VTX_BOUNDARY_EDGE_ONLY, OpenSubdiv::Sdc::Options::FVarLinearInterpolation primvarInterp=OpenSubdiv::Sdc::Options::FVAR_LINEAR_ALL)</td></tr>
 <tr class="separator:acfed8fc28e1669e42b22e1f5df90172c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga1cc8ac3c87ed90dbc6e657b3ddd87c1d"><td class="memTemplParams" colspan="2">template&lt;typename Scalar , typename Index &gt; </td></tr>
-<tr class="memitem:ga1cc8ac3c87ed90dbc6e657b3ddd87c1d"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__module-subdivision.html#ga1cc8ac3c87ed90dbc6e657b3ddd87c1d">subdivide_mesh</a> (const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;mesh, <a class="el" href="structlagrange_1_1subdivision_1_1_subdivision_options.html">SubdivisionOptions</a> options={})</td></tr>
-<tr class="memdesc:ga1cc8ac3c87ed90dbc6e657b3ddd87c1d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluates the subdivision surface of a polygonal mesh.  <a href="group__module-subdivision.html#ga1cc8ac3c87ed90dbc6e657b3ddd87c1d">More...</a><br /></td></tr>
-<tr class="separator:ga1cc8ac3c87ed90dbc6e657b3ddd87c1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab830dbf13f0590f7397036d72e396d0d"><td class="memTemplParams" colspan="2">template&lt;typename Scalar , typename Index &gt; </td></tr>
+<tr class="memitem:gab830dbf13f0590f7397036d72e396d0d"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__module-subdivision.html#gab830dbf13f0590f7397036d72e396d0d">subdivide_mesh</a> (const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;mesh, const <a class="el" href="structlagrange_1_1subdivision_1_1_subdivision_options.html">SubdivisionOptions</a> &amp;options={})</td></tr>
+<tr class="memdesc:gab830dbf13f0590f7397036d72e396d0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluates the subdivision surface of a polygonal mesh.  <a href="group__module-subdivision.html#gab830dbf13f0590f7397036d72e396d0d">More...</a><br /></td></tr>
+<tr class="separator:gab830dbf13f0590f7397036d72e396d0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga5bb45b1783fc315efefb291e2d2dbd9f"><td class="memTemplParams" colspan="2">template&lt;typename Scalar , typename Index &gt; </td></tr>
 <tr class="memitem:ga5bb45b1783fc315efefb291e2d2dbd9f"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__module-subdivision.html#ga5bb45b1783fc315efefb291e2d2dbd9f">midpoint_subdivision</a> (const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;mesh)</td></tr>
 <tr class="memdesc:ga5bb45b1783fc315efefb291e2d2dbd9f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs one step of midpoint subdivision for triangle meshes.  <a href="group__module-subdivision.html#ga5bb45b1783fc315efefb291e2d2dbd9f">More...</a><br /></td></tr>
@@ -184,6 +191,14 @@ template&lt;typename input_meshType , typename output_meshType &gt; </td></tr>
 <tr class="memitem:ga956eef31bf35351dff901a7f4d758f5f"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__module-subdivision.html#ga956eef31bf35351dff901a7f4d758f5f">sqrt_subdivision</a> (const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;mesh)</td></tr>
 <tr class="memdesc:ga956eef31bf35351dff901a7f4d758f5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs one step of sqrt(3)-subdivision.  <a href="group__module-subdivision.html#ga956eef31bf35351dff901a7f4d758f5f">More...</a><br /></td></tr>
 <tr class="separator:ga956eef31bf35351dff901a7f4d758f5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d374961dfbbf6b7f2f5f92a67db46f3"><td class="memTemplParams" colspan="2"><a id="a5d374961dfbbf6b7f2f5f92a67db46f3" name="a5d374961dfbbf6b7f2f5f92a67db46f3"></a>
+template&lt;typename Scalar , typename Index &gt; </td></tr>
+<tr class="memitem:a5d374961dfbbf6b7f2f5f92a67db46f3"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>subdivide_edge_adaptive</b> (const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;input_mesh, OpenSubdiv::Far::TopologyRefiner &amp;topology_refiner, const <a class="el" href="structlagrange_1_1subdivision_1_1_interpolated_attribute_ids.html">InterpolatedAttributeIds</a> &amp;interpolated_attr, const <a class="el" href="structlagrange_1_1subdivision_1_1_subdivision_options.html">SubdivisionOptions</a> &amp;options)</td></tr>
+<tr class="separator:a5d374961dfbbf6b7f2f5f92a67db46f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1620fe2776fac0ab3a3e3786b3d0a9a"><td class="memTemplParams" colspan="2"><a id="af1620fe2776fac0ab3a3e3786b3d0a9a" name="af1620fe2776fac0ab3a3e3786b3d0a9a"></a>
+template&lt;typename Scalar , typename Index &gt; </td></tr>
+<tr class="memitem:af1620fe2776fac0ab3a3e3786b3d0a9a"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>subdivide_uniform</b> (const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;input_mesh, OpenSubdiv::Far::TopologyRefiner &amp;topology_refiner, const <a class="el" href="structlagrange_1_1subdivision_1_1_interpolated_attribute_ids.html">InterpolatedAttributeIds</a> &amp;interpolated_attr, const <a class="el" href="structlagrange_1_1subdivision_1_1_subdivision_options.html">SubdivisionOptions</a> &amp;options)</td></tr>
+<tr class="separator:af1620fe2776fac0ab3a3e3786b3d0a9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Subdivision surfaces. </p>

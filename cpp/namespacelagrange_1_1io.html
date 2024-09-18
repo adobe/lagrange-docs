@@ -142,7 +142,8 @@ Enumerations</h2></td></tr>
 , <b>Gltf</b>
 , <b>Msh</b>
 , <br />
-&#160;&#160;<b>Unknown</b>
+&#160;&#160;<b>Fbx</b>
+, <b>Unknown</b>
 <br />
  }</td></tr>
 <tr class="separator:a610845e6f56e545283af144cbbb99cfe"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -201,6 +202,10 @@ Functions</h2></td></tr>
 <tr class="memitem:a6610dc72a7d80ebe10cc94ed98b72327"><td class="memTemplItemLeft" align="right" valign="top">SceneType&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacelagrange_1_1io.html#a6610dc72a7d80ebe10cc94ed98b72327">load_scene</a> (const fs::path &amp;filename, const <a class="el" href="structlagrange_1_1io_1_1_load_options.html">LoadOptions</a> &amp;options={})</td></tr>
 <tr class="memdesc:a6610dc72a7d80ebe10cc94ed98b72327"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load a scene.  <a href="namespacelagrange_1_1io.html#a6610dc72a7d80ebe10cc94ed98b72327">More...</a><br /></td></tr>
 <tr class="separator:a6610dc72a7d80ebe10cc94ed98b72327"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36684a3bf60e9ff854678d8df202c8eb"><td class="memTemplParams" colspan="2">template&lt;typename SceneType &gt; </td></tr>
+<tr class="memitem:a36684a3bf60e9ff854678d8df202c8eb"><td class="memTemplItemLeft" align="right" valign="top">SceneType&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacelagrange_1_1io.html#a36684a3bf60e9ff854678d8df202c8eb">load_scene</a> (std::istream &amp;input_stream, const <a class="el" href="structlagrange_1_1io_1_1_load_options.html">LoadOptions</a> &amp;options={})</td></tr>
+<tr class="memdesc:a36684a3bf60e9ff854678d8df202c8eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load a scene from a stream.  <a href="namespacelagrange_1_1io.html#a36684a3bf60e9ff854678d8df202c8eb">More...</a><br /></td></tr>
+<tr class="separator:a36684a3bf60e9ff854678d8df202c8eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afc1770ef8d6955dde3a8d4dd23025f0f"><td class="memTemplParams" colspan="2">template&lt;typename SceneType &gt; </td></tr>
 <tr class="memitem:afc1770ef8d6955dde3a8d4dd23025f0f"><td class="memTemplItemLeft" align="right" valign="top">SceneType&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacelagrange_1_1io.html#afc1770ef8d6955dde3a8d4dd23025f0f">load_scene_fbx</a> (const fs::path &amp;filename, const <a class="el" href="structlagrange_1_1io_1_1_load_options.html">LoadOptions</a> &amp;options={})</td></tr>
 <tr class="memdesc:afc1770ef8d6955dde3a8d4dd23025f0f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load an fbx scene.  <a href="namespacelagrange_1_1io.html#afc1770ef8d6955dde3a8d4dd23025f0f">More...</a><br /></td></tr>
@@ -289,6 +294,10 @@ Functions</h2></td></tr>
 <tr class="memitem:a637317230163bf7f291d7b512ebdaff6"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacelagrange_1_1io.html#a637317230163bf7f291d7b512ebdaff6">save_scene</a> (const fs::path &amp;filename, const <a class="el" href="structlagrange_1_1scene_1_1_scene.html">scene::Scene</a>&lt; Scalar, Index &gt; &amp;scene, const <a class="el" href="structlagrange_1_1io_1_1_save_options.html">SaveOptions</a> &amp;options={})</td></tr>
 <tr class="memdesc:a637317230163bf7f291d7b512ebdaff6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Save a scene to a file.  <a href="namespacelagrange_1_1io.html#a637317230163bf7f291d7b512ebdaff6">More...</a><br /></td></tr>
 <tr class="separator:a637317230163bf7f291d7b512ebdaff6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a547d832b78822de91ca20311c7569337"><td class="memTemplParams" colspan="2">template&lt;typename Scalar , typename Index &gt; </td></tr>
+<tr class="memitem:a547d832b78822de91ca20311c7569337"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacelagrange_1_1io.html#a547d832b78822de91ca20311c7569337">save_scene</a> (std::ostream &amp;output_stream, const <a class="el" href="structlagrange_1_1scene_1_1_scene.html">scene::Scene</a>&lt; Scalar, Index &gt; &amp;scene, FileFormat format, const <a class="el" href="structlagrange_1_1io_1_1_save_options.html">SaveOptions</a> &amp;options={})</td></tr>
+<tr class="memdesc:a547d832b78822de91ca20311c7569337"><td class="mdescLeft">&#160;</td><td class="mdescRight">Save a scene to a stream.  <a href="namespacelagrange_1_1io.html#a547d832b78822de91ca20311c7569337">More...</a><br /></td></tr>
+<tr class="separator:a547d832b78822de91ca20311c7569337"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac252eb5467fb109d6ed6cae1ff65f508"><td class="memTemplParams" colspan="2">template&lt;typename Scalar , typename Index &gt; </td></tr>
 <tr class="memitem:ac252eb5467fb109d6ed6cae1ff65f508"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacelagrange_1_1io.html#ac252eb5467fb109d6ed6cae1ff65f508">save_scene_gltf</a> (std::ostream &amp;output_stream, const <a class="el" href="structlagrange_1_1scene_1_1_scene.html">scene::Scene</a>&lt; Scalar, Index &gt; &amp;scene, const <a class="el" href="structlagrange_1_1io_1_1_save_options.html">SaveOptions</a> &amp;options={})</td></tr>
 <tr class="memdesc:ac252eb5467fb109d6ed6cae1ff65f508"><td class="mdescLeft">&#160;</td><td class="mdescRight">Save a scene to a gltf or glb file.  <a href="namespacelagrange_1_1io.html#ac252eb5467fb109d6ed6cae1ff65f508">More...</a><br /></td></tr>
@@ -397,6 +406,10 @@ template&lt;typename Scalar , typename Index &gt; </td></tr>
 <tr class="memitem:a1b666d762d0751beb709aa67aa3e42aa"><td class="memItemLeft" align="right" valign="top"><a id="a1b666d762d0751beb709aa67aa3e42aa" name="a1b666d762d0751beb709aa67aa3e42aa"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>LA_SIMPLE_SCENE_X</b> (<a class="el" href="namespacelagrange_1_1io.html#a4f81766d0511e2289153f3a9e20ec589">save_simple_scene</a>, 0)</td></tr>
 <tr class="separator:a1b666d762d0751beb709aa67aa3e42aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4121f2839555fbee742ef87d2aa92554"><td class="memTemplParams" colspan="2"><a id="a4121f2839555fbee742ef87d2aa92554" name="a4121f2839555fbee742ef87d2aa92554"></a>
+template&lt;typename Scalar , typename Index &gt; </td></tr>
+<tr class="memitem:a4121f2839555fbee742ef87d2aa92554"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>stitch_mesh</b> (<a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;mesh)</td></tr>
+<tr class="separator:a4121f2839555fbee742ef87d2aa92554"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p ><a class="el" href="classlagrange_1_1_mesh.html">Mesh</a> input/output. </p>
@@ -931,7 +944,7 @@ template&lt;typename Scalar , typename Index &gt; </td></tr>
 </div>
 </div>
 <a id="a6610dc72a7d80ebe10cc94ed98b72327" name="a6610dc72a7d80ebe10cc94ed98b72327"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6610dc72a7d80ebe10cc94ed98b72327">&#9670;&nbsp;</a></span>load_scene()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a6610dc72a7d80ebe10cc94ed98b72327">&#9670;&nbsp;</a></span>load_scene() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -965,6 +978,44 @@ template&lt;typename Scalar , typename Index &gt; </td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A <code>Scene</code> object created from the input scene file. </dd></dl>
+
+</div>
+</div>
+<a id="a36684a3bf60e9ff854678d8df202c8eb" name="a36684a3bf60e9ff854678d8df202c8eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a36684a3bf60e9ff854678d8df202c8eb">&#9670;&nbsp;</a></span>load_scene() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SceneType load_scene </td>
+          <td>(</td>
+          <td class="paramtype">std::istream &amp;&#160;</td>
+          <td class="paramname"><em>input_stream</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structlagrange_1_1io_1_1_load_options.html">LoadOptions</a> &amp;&#160;</td>
+          <td class="paramname"><em>options</em> = <code>{}</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Load a scene from a stream. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">input_stream</td><td>The input stream. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">options</td><td>Extra options related to loading.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A <code>Scene</code> object loaded from the input stream. </dd></dl>
 
 </div>
 </div>
@@ -1902,7 +1953,7 @@ template&lt;typename Scalar , typename Index &gt; </td></tr>
 </div>
 </div>
 <a id="a637317230163bf7f291d7b512ebdaff6" name="a637317230163bf7f291d7b512ebdaff6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a637317230163bf7f291d7b512ebdaff6">&#9670;&nbsp;</a></span>save_scene()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a637317230163bf7f291d7b512ebdaff6">&#9670;&nbsp;</a></span>save_scene() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1938,6 +1989,57 @@ template&lt;typename Scalar , typename Index &gt; </td></tr>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">filename</td><td>path to output </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">scene</td><td>scene to save </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">options</td><td><a class="el" href="structlagrange_1_1io_1_1_save_options.html" title="Options used when saving a mesh or a scene.">SaveOptions</a>, check the struct for more details. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a547d832b78822de91ca20311c7569337" name="a547d832b78822de91ca20311c7569337"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a547d832b78822de91ca20311c7569337">&#9670;&nbsp;</a></span>save_scene() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void save_scene </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>output_stream</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structlagrange_1_1scene_1_1_scene.html">scene::Scene</a>&lt; Scalar, Index &gt; &amp;&#160;</td>
+          <td class="paramname"><em>scene</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">FileFormat&#160;</td>
+          <td class="paramname"><em>format</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structlagrange_1_1io_1_1_save_options.html">SaveOptions</a> &amp;&#160;</td>
+          <td class="paramname"><em>options</em> = <code>{}</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Save a scene to a stream. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">output_stream</td><td>Stream to output </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">scene</td><td>Scene to save </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">format</td><td>FileFormat to use. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">options</td><td><a class="el" href="structlagrange_1_1io_1_1_save_options.html" title="Options used when saving a mesh or a scene.">SaveOptions</a>, check the struct for more details. </td></tr>
   </table>
   </dd>

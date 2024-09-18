@@ -9,12 +9,13 @@ var searchData=
   ['raycastermesh_6',['RaycasterMesh',['../classlagrange_1_1raycasting_1_1_raycaster_mesh.html',1,'lagrange::raycasting']]],
   ['raycastermeshderived_7',['RaycasterMeshDerived',['../classlagrange_1_1raycasting_1_1_raycaster_mesh_derived.html',1,'lagrange::raycasting']]],
   ['rayfacethit_8',['RayFacetHit',['../structlagrange_1_1ui_1_1_ray_facet_hit.html',1,'lagrange::ui']]],
-  ['remapverticesoptions_9',['RemapVerticesOptions',['../structlagrange_1_1_remap_vertices_options.html',1,'lagrange']]],
-  ['remeshingoptions_10',['RemeshingOptions',['../structlagrange_1_1scene_1_1_remeshing_options.html',1,'lagrange::scene']]],
-  ['removeduplicatefacetoptions_11',['RemoveDuplicateFacetOptions',['../structlagrange_1_1_remove_duplicate_facet_options.html',1,'lagrange']]],
-  ['removeduplicateverticesoptions_12',['RemoveDuplicateVerticesOptions',['../structlagrange_1_1_remove_duplicate_vertices_options.html',1,'lagrange']]],
-  ['removenullareafacetsoptions_13',['RemoveNullAreaFacetsOptions',['../structlagrange_1_1_remove_null_area_facets_options.html',1,'lagrange']]],
-  ['rendercontext_14',['RenderContext',['../structlagrange_1_1ui_1_1_render_context.html',1,'lagrange::ui']]],
-  ['reservedattributeids_15',['ReservedAttributeIds',['../structlagrange_1_1_surface_mesh_1_1_reserved_attribute_ids.html',1,'lagrange::SurfaceMesh']]],
-  ['rotatetooltag_16',['RotateToolTag',['../structlagrange_1_1ui_1_1_rotate_tool_tag.html',1,'lagrange::ui']]]
+  ['reconstructionoptions_9',['ReconstructionOptions',['../structlagrange_1_1poisson_1_1_reconstruction_options.html',1,'lagrange::poisson']]],
+  ['remapverticesoptions_10',['RemapVerticesOptions',['../structlagrange_1_1_remap_vertices_options.html',1,'lagrange']]],
+  ['remeshingoptions_11',['RemeshingOptions',['../structlagrange_1_1scene_1_1_remeshing_options.html',1,'lagrange::scene']]],
+  ['removeduplicatefacetoptions_12',['RemoveDuplicateFacetOptions',['../structlagrange_1_1_remove_duplicate_facet_options.html',1,'lagrange']]],
+  ['removeduplicateverticesoptions_13',['RemoveDuplicateVerticesOptions',['../structlagrange_1_1_remove_duplicate_vertices_options.html',1,'lagrange']]],
+  ['removenullareafacetsoptions_14',['RemoveNullAreaFacetsOptions',['../structlagrange_1_1_remove_null_area_facets_options.html',1,'lagrange']]],
+  ['rendercontext_15',['RenderContext',['../structlagrange_1_1ui_1_1_render_context.html',1,'lagrange::ui']]],
+  ['reservedattributeids_16',['ReservedAttributeIds',['../structlagrange_1_1_surface_mesh_1_1_reserved_attribute_ids.html',1,'lagrange::SurfaceMesh']]],
+  ['rotatetooltag_17',['RotateToolTag',['../structlagrange_1_1ui_1_1_rotate_tool_tag.html',1,'lagrange::ui']]]
 ];

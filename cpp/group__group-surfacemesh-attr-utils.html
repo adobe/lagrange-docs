@@ -111,6 +111,7 @@ $(document).ready(function(){initNavTree('group__group-surfacemesh-attr-utils.ht
 
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">Attributes utilities<div class="ingroups"><a class="el" href="group__module-core.html">Core Module</a> &raquo; <a class="el" href="group__group-surfacemesh.html">SurfaceMesh</a></div></div></div>
 </div><!--header-->
@@ -119,12 +120,18 @@ $(document).ready(function(){initNavTree('group__group-surfacemesh-attr-utils.ht
 <p>Various attribute processing utilities.  
 <a href="#details">More...</a></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlagrange_1_1_weld_options.html">WeldOptions</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Options for welding indexed attributes.  <a href="structlagrange_1_1_weld_options.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:gaad759b003a1c91b6070358d952f22874"><td class="memTemplParams" colspan="2">template&lt;typename Scalar , typename Index &gt; </td></tr>
-<tr class="memitem:gaad759b003a1c91b6070358d952f22874"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__group-surfacemesh-attr-utils.html#gaad759b003a1c91b6070358d952f22874">weld_indexed_attribute</a> (<a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;mesh, <a class="el" href="group__group-surfacemesh-attr.html#ga4d115376c2c766084ef808c837348fc3">AttributeId</a> attr_id)</td></tr>
-<tr class="memdesc:gaad759b003a1c91b6070358d952f22874"><td class="mdescLeft">&#160;</td><td class="mdescRight">Weld an indexed attribute by combining all corners around a vertex with the same attribute value.  <a href="group__group-surfacemesh-attr-utils.html#gaad759b003a1c91b6070358d952f22874">More...</a><br /></td></tr>
-<tr class="separator:gaad759b003a1c91b6070358d952f22874"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac25160103a579bb49738ba559ec85fb8"><td class="memTemplParams" colspan="2">template&lt;typename Scalar , typename Index &gt; </td></tr>
+<tr class="memitem:gac25160103a579bb49738ba559ec85fb8"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__group-surfacemesh-attr-utils.html#gac25160103a579bb49738ba559ec85fb8">weld_indexed_attribute</a> (<a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;mesh, <a class="el" href="group__group-surfacemesh-attr.html#ga4d115376c2c766084ef808c837348fc3">AttributeId</a> attr_id, const <a class="el" href="structlagrange_1_1_weld_options.html">WeldOptions</a> &amp;options={})</td></tr>
+<tr class="memdesc:gac25160103a579bb49738ba559ec85fb8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Weld an indexed attribute by combining all corners around a vertex with the same attribute value.  <a href="group__group-surfacemesh-attr-utils.html#gac25160103a579bb49738ba559ec85fb8">More...</a><br /></td></tr>
+<tr class="separator:gac25160103a579bb49738ba559ec85fb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader">Attribute remapping</h2></td></tr>
 <tr><td class="ititle" colspan="2"><p >Mapping attributes between different element types.</p>
@@ -481,8 +488,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="gaad759b003a1c91b6070358d952f22874" name="gaad759b003a1c91b6070358d952f22874"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gaad759b003a1c91b6070358d952f22874">&#9670;&nbsp;</a></span>weld_indexed_attribute()</h2>
+<a id="gac25160103a579bb49738ba559ec85fb8" name="gac25160103a579bb49738ba559ec85fb8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac25160103a579bb49738ba559ec85fb8">&#9670;&nbsp;</a></span>weld_indexed_attribute()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -497,7 +504,13 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="group__group-surfacemesh-attr.html#ga4d115376c2c766084ef808c837348fc3">AttributeId</a>&#160;</td>
-          <td class="paramname"><em>attr_id</em>&#160;</td>
+          <td class="paramname"><em>attr_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structlagrange_1_1_weld_options.html">WeldOptions</a> &amp;&#160;</td>
+          <td class="paramname"><em>options</em> = <code>{}</code>&#160;</td>
         </tr>
         <tr>
           <td></td>

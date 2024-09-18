@@ -284,16 +284,15 @@ $(document).ready(function(){initNavTree('scope__guard_8h_source.html',''); init
 <div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>}</div>
 <div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span> </div>
 <div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span> </div>
-<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span> </div>
-<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> Callback&gt;</div>
-<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span><span class="keyword">inline</span> <span class="keyword">auto</span> <a class="code hl_function" href="group__group-utils-misc.html#ga473b5d2b31badd808124196a21ce0b45">sg_detail::make_scope_guard</a>(Callback&amp;&amp; callback) <span class="keyword">noexcept</span>(</div>
-<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>    std::is_nothrow_constructible&lt;Callback, Callback&amp;&amp;&gt;::value) -&gt; sg_detail::scope_guard&lt;Callback&gt;</div>
-<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>{</div>
-<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>    <span class="keywordflow">return</span> sg_detail::scope_guard&lt;Callback&gt;{std::forward&lt;Callback&gt;(callback)};</div>
-<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>}</div>
-<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span> </div>
-<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span> </div>
-<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>} <span class="comment">// namespace lagrange</span></div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> Callback&gt;</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span><span class="keyword">inline</span> <span class="keyword">auto</span> <a class="code hl_function" href="group__group-utils-misc.html#ga473b5d2b31badd808124196a21ce0b45">sg_detail::make_scope_guard</a>(Callback&amp;&amp; callback) <span class="keyword">noexcept</span>(</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>    std::is_nothrow_constructible&lt;Callback, Callback&amp;&amp;&gt;::value) -&gt; sg_detail::scope_guard&lt;Callback&gt;</div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>{</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>    <span class="keywordflow">return</span> sg_detail::scope_guard&lt;Callback&gt;{std::forward&lt;Callback&gt;(callback)};</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>}</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span> </div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span> </div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>} <span class="comment">// namespace lagrange</span></div>
 <div class="ttc" id="agroup__group-utils-misc_html_ga473b5d2b31badd808124196a21ce0b45"><div class="ttname"><a href="group__group-utils-misc.html#ga473b5d2b31badd808124196a21ce0b45">lagrange::make_scope_guard</a></div><div class="ttdeci">sg_detail::scope_guard&lt; Callback &gt; make_scope_guard(Callback &amp;&amp;callback) noexcept(std::is_nothrow_constructible&lt; Callback, Callback &amp;&amp; &gt;::value)</div><div class="ttdoc">Creates a scope guard around a callable object.</div></div>
 <div class="ttc" id="anamespacelagrange_html"><div class="ttname"><a href="namespacelagrange.html">lagrange</a></div><div class="ttdoc">Main namespace for Lagrange.</div><div class="ttdef"><b>Definition:</b> AABBIGL.h:30</div></div>
 </div><!-- fragment --></div><!-- contents -->
