@@ -19,10 +19,11 @@ var searchData=
   ['attribute_3c_20index_20_3e_16',['Attribute&lt; Index &gt;',['../classlagrange_1_1_attribute.html',1,'lagrange']]],
   ['attribute_3c_20valuetype_20_3e_17',['Attribute&lt; ValueType &gt;',['../classlagrange_1_1_attribute.html',1,'lagrange']]],
   ['attributebase_18',['AttributeBase',['../classlagrange_1_1_attribute_base.html',1,'lagrange']]],
-  ['attributefilter_19',['AttributeFilter',['../structlagrange_1_1_attribute_filter.html',1,'lagrange']]],
-  ['attributemanager_20',['AttributeManager',['../classlagrange_1_1experimental_1_1_attribute_manager.html',1,'lagrange::experimental']]],
-  ['attributematcher_21',['AttributeMatcher',['../structlagrange_1_1_attribute_matcher.html',1,'lagrange']]],
-  ['attributename_22',['AttributeName',['../structlagrange_1_1_attribute_name.html',1,'lagrange']]],
-  ['attributerender_23',['AttributeRender',['../structlagrange_1_1ui_1_1_attribute_render.html',1,'lagrange::ui']]],
-  ['attributes_24',['Attributes',['../classlagrange_1_1_attributes.html',1,'lagrange']]]
+  ['attributeevaluator_19',['AttributeEvaluator',['../classlagrange_1_1poisson_1_1_attribute_evaluator.html',1,'lagrange::poisson']]],
+  ['attributefilter_20',['AttributeFilter',['../structlagrange_1_1_attribute_filter.html',1,'lagrange']]],
+  ['attributemanager_21',['AttributeManager',['../classlagrange_1_1experimental_1_1_attribute_manager.html',1,'lagrange::experimental']]],
+  ['attributematcher_22',['AttributeMatcher',['../structlagrange_1_1_attribute_matcher.html',1,'lagrange']]],
+  ['attributename_23',['AttributeName',['../structlagrange_1_1_attribute_name.html',1,'lagrange']]],
+  ['attributerender_24',['AttributeRender',['../structlagrange_1_1ui_1_1_attribute_render.html',1,'lagrange::ui']]],
+  ['attributes_25',['Attributes',['../classlagrange_1_1_attributes.html',1,'lagrange']]]
 ];

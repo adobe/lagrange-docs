@@ -3,6 +3,7 @@ var group__group_utils_assert =
     [ "lagrange", "namespacelagrange.html", null ],
     [ "Error", "structlagrange_1_1_error.html", null ],
     [ "BadCastError", "structlagrange_1_1_bad_cast_error.html", null ],
+    [ "ParsingError", "structlagrange_1_1_parsing_error.html", null ],
     [ "la_runtime_assert", "group__group-utils-assert.html#ga1ccafcb14523a1aae57dcac3c3f32ecd", null ],
     [ "la_debug_assert", "group__group-utils-assert.html#ga5b5259c4072f1caaa696e074f2f7ea15", null ],
     [ "lagrange::set_breakpoint_enabled", "group__group-utils-assert.html#gaf0eeb4d96ed545aadd3b6bf27ed631c6", null ],

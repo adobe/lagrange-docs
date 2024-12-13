@@ -11,11 +11,12 @@ var searchData=
   ['defaultsystems_8',['DefaultSystems',['../structlagrange_1_1ui_1_1_default_systems.html',1,'lagrange::ui']]],
   ['defaulttools_9',['DefaultTools',['../structlagrange_1_1ui_1_1_default_tools.html',1,'lagrange::ui']]],
   ['dehoveredevent_10',['DehoveredEvent',['../structlagrange_1_1ui_1_1_dehovered_event.html',1,'lagrange::ui']]],
-  ['deselectedevent_11',['DeselectedEvent',['../structlagrange_1_1ui_1_1_deselected_event.html',1,'lagrange::ui']]],
-  ['dihedralangleoptions_12',['DihedralAngleOptions',['../structlagrange_1_1_dihedral_angle_options.html',1,'lagrange']]],
-  ['dijkstradistanceoptions_13',['DijkstraDistanceOptions',['../structlagrange_1_1_dijkstra_distance_options.html',1,'lagrange']]],
-  ['disjointsets_14',['DisjointSets',['../classlagrange_1_1_disjoint_sets.html',1,'lagrange']]],
-  ['disjointsetswithsize_15',['DisjointSetsWithSize',['../classlagrange_1_1_disjoint_sets_with_size.html',1,'lagrange']]],
-  ['dockspace_16',['Dockspace',['../structlagrange_1_1ui_1_1_dockspace.html',1,'lagrange::ui']]],
-  ['downloadresult_17',['DownloadResult',['../structlagrange_1_1ui_1_1_texture_1_1_download_result.html',1,'lagrange::ui::Texture']]]
+  ['derived_11',['Derived',['../structlagrange_1_1poisson_1_1_attribute_evaluator_1_1_impl_1_1_derived.html',1,'lagrange::poisson::AttributeEvaluator::Impl']]],
+  ['deselectedevent_12',['DeselectedEvent',['../structlagrange_1_1ui_1_1_deselected_event.html',1,'lagrange::ui']]],
+  ['dihedralangleoptions_13',['DihedralAngleOptions',['../structlagrange_1_1_dihedral_angle_options.html',1,'lagrange']]],
+  ['dijkstradistanceoptions_14',['DijkstraDistanceOptions',['../structlagrange_1_1_dijkstra_distance_options.html',1,'lagrange']]],
+  ['disjointsets_15',['DisjointSets',['../classlagrange_1_1_disjoint_sets.html',1,'lagrange']]],
+  ['disjointsetswithsize_16',['DisjointSetsWithSize',['../classlagrange_1_1_disjoint_sets_with_size.html',1,'lagrange']]],
+  ['dockspace_17',['Dockspace',['../structlagrange_1_1ui_1_1_dockspace.html',1,'lagrange::ui']]],
+  ['downloadresult_18',['DownloadResult',['../structlagrange_1_1ui_1_1_texture_1_1_download_result.html',1,'lagrange::ui::Texture']]]
 ];

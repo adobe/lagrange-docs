@@ -10,7 +10,7 @@ var searchData=
   ['imageview_7',['ImageView',['../classlagrange_1_1image_1_1_image_view.html',1,'lagrange::image']]],
   ['imageviewbase_8',['ImageViewBase',['../classlagrange_1_1image_1_1_image_view_base.html',1,'lagrange::image']]],
   ['immediateentities_9',['ImmediateEntities',['../structlagrange_1_1ui_1_1_immediate_entities.html',1,'lagrange::ui']]],
-  ['impl_10',['Impl',['../structlagrange_1_1winding_1_1_fast_winding_number_1_1_impl.html',1,'lagrange::winding::FastWindingNumber']]],
+  ['impl_10',['Impl',['../structlagrange_1_1poisson_1_1_attribute_evaluator_1_1_impl.html',1,'AttributeEvaluator::Impl'],['../structlagrange_1_1winding_1_1_fast_winding_number_1_1_impl.html',1,'FastWindingNumber::Impl']]],
   ['indexedattribute_11',['IndexedAttribute',['../classlagrange_1_1experimental_1_1_indexed_attribute.html',1,'IndexedAttribute'],['../classlagrange_1_1_indexed_attribute.html',1,'IndexedAttribute&lt; ValueType_, Index_ &gt;']]],
   ['indexedattributemanager_12',['IndexedAttributeManager',['../classlagrange_1_1experimental_1_1_indexed_attribute_manager.html',1,'lagrange::experimental']]],
   ['indexedattributes_13',['IndexedAttributes',['../classlagrange_1_1_indexed_attributes.html',1,'lagrange']]],
@@ -23,5 +23,6 @@ var searchData=
   ['is_5fmesh_5fsmart_5fptr_5fhelper_20',['is_mesh_smart_ptr_helper',['../structlagrange_1_1_mesh_trait_helper_1_1is__mesh__smart__ptr__helper.html',1,'lagrange::MeshTraitHelper']]],
   ['is_5fmesh_5fsmart_5fptr_5fhelper_3c_20meshtypeptr_2c_20typename_20void_3c_20typename_20meshtypeptr_3a_3aelement_5ftype_2c_20typename_20meshtypeptr_3a_3aelement_5ftype_3a_3avertexarray_2c_20typename_20meshtypeptr_3a_3aelement_5ftype_3a_3afacetarray_20_3e_3a_3atype_20_3e_21',['is_mesh_smart_ptr_helper&lt; MeshTypePtr, typename Void&lt; typename MeshTypePtr::element_type, typename MeshTypePtr::element_type::VertexArray, typename MeshTypePtr::element_type::FacetArray &gt;::type &gt;',['../structlagrange_1_1_mesh_trait_helper_1_1is__mesh__smart__ptr__helper_3_01_mesh_type_ptr_00_01typdd3a1b441f06e428de34247e1df62704.html',1,'lagrange::MeshTraitHelper']]],
   ['is_5frange_3c_20derived_2c_20std_3a_3aenable_5fif_5ft_3c_20std_3a_3ais_5fbase_5fof_3c_20eigen_3a_3adensebase_3c_20derived_20_3e_2c_20derived_20_3e_3a_3avalue_2c_20char_20_3e_20_3e_22',['is_range&lt; Derived, std::enable_if_t&lt; std::is_base_of&lt; Eigen::DenseBase&lt; Derived &gt;, Derived &gt;::value, char &gt; &gt;',['../structfmt_1_1is__range_3_01_derived_00_01std_1_1enable__if__t_3_01std_1_1is__base__of_3_01_eigen8831e8e9466b492bd5196648eda925fb.html',1,'fmt']]],
-  ['iterator_23',['iterator',['../classlagrange_1_1_edge_type_1_1iterator.html',1,'lagrange::EdgeType']]]
+  ['isolineoptions_23',['IsolineOptions',['../structlagrange_1_1_isoline_options.html',1,'lagrange']]],
+  ['iterator_24',['iterator',['../classlagrange_1_1_edge_type_1_1iterator.html',1,'lagrange::EdgeType']]]
 ];

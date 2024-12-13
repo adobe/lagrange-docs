@@ -25,8 +25,9 @@ var searchData=
   ['enumtoscalar_3c_20scalarenum_3a_3auint64_20_3e_22',['EnumToScalar&lt; ScalarEnum::UINT64 &gt;',['../structlagrange_1_1experimental_1_1_enum_to_scalar_3_01_scalar_enum_1_1_u_i_n_t64_01_4.html',1,'lagrange::experimental']]],
   ['enumtoscalar_3c_20scalarenum_3a_3auint8_20_3e_23',['EnumToScalar&lt; ScalarEnum::UINT8 &gt;',['../structlagrange_1_1experimental_1_1_enum_to_scalar_3_01_scalar_enum_1_1_u_i_n_t8_01_4.html',1,'lagrange::experimental']]],
   ['error_24',['Error',['../structlagrange_1_1_error.html',1,'lagrange']]],
-  ['eventemitter_25',['EventEmitter',['../structlagrange_1_1ui_1_1_event_emitter.html',1,'lagrange::ui']]],
-  ['exactpredicates_26',['ExactPredicates',['../classlagrange_1_1_exact_predicates.html',1,'lagrange']]],
-  ['exactpredicatesshewchuk_27',['ExactPredicatesShewchuk',['../classlagrange_1_1_exact_predicates_shewchuk.html',1,'lagrange']]],
-  ['extensions_28',['Extensions',['../structlagrange_1_1scene_1_1_extensions.html',1,'lagrange::scene']]]
+  ['evaluatoroptions_25',['EvaluatorOptions',['../structlagrange_1_1poisson_1_1_evaluator_options.html',1,'lagrange::poisson']]],
+  ['eventemitter_26',['EventEmitter',['../structlagrange_1_1ui_1_1_event_emitter.html',1,'lagrange::ui']]],
+  ['exactpredicates_27',['ExactPredicates',['../classlagrange_1_1_exact_predicates.html',1,'lagrange']]],
+  ['exactpredicatesshewchuk_28',['ExactPredicatesShewchuk',['../classlagrange_1_1_exact_predicates_shewchuk.html',1,'lagrange']]],
+  ['extensions_29',['Extensions',['../structlagrange_1_1scene_1_1_extensions.html',1,'lagrange::scene']]]
 ];

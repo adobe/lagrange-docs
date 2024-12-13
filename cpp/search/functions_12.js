@@ -25,5 +25,6 @@ var searchData=
   ['triangle_5fuv_5fdistortion_22',['triangle_uv_distortion',['../namespacelagrange.html#ab63029c7c83fee8c6f3bf5de81e4353c',1,'lagrange::triangle_uv_distortion(span&lt; const Scalar, 3 &gt; V0, span&lt; const Scalar, 3 &gt; V1, span&lt; const Scalar, 3 &gt; V2, span&lt; const Scalar, 2 &gt; v0, span&lt; const Scalar, 2 &gt; v1, span&lt; const Scalar, 2 &gt; v2)'],['../namespacelagrange.html#a8536342d5f43c6fd93cf888e97aa7873',1,'lagrange::triangle_uv_distortion(span&lt; const Scalar, 3 &gt; V0, span&lt; const Scalar, 3 &gt; V1, span&lt; const Scalar, 3 &gt; V2, span&lt; const Scalar, 2 &gt; v0, span&lt; const Scalar, 2 &gt; v1, span&lt; const Scalar, 2 &gt; v2, DistortionMetric metric)']]],
   ['triangulate_5fpolygonal_5ffacets_23',['triangulate_polygonal_facets',['../group__group-surfacemesh-utils.html#ga48af6105ece8a970755870c73af73ddd',1,'lagrange']]],
   ['trigger_5fbreakpoint_24',['trigger_breakpoint',['../group__group-utils-assert.html#ga82afecd46baab6fadf8dfa8d7dbea5ec',1,'lagrange']]],
-  ['two_5fpi_25',['two_pi',['../namespacelagrange_1_1ui.html#ab5dc91ffacc9f30a4af58def59640f5d',1,'lagrange::ui']]]
+  ['trim_5fby_5fisoline_25',['trim_by_isoline',['../group__group-surfacemesh-utils.html#ga0e2ab861e8faec161cd8613e8a9362de',1,'lagrange']]],
+  ['two_5fpi_26',['two_pi',['../namespacelagrange_1_1ui.html#ab5dc91ffacc9f30a4af58def59640f5d',1,'lagrange::ui']]]
 ];

@@ -118,7 +118,7 @@ $(document).ready(function(){initNavTree('group__group-surfacemesh-utils.html','
 </div><!--header-->
 <div class="contents">
 
-<p>Various attribute processing utilities.  
+<p>Various mesh processing utilities.  
 <a href="#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
@@ -182,11 +182,17 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlagrange_1_1_attribute_matcher.html">AttributeMatcher</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper object to match attributes based on usage, element type, and number of channels.  <a href="structlagrange_1_1_attribute_matcher.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlagrange_1_1_isoline_options.html">IsolineOptions</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Options for isoline extraction/trimming.  <a href="structlagrange_1_1_isoline_options.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlagrange_1_1_orientation_options.html">OrientationOptions</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Option struct for computing if edges are oriented.  <a href="structlagrange_1_1_orientation_options.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlagrange_1_1_remap_vertices_options.html">RemapVerticesOptions</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remap vertices options.  <a href="structlagrange_1_1_remap_vertices_options.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlagrange_1_1_select_facets_by_normal_similarity_options.html">SelectFacetsByNormalSimilarityOptions</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Option struct for selecting facets based on normal similarity.  <a href="structlagrange_1_1_select_facets_by_normal_similarity_options.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlagrange_1_1_frustum.html">Frustum&lt; Scalar &gt;</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">An array of four planes that define a frustum.  <a href="structlagrange_1_1_frustum.html#details">More...</a><br /></td></tr>
@@ -397,6 +403,14 @@ template&lt;typename Scalar , typename Index &gt; </td></tr>
 <tr class="memitem:ga5f8560d698163d4c9d75d3b8ed9de3ed"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="group__group-surfacemesh-attr.html#ga4d115376c2c766084ef808c837348fc3">AttributeId</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__group-surfacemesh-utils.html#ga5f8560d698163d4c9d75d3b8ed9de3ed">find_matching_attributes</a> (const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;mesh, <a class="el" href="classlagrange_1_1_bit_field.html">BitField</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#ga9d8ab208822bab9987e9652dda49d89a">AttributeElement</a> &gt; element_types)</td></tr>
 <tr class="memdesc:ga5f8560d698163d4c9d75d3b8ed9de3ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finds all attributes with the specified element types.  <a href="group__group-surfacemesh-utils.html#ga5f8560d698163d4c9d75d3b8ed9de3ed">More...</a><br /></td></tr>
 <tr class="separator:ga5f8560d698163d4c9d75d3b8ed9de3ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0e2ab861e8faec161cd8613e8a9362de"><td class="memTemplParams" colspan="2">template&lt;typename Scalar , typename Index &gt; </td></tr>
+<tr class="memitem:ga0e2ab861e8faec161cd8613e8a9362de"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__group-surfacemesh-utils.html#ga0e2ab861e8faec161cd8613e8a9362de">trim_by_isoline</a> (const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;mesh, const <a class="el" href="structlagrange_1_1_isoline_options.html">IsolineOptions</a> &amp;options={})</td></tr>
+<tr class="memdesc:ga0e2ab861e8faec161cd8613e8a9362de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Trim a mesh by the isoline of an implicit function defined on the mesh vertices/corners.  <a href="group__group-surfacemesh-utils.html#ga0e2ab861e8faec161cd8613e8a9362de">More...</a><br /></td></tr>
+<tr class="separator:ga0e2ab861e8faec161cd8613e8a9362de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gafef35c376e1761a87d7ffdc81e845adf"><td class="memTemplParams" colspan="2">template&lt;typename Scalar , typename Index &gt; </td></tr>
+<tr class="memitem:gafef35c376e1761a87d7ffdc81e845adf"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__group-surfacemesh-utils.html#gafef35c376e1761a87d7ffdc81e845adf">extract_isoline</a> (const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;mesh, const <a class="el" href="structlagrange_1_1_isoline_options.html">IsolineOptions</a> &amp;options={})</td></tr>
+<tr class="memdesc:gafef35c376e1761a87d7ffdc81e845adf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Extract the isoline of an implicit function defined on the mesh vertices/corners.  <a href="group__group-surfacemesh-utils.html#gafef35c376e1761a87d7ffdc81e845adf">More...</a><br /></td></tr>
+<tr class="separator:gafef35c376e1761a87d7ffdc81e845adf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gabb5fc3fc93e8d973bcc534398eeb0aa9"><td class="memTemplParams" colspan="2">template&lt;typename Scalar , typename Index , typename <a class="el" href="classlagrange_1_1_mesh.html">MeshType</a> &gt; </td></tr>
 <tr class="memitem:gabb5fc3fc93e8d973bcc534398eeb0aa9"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__group-surfacemesh-utils.html#gabb5fc3fc93e8d973bcc534398eeb0aa9">to_surface_mesh_copy</a> (const <a class="el" href="classlagrange_1_1_mesh.html">MeshType</a> &amp;mesh)</td></tr>
 <tr class="memdesc:gabb5fc3fc93e8d973bcc534398eeb0aa9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert a legacy mesh object to a surface mesh object.  <a href="group__group-surfacemesh-utils.html#gabb5fc3fc93e8d973bcc534398eeb0aa9">More...</a><br /></td></tr>
@@ -437,6 +451,10 @@ template&lt;typename Scalar , typename Index &gt; </td></tr>
 <tr class="memitem:ga78898b0da8d43677481cdc176f2391f8"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__group-surfacemesh-utils.html#ga78898b0da8d43677481cdc176f2391f8">remap_vertices</a> (<a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;mesh, <a class="el" href="group__group-utils-misc.html#ga4afead0b9ccc53fe4fca896787595d26">span</a>&lt; const Index &gt; forward_mapping, <a class="el" href="structlagrange_1_1_remap_vertices_options.html">RemapVerticesOptions</a> options={})</td></tr>
 <tr class="memdesc:ga78898b0da8d43677481cdc176f2391f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remap vertices of a mesh based on provided forward mapping.  <a href="group__group-surfacemesh-utils.html#ga78898b0da8d43677481cdc176f2391f8">More...</a><br /></td></tr>
 <tr class="separator:ga78898b0da8d43677481cdc176f2391f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa1d91a293ac5a8930d258295b751eb6a"><td class="memTemplParams" colspan="2">template&lt;typename Scalar , typename Index &gt; </td></tr>
+<tr class="memitem:gaa1d91a293ac5a8930d258295b751eb6a"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="group__group-surfacemesh-attr.html#ga4d115376c2c766084ef808c837348fc3">AttributeId</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__group-surfacemesh-utils.html#gaa1d91a293ac5a8930d258295b751eb6a">select_facets_by_normal_similarity</a> (<a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;mesh, const Index seed_facet_id, const <a class="el" href="structlagrange_1_1_select_facets_by_normal_similarity_options.html">SelectFacetsByNormalSimilarityOptions</a> &amp;options={})</td></tr>
+<tr class="memdesc:gaa1d91a293ac5a8930d258295b751eb6a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given a seed facet, selects facets around it based on the change in triangle normals.  <a href="group__group-surfacemesh-utils.html#gaa1d91a293ac5a8930d258295b751eb6a">More...</a><br /></td></tr>
+<tr class="separator:gaa1d91a293ac5a8930d258295b751eb6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga2a4c19c8eb140fe6e67990da8b65736e"><td class="memTemplParams" colspan="2">template&lt;typename Scalar , typename Index &gt; </td></tr>
 <tr class="memitem:ga2a4c19c8eb140fe6e67990da8b65736e"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__group-surfacemesh-utils.html#ga2a4c19c8eb140fe6e67990da8b65736e">select_facets_in_frustum</a> (<a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;mesh, const <a class="el" href="structlagrange_1_1_frustum.html">Frustum</a>&lt; Scalar &gt; &amp;frustum, const <a class="el" href="structlagrange_1_1_frustum_selection_options.html">FrustumSelectionOptions</a> &amp;options={})</td></tr>
 <tr class="memdesc:ga2a4c19c8eb140fe6e67990da8b65736e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Select all facets that intersect the cone/frustrum bounded by 4 planes defined by (n_i, p_i), where n_i is the plane normal and p_i is a point on the plane.  <a href="group__group-surfacemesh-utils.html#ga2a4c19c8eb140fe6e67990da8b65736e">More...</a><br /></td></tr>
@@ -491,8 +509,7 @@ template&lt;typename Scalar , typename Index &gt; </td></tr>
 <tr class="separator:ga48af6105ece8a970755870c73af73ddd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p >Various attribute processing utilities. </p>
-<p >Various mesh processing utilities.</p>
+<p >Various mesh processing utilities. </p>
 <h2 class="groupheader">Enumeration Type Documentation</h2>
 <a id="gadab1480827f4522cbf1f9e1d4c28db91" name="gadab1480827f4522cbf1f9e1d4c28db91"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#gadab1480827f4522cbf1f9e1d4c28db91">&#9670;&nbsp;</a></span>DistortionMetric</h2>
@@ -2559,6 +2576,102 @@ To convert a mesh and its attributes to different types, use the cast function.<
 
 </div>
 </div>
+<a id="ga0e2ab861e8faec161cd8613e8a9362de" name="ga0e2ab861e8faec161cd8613e8a9362de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga0e2ab861e8faec161cd8613e8a9362de">&#9670;&nbsp;</a></span>trim_by_isoline()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; trim_by_isoline </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;&#160;</td>
+          <td class="paramname"><em>mesh</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structlagrange_1_1_isoline_options.html">IsolineOptions</a> &amp;&#160;</td>
+          <td class="paramname"><em>options</em> = <code>{}</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;lagrange/isoline.h&gt;</code></p>
+
+<p>Trim a mesh by the isoline of an implicit function defined on the mesh vertices/corners. </p>
+<dl class="section note"><dt>Note</dt><dd>The input must be a triangle mesh.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">mesh</td><td>Input triangle mesh to trim. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">options</td><td>Isoline options.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Scalar</td><td><a class="el" href="classlagrange_1_1_mesh.html">Mesh</a> scalar type. </td></tr>
+    <tr><td class="paramname">Index</td><td><a class="el" href="classlagrange_1_1_mesh.html">Mesh</a> index type.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The trimmed mesh. </dd></dl>
+
+</div>
+</div>
+<a id="gafef35c376e1761a87d7ffdc81e845adf" name="gafef35c376e1761a87d7ffdc81e845adf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gafef35c376e1761a87d7ffdc81e845adf">&#9670;&nbsp;</a></span>extract_isoline()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; extract_isoline </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;&#160;</td>
+          <td class="paramname"><em>mesh</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structlagrange_1_1_isoline_options.html">IsolineOptions</a> &amp;&#160;</td>
+          <td class="paramname"><em>options</em> = <code>{}</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;lagrange/isoline.h&gt;</code></p>
+
+<p>Extract the isoline of an implicit function defined on the mesh vertices/corners. </p>
+<dl class="section note"><dt>Note</dt><dd>The input must be a triangle mesh.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">mesh</td><td>Input triangle mesh to extract the isoline from. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">options</td><td>Isoline options.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Scalar</td><td><a class="el" href="classlagrange_1_1_mesh.html">Mesh</a> scalar type. </td></tr>
+    <tr><td class="paramname">Index</td><td><a class="el" href="classlagrange_1_1_mesh.html">Mesh</a> index type.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A mesh whose facets is a collection of size 2 elements representing the extracted isoline. </dd></dl>
+
+</div>
+</div>
 <a id="gabb5fc3fc93e8d973bcc534398eeb0aa9" name="gabb5fc3fc93e8d973bcc534398eeb0aa9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#gabb5fc3fc93e8d973bcc534398eeb0aa9">&#9670;&nbsp;</a></span>to_surface_mesh_copy()</h2>
 
@@ -2966,6 +3079,62 @@ To convert a mesh and its attributes to different types, use the cast function.<
 <dl class="section see"><dt>See also</dt><dd><code><a class="el" href="group__group-surfacemesh-utils.html#ga8aea6bef4481de2ace23921d95fdc8fe" title="Reorder vertices of a mesh based on a given permutation.">permute_vertices</a></code> for simply permuting the vertex order. </dd>
 <dd>
 <code><a class="el" href="structlagrange_1_1_remap_vertices_options.html" title="Remap vertices options.">RemapVerticesOptions</a></code>. </dd></dl>
+
+</div>
+</div>
+<a id="gaa1d91a293ac5a8930d258295b751eb6a" name="gaa1d91a293ac5a8930d258295b751eb6a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa1d91a293ac5a8930d258295b751eb6a">&#9670;&nbsp;</a></span>select_facets_by_normal_similarity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__group-surfacemesh-attr.html#ga4d115376c2c766084ef808c837348fc3">AttributeId</a> select_facets_by_normal_similarity </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;&#160;</td>
+          <td class="paramname"><em>mesh</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Index&#160;</td>
+          <td class="paramname"><em>seed_facet_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structlagrange_1_1_select_facets_by_normal_similarity_options.html">SelectFacetsByNormalSimilarityOptions</a> &amp;&#160;</td>
+          <td class="paramname"><em>options</em> = <code>{}</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;lagrange/select_facets_by_normal_similarity.h&gt;</code></p>
+
+<p>Given a seed facet, selects facets around it based on the change in triangle normals. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">mesh</td><td>The input mesh. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">seed_facet_id</td><td>The index of the seed facet </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">options</td><td>Optional arguments (greedy, output_attribute_name).</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Scalar</td><td><a class="el" href="classlagrange_1_1_mesh.html">Mesh</a> scalar type. </td></tr>
+    <tr><td class="paramname">Index</td><td><a class="el" href="classlagrange_1_1_mesh.html">Mesh</a> index type.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>AttributeId The attribute id of the selection, whose attribute name is given by options.output_attribute_name.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Currently only support triangular mesh and will throw error if mesh.is_triangle_mesh() is false! The function will check if the mesh contains facet normal by looking for options.facet_normal_attribute_name, and if not found, will call compute_facet_normal(meshm, options.facet_normal_attribute_name).</dd></dl>
+<dl class="section see"><dt>See also</dt><dd>SelectFacetByNormalSimilarityOptions </dd></dl>
 
 </div>
 </div>

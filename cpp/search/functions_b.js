@@ -20,13 +20,11 @@ var searchData=
   ['map_5fattribute_17',['map_attribute',['../group__group-surfacemesh-attr-utils.html#gad7a1e90b26e460f8b9afc7efbca95cc4',1,'lagrange::map_attribute(SurfaceMesh&lt; Scalar, Index &gt; &amp;mesh, AttributeId id, std::string_view new_name, AttributeElement new_element)'],['../group__group-surfacemesh-attr-utils.html#ga38348fa42743d4cb72a1a2975483acc1',1,'lagrange::map_attribute(SurfaceMesh&lt; Scalar, Index &gt; &amp;mesh, std::string_view old_name, std::string_view new_name, AttributeElement new_element)']]],
   ['map_5fattribute_5fin_5fplace_18',['map_attribute_in_place',['../group__group-surfacemesh-attr-utils.html#gacd6500c173df1a5bc53e2c9b32e08309',1,'lagrange::map_attribute_in_place(SurfaceMesh&lt; Scalar, Index &gt; &amp;mesh, AttributeId id, AttributeElement new_element)'],['../group__group-surfacemesh-attr-utils.html#ga4a2e525bede1624580d71782861b0cd6',1,'lagrange::map_attribute_in_place(SurfaceMesh&lt; Scalar, Index &gt; &amp;mesh, std::string_view name, AttributeElement new_element)']]],
   ['map_5fattributes_19',['map_attributes',['../namespacelagrange_1_1internal.html#aaef57d47fd036494daf8bf23f015dd07',1,'lagrange::internal']]],
-  ['marching_5ftriangles_5fgeneral_20',['marching_triangles_general',['../namespacelagrange.html#aa79f233ab5cedf00d807bc3f8c3c203e',1,'lagrange']]],
-  ['marching_5ftriangles_5findexed_21',['marching_triangles_indexed',['../namespacelagrange.html#a303f43cd9a9728efee71e5b5d2534927',1,'lagrange']]],
-  ['matrix_5fref_22',['matrix_ref',['../group__group-surfacemesh-views.html#gaf2e0d4ab50ffdc84c4431d699f6741fe',1,'lagrange']]],
-  ['matrix_5fview_23',['matrix_view',['../group__group-surfacemesh-views.html#ga0ae9d0742709686405adad75e20e8bc8',1,'lagrange']]],
-  ['merge_24',['merge',['../classlagrange_1_1_disjoint_sets.html#a3ee2d4bff5bd1dc9d4f8b7eecd8e3dbc',1,'lagrange::DisjointSets']]],
-  ['mesh_25',['Mesh',['../classlagrange_1_1_mesh.html#a2a23c7c0c4e0da252b7bc0e13b6f81d8',1,'lagrange::Mesh']]],
-  ['meshadapter_26',['MeshAdapter',['../classlagrange_1_1volume_1_1legacy_1_1_mesh_adapter.html#adc98e2a86dc99dc2c124b575b1b26e85',1,'lagrange::volume::legacy::MeshAdapter']]],
-  ['midpoint_5fsubdivision_27',['midpoint_subdivision',['../group__module-subdivision.html#ga5bb45b1783fc315efefb291e2d2dbd9f',1,'lagrange::subdivision']]],
-  ['move_5fdata_28',['move_data',['../namespacelagrange.html#a45f1c6cc55a36fae54bcd3723d8255e2',1,'lagrange']]]
+  ['matrix_5fref_20',['matrix_ref',['../group__group-surfacemesh-views.html#gaf2e0d4ab50ffdc84c4431d699f6741fe',1,'lagrange']]],
+  ['matrix_5fview_21',['matrix_view',['../group__group-surfacemesh-views.html#ga0ae9d0742709686405adad75e20e8bc8',1,'lagrange']]],
+  ['merge_22',['merge',['../classlagrange_1_1_disjoint_sets.html#a3ee2d4bff5bd1dc9d4f8b7eecd8e3dbc',1,'lagrange::DisjointSets']]],
+  ['mesh_23',['Mesh',['../classlagrange_1_1_mesh.html#a2a23c7c0c4e0da252b7bc0e13b6f81d8',1,'lagrange::Mesh']]],
+  ['meshadapter_24',['MeshAdapter',['../classlagrange_1_1volume_1_1legacy_1_1_mesh_adapter.html#adc98e2a86dc99dc2c124b575b1b26e85',1,'lagrange::volume::legacy::MeshAdapter']]],
+  ['midpoint_5fsubdivision_25',['midpoint_subdivision',['../group__module-subdivision.html#ga5bb45b1783fc315efefb291e2d2dbd9f',1,'lagrange::subdivision']]],
+  ['move_5fdata_26',['move_data',['../namespacelagrange.html#a45f1c6cc55a36fae54bcd3723d8255e2',1,'lagrange']]]
 ];

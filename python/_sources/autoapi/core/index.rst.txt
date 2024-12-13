@@ -63,12 +63,14 @@ Functions
    core.compute_mesh_area
    core.compute_mesh_centroid
    core.compute_normal
+   core.compute_pointcloud_pca
    core.compute_seam_edges
    core.compute_tangent_bitangent
    core.compute_uv_distortion
    core.compute_vertex_normal
    core.compute_vertex_valence
    core.detect_degenerate_facets
+   core.extract_isoline
    core.extract_submesh
    core.filter_attributes
    core.is_edge_manifold
@@ -86,11 +88,19 @@ Functions
    core.remove_duplicate_vertices
    core.remove_isolated_vertices
    core.remove_null_area_facets
+   core.remove_short_edges
    core.remove_topologically_degenerate_facets
+   core.reorder_mesh
+   core.resolve_nonmanifoldness
+   core.resolve_vertex_nonmanifoldness
+   core.select_facets_by_normal_similarity
+   core.select_facets_in_frustum
    core.separate_by_components
    core.separate_by_facet_groups
+   core.split_long_edges
    core.transform_mesh
    core.triangulate_polygonal_facets
+   core.trim_by_isoline
    core.unify_index_buffer
    core.weld_indexed_attribute
 
@@ -116,7 +126,7 @@ Attributes
       Copy policy of the attribute.
 
    .. py:property:: data
-      :type: object
+      :type: numpy.typing.NDArray
 
       Raw data buffer of the attribute.
 
@@ -577,7 +587,7 @@ Attributes
    .. py:property:: output_attribute_name
       :type: str
 
-      '@facet_normal'
+      `@facet_normal`
 
       :type: Output attribute name. Default
 
@@ -637,7 +647,7 @@ Attributes
    .. py:property:: input_attribute_name
       :type: str
 
-      The name of the pre-computed facet area attribute, default is '@facet_area'.
+      The name of the pre-computed facet area attribute, default is `@facet_area`.
 
    .. py:property:: use_signed_area
       :type: bool
@@ -695,7 +705,7 @@ Attributes
    .. py:property:: facet_normal_attribute_name
       :type: str
 
-      Facet normal attribute name to use. Default is '@facet_normal'.
+      Facet normal attribute name to use. Default is `@facet_normal`.
 
    .. py:property:: keep_facet_normals
       :type: bool
@@ -705,7 +715,7 @@ Attributes
    .. py:property:: output_attribute_name
       :type: str
 
-      '@normal'
+      `@normal`
 
       :type: Output attribute name. Default
 
@@ -962,9 +972,7 @@ Attributes
       Get an attribute by name.
 
       :param name: Name of the attribute.
-      :type name: str
       :param sharing: Whether to allow sharing the attribute with other meshes.
-      :type sharing: bool
 
       :return: The attribute.
 
@@ -978,9 +986,11 @@ Attributes
    .. py:method:: clear_vertices()
 
 
-   .. py:method:: clone()
+   .. py:method:: clone(strip = False)
 
       Create a deep copy of this mesh.
+
+      :param strip: If True, strip the mesh of all attributes except for the reserved attributes.
 
 
    .. py:method:: compress_if_regular()
@@ -997,19 +1007,14 @@ Attributes
       Create an attribute.
 
       :param name: Name of the attribute.
-      :type name: str
       :param element: Element type of the attribute. If None, derive from the shape of initial values.
-      :type element: AttributeElement, optional
       :param usage: Usage type of the attribute. If None, derive from the shape of initial values or the number of channels.
-      :type usage: AttributeUsage, optional
       :param initial_values: Initial values of the attribute.
-      :type initial_values: numpy.ndarray, optional
       :param initial_indices: Initial indices of the attribute (Indexed attribute only).
-      :type initial_indices: numpy.ndarray, optional
       :param num_channels: Number of channels of the attribute.
-      :type num_channels: int, optional
       :param dtype: Data type of the attribute.
-      :type dtype: valid numpy.dtype, optional
+
+      :returns: The id of the created attribute.
 
       .. note::
          If `element` is None, it will be derived based on the cardinality of the mesh elements.
@@ -1019,19 +1024,14 @@ Attributes
       .. note::
          If `usage` is None, it will be derived based on the shape of `initial_values` or `num_channels` if specified.
 
-      :returns: The id of the created attribute.
-
 
    .. py:method:: create_attribute_from(name, source_mesh, source_name = '')
 
       Shallow copy an attribute from another mesh.
 
       :param name: Name of the attribute.
-      :type name: str
       :param source_mesh: Source mesh.
-      :type source_mesh: SurfaceMesh
       :param source_name: Name of the attribute in the source mesh. If empty, use the same name as `name`.
-      :type source_name: str, optional
 
       :returns: The id of the created attribute.
 
@@ -1043,7 +1043,6 @@ Attributes
       Delete an attribute by id.
 
       :param id: Id of the attribute.
-      :type id: AttributeId
 
 
    .. py:method:: duplicate_attribute(arg0, arg1, /)
@@ -1058,6 +1057,22 @@ Attributes
    .. py:method:: get_attribute_name(arg, /)
 
 
+   .. py:method:: get_clockwise_corner_around_vertex(corner)
+
+      Get the clockwise corner around the vertex associated with the input corner.
+
+      .. note::
+          If the vertex is a non-manifold vertex, only one "umbrella" (a set of connected
+          corners based on edge-connectivity) will be visited.
+
+          If the traversal reaches a boundary or a non-manifold edge, the next adjacent corner
+          is not well defined. It will return `invalid_index` in this case.
+
+      :param corner: The input corner index.
+
+      :returns: The clockwise corner index or `invalid_index` if none exists.
+
+
    .. py:method:: get_corner_edge(arg, /)
 
 
@@ -1065,6 +1080,22 @@ Attributes
 
 
    .. py:method:: get_corner_vertex(arg, /)
+
+
+   .. py:method:: get_counterclockwise_corner_around_vertex(corner)
+
+      Get the counterclockwise corner around the vertex associated with the input corner.
+
+      .. note::
+          If the vertex is a non-manifold vertex, only one "umbrella" (a set of connected
+          corners based on edge-connectivity) will be visited.
+
+          If the traversal reaches a boundary or a non-manifold edge, the next adjacent corner
+          is not well defined. It will return `invalid_index` in this case.
+
+      :param corner: The input corner index.
+
+      :returns: The counterclockwise corner index or `invalid_index` if none exists.
 
 
    .. py:method:: get_edge(arg0, arg1, /)
@@ -1143,9 +1174,7 @@ Attributes
       Get an indexed attribute by name.
 
       :param name: Name of the attribute.
-      :type name: str
       :param sharing: Whether to allow sharing the attribute with other meshes.
-      :type sharing: bool
 
       :returns: The indexed attribute.
 
@@ -1158,7 +1187,6 @@ Attributes
       If not provided, the edges are initialized in an arbitrary order.
 
       :param edges: M x 2 tensor of predefined edge vertex indices, where M is the number of edges.
-      :type edges: numpy.ndarray, optional
 
 
    .. py:method:: is_attribute_indexed(arg: int, /) -> bool
@@ -1201,13 +1229,9 @@ Attributes
       Wrap an existing numpy array as an attribute.
 
       :param name: Name of the attribute.
-      :type name: str
       :param element: Element type of the attribute.
-      :type element: AttributeElement
       :param usage: Usage type of the attribute.
-      :type usage: AttributeUsage
       :param values: Values of the attribute.
-      :type values: numpy.ndarray
 
       :returns: The id of the created attribute.
 
@@ -1218,13 +1242,9 @@ Attributes
       Wrap a tensor as a list of hybrid facets.
 
       :param offsets: The offset indices into the facets array.
-      :type offsets: numpy.ndarray
       :param num_facets: Number of facets.
-      :type num_facets: int
       :param facets: The indices of the vertices of the facets.
-      :type facets: numpy.ndarray
       :param num_corners: Number of corners.
-      :type num_corners: int
 
       :return: The id of the wrapped facet attribute.
 
@@ -1234,13 +1254,9 @@ Attributes
       Wrap an existing numpy array as an indexed attribute.
 
       :param name: Name of the attribute.
-      :type name: str
       :param usage: Usage type of the attribute.
-      :type usage: AttributeUsage
       :param values: Values of the attribute.
-      :type values: numpy.ndarray
       :param indices: Indices of the attribute.
-      :type indices: numpy.ndarray
 
       :returns: The id of the created attribute.
 
@@ -1250,9 +1266,7 @@ Attributes
       Wrap a tensor as vertices.
 
       :param tensor: The tensor to wrap.
-      :type tensor: numpy.ndarray
       :param num_vertices: Number of vertices.
-      :type num_vertices: int
 
       :return: The id of the wrapped vertices attribute.
 
@@ -1266,7 +1280,7 @@ Attributes
    .. py:property:: bitangent_attribute_name
       :type: str
 
-      The name of the output bitangent attribute, default is '@bitangent'
+      The name of the output bitangent attribute, default is `@bitangent`
 
    .. py:property:: normal_attribute_name
       :type: str
@@ -1286,7 +1300,7 @@ Attributes
    .. py:property:: tangent_attribute_name
       :type: str
 
-      The name of the output tangent attribute, default is '@tangent'
+      The name of the output tangent attribute, default is `@tangent`
 
    .. py:property:: uv_attribute_name
       :type: str
@@ -1323,7 +1337,7 @@ Attributes
    .. py:property:: output_attribute_name
       :type: str
 
-      Output attribute name. Default is '@vertex_normal'.
+      Output attribute name. Default is `@vertex_normal`.
 
    .. py:property:: recompute_weighted_corner_normals
       :type: bool
@@ -1338,7 +1352,7 @@ Attributes
    .. py:property:: weighted_corner_normal_attribute_name
       :type: str
 
-      Precomputed weighted corner normals attribute name.Default is '@weighted_corner_normal'. If attribute exists, the weighted corner normals will be used instead of recomputing them.
+      Precomputed weighted corner normals attribute name.Default is `@weighted_corner_normal`. If attribute exists, the weighted corner normals will be used instead of recomputing them.
 
 
 .. py:class:: VertexValenceOptions
@@ -1374,9 +1388,7 @@ Attributes
    Combine a list of meshes into a single mesh.
 
    :param meshes: input meshes
-   :type meshes: list[SurfaceMesh]
    :param preserve_attributes: whether to preserve attributes
-   :type preserve_attributes: bool
 
    :returns: the combined mesh
 
@@ -1509,8 +1521,8 @@ Attributes
 
    :param mesh: The input mesh.
    :param weighting_type: The weighting type. Default is `Area`.
-   :param facet_centroid_attribute_name: The name of the pre-computed facet centroid attribute if available. Default is '@facet_centroid'.
-   :param facet_area_attribute_name: The name of the pre-computed facet area attribute if available. Default is '@facet_area'.
+   :param facet_centroid_attribute_name: The name of the pre-computed facet centroid attribute if available. Default is `@facet_centroid`.
+   :param facet_area_attribute_name: The name of the pre-computed facet area attribute if available. Default is `@facet_area`.
 
    :returns: The mesh centroid.
 
@@ -1521,23 +1533,26 @@ Attributes
    Compute indexed normal attribute (Pythonic API).
 
    :param mesh: input mesh
-   :type mesh: SurfaceMesh
    :param feature_angle_threshold: feature angle threshold
-   :type feature_angle_threshold: float, optional
    :param cone_vertices: cone vertices
-   :type cone_vertices: list[int] or numpy.ndarray, optional
    :param output_attribute_name: output normal attribute name
-   :type output_attribute_name: str, optional
    :param weight_type: normal weighting type
-   :type weight_type: NormalWeightingType, optional
    :param facet_normal_attribute_name: facet normal attribute name
-   :type facet_normal_attribute_name: str, optional
    :param recompute_facet_normals: whether to recompute facet normals
-   :type recompute_facet_normals: bool, optional
    :param keep_facet_normals: whether to keep the computed facet normal attribute
-   :type keep_facet_normals: bool, optional
 
    :returns: the id of the indexed normal attribute.
+
+
+.. py:function:: compute_pointcloud_pca(points, shift_centroid = False, normalize = False)
+
+   Compute principal components of a point cloud.
+
+   :param points: Input points.
+   :param shift_centroid: When true: covariance = (P-centroid)^T (P-centroid), when false: covariance = (P)^T (P).
+   :param normalize: Should we divide the result by number of points?
+
+   :returns: tuple of (center, eigenvectors, eigenvalues).
 
 
 .. py:function:: compute_seam_edges(mesh, indexed_attribute_id, output_attribute_name = None)
@@ -1616,6 +1631,19 @@ Attributes
    :param mesh: The input mesh.
 
    :returns: A list of indices of degenerate facets.
+
+
+.. py:function:: extract_isoline(mesh, attribute, isovalue = 0.0)
+
+   Extract the isoline of an implicit function defined on the mesh vertices/corners.
+
+   The input mesh must be a triangle mesh.
+
+   :param mesh:       Input triangle mesh to extract the isoline from.
+   :param attribute:  Attribute id or name of the scalar field to use. Can be a vertex or indexed attribute.
+   :param isovalue:   Isovalue to extract.
+
+   :return: A mesh whose facets is a collection of size 2 elements representing the extracted isoline.
 
 
 .. py:function:: extract_submesh(mesh, selected_facets, source_vertex_attr_name = '', source_facet_attr_name = '', map_attributes = False)
@@ -1786,6 +1814,14 @@ Attributes
    :param remove_isolated_vertices: Whether to remove isolated vertices after removing null area facets.
 
 
+.. py:function:: remove_short_edges(mesh, threshold = 0)
+
+   Remove short edges from a mesh.
+
+   :param mesh:      The input mesh for inplace modification.
+   :param threshold: The minimum edge length below which an edge is considered short.
+
+
 .. py:function:: remove_topologically_degenerate_facets(mesh)
 
    Remove topologically degenerate facets such as (0, 1, 1)
@@ -1795,6 +1831,60 @@ Attributes
    is not.
 
    :param mesh: The input mesh for inplace modification.
+
+
+.. py:function:: reorder_mesh(mesh, method)
+
+   Reorder a mesh in place.
+
+   :param mesh: input mesh
+   :param method: reordering method, options are 'Lexicographic', 'Morton', 'Hilbert', 'None' (default is 'Morton').
+
+
+.. py:function:: resolve_nonmanifoldness(mesh)
+
+   Resolve both vertex and edge nonmanifoldness in a mesh.
+
+   :param mesh: The input mesh for inplace modification.
+
+
+.. py:function:: resolve_vertex_nonmanifoldness(mesh)
+
+   Resolve vertex non-manifoldness in a mesh.
+
+   :param mesh: The input mesh for inplace modification.
+
+   :raises RuntimeError: If the input mesh is not edge-manifold.
+
+
+.. py:function:: select_facets_by_normal_similarity(mesh, seed_facet_id, flood_error_limit = None, flood_second_to_first_order_limit_ratio = None, facet_normal_attribute_name = None, is_facet_selectable_attribute_name = None, output_attribute_name = None, search_type = None, num_smooth_iterations = None)
+
+   Select facets by normal similarity (Pythonic API).
+
+   :param mesh: Input mesh.
+   :param seed_facet_id: Index of the seed facet.
+   :param flood_error_limit: Tolerance for normals of the seed and the selected facets. Higher limit leads to larger selected region.
+   :param flood_second_to_first_order_limit_ratio: Ratio of the flood_error_limit and the tolerance for normals of neighboring selected facets. Higher ratio leads to more curvature in selected region.
+   :param facet_normal_attribute_name: Attribute name of the facets normal. If the mesh doesn't have this attribute, it will call compute_facet_normal to compute it.
+   :param is_facet_selectable_attribute_name: If provided, this function will look for this attribute to determine if a facet is selectable.
+   :param output_attribute_name: Attribute name of whether a facet is selected.
+   :param search_type: Use 'BFS' for breadth-first search or 'DFS' for depth-first search.
+   :param num_smooth_iterations: Number of iterations to smooth the boundary of the selected region.
+
+   :returns: Id of the attribute on whether a facet is selected.
+
+
+.. py:function:: select_facets_in_frustum(mesh, frustum_plane_points, frustum_plane_normals, greedy = None, output_attribute_name = None)
+
+   Select facets in a frustum (Pythonic API).
+
+   :param mesh: Input mesh.
+   :param frustum_plane_points: Four points on each of the frustum planes.
+   :param frustum_plane_normals: Four normals of each of the frustum planes.
+   :param greedy: If true, the function returns as soon as the first facet is found.
+   :param output_attribute_name: Attribute name of whether a facet is selected.
+
+   :returns: Whether any facets got selected.
 
 
 .. py:function:: separate_by_components(mesh, source_vertex_attr_name = '', source_facet_attr_name = '', map_attributes = False, connectivity_type = ConnectivityType.Edge)
@@ -1822,6 +1912,21 @@ Attributes
    :returns: A list of meshes, one for each facet group.
 
 
+.. py:function:: split_long_edges(mesh, max_edge_length = 0.10000000149011612, recursive = True, active_region_attribute = None, edge_length_attribute = None)
+
+   Split edges that are longer than `max_edge_length`.
+
+   :param mesh:                  The input mesh for inplace modification.
+   :param max_edge_length:       Maximum edge length. Edges longer than this value will be split.
+   :param recursive:              If true, the operation will be applied recursively until no edge is longer than `max_edge_length`.
+   :param active_region_attribute: The facet attribute name that will be used to determine the active region.
+                                   If `None`, all edges will be considered.
+                                   Otherwise, only edges that are part of the active region will be split.
+                                   The attribute must be of value type `uint8_t`.
+   :param edge_length_attribute:  The edge length attribute name that will be used to determine the edge length.
+                                  If `None`, the function will compute the edge lengths.
+
+
 .. py:function:: transform_mesh(mesh, affine_transform, normalize_normals = True, normalize_tangents_bitangents = True, in_place = True)
 
    Apply affine transformation to a mesh.
@@ -1842,6 +1947,20 @@ Attributes
    :param mesh: The input mesh.
 
 
+.. py:function:: trim_by_isoline(mesh, attribute, isovalue = 0.0, keep_below = True)
+
+   Trim a mesh by the isoline of an implicit function defined on the mesh vertices/corners.
+
+   The input mesh must be a triangle mesh.
+
+   :param mesh:       Input triangle mesh to trim.
+   :param attribute:  Attribute id or name of the scalar field to use. Can be a vertex or indexed attribute.
+   :param isovalue:   Isovalue to trim with.
+   :param keep_below: Whether to keep the part below the isoline.
+
+   :return: The trimmed mesh.
+
+
 .. py:function:: unify_index_buffer(mesh: SurfaceMesh) -> SurfaceMesh
                  unify_index_buffer(mesh: SurfaceMesh, attribute_ids: collections.abc.Sequence[int]) -> SurfaceMesh
                  unify_index_buffer(mesh: SurfaceMesh, attribute_names: collections.abc.Sequence[str]) -> SurfaceMesh
@@ -1849,9 +1968,7 @@ Attributes
    Unify the index buffer of the mesh for selected attributes.
 
    :param mesh: The mesh to unify.
-   :type mesh: SurfaceMesh
    :param attribute_names: The selected attribute names to unify.
-   :type attribute_names: list of str
 
    :returns: The unified mesh.
 

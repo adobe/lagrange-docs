@@ -132,10 +132,34 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>normalize_normals</b>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>normalize_tangents_bitangents</b> = true</td></tr>
 <tr class="memdesc:adb325bf37307e1d4836ea6886c266e83"><td class="mdescLeft">&#160;</td><td class="mdescRight">If enabled, tangents and bitangents are normalized after transformation. <br /></td></tr>
 <tr class="separator:adb325bf37307e1d4836ea6886c266e83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab5e6e7c0226df5f9e151b0fefdfe21f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlagrange_1_1_transform_options.html#aab5e6e7c0226df5f9e151b0fefdfe21f">reorient</a> = false</td></tr>
+<tr class="memdesc:aab5e6e7c0226df5f9e151b0fefdfe21f"><td class="mdescLeft">&#160;</td><td class="mdescRight">If enabled, when applying a transform with negative determinant:  <a href="structlagrange_1_1_transform_options.html#aab5e6e7c0226df5f9e151b0fefdfe21f">More...</a><br /></td></tr>
+<tr class="separator:aab5e6e7c0226df5f9e151b0fefdfe21f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Options available when applying affine transforms to a mesh. </p>
-</div><hr/>The documentation for this struct was generated from the following file:<ul>
+</div><h2 class="groupheader">Member Data Documentation</h2>
+<a id="aab5e6e7c0226df5f9e151b0fefdfe21f" name="aab5e6e7c0226df5f9e151b0fefdfe21f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab5e6e7c0226df5f9e151b0fefdfe21f">&#9670;&nbsp;</a></span>reorient</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool reorient = false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>If enabled, when applying a transform with negative determinant: </p>
+<ol type="1">
+<li>Normals, tangents and bitangents are flipped.</li>
+<li>Facet orientations are reversed. </li>
+</ol>
+
+</div>
+</div>
+<hr/>The documentation for this struct was generated from the following file:<ul>
 <li>lagrange/types/<a class="el" href="_transform_options_8h_source.html">TransformOptions.h</a></li>
 </ul>
 </div><!-- contents -->

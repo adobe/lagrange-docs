@@ -35,7 +35,7 @@ var searchData=
   ['marquee_5factive_32',['marquee_active',['../structlagrange_1_1ui_1_1_selection_context.html#a2f969af0c939c1e5e1fd0509e316638c',1,'lagrange::ui::SelectionContext']]],
   ['material_5fid_33',['material_id',['../structlagrange_1_1_attribute_name.html#a684f770f2cc5ec13c7f32d1a4b3a50ef',1,'lagrange::AttributeName']]],
   ['materials_34',['materials',['../structlagrange_1_1io_1_1internal_1_1_obj_reader_result.html#a80986648551e01eac9fcd2ddedd69f29',1,'lagrange::io::internal::ObjReaderResult']]],
-  ['max_5fedge_5flength_35',['max_edge_length',['../structlagrange_1_1subdivision_1_1_subdivision_options.html#a3e8bcbb0c92920e576a6a8a024260590',1,'lagrange::subdivision::SubdivisionOptions']]],
+  ['max_5fedge_5flength_35',['max_edge_length',['../structlagrange_1_1_split_long_edges_options.html#a31be7cd3f9d91f4caef160830e2ddb29',1,'lagrange::SplitLongEdgesOptions::max_edge_length()'],['../structlagrange_1_1subdivision_1_1_subdivision_options.html#a3e8bcbb0c92920e576a6a8a024260590',1,'lagrange::subdivision::SubdivisionOptions::max_edge_length()']]],
   ['max_5fvalue_36',['max_value',['../structlagrange_1_1image_1_1_image_histogram.html#ab57d4076e7e499e5da8c1ae500170a02',1,'lagrange::image::ImageHistogram']]],
   ['mesh_37',['mesh',['../structlagrange_1_1io_1_1internal_1_1_obj_reader_result.html#a5b84a6d7e626bf867e1724e5e0283343',1,'lagrange::io::internal::ObjReaderResult']]],
   ['mesh_5findex_38',['mesh_index',['../structlagrange_1_1scene_1_1_mesh_instance.html#a4b8c10b968567324a6129398346445f7',1,'lagrange::scene::MeshInstance']]],

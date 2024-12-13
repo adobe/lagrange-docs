@@ -1429,7 +1429,7 @@ are not listed there. </p>
 <tr>
 <td><a href="https://github.com/catchorg/Catch2">Catch2</a></td>
 <td>Boost</td>
-<td>Testing</td>
+<td>Testing, Unit Tests (Core)</td>
 </tr>
 <tr>
 <td><a href="https://github.com/ocornut/imgui">Dear ImGui</a></td>
@@ -1439,7 +1439,7 @@ are not listed there. </p>
 <tr>
 <td><a href="https://eigen.tuxfamily.org/">Eigen</a></td>
 <td>MPL2</td>
-<td>Core, UI</td>
+<td>Core, UI, Unit Tests (Core)</td>
 </tr>
 <tr>
 <td><a href="https://github.com/embree/embree">Embree</a></td>
@@ -1479,7 +1479,7 @@ are not listed there. </p>
 <tr>
 <td><a href="https://github.com/libigl/libigl/">Libigl</a></td>
 <td>MPL2</td>
-<td>BVH, IO</td>
+<td>BVH, IO, Subdivision</td>
 </tr>
 <tr>
 <td><a href="http://glaros.dtc.umn.edu/gkhome/metis/metis/overview">METIS</a></td>
@@ -1512,6 +1512,16 @@ are not listed there. </p>
 <td>Volume</td>
 </tr>
 <tr>
+<td><a href="https://github.com/mkazhdan/PoissonRecon">PoissonRecon</a></td>
+<td>MIT</td>
+<td>Poisson</td>
+</tr>
+<tr>
+<td><a href="https://github.com/nmwsharp/polyscope">Polyscope</a></td>
+<td>MIT</td>
+<td>Examples (Core)</td>
+</tr>
+<tr>
 <td><a href="https://github.com/samhocevar/portable-file-dialogs">Portable File Dialogs</a></td>
 <td>WTFPL (public domain)</td>
 <td>UI</td>
@@ -1525,6 +1535,11 @@ are not listed there. </p>
 <td><a href="https://github.com/oneapi-src/oneTBB">Threading Building Blocks</a></td>
 <td>Apache 2</td>
 <td>Core</td>
+</tr>
+<tr>
+<td><a href="https://github.com/syoyo/tinyexr">TinyEXR</a></td>
+<td>BSD-3</td>
+<td>Image_IO</td>
 </tr>
 <tr>
 <td><a href="https://github.com/wolfpld/tracy">Tracy</a><sup id="fnref:4_tracy"><a class="footnote-ref" href="#fn:4_tracy">5</a></sup></td>
@@ -1559,12 +1574,12 @@ are not listed there. </p>
 <tr>
 <td><a href="https://github.com/gabime/spdlog">spdlog</a></td>
 <td>MIT</td>
-<td>Core</td>
+<td>Core, Unit Tests (Core)</td>
 </tr>
 <tr>
 <td><a href="https://github.com/nothings/stb">stb</a></td>
 <td>Public domain</td>
-<td>UI, Unit Tests (IO)</td>
+<td>Image_IO, UI, Unit Tests (IO)</td>
 </tr>
 <tr>
 <td><a href="https://github.com/syoyo/tinygltf">tinygltf</a></td>
@@ -1573,6 +1588,11 @@ are not listed there. </p>
 </tr>
 <tr>
 <td><a href="https://github.com/tinyobjloader/tinyobjloader">tinyobjloader</a></td>
+<td>MIT</td>
+<td>IO</td>
+</tr>
+<tr>
+<td><a href="https://github.com/ufbx/ufbx">ufbx</a></td>
 <td>MIT</td>
 <td>IO</td>
 </tr>
@@ -1654,6 +1674,12 @@ appropriate licenses and files that are affected.</p>
 <td><a href="https://github.com/adobe/lagrange/blob/main/modules/core/include/lagrange/point_triangle_squared_distance.h">point_triangle_squared_distance.h</a>, <a href="https://github.com/adobe/lagrange/blob/main/modules/core/include/lagrange/point_segment_squared_distance.h">point_segment_squared_distance.h</a></td>
 </tr>
 <tr>
+<td><a href="https://github.com/rawrunprotected/hilbert_curves">hilbert_curves</a></td>
+<td>Public domain</td>
+<td>Core</td>
+<td><a href="https://github.com/adobe/lagrange/blob/main/modules/core/src/reorder_mesh.cpp">reorder_mesh.cpp</a></td>
+</tr>
+<tr>
 <td><a href="https://github.com/ocornut/imgui/issues/1901">ImGui Progress Indicators</a></td>
 <td>MIT</td>
 <td>UI</td>
@@ -1707,7 +1733,7 @@ appropriate licenses and files that are affected.</p>
 <p>Boost::filesystem is an optional backend of the FS module.&#160;<a class="footnote-backref" href="#fnref:1_boost" title="Jump back to footnote 2 in the text">&#8617;</a></p>
 </li>
 <li id="fn:2_cli11_examples">
-<p>CLI11 is used by the examples in the following modules: BVH, Core, IO, Partitioning, Raycasting, Subdivision, UI, Volume, Winding&#160;<a class="footnote-backref" href="#fnref:2_cli11_examples" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+<p>CLI11 is used by the examples in the following modules: BVH, Core, IO, Image, Image_IO, Partitioning, Poisson, Raycasting, Subdivision, UI, Volume, Winding&#160;<a class="footnote-backref" href="#fnref:2_cli11_examples" title="Jump back to footnote 3 in the text">&#8617;</a></p>
 </li>
 <li id="fn:3_filesystem">
 <p><code>gulrak/filesystem</code> is only needed when the IO module is compiled in C++14 mode. In C++17 mode, the IO module will defaults to <code>std::filesystem</code>.&#160;<a class="footnote-backref" href="#fnref:3_filesystem" title="Jump back to footnote 4 in the text">&#8617;</a></p>

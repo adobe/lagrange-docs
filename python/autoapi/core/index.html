@@ -3,7 +3,7 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="next" title="image" href="../image/index.html" /><link rel="prev" title="API Reference" href="../index.html" />
+<link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="next" title="subdivision" href="../subdivision/index.html" /><link rel="prev" title="scene" href="../scene/index.html" />
 
     <!-- Generated with Sphinx 7.4.7 and Furo 2023.09.10 -->
         <title>core - Lagrange documentation</title>
@@ -158,8 +158,12 @@
   <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
 <li class="toctree-l1 current has-children"><a class="reference internal" href="../index.html">API Reference</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of API Reference</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
-<li class="toctree-l2 current current-page"><a class="current reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">core</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../poisson/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">poisson</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="../image/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">image</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../scene/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">scene</span></code></a></li>
+<li class="toctree-l2 current current-page"><a class="current reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">core</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../subdivision/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">subdivision</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../io/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">io</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -343,23 +347,29 @@
 <tr class="row-even"><td><p><a class="reference internal" href="#core.compute_normal" title="core.compute_normal"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compute_normal</span></code></a>(…)</p></td>
 <td><p>Compute indexed normal attribute (Pythonic API).</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#core.compute_seam_edges" title="core.compute_seam_edges"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compute_seam_edges</span></code></a>(mesh, indexed_attribute_id[, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#core.compute_pointcloud_pca" title="core.compute_pointcloud_pca"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compute_pointcloud_pca</span></code></a>(points[, shift_centroid, normalize])</p></td>
+<td><p>Compute principal components of a point cloud.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#core.compute_seam_edges" title="core.compute_seam_edges"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compute_seam_edges</span></code></a>(mesh, indexed_attribute_id[, ...])</p></td>
 <td><p>Computer seam edges for a given indexed attribute.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#core.compute_tangent_bitangent" title="core.compute_tangent_bitangent"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compute_tangent_bitangent</span></code></a>(…)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#core.compute_tangent_bitangent" title="core.compute_tangent_bitangent"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compute_tangent_bitangent</span></code></a>(…)</p></td>
 <td><p>Compute tangent and bitangent vector attributes (Pythonic API).</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#core.compute_uv_distortion" title="core.compute_uv_distortion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compute_uv_distortion</span></code></a>(mesh[, uv_attribute_name, ...])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#core.compute_uv_distortion" title="core.compute_uv_distortion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compute_uv_distortion</span></code></a>(mesh[, uv_attribute_name, ...])</p></td>
 <td><p>Compute UV distortion.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#core.compute_vertex_normal" title="core.compute_vertex_normal"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compute_vertex_normal</span></code></a>(…)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#core.compute_vertex_normal" title="core.compute_vertex_normal"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compute_vertex_normal</span></code></a>(…)</p></td>
 <td><p>Computer vertex normal (Pythonic API).</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#core.compute_vertex_valence" title="core.compute_vertex_valence"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compute_vertex_valence</span></code></a>(…)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#core.compute_vertex_valence" title="core.compute_vertex_valence"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compute_vertex_valence</span></code></a>(…)</p></td>
 <td><p>Compute vertex valence);</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#core.detect_degenerate_facets" title="core.detect_degenerate_facets"><code class="xref py py-obj docutils literal notranslate"><span class="pre">detect_degenerate_facets</span></code></a>(mesh)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#core.detect_degenerate_facets" title="core.detect_degenerate_facets"><code class="xref py py-obj docutils literal notranslate"><span class="pre">detect_degenerate_facets</span></code></a>(mesh)</p></td>
 <td><p>Detect degenerate facets in a mesh.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#core.extract_isoline" title="core.extract_isoline"><code class="xref py py-obj docutils literal notranslate"><span class="pre">extract_isoline</span></code></a>(mesh, attribute[, isovalue])</p></td>
+<td><p>Extract the isoline of an implicit function defined on the mesh vertices/corners.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#core.extract_submesh" title="core.extract_submesh"><code class="xref py py-obj docutils literal notranslate"><span class="pre">extract_submesh</span></code></a>(mesh, selected_facets[, ...])</p></td>
 <td><p>Extract a submesh based on the selected facets.</p></td>
@@ -412,8 +422,26 @@
 <tr class="row-odd"><td><p><a class="reference internal" href="#core.remove_null_area_facets" title="core.remove_null_area_facets"><code class="xref py py-obj docutils literal notranslate"><span class="pre">remove_null_area_facets</span></code></a>(mesh[, null_area_threshold, ...])</p></td>
 <td><p>Remove facets with unsigned facets area &lt;= <cite>null_area_threhsold</cite>.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#core.remove_topologically_degenerate_facets" title="core.remove_topologically_degenerate_facets"><code class="xref py py-obj docutils literal notranslate"><span class="pre">remove_topologically_degenerate_facets</span></code></a>(mesh)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#core.remove_short_edges" title="core.remove_short_edges"><code class="xref py py-obj docutils literal notranslate"><span class="pre">remove_short_edges</span></code></a>(mesh[, threshold])</p></td>
+<td><p>Remove short edges from a mesh.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#core.remove_topologically_degenerate_facets" title="core.remove_topologically_degenerate_facets"><code class="xref py py-obj docutils literal notranslate"><span class="pre">remove_topologically_degenerate_facets</span></code></a>(mesh)</p></td>
 <td><p>Remove topologically degenerate facets such as (0, 1, 1)</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#core.reorder_mesh" title="core.reorder_mesh"><code class="xref py py-obj docutils literal notranslate"><span class="pre">reorder_mesh</span></code></a>(mesh, method)</p></td>
+<td><p>Reorder a mesh in place.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#core.resolve_nonmanifoldness" title="core.resolve_nonmanifoldness"><code class="xref py py-obj docutils literal notranslate"><span class="pre">resolve_nonmanifoldness</span></code></a>(mesh)</p></td>
+<td><p>Resolve both vertex and edge nonmanifoldness in a mesh.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#core.resolve_vertex_nonmanifoldness" title="core.resolve_vertex_nonmanifoldness"><code class="xref py py-obj docutils literal notranslate"><span class="pre">resolve_vertex_nonmanifoldness</span></code></a>(mesh)</p></td>
+<td><p>Resolve vertex non-manifoldness in a mesh.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#core.select_facets_by_normal_similarity" title="core.select_facets_by_normal_similarity"><code class="xref py py-obj docutils literal notranslate"><span class="pre">select_facets_by_normal_similarity</span></code></a>(mesh, seed_facet_id)</p></td>
+<td><p>Select facets by normal similarity (Pythonic API).</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#core.select_facets_in_frustum" title="core.select_facets_in_frustum"><code class="xref py py-obj docutils literal notranslate"><span class="pre">select_facets_in_frustum</span></code></a>(mesh, frustum_plane_points, ...)</p></td>
+<td><p>Select facets in a frustum (Pythonic API).</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#core.separate_by_components" title="core.separate_by_components"><code class="xref py py-obj docutils literal notranslate"><span class="pre">separate_by_components</span></code></a>(mesh[, ...])</p></td>
 <td><p>Extract a set of submeshes based on connected components.</p></td>
@@ -421,11 +449,17 @@
 <tr class="row-even"><td><p><a class="reference internal" href="#core.separate_by_facet_groups" title="core.separate_by_facet_groups"><code class="xref py py-obj docutils literal notranslate"><span class="pre">separate_by_facet_groups</span></code></a>(mesh, facet_group_indices[, ...])</p></td>
 <td><p>Extract a set of submeshes based on facet groups.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#core.transform_mesh" title="core.transform_mesh"><code class="xref py py-obj docutils literal notranslate"><span class="pre">transform_mesh</span></code></a>(mesh, affine_transform[, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#core.split_long_edges" title="core.split_long_edges"><code class="xref py py-obj docutils literal notranslate"><span class="pre">split_long_edges</span></code></a>(mesh[, max_edge_length, recursive, ...])</p></td>
+<td><p>Split edges that are longer than <cite>max_edge_length</cite>.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#core.transform_mesh" title="core.transform_mesh"><code class="xref py py-obj docutils literal notranslate"><span class="pre">transform_mesh</span></code></a>(mesh, affine_transform[, ...])</p></td>
 <td><p>Apply affine transformation to a mesh.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#core.triangulate_polygonal_facets" title="core.triangulate_polygonal_facets"><code class="xref py py-obj docutils literal notranslate"><span class="pre">triangulate_polygonal_facets</span></code></a>(mesh)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#core.triangulate_polygonal_facets" title="core.triangulate_polygonal_facets"><code class="xref py py-obj docutils literal notranslate"><span class="pre">triangulate_polygonal_facets</span></code></a>(mesh)</p></td>
 <td><p>Triangulate polygonal facets of the mesh.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#core.trim_by_isoline" title="core.trim_by_isoline"><code class="xref py py-obj docutils literal notranslate"><span class="pre">trim_by_isoline</span></code></a>(mesh, attribute[, isovalue, keep_below])</p></td>
+<td><p>Trim a mesh by the isoline of an implicit function defined on the mesh vertices/corners.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#core.unify_index_buffer" title="core.unify_index_buffer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">unify_index_buffer</span></code></a>(…)</p></td>
 <td><p>Unify the index buffer of the mesh for selected attributes.</p></td>
@@ -468,11 +502,11 @@
 
 <dl class="py property">
 <dt class="sig sig-object py" id="core.Attribute.data">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">data</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">object</span></em><a class="headerlink" href="#core.Attribute.data" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">data</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">numpy.typing.NDArray</span></em><a class="headerlink" href="#core.Attribute.data" title="Link to this definition">¶</a></dt>
 <dd><p>Raw data buffer of the attribute.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>object</p>
+<dd class="field-odd"><p>numpy.typing.NDArray</p>
 </dd>
 </dl>
 </dd></dl>
@@ -1079,7 +1113,7 @@
 <dl class="py property">
 <dt class="sig sig-object py" id="core.FacetNormalOptions.output_attribute_name">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">output_attribute_name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#core.FacetNormalOptions.output_attribute_name" title="Link to this definition">¶</a></dt>
-<dd><p><a class="reference external" href="mailto:'&#37;&#52;&#48;facet_normal">‘<span>&#64;</span>facet_normal</a>’</p>
+<dd><p><cite>&#64;facet_normal</cite></p>
 <dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>Output attribute name. Default</p>
@@ -1179,7 +1213,7 @@
 <dl class="py property">
 <dt class="sig sig-object py" id="core.MeshAreaOptions.input_attribute_name">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">input_attribute_name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#core.MeshAreaOptions.input_attribute_name" title="Link to this definition">¶</a></dt>
-<dd><p>The name of the pre-computed facet area attribute, default is <a class="reference external" href="mailto:'&#37;&#52;&#48;facet_area">‘<span>&#64;</span>facet_area</a>’.</p>
+<dd><p>The name of the pre-computed facet area attribute, default is <cite>&#64;facet_area</cite>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>str</p>
@@ -1314,7 +1348,7 @@
 <dl class="py property">
 <dt class="sig sig-object py" id="core.NormalOptions.facet_normal_attribute_name">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">facet_normal_attribute_name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#core.NormalOptions.facet_normal_attribute_name" title="Link to this definition">¶</a></dt>
-<dd><p>Facet normal attribute name to use. Default is <a class="reference external" href="mailto:'&#37;&#52;&#48;facet_normal">‘<span>&#64;</span>facet_normal</a>’.</p>
+<dd><p>Facet normal attribute name to use. Default is <cite>&#64;facet_normal</cite>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>str</p>
@@ -1336,7 +1370,7 @@
 <dl class="py property">
 <dt class="sig sig-object py" id="core.NormalOptions.output_attribute_name">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">output_attribute_name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#core.NormalOptions.output_attribute_name" title="Link to this definition">¶</a></dt>
-<dd><p><a class="reference external" href="mailto:'&#37;&#52;&#48;normal">‘<span>&#64;</span>normal</a>’</p>
+<dd><p><cite>&#64;normal</cite></p>
 <dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>Output attribute name. Default</p>
@@ -1902,8 +1936,8 @@
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>name</strong> (<em>str</em>) – Name of the attribute.</p></li>
-<li><p><strong>sharing</strong> (<em>bool</em>) – Whether to allow sharing the attribute with other meshes.</p></li>
+<li><p><strong>name</strong> – Name of the attribute.</p></li>
+<li><p><strong>sharing</strong> – Whether to allow sharing the attribute with other meshes.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
@@ -1944,11 +1978,14 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="core.SurfaceMesh.clone">
-<span class="sig-name descname"><span class="pre">clone</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#core.SurfaceMesh.clone" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">clone</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">strip</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#core.SurfaceMesh.clone" title="Link to this definition">¶</a></dt>
 <dd><p>Create a deep copy of this mesh.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>object</p>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>strip</strong> (<em>bool</em>) – If True, strip the mesh of all attributes except for the reserved attributes.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="#core.SurfaceMesh" title="core.SurfaceMesh">SurfaceMesh</a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -1997,16 +2034,19 @@
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>name</strong> (<em>str</em>) – Name of the attribute.</p></li>
-<li><p><strong>element</strong> (<a class="reference internal" href="#core.AttributeElement" title="core.AttributeElement"><em>AttributeElement</em></a><em>, </em><em>optional</em>) – Element type of the attribute. If None, derive from the shape of initial values.</p></li>
-<li><p><strong>usage</strong> (<a class="reference internal" href="#core.AttributeUsage" title="core.AttributeUsage"><em>AttributeUsage</em></a><em>, </em><em>optional</em>) – Usage type of the attribute. If None, derive from the shape of initial values or the number of channels.</p></li>
-<li><p><strong>initial_values</strong> (<em>numpy.ndarray</em><em>, </em><em>optional</em>) – Initial values of the attribute.</p></li>
-<li><p><strong>initial_indices</strong> (<em>numpy.ndarray</em><em>, </em><em>optional</em>) – Initial indices of the attribute (Indexed attribute only).</p></li>
-<li><p><strong>num_channels</strong> (<em>int</em><em>, </em><em>optional</em>) – Number of channels of the attribute.</p></li>
-<li><p><strong>dtype</strong> (<em>valid numpy.dtype</em><em>, </em><em>optional</em>) – Data type of the attribute.</p></li>
+<li><p><strong>element</strong> (<em>Union</em><em>[</em><a class="reference internal" href="#core.AttributeElement" title="core.AttributeElement"><em>AttributeElement</em></a><em>, </em><em>Literal</em><em>[</em><em>Vertex</em><em>, </em><em>Facet</em><em>, </em><em>Edge</em><em>, </em><em>Corner</em><em>, </em><em>Value</em><em>, </em><em>Indexed</em><em>]</em><em>, </em><em>None</em><em>]</em>) – Element type of the attribute. If None, derive from the shape of initial values.</p></li>
+<li><p><strong>usage</strong> (<em>Union</em><em>[</em><a class="reference internal" href="#core.AttributeUsage" title="core.AttributeUsage"><em>AttributeUsage</em></a><em>, </em><em>Literal</em><em>[</em><em>Vector</em><em>, </em><em>Scalar</em><em>, </em><em>Position</em><em>, </em><em>Normal</em><em>, </em><em>Tangent</em><em>, </em><em>Bitangent</em><em>, </em><em>Color</em><em>, </em><em>UV</em><em>, </em><em>VertexIndex</em><em>, </em><em>FacetIndex</em><em>, </em><em>CornerIndex</em><em>, </em><em>EdgeIndex</em><em>]</em><em>, </em><em>None</em><em>]</em>) – Usage type of the attribute. If None, derive from the shape of initial values or the number of channels.</p></li>
+<li><p><strong>initial_values</strong> (<em>Union</em><em>[</em><em>numpy.typing.NDArray</em><em>, </em><em>List</em><em>[</em><em>float</em><em>]</em><em>, </em><em>None</em><em>]</em>) – Initial values of the attribute.</p></li>
+<li><p><strong>initial_indices</strong> (<em>Union</em><em>[</em><em>numpy.typing.NDArray</em><em>, </em><em>List</em><em>[</em><em>int</em><em>]</em><em>, </em><em>None</em><em>]</em>) – Initial indices of the attribute (Indexed attribute only).</p></li>
+<li><p><strong>num_channels</strong> (<em>Optional</em><em>[</em><em>int</em><em>]</em>) – Number of channels of the attribute.</p></li>
+<li><p><strong>dtype</strong> (<em>Optional</em><em>[</em><em>numpy.typing.DTypeLike</em><em>]</em>) – Data type of the attribute.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p>int</p>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The id of the created attribute.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>AttributeId</p>
 </dd>
 </dl>
 <div class="admonition note">
@@ -2019,25 +2059,6 @@ In addition, explicit <cite>element</cite> specification is required for value a
 <p class="admonition-title">Note</p>
 <p>If <cite>usage</cite> is None, it will be derived based on the shape of <cite>initial_values</cite> or <cite>num_channels</cite> if specified.</p>
 </div>
-<dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>The id of the created attribute.</p>
-</dd>
-<dt class="field-even">Parameters<span class="colon">:</span></dt>
-<dd class="field-even"><ul class="simple">
-<li><p><strong>name</strong> (<em>str</em>)</p></li>
-<li><p><strong>element</strong> (<a class="reference internal" href="#core.AttributeElement" title="core.AttributeElement"><em>AttributeElement</em></a><em> | </em><em>None</em>)</p></li>
-<li><p><strong>usage</strong> (<a class="reference internal" href="#core.AttributeUsage" title="core.AttributeUsage"><em>AttributeUsage</em></a><em> | </em><em>None</em>)</p></li>
-<li><p><strong>initial_values</strong> (<em>Annotated</em><em>[</em><em>numpy.typing.ArrayLike</em><em>, </em><em>dict</em><em>(</em><em>order='C'</em><em>, </em><em>device='cpu'</em><em>)</em><em>] </em><em>| </em><em>list</em><em> | </em><em>None</em>)</p></li>
-<li><p><strong>initial_indices</strong> (<em>Annotated</em><em>[</em><em>numpy.typing.ArrayLike</em><em>, </em><em>dict</em><em>(</em><em>dtype='uint32'</em><em>, </em><em>order='C'</em><em>, </em><em>device='cpu'</em><em>)</em><em>] </em><em>| </em><em>Annotated</em><em>[</em><em>numpy.typing.ArrayLike</em><em>, </em><em>dict</em><em>(</em><em>order='C'</em><em>, </em><em>device='cpu'</em><em>)</em><em>] </em><em>| </em><em>list</em><em> | </em><em>None</em>)</p></li>
-<li><p><strong>num_channels</strong> (<em>int</em><em> | </em><em>None</em>)</p></li>
-<li><p><strong>dtype</strong> (<em>type</em><em> | </em><em>None</em>)</p></li>
-</ul>
-</dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>int</p>
-</dd>
-</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -2049,7 +2070,7 @@ In addition, explicit <cite>element</cite> specification is required for value a
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>name</strong> (<em>str</em>) – Name of the attribute.</p></li>
 <li><p><strong>source_mesh</strong> (<a class="reference internal" href="#core.SurfaceMesh" title="core.SurfaceMesh"><em>SurfaceMesh</em></a>) – Source mesh.</p></li>
-<li><p><strong>source_name</strong> (<em>str</em><em>, </em><em>optional</em>) – Name of the attribute in the source mesh. If empty, use the same name as <cite>name</cite>.</p></li>
+<li><p><strong>source_name</strong> (<em>str</em>) – Name of the attribute in the source mesh. If empty, use the same name as <cite>name</cite>.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
@@ -2071,7 +2092,7 @@ In addition, explicit <cite>element</cite> specification is required for value a
 <dd><p>Delete an attribute by id.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>id</strong> (<em>AttributeId</em>) – Id of the attribute.</p>
+<dd class="field-odd"><p><strong>id</strong> – Id of the attribute.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -2135,6 +2156,30 @@ In addition, explicit <cite>element</cite> specification is required for value a
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="core.SurfaceMesh.get_clockwise_corner_around_vertex">
+<span class="sig-name descname"><span class="pre">get_clockwise_corner_around_vertex</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">corner</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#core.SurfaceMesh.get_clockwise_corner_around_vertex" title="Link to this definition">¶</a></dt>
+<dd><p>Get the clockwise corner around the vertex associated with the input corner.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If the vertex is a non-manifold vertex, only one “umbrella” (a set of connected
+corners based on edge-connectivity) will be visited.</p>
+<p>If the traversal reaches a boundary or a non-manifold edge, the next adjacent corner
+is not well defined. It will return <cite>invalid_index</cite> in this case.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>corner</strong> (<em>int</em>) – The input corner index.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The clockwise corner index or <cite>invalid_index</cite> if none exists.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="core.SurfaceMesh.get_corner_edge">
 <span class="sig-name descname"><span class="pre">get_corner_edge</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arg</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">/</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#core.SurfaceMesh.get_corner_edge" title="Link to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
@@ -2169,6 +2214,30 @@ In addition, explicit <cite>element</cite> specification is required for value a
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
 <dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="core.SurfaceMesh.get_counterclockwise_corner_around_vertex">
+<span class="sig-name descname"><span class="pre">get_counterclockwise_corner_around_vertex</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">corner</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#core.SurfaceMesh.get_counterclockwise_corner_around_vertex" title="Link to this definition">¶</a></dt>
+<dd><p>Get the counterclockwise corner around the vertex associated with the input corner.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If the vertex is a non-manifold vertex, only one “umbrella” (a set of connected
+corners based on edge-connectivity) will be visited.</p>
+<p>If the traversal reaches a boundary or a non-manifold edge, the next adjacent corner
+is not well defined. It will return <cite>invalid_index</cite> in this case.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>corner</strong> (<em>int</em>) – The input corner index.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The counterclockwise corner index or <cite>invalid_index</cite> if none exists.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
 </dd>
 </dl>
 </dd></dl>
@@ -2438,8 +2507,8 @@ In addition, explicit <cite>element</cite> specification is required for value a
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>name</strong> (<em>str</em>) – Name of the attribute.</p></li>
-<li><p><strong>sharing</strong> (<em>bool</em>) – Whether to allow sharing the attribute with other meshes.</p></li>
+<li><p><strong>name</strong> – Name of the attribute.</p></li>
+<li><p><strong>sharing</strong> – Whether to allow sharing the attribute with other meshes.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
@@ -2456,7 +2525,7 @@ In addition, explicit <cite>element</cite> specification is required for value a
 If not provided, the edges are initialized in an arbitrary order.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>edges</strong> (<em>numpy.ndarray</em><em>, </em><em>optional</em>) – M x 2 tensor of predefined edge vertex indices, where M is the number of edges.</p>
+<dd class="field-odd"><p><strong>edges</strong> (<em>Annotated</em><em>[</em><em>numpy.typing.ArrayLike</em><em>, </em><em>dict</em><em>(</em><em>dtype='uint32'</em><em>, </em><em>order='C'</em><em>, </em><em>device='cpu'</em><em>)</em><em>] </em><em>| </em><em>None</em>) – M x 2 tensor of predefined edge vertex indices, where M is the number of edges.</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
 <dd class="field-even"><p>None</p>
@@ -2572,7 +2641,7 @@ If not provided, the edges are initialized in an arbitrary order.</p>
 <li><p><strong>name</strong> (<em>str</em>) – Name of the attribute.</p></li>
 <li><p><strong>element</strong> (<a class="reference internal" href="#core.AttributeElement" title="core.AttributeElement"><em>AttributeElement</em></a>) – Element type of the attribute.</p></li>
 <li><p><strong>usage</strong> (<a class="reference internal" href="#core.AttributeUsage" title="core.AttributeUsage"><em>AttributeUsage</em></a>) – Usage type of the attribute.</p></li>
-<li><p><strong>values</strong> (<em>numpy.ndarray</em>) – Values of the attribute.</p></li>
+<li><p><strong>values</strong> (<em>Annotated</em><em>[</em><em>numpy.typing.ArrayLike</em><em>, </em><em>dict</em><em>(</em><em>order='C'</em><em>, </em><em>device='cpu'</em><em>)</em><em>]</em>) – Values of the attribute.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
@@ -2593,10 +2662,10 @@ If not provided, the edges are initialized in an arbitrary order.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>offsets</strong> (<em>numpy.ndarray</em>) – The offset indices into the facets array.</p></li>
-<li><p><strong>num_facets</strong> (<em>int</em>) – Number of facets.</p></li>
-<li><p><strong>facets</strong> (<em>numpy.ndarray</em>) – The indices of the vertices of the facets.</p></li>
-<li><p><strong>num_corners</strong> (<em>int</em>) – Number of corners.</p></li>
+<li><p><strong>offsets</strong> – The offset indices into the facets array.</p></li>
+<li><p><strong>num_facets</strong> – Number of facets.</p></li>
+<li><p><strong>facets</strong> – The indices of the vertices of the facets.</p></li>
+<li><p><strong>num_corners</strong> – Number of corners.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
@@ -2614,8 +2683,8 @@ If not provided, the edges are initialized in an arbitrary order.</p>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>name</strong> (<em>str</em>) – Name of the attribute.</p></li>
 <li><p><strong>usage</strong> (<a class="reference internal" href="#core.AttributeUsage" title="core.AttributeUsage"><em>AttributeUsage</em></a>) – Usage type of the attribute.</p></li>
-<li><p><strong>values</strong> (<em>numpy.ndarray</em>) – Values of the attribute.</p></li>
-<li><p><strong>indices</strong> (<em>numpy.ndarray</em>) – Indices of the attribute.</p></li>
+<li><p><strong>values</strong> (<em>Annotated</em><em>[</em><em>numpy.typing.ArrayLike</em><em>, </em><em>dict</em><em>(</em><em>order='C'</em><em>, </em><em>device='cpu'</em><em>)</em><em>]</em>) – Values of the attribute.</p></li>
+<li><p><strong>indices</strong> (<em>Annotated</em><em>[</em><em>numpy.typing.ArrayLike</em><em>, </em><em>dict</em><em>(</em><em>dtype='uint32'</em><em>, </em><em>order='C'</em><em>, </em><em>device='cpu'</em><em>)</em><em>]</em>) – Indices of the attribute.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
@@ -2634,7 +2703,7 @@ If not provided, the edges are initialized in an arbitrary order.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>tensor</strong> (<em>numpy.ndarray</em>) – The tensor to wrap.</p></li>
+<li><p><strong>tensor</strong> (<em>Annotated</em><em>[</em><em>numpy.typing.ArrayLike</em><em>, </em><em>dict</em><em>(</em><em>dtype='float64'</em><em>, </em><em>order='C'</em><em>, </em><em>device='cpu'</em><em>)</em><em>]</em>) – The tensor to wrap.</p></li>
 <li><p><strong>num_vertices</strong> (<em>int</em>) – Number of vertices.</p></li>
 </ul>
 </dd>
@@ -2656,7 +2725,7 @@ If not provided, the edges are initialized in an arbitrary order.</p>
 <dl class="py property">
 <dt class="sig sig-object py" id="core.TangentBitangentOptions.bitangent_attribute_name">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">bitangent_attribute_name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#core.TangentBitangentOptions.bitangent_attribute_name" title="Link to this definition">¶</a></dt>
-<dd><p>The name of the output bitangent attribute, default is <a class="reference external" href="mailto:'&#37;&#52;&#48;bitangent">‘<span>&#64;</span>bitangent</a>’</p>
+<dd><p>The name of the output bitangent attribute, default is <cite>&#64;bitangent</cite></p>
 <dl class="field-list simple">
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>str</p>
@@ -2700,7 +2769,7 @@ If not provided, the edges are initialized in an arbitrary order.</p>
 <dl class="py property">
 <dt class="sig sig-object py" id="core.TangentBitangentOptions.tangent_attribute_name">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">tangent_attribute_name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#core.TangentBitangentOptions.tangent_attribute_name" title="Link to this definition">¶</a></dt>
-<dd><p>The name of the output tangent attribute, default is <a class="reference external" href="mailto:'&#37;&#52;&#48;tangent">‘<span>&#64;</span>tangent</a>’</p>
+<dd><p>The name of the output tangent attribute, default is <cite>&#64;tangent</cite></p>
 <dl class="field-list simple">
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>str</p>
@@ -2767,7 +2836,7 @@ If not provided, the edges are initialized in an arbitrary order.</p>
 <dl class="py property">
 <dt class="sig sig-object py" id="core.VertexNormalOptions.output_attribute_name">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">output_attribute_name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#core.VertexNormalOptions.output_attribute_name" title="Link to this definition">¶</a></dt>
-<dd><p>Output attribute name. Default is <a class="reference external" href="mailto:'&#37;&#52;&#48;vertex_normal">‘<span>&#64;</span>vertex_normal</a>’.</p>
+<dd><p>Output attribute name. Default is <cite>&#64;vertex_normal</cite>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>str</p>
@@ -2800,7 +2869,7 @@ If not provided, the edges are initialized in an arbitrary order.</p>
 <dl class="py property">
 <dt class="sig sig-object py" id="core.VertexNormalOptions.weighted_corner_normal_attribute_name">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">weighted_corner_normal_attribute_name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#core.VertexNormalOptions.weighted_corner_normal_attribute_name" title="Link to this definition">¶</a></dt>
-<dd><p>Precomputed weighted corner normals attribute name.Default is <a class="reference external" href="mailto:'&#37;&#52;&#48;weighted_corner_normal">‘<span>&#64;</span>weighted_corner_normal</a>’. If attribute exists, the weighted corner normals will be used instead of recomputing them.</p>
+<dd><p>Precomputed weighted corner normals attribute name.Default is <cite>&#64;weighted_corner_normal</cite>. If attribute exists, the weighted corner normals will be used instead of recomputing them.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>str</p>
@@ -2867,7 +2936,7 @@ If not provided, the edges are initialized in an arbitrary order.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>meshes</strong> (<em>list</em><em>[</em><a class="reference internal" href="#core.SurfaceMesh" title="core.SurfaceMesh"><em>SurfaceMesh</em></a><em>]</em>) – input meshes</p></li>
+<li><p><strong>meshes</strong> (<em>collections.abc.Sequence</em><em>[</em><a class="reference internal" href="#core.SurfaceMesh" title="core.SurfaceMesh"><em>SurfaceMesh</em></a><em>]</em>) – input meshes</p></li>
 <li><p><strong>preserve_attributes</strong> (<em>bool</em>) – whether to preserve attributes</p></li>
 </ul>
 </dd>
@@ -3099,8 +3168,8 @@ well-defined and will be set to the special value 2 * M_PI.</p>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>mesh</strong> – The input mesh.</p></li>
 <li><p><strong>weighting_type</strong> – The weighting type. Default is <cite>Area</cite>.</p></li>
-<li><p><strong>facet_centroid_attribute_name</strong> – The name of the pre-computed facet centroid attribute if available. Default is <a class="reference external" href="mailto:'&#37;&#52;&#48;facet_centroid">‘<span>&#64;</span>facet_centroid</a>’.</p></li>
-<li><p><strong>facet_area_attribute_name</strong> – The name of the pre-computed facet area attribute if available. Default is <a class="reference external" href="mailto:'&#37;&#52;&#48;facet_area">‘<span>&#64;</span>facet_area</a>’.</p></li>
+<li><p><strong>facet_centroid_attribute_name</strong> – The name of the pre-computed facet centroid attribute if available. Default is <cite>&#64;facet_centroid</cite>.</p></li>
+<li><p><strong>facet_area_attribute_name</strong> – The name of the pre-computed facet area attribute if available. Default is <cite>&#64;facet_area</cite>.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
@@ -3118,18 +3187,39 @@ well-defined and will be set to the special value 2 * M_PI.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>mesh</strong> (<a class="reference internal" href="#core.SurfaceMesh" title="core.SurfaceMesh"><em>SurfaceMesh</em></a>) – input mesh</p></li>
-<li><p><strong>feature_angle_threshold</strong> (<em>float</em><em>, </em><em>optional</em>) – feature angle threshold</p></li>
-<li><p><strong>cone_vertices</strong> (<em>list</em><em>[</em><em>int</em><em>] or </em><em>numpy.ndarray</em><em>, </em><em>optional</em>) – cone vertices</p></li>
-<li><p><strong>output_attribute_name</strong> (<em>str</em><em>, </em><em>optional</em>) – output normal attribute name</p></li>
-<li><p><strong>weight_type</strong> (<a class="reference internal" href="#core.NormalWeightingType" title="core.NormalWeightingType"><em>NormalWeightingType</em></a><em>, </em><em>optional</em>) – normal weighting type</p></li>
-<li><p><strong>facet_normal_attribute_name</strong> (<em>str</em><em>, </em><em>optional</em>) – facet normal attribute name</p></li>
-<li><p><strong>recompute_facet_normals</strong> (<em>bool</em><em>, </em><em>optional</em>) – whether to recompute facet normals</p></li>
-<li><p><strong>keep_facet_normals</strong> (<em>bool</em><em>, </em><em>optional</em>) – whether to keep the computed facet normal attribute</p></li>
+<li><p><strong>mesh</strong> – input mesh</p></li>
+<li><p><strong>feature_angle_threshold</strong> – feature angle threshold</p></li>
+<li><p><strong>cone_vertices</strong> – cone vertices</p></li>
+<li><p><strong>output_attribute_name</strong> – output normal attribute name</p></li>
+<li><p><strong>weight_type</strong> – normal weighting type</p></li>
+<li><p><strong>facet_normal_attribute_name</strong> – facet normal attribute name</p></li>
+<li><p><strong>recompute_facet_normals</strong> – whether to recompute facet normals</p></li>
+<li><p><strong>keep_facet_normals</strong> – whether to keep the computed facet normal attribute</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>the id of the indexed normal attribute.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="core.compute_pointcloud_pca">
+<span class="sig-prename descclassname"><span class="pre">core.</span></span><span class="sig-name descname"><span class="pre">compute_pointcloud_pca</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">points</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shift_centroid</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normalize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#core.compute_pointcloud_pca" title="Link to this definition">¶</a></dt>
+<dd><p>Compute principal components of a point cloud.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>points</strong> (<em>Annotated</em><em>[</em><em>numpy.typing.ArrayLike</em><em>, </em><em>dict</em><em>(</em><em>dtype='float64'</em><em>, </em><em>shape=</em><em>(</em><em>None</em><em>, </em><em>3</em><em>)</em><em>, </em><em>order='C'</em><em>, </em><em>device='cpu'</em><em>, </em><em>writable=False</em><em>)</em><em>]</em>) – Input points.</p></li>
+<li><p><strong>shift_centroid</strong> (<em>bool</em>) – When true: covariance = (P-centroid)^T (P-centroid), when false: covariance = (P)^T (P).</p></li>
+<li><p><strong>normalize</strong> (<em>bool</em>) – Should we divide the result by number of points?</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>tuple of (center, eigenvectors, eigenvalues).</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>tuple[list[float], list[list[float]], list[float]]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -3257,6 +3347,28 @@ well-defined and will be set to the special value 2 * M_PI.</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>list[int]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="core.extract_isoline">
+<span class="sig-prename descclassname"><span class="pre">core.</span></span><span class="sig-name descname"><span class="pre">extract_isoline</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mesh</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attribute</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">isovalue</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#core.extract_isoline" title="Link to this definition">¶</a></dt>
+<dd><p>Extract the isoline of an implicit function defined on the mesh vertices/corners.</p>
+<p>The input mesh must be a triangle mesh.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>mesh</strong> (<a class="reference internal" href="#core.SurfaceMesh" title="core.SurfaceMesh"><em>SurfaceMesh</em></a>) – Input triangle mesh to extract the isoline from.</p></li>
+<li><p><strong>attribute</strong> (<em>int</em><em> | </em><em>str</em>) – Attribute id or name of the scalar field to use. Can be a vertex or indexed attribute.</p></li>
+<li><p><strong>isovalue</strong> (<em>float</em>) – Isovalue to extract.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A mesh whose facets is a collection of size 2 elements representing the extracted isoline.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#core.SurfaceMesh" title="core.SurfaceMesh">SurfaceMesh</a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -3565,6 +3677,23 @@ If one orientation has more duplicate facets, all but one facet with the majorit
 </dd></dl>
 
 <dl class="py function">
+<dt class="sig sig-object py" id="core.remove_short_edges">
+<span class="sig-prename descclassname"><span class="pre">core.</span></span><span class="sig-name descname"><span class="pre">remove_short_edges</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mesh</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">threshold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#core.remove_short_edges" title="Link to this definition">¶</a></dt>
+<dd><p>Remove short edges from a mesh.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>mesh</strong> (<a class="reference internal" href="#core.SurfaceMesh" title="core.SurfaceMesh"><em>SurfaceMesh</em></a>) – The input mesh for inplace modification.</p></li>
+<li><p><strong>threshold</strong> (<em>float</em>) – The minimum edge length below which an edge is considered short.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
 <dt class="sig sig-object py" id="core.remove_topologically_degenerate_facets">
 <span class="sig-prename descclassname"><span class="pre">core.</span></span><span class="sig-name descname"><span class="pre">remove_topologically_degenerate_facets</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mesh</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#core.remove_topologically_degenerate_facets" title="Link to this definition">¶</a></dt>
 <dd><p>Remove topologically degenerate facets such as (0, 1, 1)</p>
@@ -3577,6 +3706,104 @@ is not.</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
 <dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="core.reorder_mesh">
+<span class="sig-prename descclassname"><span class="pre">core.</span></span><span class="sig-name descname"><span class="pre">reorder_mesh</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mesh</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">method</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#core.reorder_mesh" title="Link to this definition">¶</a></dt>
+<dd><p>Reorder a mesh in place.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>mesh</strong> (<a class="reference internal" href="#core.SurfaceMesh" title="core.SurfaceMesh"><em>SurfaceMesh</em></a>) – input mesh</p></li>
+<li><p><strong>method</strong> (<em>Literal</em><em>[</em><em>Lexicographic</em><em>, </em><em>Morton</em><em>, </em><em>Hilbert</em><em>, </em><em>None</em><em>]</em>) – reordering method, options are ‘Lexicographic’, ‘Morton’, ‘Hilbert’, ‘None’ (default is ‘Morton’).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="core.resolve_nonmanifoldness">
+<span class="sig-prename descclassname"><span class="pre">core.</span></span><span class="sig-name descname"><span class="pre">resolve_nonmanifoldness</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mesh</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#core.resolve_nonmanifoldness" title="Link to this definition">¶</a></dt>
+<dd><p>Resolve both vertex and edge nonmanifoldness in a mesh.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>mesh</strong> (<a class="reference internal" href="#core.SurfaceMesh" title="core.SurfaceMesh"><em>SurfaceMesh</em></a>) – The input mesh for inplace modification.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="core.resolve_vertex_nonmanifoldness">
+<span class="sig-prename descclassname"><span class="pre">core.</span></span><span class="sig-name descname"><span class="pre">resolve_vertex_nonmanifoldness</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mesh</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#core.resolve_vertex_nonmanifoldness" title="Link to this definition">¶</a></dt>
+<dd><p>Resolve vertex non-manifoldness in a mesh.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>mesh</strong> (<a class="reference internal" href="#core.SurfaceMesh" title="core.SurfaceMesh"><em>SurfaceMesh</em></a>) – The input mesh for inplace modification.</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>RuntimeError</strong> – If the input mesh is not edge-manifold.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="core.select_facets_by_normal_similarity">
+<span class="sig-prename descclassname"><span class="pre">core.</span></span><span class="sig-name descname"><span class="pre">select_facets_by_normal_similarity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mesh</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">seed_facet_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flood_error_limit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flood_second_to_first_order_limit_ratio</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">facet_normal_attribute_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_facet_selectable_attribute_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_attribute_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">search_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_smooth_iterations</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#core.select_facets_by_normal_similarity" title="Link to this definition">¶</a></dt>
+<dd><p>Select facets by normal similarity (Pythonic API).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>mesh</strong> (<a class="reference internal" href="#core.SurfaceMesh" title="core.SurfaceMesh"><em>SurfaceMesh</em></a>) – Input mesh.</p></li>
+<li><p><strong>seed_facet_id</strong> (<em>int</em>) – Index of the seed facet.</p></li>
+<li><p><strong>flood_error_limit</strong> (<em>float</em><em> | </em><em>None</em>) – Tolerance for normals of the seed and the selected facets. Higher limit leads to larger selected region.</p></li>
+<li><p><strong>flood_second_to_first_order_limit_ratio</strong> (<em>float</em><em> | </em><em>None</em>) – Ratio of the flood_error_limit and the tolerance for normals of neighboring selected facets. Higher ratio leads to more curvature in selected region.</p></li>
+<li><p><strong>facet_normal_attribute_name</strong> (<em>str</em><em> | </em><em>None</em>) – Attribute name of the facets normal. If the mesh doesn’t have this attribute, it will call compute_facet_normal to compute it.</p></li>
+<li><p><strong>is_facet_selectable_attribute_name</strong> (<em>str</em><em> | </em><em>None</em>) – If provided, this function will look for this attribute to determine if a facet is selectable.</p></li>
+<li><p><strong>output_attribute_name</strong> (<em>str</em><em> | </em><em>None</em>) – Attribute name of whether a facet is selected.</p></li>
+<li><p><strong>search_type</strong> (<em>Literal</em><em>[</em><em>BFS</em><em>, </em><em>DFS</em><em>] </em><em>| </em><em>None</em>) – Use ‘BFS’ for breadth-first search or ‘DFS’ for depth-first search.</p></li>
+<li><p><strong>num_smooth_iterations</strong> (<em>int</em><em> | </em><em>None</em>) – Number of iterations to smooth the boundary of the selected region.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Id of the attribute on whether a facet is selected.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="core.select_facets_in_frustum">
+<span class="sig-prename descclassname"><span class="pre">core.</span></span><span class="sig-name descname"><span class="pre">select_facets_in_frustum</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mesh</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frustum_plane_points</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frustum_plane_normals</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">greedy</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_attribute_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#core.select_facets_in_frustum" title="Link to this definition">¶</a></dt>
+<dd><p>Select facets in a frustum (Pythonic API).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>mesh</strong> (<a class="reference internal" href="#core.SurfaceMesh" title="core.SurfaceMesh"><em>SurfaceMesh</em></a>) – Input mesh.</p></li>
+<li><p><strong>frustum_plane_points</strong> (<em>collections.abc.Sequence</em><em>[</em><em>collections.abc.Sequence</em><em>[</em><em>float</em><em>]</em><em>]</em>) – Four points on each of the frustum planes.</p></li>
+<li><p><strong>frustum_plane_normals</strong> (<em>collections.abc.Sequence</em><em>[</em><em>collections.abc.Sequence</em><em>[</em><em>float</em><em>]</em><em>]</em>) – Four normals of each of the frustum planes.</p></li>
+<li><p><strong>greedy</strong> (<em>bool</em><em> | </em><em>None</em>) – If true, the function returns as soon as the first facet is found.</p></li>
+<li><p><strong>output_attribute_name</strong> (<em>str</em><em> | </em><em>None</em>) – Attribute name of whether a facet is selected.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Whether any facets got selected.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>bool</p>
 </dd>
 </dl>
 </dd></dl>
@@ -3628,6 +3855,30 @@ is not.</p>
 </dd></dl>
 
 <dl class="py function">
+<dt class="sig sig-object py" id="core.split_long_edges">
+<span class="sig-prename descclassname"><span class="pre">core.</span></span><span class="sig-name descname"><span class="pre">split_long_edges</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mesh</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_edge_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.10000000149011612</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">recursive</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">active_region_attribute</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">edge_length_attribute</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#core.split_long_edges" title="Link to this definition">¶</a></dt>
+<dd><p>Split edges that are longer than <cite>max_edge_length</cite>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>mesh</strong> (<a class="reference internal" href="#core.SurfaceMesh" title="core.SurfaceMesh"><em>SurfaceMesh</em></a>) – The input mesh for inplace modification.</p></li>
+<li><p><strong>max_edge_length</strong> (<em>float</em>) – Maximum edge length. Edges longer than this value will be split.</p></li>
+<li><p><strong>recursive</strong> (<em>bool</em>) – If true, the operation will be applied recursively until no edge is longer than <cite>max_edge_length</cite>.</p></li>
+<li><p><strong>active_region_attribute</strong> (<em>str</em><em> | </em><em>None</em>) – The facet attribute name that will be used to determine the active region.
+If <cite>None</cite>, all edges will be considered.
+Otherwise, only edges that are part of the active region will be split.
+The attribute must be of value type <cite>uint8_t</cite>.</p></li>
+<li><p><strong>edge_length_attribute</strong> (<em>str</em><em> | </em><em>None</em>) – The edge length attribute name that will be used to determine the edge length.
+If <cite>None</cite>, the function will compute the edge lengths.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
 <dt class="sig sig-object py" id="core.transform_mesh">
 <span class="sig-prename descclassname"><span class="pre">core.</span></span><span class="sig-name descname"><span class="pre">transform_mesh</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mesh</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">affine_transform</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normalize_normals</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normalize_tangents_bitangents</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">in_place</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#core.transform_mesh" title="Link to this definition">¶</a></dt>
 <dd><p>Apply affine transformation to a mesh.</p>
@@ -3665,6 +3916,29 @@ is not.</p>
 </dd></dl>
 
 <dl class="py function">
+<dt class="sig sig-object py" id="core.trim_by_isoline">
+<span class="sig-prename descclassname"><span class="pre">core.</span></span><span class="sig-name descname"><span class="pre">trim_by_isoline</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mesh</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attribute</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">isovalue</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">keep_below</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#core.trim_by_isoline" title="Link to this definition">¶</a></dt>
+<dd><p>Trim a mesh by the isoline of an implicit function defined on the mesh vertices/corners.</p>
+<p>The input mesh must be a triangle mesh.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>mesh</strong> (<a class="reference internal" href="#core.SurfaceMesh" title="core.SurfaceMesh"><em>SurfaceMesh</em></a>) – Input triangle mesh to trim.</p></li>
+<li><p><strong>attribute</strong> (<em>int</em><em> | </em><em>str</em>) – Attribute id or name of the scalar field to use. Can be a vertex or indexed attribute.</p></li>
+<li><p><strong>isovalue</strong> (<em>float</em>) – Isovalue to trim with.</p></li>
+<li><p><strong>keep_below</strong> (<em>bool</em>) – Whether to keep the part below the isoline.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The trimmed mesh.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#core.SurfaceMesh" title="core.SurfaceMesh">SurfaceMesh</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
 <dt class="sig sig-object py" id="core.unify_index_buffer">
 <span class="sig-prename descclassname"><span class="pre">core.</span></span><span class="sig-name descname"><span class="pre">unify_index_buffer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mesh</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#core.SurfaceMesh" title="core.SurfaceMesh"><span class="pre">SurfaceMesh</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#core.SurfaceMesh" title="core.SurfaceMesh"><span class="pre">SurfaceMesh</span></a></span></span><a class="headerlink" href="#core.unify_index_buffer" title="Link to this definition">¶</a></dt>
 <dt class="sig sig-object py">
@@ -3675,8 +3949,8 @@ is not.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>mesh</strong> (<a class="reference internal" href="#core.SurfaceMesh" title="core.SurfaceMesh"><em>SurfaceMesh</em></a>) – The mesh to unify.</p></li>
-<li><p><strong>attribute_names</strong> (<em>list</em><em> of </em><em>str</em>) – The selected attribute names to unify.</p></li>
+<li><p><strong>mesh</strong> – The mesh to unify.</p></li>
+<li><p><strong>attribute_names</strong> – The selected attribute names to unify.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
@@ -3723,23 +3997,23 @@ is not.</p>
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="../image/index.html">
+          <a class="next-page" href="../subdivision/index.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title"><code class="xref py py-mod docutils literal notranslate"><span class="pre">image</span></code></div>
+                <div class="title"><code class="xref py py-mod docutils literal notranslate"><span class="pre">subdivision</span></code></div>
               </div>
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
-          <a class="prev-page" href="../index.html">
+          <a class="prev-page" href="../scene/index.html">
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">API Reference</div>
+                <div class="title"><code class="xref py py-mod docutils literal notranslate"><span class="pre">scene</span></code></div>
                 
               </div>
             </a>
@@ -4009,9 +4283,11 @@ is not.</p>
 <li><a class="reference internal" href="#core.SurfaceMesh.find_edge_from_vertices"><code class="docutils literal notranslate"><span class="pre">SurfaceMesh.find_edge_from_vertices()</span></code></a></li>
 <li><a class="reference internal" href="#core.SurfaceMesh.get_attribute_id"><code class="docutils literal notranslate"><span class="pre">SurfaceMesh.get_attribute_id()</span></code></a></li>
 <li><a class="reference internal" href="#core.SurfaceMesh.get_attribute_name"><code class="docutils literal notranslate"><span class="pre">SurfaceMesh.get_attribute_name()</span></code></a></li>
+<li><a class="reference internal" href="#core.SurfaceMesh.get_clockwise_corner_around_vertex"><code class="docutils literal notranslate"><span class="pre">SurfaceMesh.get_clockwise_corner_around_vertex()</span></code></a></li>
 <li><a class="reference internal" href="#core.SurfaceMesh.get_corner_edge"><code class="docutils literal notranslate"><span class="pre">SurfaceMesh.get_corner_edge()</span></code></a></li>
 <li><a class="reference internal" href="#core.SurfaceMesh.get_corner_facet"><code class="docutils literal notranslate"><span class="pre">SurfaceMesh.get_corner_facet()</span></code></a></li>
 <li><a class="reference internal" href="#core.SurfaceMesh.get_corner_vertex"><code class="docutils literal notranslate"><span class="pre">SurfaceMesh.get_corner_vertex()</span></code></a></li>
+<li><a class="reference internal" href="#core.SurfaceMesh.get_counterclockwise_corner_around_vertex"><code class="docutils literal notranslate"><span class="pre">SurfaceMesh.get_counterclockwise_corner_around_vertex()</span></code></a></li>
 <li><a class="reference internal" href="#core.SurfaceMesh.get_edge"><code class="docutils literal notranslate"><span class="pre">SurfaceMesh.get_edge()</span></code></a></li>
 <li><a class="reference internal" href="#core.SurfaceMesh.get_edge_vertices"><code class="docutils literal notranslate"><span class="pre">SurfaceMesh.get_edge_vertices()</span></code></a></li>
 <li><a class="reference internal" href="#core.SurfaceMesh.get_facet_corner_begin"><code class="docutils literal notranslate"><span class="pre">SurfaceMesh.get_facet_corner_begin()</span></code></a></li>
@@ -4087,12 +4363,14 @@ is not.</p>
 <li><a class="reference internal" href="#core.compute_mesh_area"><code class="docutils literal notranslate"><span class="pre">compute_mesh_area()</span></code></a></li>
 <li><a class="reference internal" href="#core.compute_mesh_centroid"><code class="docutils literal notranslate"><span class="pre">compute_mesh_centroid()</span></code></a></li>
 <li><a class="reference internal" href="#core.compute_normal"><code class="docutils literal notranslate"><span class="pre">compute_normal()</span></code></a></li>
+<li><a class="reference internal" href="#core.compute_pointcloud_pca"><code class="docutils literal notranslate"><span class="pre">compute_pointcloud_pca()</span></code></a></li>
 <li><a class="reference internal" href="#core.compute_seam_edges"><code class="docutils literal notranslate"><span class="pre">compute_seam_edges()</span></code></a></li>
 <li><a class="reference internal" href="#core.compute_tangent_bitangent"><code class="docutils literal notranslate"><span class="pre">compute_tangent_bitangent()</span></code></a></li>
 <li><a class="reference internal" href="#core.compute_uv_distortion"><code class="docutils literal notranslate"><span class="pre">compute_uv_distortion()</span></code></a></li>
 <li><a class="reference internal" href="#core.compute_vertex_normal"><code class="docutils literal notranslate"><span class="pre">compute_vertex_normal()</span></code></a></li>
 <li><a class="reference internal" href="#core.compute_vertex_valence"><code class="docutils literal notranslate"><span class="pre">compute_vertex_valence()</span></code></a></li>
 <li><a class="reference internal" href="#core.detect_degenerate_facets"><code class="docutils literal notranslate"><span class="pre">detect_degenerate_facets()</span></code></a></li>
+<li><a class="reference internal" href="#core.extract_isoline"><code class="docutils literal notranslate"><span class="pre">extract_isoline()</span></code></a></li>
 <li><a class="reference internal" href="#core.extract_submesh"><code class="docutils literal notranslate"><span class="pre">extract_submesh()</span></code></a></li>
 <li><a class="reference internal" href="#core.filter_attributes"><code class="docutils literal notranslate"><span class="pre">filter_attributes()</span></code></a></li>
 <li><a class="reference internal" href="#core.is_edge_manifold"><code class="docutils literal notranslate"><span class="pre">is_edge_manifold()</span></code></a></li>
@@ -4110,11 +4388,19 @@ is not.</p>
 <li><a class="reference internal" href="#core.remove_duplicate_vertices"><code class="docutils literal notranslate"><span class="pre">remove_duplicate_vertices()</span></code></a></li>
 <li><a class="reference internal" href="#core.remove_isolated_vertices"><code class="docutils literal notranslate"><span class="pre">remove_isolated_vertices()</span></code></a></li>
 <li><a class="reference internal" href="#core.remove_null_area_facets"><code class="docutils literal notranslate"><span class="pre">remove_null_area_facets()</span></code></a></li>
+<li><a class="reference internal" href="#core.remove_short_edges"><code class="docutils literal notranslate"><span class="pre">remove_short_edges()</span></code></a></li>
 <li><a class="reference internal" href="#core.remove_topologically_degenerate_facets"><code class="docutils literal notranslate"><span class="pre">remove_topologically_degenerate_facets()</span></code></a></li>
+<li><a class="reference internal" href="#core.reorder_mesh"><code class="docutils literal notranslate"><span class="pre">reorder_mesh()</span></code></a></li>
+<li><a class="reference internal" href="#core.resolve_nonmanifoldness"><code class="docutils literal notranslate"><span class="pre">resolve_nonmanifoldness()</span></code></a></li>
+<li><a class="reference internal" href="#core.resolve_vertex_nonmanifoldness"><code class="docutils literal notranslate"><span class="pre">resolve_vertex_nonmanifoldness()</span></code></a></li>
+<li><a class="reference internal" href="#core.select_facets_by_normal_similarity"><code class="docutils literal notranslate"><span class="pre">select_facets_by_normal_similarity()</span></code></a></li>
+<li><a class="reference internal" href="#core.select_facets_in_frustum"><code class="docutils literal notranslate"><span class="pre">select_facets_in_frustum()</span></code></a></li>
 <li><a class="reference internal" href="#core.separate_by_components"><code class="docutils literal notranslate"><span class="pre">separate_by_components()</span></code></a></li>
 <li><a class="reference internal" href="#core.separate_by_facet_groups"><code class="docutils literal notranslate"><span class="pre">separate_by_facet_groups()</span></code></a></li>
+<li><a class="reference internal" href="#core.split_long_edges"><code class="docutils literal notranslate"><span class="pre">split_long_edges()</span></code></a></li>
 <li><a class="reference internal" href="#core.transform_mesh"><code class="docutils literal notranslate"><span class="pre">transform_mesh()</span></code></a></li>
 <li><a class="reference internal" href="#core.triangulate_polygonal_facets"><code class="docutils literal notranslate"><span class="pre">triangulate_polygonal_facets()</span></code></a></li>
+<li><a class="reference internal" href="#core.trim_by_isoline"><code class="docutils literal notranslate"><span class="pre">trim_by_isoline()</span></code></a></li>
 <li><a class="reference internal" href="#core.unify_index_buffer"><code class="docutils literal notranslate"><span class="pre">unify_index_buffer()</span></code></a></li>
 <li><a class="reference internal" href="#core.weld_indexed_attribute"><code class="docutils literal notranslate"><span class="pre">weld_indexed_attribute()</span></code></a></li>
 <li><a class="reference internal" href="#core.invalid_index"><code class="docutils literal notranslate"><span class="pre">invalid_index</span></code></a></li>

@@ -11,6 +11,7 @@ var searchData=
   ['pos_5fx_8',['pos_x',['../structlagrange_1_1ui_1_1_viewer_1_1_window_options.html#a989d3e09b707fb1f4bc2355ba5855a0c',1,'lagrange::ui::Viewer::WindowOptions']]],
   ['pos_5fy_9',['pos_y',['../structlagrange_1_1ui_1_1_viewer_1_1_window_options.html#a769c689813b19fb03572dc4937b40993',1,'lagrange::ui::Viewer::WindowOptions']]],
   ['position_10',['position',['../structlagrange_1_1ui_1_1_input_state_1_1_mouse.html#a81f80e875fa7bc858012e2786d091838',1,'lagrange::ui::InputState::Mouse']]],
-  ['preserve_5fshared_5findices_11',['preserve_shared_indices',['../structlagrange_1_1subdivision_1_1_subdivision_options.html#a125a455b3b6c3394a1d6a77e09034994',1,'lagrange::subdivision::SubdivisionOptions']]],
-  ['primitive_12',['Primitive',['../structlagrange_1_1ui_1_1_rasterizer_options.html#ad2b41d5a764fd797c80c0d30f1eb0980',1,'lagrange::ui::RasterizerOptions']]]
+  ['positive_11',['positive',['../structlagrange_1_1_orient_options.html#acdea3192c7c9a99816f27e88da0eeff2',1,'lagrange::OrientOptions']]],
+  ['preserve_5fshared_5findices_12',['preserve_shared_indices',['../structlagrange_1_1subdivision_1_1_subdivision_options.html#a125a455b3b6c3394a1d6a77e09034994',1,'lagrange::subdivision::SubdivisionOptions']]],
+  ['primitive_13',['Primitive',['../structlagrange_1_1ui_1_1_rasterizer_options.html#ad2b41d5a764fd797c80c0d30f1eb0980',1,'lagrange::ui::RasterizerOptions']]]
 ];

@@ -194,7 +194,7 @@ $(document).ready(function(){initNavTree('_raw_input_image_8h_source.html',''); 
 <div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span> </div>
 <div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    <span class="keywordtype">size_t</span> get_size_precision()<span class="keyword"> const</span></div>
 <div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span><span class="keyword">    </span>{</div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><span class="keywordtype">size_t</span><span class="keyword">&gt;</span>(1u &lt;&lt; <span class="keyword">static_cast&lt;</span>uint32_t<span class="keyword">&gt;</span>(m_pixel_precision));</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><span class="keywordtype">size_t</span><span class="keyword">&gt;</span>(1llu &lt;&lt; static_cast&lt;uint32_t&gt;(m_pixel_precision));</div>
 <div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    }</div>
 <div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
 <div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    <span class="keywordtype">size_t</span> get_num_channels()<span class="keyword"> const</span></div>

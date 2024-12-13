@@ -1,0 +1,2077 @@
+:py:mod:`scene`
+===============
+
+.. py:module:: scene
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   scene.Animation
+   scene.AnimationList
+   scene.BufferList
+   scene.Camera
+   scene.CameraList
+   scene.ElementIdList
+   scene.Extensions
+   scene.FacetAllocationStrategy
+   scene.Image
+   scene.ImageBuffer
+   scene.ImageList
+   scene.Light
+   scene.LightList
+   scene.Material
+   scene.MaterialList
+   scene.MeshInstance3D
+   scene.Node
+   scene.NodeList
+   scene.RemeshingOptions
+   scene.Scene
+   scene.SceneMeshInstance
+   scene.SceneMeshInstanceList
+   scene.SimpleScene3D
+   scene.Skeleton
+   scene.SkeletonList
+   scene.SurfaceMeshList
+   scene.Texture
+   scene.TextureInfo
+   scene.TextureList
+   scene.ValueList
+   scene.ValueMap
+   scene.ValueUnorderedMap
+
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   scene.compute_global_node_transform
+   scene.mesh_to_simple_scene
+   scene.meshes_to_simple_scene
+   scene.simple_scene_to_mesh
+
+
+
+.. py:class:: Animation
+
+
+   .. py:property:: extensions
+      :type: Extensions
+
+
+   .. py:property:: name
+      :type: str
+
+
+   .. py:method:: __repr__()
+
+      Return repr(self).
+
+
+
+.. py:class:: AnimationList
+              AnimationList(arg)
+              AnimationList(arg, /)
+
+
+   .. py:method:: __bool__()
+
+      Check whether the vector is nonempty
+
+
+   .. py:method:: __delitem__(arg: int, /) -> None
+                  __delitem__(arg: slice, /) -> None
+
+
+   .. py:method:: __getitem__(arg: int, /) -> Animation
+                  __getitem__(arg: slice, /) -> AnimationList
+
+
+   .. py:method:: __iter__()
+
+
+   .. py:method:: __len__()
+
+
+   .. py:method:: __repr__()
+
+      Return repr(self).
+
+
+   .. py:method:: __setitem__(arg0: int, arg1: Animation, /) -> None
+                  __setitem__(arg0: slice, arg1: AnimationList, /) -> None
+
+
+   .. py:method:: append(arg, /)
+
+      Append `arg` to the end of the list.
+
+
+   .. py:method:: clear()
+
+      Remove all items from list.
+
+
+   .. py:method:: extend(arg, /)
+
+      Extend `self` by appending elements from `arg`.
+
+
+   .. py:method:: insert(arg0, arg1, /)
+
+      Insert object `arg1` before index `arg0`.
+
+
+   .. py:method:: pop(index = -1)
+
+      Remove and return item at `index` (default last).
+
+
+
+.. py:class:: BufferList
+              BufferList(arg)
+              BufferList(arg, /)
+
+
+   .. py:method:: __bool__()
+
+      Check whether the vector is nonempty
+
+
+   .. py:method:: __contains__(arg: int, /) -> bool
+                  __contains__(arg: object, /) -> bool
+
+
+   .. py:method:: __delitem__(arg: int, /) -> None
+                  __delitem__(arg: slice, /) -> None
+
+
+   .. py:method:: __eq__(arg, /)
+
+      Return self==value.
+
+
+   .. py:method:: __getitem__(arg: int, /) -> int
+                  __getitem__(arg: slice, /) -> BufferList
+
+
+   .. py:method:: __iter__()
+
+
+   .. py:method:: __len__()
+
+
+   .. py:method:: __ne__(arg, /)
+
+      Return self!=value.
+
+
+   .. py:method:: __repr__()
+
+      Return repr(self).
+
+
+   .. py:method:: __setitem__(arg0: int, arg1: int, /) -> None
+                  __setitem__(arg0: slice, arg1: BufferList, /) -> None
+
+
+   .. py:method:: append(arg, /)
+
+      Append `arg` to the end of the list.
+
+
+   .. py:method:: clear()
+
+      Remove all items from list.
+
+
+   .. py:method:: count(arg, /)
+
+      Return number of occurrences of `arg`.
+
+
+   .. py:method:: extend(arg, /)
+
+      Extend `self` by appending elements from `arg`.
+
+
+   .. py:method:: insert(arg0, arg1, /)
+
+      Insert object `arg1` before index `arg0`.
+
+
+   .. py:method:: pop(index = -1)
+
+      Remove and return item at `index` (default last).
+
+
+   .. py:method:: remove(arg, /)
+
+      Remove first occurrence of `arg`.
+
+
+
+.. py:class:: Camera
+
+
+   Camera
+
+   .. py:class:: Type(*args, **kwds)
+
+
+      Bases: :py:obj:`enum.Enum`
+
+      Create a collection of name/value pairs.
+
+      Example enumeration:
+
+      >>> class Color(Enum):
+      ...     RED = 1
+      ...     BLUE = 2
+      ...     GREEN = 3
+
+      Access them by:
+
+      - attribute access::
+
+      >>> Color.RED
+      <Color.RED: 1>
+
+      - value lookup:
+
+      >>> Color(1)
+      <Color.RED: 1>
+
+      - name lookup:
+
+      >>> Color['RED']
+      <Color.RED: 1>
+
+      Enumerations can be iterated over, and know how many members they have:
+
+      >>> len(Color)
+      3
+
+      >>> list(Color)
+      [<Color.RED: 1>, <Color.BLUE: 2>, <Color.GREEN: 3>]
+
+      Methods can be added to enumerations, and members can have their own
+      attributes -- see the documentation for details.
+
+      .. py:attribute:: Orthographic
+         :value: 1
+
+         
+
+      .. py:attribute:: Perspective
+         :value: 0
+
+         
+
+
+   .. py:property:: aspect_ratio
+      :type: float
+
+
+   .. py:property:: extensions
+      :type: Extensions
+
+
+   .. py:property:: far_plane
+      :type: float
+
+
+   .. py:property:: get_vertical_fov
+      :type: float
+
+
+   .. py:property:: horizontal_fov
+      :type: float
+
+
+   .. py:property:: look_at
+      :type: Annotated[numpy.typing.ArrayLike, dict(dtype='float32', shape=3, order='C')]
+
+
+   .. py:property:: name
+      :type: str
+
+
+   .. py:property:: near_plane
+      :type: float
+
+
+   .. py:property:: orthographic_width
+      :type: float
+
+
+   .. py:property:: position
+      :type: Annotated[numpy.typing.ArrayLike, dict(dtype='float32', shape=3, order='C')]
+
+
+   .. py:property:: set_horizontal_fov_from_vertical_fov
+      :type: None
+
+
+   .. py:property:: type
+      :type: Camera
+
+
+   .. py:property:: up
+      :type: Annotated[numpy.typing.ArrayLike, dict(dtype='float32', shape=3, order='C')]
+
+
+   .. py:method:: __repr__()
+
+      Return repr(self).
+
+
+
+.. py:class:: CameraList
+              CameraList(arg)
+              CameraList(arg, /)
+
+
+   .. py:method:: __bool__()
+
+      Check whether the vector is nonempty
+
+
+   .. py:method:: __delitem__(arg: int, /) -> None
+                  __delitem__(arg: slice, /) -> None
+
+
+   .. py:method:: __getitem__(arg: int, /) -> Camera
+                  __getitem__(arg: slice, /) -> CameraList
+
+
+   .. py:method:: __iter__()
+
+
+   .. py:method:: __len__()
+
+
+   .. py:method:: __repr__()
+
+      Return repr(self).
+
+
+   .. py:method:: __setitem__(arg0: int, arg1: Camera, /) -> None
+                  __setitem__(arg0: slice, arg1: CameraList, /) -> None
+
+
+   .. py:method:: append(arg, /)
+
+      Append `arg` to the end of the list.
+
+
+   .. py:method:: clear()
+
+      Remove all items from list.
+
+
+   .. py:method:: extend(arg, /)
+
+      Extend `self` by appending elements from `arg`.
+
+
+   .. py:method:: insert(arg0, arg1, /)
+
+      Insert object `arg1` before index `arg0`.
+
+
+   .. py:method:: pop(index = -1)
+
+      Remove and return item at `index` (default last).
+
+
+
+.. py:class:: ElementIdList
+              ElementIdList(arg)
+              ElementIdList(arg, /)
+
+
+   .. py:method:: __bool__()
+
+      Check whether the vector is nonempty
+
+
+   .. py:method:: __contains__(arg: int, /) -> bool
+                  __contains__(arg: object, /) -> bool
+
+
+   .. py:method:: __delitem__(arg: int, /) -> None
+                  __delitem__(arg: slice, /) -> None
+
+
+   .. py:method:: __eq__(arg, /)
+
+      Return self==value.
+
+
+   .. py:method:: __getitem__(arg: int, /) -> int
+                  __getitem__(arg: slice, /) -> ElementIdList
+
+
+   .. py:method:: __iter__()
+
+
+   .. py:method:: __len__()
+
+
+   .. py:method:: __ne__(arg, /)
+
+      Return self!=value.
+
+
+   .. py:method:: __repr__()
+
+      Return repr(self).
+
+
+   .. py:method:: __setitem__(arg0: int, arg1: int, /) -> None
+                  __setitem__(arg0: slice, arg1: ElementIdList, /) -> None
+
+
+   .. py:method:: append(arg, /)
+
+      Append `arg` to the end of the list.
+
+
+   .. py:method:: clear()
+
+      Remove all items from list.
+
+
+   .. py:method:: count(arg, /)
+
+      Return number of occurrences of `arg`.
+
+
+   .. py:method:: extend(arg, /)
+
+      Extend `self` by appending elements from `arg`.
+
+
+   .. py:method:: insert(arg0, arg1, /)
+
+      Insert object `arg1` before index `arg0`.
+
+
+   .. py:method:: pop(index = -1)
+
+      Remove and return item at `index` (default last).
+
+
+   .. py:method:: remove(arg, /)
+
+      Remove first occurrence of `arg`.
+
+
+
+.. py:class:: Extensions
+
+
+   .. py:property:: data
+      :type: ValueUnorderedMap
+
+
+   .. py:property:: empty
+      :type: bool
+
+
+   .. py:property:: size
+      :type: int
+
+
+
+.. py:class:: FacetAllocationStrategy(*args, **kwds)
+
+
+   Bases: :py:obj:`enum.Enum`
+
+   Create a collection of name/value pairs.
+
+   Example enumeration:
+
+   >>> class Color(Enum):
+   ...     RED = 1
+   ...     BLUE = 2
+   ...     GREEN = 3
+
+   Access them by:
+
+   - attribute access::
+
+   >>> Color.RED
+   <Color.RED: 1>
+
+   - value lookup:
+
+   >>> Color(1)
+   <Color.RED: 1>
+
+   - name lookup:
+
+   >>> Color['RED']
+   <Color.RED: 1>
+
+   Enumerations can be iterated over, and know how many members they have:
+
+   >>> len(Color)
+   3
+
+   >>> list(Color)
+   [<Color.RED: 1>, <Color.BLUE: 2>, <Color.GREEN: 3>]
+
+   Methods can be added to enumerations, and members can have their own
+   attributes -- see the documentation for details.
+
+   .. py:attribute:: EvenSplit
+      :value: 0
+
+      
+
+   .. py:attribute:: RelativeToMeshArea
+      :value: 1
+
+      
+
+   .. py:attribute:: RelativeToNumFacets
+      :value: 2
+
+      
+
+   .. py:attribute:: Synchronized
+      :value: 3
+
+      
+
+
+.. py:class:: Image
+
+
+   .. py:property:: extensions
+      :type: Extensions
+
+      Additional data associated with the image
+
+   .. py:property:: image
+      :type: ImageBuffer
+
+      Image buffer
+
+   .. py:property:: name
+      :type: str
+
+      Name of the image object
+
+   .. py:property:: uri
+      :type: pathlib.Path
+
+      URI of the image file
+
+   .. py:method:: __repr__()
+
+      Return repr(self).
+
+
+
+.. py:class:: ImageBuffer
+
+
+   .. py:property:: data
+      :type: object
+
+      Raw image data.
+
+   .. py:property:: dtype
+      :type: type | None
+
+      The element data type of the image buffer.
+
+   .. py:property:: height
+      :type: int
+
+      Image height
+
+   .. py:property:: num_channels
+      :type: int
+
+      Number of channels in each pixel
+
+   .. py:property:: width
+      :type: int
+
+      Image width
+
+
+.. py:class:: ImageList
+              ImageList(arg)
+              ImageList(arg, /)
+
+
+   .. py:method:: __bool__()
+
+      Check whether the vector is nonempty
+
+
+   .. py:method:: __delitem__(arg: int, /) -> None
+                  __delitem__(arg: slice, /) -> None
+
+
+   .. py:method:: __getitem__(arg: int, /) -> Image
+                  __getitem__(arg: slice, /) -> ImageList
+
+
+   .. py:method:: __iter__()
+
+
+   .. py:method:: __len__()
+
+
+   .. py:method:: __repr__()
+
+      Return repr(self).
+
+
+   .. py:method:: __setitem__(arg0: int, arg1: Image, /) -> None
+                  __setitem__(arg0: slice, arg1: ImageList, /) -> None
+
+
+   .. py:method:: append(arg, /)
+
+      Append `arg` to the end of the list.
+
+
+   .. py:method:: clear()
+
+      Remove all items from list.
+
+
+   .. py:method:: extend(arg, /)
+
+      Extend `self` by appending elements from `arg`.
+
+
+   .. py:method:: insert(arg0, arg1, /)
+
+      Insert object `arg1` before index `arg0`.
+
+
+   .. py:method:: pop(index = -1)
+
+      Remove and return item at `index` (default last).
+
+
+
+.. py:class:: Light
+
+
+   Light
+
+   .. py:class:: Type(*args, **kwds)
+
+
+      Bases: :py:obj:`enum.Enum`
+
+      Create a collection of name/value pairs.
+
+      Example enumeration:
+
+      >>> class Color(Enum):
+      ...     RED = 1
+      ...     BLUE = 2
+      ...     GREEN = 3
+
+      Access them by:
+
+      - attribute access::
+
+      >>> Color.RED
+      <Color.RED: 1>
+
+      - value lookup:
+
+      >>> Color(1)
+      <Color.RED: 1>
+
+      - name lookup:
+
+      >>> Color['RED']
+      <Color.RED: 1>
+
+      Enumerations can be iterated over, and know how many members they have:
+
+      >>> len(Color)
+      3
+
+      >>> list(Color)
+      [<Color.RED: 1>, <Color.BLUE: 2>, <Color.GREEN: 3>]
+
+      Methods can be added to enumerations, and members can have their own
+      attributes -- see the documentation for details.
+
+      .. py:attribute:: Ambient
+         :value: 4
+
+         
+
+      .. py:attribute:: Area
+         :value: 5
+
+         
+
+      .. py:attribute:: Directional
+         :value: 1
+
+         
+
+      .. py:attribute:: Point
+         :value: 2
+
+         
+
+      .. py:attribute:: Spot
+         :value: 3
+
+         
+
+      .. py:attribute:: Undefined
+         :value: 0
+
+         
+
+
+   .. py:property:: angle_inner_cone
+      :type: float
+
+
+   .. py:property:: angle_outer_cone
+      :type: float
+
+
+   .. py:property:: attenuation_constant
+      :type: float
+
+
+   .. py:property:: attenuation_cubic
+      :type: float
+
+
+   .. py:property:: attenuation_linear
+      :type: float
+
+
+   .. py:property:: attenuation_quadratic
+      :type: float
+
+
+   .. py:property:: color_ambient
+      :type: Annotated[numpy.typing.ArrayLike, dict(dtype='float32', shape=3, order='C')]
+
+
+   .. py:property:: color_diffuse
+      :type: Annotated[numpy.typing.ArrayLike, dict(dtype='float32', shape=3, order='C')]
+
+
+   .. py:property:: color_specular
+      :type: Annotated[numpy.typing.ArrayLike, dict(dtype='float32', shape=3, order='C')]
+
+
+   .. py:property:: direction
+      :type: Annotated[numpy.typing.ArrayLike, dict(dtype='float32', shape=3, order='C')]
+
+
+   .. py:property:: extensions
+      :type: Extensions
+
+
+   .. py:property:: intensity
+      :type: float
+
+
+   .. py:property:: name
+      :type: str
+
+
+   .. py:property:: position
+      :type: Annotated[numpy.typing.ArrayLike, dict(dtype='float32', shape=3, order='C')]
+
+
+   .. py:property:: range
+      :type: float
+
+
+   .. py:property:: size
+      :type: Annotated[numpy.typing.ArrayLike, dict(dtype='float32', shape=2, order='C')]
+
+
+   .. py:property:: type
+      :type: Light
+
+
+   .. py:property:: up
+      :type: Annotated[numpy.typing.ArrayLike, dict(dtype='float32', shape=3, order='C')]
+
+
+   .. py:method:: __repr__()
+
+      Return repr(self).
+
+
+
+.. py:class:: LightList
+              LightList(arg)
+              LightList(arg, /)
+
+
+   .. py:method:: __bool__()
+
+      Check whether the vector is nonempty
+
+
+   .. py:method:: __delitem__(arg: int, /) -> None
+                  __delitem__(arg: slice, /) -> None
+
+
+   .. py:method:: __getitem__(arg: int, /) -> Light
+                  __getitem__(arg: slice, /) -> LightList
+
+
+   .. py:method:: __iter__()
+
+
+   .. py:method:: __len__()
+
+
+   .. py:method:: __repr__()
+
+      Return repr(self).
+
+
+   .. py:method:: __setitem__(arg0: int, arg1: Light, /) -> None
+                  __setitem__(arg0: slice, arg1: LightList, /) -> None
+
+
+   .. py:method:: append(arg, /)
+
+      Append `arg` to the end of the list.
+
+
+   .. py:method:: clear()
+
+      Remove all items from list.
+
+
+   .. py:method:: extend(arg, /)
+
+      Extend `self` by appending elements from `arg`.
+
+
+   .. py:method:: insert(arg0, arg1, /)
+
+      Insert object `arg1` before index `arg0`.
+
+
+   .. py:method:: pop(index = -1)
+
+      Remove and return item at `index` (default last).
+
+
+
+.. py:class:: Material
+
+
+   .. py:class:: AlphaMode(*args, **kwds)
+
+
+      Bases: :py:obj:`enum.Enum`
+
+      Create a collection of name/value pairs.
+
+      Example enumeration:
+
+      >>> class Color(Enum):
+      ...     RED = 1
+      ...     BLUE = 2
+      ...     GREEN = 3
+
+      Access them by:
+
+      - attribute access::
+
+      >>> Color.RED
+      <Color.RED: 1>
+
+      - value lookup:
+
+      >>> Color(1)
+      <Color.RED: 1>
+
+      - name lookup:
+
+      >>> Color['RED']
+      <Color.RED: 1>
+
+      Enumerations can be iterated over, and know how many members they have:
+
+      >>> len(Color)
+      3
+
+      >>> list(Color)
+      [<Color.RED: 1>, <Color.BLUE: 2>, <Color.GREEN: 3>]
+
+      Methods can be added to enumerations, and members can have their own
+      attributes -- see the documentation for details.
+
+      .. py:attribute:: Blend
+         :value: 2
+
+         
+
+      .. py:attribute:: Mask
+         :value: 1
+
+         
+
+      .. py:attribute:: Opaque
+         :value: 0
+
+         
+
+
+   .. py:property:: alpha_cutoff
+      :type: float
+
+
+   .. py:property:: alpha_mode
+      :type: Material
+
+
+   .. py:property:: base_color_texture
+      :type: TextureInfo
+
+
+   .. py:property:: base_color_value
+      :type: Annotated[numpy.typing.ArrayLike, dict(dtype='float32', shape=4, order='C')]
+
+
+   .. py:property:: double_sided
+      :type: bool
+
+
+   .. py:property:: emissive_texture
+      :type: TextureInfo
+
+
+   .. py:property:: emissive_value
+      :type: Annotated[numpy.typing.ArrayLike, dict(dtype='float32', shape=3, order='C')]
+
+
+   .. py:property:: extensions
+      :type: Extensions
+
+
+   .. py:property:: metallic_roughness_texture
+      :type: TextureInfo
+
+
+   .. py:property:: metallic_value
+      :type: float
+
+
+   .. py:property:: name
+      :type: str
+
+
+   .. py:property:: normal_scale
+      :type: float
+
+
+   .. py:property:: normal_texture
+      :type: TextureInfo
+
+
+   .. py:property:: occlusion_strength
+      :type: float
+
+
+   .. py:property:: occlusion_texture
+      :type: TextureInfo
+
+
+   .. py:property:: roughness_value
+      :type: float
+
+
+   .. py:method:: __repr__()
+
+      Return repr(self).
+
+
+
+.. py:class:: MaterialList
+              MaterialList(arg)
+              MaterialList(arg, /)
+
+
+   .. py:method:: __bool__()
+
+      Check whether the vector is nonempty
+
+
+   .. py:method:: __delitem__(arg: int, /) -> None
+                  __delitem__(arg: slice, /) -> None
+
+
+   .. py:method:: __getitem__(arg: int, /) -> Material
+                  __getitem__(arg: slice, /) -> MaterialList
+
+
+   .. py:method:: __iter__()
+
+
+   .. py:method:: __len__()
+
+
+   .. py:method:: __repr__()
+
+      Return repr(self).
+
+
+   .. py:method:: __setitem__(arg0: int, arg1: Material, /) -> None
+                  __setitem__(arg0: slice, arg1: MaterialList, /) -> None
+
+
+   .. py:method:: append(arg, /)
+
+      Append `arg` to the end of the list.
+
+
+   .. py:method:: clear()
+
+      Remove all items from list.
+
+
+   .. py:method:: extend(arg, /)
+
+      Extend `self` by appending elements from `arg`.
+
+
+   .. py:method:: insert(arg0, arg1, /)
+
+      Insert object `arg1` before index `arg0`.
+
+
+   .. py:method:: pop(index = -1)
+
+      Remove and return item at `index` (default last).
+
+
+
+.. py:class:: MeshInstance3D
+
+
+   A single mesh instance in a scene
+
+   .. py:property:: mesh_index
+      :type: int
+
+
+   .. py:property:: transform
+      :type: Annotated[numpy.typing.ArrayLike, dict(dtype='float64', order='C', device='cpu')]
+
+
+
+.. py:class:: Node
+
+
+   .. py:property:: cameras
+      :type: ElementIdList
+
+
+   .. py:property:: children
+      :type: ElementIdList
+
+
+   .. py:property:: extensions
+      :type: Extensions
+
+
+   .. py:property:: lights
+      :type: ElementIdList
+
+
+   .. py:property:: meshes
+      :type: SceneMeshInstanceList
+
+
+   .. py:property:: name
+      :type: str
+
+
+   .. py:property:: parent
+      :type: int
+
+
+   .. py:property:: transform
+      :type: Annotated[numpy.typing.ArrayLike, dict(dtype='float32', shape=(4, 4), order='F')]
+
+      The affine transform associated with this node
+
+   .. py:method:: __repr__()
+
+      Return repr(self).
+
+
+
+.. py:class:: NodeList
+              NodeList(arg)
+              NodeList(arg, /)
+
+
+   .. py:method:: __bool__()
+
+      Check whether the vector is nonempty
+
+
+   .. py:method:: __delitem__(arg: int, /) -> None
+                  __delitem__(arg: slice, /) -> None
+
+
+   .. py:method:: __getitem__(arg: int, /) -> Node
+                  __getitem__(arg: slice, /) -> NodeList
+
+
+   .. py:method:: __iter__()
+
+
+   .. py:method:: __len__()
+
+
+   .. py:method:: __repr__()
+
+      Return repr(self).
+
+
+   .. py:method:: __setitem__(arg0: int, arg1: Node, /) -> None
+                  __setitem__(arg0: slice, arg1: NodeList, /) -> None
+
+
+   .. py:method:: append(arg, /)
+
+      Append `arg` to the end of the list.
+
+
+   .. py:method:: clear()
+
+      Remove all items from list.
+
+
+   .. py:method:: extend(arg, /)
+
+      Extend `self` by appending elements from `arg`.
+
+
+   .. py:method:: insert(arg0, arg1, /)
+
+      Insert object `arg1` before index `arg0`.
+
+
+   .. py:method:: pop(index = -1)
+
+      Remove and return item at `index` (default last).
+
+
+
+.. py:class:: RemeshingOptions
+
+
+   .. py:property:: facet_allocation_strategy
+      :type: FacetAllocationStrategy
+
+
+   .. py:property:: min_facets
+      :type: int
+
+
+
+.. py:class:: Scene
+
+
+   A 3D scene
+
+   .. py:property:: animations
+      :type: AnimationList
+
+
+   .. py:property:: cameras
+      :type: CameraList
+
+
+   .. py:property:: extensions
+      :type: Extensions
+
+
+   .. py:property:: images
+      :type: ImageList
+
+
+   .. py:property:: lights
+      :type: LightList
+
+
+   .. py:property:: materials
+      :type: MaterialList
+
+
+   .. py:property:: meshes
+      :type: SurfaceMeshList
+
+
+   .. py:property:: name
+      :type: str
+
+
+   .. py:property:: nodes
+      :type: NodeList
+
+
+   .. py:property:: root_nodes
+      :type: ElementIdList
+
+
+   .. py:property:: skeletons
+      :type: SkeletonList
+
+
+   .. py:property:: textures
+      :type: TextureList
+
+
+   .. py:method:: __repr__()
+
+      Return repr(self).
+
+
+   .. py:method:: add(element)
+
+      Add an element to the scene.
+
+      :param element: The element to add to the scene. E.g. node, mesh, image, texture, material, light, camera, skeleton, or animation.
+
+      :returns: The id of the added element.
+
+
+   .. py:method:: add_child(parent_id, child_id)
+
+      Add a child node to a parent node.
+
+      :param parent_id: The parent node id.
+      :param child_id: The child node id.
+
+      :returns: The id of the added child node.
+
+
+
+.. py:class:: SceneMeshInstance
+
+
+   Mesh and material index of a node
+
+   .. py:property:: materials
+      :type: ElementIdList
+
+
+   .. py:property:: mesh
+      :type: int
+
+
+
+.. py:class:: SceneMeshInstanceList
+              SceneMeshInstanceList(arg)
+              SceneMeshInstanceList(arg, /)
+
+
+   .. py:method:: __bool__()
+
+      Check whether the vector is nonempty
+
+
+   .. py:method:: __delitem__(arg: int, /) -> None
+                  __delitem__(arg: slice, /) -> None
+
+
+   .. py:method:: __getitem__(arg: int, /) -> SceneMeshInstance
+                  __getitem__(arg: slice, /) -> SceneMeshInstanceList
+
+
+   .. py:method:: __iter__()
+
+
+   .. py:method:: __len__()
+
+
+   .. py:method:: __repr__()
+
+      Return repr(self).
+
+
+   .. py:method:: __setitem__(arg0: int, arg1: SceneMeshInstance, /) -> None
+                  __setitem__(arg0: slice, arg1: SceneMeshInstanceList, /) -> None
+
+
+   .. py:method:: append(arg, /)
+
+      Append `arg` to the end of the list.
+
+
+   .. py:method:: clear()
+
+      Remove all items from list.
+
+
+   .. py:method:: extend(arg, /)
+
+      Extend `self` by appending elements from `arg`.
+
+
+   .. py:method:: insert(arg0, arg1, /)
+
+      Insert object `arg1` before index `arg0`.
+
+
+   .. py:method:: pop(index = -1)
+
+      Remove and return item at `index` (default last).
+
+
+
+.. py:class:: SimpleScene3D
+
+
+   Simple scene container for instanced meshes
+
+   .. py:property:: num_meshes
+      :type: int
+
+      Number of meshes in the scene
+
+   .. py:property:: total_num_instances
+      :type: int
+
+      Total number of instances for all meshes in the scene
+
+   .. py:method:: add_instance(instance)
+
+
+   .. py:method:: add_mesh(mesh)
+
+
+   .. py:method:: get_instance(mesh_index, instance_index)
+
+
+   .. py:method:: get_mesh(mesh_index)
+
+
+   .. py:method:: num_instances(mesh_index)
+
+
+   .. py:method:: ref_mesh(mesh_index)
+
+
+   .. py:method:: reserve_instances(mesh_index, num_instances)
+
+
+   .. py:method:: reserve_meshes(num_meshes)
+
+
+
+.. py:class:: Skeleton
+
+
+   .. py:property:: extensions
+      :type: Extensions
+
+
+   .. py:property:: meshes
+      :type: ElementIdList
+
+
+
+.. py:class:: SkeletonList
+              SkeletonList(arg)
+              SkeletonList(arg, /)
+
+
+   .. py:method:: __bool__()
+
+      Check whether the vector is nonempty
+
+
+   .. py:method:: __delitem__(arg: int, /) -> None
+                  __delitem__(arg: slice, /) -> None
+
+
+   .. py:method:: __getitem__(arg: int, /) -> Skeleton
+                  __getitem__(arg: slice, /) -> SkeletonList
+
+
+   .. py:method:: __iter__()
+
+
+   .. py:method:: __len__()
+
+
+   .. py:method:: __repr__()
+
+      Return repr(self).
+
+
+   .. py:method:: __setitem__(arg0: int, arg1: Skeleton, /) -> None
+                  __setitem__(arg0: slice, arg1: SkeletonList, /) -> None
+
+
+   .. py:method:: append(arg, /)
+
+      Append `arg` to the end of the list.
+
+
+   .. py:method:: clear()
+
+      Remove all items from list.
+
+
+   .. py:method:: extend(arg, /)
+
+      Extend `self` by appending elements from `arg`.
+
+
+   .. py:method:: insert(arg0, arg1, /)
+
+      Insert object `arg1` before index `arg0`.
+
+
+   .. py:method:: pop(index = -1)
+
+      Remove and return item at `index` (default last).
+
+
+
+.. py:class:: SurfaceMeshList
+              SurfaceMeshList(arg)
+              SurfaceMeshList(arg, /)
+
+
+   .. py:method:: __bool__()
+
+      Check whether the vector is nonempty
+
+
+   .. py:method:: __delitem__(arg: int, /) -> None
+                  __delitem__(arg: slice, /) -> None
+
+
+   .. py:method:: __getitem__(arg: int, /) -> lagrange.core.SurfaceMesh
+                  __getitem__(arg: slice, /) -> SurfaceMeshList
+
+
+   .. py:method:: __iter__()
+
+
+   .. py:method:: __len__()
+
+
+   .. py:method:: __repr__()
+
+      Return repr(self).
+
+
+   .. py:method:: __setitem__(arg0: int, arg1: lagrange.core.SurfaceMesh, /) -> None
+                  __setitem__(arg0: slice, arg1: SurfaceMeshList, /) -> None
+
+
+   .. py:method:: append(arg, /)
+
+      Append `arg` to the end of the list.
+
+
+   .. py:method:: clear()
+
+      Remove all items from list.
+
+
+   .. py:method:: extend(arg, /)
+
+      Extend `self` by appending elements from `arg`.
+
+
+   .. py:method:: insert(arg0, arg1, /)
+
+      Insert object `arg1` before index `arg0`.
+
+
+   .. py:method:: pop(index = -1)
+
+      Remove and return item at `index` (default last).
+
+
+
+.. py:class:: Texture
+
+
+   Texture
+
+   .. py:class:: TextureFilter(*args, **kwds)
+
+
+      Bases: :py:obj:`enum.Enum`
+
+      Create a collection of name/value pairs.
+
+      Example enumeration:
+
+      >>> class Color(Enum):
+      ...     RED = 1
+      ...     BLUE = 2
+      ...     GREEN = 3
+
+      Access them by:
+
+      - attribute access::
+
+      >>> Color.RED
+      <Color.RED: 1>
+
+      - value lookup:
+
+      >>> Color(1)
+      <Color.RED: 1>
+
+      - name lookup:
+
+      >>> Color['RED']
+      <Color.RED: 1>
+
+      Enumerations can be iterated over, and know how many members they have:
+
+      >>> len(Color)
+      3
+
+      >>> list(Color)
+      [<Color.RED: 1>, <Color.BLUE: 2>, <Color.GREEN: 3>]
+
+      Methods can be added to enumerations, and members can have their own
+      attributes -- see the documentation for details.
+
+      .. py:attribute:: Linear
+         :value: 9729
+
+         
+
+      .. py:attribute:: LinearMipmapLinear
+         :value: 9987
+
+         
+
+      .. py:attribute:: LinearMipmapNearest
+         :value: 9985
+
+         
+
+      .. py:attribute:: Nearest
+         :value: 9728
+
+         
+
+      .. py:attribute:: NearestMimpapNearest
+         :value: 9984
+
+         
+
+      .. py:attribute:: NearestMipmapLinear
+         :value: 9986
+
+         
+
+      .. py:attribute:: Undefined
+         :value: 0
+
+         
+
+
+   .. py:class:: WrapMode(*args, **kwds)
+
+
+      Bases: :py:obj:`enum.Enum`
+
+      Create a collection of name/value pairs.
+
+      Example enumeration:
+
+      >>> class Color(Enum):
+      ...     RED = 1
+      ...     BLUE = 2
+      ...     GREEN = 3
+
+      Access them by:
+
+      - attribute access::
+
+      >>> Color.RED
+      <Color.RED: 1>
+
+      - value lookup:
+
+      >>> Color(1)
+      <Color.RED: 1>
+
+      - name lookup:
+
+      >>> Color['RED']
+      <Color.RED: 1>
+
+      Enumerations can be iterated over, and know how many members they have:
+
+      >>> len(Color)
+      3
+
+      >>> list(Color)
+      [<Color.RED: 1>, <Color.BLUE: 2>, <Color.GREEN: 3>]
+
+      Methods can be added to enumerations, and members can have their own
+      attributes -- see the documentation for details.
+
+      .. py:attribute:: Clamp
+         :value: 1
+
+         
+
+      .. py:attribute:: Decal
+         :value: 2
+
+         
+
+      .. py:attribute:: Mirror
+         :value: 3
+
+         
+
+      .. py:attribute:: Wrap
+         :value: 0
+
+         
+
+
+   .. py:property:: extensions
+      :type: Extensions
+
+
+   .. py:property:: image
+      :type: int
+
+
+   .. py:property:: mag_filter
+      :type: Texture
+
+
+   .. py:property:: min_filter
+      :type: Texture
+
+
+   .. py:property:: name
+      :type: str
+
+
+   .. py:property:: offset
+      :type: Annotated[numpy.typing.ArrayLike, dict(dtype='float32', shape=2, order='C')]
+
+
+   .. py:property:: rotation
+      :type: float
+
+
+   .. py:property:: scale
+      :type: Annotated[numpy.typing.ArrayLike, dict(dtype='float32', shape=2, order='C')]
+
+
+   .. py:property:: wrap_u
+      :type: Texture
+
+
+   .. py:property:: wrap_v
+      :type: Texture
+
+
+   .. py:method:: __repr__()
+
+      Return repr(self).
+
+
+
+.. py:class:: TextureInfo
+
+
+   .. py:property:: index
+      :type: int
+
+
+   .. py:property:: texcoord
+      :type: int
+
+
+
+.. py:class:: TextureList
+              TextureList(arg)
+              TextureList(arg, /)
+
+
+   .. py:method:: __bool__()
+
+      Check whether the vector is nonempty
+
+
+   .. py:method:: __delitem__(arg: int, /) -> None
+                  __delitem__(arg: slice, /) -> None
+
+
+   .. py:method:: __getitem__(arg: int, /) -> Texture
+                  __getitem__(arg: slice, /) -> TextureList
+
+
+   .. py:method:: __iter__()
+
+
+   .. py:method:: __len__()
+
+
+   .. py:method:: __repr__()
+
+      Return repr(self).
+
+
+   .. py:method:: __setitem__(arg0: int, arg1: Texture, /) -> None
+                  __setitem__(arg0: slice, arg1: TextureList, /) -> None
+
+
+   .. py:method:: append(arg, /)
+
+      Append `arg` to the end of the list.
+
+
+   .. py:method:: clear()
+
+      Remove all items from list.
+
+
+   .. py:method:: extend(arg, /)
+
+      Extend `self` by appending elements from `arg`.
+
+
+   .. py:method:: insert(arg0, arg1, /)
+
+      Insert object `arg1` before index `arg0`.
+
+
+   .. py:method:: pop(index = -1)
+
+      Remove and return item at `index` (default last).
+
+
+
+.. py:class:: ValueList
+              ValueList(arg)
+              ValueList(arg, /)
+
+
+   .. py:method:: __bool__()
+
+      Check whether the vector is nonempty
+
+
+   .. py:method:: __delitem__(arg: int, /) -> None
+                  __delitem__(arg: slice, /) -> None
+
+
+   .. py:method:: __getitem__(arg: int, /) -> Value
+                  __getitem__(arg: slice, /) -> ValueList
+
+
+   .. py:method:: __iter__()
+
+
+   .. py:method:: __len__()
+
+
+   .. py:method:: __repr__()
+
+      Return repr(self).
+
+
+   .. py:method:: __setitem__(arg0: int, arg1: Value, /) -> None
+                  __setitem__(arg0: slice, arg1: ValueList, /) -> None
+
+
+   .. py:method:: append(arg, /)
+
+      Append `arg` to the end of the list.
+
+
+   .. py:method:: clear()
+
+      Remove all items from list.
+
+
+   .. py:method:: extend(arg, /)
+
+      Extend `self` by appending elements from `arg`.
+
+
+   .. py:method:: insert(arg0, arg1, /)
+
+      Insert object `arg1` before index `arg0`.
+
+
+   .. py:method:: pop(index = -1)
+
+      Remove and return item at `index` (default last).
+
+
+
+.. py:class:: ValueMap
+              ValueMap(arg)
+              ValueMap(arg, /)
+
+
+   .. py:class:: ItemView
+
+
+      .. py:method:: __iter__()
+
+
+      .. py:method:: __len__()
+
+
+
+   .. py:class:: KeyView
+
+
+      .. py:method:: __contains__(arg: str, /) -> bool
+                     __contains__(arg: object, /) -> bool
+
+
+      .. py:method:: __iter__()
+
+
+      .. py:method:: __len__()
+
+
+
+   .. py:class:: ValueView
+
+
+      .. py:method:: __iter__()
+
+
+      .. py:method:: __len__()
+
+
+
+   .. py:method:: __bool__()
+
+      Check whether the map is nonempty
+
+
+   .. py:method:: __contains__(arg: str, /) -> bool
+                  __contains__(arg: object, /) -> bool
+
+
+   .. py:method:: __delitem__(arg, /)
+
+
+   .. py:method:: __getitem__(arg, /)
+
+
+   .. py:method:: __iter__()
+
+
+   .. py:method:: __len__()
+
+
+   .. py:method:: __repr__()
+
+      Return repr(self).
+
+
+   .. py:method:: __setitem__(arg0, arg1, /)
+
+
+   .. py:method:: clear()
+
+      Remove all items
+
+
+   .. py:method:: items()
+
+      Returns an iterable view of the map's items.
+
+
+   .. py:method:: keys()
+
+      Returns an iterable view of the map's keys.
+
+
+   .. py:method:: update(arg, /)
+
+      Update the map with element from `arg`
+
+
+   .. py:method:: values()
+
+      Returns an iterable view of the map's values.
+
+
+
+.. py:class:: ValueUnorderedMap
+              ValueUnorderedMap(arg)
+              ValueUnorderedMap(arg, /)
+
+
+   .. py:class:: ItemView
+
+
+      .. py:method:: __iter__()
+
+
+      .. py:method:: __len__()
+
+
+
+   .. py:class:: KeyView
+
+
+      .. py:method:: __contains__(arg: str, /) -> bool
+                     __contains__(arg: object, /) -> bool
+
+
+      .. py:method:: __iter__()
+
+
+      .. py:method:: __len__()
+
+
+
+   .. py:class:: ValueView
+
+
+      .. py:method:: __iter__()
+
+
+      .. py:method:: __len__()
+
+
+
+   .. py:method:: __bool__()
+
+      Check whether the map is nonempty
+
+
+   .. py:method:: __contains__(arg: str, /) -> bool
+                  __contains__(arg: object, /) -> bool
+
+
+   .. py:method:: __delitem__(arg, /)
+
+
+   .. py:method:: __getitem__(arg, /)
+
+
+   .. py:method:: __iter__()
+
+
+   .. py:method:: __len__()
+
+
+   .. py:method:: __repr__()
+
+      Return repr(self).
+
+
+   .. py:method:: __setitem__(arg0, arg1, /)
+
+
+   .. py:method:: clear()
+
+      Remove all items
+
+
+   .. py:method:: items()
+
+      Returns an iterable view of the map's items.
+
+
+   .. py:method:: keys()
+
+      Returns an iterable view of the map's keys.
+
+
+   .. py:method:: update(arg, /)
+
+      Update the map with element from `arg`
+
+
+   .. py:method:: values()
+
+      Returns an iterable view of the map's values.
+
+
+
+.. py:function:: compute_global_node_transform(scene, node_idx)
+
+   Compute the global transform associated with a node.
+
+   :param scene: The input node.
+   :param node_idx: The index of the taget node.
+
+   :returns: The global transform of the target node, which is the combination of transforms from this node all the way to the root.
+
+
+.. py:function:: mesh_to_simple_scene(mesh)
+
+   Converts a single mesh into a simple scene with a single identity instance of the input mesh.
+
+   :param mesh: Input mesh to convert.
+
+   :return: Simple scene containing the input mesh.
+
+
+.. py:function:: meshes_to_simple_scene(meshes)
+
+   Converts a list of meshes into a simple scene with a single identity instance of each input mesh.
+
+   :param meshes: Input meshes to convert.
+
+   :return: Simple scene containing the input meshes.
+
+
+.. py:function:: simple_scene_to_mesh(scene, normalize_normals = True, normalize_tangents_bitangents = True, preserve_attributes = True)
+
+   Converts a scene into a concatenated mesh with all the transforms applied.
+
+   :param scene: Scene to convert.
+   :param normalize_normals: If enabled, normals are normalized after transformation.
+   :param normalize_tangents_bitangents: If enabled, tangents and bitangents are normalized after transformation.
+   :param preserve_attributes: Preserve shared attributes and map them to the output mesh.
+
+   :return: Concatenated mesh.
+
+

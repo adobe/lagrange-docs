@@ -19,7 +19,7 @@ var searchData=
   ['operator_7e_16',['operator~',['../classlagrange_1_1_bit_field.html#abefdb69eb214ece2bee29f733c3c7a6b',1,'lagrange::BitField']]],
   ['orient2d_17',['orient2D',['../classlagrange_1_1_exact_predicates_shewchuk.html#a80c2052a05245456fad1d39004a08a15',1,'lagrange::ExactPredicatesShewchuk::orient2D()'],['../classlagrange_1_1_exact_predicates.html#a1471761eb7a2b86f0a7c0e06469b6c2e',1,'lagrange::ExactPredicates::orient2D()']]],
   ['orient3d_18',['orient3D',['../classlagrange_1_1_exact_predicates_shewchuk.html#a375969625576d670383c1d0bcd099867',1,'lagrange::ExactPredicatesShewchuk::orient3D()'],['../classlagrange_1_1_exact_predicates.html#ac81cce6bd82e3353d4935dceac223fd3',1,'lagrange::ExactPredicates::orient3D()']]],
-  ['orient_5foutward_19',['orient_outward',['../namespacelagrange.html#ad4d4b75c350742efbcde9bab3781edcf',1,'lagrange']]],
+  ['orient_5foutward_19',['orient_outward',['../namespacelagrange.html#a5146fd14484d1ca61328735d4875f273',1,'lagrange']]],
   ['orphan_20',['orphan',['../namespacelagrange_1_1ui.html#a2b45667dbc5b368cedcaacf3f3f815e0',1,'lagrange::ui']]],
   ['orphan_5fwithout_5fsubtree_21',['orphan_without_subtree',['../namespacelagrange_1_1ui.html#a59bae8ae7c4c0e999f912273829476f2',1,'lagrange::ui']]],
   ['ortho_22',['ortho',['../namespacelagrange_1_1ui.html#acdde4dc0c1145b82032b131ea61da7be',1,'lagrange::ui']]],

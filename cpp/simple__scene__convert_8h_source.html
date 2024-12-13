@@ -135,19 +135,20 @@ $(document).ready(function(){initNavTree('simple__scene__convert_8h_source.html'
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="keyword">namespace </span>lagrange::scene {</div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="keyword">template</span> &lt;<span class="keywordtype">size_t</span> Dimension = 3, <span class="keyword">typename</span> Scalar, <span class="keyword">typename</span> Index&gt;</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>SimpleScene&lt;Scalar, Index, Dimension&gt; mesh_to_simple_scene(SurfaceMesh&lt;Scalar, Index&gt; mesh);</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>SimpleScene&lt;Scalar, Index, Dimension&gt; mesh_to_simple_scene(<a class="code hl_class" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh&lt;Scalar, Index&gt;</a> mesh);</div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="keyword">template</span> &lt;<span class="keywordtype">size_t</span> Dimension = 3, <span class="keyword">typename</span> Scalar, <span class="keyword">typename</span> Index&gt;</div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>SimpleScene&lt;Scalar, Index, Dimension&gt; meshes_to_simple_scene(</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    std::vector&lt;SurfaceMesh&lt;Scalar, Index&gt;&gt; meshes);</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    std::vector&lt;<a class="code hl_class" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh&lt;Scalar, Index&gt;</a>&gt; meshes);</div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> Scalar, <span class="keyword">typename</span> Index, <span class="keywordtype">size_t</span> Dimension&gt;</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>SurfaceMesh&lt;Scalar, Index&gt; simple_scene_to_mesh(</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><a class="code hl_class" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh&lt;Scalar, Index&gt;</a> simple_scene_to_mesh(</div>
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    <span class="keyword">const</span> SimpleScene&lt;Scalar, Index, Dimension&gt;&amp; scene,</div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    <span class="keyword">const</span> TransformOptions&amp; transform_options = {},</div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    <span class="keywordtype">bool</span> preserve_attributes = <span class="keyword">true</span>);</div>
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>} <span class="comment">// namespace lagrange::scene</span></div>
+<div class="ttc" id="aclasslagrange_1_1_surface_mesh_html"><div class="ttname"><a href="classlagrange_1_1_surface_mesh.html">lagrange::SurfaceMesh</a></div><div class="ttdoc">A general purpose polygonal mesh class.</div><div class="ttdef"><b>Definition:</b> SurfaceMesh.h:66</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

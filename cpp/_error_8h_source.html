@@ -136,21 +136,27 @@ $(document).ready(function(){initNavTree('_error_8h_source.html',''); initResiza
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="structlagrange_1_1_error.html">   26</a></span><span class="keyword">struct </span>LA_CORE_API <a class="code hl_struct" href="structlagrange_1_1_error.html">Error</a> : <span class="keyword">public</span> std::runtime_error</div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>{</div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <span class="keyword">using </span>runtime_error::runtime_error;</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <a class="code hl_struct" href="structlagrange_1_1_error.html">~Error</a>() <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>};</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="structlagrange_1_1_bad_cast_error.html">   36</a></span><span class="keyword">struct </span>LA_CORE_API <a class="code hl_struct" href="structlagrange_1_1_bad_cast_error.html">BadCastError</a> : <span class="keyword">public</span> <a class="code hl_struct" href="structlagrange_1_1_error.html">Error</a></div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>{</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <a class="code hl_struct" href="structlagrange_1_1_bad_cast_error.html">BadCastError</a>() : <a class="code hl_struct" href="structlagrange_1_1_error.html">Error</a>(<span class="stringliteral">&quot;bad cast&quot;</span>) {}</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <a class="code hl_struct" href="structlagrange_1_1_bad_cast_error.html">~BadCastError</a>() <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>};</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>} <span class="comment">// namespace lagrange</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <a class="code hl_struct" href="structlagrange_1_1_error.html">~Error</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>};</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="structlagrange_1_1_bad_cast_error.html">   35</a></span><span class="keyword">struct </span>LA_CORE_API <a class="code hl_struct" href="structlagrange_1_1_bad_cast_error.html">BadCastError</a> : <span class="keyword">public</span> <a class="code hl_struct" href="structlagrange_1_1_error.html">Error</a></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>{</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <a class="code hl_struct" href="structlagrange_1_1_bad_cast_error.html">BadCastError</a>() : <a class="code hl_struct" href="structlagrange_1_1_error.html">Error</a>(<span class="stringliteral">&quot;bad cast&quot;</span>) {}</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <a class="code hl_struct" href="structlagrange_1_1_bad_cast_error.html">~BadCastError</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>};</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="structlagrange_1_1_parsing_error.html">   44</a></span><span class="keyword">struct </span>LA_CORE_API <a class="code hl_struct" href="structlagrange_1_1_parsing_error.html">ParsingError</a> : <span class="keyword">public</span> <a class="code hl_struct" href="structlagrange_1_1_error.html">Error</a></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>{</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="keyword">using </span>Error::Error;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <a class="code hl_struct" href="structlagrange_1_1_parsing_error.html">~ParsingError</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>};</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>} <span class="comment">// namespace lagrange</span></div>
 <div class="ttc" id="anamespacelagrange_html"><div class="ttname"><a href="namespacelagrange.html">lagrange</a></div><div class="ttdoc">Main namespace for Lagrange.</div><div class="ttdef"><b>Definition:</b> AABBIGL.h:30</div></div>
-<div class="ttc" id="astructlagrange_1_1_bad_cast_error_html"><div class="ttname"><a href="structlagrange_1_1_bad_cast_error.html">lagrange::BadCastError</a></div><div class="ttdoc">An exception of this type is thrown when a lagrange::safe_cast&lt;&gt; fails.</div><div class="ttdef"><b>Definition:</b> Error.h:37</div></div>
+<div class="ttc" id="astructlagrange_1_1_bad_cast_error_html"><div class="ttname"><a href="structlagrange_1_1_bad_cast_error.html">lagrange::BadCastError</a></div><div class="ttdoc">An exception of this type is thrown when a lagrange::safe_cast&lt;&gt; fails.</div><div class="ttdef"><b>Definition:</b> Error.h:36</div></div>
 <div class="ttc" id="astructlagrange_1_1_error_html"><div class="ttname"><a href="structlagrange_1_1_error.html">lagrange::Error</a></div><div class="ttdoc">Base exception for errors thrown by Lagrange functions.</div><div class="ttdef"><b>Definition:</b> Error.h:27</div></div>
+<div class="ttc" id="astructlagrange_1_1_parsing_error_html"><div class="ttname"><a href="structlagrange_1_1_parsing_error.html">lagrange::ParsingError</a></div><div class="ttdoc">An exception of this type is thrown when a parsing error occurs.</div><div class="ttdef"><b>Definition:</b> Error.h:45</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

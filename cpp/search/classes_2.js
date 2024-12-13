@@ -17,13 +17,14 @@ var searchData=
   ['components_14',['Components',['../classlagrange_1_1legacy_1_1_components.html',1,'lagrange::legacy']]],
   ['computeborderedcomponentsoutput_15',['ComputeBorderedComponentsOutput',['../structlagrange_1_1legacy_1_1_compute_bordered_components_output.html',1,'lagrange::legacy']]],
   ['computemeshcentroidoutput_16',['ComputeMeshCentroidOutput',['../structlagrange_1_1legacy_1_1_compute_mesh_centroid_output.html',1,'lagrange::legacy']]],
-  ['computepointcloudpcaoutput_17',['ComputePointcloudPCAOutput',['../structlagrange_1_1_compute_pointcloud_p_c_a_output.html',1,'lagrange']]],
-  ['connectivity_18',['Connectivity',['../classlagrange_1_1_connectivity.html',1,'lagrange']]],
-  ['control_5fblock_19',['control_block',['../classlagrange_1_1internal_1_1control__block.html',1,'lagrange::internal']]],
-  ['control_5fblock_5fbase_20',['control_block_base',['../classlagrange_1_1internal_1_1control__block__base.html',1,'lagrange::internal']]],
-  ['convert_5fimage_5fpixel_21',['convert_image_pixel',['../structlagrange_1_1image_1_1convert__image__pixel.html',1,'lagrange::image']]],
-  ['convert_5fimplicit_22',['convert_implicit',['../structlagrange_1_1ui_1_1detail_1_1convert__implicit.html',1,'lagrange::ui::detail']]],
-  ['copy_5fon_5fwrite_5fptr_23',['copy_on_write_ptr',['../classlagrange_1_1copy__on__write__ptr.html',1,'lagrange']]],
-  ['cornernormaloptions_24',['CornerNormalOptions',['../structlagrange_1_1_corner_normal_options.html',1,'lagrange']]],
-  ['createoptions_25',['CreateOptions',['../structlagrange_1_1testing_1_1_create_options.html',1,'lagrange::testing']]]
+  ['computepointcloudpcaoptions_17',['ComputePointcloudPCAOptions',['../structlagrange_1_1_compute_pointcloud_p_c_a_options.html',1,'lagrange']]],
+  ['computepointcloudpcaoutput_18',['ComputePointcloudPCAOutput',['../structlagrange_1_1legacy_1_1_compute_pointcloud_p_c_a_output.html',1,'lagrange::legacy']]],
+  ['connectivity_19',['Connectivity',['../classlagrange_1_1_connectivity.html',1,'lagrange']]],
+  ['control_5fblock_20',['control_block',['../classlagrange_1_1internal_1_1control__block.html',1,'lagrange::internal']]],
+  ['control_5fblock_5fbase_21',['control_block_base',['../classlagrange_1_1internal_1_1control__block__base.html',1,'lagrange::internal']]],
+  ['convert_5fimage_5fpixel_22',['convert_image_pixel',['../structlagrange_1_1image_1_1convert__image__pixel.html',1,'lagrange::image']]],
+  ['convert_5fimplicit_23',['convert_implicit',['../structlagrange_1_1ui_1_1detail_1_1convert__implicit.html',1,'lagrange::ui::detail']]],
+  ['copy_5fon_5fwrite_5fptr_24',['copy_on_write_ptr',['../classlagrange_1_1copy__on__write__ptr.html',1,'lagrange']]],
+  ['cornernormaloptions_25',['CornerNormalOptions',['../structlagrange_1_1_corner_normal_options.html',1,'lagrange']]],
+  ['createoptions_26',['CreateOptions',['../structlagrange_1_1testing_1_1_create_options.html',1,'lagrange::testing']]]
 ];
