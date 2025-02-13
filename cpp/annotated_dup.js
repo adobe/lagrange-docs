@@ -128,14 +128,14 @@ var annotated_dup =
           [ "ThreadPool", "structlagrange_1_1poisson_1_1threadpool_1_1_thread_pool.html", null ]
         ] ],
         [ "AttributeEvaluator", "classlagrange_1_1poisson_1_1_attribute_evaluator.html", "classlagrange_1_1poisson_1_1_attribute_evaluator" ],
+        [ "CommonOptions", "structlagrange_1_1poisson_1_1_common_options.html", "structlagrange_1_1poisson_1_1_common_options" ],
         [ "EvaluatorOptions", "structlagrange_1_1poisson_1_1_evaluator_options.html", "structlagrange_1_1poisson_1_1_evaluator_options" ],
         [ "ReconstructionOptions", "structlagrange_1_1poisson_1_1_reconstruction_options.html", "structlagrange_1_1poisson_1_1_reconstruction_options" ]
       ] ],
       [ "python", null, [
         [ "PyAttribute", "classlagrange_1_1python_1_1_py_attribute.html", null ],
         [ "PyIndexedAttribute", "classlagrange_1_1python_1_1_py_indexed_attribute.html", null ],
-        [ "PythonLoggingSink", "classlagrange_1_1python_1_1_python_logging_sink.html", null ],
-        [ "UserDataConverterTrampoline", "structlagrange_1_1python_1_1_user_data_converter_trampoline.html", null ]
+        [ "PythonLoggingSink", "classlagrange_1_1python_1_1_python_logging_sink.html", null ]
       ] ],
       [ "raycasting", "namespacelagrange_1_1raycasting.html", [
         [ "ClosestPointResult", "structlagrange_1_1raycasting_1_1_closest_point_result.html", null ],
@@ -159,7 +159,7 @@ var annotated_dup =
         [ "SimpleScene", "classlagrange_1_1scene_1_1_simple_scene.html", "classlagrange_1_1scene_1_1_simple_scene" ],
         [ "Skeleton", "structlagrange_1_1scene_1_1_skeleton.html", null ],
         [ "Texture", "structlagrange_1_1scene_1_1_texture.html", null ],
-        [ "TextureInfo", "structlagrange_1_1scene_1_1_texture_info.html", null ],
+        [ "TextureInfo", "structlagrange_1_1scene_1_1_texture_info.html", "structlagrange_1_1scene_1_1_texture_info" ],
         [ "UserDataConverter", "structlagrange_1_1scene_1_1_user_data_converter.html", null ],
         [ "Value", "classlagrange_1_1scene_1_1_value.html", null ]
       ] ],

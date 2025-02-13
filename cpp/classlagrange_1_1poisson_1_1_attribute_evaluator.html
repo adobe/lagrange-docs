@@ -117,6 +117,11 @@ $(document).ready(function(){initNavTree('classlagrange_1_1poisson_1_1_attribute
   <div class="headertitle"><div class="title">AttributeEvaluator Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p><a class="el" href="classlagrange_1_1_attribute.html" title="Derived attribute class that stores the actual information.">Attribute</a> evaluator class.  
+ <a href="classlagrange_1_1poisson_1_1_attribute_evaluator.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_attribute_evaluator_8h_source.html">lagrange/poisson/AttributeEvaluator.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
@@ -125,15 +130,112 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:acc75bf1689ed05003b961a75192b1e46"><td class="memTemplParams" colspan="2"><a id="acc75bf1689ed05003b961a75192b1e46" name="acc75bf1689ed05003b961a75192b1e46"></a>
-template&lt;typename Scalar , typename Index &gt; </td></tr>
-<tr class="memitem:acc75bf1689ed05003b961a75192b1e46"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><b>AttributeEvaluator</b> (const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;points, const <a class="el" href="structlagrange_1_1poisson_1_1_evaluator_options.html">EvaluatorOptions</a> &amp;options={})</td></tr>
+<tr class="memitem:acc75bf1689ed05003b961a75192b1e46"><td class="memTemplParams" colspan="2">template&lt;typename Scalar , typename Index &gt; </td></tr>
+<tr class="memitem:acc75bf1689ed05003b961a75192b1e46"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classlagrange_1_1poisson_1_1_attribute_evaluator.html#acc75bf1689ed05003b961a75192b1e46">AttributeEvaluator</a> (const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;points, const <a class="el" href="structlagrange_1_1poisson_1_1_evaluator_options.html">EvaluatorOptions</a> &amp;options={})</td></tr>
+<tr class="memdesc:acc75bf1689ed05003b961a75192b1e46"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a new attribute evaluator for a point cloud.  <a href="classlagrange_1_1poisson_1_1_attribute_evaluator.html#acc75bf1689ed05003b961a75192b1e46">More...</a><br /></td></tr>
 <tr class="separator:acc75bf1689ed05003b961a75192b1e46"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7f54ca6383d4b897626d2f3de9079c42"><td class="memTemplParams" colspan="2"><a id="a7f54ca6383d4b897626d2f3de9079c42" name="a7f54ca6383d4b897626d2f3de9079c42"></a>
-template&lt;typename Scalar , typename ValueType &gt; </td></tr>
-<tr class="memitem:a7f54ca6383d4b897626d2f3de9079c42"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>eval</b> (<a class="el" href="group__group-utils-misc.html#ga4afead0b9ccc53fe4fca896787595d26">span</a>&lt; const Scalar &gt; pos, <a class="el" href="group__group-utils-misc.html#ga4afead0b9ccc53fe4fca896787595d26">span</a>&lt; ValueType &gt; out) const</td></tr>
+<tr class="memitem:acdcb7e6170d0eee886d6e1d183e0a355"><td class="memItemLeft" align="right" valign="top"><a id="acdcb7e6170d0eee886d6e1d183e0a355" name="acdcb7e6170d0eee886d6e1d183e0a355"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>~AttributeEvaluator</b> ()</td></tr>
+<tr class="memdesc:acdcb7e6170d0eee886d6e1d183e0a355"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys the object. <br /></td></tr>
+<tr class="separator:acdcb7e6170d0eee886d6e1d183e0a355"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f54ca6383d4b897626d2f3de9079c42"><td class="memTemplParams" colspan="2">template&lt;typename Scalar , typename ValueType &gt; </td></tr>
+<tr class="memitem:a7f54ca6383d4b897626d2f3de9079c42"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classlagrange_1_1poisson_1_1_attribute_evaluator.html#a7f54ca6383d4b897626d2f3de9079c42">eval</a> (<a class="el" href="group__group-utils-misc.html#ga4afead0b9ccc53fe4fca896787595d26">span</a>&lt; const Scalar &gt; pos, <a class="el" href="group__group-utils-misc.html#ga4afead0b9ccc53fe4fca896787595d26">span</a>&lt; ValueType &gt; out) const</td></tr>
+<tr class="memdesc:a7f54ca6383d4b897626d2f3de9079c42"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluate the extrapolated attribute at any point in 3D space.  <a href="classlagrange_1_1poisson_1_1_attribute_evaluator.html#a7f54ca6383d4b897626d2f3de9079c42">More...</a><br /></td></tr>
 <tr class="separator:a7f54ca6383d4b897626d2f3de9079c42"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p ><a class="el" href="classlagrange_1_1_attribute.html" title="Derived attribute class that stores the actual information.">Attribute</a> evaluator class. </p>
+<p >Once constructed, it allows interpolating a signal from point cloud data. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="acc75bf1689ed05003b961a75192b1e46" name="acc75bf1689ed05003b961a75192b1e46"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc75bf1689ed05003b961a75192b1e46">&#9670;&nbsp;</a></span>AttributeEvaluator()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classlagrange_1_1poisson_1_1_attribute_evaluator.html">AttributeEvaluator</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;&#160;</td>
+          <td class="paramname"><em>points</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structlagrange_1_1poisson_1_1_evaluator_options.html">EvaluatorOptions</a> &amp;&#160;</td>
+          <td class="paramname"><em>options</em> = <code>{}</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructs a new attribute evaluator for a point cloud. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">points</td><td>Point cloud to evaluate. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">options</td><td><a class="el" href="classlagrange_1_1_attribute.html" title="Derived attribute class that stores the actual information.">Attribute</a> evaluation option.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Scalar</td><td>Point cloud scalar type. </td></tr>
+    <tr><td class="paramname">Index</td><td>Point cloud index type. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a7f54ca6383d4b897626d2f3de9079c42" name="a7f54ca6383d4b897626d2f3de9079c42"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7f54ca6383d4b897626d2f3de9079c42">&#9670;&nbsp;</a></span>eval()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void eval </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__group-utils-misc.html#ga4afead0b9ccc53fe4fca896787595d26">span</a>&lt; const Scalar &gt;&#160;</td>
+          <td class="paramname"><em>pos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__group-utils-misc.html#ga4afead0b9ccc53fe4fca896787595d26">span</a>&lt; ValueType &gt;&#160;</td>
+          <td class="paramname"><em>out</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Evaluate the extrapolated attribute at any point in 3D space. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pos</td><td>Position to evalute at. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">out</td><td>Output buffer to write the evaluated attribute values.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Scalar</td><td>Point coordinate scalar type. </td></tr>
+    <tr><td class="paramname">ValueType</td><td><a class="el" href="classlagrange_1_1_attribute.html" title="Derived attribute class that stores the actual information.">Attribute</a> value type. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>lagrange/poisson/<a class="el" href="_attribute_evaluator_8h_source.html">AttributeEvaluator.h</a></li>
 <li>AttributeEvaluator.cpp</li>

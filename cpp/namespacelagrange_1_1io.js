@@ -14,6 +14,8 @@ var namespacelagrange_1_1io =
     [ "load_mesh_obj", "namespacelagrange_1_1io.html#addd53774d944f8306ca4da9e7f9b277e", null ],
     [ "load_mesh_ply", "namespacelagrange_1_1io.html#a1b86447ec2052740eca15c57de7a9292", null ],
     [ "load_mesh_ply", "namespacelagrange_1_1io.html#a838761f1101535c1589be1f5df2c443d", null ],
+    [ "load_mesh_stl", "namespacelagrange_1_1io.html#ae02f11ee2792ef20c997620fa29b5753", null ],
+    [ "load_mesh_stl", "namespacelagrange_1_1io.html#acead5a3a646f4538a6d715f033773ec9", null ],
     [ "load_scene", "namespacelagrange_1_1io.html#a6610dc72a7d80ebe10cc94ed98b72327", null ],
     [ "load_scene", "namespacelagrange_1_1io.html#a36684a3bf60e9ff854678d8df202c8eb", null ],
     [ "load_scene_fbx", "namespacelagrange_1_1io.html#afc1770ef8d6955dde3a8d4dd23025f0f", null ],

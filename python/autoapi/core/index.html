@@ -3,7 +3,7 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="next" title="subdivision" href="../subdivision/index.html" /><link rel="prev" title="scene" href="../scene/index.html" />
+<link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="prev" title="poisson" href="../poisson/index.html" />
 
     <!-- Generated with Sphinx 7.4.7 and Furo 2023.09.10 -->
         <title>core - Lagrange documentation</title>
@@ -158,12 +158,12 @@
   <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
 <li class="toctree-l1 current has-children"><a class="reference internal" href="../index.html">API Reference</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of API Reference</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../poisson/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">poisson</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="../image/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">image</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="../scene/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">scene</span></code></a></li>
-<li class="toctree-l2 current current-page"><a class="current reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">core</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="../subdivision/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">subdivision</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../image/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">image</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="../io/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">io</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../poisson/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">poisson</span></code></a></li>
+<li class="toctree-l2 current current-page"><a class="current reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">core</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -212,88 +212,91 @@
 <tr class="row-odd"><td><p><a class="reference internal" href="#core.Attribute" title="core.Attribute"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Attribute</span></code></a></p></td>
 <td><p>Mesh attribute</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#core.AttributeCopyPolicy" title="core.AttributeCopyPolicy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">AttributeCopyPolicy</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#core.AttributeCastPolicy" title="core.AttributeCastPolicy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">AttributeCastPolicy</span></code></a></p></td>
+<td><p>Policy for remapping invalid values when casting to a different value type</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#core.AttributeCopyPolicy" title="core.AttributeCopyPolicy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">AttributeCopyPolicy</span></code></a></p></td>
 <td><p>Policy for copying attribute that is a view of an external buffer</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#core.AttributeCreatePolicy" title="core.AttributeCreatePolicy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">AttributeCreatePolicy</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#core.AttributeCreatePolicy" title="core.AttributeCreatePolicy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">AttributeCreatePolicy</span></code></a></p></td>
 <td><p>Attribute creation policy</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#core.AttributeDeletePolicy" title="core.AttributeDeletePolicy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">AttributeDeletePolicy</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#core.AttributeDeletePolicy" title="core.AttributeDeletePolicy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">AttributeDeletePolicy</span></code></a></p></td>
 <td><p>Policy for deleting attributes with reserved names</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#core.AttributeElement" title="core.AttributeElement"><code class="xref py py-obj docutils literal notranslate"><span class="pre">AttributeElement</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#core.AttributeElement" title="core.AttributeElement"><code class="xref py py-obj docutils literal notranslate"><span class="pre">AttributeElement</span></code></a></p></td>
 <td><p>Attribute element type</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#core.AttributeExportPolicy" title="core.AttributeExportPolicy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">AttributeExportPolicy</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#core.AttributeExportPolicy" title="core.AttributeExportPolicy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">AttributeExportPolicy</span></code></a></p></td>
 <td><p>Policy for exporting attribute that is a view of an external buffer</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#core.AttributeGrowthPolicy" title="core.AttributeGrowthPolicy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">AttributeGrowthPolicy</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#core.AttributeGrowthPolicy" title="core.AttributeGrowthPolicy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">AttributeGrowthPolicy</span></code></a></p></td>
 <td><p>Attribute growth policy (for external buffers)</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#core.AttributeShrinkPolicy" title="core.AttributeShrinkPolicy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">AttributeShrinkPolicy</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#core.AttributeShrinkPolicy" title="core.AttributeShrinkPolicy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">AttributeShrinkPolicy</span></code></a></p></td>
 <td><p>Attribute shrink policy (for external buffers)</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#core.AttributeUsage" title="core.AttributeUsage"><code class="xref py py-obj docutils literal notranslate"><span class="pre">AttributeUsage</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#core.AttributeUsage" title="core.AttributeUsage"><code class="xref py py-obj docutils literal notranslate"><span class="pre">AttributeUsage</span></code></a></p></td>
 <td><p>Attribute usage type</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#core.AttributeWritePolicy" title="core.AttributeWritePolicy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">AttributeWritePolicy</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#core.AttributeWritePolicy" title="core.AttributeWritePolicy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">AttributeWritePolicy</span></code></a></p></td>
 <td><p>Policy for attempting to write to read-only external buffer</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#core.CentroidWeightingType" title="core.CentroidWeightingType"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CentroidWeightingType</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#core.CentroidWeightingType" title="core.CentroidWeightingType"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CentroidWeightingType</span></code></a></p></td>
 <td><p>Centroid weighting type.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#core.ConnectivityType" title="core.ConnectivityType"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ConnectivityType</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#core.ConnectivityType" title="core.ConnectivityType"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ConnectivityType</span></code></a></p></td>
 <td><p>Mesh connectivity type</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#core.DistortionMetric" title="core.DistortionMetric"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DistortionMetric</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#core.DistortionMetric" title="core.DistortionMetric"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DistortionMetric</span></code></a></p></td>
 <td><p>Distortion metric.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#core.FacetAreaOptions" title="core.FacetAreaOptions"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FacetAreaOptions</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#core.FacetAreaOptions" title="core.FacetAreaOptions"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FacetAreaOptions</span></code></a></p></td>
 <td><p>Options for computing facet area.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#core.FacetCentroidOptions" title="core.FacetCentroidOptions"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FacetCentroidOptions</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#core.FacetCentroidOptions" title="core.FacetCentroidOptions"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FacetCentroidOptions</span></code></a></p></td>
 <td><p>Facet centroid options.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#core.FacetNormalOptions" title="core.FacetNormalOptions"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FacetNormalOptions</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#core.FacetNormalOptions" title="core.FacetNormalOptions"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FacetNormalOptions</span></code></a></p></td>
 <td><p>Facet normal computation options.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#core.IndexedAttribute" title="core.IndexedAttribute"><code class="xref py py-obj docutils literal notranslate"><span class="pre">IndexedAttribute</span></code></a></p></td>
-<td><p></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#core.IndexedAttribute" title="core.IndexedAttribute"><code class="xref py py-obj docutils literal notranslate"><span class="pre">IndexedAttribute</span></code></a></p></td>
+<td><p>Index attribute</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#core.MappingPolicy" title="core.MappingPolicy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MappingPolicy</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#core.MappingPolicy" title="core.MappingPolicy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MappingPolicy</span></code></a></p></td>
 <td><p>Mapping policy for handling collisions.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#core.MeshAreaOptions" title="core.MeshAreaOptions"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MeshAreaOptions</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#core.MeshAreaOptions" title="core.MeshAreaOptions"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MeshAreaOptions</span></code></a></p></td>
 <td><p>Options for computing mesh area.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#core.MeshCentroidOptions" title="core.MeshCentroidOptions"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MeshCentroidOptions</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#core.MeshCentroidOptions" title="core.MeshCentroidOptions"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MeshCentroidOptions</span></code></a></p></td>
 <td><p>Mesh centroid options.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#core.MetaData" title="core.MetaData"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MetaData</span></code></a></p></td>
-<td><p></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#core.MetaData" title="core.MetaData"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MetaData</span></code></a></p></td>
+<td><p>Metadata <cite>dict</cite> of the mesh</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#core.NormalOptions" title="core.NormalOptions"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NormalOptions</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#core.NormalOptions" title="core.NormalOptions"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NormalOptions</span></code></a></p></td>
 <td><p>Normal computation options.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#core.NormalWeightingType" title="core.NormalWeightingType"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NormalWeightingType</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#core.NormalWeightingType" title="core.NormalWeightingType"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NormalWeightingType</span></code></a></p></td>
 <td><p>Normal weighting type.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#core.RemapVerticesOptions" title="core.RemapVerticesOptions"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RemapVerticesOptions</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#core.RemapVerticesOptions" title="core.RemapVerticesOptions"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RemapVerticesOptions</span></code></a></p></td>
 <td><p>Options for remapping vertices.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#core.SurfaceMesh" title="core.SurfaceMesh"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SurfaceMesh</span></code></a></p></td>
-<td><p></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#core.SurfaceMesh" title="core.SurfaceMesh"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SurfaceMesh</span></code></a></p></td>
+<td><p>Surface mesh data structure</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#core.TangentBitangentOptions" title="core.TangentBitangentOptions"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TangentBitangentOptions</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#core.TangentBitangentOptions" title="core.TangentBitangentOptions"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TangentBitangentOptions</span></code></a></p></td>
 <td><p>Tangent bitangent options</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#core.TangentBitangentResult" title="core.TangentBitangentResult"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TangentBitangentResult</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#core.TangentBitangentResult" title="core.TangentBitangentResult"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TangentBitangentResult</span></code></a></p></td>
 <td><p>Tangent bitangent result</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#core.VertexNormalOptions" title="core.VertexNormalOptions"><code class="xref py py-obj docutils literal notranslate"><span class="pre">VertexNormalOptions</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#core.VertexNormalOptions" title="core.VertexNormalOptions"><code class="xref py py-obj docutils literal notranslate"><span class="pre">VertexNormalOptions</span></code></a></p></td>
 <td><p>Options for computing vertex normals</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#core.VertexValenceOptions" title="core.VertexValenceOptions"><code class="xref py py-obj docutils literal notranslate"><span class="pre">VertexValenceOptions</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#core.VertexValenceOptions" title="core.VertexValenceOptions"><code class="xref py py-obj docutils literal notranslate"><span class="pre">VertexValenceOptions</span></code></a></p></td>
 <td><p>Vertex valence options</p></td>
 </tr>
 </tbody>
@@ -344,62 +347,74 @@
 <tr class="row-odd"><td><p><a class="reference internal" href="#core.compute_mesh_centroid" title="core.compute_mesh_centroid"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compute_mesh_centroid</span></code></a>(…)</p></td>
 <td><p>Compute mesh centroid (Pythonic API).</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#core.compute_normal" title="core.compute_normal"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compute_normal</span></code></a>(…)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#core.compute_mesh_covariance" title="core.compute_mesh_covariance"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compute_mesh_covariance</span></code></a>(mesh, center[, ...])</p></td>
+<td><p>Compute the covariance matrix of a mesh w.r.t. a center (Pythonic API).</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#core.compute_normal" title="core.compute_normal"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compute_normal</span></code></a>(…)</p></td>
 <td><p>Compute indexed normal attribute (Pythonic API).</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#core.compute_pointcloud_pca" title="core.compute_pointcloud_pca"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compute_pointcloud_pca</span></code></a>(points[, shift_centroid, normalize])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#core.compute_pointcloud_pca" title="core.compute_pointcloud_pca"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compute_pointcloud_pca</span></code></a>(points[, shift_centroid, normalize])</p></td>
 <td><p>Compute principal components of a point cloud.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#core.compute_seam_edges" title="core.compute_seam_edges"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compute_seam_edges</span></code></a>(mesh, indexed_attribute_id[, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#core.compute_seam_edges" title="core.compute_seam_edges"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compute_seam_edges</span></code></a>(mesh, indexed_attribute_id[, ...])</p></td>
 <td><p>Computer seam edges for a given indexed attribute.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#core.compute_tangent_bitangent" title="core.compute_tangent_bitangent"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compute_tangent_bitangent</span></code></a>(…)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#core.compute_tangent_bitangent" title="core.compute_tangent_bitangent"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compute_tangent_bitangent</span></code></a>(…)</p></td>
 <td><p>Compute tangent and bitangent vector attributes (Pythonic API).</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#core.compute_uv_distortion" title="core.compute_uv_distortion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compute_uv_distortion</span></code></a>(mesh[, uv_attribute_name, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#core.compute_uv_distortion" title="core.compute_uv_distortion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compute_uv_distortion</span></code></a>(mesh[, uv_attribute_name, ...])</p></td>
 <td><p>Compute UV distortion.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#core.compute_vertex_normal" title="core.compute_vertex_normal"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compute_vertex_normal</span></code></a>(…)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#core.compute_vertex_normal" title="core.compute_vertex_normal"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compute_vertex_normal</span></code></a>(…)</p></td>
 <td><p>Computer vertex normal (Pythonic API).</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#core.compute_vertex_valence" title="core.compute_vertex_valence"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compute_vertex_valence</span></code></a>(…)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#core.compute_vertex_valence" title="core.compute_vertex_valence"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compute_vertex_valence</span></code></a>(…)</p></td>
 <td><p>Compute vertex valence);</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#core.detect_degenerate_facets" title="core.detect_degenerate_facets"><code class="xref py py-obj docutils literal notranslate"><span class="pre">detect_degenerate_facets</span></code></a>(mesh)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#core.detect_degenerate_facets" title="core.detect_degenerate_facets"><code class="xref py py-obj docutils literal notranslate"><span class="pre">detect_degenerate_facets</span></code></a>(mesh)</p></td>
 <td><p>Detect degenerate facets in a mesh.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#core.extract_isoline" title="core.extract_isoline"><code class="xref py py-obj docutils literal notranslate"><span class="pre">extract_isoline</span></code></a>(mesh, attribute[, isovalue])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#core.extract_boundary_edges" title="core.extract_boundary_edges"><code class="xref py py-obj docutils literal notranslate"><span class="pre">extract_boundary_edges</span></code></a>(mesh)</p></td>
+<td><p>Extract boundary edges from a mesh.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#core.extract_boundary_loops" title="core.extract_boundary_loops"><code class="xref py py-obj docutils literal notranslate"><span class="pre">extract_boundary_loops</span></code></a>(mesh)</p></td>
+<td><p>Extract boundary loops from a mesh.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#core.extract_isoline" title="core.extract_isoline"><code class="xref py py-obj docutils literal notranslate"><span class="pre">extract_isoline</span></code></a>(mesh, attribute[, isovalue])</p></td>
 <td><p>Extract the isoline of an implicit function defined on the mesh vertices/corners.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#core.extract_submesh" title="core.extract_submesh"><code class="xref py py-obj docutils literal notranslate"><span class="pre">extract_submesh</span></code></a>(mesh, selected_facets[, ...])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#core.extract_submesh" title="core.extract_submesh"><code class="xref py py-obj docutils literal notranslate"><span class="pre">extract_submesh</span></code></a>(mesh, selected_facets[, ...])</p></td>
 <td><p>Extract a submesh based on the selected facets.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#core.filter_attributes" title="core.filter_attributes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">filter_attributes</span></code></a>(mesh[, included_attributes, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#core.filter_attributes" title="core.filter_attributes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">filter_attributes</span></code></a>(mesh[, included_attributes, ...])</p></td>
 <td><p>Filters the attributes of mesh according to user specifications.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#core.is_edge_manifold" title="core.is_edge_manifold"><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_edge_manifold</span></code></a>(mesh)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#core.is_edge_manifold" title="core.is_edge_manifold"><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_edge_manifold</span></code></a>(mesh)</p></td>
 <td><p>Check if the mesh is edge manifold.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#core.is_manifold" title="core.is_manifold"><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_manifold</span></code></a>(mesh)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#core.is_manifold" title="core.is_manifold"><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_manifold</span></code></a>(mesh)</p></td>
 <td><p>Check if the mesh is manifold.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#core.is_oriented" title="core.is_oriented"><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_oriented</span></code></a>(mesh)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#core.is_oriented" title="core.is_oriented"><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_oriented</span></code></a>(mesh)</p></td>
 <td><p>Check if the mesh is oriented.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#core.is_vertex_manifold" title="core.is_vertex_manifold"><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_vertex_manifold</span></code></a>(mesh)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#core.is_vertex_manifold" title="core.is_vertex_manifold"><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_vertex_manifold</span></code></a>(mesh)</p></td>
 <td><p>Check if the mesh is vertex manifold.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#core.map_attribute" title="core.map_attribute"><code class="xref py py-obj docutils literal notranslate"><span class="pre">map_attribute</span></code></a>(…)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#core.map_attribute" title="core.map_attribute"><code class="xref py py-obj docutils literal notranslate"><span class="pre">map_attribute</span></code></a>(…)</p></td>
 <td><p>Map an attribute to a new element type.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#core.map_attribute_in_place" title="core.map_attribute_in_place"><code class="xref py py-obj docutils literal notranslate"><span class="pre">map_attribute_in_place</span></code></a>(…)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#core.map_attribute_in_place" title="core.map_attribute_in_place"><code class="xref py py-obj docutils literal notranslate"><span class="pre">map_attribute_in_place</span></code></a>(…)</p></td>
 <td><p>Map an attribute to a new element type in place.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#core.normalize_mesh" title="core.normalize_mesh"><code class="xref py py-obj docutils literal notranslate"><span class="pre">normalize_mesh</span></code></a>(mesh)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#core.normalize_mesh" title="core.normalize_mesh"><code class="xref py py-obj docutils literal notranslate"><span class="pre">normalize_mesh</span></code></a>(mesh)</p></td>
 <td><p>Normalize a mesh to fit into a unit box centered at the origin.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#core.normalize_meshes" title="core.normalize_meshes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">normalize_meshes</span></code></a>(meshes)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#core.normalize_meshes" title="core.normalize_meshes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">normalize_meshes</span></code></a>(meshes)</p></td>
 <td><p>Normalize a list of meshes to fit into a unit box centered at the origin.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#core.orient_outward" title="core.orient_outward"><code class="xref py py-obj docutils literal notranslate"><span class="pre">orient_outward</span></code></a>(mesh[, positive])</p></td>
+<td><p>Orient the facets of a mesh so that the signed volume of each connected component is positive or negative.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#core.permute_facets" title="core.permute_facets"><code class="xref py py-obj docutils literal notranslate"><span class="pre">permute_facets</span></code></a>(mesh, new_to_old)</p></td>
 <td><p>Reorder facets of a mesh in place based on a permutation.</p></td>
@@ -410,47 +425,53 @@
 <tr class="row-odd"><td><p><a class="reference internal" href="#core.remap_vertices" title="core.remap_vertices"><code class="xref py py-obj docutils literal notranslate"><span class="pre">remap_vertices</span></code></a>(…)</p></td>
 <td><p>Remap vertices of a mesh in place based on a permutation (Pythonic API).</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#core.remove_duplicate_facets" title="core.remove_duplicate_facets"><code class="xref py py-obj docutils literal notranslate"><span class="pre">remove_duplicate_facets</span></code></a>(mesh[, consider_orientation])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#core.remove_degenerate_facets" title="core.remove_degenerate_facets"><code class="xref py py-obj docutils literal notranslate"><span class="pre">remove_degenerate_facets</span></code></a>(mesh)</p></td>
+<td><p>Remove degenerate facets from a mesh.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#core.remove_duplicate_facets" title="core.remove_duplicate_facets"><code class="xref py py-obj docutils literal notranslate"><span class="pre">remove_duplicate_facets</span></code></a>(mesh[, consider_orientation])</p></td>
 <td><p>Remove duplicate facets from a mesh.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#core.remove_duplicate_vertices" title="core.remove_duplicate_vertices"><code class="xref py py-obj docutils literal notranslate"><span class="pre">remove_duplicate_vertices</span></code></a>(mesh[, extra_attributes, ...])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#core.remove_duplicate_vertices" title="core.remove_duplicate_vertices"><code class="xref py py-obj docutils literal notranslate"><span class="pre">remove_duplicate_vertices</span></code></a>(mesh[, extra_attributes, ...])</p></td>
 <td><p>Remove duplicate vertices from a mesh.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#core.remove_isolated_vertices" title="core.remove_isolated_vertices"><code class="xref py py-obj docutils literal notranslate"><span class="pre">remove_isolated_vertices</span></code></a>(mesh)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#core.remove_isolated_vertices" title="core.remove_isolated_vertices"><code class="xref py py-obj docutils literal notranslate"><span class="pre">remove_isolated_vertices</span></code></a>(mesh)</p></td>
 <td><p>Remove isolated vertices from a mesh.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#core.remove_null_area_facets" title="core.remove_null_area_facets"><code class="xref py py-obj docutils literal notranslate"><span class="pre">remove_null_area_facets</span></code></a>(mesh[, null_area_threshold, ...])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#core.remove_null_area_facets" title="core.remove_null_area_facets"><code class="xref py py-obj docutils literal notranslate"><span class="pre">remove_null_area_facets</span></code></a>(mesh[, null_area_threshold, ...])</p></td>
 <td><p>Remove facets with unsigned facets area &lt;= <cite>null_area_threhsold</cite>.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#core.remove_short_edges" title="core.remove_short_edges"><code class="xref py py-obj docutils literal notranslate"><span class="pre">remove_short_edges</span></code></a>(mesh[, threshold])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#core.remove_short_edges" title="core.remove_short_edges"><code class="xref py py-obj docutils literal notranslate"><span class="pre">remove_short_edges</span></code></a>(mesh[, threshold])</p></td>
 <td><p>Remove short edges from a mesh.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#core.remove_topologically_degenerate_facets" title="core.remove_topologically_degenerate_facets"><code class="xref py py-obj docutils literal notranslate"><span class="pre">remove_topologically_degenerate_facets</span></code></a>(mesh)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#core.remove_topologically_degenerate_facets" title="core.remove_topologically_degenerate_facets"><code class="xref py py-obj docutils literal notranslate"><span class="pre">remove_topologically_degenerate_facets</span></code></a>(mesh)</p></td>
 <td><p>Remove topologically degenerate facets such as (0, 1, 1)</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#core.reorder_mesh" title="core.reorder_mesh"><code class="xref py py-obj docutils literal notranslate"><span class="pre">reorder_mesh</span></code></a>(mesh, method)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#core.reorder_mesh" title="core.reorder_mesh"><code class="xref py py-obj docutils literal notranslate"><span class="pre">reorder_mesh</span></code></a>(mesh, method)</p></td>
 <td><p>Reorder a mesh in place.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#core.resolve_nonmanifoldness" title="core.resolve_nonmanifoldness"><code class="xref py py-obj docutils literal notranslate"><span class="pre">resolve_nonmanifoldness</span></code></a>(mesh)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#core.resolve_nonmanifoldness" title="core.resolve_nonmanifoldness"><code class="xref py py-obj docutils literal notranslate"><span class="pre">resolve_nonmanifoldness</span></code></a>(mesh)</p></td>
 <td><p>Resolve both vertex and edge nonmanifoldness in a mesh.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#core.resolve_vertex_nonmanifoldness" title="core.resolve_vertex_nonmanifoldness"><code class="xref py py-obj docutils literal notranslate"><span class="pre">resolve_vertex_nonmanifoldness</span></code></a>(mesh)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#core.resolve_vertex_nonmanifoldness" title="core.resolve_vertex_nonmanifoldness"><code class="xref py py-obj docutils literal notranslate"><span class="pre">resolve_vertex_nonmanifoldness</span></code></a>(mesh)</p></td>
 <td><p>Resolve vertex non-manifoldness in a mesh.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#core.select_facets_by_normal_similarity" title="core.select_facets_by_normal_similarity"><code class="xref py py-obj docutils literal notranslate"><span class="pre">select_facets_by_normal_similarity</span></code></a>(mesh, seed_facet_id)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#core.select_facets_by_normal_similarity" title="core.select_facets_by_normal_similarity"><code class="xref py py-obj docutils literal notranslate"><span class="pre">select_facets_by_normal_similarity</span></code></a>(mesh, seed_facet_id)</p></td>
 <td><p>Select facets by normal similarity (Pythonic API).</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#core.select_facets_in_frustum" title="core.select_facets_in_frustum"><code class="xref py py-obj docutils literal notranslate"><span class="pre">select_facets_in_frustum</span></code></a>(mesh, frustum_plane_points, ...)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#core.select_facets_in_frustum" title="core.select_facets_in_frustum"><code class="xref py py-obj docutils literal notranslate"><span class="pre">select_facets_in_frustum</span></code></a>(mesh, frustum_plane_points, ...)</p></td>
 <td><p>Select facets in a frustum (Pythonic API).</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#core.separate_by_components" title="core.separate_by_components"><code class="xref py py-obj docutils literal notranslate"><span class="pre">separate_by_components</span></code></a>(mesh[, ...])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#core.separate_by_components" title="core.separate_by_components"><code class="xref py py-obj docutils literal notranslate"><span class="pre">separate_by_components</span></code></a>(mesh[, ...])</p></td>
 <td><p>Extract a set of submeshes based on connected components.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#core.separate_by_facet_groups" title="core.separate_by_facet_groups"><code class="xref py py-obj docutils literal notranslate"><span class="pre">separate_by_facet_groups</span></code></a>(mesh, facet_group_indices[, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#core.separate_by_facet_groups" title="core.separate_by_facet_groups"><code class="xref py py-obj docutils literal notranslate"><span class="pre">separate_by_facet_groups</span></code></a>(mesh, facet_group_indices[, ...])</p></td>
 <td><p>Extract a set of submeshes based on facet groups.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#core.split_long_edges" title="core.split_long_edges"><code class="xref py py-obj docutils literal notranslate"><span class="pre">split_long_edges</span></code></a>(mesh[, max_edge_length, recursive, ...])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#core.split_long_edges" title="core.split_long_edges"><code class="xref py py-obj docutils literal notranslate"><span class="pre">split_long_edges</span></code></a>(mesh[, max_edge_length, recursive, ...])</p></td>
 <td><p>Split edges that are longer than <cite>max_edge_length</cite>.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#core.thicken_and_close_mesh" title="core.thicken_and_close_mesh"><code class="xref py py-obj docutils literal notranslate"><span class="pre">thicken_and_close_mesh</span></code></a>(mesh[, offset_amount, ...])</p></td>
+<td><p>Thicken a mesh by offsetting it, and close the shape into a thick 3D solid.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#core.transform_mesh" title="core.transform_mesh"><code class="xref py py-obj docutils literal notranslate"><span class="pre">transform_mesh</span></code></a>(mesh, affine_transform[, ...])</p></td>
 <td><p>Apply affine transformation to a mesh.</p></td>
@@ -489,6 +510,17 @@
 <dt class="sig sig-object py" id="core.Attribute">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">core.</span></span><span class="sig-name descname"><span class="pre">Attribute</span></span><a class="headerlink" href="#core.Attribute" title="Link to this definition">¶</a></dt>
 <dd><p>Mesh attribute</p>
+<dl class="py property">
+<dt class="sig sig-object py" id="core.Attribute.cast_policy">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">cast_policy</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#core.AttributeCastPolicy" title="core.AttributeCastPolicy"><span class="pre">AttributeCastPolicy</span></a></em><a class="headerlink" href="#core.Attribute.cast_policy" title="Link to this definition">¶</a></dt>
+<dd><p>Copy policy of the attribute.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#core.AttributeCastPolicy" title="core.AttributeCastPolicy">AttributeCastPolicy</a></p>
+</dd>
+</dl>
+</dd></dl>
+
 <dl class="py property">
 <dt class="sig sig-object py" id="core.Attribute.copy_policy">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">copy_policy</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#core.AttributeCopyPolicy" title="core.AttributeCopyPolicy"><span class="pre">AttributeCopyPolicy</span></a></em><a class="headerlink" href="#core.Attribute.copy_policy" title="Link to this definition">¶</a></dt>
@@ -690,6 +722,31 @@
 <dd class="field-even"><p>None</p>
 </dd>
 </dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="core.AttributeCastPolicy">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">core.</span></span><span class="sig-name descname"><span class="pre">AttributeCastPolicy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwds</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#core.AttributeCastPolicy" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">enum.Enum</span></code></p>
+<p>Policy for remapping invalid values when casting to a different value type</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="core.AttributeCastPolicy.DoNotRemapInvalid">
+<span class="sig-name descname"><span class="pre">DoNotRemapInvalid</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2</span></em><a class="headerlink" href="#core.AttributeCastPolicy.DoNotRemapInvalid" title="Link to this definition">¶</a></dt>
+<dd><p>Do not remap invalid values. They are simply static_cast&lt;&gt; to the target type</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="core.AttributeCastPolicy.RemapInvalidAlways">
+<span class="sig-name descname"><span class="pre">RemapInvalidAlways</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#core.AttributeCastPolicy.RemapInvalidAlways" title="Link to this definition">¶</a></dt>
+<dd><p>Always remap invalid values from source type to target type, regardless of AttributeUsage</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="core.AttributeCastPolicy.RemapInvalidIndices">
+<span class="sig-name descname"><span class="pre">RemapInvalidIndices</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#core.AttributeCastPolicy.RemapInvalidIndices" title="Link to this definition">¶</a></dt>
+<dd><p>Map invalue values only if the AttributeUsage represents indices</p>
 </dd></dl>
 
 </dd></dl>
@@ -1129,7 +1186,8 @@
 <dl class="py class">
 <dt class="sig sig-object py" id="core.IndexedAttribute">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">core.</span></span><span class="sig-name descname"><span class="pre">IndexedAttribute</span></span><a class="headerlink" href="#core.IndexedAttribute" title="Link to this definition">¶</a></dt>
-<dd><dl class="py property">
+<dd><p>Index attribute</p>
+<dl class="py property">
 <dt class="sig sig-object py" id="core.IndexedAttribute.element_type">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">element_type</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#core.AttributeElement" title="core.AttributeElement"><span class="pre">AttributeElement</span></a></em><a class="headerlink" href="#core.IndexedAttribute.element_type" title="Link to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
@@ -1276,7 +1334,8 @@
 <dl class="py class">
 <dt class="sig sig-object py" id="core.MetaData">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">core.</span></span><span class="sig-name descname"><span class="pre">MetaData</span></span><a class="headerlink" href="#core.MetaData" title="Link to this definition">¶</a></dt>
-<dd><dl class="py method">
+<dd><p>Metadata <cite>dict</cite> of the mesh</p>
+<dl class="py method">
 <dt class="sig sig-object py" id="core.MetaData.__delitem__">
 <span class="sig-name descname"><span class="pre">__delitem__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arg</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">/</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#core.MetaData.__delitem__" title="Link to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
@@ -1461,7 +1520,8 @@
 <dl class="py class">
 <dt class="sig sig-object py" id="core.SurfaceMesh">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">core.</span></span><span class="sig-name descname"><span class="pre">SurfaceMesh</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dimension</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#core.SurfaceMesh" title="Link to this definition">¶</a></dt>
-<dd><dl class="field-list simple">
+<dd><p>Surface mesh data structure</p>
+<dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>dimension</strong> (<em>int</em>)</p>
 </dd>
@@ -3179,6 +3239,27 @@ well-defined and will be set to the special value 2 * M_PI.</p>
 </dd></dl>
 
 <dl class="py function">
+<dt class="sig sig-object py" id="core.compute_mesh_covariance">
+<span class="sig-prename descclassname"><span class="pre">core.</span></span><span class="sig-name descname"><span class="pre">compute_mesh_covariance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mesh</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">center</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">active_facets_attribute_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#core.compute_mesh_covariance" title="Link to this definition">¶</a></dt>
+<dd><p>Compute the covariance matrix of a mesh w.r.t. a center (Pythonic API).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>mesh</strong> (<a class="reference internal" href="#core.SurfaceMesh" title="core.SurfaceMesh"><em>SurfaceMesh</em></a>) – Input mesh.</p></li>
+<li><p><strong>center</strong> (<em>collections.abc.Sequence</em><em>[</em><em>float</em><em>]</em>) – The center of the covariance computation.</p></li>
+<li><p><strong>active_facets_attribute_name</strong> (<em>str</em><em> | </em><em>None</em>) – (optional) Attribute name of whether a facet should be considered in the computation.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The 3 by 3 covariance matrix, which should be symmetric.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list[list[float]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
 <dt class="sig sig-object py" id="core.compute_normal">
 <span class="sig-prename descclassname"><span class="pre">core.</span></span><span class="sig-name descname"><span class="pre">compute_normal</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mesh</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#core.SurfaceMesh" title="core.SurfaceMesh"><span class="pre">SurfaceMesh</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">feature_angle_threshold</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.7853981633974483</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cone_vertices</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">options</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#core.NormalOptions" title="core.NormalOptions"><span class="pre">NormalOptions</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#core.compute_normal" title="Link to this definition">¶</a></dt>
 <dt class="sig sig-object py">
@@ -3338,6 +3419,10 @@ well-defined and will be set to the special value 2 * M_PI.</p>
 <dt class="sig sig-object py" id="core.detect_degenerate_facets">
 <span class="sig-prename descclassname"><span class="pre">core.</span></span><span class="sig-name descname"><span class="pre">detect_degenerate_facets</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mesh</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#core.detect_degenerate_facets" title="Link to this definition">¶</a></dt>
 <dd><p>Detect degenerate facets in a mesh.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Only __exaxtly__ degenerate facets are detected.</p>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>mesh</strong> (<a class="reference internal" href="#core.SurfaceMesh" title="core.SurfaceMesh"><em>SurfaceMesh</em></a>) – The input mesh.</p>
@@ -3347,6 +3432,40 @@ well-defined and will be set to the special value 2 * M_PI.</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>list[int]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="core.extract_boundary_edges">
+<span class="sig-prename descclassname"><span class="pre">core.</span></span><span class="sig-name descname"><span class="pre">extract_boundary_edges</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mesh</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#core.extract_boundary_edges" title="Link to this definition">¶</a></dt>
+<dd><p>Extract boundary edges from a mesh.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>mesh</strong> (<a class="reference internal" href="#core.SurfaceMesh" title="core.SurfaceMesh"><em>SurfaceMesh</em></a>) – Input mesh.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A list of boundary edge indices.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list[int]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="core.extract_boundary_loops">
+<span class="sig-prename descclassname"><span class="pre">core.</span></span><span class="sig-name descname"><span class="pre">extract_boundary_loops</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mesh</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#core.extract_boundary_loops" title="Link to this definition">¶</a></dt>
+<dd><p>Extract boundary loops from a mesh.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>mesh</strong> (<a class="reference internal" href="#core.SurfaceMesh" title="core.SurfaceMesh"><em>SurfaceMesh</em></a>) – Input mesh.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A list of boundary loops, each represented as a list of vertex indices.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list[list[int]]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -3555,6 +3674,23 @@ well-defined and will be set to the special value 2 * M_PI.</p>
 </dd></dl>
 
 <dl class="py function">
+<dt class="sig sig-object py" id="core.orient_outward">
+<span class="sig-prename descclassname"><span class="pre">core.</span></span><span class="sig-name descname"><span class="pre">orient_outward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mesh</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">positive</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#core.orient_outward" title="Link to this definition">¶</a></dt>
+<dd><p>Orient the facets of a mesh so that the signed volume of each connected component is positive or negative.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>mesh</strong> (<a class="reference internal" href="#core.SurfaceMesh" title="core.SurfaceMesh"><em>SurfaceMesh</em></a>) – Input mesh.</p></li>
+<li><p><strong>positive</strong> (<em>bool</em>) – Whether to orient each volume positively or negatively.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
 <dt class="sig sig-object py" id="core.permute_facets">
 <span class="sig-prename descclassname"><span class="pre">core.</span></span><span class="sig-name descname"><span class="pre">permute_facets</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mesh</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">new_to_old</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#core.permute_facets" title="Link to this definition">¶</a></dt>
 <dd><p>Reorder facets of a mesh in place based on a permutation.</p>
@@ -3607,6 +3743,26 @@ well-defined and will be set to the special value 2 * M_PI.</p>
 </dd></dl>
 
 <dl class="py function">
+<dt class="sig sig-object py" id="core.remove_degenerate_facets">
+<span class="sig-prename descclassname"><span class="pre">core.</span></span><span class="sig-name descname"><span class="pre">remove_degenerate_facets</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mesh</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#core.remove_degenerate_facets" title="Link to this definition">¶</a></dt>
+<dd><p>Remove degenerate facets from a mesh.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The current method assumes input mesh is triangular.
+Use <cite>triangulate_polygonal_facets</cite> if the input mesh is not triangular.
+Non-degenerate facets adjacent to degenerte facets may be re-triangulated as a result of the removal.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>mesh</strong> (<a class="reference internal" href="#core.SurfaceMesh" title="core.SurfaceMesh"><em>SurfaceMesh</em></a>) – The mesh for inplace modification.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
 <dt class="sig sig-object py" id="core.remove_duplicate_facets">
 <span class="sig-prename descclassname"><span class="pre">core.</span></span><span class="sig-name descname"><span class="pre">remove_duplicate_facets</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mesh</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">consider_orientation</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#core.remove_duplicate_facets" title="Link to this definition">¶</a></dt>
 <dd><p>Remove duplicate facets from a mesh.</p>
@@ -3648,6 +3804,10 @@ If one orientation has more duplicate facets, all but one facet with the majorit
 <dt class="sig sig-object py" id="core.remove_isolated_vertices">
 <span class="sig-prename descclassname"><span class="pre">core.</span></span><span class="sig-name descname"><span class="pre">remove_isolated_vertices</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mesh</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#core.remove_isolated_vertices" title="Link to this definition">¶</a></dt>
 <dd><p>Remove isolated vertices from a mesh.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>A vertex is considered isolated if it is not referenced by any facet.</p>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>mesh</strong> (<a class="reference internal" href="#core.SurfaceMesh" title="core.SurfaceMesh"><em>SurfaceMesh</em></a>) – The input mesh for inplace modification.</p>
@@ -3879,6 +4039,30 @@ If <cite>None</cite>, the function will compute the edge lengths.</p></li>
 </dd></dl>
 
 <dl class="py function">
+<dt class="sig sig-object py" id="core.thicken_and_close_mesh">
+<span class="sig-prename descclassname"><span class="pre">core.</span></span><span class="sig-name descname"><span class="pre">thicken_and_close_mesh</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mesh</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">offset_amount</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">direction</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mirror_ratio</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_segments</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">indexed_attributes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#core.thicken_and_close_mesh" title="Link to this definition">¶</a></dt>
+<dd><p>Thicken a mesh by offsetting it, and close the shape into a thick 3D solid.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>mesh</strong> (<a class="reference internal" href="#core.SurfaceMesh" title="core.SurfaceMesh"><em>SurfaceMesh</em></a>) – Input mesh.</p></li>
+<li><p><strong>direction</strong> (<em>collections.abc.Sequence</em><em>[</em><em>float</em><em>] </em><em>| </em><em>str</em><em> | </em><em>None</em>) – Direction of the offset. Can be an attribute name or a fixed 3D vector.</p></li>
+<li><p><strong>offset_amount</strong> (<em>float</em><em> | </em><em>None</em>) – Amount of offset.</p></li>
+<li><p><strong>mirror_ratio</strong> (<em>float</em><em> | </em><em>None</em>) – Ratio of the offset amount to mirror the mesh.</p></li>
+<li><p><strong>num_segments</strong> (<em>int</em><em> | </em><em>None</em>) – Number of segments to use for the thickening.</p></li>
+<li><p><strong>indexed_attributes</strong> (<em>collections.abc.Sequence</em><em>[</em><em>str</em><em>] </em><em>| </em><em>None</em>) – List of indexed attributes to copy to the new mesh.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The thickened and closed mesh.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#core.SurfaceMesh" title="core.SurfaceMesh">SurfaceMesh</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
 <dt class="sig sig-object py" id="core.transform_mesh">
 <span class="sig-prename descclassname"><span class="pre">core.</span></span><span class="sig-name descname"><span class="pre">transform_mesh</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mesh</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">affine_transform</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normalize_normals</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normalize_tangents_bitangents</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">in_place</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#core.transform_mesh" title="Link to this definition">¶</a></dt>
 <dd><p>Apply affine transformation to a mesh.</p>
@@ -3997,23 +4181,15 @@ If <cite>None</cite>, the function will compute the edge lengths.</p></li>
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="../subdivision/index.html">
-              <div class="page-info">
-                <div class="context">
-                  <span>Next</span>
-                </div>
-                <div class="title"><code class="xref py py-mod docutils literal notranslate"><span class="pre">subdivision</span></code></div>
-              </div>
-              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
-            </a>
-          <a class="prev-page" href="../scene/index.html">
+          
+          <a class="prev-page" href="../poisson/index.html">
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
                   <span>Previous</span>
                 </div>
                 
-                <div class="title"><code class="xref py py-mod docutils literal notranslate"><span class="pre">scene</span></code></div>
+                <div class="title"><code class="xref py py-mod docutils literal notranslate"><span class="pre">poisson</span></code></div>
                 
               </div>
             </a>
@@ -4053,6 +4229,7 @@ If <cite>None</cite>, the function will compute the edge lengths.</p></li>
 <li><a class="reference internal" href="#functions">Functions</a></li>
 <li><a class="reference internal" href="#attributes">Attributes</a><ul>
 <li><a class="reference internal" href="#core.Attribute"><code class="docutils literal notranslate"><span class="pre">Attribute</span></code></a><ul>
+<li><a class="reference internal" href="#core.Attribute.cast_policy"><code class="docutils literal notranslate"><span class="pre">Attribute.cast_policy</span></code></a></li>
 <li><a class="reference internal" href="#core.Attribute.copy_policy"><code class="docutils literal notranslate"><span class="pre">Attribute.copy_policy</span></code></a></li>
 <li><a class="reference internal" href="#core.Attribute.data"><code class="docutils literal notranslate"><span class="pre">Attribute.data</span></code></a></li>
 <li><a class="reference internal" href="#core.Attribute.default_value"><code class="docutils literal notranslate"><span class="pre">Attribute.default_value</span></code></a></li>
@@ -4071,6 +4248,12 @@ If <cite>None</cite>, the function will compute the edge lengths.</p></li>
 <li><a class="reference internal" href="#core.Attribute.empty"><code class="docutils literal notranslate"><span class="pre">Attribute.empty()</span></code></a></li>
 <li><a class="reference internal" href="#core.Attribute.insert_elements"><code class="docutils literal notranslate"><span class="pre">Attribute.insert_elements()</span></code></a></li>
 <li><a class="reference internal" href="#core.Attribute.reserve_entries"><code class="docutils literal notranslate"><span class="pre">Attribute.reserve_entries()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#core.AttributeCastPolicy"><code class="docutils literal notranslate"><span class="pre">AttributeCastPolicy</span></code></a><ul>
+<li><a class="reference internal" href="#core.AttributeCastPolicy.DoNotRemapInvalid"><code class="docutils literal notranslate"><span class="pre">AttributeCastPolicy.DoNotRemapInvalid</span></code></a></li>
+<li><a class="reference internal" href="#core.AttributeCastPolicy.RemapInvalidAlways"><code class="docutils literal notranslate"><span class="pre">AttributeCastPolicy.RemapInvalidAlways</span></code></a></li>
+<li><a class="reference internal" href="#core.AttributeCastPolicy.RemapInvalidIndices"><code class="docutils literal notranslate"><span class="pre">AttributeCastPolicy.RemapInvalidIndices</span></code></a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#core.AttributeCopyPolicy"><code class="docutils literal notranslate"><span class="pre">AttributeCopyPolicy</span></code></a><ul>
@@ -4362,6 +4545,7 @@ If <cite>None</cite>, the function will compute the edge lengths.</p></li>
 <li><a class="reference internal" href="#core.compute_greedy_coloring"><code class="docutils literal notranslate"><span class="pre">compute_greedy_coloring()</span></code></a></li>
 <li><a class="reference internal" href="#core.compute_mesh_area"><code class="docutils literal notranslate"><span class="pre">compute_mesh_area()</span></code></a></li>
 <li><a class="reference internal" href="#core.compute_mesh_centroid"><code class="docutils literal notranslate"><span class="pre">compute_mesh_centroid()</span></code></a></li>
+<li><a class="reference internal" href="#core.compute_mesh_covariance"><code class="docutils literal notranslate"><span class="pre">compute_mesh_covariance()</span></code></a></li>
 <li><a class="reference internal" href="#core.compute_normal"><code class="docutils literal notranslate"><span class="pre">compute_normal()</span></code></a></li>
 <li><a class="reference internal" href="#core.compute_pointcloud_pca"><code class="docutils literal notranslate"><span class="pre">compute_pointcloud_pca()</span></code></a></li>
 <li><a class="reference internal" href="#core.compute_seam_edges"><code class="docutils literal notranslate"><span class="pre">compute_seam_edges()</span></code></a></li>
@@ -4370,6 +4554,8 @@ If <cite>None</cite>, the function will compute the edge lengths.</p></li>
 <li><a class="reference internal" href="#core.compute_vertex_normal"><code class="docutils literal notranslate"><span class="pre">compute_vertex_normal()</span></code></a></li>
 <li><a class="reference internal" href="#core.compute_vertex_valence"><code class="docutils literal notranslate"><span class="pre">compute_vertex_valence()</span></code></a></li>
 <li><a class="reference internal" href="#core.detect_degenerate_facets"><code class="docutils literal notranslate"><span class="pre">detect_degenerate_facets()</span></code></a></li>
+<li><a class="reference internal" href="#core.extract_boundary_edges"><code class="docutils literal notranslate"><span class="pre">extract_boundary_edges()</span></code></a></li>
+<li><a class="reference internal" href="#core.extract_boundary_loops"><code class="docutils literal notranslate"><span class="pre">extract_boundary_loops()</span></code></a></li>
 <li><a class="reference internal" href="#core.extract_isoline"><code class="docutils literal notranslate"><span class="pre">extract_isoline()</span></code></a></li>
 <li><a class="reference internal" href="#core.extract_submesh"><code class="docutils literal notranslate"><span class="pre">extract_submesh()</span></code></a></li>
 <li><a class="reference internal" href="#core.filter_attributes"><code class="docutils literal notranslate"><span class="pre">filter_attributes()</span></code></a></li>
@@ -4381,9 +4567,11 @@ If <cite>None</cite>, the function will compute the edge lengths.</p></li>
 <li><a class="reference internal" href="#core.map_attribute_in_place"><code class="docutils literal notranslate"><span class="pre">map_attribute_in_place()</span></code></a></li>
 <li><a class="reference internal" href="#core.normalize_mesh"><code class="docutils literal notranslate"><span class="pre">normalize_mesh()</span></code></a></li>
 <li><a class="reference internal" href="#core.normalize_meshes"><code class="docutils literal notranslate"><span class="pre">normalize_meshes()</span></code></a></li>
+<li><a class="reference internal" href="#core.orient_outward"><code class="docutils literal notranslate"><span class="pre">orient_outward()</span></code></a></li>
 <li><a class="reference internal" href="#core.permute_facets"><code class="docutils literal notranslate"><span class="pre">permute_facets()</span></code></a></li>
 <li><a class="reference internal" href="#core.permute_vertices"><code class="docutils literal notranslate"><span class="pre">permute_vertices()</span></code></a></li>
 <li><a class="reference internal" href="#core.remap_vertices"><code class="docutils literal notranslate"><span class="pre">remap_vertices()</span></code></a></li>
+<li><a class="reference internal" href="#core.remove_degenerate_facets"><code class="docutils literal notranslate"><span class="pre">remove_degenerate_facets()</span></code></a></li>
 <li><a class="reference internal" href="#core.remove_duplicate_facets"><code class="docutils literal notranslate"><span class="pre">remove_duplicate_facets()</span></code></a></li>
 <li><a class="reference internal" href="#core.remove_duplicate_vertices"><code class="docutils literal notranslate"><span class="pre">remove_duplicate_vertices()</span></code></a></li>
 <li><a class="reference internal" href="#core.remove_isolated_vertices"><code class="docutils literal notranslate"><span class="pre">remove_isolated_vertices()</span></code></a></li>
@@ -4398,6 +4586,7 @@ If <cite>None</cite>, the function will compute the edge lengths.</p></li>
 <li><a class="reference internal" href="#core.separate_by_components"><code class="docutils literal notranslate"><span class="pre">separate_by_components()</span></code></a></li>
 <li><a class="reference internal" href="#core.separate_by_facet_groups"><code class="docutils literal notranslate"><span class="pre">separate_by_facet_groups()</span></code></a></li>
 <li><a class="reference internal" href="#core.split_long_edges"><code class="docutils literal notranslate"><span class="pre">split_long_edges()</span></code></a></li>
+<li><a class="reference internal" href="#core.thicken_and_close_mesh"><code class="docutils literal notranslate"><span class="pre">thicken_and_close_mesh()</span></code></a></li>
 <li><a class="reference internal" href="#core.transform_mesh"><code class="docutils literal notranslate"><span class="pre">transform_mesh()</span></code></a></li>
 <li><a class="reference internal" href="#core.triangulate_polygonal_facets"><code class="docutils literal notranslate"><span class="pre">triangulate_polygonal_facets()</span></code></a></li>
 <li><a class="reference internal" href="#core.trim_by_isoline"><code class="docutils literal notranslate"><span class="pre">trim_by_isoline()</span></code></a></li>

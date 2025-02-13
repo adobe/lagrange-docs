@@ -1,7 +1,7 @@
 var searchData=
 [
   ['object_5fid_0',['object_id',['../structlagrange_1_1_attribute_name.html#ab948bb6b40c542bbd8c729cf1291933c',1,'lagrange::AttributeName']]],
-  ['octree_5fdepth_1',['octree_depth',['../structlagrange_1_1poisson_1_1_evaluator_options.html#a22bfd91df7ca16f54c0ff2284ec54d73',1,'lagrange::poisson::EvaluatorOptions::octree_depth()'],['../structlagrange_1_1poisson_1_1_reconstruction_options.html#a22bfd91df7ca16f54c0ff2284ec54d73',1,'lagrange::poisson::ReconstructionOptions::octree_depth()']]],
+  ['octree_5fdepth_1',['octree_depth',['../structlagrange_1_1poisson_1_1_common_options.html#a22bfd91df7ca16f54c0ff2284ec54d73',1,'lagrange::poisson::CommonOptions']]],
   ['offset_5famount_2',['offset_amount',['../structlagrange_1_1_thicken_and_close_options.html#a924c5f0b82bf8d7877e7e1a4516bdf9f',1,'lagrange::ThickenAndCloseOptions']]],
   ['offsets_3',['offsets',['../structlagrange_1_1internal_1_1_inverse_mapping.html#ad718cf6360aa1cf29bbcc6b74f1bbf37',1,'lagrange::internal::InverseMapping']]],
   ['onepx_5ffrustum_4',['onepx_frustum',['../structlagrange_1_1ui_1_1_selection_context.html#a1d47c816cbdb4f6b82e720ef46d4de92',1,'lagrange::ui::SelectionContext']]],

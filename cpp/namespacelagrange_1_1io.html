@@ -143,6 +143,7 @@ Enumerations</h2></td></tr>
 , <b>Msh</b>
 , <br />
 &#160;&#160;<b>Fbx</b>
+, <b>Stl</b>
 , <b>Unknown</b>
 <br />
  }</td></tr>
@@ -198,6 +199,14 @@ Functions</h2></td></tr>
 <tr class="memitem:a838761f1101535c1589be1f5df2c443d"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classlagrange_1_1_mesh.html">MeshType</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacelagrange_1_1io.html#a838761f1101535c1589be1f5df2c443d">load_mesh_ply</a> (const fs::path &amp;filename, const <a class="el" href="structlagrange_1_1io_1_1_load_options.html">LoadOptions</a> &amp;options={})</td></tr>
 <tr class="memdesc:a838761f1101535c1589be1f5df2c443d"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.Loads a mesh from a file in PLY format.  <a href="namespacelagrange_1_1io.html#a838761f1101535c1589be1f5df2c443d">More...</a><br /></td></tr>
 <tr class="separator:a838761f1101535c1589be1f5df2c443d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae02f11ee2792ef20c997620fa29b5753"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="classlagrange_1_1_mesh.html">MeshType</a> &gt; </td></tr>
+<tr class="memitem:ae02f11ee2792ef20c997620fa29b5753"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classlagrange_1_1_mesh.html">MeshType</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacelagrange_1_1io.html#ae02f11ee2792ef20c997620fa29b5753">load_mesh_stl</a> (std::istream &amp;input_stream, const <a class="el" href="structlagrange_1_1io_1_1_load_options.html">LoadOptions</a> &amp;options={})</td></tr>
+<tr class="memdesc:ae02f11ee2792ef20c997620fa29b5753"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads a mesh from a stream in STL format.  <a href="namespacelagrange_1_1io.html#ae02f11ee2792ef20c997620fa29b5753">More...</a><br /></td></tr>
+<tr class="separator:ae02f11ee2792ef20c997620fa29b5753"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acead5a3a646f4538a6d715f033773ec9"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="classlagrange_1_1_mesh.html">MeshType</a> &gt; </td></tr>
+<tr class="memitem:acead5a3a646f4538a6d715f033773ec9"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classlagrange_1_1_mesh.html">MeshType</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacelagrange_1_1io.html#acead5a3a646f4538a6d715f033773ec9">load_mesh_stl</a> (const fs::path &amp;filename, const <a class="el" href="structlagrange_1_1io_1_1_load_options.html">LoadOptions</a> &amp;options={})</td></tr>
+<tr class="memdesc:acead5a3a646f4538a6d715f033773ec9"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.Loads a mesh from a file in STL format.  <a href="namespacelagrange_1_1io.html#acead5a3a646f4538a6d715f033773ec9">More...</a><br /></td></tr>
+<tr class="separator:acead5a3a646f4538a6d715f033773ec9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6610dc72a7d80ebe10cc94ed98b72327"><td class="memTemplParams" colspan="2">template&lt;typename SceneType &gt; </td></tr>
 <tr class="memitem:a6610dc72a7d80ebe10cc94ed98b72327"><td class="memTemplItemLeft" align="right" valign="top">SceneType&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacelagrange_1_1io.html#a6610dc72a7d80ebe10cc94ed98b72327">load_scene</a> (const fs::path &amp;filename, const <a class="el" href="structlagrange_1_1io_1_1_load_options.html">LoadOptions</a> &amp;options={})</td></tr>
 <tr class="memdesc:a6610dc72a7d80ebe10cc94ed98b72327"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load a scene.  <a href="namespacelagrange_1_1io.html#a6610dc72a7d80ebe10cc94ed98b72327">More...</a><br /></td></tr>
@@ -939,6 +948,83 @@ template&lt;typename Scalar , typename Index &gt; </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>Loaded mesh. </dd></dl>
+
+</div>
+</div>
+<a id="ae02f11ee2792ef20c997620fa29b5753" name="ae02f11ee2792ef20c997620fa29b5753"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae02f11ee2792ef20c997620fa29b5753">&#9670;&nbsp;</a></span>load_mesh_stl() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classlagrange_1_1_mesh.html">MeshType</a> load_mesh_stl </td>
+          <td>(</td>
+          <td class="paramtype">std::istream &amp;&#160;</td>
+          <td class="paramname"><em>input_stream</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structlagrange_1_1io_1_1_load_options.html">LoadOptions</a> &amp;&#160;</td>
+          <td class="paramname"><em>options</em> = <code>{}</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Loads a mesh from a stream in STL format. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">input_stream</td><td>Input stream. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">options</td><td>Load options.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Loaded mesh. </dd></dl>
+
+</div>
+</div>
+<a id="acead5a3a646f4538a6d715f033773ec9" name="acead5a3a646f4538a6d715f033773ec9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acead5a3a646f4538a6d715f033773ec9">&#9670;&nbsp;</a></span>load_mesh_stl() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classlagrange_1_1_mesh.html">MeshType</a> load_mesh_stl </td>
+          <td>(</td>
+          <td class="paramtype">const fs::path &amp;&#160;</td>
+          <td class="paramname"><em>filename</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structlagrange_1_1io_1_1_load_options.html">LoadOptions</a> &amp;&#160;</td>
+          <td class="paramname"><em>options</em> = <code>{}</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.Loads a mesh from a file in STL format. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">filename</td><td>Input filename. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">options</td><td>Load options.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="namespacelagrange_1_1io.html#ae02f11ee2792ef20c997620fa29b5753" title="Loads a mesh from a stream in STL format.">load_mesh_stl(std::istream&amp;, const LoadOptions&amp;)</a> for more info.</dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>Loaded mesh. </dd></dl>
 
 </div>

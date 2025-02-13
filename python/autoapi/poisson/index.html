@@ -3,7 +3,7 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="next" title="image" href="../image/index.html" /><link rel="prev" title="API Reference" href="../index.html" />
+<link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="next" title="core" href="../core/index.html" /><link rel="prev" title="io" href="../io/index.html" />
 
     <!-- Generated with Sphinx 7.4.7 and Furo 2023.09.10 -->
         <title>poisson - Lagrange documentation</title>
@@ -158,12 +158,12 @@
   <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
 <li class="toctree-l1 current has-children"><a class="reference internal" href="../index.html">API Reference</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of API Reference</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
-<li class="toctree-l2 current current-page"><a class="current reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">poisson</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="../image/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">image</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="../scene/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">scene</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="../core/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">core</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="../subdivision/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">subdivision</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../image/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">image</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="../io/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">io</span></code></a></li>
+<li class="toctree-l2 current current-page"><a class="current reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">poisson</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../core/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">core</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -217,24 +217,25 @@
 </div>
 <dl class="py function">
 <dt class="sig sig-object py" id="poisson.mesh_from_oriented_points">
-<span class="sig-prename descclassname"><span class="pre">poisson.</span></span><span class="sig-name descname"><span class="pre">mesh_from_oriented_points</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">points</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normals</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">octree_depth</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">interpolation_weight</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_normal_length_as_confidence</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_dirichlet_boundary</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">colors</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_vertex_depth_attribute_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#poisson.mesh_from_oriented_points" title="Link to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">poisson.</span></span><span class="sig-name descname"><span class="pre">mesh_from_oriented_points</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">points</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normals</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">octree_depth</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">samples_per_node</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">interpolation_weight</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_normal_length_as_confidence</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_dirichlet_boundary</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">colors</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_vertex_depth_attribute_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#poisson.mesh_from_oriented_points" title="Link to this definition">¶</a></dt>
 <dd><p>Creates a triangle mesh from an oriented point cloud using Poisson surface reconstruction.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>points</strong> (<em>numpy.typing.NDArray</em><em>[</em><em>numpy.float64</em><em>]</em>) – Input point cloud positions (N x 3 matrix).</p></li>
-<li><p><strong>normals</strong> (<em>numpy.typing.NDArray</em><em>[</em><em>numpy.float64</em><em>]</em>) – Input point cloud normals (N x 3 matrix).</p></li>
+<li><p><strong>points</strong> (<em>Annotated</em><em>[</em><em>numpy.typing.ArrayLike</em><em>, </em><em>dict</em><em>(</em><em>dtype='float64'</em><em>, </em><em>order='C'</em><em>, </em><em>device='cpu'</em><em>)</em><em>]</em>) – Input point cloud positions (N x 3 matrix).</p></li>
+<li><p><strong>normals</strong> (<em>Annotated</em><em>[</em><em>numpy.typing.ArrayLike</em><em>, </em><em>dict</em><em>(</em><em>dtype='float64'</em><em>, </em><em>order='C'</em><em>, </em><em>device='cpu'</em><em>)</em><em>]</em>) – Input point cloud normals (N x 3 matrix).</p></li>
+<li><p><strong>samples_per_node</strong> (<em>float</em>) – Number of samples per node.</p></li>
 <li><p><strong>octree_depth</strong> (<em>int</em>) – Maximum octree depth. (If the value is zero then log base 4 of the point count is used.)</p></li>
 <li><p><strong>interpolation_weight</strong> (<em>float</em>) – Point interpolation weight (lambda).</p></li>
 <li><p><strong>use_normal_length_as_confidence</strong> (<em>bool</em>) – Use normal length as confidence.</p></li>
 <li><p><strong>use_dirichlet_boundary</strong> (<em>bool</em>) – Use Dirichlet boundary conditions.</p></li>
-<li><p><strong>colors</strong> (<em>Optional</em><em>[</em><em>numpy.typing.NDArray</em><em>]</em>) – Optional color attribute to interpolate (N x K matrix).</p></li>
+<li><p><strong>colors</strong> (<em>Annotated</em><em>[</em><em>numpy.typing.ArrayLike</em><em>, </em><em>dict</em><em>(</em><em>order='C'</em><em>, </em><em>device='cpu'</em><em>)</em><em>] </em><em>| </em><em>None</em>) – Optional color attribute to interpolate (N x K matrix).</p></li>
 <li><p><strong>output_vertex_depth_attribute_name</strong> (<em>str</em>) – Output density attribute name. We use a point’s target octree depth as a measure of the sampling density. A lower number means a low sampling density, and can be used to prune low-confidence regions as a post-process.</p></li>
 <li><p><strong>verbose</strong> (<em>bool</em>) – Output logging information (directly printed to standard output).</p></li>
 </ul>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p>lagrange.SurfaceMesh32f</p>
+<dd class="field-even"><p>lagrange.core.SurfaceMesh</p>
 </dd>
 </dl>
 </dd></dl>
@@ -248,23 +249,23 @@
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="../image/index.html">
+          <a class="next-page" href="../core/index.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title"><code class="xref py py-mod docutils literal notranslate"><span class="pre">image</span></code></div>
+                <div class="title"><code class="xref py py-mod docutils literal notranslate"><span class="pre">core</span></code></div>
               </div>
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
-          <a class="prev-page" href="../index.html">
+          <a class="prev-page" href="../io/index.html">
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">API Reference</div>
+                <div class="title"><code class="xref py py-mod docutils literal notranslate"><span class="pre">io</span></code></div>
                 
               </div>
             </a>

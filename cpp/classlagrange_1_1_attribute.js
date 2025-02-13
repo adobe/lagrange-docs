@@ -23,6 +23,8 @@ var classlagrange_1_1_attribute =
     [ "get_write_policy", "classlagrange_1_1_attribute.html#ad9b8b1f723ee9f5918f8c9783fc27590", null ],
     [ "set_copy_policy", "classlagrange_1_1_attribute.html#ab098c8a7d3c8e9b496f98d6a3f67d8c6", null ],
     [ "get_copy_policy", "classlagrange_1_1_attribute.html#a092f27d0f1e475f8faf46c6c804fafd1", null ],
+    [ "set_cast_policy", "classlagrange_1_1_attribute.html#ae9f0221a848867511e299c59110c0466", null ],
+    [ "get_cast_policy", "classlagrange_1_1_attribute.html#a1e74ea938574c8e71f51a2604d06a813", null ],
     [ "create_internal_copy", "classlagrange_1_1_attribute.html#a65f3d917d55163cf642f8b3f95fb583a", null ],
     [ "clear", "classlagrange_1_1_attribute.html#ac8bb3912a3ce86b15842e79d0b421204", null ],
     [ "shrink_to_fit", "classlagrange_1_1_attribute.html#a5f16304f80b6fb253c7b0ead3e16dd18", null ],
@@ -59,6 +61,7 @@ var classlagrange_1_1_attribute =
     [ "m_shrink_policy", "classlagrange_1_1_attribute.html#a8e2066426e5ee0b662e282e2236cc423", null ],
     [ "m_write_policy", "classlagrange_1_1_attribute.html#a81ac5e6e4ab023885c334c86e1325744", null ],
     [ "m_copy_policy", "classlagrange_1_1_attribute.html#aeb40e84a56364071d899e534183777b2", null ],
+    [ "m_cast_policy", "classlagrange_1_1_attribute.html#a5d97ebb551c9c1d148c488443988d534", null ],
     [ "m_is_external", "classlagrange_1_1_attribute.html#a1f1b1142d86a16ba5d18fd334bf83fdc", null ],
     [ "m_is_read_only", "classlagrange_1_1_attribute.html#a7e74c73b00954699a4853bface6ac78a", null ],
     [ "m_num_elements", "classlagrange_1_1_attribute.html#acc6eff2b70d120ff54b4d64be2e3f8bc", null ]

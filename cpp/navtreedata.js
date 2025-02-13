@@ -57,17 +57,17 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "../",
-"classlagrange_1_1_mesh_navigation.html#a8316e8d0bde5a7a8c8ef2feaa6b75f53",
-"classlagrange_1_1_surface_mesh.html#acd19aedf26eaea675129e658993c2f96",
-"classlagrange_1_1internal_1_1shared__ptr.html#ab8e997a74e163f0c0d427b0c6a8c0026",
-"classlagrange_1_1ui_1_1_color.html#a38d58def9c51f3955b8e794b49ea8303",
-"functions_t.html",
-"group__group-utils-warning.html#ga67365facef2eed9a96dc7889f58c50c1",
-"namespacelagrange_1_1raycasting.html#aff772b7a84d58ae865826ab3b66d0d35",
-"structlagrange_1_1_normal_options.html#a352c5412d6b65484c180375041e6c255",
-"structlagrange_1_1io_1_1_load_options.html#a571e7338dfe2e6771492b4e4e5c94751",
-"structlagrange_1_1ui_1_1_i_b_l.html#a635b2b63b6da24aef0868e92dda57560",
-"structlagrange_1_1ui_1_1type__traits_3_01int16__t_01_4.html"
+"classlagrange_1_1_mesh_navigation.html#a7f00680054ba02315da270847e05ceb1",
+"classlagrange_1_1_surface_mesh.html#ac105eafb5fa2eab8e87215d26ebb21c0",
+"classlagrange_1_1internal_1_1shared__ptr.html#a9a89323960f82fc5cf0e03635829fb5a",
+"classlagrange_1_1ui_1_1_camera.html#ae8bd2b2016f71aa4ffd01cea60bbc0a3",
+"functions_n.html",
+"group__group-utils-misc.html#gad2f13bef4d8b9c7c6b2dc61b87d95bd4",
+"namespacelagrange_1_1raycasting.html#a4cacb45d286bda3567a5eedf0ea57c9aaaa30404ca3fb4604d829dacae0444dd1",
+"structlagrange_1_1_mesh_covariance_options.html#a09495d225bdbb9d167086d6c25c1848b",
+"structlagrange_1_1io_1_1_load_options.html#a177eb10b677f5f83f6e34288d26bed89",
+"structlagrange_1_1ui_1_1_hovered_event.html",
+"structlagrange_1_1ui_1_1_window_resize_event.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

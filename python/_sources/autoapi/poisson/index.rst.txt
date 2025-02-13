@@ -17,12 +17,13 @@ Functions
 
 
 
-.. py:function:: mesh_from_oriented_points(points, normals, octree_depth = 0, interpolation_weight = 2.0, use_normal_length_as_confidence = False, use_dirichlet_boundary = False, colors = None, output_vertex_depth_attribute_name = '', verbose = False)
+.. py:function:: mesh_from_oriented_points(points, normals, octree_depth = 0, samples_per_node = 1.5, interpolation_weight = 2.0, use_normal_length_as_confidence = False, use_dirichlet_boundary = False, colors = None, output_vertex_depth_attribute_name = '', verbose = False)
 
    Creates a triangle mesh from an oriented point cloud using Poisson surface reconstruction.
 
    :param points: Input point cloud positions (N x 3 matrix).
    :param normals: Input point cloud normals (N x 3 matrix).
+   :param samples_per_node: Number of samples per node.
    :param octree_depth: Maximum octree depth. (If the value is zero then log base 4 of the point count is used.)
    :param interpolation_weight: Point interpolation weight (lambda).
    :param use_normal_length_as_confidence: Use normal length as confidence.

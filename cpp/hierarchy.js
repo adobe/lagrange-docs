@@ -64,6 +64,10 @@ var hierarchy =
     [ "BVH< _VertexArray, _ElementArray >::ClosestPoint", "structlagrange_1_1bvh_1_1_b_v_h_1_1_closest_point.html", null ],
     [ "ClosestPointResult< Scalar >", "structlagrange_1_1raycasting_1_1_closest_point_result.html", null ],
     [ "ColormapShaderMode", "structlagrange_1_1ui_1_1_colormap_shader_mode.html", null ],
+    [ "CommonOptions", "structlagrange_1_1poisson_1_1_common_options.html", [
+      [ "EvaluatorOptions", "structlagrange_1_1poisson_1_1_evaluator_options.html", null ],
+      [ "ReconstructionOptions", "structlagrange_1_1poisson_1_1_reconstruction_options.html", null ]
+    ] ],
     [ "ComponentOptions", "structlagrange_1_1_component_options.html", null ],
     [ "ComponentPanel", "structlagrange_1_1ui_1_1_component_panel.html", null ],
     [ "Components< GeometryType >", "classlagrange_1_1legacy_1_1_components.html", null ],
@@ -123,7 +127,6 @@ var hierarchy =
     [ "EnumToScalar< ScalarEnum::UINT32 >", "structlagrange_1_1experimental_1_1_enum_to_scalar_3_01_scalar_enum_1_1_u_i_n_t32_01_4.html", null ],
     [ "EnumToScalar< ScalarEnum::UINT64 >", "structlagrange_1_1experimental_1_1_enum_to_scalar_3_01_scalar_enum_1_1_u_i_n_t64_01_4.html", null ],
     [ "EnumToScalar< ScalarEnum::UINT8 >", "structlagrange_1_1experimental_1_1_enum_to_scalar_3_01_scalar_enum_1_1_u_i_n_t8_01_4.html", null ],
-    [ "EvaluatorOptions", "structlagrange_1_1poisson_1_1_evaluator_options.html", null ],
     [ "ExactPredicates", "classlagrange_1_1_exact_predicates.html", [
       [ "ExactPredicatesShewchuk", "classlagrange_1_1_exact_predicates_shewchuk.html", null ]
     ] ],
@@ -281,7 +284,6 @@ var hierarchy =
       [ "RaycasterMeshDerived< MeshType >", "classlagrange_1_1raycasting_1_1_raycaster_mesh_derived.html", null ]
     ] ],
     [ "RayFacetHit", "structlagrange_1_1ui_1_1_ray_facet_hit.html", null ],
-    [ "ReconstructionOptions", "structlagrange_1_1poisson_1_1_reconstruction_options.html", null ],
     [ "RemapVerticesOptions", "structlagrange_1_1_remap_vertices_options.html", null ],
     [ "RemeshingOptions", "structlagrange_1_1scene_1_1_remeshing_options.html", null ],
     [ "RemoveDuplicateFacetOptions", "structlagrange_1_1_remove_duplicate_facet_options.html", null ],
@@ -457,9 +459,7 @@ var hierarchy =
     [ "UIPanel", "structlagrange_1_1ui_1_1_u_i_panel.html", null ],
     [ "UIWidget", "classlagrange_1_1ui_1_1_u_i_widget.html", null ],
     [ "UnorientedEdge< Index >", "structlagrange_1_1internal_1_1_unoriented_edge.html", null ],
-    [ "UserDataConverter", "structlagrange_1_1scene_1_1_user_data_converter.html", [
-      [ "UserDataConverterTrampoline", "structlagrange_1_1python_1_1_user_data_converter_trampoline.html", null ]
-    ] ],
+    [ "UserDataConverter", "structlagrange_1_1scene_1_1_user_data_converter.html", null ],
     [ "UVDistortionOptions", "structlagrange_1_1_u_v_distortion_options.html", null ],
     [ "Value", "classlagrange_1_1scene_1_1_value.html", null ],
     [ "value_field< T >", "structlagrange_1_1ui_1_1utils_1_1value__field.html", null ],

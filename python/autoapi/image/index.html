@@ -3,7 +3,7 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="next" title="scene" href="../scene/index.html" /><link rel="prev" title="poisson" href="../poisson/index.html" />
+<link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="next" title="io" href="../io/index.html" /><link rel="prev" title="subdivision" href="../subdivision/index.html" />
 
     <!-- Generated with Sphinx 7.4.7 and Furo 2023.09.10 -->
         <title>image - Lagrange documentation</title>
@@ -158,12 +158,12 @@
   <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
 <li class="toctree-l1 current has-children"><a class="reference internal" href="../index.html">API Reference</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of API Reference</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../poisson/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">poisson</span></code></a></li>
-<li class="toctree-l2 current current-page"><a class="current reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">image</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="../scene/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">scene</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="../core/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">core</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="../subdivision/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">subdivision</span></code></a></li>
+<li class="toctree-l2 current current-page"><a class="current reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">image</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="../io/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">io</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../poisson/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">poisson</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../core/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">core</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -210,13 +210,13 @@
 <table class="autosummary longtable docutils align-default">
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="#image.ImageChannel" title="image.ImageChannel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ImageChannel</span></code></a></p></td>
-<td><p>Create a collection of name/value pairs.</p></td>
+<td><p>Image channel</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#image.ImagePrecision" title="image.ImagePrecision"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ImagePrecision</span></code></a></p></td>
-<td><p>Create a collection of name/value pairs.</p></td>
+<td><p>Image pixel precision</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#image.ImageStorage" title="image.ImageStorage"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ImageStorage</span></code></a></p></td>
-<td><p></p></td>
+<td><p>Image storage class</p></td>
 </tr>
 </tbody>
 </table>
@@ -225,47 +225,7 @@
 <dt class="sig sig-object py" id="image.ImageChannel">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">image.</span></span><span class="sig-name descname"><span class="pre">ImageChannel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwds</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#image.ImageChannel" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">enum.Enum</span></code></p>
-<p>Create a collection of name/value pairs.</p>
-<p>Example enumeration:</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">class</span> <span class="nc">Color</span><span class="p">(</span><span class="n">Enum</span><span class="p">):</span>
-<span class="gp">... </span>    <span class="n">RED</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="gp">... </span>    <span class="n">BLUE</span> <span class="o">=</span> <span class="mi">2</span>
-<span class="gp">... </span>    <span class="n">GREEN</span> <span class="o">=</span> <span class="mi">3</span>
-</pre></div>
-</div>
-<p>Access them by:</p>
-<ul class="simple">
-<li><p>attribute access:</p></li>
-</ul>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">Color</span><span class="o">.</span><span class="n">RED</span>
-<span class="go">&lt;Color.RED: 1&gt;</span>
-</pre></div>
-</div>
-<ul class="simple">
-<li><p>value lookup:</p></li>
-</ul>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">Color</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-<span class="go">&lt;Color.RED: 1&gt;</span>
-</pre></div>
-</div>
-<ul class="simple">
-<li><p>name lookup:</p></li>
-</ul>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">Color</span><span class="p">[</span><span class="s1">&#39;RED&#39;</span><span class="p">]</span>
-<span class="go">&lt;Color.RED: 1&gt;</span>
-</pre></div>
-</div>
-<p>Enumerations can be iterated over, and know how many members they have:</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">len</span><span class="p">(</span><span class="n">Color</span><span class="p">)</span>
-<span class="go">3</span>
-</pre></div>
-</div>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">list</span><span class="p">(</span><span class="n">Color</span><span class="p">)</span>
-<span class="go">[&lt;Color.RED: 1&gt;, &lt;Color.BLUE: 2&gt;, &lt;Color.GREEN: 3&gt;]</span>
-</pre></div>
-</div>
-<p>Methods can be added to enumerations, and members can have their own
-attributes – see the documentation for details.</p>
+<p>Image channel</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="image.ImageChannel.four">
 <span class="sig-name descname"><span class="pre">four</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">4</span></em><a class="headerlink" href="#image.ImageChannel.four" title="Link to this definition">¶</a></dt>
@@ -292,47 +252,7 @@ attributes – see the documentation for details.</p>
 <dt class="sig sig-object py" id="image.ImagePrecision">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">image.</span></span><span class="sig-name descname"><span class="pre">ImagePrecision</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwds</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#image.ImagePrecision" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">enum.Enum</span></code></p>
-<p>Create a collection of name/value pairs.</p>
-<p>Example enumeration:</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">class</span> <span class="nc">Color</span><span class="p">(</span><span class="n">Enum</span><span class="p">):</span>
-<span class="gp">... </span>    <span class="n">RED</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="gp">... </span>    <span class="n">BLUE</span> <span class="o">=</span> <span class="mi">2</span>
-<span class="gp">... </span>    <span class="n">GREEN</span> <span class="o">=</span> <span class="mi">3</span>
-</pre></div>
-</div>
-<p>Access them by:</p>
-<ul class="simple">
-<li><p>attribute access:</p></li>
-</ul>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">Color</span><span class="o">.</span><span class="n">RED</span>
-<span class="go">&lt;Color.RED: 1&gt;</span>
-</pre></div>
-</div>
-<ul class="simple">
-<li><p>value lookup:</p></li>
-</ul>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">Color</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-<span class="go">&lt;Color.RED: 1&gt;</span>
-</pre></div>
-</div>
-<ul class="simple">
-<li><p>name lookup:</p></li>
-</ul>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">Color</span><span class="p">[</span><span class="s1">&#39;RED&#39;</span><span class="p">]</span>
-<span class="go">&lt;Color.RED: 1&gt;</span>
-</pre></div>
-</div>
-<p>Enumerations can be iterated over, and know how many members they have:</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">len</span><span class="p">(</span><span class="n">Color</span><span class="p">)</span>
-<span class="go">3</span>
-</pre></div>
-</div>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">list</span><span class="p">(</span><span class="n">Color</span><span class="p">)</span>
-<span class="go">[&lt;Color.RED: 1&gt;, &lt;Color.BLUE: 2&gt;, &lt;Color.GREEN: 3&gt;]</span>
-</pre></div>
-</div>
-<p>Methods can be added to enumerations, and members can have their own
-attributes – see the documentation for details.</p>
+<p>Image pixel precision</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="image.ImagePrecision.float16">
 <span class="sig-name descname"><span class="pre">float16</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">6</span></em><a class="headerlink" href="#image.ImagePrecision.float16" title="Link to this definition">¶</a></dt>
@@ -377,20 +297,22 @@ attributes – see the documentation for details.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="image.ImageStorage">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">image.</span></span><span class="sig-name descname"><span class="pre">ImageStorage</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arg0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg2</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">/</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#image.ImageStorage" title="Link to this definition">¶</a></dt>
-<dd><dl class="field-list simple">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">image.</span></span><span class="sig-name descname"><span class="pre">ImageStorage</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">width</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">height</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alignment</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#image.ImageStorage" title="Link to this definition">¶</a></dt>
+<dd><p>Image storage class</p>
+<dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>arg0</strong> (<em>int</em>)</p></li>
-<li><p><strong>arg1</strong> (<em>int</em>)</p></li>
-<li><p><strong>arg2</strong> (<em>int</em>)</p></li>
+<li><p><strong>width</strong> (<em>int</em>)</p></li>
+<li><p><strong>height</strong> (<em>int</em>)</p></li>
+<li><p><strong>alignment</strong> (<em>int</em>)</p></li>
 </ul>
 </dd>
 </dl>
 <dl class="py property">
 <dt class="sig sig-object py" id="image.ImageStorage.data">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">data</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Annotated</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.typing.ArrayLike</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">(</span></span><span class="n"><span class="pre">dtype</span></span><span class="o"><span class="pre">=</span></span><span class="s"><span class="pre">'uint8'</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">order</span></span><span class="o"><span class="pre">=</span></span><span class="s"><span class="pre">'C'</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">device</span></span><span class="o"><span class="pre">=</span></span><span class="s"><span class="pre">'cpu'</span></span><span class="p"><span class="pre">)</span></span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#image.ImageStorage.data" title="Link to this definition">¶</a></dt>
-<dd><dl class="field-list simple">
+<dd><p>Raw image data</p>
+<dl class="field-list simple">
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>Annotated[numpy.typing.ArrayLike, dict(dtype=’uint8’, order=’C’, device=’cpu’)]</p>
 </dd>
@@ -400,7 +322,8 @@ attributes – see the documentation for details.</p>
 <dl class="py property">
 <dt class="sig sig-object py" id="image.ImageStorage.height">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">height</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#image.ImageStorage.height" title="Link to this definition">¶</a></dt>
-<dd><dl class="field-list simple">
+<dd><p>Image height</p>
+<dl class="field-list simple">
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>int</p>
 </dd>
@@ -410,7 +333,8 @@ attributes – see the documentation for details.</p>
 <dl class="py property">
 <dt class="sig sig-object py" id="image.ImageStorage.stride">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">stride</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#image.ImageStorage.stride" title="Link to this definition">¶</a></dt>
-<dd><dl class="field-list simple">
+<dd><p>Image stride</p>
+<dl class="field-list simple">
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>int</p>
 </dd>
@@ -420,7 +344,8 @@ attributes – see the documentation for details.</p>
 <dl class="py property">
 <dt class="sig sig-object py" id="image.ImageStorage.width">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">width</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#image.ImageStorage.width" title="Link to this definition">¶</a></dt>
-<dd><dl class="field-list simple">
+<dd><p>Image width</p>
+<dl class="field-list simple">
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>int</p>
 </dd>
@@ -438,23 +363,23 @@ attributes – see the documentation for details.</p>
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="../scene/index.html">
+          <a class="next-page" href="../io/index.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title"><code class="xref py py-mod docutils literal notranslate"><span class="pre">scene</span></code></div>
+                <div class="title"><code class="xref py py-mod docutils literal notranslate"><span class="pre">io</span></code></div>
               </div>
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
-          <a class="prev-page" href="../poisson/index.html">
+          <a class="prev-page" href="../subdivision/index.html">
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
                   <span>Previous</span>
                 </div>
                 
-                <div class="title"><code class="xref py py-mod docutils literal notranslate"><span class="pre">poisson</span></code></div>
+                <div class="title"><code class="xref py py-mod docutils literal notranslate"><span class="pre">subdivision</span></code></div>
                 
               </div>
             </a>

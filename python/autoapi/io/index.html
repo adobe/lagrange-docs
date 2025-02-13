@@ -3,7 +3,7 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="prev" title="subdivision" href="../subdivision/index.html" />
+<link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="next" title="poisson" href="../poisson/index.html" /><link rel="prev" title="image" href="../image/index.html" />
 
     <!-- Generated with Sphinx 7.4.7 and Furo 2023.09.10 -->
         <title>io - Lagrange documentation</title>
@@ -158,12 +158,12 @@
   <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
 <li class="toctree-l1 current has-children"><a class="reference internal" href="../index.html">API Reference</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of API Reference</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../poisson/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">poisson</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="../image/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">image</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="../scene/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">scene</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="../core/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">core</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="../subdivision/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">subdivision</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../image/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">image</span></code></a></li>
 <li class="toctree-l2 current current-page"><a class="current reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">io</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../poisson/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">poisson</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../core/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">core</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -210,13 +210,13 @@
 <table class="autosummary longtable docutils align-default">
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="#io.FileEncoding" title="io.FileEncoding"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FileEncoding</span></code></a></p></td>
-<td><p>Create a collection of name/value pairs.</p></td>
+<td><p>File encoding type</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#io.LoadOptions" title="io.LoadOptions"><code class="xref py py-obj docutils literal notranslate"><span class="pre">LoadOptions</span></code></a></p></td>
-<td><p></p></td>
+<td><p>Load options</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#io.SaveOptions" title="io.SaveOptions"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SaveOptions</span></code></a></p></td>
-<td><p></p></td>
+<td><p>Save options</p></td>
 </tr>
 </tbody>
 </table>
@@ -264,47 +264,7 @@
 <dt class="sig sig-object py" id="io.FileEncoding">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">io.</span></span><span class="sig-name descname"><span class="pre">FileEncoding</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwds</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#io.FileEncoding" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">enum.Enum</span></code></p>
-<p>Create a collection of name/value pairs.</p>
-<p>Example enumeration:</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">class</span> <span class="nc">Color</span><span class="p">(</span><span class="n">Enum</span><span class="p">):</span>
-<span class="gp">... </span>    <span class="n">RED</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="gp">... </span>    <span class="n">BLUE</span> <span class="o">=</span> <span class="mi">2</span>
-<span class="gp">... </span>    <span class="n">GREEN</span> <span class="o">=</span> <span class="mi">3</span>
-</pre></div>
-</div>
-<p>Access them by:</p>
-<ul class="simple">
-<li><p>attribute access:</p></li>
-</ul>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">Color</span><span class="o">.</span><span class="n">RED</span>
-<span class="go">&lt;Color.RED: 1&gt;</span>
-</pre></div>
-</div>
-<ul class="simple">
-<li><p>value lookup:</p></li>
-</ul>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">Color</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-<span class="go">&lt;Color.RED: 1&gt;</span>
-</pre></div>
-</div>
-<ul class="simple">
-<li><p>name lookup:</p></li>
-</ul>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">Color</span><span class="p">[</span><span class="s1">&#39;RED&#39;</span><span class="p">]</span>
-<span class="go">&lt;Color.RED: 1&gt;</span>
-</pre></div>
-</div>
-<p>Enumerations can be iterated over, and know how many members they have:</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">len</span><span class="p">(</span><span class="n">Color</span><span class="p">)</span>
-<span class="go">3</span>
-</pre></div>
-</div>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">list</span><span class="p">(</span><span class="n">Color</span><span class="p">)</span>
-<span class="go">[&lt;Color.RED: 1&gt;, &lt;Color.BLUE: 2&gt;, &lt;Color.GREEN: 3&gt;]</span>
-</pre></div>
-</div>
-<p>Methods can be added to enumerations, and members can have their own
-attributes – see the documentation for details.</p>
+<p>File encoding type</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="io.FileEncoding.Ascii">
 <span class="sig-name descname"><span class="pre">Ascii</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#io.FileEncoding.Ascii" title="Link to this definition">¶</a></dt>
@@ -320,7 +280,8 @@ attributes – see the documentation for details.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="io.LoadOptions">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">io.</span></span><span class="sig-name descname"><span class="pre">LoadOptions</span></span><a class="headerlink" href="#io.LoadOptions" title="Link to this definition">¶</a></dt>
-<dd><dl class="py property">
+<dd><p>Load options</p>
+<dl class="py property">
 <dt class="sig sig-object py" id="io.LoadOptions.load_materials">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">load_materials</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#io.LoadOptions.load_materials" title="Link to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
@@ -415,51 +376,12 @@ attributes – see the documentation for details.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="io.SaveOptions">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">io.</span></span><span class="sig-name descname"><span class="pre">SaveOptions</span></span><a class="headerlink" href="#io.SaveOptions" title="Link to this definition">¶</a></dt>
-<dd><dl class="py class">
+<dd><p>Save options</p>
+<dl class="py class">
 <dt class="sig sig-object py" id="io.SaveOptions.AttributeConversionPolicy">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">AttributeConversionPolicy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwds</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#io.SaveOptions.AttributeConversionPolicy" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">enum.Enum</span></code></p>
-<p>Create a collection of name/value pairs.</p>
-<p>Example enumeration:</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">class</span> <span class="nc">Color</span><span class="p">(</span><span class="n">Enum</span><span class="p">):</span>
-<span class="gp">... </span>    <span class="n">RED</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="gp">... </span>    <span class="n">BLUE</span> <span class="o">=</span> <span class="mi">2</span>
-<span class="gp">... </span>    <span class="n">GREEN</span> <span class="o">=</span> <span class="mi">3</span>
-</pre></div>
-</div>
-<p>Access them by:</p>
-<ul class="simple">
-<li><p>attribute access:</p></li>
-</ul>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">Color</span><span class="o">.</span><span class="n">RED</span>
-<span class="go">&lt;Color.RED: 1&gt;</span>
-</pre></div>
-</div>
-<ul class="simple">
-<li><p>value lookup:</p></li>
-</ul>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">Color</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-<span class="go">&lt;Color.RED: 1&gt;</span>
-</pre></div>
-</div>
-<ul class="simple">
-<li><p>name lookup:</p></li>
-</ul>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">Color</span><span class="p">[</span><span class="s1">&#39;RED&#39;</span><span class="p">]</span>
-<span class="go">&lt;Color.RED: 1&gt;</span>
-</pre></div>
-</div>
-<p>Enumerations can be iterated over, and know how many members they have:</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">len</span><span class="p">(</span><span class="n">Color</span><span class="p">)</span>
-<span class="go">3</span>
-</pre></div>
-</div>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">list</span><span class="p">(</span><span class="n">Color</span><span class="p">)</span>
-<span class="go">[&lt;Color.RED: 1&gt;, &lt;Color.BLUE: 2&gt;, &lt;Color.GREEN: 3&gt;]</span>
-</pre></div>
-</div>
-<p>Methods can be added to enumerations, and members can have their own
-attributes – see the documentation for details.</p>
+<p>Attribute conversion policy</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="io.SaveOptions.AttributeConversionPolicy.ConvertAsNeeded">
 <span class="sig-name descname"><span class="pre">ConvertAsNeeded</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#io.SaveOptions.AttributeConversionPolicy.ConvertAsNeeded" title="Link to this definition">¶</a></dt>
@@ -476,47 +398,7 @@ attributes – see the documentation for details.</p>
 <dt class="sig sig-object py" id="io.SaveOptions.OutputAttributes">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">OutputAttributes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwds</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#io.SaveOptions.OutputAttributes" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">enum.Enum</span></code></p>
-<p>Create a collection of name/value pairs.</p>
-<p>Example enumeration:</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">class</span> <span class="nc">Color</span><span class="p">(</span><span class="n">Enum</span><span class="p">):</span>
-<span class="gp">... </span>    <span class="n">RED</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="gp">... </span>    <span class="n">BLUE</span> <span class="o">=</span> <span class="mi">2</span>
-<span class="gp">... </span>    <span class="n">GREEN</span> <span class="o">=</span> <span class="mi">3</span>
-</pre></div>
-</div>
-<p>Access them by:</p>
-<ul class="simple">
-<li><p>attribute access:</p></li>
-</ul>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">Color</span><span class="o">.</span><span class="n">RED</span>
-<span class="go">&lt;Color.RED: 1&gt;</span>
-</pre></div>
-</div>
-<ul class="simple">
-<li><p>value lookup:</p></li>
-</ul>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">Color</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-<span class="go">&lt;Color.RED: 1&gt;</span>
-</pre></div>
-</div>
-<ul class="simple">
-<li><p>name lookup:</p></li>
-</ul>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">Color</span><span class="p">[</span><span class="s1">&#39;RED&#39;</span><span class="p">]</span>
-<span class="go">&lt;Color.RED: 1&gt;</span>
-</pre></div>
-</div>
-<p>Enumerations can be iterated over, and know how many members they have:</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">len</span><span class="p">(</span><span class="n">Color</span><span class="p">)</span>
-<span class="go">3</span>
-</pre></div>
-</div>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">list</span><span class="p">(</span><span class="n">Color</span><span class="p">)</span>
-<span class="go">[&lt;Color.RED: 1&gt;, &lt;Color.BLUE: 2&gt;, &lt;Color.GREEN: 3&gt;]</span>
-</pre></div>
-</div>
-<p>Methods can be added to enumerations, and members can have their own
-attributes – see the documentation for details.</p>
+<p>Output attribute mode</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="io.SaveOptions.OutputAttributes.All">
 <span class="sig-name descname"><span class="pre">All</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#io.SaveOptions.OutputAttributes.All" title="Link to this definition">¶</a></dt>
@@ -809,15 +691,23 @@ attributes – see the documentation for details.</p>
       <footer>
         
         <div class="related-pages">
-          
-          <a class="prev-page" href="../subdivision/index.html">
+          <a class="next-page" href="../poisson/index.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title"><code class="xref py py-mod docutils literal notranslate"><span class="pre">poisson</span></code></div>
+              </div>
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="../image/index.html">
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
                   <span>Previous</span>
                 </div>
                 
-                <div class="title"><code class="xref py py-mod docutils literal notranslate"><span class="pre">subdivision</span></code></div>
+                <div class="title"><code class="xref py py-mod docutils literal notranslate"><span class="pre">image</span></code></div>
                 
               </div>
             </a>

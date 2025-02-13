@@ -13,6 +13,7 @@ Classes
 .. autoapisummary::
 
    core.Attribute
+   core.AttributeCastPolicy
    core.AttributeCopyPolicy
    core.AttributeCreatePolicy
    core.AttributeDeletePolicy
@@ -62,6 +63,7 @@ Functions
    core.compute_greedy_coloring
    core.compute_mesh_area
    core.compute_mesh_centroid
+   core.compute_mesh_covariance
    core.compute_normal
    core.compute_pointcloud_pca
    core.compute_seam_edges
@@ -70,6 +72,8 @@ Functions
    core.compute_vertex_normal
    core.compute_vertex_valence
    core.detect_degenerate_facets
+   core.extract_boundary_edges
+   core.extract_boundary_loops
    core.extract_isoline
    core.extract_submesh
    core.filter_attributes
@@ -81,9 +85,11 @@ Functions
    core.map_attribute_in_place
    core.normalize_mesh
    core.normalize_meshes
+   core.orient_outward
    core.permute_facets
    core.permute_vertices
    core.remap_vertices
+   core.remove_degenerate_facets
    core.remove_duplicate_facets
    core.remove_duplicate_vertices
    core.remove_isolated_vertices
@@ -98,6 +104,7 @@ Functions
    core.separate_by_components
    core.separate_by_facet_groups
    core.split_long_edges
+   core.thicken_and_close_mesh
    core.transform_mesh
    core.triangulate_polygonal_facets
    core.trim_by_isoline
@@ -119,6 +126,11 @@ Attributes
 
 
    Mesh attribute
+
+   .. py:property:: cast_policy
+      :type: AttributeCastPolicy
+
+      Copy policy of the attribute.
 
    .. py:property:: copy_policy
       :type: AttributeCopyPolicy
@@ -214,6 +226,29 @@ Attributes
 
       :param num_entries: Number of entries to reserve. It does not need to be a multiple of `num_channels`.
 
+
+
+.. py:class:: AttributeCastPolicy(*args, **kwds)
+
+
+   Bases: :py:obj:`enum.Enum`
+
+   Policy for remapping invalid values when casting to a different value type
+
+   .. py:attribute:: DoNotRemapInvalid
+      :value: 2
+
+      Do not remap invalid values. They are simply static_cast<> to the target type
+
+   .. py:attribute:: RemapInvalidAlways
+      :value: 1
+
+      Always remap invalid values from source type to target type, regardless of AttributeUsage
+
+   .. py:attribute:: RemapInvalidIndices
+      :value: 0
+
+      Map invalue values only if the AttributeUsage represents indices
 
 
 .. py:class:: AttributeCopyPolicy(*args, **kwds)
@@ -595,6 +630,8 @@ Attributes
 .. py:class:: IndexedAttribute
 
 
+   Index attribute
+
    .. py:property:: element_type
       :type: AttributeElement
 
@@ -678,6 +715,8 @@ Attributes
 
 .. py:class:: MetaData
 
+
+   Metadata `dict` of the mesh
 
    .. py:method:: __delitem__(arg, /)
 
@@ -771,6 +810,8 @@ Attributes
 
 .. py:class:: SurfaceMesh(dimension = 3)
 
+
+   Surface mesh data structure
 
    .. py:property:: attr_id_corner_to_edge
       :type: int
@@ -1527,6 +1568,17 @@ Attributes
    :returns: The mesh centroid.
 
 
+.. py:function:: compute_mesh_covariance(mesh, center, active_facets_attribute_name = None)
+
+   Compute the covariance matrix of a mesh w.r.t. a center (Pythonic API).
+
+   :param mesh: Input mesh.
+   :param center: The center of the covariance computation.
+   :param active_facets_attribute_name: (optional) Attribute name of whether a facet should be considered in the computation.
+
+   :returns: The 3 by 3 covariance matrix, which should be symmetric.
+
+
 .. py:function:: compute_normal(mesh: SurfaceMesh, feature_angle_threshold: float = 0.7853981633974483, cone_vertices: object | None = None, options: NormalOptions | None = None) -> int
                  compute_normal(mesh: SurfaceMesh, feature_angle_threshold: float = 0.7853981633974483, cone_vertices: object | None = None, output_attribute_name: str | None = None, weight_type: NormalWeightingType | None = None, facet_normal_attribute_name: str | None = None, recompute_facet_normals: bool | None = None, keep_facet_normals: bool | None = None) -> int
 
@@ -1625,12 +1677,30 @@ Attributes
 
    Detect degenerate facets in a mesh.
 
-   .. note:
+   .. note::
        Only __exaxtly__ degenerate facets are detected.
 
    :param mesh: The input mesh.
 
    :returns: A list of indices of degenerate facets.
+
+
+.. py:function:: extract_boundary_edges(mesh)
+
+   Extract boundary edges from a mesh.
+
+   :param mesh: Input mesh.
+
+   :returns: A list of boundary edge indices.
+
+
+.. py:function:: extract_boundary_loops(mesh)
+
+   Extract boundary loops from a mesh.
+
+   :param mesh: Input mesh.
+
+   :returns: A list of boundary loops, each represented as a list of vertex indices.
 
 
 .. py:function:: extract_isoline(mesh, attribute, isovalue = 0.0)
@@ -1747,6 +1817,14 @@ Attributes
    :param meshes: input meshes
 
 
+.. py:function:: orient_outward(mesh, positive = True)
+
+   Orient the facets of a mesh so that the signed volume of each connected component is positive or negative.
+
+   :param mesh: Input mesh.
+   :param positive: Whether to orient each volume positively or negatively.
+
+
 .. py:function:: permute_facets(mesh, new_to_old)
 
    Reorder facets of a mesh in place based on a permutation.
@@ -1774,6 +1852,18 @@ Attributes
    :param collision_policy_integral: The collision policy for integral attributes.
 
 
+.. py:function:: remove_degenerate_facets(mesh)
+
+   Remove degenerate facets from a mesh.
+
+   .. note::
+       The current method assumes input mesh is triangular.
+       Use `triangulate_polygonal_facets` if the input mesh is not triangular.
+       Non-degenerate facets adjacent to degenerte facets may be re-triangulated as a result of the removal.
+
+   :param mesh: The mesh for inplace modification.
+
+
 .. py:function:: remove_duplicate_facets(mesh, consider_orientation = False)
 
    Remove duplicate facets from a mesh.
@@ -1799,7 +1889,7 @@ Attributes
 
    Remove isolated vertices from a mesh.
 
-   .. note:
+   .. note::
        A vertex is considered isolated if it is not referenced by any facet.
 
    :param mesh: The input mesh for inplace modification.
@@ -1925,6 +2015,20 @@ Attributes
                                    The attribute must be of value type `uint8_t`.
    :param edge_length_attribute:  The edge length attribute name that will be used to determine the edge length.
                                   If `None`, the function will compute the edge lengths.
+
+
+.. py:function:: thicken_and_close_mesh(mesh, offset_amount = None, direction = None, mirror_ratio = None, num_segments = None, indexed_attributes = None)
+
+   Thicken a mesh by offsetting it, and close the shape into a thick 3D solid.
+
+   :param mesh: Input mesh.
+   :param direction: Direction of the offset. Can be an attribute name or a fixed 3D vector.
+   :param offset_amount: Amount of offset.
+   :param mirror_ratio: Ratio of the offset amount to mirror the mesh.
+   :param num_segments: Number of segments to use for the thickening.
+   :param indexed_attributes: List of indexed attributes to copy to the new mesh.
+
+   :returns: The thickened and closed mesh.
 
 
 .. py:function:: transform_mesh(mesh, affine_transform, normalize_normals = True, normalize_tangents_bitangents = True, in_place = True)

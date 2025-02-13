@@ -156,12 +156,12 @@
   <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul>
 <li class="toctree-l1 has-children"><a class="reference internal" href="autoapi/index.html">API Reference</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of API Reference</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="autoapi/poisson/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">poisson</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="autoapi/image/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">image</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="autoapi/scene/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">scene</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="autoapi/core/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">core</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="autoapi/subdivision/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">subdivision</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="autoapi/image/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">image</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="autoapi/io/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">io</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="autoapi/poisson/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">poisson</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="autoapi/core/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">core</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -445,7 +445,11 @@
 </li>
           <li><a href="autoapi/scene/index.html#scene.ElementIdList.__repr__">(scene.ElementIdList method)</a>
 </li>
+          <li><a href="autoapi/scene/index.html#scene.Extensions.__repr__">(scene.Extensions method)</a>
+</li>
           <li><a href="autoapi/scene/index.html#scene.Image.__repr__">(scene.Image method)</a>
+</li>
+          <li><a href="autoapi/scene/index.html#scene.ImageBuffer.__repr__">(scene.ImageBuffer method)</a>
 </li>
           <li><a href="autoapi/scene/index.html#scene.ImageList.__repr__">(scene.ImageList method)</a>
 </li>
@@ -463,13 +467,19 @@
 </li>
           <li><a href="autoapi/scene/index.html#scene.Scene.__repr__">(scene.Scene method)</a>
 </li>
+          <li><a href="autoapi/scene/index.html#scene.SceneMeshInstance.__repr__">(scene.SceneMeshInstance method)</a>
+</li>
           <li><a href="autoapi/scene/index.html#scene.SceneMeshInstanceList.__repr__">(scene.SceneMeshInstanceList method)</a>
+</li>
+          <li><a href="autoapi/scene/index.html#scene.Skeleton.__repr__">(scene.Skeleton method)</a>
 </li>
           <li><a href="autoapi/scene/index.html#scene.SkeletonList.__repr__">(scene.SkeletonList method)</a>
 </li>
           <li><a href="autoapi/scene/index.html#scene.SurfaceMeshList.__repr__">(scene.SurfaceMeshList method)</a>
 </li>
           <li><a href="autoapi/scene/index.html#scene.Texture.__repr__">(scene.Texture method)</a>
+</li>
+          <li><a href="autoapi/scene/index.html#scene.TextureInfo.__repr__">(scene.TextureInfo method)</a>
 </li>
           <li><a href="autoapi/scene/index.html#scene.TextureList.__repr__">(scene.TextureList method)</a>
 </li>
@@ -670,6 +680,8 @@
 </li>
         <li><a href="autoapi/io/index.html#io.SaveOptions.attribute_conversion_policy">attribute_conversion_policy (io.SaveOptions property)</a>
 </li>
+        <li><a href="autoapi/core/index.html#core.AttributeCastPolicy">AttributeCastPolicy (class in core)</a>
+</li>
         <li><a href="autoapi/core/index.html#core.AttributeCopyPolicy">AttributeCopyPolicy (class in core)</a>
 </li>
         <li><a href="autoapi/core/index.html#core.AttributeCreatePolicy">AttributeCreatePolicy (class in core)</a>
@@ -741,6 +753,8 @@
 </li>
         </ul></li>
         <li><a href="autoapi/core/index.html#core.cast_attribute">cast_attribute() (in module core)</a>
+</li>
+        <li><a href="autoapi/core/index.html#core.Attribute.cast_policy">cast_policy (core.Attribute property)</a>
 </li>
         <li><a href="autoapi/subdivision/index.html#subdivision.SchemeType.CatmullClark">CatmullClark (subdivision.SchemeType attribute)</a>
 </li>
@@ -834,6 +848,8 @@
 </li>
         <li><a href="autoapi/core/index.html#core.compute_mesh_centroid">compute_mesh_centroid() (in module core)</a>
 </li>
+        <li><a href="autoapi/core/index.html#core.compute_mesh_covariance">compute_mesh_covariance() (in module core)</a>
+</li>
         <li><a href="autoapi/core/index.html#core.compute_normal">compute_normal() (in module core)</a>
 </li>
         <li><a href="autoapi/core/index.html#core.compute_pointcloud_pca">compute_pointcloud_pca() (in module core)</a>
@@ -923,10 +939,10 @@
 </li>
         <li><a href="autoapi/core/index.html#core.detect_degenerate_facets">detect_degenerate_facets() (in module core)</a>
 </li>
-    </ul></td>
-    <td style="width: 33%; vertical-align: top;"><ul>
         <li><a href="autoapi/core/index.html#core.SurfaceMesh.dimension">dimension (core.SurfaceMesh property)</a>
 </li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
         <li><a href="autoapi/scene/index.html#scene.Light.direction">direction (scene.Light property)</a>
 </li>
         <li><a href="autoapi/scene/index.html#scene.Light.Type.Directional">Directional (scene.Light.Type attribute)</a>
@@ -934,6 +950,8 @@
         <li><a href="autoapi/core/index.html#core.DistortionMetric.Dirichlet">Dirichlet (core.DistortionMetric attribute)</a>
 </li>
         <li><a href="autoapi/core/index.html#core.DistortionMetric">DistortionMetric (class in core)</a>
+</li>
+        <li><a href="autoapi/core/index.html#core.AttributeCastPolicy.DoNotRemapInvalid">DoNotRemapInvalid (core.AttributeCastPolicy attribute)</a>
 </li>
         <li><a href="autoapi/scene/index.html#scene.Material.double_sided">double_sided (scene.Material property)</a>
 </li>
@@ -1011,8 +1029,6 @@
 </li>
         <li><a href="autoapi/io/index.html#io.SaveOptions.AttributeConversionPolicy.ExactMatchOnly">ExactMatchOnly (io.SaveOptions.AttributeConversionPolicy attribute)</a>
 </li>
-    </ul></td>
-    <td style="width: 33%; vertical-align: top;"><ul>
         <li><a href="autoapi/scene/index.html#scene.AnimationList.extend">extend() (scene.AnimationList method)</a>
 
         <ul>
@@ -1041,6 +1057,8 @@
           <li><a href="autoapi/scene/index.html#scene.ValueList.extend">(scene.ValueList method)</a>
 </li>
         </ul></li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
         <li><a href="autoapi/scene/index.html#scene.Extensions">Extensions (class in scene)</a>
 </li>
         <li><a href="autoapi/scene/index.html#scene.Animation.extensions">extensions (scene.Animation property)</a>
@@ -1064,6 +1082,10 @@
 </li>
         </ul></li>
         <li><a href="autoapi/core/index.html#core.Attribute.external">external (core.Attribute property)</a>
+</li>
+        <li><a href="autoapi/core/index.html#core.extract_boundary_edges">extract_boundary_edges() (in module core)</a>
+</li>
+        <li><a href="autoapi/core/index.html#core.extract_boundary_loops">extract_boundary_loops() (in module core)</a>
 </li>
         <li><a href="autoapi/core/index.html#core.extract_isoline">extract_isoline() (in module core)</a>
 </li>
@@ -1548,9 +1570,9 @@
 </li>
         <li><a href="autoapi/scene/index.html#scene.Texture.TextureFilter.Nearest">Nearest (scene.Texture.TextureFilter attribute)</a>
 </li>
-        <li><a href="autoapi/scene/index.html#scene.Texture.TextureFilter.NearestMimpapNearest">NearestMimpapNearest (scene.Texture.TextureFilter attribute)</a>
-</li>
         <li><a href="autoapi/scene/index.html#scene.Texture.TextureFilter.NearestMipmapLinear">NearestMipmapLinear (scene.Texture.TextureFilter attribute)</a>
+</li>
+        <li><a href="autoapi/scene/index.html#scene.Texture.TextureFilter.NearestMipmapNearest">NearestMipmapNearest (scene.Texture.TextureFilter attribute)</a>
 </li>
         <li><a href="autoapi/scene/index.html#scene.Node">Node (class in scene)</a>
 </li>
@@ -1617,6 +1639,8 @@
         <li><a href="autoapi/image/index.html#image.ImageChannel.one">one (image.ImageChannel attribute)</a>
 </li>
         <li><a href="autoapi/scene/index.html#scene.Material.AlphaMode.Opaque">Opaque (scene.Material.AlphaMode attribute)</a>
+</li>
+        <li><a href="autoapi/core/index.html#core.orient_outward">orient_outward() (in module core)</a>
 </li>
         <li><a href="autoapi/scene/index.html#scene.Camera.Type.Orthographic">Orthographic (scene.Camera.Type attribute)</a>
 </li>
@@ -1735,6 +1759,10 @@
 </li>
         <li><a href="autoapi/core/index.html#core.remap_vertices">remap_vertices() (in module core)</a>
 </li>
+        <li><a href="autoapi/core/index.html#core.AttributeCastPolicy.RemapInvalidAlways">RemapInvalidAlways (core.AttributeCastPolicy attribute)</a>
+</li>
+        <li><a href="autoapi/core/index.html#core.AttributeCastPolicy.RemapInvalidIndices">RemapInvalidIndices (core.AttributeCastPolicy attribute)</a>
+</li>
         <li><a href="autoapi/core/index.html#core.RemapVerticesOptions">RemapVerticesOptions (class in core)</a>
 </li>
         <li><a href="autoapi/scene/index.html#scene.RemeshingOptions">RemeshingOptions (class in scene)</a>
@@ -1745,12 +1773,14 @@
           <li><a href="autoapi/scene/index.html#scene.ElementIdList.remove">(scene.ElementIdList method)</a>
 </li>
         </ul></li>
+        <li><a href="autoapi/core/index.html#core.remove_degenerate_facets">remove_degenerate_facets() (in module core)</a>
+</li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
         <li><a href="autoapi/core/index.html#core.remove_duplicate_facets">remove_duplicate_facets() (in module core)</a>
 </li>
         <li><a href="autoapi/core/index.html#core.remove_duplicate_vertices">remove_duplicate_vertices() (in module core)</a>
 </li>
-    </ul></td>
-    <td style="width: 33%; vertical-align: top;"><ul>
         <li><a href="autoapi/core/index.html#core.SurfaceMesh.remove_facets">remove_facets() (core.SurfaceMesh method)</a>
 </li>
         <li><a href="autoapi/core/index.html#core.remove_isolated_vertices">remove_isolated_vertices() (in module core)</a>
@@ -1934,6 +1964,8 @@
     </ul></td>
     <td style="width: 33%; vertical-align: top;"><ul>
         <li><a href="autoapi/scene/index.html#scene.Scene.textures">textures (scene.Scene property)</a>
+</li>
+        <li><a href="autoapi/core/index.html#core.thicken_and_close_mesh">thicken_and_close_mesh() (in module core)</a>
 </li>
         <li><a href="autoapi/image/index.html#image.ImageChannel.three">three (image.ImageChannel attribute)</a>
 </li>

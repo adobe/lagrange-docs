@@ -21,7 +21,7 @@ var searchData=
   ['vector_5fref_18',['vector_ref',['../group__group-surfacemesh-views.html#ga1fe8e6f4f2ff0c10903d49ec085e541a',1,'lagrange']]],
   ['vector_5fview_19',['vector_view',['../group__group-surfacemesh-views.html#ga217fb9661440df5dd7025d26cfeaf4d6',1,'lagrange']]],
   ['vectorview_20',['VectorView',['../group__group-surfacemesh-views.html#ga373c385fbf8ee25f008de6d6575118ab',1,'lagrange']]],
-  ['verbose_21',['verbose',['../structlagrange_1_1poisson_1_1_evaluator_options.html#ab3f078684998b83967d507d0f453f454',1,'lagrange::poisson::EvaluatorOptions::verbose()'],['../structlagrange_1_1poisson_1_1_reconstruction_options.html#ab3f078684998b83967d507d0f453f454',1,'lagrange::poisson::ReconstructionOptions::verbose()']]],
+  ['verbose_21',['verbose',['../structlagrange_1_1poisson_1_1_common_options.html#ab3f078684998b83967d507d0f453f454',1,'lagrange::poisson::CommonOptions']]],
   ['verbosetimer_22',['VerboseTimer',['../classlagrange_1_1_verbose_timer.html',1,'VerboseTimer'],['../classlagrange_1_1_verbose_timer.html#a752260dc7301e097d009849c1969d40f',1,'lagrange::VerboseTimer::VerboseTimer()']]],
   ['vertex_23',['Vertex',['../group__group-surfacemesh-attr.html#gga9d8ab208822bab9987e9652dda49d89aad013c4439c3e09308d6b2eef2a4025ae',1,'lagrange::Vertex()'],['../namespacelagrange.html#a312f57b0318728667933d7254778058bab22b929ba52471a02d18bb3a4e4472e6',1,'lagrange::Vertex()']]],
   ['vertex_5fboundary_5finterpolation_24',['vertex_boundary_interpolation',['../structlagrange_1_1subdivision_1_1_subdivision_options.html#a56ecf395ef5c7f6bca751e06c42f02a2',1,'lagrange::subdivision::SubdivisionOptions']]],

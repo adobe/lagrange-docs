@@ -3,7 +3,7 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="next" title="core" href="../core/index.html" /><link rel="prev" title="image" href="../image/index.html" />
+<link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="next" title="subdivision" href="../subdivision/index.html" /><link rel="prev" title="API Reference" href="../index.html" />
 
     <!-- Generated with Sphinx 7.4.7 and Furo 2023.09.10 -->
         <title>scene - Lagrange documentation</title>
@@ -158,12 +158,12 @@
   <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
 <li class="toctree-l1 current has-children"><a class="reference internal" href="../index.html">API Reference</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of API Reference</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../poisson/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">poisson</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="../image/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">image</span></code></a></li>
 <li class="toctree-l2 current current-page"><a class="current reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">scene</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="../core/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">core</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="../subdivision/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">subdivision</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../image/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">image</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="../io/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">io</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../poisson/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">poisson</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../core/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">core</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -720,47 +720,7 @@
 <dt class="sig sig-object py" id="scene.Camera.Type">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Type</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwds</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#scene.Camera.Type" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">enum.Enum</span></code></p>
-<p>Create a collection of name/value pairs.</p>
-<p>Example enumeration:</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">class</span> <span class="nc">Color</span><span class="p">(</span><span class="n">Enum</span><span class="p">):</span>
-<span class="gp">... </span>    <span class="n">RED</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="gp">... </span>    <span class="n">BLUE</span> <span class="o">=</span> <span class="mi">2</span>
-<span class="gp">... </span>    <span class="n">GREEN</span> <span class="o">=</span> <span class="mi">3</span>
-</pre></div>
-</div>
-<p>Access them by:</p>
-<ul class="simple">
-<li><p>attribute access:</p></li>
-</ul>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">Color</span><span class="o">.</span><span class="n">RED</span>
-<span class="go">&lt;Color.RED: 1&gt;</span>
-</pre></div>
-</div>
-<ul class="simple">
-<li><p>value lookup:</p></li>
-</ul>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">Color</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-<span class="go">&lt;Color.RED: 1&gt;</span>
-</pre></div>
-</div>
-<ul class="simple">
-<li><p>name lookup:</p></li>
-</ul>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">Color</span><span class="p">[</span><span class="s1">&#39;RED&#39;</span><span class="p">]</span>
-<span class="go">&lt;Color.RED: 1&gt;</span>
-</pre></div>
-</div>
-<p>Enumerations can be iterated over, and know how many members they have:</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">len</span><span class="p">(</span><span class="n">Color</span><span class="p">)</span>
-<span class="go">3</span>
-</pre></div>
-</div>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">list</span><span class="p">(</span><span class="n">Color</span><span class="p">)</span>
-<span class="go">[&lt;Color.RED: 1&gt;, &lt;Color.BLUE: 2&gt;, &lt;Color.GREEN: 3&gt;]</span>
-</pre></div>
-</div>
-<p>Methods can be added to enumerations, and members can have their own
-attributes – see the documentation for details.</p>
+<p>Camera type</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="scene.Camera.Type.Orthographic">
 <span class="sig-name descname"><span class="pre">Orthographic</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#scene.Camera.Type.Orthographic" title="Link to this definition">¶</a></dt>
@@ -1299,6 +1259,17 @@ attributes – see the documentation for details.</p>
 </dl>
 </dd></dl>
 
+<dl class="py method">
+<dt class="sig sig-object py" id="scene.Extensions.__repr__">
+<span class="sig-name descname"><span class="pre">__repr__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#scene.Extensions.__repr__" title="Link to this definition">¶</a></dt>
+<dd><p>Return repr(self).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
 </dd></dl>
 
 <dl class="py class">
@@ -1406,11 +1377,11 @@ attributes – see the documentation for details.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="scene.Image.uri">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">uri</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">pathlib.Path</span></em><a class="headerlink" href="#scene.Image.uri" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">uri</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#scene.Image.uri" title="Link to this definition">¶</a></dt>
 <dd><p>URI of the image file</p>
 <dl class="field-list simple">
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>pathlib.Path</p>
+<dd class="field-odd"><p>str | None</p>
 </dd>
 </dl>
 </dd></dl>
@@ -1482,6 +1453,17 @@ attributes – see the documentation for details.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="scene.ImageBuffer.__repr__">
+<span class="sig-name descname"><span class="pre">__repr__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#scene.ImageBuffer.__repr__" title="Link to this definition">¶</a></dt>
+<dd><p>Return repr(self).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
 </dd>
 </dl>
 </dd></dl>
@@ -1638,47 +1620,7 @@ attributes – see the documentation for details.</p>
 <dt class="sig sig-object py" id="scene.Light.Type">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Type</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwds</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#scene.Light.Type" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">enum.Enum</span></code></p>
-<p>Create a collection of name/value pairs.</p>
-<p>Example enumeration:</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">class</span> <span class="nc">Color</span><span class="p">(</span><span class="n">Enum</span><span class="p">):</span>
-<span class="gp">... </span>    <span class="n">RED</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="gp">... </span>    <span class="n">BLUE</span> <span class="o">=</span> <span class="mi">2</span>
-<span class="gp">... </span>    <span class="n">GREEN</span> <span class="o">=</span> <span class="mi">3</span>
-</pre></div>
-</div>
-<p>Access them by:</p>
-<ul class="simple">
-<li><p>attribute access:</p></li>
-</ul>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">Color</span><span class="o">.</span><span class="n">RED</span>
-<span class="go">&lt;Color.RED: 1&gt;</span>
-</pre></div>
-</div>
-<ul class="simple">
-<li><p>value lookup:</p></li>
-</ul>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">Color</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-<span class="go">&lt;Color.RED: 1&gt;</span>
-</pre></div>
-</div>
-<ul class="simple">
-<li><p>name lookup:</p></li>
-</ul>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">Color</span><span class="p">[</span><span class="s1">&#39;RED&#39;</span><span class="p">]</span>
-<span class="go">&lt;Color.RED: 1&gt;</span>
-</pre></div>
-</div>
-<p>Enumerations can be iterated over, and know how many members they have:</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">len</span><span class="p">(</span><span class="n">Color</span><span class="p">)</span>
-<span class="go">3</span>
-</pre></div>
-</div>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">list</span><span class="p">(</span><span class="n">Color</span><span class="p">)</span>
-<span class="go">[&lt;Color.RED: 1&gt;, &lt;Color.BLUE: 2&gt;, &lt;Color.GREEN: 3&gt;]</span>
-</pre></div>
-</div>
-<p>Methods can be added to enumerations, and members can have their own
-attributes – see the documentation for details.</p>
+<p>Light type</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="scene.Light.Type.Ambient">
 <span class="sig-name descname"><span class="pre">Ambient</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">4</span></em><a class="headerlink" href="#scene.Light.Type.Ambient" title="Link to this definition">¶</a></dt>
@@ -2053,47 +1995,7 @@ attributes – see the documentation for details.</p>
 <dt class="sig sig-object py" id="scene.Material.AlphaMode">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">AlphaMode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwds</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#scene.Material.AlphaMode" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">enum.Enum</span></code></p>
-<p>Create a collection of name/value pairs.</p>
-<p>Example enumeration:</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">class</span> <span class="nc">Color</span><span class="p">(</span><span class="n">Enum</span><span class="p">):</span>
-<span class="gp">... </span>    <span class="n">RED</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="gp">... </span>    <span class="n">BLUE</span> <span class="o">=</span> <span class="mi">2</span>
-<span class="gp">... </span>    <span class="n">GREEN</span> <span class="o">=</span> <span class="mi">3</span>
-</pre></div>
-</div>
-<p>Access them by:</p>
-<ul class="simple">
-<li><p>attribute access:</p></li>
-</ul>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">Color</span><span class="o">.</span><span class="n">RED</span>
-<span class="go">&lt;Color.RED: 1&gt;</span>
-</pre></div>
-</div>
-<ul class="simple">
-<li><p>value lookup:</p></li>
-</ul>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">Color</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-<span class="go">&lt;Color.RED: 1&gt;</span>
-</pre></div>
-</div>
-<ul class="simple">
-<li><p>name lookup:</p></li>
-</ul>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">Color</span><span class="p">[</span><span class="s1">&#39;RED&#39;</span><span class="p">]</span>
-<span class="go">&lt;Color.RED: 1&gt;</span>
-</pre></div>
-</div>
-<p>Enumerations can be iterated over, and know how many members they have:</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">len</span><span class="p">(</span><span class="n">Color</span><span class="p">)</span>
-<span class="go">3</span>
-</pre></div>
-</div>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">list</span><span class="p">(</span><span class="n">Color</span><span class="p">)</span>
-<span class="go">[&lt;Color.RED: 1&gt;, &lt;Color.BLUE: 2&gt;, &lt;Color.GREEN: 3&gt;]</span>
-</pre></div>
-</div>
-<p>Methods can be added to enumerations, and members can have their own
-attributes – see the documentation for details.</p>
+<p>Alpha mode</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="scene.Material.AlphaMode.Blend">
 <span class="sig-name descname"><span class="pre">Blend</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2</span></em><a class="headerlink" href="#scene.Material.AlphaMode.Blend" title="Link to this definition">¶</a></dt>
@@ -2517,10 +2419,11 @@ attributes – see the documentation for details.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="scene.Node.parent">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">parent</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#scene.Node.parent" title="Link to this definition">¶</a></dt>
-<dd><dl class="field-list simple">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">parent</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#scene.Node.parent" title="Link to this definition">¶</a></dt>
+<dd><p>Parent node index (None if no parent)</p>
+<dl class="field-list simple">
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>int</p>
+<dd class="field-odd"><p>int | None</p>
 </dd>
 </dl>
 </dd></dl>
@@ -2906,10 +2809,22 @@ attributes – see the documentation for details.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="scene.SceneMeshInstance.mesh">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">mesh</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#scene.SceneMeshInstance.mesh" title="Link to this definition">¶</a></dt>
-<dd><dl class="field-list simple">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">mesh</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#scene.SceneMeshInstance.mesh" title="Link to this definition">¶</a></dt>
+<dd><p>Mesh index in the scene.meshes vector (None if invalid)</p>
+<dl class="field-list simple">
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>int</p>
+<dd class="field-odd"><p>int | None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="scene.SceneMeshInstance.__repr__">
+<span class="sig-name descname"><span class="pre">__repr__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#scene.SceneMeshInstance.__repr__" title="Link to this definition">¶</a></dt>
+<dd><p>Return repr(self).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
 </dd>
 </dl>
 </dd></dl>
@@ -3219,6 +3134,17 @@ attributes – see the documentation for details.</p>
 </dl>
 </dd></dl>
 
+<dl class="py method">
+<dt class="sig sig-object py" id="scene.Skeleton.__repr__">
+<span class="sig-name descname"><span class="pre">__repr__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#scene.Skeleton.__repr__" title="Link to this definition">¶</a></dt>
+<dd><p>Return repr(self).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
 </dd></dl>
 
 <dl class="py class">
@@ -3513,47 +3439,7 @@ attributes – see the documentation for details.</p>
 <dt class="sig sig-object py" id="scene.Texture.TextureFilter">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">TextureFilter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwds</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#scene.Texture.TextureFilter" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">enum.Enum</span></code></p>
-<p>Create a collection of name/value pairs.</p>
-<p>Example enumeration:</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">class</span> <span class="nc">Color</span><span class="p">(</span><span class="n">Enum</span><span class="p">):</span>
-<span class="gp">... </span>    <span class="n">RED</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="gp">... </span>    <span class="n">BLUE</span> <span class="o">=</span> <span class="mi">2</span>
-<span class="gp">... </span>    <span class="n">GREEN</span> <span class="o">=</span> <span class="mi">3</span>
-</pre></div>
-</div>
-<p>Access them by:</p>
-<ul class="simple">
-<li><p>attribute access:</p></li>
-</ul>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">Color</span><span class="o">.</span><span class="n">RED</span>
-<span class="go">&lt;Color.RED: 1&gt;</span>
-</pre></div>
-</div>
-<ul class="simple">
-<li><p>value lookup:</p></li>
-</ul>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">Color</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-<span class="go">&lt;Color.RED: 1&gt;</span>
-</pre></div>
-</div>
-<ul class="simple">
-<li><p>name lookup:</p></li>
-</ul>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">Color</span><span class="p">[</span><span class="s1">&#39;RED&#39;</span><span class="p">]</span>
-<span class="go">&lt;Color.RED: 1&gt;</span>
-</pre></div>
-</div>
-<p>Enumerations can be iterated over, and know how many members they have:</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">len</span><span class="p">(</span><span class="n">Color</span><span class="p">)</span>
-<span class="go">3</span>
-</pre></div>
-</div>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">list</span><span class="p">(</span><span class="n">Color</span><span class="p">)</span>
-<span class="go">[&lt;Color.RED: 1&gt;, &lt;Color.BLUE: 2&gt;, &lt;Color.GREEN: 3&gt;]</span>
-</pre></div>
-</div>
-<p>Methods can be added to enumerations, and members can have their own
-attributes – see the documentation for details.</p>
+<p>Texture filter mode</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="scene.Texture.TextureFilter.Linear">
 <span class="sig-name descname"><span class="pre">Linear</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">9729</span></em><a class="headerlink" href="#scene.Texture.TextureFilter.Linear" title="Link to this definition">¶</a></dt>
@@ -3575,13 +3461,13 @@ attributes – see the documentation for details.</p>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="scene.Texture.TextureFilter.NearestMimpapNearest">
-<span class="sig-name descname"><span class="pre">NearestMimpapNearest</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">9984</span></em><a class="headerlink" href="#scene.Texture.TextureFilter.NearestMimpapNearest" title="Link to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="scene.Texture.TextureFilter.NearestMipmapLinear">
+<span class="sig-name descname"><span class="pre">NearestMipmapLinear</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">9986</span></em><a class="headerlink" href="#scene.Texture.TextureFilter.NearestMipmapLinear" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="scene.Texture.TextureFilter.NearestMipmapLinear">
-<span class="sig-name descname"><span class="pre">NearestMipmapLinear</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">9986</span></em><a class="headerlink" href="#scene.Texture.TextureFilter.NearestMipmapLinear" title="Link to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="scene.Texture.TextureFilter.NearestMipmapNearest">
+<span class="sig-name descname"><span class="pre">NearestMipmapNearest</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">9984</span></em><a class="headerlink" href="#scene.Texture.TextureFilter.NearestMipmapNearest" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
@@ -3595,47 +3481,7 @@ attributes – see the documentation for details.</p>
 <dt class="sig sig-object py" id="scene.Texture.WrapMode">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">WrapMode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwds</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#scene.Texture.WrapMode" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">enum.Enum</span></code></p>
-<p>Create a collection of name/value pairs.</p>
-<p>Example enumeration:</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">class</span> <span class="nc">Color</span><span class="p">(</span><span class="n">Enum</span><span class="p">):</span>
-<span class="gp">... </span>    <span class="n">RED</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="gp">... </span>    <span class="n">BLUE</span> <span class="o">=</span> <span class="mi">2</span>
-<span class="gp">... </span>    <span class="n">GREEN</span> <span class="o">=</span> <span class="mi">3</span>
-</pre></div>
-</div>
-<p>Access them by:</p>
-<ul class="simple">
-<li><p>attribute access:</p></li>
-</ul>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">Color</span><span class="o">.</span><span class="n">RED</span>
-<span class="go">&lt;Color.RED: 1&gt;</span>
-</pre></div>
-</div>
-<ul class="simple">
-<li><p>value lookup:</p></li>
-</ul>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">Color</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-<span class="go">&lt;Color.RED: 1&gt;</span>
-</pre></div>
-</div>
-<ul class="simple">
-<li><p>name lookup:</p></li>
-</ul>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">Color</span><span class="p">[</span><span class="s1">&#39;RED&#39;</span><span class="p">]</span>
-<span class="go">&lt;Color.RED: 1&gt;</span>
-</pre></div>
-</div>
-<p>Enumerations can be iterated over, and know how many members they have:</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">len</span><span class="p">(</span><span class="n">Color</span><span class="p">)</span>
-<span class="go">3</span>
-</pre></div>
-</div>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">list</span><span class="p">(</span><span class="n">Color</span><span class="p">)</span>
-<span class="go">[&lt;Color.RED: 1&gt;, &lt;Color.BLUE: 2&gt;, &lt;Color.GREEN: 3&gt;]</span>
-</pre></div>
-</div>
-<p>Methods can be added to enumerations, and members can have their own
-attributes – see the documentation for details.</p>
+<p>Texture wrap mode</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="scene.Texture.WrapMode.Clamp">
 <span class="sig-name descname"><span class="pre">Clamp</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#scene.Texture.WrapMode.Clamp" title="Link to this definition">¶</a></dt>
@@ -3670,10 +3516,11 @@ attributes – see the documentation for details.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="scene.Texture.image">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">image</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#scene.Texture.image" title="Link to this definition">¶</a></dt>
-<dd><dl class="field-list simple">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">image</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#scene.Texture.image" title="Link to this definition">¶</a></dt>
+<dd><p>Texture image index in scene.images vector (None if invalid)</p>
+<dl class="field-list simple">
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>int</p>
+<dd class="field-odd"><p>int | None</p>
 </dd>
 </dl>
 </dd></dl>
@@ -3776,10 +3623,11 @@ attributes – see the documentation for details.</p>
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">scene.</span></span><span class="sig-name descname"><span class="pre">TextureInfo</span></span><a class="headerlink" href="#scene.TextureInfo" title="Link to this definition">¶</a></dt>
 <dd><dl class="py property">
 <dt class="sig sig-object py" id="scene.TextureInfo.index">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">index</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#scene.TextureInfo.index" title="Link to this definition">¶</a></dt>
-<dd><dl class="field-list simple">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">index</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#scene.TextureInfo.index" title="Link to this definition">¶</a></dt>
+<dd><p>Texture index in scene.textures vector. <cite>None</cite> if not set.</p>
+<dl class="field-list simple">
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>int</p>
+<dd class="field-odd"><p>int | None</p>
 </dd>
 </dl>
 </dd></dl>
@@ -3790,6 +3638,17 @@ attributes – see the documentation for details.</p>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="scene.TextureInfo.__repr__">
+<span class="sig-name descname"><span class="pre">__repr__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#scene.TextureInfo.__repr__" title="Link to this definition">¶</a></dt>
+<dd><p>Return repr(self).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
 </dd>
 </dl>
 </dd></dl>
@@ -4568,7 +4427,7 @@ attributes – see the documentation for details.</p>
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>scene</strong> (<a class="reference internal" href="#scene.Scene" title="scene.Scene"><em>Scene</em></a>) – The input node.</p></li>
-<li><p><strong>node_idx</strong> (<em>int</em>) – The index of the taget node.</p></li>
+<li><p><strong>node_idx</strong> (<em>int</em>) – The index of the target node.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
@@ -4645,23 +4504,23 @@ attributes – see the documentation for details.</p>
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="../core/index.html">
+          <a class="next-page" href="../subdivision/index.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title"><code class="xref py py-mod docutils literal notranslate"><span class="pre">core</span></code></div>
+                <div class="title"><code class="xref py py-mod docutils literal notranslate"><span class="pre">subdivision</span></code></div>
               </div>
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
-          <a class="prev-page" href="../image/index.html">
+          <a class="prev-page" href="../index.html">
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
                   <span>Previous</span>
                 </div>
                 
-                <div class="title"><code class="xref py py-mod docutils literal notranslate"><span class="pre">image</span></code></div>
+                <div class="title">API Reference</div>
                 
               </div>
             </a>
@@ -4801,6 +4660,7 @@ attributes – see the documentation for details.</p>
 <li><a class="reference internal" href="#scene.Extensions.data"><code class="docutils literal notranslate"><span class="pre">Extensions.data</span></code></a></li>
 <li><a class="reference internal" href="#scene.Extensions.empty"><code class="docutils literal notranslate"><span class="pre">Extensions.empty</span></code></a></li>
 <li><a class="reference internal" href="#scene.Extensions.size"><code class="docutils literal notranslate"><span class="pre">Extensions.size</span></code></a></li>
+<li><a class="reference internal" href="#scene.Extensions.__repr__"><code class="docutils literal notranslate"><span class="pre">Extensions.__repr__()</span></code></a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#scene.FacetAllocationStrategy"><code class="docutils literal notranslate"><span class="pre">FacetAllocationStrategy</span></code></a><ul>
@@ -4824,6 +4684,7 @@ attributes – see the documentation for details.</p>
 <li><a class="reference internal" href="#scene.ImageBuffer.height"><code class="docutils literal notranslate"><span class="pre">ImageBuffer.height</span></code></a></li>
 <li><a class="reference internal" href="#scene.ImageBuffer.num_channels"><code class="docutils literal notranslate"><span class="pre">ImageBuffer.num_channels</span></code></a></li>
 <li><a class="reference internal" href="#scene.ImageBuffer.width"><code class="docutils literal notranslate"><span class="pre">ImageBuffer.width</span></code></a></li>
+<li><a class="reference internal" href="#scene.ImageBuffer.__repr__"><code class="docutils literal notranslate"><span class="pre">ImageBuffer.__repr__()</span></code></a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#scene.ImageList"><code class="docutils literal notranslate"><span class="pre">ImageList</span></code></a><ul>
@@ -4986,6 +4847,7 @@ attributes – see the documentation for details.</p>
 <li><a class="reference internal" href="#scene.SceneMeshInstance"><code class="docutils literal notranslate"><span class="pre">SceneMeshInstance</span></code></a><ul>
 <li><a class="reference internal" href="#scene.SceneMeshInstance.materials"><code class="docutils literal notranslate"><span class="pre">SceneMeshInstance.materials</span></code></a></li>
 <li><a class="reference internal" href="#scene.SceneMeshInstance.mesh"><code class="docutils literal notranslate"><span class="pre">SceneMeshInstance.mesh</span></code></a></li>
+<li><a class="reference internal" href="#scene.SceneMeshInstance.__repr__"><code class="docutils literal notranslate"><span class="pre">SceneMeshInstance.__repr__()</span></code></a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#scene.SceneMeshInstanceList"><code class="docutils literal notranslate"><span class="pre">SceneMeshInstanceList</span></code></a><ul>
@@ -5019,6 +4881,7 @@ attributes – see the documentation for details.</p>
 <li><a class="reference internal" href="#scene.Skeleton"><code class="docutils literal notranslate"><span class="pre">Skeleton</span></code></a><ul>
 <li><a class="reference internal" href="#scene.Skeleton.extensions"><code class="docutils literal notranslate"><span class="pre">Skeleton.extensions</span></code></a></li>
 <li><a class="reference internal" href="#scene.Skeleton.meshes"><code class="docutils literal notranslate"><span class="pre">Skeleton.meshes</span></code></a></li>
+<li><a class="reference internal" href="#scene.Skeleton.__repr__"><code class="docutils literal notranslate"><span class="pre">Skeleton.__repr__()</span></code></a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#scene.SkeletonList"><code class="docutils literal notranslate"><span class="pre">SkeletonList</span></code></a><ul>
@@ -5057,8 +4920,8 @@ attributes – see the documentation for details.</p>
 <li><a class="reference internal" href="#scene.Texture.TextureFilter.LinearMipmapLinear"><code class="docutils literal notranslate"><span class="pre">Texture.TextureFilter.LinearMipmapLinear</span></code></a></li>
 <li><a class="reference internal" href="#scene.Texture.TextureFilter.LinearMipmapNearest"><code class="docutils literal notranslate"><span class="pre">Texture.TextureFilter.LinearMipmapNearest</span></code></a></li>
 <li><a class="reference internal" href="#scene.Texture.TextureFilter.Nearest"><code class="docutils literal notranslate"><span class="pre">Texture.TextureFilter.Nearest</span></code></a></li>
-<li><a class="reference internal" href="#scene.Texture.TextureFilter.NearestMimpapNearest"><code class="docutils literal notranslate"><span class="pre">Texture.TextureFilter.NearestMimpapNearest</span></code></a></li>
 <li><a class="reference internal" href="#scene.Texture.TextureFilter.NearestMipmapLinear"><code class="docutils literal notranslate"><span class="pre">Texture.TextureFilter.NearestMipmapLinear</span></code></a></li>
+<li><a class="reference internal" href="#scene.Texture.TextureFilter.NearestMipmapNearest"><code class="docutils literal notranslate"><span class="pre">Texture.TextureFilter.NearestMipmapNearest</span></code></a></li>
 <li><a class="reference internal" href="#scene.Texture.TextureFilter.Undefined"><code class="docutils literal notranslate"><span class="pre">Texture.TextureFilter.Undefined</span></code></a></li>
 </ul>
 </li>
@@ -5085,6 +4948,7 @@ attributes – see the documentation for details.</p>
 <li><a class="reference internal" href="#scene.TextureInfo"><code class="docutils literal notranslate"><span class="pre">TextureInfo</span></code></a><ul>
 <li><a class="reference internal" href="#scene.TextureInfo.index"><code class="docutils literal notranslate"><span class="pre">TextureInfo.index</span></code></a></li>
 <li><a class="reference internal" href="#scene.TextureInfo.texcoord"><code class="docutils literal notranslate"><span class="pre">TextureInfo.texcoord</span></code></a></li>
+<li><a class="reference internal" href="#scene.TextureInfo.__repr__"><code class="docutils literal notranslate"><span class="pre">TextureInfo.__repr__()</span></code></a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#scene.TextureList"><code class="docutils literal notranslate"><span class="pre">TextureList</span></code></a><ul>

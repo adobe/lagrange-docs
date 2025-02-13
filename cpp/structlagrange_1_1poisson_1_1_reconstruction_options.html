@@ -121,6 +121,8 @@ $(document).ready(function(){initNavTree('structlagrange_1_1poisson_1_1_reconstr
  <a href="structlagrange_1_1poisson_1_1_reconstruction_options.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="mesh__from__oriented__points_8h_source.html">lagrange/poisson/mesh_from_oriented_points.h</a>&gt;</code></p>
+
+<p>Inherits <a class="el" href="structlagrange_1_1poisson_1_1_common_options.html">CommonOptions</a>.</p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -128,10 +130,6 @@ Public Attributes</h2></td></tr>
 std::string_view&#160;</td><td class="memItemRight" valign="bottom"><b>input_normals</b></td></tr>
 <tr class="memdesc:a6482e8ca5ad0a73125a24ed133b21da2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Input normal attribute name. If empty, uses the first attribute with usage <code>Normal</code>. <br /></td></tr>
 <tr class="separator:a6482e8ca5ad0a73125a24ed133b21da2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a22bfd91df7ca16f54c0ff2284ec54d73"><td class="memItemLeft" align="right" valign="top"><a id="a22bfd91df7ca16f54c0ff2284ec54d73" name="a22bfd91df7ca16f54c0ff2284ec54d73"></a>
-unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>octree_depth</b> = 0</td></tr>
-<tr class="memdesc:a22bfd91df7ca16f54c0ff2284ec54d73"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum octree depth. (If the value is zero then the minimum of 8 and log base 4 of the point count is used.) <br /></td></tr>
-<tr class="separator:a22bfd91df7ca16f54c0ff2284ec54d73"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8ebaf2d95e2be21c5b21f76bdc7b8249"><td class="memItemLeft" align="right" valign="top"><a id="a8ebaf2d95e2be21c5b21f76bdc7b8249" name="a8ebaf2d95e2be21c5b21f76bdc7b8249"></a>
 float&#160;</td><td class="memItemRight" valign="bottom"><b>interpolation_weight</b> = 2.f</td></tr>
 <tr class="memdesc:a8ebaf2d95e2be21c5b21f76bdc7b8249"><td class="mdescLeft">&#160;</td><td class="mdescRight">Point interpolation weight (lambda) <br /></td></tr>
@@ -151,10 +149,19 @@ std::string_view&#160;</td><td class="memItemRight" valign="bottom"><b>interpola
 <tr class="memitem:a592fb337b98494dd6cb61985eba6886b"><td class="memItemLeft" align="right" valign="top">std::string_view&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlagrange_1_1poisson_1_1_reconstruction_options.html#a592fb337b98494dd6cb61985eba6886b">output_vertex_depth_attribute_name</a></td></tr>
 <tr class="memdesc:a592fb337b98494dd6cb61985eba6886b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Output density attribute name.  <a href="structlagrange_1_1poisson_1_1_reconstruction_options.html#a592fb337b98494dd6cb61985eba6886b">More...</a><br /></td></tr>
 <tr class="separator:a592fb337b98494dd6cb61985eba6886b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab3f078684998b83967d507d0f453f454"><td class="memItemLeft" align="right" valign="top"><a id="ab3f078684998b83967d507d0f453f454" name="ab3f078684998b83967d507d0f453f454"></a>
+<tr class="inherit_header pub_attribs_structlagrange_1_1poisson_1_1_common_options"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_structlagrange_1_1poisson_1_1_common_options')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="structlagrange_1_1poisson_1_1_common_options.html">CommonOptions</a></td></tr>
+<tr class="memitem:a22bfd91df7ca16f54c0ff2284ec54d73 inherit pub_attribs_structlagrange_1_1poisson_1_1_common_options"><td class="memItemLeft" align="right" valign="top"><a id="a22bfd91df7ca16f54c0ff2284ec54d73" name="a22bfd91df7ca16f54c0ff2284ec54d73"></a>
+unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>octree_depth</b> = 0</td></tr>
+<tr class="memdesc:a22bfd91df7ca16f54c0ff2284ec54d73 inherit pub_attribs_structlagrange_1_1poisson_1_1_common_options"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum octree depth. (If the value is zero then the minimum of 8 and log base 4 of the point count is used.) <br /></td></tr>
+<tr class="separator:a22bfd91df7ca16f54c0ff2284ec54d73 inherit pub_attribs_structlagrange_1_1poisson_1_1_common_options"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af79f26b12c01e28616e87c8d57213674 inherit pub_attribs_structlagrange_1_1poisson_1_1_common_options"><td class="memItemLeft" align="right" valign="top"><a id="af79f26b12c01e28616e87c8d57213674" name="af79f26b12c01e28616e87c8d57213674"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>samples_per_node</b> = 1.5f</td></tr>
+<tr class="memdesc:af79f26b12c01e28616e87c8d57213674 inherit pub_attribs_structlagrange_1_1poisson_1_1_common_options"><td class="mdescLeft">&#160;</td><td class="mdescRight">Numer of samples per node. <br /></td></tr>
+<tr class="separator:af79f26b12c01e28616e87c8d57213674 inherit pub_attribs_structlagrange_1_1poisson_1_1_common_options"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3f078684998b83967d507d0f453f454 inherit pub_attribs_structlagrange_1_1poisson_1_1_common_options"><td class="memItemLeft" align="right" valign="top"><a id="ab3f078684998b83967d507d0f453f454" name="ab3f078684998b83967d507d0f453f454"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>verbose</b> = false</td></tr>
-<tr class="memdesc:ab3f078684998b83967d507d0f453f454"><td class="mdescLeft">&#160;</td><td class="mdescRight">Output logging information (directly printed to std::cout) <br /></td></tr>
-<tr class="separator:ab3f078684998b83967d507d0f453f454"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memdesc:ab3f078684998b83967d507d0f453f454 inherit pub_attribs_structlagrange_1_1poisson_1_1_common_options"><td class="mdescLeft">&#160;</td><td class="mdescRight">Output logging information (directly printed to std::cout) <br /></td></tr>
+<tr class="separator:ab3f078684998b83967d507d0f453f454 inherit pub_attribs_structlagrange_1_1poisson_1_1_common_options"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Option struct for Poisson surface reconstruction. </p>
