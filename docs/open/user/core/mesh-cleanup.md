@@ -6,7 +6,7 @@
     Documentation on this page relies on our [legacy mesh](legacy-mesh.md) data structure.
 
 Lagrange supports a number of mesh cleanup operations.  Typically, a mesh
-cleanup operation takes an mesh object as input and creates a new [Mesh] object.
+cleanup operation takes a mesh object as input and creates a new [Mesh] object.
 For example, all mesh cleanup functions have the same function signature:
 
 ```c++
@@ -14,7 +14,7 @@ auto out_mesh_unique = lagrange::function_name(in_mesh);
 ```
 
 Therefore, it is possible to combine mesh cleanup operations by chaining them.
-Existing vertex/facet/corner attributes can be seamless ported from the input
+Existing vertex/facet/corner attributes can be seamlessly ported from the input
 mesh to the output mesh.
 
 !!! warning "Limitation"
@@ -23,7 +23,7 @@ mesh to the output mesh.
 ## Remove Isolated Vertices
 
 An isolated vertex is a vertex that is not adjacent to any facet.  It can be
-removed with `remove_isolated_vertex` function:
+removed with `remove_isolated_vertices` function:
 
 ```c++
 #include <lagrange/mesh_cleanup/remove_isolated_vertices.h>
@@ -87,7 +87,7 @@ To remove all edges shorter than a given threshold:
 
 ```c++
 #include <lagrange/mesh_cleanup/remove_short_edges.h>
-auto mesh2_unqiue = lagrange::remove_short_edges(
+auto mesh2_unique = lagrange::remove_short_edges(
         mesh, tol);
 ```
 
@@ -97,7 +97,7 @@ where `tol` is the target edge length threshold.
 ## Remove Duplicate Facets
 
 Two facets are considered duplicates of each other if they are formed by the
-combination of vertices.  E.g. facet `[1, 2, 3]` is considered as duplicate of
+same combination of vertices.  E.g. facet `[1, 2, 3]` is considered as duplicate of
 facet `[3, 2, 1]`.  To remove all duplicate facets:
 
 ```c++
@@ -107,7 +107,7 @@ auto mesh2_unique = lagrange::remove_duplicate_facets(
 ```
 
 !!! note
-    Facet orientation is not considered.  Even thought facet `[1, 2, 3]`
+    Facet orientation is not considered.  Even though facet `[1, 2, 3]`
     and `[3, 2, 1]` have opposite orientations, they are considered as duplicates.
 
 ## Split Long Edges
@@ -158,7 +158,7 @@ where nonmanifold vertices and edges are "pulled apart".
 
 ## Convert Quad Mesh To Triangular Mesh
 
-Lagrange also provide handy function to convert a quad to a triangular mesh:
+Lagrange also provides handy function to convert a quad to a triangular mesh:
 
 ```c++
 #include <lagrange/quad_to_tri.h>

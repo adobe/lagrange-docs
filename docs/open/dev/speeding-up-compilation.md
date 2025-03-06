@@ -1,7 +1,7 @@
 # Tips To Speed Up Compilation Times
 
 If your hand has reached too deep into the depth of C++ template meta-programming and header-only
-libraries, you might find yourself in a hot mess of slow-compiling projects and long wait-time
+libraries, you might find yourself in a hot mess of slow-compiling projects and long wait times
 between recompilations.
 
 ![](img/xkcd_compiling.png)
@@ -19,7 +19,7 @@ improve compilation performance. On Linux and macOS, you can use [ccache](https:
 to improve the performance of repeated builds. Combined with a shared cache database stored in a
 Redis server, this will provide additional performance (e.g. in a Jenkins build cluster).
 [sccache](https://github.com/mozilla/sccache) is an alternative to ccache that also works on Windows
-and support cloud storage. Finally, for distributed compilation on Linux, you can also look into
+and supports cloud storage. Finally, for distributed compilation on Linux, you can also look into
 [icecream](https://github.com/icecc/icecream).
 
 ### Use Pre-Compiled Headers
@@ -140,7 +140,7 @@ phenomenon that does not improve with new versions of the C++ standard.
 Secondly, templated code require the compiler to generate code at each location where a templated
 function is used. In a project where everything is templated, deeply nested calls to templated
 functions means that the compiler will basically have to compile the whole project for each
-translation unit. This kinda defeats the purpose of separating a project in [single compilation
+translation unit. This kinda defeats the purpose of separating a project into [single compilation
 units](https://en.wikipedia.org/wiki/Single_Compilation_Unit) in the first place. Because templated
 code is usually header-only, pulling a complicated templated function will pull a lot of dependent
 headers, which will need to be parsed, and compiled, etc. The result is a big quagmire of header
@@ -161,7 +161,7 @@ To remedy this, one needs to find **compromise**, and refactor your code accordi
 The first step to sanitize a C++ project slowed down by expensive templates is to get rid of them.
 Seriously. Do not use templates unless you have to.
 
-If you absolutely need do use templates, consider the following:
+If you absolutely need to use templates, consider the following:
 
 1. If you only need to support a limited number of types, use explicit template instantiation.
 2. Write separate files for function declaration and definition, just like you would for a regular
@@ -271,10 +271,10 @@ To limit compilation overhead due to header parsing, you can do the following:
 
 - [Profile](compilation-profiling.md) your compilation times to find out which header takes the most
   time to parse.
-- Separate your code between source and header files. Move header includes to the .cpp if they are
+- Separate your code into source and header files. Move header includes to the .cpp if they are
   not needed in the .h.
 - Separate expensive headers from cheap-but-commonly-used ones, and only include what you need.
-- **Avoid** having a `all.h` or `common.h` that include all headers from your library. This may seem
+- **Avoid** having an `all.h` or `common.h` that include all headers from your library. This may seem
   convenient, but will increase compilation times for your users.
 - Use forward declarations to avoid pulling expensive headers.
 - Use the [PIMPL idiom](#the-pimpl-idiom) to hide implementation details from header files of a
@@ -282,7 +282,7 @@ To limit compilation overhead due to header parsing, you can do the following:
 
 !!! tip "Forward Declarations And Pass-By-Value"
     I was surprised to learn that you can declare a function taking a forward declared class as a
-    by-value argument and as a result. I.e. this works just fine:
+    by-value argument and as a return type. I.e. this works just fine:
 
     ```c++
     class type;
@@ -292,7 +292,7 @@ To limit compilation overhead due to header parsing, you can do the following:
 !!! warning "Forward Declarations And Circular Dependencies"
     The Google C++ Style Guide cautions [against using forward
     declarations](https://google.github.io/styleguide/cppguide.html#Forward_Declarations) whenever
-    possible. Forward declaration can hide circular dependencies which should be a red flag in your
+    possible. Forward declarations can hide circular dependencies which should be a red flag in your
     code architecture. My advice would be to use them sparingly when it makes sense, and measure the
     performance impact on your project when possible.
 
@@ -468,11 +468,11 @@ The basic idea is as follows:
     unique names for your macro, then it is a good idea to do so.
 
 The above solution works well for a single list of types to instantiate. But what if we are mixing
-functions that depend on two different types `U` and `T`? This is where the extra parameter `data`
+functions that depend on two different types, `U` and `T`? This is where the extra parameter `data`
 comes in. You can think of it as a continuation parameter to recursively instantiate nested type
 lists.
 
-Here is an concrete example:
+Here is a concrete example:
 
 === "Header.h"
 

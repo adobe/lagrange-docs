@@ -56,7 +56,7 @@ the `modules` directory. Each module has similar subdirectory setup:
 * `src/` contains the source codes.
 * `tests/` contains unit tests specific to this module.
 * `performance/` contains performance tests.
-* `examples/` contains stand alone examples illustrating typical usage.
+* `examples/` contains standalone examples illustrating typical usage.
 
 ## Adding New Third-Party Code
 

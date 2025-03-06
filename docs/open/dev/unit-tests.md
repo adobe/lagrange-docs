@@ -29,7 +29,7 @@ Running unit tests can be done either
 
     - **Xcode**
 
-        ![unit-tests-xcode](img/unit-tests-xcode.png
+        ![unit-tests-xcode](img/unit-tests-xcode.png)
     ```
 
 ## Debugging

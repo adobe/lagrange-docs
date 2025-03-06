@@ -11,12 +11,12 @@ design principles that go into Lagrange.
    page](third-party.md) for more information.
 
 2. **Powerful Mesh Data Structure**. Our mesh data structure can represent any type of mesh
-   (triangle mesh, quad-dominant, polygonal mesh, 2D, 3D, etc.). It is memory-efficient, support
+   (triangle mesh, quad-dominant, polygonal mesh, 2D, 3D, etc.). It is memory-efficient, supports
    generic attributes, navigation, dynamic editing, etc. More information is available on our
    dedicated [Mesh Class](user/core/mesh.md) user guide.
 
 3. **Interoperability**. Our mesh data structure is designed to allow wrapping any continuous
-   buffers as regular mesh attributes. This allows creating a Lagrange mesh from an external buffer
+   buffer as regular mesh attributes. This allows creating a Lagrange mesh from an external buffer
    without copying any data, as long as memory layout is compatible. Furthermore, you can export
    attributes to reuse our buffers after a mesh object is destroyed. And because our attributes can
    be viewed as Eigen matrices, our mesh data structure is directly compatible with libigl. We are
@@ -116,7 +116,7 @@ design principles that go into Lagrange.
         - Easy to add your own UI via ImGui
         - Variety of visualization options - mix and match indexing/colormapping/rendered primitive/shading.
 
-10. **Robustness/Support**. Being backed by a company, Lagrange has a strong focus on correctness/being as bug free as possible. We have extensive unit testing internally, with more than 400 unit tests. Specifically, we try to ensure the following:
+10. **Robustness/Support**. Being backed by a company, Lagrange has a strong focus on correctness/being as bug-free as possible. We have extensive unit testing internally, with more than 400 unit tests. Specifically, we try to ensure the following:
     - **Corner Cases**. Special cases should not crash the program. Incorrect inputs may result in exceptions being thrown.
     - **Determinism**. Parallel algorithms should produce the same results when called repeatedly with the same inputs.
     - **Regression Tests**. We should have unit tests to ensure that algorithms produce the same output whenever code changes. Changes in algorithm behaviors should be documented.

@@ -131,8 +131,8 @@ Lagrange provide a handy function that avoid repeated type specification:
 ```c++
 #include <lagrange/common.h>
 
-std::unqiue_ptr<T> unique_val = ...;
-auto shared_val == lagrange::to_shared_ptr(unique_val);
+std::unique_ptr<T> unique_val = ...;
+auto shared_val = lagrange::to_shared_ptr(unique_val);
 assert(unique_val == nullptr);
 assert(shared_val.use_count() == 1);
 ```
@@ -227,7 +227,7 @@ an enum type.
 enum Operation : int {
     Translation = (1 << 0),
     Rotation = (1 << 1),
-    Scaling = (1 << 2),,
+    Scaling = (1 << 2),
 }
 BitField<Operation> op;
 op.set(Operation::Translation);
@@ -294,7 +294,7 @@ void my_function() {
 
     // Deferred called to `delete_object()` destructor.
     // Called when `guard` goes out of scope.
-    auto guard = lagrange::make_scope_guard([&]( delete_object(obj); ));
+    auto guard = lagrange::make_scope_guard([&]() { delete_object(obj); });
 
     // Use `obj` ...
 }
@@ -361,16 +361,16 @@ over a raw pointer, while tracking the actual owner object via a different `std:
         uint32_t num_vertices = owner_obj->vertices.size() / 3;
 
         // Create a "view" of the raw vertices pointer while tracking ownership information
-        auto vertices_vew = make_shared_span(
+        auto vertices_view = make_shared_span(
             owner_obj,
             owner_obj->vertices.data(),
             owner_obj->vertices.size());
 
-        mesh.wrap_as_vertices(vertices_vew, num_vertices);
+        mesh.wrap_as_vertices(vertices_view, num_vertices);
 
         // Wrap facet buffer sharing the same owner object
         uint32_t num_facets = owner_obj->facets.size() / 3;
-        auto facets_vew = make_shared_span(
+        auto facets_view = make_shared_span(
             owner_obj,
             owner_obj->facets.data(),
             owner_obj->facets.size());

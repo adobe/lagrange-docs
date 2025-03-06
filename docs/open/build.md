@@ -1,6 +1,8 @@
 # Compilation Instructions
 
-## Build
+## CMake
+
+### Build
 
 Lagrange requires a modern C++ compiler that supports C++17 features.
 Lagrange data structures are compatible with [Eigen](https://eigen.tuxfamily.org/) matrices.
@@ -8,7 +10,7 @@ Other dependencies such as
 [libigl](https://github.com/libigl/libigl) and
 [imgui](https://github.com/ocornut/imgui) will be downloaded by the build system as needed.
 
-### Checkout
+#### Checkout
 
 To checkout the code:
 
@@ -16,7 +18,7 @@ To checkout the code:
 git clone {{ repo_git }}
 ```
 
-### Compiling
+#### Compiling
 
 To build the code:
 
@@ -61,7 +63,6 @@ To see available CMake options, please take a look at the file [{{ cmake_option_
     * `LAGRANGE_PERFORMANCE_TESTS`: build performance tests.
     * `LAGRANGE_EXAMPLES`: build examples.
     * `LAGRANGE_USE_PCH`: build with precomplied headers.
-    * `LAGRANGE_WITH_ONETBB`: build with oneTBB.
     * `LAGRANGE_WITH_TRACY`: build with tracy profiling support.
     * `USE_SANITIZER`: build with sanitizer support, options are "Address", "Memory", "MemoryWithOrigins", "Undefined", "Thread", "Leak".
 
@@ -79,7 +80,7 @@ cmake --build . -j 8
 
     If neither option works, please ask for help on [#lib-lagrange](https://adoberesearch.slack.com/archives/CLNGBC44V).
 
-### Unit Tests
+#### Unit Tests
 
 {% if is_corp %}
 
@@ -94,23 +95,24 @@ either run the special target `RUN_TESTS` in your Visual Studio/Xcode project, o
 in the command-line in your build folder. Further instructions on running unit tests are available
 on [this page](dev/unit-tests.md).
 
+### Platform-Specific Steps
 
-## Platform-Specific Steps
+#### Windows
 
-### Windows
+Running CMake inside PowerShell or cmd.exe should pick up MSVC as the compiler and generate a Visual
+Studio project by default:
 
-For Visual Studio, you might have to force 64-bit compilation depending on your exact compiler
-version, e.g.:
+![](img/cmake-win.png)
 
-```sh
-cmake -A x64 ..
-cmake -G "Visual Studio 17 2022" -A x64 ..
-cmake -G "Visual Studio 16 2019" -A x64 ..
-cmake -G "Visual Studio 15 2017 Win64" ..
-cmake -G "Visual Studio 14 2015 Win64" ..
-```
+If CMake picks up a different compiler, you may have to run the CMake command from either the
+[**Developer Command Prompt for VS 2022** or **Developer PowerShell for VS
+2022**](https://learn.microsoft.com/en-us/visualstudio/ide/reference/command-prompt-powershell?view=vs-2022).
+If this doesn't produce a VS project targeting x64 architecture, you may need to specifically run
+CMake from the [**x64 Native Tools Command Prompt for VS
+2022**](https://learn.microsoft.com/en-us/cpp/build/how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line?view=msvc-170)
+instead.
 
-### Unix
+#### Unix
 
 You may have to install Zenity for the file dialog window to work:
 
@@ -118,7 +120,7 @@ You may have to install Zenity for the file dialog window to work:
 sudo apt-get install zenity
 ```
 
-## Run
+### Run
 
 Executables are compiled into the following folders:
 
@@ -126,10 +128,20 @@ Executables are compiled into the following folders:
 - `<build>/tests` for unit test executables.
 - `<build>/performance` for performance test executables (legacy code).
 
-## Dependencies
+### Dependencies
 
 Lagrange's CMake build system will download and build any and all dependencies required by the
 current build setup. This includes both core dependencies (e.g., Eigen) and optional ones (e.g.,
 tinyobjloader for the IO module). If you are using Lagrange in your project and you wish to override
 Lagrange dependencies, make sure they are specified as CMake targets before calling
 `add_subdirectory(<lagrange>)`.
+
+{% if is_corp %}
+
+### Vcpkg Support
+
+Please read our [➡️ dedicated page ⬅️](../corp/dev/vcpkg.md) for information about vcpkg in Lagrange.
+
+{% endif %}
+
+<!-- ## MetaBuild -->

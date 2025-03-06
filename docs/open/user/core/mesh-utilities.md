@@ -4,7 +4,7 @@ This page describes various mesh and attribute utilities available in Lagrange's
 
 ## Compute Mesh Normals
 
-As described in our [Mesh Utilities][mesh-utils] page, mesh normals can be computed using on of the
+As described in our [Mesh Utilities][mesh-utils] page, mesh normals can be computed using one of the
 following function:
 
 ```c++
@@ -91,7 +91,7 @@ The input mesh must have an existing indexed UV and normal attribute. The
     more generic indexed attribute, and we use an attribute's index to identify and group together
     identical corners.
 
-    In practice, this means that you will need to weld together any identical attribute that do not
+    In practice, this means that you will need to weld together any identical attributes that do not
     share the same indices, or you may end up with different result compared to mikktspace.
 
 !!! warning "Limitations: Triangle Meshes vs Quad Meshes"
@@ -183,25 +183,25 @@ depending on the type of operation, as summarized below:
 
 
 !!! example
-    - Transfering a vertex attribute to mesh corner elements is a _dispatch_ operation, and will not
+    - Transferring a vertex attribute to mesh corner elements is a _dispatch_ operation, and will not
     modify any value.
-    - Transfering a corner attribute to mesh vertex elements is an _gather_ operation, and
+    - Transferring a corner attribute to mesh vertex elements is an _gather_ operation, and
     numerical values will be averaged.
 
 !!! note "Value Attributes"
-    When transfering a value attribute to any other type of element, it is expected that the number
+    When transferring a value attribute to any other type of element, it is expected that the number
     of entries in the source attribute matches the target number of mesh element.
 
     Conversely, transferring from any other mesh element type to a value attribute will create a
     buffer with the same number of entries as the input attribute element type.
 
 !!! note "Indexed Attributes and Value Attributes"
-    When transfering a value attribute to an indexed attribute (and vice-versa), the value attribute
+    When transferring a value attribute to an indexed attribute (and vice-versa), the value attribute
     is expected to have a number of elements equals to the number of _mesh corners_.
 
-    - Transfering `Value` -> `Indexed` will create an indexed attribute with a trivial index buffer
+    - Transferring `Value` -> `Indexed` will create an indexed attribute with a trivial index buffer
     (identity mapping corner $c_i$ $\to$ value $i$).
-    - Transfering `Indexed` -> `Value` will interpret the indexed attribute as if it were a corner
+    - Transferring `Indexed` -> `Value` will interpret the indexed attribute as if it were a corner
     attribute. The indexing will be lost on conversion.
 
 See: [Attributes Utilities][attr-utils] documentation.
