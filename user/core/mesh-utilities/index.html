@@ -1513,7 +1513,7 @@
 <h1 id="mesh-utility-functions">Mesh Utility Functions</h1>
 <p>This page describes various mesh and attribute utilities available in Lagrange's core module.</p>
 <h2 id="compute-mesh-normals">Compute Mesh Normals</h2>
-<p>As described in our <a href="../../../cpp/group__group-surfacemesh-utils.html">Mesh Utilities</a> page, mesh normals can be computed using on of the
+<p>As described in our <a href="../../../cpp/group__group-surfacemesh-utils.html">Mesh Utilities</a> page, mesh normals can be computed using one of the
 following function:</p>
 <div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;lagrange/compute_normal.h&gt;</span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;lagrange/compute_facet_normal.h&gt;</span>
@@ -1590,7 +1590,7 @@ shows that we are 5x-6x faster than mikktspace, mostly due to the addition of mu
 weld corners sharing identical UV/normal values. In contrast, our mesh data structure uses a
 more generic indexed attribute, and we use an attribute's index to identify and group together
 identical corners.</p>
-<p>In practice, this means that you will need to weld together any identical attribute that do not
+<p>In practice, this means that you will need to weld together any identical attributes that do not
 share the same indices, or you may end up with different result compared to mikktspace.</p>
 </div>
 <div class="admonition warning">
@@ -1726,27 +1726,27 @@ depending on the type of operation, as summarized below:</p>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
 <ul>
-<li>Transfering a vertex attribute to mesh corner elements is a <em>dispatch</em> operation, and will not
+<li>Transferring a vertex attribute to mesh corner elements is a <em>dispatch</em> operation, and will not
 modify any value.</li>
-<li>Transfering a corner attribute to mesh vertex elements is an <em>gather</em> operation, and
+<li>Transferring a corner attribute to mesh vertex elements is an <em>gather</em> operation, and
 numerical values will be averaged.</li>
 </ul>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Value Attributes</p>
-<p>When transfering a value attribute to any other type of element, it is expected that the number
+<p>When transferring a value attribute to any other type of element, it is expected that the number
 of entries in the source attribute matches the target number of mesh element.</p>
 <p>Conversely, transferring from any other mesh element type to a value attribute will create a
 buffer with the same number of entries as the input attribute element type.</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Indexed Attributes and Value Attributes</p>
-<p>When transfering a value attribute to an indexed attribute (and vice-versa), the value attribute
+<p>When transferring a value attribute to an indexed attribute (and vice-versa), the value attribute
 is expected to have a number of elements equals to the number of <em>mesh corners</em>.</p>
 <ul>
-<li>Transfering <code>Value</code> -&gt; <code>Indexed</code> will create an indexed attribute with a trivial index buffer
+<li>Transferring <code>Value</code> -&gt; <code>Indexed</code> will create an indexed attribute with a trivial index buffer
 (identity mapping corner <span class="arithmatex">\(c_i\)</span> <span class="arithmatex">\(\to\)</span> value <span class="arithmatex">\(i\)</span>).</li>
-<li>Transfering <code>Indexed</code> -&gt; <code>Value</code> will interpret the indexed attribute as if it were a corner
+<li>Transferring <code>Indexed</code> -&gt; <code>Value</code> will interpret the indexed attribute as if it were a corner
 attribute. The indexing will be lost on conversion.</li>
 </ul>
 </div>

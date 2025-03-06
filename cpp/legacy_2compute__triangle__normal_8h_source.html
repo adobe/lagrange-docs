@@ -145,7 +145,7 @@ $(document).ready(function(){initNavTree('legacy_2compute__triangle__normal_8h_s
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="keyword">using </span>AttributeArray = <span class="keyword">typename</span> MeshType::AttributeArray;</div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="keyword">using </span>RowVector3s = Eigen::Matrix&lt;Scalar, 1, 3&gt;;</div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="keywordflow">if</span> (mesh.get_vertex_per_facet() != 3) {</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="keywordflow">if</span> (mesh.<a class="code hl_function" href="classlagrange_1_1_surface_mesh.html#abd39a328d5689f8b05c3f871079d77ce">get_vertex_per_facet</a>() != 3) {</div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        <span class="keywordflow">throw</span> std::runtime_error(<span class="stringliteral">&quot;Input mesh is not triangle mesh.&quot;</span>);</div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    }</div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="keywordflow">if</span> (mesh.get_dim() != 3) {</div>
@@ -157,7 +157,7 @@ $(document).ready(function(){initNavTree('legacy_2compute__triangle__normal_8h_s
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    AttributeArray normals(facets.rows(), 3);</div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="comment">// Iterate over facets in parallel</span></div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    tbb::parallel_for(Index(0), mesh.get_num_facets(), [&amp;](Index f) {</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    tbb::parallel_for(Index(0), mesh.<a class="code hl_function" href="classlagrange_1_1_surface_mesh.html#abcf8a67369f4ebda946306ae39673d4a">get_num_facets</a>(), [&amp;](Index f) {</div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        const RowVector3s p0 = vertices.row(facets(f, 0));</div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        const RowVector3s p1 = vertices.row(facets(f, 1));</div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        const RowVector3s p2 = vertices.row(facets(f, 2));</div>
@@ -177,6 +177,8 @@ $(document).ready(function(){initNavTree('legacy_2compute__triangle__normal_8h_s
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>} <span class="comment">// namespace legacy</span></div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>} <span class="comment">// namespace lagrange</span></div>
 <div class="ttc" id="aclasslagrange_1_1_mesh_html"><div class="ttname"><a href="classlagrange_1_1_mesh.html">lagrange::Mesh</a></div><div class="ttdef"><b>Definition:</b> Mesh.h:48</div></div>
+<div class="ttc" id="aclasslagrange_1_1_surface_mesh_html_abcf8a67369f4ebda946306ae39673d4a"><div class="ttname"><a href="classlagrange_1_1_surface_mesh.html#abcf8a67369f4ebda946306ae39673d4a">lagrange::SurfaceMesh::get_num_facets</a></div><div class="ttdeci">Index get_num_facets() const</div><div class="ttdoc">Retrieves the number of facets.</div><div class="ttdef"><b>Definition:</b> SurfaceMesh.h:678</div></div>
+<div class="ttc" id="aclasslagrange_1_1_surface_mesh_html_abd39a328d5689f8b05c3f871079d77ce"><div class="ttname"><a href="classlagrange_1_1_surface_mesh.html#abd39a328d5689f8b05c3f871079d77ce">lagrange::SurfaceMesh::get_vertex_per_facet</a></div><div class="ttdeci">Index get_vertex_per_facet() const</div><div class="ttdoc">Retrieves the number of vertex per facet in a regular mesh.</div><div class="ttdef"><b>Definition:</b> SurfaceMesh.cpp:2118</div></div>
 <div class="ttc" id="anamespacelagrange_html"><div class="ttname"><a href="namespacelagrange.html">lagrange</a></div><div class="ttdoc">Main namespace for Lagrange.</div><div class="ttdef"><b>Definition:</b> AABBIGL.h:30</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->

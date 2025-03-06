@@ -1562,7 +1562,7 @@
 
 <h1 id="tips-to-speed-up-compilation-times">Tips To Speed Up Compilation Times</h1>
 <p>If your hand has reached too deep into the depth of C++ template meta-programming and header-only
-libraries, you might find yourself in a hot mess of slow-compiling projects and long wait-time
+libraries, you might find yourself in a hot mess of slow-compiling projects and long wait times
 between recompilations.</p>
 <figure class="figure-image">  <img src="../img/xkcd_compiling.png" alt="" >  <figcaption></figcaption></figure>
 
@@ -1577,7 +1577,7 @@ improve compilation performance. On Linux and macOS, you can use <a href="https:
 to improve the performance of repeated builds. Combined with a shared cache database stored in a
 Redis server, this will provide additional performance (e.g. in a Jenkins build cluster).
 <a href="https://github.com/mozilla/sccache">sccache</a> is an alternative to ccache that also works on Windows
-and support cloud storage. Finally, for distributed compilation on Linux, you can also look into
+and supports cloud storage. Finally, for distributed compilation on Linux, you can also look into
 <a href="https://github.com/icecc/icecream">icecream</a>.</p>
 <h3 id="use-pre-compiled-headers">Use Pre-Compiled Headers</h3>
 <p>The basic CMake file to enable pre-compiled headers for your project look like this:</p>
@@ -1676,7 +1676,7 @@ phenomenon that does not improve with new versions of the C++ standard.</p>
 <p>Secondly, templated code require the compiler to generate code at each location where a templated
 function is used. In a project where everything is templated, deeply nested calls to templated
 functions means that the compiler will basically have to compile the whole project for each
-translation unit. This kinda defeats the purpose of separating a project in <a href="https://en.wikipedia.org/wiki/Single_Compilation_Unit">single compilation
+translation unit. This kinda defeats the purpose of separating a project into <a href="https://en.wikipedia.org/wiki/Single_Compilation_Unit">single compilation
 units</a> in the first place. Because templated
 code is usually header-only, pulling a complicated templated function will pull a lot of dependent
 headers, which will need to be parsed, and compiled, etc. The result is a big quagmire of header
@@ -1694,7 +1694,7 @@ times.</p>
 <h3 id="explicit-template-instantiation">Explicit Template Instantiation</h3>
 <p>The first step to sanitize a C++ project slowed down by expensive templates is to get rid of them.
 Seriously. Do not use templates unless you have to.</p>
-<p>If you absolutely need do use templates, consider the following:</p>
+<p>If you absolutely need to use templates, consider the following:</p>
 <ol>
 <li>If you only need to support a limited number of types, use explicit template instantiation.</li>
 <li>Write separate files for function declaration and definition, just like you would for a regular
@@ -1799,10 +1799,10 @@ detailed statistics on all STL headers.</p>
 <ul>
 <li><a href="../compilation-profiling/">Profile</a> your compilation times to find out which header takes the most
   time to parse.</li>
-<li>Separate your code between source and header files. Move header includes to the .cpp if they are
+<li>Separate your code into source and header files. Move header includes to the .cpp if they are
   not needed in the .h.</li>
 <li>Separate expensive headers from cheap-but-commonly-used ones, and only include what you need.</li>
-<li><strong>Avoid</strong> having a <code>all.h</code> or <code>common.h</code> that include all headers from your library. This may seem
+<li><strong>Avoid</strong> having an <code>all.h</code> or <code>common.h</code> that include all headers from your library. This may seem
   convenient, but will increase compilation times for your users.</li>
 <li>Use forward declarations to avoid pulling expensive headers.</li>
 <li>Use the <a href="#the-pimpl-idiom">PIMPL idiom</a> to hide implementation details from header files of a
@@ -1811,7 +1811,7 @@ detailed statistics on all STL headers.</p>
 <div class="admonition tip">
 <p class="admonition-title">Forward Declarations And Pass-By-Value</p>
 <p>I was surprised to learn that you can declare a function taking a forward declared class as a
-by-value argument and as a result. I.e. this works just fine:</p>
+by-value argument and as a return type. I.e. this works just fine:</p>
 <div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">type</span><span class="p">;</span>
 <span class="n">type</span><span class="w"> </span><span class="nf">function</span><span class="p">(</span><span class="n">type</span><span class="p">);</span>
 </code></pre></div>
@@ -1820,7 +1820,7 @@ by-value argument and as a result. I.e. this works just fine:</p>
 <p class="admonition-title">Forward Declarations And Circular Dependencies</p>
 <p>The Google C++ Style Guide cautions <a href="https://google.github.io/styleguide/cppguide.html#Forward_Declarations">against using forward
 declarations</a> whenever
-possible. Forward declaration can hide circular dependencies which should be a red flag in your
+possible. Forward declarations can hide circular dependencies which should be a red flag in your
 code architecture. My advice would be to use them sparingly when it makes sense, and measure the
 performance impact on your project when possible.</p>
 </div>
@@ -2001,10 +2001,10 @@ builds</a> and are <em>not</em> using
 unique names for your macro, then it is a good idea to do so.</p>
 </div>
 <p>The above solution works well for a single list of types to instantiate. But what if we are mixing
-functions that depend on two different types <code>U</code> and <code>T</code>? This is where the extra parameter <code>data</code>
+functions that depend on two different types, <code>U</code> and <code>T</code>? This is where the extra parameter <code>data</code>
 comes in. You can think of it as a continuation parameter to recursively instantiate nested type
 lists.</p>
-<p>Here is an concrete example:</p>
+<p>Here is a concrete example:</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="5:3"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><input id="__tabbed_5_3" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">Header.h</label><label for="__tabbed_5_2">Types.h</label><label for="__tabbed_5_3">Source.cpp</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">

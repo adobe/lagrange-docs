@@ -274,7 +274,7 @@ $(document).ready(function(){initNavTree('mesh_8impl_8h_source.html',''); initRe
 <div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>AABB get_mesh_bounds(<span class="keyword">const</span> MeshBase* mesh_base)</div>
 <div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>{</div>
 <div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>    <span class="keyword">const</span> <span class="keyword">auto</span>&amp; mesh = <span class="keyword">reinterpret_cast&lt;</span><span class="keyword">const </span><a class="code hl_class" href="classlagrange_1_1_mesh.html">MeshType</a>&amp;<span class="keyword">&gt;</span>(*mesh_base);</div>
-<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>    <span class="keywordflow">if</span> (mesh.get_num_vertices() == 0) <span class="keywordflow">return</span> AABB();</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>    <span class="keywordflow">if</span> (mesh.<a class="code hl_function" href="classlagrange_1_1_surface_mesh.html#a1ed57c732bcdb304ed7033147f5d9002">get_num_vertices</a>() == 0) <span class="keywordflow">return</span> AABB();</div>
 <div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span> </div>
 <div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>    <span class="keyword">const</span> <span class="keyword">auto</span>&amp; V = mesh.get_vertices();</div>
 <div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>    <span class="keywordflow">return</span> AABB(</div>
@@ -351,22 +351,22 @@ $(document).ready(function(){initNavTree('mesh_8impl_8h_source.html',''); initRe
 <div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>        mesh.add_corner_attribute(attrib_name);</div>
 <div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>        mesh.import_corner_attribute(</div>
 <div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>            attrib_name,</div>
-<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>            AttributeArray::Zero(mesh.get_num_facets() * mesh.get_vertex_per_facet(), 1));</div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>            AttributeArray::Zero(mesh.<a class="code hl_function" href="classlagrange_1_1_surface_mesh.html#abcf8a67369f4ebda946306ae39673d4a">get_num_facets</a>() * mesh.<a class="code hl_function" href="classlagrange_1_1_surface_mesh.html#abd39a328d5689f8b05c3f871079d77ce">get_vertex_per_facet</a>(), 1));</div>
 <div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>    }</div>
 <div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span> </div>
 <div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>    <span class="keywordflow">if</span> (!mesh.has_facet_attribute(attrib_name)) {</div>
 <div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>        mesh.add_facet_attribute(attrib_name);</div>
-<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>        mesh.import_facet_attribute(attrib_name, AttributeArray::Zero(mesh.get_num_facets(), 1));</div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>        mesh.import_facet_attribute(attrib_name, AttributeArray::Zero(mesh.<a class="code hl_function" href="classlagrange_1_1_surface_mesh.html#abcf8a67369f4ebda946306ae39673d4a">get_num_facets</a>(), 1));</div>
 <div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>    }</div>
 <div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span> </div>
 <div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>    <span class="keywordflow">if</span> (mesh.is_edge_data_initialized() &amp;&amp; !mesh.has_edge_attribute(attrib_name)) {</div>
 <div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>        mesh.add_edge_attribute(attrib_name);</div>
-<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>        mesh.import_edge_attribute(attrib_name, AttributeArray::Zero(mesh.get_num_edges(), 1));</div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>        mesh.import_edge_attribute(attrib_name, AttributeArray::Zero(mesh.<a class="code hl_function" href="classlagrange_1_1_surface_mesh.html#ab4b72663d159f5e5280c524fab4cebc3">get_num_edges</a>(), 1));</div>
 <div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>    }</div>
 <div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span> </div>
 <div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>    <span class="keywordflow">if</span> (!mesh.has_vertex_attribute(attrib_name)) {</div>
 <div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>        mesh.add_vertex_attribute(attrib_name);</div>
-<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>        mesh.import_vertex_attribute(attrib_name, AttributeArray::Zero(mesh.get_num_vertices(), 1));</div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>        mesh.import_vertex_attribute(attrib_name, AttributeArray::Zero(mesh.<a class="code hl_function" href="classlagrange_1_1_surface_mesh.html#a1ed57c732bcdb304ed7033147f5d9002">get_num_vertices</a>(), 1));</div>
 <div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>    }</div>
 <div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>}</div>
 <div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span> </div>
@@ -665,7 +665,7 @@ $(document).ready(function(){initNavTree('mesh_8impl_8h_source.html',''); initRe
 <div class="line"><a id="l00560" name="l00560"></a><span class="lineno">  560</span>    <span class="keyword">using </span>Scalar = <span class="keyword">typename</span> MeshType::Scalar;</div>
 <div class="line"><a id="l00561" name="l00561"></a><span class="lineno">  561</span>    <span class="keyword">using </span>Index = <span class="keyword">typename</span> MeshType::Index;</div>
 <div class="line"><a id="l00562" name="l00562"></a><span class="lineno">  562</span> </div>
-<div class="line"><a id="l00563" name="l00563"></a><span class="lineno">  563</span>    <span class="keyword">const</span> <span class="keyword">auto</span> num_vertices = mesh.get_num_vertices();</div>
+<div class="line"><a id="l00563" name="l00563"></a><span class="lineno">  563</span>    <span class="keyword">const</span> <span class="keyword">auto</span> num_vertices = mesh.<a class="code hl_function" href="classlagrange_1_1_surface_mesh.html#a1ed57c732bcdb304ed7033147f5d9002">get_num_vertices</a>();</div>
 <div class="line"><a id="l00564" name="l00564"></a><span class="lineno">  564</span>    <span class="keyword">const</span> <span class="keyword">auto</span>&amp; vertices = mesh.get_vertices();</div>
 <div class="line"><a id="l00565" name="l00565"></a><span class="lineno">  565</span> </div>
 <div class="line"><a id="l00566" name="l00566"></a><span class="lineno">  566</span>    AttributeArray attr;</div>
@@ -720,8 +720,8 @@ $(document).ready(function(){initNavTree('mesh_8impl_8h_source.html',''); initRe
 <div class="line"><a id="l00615" name="l00615"></a><span class="lineno">  615</span>    <span class="keyword">using </span>Index = <span class="keyword">typename</span> MeshType::Index;</div>
 <div class="line"><a id="l00616" name="l00616"></a><span class="lineno">  616</span>    <a class="code hl_define" href="group__group-utils-assert.html#ga1ccafcb14523a1aae57dcac3c3f32ecd">la_runtime_assert</a>(mesh.has_corner_attribute(attrib_name));</div>
 <div class="line"><a id="l00617" name="l00617"></a><span class="lineno">  617</span> </div>
-<div class="line"><a id="l00618" name="l00618"></a><span class="lineno">  618</span>    <span class="keyword">const</span> Index num_facets = mesh.get_num_facets();</div>
-<div class="line"><a id="l00619" name="l00619"></a><span class="lineno">  619</span>    <span class="keyword">const</span> Index vertex_per_facet = mesh.get_vertex_per_facet();</div>
+<div class="line"><a id="l00618" name="l00618"></a><span class="lineno">  618</span>    <span class="keyword">const</span> Index num_facets = mesh.<a class="code hl_function" href="classlagrange_1_1_surface_mesh.html#abcf8a67369f4ebda946306ae39673d4a">get_num_facets</a>();</div>
+<div class="line"><a id="l00619" name="l00619"></a><span class="lineno">  619</span>    <span class="keyword">const</span> Index vertex_per_facet = mesh.<a class="code hl_function" href="classlagrange_1_1_surface_mesh.html#abd39a328d5689f8b05c3f871079d77ce">get_vertex_per_facet</a>();</div>
 <div class="line"><a id="l00620" name="l00620"></a><span class="lineno">  620</span> </div>
 <div class="line"><a id="l00621" name="l00621"></a><span class="lineno">  621</span>    <span class="keyword">const</span> <span class="keyword">auto</span>&amp; facets = mesh.get_facets();</div>
 <div class="line"><a id="l00622" name="l00622"></a><span class="lineno">  622</span> </div>
@@ -769,8 +769,8 @@ $(document).ready(function(){initNavTree('mesh_8impl_8h_source.html',''); initRe
 <div class="line"><a id="l00664" name="l00664"></a><span class="lineno">  664</span>    <a class="code hl_define" href="group__group-utils-assert.html#ga1ccafcb14523a1aae57dcac3c3f32ecd">la_runtime_assert</a>(mesh.has_corner_attribute(attrib_name));</div>
 <div class="line"><a id="l00665" name="l00665"></a><span class="lineno">  665</span>    <a class="code hl_define" href="group__group-utils-assert.html#ga1ccafcb14523a1aae57dcac3c3f32ecd">la_runtime_assert</a>(mesh.has_vertex_attribute(attrib_name));</div>
 <div class="line"><a id="l00666" name="l00666"></a><span class="lineno">  666</span> </div>
-<div class="line"><a id="l00667" name="l00667"></a><span class="lineno">  667</span>    <span class="keyword">const</span> Index num_facets = mesh.get_num_facets();</div>
-<div class="line"><a id="l00668" name="l00668"></a><span class="lineno">  668</span>    <span class="keyword">const</span> Index vertex_per_facet = mesh.get_vertex_per_facet();</div>
+<div class="line"><a id="l00667" name="l00667"></a><span class="lineno">  667</span>    <span class="keyword">const</span> Index num_facets = mesh.<a class="code hl_function" href="classlagrange_1_1_surface_mesh.html#abcf8a67369f4ebda946306ae39673d4a">get_num_facets</a>();</div>
+<div class="line"><a id="l00668" name="l00668"></a><span class="lineno">  668</span>    <span class="keyword">const</span> Index vertex_per_facet = mesh.<a class="code hl_function" href="classlagrange_1_1_surface_mesh.html#abd39a328d5689f8b05c3f871079d77ce">get_vertex_per_facet</a>();</div>
 <div class="line"><a id="l00669" name="l00669"></a><span class="lineno">  669</span> </div>
 <div class="line"><a id="l00670" name="l00670"></a><span class="lineno">  670</span>    <span class="keyword">const</span> <span class="keyword">auto</span>&amp; facets = mesh.get_facets();</div>
 <div class="line"><a id="l00671" name="l00671"></a><span class="lineno">  671</span> </div>
@@ -804,7 +804,7 @@ $(document).ready(function(){initNavTree('mesh_8impl_8h_source.html',''); initRe
 <div class="line"><a id="l00699" name="l00699"></a><span class="lineno">  699</span>    <span class="keyword">auto</span>&amp; mesh = <span class="keyword">reinterpret_cast&lt;</span><a class="code hl_class" href="classlagrange_1_1_mesh.html">MeshType</a>&amp;<span class="keyword">&gt;</span>(*mesh_base);</div>
 <div class="line"><a id="l00700" name="l00700"></a><span class="lineno">  700</span> </div>
 <div class="line"><a id="l00701" name="l00701"></a><span class="lineno">  701</span>    <span class="comment">// Convert to vertex attribute</span></div>
-<div class="line"><a id="l00702" name="l00702"></a><span class="lineno">  702</span>    <span class="keyword">const</span> <span class="keyword">auto</span> per_facet = mesh.get_vertex_per_facet();</div>
+<div class="line"><a id="l00702" name="l00702"></a><span class="lineno">  702</span>    <span class="keyword">const</span> <span class="keyword">auto</span> per_facet = mesh.<a class="code hl_function" href="classlagrange_1_1_surface_mesh.html#abd39a328d5689f8b05c3f871079d77ce">get_vertex_per_facet</a>();</div>
 <div class="line"><a id="l00703" name="l00703"></a><span class="lineno">  703</span>    <span class="keyword">const</span> <span class="keyword">auto</span>&amp; facet_attr = mesh.get_facet_attribute(attrib_name);</div>
 <div class="line"><a id="l00704" name="l00704"></a><span class="lineno">  704</span> </div>
 <div class="line"><a id="l00705" name="l00705"></a><span class="lineno">  705</span>    <span class="keyword">using </span>AttributeArray = <span class="keyword">typename</span> MeshType::AttributeArray;</div>
@@ -838,8 +838,8 @@ $(document).ready(function(){initNavTree('mesh_8impl_8h_source.html',''); initRe
 <div class="line"><a id="l00737" name="l00737"></a><span class="lineno">  737</span> </div>
 <div class="line"><a id="l00738" name="l00738"></a><span class="lineno">  738</span>    <span class="keyword">using </span>AttribArray = <span class="keyword">typename</span> MeshType::AttributeArray;</div>
 <div class="line"><a id="l00739" name="l00739"></a><span class="lineno">  739</span> </div>
-<div class="line"><a id="l00740" name="l00740"></a><span class="lineno">  740</span>    <span class="keyword">const</span> <span class="keyword">auto</span> num_facets = mesh.get_num_facets();</div>
-<div class="line"><a id="l00741" name="l00741"></a><span class="lineno">  741</span>    <span class="keyword">const</span> <span class="keyword">auto</span> vertex_per_facet = mesh.get_vertex_per_facet();</div>
+<div class="line"><a id="l00740" name="l00740"></a><span class="lineno">  740</span>    <span class="keyword">const</span> <span class="keyword">auto</span> num_facets = mesh.<a class="code hl_function" href="classlagrange_1_1_surface_mesh.html#abcf8a67369f4ebda946306ae39673d4a">get_num_facets</a>();</div>
+<div class="line"><a id="l00741" name="l00741"></a><span class="lineno">  741</span>    <span class="keyword">const</span> <span class="keyword">auto</span> vertex_per_facet = mesh.<a class="code hl_function" href="classlagrange_1_1_surface_mesh.html#abd39a328d5689f8b05c3f871079d77ce">get_vertex_per_facet</a>();</div>
 <div class="line"><a id="l00742" name="l00742"></a><span class="lineno">  742</span>    <span class="keyword">const</span> <span class="keyword">auto</span>&amp; facets = mesh.get_facets();</div>
 <div class="line"><a id="l00743" name="l00743"></a><span class="lineno">  743</span> </div>
 <div class="line"><a id="l00744" name="l00744"></a><span class="lineno">  744</span>    <span class="keyword">const</span> AttribArray&amp; vertex_attrib = mesh.get_vertex_attribute(attrib_name);</div>
@@ -1012,7 +1012,7 @@ $(document).ready(function(){initNavTree('mesh_8impl_8h_source.html',''); initRe
 <div class="line"><a id="l00911" name="l00911"></a><span class="lineno">  911</span>    <span class="keyword">auto</span>&amp; mesh = <span class="keyword">reinterpret_cast&lt;</span><a class="code hl_class" href="classlagrange_1_1_mesh.html">MeshType</a>&amp;<span class="keyword">&gt;</span>(*mesh_base);</div>
 <div class="line"><a id="l00912" name="l00912"></a><span class="lineno">  912</span>    <span class="keyword">using </span>AttribArray = <span class="keyword">typename</span> MeshType::AttributeArray;</div>
 <div class="line"><a id="l00913" name="l00913"></a><span class="lineno">  913</span> </div>
-<div class="line"><a id="l00914" name="l00914"></a><span class="lineno">  914</span>    <span class="keyword">const</span> <span class="keyword">auto</span> num_vertices = mesh.get_num_vertices();</div>
+<div class="line"><a id="l00914" name="l00914"></a><span class="lineno">  914</span>    <span class="keyword">const</span> <span class="keyword">auto</span> num_vertices = mesh.<a class="code hl_function" href="classlagrange_1_1_surface_mesh.html#a1ed57c732bcdb304ed7033147f5d9002">get_num_vertices</a>();</div>
 <div class="line"><a id="l00915" name="l00915"></a><span class="lineno">  915</span>    <span class="keyword">const</span> <span class="keyword">auto</span>&amp; vertices = mesh.get_vertices();</div>
 <div class="line"><a id="l00916" name="l00916"></a><span class="lineno">  916</span> </div>
 <div class="line"><a id="l00917" name="l00917"></a><span class="lineno">  917</span>    AttribArray vertex_attrib;</div>
@@ -1232,6 +1232,10 @@ $(document).ready(function(){initNavTree('mesh_8impl_8h_source.html',''); initRe
 <div class="line"><a id="l01131" name="l01131"></a><span class="lineno"> 1131</span>} <span class="comment">// namespace lagrange</span></div>
 <div class="ttc" id="aclasslagrange_1_1_mesh_html"><div class="ttname"><a href="classlagrange_1_1_mesh.html">lagrange::Mesh</a></div><div class="ttdef"><b>Definition:</b> Mesh.h:48</div></div>
 <div class="ttc" id="aclasslagrange_1_1_mesh_html_ab4b72663d159f5e5280c524fab4cebc3"><div class="ttname"><a href="classlagrange_1_1_mesh.html#ab4b72663d159f5e5280c524fab4cebc3">lagrange::Mesh::get_num_edges</a></div><div class="ttdeci">Index get_num_edges() const</div><div class="ttdoc">Gets the number of edges.</div><div class="ttdef"><b>Definition:</b> Mesh.h:650</div></div>
+<div class="ttc" id="aclasslagrange_1_1_surface_mesh_html_a1ed57c732bcdb304ed7033147f5d9002"><div class="ttname"><a href="classlagrange_1_1_surface_mesh.html#a1ed57c732bcdb304ed7033147f5d9002">lagrange::SurfaceMesh::get_num_vertices</a></div><div class="ttdeci">Index get_num_vertices() const</div><div class="ttdoc">Retrieves the number of vertices.</div><div class="ttdef"><b>Definition:</b> SurfaceMesh.h:671</div></div>
+<div class="ttc" id="aclasslagrange_1_1_surface_mesh_html_ab4b72663d159f5e5280c524fab4cebc3"><div class="ttname"><a href="classlagrange_1_1_surface_mesh.html#ab4b72663d159f5e5280c524fab4cebc3">lagrange::SurfaceMesh::get_num_edges</a></div><div class="ttdeci">Index get_num_edges() const</div><div class="ttdoc">Retrieves the number of edges.</div><div class="ttdef"><b>Definition:</b> SurfaceMesh.h:692</div></div>
+<div class="ttc" id="aclasslagrange_1_1_surface_mesh_html_abcf8a67369f4ebda946306ae39673d4a"><div class="ttname"><a href="classlagrange_1_1_surface_mesh.html#abcf8a67369f4ebda946306ae39673d4a">lagrange::SurfaceMesh::get_num_facets</a></div><div class="ttdeci">Index get_num_facets() const</div><div class="ttdoc">Retrieves the number of facets.</div><div class="ttdef"><b>Definition:</b> SurfaceMesh.h:678</div></div>
+<div class="ttc" id="aclasslagrange_1_1_surface_mesh_html_abd39a328d5689f8b05c3f871079d77ce"><div class="ttname"><a href="classlagrange_1_1_surface_mesh.html#abd39a328d5689f8b05c3f871079d77ce">lagrange::SurfaceMesh::get_vertex_per_facet</a></div><div class="ttdeci">Index get_vertex_per_facet() const</div><div class="ttdoc">Retrieves the number of vertex per facet in a regular mesh.</div><div class="ttdef"><b>Definition:</b> SurfaceMesh.cpp:2118</div></div>
 <div class="ttc" id="agroup__group-surfacemesh-utils_html_ga8c1ac1ec1658273f6e6bb312dd2b0718"><div class="ttname"><a href="group__group-surfacemesh-utils.html#ga8c1ac1ec1658273f6e6bb312dd2b0718">lagrange::compute_vertex_normal</a></div><div class="ttdeci">AttributeId compute_vertex_normal(SurfaceMesh&lt; Scalar, Index &gt; &amp;mesh, VertexNormalOptions options={})</div><div class="ttdoc">Compute per-vertex normals based on specified weighting type.</div><div class="ttdef"><b>Definition:</b> compute_vertex_normal.cpp:34</div></div>
 <div class="ttc" id="agroup__group-utils-assert_html_ga1ccafcb14523a1aae57dcac3c3f32ecd"><div class="ttname"><a href="group__group-utils-assert.html#ga1ccafcb14523a1aae57dcac3c3f32ecd">la_runtime_assert</a></div><div class="ttdeci">#define la_runtime_assert(...)</div><div class="ttdoc">Runtime assertion check.</div><div class="ttdef"><b>Definition:</b> assert.h:169</div></div>
 <div class="ttc" id="anamespacelagrange_1_1ui_html"><div class="ttname"><a href="namespacelagrange_1_1ui.html">lagrange::ui</a></div><div class="ttdoc">Lagrange UI Viewer and mini 3D engine.</div><div class="ttdef"><b>Definition:</b> AcceleratedPicking.h:22</div></div>

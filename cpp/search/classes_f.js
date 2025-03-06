@@ -16,6 +16,7 @@ var searchData=
   ['removeduplicateverticesoptions_13',['RemoveDuplicateVerticesOptions',['../structlagrange_1_1_remove_duplicate_vertices_options.html',1,'lagrange']]],
   ['removenullareafacetsoptions_14',['RemoveNullAreaFacetsOptions',['../structlagrange_1_1_remove_null_area_facets_options.html',1,'lagrange']]],
   ['rendercontext_15',['RenderContext',['../structlagrange_1_1ui_1_1_render_context.html',1,'lagrange::ui']]],
-  ['reservedattributeids_16',['ReservedAttributeIds',['../structlagrange_1_1_surface_mesh_1_1_reserved_attribute_ids.html',1,'lagrange::SurfaceMesh']]],
-  ['rotatetooltag_17',['RotateToolTag',['../structlagrange_1_1ui_1_1_rotate_tool_tag.html',1,'lagrange::ui']]]
+  ['rescaleuvoptions_16',['RescaleUVOptions',['../structlagrange_1_1_rescale_u_v_options.html',1,'lagrange']]],
+  ['reservedattributeids_17',['ReservedAttributeIds',['../structlagrange_1_1_surface_mesh_1_1_reserved_attribute_ids.html',1,'lagrange::SurfaceMesh']]],
+  ['rotatetooltag_18',['RotateToolTag',['../structlagrange_1_1ui_1_1_rotate_tool_tag.html',1,'lagrange::ui']]]
 ];

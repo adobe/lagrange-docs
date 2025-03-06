@@ -207,8 +207,8 @@ $(document).ready(function(){initNavTree('legacy_2combine__mesh__list_8h_source.
 <div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    Index total_vertices(0), total_facets(0);</div>
 <div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
 <div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; mesh : mesh_list) {</div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>        total_vertices += mesh-&gt;get_num_vertices();</div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>        total_facets += mesh-&gt;get_num_facets();</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>        total_vertices += mesh-&gt;<a class="code hl_function" href="classlagrange_1_1_surface_mesh.html#a1ed57c732bcdb304ed7033147f5d9002">get_num_vertices</a>();</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>        total_facets += mesh-&gt;<a class="code hl_function" href="classlagrange_1_1_surface_mesh.html#abcf8a67369f4ebda946306ae39673d4a">get_num_facets</a>();</div>
 <div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    }</div>
 <div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span> </div>
 <div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    Vtype V(total_vertices, dim);</div>
@@ -217,14 +217,14 @@ $(document).ready(function(){initNavTree('legacy_2combine__mesh__list_8h_source.
 <div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span> </div>
 <div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; mesh : mesh_list) {</div>
 <div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>        assert(mesh-&gt;get_dim() == dim);</div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>        assert(mesh-&gt;get_vertex_per_facet() == vertex_per_facet);</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>        assert(mesh-&gt;<a class="code hl_function" href="classlagrange_1_1_surface_mesh.html#abd39a328d5689f8b05c3f871079d77ce">get_vertex_per_facet</a>() == vertex_per_facet);</div>
 <div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span> </div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>        V.middleRows(curr_v_index, mesh-&gt;get_num_vertices()) = mesh-&gt;get_vertices();</div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>        F.middleRows(curr_f_index, mesh-&gt;get_num_facets()) =</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>        V.middleRows(curr_v_index, mesh-&gt;<a class="code hl_function" href="classlagrange_1_1_surface_mesh.html#a1ed57c732bcdb304ed7033147f5d9002">get_num_vertices</a>()) = mesh-&gt;get_vertices();</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>        F.middleRows(curr_f_index, mesh-&gt;<a class="code hl_function" href="classlagrange_1_1_surface_mesh.html#abcf8a67369f4ebda946306ae39673d4a">get_num_facets</a>()) =</div>
 <div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>            mesh-&gt;get_facets().array() + curr_v_index;</div>
 <div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span> </div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>        curr_v_index += mesh-&gt;get_num_vertices();</div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>        curr_f_index += mesh-&gt;get_num_facets();</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>        curr_v_index += mesh-&gt;<a class="code hl_function" href="classlagrange_1_1_surface_mesh.html#a1ed57c732bcdb304ed7033147f5d9002">get_num_vertices</a>();</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>        curr_f_index += mesh-&gt;<a class="code hl_function" href="classlagrange_1_1_surface_mesh.html#abcf8a67369f4ebda946306ae39673d4a">get_num_facets</a>();</div>
 <div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>    }</div>
 <div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span> </div>
 <div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>    <span class="keyword">auto</span> combined_mesh = <a class="code hl_function" href="namespacelagrange.html#a01a55c916bd22d4ee64baa54c4993344">lagrange::create_mesh</a>(std::move(V), std::move(F));</div>
@@ -259,7 +259,7 @@ $(document).ready(function(){initNavTree('legacy_2combine__mesh__list_8h_source.
 <div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>        <span class="keywordtype">bool</span> can_merge = <span class="keyword">true</span>;</div>
 <div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; mesh : mesh_list) {</div>
 <div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>            <span class="keywordflow">if</span> (!mesh-&gt;has_vertex_attribute(attr_name)) {</div>
-<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>                <a class="code hl_function" href="group__group-logger.html#ga97e3b3adabf67bc7d3650ed14214ddaa">logger</a>().warn(<span class="stringliteral">&quot;Cannot combine attribute \&quot;{}\&quot;&quot;</span>, attr_name);</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>                <a class="code hl_function" href="group__group-logger.html#ga84167f554a5d7594c0ba4ae760f31599">logger</a>().warn(<span class="stringliteral">&quot;Cannot combine attribute \&quot;{}\&quot;&quot;</span>, attr_name);</div>
 <div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>                can_merge = <span class="keyword">false</span>;</div>
 <div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>                <span class="keywordflow">break</span>;</div>
 <div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>            }</div>
@@ -271,9 +271,9 @@ $(document).ready(function(){initNavTree('legacy_2combine__mesh__list_8h_source.
 <div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span> </div>
 <div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>        Index curr_row = 0;</div>
 <div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; mesh : mesh_list) {</div>
-<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>            attr.block(curr_row, 0, mesh-&gt;get_num_vertices(), attribute_dim) =</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>            attr.block(curr_row, 0, mesh-&gt;<a class="code hl_function" href="classlagrange_1_1_surface_mesh.html#a1ed57c732bcdb304ed7033147f5d9002">get_num_vertices</a>(), attribute_dim) =</div>
 <div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>                mesh-&gt;get_vertex_attribute(attr_name);</div>
-<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>            curr_row += mesh-&gt;get_num_vertices();</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>            curr_row += mesh-&gt;<a class="code hl_function" href="classlagrange_1_1_surface_mesh.html#a1ed57c732bcdb304ed7033147f5d9002">get_num_vertices</a>();</div>
 <div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>        }</div>
 <div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span> </div>
 <div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>        combined_mesh.add_vertex_attribute(attr_name);</div>
@@ -298,7 +298,7 @@ $(document).ready(function(){initNavTree('legacy_2combine__mesh__list_8h_source.
 <div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; mesh : mesh_list) {</div>
 <div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>            <span class="keywordflow">if</span> (!mesh-&gt;has_facet_attribute(attr_name)) {</div>
 <div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>                can_merge = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>                <a class="code hl_function" href="group__group-logger.html#ga97e3b3adabf67bc7d3650ed14214ddaa">logger</a>().warn(<span class="stringliteral">&quot;Cannot combine facet attribute \&quot;{}\&quot;&quot;</span>, attr_name);</div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>                <a class="code hl_function" href="group__group-logger.html#ga84167f554a5d7594c0ba4ae760f31599">logger</a>().warn(<span class="stringliteral">&quot;Cannot combine facet attribute \&quot;{}\&quot;&quot;</span>, attr_name);</div>
 <div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>                <span class="keywordflow">break</span>;</div>
 <div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>            }</div>
 <div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>        }</div>
@@ -309,9 +309,9 @@ $(document).ready(function(){initNavTree('legacy_2combine__mesh__list_8h_source.
 <div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span> </div>
 <div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>        Index curr_row = 0;</div>
 <div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; mesh : mesh_list) {</div>
-<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>            attr.block(curr_row, 0, mesh-&gt;get_num_facets(), attribute_dim) =</div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>            attr.block(curr_row, 0, mesh-&gt;<a class="code hl_function" href="classlagrange_1_1_surface_mesh.html#abcf8a67369f4ebda946306ae39673d4a">get_num_facets</a>(), attribute_dim) =</div>
 <div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>                mesh-&gt;get_facet_attribute(attr_name);</div>
-<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>            curr_row += mesh-&gt;get_num_facets();</div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>            curr_row += mesh-&gt;<a class="code hl_function" href="classlagrange_1_1_surface_mesh.html#abcf8a67369f4ebda946306ae39673d4a">get_num_facets</a>();</div>
 <div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>        }</div>
 <div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span> </div>
 <div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>        combined_mesh.add_facet_attribute(attr_name);</div>
@@ -336,7 +336,7 @@ $(document).ready(function(){initNavTree('legacy_2combine__mesh__list_8h_source.
 <div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>        <span class="keywordtype">bool</span> can_merge = <span class="keyword">true</span>;</div>
 <div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; mesh : mesh_list) {</div>
 <div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>            <span class="keywordflow">if</span> (!mesh-&gt;has_corner_attribute(attr_name)) {</div>
-<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>                <a class="code hl_function" href="group__group-logger.html#ga97e3b3adabf67bc7d3650ed14214ddaa">logger</a>().warn(<span class="stringliteral">&quot;Cannot combine corner attribute \&quot;{}\&quot;&quot;</span>, attr_name);</div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>                <a class="code hl_function" href="group__group-logger.html#ga84167f554a5d7594c0ba4ae760f31599">logger</a>().warn(<span class="stringliteral">&quot;Cannot combine corner attribute \&quot;{}\&quot;&quot;</span>, attr_name);</div>
 <div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>                can_merge = <span class="keyword">false</span>;</div>
 <div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>                <span class="keywordflow">break</span>;</div>
 <div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>            }</div>
@@ -348,7 +348,7 @@ $(document).ready(function(){initNavTree('legacy_2combine__mesh__list_8h_source.
 <div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span> </div>
 <div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>        Index curr_row = 0;</div>
 <div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; mesh : mesh_list) {</div>
-<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>            <span class="keyword">const</span> <span class="keyword">auto</span> num_facets = mesh-&gt;get_num_facets();</div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>            <span class="keyword">const</span> <span class="keyword">auto</span> num_facets = mesh-&gt;<a class="code hl_function" href="classlagrange_1_1_surface_mesh.html#abcf8a67369f4ebda946306ae39673d4a">get_num_facets</a>();</div>
 <div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>            attr.block(curr_row, 0, num_facets * vertex_per_facet, attribute_dim) =</div>
 <div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>                mesh-&gt;get_corner_attribute(attr_name);</div>
 <div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>            curr_row += num_facets * vertex_per_facet;</div>
@@ -384,7 +384,7 @@ $(document).ready(function(){initNavTree('legacy_2combine__mesh__list_8h_source.
 <div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; mesh : mesh_list) {</div>
 <div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>            <span class="keywordflow">if</span> (!mesh-&gt;has_edge_attribute(attr_name)) {</div>
 <div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>                can_merge = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>                <a class="code hl_function" href="group__group-logger.html#ga97e3b3adabf67bc7d3650ed14214ddaa">logger</a>().warn(<span class="stringliteral">&quot;Cannot combine edge attribute \&quot;{}\&quot;&quot;</span>, attr_name);</div>
+<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>                <a class="code hl_function" href="group__group-logger.html#ga84167f554a5d7594c0ba4ae760f31599">logger</a>().warn(<span class="stringliteral">&quot;Cannot combine edge attribute \&quot;{}\&quot;&quot;</span>, attr_name);</div>
 <div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>                <span class="keywordflow">break</span>;</div>
 <div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>            }</div>
 <div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>        }</div>
@@ -398,25 +398,25 @@ $(document).ready(function(){initNavTree('legacy_2combine__mesh__list_8h_source.
 <div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>        Index edge_offset = 0;</div>
 <div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; mesh : mesh_list) {</div>
 <div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>            <span class="keyword">const</span> <span class="keyword">auto</span>&amp; per_mesh_attr = mesh-&gt;get_edge_attribute(attr_name);</div>
-<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>            <span class="keywordflow">for</span> (<span class="keyword">auto</span> old_e : <a class="code hl_function" href="group__group-utils-misc.html#ga41568d17fc48cea4a31db0e40cd93cf8">range</a>(mesh-&gt;get_num_edges())) {</div>
-<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>                <span class="keyword">const</span> <span class="keyword">auto</span>&amp; c = mesh-&gt;get_one_corner_around_edge(old_e);</div>
-<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>                <span class="keyword">const</span> Index f = c / mesh-&gt;get_vertex_per_facet();</div>
-<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>                <span class="keyword">const</span> Index lv = c % mesh-&gt;get_vertex_per_facet();</div>
-<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>                <a class="code hl_define" href="group__group-utils-assert.html#ga5b5259c4072f1caaa696e074f2f7ea15">la_debug_assert</a>(mesh-&gt;get_edge(f, lv) == old_e);</div>
+<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>            <span class="keywordflow">for</span> (<span class="keyword">auto</span> old_e : <a class="code hl_function" href="group__group-utils-misc.html#ga41568d17fc48cea4a31db0e40cd93cf8">range</a>(mesh-&gt;<a class="code hl_function" href="classlagrange_1_1_surface_mesh.html#ab4b72663d159f5e5280c524fab4cebc3">get_num_edges</a>())) {</div>
+<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>                <span class="keyword">const</span> <span class="keyword">auto</span>&amp; c = mesh-&gt;<a class="code hl_function" href="classlagrange_1_1_surface_mesh.html#abb5d255c7768b0fe3ec34c035ac9a8cd">get_one_corner_around_edge</a>(old_e);</div>
+<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>                <span class="keyword">const</span> Index f = c / mesh-&gt;<a class="code hl_function" href="classlagrange_1_1_surface_mesh.html#abd39a328d5689f8b05c3f871079d77ce">get_vertex_per_facet</a>();</div>
+<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>                <span class="keyword">const</span> Index lv = c % mesh-&gt;<a class="code hl_function" href="classlagrange_1_1_surface_mesh.html#abd39a328d5689f8b05c3f871079d77ce">get_vertex_per_facet</a>();</div>
+<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>                <a class="code hl_define" href="group__group-utils-assert.html#ga5b5259c4072f1caaa696e074f2f7ea15">la_debug_assert</a>(mesh-&gt;<a class="code hl_function" href="classlagrange_1_1_surface_mesh.html#a2fe4f82c25a5b076fdfcc5c4d78fd7fe">get_edge</a>(f, lv) == old_e);</div>
 <div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>                <span class="keyword">const</span> <span class="keyword">auto</span> new_e = combined_mesh.get_edge(f + facet_offset, lv);</div>
 <div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>                attr.row(new_e) = per_mesh_attr.row(old_e);</div>
 <div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span> </div>
 <div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span>                <span class="comment">// sanity check</span></div>
-<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span>                <span class="keyword">auto</span> old_v = mesh-&gt;get_edge_vertices(old_e);</div>
+<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span>                <span class="keyword">auto</span> old_v = mesh-&gt;<a class="code hl_function" href="classlagrange_1_1_surface_mesh.html#a29302efd8dd0d5b7c28f28f901b62d36">get_edge_vertices</a>(old_e);</div>
 <div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span>                <span class="keyword">auto</span> new_v = combined_mesh.get_edge_vertices(new_e);</div>
 <div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>                std::sort(old_v.begin(), old_v.end());</div>
 <div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>                std::sort(new_v.begin(), new_v.end());</div>
 <div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span>                <a class="code hl_define" href="group__group-utils-assert.html#ga5b5259c4072f1caaa696e074f2f7ea15">la_debug_assert</a>(new_v[0] == old_v[0] + vertex_offset);</div>
 <div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span>                <a class="code hl_define" href="group__group-utils-assert.html#ga5b5259c4072f1caaa696e074f2f7ea15">la_debug_assert</a>(new_v[1] == old_v[1] + vertex_offset);</div>
 <div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span>            }</div>
-<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span>            vertex_offset += mesh-&gt;get_num_vertices();</div>
-<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span>            facet_offset += mesh-&gt;get_num_facets();</div>
-<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span>            edge_offset += mesh-&gt;get_num_edges();</div>
+<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span>            vertex_offset += mesh-&gt;<a class="code hl_function" href="classlagrange_1_1_surface_mesh.html#a1ed57c732bcdb304ed7033147f5d9002">get_num_vertices</a>();</div>
+<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span>            facet_offset += mesh-&gt;<a class="code hl_function" href="classlagrange_1_1_surface_mesh.html#abcf8a67369f4ebda946306ae39673d4a">get_num_facets</a>();</div>
+<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span>            edge_offset += mesh-&gt;<a class="code hl_function" href="classlagrange_1_1_surface_mesh.html#ab4b72663d159f5e5280c524fab4cebc3">get_num_edges</a>();</div>
 <div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span>        }</div>
 <div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span> </div>
 <div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span>        combined_mesh.add_edge_attribute(attr_name);</div>
@@ -446,7 +446,7 @@ $(document).ready(function(){initNavTree('legacy_2combine__mesh__list_8h_source.
 <div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span>        <span class="keywordflow">if</span> (ref_values.get_scalar_type() != experimental::ScalarToEnum_v&lt;Scalar&gt;) {</div>
 <div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span>            std::string expected_type = experimental::ScalarToEnum&lt;Scalar&gt;::name;</div>
 <div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span>            std::string current_type = experimental::enum_to_name(ref_values.get_scalar_type());</div>
-<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span>            <a class="code hl_function" href="group__group-logger.html#ga97e3b3adabf67bc7d3650ed14214ddaa">logger</a>().warn(</div>
+<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span>            <a class="code hl_function" href="group__group-logger.html#ga84167f554a5d7594c0ba4ae760f31599">logger</a>().warn(</div>
 <div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span>                <span class="stringliteral">&quot;Cannot combined indexed attribute ({}) with custom Scalar type \&quot;{}\&quot;.  &quot;</span></div>
 <div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span>                <span class="stringliteral">&quot;Expecting \&quot;{}\&quot;.&quot;</span>,</div>
 <div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span>                attr_name,</div>
@@ -457,7 +457,7 @@ $(document).ready(function(){initNavTree('legacy_2combine__mesh__list_8h_source.
 <div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span>        <span class="keywordflow">if</span> (ref_indices.get_scalar_type() != experimental::ScalarToEnum_v&lt;Index&gt;) {</div>
 <div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span>            std::string expected_type = experimental::ScalarToEnum&lt;Index&gt;::name;</div>
 <div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span>            std::string current_type = experimental::enum_to_name(ref_indices.get_scalar_type());</div>
-<div class="line"><a id="l00353" name="l00353"></a><span class="lineno">  353</span>            <a class="code hl_function" href="group__group-logger.html#ga97e3b3adabf67bc7d3650ed14214ddaa">logger</a>().warn(</div>
+<div class="line"><a id="l00353" name="l00353"></a><span class="lineno">  353</span>            <a class="code hl_function" href="group__group-logger.html#ga84167f554a5d7594c0ba4ae760f31599">logger</a>().warn(</div>
 <div class="line"><a id="l00354" name="l00354"></a><span class="lineno">  354</span>                <span class="stringliteral">&quot;Cannot combined indexed attribute ({}) with custom Index type \&quot;{}\&quot;.  &quot;</span></div>
 <div class="line"><a id="l00355" name="l00355"></a><span class="lineno">  355</span>                <span class="stringliteral">&quot;Expecting \&quot;{}\&quot;.&quot;</span>,</div>
 <div class="line"><a id="l00356" name="l00356"></a><span class="lineno">  356</span>                attr_name,</div>
@@ -472,7 +472,7 @@ $(document).ready(function(){initNavTree('legacy_2combine__mesh__list_8h_source.
 <div class="line"><a id="l00365" name="l00365"></a><span class="lineno">  365</span>        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; mesh : mesh_list) {</div>
 <div class="line"><a id="l00366" name="l00366"></a><span class="lineno">  366</span>            <span class="keywordflow">if</span> (!mesh-&gt;has_indexed_attribute(attr_name)) {</div>
 <div class="line"><a id="l00367" name="l00367"></a><span class="lineno">  367</span>                can_merge = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00368" name="l00368"></a><span class="lineno">  368</span>                <a class="code hl_function" href="group__group-logger.html#ga97e3b3adabf67bc7d3650ed14214ddaa">logger</a>().warn(<span class="stringliteral">&quot;Cannot combine indexed attribute \&quot;{}\&quot;&quot;</span>, attr_name);</div>
+<div class="line"><a id="l00368" name="l00368"></a><span class="lineno">  368</span>                <a class="code hl_function" href="group__group-logger.html#ga84167f554a5d7594c0ba4ae760f31599">logger</a>().warn(<span class="stringliteral">&quot;Cannot combine indexed attribute \&quot;{}\&quot;&quot;</span>, attr_name);</div>
 <div class="line"><a id="l00369" name="l00369"></a><span class="lineno">  369</span>                <span class="keywordflow">break</span>;</div>
 <div class="line"><a id="l00370" name="l00370"></a><span class="lineno">  370</span>            }</div>
 <div class="line"><a id="l00371" name="l00371"></a><span class="lineno">  371</span>            <span class="keyword">auto</span> attr = mesh-&gt;get_indexed_attribute_array(attr_name);</div>
@@ -481,12 +481,12 @@ $(document).ready(function(){initNavTree('legacy_2combine__mesh__list_8h_source.
 <div class="line"><a id="l00374" name="l00374"></a><span class="lineno">  374</span> </div>
 <div class="line"><a id="l00375" name="l00375"></a><span class="lineno">  375</span>            <span class="keywordflow">if</span> (values.get_scalar_type() != ref_values.get_scalar_type()) {</div>
 <div class="line"><a id="l00376" name="l00376"></a><span class="lineno">  376</span>                can_merge = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00377" name="l00377"></a><span class="lineno">  377</span>                <a class="code hl_function" href="group__group-logger.html#ga97e3b3adabf67bc7d3650ed14214ddaa">logger</a>().warn(<span class="stringliteral">&quot;Cannot combine indexed attribute because value type mismatch.&quot;</span>);</div>
+<div class="line"><a id="l00377" name="l00377"></a><span class="lineno">  377</span>                <a class="code hl_function" href="group__group-logger.html#ga84167f554a5d7594c0ba4ae760f31599">logger</a>().warn(<span class="stringliteral">&quot;Cannot combine indexed attribute because value type mismatch.&quot;</span>);</div>
 <div class="line"><a id="l00378" name="l00378"></a><span class="lineno">  378</span>                <span class="keywordflow">break</span>;</div>
 <div class="line"><a id="l00379" name="l00379"></a><span class="lineno">  379</span>            }</div>
 <div class="line"><a id="l00380" name="l00380"></a><span class="lineno">  380</span>            <span class="keywordflow">if</span> (indices.get_scalar_type() != ref_indices.get_scalar_type()) {</div>
 <div class="line"><a id="l00381" name="l00381"></a><span class="lineno">  381</span>                can_merge = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00382" name="l00382"></a><span class="lineno">  382</span>                <a class="code hl_function" href="group__group-logger.html#ga97e3b3adabf67bc7d3650ed14214ddaa">logger</a>().warn(<span class="stringliteral">&quot;Cannot combine indexed attribute because index type mismatch.&quot;</span>);</div>
+<div class="line"><a id="l00382" name="l00382"></a><span class="lineno">  382</span>                <a class="code hl_function" href="group__group-logger.html#ga84167f554a5d7594c0ba4ae760f31599">logger</a>().warn(<span class="stringliteral">&quot;Cannot combine indexed attribute because index type mismatch.&quot;</span>);</div>
 <div class="line"><a id="l00383" name="l00383"></a><span class="lineno">  383</span>                <span class="keywordflow">break</span>;</div>
 <div class="line"><a id="l00384" name="l00384"></a><span class="lineno">  384</span>            }</div>
 <div class="line"><a id="l00385" name="l00385"></a><span class="lineno">  385</span> </div>
@@ -528,7 +528,14 @@ $(document).ready(function(){initNavTree('legacy_2combine__mesh__list_8h_source.
 <div class="line"><a id="l00421" name="l00421"></a><span class="lineno">  421</span>} <span class="comment">// namespace lagrange</span></div>
 <div class="ttc" id="aclasslagrange_1_1_mesh_html"><div class="ttname"><a href="classlagrange_1_1_mesh.html">lagrange::Mesh</a></div><div class="ttdef"><b>Definition:</b> Mesh.h:48</div></div>
 <div class="ttc" id="aclasslagrange_1_1_mesh_html_a4eda44e88c540acb3c88739149e6e333"><div class="ttname"><a href="classlagrange_1_1_mesh.html#a4eda44e88c540acb3c88739149e6e333">lagrange::Mesh::initialize_edge_data</a></div><div class="ttdeci">void initialize_edge_data()</div><div class="ttdoc">Edge data initialization.</div><div class="ttdef"><b>Definition:</b> Mesh.h:633</div></div>
-<div class="ttc" id="agroup__group-logger_html_ga97e3b3adabf67bc7d3650ed14214ddaa"><div class="ttname"><a href="group__group-logger.html#ga97e3b3adabf67bc7d3650ed14214ddaa">lagrange::logger</a></div><div class="ttdeci">LA_CORE_API spdlog::logger &amp; logger()</div><div class="ttdoc">Retrieves the current logger.</div><div class="ttdef"><b>Definition:</b> Logger.cpp:40</div></div>
+<div class="ttc" id="aclasslagrange_1_1_surface_mesh_html_a1ed57c732bcdb304ed7033147f5d9002"><div class="ttname"><a href="classlagrange_1_1_surface_mesh.html#a1ed57c732bcdb304ed7033147f5d9002">lagrange::SurfaceMesh::get_num_vertices</a></div><div class="ttdeci">Index get_num_vertices() const</div><div class="ttdoc">Retrieves the number of vertices.</div><div class="ttdef"><b>Definition:</b> SurfaceMesh.h:671</div></div>
+<div class="ttc" id="aclasslagrange_1_1_surface_mesh_html_a29302efd8dd0d5b7c28f28f901b62d36"><div class="ttname"><a href="classlagrange_1_1_surface_mesh.html#a29302efd8dd0d5b7c28f28f901b62d36">lagrange::SurfaceMesh::get_edge_vertices</a></div><div class="ttdeci">std::array&lt; Index, 2 &gt; get_edge_vertices(Index e) const</div><div class="ttdoc">Retrieve edge endpoints.</div><div class="ttdef"><b>Definition:</b> SurfaceMesh.cpp:2457</div></div>
+<div class="ttc" id="aclasslagrange_1_1_surface_mesh_html_a2fe4f82c25a5b076fdfcc5c4d78fd7fe"><div class="ttname"><a href="classlagrange_1_1_surface_mesh.html#a2fe4f82c25a5b076fdfcc5c4d78fd7fe">lagrange::SurfaceMesh::get_edge</a></div><div class="ttdeci">Index get_edge(Index f, Index lv) const</div><div class="ttdoc">Gets the edge index corresponding to (f, lv) – (f, lv+1).</div><div class="ttdef"><b>Definition:</b> SurfaceMesh.cpp:2435</div></div>
+<div class="ttc" id="aclasslagrange_1_1_surface_mesh_html_ab4b72663d159f5e5280c524fab4cebc3"><div class="ttname"><a href="classlagrange_1_1_surface_mesh.html#ab4b72663d159f5e5280c524fab4cebc3">lagrange::SurfaceMesh::get_num_edges</a></div><div class="ttdeci">Index get_num_edges() const</div><div class="ttdoc">Retrieves the number of edges.</div><div class="ttdef"><b>Definition:</b> SurfaceMesh.h:692</div></div>
+<div class="ttc" id="aclasslagrange_1_1_surface_mesh_html_abb5d255c7768b0fe3ec34c035ac9a8cd"><div class="ttname"><a href="classlagrange_1_1_surface_mesh.html#abb5d255c7768b0fe3ec34c035ac9a8cd">lagrange::SurfaceMesh::get_one_corner_around_edge</a></div><div class="ttdeci">Index get_one_corner_around_edge(Index e) const</div><div class="ttdoc">Get the index of one corner around a given edge.</div><div class="ttdef"><b>Definition:</b> SurfaceMesh.cpp:2603</div></div>
+<div class="ttc" id="aclasslagrange_1_1_surface_mesh_html_abcf8a67369f4ebda946306ae39673d4a"><div class="ttname"><a href="classlagrange_1_1_surface_mesh.html#abcf8a67369f4ebda946306ae39673d4a">lagrange::SurfaceMesh::get_num_facets</a></div><div class="ttdeci">Index get_num_facets() const</div><div class="ttdoc">Retrieves the number of facets.</div><div class="ttdef"><b>Definition:</b> SurfaceMesh.h:678</div></div>
+<div class="ttc" id="aclasslagrange_1_1_surface_mesh_html_abd39a328d5689f8b05c3f871079d77ce"><div class="ttname"><a href="classlagrange_1_1_surface_mesh.html#abd39a328d5689f8b05c3f871079d77ce">lagrange::SurfaceMesh::get_vertex_per_facet</a></div><div class="ttdeci">Index get_vertex_per_facet() const</div><div class="ttdoc">Retrieves the number of vertex per facet in a regular mesh.</div><div class="ttdef"><b>Definition:</b> SurfaceMesh.cpp:2118</div></div>
+<div class="ttc" id="agroup__group-logger_html_ga84167f554a5d7594c0ba4ae760f31599"><div class="ttname"><a href="group__group-logger.html#ga84167f554a5d7594c0ba4ae760f31599">lagrange::logger</a></div><div class="ttdeci">LA_CORE_API spdlog::logger &amp; logger()</div><div class="ttdoc">Retrieves the current logger.</div><div class="ttdef"><b>Definition:</b> Logger.cpp:40</div></div>
 <div class="ttc" id="agroup__group-utils-assert_html_ga5b5259c4072f1caaa696e074f2f7ea15"><div class="ttname"><a href="group__group-utils-assert.html#ga5b5259c4072f1caaa696e074f2f7ea15">la_debug_assert</a></div><div class="ttdeci">#define la_debug_assert(...)</div><div class="ttdoc">Debug assertion check.</div><div class="ttdef"><b>Definition:</b> assert.h:189</div></div>
 <div class="ttc" id="agroup__group-utils-misc_html_ga41568d17fc48cea4a31db0e40cd93cf8"><div class="ttname"><a href="group__group-utils-misc.html#ga41568d17fc48cea4a31db0e40cd93cf8">lagrange::range</a></div><div class="ttdeci">internal::Range&lt; Index &gt; range(Index end)</div><div class="ttdoc">Returns an iterable object representing the range [0, end).</div><div class="ttdef"><b>Definition:</b> range.h:176</div></div>
 <div class="ttc" id="anamespacelagrange_html"><div class="ttname"><a href="namespacelagrange.html">lagrange</a></div><div class="ttdoc">Main namespace for Lagrange.</div><div class="ttdef"><b>Definition:</b> AABBIGL.h:30</div></div>

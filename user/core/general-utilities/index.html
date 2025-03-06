@@ -1653,8 +1653,8 @@ recommended to use code that avoids casting in the first place.</p>
 Lagrange provide a handy function that avoid repeated type specification:</p>
 <div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;lagrange/common.h&gt;</span>
 
-<span class="n">std</span><span class="o">::</span><span class="n">unqiue_ptr</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="w"> </span><span class="n">unique_val</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">...;</span>
-<span class="k">auto</span><span class="w"> </span><span class="n">shared_val</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">lagrange</span><span class="o">::</span><span class="n">to_shared_ptr</span><span class="p">(</span><span class="n">unique_val</span><span class="p">);</span>
+<span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="w"> </span><span class="n">unique_val</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">...;</span>
+<span class="k">auto</span><span class="w"> </span><span class="n">shared_val</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lagrange</span><span class="o">::</span><span class="n">to_shared_ptr</span><span class="p">(</span><span class="n">unique_val</span><span class="p">);</span>
 <span class="n">assert</span><span class="p">(</span><span class="n">unique_val</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="k">nullptr</span><span class="p">);</span>
 <span class="n">assert</span><span class="p">(</span><span class="n">shared_val</span><span class="p">.</span><span class="n">use_count</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
 </code></pre></div>
@@ -1732,7 +1732,7 @@ an enum type.</p>
 <span class="k">enum</span><span class="w"> </span><span class="nc">Operation</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="n">Translation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="mi">0</span><span class="p">),</span>
 <span class="w">    </span><span class="n">Rotation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="mi">1</span><span class="p">),</span>
-<span class="w">    </span><span class="n">Scaling</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="mi">2</span><span class="p">),,</span>
+<span class="w">    </span><span class="n">Scaling</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="mi">2</span><span class="p">),</span>
 <span class="p">}</span>
 <span class="n">BitField</span><span class="o">&lt;</span><span class="n">Operation</span><span class="o">&gt;</span><span class="w"> </span><span class="n">op</span><span class="p">;</span>
 <span class="n">op</span><span class="p">.</span><span class="n">set</span><span class="p">(</span><span class="n">Operation</span><span class="o">::</span><span class="n">Translation</span><span class="p">);</span>
@@ -1784,7 +1784,7 @@ is called even if an exception is raised. One possibility is to use a
 
 <span class="w">    </span><span class="c1">// Deferred called to `delete_object()` destructor.</span>
 <span class="w">    </span><span class="c1">// Called when `guard` goes out of scope.</span>
-<span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">guard</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lagrange</span><span class="o">::</span><span class="n">make_scope_guard</span><span class="p">([</span><span class="o">&amp;</span><span class="p">](</span><span class="w"> </span><span class="n">delete_object</span><span class="p">(</span><span class="n">obj</span><span class="p">);</span><span class="w"> </span><span class="p">));</span>
+<span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">guard</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lagrange</span><span class="o">::</span><span class="n">make_scope_guard</span><span class="p">([</span><span class="o">&amp;</span><span class="p">]()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">delete_object</span><span class="p">(</span><span class="n">obj</span><span class="p">);</span><span class="w"> </span><span class="p">});</span>
 
 <span class="w">    </span><span class="c1">// Use `obj` ...</span>
 <span class="p">}</span>
@@ -1837,16 +1837,16 @@ over a raw pointer, while tracking the actual owner object via a different <code
 <span class="w">    </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">num_vertices</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">owner_obj</span><span class="o">-&gt;</span><span class="n">vertices</span><span class="p">.</span><span class="n">size</span><span class="p">()</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span>
 
 <span class="w">    </span><span class="c1">// Create a &quot;view&quot; of the raw vertices pointer while tracking ownership information</span>
-<span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">vertices_vew</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">make_shared_span</span><span class="p">(</span>
+<span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">vertices_view</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">make_shared_span</span><span class="p">(</span>
 <span class="w">        </span><span class="n">owner_obj</span><span class="p">,</span>
 <span class="w">        </span><span class="n">owner_obj</span><span class="o">-&gt;</span><span class="n">vertices</span><span class="p">.</span><span class="n">data</span><span class="p">(),</span>
 <span class="w">        </span><span class="n">owner_obj</span><span class="o">-&gt;</span><span class="n">vertices</span><span class="p">.</span><span class="n">size</span><span class="p">());</span>
 
-<span class="w">    </span><span class="n">mesh</span><span class="p">.</span><span class="n">wrap_as_vertices</span><span class="p">(</span><span class="n">vertices_vew</span><span class="p">,</span><span class="w"> </span><span class="n">num_vertices</span><span class="p">);</span>
+<span class="w">    </span><span class="n">mesh</span><span class="p">.</span><span class="n">wrap_as_vertices</span><span class="p">(</span><span class="n">vertices_view</span><span class="p">,</span><span class="w"> </span><span class="n">num_vertices</span><span class="p">);</span>
 
 <span class="w">    </span><span class="c1">// Wrap facet buffer sharing the same owner object</span>
 <span class="w">    </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">num_facets</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">owner_obj</span><span class="o">-&gt;</span><span class="n">facets</span><span class="p">.</span><span class="n">size</span><span class="p">()</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span>
-<span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">facets_vew</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">make_shared_span</span><span class="p">(</span>
+<span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">facets_view</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">make_shared_span</span><span class="p">(</span>
 <span class="w">        </span><span class="n">owner_obj</span><span class="p">,</span>
 <span class="w">        </span><span class="n">owner_obj</span><span class="o">-&gt;</span><span class="n">facets</span><span class="p">.</span><span class="n">data</span><span class="p">(),</span>
 <span class="w">        </span><span class="n">owner_obj</span><span class="o">-&gt;</span><span class="n">facets</span><span class="p">.</span><span class="n">size</span><span class="p">());</span>

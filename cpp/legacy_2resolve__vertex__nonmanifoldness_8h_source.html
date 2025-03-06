@@ -150,7 +150,7 @@ $(document).ready(function(){initNavTree('legacy_2resolve__vertex__nonmanifoldne
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <span class="keywordflow">if</span> (!mesh.is_connectivity_initialized()) {</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        mesh.initialize_connectivity();</div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    }</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="keywordflow">if</span> (mesh.get_vertex_per_facet() != 3) {</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="keywordflow">if</span> (mesh.<a class="code hl_function" href="classlagrange_1_1_surface_mesh.html#abd39a328d5689f8b05c3f871079d77ce">get_vertex_per_facet</a>() != 3) {</div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        <span class="keywordflow">throw</span> std::runtime_error(</div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>            <span class="stringliteral">&quot;Resolve vertex nonmanifoldness is only implemented for triangle mesh&quot;</span>);</div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    }</div>
@@ -161,7 +161,7 @@ $(document).ready(function(){initNavTree('legacy_2resolve__vertex__nonmanifoldne
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <span class="keyword">using </span>FacetArray = <span class="keyword">typename</span> MeshType::FacetArray;</div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="keyword">const</span> <span class="keyword">auto</span> dim = mesh.get_dim();</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <span class="keyword">const</span> Index num_vertices = mesh.get_num_vertices();</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <span class="keyword">const</span> Index num_vertices = mesh.<a class="code hl_function" href="classlagrange_1_1_surface_mesh.html#a1ed57c732bcdb304ed7033147f5d9002">get_num_vertices</a>();</div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="keyword">const</span> <span class="keyword">auto</span>&amp; vertices = mesh.get_vertices();</div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <span class="keyword">const</span> <span class="keyword">auto</span>&amp; facets = mesh.get_facets();</div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
@@ -180,7 +180,7 @@ $(document).ready(function(){initNavTree('legacy_2resolve__vertex__nonmanifoldne
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    };</div>
 <div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    FacetArray out_facets(facets);</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    Index vertex_count = mesh.get_num_vertices();</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    Index vertex_count = mesh.<a class="code hl_function" href="classlagrange_1_1_surface_mesh.html#a1ed57c732bcdb304ed7033147f5d9002">get_num_vertices</a>();</div>
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
 <div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    <span class="comment">// this is a backward vertex map, we initialize with iota as {0, 1, 2, 3, ...}</span></div>
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    <span class="comment">// later we add elements gradually, since we don&#39;t know the final size in advance</span></div>
@@ -266,6 +266,8 @@ $(document).ready(function(){initNavTree('legacy_2resolve__vertex__nonmanifoldne
 <div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>} <span class="comment">// namespace lagrange</span></div>
 <div class="ttc" id="aclasslagrange_1_1_edge_type_html"><div class="ttname"><a href="classlagrange_1_1_edge_type.html">lagrange::EdgeType</a></div><div class="ttdef"><b>Definition:</b> Edge.h:29</div></div>
 <div class="ttc" id="aclasslagrange_1_1_mesh_html"><div class="ttname"><a href="classlagrange_1_1_mesh.html">lagrange::Mesh</a></div><div class="ttdef"><b>Definition:</b> Mesh.h:48</div></div>
+<div class="ttc" id="aclasslagrange_1_1_surface_mesh_html_a1ed57c732bcdb304ed7033147f5d9002"><div class="ttname"><a href="classlagrange_1_1_surface_mesh.html#a1ed57c732bcdb304ed7033147f5d9002">lagrange::SurfaceMesh::get_num_vertices</a></div><div class="ttdeci">Index get_num_vertices() const</div><div class="ttdoc">Retrieves the number of vertices.</div><div class="ttdef"><b>Definition:</b> SurfaceMesh.h:671</div></div>
+<div class="ttc" id="aclasslagrange_1_1_surface_mesh_html_abd39a328d5689f8b05c3f871079d77ce"><div class="ttname"><a href="classlagrange_1_1_surface_mesh.html#abd39a328d5689f8b05c3f871079d77ce">lagrange::SurfaceMesh::get_vertex_per_facet</a></div><div class="ttdeci">Index get_vertex_per_facet() const</div><div class="ttdoc">Retrieves the number of vertex per facet in a regular mesh.</div><div class="ttdef"><b>Definition:</b> SurfaceMesh.cpp:2118</div></div>
 <div class="ttc" id="agroup__group-surfacemesh-attr_html_gga9d8ab208822bab9987e9652dda49d89aa7f0bc3a17ff45e6a7c3fe52b35db1888"><div class="ttname"><a href="group__group-surfacemesh-attr.html#gga9d8ab208822bab9987e9652dda49d89aa7f0bc3a17ff45e6a7c3fe52b35db1888">lagrange::Edge</a></div><div class="ttdeci">@ Edge</div><div class="ttdoc">Per-edge mesh attributes.</div><div class="ttdef"><b>Definition:</b> AttributeFwd.h:34</div></div>
 <div class="ttc" id="anamespacelagrange_1_1internal_html_aaef57d47fd036494daf8bf23f015dd07"><div class="ttname"><a href="namespacelagrange_1_1internal.html#aaef57d47fd036494daf8bf23f015dd07">lagrange::internal::map_attributes</a></div><div class="ttdeci">void map_attributes(const SurfaceMesh&lt; Scalar, Index &gt; &amp;source_mesh, SurfaceMesh&lt; Scalar, Index &gt; &amp;target_mesh, span&lt; const Index &gt; mapping_data, span&lt; const Index &gt; mapping_offsets={}, const MapAttributesOptions &amp;options={})</div><div class="ttdoc">Map attributes from the source mesh to the target mesh.</div><div class="ttdef"><b>Definition:</b> map_attributes.cpp:26</div></div>
 <div class="ttc" id="anamespacelagrange_html"><div class="ttname"><a href="namespacelagrange.html">lagrange</a></div><div class="ttdoc">Main namespace for Lagrange.</div><div class="ttdef"><b>Definition:</b> AABBIGL.h:30</div></div>

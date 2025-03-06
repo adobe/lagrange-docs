@@ -1426,13 +1426,13 @@ design principles that go into Lagrange.</p>
 </li>
 <li>
 <p><strong>Powerful Mesh Data Structure</strong>. Our mesh data structure can represent any type of mesh
-   (triangle mesh, quad-dominant, polygonal mesh, 2D, 3D, etc.). It is memory-efficient, support
+   (triangle mesh, quad-dominant, polygonal mesh, 2D, 3D, etc.). It is memory-efficient, supports
    generic attributes, navigation, dynamic editing, etc. More information is available on our
    dedicated <a href="../user/core/mesh/">Mesh Class</a> user guide.</p>
 </li>
 <li>
 <p><strong>Interoperability</strong>. Our mesh data structure is designed to allow wrapping any continuous
-   buffers as regular mesh attributes. This allows creating a Lagrange mesh from an external buffer
+   buffer as regular mesh attributes. This allows creating a Lagrange mesh from an external buffer
    without copying any data, as long as memory layout is compatible. Furthermore, you can export
    attributes to reuse our buffers after a mesh object is destroyed. And because our attributes can
    be viewed as Eigen matrices, our mesh data structure is directly compatible with libigl. We are
@@ -1694,7 +1694,7 @@ be easy to add them to your build system, provided you can compile the required 
 </details>
 </li>
 <li>
-<p><strong>Robustness/Support</strong>. Being backed by a company, Lagrange has a strong focus on correctness/being as bug free as possible. We have extensive unit testing internally, with more than 400 unit tests. Specifically, we try to ensure the following:</p>
+<p><strong>Robustness/Support</strong>. Being backed by a company, Lagrange has a strong focus on correctness/being as bug-free as possible. We have extensive unit testing internally, with more than 400 unit tests. Specifically, we try to ensure the following:</p>
 <ul>
 <li><strong>Corner Cases</strong>. Special cases should not crash the program. Incorrect inputs may result in exceptions being thrown.</li>
 <li><strong>Determinism</strong>. Parallel algorithms should produce the same results when called repeatedly with the same inputs.</li>

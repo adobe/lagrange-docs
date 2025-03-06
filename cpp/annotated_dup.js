@@ -350,6 +350,7 @@ var annotated_dup =
       [ "BitField", "classlagrange_1_1_bit_field.html", "classlagrange_1_1_bit_field" ],
       [ "ChainEdgesOptions", "structlagrange_1_1_chain_edges_options.html", "structlagrange_1_1_chain_edges_options" ],
       [ "ChainEdgesResult", "structlagrange_1_1_chain_edges_result.html", "structlagrange_1_1_chain_edges_result" ],
+      [ "CloseSmallHolesOptions", "structlagrange_1_1_close_small_holes_options.html", "structlagrange_1_1_close_small_holes_options" ],
       [ "ComponentOptions", "structlagrange_1_1_component_options.html", "structlagrange_1_1_component_options" ],
       [ "ComputePointcloudPCAOptions", "structlagrange_1_1_compute_pointcloud_p_c_a_options.html", "structlagrange_1_1_compute_pointcloud_p_c_a_options" ],
       [ "Connectivity", "classlagrange_1_1_connectivity.html", null ],
@@ -396,6 +397,7 @@ var annotated_dup =
       [ "RemoveDuplicateFacetOptions", "structlagrange_1_1_remove_duplicate_facet_options.html", "structlagrange_1_1_remove_duplicate_facet_options" ],
       [ "RemoveDuplicateVerticesOptions", "structlagrange_1_1_remove_duplicate_vertices_options.html", "structlagrange_1_1_remove_duplicate_vertices_options" ],
       [ "RemoveNullAreaFacetsOptions", "structlagrange_1_1_remove_null_area_facets_options.html", "structlagrange_1_1_remove_null_area_facets_options" ],
+      [ "RescaleUVOptions", "structlagrange_1_1_rescale_u_v_options.html", "structlagrange_1_1_rescale_u_v_options" ],
       [ "SamplePointsOnSurfaceOutput", "structlagrange_1_1_sample_points_on_surface_output.html", null ],
       [ "ScopedLogLevel", "classlagrange_1_1_scoped_log_level.html", "classlagrange_1_1_scoped_log_level" ],
       [ "ScopedTimer", "classlagrange_1_1_scoped_timer.html", "classlagrange_1_1_scoped_timer" ],
@@ -417,7 +419,10 @@ var annotated_dup =
       [ "TangentBitangentResult", "structlagrange_1_1_tangent_bitangent_result.html", "structlagrange_1_1_tangent_bitangent_result" ],
       [ "ThickenAndCloseOptions", "structlagrange_1_1_thicken_and_close_options.html", "structlagrange_1_1_thicken_and_close_options" ],
       [ "TransformOptions", "structlagrange_1_1_transform_options.html", "structlagrange_1_1_transform_options" ],
+      [ "UnflipUVOptions", "structlagrange_1_1_unflip_u_v_options.html", "structlagrange_1_1_unflip_u_v_options" ],
+      [ "UVChartOptions", "structlagrange_1_1_u_v_chart_options.html", "structlagrange_1_1_u_v_chart_options" ],
       [ "UVDistortionOptions", "structlagrange_1_1_u_v_distortion_options.html", "structlagrange_1_1_u_v_distortion_options" ],
+      [ "UVMeshOptions", "structlagrange_1_1_u_v_mesh_options.html", "structlagrange_1_1_u_v_mesh_options" ],
       [ "value_ptr", "classlagrange_1_1value__ptr.html", null ],
       [ "VerboseTimer", "classlagrange_1_1_verbose_timer.html", "classlagrange_1_1_verbose_timer" ],
       [ "VertexManifoldOptions", "structlagrange_1_1_vertex_manifold_options.html", "structlagrange_1_1_vertex_manifold_options" ],
@@ -452,6 +457,9 @@ var annotated_dup =
       ] ],
       [ "test_cast_attribute", null, [
         [ "TestCastAttribute", "classtests_1_1test__cast__attribute_1_1_test_cast_attribute.html", null ]
+      ] ],
+      [ "test_close_small_holes", null, [
+        [ "TestCloseSmallHoles", "classtests_1_1test__close__small__holes_1_1_test_close_small_holes.html", null ]
       ] ],
       [ "test_combine_meshes", null, [
         [ "TestCombineMeshes", "classtests_1_1test__combine__meshes_1_1_test_combine_meshes.html", null ]

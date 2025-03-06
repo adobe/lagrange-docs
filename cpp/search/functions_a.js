@@ -19,6 +19,6 @@ var searchData=
   ['load_5fsimple_5fscene_5fgltf_16',['load_simple_scene_gltf',['../namespacelagrange_1_1io.html#ab57e5a417e429d912c0d2c7af5f637eb',1,'lagrange::io::load_simple_scene_gltf(const fs::path &amp;filename, const LoadOptions &amp;options={})'],['../namespacelagrange_1_1io.html#a0ae4676249f61cb5b3db71ef66cd8bd8',1,'lagrange::io::load_simple_scene_gltf(std::istream &amp;input_stream, const LoadOptions &amp;options={})']]],
   ['lock_17',['lock',['../classlagrange_1_1internal_1_1weak__ptr.html#ad4ccc58998f31c3e706e2f97d3a99563',1,'lagrange::internal::weak_ptr']]],
   ['log_5fonce_18',['log_once',['../namespacelagrange_1_1ui.html#ac0583d5e013886855c1ddcb061196d96',1,'lagrange::ui']]],
-  ['logger_19',['logger',['../group__group-logger.html#ga97e3b3adabf67bc7d3650ed14214ddaa',1,'lagrange']]],
+  ['logger_19',['logger',['../group__group-logger.html#ga84167f554a5d7594c0ba4ae760f31599',1,'lagrange']]],
   ['look_5fat_20',['look_at',['../namespacelagrange_1_1ui.html#a19124179c7426f109b244c0b0c7d6461',1,'lagrange::ui']]]
 ];

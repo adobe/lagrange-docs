@@ -69,7 +69,7 @@ var searchData=
   ['lock_66',['lock',['../classlagrange_1_1internal_1_1weak__ptr.html#ad4ccc58998f31c3e706e2f97d3a99563',1,'lagrange::internal::weak_ptr']]],
   ['log_5fonce_67',['log_once',['../namespacelagrange_1_1ui.html#ac0583d5e013886855c1ddcb061196d96',1,'lagrange::ui']]],
   ['logdata_68',['LogData',['../classlagrange_1_1ui_1_1_log_data.html',1,'lagrange::ui']]],
-  ['logger_69',['logger',['../group__group-logger.html#ga97e3b3adabf67bc7d3650ed14214ddaa',1,'lagrange']]],
+  ['logger_69',['logger',['../group__group-logger.html#ga84167f554a5d7594c0ba4ae760f31599',1,'lagrange']]],
   ['loggercontextdata_70',['LoggerContextData',['../structlagrange_1_1ui_1_1_logger_context_data.html',1,'lagrange::ui']]],
   ['loggerpanel_71',['LoggerPanel',['../structlagrange_1_1ui_1_1_logger_panel.html',1,'lagrange::ui']]],
   ['logging_72',['Logging',['../group__group-logger.html',1,'']]],

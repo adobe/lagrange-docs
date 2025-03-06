@@ -61,13 +61,13 @@ var NAVTREEINDEX =
 "classlagrange_1_1_surface_mesh.html#ac105eafb5fa2eab8e87215d26ebb21c0",
 "classlagrange_1_1internal_1_1shared__ptr.html#a9a89323960f82fc5cf0e03635829fb5a",
 "classlagrange_1_1ui_1_1_camera.html#ae8bd2b2016f71aa4ffd01cea60bbc0a3",
-"functions_n.html",
-"group__group-utils-misc.html#gad2f13bef4d8b9c7c6b2dc61b87d95bd4",
-"namespacelagrange_1_1raycasting.html#a4cacb45d286bda3567a5eedf0ea57c9aaaa30404ca3fb4604d829dacae0444dd1",
-"structlagrange_1_1_mesh_covariance_options.html#a09495d225bdbb9d167086d6c25c1848b",
-"structlagrange_1_1io_1_1_load_options.html#a177eb10b677f5f83f6e34288d26bed89",
-"structlagrange_1_1ui_1_1_hovered_event.html",
-"structlagrange_1_1ui_1_1_window_resize_event.html"
+"functions_m.html",
+"group__group-utils-misc.html#gabc213e8639504f32e944828c1634d13e",
+"namespacelagrange_1_1raycasting.html#a1bf0ebeb95eeae0cf367574faaecd8dda8c1a06fda3cb6a681071165ed84ec988",
+"structlagrange_1_1_isoline_options.html#a4f872975d082a5c218816be05ff08fce",
+"structlagrange_1_1internal_1_1_bucket_sort_offset.html",
+"structlagrange_1_1ui_1_1_event_emitter.html",
+"structlagrange_1_1ui_1_1_viewer_1_1_window_options.html#a2474a5474cbff19523a51eb1de01cda4"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

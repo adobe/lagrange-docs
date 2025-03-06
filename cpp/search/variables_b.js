@@ -37,12 +37,13 @@ var searchData=
   ['material_5fid_34',['material_id',['../structlagrange_1_1_attribute_name.html#a684f770f2cc5ec13c7f32d1a4b3a50ef',1,'lagrange::AttributeName']]],
   ['materials_35',['materials',['../structlagrange_1_1io_1_1internal_1_1_obj_reader_result.html#a80986648551e01eac9fcd2ddedd69f29',1,'lagrange::io::internal::ObjReaderResult']]],
   ['max_5fedge_5flength_36',['max_edge_length',['../structlagrange_1_1_split_long_edges_options.html#a31be7cd3f9d91f4caef160830e2ddb29',1,'lagrange::SplitLongEdgesOptions::max_edge_length()'],['../structlagrange_1_1subdivision_1_1_subdivision_options.html#a3e8bcbb0c92920e576a6a8a024260590',1,'lagrange::subdivision::SubdivisionOptions::max_edge_length()']]],
-  ['max_5fvalue_37',['max_value',['../structlagrange_1_1image_1_1_image_histogram.html#ab57d4076e7e499e5da8c1ae500170a02',1,'lagrange::image::ImageHistogram']]],
-  ['mesh_38',['mesh',['../structlagrange_1_1io_1_1internal_1_1_obj_reader_result.html#a5b84a6d7e626bf867e1724e5e0283343',1,'lagrange::io::internal::ObjReaderResult']]],
-  ['mesh_5findex_39',['mesh_index',['../structlagrange_1_1scene_1_1_mesh_instance.html#a4b8c10b968567324a6129398346445f7',1,'lagrange::scene::MeshInstance']]],
-  ['metric_40',['metric',['../structlagrange_1_1_u_v_distortion_options.html#a5a7bba915aabeee60a27f282d88e21ee',1,'lagrange::UVDistortionOptions']]],
-  ['min_5ffacets_41',['min_facets',['../structlagrange_1_1scene_1_1_remeshing_options.html#a18803196ae5de707f545bdb6056d2606',1,'lagrange::scene::RemeshingOptions']]],
-  ['min_5fvalue_42',['min_value',['../structlagrange_1_1image_1_1_image_histogram.html#aad5729d76ea20f8aded557bc39d776bf',1,'lagrange::image::ImageHistogram']]],
-  ['mirror_5fratio_43',['mirror_ratio',['../structlagrange_1_1_thicken_and_close_options.html#afd42b20443806dc854dab304e36546f0',1,'lagrange::ThickenAndCloseOptions']]],
-  ['monitor_5findex_44',['monitor_index',['../structlagrange_1_1ui_1_1_viewer_1_1_window_options.html#a0e0d7a8a1aa351b100ea456222f96bab',1,'lagrange::ui::Viewer::WindowOptions']]]
+  ['max_5fhole_5fsize_37',['max_hole_size',['../structlagrange_1_1_close_small_holes_options.html#a95df7d94e743d58700e5da1a3f082c6c',1,'lagrange::CloseSmallHolesOptions']]],
+  ['max_5fvalue_38',['max_value',['../structlagrange_1_1image_1_1_image_histogram.html#ab57d4076e7e499e5da8c1ae500170a02',1,'lagrange::image::ImageHistogram']]],
+  ['mesh_39',['mesh',['../structlagrange_1_1io_1_1internal_1_1_obj_reader_result.html#a5b84a6d7e626bf867e1724e5e0283343',1,'lagrange::io::internal::ObjReaderResult']]],
+  ['mesh_5findex_40',['mesh_index',['../structlagrange_1_1scene_1_1_mesh_instance.html#a4b8c10b968567324a6129398346445f7',1,'lagrange::scene::MeshInstance']]],
+  ['metric_41',['metric',['../structlagrange_1_1_u_v_distortion_options.html#a5a7bba915aabeee60a27f282d88e21ee',1,'lagrange::UVDistortionOptions']]],
+  ['min_5ffacets_42',['min_facets',['../structlagrange_1_1scene_1_1_remeshing_options.html#a18803196ae5de707f545bdb6056d2606',1,'lagrange::scene::RemeshingOptions']]],
+  ['min_5fvalue_43',['min_value',['../structlagrange_1_1image_1_1_image_histogram.html#aad5729d76ea20f8aded557bc39d776bf',1,'lagrange::image::ImageHistogram']]],
+  ['mirror_5fratio_44',['mirror_ratio',['../structlagrange_1_1_thicken_and_close_options.html#afd42b20443806dc854dab304e36546f0',1,'lagrange::ThickenAndCloseOptions']]],
+  ['monitor_5findex_45',['monitor_index',['../structlagrange_1_1ui_1_1_viewer_1_1_window_options.html#a0e0d7a8a1aa351b100ea456222f96bab',1,'lagrange::ui::Viewer::WindowOptions']]]
 ];

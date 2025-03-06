@@ -172,7 +172,7 @@ $(document).ready(function(){initNavTree('legacy_2chain__edges__into__simple__lo
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        degree_in[v1]++;</div>
 <div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    }</div>
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    <span class="keywordflow">if</span> (!(degree_in.array() == degree_out.array()).all()) {</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        <a class="code hl_function" href="group__group-logger.html#ga97e3b3adabf67bc7d3650ed14214ddaa">logger</a>().debug(<span class="stringliteral">&quot;Input digraph has dangling vertices.&quot;</span>);</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        <a class="code hl_function" href="group__group-logger.html#ga84167f554a5d7594c0ba4ae760f31599">logger</a>().debug(<span class="stringliteral">&quot;Input digraph has dangling vertices.&quot;</span>);</div>
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    }</div>
 <div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    <span class="comment">// path -&gt; first edge in the path</span></div>
@@ -368,7 +368,7 @@ $(document).ready(function(){initNavTree('legacy_2chain__edges__into__simple__lo
 <div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>    }</div>
 <div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span> </div>
 <div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>    <span class="keywordflow">if</span> (num_edges_removed != num_edges) {</div>
-<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>        <a class="code hl_function" href="group__group-logger.html#ga97e3b3adabf67bc7d3650ed14214ddaa">logger</a>().warn(</div>
+<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>        <a class="code hl_function" href="group__group-logger.html#ga84167f554a5d7594c0ba4ae760f31599">logger</a>().warn(</div>
 <div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>            <span class="stringliteral">&quot;Removing ears didn&#39;t result in an empty graph, number of edges remaining: {}&quot;</span>,</div>
 <div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>            num_edges - num_edges_removed);</div>
 <div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>        Index true_num_removed = 0;</div>
@@ -393,7 +393,7 @@ $(document).ready(function(){initNavTree('legacy_2chain__edges__into__simple__lo
 <div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span> </div>
 <div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>} <span class="comment">// namespace legacy</span></div>
 <div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>} <span class="comment">// namespace lagrange</span></div>
-<div class="ttc" id="agroup__group-logger_html_ga97e3b3adabf67bc7d3650ed14214ddaa"><div class="ttname"><a href="group__group-logger.html#ga97e3b3adabf67bc7d3650ed14214ddaa">lagrange::logger</a></div><div class="ttdeci">LA_CORE_API spdlog::logger &amp; logger()</div><div class="ttdoc">Retrieves the current logger.</div><div class="ttdef"><b>Definition:</b> Logger.cpp:40</div></div>
+<div class="ttc" id="agroup__group-logger_html_ga84167f554a5d7594c0ba4ae760f31599"><div class="ttname"><a href="group__group-logger.html#ga84167f554a5d7594c0ba4ae760f31599">lagrange::logger</a></div><div class="ttdeci">LA_CORE_API spdlog::logger &amp; logger()</div><div class="ttdoc">Retrieves the current logger.</div><div class="ttdef"><b>Definition:</b> Logger.cpp:40</div></div>
 <div class="ttc" id="agroup__group-utils-assert_html_ga5b5259c4072f1caaa696e074f2f7ea15"><div class="ttname"><a href="group__group-utils-assert.html#ga5b5259c4072f1caaa696e074f2f7ea15">la_debug_assert</a></div><div class="ttdeci">#define la_debug_assert(...)</div><div class="ttdoc">Debug assertion check.</div><div class="ttdef"><b>Definition:</b> assert.h:189</div></div>
 <div class="ttc" id="agroup__group-utils-misc-functionref_html_ga626fd0cc926eb83e8adb607687c3c8e2"><div class="ttname"><a href="group__group-utils-misc-functionref.html#ga626fd0cc926eb83e8adb607687c3c8e2">lagrange::swap</a></div><div class="ttdeci">constexpr void swap(function_ref&lt; R(Args...)&gt; &amp;lhs, function_ref&lt; R(Args...)&gt; &amp;rhs) noexcept</div><div class="ttdoc">Swaps the referred callables of lhs and rhs.</div><div class="ttdef"><b>Definition:</b> function_ref.h:114</div></div>
 <div class="ttc" id="anamespacelagrange_html"><div class="ttname"><a href="namespacelagrange.html">lagrange</a></div><div class="ttdoc">Main namespace for Lagrange.</div><div class="ttdef"><b>Definition:</b> AABBIGL.h:30</div></div>

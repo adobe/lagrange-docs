@@ -1454,7 +1454,7 @@
 
 <h1 id="runtime-profiling-with-tracy">Runtime Profiling with Tracy</h1>
 <p><a href="https://github.com/wolfpld/tracy">Tracy</a> is a real-time profiler using a client/server model. It is
-cross-platform (Windows, Linux, macOS) and support GPU (OpenGL, Vulkan, etc.). This page explains
+cross-platform (Windows, Linux, macOS) and supports GPU (OpenGL, Vulkan, etc.). This page explains
 how to use Tracy with Lagrange.</p>
 <figure class="figure-image">  <img src="../../../open/dev/img/tracy.png" alt="" >  <figcaption></figcaption></figure>
 
@@ -1464,7 +1464,7 @@ client (a single .cpp file) into our application to enable profiling. To enable 
 with Lagrange, simply enable the CMake option <code>LAGRANGE_WITH_TRACY</code> in your CMake setup.</p>
 <div class="admonition info">
 <p class="admonition-title">Compile Options</p>
-<p>On macOs and Linux, do not forget to compile your application with <code>-g</code>,
+<p>On MacOS and Linux, do not forget to compile your application with <code>-g</code>,
 <code>-fno-omit-frame-pointer</code>, and <code>-rdynamic</code> (see tracy manual for explanations). When using
 <code>LAGRANGE_WITH_TRACY=ON</code>, those options will be automatically enabled by the Lagrange CMake.</p>
 </div>

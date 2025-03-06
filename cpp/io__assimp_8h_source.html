@@ -237,7 +237,7 @@ $(document).ready(function(){initNavTree('io__assimp_8h_source.html',''); initRe
 <div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>            }</div>
 <div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>            meshes.push_back(register_mesh(r, std::move(lgmesh)));</div>
 <div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (amesh-&gt;mPrimitiveTypes &amp; aiPrimitiveType_POINT) {</div>
-<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>            <a class="code hl_function" href="group__group-logger.html#ga97e3b3adabf67bc7d3650ed14214ddaa">lagrange::logger</a>().error(<span class="stringliteral">&quot;Point clouds not supported yet!&quot;</span>);</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>            <a class="code hl_function" href="group__group-logger.html#ga84167f554a5d7594c0ba4ae760f31599">lagrange::logger</a>().error(<span class="stringliteral">&quot;Point clouds not supported yet!&quot;</span>);</div>
 <div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>            meshes.push_back(NullEntity);</div>
 <div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>        }</div>
 <div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>    }</div>
@@ -270,12 +270,12 @@ $(document).ready(function(){initNavTree('io__assimp_8h_source.html',''); initRe
 <div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>        );</div>
 <div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span> </div>
 <div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>        <span class="keywordflow">if</span> (!scene) {</div>
-<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>            <a class="code hl_function" href="group__group-logger.html#ga97e3b3adabf67bc7d3650ed14214ddaa">logger</a>().error(<span class="stringliteral">&quot;Error loading scene: {}&quot;</span>, importer.GetErrorString());</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>            <a class="code hl_function" href="group__group-logger.html#ga84167f554a5d7594c0ba4ae760f31599">logger</a>().error(<span class="stringliteral">&quot;Error loading scene: {}&quot;</span>, importer.GetErrorString());</div>
 <div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>            <span class="keywordflow">return</span> NullEntity;</div>
 <div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>        }</div>
 <div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span> </div>
 <div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>    } <span class="keywordflow">catch</span> (<span class="keyword">const</span> std::exception&amp; ex) {</div>
-<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>        <a class="code hl_function" href="group__group-logger.html#ga97e3b3adabf67bc7d3650ed14214ddaa">lagrange::logger</a>().error(<span class="stringliteral">&quot;Exception in load_scene: {}&quot;</span>, ex.what());</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>        <a class="code hl_function" href="group__group-logger.html#ga84167f554a5d7594c0ba4ae760f31599">lagrange::logger</a>().error(<span class="stringliteral">&quot;Exception in load_scene: {}&quot;</span>, ex.what());</div>
 <div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>        <span class="keywordflow">return</span> NullEntity;</div>
 <div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>    }</div>
 <div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span> </div>
@@ -289,7 +289,7 @@ $(document).ready(function(){initNavTree('io__assimp_8h_source.html',''); initRe
 <div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>} <span class="comment">// namespace lagrange</span></div>
 <div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span> </div>
 <div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span><span class="preprocessor">#endif</span></div>
-<div class="ttc" id="agroup__group-logger_html_ga97e3b3adabf67bc7d3650ed14214ddaa"><div class="ttname"><a href="group__group-logger.html#ga97e3b3adabf67bc7d3650ed14214ddaa">lagrange::logger</a></div><div class="ttdeci">LA_CORE_API spdlog::logger &amp; logger()</div><div class="ttdoc">Retrieves the current logger.</div><div class="ttdef"><b>Definition:</b> Logger.cpp:40</div></div>
+<div class="ttc" id="agroup__group-logger_html_ga84167f554a5d7594c0ba4ae760f31599"><div class="ttname"><a href="group__group-logger.html#ga84167f554a5d7594c0ba4ae760f31599">lagrange::logger</a></div><div class="ttdeci">LA_CORE_API spdlog::logger &amp; logger()</div><div class="ttdoc">Retrieves the current logger.</div><div class="ttdef"><b>Definition:</b> Logger.cpp:40</div></div>
 <div class="ttc" id="anamespacelagrange_1_1io_html_a6610dc72a7d80ebe10cc94ed98b72327"><div class="ttname"><a href="namespacelagrange_1_1io.html#a6610dc72a7d80ebe10cc94ed98b72327">lagrange::io::load_scene</a></div><div class="ttdeci">SceneType load_scene(const fs::path &amp;filename, const LoadOptions &amp;options={})</div><div class="ttdoc">Load a scene.</div><div class="ttdef"><b>Definition:</b> load_scene.cpp:33</div></div>
 <div class="ttc" id="anamespacelagrange_1_1ui_html"><div class="ttname"><a href="namespacelagrange_1_1ui.html">lagrange::ui</a></div><div class="ttdoc">Lagrange UI Viewer and mini 3D engine.</div><div class="ttdef"><b>Definition:</b> AcceleratedPicking.h:22</div></div>
 <div class="ttc" id="anamespacelagrange_html"><div class="ttname"><a href="namespacelagrange.html">lagrange</a></div><div class="ttdoc">Main namespace for Lagrange.</div><div class="ttdef"><b>Definition:</b> AABBIGL.h:30</div></div>

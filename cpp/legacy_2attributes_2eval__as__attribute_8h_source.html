@@ -151,7 +151,7 @@ $(document).ready(function(){initNavTree('legacy_2attributes_2eval__as__attribut
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="keyword">using </span>AttributeArray = <span class="keyword">typename</span> MeshType::AttributeArray;</div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="keyword">using </span>Index = <span class="keyword">typename</span> MeshType::Index;</div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <span class="keyword">const</span> <span class="keyword">auto</span> num_vertices = mesh.get_num_vertices();</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <span class="keyword">const</span> <span class="keyword">auto</span> num_vertices = mesh.<a class="code hl_function" href="classlagrange_1_1_surface_mesh.html#a1ed57c732bcdb304ed7033147f5d9002">get_num_vertices</a>();</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    AttributeArray attr(num_vertices, 1);</div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="keywordflow">if</span> (parallel) {</div>
@@ -226,7 +226,7 @@ $(document).ready(function(){initNavTree('legacy_2attributes_2eval__as__attribut
 <div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>    <span class="keyword">using </span>AttributeArray = <span class="keyword">typename</span> MeshType::AttributeArray;</div>
 <div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>    <span class="keyword">using </span>Index = <span class="keyword">typename</span> MeshType::Index;</div>
 <div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span> </div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>    <span class="keyword">const</span> <span class="keyword">auto</span> num_facets = mesh.get_num_facets();</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>    <span class="keyword">const</span> <span class="keyword">auto</span> num_facets = mesh.<a class="code hl_function" href="classlagrange_1_1_surface_mesh.html#abcf8a67369f4ebda946306ae39673d4a">get_num_facets</a>();</div>
 <div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>    AttributeArray attr(num_facets, 1);</div>
 <div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span> </div>
 <div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>    <span class="keywordflow">if</span> (parallel) {</div>
@@ -261,7 +261,7 @@ $(document).ready(function(){initNavTree('legacy_2attributes_2eval__as__attribut
 <div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>    <span class="keyword">using </span>AttributeArray = <span class="keyword">typename</span> MeshType::AttributeArray;</div>
 <div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>    <span class="keyword">using </span>Index = <span class="keyword">typename</span> MeshType::Index;</div>
 <div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span> </div>
-<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>    <span class="keyword">const</span> <span class="keyword">auto</span> num_edges = mesh.get_num_edges();</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>    <span class="keyword">const</span> <span class="keyword">auto</span> num_edges = mesh.<a class="code hl_function" href="classlagrange_1_1_surface_mesh.html#ab4b72663d159f5e5280c524fab4cebc3">get_num_edges</a>();</div>
 <div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>    AttributeArray attr(num_edges, 1);</div>
 <div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span> </div>
 <div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>    <span class="keywordflow">if</span> (parallel) {</div>
@@ -287,6 +287,9 @@ $(document).ready(function(){initNavTree('legacy_2attributes_2eval__as__attribut
 <div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>} <span class="comment">// namespace legacy</span></div>
 <div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>} <span class="comment">// namespace lagrange</span></div>
 <div class="ttc" id="aclasslagrange_1_1_mesh_html"><div class="ttname"><a href="classlagrange_1_1_mesh.html">lagrange::Mesh</a></div><div class="ttdef"><b>Definition:</b> Mesh.h:48</div></div>
+<div class="ttc" id="aclasslagrange_1_1_surface_mesh_html_a1ed57c732bcdb304ed7033147f5d9002"><div class="ttname"><a href="classlagrange_1_1_surface_mesh.html#a1ed57c732bcdb304ed7033147f5d9002">lagrange::SurfaceMesh::get_num_vertices</a></div><div class="ttdeci">Index get_num_vertices() const</div><div class="ttdoc">Retrieves the number of vertices.</div><div class="ttdef"><b>Definition:</b> SurfaceMesh.h:671</div></div>
+<div class="ttc" id="aclasslagrange_1_1_surface_mesh_html_ab4b72663d159f5e5280c524fab4cebc3"><div class="ttname"><a href="classlagrange_1_1_surface_mesh.html#ab4b72663d159f5e5280c524fab4cebc3">lagrange::SurfaceMesh::get_num_edges</a></div><div class="ttdeci">Index get_num_edges() const</div><div class="ttdoc">Retrieves the number of edges.</div><div class="ttdef"><b>Definition:</b> SurfaceMesh.h:692</div></div>
+<div class="ttc" id="aclasslagrange_1_1_surface_mesh_html_abcf8a67369f4ebda946306ae39673d4a"><div class="ttname"><a href="classlagrange_1_1_surface_mesh.html#abcf8a67369f4ebda946306ae39673d4a">lagrange::SurfaceMesh::get_num_facets</a></div><div class="ttdeci">Index get_num_facets() const</div><div class="ttdoc">Retrieves the number of facets.</div><div class="ttdef"><b>Definition:</b> SurfaceMesh.h:678</div></div>
 <div class="ttc" id="agroup__group-utils-misc_html_ga41568d17fc48cea4a31db0e40cd93cf8"><div class="ttname"><a href="group__group-utils-misc.html#ga41568d17fc48cea4a31db0e40cd93cf8">lagrange::range</a></div><div class="ttdeci">internal::Range&lt; Index &gt; range(Index end)</div><div class="ttdoc">Returns an iterable object representing the range [0, end).</div><div class="ttdef"><b>Definition:</b> range.h:176</div></div>
 <div class="ttc" id="anamespacelagrange_html"><div class="ttname"><a href="namespacelagrange.html">lagrange</a></div><div class="ttdoc">Main namespace for Lagrange.</div><div class="ttdef"><b>Definition:</b> AABBIGL.h:30</div></div>
 </div><!-- fragment --></div><!-- contents -->

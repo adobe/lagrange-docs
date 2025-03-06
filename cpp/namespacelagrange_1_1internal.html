@@ -224,6 +224,18 @@ template&lt;typename DerivedV , typename DerivedF , typename DeriveddblA &gt; </
 <tr class="memitem:adbcff88ab81e30f4cd399e5fd3fb2ab2"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="group__group-surfacemesh-attr.html#ga4d115376c2c766084ef808c837348fc3">AttributeId</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacelagrange_1_1internal.html#adbcff88ab81e30f4cd399e5fd3fb2ab2">find_or_create_attribute</a> (<a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;mesh, std::string_view name, <a class="el" href="group__group-surfacemesh-attr.html#ga9d8ab208822bab9987e9652dda49d89a">AttributeElement</a> expected_element, <a class="el" href="group__group-surfacemesh-attr.html#ga5a2f28c8b9e2f8fce6e70b2418c46e45">AttributeUsage</a> expected_usage, size_t expected_channels, ResetToDefault reset_tag)</td></tr>
 <tr class="memdesc:adbcff88ab81e30f4cd399e5fd3fb2ab2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Either retrieve or create an attribute with a prescribed name, element type and usage.  <a href="namespacelagrange_1_1internal.html#adbcff88ab81e30f4cd399e5fd3fb2ab2">More...</a><br /></td></tr>
 <tr class="separator:adbcff88ab81e30f4cd399e5fd3fb2ab2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54a13380928ee39f6b49fb537d203b73"><td class="memTemplParams" colspan="2">template&lt;typename Scalar , typename Index &gt; </td></tr>
+<tr class="memitem:a54a13380928ee39f6b49fb537d203b73"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="group__group-surfacemesh-attr.html#ga4d115376c2c766084ef808c837348fc3">AttributeId</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacelagrange_1_1internal.html#a54a13380928ee39f6b49fb537d203b73">get_uv_id</a> (const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;mesh, std::string_view uv_attribute_name=&quot;&quot;)</td></tr>
+<tr class="memdesc:a54a13380928ee39f6b49fb537d203b73"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the ID of the UV attribute of a mesh.  <a href="namespacelagrange_1_1internal.html#a54a13380928ee39f6b49fb537d203b73">More...</a><br /></td></tr>
+<tr class="separator:a54a13380928ee39f6b49fb537d203b73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43200147bd58e3f3de9d6ae1ce3c5c39"><td class="memTemplParams" colspan="2">template&lt;typename Scalar , typename Index &gt; </td></tr>
+<tr class="memitem:a43200147bd58e3f3de9d6ae1ce3c5c39"><td class="memTemplItemLeft" align="right" valign="top">std::tuple&lt; <a class="el" href="group__group-surfacemesh-views.html#gabdf68813d2c56704e10b6ba3c5b9aa6d">ConstRowMatrixView</a>&lt; Scalar &gt;, <a class="el" href="group__group-surfacemesh-views.html#gabdf68813d2c56704e10b6ba3c5b9aa6d">ConstRowMatrixView</a>&lt; Index &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacelagrange_1_1internal.html#a43200147bd58e3f3de9d6ae1ce3c5c39">get_uv_attribute</a> (const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;mesh, std::string_view uv_attribute_name=&quot;&quot;)</td></tr>
+<tr class="memdesc:a43200147bd58e3f3de9d6ae1ce3c5c39"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the constant UV attribute buffers of a mesh.  <a href="namespacelagrange_1_1internal.html#a43200147bd58e3f3de9d6ae1ce3c5c39">More...</a><br /></td></tr>
+<tr class="separator:a43200147bd58e3f3de9d6ae1ce3c5c39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f3414e7c48c3cfb4ee6ee358f720180"><td class="memTemplParams" colspan="2">template&lt;typename Scalar , typename Index &gt; </td></tr>
+<tr class="memitem:a4f3414e7c48c3cfb4ee6ee358f720180"><td class="memTemplItemLeft" align="right" valign="top">std::tuple&lt; <a class="el" href="group__group-surfacemesh-views.html#ga06ca3172e4577c726eaf8d2ab26a1ab5">RowMatrixView</a>&lt; Scalar &gt;, <a class="el" href="group__group-surfacemesh-views.html#ga06ca3172e4577c726eaf8d2ab26a1ab5">RowMatrixView</a>&lt; Index &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacelagrange_1_1internal.html#a4f3414e7c48c3cfb4ee6ee358f720180">ref_uv_attribute</a> (<a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;mesh, std::string_view uv_attribute_name=&quot;&quot;)</td></tr>
+<tr class="memdesc:a4f3414e7c48c3cfb4ee6ee358f720180"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the modifiable UV attribute buffers of a mesh.  <a href="namespacelagrange_1_1internal.html#a4f3414e7c48c3cfb4ee6ee358f720180">More...</a><br /></td></tr>
+<tr class="separator:a4f3414e7c48c3cfb4ee6ee358f720180"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8d8b8c95bd1fe5343f763045a81314ee"><td class="memTemplParams" colspan="2">template&lt;typename DerivedV , typename DerivedF , typename DerivedK &gt; </td></tr>
 <tr class="memitem:a8d8b8c95bd1fe5343f763045a81314ee"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacelagrange_1_1internal.html#a8d8b8c95bd1fe5343f763045a81314ee">internal_angles</a> (const Eigen::MatrixBase&lt; DerivedV &gt; &amp;vertices, const Eigen::MatrixBase&lt; DerivedF &gt; &amp;facets, Eigen::PlainObjectBase&lt; DerivedK &gt; &amp;angles)</td></tr>
 <tr class="memdesc:a8d8b8c95bd1fe5343f763045a81314ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute internal angles for a triangle mesh.  <a href="namespacelagrange_1_1internal.html#a8d8b8c95bd1fe5343f763045a81314ee">More...</a><br /></td></tr>
@@ -951,6 +963,120 @@ bool LA_CORE_API&#160;</td><td class="memItemRight" valign="bottom"><b>point_on_
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="classlagrange_1_1_attribute.html" title="Derived attribute class that stores the actual information.">Attribute</a> id for the retrieved attribute. </dd></dl>
+
+</div>
+</div>
+<a id="a54a13380928ee39f6b49fb537d203b73" name="a54a13380928ee39f6b49fb537d203b73"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a54a13380928ee39f6b49fb537d203b73">&#9670;&nbsp;</a></span>get_uv_id()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__group-surfacemesh-attr.html#ga4d115376c2c766084ef808c837348fc3">AttributeId</a> get_uv_id </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;&#160;</td>
+          <td class="paramname"><em>mesh</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string_view&#160;</td>
+          <td class="paramname"><em>uv_attribute_name</em> = <code>&quot;&quot;</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the ID of the UV attribute of a mesh. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mesh</td><td>The mesh to get the UV attribute from. </td></tr>
+    <tr><td class="paramname">uv_attribute_name</td><td>The name of the UV attribute. If empty, use the first indexed or vertex UV attribute.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The ID of the UV attribute. </dd></dl>
+
+</div>
+</div>
+<a id="a43200147bd58e3f3de9d6ae1ce3c5c39" name="a43200147bd58e3f3de9d6ae1ce3c5c39"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a43200147bd58e3f3de9d6ae1ce3c5c39">&#9670;&nbsp;</a></span>get_uv_attribute()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::tuple&lt; <a class="el" href="group__group-surfacemesh-views.html#gabdf68813d2c56704e10b6ba3c5b9aa6d">ConstRowMatrixView</a>&lt; Scalar &gt;, <a class="el" href="group__group-surfacemesh-views.html#gabdf68813d2c56704e10b6ba3c5b9aa6d">ConstRowMatrixView</a>&lt; Index &gt; &gt; get_uv_attribute </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;&#160;</td>
+          <td class="paramname"><em>mesh</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string_view&#160;</td>
+          <td class="paramname"><em>uv_attribute_name</em> = <code>&quot;&quot;</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the constant UV attribute buffers of a mesh. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mesh</td><td>The mesh to get the UV attribute from. </td></tr>
+    <tr><td class="paramname">uv_attribute_name</td><td>The name of the UV attribute. If empty, use the first indexed or vertex UV attribute.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A tuple containing the UV values and indices. </dd></dl>
+
+</div>
+</div>
+<a id="a4f3414e7c48c3cfb4ee6ee358f720180" name="a4f3414e7c48c3cfb4ee6ee358f720180"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4f3414e7c48c3cfb4ee6ee358f720180">&#9670;&nbsp;</a></span>ref_uv_attribute()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::tuple&lt; <a class="el" href="group__group-surfacemesh-views.html#ga06ca3172e4577c726eaf8d2ab26a1ab5">RowMatrixView</a>&lt; Scalar &gt;, <a class="el" href="group__group-surfacemesh-views.html#ga06ca3172e4577c726eaf8d2ab26a1ab5">RowMatrixView</a>&lt; Index &gt; &gt; ref_uv_attribute </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;&#160;</td>
+          <td class="paramname"><em>mesh</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string_view&#160;</td>
+          <td class="paramname"><em>uv_attribute_name</em> = <code>&quot;&quot;</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the modifiable UV attribute buffers of a mesh. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mesh</td><td>The mesh to get the UV attribute from. </td></tr>
+    <tr><td class="paramname">uv_attribute_name</td><td>The name of the UV attribute. If empty, use the first indexed or vertex UV attribute.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A tuple containing the UV values and indices. </dd></dl>
 
 </div>
 </div>

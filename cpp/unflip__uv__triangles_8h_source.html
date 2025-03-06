@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.4"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Lagrange: /home/runner/work/lagrange-docs/lagrange-docs/lagrange_tmp/modules/scene/python/include/lagrange/python/scene.h Source File</title>
+<title>Lagrange: lagrange/mesh_cleanup/unflip_uv_triangles.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -91,7 +91,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('python_2include_2lagrange_2python_2scene_8h_source.html',''); initResizable(); });
+$(document).ready(function(){initNavTree('unflip__uv__triangles_8h_source.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -110,11 +110,11 @@ $(document).ready(function(){initNavTree('python_2include_2lagrange_2python_2sce
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">scene.h</div></div>
+  <div class="headertitle"><div class="title">unflip_uv_triangles.h</div></div>
 </div><!--header-->
 <div class="contents">
 <div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * Copyright 2023 Adobe. All rights reserved.</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * Copyright 2025 Adobe. All rights reserved.</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> * This file is licensed to you under the Apache License, Version 2.0 (the &quot;License&quot;);</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> * you may not use this file except in compliance with the License. You may obtain a copy</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> * of the License at http://www.apache.org/licenses/LICENSE-2.0</span></div>
@@ -126,21 +126,32 @@ $(document).ready(function(){initNavTree('python_2include_2lagrange_2python_2sce
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment"> */</span></div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#pragma once</span></div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment">// clang-format off</span></div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &lt;lagrange/utils/warnoff.h&gt;</span></div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &lt;nanobind/nanobind.h&gt;</span></div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &lt;lagrange/utils/warnon.h&gt;</span></div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment">// clang-format on</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;lagrange/SurfaceMesh.h&gt;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &lt;string_view&gt;</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacelagrange.html">lagrange</a> {</div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="keyword">namespace </span>lagrange::python {</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="keywordtype">void</span> populate_scene_module(nanobind::module_&amp; m);</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>}</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="structlagrange_1_1_unflip_u_v_options.html">   20</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structlagrange_1_1_unflip_u_v_options.html">UnflipUVOptions</a></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>{</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="structlagrange_1_1_unflip_u_v_options.html#a812bd5f3c809396ee71d159824173876">   24</a></span>    std::string_view <a class="code hl_variable" href="structlagrange_1_1_unflip_u_v_options.html#a812bd5f3c809396ee71d159824173876">uv_attribute_name</a> = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>};</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> Scalar, <span class="keyword">typename</span> Index&gt;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="keywordtype">void</span> <a class="code hl_function" href="namespacelagrange.html#a1a52980d167584935ed162810d2a71ba">unflip_uv_triangles</a>(<a class="code hl_class" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh&lt;Scalar, Index&gt;</a>&amp; mesh, <span class="keyword">const</span> <a class="code hl_struct" href="structlagrange_1_1_unflip_u_v_options.html">UnflipUVOptions</a>&amp; options = {});</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>} <span class="comment">// namespace lagrange</span></div>
+<div class="ttc" id="aclasslagrange_1_1_surface_mesh_html"><div class="ttname"><a href="classlagrange_1_1_surface_mesh.html">lagrange::SurfaceMesh&lt; Scalar, Index &gt;</a></div></div>
+<div class="ttc" id="anamespacelagrange_html"><div class="ttname"><a href="namespacelagrange.html">lagrange</a></div><div class="ttdoc">Main namespace for Lagrange.</div><div class="ttdef"><b>Definition:</b> AABBIGL.h:30</div></div>
+<div class="ttc" id="anamespacelagrange_html_a1a52980d167584935ed162810d2a71ba"><div class="ttname"><a href="namespacelagrange.html#a1a52980d167584935ed162810d2a71ba">lagrange::unflip_uv_triangles</a></div><div class="ttdeci">void unflip_uv_triangles(SurfaceMesh&lt; Scalar, Index &gt; &amp;mesh, const UnflipUVOptions &amp;options={})</div><div class="ttdoc">Unflip flipped UV triangles.</div><div class="ttdef"><b>Definition:</b> unflip_uv_triangles.cpp:26</div></div>
+<div class="ttc" id="astructlagrange_1_1_unflip_u_v_options_html"><div class="ttname"><a href="structlagrange_1_1_unflip_u_v_options.html">lagrange::UnflipUVOptions</a></div><div class="ttdef"><b>Definition:</b> unflip_uv_triangles.h:21</div></div>
+<div class="ttc" id="astructlagrange_1_1_unflip_u_v_options_html_a812bd5f3c809396ee71d159824173876"><div class="ttname"><a href="structlagrange_1_1_unflip_u_v_options.html#a812bd5f3c809396ee71d159824173876">lagrange::UnflipUVOptions::uv_attribute_name</a></div><div class="ttdeci">std::string_view uv_attribute_name</div><div class="ttdoc">Name of the attribute containing the UV coordinates.</div><div class="ttdef"><b>Definition:</b> unflip_uv_triangles.h:24</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_3c441d77f22c8082694501a0516e9f1c.html">python</a></li><li class="navelem"><a class="el" href="dir_dd6798a254c07eb51fc3172b0c2463b4.html">include</a></li><li class="navelem"><a class="el" href="dir_95188b8ecaa7983e047e207c3f0f4bc7.html">lagrange</a></li><li class="navelem"><a class="el" href="dir_7e8eeba485db6d1fee0f4e64801e0619.html">python</a></li><li class="navelem"><b>scene.h</b></li>
+    <li class="navelem"><a class="el" href="dir_e277d0e790805391a364b883bec7db94.html">lagrange</a></li><li class="navelem"><a class="el" href="dir_75e0496104c9e7e6e5aa94b4468f4343.html">mesh_cleanup</a></li><li class="navelem"><b>unflip_uv_triangles.h</b></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
   </ul>
 </div>

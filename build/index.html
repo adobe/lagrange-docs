@@ -438,6 +438,14 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#cmake" class="md-nav__link">
+    CMake
+  </a>
+  
+    <nav class="md-nav" aria-label="CMake">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#build" class="md-nav__link">
     Build
   </a>
@@ -470,8 +478,8 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#platform-specific-steps" class="md-nav__link">
     Platform-Specific Steps
   </a>
@@ -497,18 +505,23 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#run" class="md-nav__link">
     Run
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#dependencies" class="md-nav__link">
     Dependencies
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1422,6 +1435,14 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#cmake" class="md-nav__link">
+    CMake
+  </a>
+  
+    <nav class="md-nav" aria-label="CMake">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#build" class="md-nav__link">
     Build
   </a>
@@ -1454,8 +1475,8 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#platform-specific-steps" class="md-nav__link">
     Platform-Specific Steps
   </a>
@@ -1481,18 +1502,23 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#run" class="md-nav__link">
     Run
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#dependencies" class="md-nav__link">
     Dependencies
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1521,17 +1547,18 @@
 
 
 <h1 id="compilation-instructions">Compilation Instructions</h1>
-<h2 id="build">Build</h2>
+<h2 id="cmake">CMake</h2>
+<h3 id="build">Build</h3>
 <p>Lagrange requires a modern C++ compiler that supports C++17 features.
 Lagrange data structures are compatible with <a href="https://eigen.tuxfamily.org/">Eigen</a> matrices.
 Other dependencies such as
 <a href="https://github.com/libigl/libigl">libigl</a> and
 <a href="https://github.com/ocornut/imgui">imgui</a> will be downloaded by the build system as needed.</p>
-<h3 id="checkout">Checkout</h3>
+<h4 id="checkout">Checkout</h4>
 <p>To checkout the code:</p>
 <div class="highlight"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>git@github.com:adobe/lagrange.git
 </code></pre></div>
-<h3 id="compiling">Compiling</h3>
+<h4 id="compiling">Compiling</h4>
 <p>To build the code:</p>
 <div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>Lagrange
 mkdir<span class="w"> </span>build
@@ -1559,7 +1586,6 @@ LagrangeOptions.cmake</code> and uncomment options that you wish to change.</p>
 <li><code>LAGRANGE_PERFORMANCE_TESTS</code>: build performance tests.</li>
 <li><code>LAGRANGE_EXAMPLES</code>: build examples.</li>
 <li><code>LAGRANGE_USE_PCH</code>: build with precomplied headers.</li>
-<li><code>LAGRANGE_WITH_ONETBB</code>: build with oneTBB.</li>
 <li><code>LAGRANGE_WITH_TRACY</code>: build with tracy profiling support.</li>
 <li><code>USE_SANITIZER</code>: build with sanitizer support, options are "Address", "Memory", "MemoryWithOrigins", "Undefined", "Thread", "Leak".</li>
 </ul>
@@ -1576,38 +1602,42 @@ LagrangeOptions.cmake</code> and uncomment options that you wish to change.</p>
 </ol>
 <p>If neither option works, please ask for help on <a href="https://adoberesearch.slack.com/archives/CLNGBC44V">#lib-lagrange</a>.</p>
 </div>
-<h3 id="unit-tests">Unit Tests</h3>
+<h4 id="unit-tests">Unit Tests</h4>
 <p>When <code>LAGRANGE_UNIT_TESTS</code> is <code>ON</code>, unit tests are built automatically. To run all unit tests,
 either run the special target <code>RUN_TESTS</code> in your Visual Studio/Xcode project, or simply run <code>ctest</code>
 in the command-line in your build folder. Further instructions on running unit tests are available
 on <a href="../dev/unit-tests/">this page</a>.</p>
-<h2 id="platform-specific-steps">Platform-Specific Steps</h2>
-<h3 id="windows">Windows</h3>
-<p>For Visual Studio, you might have to force 64-bit compilation depending on your exact compiler
-version, e.g.:</p>
-<div class="highlight"><pre><span></span><code>cmake<span class="w"> </span>-A<span class="w"> </span>x64<span class="w"> </span>..
-cmake<span class="w"> </span>-G<span class="w"> </span><span class="s2">&quot;Visual Studio 17 2022&quot;</span><span class="w"> </span>-A<span class="w"> </span>x64<span class="w"> </span>..
-cmake<span class="w"> </span>-G<span class="w"> </span><span class="s2">&quot;Visual Studio 16 2019&quot;</span><span class="w"> </span>-A<span class="w"> </span>x64<span class="w"> </span>..
-cmake<span class="w"> </span>-G<span class="w"> </span><span class="s2">&quot;Visual Studio 15 2017 Win64&quot;</span><span class="w"> </span>..
-cmake<span class="w"> </span>-G<span class="w"> </span><span class="s2">&quot;Visual Studio 14 2015 Win64&quot;</span><span class="w"> </span>..
-</code></pre></div>
-<h3 id="unix">Unix</h3>
+<h3 id="platform-specific-steps">Platform-Specific Steps</h3>
+<h4 id="windows">Windows</h4>
+<p>Running CMake inside PowerShell or cmd.exe should pick up MSVC as the compiler and generate a Visual
+Studio project by default:</p>
+<figure class="figure-image">  <img src="../img/cmake-win.png" alt="" >  <figcaption></figcaption></figure>
+
+<p>If CMake picks up a different compiler, you may have to run the CMake command from either the
+<a href="https://learn.microsoft.com/en-us/visualstudio/ide/reference/command-prompt-powershell?view=vs-2022"><strong>Developer Command Prompt for VS 2022</strong> or <strong>Developer PowerShell for VS
+2022</strong></a>.
+If this doesn't produce a VS project targeting x64 architecture, you may need to specifically run
+CMake from the <a href="https://learn.microsoft.com/en-us/cpp/build/how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line?view=msvc-170"><strong>x64 Native Tools Command Prompt for VS
+2022</strong></a>
+instead.</p>
+<h4 id="unix">Unix</h4>
 <p>You may have to install Zenity for the file dialog window to work:</p>
 <div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>zenity
 </code></pre></div>
-<h2 id="run">Run</h2>
+<h3 id="run">Run</h3>
 <p>Executables are compiled into the following folders:</p>
 <ul>
 <li><code>&lt;build&gt;/examples</code> for examples covering various Lagrange features.</li>
 <li><code>&lt;build&gt;/tests</code> for unit test executables.</li>
 <li><code>&lt;build&gt;/performance</code> for performance test executables (legacy code).</li>
 </ul>
-<h2 id="dependencies">Dependencies</h2>
+<h3 id="dependencies">Dependencies</h3>
 <p>Lagrange's CMake build system will download and build any and all dependencies required by the
 current build setup. This includes both core dependencies (e.g., Eigen) and optional ones (e.g.,
 tinyobjloader for the IO module). If you are using Lagrange in your project and you wish to override
 Lagrange dependencies, make sure they are specified as CMake targets before calling
 <code>add_subdirectory(&lt;lagrange&gt;)</code>.</p>
+<!-- ## MetaBuild -->
 
 
 

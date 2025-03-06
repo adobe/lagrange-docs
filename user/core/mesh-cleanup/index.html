@@ -1518,12 +1518,12 @@
 <p>Documentation on this page relies on our <a href="../legacy-mesh/">legacy mesh</a> data structure.</p>
 </div>
 <p>Lagrange supports a number of mesh cleanup operations.  Typically, a mesh
-cleanup operation takes an mesh object as input and creates a new <a href="../legacy-mesh/">Mesh</a> object.
+cleanup operation takes a mesh object as input and creates a new <a href="../legacy-mesh/">Mesh</a> object.
 For example, all mesh cleanup functions have the same function signature:</p>
 <div class="highlight"><pre><span></span><code><span class="k">auto</span><span class="w"> </span><span class="n">out_mesh_unique</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lagrange</span><span class="o">::</span><span class="n">function_name</span><span class="p">(</span><span class="n">in_mesh</span><span class="p">);</span>
 </code></pre></div>
 <p>Therefore, it is possible to combine mesh cleanup operations by chaining them.
-Existing vertex/facet/corner attributes can be seamless ported from the input
+Existing vertex/facet/corner attributes can be seamlessly ported from the input
 mesh to the output mesh.</p>
 <div class="admonition warning">
 <p class="admonition-title">Limitation</p>
@@ -1531,7 +1531,7 @@ mesh to the output mesh.</p>
 </div>
 <h2 id="remove-isolated-vertices">Remove Isolated Vertices</h2>
 <p>An isolated vertex is a vertex that is not adjacent to any facet.  It can be
-removed with <code>remove_isolated_vertex</code> function:</p>
+removed with <code>remove_isolated_vertices</code> function:</p>
 <div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;lagrange/mesh_cleanup/remove_isolated_vertices.h&gt;</span>
 <span class="k">auto</span><span class="w"> </span><span class="n">mesh2_unique</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lagrange</span><span class="o">::</span><span class="n">remove_isolated_vertices</span><span class="p">(</span>
 <span class="w">        </span><span class="n">mesh</span><span class="p">);</span>
@@ -1573,13 +1573,13 @@ general degeneracy and it is possible to identify it from connectivity alone.</p
 <h2 id="remove-short-edges">Remove Short Edges</h2>
 <p>To remove all edges shorter than a given threshold:</p>
 <div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;lagrange/mesh_cleanup/remove_short_edges.h&gt;</span>
-<span class="k">auto</span><span class="w"> </span><span class="n">mesh2_unqiue</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lagrange</span><span class="o">::</span><span class="n">remove_short_edges</span><span class="p">(</span>
+<span class="k">auto</span><span class="w"> </span><span class="n">mesh2_unique</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lagrange</span><span class="o">::</span><span class="n">remove_short_edges</span><span class="p">(</span>
 <span class="w">        </span><span class="n">mesh</span><span class="p">,</span><span class="w"> </span><span class="n">tol</span><span class="p">);</span>
 </code></pre></div>
 <p>where <code>tol</code> is the target edge length threshold.</p>
 <h2 id="remove-duplicate-facets">Remove Duplicate Facets</h2>
 <p>Two facets are considered duplicates of each other if they are formed by the
-combination of vertices.  E.g. facet <code>[1, 2, 3]</code> is considered as duplicate of
+same combination of vertices.  E.g. facet <code>[1, 2, 3]</code> is considered as duplicate of
 facet <code>[3, 2, 1]</code>.  To remove all duplicate facets:</p>
 <div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;lagrange/mesh_cleanup/remove_duplicate_facets.h&gt;</span>
 <span class="k">auto</span><span class="w"> </span><span class="n">mesh2_unique</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lagrange</span><span class="o">::</span><span class="n">remove_duplicate_facets</span><span class="p">(</span>
@@ -1587,7 +1587,7 @@ facet <code>[3, 2, 1]</code>.  To remove all duplicate facets:</p>
 </code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Facet orientation is not considered.  Even thought facet <code>[1, 2, 3]</code>
+<p>Facet orientation is not considered.  Even though facet <code>[1, 2, 3]</code>
 and <code>[3, 2, 1]</code> have opposite orientations, they are considered as duplicates.</p>
 </div>
 <h2 id="split-long-edges">Split Long Edges</h2>
@@ -1625,7 +1625,7 @@ refinement where all edges are split.</p>
 <p><figure class="figure-image">  <img src="../img/nonmanifold_cases.png" alt="Nonmanifold cases" >  <figcaption>Nonmanifold cases</figcaption></figure></p>
 </div>
 <h2 id="convert-quad-mesh-to-triangular-mesh">Convert Quad Mesh To Triangular Mesh</h2>
-<p>Lagrange also provide handy function to convert a quad to a triangular mesh:</p>
+<p>Lagrange also provides handy function to convert a quad to a triangular mesh:</p>
 <div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;lagrange/quad_to_tri.h&gt;</span>
 <span class="k">auto</span><span class="w"> </span><span class="n">mesh2_unique</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lagrange</span><span class="o">::</span><span class="n">quad_to_tri</span><span class="p">(</span><span class="n">mesh</span><span class="p">);</span>
 </code></pre></div>
