@@ -942,7 +942,7 @@ $(document).ready(function(){initNavTree('bind__surface__mesh_8h_source.html',''
 <div class="line"><a id="l00827" name="l00827"></a><span class="lineno">  827</span>                <a class="code hl_function" href="group__group-utils-misc.html#ga29789b742f13c0dd6059b641aa7b29ab">make_shared_span</a>(owner, values.data(), values.size()),</div>
 <div class="line"><a id="l00828" name="l00828"></a><span class="lineno">  828</span>                <span class="keyword">static_cast&lt;</span>Index<span class="keyword">&gt;</span>(num_facets),</div>
 <div class="line"><a id="l00829" name="l00829"></a><span class="lineno">  829</span>                <span class="keyword">static_cast&lt;</span>Index<span class="keyword">&gt;</span>(vertex_per_facet));</div>
-<div class="line"><a id="l00830" name="l00830"></a><span class="lineno">  830</span>            <span class="keyword">auto</span>&amp; attr = self.template ref_attribute&lt;Scalar&gt;(<span class="keywordtype">id</span>);</div>
+<div class="line"><a id="l00830" name="l00830"></a><span class="lineno">  830</span>            <span class="keyword">auto</span>&amp; attr = self.template ref_attribute&lt;Index&gt;(<span class="keywordtype">id</span>);</div>
 <div class="line"><a id="l00831" name="l00831"></a><span class="lineno">  831</span>            attr.set_growth_policy(<a class="code hl_enumvalue" href="group__group-surfacemesh-attr.html#gga790f065d45f011268208d588a8251846aef773dc1e1097301a1bf955bfa9857ec">AttributeGrowthPolicy::WarnAndCopy</a>);</div>
 <div class="line"><a id="l00832" name="l00832"></a><span class="lineno">  832</span>        },</div>
 <div class="line"><a id="l00833" name="l00833"></a><span class="lineno">  833</span>        <span class="stringliteral">&quot;Facets of the mesh.&quot;</span>);</div>
@@ -980,7 +980,7 @@ $(document).ready(function(){initNavTree('bind__surface__mesh_8h_source.html',''
 <div class="line"><a id="l00865" name="l00865"></a><span class="lineno">  865</span>                <a class="code hl_function" href="group__group-utils-misc.html#ga29789b742f13c0dd6059b641aa7b29ab">make_shared_span</a>(owner, values.data(), values.size()),</div>
 <div class="line"><a id="l00866" name="l00866"></a><span class="lineno">  866</span>                num_facets,</div>
 <div class="line"><a id="l00867" name="l00867"></a><span class="lineno">  867</span>                vertex_per_facet);</div>
-<div class="line"><a id="l00868" name="l00868"></a><span class="lineno">  868</span>            <span class="keyword">auto</span>&amp; attr = self.template ref_attribute&lt;Scalar&gt;(<span class="keywordtype">id</span>);</div>
+<div class="line"><a id="l00868" name="l00868"></a><span class="lineno">  868</span>            <span class="keyword">auto</span>&amp; attr = self.template ref_attribute&lt;Index&gt;(<span class="keywordtype">id</span>);</div>
 <div class="line"><a id="l00869" name="l00869"></a><span class="lineno">  869</span>            attr.set_growth_policy(<a class="code hl_enumvalue" href="group__group-surfacemesh-attr.html#gga790f065d45f011268208d588a8251846aef773dc1e1097301a1bf955bfa9857ec">AttributeGrowthPolicy::WarnAndCopy</a>);</div>
 <div class="line"><a id="l00870" name="l00870"></a><span class="lineno">  870</span>            <span class="keywordflow">return</span> id;</div>
 <div class="line"><a id="l00871" name="l00871"></a><span class="lineno">  871</span>        },</div>
@@ -1014,7 +1014,7 @@ $(document).ready(function(){initNavTree('bind__surface__mesh_8h_source.html',''
 <div class="line"><a id="l00899" name="l00899"></a><span class="lineno">  899</span>                num_facets,</div>
 <div class="line"><a id="l00900" name="l00900"></a><span class="lineno">  900</span>                <a class="code hl_function" href="group__group-utils-misc.html#ga29789b742f13c0dd6059b641aa7b29ab">make_shared_span</a>(facets_owner, facets_data.data(), facets_data.size()),</div>
 <div class="line"><a id="l00901" name="l00901"></a><span class="lineno">  901</span>                num_corners);</div>
-<div class="line"><a id="l00902" name="l00902"></a><span class="lineno">  902</span>            <span class="keyword">auto</span>&amp; attr = self.template ref_attribute&lt;Scalar&gt;(<span class="keywordtype">id</span>);</div>
+<div class="line"><a id="l00902" name="l00902"></a><span class="lineno">  902</span>            <span class="keyword">auto</span>&amp; attr = self.template ref_attribute&lt;Index&gt;(<span class="keywordtype">id</span>);</div>
 <div class="line"><a id="l00903" name="l00903"></a><span class="lineno">  903</span>            attr.set_growth_policy(<a class="code hl_enumvalue" href="group__group-surfacemesh-attr.html#gga790f065d45f011268208d588a8251846aef773dc1e1097301a1bf955bfa9857ec">AttributeGrowthPolicy::WarnAndCopy</a>);</div>
 <div class="line"><a id="l00904" name="l00904"></a><span class="lineno">  904</span>            <span class="keywordflow">return</span> id;</div>
 <div class="line"><a id="l00905" name="l00905"></a><span class="lineno">  905</span>        },</div>

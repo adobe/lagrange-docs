@@ -146,6 +146,13 @@ std::string_view&#160;</td><td class="memItemRight" valign="bottom"><b>bitangent
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>pad_with_sign</b> = false</td></tr>
 <tr class="memdesc:a6b9ae3e346b4c49548ff8e48d0256502"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether to pad the tangent/bitangent vectors with a 4th coordinate indicating the sign of the UV triangle. <br /></td></tr>
 <tr class="separator:a6b9ae3e346b4c49548ff8e48d0256502"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74d9ba96034fa4a6676fb89f811bae6d"><td class="memItemLeft" align="right" valign="top"><a id="a74d9ba96034fa4a6676fb89f811bae6d" name="a74d9ba96034fa4a6676fb89f811bae6d"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>orthogonalize_bitangent</b> = false</td></tr>
+<tr class="memdesc:a74d9ba96034fa4a6676fb89f811bae6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether to compute the bitangent as sign * cross(normal, tangent) If false, the bitangent is computed as the derivative of v-coordinate. <br /></td></tr>
+<tr class="separator:a74d9ba96034fa4a6676fb89f811bae6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50e87d1c37ce58340acc315e50596487"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlagrange_1_1_tangent_bitangent_options.html#a50e87d1c37ce58340acc315e50596487">keep_existing_tangent</a> = false</td></tr>
+<tr class="memdesc:a50e87d1c37ce58340acc315e50596487"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether to recompute tangent if the tangent attribute (specified by tangent_attribute_name) already exists.  <a href="structlagrange_1_1_tangent_bitangent_options.html#a50e87d1c37ce58340acc315e50596487">More...</a><br /></td></tr>
+<tr class="separator:a50e87d1c37ce58340acc315e50596487"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Option struct for computing tangent and bitangent vectors. </p>
@@ -181,6 +188,29 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>pad_with_sign</b> = f
 
 <p>Normal attribute name used to compute the BTN frame. </p>
 <p >Must be an indexed attribute. The output tangent/bitangent vectors are projected into the plane orthogonal to the normal vector at each triangle corner. If the output element type is set to <code>Indexed</code>, the indices in the provided normal attribute are also used to aggregate BTN frames between neighboring triangles. If left empty, the first indexed Normal attribute is used. </p>
+
+</div>
+</div>
+<a id="a50e87d1c37ce58340acc315e50596487" name="a50e87d1c37ce58340acc315e50596487"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a50e87d1c37ce58340acc315e50596487">&#9670;&nbsp;</a></span>keep_existing_tangent</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool keep_existing_tangent = false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Whether to recompute tangent if the tangent attribute (specified by tangent_attribute_name) already exists. </p>
+<ul>
+<li>If true, bitangent will be computed by sign * normalized(cross(normal, existing_tangent))<ul>
+<li><code>orthogonalize_bitangent</code> must be true</li>
+</ul>
+</li>
+<li>If false, the tangent will be recomputed and potentially overwritten. </li>
+</ul>
 
 </div>
 </div>

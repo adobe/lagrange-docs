@@ -337,6 +337,8 @@
           
         
           
+            
+          
         
           
         
@@ -615,6 +617,13 @@
         <li class="md-nav__item">
   <a href="#accessing-attribute-values" class="md-nav__link">
     Accessing Attribute Values
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#accessing-indexed-attribute" class="md-nav__link">
+    Accessing Indexed Attribute
   </a>
   
 </li>
@@ -1485,6 +1494,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#accessing-indexed-attribute" class="md-nav__link">
+    Accessing Indexed Attribute
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#iterating-over-mesh-attributes" class="md-nav__link">
     Iterating Over Mesh Attributes
   </a>
@@ -1756,7 +1772,8 @@ buffers</a>. If you need to track ownership, you can use a
 <span class="k">auto</span><span class="w"> </span><span class="n">attr_matrix</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">matrix_view</span><span class="p">(</span><span class="n">mesh</span><span class="p">.</span><span class="n">get_attribute</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;</span><span class="p">(</span><span class="n">id1</span><span class="p">));</span>
 </code></pre></div>
 <h2 id="accessing-attribute-values">Accessing Attribute Values</h2>
-<div class="highlight"><pre><span></span><code><span class="n">lagrange</span><span class="o">::</span><span class="n">SurfaceMesh</span><span class="o">&lt;</span><span class="n">Scalar</span><span class="p">,</span><span class="w"> </span><span class="n">Index</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mesh</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;lagrange/Attribute.h&gt;</span>
+<span class="n">lagrange</span><span class="o">::</span><span class="n">SurfaceMesh</span><span class="o">&lt;</span><span class="n">Scalar</span><span class="p">,</span><span class="w"> </span><span class="n">Index</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mesh</span><span class="p">;</span>
 
 <span class="c1">// ...</span>
 
@@ -1788,6 +1805,33 @@ reason, the following code will <strong>not</strong> compile and produce an erro
 <p>Copy-on-write handling of attribute buffers is done at the mesh level, i.e. when copying a
 <code>SurfaceMesh</code> object, or when calling methods such as <code>SurfaceMesh::duplicate_attribute()</code>.</p>
 </div>
+<h2 id="accessing-indexed-attribute">Accessing Indexed Attribute</h2>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;lagrange/IndexedAttribute.h&gt;</span>
+
+<span class="c1">// ...</span>
+
+<span class="n">lagrange</span><span class="o">::</span><span class="n">SurfaceMesh</span><span class="o">&lt;</span><span class="n">Scalar</span><span class="p">,</span><span class="w"> </span><span class="n">Index</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mesh</span><span class="p">;</span>
+
+<span class="c1">// ...</span>
+
+<span class="c1">// Returns a const Attribute&lt;T&gt; &amp;</span>
+<span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="o">&amp;</span><span class="w"> </span><span class="n">attr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mesh</span><span class="p">.</span><span class="n">get_indexed_attribute</span><span class="o">&lt;</span><span class="n">Scalar</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;normals&quot;</span><span class="p">);</span>
+
+<span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="o">&amp;</span><span class="w"> </span><span class="n">attr_indices</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">attr</span><span class="p">.</span><span class="n">indices</span><span class="p">();</span>
+<span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="o">&amp;</span><span class="w"> </span><span class="n">attr_values</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">attr</span><span class="p">.</span><span class="n">values</span><span class="p">();</span>
+<span class="kt">size_t</span><span class="w"> </span><span class="n">num_channels</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">attr</span><span class="p">.</span><span class="n">get_num_channels</span><span class="p">();</span>
+
+<span class="c1">// attr_indices[corner_id] yields the index at which one should look up in the attr_values array</span>
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">Index</span><span class="w"> </span><span class="n">corner_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">corner_id</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">mesh</span><span class="p">.</span><span class="n">get_num_corners</span><span class="p">();</span><span class="w"> </span><span class="o">++</span><span class="n">corner_id</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">values</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">attr_values</span><span class="p">.</span><span class="n">subspan</span><span class="p">(</span><span class="n">num_channels</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">attr_indices</span><span class="p">[</span><span class="n">corner_id</span><span class="p">],</span><span class="w"> </span><span class="n">num_channels</span><span class="p">);</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">Scalar</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">values</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// this gives individual components of the normal at the corner</span>
+<span class="w">        </span><span class="c1">// ...</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Use <code>ref_indexed_attribute&lt;&gt;</code> instead of <code>get_indexed_attribute&lt;&gt;</code> for writable reference. See <a href="../mesh/#copy-on-write">this
+section</a>.</p>
 <h2 id="iterating-over-mesh-attributes">Iterating Over Mesh Attributes</h2>
 <p>In many situation, it is desirable to iterate over existing mesh attributes to extract some
 information, or process existing attributes. We provide utility functions to iterate over existing

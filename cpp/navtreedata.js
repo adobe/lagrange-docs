@@ -61,13 +61,13 @@ var NAVTREEINDEX =
 "classlagrange_1_1_surface_mesh.html#ac105eafb5fa2eab8e87215d26ebb21c0",
 "classlagrange_1_1internal_1_1shared__ptr.html#a9a89323960f82fc5cf0e03635829fb5a",
 "classlagrange_1_1ui_1_1_camera.html#ae8bd2b2016f71aa4ffd01cea60bbc0a3",
-"functions_m.html",
-"group__group-utils-misc.html#gabc213e8639504f32e944828c1634d13e",
-"namespacelagrange_1_1raycasting.html#a1bf0ebeb95eeae0cf367574faaecd8dda8c1a06fda3cb6a681071165ed84ec988",
-"structlagrange_1_1_isoline_options.html#a4f872975d082a5c218816be05ff08fce",
-"structlagrange_1_1internal_1_1_bucket_sort_offset.html",
-"structlagrange_1_1ui_1_1_event_emitter.html",
-"structlagrange_1_1ui_1_1_viewer_1_1_window_options.html#a2474a5474cbff19523a51eb1de01cda4"
+"functions_l.html",
+"group__group-utils-misc.html#ga81d5673419396307677f905d5f4033ce",
+"namespacelagrange_1_1partitioning.html#a09e8dc3cefeb36db96cd82eb06093b18",
+"structlagrange_1_1_greedy_coloring_options.html",
+"structlagrange_1_1image_1_1_image_histogram.html#aad5729d76ea20f8aded557bc39d776bf",
+"structlagrange_1_1ui_1_1_default_shader_indices_names.html",
+"structlagrange_1_1ui_1_1_u_i_panel.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

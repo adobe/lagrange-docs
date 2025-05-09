@@ -5,5 +5,7 @@ var structlagrange_1_1_tangent_bitangent_options =
     [ "uv_attribute_name", "structlagrange_1_1_tangent_bitangent_options.html#a812bd5f3c809396ee71d159824173876", null ],
     [ "normal_attribute_name", "structlagrange_1_1_tangent_bitangent_options.html#a51066a9b87ceffa1db37243770584972", null ],
     [ "output_element_type", "structlagrange_1_1_tangent_bitangent_options.html#a650d9b28565137517f5f823c480ee063", null ],
-    [ "pad_with_sign", "structlagrange_1_1_tangent_bitangent_options.html#a6b9ae3e346b4c49548ff8e48d0256502", null ]
+    [ "pad_with_sign", "structlagrange_1_1_tangent_bitangent_options.html#a6b9ae3e346b4c49548ff8e48d0256502", null ],
+    [ "orthogonalize_bitangent", "structlagrange_1_1_tangent_bitangent_options.html#a74d9ba96034fa4a6676fb89f811bae6d", null ],
+    [ "keep_existing_tangent", "structlagrange_1_1_tangent_bitangent_options.html#a50e87d1c37ce58340acc315e50596487", null ]
 ];

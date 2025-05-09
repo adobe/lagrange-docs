@@ -1,6 +1,7 @@
 var modules =
 [
     [ "Core Module", "group__module-core.html", "group__module-core" ],
+    [ "Filtering Module", "group__module-filtering.html", "group__module-filtering" ],
     [ "FS Module", "group__module-fs.html", null ],
     [ "Image Module", "group__module-image.html", null ],
     [ "IO Module", "group__module-io.html", null ],

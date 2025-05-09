@@ -423,14 +423,22 @@ template&lt;typename Scalar , typename Index &gt; </td></tr>
 <tr class="memitem:gac349d354b36d62bc2efeb93dd2b7f078"><td class="memTemplItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classlagrange_1_1_mesh.html">MeshType</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__group-surfacemesh-utils.html#gac349d354b36d62bc2efeb93dd2b7f078">to_legacy_mesh</a> (const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;mesh)</td></tr>
 <tr class="memdesc:gac349d354b36d62bc2efeb93dd2b7f078"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert a surface mesh object to a legacy mesh object.  <a href="group__group-surfacemesh-utils.html#gac349d354b36d62bc2efeb93dd2b7f078">More...</a><br /></td></tr>
 <tr class="separator:gac349d354b36d62bc2efeb93dd2b7f078"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaf07b7ee38e3c92577a3cdc9a7bb38479"><td class="memTemplParams" colspan="2">template&lt;typename Scalar , typename Index &gt; </td></tr>
-<tr class="memitem:gaf07b7ee38e3c92577a3cdc9a7bb38479"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__group-surfacemesh-utils.html#gaf07b7ee38e3c92577a3cdc9a7bb38479">normalize_mesh</a> (<a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;mesh)</td></tr>
-<tr class="memdesc:gaf07b7ee38e3c92577a3cdc9a7bb38479"><td class="mdescLeft">&#160;</td><td class="mdescRight">Normalize a mesh to fit in a unit box centered at the origin.  <a href="group__group-surfacemesh-utils.html#gaf07b7ee38e3c92577a3cdc9a7bb38479">More...</a><br /></td></tr>
-<tr class="separator:gaf07b7ee38e3c92577a3cdc9a7bb38479"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gad46e0464a61ba9b6c5fd7948af53c304"><td class="memTemplParams" colspan="2">template&lt;typename Scalar , typename Index &gt; </td></tr>
-<tr class="memitem:gad46e0464a61ba9b6c5fd7948af53c304"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__group-surfacemesh-utils.html#gad46e0464a61ba9b6c5fd7948af53c304">normalize_meshes</a> (<a class="el" href="group__group-utils-misc.html#ga4afead0b9ccc53fe4fca896787595d26">span</a>&lt; <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; * &gt; meshes)</td></tr>
-<tr class="memdesc:gad46e0464a61ba9b6c5fd7948af53c304"><td class="mdescLeft">&#160;</td><td class="mdescRight">Normalize a list of meshes to fit in a unit box centered at the origin.  <a href="group__group-surfacemesh-utils.html#gad46e0464a61ba9b6c5fd7948af53c304">More...</a><br /></td></tr>
-<tr class="separator:gad46e0464a61ba9b6c5fd7948af53c304"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8a3c053ce081c3a551af20b1ed5bca08"><td class="memTemplParams" colspan="2">template&lt;size_t Dimension = 3, typename Scalar , typename Index &gt; </td></tr>
+<tr class="memitem:ga8a3c053ce081c3a551af20b1ed5bca08"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__group-surfacemesh-utils.html#ga8a3c053ce081c3a551af20b1ed5bca08">normalize_mesh_with_transform</a> (<a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;mesh, const <a class="el" href="structlagrange_1_1_transform_options.html">TransformOptions</a> &amp;options={}) -&gt; Eigen::Transform&lt; Scalar, Dimension, Eigen::Affine &gt;</td></tr>
+<tr class="memdesc:ga8a3c053ce081c3a551af20b1ed5bca08"><td class="mdescLeft">&#160;</td><td class="mdescRight">Normalize a mesh to fit in a unit box centered at the origin.  <a href="group__group-surfacemesh-utils.html#ga8a3c053ce081c3a551af20b1ed5bca08">More...</a><br /></td></tr>
+<tr class="separator:ga8a3c053ce081c3a551af20b1ed5bca08"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7338d1f11a59b043aecad72a3cf708bf"><td class="memTemplParams" colspan="2">template&lt;typename Scalar , typename Index &gt; </td></tr>
+<tr class="memitem:ga7338d1f11a59b043aecad72a3cf708bf"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__group-surfacemesh-utils.html#ga7338d1f11a59b043aecad72a3cf708bf">normalize_mesh</a> (<a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;mesh, const <a class="el" href="structlagrange_1_1_transform_options.html">TransformOptions</a> &amp;options={})</td></tr>
+<tr class="memdesc:ga7338d1f11a59b043aecad72a3cf708bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Normalize a mesh to fit in a unit box centered at the origin.  <a href="group__group-surfacemesh-utils.html#ga7338d1f11a59b043aecad72a3cf708bf">More...</a><br /></td></tr>
+<tr class="separator:ga7338d1f11a59b043aecad72a3cf708bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaff1990dcc852e6a57d266bd14c6a2343"><td class="memTemplParams" colspan="2">template&lt;size_t Dimension = 3, typename Scalar , typename Index &gt; </td></tr>
+<tr class="memitem:gaff1990dcc852e6a57d266bd14c6a2343"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__group-surfacemesh-utils.html#gaff1990dcc852e6a57d266bd14c6a2343">normalize_meshes_with_transform</a> (<a class="el" href="group__group-utils-misc.html#ga4afead0b9ccc53fe4fca896787595d26">span</a>&lt; <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; * &gt; meshes, const <a class="el" href="structlagrange_1_1_transform_options.html">TransformOptions</a> &amp;options={}) -&gt; Eigen::Transform&lt; Scalar, Dimension, Eigen::Affine &gt;</td></tr>
+<tr class="memdesc:gaff1990dcc852e6a57d266bd14c6a2343"><td class="mdescLeft">&#160;</td><td class="mdescRight">Normalize a list of meshes to fit in a unit box centered at the origin.  <a href="group__group-surfacemesh-utils.html#gaff1990dcc852e6a57d266bd14c6a2343">More...</a><br /></td></tr>
+<tr class="separator:gaff1990dcc852e6a57d266bd14c6a2343"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaca4977e11607d038c9754e12dc7271c6"><td class="memTemplParams" colspan="2">template&lt;typename Scalar , typename Index &gt; </td></tr>
+<tr class="memitem:gaca4977e11607d038c9754e12dc7271c6"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__group-surfacemesh-utils.html#gaca4977e11607d038c9754e12dc7271c6">normalize_meshes</a> (<a class="el" href="group__group-utils-misc.html#ga4afead0b9ccc53fe4fca896787595d26">span</a>&lt; <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; * &gt; meshes, const <a class="el" href="structlagrange_1_1_transform_options.html">TransformOptions</a> &amp;options={})</td></tr>
+<tr class="memdesc:gaca4977e11607d038c9754e12dc7271c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Normalize a list of meshes to fit in a unit box centered at the origin.  <a href="group__group-surfacemesh-utils.html#gaca4977e11607d038c9754e12dc7271c6">More...</a><br /></td></tr>
+<tr class="separator:gaca4977e11607d038c9754e12dc7271c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga40b789004d6fc0e7ca4cf13fd0c811e8"><td class="memTemplParams" colspan="2">template&lt;typename Scalar , typename Index &gt; </td></tr>
 <tr class="memitem:ga40b789004d6fc0e7ca4cf13fd0c811e8"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__group-surfacemesh-utils.html#ga40b789004d6fc0e7ca4cf13fd0c811e8">is_oriented</a> (const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;mesh)</td></tr>
 <tr class="memdesc:ga40b789004d6fc0e7ca4cf13fd0c811e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if a mesh is oriented.  <a href="group__group-surfacemesh-utils.html#ga40b789004d6fc0e7ca4cf13fd0c811e8">More...</a><br /></td></tr>
@@ -1868,7 +1876,7 @@ template&lt;typename Scalar , typename Index &gt; </td></tr>
 <p><code>#include &lt;lagrange/compute_tangent_bitangent.h&gt;</code></p>
 
 <p>Compute mesh tangent and bitangent vectors orthogonal to the input mesh normals. </p>
-<dl class="section note"><dt>Note</dt><dd>The input mesh must have existing indexed normal and UV attributes. The input UV attribute is used to orient the resulting T/B vectors coherently wrt to the UV mapping.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Unless <code>options.keep_existing_tangent</code> is true, the input mesh must have existing indexed normal and UV attributes. The input UV attribute is used to orient the resulting T/B vectors coherently wrt to the UV mapping.</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">mesh</td><td>The input mesh. </td></tr>
@@ -2785,18 +2793,28 @@ To convert a mesh and its attributes to different types, use the cast function.<
 
 </div>
 </div>
-<a id="gaf07b7ee38e3c92577a3cdc9a7bb38479" name="gaf07b7ee38e3c92577a3cdc9a7bb38479"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gaf07b7ee38e3c92577a3cdc9a7bb38479">&#9670;&nbsp;</a></span>normalize_mesh()</h2>
+<a id="ga8a3c053ce081c3a551af20b1ed5bca08" name="ga8a3c053ce081c3a551af20b1ed5bca08"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8a3c053ce081c3a551af20b1ed5bca08">&#9670;&nbsp;</a></span>normalize_mesh_with_transform()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void normalize_mesh </td>
+          <td class="memname">auto normalize_mesh_with_transform </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;&#160;</td>
-          <td class="paramname"><em>mesh</em></td><td>)</td>
+          <td class="paramname"><em>mesh</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const <a class="el" href="structlagrange_1_1_transform_options.html">TransformOptions</a> &amp;&#160;</td>
+          <td class="paramname"><em>options</em> = <code>{}</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> -&gt; Eigen::Transform&lt;Scalar, Dimension, Eigen::Affine&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -2806,7 +2824,56 @@ To convert a mesh and its attributes to different types, use the cast function.<
 <p>Normalize a mesh to fit in a unit box centered at the origin. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">mesh</td><td>Input mesh.</td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">mesh</td><td>Input mesh. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">options</td><td>Transform options.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Dimension</td><td><a class="el" href="classlagrange_1_1_mesh.html">Mesh</a> dimension. </td></tr>
+    <tr><td class="paramname">Scalar</td><td><a class="el" href="classlagrange_1_1_mesh.html">Mesh</a> scalar type. </td></tr>
+    <tr><td class="paramname">Index</td><td><a class="el" href="classlagrange_1_1_mesh.html">Mesh</a> index type.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The inverse transform, can be used to undo the normalization process. </dd></dl>
+
+</div>
+</div>
+<a id="ga7338d1f11a59b043aecad72a3cf708bf" name="ga7338d1f11a59b043aecad72a3cf708bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga7338d1f11a59b043aecad72a3cf708bf">&#9670;&nbsp;</a></span>normalize_mesh()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void normalize_mesh </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;&#160;</td>
+          <td class="paramname"><em>mesh</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structlagrange_1_1_transform_options.html">TransformOptions</a> &amp;&#160;</td>
+          <td class="paramname"><em>options</em> = <code>{}</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;lagrange/normalize_meshes.h&gt;</code></p>
+
+<p>Normalize a mesh to fit in a unit box centered at the origin. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">mesh</td><td>Input mesh. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">options</td><td>Transform options.</td></tr>
   </table>
   </dd>
 </dl>
@@ -2820,18 +2887,28 @@ To convert a mesh and its attributes to different types, use the cast function.<
 
 </div>
 </div>
-<a id="gad46e0464a61ba9b6c5fd7948af53c304" name="gad46e0464a61ba9b6c5fd7948af53c304"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gad46e0464a61ba9b6c5fd7948af53c304">&#9670;&nbsp;</a></span>normalize_meshes()</h2>
+<a id="gaff1990dcc852e6a57d266bd14c6a2343" name="gaff1990dcc852e6a57d266bd14c6a2343"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaff1990dcc852e6a57d266bd14c6a2343">&#9670;&nbsp;</a></span>normalize_meshes_with_transform()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void normalize_meshes </td>
+          <td class="memname">auto normalize_meshes_with_transform </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="group__group-utils-misc.html#ga4afead0b9ccc53fe4fca896787595d26">span</a>&lt; <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; * &gt;&#160;</td>
-          <td class="paramname"><em>meshes</em></td><td>)</td>
+          <td class="paramname"><em>meshes</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const <a class="el" href="structlagrange_1_1_transform_options.html">TransformOptions</a> &amp;&#160;</td>
+          <td class="paramname"><em>options</em> = <code>{}</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> -&gt; Eigen::Transform&lt;Scalar, Dimension, Eigen::Affine&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -2841,7 +2918,56 @@ To convert a mesh and its attributes to different types, use the cast function.<
 <p>Normalize a list of meshes to fit in a unit box centered at the origin. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">meshes</td><td>List of pointers to the meshes to modify.</td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">meshes</td><td>List of pointers to the meshes to modify. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">options</td><td>Transform options.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Dimension</td><td><a class="el" href="classlagrange_1_1_mesh.html">Mesh</a> dimension. </td></tr>
+    <tr><td class="paramname">Scalar</td><td><a class="el" href="classlagrange_1_1_mesh.html">Mesh</a> scalar type. </td></tr>
+    <tr><td class="paramname">Index</td><td><a class="el" href="classlagrange_1_1_mesh.html">Mesh</a> index type.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The inverse transform, can be used to undo the normalization process. </dd></dl>
+
+</div>
+</div>
+<a id="gaca4977e11607d038c9754e12dc7271c6" name="gaca4977e11607d038c9754e12dc7271c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaca4977e11607d038c9754e12dc7271c6">&#9670;&nbsp;</a></span>normalize_meshes()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void normalize_meshes </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__group-utils-misc.html#ga4afead0b9ccc53fe4fca896787595d26">span</a>&lt; <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; * &gt;&#160;</td>
+          <td class="paramname"><em>meshes</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structlagrange_1_1_transform_options.html">TransformOptions</a> &amp;&#160;</td>
+          <td class="paramname"><em>options</em> = <code>{}</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;lagrange/normalize_meshes.h&gt;</code></p>
+
+<p>Normalize a list of meshes to fit in a unit box centered at the origin. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">meshes</td><td>List of pointers to the meshes to modify. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">options</td><td>Transform options.</td></tr>
   </table>
   </dd>
 </dl>

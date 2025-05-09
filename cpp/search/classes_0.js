@@ -25,5 +25,6 @@ var searchData=
   ['attributematcher_22',['AttributeMatcher',['../structlagrange_1_1_attribute_matcher.html',1,'lagrange']]],
   ['attributename_23',['AttributeName',['../structlagrange_1_1_attribute_name.html',1,'lagrange']]],
   ['attributerender_24',['AttributeRender',['../structlagrange_1_1ui_1_1_attribute_render.html',1,'lagrange::ui']]],
-  ['attributes_25',['Attributes',['../classlagrange_1_1_attributes.html',1,'lagrange']]]
+  ['attributes_25',['Attributes',['../classlagrange_1_1_attributes.html',1,'lagrange']]],
+  ['attributesmoothingoptions_26',['AttributeSmoothingOptions',['../structlagrange_1_1filtering_1_1_attribute_smoothing_options.html',1,'lagrange::filtering']]]
 ];

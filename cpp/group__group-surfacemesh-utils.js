@@ -60,7 +60,9 @@ var group__group_surfacemesh_utils =
       [ "uv_attribute_name", "structlagrange_1_1_tangent_bitangent_options.html#a812bd5f3c809396ee71d159824173876", null ],
       [ "normal_attribute_name", "structlagrange_1_1_tangent_bitangent_options.html#a51066a9b87ceffa1db37243770584972", null ],
       [ "output_element_type", "structlagrange_1_1_tangent_bitangent_options.html#a650d9b28565137517f5f823c480ee063", null ],
-      [ "pad_with_sign", "structlagrange_1_1_tangent_bitangent_options.html#a6b9ae3e346b4c49548ff8e48d0256502", null ]
+      [ "pad_with_sign", "structlagrange_1_1_tangent_bitangent_options.html#a6b9ae3e346b4c49548ff8e48d0256502", null ],
+      [ "orthogonalize_bitangent", "structlagrange_1_1_tangent_bitangent_options.html#a74d9ba96034fa4a6676fb89f811bae6d", null ],
+      [ "keep_existing_tangent", "structlagrange_1_1_tangent_bitangent_options.html#a50e87d1c37ce58340acc315e50596487", null ]
     ] ],
     [ "TangentBitangentResult", "structlagrange_1_1_tangent_bitangent_result.html", [
       [ "tangent_id", "structlagrange_1_1_tangent_bitangent_result.html#a46c2f467917671e030772bb7a6b65ac4", null ],
@@ -216,8 +218,10 @@ var group__group_surfacemesh_utils =
     [ "lagrange::to_surface_mesh_copy", "group__group-surfacemesh-utils.html#gabb5fc3fc93e8d973bcc534398eeb0aa9", null ],
     [ "lagrange::to_surface_mesh_wrap", "group__group-surfacemesh-utils.html#ga68ad17ee5b7475decfbaf17fcfa63d65", null ],
     [ "lagrange::to_legacy_mesh", "group__group-surfacemesh-utils.html#gac349d354b36d62bc2efeb93dd2b7f078", null ],
-    [ "lagrange::normalize_mesh", "group__group-surfacemesh-utils.html#gaf07b7ee38e3c92577a3cdc9a7bb38479", null ],
-    [ "lagrange::normalize_meshes", "group__group-surfacemesh-utils.html#gad46e0464a61ba9b6c5fd7948af53c304", null ],
+    [ "lagrange::normalize_mesh_with_transform", "group__group-surfacemesh-utils.html#ga8a3c053ce081c3a551af20b1ed5bca08", null ],
+    [ "lagrange::normalize_mesh", "group__group-surfacemesh-utils.html#ga7338d1f11a59b043aecad72a3cf708bf", null ],
+    [ "lagrange::normalize_meshes_with_transform", "group__group-surfacemesh-utils.html#gaff1990dcc852e6a57d266bd14c6a2343", null ],
+    [ "lagrange::normalize_meshes", "group__group-surfacemesh-utils.html#gaca4977e11607d038c9754e12dc7271c6", null ],
     [ "lagrange::is_oriented", "group__group-surfacemesh-utils.html#ga40b789004d6fc0e7ca4cf13fd0c811e8", null ],
     [ "lagrange::compute_edge_is_oriented", "group__group-surfacemesh-utils.html#ga3424db415f75216333a8568e158d2832", null ],
     [ "lagrange::permute_facets", "group__group-surfacemesh-utils.html#ga4bb6f1ff87f6aac0062ac21dba0f2349", null ],
