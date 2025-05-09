@@ -4,7 +4,7 @@
 
 !!! warning "Artifactory Access"
     Building unit tests requires Artifactory to be setup. Please read our [Getting
-    Started](../setup.md) page for instructions on how to configure your API key.
+    Started](../setup/index.md) page for instructions on how to configure your API key.
 
 {% endif %}
 
@@ -30,7 +30,6 @@ Running unit tests can be done either
     - **Xcode**
 
         ![unit-tests-xcode](img/unit-tests-xcode.png)
-    ```
 
 ## Debugging
 
@@ -58,7 +57,6 @@ Some tests are tagged `[.slow]` and skipped by default. If you wish to run them,
     executable. For more details on the available command-line options, please refer to [this
     page](https://github.com/catchorg/Catch2/blob/devel/docs/command-line.md) of the Catch2
     documentation.
-    )
 
     ```sh
     ./tests/test_lagrange_core "MeshCreation"

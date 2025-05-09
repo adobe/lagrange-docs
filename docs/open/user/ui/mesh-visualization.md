@@ -65,7 +65,7 @@ See [Materials](mesh-visualization.md#materials) section to see how to control t
 ### Mesh visualizations
 
 Adds a visualization of a mesh. {% if is_corp %} Designed after the discussion
-[here](https://git.corp.adobe.com/lagrange/lagrange-lib/issues/194). {% endif %}
+[here](https://github.com/Research-Adobe/lagrange/issues/194). {% endif %}
 
 ```c++
 auto vertex_viz_entity = ui::show_vertex_attribute(registry, mesh_entity, attribute_name, glyph_type);

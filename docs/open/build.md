@@ -86,7 +86,7 @@ cmake --build . -j 8
 
 !!! warning "Artifactory Access"
     Building unit tests requires Artifactory to be setup. Please read our [Getting
-    Started](setup.md) page for instructions on how to configure your API key.
+    Started](setup/index.md) page for instructions on how to configure your API key.
 
 {% endif %}
 

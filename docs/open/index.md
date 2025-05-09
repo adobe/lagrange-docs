@@ -1,7 +1,11 @@
 # Lagrange
 
 {% if is_corp %}
-{% include 'corp/badges.md' %}
+
+!!! info "GitHub Enterprise Cloud Migration"
+    Lagrange moved to GitHub Enterprise Cloud on Apr 15, 2025. Read about our
+    [recommendations](../corp/ghec.md) for GHEC access.
+
 {% endif %}
 
 Project Lagrange is an initiative to bring the power of robust geometry

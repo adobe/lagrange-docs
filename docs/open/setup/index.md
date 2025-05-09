@@ -6,8 +6,8 @@
 
 ## Compiling Lagrange
 
-- How to [compile Lagrange](build.md).
-- How to [run unit tests](dev/unit-tests.md).
+- How to [compile Lagrange](../build.md).
+- How to [run unit tests](../dev/unit-tests.md).
 {% if is_corp %}
 - Example project templates using Lagrange:
     - [C++ Project]({{ cpp_project_url }})
@@ -19,8 +19,8 @@
 
 ## Contributing
 
-- Read our [contributing page](dev/contribute.md).
-- Read our [code style guide](dev/code-style.md).
+- Read our [contributing page](../dev/contribute.md).
+- Read our [code style guide](../dev/code-style.md).
 {% if is_corp %}
-- How to upload new test data to [Artifactory](../corp/dev/artifactory.md).
+- How to upload new test data to [Artifactory](../../corp/dev/artifactory.md).
 {% endif %}

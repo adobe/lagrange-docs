@@ -105,6 +105,7 @@ auto attr_matrix = matrix_view(mesh.get_attribute<float>(id1));
 ## Accessing Attribute Values
 
 ```c++
+#include <lagrange/Attribute.h>
 lagrange::SurfaceMesh<Scalar, Index> mesh;
 
 // ...
@@ -138,6 +139,37 @@ auto attr_matrix = matrix_view(attr);
 
     Copy-on-write handling of attribute buffers is done at the mesh level, i.e. when copying a
     `SurfaceMesh` object, or when calling methods such as `SurfaceMesh::duplicate_attribute()`.
+
+## Accessing Indexed Attribute
+
+```c++
+#include <lagrange/IndexedAttribute.h>
+
+// ...
+
+lagrange::SurfaceMesh<Scalar, Index> mesh;
+
+// ...
+
+// Returns a const Attribute<T> &
+const auto& attr = mesh.get_indexed_attribute<Scalar>("normals");
+
+const auto& attr_indices = attr.indices();
+const auto& attr_values = attr.values();
+size_t num_channels = attr.get_num_channels();
+
+// attr_indices[corner_id] yields the index at which one should look up in the attr_values array
+for (Index corner_id = 0; corner_id < mesh.get_num_corners(); ++corner_id) {
+    auto values = attr_values.subspan(num_channels * attr_indices[corner_id], num_channels);
+    for (Scalar x : values) {
+        // this gives individual components of the normal at the corner
+        // ...
+    }
+}
+```
+
+Use `ref_indexed_attribute<>` instead of `get_indexed_attribute<>` for writable reference. See [this
+section](mesh.md#copy-on-write).
 
 ## Iterating Over Mesh Attributes
 
