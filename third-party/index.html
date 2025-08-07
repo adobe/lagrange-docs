@@ -1419,19 +1419,29 @@ are not listed there. </p>
 <td>IO</td>
 </tr>
 <tr>
-<td><a href="https://www.boost.org/">Boost</a><sup id="fnref:1_boost"><a class="footnote-ref" href="#fn:1_boost">2</a></sup></td>
+<td><a href="https://en.wikipedia.org/wiki/Basic_Linear_Algebra_Subprograms">BLAS</a><sup id="fnref:1_blas"><a class="footnote-ref" href="#fn:1_blas">2</a></sup></td>
+<td><strong>Depends</strong></td>
+<td>Filtering</td>
+</tr>
+<tr>
+<td><a href="https://www.boost.org/">Boost</a><sup id="fnref:2_boost"><a class="footnote-ref" href="#fn:2_boost">3</a></sup></td>
 <td>Boost</td>
 <td>FS</td>
 </tr>
 <tr>
 <td><a href="https://github.com/CLIUtils/CLI11">CLI11</a></td>
 <td>BSD-3</td>
-<td>Examples<sup id="fnref:2_cli11_examples"><a class="footnote-ref" href="#fn:2_cli11_examples">3</a></sup>, Performance Tests (Core)</td>
+<td>Examples<sup id="fnref:3_cli11_examples"><a class="footnote-ref" href="#fn:3_cli11_examples">4</a></sup>, Performance Tests (Core)</td>
 </tr>
 <tr>
 <td><a href="https://github.com/catchorg/Catch2">Catch2</a></td>
 <td>Boost</td>
 <td>Testing, Unit Tests (Core)</td>
+</tr>
+<tr>
+<td><a href="https://github.com/jeremy-rifkin/cpptrace">Cpptrace</a></td>
+<td>MIT</td>
+<td>Testing</td>
 </tr>
 <tr>
 <td><a href="https://github.com/ocornut/imgui">Dear ImGui</a></td>
@@ -1454,7 +1464,7 @@ are not listed there. </p>
 <td>UI</td>
 </tr>
 <tr>
-<td><a href="https://github.com/gulrak/filesystem">Filesystem</a><sup id="fnref:3_filesystem"><a class="footnote-ref" href="#fn:3_filesystem">4</a></sup></td>
+<td><a href="https://github.com/gulrak/filesystem">Filesystem</a><sup id="fnref:4_filesystem"><a class="footnote-ref" href="#fn:4_filesystem">5</a></sup></td>
 <td>MIT</td>
 <td>FS</td>
 </tr>
@@ -1487,6 +1497,11 @@ are not listed there. </p>
 <td><a href="http://glaros.dtc.umn.edu/gkhome/metis/metis/overview">METIS</a></td>
 <td>Apache 2</td>
 <td>Partitioning</td>
+</tr>
+<tr>
+<td><a href="https://www.intel.com/content/www/us/en/developer/articles/tool/onemkl-license-faq.html">MKL</a></td>
+<td>Intel Simplified Software License</td>
+<td>Python Bindings (Filtering)</td>
 </tr>
 <tr>
 <td><a href="https://github.com/mmikk/MikkTSpace">MikkTSpace</a></td>
@@ -1529,9 +1544,9 @@ are not listed there. </p>
 <td>UI</td>
 </tr>
 <tr>
-<td><a href="https://github.com/JochenKalmbach/StackWalker">StackWalker</a></td>
-<td>BSD-2</td>
-<td>Testing</td>
+<td><a href="https://github.com/mkazhdan/ShapeGradientDomain">Shape Gradient Domain</a></td>
+<td>MIT</td>
+<td>Filtering</td>
 </tr>
 <tr>
 <td><a href="https://github.com/oneapi-src/oneTBB">Threading Building Blocks</a></td>
@@ -1544,7 +1559,7 @@ are not listed there. </p>
 <td>Image_IO</td>
 </tr>
 <tr>
-<td><a href="https://github.com/wolfpld/tracy">Tracy</a><sup id="fnref:4_tracy"><a class="footnote-ref" href="#fn:4_tracy">5</a></sup></td>
+<td><a href="https://github.com/wolfpld/tracy">Tracy</a><sup id="fnref:5_tracy"><a class="footnote-ref" href="#fn:5_tracy">6</a></sup></td>
 <td>BSD-3</td>
 <td>Core</td>
 </tr>
@@ -1652,6 +1667,12 @@ appropriate licenses and files that are affected.</p>
 <td><a href="https://github.com/adobe/lagrange/blob/main/modules/core/src/mapbox/earcut.h">earcut.h</a></td>
 </tr>
 <tr>
+<td><a href="https://gitlab.com/libeigen/eigen/-/blob/master/Eigen/src/AccelerateSupport/AccelerateSupport.h">Eigen</a></td>
+<td>MPL-2.0</td>
+<td>Filtering</td>
+<td><a href="https://github.com/adobe/lagrange/blob/main/modules/filtering/src/AccelerateSupport.h">AccelerateSupport.h</a></td>
+</tr>
+<tr>
 <td><a href="https://github.com/embree/embree/blob/ae029e2ff83bebbbe8742c88aba5b0521aba1a23/tutorials/closest_point/closest_point_device.cpp#L261-L341">Embree</a></td>
 <td>Apache 2</td>
 <td>Raycasting</td>
@@ -1731,17 +1752,20 @@ appropriate licenses and files that are affected.</p>
 <li id="fn:0_assimp">
 <p>Assimp is an optional dependency of the IO module.&#160;<a class="footnote-backref" href="#fnref:0_assimp" title="Jump back to footnote 1 in the text">&#8617;</a></p>
 </li>
-<li id="fn:1_boost">
-<p>Boost::filesystem is an optional backend of the FS module.&#160;<a class="footnote-backref" href="#fnref:1_boost" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+<li id="fn:1_blas">
+<p>Either MKL or Accelerate depending on the platform.&#160;<a class="footnote-backref" href="#fnref:1_blas" title="Jump back to footnote 2 in the text">&#8617;</a></p>
 </li>
-<li id="fn:2_cli11_examples">
-<p>CLI11 is used by the examples in the following modules: BVH, Core, IO, Image, Image_IO, Partitioning, Poisson, Raycasting, Subdivision, UI, Volume, Winding&#160;<a class="footnote-backref" href="#fnref:2_cli11_examples" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+<li id="fn:2_boost">
+<p>Boost::filesystem is an optional backend of the FS module.&#160;<a class="footnote-backref" href="#fnref:2_boost" title="Jump back to footnote 3 in the text">&#8617;</a></p>
 </li>
-<li id="fn:3_filesystem">
-<p><code>gulrak/filesystem</code> is only needed when the IO module is compiled in C++14 mode. In C++17 mode, the IO module will defaults to <code>std::filesystem</code>.&#160;<a class="footnote-backref" href="#fnref:3_filesystem" title="Jump back to footnote 4 in the text">&#8617;</a></p>
+<li id="fn:3_cli11_examples">
+<p>CLI11 is used by the examples in the following modules: BVH, Core, Filtering, IO, Image, Image_IO, Partitioning, Poisson, Raycasting, Subdivision, UI, Volume, Winding&#160;<a class="footnote-backref" href="#fnref:3_cli11_examples" title="Jump back to footnote 4 in the text">&#8617;</a></p>
 </li>
-<li id="fn:4_tracy">
-<p>Tracy is an optional dependency of the core module.&#160;<a class="footnote-backref" href="#fnref:4_tracy" title="Jump back to footnote 5 in the text">&#8617;</a></p>
+<li id="fn:4_filesystem">
+<p><code>gulrak/filesystem</code> is only needed when the IO module is compiled in C++14 mode. In C++17 mode, the IO module will defaults to <code>std::filesystem</code>.&#160;<a class="footnote-backref" href="#fnref:4_filesystem" title="Jump back to footnote 5 in the text">&#8617;</a></p>
+</li>
+<li id="fn:5_tracy">
+<p>Tracy is an optional dependency of the core module.&#160;<a class="footnote-backref" href="#fnref:5_tracy" title="Jump back to footnote 6 in the text">&#8617;</a></p>
 </li>
 </ol>
 </div>

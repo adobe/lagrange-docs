@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.4"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Lagrange: mesh_cleanup/split_edges.h Source File</title>
+<title>Lagrange: lagrange/internal/split_edges.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -130,25 +130,25 @@ $(document).ready(function(){initNavTree('split__edges_8h_source.html',''); init
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &lt;lagrange/utils/function_ref.h&gt;</span></div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &lt;lagrange/utils/span.h&gt;</span></div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacelagrange.html">lagrange</a> {</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacelagrange_1_1internal.html">lagrange::internal</a> {</div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> Scalar, <span class="keyword">typename</span> Index&gt;</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>std::vector&lt;Index&gt; <a class="code hl_function" href="namespacelagrange.html#a37b51c54c608f9674c515fd0a560a217">split_edges</a>(</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>std::vector&lt;Index&gt; <a class="code hl_function" href="namespacelagrange_1_1internal.html#a37b51c54c608f9674c515fd0a560a217">split_edges</a>(</div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <a class="code hl_class" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh&lt;Scalar, Index&gt;</a>&amp; mesh,</div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <a class="code hl_function" href="group__group-utils-misc-functionref.html#gabdcfb06e9497d99667ce90201fa5c056">function_ref</a>&lt;span&lt;Index&gt;(Index)&gt; get_edge_split_pts,</div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <a class="code hl_function" href="group__group-utils-misc-functionref.html#gabdcfb06e9497d99667ce90201fa5c056">function_ref</a>&lt;<span class="keywordtype">bool</span>(Index)&gt; active_facet);</div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>} <span class="comment">// namespace lagrange</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>} <span class="comment">// namespace lagrange::internal</span></div>
 <div class="ttc" id="aclasslagrange_1_1_surface_mesh_html"><div class="ttname"><a href="classlagrange_1_1_surface_mesh.html">lagrange::SurfaceMesh</a></div><div class="ttdoc">A general purpose polygonal mesh class.</div><div class="ttdef"><b>Definition:</b> SurfaceMesh.h:66</div></div>
 <div class="ttc" id="agroup__group-utils-misc-functionref_html_gabdcfb06e9497d99667ce90201fa5c056"><div class="ttname"><a href="group__group-utils-misc-functionref.html#gabdcfb06e9497d99667ce90201fa5c056">lagrange::function_ref</a></div><div class="ttdeci">function_ref(R(*)(Args...)) -&gt; function_ref&lt; R(Args...)&gt;</div><div class="ttdoc">Deduce function_ref type from a function pointer.</div></div>
-<div class="ttc" id="anamespacelagrange_html"><div class="ttname"><a href="namespacelagrange.html">lagrange</a></div><div class="ttdoc">Main namespace for Lagrange.</div><div class="ttdef"><b>Definition:</b> AABBIGL.h:30</div></div>
-<div class="ttc" id="anamespacelagrange_html_a37b51c54c608f9674c515fd0a560a217"><div class="ttname"><a href="namespacelagrange.html#a37b51c54c608f9674c515fd0a560a217">lagrange::split_edges</a></div><div class="ttdeci">std::vector&lt; Index &gt; split_edges(SurfaceMesh&lt; Scalar, Index &gt; &amp;mesh, function_ref&lt; span&lt; Index &gt;(Index)&gt; get_edge_split_pts, function_ref&lt; bool(Index)&gt; active_facet)</div><div class="ttdoc">Split edges based on the input split points.</div><div class="ttdef"><b>Definition:</b> split_edges.cpp:71</div></div>
+<div class="ttc" id="anamespacelagrange_1_1internal_html"><div class="ttname"><a href="namespacelagrange_1_1internal.html">lagrange::internal</a></div><div class="ttdoc">nullptr_t, size_t, ptrdiff_t basic_ostream bad_weak_ptr extent, remove_extent, is_array,...</div><div class="ttdef"><b>Definition:</b> attribute_string_utils.h:21</div></div>
+<div class="ttc" id="anamespacelagrange_1_1internal_html_a37b51c54c608f9674c515fd0a560a217"><div class="ttname"><a href="namespacelagrange_1_1internal.html#a37b51c54c608f9674c515fd0a560a217">lagrange::internal::split_edges</a></div><div class="ttdeci">std::vector&lt; Index &gt; split_edges(SurfaceMesh&lt; Scalar, Index &gt; &amp;mesh, function_ref&lt; span&lt; Index &gt;(Index)&gt; get_edge_split_pts, function_ref&lt; bool(Index)&gt; active_facet)</div><div class="ttdoc">Split edges based on the input split points.</div><div class="ttdef"><b>Definition:</b> split_edges.cpp:71</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_77a6c57f6ea8f935e5205e31d4cf6a5a.html">mesh_cleanup</a></li><li class="navelem"><b>split_edges.h</b></li>
+    <li class="navelem"><a class="el" href="dir_e277d0e790805391a364b883bec7db94.html">lagrange</a></li><li class="navelem"><a class="el" href="dir_f868e3065168465c1bbcc3009ef2971c.html">internal</a></li><li class="navelem"><b>split_edges.h</b></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
   </ul>
 </div>

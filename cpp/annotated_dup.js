@@ -426,6 +426,7 @@ var annotated_dup =
       [ "TangentBitangentResult", "structlagrange_1_1_tangent_bitangent_result.html", "structlagrange_1_1_tangent_bitangent_result" ],
       [ "ThickenAndCloseOptions", "structlagrange_1_1_thicken_and_close_options.html", "structlagrange_1_1_thicken_and_close_options" ],
       [ "TransformOptions", "structlagrange_1_1_transform_options.html", "structlagrange_1_1_transform_options" ],
+      [ "TriangulationOptions", "structlagrange_1_1_triangulation_options.html", "structlagrange_1_1_triangulation_options" ],
       [ "UnflipUVOptions", "structlagrange_1_1_unflip_u_v_options.html", "structlagrange_1_1_unflip_u_v_options" ],
       [ "UVChartOptions", "structlagrange_1_1_u_v_chart_options.html", "structlagrange_1_1_u_v_chart_options" ],
       [ "UVDistortionOptions", "structlagrange_1_1_u_v_distortion_options.html", "structlagrange_1_1_u_v_distortion_options" ],

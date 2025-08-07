@@ -3,7 +3,7 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="next" title="image" href="../image/index.html" /><link rel="prev" title="io" href="../io/index.html" />
+<link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="next" title="subdivision" href="../subdivision/index.html" /><link rel="prev" title="poisson" href="../poisson/index.html" />
 
     <!-- Generated with Sphinx 7.4.7 and Furo 2023.09.10 -->
         <title>core - Lagrange documentation</title>
@@ -158,10 +158,11 @@
   <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
 <li class="toctree-l1 current has-children"><a class="reference internal" href="../index.html">API Reference</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of API Reference</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../poisson/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">poisson</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="../io/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">io</span></code></a></li>
-<li class="toctree-l2 current current-page"><a class="current reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">core</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="../image/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">image</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../filtering/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">filtering</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../poisson/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">poisson</span></code></a></li>
+<li class="toctree-l2 current current-page"><a class="current reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">core</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="../subdivision/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">subdivision</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="../scene/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">scene</span></code></a></li>
 </ul>
@@ -311,56 +312,62 @@
 <tr class="row-odd"><td><p><a class="reference internal" href="#core.cast_attribute" title="core.cast_attribute"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cast_attribute</span></code></a>(mesh, input_attribute, dtype[, ...])</p></td>
 <td><p>Cast an attribute to a new dtype.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#core.combine_meshes" title="core.combine_meshes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">combine_meshes</span></code></a>(meshes[, preserve_attributes])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#core.close_small_holes" title="core.close_small_holes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">close_small_holes</span></code></a>(mesh[, max_hole_size, triangulate_holes])</p></td>
+<td><p>Close small holes in a mesh.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#core.combine_meshes" title="core.combine_meshes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">combine_meshes</span></code></a>(meshes[, preserve_attributes])</p></td>
 <td><p>Combine a list of meshes into a single mesh.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#core.compute_components" title="core.compute_components"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compute_components</span></code></a>(mesh[, output_attribute_name, ...])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#core.compute_components" title="core.compute_components"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compute_components</span></code></a>(mesh[, output_attribute_name, ...])</p></td>
 <td><p>Compute connected components.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#core.compute_dihedral_angles" title="core.compute_dihedral_angles"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compute_dihedral_angles</span></code></a>(mesh[, output_attribute_name, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#core.compute_dihedral_angles" title="core.compute_dihedral_angles"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compute_dihedral_angles</span></code></a>(mesh[, output_attribute_name, ...])</p></td>
 <td><p>Compute dihedral angles for each edge.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#core.compute_dijkstra_distance" title="core.compute_dijkstra_distance"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compute_dijkstra_distance</span></code></a>(mesh, seed_facet, ...[, ...])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#core.compute_dijkstra_distance" title="core.compute_dijkstra_distance"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compute_dijkstra_distance</span></code></a>(mesh, seed_facet, ...[, ...])</p></td>
 <td><p>Compute Dijkstra distance from a seed facet.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#core.compute_edge_lengths" title="core.compute_edge_lengths"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compute_edge_lengths</span></code></a>(mesh[, output_attribute_name])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#core.compute_edge_lengths" title="core.compute_edge_lengths"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compute_edge_lengths</span></code></a>(mesh[, output_attribute_name])</p></td>
 <td><p>Compute edge lengths.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#core.compute_euler" title="core.compute_euler"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compute_euler</span></code></a>(mesh)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#core.compute_euler" title="core.compute_euler"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compute_euler</span></code></a>(mesh)</p></td>
 <td><p>Compute the Euler characteristic.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#core.compute_facet_area" title="core.compute_facet_area"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compute_facet_area</span></code></a>(…)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#core.compute_facet_area" title="core.compute_facet_area"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compute_facet_area</span></code></a>(…)</p></td>
 <td><p>Compute facet area (Pythonic API).</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#core.compute_facet_centroid" title="core.compute_facet_centroid"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compute_facet_centroid</span></code></a>(…)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#core.compute_facet_centroid" title="core.compute_facet_centroid"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compute_facet_centroid</span></code></a>(…)</p></td>
 <td><p>Compute facet centroid (Pythonic API).</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#core.compute_facet_normal" title="core.compute_facet_normal"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compute_facet_normal</span></code></a>(…)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#core.compute_facet_normal" title="core.compute_facet_normal"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compute_facet_normal</span></code></a>(…)</p></td>
 <td><p>Compute facet normal (Pythonic API).</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#core.compute_greedy_coloring" title="core.compute_greedy_coloring"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compute_greedy_coloring</span></code></a>(mesh[, element_type, ...])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#core.compute_greedy_coloring" title="core.compute_greedy_coloring"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compute_greedy_coloring</span></code></a>(mesh[, element_type, ...])</p></td>
 <td><p>Compute greedy coloring of mesh elements.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#core.compute_mesh_area" title="core.compute_mesh_area"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compute_mesh_area</span></code></a>(…)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#core.compute_mesh_area" title="core.compute_mesh_area"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compute_mesh_area</span></code></a>(…)</p></td>
 <td><p>Compute mesh area (Pythonic API).</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#core.compute_mesh_centroid" title="core.compute_mesh_centroid"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compute_mesh_centroid</span></code></a>(…)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#core.compute_mesh_centroid" title="core.compute_mesh_centroid"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compute_mesh_centroid</span></code></a>(…)</p></td>
 <td><p>Compute mesh centroid (Pythonic API).</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#core.compute_mesh_covariance" title="core.compute_mesh_covariance"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compute_mesh_covariance</span></code></a>(mesh, center[, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#core.compute_mesh_covariance" title="core.compute_mesh_covariance"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compute_mesh_covariance</span></code></a>(mesh, center[, ...])</p></td>
 <td><p>Compute the covariance matrix of a mesh w.r.t. a center (Pythonic API).</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#core.compute_normal" title="core.compute_normal"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compute_normal</span></code></a>(…)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#core.compute_normal" title="core.compute_normal"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compute_normal</span></code></a>(…)</p></td>
 <td><p>Compute indexed normal attribute (Pythonic API).</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#core.compute_pointcloud_pca" title="core.compute_pointcloud_pca"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compute_pointcloud_pca</span></code></a>(points[, shift_centroid, normalize])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#core.compute_pointcloud_pca" title="core.compute_pointcloud_pca"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compute_pointcloud_pca</span></code></a>(points[, shift_centroid, normalize])</p></td>
 <td><p>Compute principal components of a point cloud.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#core.compute_seam_edges" title="core.compute_seam_edges"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compute_seam_edges</span></code></a>(mesh, indexed_attribute_id[, ...])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#core.compute_seam_edges" title="core.compute_seam_edges"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compute_seam_edges</span></code></a>(mesh, indexed_attribute_id[, ...])</p></td>
 <td><p>Computer seam edges for a given indexed attribute.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#core.compute_tangent_bitangent" title="core.compute_tangent_bitangent"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compute_tangent_bitangent</span></code></a>(…)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#core.compute_tangent_bitangent" title="core.compute_tangent_bitangent"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compute_tangent_bitangent</span></code></a>(…)</p></td>
 <td><p>Compute tangent and bitangent vector attributes (Pythonic API).</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#core.compute_uv_charts" title="core.compute_uv_charts"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compute_uv_charts</span></code></a>(mesh[, uv_attribute_name, ...])</p></td>
+<td><p>Compute UV charts.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#core.compute_uv_distortion" title="core.compute_uv_distortion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compute_uv_distortion</span></code></a>(mesh[, uv_attribute_name, ...])</p></td>
 <td><p>Compute UV distortion.</p></td>
@@ -407,11 +414,23 @@
 <tr class="row-odd"><td><p><a class="reference internal" href="#core.map_attribute_in_place" title="core.map_attribute_in_place"><code class="xref py py-obj docutils literal notranslate"><span class="pre">map_attribute_in_place</span></code></a>(…)</p></td>
 <td><p>Map an attribute to a new element type in place.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#core.normalize_mesh" title="core.normalize_mesh"><code class="xref py py-obj docutils literal notranslate"><span class="pre">normalize_mesh</span></code></a>(mesh)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#core.normalize_mesh" title="core.normalize_mesh"><code class="xref py py-obj docutils literal notranslate"><span class="pre">normalize_mesh</span></code></a>(mesh[, normalize_normals, ...])</p></td>
 <td><p>Normalize a mesh to fit into a unit box centered at the origin.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#core.normalize_meshes" title="core.normalize_meshes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">normalize_meshes</span></code></a>(meshes)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#core.normalize_mesh_with_transform" title="core.normalize_mesh_with_transform"><code class="xref py py-obj docutils literal notranslate"><span class="pre">normalize_mesh_with_transform</span></code></a>(mesh[, ...])</p></td>
+<td><p>Normalize a mesh to fit into a unit box centered at the origin.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#core.normalize_mesh_with_transform_2d" title="core.normalize_mesh_with_transform_2d"><code class="xref py py-obj docutils literal notranslate"><span class="pre">normalize_mesh_with_transform_2d</span></code></a>(mesh[, ...])</p></td>
+<td><p>Normalize a mesh to fit into a unit box centered at the origin.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#core.normalize_meshes" title="core.normalize_meshes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">normalize_meshes</span></code></a>(meshes[, normalize_normals, ...])</p></td>
 <td><p>Normalize a list of meshes to fit into a unit box centered at the origin.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#core.normalize_meshes_with_transform" title="core.normalize_meshes_with_transform"><code class="xref py py-obj docutils literal notranslate"><span class="pre">normalize_meshes_with_transform</span></code></a>(meshes[, ...])</p></td>
+<td><p>Normalize a mesh to fit into a unit box centered at the origin.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#core.normalize_meshes_with_transform_2d" title="core.normalize_meshes_with_transform_2d"><code class="xref py py-obj docutils literal notranslate"><span class="pre">normalize_meshes_with_transform_2d</span></code></a>(meshes[, ...])</p></td>
+<td><p>Normalize a mesh to fit into a unit box centered at the origin.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#core.orient_outward" title="core.orient_outward"><code class="xref py py-obj docutils literal notranslate"><span class="pre">orient_outward</span></code></a>(mesh[, positive])</p></td>
 <td><p>Orient the facets of a mesh so that the signed volume of each connected component is positive or negative.</p></td>
@@ -449,23 +468,29 @@
 <tr class="row-odd"><td><p><a class="reference internal" href="#core.reorder_mesh" title="core.reorder_mesh"><code class="xref py py-obj docutils literal notranslate"><span class="pre">reorder_mesh</span></code></a>(mesh, method)</p></td>
 <td><p>Reorder a mesh in place.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#core.resolve_nonmanifoldness" title="core.resolve_nonmanifoldness"><code class="xref py py-obj docutils literal notranslate"><span class="pre">resolve_nonmanifoldness</span></code></a>(mesh)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#core.rescale_uv_charts" title="core.rescale_uv_charts"><code class="xref py py-obj docutils literal notranslate"><span class="pre">rescale_uv_charts</span></code></a>(mesh[, uv_attribute_name, ...])</p></td>
+<td><p>Rescale UV charts such that their aspect ratios match their 3D images.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#core.resolve_nonmanifoldness" title="core.resolve_nonmanifoldness"><code class="xref py py-obj docutils literal notranslate"><span class="pre">resolve_nonmanifoldness</span></code></a>(mesh)</p></td>
 <td><p>Resolve both vertex and edge nonmanifoldness in a mesh.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#core.resolve_vertex_nonmanifoldness" title="core.resolve_vertex_nonmanifoldness"><code class="xref py py-obj docutils literal notranslate"><span class="pre">resolve_vertex_nonmanifoldness</span></code></a>(mesh)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#core.resolve_vertex_nonmanifoldness" title="core.resolve_vertex_nonmanifoldness"><code class="xref py py-obj docutils literal notranslate"><span class="pre">resolve_vertex_nonmanifoldness</span></code></a>(mesh)</p></td>
 <td><p>Resolve vertex non-manifoldness in a mesh.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#core.select_facets_by_normal_similarity" title="core.select_facets_by_normal_similarity"><code class="xref py py-obj docutils literal notranslate"><span class="pre">select_facets_by_normal_similarity</span></code></a>(mesh, seed_facet_id)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#core.select_facets_by_normal_similarity" title="core.select_facets_by_normal_similarity"><code class="xref py py-obj docutils literal notranslate"><span class="pre">select_facets_by_normal_similarity</span></code></a>(mesh, seed_facet_id)</p></td>
 <td><p>Select facets by normal similarity (Pythonic API).</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#core.select_facets_in_frustum" title="core.select_facets_in_frustum"><code class="xref py py-obj docutils literal notranslate"><span class="pre">select_facets_in_frustum</span></code></a>(mesh, frustum_plane_points, ...)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#core.select_facets_in_frustum" title="core.select_facets_in_frustum"><code class="xref py py-obj docutils literal notranslate"><span class="pre">select_facets_in_frustum</span></code></a>(mesh, frustum_plane_points, ...)</p></td>
 <td><p>Select facets in a frustum (Pythonic API).</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#core.separate_by_components" title="core.separate_by_components"><code class="xref py py-obj docutils literal notranslate"><span class="pre">separate_by_components</span></code></a>(mesh[, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#core.separate_by_components" title="core.separate_by_components"><code class="xref py py-obj docutils literal notranslate"><span class="pre">separate_by_components</span></code></a>(mesh[, ...])</p></td>
 <td><p>Extract a set of submeshes based on connected components.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#core.separate_by_facet_groups" title="core.separate_by_facet_groups"><code class="xref py py-obj docutils literal notranslate"><span class="pre">separate_by_facet_groups</span></code></a>(mesh, facet_group_indices[, ...])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#core.separate_by_facet_groups" title="core.separate_by_facet_groups"><code class="xref py py-obj docutils literal notranslate"><span class="pre">separate_by_facet_groups</span></code></a>(mesh, facet_group_indices[, ...])</p></td>
 <td><p>Extract a set of submeshes based on facet groups.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#core.split_facets_by_material" title="core.split_facets_by_material"><code class="xref py py-obj docutils literal notranslate"><span class="pre">split_facets_by_material</span></code></a>(mesh, material_attribute_name)</p></td>
+<td><p>Split mesh facets based on a material attribute.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#core.split_long_edges" title="core.split_long_edges"><code class="xref py py-obj docutils literal notranslate"><span class="pre">split_long_edges</span></code></a>(mesh[, max_edge_length, recursive, ...])</p></td>
 <td><p>Split edges that are longer than <cite>max_edge_length</cite>.</p></td>
@@ -476,7 +501,7 @@
 <tr class="row-even"><td><p><a class="reference internal" href="#core.transform_mesh" title="core.transform_mesh"><code class="xref py py-obj docutils literal notranslate"><span class="pre">transform_mesh</span></code></a>(mesh, affine_transform[, ...])</p></td>
 <td><p>Apply affine transformation to a mesh.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#core.triangulate_polygonal_facets" title="core.triangulate_polygonal_facets"><code class="xref py py-obj docutils literal notranslate"><span class="pre">triangulate_polygonal_facets</span></code></a>(mesh)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#core.triangulate_polygonal_facets" title="core.triangulate_polygonal_facets"><code class="xref py py-obj docutils literal notranslate"><span class="pre">triangulate_polygonal_facets</span></code></a>(mesh[, scheme])</p></td>
 <td><p>Triangulate polygonal facets of the mesh.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#core.trim_by_isoline" title="core.trim_by_isoline"><code class="xref py py-obj docutils literal notranslate"><span class="pre">trim_by_isoline</span></code></a>(mesh, attribute[, isovalue, keep_below])</p></td>
@@ -484,6 +509,12 @@
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#core.unify_index_buffer" title="core.unify_index_buffer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">unify_index_buffer</span></code></a>(…)</p></td>
 <td><p>Unify the index buffer of the mesh for selected attributes.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#core.uv_mesh_ref" title="core.uv_mesh_ref"><code class="xref py py-obj docutils literal notranslate"><span class="pre">uv_mesh_ref</span></code></a>(mesh[, uv_attribute_name])</p></td>
+<td><p>Extract a UV mesh reference from a 3D mesh.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#core.uv_mesh_view" title="core.uv_mesh_view"><code class="xref py py-obj docutils literal notranslate"><span class="pre">uv_mesh_view</span></code></a>(mesh[, uv_attribute_name])</p></td>
+<td><p>Extract a UV mesh view from a 3D mesh.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#core.weld_indexed_attribute" title="core.weld_indexed_attribute"><code class="xref py py-obj docutils literal notranslate"><span class="pre">weld_indexed_attribute</span></code></a>(mesh, attribute_id[, ...])</p></td>
 <td><p>Weld indexed attribute.</p></td>
@@ -2794,12 +2825,34 @@ If not provided, the edges are initialized in an arbitrary order.</p>
 </dd></dl>
 
 <dl class="py property">
+<dt class="sig sig-object py" id="core.TangentBitangentOptions.keep_existing_tangent">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">keep_existing_tangent</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#core.TangentBitangentOptions.keep_existing_tangent" title="Link to this definition">¶</a></dt>
+<dd><p>Whether to recompute tangent if the tangent attribute (specified by tangent_attribute_name) already exists. If true, bitangent is computed by normalizing cross(normal, tangent) and param orthogonalize_bitangent must be true.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
 <dt class="sig sig-object py" id="core.TangentBitangentOptions.normal_attribute_name">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">normal_attribute_name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#core.TangentBitangentOptions.normal_attribute_name" title="Link to this definition">¶</a></dt>
 <dd><p>The name of the normal attribute</p>
 <dl class="field-list simple">
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="core.TangentBitangentOptions.orthogonalize_bitangent">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">orthogonalize_bitangent</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#core.TangentBitangentOptions.orthogonalize_bitangent" title="Link to this definition">¶</a></dt>
+<dd><p>Whether to compute the bitangent as cross(normal, tangent). If false, the bitangent is computed as the derivative of v-coordinate</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>bool</p>
 </dd>
 </dl>
 </dd></dl>
@@ -2990,18 +3043,36 @@ If not provided, the edges are initialized in an arbitrary order.</p>
 </dd></dl>
 
 <dl class="py function">
+<dt class="sig sig-object py" id="core.close_small_holes">
+<span class="sig-prename descclassname"><span class="pre">core.</span></span><span class="sig-name descname"><span class="pre">close_small_holes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mesh</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_hole_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">16</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">triangulate_holes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#core.close_small_holes" title="Link to this definition">¶</a></dt>
+<dd><p>Close small holes in a mesh.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>mesh</strong> (<a class="reference internal" href="#core.SurfaceMesh" title="core.SurfaceMesh"><em>SurfaceMesh</em></a>) – The input mesh for inplace modification.</p></li>
+<li><p><strong>max_hole_size</strong> (<em>int</em>) – The maximum number of vertices on a hole to be closed.</p></li>
+<li><p><strong>triangulate_holes</strong> (<em>bool</em>) – Whether to triangulate holes. If false, holes will be filled by polygons.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
 <dt class="sig sig-object py" id="core.combine_meshes">
 <span class="sig-prename descclassname"><span class="pre">core.</span></span><span class="sig-name descname"><span class="pre">combine_meshes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">meshes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">preserve_attributes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#core.combine_meshes" title="Link to this definition">¶</a></dt>
 <dd><p>Combine a list of meshes into a single mesh.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>meshes</strong> (<em>collections.abc.Sequence</em><em>[</em><a class="reference internal" href="#core.SurfaceMesh" title="core.SurfaceMesh"><em>SurfaceMesh</em></a><em>]</em>) – input meshes</p></li>
-<li><p><strong>preserve_attributes</strong> (<em>bool</em>) – whether to preserve attributes</p></li>
+<li><p><strong>meshes</strong> (<em>collections.abc.Sequence</em><em>[</em><a class="reference internal" href="#core.SurfaceMesh" title="core.SurfaceMesh"><em>SurfaceMesh</em></a><em>]</em>) – Input meshes.</p></li>
+<li><p><strong>preserve_attributes</strong> (<em>bool</em>) – Whether to preserve attributes.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>the combined mesh</p>
+<dd class="field-even"><p>The combined mesh.</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p><a class="reference internal" href="#core.SurfaceMesh" title="core.SurfaceMesh">SurfaceMesh</a></p>
@@ -3330,7 +3401,7 @@ well-defined and will be set to the special value 2 * M_PI.</p>
 <dt class="sig sig-object py" id="core.compute_tangent_bitangent">
 <span class="sig-prename descclassname"><span class="pre">core.</span></span><span class="sig-name descname"><span class="pre">compute_tangent_bitangent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mesh</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#core.SurfaceMesh" title="core.SurfaceMesh"><span class="pre">SurfaceMesh</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">options</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#core.TangentBitangentOptions" title="core.TangentBitangentOptions"><span class="pre">TangentBitangentOptions</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">...</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#core.TangentBitangentResult" title="core.TangentBitangentResult"><span class="pre">TangentBitangentResult</span></a></span></span><a class="headerlink" href="#core.compute_tangent_bitangent" title="Link to this definition">¶</a></dt>
 <dt class="sig sig-object py">
-<span class="sig-prename descclassname"><span class="pre">core.</span></span><span class="sig-name descname"><span class="pre">compute_tangent_bitangent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mesh</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#core.SurfaceMesh" title="core.SurfaceMesh"><span class="pre">SurfaceMesh</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">tangent_attribute_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bitangent_attribute_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">uv_attribute_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normal_attribute_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_attribute_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#core.AttributeElement" title="core.AttributeElement"><span class="pre">AttributeElement</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pad_with_sign</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></span></dt>
+<span class="sig-prename descclassname"><span class="pre">core.</span></span><span class="sig-name descname"><span class="pre">compute_tangent_bitangent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mesh</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#core.SurfaceMesh" title="core.SurfaceMesh"><span class="pre">SurfaceMesh</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">tangent_attribute_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bitangent_attribute_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">uv_attribute_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normal_attribute_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_attribute_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#core.AttributeElement" title="core.AttributeElement"><span class="pre">AttributeElement</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pad_with_sign</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">orthogonalize_bitangent</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">keep_existing_tangent</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></span></dt>
 <dd><p>Compute tangent and bitangent vector attributes (Pythonic API).</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -3342,10 +3413,36 @@ well-defined and will be set to the special value 2 * M_PI.</p>
 <li><p><strong>normal_attribute_name</strong> – The name of the normal attribute.</p></li>
 <li><p><strong>output_attribute_type</strong> – The output element type.</p></li>
 <li><p><strong>pad_with_sign</strong> – Whether to pad the output tangent/bitangent with sign.</p></li>
+<li><p><strong>orthogonalize_bitangent</strong> – Whether to compute the bitangent as sign * cross(normal, tangent).</p></li>
+<li><p><strong>keep_existing_tangent</strong> – Whether to recompute tangent if the tangent attribute (specified by tangent_attribute_name) already exists. If true, bitangent is computed by normalizing cross(normal, tangent) and param orthogonalize_bitangent must be true.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>The tangent and bitangent attribute ids</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="core.compute_uv_charts">
+<span class="sig-prename descclassname"><span class="pre">core.</span></span><span class="sig-name descname"><span class="pre">compute_uv_charts</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mesh</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">uv_attribute_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_attribute_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'&#64;chart_id'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">connectivity_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Edge'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#core.compute_uv_charts" title="Link to this definition">¶</a></dt>
+<dd><p>Compute UV charts.</p>
+<p>&#64;param mesh: Input mesh.
+&#64;param uv_attribute_name: Name of the UV attribute.
+&#64;param output_attribute_name: Name of the output attribute to store the chart ids.
+&#64;param connectivity_type: Type of connectivity to use for chart computation. Can be “Vertex” or “Edge”.</p>
+<p>&#64;returns: A list of chart ids for each vertex.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>mesh</strong> (<a class="reference internal" href="#core.SurfaceMesh" title="core.SurfaceMesh"><em>SurfaceMesh</em></a>)</p></li>
+<li><p><strong>uv_attribute_name</strong> (<em>str</em>)</p></li>
+<li><p><strong>output_attribute_name</strong> (<em>str</em>)</p></li>
+<li><p><strong>connectivity_type</strong> (<em>str</em>)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>int</p>
 </dd>
 </dl>
 </dd></dl>
@@ -3647,11 +3744,15 @@ well-defined and will be set to the special value 2 * M_PI.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="core.normalize_mesh">
-<span class="sig-prename descclassname"><span class="pre">core.</span></span><span class="sig-name descname"><span class="pre">normalize_mesh</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mesh</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#core.normalize_mesh" title="Link to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">core.</span></span><span class="sig-name descname"><span class="pre">normalize_mesh</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mesh</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normalize_normals</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normalize_tangents_bitangents</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#core.normalize_mesh" title="Link to this definition">¶</a></dt>
 <dd><p>Normalize a mesh to fit into a unit box centered at the origin.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>mesh</strong> (<a class="reference internal" href="#core.SurfaceMesh" title="core.SurfaceMesh"><em>SurfaceMesh</em></a>) – input mesh</p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>mesh</strong> (<a class="reference internal" href="#core.SurfaceMesh" title="core.SurfaceMesh"><em>SurfaceMesh</em></a>) – Input mesh.</p></li>
+<li><p><strong>normalize_normals</strong> (<em>bool</em>) – Whether to normalize normals.</p></li>
+<li><p><strong>normalize_tangents_bitangents</strong> (<em>bool</em>) – Whether to normalize tangents and bitangents.</p></li>
+</ul>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
 <dd class="field-even"><p>None</p>
@@ -3660,17 +3761,97 @@ well-defined and will be set to the special value 2 * M_PI.</p>
 </dd></dl>
 
 <dl class="py function">
+<dt class="sig sig-object py" id="core.normalize_mesh_with_transform">
+<span class="sig-prename descclassname"><span class="pre">core.</span></span><span class="sig-name descname"><span class="pre">normalize_mesh_with_transform</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mesh</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normalize_normals</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normalize_tangents_bitangents</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#core.normalize_mesh_with_transform" title="Link to this definition">¶</a></dt>
+<dd><p>Normalize a mesh to fit into a unit box centered at the origin.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>mesh</strong> (<a class="reference internal" href="#core.SurfaceMesh" title="core.SurfaceMesh"><em>SurfaceMesh</em></a>) – Input mesh.</p></li>
+<li><p><strong>normalize_normals</strong> (<em>bool</em>) – Whether to normalize normals.</p></li>
+<li><p><strong>normalize_tangents_bitangents</strong> (<em>bool</em>) – Whether to normalize tangents and bitangents.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>Annotated[numpy.typing.ArrayLike, dict(dtype=’float64’, shape=(4, 4), order=’F’)]</p>
+</dd>
+</dl>
+<p>:return Inverse transform, can be used to undo the normalization process.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="core.normalize_mesh_with_transform_2d">
+<span class="sig-prename descclassname"><span class="pre">core.</span></span><span class="sig-name descname"><span class="pre">normalize_mesh_with_transform_2d</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mesh</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normalize_normals</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normalize_tangents_bitangents</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#core.normalize_mesh_with_transform_2d" title="Link to this definition">¶</a></dt>
+<dd><p>Normalize a mesh to fit into a unit box centered at the origin.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>mesh</strong> (<a class="reference internal" href="#core.SurfaceMesh" title="core.SurfaceMesh"><em>SurfaceMesh</em></a>) – Input mesh.</p></li>
+<li><p><strong>normalize_normals</strong> (<em>bool</em>) – Whether to normalize normals.</p></li>
+<li><p><strong>normalize_tangents_bitangents</strong> (<em>bool</em>) – Whether to normalize tangents and bitangents.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>Annotated[numpy.typing.ArrayLike, dict(dtype=’float64’, shape=(3, 3), order=’F’)]</p>
+</dd>
+</dl>
+<p>:return Inverse transform, can be used to undo the normalization process.</p>
+</dd></dl>
+
+<dl class="py function">
 <dt class="sig sig-object py" id="core.normalize_meshes">
-<span class="sig-prename descclassname"><span class="pre">core.</span></span><span class="sig-name descname"><span class="pre">normalize_meshes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">meshes</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#core.normalize_meshes" title="Link to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">core.</span></span><span class="sig-name descname"><span class="pre">normalize_meshes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">meshes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normalize_normals</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normalize_tangents_bitangents</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#core.normalize_meshes" title="Link to this definition">¶</a></dt>
 <dd><p>Normalize a list of meshes to fit into a unit box centered at the origin.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>meshes</strong> (<em>collections.abc.Sequence</em><em>[</em><a class="reference internal" href="#core.SurfaceMesh" title="core.SurfaceMesh"><em>SurfaceMesh</em></a><em>]</em>) – input meshes</p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>meshes</strong> (<em>collections.abc.Sequence</em><em>[</em><a class="reference internal" href="#core.SurfaceMesh" title="core.SurfaceMesh"><em>SurfaceMesh</em></a><em>]</em>) – Input meshes.</p></li>
+<li><p><strong>normalize_normals</strong> (<em>bool</em>) – Whether to normalize normals.</p></li>
+<li><p><strong>normalize_tangents_bitangents</strong> (<em>bool</em>) – Whether to normalize tangents and bitangents.</p></li>
+</ul>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
 <dd class="field-even"><p>None</p>
 </dd>
 </dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="core.normalize_meshes_with_transform">
+<span class="sig-prename descclassname"><span class="pre">core.</span></span><span class="sig-name descname"><span class="pre">normalize_meshes_with_transform</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">meshes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normalize_normals</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normalize_tangents_bitangents</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#core.normalize_meshes_with_transform" title="Link to this definition">¶</a></dt>
+<dd><p>Normalize a mesh to fit into a unit box centered at the origin.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>meshes</strong> (<em>collections.abc.Sequence</em><em>[</em><a class="reference internal" href="#core.SurfaceMesh" title="core.SurfaceMesh"><em>SurfaceMesh</em></a><em>]</em>) – Input meshes.</p></li>
+<li><p><strong>normalize_normals</strong> (<em>bool</em>) – Whether to normalize normals.</p></li>
+<li><p><strong>normalize_tangents_bitangents</strong> (<em>bool</em>) – Whether to normalize tangents and bitangents.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>Annotated[numpy.typing.ArrayLike, dict(dtype=’float64’, shape=(4, 4), order=’F’)]</p>
+</dd>
+</dl>
+<p>:return Inverse transform, can be used to undo the normalization process.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="core.normalize_meshes_with_transform_2d">
+<span class="sig-prename descclassname"><span class="pre">core.</span></span><span class="sig-name descname"><span class="pre">normalize_meshes_with_transform_2d</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">meshes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normalize_normals</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normalize_tangents_bitangents</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#core.normalize_meshes_with_transform_2d" title="Link to this definition">¶</a></dt>
+<dd><p>Normalize a mesh to fit into a unit box centered at the origin.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>meshes</strong> (<em>collections.abc.Sequence</em><em>[</em><a class="reference internal" href="#core.SurfaceMesh" title="core.SurfaceMesh"><em>SurfaceMesh</em></a><em>]</em>) – Input meshes.</p></li>
+<li><p><strong>normalize_normals</strong> (<em>bool</em>) – Whether to normalize normals.</p></li>
+<li><p><strong>normalize_tangents_bitangents</strong> (<em>bool</em>) – Whether to normalize tangents and bitangents.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>Annotated[numpy.typing.ArrayLike, dict(dtype=’float64’, shape=(3, 3), order=’F’)]</p>
+</dd>
+</dl>
+<p>:return Inverse transform, can be used to undo the normalization process.</p>
 </dd></dl>
 
 <dl class="py function">
@@ -3888,6 +4069,28 @@ is not.</p>
 </dd></dl>
 
 <dl class="py function">
+<dt class="sig sig-object py" id="core.rescale_uv_charts">
+<span class="sig-prename descclassname"><span class="pre">core.</span></span><span class="sig-name descname"><span class="pre">rescale_uv_charts</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mesh</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">uv_attribute_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chart_id_attribute_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">uv_area_threshold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1e-06</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#core.rescale_uv_charts" title="Link to this definition">¶</a></dt>
+<dd><p>Rescale UV charts such that their aspect ratios match their 3D images.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>mesh</strong> (<a class="reference internal" href="#core.SurfaceMesh" title="core.SurfaceMesh"><em>SurfaceMesh</em></a>) – The input mesh for inplace modification.</p></li>
+<li><p><strong>uv_attribute_name</strong> (<em>str</em>) – The uv attribute name to use for rescaling.
+If empty, the first UV attribute found will be used.</p></li>
+<li><p><strong>chart_id_attribute_name</strong> (<em>str</em>) – The name used for storing the patch ID attribute.
+If empty, patches will be computed based on UV chart connectivity.</p></li>
+<li><p><strong>uv_area_threshold</strong> (<em>float</em>) – The threshold for UV area.
+UV triangles with area smaller than this threshold will not contribute to scale factor computation.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
 <dt class="sig sig-object py" id="core.resolve_nonmanifoldness">
 <span class="sig-prename descclassname"><span class="pre">core.</span></span><span class="sig-name descname"><span class="pre">resolve_nonmanifoldness</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mesh</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#core.resolve_nonmanifoldness" title="Link to this definition">¶</a></dt>
 <dd><p>Resolve both vertex and edge nonmanifoldness in a mesh.</p>
@@ -4015,6 +4218,29 @@ is not.</p>
 </dd></dl>
 
 <dl class="py function">
+<dt class="sig sig-object py" id="core.split_facets_by_material">
+<span class="sig-prename descclassname"><span class="pre">core.</span></span><span class="sig-name descname"><span class="pre">split_facets_by_material</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mesh</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">material_attribute_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#core.split_facets_by_material" title="Link to this definition">¶</a></dt>
+<dd><p>Split mesh facets based on a material attribute.</p>
+<p>&#64;param mesh: Input mesh on which material segmentation will be applied in place.
+&#64;param material_attribute_name: Name of the material attribute to use for inserting boundaries.</p>
+<p>&#64;note The material attribute should be n by k vertex attribute, where n is the number of vertices,
+and k is the number of materials. The value at row i and column j indicates the probability of vertex
+i belonging to material j. The function will insert boundaries between different materials based on
+the material attribute.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>mesh</strong> (<a class="reference internal" href="#core.SurfaceMesh" title="core.SurfaceMesh"><em>SurfaceMesh</em></a>)</p></li>
+<li><p><strong>material_attribute_name</strong> (<em>str</em>)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
 <dt class="sig sig-object py" id="core.split_long_edges">
 <span class="sig-prename descclassname"><span class="pre">core.</span></span><span class="sig-name descname"><span class="pre">split_long_edges</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mesh</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_edge_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.10000000149011612</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">recursive</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">active_region_attribute</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">edge_length_attribute</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#core.split_long_edges" title="Link to this definition">¶</a></dt>
 <dd><p>Split edges that are longer than <cite>max_edge_length</cite>.</p>
@@ -4087,11 +4313,14 @@ If <cite>None</cite>, the function will compute the edge lengths.</p></li>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="core.triangulate_polygonal_facets">
-<span class="sig-prename descclassname"><span class="pre">core.</span></span><span class="sig-name descname"><span class="pre">triangulate_polygonal_facets</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mesh</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#core.triangulate_polygonal_facets" title="Link to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">core.</span></span><span class="sig-name descname"><span class="pre">triangulate_polygonal_facets</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mesh</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scheme</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'earcut'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#core.triangulate_polygonal_facets" title="Link to this definition">¶</a></dt>
 <dd><p>Triangulate polygonal facets of the mesh.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>mesh</strong> (<a class="reference internal" href="#core.SurfaceMesh" title="core.SurfaceMesh"><em>SurfaceMesh</em></a>) – The input mesh.</p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>mesh</strong> (<a class="reference internal" href="#core.SurfaceMesh" title="core.SurfaceMesh"><em>SurfaceMesh</em></a>) – The input mesh to be triangulated in place.</p></li>
+<li><p><strong>scheme</strong> (<em>str</em>) – The triangulation scheme (options are ‘earcut’ and ‘centroid_fan’)</p></li>
+</ul>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
 <dd class="field-even"><p>None</p>
@@ -4144,6 +4373,46 @@ If <cite>None</cite>, the function will compute the edge lengths.</p></li>
 </dd></dl>
 
 <dl class="py function">
+<dt class="sig sig-object py" id="core.uv_mesh_ref">
+<span class="sig-prename descclassname"><span class="pre">core.</span></span><span class="sig-name descname"><span class="pre">uv_mesh_ref</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mesh</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">uv_attribute_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#core.uv_mesh_ref" title="Link to this definition">¶</a></dt>
+<dd><p>Extract a UV mesh reference from a 3D mesh.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>mesh</strong> (<a class="reference internal" href="#core.SurfaceMesh" title="core.SurfaceMesh"><em>SurfaceMesh</em></a>) – Input mesh.</p></li>
+<li><p><strong>uv_attribute_name</strong> (<em>str</em>) – Name of the (indexed or vertex) UV attribute.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A new mesh representing the UV mesh.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#core.SurfaceMesh" title="core.SurfaceMesh">SurfaceMesh</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="core.uv_mesh_view">
+<span class="sig-prename descclassname"><span class="pre">core.</span></span><span class="sig-name descname"><span class="pre">uv_mesh_view</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mesh</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">uv_attribute_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#core.uv_mesh_view" title="Link to this definition">¶</a></dt>
+<dd><p>Extract a UV mesh view from a 3D mesh.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>mesh</strong> (<a class="reference internal" href="#core.SurfaceMesh" title="core.SurfaceMesh"><em>SurfaceMesh</em></a>) – Input mesh.</p></li>
+<li><p><strong>uv_attribute_name</strong> (<em>str</em>) – Name of the (indexed or vertex) UV attribute.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A new mesh representing the UV mesh.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#core.SurfaceMesh" title="core.SurfaceMesh">SurfaceMesh</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
 <dt class="sig sig-object py" id="core.weld_indexed_attribute">
 <span class="sig-prename descclassname"><span class="pre">core.</span></span><span class="sig-name descname"><span class="pre">weld_indexed_attribute</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mesh</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attribute_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">epsilon_rel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">epsilon_abs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#core.weld_indexed_attribute" title="Link to this definition">¶</a></dt>
 <dd><p>Weld indexed attribute.</p>
@@ -4181,23 +4450,23 @@ If <cite>None</cite>, the function will compute the edge lengths.</p></li>
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="../image/index.html">
+          <a class="next-page" href="../subdivision/index.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title"><code class="xref py py-mod docutils literal notranslate"><span class="pre">image</span></code></div>
+                <div class="title"><code class="xref py py-mod docutils literal notranslate"><span class="pre">subdivision</span></code></div>
               </div>
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
-          <a class="prev-page" href="../io/index.html">
+          <a class="prev-page" href="../poisson/index.html">
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
                   <span>Previous</span>
                 </div>
                 
-                <div class="title"><code class="xref py py-mod docutils literal notranslate"><span class="pre">io</span></code></div>
+                <div class="title"><code class="xref py py-mod docutils literal notranslate"><span class="pre">poisson</span></code></div>
                 
               </div>
             </a>
@@ -4515,7 +4784,9 @@ If <cite>None</cite>, the function will compute the edge lengths.</p></li>
 </li>
 <li><a class="reference internal" href="#core.TangentBitangentOptions"><code class="docutils literal notranslate"><span class="pre">TangentBitangentOptions</span></code></a><ul>
 <li><a class="reference internal" href="#core.TangentBitangentOptions.bitangent_attribute_name"><code class="docutils literal notranslate"><span class="pre">TangentBitangentOptions.bitangent_attribute_name</span></code></a></li>
+<li><a class="reference internal" href="#core.TangentBitangentOptions.keep_existing_tangent"><code class="docutils literal notranslate"><span class="pre">TangentBitangentOptions.keep_existing_tangent</span></code></a></li>
 <li><a class="reference internal" href="#core.TangentBitangentOptions.normal_attribute_name"><code class="docutils literal notranslate"><span class="pre">TangentBitangentOptions.normal_attribute_name</span></code></a></li>
+<li><a class="reference internal" href="#core.TangentBitangentOptions.orthogonalize_bitangent"><code class="docutils literal notranslate"><span class="pre">TangentBitangentOptions.orthogonalize_bitangent</span></code></a></li>
 <li><a class="reference internal" href="#core.TangentBitangentOptions.output_element_type"><code class="docutils literal notranslate"><span class="pre">TangentBitangentOptions.output_element_type</span></code></a></li>
 <li><a class="reference internal" href="#core.TangentBitangentOptions.pad_with_sign"><code class="docutils literal notranslate"><span class="pre">TangentBitangentOptions.pad_with_sign</span></code></a></li>
 <li><a class="reference internal" href="#core.TangentBitangentOptions.tangent_attribute_name"><code class="docutils literal notranslate"><span class="pre">TangentBitangentOptions.tangent_attribute_name</span></code></a></li>
@@ -4541,6 +4812,7 @@ If <cite>None</cite>, the function will compute the edge lengths.</p></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#core.cast_attribute"><code class="docutils literal notranslate"><span class="pre">cast_attribute()</span></code></a></li>
+<li><a class="reference internal" href="#core.close_small_holes"><code class="docutils literal notranslate"><span class="pre">close_small_holes()</span></code></a></li>
 <li><a class="reference internal" href="#core.combine_meshes"><code class="docutils literal notranslate"><span class="pre">combine_meshes()</span></code></a></li>
 <li><a class="reference internal" href="#core.compute_components"><code class="docutils literal notranslate"><span class="pre">compute_components()</span></code></a></li>
 <li><a class="reference internal" href="#core.compute_dihedral_angles"><code class="docutils literal notranslate"><span class="pre">compute_dihedral_angles()</span></code></a></li>
@@ -4558,6 +4830,7 @@ If <cite>None</cite>, the function will compute the edge lengths.</p></li>
 <li><a class="reference internal" href="#core.compute_pointcloud_pca"><code class="docutils literal notranslate"><span class="pre">compute_pointcloud_pca()</span></code></a></li>
 <li><a class="reference internal" href="#core.compute_seam_edges"><code class="docutils literal notranslate"><span class="pre">compute_seam_edges()</span></code></a></li>
 <li><a class="reference internal" href="#core.compute_tangent_bitangent"><code class="docutils literal notranslate"><span class="pre">compute_tangent_bitangent()</span></code></a></li>
+<li><a class="reference internal" href="#core.compute_uv_charts"><code class="docutils literal notranslate"><span class="pre">compute_uv_charts()</span></code></a></li>
 <li><a class="reference internal" href="#core.compute_uv_distortion"><code class="docutils literal notranslate"><span class="pre">compute_uv_distortion()</span></code></a></li>
 <li><a class="reference internal" href="#core.compute_vertex_normal"><code class="docutils literal notranslate"><span class="pre">compute_vertex_normal()</span></code></a></li>
 <li><a class="reference internal" href="#core.compute_vertex_valence"><code class="docutils literal notranslate"><span class="pre">compute_vertex_valence()</span></code></a></li>
@@ -4574,7 +4847,11 @@ If <cite>None</cite>, the function will compute the edge lengths.</p></li>
 <li><a class="reference internal" href="#core.map_attribute"><code class="docutils literal notranslate"><span class="pre">map_attribute()</span></code></a></li>
 <li><a class="reference internal" href="#core.map_attribute_in_place"><code class="docutils literal notranslate"><span class="pre">map_attribute_in_place()</span></code></a></li>
 <li><a class="reference internal" href="#core.normalize_mesh"><code class="docutils literal notranslate"><span class="pre">normalize_mesh()</span></code></a></li>
+<li><a class="reference internal" href="#core.normalize_mesh_with_transform"><code class="docutils literal notranslate"><span class="pre">normalize_mesh_with_transform()</span></code></a></li>
+<li><a class="reference internal" href="#core.normalize_mesh_with_transform_2d"><code class="docutils literal notranslate"><span class="pre">normalize_mesh_with_transform_2d()</span></code></a></li>
 <li><a class="reference internal" href="#core.normalize_meshes"><code class="docutils literal notranslate"><span class="pre">normalize_meshes()</span></code></a></li>
+<li><a class="reference internal" href="#core.normalize_meshes_with_transform"><code class="docutils literal notranslate"><span class="pre">normalize_meshes_with_transform()</span></code></a></li>
+<li><a class="reference internal" href="#core.normalize_meshes_with_transform_2d"><code class="docutils literal notranslate"><span class="pre">normalize_meshes_with_transform_2d()</span></code></a></li>
 <li><a class="reference internal" href="#core.orient_outward"><code class="docutils literal notranslate"><span class="pre">orient_outward()</span></code></a></li>
 <li><a class="reference internal" href="#core.permute_facets"><code class="docutils literal notranslate"><span class="pre">permute_facets()</span></code></a></li>
 <li><a class="reference internal" href="#core.permute_vertices"><code class="docutils literal notranslate"><span class="pre">permute_vertices()</span></code></a></li>
@@ -4587,18 +4864,22 @@ If <cite>None</cite>, the function will compute the edge lengths.</p></li>
 <li><a class="reference internal" href="#core.remove_short_edges"><code class="docutils literal notranslate"><span class="pre">remove_short_edges()</span></code></a></li>
 <li><a class="reference internal" href="#core.remove_topologically_degenerate_facets"><code class="docutils literal notranslate"><span class="pre">remove_topologically_degenerate_facets()</span></code></a></li>
 <li><a class="reference internal" href="#core.reorder_mesh"><code class="docutils literal notranslate"><span class="pre">reorder_mesh()</span></code></a></li>
+<li><a class="reference internal" href="#core.rescale_uv_charts"><code class="docutils literal notranslate"><span class="pre">rescale_uv_charts()</span></code></a></li>
 <li><a class="reference internal" href="#core.resolve_nonmanifoldness"><code class="docutils literal notranslate"><span class="pre">resolve_nonmanifoldness()</span></code></a></li>
 <li><a class="reference internal" href="#core.resolve_vertex_nonmanifoldness"><code class="docutils literal notranslate"><span class="pre">resolve_vertex_nonmanifoldness()</span></code></a></li>
 <li><a class="reference internal" href="#core.select_facets_by_normal_similarity"><code class="docutils literal notranslate"><span class="pre">select_facets_by_normal_similarity()</span></code></a></li>
 <li><a class="reference internal" href="#core.select_facets_in_frustum"><code class="docutils literal notranslate"><span class="pre">select_facets_in_frustum()</span></code></a></li>
 <li><a class="reference internal" href="#core.separate_by_components"><code class="docutils literal notranslate"><span class="pre">separate_by_components()</span></code></a></li>
 <li><a class="reference internal" href="#core.separate_by_facet_groups"><code class="docutils literal notranslate"><span class="pre">separate_by_facet_groups()</span></code></a></li>
+<li><a class="reference internal" href="#core.split_facets_by_material"><code class="docutils literal notranslate"><span class="pre">split_facets_by_material()</span></code></a></li>
 <li><a class="reference internal" href="#core.split_long_edges"><code class="docutils literal notranslate"><span class="pre">split_long_edges()</span></code></a></li>
 <li><a class="reference internal" href="#core.thicken_and_close_mesh"><code class="docutils literal notranslate"><span class="pre">thicken_and_close_mesh()</span></code></a></li>
 <li><a class="reference internal" href="#core.transform_mesh"><code class="docutils literal notranslate"><span class="pre">transform_mesh()</span></code></a></li>
 <li><a class="reference internal" href="#core.triangulate_polygonal_facets"><code class="docutils literal notranslate"><span class="pre">triangulate_polygonal_facets()</span></code></a></li>
 <li><a class="reference internal" href="#core.trim_by_isoline"><code class="docutils literal notranslate"><span class="pre">trim_by_isoline()</span></code></a></li>
 <li><a class="reference internal" href="#core.unify_index_buffer"><code class="docutils literal notranslate"><span class="pre">unify_index_buffer()</span></code></a></li>
+<li><a class="reference internal" href="#core.uv_mesh_ref"><code class="docutils literal notranslate"><span class="pre">uv_mesh_ref()</span></code></a></li>
+<li><a class="reference internal" href="#core.uv_mesh_view"><code class="docutils literal notranslate"><span class="pre">uv_mesh_view()</span></code></a></li>
 <li><a class="reference internal" href="#core.weld_indexed_attribute"><code class="docutils literal notranslate"><span class="pre">weld_indexed_attribute()</span></code></a></li>
 <li><a class="reference internal" href="#core.invalid_index"><code class="docutils literal notranslate"><span class="pre">invalid_index</span></code></a></li>
 <li><a class="reference internal" href="#core.invalid_scalar"><code class="docutils literal notranslate"><span class="pre">invalid_scalar</span></code></a></li>

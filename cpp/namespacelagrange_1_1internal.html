@@ -348,6 +348,14 @@ template&lt;typename DerivedX , typename DerivedIX &gt; </td></tr>
 template&lt;typename DerivedX &gt; </td></tr>
 <tr class="memitem:a23470163b5873880ae388a9ac065bbad"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>sortrows</b> (const Eigen::DenseBase&lt; DerivedX &gt; &amp;X, const bool ascending, Eigen::PlainObjectBase&lt; DerivedX &gt; &amp;Y)</td></tr>
 <tr class="separator:a23470163b5873880ae388a9ac065bbad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a37b51c54c608f9674c515fd0a560a217"><td class="memTemplParams" colspan="2">template&lt;typename Scalar , typename Index &gt; </td></tr>
+<tr class="memitem:a37b51c54c608f9674c515fd0a560a217"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; Index &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacelagrange_1_1internal.html#a37b51c54c608f9674c515fd0a560a217">split_edges</a> (<a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;mesh, <a class="el" href="classlagrange_1_1function__ref.html">function_ref</a>&lt; <a class="el" href="group__group-utils-misc.html#ga4afead0b9ccc53fe4fca896787595d26">span</a>&lt; Index &gt;(Index)&gt; get_edge_split_pts, <a class="el" href="classlagrange_1_1function__ref.html">function_ref</a>&lt; bool(Index)&gt; active_facet)</td></tr>
+<tr class="memdesc:a37b51c54c608f9674c515fd0a560a217"><td class="mdescLeft">&#160;</td><td class="mdescRight">Split edges based on the input split points.  <a href="namespacelagrange_1_1internal.html#a37b51c54c608f9674c515fd0a560a217">More...</a><br /></td></tr>
+<tr class="separator:a37b51c54c608f9674c515fd0a560a217"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58a2dd6f367eddfbabca4304c4067592"><td class="memTemplParams" colspan="2">template&lt;typename Scalar , typename Index &gt; </td></tr>
+<tr class="memitem:a58a2dd6f367eddfbabca4304c4067592"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacelagrange_1_1internal.html#a58a2dd6f367eddfbabca4304c4067592">split_triangle</a> (size_t num_points, <a class="el" href="group__group-utils-misc.html#ga4afead0b9ccc53fe4fca896787595d26">span</a>&lt; const Scalar &gt; points, <a class="el" href="group__group-utils-misc.html#ga4afead0b9ccc53fe4fca896787595d26">span</a>&lt; const Index &gt; chain, <a class="el" href="group__group-utils-misc.html#ga4afead0b9ccc53fe4fca896787595d26">span</a>&lt; Index &gt; visited_buffer, std::vector&lt; Index &gt; &amp;queue_buffer, const Index v0, const Index v1, const Index v2, <a class="el" href="group__group-utils-misc.html#ga4afead0b9ccc53fe4fca896787595d26">span</a>&lt; Index &gt; triangulation)</td></tr>
+<tr class="memdesc:a58a2dd6f367eddfbabca4304c4067592"><td class="mdescLeft">&#160;</td><td class="mdescRight">Split a triangle into smaller triangles based on the chain of splitting points on the edges.  <a href="namespacelagrange_1_1internal.html#a58a2dd6f367eddfbabca4304c4067592">More...</a><br /></td></tr>
+<tr class="separator:a58a2dd6f367eddfbabca4304c4067592"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2557ea7a3130377e7bd3d96f199bbe72"><td class="memTemplParams" colspan="2">template&lt;typename Scalar &gt; </td></tr>
 <tr class="memitem:a2557ea7a3130377e7bd3d96f199bbe72"><td class="memTemplItemLeft" align="right" valign="top">std::string_view&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacelagrange_1_1internal.html#a2557ea7a3130377e7bd3d96f199bbe72">string_from_scalar</a> ()</td></tr>
 <tr class="memdesc:a2557ea7a3130377e7bd3d96f199bbe72"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a human-readable string from any supported attribute value type.  <a href="namespacelagrange_1_1internal.html#a2557ea7a3130377e7bd3d96f199bbe72">More...</a><br /></td></tr>
@@ -1527,6 +1535,137 @@ bool LA_CORE_API&#160;</td><td class="memItemRight" valign="bottom"><b>point_on_
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>pair of new attribute ids: index and weight </dd></dl>
+
+</div>
+</div>
+<a id="a37b51c54c608f9674c515fd0a560a217" name="a37b51c54c608f9674c515fd0a560a217"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a37b51c54c608f9674c515fd0a560a217">&#9670;&nbsp;</a></span>split_edges()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; Index &gt; split_edges </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;&#160;</td>
+          <td class="paramname"><em>mesh</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classlagrange_1_1function__ref.html">function_ref</a>&lt; <a class="el" href="group__group-utils-misc.html#ga4afead0b9ccc53fe4fca896787595d26">span</a>&lt; Index &gt;(Index)&gt;&#160;</td>
+          <td class="paramname"><em>get_edge_split_pts</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classlagrange_1_1function__ref.html">function_ref</a>&lt; bool(Index)&gt;&#160;</td>
+          <td class="paramname"><em>active_facet</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Split edges based on the input split points. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mesh</td><td>Input mesh which will be updated in place. All potential splits should be represented as vertices in the mesh. The mesh will be updated in place. </td></tr>
+    <tr><td class="paramname">get_edge_split_pts</td><td>A function that returns the split points for each edge. The function takes an edge ID as input and returns a span of vertex indices representing the split pts. </td></tr>
+    <tr><td class="paramname">active_facet</td><td>A function that takes a facet ID as input and returns true if the facet is active. Only active facets will be split.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A vector of original facet IDs that were split. </dd></dl>
+
+</div>
+</div>
+<a id="a58a2dd6f367eddfbabca4304c4067592" name="a58a2dd6f367eddfbabca4304c4067592"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a58a2dd6f367eddfbabca4304c4067592">&#9670;&nbsp;</a></span>split_triangle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void split_triangle </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>num_points</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__group-utils-misc.html#ga4afead0b9ccc53fe4fca896787595d26">span</a>&lt; const Scalar &gt;&#160;</td>
+          <td class="paramname"><em>points</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__group-utils-misc.html#ga4afead0b9ccc53fe4fca896787595d26">span</a>&lt; const Index &gt;&#160;</td>
+          <td class="paramname"><em>chain</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__group-utils-misc.html#ga4afead0b9ccc53fe4fca896787595d26">span</a>&lt; Index &gt;&#160;</td>
+          <td class="paramname"><em>visited_buffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; Index &gt; &amp;&#160;</td>
+          <td class="paramname"><em>queue_buffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Index&#160;</td>
+          <td class="paramname"><em>v0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Index&#160;</td>
+          <td class="paramname"><em>v1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Index&#160;</td>
+          <td class="paramname"><em>v2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__group-utils-misc.html#ga4afead0b9ccc53fe4fca896787595d26">span</a>&lt; Index &gt;&#160;</td>
+          <td class="paramname"><em>triangulation</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Split a triangle into smaller triangles based on the chain of splitting points on the edges. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir"></td><td class="paramname">num_points</td><td>Total number of points. </td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">points</td><td>Coordinates of the points. </td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">chain</td><td>Chain of indices into points that iterates all vertices and splitting points in counterclockwise order around the triangle. </td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">visited_buffer</td><td>Temporary buffer that should be of size 3 * chain.size(). </td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">queue_buffer</td><td>Temporary buffer used for priority queue. </td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">v0</td><td>Index of the first corner of the input triangle in <code>chain</code>. </td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">v1</td><td>Index of the second corner of the input triangle in <code>chain</code>. </td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">v2</td><td>Index of the third corner of the input triangle in <code>chain</code>.</td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">triangulation</td><td>The (n-2) by 3 array of output triangles, where n is the size of the chain. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

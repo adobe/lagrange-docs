@@ -209,6 +209,8 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlagrange_1_1_vertex_manifold_options.html">VertexManifoldOptions</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Option struct for computing manifold flags.  <a href="structlagrange_1_1_vertex_manifold_options.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlagrange_1_1_triangulation_options.html">TriangulationOptions</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlagrange_1_1_transform_options.html">TransformOptions</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Options available when applying affine transforms to a mesh.  <a href="structlagrange_1_1_transform_options.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -511,10 +513,10 @@ template&lt;typename Scalar , typename Index &gt; </td></tr>
 <tr class="memitem:gac646c16958d9cb11644e1c9e72e305dc"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__group-surfacemesh-utils.html#gac646c16958d9cb11644e1c9e72e305dc">transformed_mesh</a> (<a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; mesh, const Eigen::Transform&lt; Scalar, Dimension, Eigen::Affine &gt; &amp;transform, const <a class="el" href="structlagrange_1_1_transform_options.html">TransformOptions</a> &amp;options={})</td></tr>
 <tr class="memdesc:gac646c16958d9cb11644e1c9e72e305dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply an affine transform to a mesh and return the transformed mesh.  <a href="group__group-surfacemesh-utils.html#gac646c16958d9cb11644e1c9e72e305dc">More...</a><br /></td></tr>
 <tr class="separator:gac646c16958d9cb11644e1c9e72e305dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga48af6105ece8a970755870c73af73ddd"><td class="memTemplParams" colspan="2">template&lt;typename Scalar , typename Index &gt; </td></tr>
-<tr class="memitem:ga48af6105ece8a970755870c73af73ddd"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__group-surfacemesh-utils.html#ga48af6105ece8a970755870c73af73ddd">triangulate_polygonal_facets</a> (<a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;mesh)</td></tr>
-<tr class="memdesc:ga48af6105ece8a970755870c73af73ddd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Triangulate polygonal facets of a mesh using a prescribed set of rules.  <a href="group__group-surfacemesh-utils.html#ga48af6105ece8a970755870c73af73ddd">More...</a><br /></td></tr>
-<tr class="separator:ga48af6105ece8a970755870c73af73ddd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8842b75f11402e01405aaa861a8cbb2c"><td class="memTemplParams" colspan="2">template&lt;typename Scalar , typename Index &gt; </td></tr>
+<tr class="memitem:ga8842b75f11402e01405aaa861a8cbb2c"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__group-surfacemesh-utils.html#ga8842b75f11402e01405aaa861a8cbb2c">triangulate_polygonal_facets</a> (<a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;mesh, const <a class="el" href="structlagrange_1_1_triangulation_options.html">TriangulationOptions</a> &amp;options={})</td></tr>
+<tr class="memdesc:ga8842b75f11402e01405aaa861a8cbb2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Triangulate polygonal facets of a mesh using a prescribed set of rules.  <a href="group__group-surfacemesh-utils.html#ga8842b75f11402e01405aaa861a8cbb2c">More...</a><br /></td></tr>
+<tr class="separator:ga8842b75f11402e01405aaa861a8cbb2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p >Various mesh processing utilities. </p>
@@ -3870,8 +3872,8 @@ To convert a mesh and its attributes to different types, use the cast function.<
 
 </div>
 </div>
-<a id="ga48af6105ece8a970755870c73af73ddd" name="ga48af6105ece8a970755870c73af73ddd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga48af6105ece8a970755870c73af73ddd">&#9670;&nbsp;</a></span>triangulate_polygonal_facets()</h2>
+<a id="ga8842b75f11402e01405aaa861a8cbb2c" name="ga8842b75f11402e01405aaa861a8cbb2c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8842b75f11402e01405aaa861a8cbb2c">&#9670;&nbsp;</a></span>triangulate_polygonal_facets()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -3880,8 +3882,18 @@ To convert a mesh and its attributes to different types, use the cast function.<
           <td class="memname">void triangulate_polygonal_facets </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; Scalar, Index &gt; &amp;&#160;</td>
-          <td class="paramname"><em>mesh</em></td><td>)</td>
+          <td class="paramname"><em>mesh</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const <a class="el" href="structlagrange_1_1_triangulation_options.html">TriangulationOptions</a> &amp;&#160;</td>
+          <td class="paramname"><em>options</em> = <code>{}</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -3891,7 +3903,8 @@ To convert a mesh and its attributes to different types, use the cast function.<
 <p>Triangulate polygonal facets of a mesh using a prescribed set of rules. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in,out]</td><td class="paramname">mesh</td><td>Polygonal mesh to triangulate in place.</td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">mesh</td><td>Polygonal mesh to triangulate in place. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">options</td><td>Options for triangulation.</td></tr>
   </table>
   </dd>
 </dl>

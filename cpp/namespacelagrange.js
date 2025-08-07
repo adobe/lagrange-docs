@@ -91,6 +91,7 @@ var namespacelagrange =
     [ "TangentBitangentResult", "structlagrange_1_1_tangent_bitangent_result.html", "structlagrange_1_1_tangent_bitangent_result" ],
     [ "ThickenAndCloseOptions", "structlagrange_1_1_thicken_and_close_options.html", "structlagrange_1_1_thicken_and_close_options" ],
     [ "TransformOptions", "structlagrange_1_1_transform_options.html", "structlagrange_1_1_transform_options" ],
+    [ "TriangulationOptions", "structlagrange_1_1_triangulation_options.html", "structlagrange_1_1_triangulation_options" ],
     [ "UnflipUVOptions", "structlagrange_1_1_unflip_u_v_options.html", "structlagrange_1_1_unflip_u_v_options" ],
     [ "UVChartOptions", "structlagrange_1_1_u_v_chart_options.html", "structlagrange_1_1_u_v_chart_options" ],
     [ "UVDistortionOptions", "structlagrange_1_1_u_v_distortion_options.html", "structlagrange_1_1_u_v_distortion_options" ],
@@ -311,6 +312,7 @@ var namespacelagrange =
     [ "separate_by_facet_groups", "group__group-surfacemesh-utils.html#ga3a916fec3d88a2f142479beb6d1dabbc", null ],
     [ "separate_by_facet_groups", "group__group-surfacemesh-utils.html#ga8bfc61d050dfff96cd48f72f4bd4b149", null ],
     [ "separate_by_facet_groups", "group__group-surfacemesh-utils.html#ga987e83dd82916a9347d04f1d45a7934e", null ],
+    [ "split_facets_by_material", "namespacelagrange.html#a773705dae58296a6d8bf45f41644a5cb", null ],
     [ "thicken_and_close_mesh", "namespacelagrange.html#a4b1d5d73a85f019a87286d7ee39acaa7", null ],
     [ "compute_euler", "group__group-surfacemesh-utils.html#ga256e7ab23f324bc2f7fb5fd977405932", null ],
     [ "is_vertex_manifold", "group__group-surfacemesh-utils.html#ga8c7a15cae60d68a94bac4068de177b4a", null ],
@@ -319,7 +321,7 @@ var namespacelagrange =
     [ "compute_vertex_is_manifold", "group__group-surfacemesh-utils.html#ga9a5f380272eec2f91bbcdf4eeb04f591", null ],
     [ "transform_mesh", "group__group-surfacemesh-utils.html#gacc5a05b5bc041f50fbff82c00e18c631", null ],
     [ "transformed_mesh", "group__group-surfacemesh-utils.html#gac646c16958d9cb11644e1c9e72e305dc", null ],
-    [ "triangulate_polygonal_facets", "group__group-surfacemesh-utils.html#ga48af6105ece8a970755870c73af73ddd", null ],
+    [ "triangulate_polygonal_facets", "group__group-surfacemesh-utils.html#ga8842b75f11402e01405aaa861a8cbb2c", null ],
     [ "unify_index_buffer", "group__group-surfacemesh-attr-utils.html#gae8deb2977d6d78e0b8e3a9a7773b6c72", null ],
     [ "unify_named_index_buffer", "group__group-surfacemesh-attr-utils.html#ga40817d91add1d124cc9f362f019d1f0c", null ],
     [ "set_breakpoint_enabled", "group__group-utils-assert.html#gaf0eeb4d96ed545aadd3b6bf27ed631c6", null ],
@@ -396,8 +398,6 @@ var namespacelagrange =
     [ "facet_ref", "group__group-surfacemesh-views.html#gae8c34105b292c12cff41b1dec4bca137", null ],
     [ "facet_view", "group__group-surfacemesh-views.html#ga8a158f542405b5b869533b691f18ed8d", null ],
     [ "weld_indexed_attribute", "group__group-surfacemesh-attr-utils.html#gac25160103a579bb49738ba559ec85fb8", null ],
-    [ "split_edges", "namespacelagrange.html#a37b51c54c608f9674c515fd0a560a217", null ],
-    [ "split_triangle", "namespacelagrange.html#a58a2dd6f367eddfbabca4304c4067592", null ],
     [ "save_graph_off", "namespacelagrange.html#af340c73b9a59c952f039a0e458b517cb", null ],
     [ "save_graph", "namespacelagrange.html#a27242b785bed719baa0d9e79f341aa72", null ]
 ];

@@ -188,10 +188,10 @@ $(document).ready(function(){initNavTree('copy__on__write__ptr_8h_source.html','
 <div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Derived&gt;</div>
 <div class="line"><a id="l00092" name="l00092"></a><span class="lineno"><a class="line" href="classlagrange_1_1copy__on__write__ptr.html#aadedf4e4515d7b9f2bd328d40f6715e2">   92</a></span>    Derived* <a class="code hl_function" href="classlagrange_1_1copy__on__write__ptr.html#aadedf4e4515d7b9f2bd328d40f6715e2">static_write</a>()</div>
 <div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    {</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>        ensure_unique_owner&lt;Derived&gt;();</div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span><span class="preprocessor">#if LAGRANGE_TARGET_FEATURE(RTTI)</span></div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>        <a class="code hl_define" href="group__group-utils-assert.html#ga5b5259c4072f1caaa696e074f2f7ea15">la_debug_assert</a>(<span class="keyword">dynamic_cast&lt;</span>Derived*<span class="keyword">&gt;</span>(m_data.get()));</div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span><span class="preprocessor">#if LAGRANGE_TARGET_FEATURE(RTTI)</span></div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>        <a class="code hl_define" href="group__group-utils-assert.html#ga5b5259c4072f1caaa696e074f2f7ea15">la_debug_assert</a>(<span class="keyword">dynamic_cast&lt;</span>Derived*<span class="keyword">&gt;</span>(m_data.get()));</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        ensure_unique_owner&lt;Derived&gt;();</div>
 <div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>        <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>Derived*<span class="keyword">&gt;</span>(m_data.get());</div>
 <div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    }</div>
 <div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span> </div>

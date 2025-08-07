@@ -43,6 +43,8 @@ var namespacelagrange_1_1internal =
     [ "skinning_extract_n", "namespacelagrange_1_1internal.html#afd3930134555d556f0e0865b5b0a5f75", null ],
     [ "weights_to_mesh_attribute", "namespacelagrange_1_1internal.html#a0ee42324f5d5b6765bcfe4ee7f489a9c", null ],
     [ "weights_to_indexed_mesh_attribute", "namespacelagrange_1_1internal.html#a780b468767386d3739edd17f56008b88", null ],
+    [ "split_edges", "namespacelagrange_1_1internal.html#a37b51c54c608f9674c515fd0a560a217", null ],
+    [ "split_triangle", "namespacelagrange_1_1internal.html#a58a2dd6f367eddfbabca4304c4067592", null ],
     [ "string_from_scalar", "namespacelagrange_1_1internal.html#a2557ea7a3130377e7bd3d96f199bbe72", null ],
     [ "visit_attribute_read", "namespacelagrange_1_1internal.html#ac4b70a7b72930733983ddcd0c3f0b32c", null ],
     [ "visit_attribute_write", "namespacelagrange_1_1internal.html#a3a774b57c59de368ea2facf37a3fa27b", null ],

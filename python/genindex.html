@@ -156,10 +156,11 @@
   <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul>
 <li class="toctree-l1 has-children"><a class="reference internal" href="autoapi/index.html">API Reference</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of API Reference</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="autoapi/poisson/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">poisson</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="autoapi/io/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">io</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="autoapi/core/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">core</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="autoapi/image/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">image</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="autoapi/filtering/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">filtering</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="autoapi/poisson/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">poisson</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="autoapi/core/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">core</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="autoapi/subdivision/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">subdivision</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="autoapi/scene/index.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">scene</span></code></a></li>
 </ul>
@@ -806,6 +807,8 @@
 </li>
         <li><a href="autoapi/core/index.html#core.SurfaceMesh.clone">clone() (core.SurfaceMesh method)</a>
 </li>
+        <li><a href="autoapi/core/index.html#core.close_small_holes">close_small_holes() (in module core)</a>
+</li>
         <li><a href="autoapi/core/index.html#core.RemapVerticesOptions.collision_policy_float">collision_policy_float (core.RemapVerticesOptions property)</a>
 </li>
         <li><a href="autoapi/core/index.html#core.RemapVerticesOptions.collision_policy_integral">collision_policy_integral (core.RemapVerticesOptions property)</a>
@@ -857,6 +860,8 @@
         <li><a href="autoapi/core/index.html#core.compute_seam_edges">compute_seam_edges() (in module core)</a>
 </li>
         <li><a href="autoapi/core/index.html#core.compute_tangent_bitangent">compute_tangent_bitangent() (in module core)</a>
+</li>
+        <li><a href="autoapi/core/index.html#core.compute_uv_charts">compute_uv_charts() (in module core)</a>
 </li>
         <li><a href="autoapi/core/index.html#core.compute_uv_distortion">compute_uv_distortion() (in module core)</a>
 </li>
@@ -1121,16 +1126,23 @@
 </li>
         <li><a href="autoapi/core/index.html#core.SurfaceMesh.facets">facets (core.SurfaceMesh property)</a>
 </li>
-    </ul></td>
-    <td style="width: 33%; vertical-align: top;"><ul>
         <li><a href="autoapi/subdivision/index.html#subdivision.FaceVaryingInterpolation">FaceVaryingInterpolation (class in subdivision)</a>
 </li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
         <li><a href="autoapi/scene/index.html#scene.Camera.far_plane">far_plane (scene.Camera property)</a>
 </li>
         <li><a href="autoapi/io/index.html#io.FileEncoding">FileEncoding (class in io)</a>
 </li>
         <li><a href="autoapi/core/index.html#core.filter_attributes">filter_attributes() (in module core)</a>
 </li>
+        <li>
+    filtering
+
+        <ul>
+          <li><a href="autoapi/filtering/index.html#module-filtering">module</a>
+</li>
+        </ul></li>
         <li><a href="autoapi/core/index.html#core.SurfaceMesh.find_edge_from_vertices">find_edge_from_vertices() (core.SurfaceMesh method)</a>
 </li>
         <li><a href="autoapi/image/index.html#image.ImagePrecision.float16">float16 (image.ImagePrecision attribute)</a>
@@ -1375,6 +1387,8 @@
   <h2>K</h2>
   <table style="width: 100%" class="indextable genindextable"><tr>
     <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="autoapi/core/index.html#core.TangentBitangentOptions.keep_existing_tangent">keep_existing_tangent (core.TangentBitangentOptions property)</a>
+</li>
         <li><a href="autoapi/core/index.html#core.NormalOptions.keep_facet_normals">keep_facet_normals (core.NormalOptions property)</a>
 </li>
         <li><a href="autoapi/core/index.html#core.VertexNormalOptions.keep_weighted_corner_normals">keep_weighted_corner_normals (core.VertexNormalOptions property)</a>
@@ -1485,6 +1499,8 @@
 </li>
         <li><a href="autoapi/scene/index.html#scene.MeshInstance3D.mesh_index">mesh_index (scene.MeshInstance3D property)</a>
 </li>
+        <li><a href="autoapi/filtering/index.html#filtering.mesh_smoothing">mesh_smoothing() (in module filtering)</a>
+</li>
         <li><a href="autoapi/scene/index.html#scene.mesh_to_simple_scene">mesh_to_simple_scene() (in module scene)</a>
 </li>
         <li><a href="autoapi/io/index.html#io.mesh_to_string">mesh_to_string() (in module io)</a>
@@ -1528,6 +1544,8 @@
 
         <ul>
           <li><a href="autoapi/core/index.html#module-core">core</a>
+</li>
+          <li><a href="autoapi/filtering/index.html#module-filtering">filtering</a>
 </li>
           <li><a href="autoapi/image/index.html#module-image">image</a>
 </li>
@@ -1584,17 +1602,25 @@
 </li>
         <li><a href="autoapi/core/index.html#core.AttributeUsage.Normal">Normal (core.AttributeUsage attribute)</a>
 </li>
-    </ul></td>
-    <td style="width: 33%; vertical-align: top;"><ul>
         <li><a href="autoapi/core/index.html#core.TangentBitangentOptions.normal_attribute_name">normal_attribute_name (core.TangentBitangentOptions property)</a>
 </li>
         <li><a href="autoapi/scene/index.html#scene.Material.normal_scale">normal_scale (scene.Material property)</a>
 </li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
         <li><a href="autoapi/scene/index.html#scene.Material.normal_texture">normal_texture (scene.Material property)</a>
 </li>
         <li><a href="autoapi/core/index.html#core.normalize_mesh">normalize_mesh() (in module core)</a>
 </li>
+        <li><a href="autoapi/core/index.html#core.normalize_mesh_with_transform">normalize_mesh_with_transform() (in module core)</a>
+</li>
+        <li><a href="autoapi/core/index.html#core.normalize_mesh_with_transform_2d">normalize_mesh_with_transform_2d() (in module core)</a>
+</li>
         <li><a href="autoapi/core/index.html#core.normalize_meshes">normalize_meshes() (in module core)</a>
+</li>
+        <li><a href="autoapi/core/index.html#core.normalize_meshes_with_transform">normalize_meshes_with_transform() (in module core)</a>
+</li>
+        <li><a href="autoapi/core/index.html#core.normalize_meshes_with_transform_2d">normalize_meshes_with_transform_2d() (in module core)</a>
 </li>
         <li><a href="autoapi/core/index.html#core.NormalOptions">NormalOptions (class in core)</a>
 </li>
@@ -1642,12 +1668,14 @@
 </li>
         <li><a href="autoapi/core/index.html#core.orient_outward">orient_outward() (in module core)</a>
 </li>
-        <li><a href="autoapi/scene/index.html#scene.Camera.Type.Orthographic">Orthographic (scene.Camera.Type attribute)</a>
+        <li><a href="autoapi/core/index.html#core.TangentBitangentOptions.orthogonalize_bitangent">orthogonalize_bitangent (core.TangentBitangentOptions property)</a>
 </li>
-        <li><a href="autoapi/scene/index.html#scene.Camera.orthographic_width">orthographic_width (scene.Camera property)</a>
+        <li><a href="autoapi/scene/index.html#scene.Camera.Type.Orthographic">Orthographic (scene.Camera.Type attribute)</a>
 </li>
     </ul></td>
     <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="autoapi/scene/index.html#scene.Camera.orthographic_width">orthographic_width (scene.Camera property)</a>
+</li>
         <li><a href="autoapi/core/index.html#core.FacetAreaOptions.output_attribute_name">output_attribute_name (core.FacetAreaOptions property)</a>
 
         <ul>
@@ -1775,10 +1803,10 @@
         </ul></li>
         <li><a href="autoapi/core/index.html#core.remove_degenerate_facets">remove_degenerate_facets() (in module core)</a>
 </li>
-    </ul></td>
-    <td style="width: 33%; vertical-align: top;"><ul>
         <li><a href="autoapi/core/index.html#core.remove_duplicate_facets">remove_duplicate_facets() (in module core)</a>
 </li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
         <li><a href="autoapi/core/index.html#core.remove_duplicate_vertices">remove_duplicate_vertices() (in module core)</a>
 </li>
         <li><a href="autoapi/core/index.html#core.SurfaceMesh.remove_facets">remove_facets() (core.SurfaceMesh method)</a>
@@ -1796,6 +1824,8 @@
         <li><a href="autoapi/core/index.html#core.SurfaceMesh.rename_attribute">rename_attribute() (core.SurfaceMesh method)</a>
 </li>
         <li><a href="autoapi/core/index.html#core.reorder_mesh">reorder_mesh() (in module core)</a>
+</li>
+        <li><a href="autoapi/core/index.html#core.rescale_uv_charts">rescale_uv_charts() (in module core)</a>
 </li>
         <li><a href="autoapi/core/index.html#core.Attribute.reserve_entries">reserve_entries() (core.Attribute method)</a>
 </li>
@@ -1834,6 +1864,8 @@
         <li><a href="autoapi/io/index.html#io.SaveOptions.OutputAttributes">SaveOptions.OutputAttributes (class in io)</a>
 </li>
         <li><a href="autoapi/core/index.html#core.AttributeUsage.Scalar">Scalar (core.AttributeUsage attribute)</a>
+</li>
+        <li><a href="autoapi/filtering/index.html#filtering.scalar_attribute_smoothing">scalar_attribute_smoothing() (in module filtering)</a>
 </li>
         <li><a href="autoapi/scene/index.html#scene.Texture.scale">scale (scene.Texture property)</a>
 </li>
@@ -1903,6 +1935,8 @@
         <li><a href="autoapi/scene/index.html#scene.Scene.skeletons">skeletons (scene.Scene property)</a>
 </li>
         <li><a href="autoapi/subdivision/index.html#subdivision.FaceVaryingInterpolation.Smooth">Smooth (subdivision.FaceVaryingInterpolation attribute)</a>
+</li>
+        <li><a href="autoapi/core/index.html#core.split_facets_by_material">split_facets_by_material() (in module core)</a>
 </li>
         <li><a href="autoapi/core/index.html#core.split_long_edges">split_long_edges() (in module core)</a>
 </li>
@@ -2023,14 +2057,14 @@
           <li><a href="autoapi/image/index.html#image.ImagePrecision.unknown">(image.ImagePrecision attribute)</a>
 </li>
         </ul></li>
-    </ul></td>
-    <td style="width: 33%; vertical-align: top;"><ul>
         <li><a href="autoapi/scene/index.html#scene.Camera.up">up (scene.Camera property)</a>
 
         <ul>
           <li><a href="autoapi/scene/index.html#scene.Light.up">(scene.Light property)</a>
 </li>
         </ul></li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
         <li><a href="autoapi/scene/index.html#scene.ValueMap.update">update() (scene.ValueMap method)</a>
 
         <ul>
@@ -2050,6 +2084,10 @@
         <li><a href="autoapi/core/index.html#core.AttributeUsage.UV">UV (core.AttributeUsage attribute)</a>
 </li>
         <li><a href="autoapi/core/index.html#core.TangentBitangentOptions.uv_attribute_name">uv_attribute_name (core.TangentBitangentOptions property)</a>
+</li>
+        <li><a href="autoapi/core/index.html#core.uv_mesh_ref">uv_mesh_ref() (in module core)</a>
+</li>
+        <li><a href="autoapi/core/index.html#core.uv_mesh_view">uv_mesh_view() (in module core)</a>
 </li>
     </ul></td>
   </tr></table>

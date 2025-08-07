@@ -449,6 +449,7 @@ var hierarchy =
     [ "TransformOptions", "structlagrange_1_1_transform_options.html", null ],
     [ "TranslateToolTag", "structlagrange_1_1ui_1_1_translate_tool_tag.html", null ],
     [ "TreeNode", "structlagrange_1_1ui_1_1_tree_node.html", null ],
+    [ "TriangulationOptions", "structlagrange_1_1_triangulation_options.html", null ],
     [ "true_type", null, [
       [ "is_mesh_helper< MeshType, typename Void< typename MeshType::VertexArray, typename MeshType::FacetArray >::type >", "structlagrange_1_1_mesh_trait_helper_1_1is__mesh__helper_3_01_mesh_type_00_01typename_01_void_3_189721d847f0585e54612704ceb864c0.html", null ],
       [ "is_mesh_smart_ptr_helper< MeshTypePtr, typename Void< typename MeshTypePtr::element_type, typename MeshTypePtr::element_type::VertexArray, typename MeshTypePtr::element_type::FacetArray >::type >", "structlagrange_1_1_mesh_trait_helper_1_1is__mesh__smart__ptr__helper_3_01_mesh_type_ptr_00_01typdd3a1b441f06e428de34247e1df62704.html", null ]

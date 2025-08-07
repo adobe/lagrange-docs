@@ -157,6 +157,13 @@ var group__group_surfacemesh_utils =
     [ "VertexManifoldOptions", "structlagrange_1_1_vertex_manifold_options.html", [
       [ "output_attribute_name", "structlagrange_1_1_vertex_manifold_options.html#ad9fcba39803c665ca7be48a39d079f00", null ]
     ] ],
+    [ "TriangulationOptions", "structlagrange_1_1_triangulation_options.html", [
+      [ "Scheme", "structlagrange_1_1_triangulation_options.html#a5c5181a54a4f46149d9c9662b2694167", [
+        [ "Earcut", "structlagrange_1_1_triangulation_options.html#a5c5181a54a4f46149d9c9662b2694167a5bc26b4c10e53460ffdb83dcb1cd44c6", null ],
+        [ "CentroidFan", "structlagrange_1_1_triangulation_options.html#a5c5181a54a4f46149d9c9662b2694167abb1b218d068efcbf201f2f012901599d", null ]
+      ] ],
+      [ "scheme", "structlagrange_1_1_triangulation_options.html#ae6330a2bea84ebba6567e33fc09a0de7", null ]
+    ] ],
     [ "TransformOptions", "structlagrange_1_1_transform_options.html", [
       [ "normalize_normals", "structlagrange_1_1_transform_options.html#ab325d5223b6259782405a0d4d87a6540", null ],
       [ "normalize_tangents_bitangents", "structlagrange_1_1_transform_options.html#adb325bf37307e1d4836ea6886c266e83", null ],
@@ -240,5 +247,5 @@ var group__group_surfacemesh_utils =
     [ "lagrange::compute_vertex_is_manifold", "group__group-surfacemesh-utils.html#ga9a5f380272eec2f91bbcdf4eeb04f591", null ],
     [ "lagrange::transform_mesh", "group__group-surfacemesh-utils.html#gacc5a05b5bc041f50fbff82c00e18c631", null ],
     [ "lagrange::transformed_mesh", "group__group-surfacemesh-utils.html#gac646c16958d9cb11644e1c9e72e305dc", null ],
-    [ "lagrange::triangulate_polygonal_facets", "group__group-surfacemesh-utils.html#ga48af6105ece8a970755870c73af73ddd", null ]
+    [ "lagrange::triangulate_polygonal_facets", "group__group-surfacemesh-utils.html#ga8842b75f11402e01405aaa861a8cbb2c", null ]
 ];

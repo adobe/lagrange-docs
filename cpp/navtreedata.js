@@ -63,11 +63,11 @@ var NAVTREEINDEX =
 "classlagrange_1_1ui_1_1_camera.html#ae8bd2b2016f71aa4ffd01cea60bbc0a3",
 "functions_l.html",
 "group__group-utils-misc.html#ga81d5673419396307677f905d5f4033ce",
-"namespacelagrange_1_1partitioning.html#a09e8dc3cefeb36db96cd82eb06093b18",
-"structlagrange_1_1_greedy_coloring_options.html",
-"structlagrange_1_1image_1_1_image_histogram.html#aad5729d76ea20f8aded557bc39d776bf",
-"structlagrange_1_1ui_1_1_default_shader_indices_names.html",
-"structlagrange_1_1ui_1_1_u_i_panel.html"
+"namespacelagrange_1_1partitioning.html",
+"structlagrange_1_1_frustum_selection_options.html#ad9fcba39803c665ca7be48a39d079f00",
+"structlagrange_1_1image_1_1_image_histogram.html",
+"structlagrange_1_1ui_1_1_default_layers.html",
+"structlagrange_1_1ui_1_1_transform_changed_event.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
