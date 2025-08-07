@@ -11,51 +11,55 @@ automatically downloaded by our CMake system depending on which Lagrange module 
     are not listed there. {% if is_corp %} For example, OpenVDB depends on Boost, TBB and IlmBase.
     Anorigami depends on Armadillo, SuperLU, Vc, etc. {% endif %}
 
-| Library Name                                                                 | License               | Used By                                               |
-|------------------------------------------------------------------------------|-----------------------|-------------------------------------------------------|
-| [Assimp](https://github.com/assimp/assimp)[^0_assimp]                        | BSD-3                 | IO                                                    |
-| [Boost](https://www.boost.org/)[^1_boost]                                    | Boost                 | FS                                                    |
-| [CLI11](https://github.com/CLIUtils/CLI11)                                   | BSD-3                 | Examples[^2_cli11_examples], Performance Tests (Core) |
-| [Catch2](https://github.com/catchorg/Catch2)                                 | Boost                 | Testing, Unit Tests (Core)                            |
-| [Dear ImGui](https://github.com/ocornut/imgui)                               | MIT                   | UI                                                    |
-| [Eigen](https://eigen.tuxfamily.org/)                                        | MPL2                  | Core, UI, Unit Tests (Core)                           |
-| [Embree](https://github.com/embree/embree)                                   | Apache 2              | Raycasting                                            |
-| [EnTT](https://github.com/skypjack/entt)                                     | MIT                   | UI                                                    |
-| [Filesystem](https://github.com/gulrak/filesystem)[^3_filesystem]            | MIT                   | FS                                                    |
-| [GLFW](https://github.com/glfw/glfw)                                         | MIT                   | UI                                                    |
-| [Happly](https://github.com/nmwsharp/happly)                                 | MIT                   | IO                                                    |
-| [ImGuizmo](https://github.com/CedricGuillemet/ImGuizmo)                      | MIT                   | UI                                                    |
-| [JSON for Modern C++](https://github.com/nlohmann/json)                      | MIT                   | Examples (Winding), UI                                |
-| [Libigl](https://github.com/libigl/libigl/)                                  | MPL2                  | BVH, IO, Subdivision                                  |
-| [METIS](http://glaros.dtc.umn.edu/gkhome/metis/metis/overview)               | Apache 2              | Partitioning                                          |
-| [MikkTSpace](https://github.com/mmikk/MikkTSpace)                            | zlib                  | Unit Tests (Core)                                     |
-| [MshIO](https://github.com/qnzhou/MshIO)                                     | Apache 2              | IO                                                    |
-| [Nanobind](https://github.com/wjakob/nanobind)                               | BSD-3                 | Python                                                |
-| [OpenSubdiv](https://github.com/PixarAnimationStudios/OpenSubdiv)            | Apache 2              | Subdivision                                           |
-| [OpenVDB](https://github.com/AcademySoftwareFoundation/openvdb)              | MPL2                  | Volume                                                |
-| [PoissonRecon](https://github.com/mkazhdan/PoissonRecon)                     | MIT                   | Poisson                                               |
-| [Polyscope](https://github.com/nmwsharp/polyscope)                           | MIT                   | Examples (Core)                                       |
-| [Portable File Dialogs](https://github.com/samhocevar/portable-file-dialogs) | WTFPL (public domain) | UI                                                    |
-| [StackWalker](https://github.com/JochenKalmbach/StackWalker)                 | BSD-2                 | Testing                                               |
-| [Threading Building Blocks](https://github.com/oneapi-src/oneTBB)            | Apache 2              | Core                                                  |
-| [TinyEXR](https://github.com/syoyo/tinyexr)                                  | BSD-3                 | Image_IO                                              |
-| [Tracy](https://github.com/wolfpld/tracy)[^4_tracy]                          | BSD-3                 | Core                                                  |
-| [WindingNumber](https://github.com/sideeffects/WindingNumber)                | MIT                   | Unit Tests (Winding), Winding                         |
-| [gl3w](https://github.com/skaslev/gl3w)                                      | MIT                   | UI                                                    |
-| [imgui fonts](https://github.com/HasKha/imgui-fonts)                         | MIT                   | UI                                                    |
-| [nanoflann](https://github.com/jlblancoc/nanoflann)                          | BSD-2                 | BVH, UI                                               |
-| [span-lite](https://github.com/martinmoene/span-lite)                        | Boost                 | Core                                                  |
-| [spdlog](https://github.com/gabime/spdlog)                                   | MIT                   | Core, Unit Tests (Core)                               |
-| [stb](https://github.com/nothings/stb)                                       | Public domain         | Image_IO, UI, Unit Tests (IO)                         |
-| [tinygltf](https://github.com/syoyo/tinygltf)                                | MIT                   | IO                                                    |
-| [tinyobjloader](https://github.com/tinyobjloader/tinyobjloader)              | MIT                   | IO                                                    |
-| [ufbx](https://github.com/ufbx/ufbx)                                         | MIT                   | IO                                                    |
+| Library Name                                                                                   | License                           | Used By                                               |
+|------------------------------------------------------------------------------------------------|-----------------------------------|-------------------------------------------------------|
+| [Assimp](https://github.com/assimp/assimp)[^0_assimp]                                          | BSD-3                             | IO                                                    |
+| [BLAS](https://en.wikipedia.org/wiki/Basic_Linear_Algebra_Subprograms)[^1_blas]                | **Depends**                       | Filtering                                             |
+| [Boost](https://www.boost.org/)[^2_boost]                                                      | Boost                             | FS                                                    |
+| [CLI11](https://github.com/CLIUtils/CLI11)                                                     | BSD-3                             | Examples[^3_cli11_examples], Performance Tests (Core) |
+| [Catch2](https://github.com/catchorg/Catch2)                                                   | Boost                             | Testing, Unit Tests (Core)                            |
+| [Cpptrace](https://github.com/jeremy-rifkin/cpptrace)                                          | MIT                               | Testing                                               |
+| [Dear ImGui](https://github.com/ocornut/imgui)                                                 | MIT                               | UI                                                    |
+| [Eigen](https://eigen.tuxfamily.org/)                                                          | MPL2                              | Core, UI, Unit Tests (Core)                           |
+| [Embree](https://github.com/embree/embree)                                                     | Apache 2                          | Raycasting                                            |
+| [EnTT](https://github.com/skypjack/entt)                                                       | MIT                               | UI                                                    |
+| [Filesystem](https://github.com/gulrak/filesystem)[^4_filesystem]                              | MIT                               | FS                                                    |
+| [GLFW](https://github.com/glfw/glfw)                                                           | MIT                               | UI                                                    |
+| [Happly](https://github.com/nmwsharp/happly)                                                   | MIT                               | IO                                                    |
+| [ImGuizmo](https://github.com/CedricGuillemet/ImGuizmo)                                        | MIT                               | UI                                                    |
+| [JSON for Modern C++](https://github.com/nlohmann/json)                                        | MIT                               | Examples (Winding), UI                                |
+| [Libigl](https://github.com/libigl/libigl/)                                                    | MPL2                              | BVH, IO, Subdivision                                  |
+| [METIS](http://glaros.dtc.umn.edu/gkhome/metis/metis/overview)                                 | Apache 2                          | Partitioning                                          |
+| [MKL](https://www.intel.com/content/www/us/en/developer/articles/tool/onemkl-license-faq.html) | Intel Simplified Software License | Python Bindings (Filtering)                           |
+| [MikkTSpace](https://github.com/mmikk/MikkTSpace)                                              | zlib                              | Unit Tests (Core)                                     |
+| [MshIO](https://github.com/qnzhou/MshIO)                                                       | Apache 2                          | IO                                                    |
+| [Nanobind](https://github.com/wjakob/nanobind)                                                 | BSD-3                             | Python                                                |
+| [OpenSubdiv](https://github.com/PixarAnimationStudios/OpenSubdiv)                              | Apache 2                          | Subdivision                                           |
+| [OpenVDB](https://github.com/AcademySoftwareFoundation/openvdb)                                | MPL2                              | Volume                                                |
+| [PoissonRecon](https://github.com/mkazhdan/PoissonRecon)                                       | MIT                               | Poisson                                               |
+| [Polyscope](https://github.com/nmwsharp/polyscope)                                             | MIT                               | Examples (Core)                                       |
+| [Portable File Dialogs](https://github.com/samhocevar/portable-file-dialogs)                   | WTFPL (public domain)             | UI                                                    |
+| [Shape Gradient Domain](https://github.com/mkazhdan/ShapeGradientDomain)                       | MIT                               | Filtering                                             |
+| [Threading Building Blocks](https://github.com/oneapi-src/oneTBB)                              | Apache 2                          | Core                                                  |
+| [TinyEXR](https://github.com/syoyo/tinyexr)                                                    | BSD-3                             | Image_IO                                              |
+| [Tracy](https://github.com/wolfpld/tracy)[^5_tracy]                                            | BSD-3                             | Core                                                  |
+| [WindingNumber](https://github.com/sideeffects/WindingNumber)                                  | MIT                               | Unit Tests (Winding), Winding                         |
+| [gl3w](https://github.com/skaslev/gl3w)                                                        | MIT                               | UI                                                    |
+| [imgui fonts](https://github.com/HasKha/imgui-fonts)                                           | MIT                               | UI                                                    |
+| [nanoflann](https://github.com/jlblancoc/nanoflann)                                            | BSD-2                             | BVH, UI                                               |
+| [span-lite](https://github.com/martinmoene/span-lite)                                          | Boost                             | Core                                                  |
+| [spdlog](https://github.com/gabime/spdlog)                                                     | MIT                               | Core, Unit Tests (Core)                               |
+| [stb](https://github.com/nothings/stb)                                                         | Public domain                     | Image_IO, UI, Unit Tests (IO)                         |
+| [tinygltf](https://github.com/syoyo/tinygltf)                                                  | MIT                               | IO                                                    |
+| [tinyobjloader](https://github.com/tinyobjloader/tinyobjloader)                                | MIT                               | IO                                                    |
+| [ufbx](https://github.com/ufbx/ufbx)                                                           | MIT                               | IO                                                    |
 
 [^0_assimp]:          Assimp is an optional dependency of the IO module.
-[^1_boost]:           Boost::filesystem is an optional backend of the FS module.
-[^2_cli11_examples]:  CLI11 is used by the examples in the following modules: BVH, Core, IO, Image, Image_IO, Partitioning, Poisson, Raycasting, Subdivision, UI, Volume, Winding
-[^3_filesystem]:      `gulrak/filesystem` is only needed when the IO module is compiled in C++14 mode. In C++17 mode, the IO module will defaults to `std::filesystem`.
-[^4_tracy]:           Tracy is an optional dependency of the core module.
+[^1_blas]:            Either MKL or Accelerate depending on the platform.
+[^2_boost]:           Boost::filesystem is an optional backend of the FS module.
+[^3_cli11_examples]:  CLI11 is used by the examples in the following modules: BVH, Core, Filtering, IO, Image, Image_IO, Partitioning, Poisson, Raycasting, Subdivision, UI, Volume, Winding
+[^4_filesystem]:      `gulrak/filesystem` is only needed when the IO module is compiled in C++14 mode. In C++17 mode, the IO module will defaults to `std::filesystem`.
+[^5_tracy]:           Tracy is an optional dependency of the core module.
 
 ## Bundled Dependencies
 
@@ -72,6 +76,7 @@ appropriate licenses and files that are affected.
 | [CPM](https://github.com/cpm-cmake/CPM.cmake)                                                                                                       | MIT                        | CMake Build System | [CPM.cmake]({{ repo_url }}/blob/main/cmake/recipes/external/CPM.cmake)                                                                                                                                                                                                                                                                                                                                                                                                                                               |
 | [e-maxx.ru](https://e-maxx.ru/algo/duval_algorithm)                                                                                                 | Public domain              | Core               | [remove_duplicate_facets.cpp]({{ repo_url }}/blob/main/modules/core/src/mesh_cleanup/remove_duplicate_facets.cpp)                                                                                                                                                                                                                                                                                                                                                                                                    |
 | [Earcut](https://github.com/mapbox/earcut.hpp)                                                                                                      | ISC                        | Core               | [earcut.h]({{ repo_url }}/blob/main/modules/core/src/mapbox/earcut.h)                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| [Eigen](https://gitlab.com/libeigen/eigen/-/blob/master/Eigen/src/AccelerateSupport/AccelerateSupport.h)                                            | MPL-2.0                    | Filtering          | [AccelerateSupport.h]({{ repo_url }}/blob/main/modules/filtering/src/AccelerateSupport.h)                                                                                                                                                                                                                                                                                                                                                                                                                            |
 | [Embree](https://github.com/embree/embree/blob/ae029e2ff83bebbbe8742c88aba5b0521aba1a23/tutorials/closest_point/closest_point_device.cpp#L261-L341) | Apache 2                   | Raycasting         | [embree_closest_point.h]({{ repo_url }}/blob/main/modules/raycasting/include/lagrange/raycasting/embree_closest_point.h)                                                                                                                                                                                                                                                                                                                                                                                             |
 | [Floating-point exception handling example](http://www-personal.umich.edu/~williams/archive/computation/fe-handling-example.c)                      | Public domain              | Core               | [fpe.cpp]({{ repo_url }}/blob/main/modules/core/src/fpe.cpp)                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 | [function_ref](https://github.com/TartanLlama/function_ref)                                                                                         | CC0                        | Core               | [function_ref.h]({{ repo_url }}/blob/main/modules/core/include/lagrange/utils/function_ref.h)                                                                                                                                                                                                                                                                                                                                                                                                                        |
