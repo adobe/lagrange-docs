@@ -75,6 +75,7 @@ Ccache can be used to speed up compilation on macOS and Linux. There are similar
 work on Windows, such as [sscache](https://github.com/mozilla/sccache) (developed by Mozilla).
 
 First, make sure you set a cache size large enough to accommodate your C++ projects:
+
 ```bash
 ccache -M 100G # set max cache size
 ccache -s # show stats
@@ -149,7 +150,7 @@ times.
 
 To remedy this, one needs to find **compromise**, and refactor your code accordingly:
 
-1. Do you _need_ to support generic templated types, or do you only need to support a limited number
+1. Do you *need* to support generic templated types, or do you only need to support a limited number
    of instantiations? E.g. `float` and `double`, or dimensions `2` and `3`?
 2. Can you get away with runtime polymorphism (virtual methods, function pointers, etc.) instead of
    compile time polymorphism (templates)? Yes there is an small overhead, but your development time
@@ -258,6 +259,14 @@ trick](#x-macro-trick-for-explicit-instantiations) described at the end of this 
     generation, not parsing. If your templated function only need to support a finite number of
     fundamental types, moving their definition into a separate source file will save you the
     additional parsing overhead and avoid header pollution.
+    In order words, based on the intended usage, use the appropriate solution:
+
+    1. **Generic Types**. If you want a templated function to be used with any possible type (e.g. a
+    container), **extern** template may be useful to save codegen on some known/common types. Since
+    you have to keep the definition in the headers, you still pay the cost for parsing the code.
+    2. **Fixed Types**. If your class/function is only meant to support specific types (e.g. `float`
+    and `double`), then you can afford to move the definition to the .cpp, and only keep the
+    declaration in the header file. This will save time on code parsing + generation.
 
 ### Limit Header Pollution
 
@@ -317,6 +326,7 @@ There are several ways to implement a PIMPL in your code (from bad to good):
 1. **[Bad]** Use a raw `T * m_foo;` member variable and forward-declare `T`. But this is **bad**
    because there is no lifetime management (when the encapsulating class is destroyed/moved/copied,
    etc.).
+
     ```c++
     class HiddenType;
 
@@ -326,10 +336,11 @@ There are several ways to implement a PIMPL in your code (from bad to good):
         HiddenType * m_foo;
     };
     ```
+
 2. **[Not Great]** Use a `std::unique_ptr<T> m_foo`. This would work, but there are two problems
    with that.
     1. The `std::unique_ptr<>` needs to know how to destroy the object, so you need to define the
-       encapsulating class destructor _in the .cpp_ source file, or you would be forced to pull
+       encapsulating class destructor *in the .cpp* source file, or you would be forced to pull
        `<HiddenType.h>` in `<Bar.h>`.
 
         === "Bar.h"
@@ -463,8 +474,8 @@ The basic idea is as follows:
 
 !!! note "Macro Cleanup"
     There is no need to `#undef MYLIB_X_attr_class` at the end of `Attribute.cpp`, since the macro
-    is usually defined at the _end_ of a .cpp file. But if you are planning on doing [Unity
-    builds](https://cmake.org/cmake/help/latest/prop_tgt/UNITY_BUILD.html) and are _not_ using
+    is usually defined at the *end* of a .cpp file. But if you are planning on doing [Unity
+    builds](https://cmake.org/cmake/help/latest/prop_tgt/UNITY_BUILD.html) and are *not* using
     unique names for your macro, then it is a good idea to do so.
 
 The above solution works well for a single list of types to instantiate. But what if we are mixing

@@ -41,26 +41,22 @@ branch (the default branch), rather than doing a full clone of the repository:
 git clone git@github.com:adobe/lagrange-docs.git --single-branch
 ```
 
-### 2. Install/update prerequisites with conda
+### 2. Setup virtual environment with pixi
 
-Run the following [conda](https://docs.conda.io/en/latest/miniconda.html) command to install/update
-dependencies:
-```
-conda env update -f conda.yml
-```
+Install [pixi](https://pixi.sh) on your machine to manage the Python environment for this project.
+Once installed, you have two options:
 
-This will create/update a conda environment with the necessary prerequisites to build the website.
+1. Run `pixi shell` to enter a shell with the virtual environment created by pixi.
+2. Prefix Python commands with `pixi run ...` to execute a given command in the project's virtual
+   environment.
 
-### 3. Activate `lagrange-website` conda environment
-
-```bash
-conda activate lagrange-website
-```
+To avoid any error, we prefix commands in our guide with `pixi run ...`. But feel free to use
+whichever method you prefer.
 
 ### 3. Generate doxygen + changelog
 
 ```
-./generate.py <PATH_TO_LAGRANGE_ROOT>
+pixi run generate.py <PATH_TO_LAGRANGE_ROOT>
 ```
 
 > __Note__: This will populate the following:
@@ -71,10 +67,10 @@ conda activate lagrange-website
 The following will run a local server at [127.0.0.1:8000](http://127.0.0.1:8000/)
 
 ```
-mkdocs serve
+pixi run mkdocs serve
 ```
 
-Alternatively, use `mkdocs build` to generate files into `site` folder
+Alternatively, use `pixi run mkdocs build` to generate files into `site` folder
 
 ### Deploy
 
@@ -83,7 +79,7 @@ Alternatively, use `mkdocs build` to generate files into `site` folder
 > __Note__: This is for reference only, GitHub Actions does this automatically.
 
 ```
-mkdocs gh-deploy -b gh-pages
+pixi run mkdocs gh-deploy -b gh-pages
 ```
 
 will push to `gh-pages` branch automatically, which will update the website.

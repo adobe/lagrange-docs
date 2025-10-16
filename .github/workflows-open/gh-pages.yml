@@ -12,19 +12,18 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Setup Conda
-        uses: conda-incubator/setup-miniconda@v2
+      - name: Setup Pixi
+        uses: prefix-dev/setup-pixi@v0.9.1
         with:
-          activate-environment: lagrange-website
-          environment-file: conda.yml
-          auto-activate-base: false
+          pixi-version: v0.55.0
+          cache: true
 
       - name: Build website
         shell: bash -l {0}
         run: |
           git clone --depth 1 https://github.com/adobe/lagrange.git ./lagrange_tmp
-          python generate.py ./lagrange_tmp
-          mkdocs build
+          pixi run python generate.py ./lagrange_tmp
+          pixi run mkdocs build
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
@@ -34,6 +33,4 @@ jobs:
 
       - name: Check links
         shell: bash -l {0}
-        run: |
-          chmod o-w -R $CONDA_PREFIX
-          linkchecker site/index.html
+        run: pixi run linkchecker site/index.html
