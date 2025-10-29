@@ -1,0 +1,37 @@
+[project]
+name = "lagrange-website"
+version = "0.1.0"
+description = "Documentation website for project Lagrange"
+readme = "README.md"
+requires-python = ">=3.13,<3.14"
+dependencies = [
+    "furo~=2023.9.10",
+    "ghp-import~=2.1.0",
+    "LinkChecker~=10.3.0",
+    "mkdocs-bibtex~=2.16.2",
+    "mkdocs-exclude~=1.0.2",
+    "mkdocs-img2figv2-plugin~=0.0.2",
+    "mkdocs-macros-plugin~=0.7.0",
+    "mkdocs-material~=9.0.11",
+    "mkdocs-redirects~=1.2.0",
+    "mkdocs~=1.4.2",
+    "pygments~=2.18.0",
+    "pymdown-extensions~=9.9.2",
+    "pypandoc_binary~=1.15",
+    "pystache~=0.6.7",
+    "sphinx-autoapi~=3.0.0",
+    "sphinx-autodoc-typehints~=2.3.0",
+    "sphinx~=7.4.7",
+    "astroid~=3.3.11",
+    "lagrange-open"
+]
+
+[tool.pixi.project]
+channels = ["conda-forge"]
+platforms = ["win-64", "linux-64", "osx-arm64"]
+
+[tool.pixi.dependencies]
+doxygen = "~=1.13.2"
+
+[tool.pixi.pypi-dependencies]
+lagrange-website = { path = ".", editable = false }
