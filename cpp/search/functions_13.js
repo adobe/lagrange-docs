@@ -24,7 +24,7 @@ var searchData=
   ['update_5ftransformation_21',['update_transformation',['../classlagrange_1_1raycasting_1_1_embree_ray_caster.html#a68088e87d790833d6049e803b9923ba3',1,'lagrange::raycasting::EmbreeRayCaster']]],
   ['update_5fvertex_5fdata_22',['update_vertex_data',['../namespacelagrange_1_1ui.html#ab461433a258f3db8943e3c9abff3eeac',1,'lagrange::ui']]],
   ['update_5fvisibility_23',['update_visibility',['../classlagrange_1_1raycasting_1_1_embree_ray_caster.html#ac3ddf8fda06773cbdd7693b35ce6d8e7',1,'lagrange::raycasting::EmbreeRayCaster']]],
-  ['use_5fcount_24',['use_count',['../classlagrange_1_1internal_1_1weak__ptr.html#a68779c565035025326e9065c5edee1e6',1,'lagrange::internal::weak_ptr::use_count()'],['../classlagrange_1_1internal_1_1shared__ptr.html#a68779c565035025326e9065c5edee1e6',1,'lagrange::internal::shared_ptr::use_count()']]],
+  ['use_5fcount_24',['use_count',['../classlagrange_1_1internal_1_1shared__ptr.html#a68779c565035025326e9065c5edee1e6',1,'lagrange::internal::shared_ptr::use_count()'],['../classlagrange_1_1internal_1_1weak__ptr.html#a68779c565035025326e9065c5edee1e6',1,'lagrange::internal::weak_ptr::use_count()']]],
   ['uv_5fmesh_5fref_25',['uv_mesh_ref',['../namespacelagrange.html#ad12b843acd76f7ad84f4cb86aebf7b78',1,'lagrange']]],
   ['uv_5fmesh_5fview_26',['uv_mesh_view',['../namespacelagrange.html#a20369090f503f98b3756a2fe6d9478e5',1,'lagrange']]]
 ];

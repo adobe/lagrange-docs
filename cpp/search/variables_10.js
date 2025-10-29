@@ -1,15 +1,17 @@
 var searchData=
 [
-  ['radius_0',['radius',['../structlagrange_1_1_dijkstra_distance_options.html#ab3e4a3f725642180f73777ee68654e76',1,'lagrange::DijkstraDistanceOptions']]],
-  ['ray_5fdir_1',['ray_dir',['../structlagrange_1_1ui_1_1_selection_context.html#afc1775985ea3d10b40fe75ed22ac22b7',1,'lagrange::ui::SelectionContext']]],
-  ['ray_5forigin_2',['ray_origin',['../structlagrange_1_1ui_1_1_selection_context.html#a8b963fe1458b187752424884e52cc3b8',1,'lagrange::ui::SelectionContext']]],
-  ['recompute_5ffacet_5fnormals_3',['recompute_facet_normals',['../structlagrange_1_1_dihedral_angle_options.html#a817eeb2e63429b8cc839da0d1e79fa2f',1,'lagrange::DihedralAngleOptions::recompute_facet_normals()'],['../structlagrange_1_1_normal_options.html#a817eeb2e63429b8cc839da0d1e79fa2f',1,'lagrange::NormalOptions::recompute_facet_normals()']]],
-  ['recompute_5fweighted_5fcorner_5fnormals_4',['recompute_weighted_corner_normals',['../structlagrange_1_1_vertex_normal_options.html#ae02aa7e233a85832a599dd07abee27b9',1,'lagrange::VertexNormalOptions']]],
-  ['recursive_5',['recursive',['../structlagrange_1_1_split_long_edges_options.html#a4dfde4fec9731901f89801f08296457f',1,'lagrange::SplitLongEdgesOptions']]],
-  ['refinement_6',['refinement',['../structlagrange_1_1subdivision_1_1_subdivision_options.html#ac29dbec90f9bb71496e1c60960739e7d',1,'lagrange::subdivision::SubdivisionOptions']]],
-  ['relax_5fdisoriented_5ftriangles_7',['relax_disoriented_triangles',['../structlagrange_1_1volume_1_1_volume_to_mesh_options.html#a33c670c8edf0ebdf667dc5103097dc14',1,'lagrange::volume::VolumeToMeshOptions']]],
-  ['remove_5fisolated_5fvertices_8',['remove_isolated_vertices',['../structlagrange_1_1_remove_null_area_facets_options.html#a7912fd3c8e4930cec8ed8c05567434a4',1,'lagrange::RemoveNullAreaFacetsOptions']]],
-  ['reorient_9',['reorient',['../structlagrange_1_1_transform_options.html#aab5e6e7c0226df5f9e151b0fefdfe21f',1,'lagrange::TransformOptions']]],
-  ['representative_5foffsets_10',['representative_offsets',['../structlagrange_1_1internal_1_1_bucket_sort_result.html#ae2a4cebc3b9b9b3b1e03fe54b2be4692',1,'lagrange::internal::BucketSortResult::representative_offsets()'],['../structlagrange_1_1internal_1_1_bucket_sort_offset.html#ae2a4cebc3b9b9b3b1e03fe54b2be4692',1,'lagrange::internal::BucketSortOffset::representative_offsets()']]],
-  ['right_11',['right',['../structlagrange_1_1bvh_1_1_edge_a_a_b_b_tree_1_1_node.html#abac8b7bcfa9b05029a3c701f166321c4',1,'lagrange::bvh::EdgeAABBTree::Node']]]
+  ['pad_5fwith_5fsign_0',['pad_with_sign',['../structlagrange_1_1_tangent_bitangent_options.html#a6b9ae3e346b4c49548ff8e48d0256502',1,'lagrange::TangentBitangentOptions']]],
+  ['parent_5finverse_1',['parent_inverse',['../structlagrange_1_1ui_1_1_gizmo_object_transform.html#ac2f6f6d37db09fcd611d85e48e3c3f57',1,'lagrange::ui::GizmoObjectTransform']]],
+  ['pass_2',['Pass',['../structlagrange_1_1ui_1_1_rasterizer_options.html#a448bed797f58a4df233c68a767b144bf',1,'lagrange::ui::RasterizerOptions']]],
+  ['pattern_3',['pattern',['../structlagrange_1_1ui_1_1_file_filter.html#a669f8ab7db52dfe7888fccf6a0e20f1e',1,'lagrange::ui::FileFilter']]],
+  ['per_5finstance_5fimportance_4',['per_instance_importance',['../structlagrange_1_1scene_1_1_remeshing_options.html#ae1e71e7d25761735795cb16ab02a6d7e',1,'lagrange::scene::RemeshingOptions']]],
+  ['planes_5',['planes',['../structlagrange_1_1_frustum.html#a4bb431445b1380df42262843e690bccf',1,'lagrange::Frustum']]],
+  ['polygonmode_6',['PolygonMode',['../structlagrange_1_1ui_1_1_rasterizer_options.html#a924282ce59d722ae91954c7dd216ab69',1,'lagrange::ui::RasterizerOptions']]],
+  ['pos_5fx_7',['pos_x',['../structlagrange_1_1ui_1_1_viewer_1_1_window_options.html#a989d3e09b707fb1f4bc2355ba5855a0c',1,'lagrange::ui::Viewer::WindowOptions']]],
+  ['pos_5fy_8',['pos_y',['../structlagrange_1_1ui_1_1_viewer_1_1_window_options.html#a769c689813b19fb03572dc4937b40993',1,'lagrange::ui::Viewer::WindowOptions']]],
+  ['position_9',['position',['../structlagrange_1_1ui_1_1_input_state_1_1_mouse.html#a81f80e875fa7bc858012e2786d091838',1,'lagrange::ui::InputState::Mouse']]],
+  ['positive_10',['positive',['../structlagrange_1_1_orient_options.html#acdea3192c7c9a99816f27e88da0eeff2',1,'lagrange::OrientOptions']]],
+  ['preserve_5fshared_5findices_11',['preserve_shared_indices',['../structlagrange_1_1subdivision_1_1_subdivision_options.html#a125a455b3b6c3394a1d6a77e09034994',1,'lagrange::subdivision::SubdivisionOptions']]],
+  ['primitive_12',['Primitive',['../structlagrange_1_1ui_1_1_rasterizer_options.html#ad2b41d5a764fd797c80c0d30f1eb0980',1,'lagrange::ui::RasterizerOptions']]],
+  ['projection_5ftransform_13',['projection_transform',['../structlagrange_1_1texproc_1_1_camera_options.html#a170e05b3d1b429f882d1d0584e141051',1,'lagrange::texproc::CameraOptions']]]
 ];

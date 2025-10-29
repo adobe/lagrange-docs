@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['raycasting_20module_0',['Raycasting Module',['../group__module-raycasting.html',1,'']]]
+  ['partitioning_20module_0',['Partitioning Module',['../group__module-partitioning.html',1,'']]]
 ];

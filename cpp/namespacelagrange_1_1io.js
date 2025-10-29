@@ -25,6 +25,7 @@ var namespacelagrange_1_1io =
     [ "load_scene_obj", "namespacelagrange_1_1io.html#a5f3232437e23b4b1401e41c3c7c45a64", null ],
     [ "load_scene_obj", "namespacelagrange_1_1io.html#a9b1b69f50c110e496cb71c2046a5b2b4", null ],
     [ "load_simple_scene", "namespacelagrange_1_1io.html#a59d6b08204508eecdf805ee9c257613e", null ],
+    [ "load_simple_scene", "namespacelagrange_1_1io.html#a742e793caf2cf68b637aab475eeef66f", null ],
     [ "load_simple_scene_fbx", "namespacelagrange_1_1io.html#af6993d7ce71ddea472081bc8b85525eb", null ],
     [ "load_simple_scene_fbx", "namespacelagrange_1_1io.html#aafc2e5b9304d5a47f042a91430cf21cb", null ],
     [ "load_simple_scene_gltf", "namespacelagrange_1_1io.html#a0ae4676249f61cb5b3db71ef66cd8bd8", null ],
@@ -43,7 +44,12 @@ var namespacelagrange_1_1io =
     [ "save_scene", "namespacelagrange_1_1io.html#a547d832b78822de91ca20311c7569337", null ],
     [ "save_scene_gltf", "namespacelagrange_1_1io.html#ac252eb5467fb109d6ed6cae1ff65f508", null ],
     [ "save_scene_gltf", "namespacelagrange_1_1io.html#a2a0c55d83024146e6828a5d5fecf91cb", null ],
+    [ "save_scene_obj", "namespacelagrange_1_1io.html#a45c0d43580ee1fd1f9c5ec7f03bd1e91", null ],
+    [ "save_scene_obj", "namespacelagrange_1_1io.html#ade016c2a1e0d994a4684924f654eb3e4", null ],
     [ "save_simple_scene", "namespacelagrange_1_1io.html#a4f81766d0511e2289153f3a9e20ec589", null ],
+    [ "save_simple_scene", "namespacelagrange_1_1io.html#ac8bd0851c2179f7440558efcb855cd54", null ],
     [ "save_simple_scene_gltf", "namespacelagrange_1_1io.html#a5e02b963e18a80664a94233d613014cb", null ],
-    [ "save_simple_scene_gltf", "namespacelagrange_1_1io.html#aa14d5abea45ab83e5a405fe623938d5b", null ]
+    [ "save_simple_scene_gltf", "namespacelagrange_1_1io.html#aa14d5abea45ab83e5a405fe623938d5b", null ],
+    [ "save_simple_scene_obj", "namespacelagrange_1_1io.html#a88a68c25d69670b6fdfb4f354d9a9efc", null ],
+    [ "save_simple_scene_obj", "namespacelagrange_1_1io.html#a187a3b61d73c5c89bc62f363e2028d8d", null ]
 ];

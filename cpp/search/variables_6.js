@@ -1,9 +1,16 @@
 var searchData=
 [
-  ['gl_5fversion_5fmajor_0',['gl_version_major',['../structlagrange_1_1ui_1_1_viewer_1_1_window_options.html#a921f43e46b969551cd946f522d072f3a',1,'lagrange::ui::Viewer::WindowOptions']]],
-  ['gl_5fversion_5fminor_1',['gl_version_minor',['../structlagrange_1_1ui_1_1_viewer_1_1_window_options.html#add8ee26bd02e156f6d1422bbf60b22a3',1,'lagrange::ui::Viewer::WindowOptions']]],
-  ['global_2',['global',['../structlagrange_1_1ui_1_1_bounds.html#a8d90039cc574781897501adf0c3a8310',1,'lagrange::ui::Bounds::global()'],['../structlagrange_1_1ui_1_1_transform.html#a480d1bba1bace165418cc7a3c4d4181b',1,'lagrange::ui::Transform::global()']]],
-  ['gradient_5fmodulation_5fscale_3',['gradient_modulation_scale',['../structlagrange_1_1filtering_1_1_attribute_smoothing_options.html#a3e770b6a4ad8cafb6d15c0b26dd050c3',1,'lagrange::filtering::AttributeSmoothingOptions::gradient_modulation_scale()'],['../structlagrange_1_1filtering_1_1_smoothing_options.html#a3e770b6a4ad8cafb6d15c0b26dd050c3',1,'lagrange::filtering::SmoothingOptions::gradient_modulation_scale()']]],
-  ['gradient_5fweight_4',['gradient_weight',['../structlagrange_1_1filtering_1_1_attribute_smoothing_options.html#aec88b33201a3068347290c4f31704809',1,'lagrange::filtering::AttributeSmoothingOptions::gradient_weight()'],['../structlagrange_1_1filtering_1_1_smoothing_options.html#aec88b33201a3068347290c4f31704809',1,'lagrange::filtering::SmoothingOptions::gradient_weight()']]],
-  ['greedy_5',['greedy',['../structlagrange_1_1_frustum_selection_options.html#ab88d48acadd0e9697398bded9513de2f',1,'lagrange::FrustumSelectionOptions']]]
+  ['face_5fhole_5fattr_0',['face_hole_attr',['../structlagrange_1_1subdivision_1_1_subdivision_options.html#a18896d3cb0645d219adf1880f24842f2',1,'lagrange::subdivision::SubdivisionOptions']]],
+  ['face_5fvarying_5finterpolation_1',['face_varying_interpolation',['../structlagrange_1_1subdivision_1_1_subdivision_options.html#af579dd0506d1dcc4da54734113dd1cae',1,'lagrange::subdivision::SubdivisionOptions']]],
+  ['facet_5fallocation_5fstrategy_2',['facet_allocation_strategy',['../structlagrange_1_1scene_1_1_remeshing_options.html#adfdba15b463b61a798b0543efe94cc79',1,'lagrange::scene::RemeshingOptions']]],
+  ['facet_5farea_5fattribute_5fname_3',['facet_area_attribute_name',['../structlagrange_1_1_mesh_centroid_options.html#ad81ac470ed28f1c4e417d0925b5274e3',1,'lagrange::MeshCentroidOptions']]],
+  ['facet_5fcentroid_5fattribute_5fname_4',['facet_centroid_attribute_name',['../structlagrange_1_1_mesh_centroid_options.html#a557068639911fb69ab0a964bf88dcf9e',1,'lagrange::MeshCentroidOptions']]],
+  ['facet_5fnormal_5fattribute_5fname_5',['facet_normal_attribute_name',['../structlagrange_1_1_dihedral_angle_options.html#a4c122150ae238de703e9610a0bc2469d',1,'lagrange::DihedralAngleOptions::facet_normal_attribute_name'],['../structlagrange_1_1_normal_options.html#a4c122150ae238de703e9610a0bc2469d',1,'lagrange::NormalOptions::facet_normal_attribute_name'],['../structlagrange_1_1_select_facets_by_normal_similarity_options.html#a4c122150ae238de703e9610a0bc2469d',1,'lagrange::SelectFacetsByNormalSimilarityOptions::facet_normal_attribute_name']]],
+  ['fill_5fcolor_6',['fill_color',['../structlagrange_1_1image__io_1_1_s_v_g_setting.html#a44d2616e2be8c44f3f7995d1a7e0dd4d',1,'lagrange::image_io::SVGSetting']]],
+  ['filter_5fmethod_7',['filter_method',['../structlagrange_1_1filtering_1_1_smoothing_options.html#a76a55710d483a2df415863a6491ccc38',1,'lagrange::filtering::SmoothingOptions']]],
+  ['flood_5ferror_5flimit_8',['flood_error_limit',['../structlagrange_1_1_select_facets_by_normal_similarity_options.html#a800bd73c3b114e156c375e2bd0e981b5',1,'lagrange::SelectFacetsByNormalSimilarityOptions']]],
+  ['flood_5fsecond_5fto_5ffirst_5forder_5flimit_5fratio_9',['flood_second_to_first_order_limit_ratio',['../structlagrange_1_1_select_facets_by_normal_similarity_options.html#a7d7a656568e71c99b6ec89473713cddf',1,'lagrange::SelectFacetsByNormalSimilarityOptions']]],
+  ['focus_5fon_5fshow_10',['focus_on_show',['../structlagrange_1_1ui_1_1_viewer_1_1_window_options.html#ab6a258228bcf9430de46ab783bc265ef',1,'lagrange::ui::Viewer::WindowOptions']]],
+  ['frustum_11',['frustum',['../structlagrange_1_1ui_1_1_selection_context.html#abe1837a57eb3e099b7b2ef01334bd01d',1,'lagrange::ui::SelectionContext']]],
+  ['fullscreen_12',['fullscreen',['../structlagrange_1_1ui_1_1_viewer_1_1_window_options.html#a5a9147cb82d1cbeefadd62beb9e6910b',1,'lagrange::ui::Viewer::WindowOptions']]]
 ];

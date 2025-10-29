@@ -31,28 +31,28 @@ var group__module_subdivision =
       [ "output_limit_bitangents", "structlagrange_1_1subdivision_1_1_subdivision_options.html#a5102f2d51412de4e0b0a0bda934279e8", null ],
       [ "validate_topology", "structlagrange_1_1subdivision_1_1_subdivision_options.html#a33182352a8f094352602fa671575a2cb", null ]
     ] ],
-    [ "lagrange::subdivision::SchemeType", "group__module-subdivision.html#gaa3daa2f428c6be2b1cb394f3a525833d", [
-      [ "lagrange::subdivision::SchemeType::CatmullClark", "group__module-subdivision.html#ggaa3daa2f428c6be2b1cb394f3a525833da2c09a969b30a9a12caf39ee2a398597a", null ],
-      [ "lagrange::subdivision::SchemeType::Loop", "group__module-subdivision.html#ggaa3daa2f428c6be2b1cb394f3a525833da89d7b10cb4238977d2b523dfd9ea7745", null ]
+    [ "SchemeType", "group__module-subdivision.html#gaa3daa2f428c6be2b1cb394f3a525833d", [
+      [ "CatmullClark", "group__module-subdivision.html#ggaa3daa2f428c6be2b1cb394f3a525833da2c09a969b30a9a12caf39ee2a398597a", null ],
+      [ "Loop", "group__module-subdivision.html#ggaa3daa2f428c6be2b1cb394f3a525833da89d7b10cb4238977d2b523dfd9ea7745", null ]
     ] ],
-    [ "lagrange::subdivision::VertexBoundaryInterpolation", "group__module-subdivision.html#ga4189a9f8863a8107f9686281bdbe9364", [
-      [ "lagrange::subdivision::VertexBoundaryInterpolation::None", "group__module-subdivision.html#gga4189a9f8863a8107f9686281bdbe9364a6adf97f83acf6453d4a6a4b1070f3754", null ],
-      [ "lagrange::subdivision::VertexBoundaryInterpolation::EdgeOnly", "group__module-subdivision.html#gga4189a9f8863a8107f9686281bdbe9364a45617d4a3cb846d3bf2fda69d7d00c06", null ],
-      [ "lagrange::subdivision::VertexBoundaryInterpolation::EdgeAndCorner", "group__module-subdivision.html#gga4189a9f8863a8107f9686281bdbe9364aca17096c8c5bb131b5ee4a88407ab97e", null ]
+    [ "VertexBoundaryInterpolation", "group__module-subdivision.html#ga4189a9f8863a8107f9686281bdbe9364", [
+      [ "None", "group__module-subdivision.html#gga4189a9f8863a8107f9686281bdbe9364a6adf97f83acf6453d4a6a4b1070f3754", null ],
+      [ "EdgeOnly", "group__module-subdivision.html#gga4189a9f8863a8107f9686281bdbe9364a45617d4a3cb846d3bf2fda69d7d00c06", null ],
+      [ "EdgeAndCorner", "group__module-subdivision.html#gga4189a9f8863a8107f9686281bdbe9364aca17096c8c5bb131b5ee4a88407ab97e", null ]
     ] ],
-    [ "lagrange::subdivision::FaceVaryingInterpolation", "group__module-subdivision.html#ga18fb36949d8541f36a871b958052e9cd", [
-      [ "lagrange::subdivision::FaceVaryingInterpolation::None", "group__module-subdivision.html#gga18fb36949d8541f36a871b958052e9cda6adf97f83acf6453d4a6a4b1070f3754", null ],
-      [ "lagrange::subdivision::FaceVaryingInterpolation::CornersOnly", "group__module-subdivision.html#gga18fb36949d8541f36a871b958052e9cda65e745641efb8abb0f3ed8d4e38e47e6", null ],
-      [ "lagrange::subdivision::FaceVaryingInterpolation::CornersPlus1", "group__module-subdivision.html#gga18fb36949d8541f36a871b958052e9cda7842f906dde4df50b36380e5903de0bd", null ],
-      [ "lagrange::subdivision::FaceVaryingInterpolation::CornersPlus2", "group__module-subdivision.html#gga18fb36949d8541f36a871b958052e9cda1299749c8483efe1ddbd40a5886eae6f", null ],
-      [ "lagrange::subdivision::FaceVaryingInterpolation::Boundaries", "group__module-subdivision.html#gga18fb36949d8541f36a871b958052e9cda8c0d5bd10a22aaaa32f275d92436f5f3", null ],
-      [ "lagrange::subdivision::FaceVaryingInterpolation::All", "group__module-subdivision.html#gga18fb36949d8541f36a871b958052e9cdab1c94ca2fbc3e78fc30069c8d0f01680", null ]
+    [ "FaceVaryingInterpolation", "group__module-subdivision.html#ga18fb36949d8541f36a871b958052e9cd", [
+      [ "None", "group__module-subdivision.html#gga18fb36949d8541f36a871b958052e9cda6adf97f83acf6453d4a6a4b1070f3754", null ],
+      [ "CornersOnly", "group__module-subdivision.html#gga18fb36949d8541f36a871b958052e9cda65e745641efb8abb0f3ed8d4e38e47e6", null ],
+      [ "CornersPlus1", "group__module-subdivision.html#gga18fb36949d8541f36a871b958052e9cda7842f906dde4df50b36380e5903de0bd", null ],
+      [ "CornersPlus2", "group__module-subdivision.html#gga18fb36949d8541f36a871b958052e9cda1299749c8483efe1ddbd40a5886eae6f", null ],
+      [ "Boundaries", "group__module-subdivision.html#gga18fb36949d8541f36a871b958052e9cda8c0d5bd10a22aaaa32f275d92436f5f3", null ],
+      [ "All", "group__module-subdivision.html#gga18fb36949d8541f36a871b958052e9cdab1c94ca2fbc3e78fc30069c8d0f01680", null ]
     ] ],
-    [ "lagrange::subdivision::RefinementType", "group__module-subdivision.html#gaac5ae01fdafef92da6cdf7fcaa27bed2", [
-      [ "lagrange::subdivision::RefinementType::Uniform", "group__module-subdivision.html#ggaac5ae01fdafef92da6cdf7fcaa27bed2af19516d11f2946f894070e92fcb56b6d", null ],
-      [ "lagrange::subdivision::RefinementType::EdgeAdaptive", "group__module-subdivision.html#ggaac5ae01fdafef92da6cdf7fcaa27bed2a231aed9401f31afda5dc12fd6952e324", null ]
+    [ "RefinementType", "group__module-subdivision.html#gaac5ae01fdafef92da6cdf7fcaa27bed2", [
+      [ "Uniform", "group__module-subdivision.html#ggaac5ae01fdafef92da6cdf7fcaa27bed2af19516d11f2946f894070e92fcb56b6d", null ],
+      [ "EdgeAdaptive", "group__module-subdivision.html#ggaac5ae01fdafef92da6cdf7fcaa27bed2a231aed9401f31afda5dc12fd6952e324", null ]
     ] ],
-    [ "lagrange::subdivision::subdivide_mesh", "group__module-subdivision.html#gab830dbf13f0590f7397036d72e396d0d", null ],
-    [ "lagrange::subdivision::midpoint_subdivision", "group__module-subdivision.html#ga5bb45b1783fc315efefb291e2d2dbd9f", null ],
-    [ "lagrange::subdivision::sqrt_subdivision", "group__module-subdivision.html#ga956eef31bf35351dff901a7f4d758f5f", null ]
+    [ "subdivide_mesh", "group__module-subdivision.html#gab830dbf13f0590f7397036d72e396d0d", null ],
+    [ "midpoint_subdivision", "group__module-subdivision.html#ga5bb45b1783fc315efefb291e2d2dbd9f", null ],
+    [ "sqrt_subdivision", "group__module-subdivision.html#ga956eef31bf35351dff901a7f4d758f5f", null ]
 ];

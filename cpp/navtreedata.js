@@ -27,7 +27,7 @@ var NAVTREE =
   [ "Lagrange", "index.html", [
     [ "Main Website", "../", null ],
     [ "Lagrange Reference Documentation", "index.html", null ],
-    [ "Modules", "modules.html", "modules" ],
+    [ "Modules", "topics.html", "topics" ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],
       [ "Namespace Members", "namespacemembers.html", [
@@ -58,17 +58,17 @@ var NAVTREEINDEX =
 [
 "../",
 "classlagrange_1_1_mesh_navigation.html#a7f00680054ba02315da270847e05ceb1",
-"classlagrange_1_1_surface_mesh.html#ac105eafb5fa2eab8e87215d26ebb21c0",
-"classlagrange_1_1internal_1_1shared__ptr.html#a9a89323960f82fc5cf0e03635829fb5a",
-"classlagrange_1_1ui_1_1_camera.html#ae8bd2b2016f71aa4ffd01cea60bbc0a3",
-"functions_l.html",
-"group__group-utils-misc.html#ga81d5673419396307677f905d5f4033ce",
-"namespacelagrange_1_1partitioning.html",
-"structlagrange_1_1_frustum_selection_options.html#ad9fcba39803c665ca7be48a39d079f00",
-"structlagrange_1_1image_1_1_image_histogram.html",
-"structlagrange_1_1ui_1_1_default_layers.html",
-"structlagrange_1_1ui_1_1_transform_changed_event.html"
+"classlagrange_1_1_surface_mesh.html#acc2fb6f223bb81c84ab9242bf05593bc",
+"classlagrange_1_1internal_1_1shared__ptr.html#a7847556a2d009a5502a01989cf61d4e1",
+"classlagrange_1_1ui_1_1_camera.html#a7cf6e8c5a5bc5e7b2afef3647870b1c4abb2fe5c916efb43aab8cbb68f997d2ee",
+"functions_vars_p.html",
+"group__module-bvh.html",
+"namespacelagrange_1_1io.html#ade016c2a1e0d994a4684924f654eb3e4",
+"structlagrange_1_1_facet_circumcenter_options.html",
+"structlagrange_1_1filtering_1_1_smoothing_options.html#a76a55710d483a2df415863a6491ccc38",
+"structlagrange_1_1texproc_1_1_filtering_options.html#a100b2051d845229f0d19ef98b257a239",
+"structlagrange_1_1ui_1_1_selection_viewport.html"
 ];
 
-var SYNCONMSG = 'click to disable panel synchronisation';
-var SYNCOFFMSG = 'click to enable panel synchronisation';
+var SYNCONMSG = 'click to disable panel synchronization';
+var SYNCOFFMSG = 'click to enable panel synchronization';

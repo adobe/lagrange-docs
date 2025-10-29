@@ -10,6 +10,6 @@ var group__group_utils_misc_functionref =
       [ "operator()", "classlagrange_1_1function__ref_3_01_r_07_args_8_8_8_08_4.html#ad7e5180a82f0d5ff79ede955169ab083", null ],
       [ "operator bool", "classlagrange_1_1function__ref_3_01_r_07_args_8_8_8_08_4.html#a420e60e9788bfa3b52aa3aab72ea3a5e", null ]
     ] ],
-    [ "lagrange::swap", "group__group-utils-misc-functionref.html#ga626fd0cc926eb83e8adb607687c3c8e2", null ],
-    [ "lagrange::function_ref", "group__group-utils-misc-functionref.html#gabdcfb06e9497d99667ce90201fa5c056", null ]
+    [ "swap", "group__group-utils-misc-functionref.html#ga626fd0cc926eb83e8adb607687c3c8e2", null ],
+    [ "function_ref", "group__group-utils-misc-functionref.html#gabdcfb06e9497d99667ce90201fa5c056", null ]
 ];

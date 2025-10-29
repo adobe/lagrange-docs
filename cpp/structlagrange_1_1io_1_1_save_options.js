@@ -11,5 +11,6 @@ var structlagrange_1_1io_1_1_save_options =
     [ "encoding", "structlagrange_1_1io_1_1_save_options.html#abb84ed5d57b2fdc0be4af7b6e6c324a4", null ],
     [ "selected_attributes", "structlagrange_1_1io_1_1_save_options.html#aa0151b38bf86f84e02a4c42415d92060", null ],
     [ "attribute_conversion_policy", "structlagrange_1_1io_1_1_save_options.html#ab63d6003b0205ae82e5a7e4055a30bd0", null ],
-    [ "embed_images", "structlagrange_1_1io_1_1_save_options.html#a33ec4213834c946051b60c04669cd119", null ]
+    [ "embed_images", "structlagrange_1_1io_1_1_save_options.html#a33ec4213834c946051b60c04669cd119", null ],
+    [ "export_materials", "structlagrange_1_1io_1_1_save_options.html#af20d5daaff3e4179c1df8f8238a219bc", null ]
 ];

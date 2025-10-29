@@ -53,6 +53,6 @@ var group__group_utils =
     [ "SmallVector< T, N >", "classlagrange_1_1_small_vector.html", null ],
     [ "StackSet< T, N >", "structlagrange_1_1_stack_set.html", null ],
     [ "StackVector< T, N >", "structlagrange_1_1_stack_vector.html", null ],
-    [ "lagrange::chain_directed_edges", "group__group-utils.html#gadc37a853021fc87c80d53f7cb0a21ae5", null ],
-    [ "lagrange::chain_undirected_edges", "group__group-utils.html#ga85a228fdc8080ef275f963576cd9b4c9", null ]
+    [ "chain_directed_edges", "group__group-utils.html#gadc37a853021fc87c80d53f7cb0a21ae5", null ],
+    [ "chain_undirected_edges", "group__group-utils.html#ga85a228fdc8080ef275f963576cd9b4c9", null ]
 ];

@@ -1,7 +1,7 @@
 var classlagrange_1_1ui_1_1_keybinds =
 [
     [ "Keybind", "structlagrange_1_1ui_1_1_keybinds_1_1_keybind.html", null ],
-    [ "MapType", "classlagrange_1_1ui_1_1_keybinds.html#a9b48148e3c250377b25ec5c8e0d4fac3", null ],
+    [ "MapType", "classlagrange_1_1ui_1_1_keybinds.html#a0d187713751b35153120f90c2ab685ac", null ],
     [ "update", "classlagrange_1_1ui_1_1_keybinds.html#ac5c54df7ed3b930268c8d7752c101725", null ],
     [ "push_context", "classlagrange_1_1ui_1_1_keybinds.html#af7a5ff700dee6d52dd76bf29cd662a28", null ],
     [ "pop_context", "classlagrange_1_1ui_1_1_keybinds.html#acaa213e334b066dd3a6d0a5fa894f4a1", null ],

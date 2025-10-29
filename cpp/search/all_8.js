@@ -7,9 +7,10 @@ var searchData=
   ['has_5fedges_4',['has_edges',['../classlagrange_1_1_surface_mesh.html#aa9b58744bd298398b70869f693b21f35',1,'lagrange::SurfaceMesh']]],
   ['hash_3c_20lagrange_3a_3aedgetype_3c_20index_20_3e_20_3e_5',['hash&lt; lagrange::EdgeType&lt; Index &gt; &gt;',['../structstd_1_1hash_3_01lagrange_1_1_edge_type_3_01_index_01_4_01_4.html',1,'std']]],
   ['hash_5fcombine_6',['hash_combine',['../group__group-utils-misc.html#gabc213e8639504f32e944828c1634d13e',1,'lagrange']]],
-  ['height_7',['height',['../structlagrange_1_1image__io_1_1_s_v_g_setting.html#a48083b65ac9a863566dc3e3fff09a5b4',1,'lagrange::image_io::SVGSetting::height()'],['../structlagrange_1_1scene_1_1_image_buffer_experimental.html#a02afeaaf8574e7a78d6b466ff2695052',1,'lagrange::scene::ImageBufferExperimental::height()'],['../structlagrange_1_1ui_1_1_viewer_1_1_window_options.html#ad12fc34ce789bce6c8a05d8a17138534',1,'lagrange::ui::Viewer::WindowOptions::height()']]],
+  ['height_7',['height',['../structlagrange_1_1image__io_1_1_s_v_g_setting.html#a48083b65ac9a863566dc3e3fff09a5b4',1,'lagrange::image_io::SVGSetting::height'],['../structlagrange_1_1scene_1_1_image_buffer_experimental.html#a02afeaaf8574e7a78d6b466ff2695052',1,'lagrange::scene::ImageBufferExperimental::height'],['../structlagrange_1_1texproc_1_1_texture_rasterizer_options.html#a02afeaaf8574e7a78d6b466ff2695052',1,'lagrange::texproc::TextureRasterizerOptions::height'],['../structlagrange_1_1ui_1_1_viewer_1_1_window_options.html#ad12fc34ce789bce6c8a05d8a17138534',1,'lagrange::ui::Viewer::WindowOptions::height']]],
   ['hilbert_8',['Hilbert',['../namespacelagrange.html#a3cce9a28814e60e46fc8877d69ce28e3ac98cbfb539a3891d9db35c17c7c184b3',1,'lagrange']]],
   ['hovered_9',['Hovered',['../structlagrange_1_1ui_1_1_hovered.html',1,'lagrange::ui']]],
-  ['hoveredevent_10',['HoveredEvent',['../structlagrange_1_1ui_1_1_hovered_event.html',1,'lagrange::ui']]],
-  ['hoveredtemp_11',['HoveredTemp',['../structlagrange_1_1ui_1_1_hovered_temp.html',1,'lagrange::ui']]]
+  ['hovered_20tt_20and_20tt_20selected_20tt_10',['&lt;tt&gt;Hovered&lt;/tt&gt; and &lt;tt&gt;Selected&lt;/tt&gt;',['..//home/runner/work/lagrange-docs/lagrange-docs/lagrange_tmp/modules/ui/README.md#autotoc_md27',1,'']]],
+  ['hoveredevent_11',['HoveredEvent',['../structlagrange_1_1ui_1_1_hovered_event.html',1,'lagrange::ui']]],
+  ['hoveredtemp_12',['HoveredTemp',['../structlagrange_1_1ui_1_1_hovered_temp.html',1,'lagrange::ui']]]
 ];

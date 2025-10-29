@@ -1,16 +1,16 @@
 var searchData=
 [
-  ['face_5fhole_5fattr_0',['face_hole_attr',['../structlagrange_1_1subdivision_1_1_subdivision_options.html#a18896d3cb0645d219adf1880f24842f2',1,'lagrange::subdivision::SubdivisionOptions']]],
-  ['face_5fvarying_5finterpolation_1',['face_varying_interpolation',['../structlagrange_1_1subdivision_1_1_subdivision_options.html#af579dd0506d1dcc4da54734113dd1cae',1,'lagrange::subdivision::SubdivisionOptions']]],
-  ['facet_5fallocation_5fstrategy_2',['facet_allocation_strategy',['../structlagrange_1_1scene_1_1_remeshing_options.html#adfdba15b463b61a798b0543efe94cc79',1,'lagrange::scene::RemeshingOptions']]],
-  ['facet_5farea_5fattribute_5fname_3',['facet_area_attribute_name',['../structlagrange_1_1_mesh_centroid_options.html#ad81ac470ed28f1c4e417d0925b5274e3',1,'lagrange::MeshCentroidOptions']]],
-  ['facet_5fcentroid_5fattribute_5fname_4',['facet_centroid_attribute_name',['../structlagrange_1_1_mesh_centroid_options.html#a557068639911fb69ab0a964bf88dcf9e',1,'lagrange::MeshCentroidOptions']]],
-  ['facet_5fnormal_5fattribute_5fname_5',['facet_normal_attribute_name',['../structlagrange_1_1_dihedral_angle_options.html#a4c122150ae238de703e9610a0bc2469d',1,'lagrange::DihedralAngleOptions::facet_normal_attribute_name()'],['../structlagrange_1_1_normal_options.html#a4c122150ae238de703e9610a0bc2469d',1,'lagrange::NormalOptions::facet_normal_attribute_name()'],['../structlagrange_1_1_select_facets_by_normal_similarity_options.html#a4c122150ae238de703e9610a0bc2469d',1,'lagrange::SelectFacetsByNormalSimilarityOptions::facet_normal_attribute_name()']]],
-  ['fill_5fcolor_6',['fill_color',['../structlagrange_1_1image__io_1_1_s_v_g_setting.html#a44d2616e2be8c44f3f7995d1a7e0dd4d',1,'lagrange::image_io::SVGSetting']]],
-  ['filter_5fmethod_7',['filter_method',['../structlagrange_1_1filtering_1_1_smoothing_options.html#a76a55710d483a2df415863a6491ccc38',1,'lagrange::filtering::SmoothingOptions']]],
-  ['flood_5ferror_5flimit_8',['flood_error_limit',['../structlagrange_1_1_select_facets_by_normal_similarity_options.html#a800bd73c3b114e156c375e2bd0e981b5',1,'lagrange::SelectFacetsByNormalSimilarityOptions']]],
-  ['flood_5fsecond_5fto_5ffirst_5forder_5flimit_5fratio_9',['flood_second_to_first_order_limit_ratio',['../structlagrange_1_1_select_facets_by_normal_similarity_options.html#a7d7a656568e71c99b6ec89473713cddf',1,'lagrange::SelectFacetsByNormalSimilarityOptions']]],
-  ['focus_5fon_5fshow_10',['focus_on_show',['../structlagrange_1_1ui_1_1_viewer_1_1_window_options.html#ab6a258228bcf9430de46ab783bc265ef',1,'lagrange::ui::Viewer::WindowOptions']]],
-  ['frustum_11',['frustum',['../structlagrange_1_1ui_1_1_selection_context.html#abe1837a57eb3e099b7b2ef01334bd01d',1,'lagrange::ui::SelectionContext']]],
-  ['fullscreen_12',['fullscreen',['../structlagrange_1_1ui_1_1_viewer_1_1_window_options.html#a5a9147cb82d1cbeefadd62beb9e6910b',1,'lagrange::ui::Viewer::WindowOptions']]]
+  ['edge_5flength_5fattribute_0',['edge_length_attribute',['../structlagrange_1_1_split_long_edges_options.html#a4e3c61ea439d03cbfc5ad53f078803bb',1,'lagrange::SplitLongEdgesOptions']]],
+  ['edge_5fsharpness_5fattr_1',['edge_sharpness_attr',['../structlagrange_1_1subdivision_1_1_subdivision_options.html#a1f54c0b91b23661df594458959dfba70',1,'lagrange::subdivision::SubdivisionOptions']]],
+  ['eigenvalues_2',['eigenvalues',['../structlagrange_1_1_pointcloud_p_c_a_output.html#a83a3e8f3cabad55fd29844db987524ab',1,'lagrange::PointcloudPCAOutput']]],
+  ['eigenvectors_3',['eigenvectors',['../structlagrange_1_1_pointcloud_p_c_a_output.html#a2f13f46dd9110f360bdc5dc896de3aa8',1,'lagrange::PointcloudPCAOutput']]],
+  ['element_5ftype_4',['element_type',['../structlagrange_1_1_greedy_coloring_options.html#ae25137421e69fb211c5fd3bf517b2829',1,'lagrange::GreedyColoringOptions::element_type'],['../structlagrange_1_1scene_1_1_image_buffer_experimental.html#aa096c2e95899c1d2b2869e1c23cca104',1,'lagrange::scene::ImageBufferExperimental::element_type']]],
+  ['element_5ftypes_5',['element_types',['../structlagrange_1_1_attribute_matcher.html#a12e65d80f75698f2ba11b13bdaa5c25f',1,'lagrange::AttributeMatcher']]],
+  ['embed_5fimages_6',['embed_images',['../structlagrange_1_1io_1_1_save_options.html#a33ec4213834c946051b60c04669cd119',1,'lagrange::io::SaveOptions']]],
+  ['encoding_7',['encoding',['../structlagrange_1_1io_1_1_save_options.html#abb84ed5d57b2fdc0be4af7b6e6c324a4',1,'lagrange::io::SaveOptions']]],
+  ['excluded_5fattributes_8',['excluded_attributes',['../structlagrange_1_1_attribute_filter.html#a4aa22445446ec6fa89194d60fc8ee9e3',1,'lagrange::AttributeFilter']]],
+  ['export_5fmaterials_9',['export_materials',['../structlagrange_1_1io_1_1_save_options.html#af20d5daaff3e4179c1df8f8238a219bc',1,'lagrange::io::SaveOptions']]],
+  ['extensions_10',['extensions',['../structlagrange_1_1scene_1_1_image_experimental.html#a08936f4f41506b0b95105d8e620a9a96',1,'lagrange::scene::ImageExperimental']]],
+  ['exterior_5fonly_11',['exterior_only',['../structlagrange_1_1texproc_1_1_stitching_options.html#aa1c5474979d2ade3016e457d168d2f38',1,'lagrange::texproc::StitchingOptions']]],
+  ['extra_5fattributes_12',['extra_attributes',['../structlagrange_1_1_remove_duplicate_vertices_options.html#a1f3274faf4d13c22001e47b145c5ff3f',1,'lagrange::RemoveDuplicateVerticesOptions']]]
 ];

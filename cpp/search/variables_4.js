@@ -1,16 +1,14 @@
 var searchData=
 [
-  ['edge_5flength_5fattribute_0',['edge_length_attribute',['../structlagrange_1_1_split_long_edges_options.html#a4e3c61ea439d03cbfc5ad53f078803bb',1,'lagrange::SplitLongEdgesOptions']]],
-  ['edge_5fsharpness_5fattr_1',['edge_sharpness_attr',['../structlagrange_1_1subdivision_1_1_subdivision_options.html#a1f54c0b91b23661df594458959dfba70',1,'lagrange::subdivision::SubdivisionOptions']]],
-  ['eigenvalues_2',['eigenvalues',['../structlagrange_1_1_pointcloud_p_c_a_output.html#a83a3e8f3cabad55fd29844db987524ab',1,'lagrange::PointcloudPCAOutput']]],
-  ['eigenvectors_3',['eigenvectors',['../structlagrange_1_1_pointcloud_p_c_a_output.html#a2f13f46dd9110f360bdc5dc896de3aa8',1,'lagrange::PointcloudPCAOutput']]],
-  ['element_5ftype_4',['element_type',['../structlagrange_1_1_greedy_coloring_options.html#ae25137421e69fb211c5fd3bf517b2829',1,'lagrange::GreedyColoringOptions::element_type()'],['../structlagrange_1_1scene_1_1_image_buffer_experimental.html#aa096c2e95899c1d2b2869e1c23cca104',1,'lagrange::scene::ImageBufferExperimental::element_type()']]],
-  ['element_5ftypes_5',['element_types',['../structlagrange_1_1_attribute_matcher.html#a12e65d80f75698f2ba11b13bdaa5c25f',1,'lagrange::AttributeMatcher']]],
-  ['embed_5fimages_6',['embed_images',['../structlagrange_1_1io_1_1_save_options.html#a33ec4213834c946051b60c04669cd119',1,'lagrange::io::SaveOptions']]],
-  ['encoding_7',['encoding',['../structlagrange_1_1io_1_1_save_options.html#abb84ed5d57b2fdc0be4af7b6e6c324a4',1,'lagrange::io::SaveOptions']]],
-  ['epsilon_5fabs_8',['epsilon_abs',['../structlagrange_1_1_weld_options.html#ae32f83f9278aaba1dd68bd4b5cde080e',1,'lagrange::WeldOptions']]],
-  ['epsilon_5frel_9',['epsilon_rel',['../structlagrange_1_1_weld_options.html#a8cdc36ab1977d4c909552aa765b7d2e0',1,'lagrange::WeldOptions']]],
-  ['excluded_5fattributes_10',['excluded_attributes',['../structlagrange_1_1_attribute_filter.html#a4aa22445446ec6fa89194d60fc8ee9e3',1,'lagrange::AttributeFilter']]],
-  ['extensions_11',['extensions',['../structlagrange_1_1scene_1_1_image_experimental.html#a08936f4f41506b0b95105d8e620a9a96',1,'lagrange::scene::ImageExperimental']]],
-  ['extra_5fattributes_12',['extra_attributes',['../structlagrange_1_1_remove_duplicate_vertices_options.html#a1f3274faf4d13c22001e47b145c5ff3f',1,'lagrange::RemoveDuplicateVerticesOptions']]]
+  ['data_0',['data',['../structlagrange_1_1internal_1_1_inverse_mapping.html#ad1114dd72990dbe57d3cf111602bc67a',1,'lagrange::internal::InverseMapping::data'],['../structlagrange_1_1scene_1_1_image_buffer_experimental.html#ac2971049b9d54f3e3a4a6b6c6f6d7d64',1,'lagrange::scene::ImageBufferExperimental::data'],['../structlagrange_1_1scene_1_1_extensions.html#ac1cac93fba8a8292d3c213099c3630ff',1,'lagrange::scene::Extensions::data']]],
+  ['delta_1',['delta',['../structlagrange_1_1ui_1_1_input_state_1_1_mouse.html#ae686ba2e5a51369d6e58ed5135b9a163',1,'lagrange::ui::InputState::Mouse']]],
+  ['depth_5fdiscontinuity_5ferosion_5fradius_2',['depth_discontinuity_erosion_radius',['../structlagrange_1_1texproc_1_1_texture_rasterizer_options.html#ae35905ac9447f734a0efcd6c8ef580a2',1,'lagrange::texproc::TextureRasterizerOptions']]],
+  ['depth_5fdiscontinuity_5fthreshold_3',['depth_discontinuity_threshold',['../structlagrange_1_1texproc_1_1_texture_rasterizer_options.html#a8b65bd7670eb6bd683991bc9d201c11c',1,'lagrange::texproc::TextureRasterizerOptions']]],
+  ['depth_5fprecision_4',['depth_precision',['../structlagrange_1_1texproc_1_1_texture_rasterizer_options.html#a0bb547d957f533b41ac64a6fd2404c29',1,'lagrange::texproc::TextureRasterizerOptions']]],
+  ['diffuse_5',['diffuse',['../structlagrange_1_1ui_1_1_i_b_l.html#ae009859343aa5d570f0b1ce2db59c48b',1,'lagrange::ui::IBL']]],
+  ['dilation_5fradius_6',['dilation_radius',['../structlagrange_1_1texproc_1_1_dilation_options.html#aafe07fb996dbe96587928bfcb3014225',1,'lagrange::texproc::DilationOptions']]],
+  ['dim_7',['Dim',['../structlagrange_1_1scene_1_1_mesh_instance.html#a09038d8c985e54b5ed2f841453f6614c',1,'lagrange::scene::MeshInstance::Dim'],['../classlagrange_1_1scene_1_1_simple_scene.html#a09038d8c985e54b5ed2f841453f6614c',1,'lagrange::scene::SimpleScene::Dim']]],
+  ['direction_8',['direction',['../structlagrange_1_1_thicken_and_close_options.html#a79d4f4019cd208503e65ac6f544c62c3',1,'lagrange::ThickenAndCloseOptions']]],
+  ['distance_5ftolerance_9',['distance_tolerance',['../structlagrange_1_1_normal_options.html#adb3d5d7fc11c1d2a87c6d678f225e981',1,'lagrange::NormalOptions::distance_tolerance'],['../structlagrange_1_1_vertex_normal_options.html#adb3d5d7fc11c1d2a87c6d678f225e981',1,'lagrange::VertexNormalOptions::distance_tolerance'],['../structlagrange_1_1_corner_normal_options.html#adb3d5d7fc11c1d2a87c6d678f225e981',1,'lagrange::CornerNormalOptions::distance_tolerance']]],
+  ['dt_10',['dt',['../structlagrange_1_1ui_1_1_global_time.html#a03e28be41881b703c836edbfe9b51b17',1,'lagrange::ui::GlobalTime']]]
 ];

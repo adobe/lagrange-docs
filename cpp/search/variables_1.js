@@ -1,15 +1,13 @@
 var searchData=
 [
-  ['background_0',['background',['../structlagrange_1_1ui_1_1_i_b_l.html#a041e2ba68678c13491268868526b09f3',1,'lagrange::ui::IBL']]],
-  ['background_5frect_1',['background_rect',['../structlagrange_1_1ui_1_1_i_b_l.html#a0c98a9f22a46e0a873729e3107e5b824',1,'lagrange::ui::IBL']]],
-  ['barycentric_5fcoords_2',['barycentric_coords',['../structlagrange_1_1_dijkstra_distance_options.html#af4a9e8ae03ea613ee7e193edcbb80056',1,'lagrange::DijkstraDistanceOptions']]],
-  ['behavior_3',['behavior',['../structlagrange_1_1ui_1_1_selection_context.html#afc959c1cad6a84a4feb0bb46377d23bb',1,'lagrange::ui::SelectionContext']]],
-  ['bitangent_4',['bitangent',['../structlagrange_1_1_attribute_name.html#a1822d84532e370139075d4a3e99247b3',1,'lagrange::AttributeName']]],
-  ['bitangent_5fattribute_5fname_5',['bitangent_attribute_name',['../structlagrange_1_1_tangent_bitangent_options.html#a1f4e451b1f915a7f52b4ae6cf10a4e3f',1,'lagrange::TangentBitangentOptions']]],
-  ['bitangent_5fid_6',['bitangent_id',['../structlagrange_1_1_tangent_bitangent_result.html#ac83f6c18baa7406972b12445f0799343',1,'lagrange::TangentBitangentResult']]],
-  ['blendsrcrgb_7',['BlendSrcRGB',['../structlagrange_1_1ui_1_1_rasterizer_options.html#afe571c7fe2561615d9b2806910902646',1,'lagrange::ui::RasterizerOptions']]],
-  ['blur_8',['blur',['../structlagrange_1_1ui_1_1_i_b_l.html#ad9e062b9cbfcb76867efd5516d959f8a',1,'lagrange::ui::IBL']]],
-  ['boundaries_9',['boundaries',['../structlagrange_1_1image_1_1_image_histogram.html#a3abac854e82a547116393afdd2619d76',1,'lagrange::image::ImageHistogram']]],
-  ['boundary_5fonly_10',['boundary_only',['../structlagrange_1_1_remove_duplicate_vertices_options.html#abe1380fd152e7c39c5509136339422d0',1,'lagrange::RemoveDuplicateVerticesOptions']]],
-  ['bvh_5fnode_11',['bvh_node',['../structlagrange_1_1ui_1_1_bounds.html#a37bf951ca9b8214e30525f900e4b2bf6',1,'lagrange::ui::Bounds']]]
+  ['active_0',['active',['../structlagrange_1_1ui_1_1_selection_context.html#a03c996f9fcf0e10baeb3e700be0c409a',1,'lagrange::ui::SelectionContext']]],
+  ['active_5ffacets_5fattribute_5fname_1',['active_facets_attribute_name',['../structlagrange_1_1_mesh_covariance_options.html#a5cc3e5dc2766b3d6532b498f6921f645',1,'lagrange::MeshCovarianceOptions']]],
+  ['active_5fregion_5fattribute_2',['active_region_attribute',['../structlagrange_1_1_split_long_edges_options.html#abffe183776696b4a5d7aede165372ae5',1,'lagrange::SplitLongEdgesOptions']]],
+  ['active_5fviewport_3',['active_viewport',['../structlagrange_1_1ui_1_1_selection_context.html#ac3cfc8e6a1526b1cac9f513c98496a8c',1,'lagrange::ui::SelectionContext']]],
+  ['adaptivity_4',['adaptivity',['../structlagrange_1_1volume_1_1_volume_to_mesh_options.html#a20a4daa4ab54e756b2eac480d7530540',1,'lagrange::volume::VolumeToMeshOptions']]],
+  ['and_5ffilters_5',['and_filters',['../structlagrange_1_1_attribute_filter.html#af506671fd3483ecdc257a2a205e45dd4',1,'lagrange::AttributeFilter']]],
+  ['as_5fone_5fmesh_6',['as_one_mesh',['../structlagrange_1_1io_1_1legacy_1_1_mesh_loader_params.html#a55816d819020abec1fa5a7e708be3186',1,'lagrange::io::legacy::MeshLoaderParams']]],
+  ['attribute_5fconversion_5fpolicy_7',['attribute_conversion_policy',['../structlagrange_1_1io_1_1_save_options.html#ab63d6003b0205ae82e5a7e4055a30bd0',1,'lagrange::io::SaveOptions']]],
+  ['attribute_5fid_8',['attribute_id',['../structlagrange_1_1_isoline_options.html#a9d007016295ea10ad679e8c6974681d6',1,'lagrange::IsolineOptions']]],
+  ['attribute_5ftype_9',['attribute_type',['../structlagrange_1_1ui_1_1_attribute_render.html#acb9c464bc7d6dcf2080d11a84cf109fe',1,'lagrange::ui::AttributeRender']]]
 ];

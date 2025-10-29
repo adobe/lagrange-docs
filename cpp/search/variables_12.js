@@ -1,12 +1,14 @@
 var searchData=
 [
-  ['t_0',['t',['../structlagrange_1_1ui_1_1_global_time.html#a87accd1af8e0aff4b818d891374f7cec',1,'lagrange::ui::GlobalTime']]],
-  ['tangent_1',['tangent',['../structlagrange_1_1_attribute_name.html#a14249b2b01178d8bd90b6900958c2d06',1,'lagrange::AttributeName']]],
-  ['tangent_5fattribute_5fname_2',['tangent_attribute_name',['../structlagrange_1_1_tangent_bitangent_options.html#a5505da898942fbe9ee150d5253a75bea',1,'lagrange::TangentBitangentOptions']]],
-  ['tangent_5fid_3',['tangent_id',['../structlagrange_1_1_tangent_bitangent_result.html#a46c2f467917671e030772bb7a6b65ac4',1,'lagrange::TangentBitangentResult']]],
-  ['texcoord_4',['texcoord',['../structlagrange_1_1_attribute_name.html#a89974aafa583f7a43d53b3894eda5d89',1,'lagrange::AttributeName::texcoord()'],['../structlagrange_1_1scene_1_1_texture_info.html#a57a4dd1e240a59db44ea00ae76549da3',1,'lagrange::scene::TextureInfo::texcoord()']]],
-  ['title_5',['title',['../structlagrange_1_1ui_1_1_u_i_panel.html#ac30fed21fe991cc8475ce543929f8b72',1,'lagrange::ui::UIPanel']]],
-  ['transform_6',['transform',['../structlagrange_1_1scene_1_1_mesh_instance.html#abbd6ccea530a2fa33fb91927d25eee36',1,'lagrange::scene::MeshInstance']]],
-  ['triangulate_7',['triangulate',['../structlagrange_1_1io_1_1legacy_1_1_mesh_loader_params.html#abe2f6144e25d7ce8c9d818b3926a5a39',1,'lagrange::io::legacy::MeshLoaderParams::triangulate()'],['../structlagrange_1_1io_1_1_load_options.html#a28b75c7a2a709f010d24914838a8acdb',1,'lagrange::io::LoadOptions::triangulate()']]],
-  ['triangulate_5fholes_8',['triangulate_holes',['../structlagrange_1_1_close_small_holes_options.html#a2fb41141c15c3df4685d0b78d62c1359',1,'lagrange::CloseSmallHolesOptions']]]
+  ['radius_0',['radius',['../structlagrange_1_1bvh_1_1_weld_options.html#a5050a760c11da521cd4aee6336f6529f',1,'lagrange::bvh::WeldOptions::radius'],['../structlagrange_1_1_dijkstra_distance_options.html#ab3e4a3f725642180f73777ee68654e76',1,'lagrange::DijkstraDistanceOptions::radius']]],
+  ['ray_5fdir_1',['ray_dir',['../structlagrange_1_1ui_1_1_selection_context.html#afc1775985ea3d10b40fe75ed22ac22b7',1,'lagrange::ui::SelectionContext']]],
+  ['ray_5forigin_2',['ray_origin',['../structlagrange_1_1ui_1_1_selection_context.html#a8b963fe1458b187752424884e52cc3b8',1,'lagrange::ui::SelectionContext']]],
+  ['recompute_5ffacet_5fnormals_3',['recompute_facet_normals',['../structlagrange_1_1_dihedral_angle_options.html#a817eeb2e63429b8cc839da0d1e79fa2f',1,'lagrange::DihedralAngleOptions::recompute_facet_normals'],['../structlagrange_1_1_normal_options.html#a817eeb2e63429b8cc839da0d1e79fa2f',1,'lagrange::NormalOptions::recompute_facet_normals']]],
+  ['recompute_5fweighted_5fcorner_5fnormals_4',['recompute_weighted_corner_normals',['../structlagrange_1_1_vertex_normal_options.html#ae02aa7e233a85832a599dd07abee27b9',1,'lagrange::VertexNormalOptions']]],
+  ['recursive_5',['recursive',['../structlagrange_1_1_split_long_edges_options.html#a4dfde4fec9731901f89801f08296457f',1,'lagrange::SplitLongEdgesOptions']]],
+  ['refinement_6',['refinement',['../structlagrange_1_1subdivision_1_1_subdivision_options.html#ac29dbec90f9bb71496e1c60960739e7d',1,'lagrange::subdivision::SubdivisionOptions']]],
+  ['relax_5fdisoriented_5ftriangles_7',['relax_disoriented_triangles',['../structlagrange_1_1volume_1_1_volume_to_mesh_options.html#a33c670c8edf0ebdf667dc5103097dc14',1,'lagrange::volume::VolumeToMeshOptions']]],
+  ['remove_5fisolated_5fvertices_8',['remove_isolated_vertices',['../structlagrange_1_1_remove_null_area_facets_options.html#a7912fd3c8e4930cec8ed8c05567434a4',1,'lagrange::RemoveNullAreaFacetsOptions']]],
+  ['reorient_9',['reorient',['../structlagrange_1_1_transform_options.html#aab5e6e7c0226df5f9e151b0fefdfe21f',1,'lagrange::TransformOptions']]],
+  ['representative_5foffsets_10',['representative_offsets',['../structlagrange_1_1internal_1_1_bucket_sort_result.html#ae2a4cebc3b9b9b3b1e03fe54b2be4692',1,'lagrange::internal::BucketSortResult::representative_offsets'],['../structlagrange_1_1internal_1_1_bucket_sort_offset.html#ae2a4cebc3b9b9b3b1e03fe54b2be4692',1,'lagrange::internal::BucketSortOffset::representative_offsets']]]
 ];

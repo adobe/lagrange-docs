@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['partitioning_20module_0',['Partitioning Module',['../md__home_runner_work_lagrange_docs_lagrange_docs_lagrange_tmp_modules_partitioning_partitioning.html',1,'']]]
+  ['lagrange_20reference_20documentation_0',['Lagrange Reference Documentation',['../index.html',1,'']]],
+  ['list_1',['List',['../deprecated.html',1,'Deprecated List'],['../todo.html',1,'Todo List']]]
 ];

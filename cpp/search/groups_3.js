@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['filtering_20module_0',['Filtering Module',['../group__module-filtering.html',1,'']]],
-  ['fs_20module_1',['FS Module',['../group__module-fs.html',1,'']]],
-  ['function_5fref_2',['function_ref',['../group__group-utils-misc-functionref.html',1,'']]]
+  ['eigen_20views_0',['Eigen views',['../group__group-surfacemesh-views.html',1,'']]],
+  ['errors_1',['Assert and errors',['../group__group-utils-assert.html',1,'']]]
 ];

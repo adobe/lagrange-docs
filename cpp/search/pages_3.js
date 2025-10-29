@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['i_2fo_20module_0',['I/O Module',['../md__home_runner_work_lagrange_docs_lagrange_docs_lagrange_tmp_modules_io_io.html',1,'']]],
-  ['image_20module_1',['Image Module',['../md__home_runner_work_lagrange_docs_lagrange_docs_lagrange_tmp_modules_image_image.html',1,'']]]
+  ['filesystem_20module_0',['Filesystem Module',['../md__2home_2runner_2work_2lagrange-docs_2lagrange-docs_2lagrange__tmp_2modules_2fs_2fs.html',1,'']]],
+  ['filtering_20module_1',['Filtering Module',['../md__2home_2runner_2work_2lagrange-docs_2lagrange-docs_2lagrange__tmp_2modules_2filtering_2filtering.html',1,'']]]
 ];

@@ -1,18 +1,19 @@
 var annotated_dup =
 [
-    [ "_logging", null, [
-      [ "ColorFormatter", "class__logging_1_1_color_formatter.html", null ]
-    ] ],
     [ "fmt", null, [
       [ "formatter< T, std::enable_if_t< std::is_base_of< Eigen::DenseBase< T >, T >::value, char > >", "structfmt_1_1formatter_3_01_t_00_01std_1_1enable__if__t_3_01std_1_1is__base__of_3_01_eigen_1_1_d4cad164886cc373111d40252deee7ffc.html", null ],
       [ "is_range< Derived, std::enable_if_t< std::is_base_of< Eigen::DenseBase< Derived >, Derived >::value, char > >", "structfmt_1_1is__range_3_01_derived_00_01std_1_1enable__if__t_3_01std_1_1is__base__of_3_01_eigen8831e8e9466b492bd5196648eda925fb.html", null ]
     ] ],
     [ "lagrange", "namespacelagrange.html", [
       [ "bvh", null, [
+        [ "AABB", "classlagrange_1_1bvh_1_1_a_a_b_b.html", "classlagrange_1_1bvh_1_1_a_a_b_b" ],
         [ "AABBIGL", "classlagrange_1_1bvh_1_1_a_a_b_b_i_g_l.html", "classlagrange_1_1bvh_1_1_a_a_b_b_i_g_l" ],
         [ "BVH", "classlagrange_1_1bvh_1_1_b_v_h.html", "classlagrange_1_1bvh_1_1_b_v_h" ],
         [ "BVHNanoflann", "classlagrange_1_1bvh_1_1_b_v_h_nanoflann.html", "classlagrange_1_1bvh_1_1_b_v_h_nanoflann" ],
-        [ "EdgeAABBTree", "structlagrange_1_1bvh_1_1_edge_a_a_b_b_tree.html", "structlagrange_1_1bvh_1_1_edge_a_a_b_b_tree" ]
+        [ "EdgeAABBTree", "structlagrange_1_1bvh_1_1_edge_a_a_b_b_tree.html", "structlagrange_1_1bvh_1_1_edge_a_a_b_b_tree" ],
+        [ "PyEdgeAABBTree", "classlagrange_1_1bvh_1_1_py_edge_a_a_b_b_tree.html", null ],
+        [ "TriangleAABBTree", "classlagrange_1_1bvh_1_1_triangle_a_a_b_b_tree.html", "classlagrange_1_1bvh_1_1_triangle_a_a_b_b_tree" ],
+        [ "WeldOptions", "structlagrange_1_1bvh_1_1_weld_options.html", "structlagrange_1_1bvh_1_1_weld_options" ]
       ] ],
       [ "experimental", null, [
         [ "internal", null, [
@@ -24,8 +25,6 @@ var annotated_dup =
         [ "AttributeManager", "classlagrange_1_1experimental_1_1_attribute_manager.html", null ],
         [ "EigenArray", "classlagrange_1_1experimental_1_1_eigen_array.html", "classlagrange_1_1experimental_1_1_eigen_array" ],
         [ "EigenArrayRef", "classlagrange_1_1experimental_1_1_eigen_array_ref.html", null ],
-        [ "EigenArrayRef< _EigenType, false >", "classlagrange_1_1experimental_1_1_eigen_array_ref_3_01___eigen_type_00_01false_01_4.html", "classlagrange_1_1experimental_1_1_eigen_array_ref_3_01___eigen_type_00_01false_01_4" ],
-        [ "EigenArrayRef< _EigenType, true >", "classlagrange_1_1experimental_1_1_eigen_array_ref_3_01___eigen_type_00_01true_01_4.html", "classlagrange_1_1experimental_1_1_eigen_array_ref_3_01___eigen_type_00_01true_01_4" ],
         [ "EnumToScalar", "structlagrange_1_1experimental_1_1_enum_to_scalar.html", null ],
         [ "EnumToScalar< ScalarEnum::DOUBLE >", "structlagrange_1_1experimental_1_1_enum_to_scalar_3_01_scalar_enum_1_1_d_o_u_b_l_e_01_4.html", null ],
         [ "EnumToScalar< ScalarEnum::FLOAT >", "structlagrange_1_1experimental_1_1_enum_to_scalar_3_01_scalar_enum_1_1_f_l_o_a_t_01_4.html", null ],
@@ -40,8 +39,6 @@ var annotated_dup =
         [ "IndexedAttribute", "classlagrange_1_1experimental_1_1_indexed_attribute.html", null ],
         [ "IndexedAttributeManager", "classlagrange_1_1experimental_1_1_indexed_attribute_manager.html", null ],
         [ "RawArray", "classlagrange_1_1experimental_1_1_raw_array.html", null ],
-        [ "RawArray< _Scalar, _Rows, _Cols, _Options, false >", "classlagrange_1_1experimental_1_1_raw_array_3_01___scalar_00_01___rows_00_01___cols_00_01___options_00_01false_01_4.html", "classlagrange_1_1experimental_1_1_raw_array_3_01___scalar_00_01___rows_00_01___cols_00_01___options_00_01false_01_4" ],
-        [ "RawArray< _Scalar, _Rows, _Cols, _Options, true >", "classlagrange_1_1experimental_1_1_raw_array_3_01___scalar_00_01___rows_00_01___cols_00_01___options_00_01true_01_4.html", "classlagrange_1_1experimental_1_1_raw_array_3_01___scalar_00_01___rows_00_01___cols_00_01___options_00_01true_01_4" ],
         [ "ScalarToEnum", "structlagrange_1_1experimental_1_1_scalar_to_enum.html", null ],
         [ "ScalarToEnum< double, void >", "structlagrange_1_1experimental_1_1_scalar_to_enum_3_01double_00_01void_01_4.html", null ],
         [ "ScalarToEnum< float, void >", "structlagrange_1_1experimental_1_1_scalar_to_enum_3_01float_00_01void_01_4.html", null ],
@@ -182,6 +179,23 @@ var annotated_dup =
       ] ],
       [ "testing", null, [
         [ "CreateOptions", "structlagrange_1_1testing_1_1_create_options.html", "structlagrange_1_1testing_1_1_create_options" ]
+      ] ],
+      [ "texproc", null, [
+        [ "mesh_utils", null, [
+          [ "MeshWrapper", "structlagrange_1_1texproc_1_1mesh__utils_1_1_mesh_wrapper.html", null ]
+        ] ],
+        [ "threadpool", null, [
+          [ "ThreadPool", "structlagrange_1_1texproc_1_1threadpool_1_1_thread_pool.html", null ]
+        ] ],
+        [ "CameraOptions", "structlagrange_1_1texproc_1_1_camera_options.html", "structlagrange_1_1texproc_1_1_camera_options" ],
+        [ "CompositingOptions", "structlagrange_1_1texproc_1_1_compositing_options.html", "structlagrange_1_1texproc_1_1_compositing_options" ],
+        [ "ConstWeightedTextureView", "structlagrange_1_1texproc_1_1_const_weighted_texture_view.html", "structlagrange_1_1texproc_1_1_const_weighted_texture_view" ],
+        [ "DilationOptions", "structlagrange_1_1texproc_1_1_dilation_options.html", "structlagrange_1_1texproc_1_1_dilation_options" ],
+        [ "FilteringOptions", "structlagrange_1_1texproc_1_1_filtering_options.html", "structlagrange_1_1texproc_1_1_filtering_options" ],
+        [ "Padding", "classlagrange_1_1texproc_1_1_padding.html", null ],
+        [ "StitchingOptions", "structlagrange_1_1texproc_1_1_stitching_options.html", "structlagrange_1_1texproc_1_1_stitching_options" ],
+        [ "TextureRasterizer", "classlagrange_1_1texproc_1_1_texture_rasterizer.html", "classlagrange_1_1texproc_1_1_texture_rasterizer" ],
+        [ "TextureRasterizerOptions", "structlagrange_1_1texproc_1_1_texture_rasterizer_options.html", "structlagrange_1_1texproc_1_1_texture_rasterizer_options" ]
       ] ],
       [ "ui", "namespacelagrange_1_1ui.html", [
         [ "detail", null, [
@@ -340,6 +354,7 @@ var annotated_dup =
           [ "MeshAdapter", "classlagrange_1_1volume_1_1legacy_1_1_mesh_adapter.html", "classlagrange_1_1volume_1_1legacy_1_1_mesh_adapter" ]
         ] ],
         [ "MeshToVolumeOptions", "structlagrange_1_1volume_1_1_mesh_to_volume_options.html", "structlagrange_1_1volume_1_1_mesh_to_volume_options" ],
+        [ "NormalsFromVolumeOptions", "structlagrange_1_1volume_1_1_normals_from_volume_options.html", "structlagrange_1_1volume_1_1_normals_from_volume_options" ],
         [ "VolumeToMeshOptions", "structlagrange_1_1volume_1_1_volume_to_mesh_options.html", "structlagrange_1_1volume_1_1_volume_to_mesh_options" ]
       ] ],
       [ "winding", null, [
@@ -374,7 +389,9 @@ var annotated_dup =
       [ "ExactPredicatesShewchuk", "classlagrange_1_1_exact_predicates_shewchuk.html", "classlagrange_1_1_exact_predicates_shewchuk" ],
       [ "FacetAreaOptions", "structlagrange_1_1_facet_area_options.html", "structlagrange_1_1_facet_area_options" ],
       [ "FacetCentroidOptions", "structlagrange_1_1_facet_centroid_options.html", "structlagrange_1_1_facet_centroid_options" ],
+      [ "FacetCircumcenterOptions", "structlagrange_1_1_facet_circumcenter_options.html", "structlagrange_1_1_facet_circumcenter_options" ],
       [ "FacetNormalOptions", "structlagrange_1_1_facet_normal_options.html", "structlagrange_1_1_facet_normal_options" ],
+      [ "FacetVectorAreaOptions", "structlagrange_1_1_facet_vector_area_options.html", "structlagrange_1_1_facet_vector_area_options" ],
       [ "Frustum", "structlagrange_1_1_frustum.html", "structlagrange_1_1_frustum" ],
       [ "FrustumSelectionOptions", "structlagrange_1_1_frustum_selection_options.html", "structlagrange_1_1_frustum_selection_options" ],
       [ "function_ref", "classlagrange_1_1function__ref.html", null ],
@@ -435,162 +452,10 @@ var annotated_dup =
       [ "VerboseTimer", "classlagrange_1_1_verbose_timer.html", "classlagrange_1_1_verbose_timer" ],
       [ "VertexManifoldOptions", "structlagrange_1_1_vertex_manifold_options.html", "structlagrange_1_1_vertex_manifold_options" ],
       [ "VertexNormalOptions", "structlagrange_1_1_vertex_normal_options.html", "structlagrange_1_1_vertex_normal_options" ],
-      [ "VertexValenceOptions", "structlagrange_1_1_vertex_valence_options.html", "structlagrange_1_1_vertex_valence_options" ],
-      [ "WeldOptions", "structlagrange_1_1_weld_options.html", "structlagrange_1_1_weld_options" ]
+      [ "VertexValenceOptions", "structlagrange_1_1_vertex_valence_options.html", "structlagrange_1_1_vertex_valence_options" ]
     ] ],
     [ "std", null, [
       [ "hash< lagrange::EdgeType< Index > >", "structstd_1_1hash_3_01lagrange_1_1_edge_type_3_01_index_01_4_01_4.html", null ]
-    ] ],
-    [ "test_attribute", null, [
-      [ "TestAttribute", "classtest__attribute_1_1_test_attribute.html", null ]
-    ] ],
-    [ "test_cast_attribute", null, [
-      [ "TestCastAttribute", "classtest__cast__attribute_1_1_test_cast_attribute.html", null ]
-    ] ],
-    [ "test_close_small_holes", null, [
-      [ "TestCloseSmallHoles", "classtest__close__small__holes_1_1_test_close_small_holes.html", null ]
-    ] ],
-    [ "test_combine_meshes", null, [
-      [ "TestCombineMeshes", "classtest__combine__meshes_1_1_test_combine_meshes.html", null ]
-    ] ],
-    [ "test_compute_centroid", null, [
-      [ "TestComputeCentroid", "classtest__compute__centroid_1_1_test_compute_centroid.html", null ]
-    ] ],
-    [ "test_compute_components", null, [
-      [ "TestComputeComponents", "classtest__compute__components_1_1_test_compute_components.html", null ]
-    ] ],
-    [ "test_compute_dihedral_angles", null, [
-      [ "TestComputeDihedralAngles", "classtest__compute__dihedral__angles_1_1_test_compute_dihedral_angles.html", null ]
-    ] ],
-    [ "test_compute_dijkstra_distance", null, [
-      [ "TestComputeDijkstraDistance", "classtest__compute__dijkstra__distance_1_1_test_compute_dijkstra_distance.html", null ]
-    ] ],
-    [ "test_compute_edge_lengths", null, [
-      [ "TestComputeEdgeLengths", "classtest__compute__edge__lengths_1_1_test_compute_edge_lengths.html", null ]
-    ] ],
-    [ "test_compute_facet_area", null, [
-      [ "TestComputeFacetArea", "classtest__compute__facet__area_1_1_test_compute_facet_area.html", null ]
-    ] ],
-    [ "test_compute_facet_normal", null, [
-      [ "TestComputeFacetNormal", "classtest__compute__facet__normal_1_1_test_compute_facet_normal.html", null ]
-    ] ],
-    [ "test_compute_mesh_covariance", null, [
-      [ "TestComputeMeshCovariance", "classtest__compute__mesh__covariance_1_1_test_compute_mesh_covariance.html", null ]
-    ] ],
-    [ "test_compute_normal", null, [
-      [ "TestComputeNormal", "classtest__compute__normal_1_1_test_compute_normal.html", null ]
-    ] ],
-    [ "test_compute_pointcloud_pca", null, [
-      [ "TestComputePointcloudPCA", "classtest__compute__pointcloud__pca_1_1_test_compute_pointcloud_p_c_a.html", null ]
-    ] ],
-    [ "test_compute_seam_edges", null, [
-      [ "TestComputeCentroid", "classtest__compute__seam__edges_1_1_test_compute_centroid.html", null ]
-    ] ],
-    [ "test_compute_tangent_bitangent", null, [
-      [ "TestComputeTangentBitangent", "classtest__compute__tangent__bitangent_1_1_test_compute_tangent_bitangent.html", null ]
-    ] ],
-    [ "test_compute_uv_distortion", null, [
-      [ "TestComputeUVDistortion", "classtest__compute__uv__distortion_1_1_test_compute_u_v_distortion.html", null ]
-    ] ],
-    [ "test_compute_vertex_normal", null, [
-      [ "TestComputeVertexNormal", "classtest__compute__vertex__normal_1_1_test_compute_vertex_normal.html", null ]
-    ] ],
-    [ "test_compute_vertex_valence", null, [
-      [ "TestComputeVertexValence", "classtest__compute__vertex__valence_1_1_test_compute_vertex_valence.html", null ]
-    ] ],
-    [ "test_detect_degenerate_facets", null, [
-      [ "TestDetectDegenerateFacets", "classtest__detect__degenerate__facets_1_1_test_detect_degenerate_facets.html", null ]
-    ] ],
-    [ "test_filter_attributes", null, [
-      [ "TestFilterAttributes", "classtest__filter__attributes_1_1_test_filter_attributes.html", null ]
-    ] ],
-    [ "test_indexed_attribute", null, [
-      [ "TestIndexedAttribute", "classtest__indexed__attribute_1_1_test_indexed_attribute.html", null ]
-    ] ],
-    [ "test_io", null, [
-      [ "TestIO", "classtest__io_1_1_test_i_o.html", null ]
-    ] ],
-    [ "test_isoline", null, [
-      [ "TestIsoline", "classtest__isoline_1_1_test_isoline.html", null ]
-    ] ],
-    [ "test_mesh_instance", null, [
-      [ "TestMeshInstance", "classtest__mesh__instance_1_1_test_mesh_instance.html", null ]
-    ] ],
-    [ "test_mesh_smoothing", null, [
-      [ "TestMeshSmoothing", "classtest__mesh__smoothing_1_1_test_mesh_smoothing.html", null ]
-    ] ],
-    [ "test_mesh_subdivision", null, [
-      [ "TestMeshSubdivision", "classtest__mesh__subdivision_1_1_test_mesh_subdivision.html", null ]
-    ] ],
-    [ "test_normalize_meshes", null, [
-      [ "TestNormalizeMeshes", "classtest__normalize__meshes_1_1_test_normalize_meshes.html", null ]
-    ] ],
-    [ "test_orient_outward", null, [
-      [ "TestOrientOutward", "classtest__orient__outward_1_1_test_orient_outward.html", null ]
-    ] ],
-    [ "test_permute_facets", null, [
-      [ "TestPermuteFacets", "classtest__permute__facets_1_1_test_permute_facets.html", null ]
-    ] ],
-    [ "test_permute_vertices", null, [
-      [ "TestPermuteVertices", "classtest__permute__vertices_1_1_test_permute_vertices.html", null ]
-    ] ],
-    [ "test_poisson_reconstruction", null, [
-      [ "TestPoissonReconstruction", "classtest__poisson__reconstruction_1_1_test_poisson_reconstruction.html", null ]
-    ] ],
-    [ "test_remap_vertices", null, [
-      [ "TestRemapVertices", "classtest__remap__vertices_1_1_test_remap_vertices.html", null ]
-    ] ],
-    [ "test_remove_degenerate_facets", null, [
-      [ "TestRemoveDegenerateFacets", "classtest__remove__degenerate__facets_1_1_test_remove_degenerate_facets.html", null ]
-    ] ],
-    [ "test_remove_duplicate_vertices", null, [
-      [ "TestRemoveDuplicateVertices", "classtest__remove__duplicate__vertices_1_1_test_remove_duplicate_vertices.html", null ]
-    ] ],
-    [ "test_remove_null_area_facets", null, [
-      [ "TestRemoveNullAreaFacets", "classtest__remove__null__area__facets_1_1_test_remove_null_area_facets.html", null ]
-    ] ],
-    [ "test_remove_short_edges", null, [
-      [ "TestRemoveShortEdges", "classtest__remove__short__edges_1_1_test_remove_short_edges.html", null ]
-    ] ],
-    [ "test_remove_topologically_degenerate_facets", null, [
-      [ "TestRemoveTopologicallyDegenerateFacets", "classtest__remove__topologically__degenerate__facets_1_1_test_remove_topologically_degenerate_facets.html", null ]
-    ] ],
-    [ "test_resolve_nonmanifoldness", null, [
-      [ "TestRemoveNonmanifoldness", "classtest__resolve__nonmanifoldness_1_1_test_remove_nonmanifoldness.html", null ],
-      [ "TestRemoveVertexNonmanifoldness", "classtest__resolve__nonmanifoldness_1_1_test_remove_vertex_nonmanifoldness.html", null ]
-    ] ],
-    [ "test_scene", null, [
-      [ "TestScene", "classtest__scene_1_1_test_scene.html", null ]
-    ] ],
-    [ "test_select_facets_by_normal_similarity", null, [
-      [ "TestSelectFacetsByNormalSimilarity", "classtest__select__facets__by__normal__similarity_1_1_test_select_facets_by_normal_similarity.html", null ]
-    ] ],
-    [ "test_select_facets_in_frustum", null, [
-      [ "TestSelectFacetsInFrustum", "classtest__select__facets__in__frustum_1_1_test_select_facets_in_frustum.html", null ]
-    ] ],
-    [ "test_simple_scene", null, [
-      [ "TestSimpleScene", "classtest__simple__scene_1_1_test_simple_scene.html", null ]
-    ] ],
-    [ "test_split_long_edges", null, [
-      [ "TestSplitLongEdges", "classtest__split__long__edges_1_1_test_split_long_edges.html", null ]
-    ] ],
-    [ "test_surface_mesh", null, [
-      [ "TestSurfaceMesh", "classtest__surface__mesh_1_1_test_surface_mesh.html", null ]
-    ] ],
-    [ "test_thicken_and_close_mesh", null, [
-      [ "TestThickenAndCloseMesh", "classtest__thicken__and__close__mesh_1_1_test_thicken_and_close_mesh.html", null ]
-    ] ],
-    [ "test_transform_mesh", null, [
-      [ "TestTransformMesh", "classtest__transform__mesh_1_1_test_transform_mesh.html", null ]
-    ] ],
-    [ "test_triangulate_polygonal_facets", null, [
-      [ "TestTriangulatePolygonalFacets", "classtest__triangulate__polygonal__facets_1_1_test_triangulate_polygonal_facets.html", null ]
-    ] ],
-    [ "test_unify_index_buffer", null, [
-      [ "TestUnifyIndexBuffer", "classtest__unify__index__buffer_1_1_test_unify_index_buffer.html", null ]
-    ] ],
-    [ "test_weld_indexed_attribute", null, [
-      [ "TestWeldIndexedAttribute", "classtest__weld__indexed__attribute_1_1_test_weld_indexed_attribute.html", null ]
     ] ],
     [ "Args", "struct_args.html", null ],
     [ "MeshFacetAdapter", "struct_mesh_facet_adapter.html", null ],

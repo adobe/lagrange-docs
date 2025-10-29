@@ -1,7 +1,23 @@
 var searchData=
 [
-  ['keep_5fbelow_0',['keep_below',['../structlagrange_1_1_isoline_options.html#ad569f1ddf959f44cfcde73d1f065d59f',1,'lagrange::IsolineOptions']]],
-  ['keep_5fexisting_5ftangent_1',['keep_existing_tangent',['../structlagrange_1_1_tangent_bitangent_options.html#a50e87d1c37ce58340acc315e50596487',1,'lagrange::TangentBitangentOptions']]],
-  ['keep_5ffacet_5fnormals_2',['keep_facet_normals',['../structlagrange_1_1_dihedral_angle_options.html#a352c5412d6b65484c180375041e6c255',1,'lagrange::DihedralAngleOptions::keep_facet_normals()'],['../structlagrange_1_1_normal_options.html#a352c5412d6b65484c180375041e6c255',1,'lagrange::NormalOptions::keep_facet_normals()']]],
-  ['keep_5fweighted_5fcorner_5fnormals_3',['keep_weighted_corner_normals',['../structlagrange_1_1_vertex_normal_options.html#a06e5a379f00572d4e9e497c8b35d091f',1,'lagrange::VertexNormalOptions']]]
+  ['image_0',['image',['../structlagrange_1_1scene_1_1_image_experimental.html#a75da4193b541086a645bae2f0b7a6846',1,'lagrange::scene::ImageExperimental']]],
+  ['imgui_5fini_5fpath_1',['imgui_ini_path',['../structlagrange_1_1ui_1_1_viewer_1_1_window_options.html#a75e9dfc8388a73f6cf39934767425e9d',1,'lagrange::ui::Viewer::WindowOptions']]],
+  ['included_5fattributes_2',['included_attributes',['../structlagrange_1_1_attribute_filter.html#ab210f39ad6f5d8bfa52cdc4cc3a914b4',1,'lagrange::AttributeFilter']]],
+  ['included_5felement_5ftypes_3',['included_element_types',['../structlagrange_1_1_attribute_filter.html#a57f5b0bb09b3f21091e682f265b10b96',1,'lagrange::AttributeFilter']]],
+  ['included_5fusages_4',['included_usages',['../structlagrange_1_1_attribute_filter.html#a62fe4611a0ae2b6922d5cc7a47931ee5',1,'lagrange::AttributeFilter']]],
+  ['index_5',['index',['../structlagrange_1_1scene_1_1_texture_info.html#a8d0d5af3cc4c1386b0f53b4d64381f95',1,'lagrange::scene::TextureInfo']]],
+  ['indexed_5fattributes_6',['indexed_attributes',['../structlagrange_1_1_thicken_and_close_options.html#afe36a9a93cf82f24011222fc231c9602',1,'lagrange::ThickenAndCloseOptions']]],
+  ['indexed_5fjoint_7',['indexed_joint',['../structlagrange_1_1_attribute_name.html#a7a6e1207cb2f3cd3660b2ebe10408f8f',1,'lagrange::AttributeName']]],
+  ['indexed_5fweight_8',['indexed_weight',['../structlagrange_1_1_attribute_name.html#a1cfe3834b60eff97b988d26a2bec856c',1,'lagrange::AttributeName']]],
+  ['indices_9',['indices',['../structlagrange_1_1internal_1_1_skinning_extract_n_result.html#ab64e4a9cea9fb7f6a63db249e4ab2b2f',1,'lagrange::internal::SkinningExtractNResult']]],
+  ['induced_5fby_5fattribute_10',['induced_by_attribute',['../structlagrange_1_1_vertex_valence_options.html#a0c68ff2e50c68dc1d809aa0081dadbe2',1,'lagrange::VertexValenceOptions']]],
+  ['initial_5ftransform_11',['initial_transform',['../structlagrange_1_1ui_1_1_gizmo_object_transform.html#a1ef29f5a6207e093d0803fde806fe322',1,'lagrange::ui::GizmoObjectTransform']]],
+  ['input_5fattribute_5fname_12',['input_attribute_name',['../structlagrange_1_1_mesh_area_options.html#a1190e5257009ccd0fc27c94bba40e21c',1,'lagrange::MeshAreaOptions']]],
+  ['input_5fnormals_13',['input_normals',['../structlagrange_1_1poisson_1_1_reconstruction_options.html#a6482e8ca5ad0a73125a24ed133b21da2',1,'lagrange::poisson::ReconstructionOptions']]],
+  ['interpolated_5fattribute_5fname_14',['interpolated_attribute_name',['../structlagrange_1_1poisson_1_1_evaluator_options.html#ad0e3015f1cdaebfe2ad4c517c2cc77b5',1,'lagrange::poisson::EvaluatorOptions::interpolated_attribute_name'],['../structlagrange_1_1poisson_1_1_reconstruction_options.html#ad0e3015f1cdaebfe2ad4c517c2cc77b5',1,'lagrange::poisson::ReconstructionOptions::interpolated_attribute_name']]],
+  ['interpolated_5fattributes_15',['interpolated_attributes',['../structlagrange_1_1subdivision_1_1_subdivision_options.html#a691ba1d5855d3a5db8b178244dfa0f4b',1,'lagrange::subdivision::SubdivisionOptions']]],
+  ['interpolation_5fweight_16',['interpolation_weight',['../structlagrange_1_1poisson_1_1_reconstruction_options.html#a8ebaf2d95e2be21c5b21f76bdc7b8249',1,'lagrange::poisson::ReconstructionOptions']]],
+  ['is_5ffacet_5fselectable_5fattribute_5fname_17',['is_facet_selectable_attribute_name',['../structlagrange_1_1_select_facets_by_normal_similarity_options.html#aa8b3fed025e57a994129c1f61dfcdcbc',1,'lagrange::SelectFacetsByNormalSimilarityOptions']]],
+  ['isindexed_18',['IsIndexed',['../classlagrange_1_1_attribute.html#a342b3d046d677f6deaee029774fc9a6e',1,'lagrange::Attribute::IsIndexed'],['../classlagrange_1_1_indexed_attribute.html#a342b3d046d677f6deaee029774fc9a6e',1,'lagrange::IndexedAttribute::IsIndexed']]],
+  ['isovalue_19',['isovalue',['../structlagrange_1_1_isoline_options.html#a4f872975d082a5c218816be05ff08fce',1,'lagrange::IsolineOptions']]]
 ];

@@ -102,72 +102,72 @@ var group__group_surfacemesh_attr =
     [ "LA_ATTRIBUTE_X", "group__group-surfacemesh-attr.html#gabdd5375a7155af710e703e21e723e834", null ],
     [ "LA_ATTRIBUTE_INDEX_X", "group__group-surfacemesh-attr.html#ga6a2732db7fadf7b5c1f4d16e2e7a5eed", null ],
     [ "LA_ATTRIBUTE_SCALAR_X", "group__group-surfacemesh-attr.html#gad3337e2189efa530a8a1c2834a2a84e2", null ],
-    [ "lagrange::AttributeId", "group__group-surfacemesh-attr.html#ga4d115376c2c766084ef808c837348fc3", null ],
-    [ "lagrange::AttributeElement", "group__group-surfacemesh-attr.html#ga9d8ab208822bab9987e9652dda49d89a", [
-      [ "lagrange::Vertex", "group__group-surfacemesh-attr.html#gga9d8ab208822bab9987e9652dda49d89aad013c4439c3e09308d6b2eef2a4025ae", null ],
-      [ "lagrange::Facet", "group__group-surfacemesh-attr.html#gga9d8ab208822bab9987e9652dda49d89aa9b112d86d52178fe18e47e14bb6aeb35", null ],
-      [ "lagrange::Edge", "group__group-surfacemesh-attr.html#gga9d8ab208822bab9987e9652dda49d89aa7f0bc3a17ff45e6a7c3fe52b35db1888", null ],
-      [ "lagrange::Corner", "group__group-surfacemesh-attr.html#gga9d8ab208822bab9987e9652dda49d89aab9925c71d0b2b9131518c35c9ebbad92", null ],
-      [ "lagrange::Value", "group__group-surfacemesh-attr.html#gga9d8ab208822bab9987e9652dda49d89aa050889cfb2c606473596b8f70f702769", null ],
-      [ "lagrange::Indexed", "group__group-surfacemesh-attr.html#gga9d8ab208822bab9987e9652dda49d89aa93747573a820d43208a296f9f56bf54e", null ]
+    [ "AttributeId", "group__group-surfacemesh-attr.html#ga4d115376c2c766084ef808c837348fc3", null ],
+    [ "AttributeElement", "group__group-surfacemesh-attr.html#ga9d8ab208822bab9987e9652dda49d89a", [
+      [ "Vertex", "group__group-surfacemesh-attr.html#gga9d8ab208822bab9987e9652dda49d89aad013c4439c3e09308d6b2eef2a4025ae", null ],
+      [ "Facet", "group__group-surfacemesh-attr.html#gga9d8ab208822bab9987e9652dda49d89aa9b112d86d52178fe18e47e14bb6aeb35", null ],
+      [ "Edge", "group__group-surfacemesh-attr.html#gga9d8ab208822bab9987e9652dda49d89aa7f0bc3a17ff45e6a7c3fe52b35db1888", null ],
+      [ "Corner", "group__group-surfacemesh-attr.html#gga9d8ab208822bab9987e9652dda49d89aab9925c71d0b2b9131518c35c9ebbad92", null ],
+      [ "Value", "group__group-surfacemesh-attr.html#gga9d8ab208822bab9987e9652dda49d89aa050889cfb2c606473596b8f70f702769", null ],
+      [ "Indexed", "group__group-surfacemesh-attr.html#gga9d8ab208822bab9987e9652dda49d89aa93747573a820d43208a296f9f56bf54e", null ]
     ] ],
-    [ "lagrange::AttributeUsage", "group__group-surfacemesh-attr.html#ga5a2f28c8b9e2f8fce6e70b2418c46e45", [
-      [ "lagrange::AttributeUsage::Vector", "group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45a57dea6f5039281b7fee517fc43bf3110", null ],
-      [ "lagrange::AttributeUsage::Scalar", "group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74", null ],
-      [ "lagrange::AttributeUsage::Position", "group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45a52f5e0bc3859bc5f5e25130b6c7e8881", null ],
-      [ "lagrange::AttributeUsage::Normal", "group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45a960b44c579bc2f6818d2daaf9e4c16f0", null ],
-      [ "lagrange::AttributeUsage::Tangent", "group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45a541671cb1be09d76a84ba1a873ec3fc8", null ],
-      [ "lagrange::AttributeUsage::Bitangent", "group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45ae3e73a4b6e7cfd12008a35f6a051b319", null ],
-      [ "lagrange::AttributeUsage::Color", "group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45acb5feb1b7314637725a2e73bdc9f7295", null ],
-      [ "lagrange::AttributeUsage::UV", "group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45adeaa2adbeb26802ae61609c3f3642d82", null ],
-      [ "lagrange::AttributeUsage::VertexIndex", "group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45a7302d7da6a3804b1edf63b4b16198d80", null ],
-      [ "lagrange::AttributeUsage::FacetIndex", "group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45aa3dfb9f32b810b4277c5c8387d7f03f5", null ],
-      [ "lagrange::AttributeUsage::CornerIndex", "group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45a63222a2d9c46a34b875c078c757da2e8", null ],
-      [ "lagrange::AttributeUsage::EdgeIndex", "group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45a7e0536ad6c15bf05bf40e8876b1a5c10", null ],
-      [ "lagrange::AttributeUsage::String", "group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45a27118326006d3829667a400ad23d5d98", null ]
+    [ "AttributeUsage", "group__group-surfacemesh-attr.html#ga5a2f28c8b9e2f8fce6e70b2418c46e45", [
+      [ "Vector", "group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45a57dea6f5039281b7fee517fc43bf3110", null ],
+      [ "Scalar", "group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74", null ],
+      [ "Position", "group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45a52f5e0bc3859bc5f5e25130b6c7e8881", null ],
+      [ "Normal", "group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45a960b44c579bc2f6818d2daaf9e4c16f0", null ],
+      [ "Tangent", "group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45a541671cb1be09d76a84ba1a873ec3fc8", null ],
+      [ "Bitangent", "group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45ae3e73a4b6e7cfd12008a35f6a051b319", null ],
+      [ "Color", "group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45acb5feb1b7314637725a2e73bdc9f7295", null ],
+      [ "UV", "group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45adeaa2adbeb26802ae61609c3f3642d82", null ],
+      [ "VertexIndex", "group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45a7302d7da6a3804b1edf63b4b16198d80", null ],
+      [ "FacetIndex", "group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45aa3dfb9f32b810b4277c5c8387d7f03f5", null ],
+      [ "CornerIndex", "group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45a63222a2d9c46a34b875c078c757da2e8", null ],
+      [ "EdgeIndex", "group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45a7e0536ad6c15bf05bf40e8876b1a5c10", null ],
+      [ "String", "group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45a27118326006d3829667a400ad23d5d98", null ]
     ] ],
-    [ "lagrange::AttributeCreatePolicy", "group__group-surfacemesh-attr.html#ga3c6b1487bdfd6da7e65b5d05c9d45537", [
-      [ "lagrange::AttributeCreatePolicy::ErrorIfReserved", "group__group-surfacemesh-attr.html#gga3c6b1487bdfd6da7e65b5d05c9d45537afc443f72fcb562a73b40af34ddb599a3", null ],
-      [ "lagrange::AttributeCreatePolicy::Force", "group__group-surfacemesh-attr.html#gga3c6b1487bdfd6da7e65b5d05c9d45537a9eb6b78a99cdb6ffd3d40d18621d9f80", null ]
+    [ "AttributeCreatePolicy", "group__group-surfacemesh-attr.html#ga3c6b1487bdfd6da7e65b5d05c9d45537", [
+      [ "ErrorIfReserved", "group__group-surfacemesh-attr.html#gga3c6b1487bdfd6da7e65b5d05c9d45537afc443f72fcb562a73b40af34ddb599a3", null ],
+      [ "Force", "group__group-surfacemesh-attr.html#gga3c6b1487bdfd6da7e65b5d05c9d45537a9eb6b78a99cdb6ffd3d40d18621d9f80", null ]
     ] ],
-    [ "lagrange::AttributeGrowthPolicy", "group__group-surfacemesh-attr.html#ga790f065d45f011268208d588a8251846", [
-      [ "lagrange::AttributeGrowthPolicy::ErrorIfExternal", "group__group-surfacemesh-attr.html#gga790f065d45f011268208d588a8251846a9e7163ae7c790d007e084e24693b2303", null ],
-      [ "lagrange::AttributeGrowthPolicy::AllowWithinCapacity", "group__group-surfacemesh-attr.html#gga790f065d45f011268208d588a8251846af12086c39414ec9b8b89727ad02fb40e", null ],
-      [ "lagrange::AttributeGrowthPolicy::WarnAndCopy", "group__group-surfacemesh-attr.html#gga790f065d45f011268208d588a8251846aef773dc1e1097301a1bf955bfa9857ec", null ],
-      [ "lagrange::AttributeGrowthPolicy::SilentCopy", "group__group-surfacemesh-attr.html#gga790f065d45f011268208d588a8251846ae1ed7e29bdcf7fc9d30c50447e35ab92", null ]
+    [ "AttributeGrowthPolicy", "group__group-surfacemesh-attr.html#ga790f065d45f011268208d588a8251846", [
+      [ "ErrorIfExternal", "group__group-surfacemesh-attr.html#gga790f065d45f011268208d588a8251846a9e7163ae7c790d007e084e24693b2303", null ],
+      [ "AllowWithinCapacity", "group__group-surfacemesh-attr.html#gga790f065d45f011268208d588a8251846af12086c39414ec9b8b89727ad02fb40e", null ],
+      [ "WarnAndCopy", "group__group-surfacemesh-attr.html#gga790f065d45f011268208d588a8251846aef773dc1e1097301a1bf955bfa9857ec", null ],
+      [ "SilentCopy", "group__group-surfacemesh-attr.html#gga790f065d45f011268208d588a8251846ae1ed7e29bdcf7fc9d30c50447e35ab92", null ]
     ] ],
-    [ "lagrange::AttributeShrinkPolicy", "group__group-surfacemesh-attr.html#ga4dfaa0766598cfdf33ee2a4a8288f9f0", [
-      [ "lagrange::AttributeShrinkPolicy::ErrorIfExternal", "group__group-surfacemesh-attr.html#gga4dfaa0766598cfdf33ee2a4a8288f9f0a9e7163ae7c790d007e084e24693b2303", null ],
-      [ "lagrange::AttributeShrinkPolicy::IgnoreIfExternal", "group__group-surfacemesh-attr.html#gga4dfaa0766598cfdf33ee2a4a8288f9f0a410c5804c7d350b6891cb8c15fdf97e8", null ],
-      [ "lagrange::AttributeShrinkPolicy::WarnAndCopy", "group__group-surfacemesh-attr.html#gga4dfaa0766598cfdf33ee2a4a8288f9f0aef773dc1e1097301a1bf955bfa9857ec", null ],
-      [ "lagrange::AttributeShrinkPolicy::SilentCopy", "group__group-surfacemesh-attr.html#gga4dfaa0766598cfdf33ee2a4a8288f9f0ae1ed7e29bdcf7fc9d30c50447e35ab92", null ]
+    [ "AttributeShrinkPolicy", "group__group-surfacemesh-attr.html#ga4dfaa0766598cfdf33ee2a4a8288f9f0", [
+      [ "ErrorIfExternal", "group__group-surfacemesh-attr.html#gga4dfaa0766598cfdf33ee2a4a8288f9f0a9e7163ae7c790d007e084e24693b2303", null ],
+      [ "IgnoreIfExternal", "group__group-surfacemesh-attr.html#gga4dfaa0766598cfdf33ee2a4a8288f9f0a410c5804c7d350b6891cb8c15fdf97e8", null ],
+      [ "WarnAndCopy", "group__group-surfacemesh-attr.html#gga4dfaa0766598cfdf33ee2a4a8288f9f0aef773dc1e1097301a1bf955bfa9857ec", null ],
+      [ "SilentCopy", "group__group-surfacemesh-attr.html#gga4dfaa0766598cfdf33ee2a4a8288f9f0ae1ed7e29bdcf7fc9d30c50447e35ab92", null ]
     ] ],
-    [ "lagrange::AttributeWritePolicy", "group__group-surfacemesh-attr.html#gae33502272f9bf0b7ca929b1418472853", [
-      [ "lagrange::AttributeWritePolicy::ErrorIfReadOnly", "group__group-surfacemesh-attr.html#ggae33502272f9bf0b7ca929b1418472853a61eb7df0ff95cbd596ba2a4c7ee06b32", null ],
-      [ "lagrange::AttributeWritePolicy::WarnAndCopy", "group__group-surfacemesh-attr.html#ggae33502272f9bf0b7ca929b1418472853aef773dc1e1097301a1bf955bfa9857ec", null ],
-      [ "lagrange::AttributeWritePolicy::SilentCopy", "group__group-surfacemesh-attr.html#ggae33502272f9bf0b7ca929b1418472853ae1ed7e29bdcf7fc9d30c50447e35ab92", null ]
+    [ "AttributeWritePolicy", "group__group-surfacemesh-attr.html#gae33502272f9bf0b7ca929b1418472853", [
+      [ "ErrorIfReadOnly", "group__group-surfacemesh-attr.html#ggae33502272f9bf0b7ca929b1418472853a61eb7df0ff95cbd596ba2a4c7ee06b32", null ],
+      [ "WarnAndCopy", "group__group-surfacemesh-attr.html#ggae33502272f9bf0b7ca929b1418472853aef773dc1e1097301a1bf955bfa9857ec", null ],
+      [ "SilentCopy", "group__group-surfacemesh-attr.html#ggae33502272f9bf0b7ca929b1418472853ae1ed7e29bdcf7fc9d30c50447e35ab92", null ]
     ] ],
-    [ "lagrange::AttributeExportPolicy", "group__group-surfacemesh-attr.html#ga4ffa0a4eff5003941fab38ce5e9fd3e6", [
-      [ "lagrange::AttributeExportPolicy::CopyIfExternal", "group__group-surfacemesh-attr.html#gga4ffa0a4eff5003941fab38ce5e9fd3e6afe72de1001d465db9eb6ce5cb874c2cb", null ],
-      [ "lagrange::AttributeExportPolicy::CopyIfUnmanaged", "group__group-surfacemesh-attr.html#gga4ffa0a4eff5003941fab38ce5e9fd3e6a2bdb7937b8109f604fbf49e7c1ad1aa3", null ],
-      [ "lagrange::AttributeExportPolicy::KeepExternalPtr", "group__group-surfacemesh-attr.html#gga4ffa0a4eff5003941fab38ce5e9fd3e6a9a526f6dc0d4d6aef1f368972f20d13e", null ],
-      [ "lagrange::AttributeExportPolicy::ErrorIfExternal", "group__group-surfacemesh-attr.html#gga4ffa0a4eff5003941fab38ce5e9fd3e6a9e7163ae7c790d007e084e24693b2303", null ]
+    [ "AttributeExportPolicy", "group__group-surfacemesh-attr.html#ga4ffa0a4eff5003941fab38ce5e9fd3e6", [
+      [ "CopyIfExternal", "group__group-surfacemesh-attr.html#gga4ffa0a4eff5003941fab38ce5e9fd3e6afe72de1001d465db9eb6ce5cb874c2cb", null ],
+      [ "CopyIfUnmanaged", "group__group-surfacemesh-attr.html#gga4ffa0a4eff5003941fab38ce5e9fd3e6a2bdb7937b8109f604fbf49e7c1ad1aa3", null ],
+      [ "KeepExternalPtr", "group__group-surfacemesh-attr.html#gga4ffa0a4eff5003941fab38ce5e9fd3e6a9a526f6dc0d4d6aef1f368972f20d13e", null ],
+      [ "ErrorIfExternal", "group__group-surfacemesh-attr.html#gga4ffa0a4eff5003941fab38ce5e9fd3e6a9e7163ae7c790d007e084e24693b2303", null ]
     ] ],
-    [ "lagrange::AttributeCopyPolicy", "group__group-surfacemesh-attr.html#ga7f5c3f54af0c081c331ab314f6e8813d", [
-      [ "lagrange::AttributeCopyPolicy::CopyIfExternal", "group__group-surfacemesh-attr.html#gga7f5c3f54af0c081c331ab314f6e8813dafe72de1001d465db9eb6ce5cb874c2cb", null ],
-      [ "lagrange::AttributeCopyPolicy::KeepExternalPtr", "group__group-surfacemesh-attr.html#gga7f5c3f54af0c081c331ab314f6e8813da9a526f6dc0d4d6aef1f368972f20d13e", null ],
-      [ "lagrange::AttributeCopyPolicy::ErrorIfExternal", "group__group-surfacemesh-attr.html#gga7f5c3f54af0c081c331ab314f6e8813da9e7163ae7c790d007e084e24693b2303", null ]
+    [ "AttributeCopyPolicy", "group__group-surfacemesh-attr.html#ga7f5c3f54af0c081c331ab314f6e8813d", [
+      [ "CopyIfExternal", "group__group-surfacemesh-attr.html#gga7f5c3f54af0c081c331ab314f6e8813dafe72de1001d465db9eb6ce5cb874c2cb", null ],
+      [ "KeepExternalPtr", "group__group-surfacemesh-attr.html#gga7f5c3f54af0c081c331ab314f6e8813da9a526f6dc0d4d6aef1f368972f20d13e", null ],
+      [ "ErrorIfExternal", "group__group-surfacemesh-attr.html#gga7f5c3f54af0c081c331ab314f6e8813da9e7163ae7c790d007e084e24693b2303", null ]
     ] ],
-    [ "lagrange::AttributeDeletePolicy", "group__group-surfacemesh-attr.html#gaa5f89459aeed8658ab8daf64e9b570e9", [
-      [ "lagrange::AttributeDeletePolicy::ErrorIfReserved", "group__group-surfacemesh-attr.html#ggaa5f89459aeed8658ab8daf64e9b570e9afc443f72fcb562a73b40af34ddb599a3", null ],
-      [ "lagrange::AttributeDeletePolicy::Force", "group__group-surfacemesh-attr.html#ggaa5f89459aeed8658ab8daf64e9b570e9a9eb6b78a99cdb6ffd3d40d18621d9f80", null ]
+    [ "AttributeDeletePolicy", "group__group-surfacemesh-attr.html#gaa5f89459aeed8658ab8daf64e9b570e9", [
+      [ "ErrorIfReserved", "group__group-surfacemesh-attr.html#ggaa5f89459aeed8658ab8daf64e9b570e9afc443f72fcb562a73b40af34ddb599a3", null ],
+      [ "Force", "group__group-surfacemesh-attr.html#ggaa5f89459aeed8658ab8daf64e9b570e9a9eb6b78a99cdb6ffd3d40d18621d9f80", null ]
     ] ],
-    [ "lagrange::AttributeCastPolicy", "group__group-surfacemesh-attr.html#gaea766ecc22bd1ae50438168e2623ce13", [
-      [ "lagrange::AttributeCastPolicy::RemapInvalidIndices", "group__group-surfacemesh-attr.html#ggaea766ecc22bd1ae50438168e2623ce13a109c10bfcd9b81228b39100a8bd88caa", null ],
-      [ "lagrange::AttributeCastPolicy::RemapInvalidAlways", "group__group-surfacemesh-attr.html#ggaea766ecc22bd1ae50438168e2623ce13a91cc01e53b43be31a6db7aa5d1d9b111", null ],
-      [ "lagrange::AttributeCastPolicy::DoNotRemapInvalid", "group__group-surfacemesh-attr.html#ggaea766ecc22bd1ae50438168e2623ce13a9ec8b601d33247efe78cb6a70882600f", null ]
+    [ "AttributeCastPolicy", "group__group-surfacemesh-attr.html#gaea766ecc22bd1ae50438168e2623ce13", [
+      [ "RemapInvalidIndices", "group__group-surfacemesh-attr.html#ggaea766ecc22bd1ae50438168e2623ce13a109c10bfcd9b81228b39100a8bd88caa", null ],
+      [ "RemapInvalidAlways", "group__group-surfacemesh-attr.html#ggaea766ecc22bd1ae50438168e2623ce13a91cc01e53b43be31a6db7aa5d1d9b111", null ],
+      [ "DoNotRemapInvalid", "group__group-surfacemesh-attr.html#ggaea766ecc22bd1ae50438168e2623ce13a9ec8b601d33247efe78cb6a70882600f", null ]
     ] ],
-    [ "lagrange::AttributeValueType", "group__group-surfacemesh-attr.html#gaa6b9ce91409ac67b7b5319cf573f66b8", null ],
-    [ "lagrange::invalid_attribute_id", "group__group-surfacemesh-attr.html#gaaf6e674ed673001dca1c6390bc0e0fc9", null ],
-    [ "lagrange::make_attribute_value_type", "group__group-surfacemesh-attr.html#gad2d86eeda7595f41169e9a4b928f6452", null ]
+    [ "AttributeValueType", "group__group-surfacemesh-attr.html#gaa6b9ce91409ac67b7b5319cf573f66b8", null ],
+    [ "invalid_attribute_id", "group__group-surfacemesh-attr.html#gaaf6e674ed673001dca1c6390bc0e0fc9", null ],
+    [ "make_attribute_value_type", "group__group-surfacemesh-attr.html#gad2d86eeda7595f41169e9a4b928f6452", null ]
 ];

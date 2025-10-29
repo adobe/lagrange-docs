@@ -1,20 +1,15 @@
 var searchData=
 [
-  ['name_0',['name',['../structlagrange_1_1ui_1_1_file_filter.html#a9b45b3e13bd9167aab02e17e08916231',1,'lagrange::ui::FileFilter::name()'],['../structlagrange_1_1scene_1_1_image_experimental.html#a9b45b3e13bd9167aab02e17e08916231',1,'lagrange::scene::ImageExperimental::name()']]],
-  ['names_1',['names',['../structlagrange_1_1io_1_1internal_1_1_obj_reader_result.html#a9c4192866025823ecd5592526c757c0b',1,'lagrange::io::internal::ObjReaderResult']]],
-  ['neighbourhood_5ffrustum_2',['neighbourhood_frustum',['../structlagrange_1_1ui_1_1_selection_context.html#a9a02002f2d413be24751b20f3eadc3d8',1,'lagrange::ui::SelectionContext']]],
-  ['normal_3',['normal',['../structlagrange_1_1_attribute_name.html#a29fc2366719c877b731e125ebc94b5b2',1,'lagrange::AttributeName::normal()'],['../structlagrange_1_1ui_1_1_shader_texture_property.html#adc15d79fa0f367652c8455ef7c5b32c1',1,'lagrange::ui::ShaderTextureProperty::normal()']]],
-  ['normal_5fattribute_5fname_4',['normal_attribute_name',['../structlagrange_1_1_tangent_bitangent_options.html#a51066a9b87ceffa1db37243770584972',1,'lagrange::TangentBitangentOptions::normal_attribute_name()'],['../structlagrange_1_1volume_1_1_volume_to_mesh_options.html#a51066a9b87ceffa1db37243770584972',1,'lagrange::volume::VolumeToMeshOptions::normal_attribute_name()']]],
-  ['normal_5fprojection_5fweight_5',['normal_projection_weight',['../structlagrange_1_1filtering_1_1_smoothing_options.html#ad1793283ca02ce3e5d0de8eb098173c3',1,'lagrange::filtering::SmoothingOptions']]],
-  ['normal_5fsmoothing_5fweight_6',['normal_smoothing_weight',['../structlagrange_1_1filtering_1_1_attribute_smoothing_options.html#a9c4c1a517b17d642f026358493b22b6b',1,'lagrange::filtering::AttributeSmoothingOptions::normal_smoothing_weight()'],['../structlagrange_1_1filtering_1_1_smoothing_options.html#a9c4c1a517b17d642f026358493b22b6b',1,'lagrange::filtering::SmoothingOptions::normal_smoothing_weight()']]],
-  ['normalize_7',['normalize',['../structlagrange_1_1io_1_1legacy_1_1_mesh_loader_params.html#af605523fa15cd8296704092afd159029',1,'lagrange::io::legacy::MeshLoaderParams::normalize()'],['../structlagrange_1_1_compute_pointcloud_p_c_a_options.html#af605523fa15cd8296704092afd159029',1,'lagrange::ComputePointcloudPCAOptions::normalize()']]],
-  ['normalize_5fnormals_8',['normalize_normals',['../structlagrange_1_1_transform_options.html#ab325d5223b6259782405a0d4d87a6540',1,'lagrange::TransformOptions']]],
-  ['normalize_5ftangents_5fbitangents_9',['normalize_tangents_bitangents',['../structlagrange_1_1_transform_options.html#adb325bf37307e1d4836ea6886c266e83',1,'lagrange::TransformOptions']]],
-  ['null_5farea_5fthreshold_10',['null_area_threshold',['../structlagrange_1_1_remove_null_area_facets_options.html#ad49f5977fbc988e5d27cb0ece3e6cb00',1,'lagrange::RemoveNullAreaFacetsOptions']]],
-  ['num_5fchannels_11',['num_channels',['../structlagrange_1_1_attribute_matcher.html#ae072a7d737d3528b7abe7833ccba24a7',1,'lagrange::AttributeMatcher::num_channels()'],['../structlagrange_1_1scene_1_1_image_buffer_experimental.html#ae072a7d737d3528b7abe7833ccba24a7',1,'lagrange::scene::ImageBufferExperimental::num_channels()']]],
-  ['num_5fcolor_5fused_12',['num_color_used',['../structlagrange_1_1_greedy_coloring_options.html#a81f5acc6d6adddb797813a0eb72a1d47',1,'lagrange::GreedyColoringOptions']]],
-  ['num_5flevels_13',['num_levels',['../structlagrange_1_1subdivision_1_1_subdivision_options.html#a2b40d61424462dd2754d3417e3176afd',1,'lagrange::subdivision::SubdivisionOptions']]],
-  ['num_5frepresentatives_14',['num_representatives',['../structlagrange_1_1internal_1_1_bucket_sort_result.html#ab3caef73b39b6c78fef58146d093e08d',1,'lagrange::internal::BucketSortResult::num_representatives()'],['../structlagrange_1_1internal_1_1_bucket_sort_offset.html#ab3caef73b39b6c78fef58146d093e08d',1,'lagrange::internal::BucketSortOffset::num_representatives()']]],
-  ['num_5fsegments_15',['num_segments',['../structlagrange_1_1_thicken_and_close_options.html#a8a2e782c4c6a655578ac31923a8b8f6d',1,'lagrange::ThickenAndCloseOptions']]],
-  ['num_5fsmooth_5fiterations_16',['num_smooth_iterations',['../structlagrange_1_1_select_facets_by_normal_similarity_options.html#aaac50419eb9608de4d9c144e5e42a1f0',1,'lagrange::SelectFacetsByNormalSimilarityOptions']]]
+  ['linear_5fattributes_0',['linear_attributes',['../classlagrange_1_1subdivision_1_1_interpolated_attributes.html#a6cb2ad656273d8578395a4631331335a',1,'lagrange::subdivision::InterpolatedAttributes']]],
+  ['load_5fimages_1',['load_images',['../structlagrange_1_1io_1_1_load_options.html#a9e0f5880b21bbb725d95ea38037a8be0',1,'lagrange::io::LoadOptions']]],
+  ['load_5fmaterials_2',['load_materials',['../structlagrange_1_1io_1_1_load_options.html#a407843f210786ed1e587995eaaff729c',1,'lagrange::io::LoadOptions']]],
+  ['load_5fnormals_3',['load_normals',['../structlagrange_1_1io_1_1_load_options.html#ae33620339fbb5e4d6fff874656b4d36f',1,'lagrange::io::LoadOptions']]],
+  ['load_5fobject_5fid_4',['load_object_id',['../structlagrange_1_1io_1_1_load_options.html#a571e7338dfe2e6771492b4e4e5c94751',1,'lagrange::io::LoadOptions']]],
+  ['load_5fobject_5fids_5',['load_object_ids',['../structlagrange_1_1io_1_1_load_options.html#add2359242ab9d3285b32723f9fcad54d',1,'lagrange::io::LoadOptions']]],
+  ['load_5ftangents_6',['load_tangents',['../structlagrange_1_1io_1_1_load_options.html#ae05142d0d4313f70884e7cbfc916ea3c',1,'lagrange::io::LoadOptions']]],
+  ['load_5fuvs_7',['load_uvs',['../structlagrange_1_1io_1_1_load_options.html#a7e66d9711414b8cc4e8bd98b5e9c3e70',1,'lagrange::io::LoadOptions']]],
+  ['load_5fvertex_5fcolors_8',['load_vertex_colors',['../structlagrange_1_1io_1_1_load_options.html#a177eb10b677f5f83f6e34288d26bed89',1,'lagrange::io::LoadOptions']]],
+  ['load_5fweights_9',['load_weights',['../structlagrange_1_1io_1_1_load_options.html#a2ac615607c358099b3f2e2c4a06599ed',1,'lagrange::io::LoadOptions']]],
+  ['local_10',['local',['../structlagrange_1_1ui_1_1_bounds.html#a63f5b0ac4528c51dc747555a8113fdc2',1,'lagrange::ui::Bounds::local'],['../structlagrange_1_1ui_1_1_transform.html#ae4533a19b031daca1bd2b79a616d96a2',1,'lagrange::ui::Transform::local']]],
+  ['loops_11',['loops',['../structlagrange_1_1_chain_edges_result.html#ac3c860fbe799df4f6a3849d51e08dfd4',1,'lagrange::ChainEdgesResult']]]
 ];

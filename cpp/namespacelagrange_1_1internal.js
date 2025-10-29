@@ -28,8 +28,8 @@ var namespacelagrange_1_1internal =
     [ "find_attribute", "namespacelagrange_1_1internal.html#a4e449214cdb7a7f4c42a69d9eb718483", null ],
     [ "find_or_create_attribute", "namespacelagrange_1_1internal.html#adbcff88ab81e30f4cd399e5fd3fb2ab2", null ],
     [ "get_uv_id", "namespacelagrange_1_1internal.html#a54a13380928ee39f6b49fb537d203b73", null ],
-    [ "get_uv_attribute", "namespacelagrange_1_1internal.html#a43200147bd58e3f3de9d6ae1ce3c5c39", null ],
-    [ "ref_uv_attribute", "namespacelagrange_1_1internal.html#a4f3414e7c48c3cfb4ee6ee358f720180", null ],
+    [ "get_uv_attribute", "namespacelagrange_1_1internal.html#aee14adf3d99a30ec9ed656ac6dc8a0af", null ],
+    [ "ref_uv_attribute", "namespacelagrange_1_1internal.html#a2aae1b36ecada46944b60dc89bab6c19", null ],
     [ "internal_angles", "namespacelagrange_1_1internal.html#a8d8b8c95bd1fe5343f763045a81314ee", null ],
     [ "invert_mapping", "namespacelagrange_1_1internal.html#abb96d5d58ea98c2b3040e59c71c46dee", null ],
     [ "invert_mapping", "namespacelagrange_1_1internal.html#a9bcceea9d9eb222554cb4fa66a318642", null ],
@@ -53,6 +53,6 @@ var namespacelagrange_1_1internal =
     [ "compute_quad_areas", "namespacelagrange_1_1internal.html#a18efc9f6e2bdf77c1b85bc5c3794edd1", null ],
     [ "bucket_sort", "namespacelagrange_1_1internal.html#a87a49ab6f672c04f4f72e198181a887c", null ],
     [ "bucket_sort", "namespacelagrange_1_1internal.html#a9c60561ca55faebfa701db5f3c0100c2", null ],
-    [ "compute_weighted_corner_normal", "namespacelagrange_1_1internal.html#a425b6670a3b7465f0b6a712b35f91b7c", null ],
+    [ "compute_weighted_corner_normal", "namespacelagrange_1_1internal.html#a1566fc02a68fa88d2d979e717b19aa62", null ],
     [ "recompute_facet_normal_if_needed", "namespacelagrange_1_1internal.html#a37c5d2a9463c0ede0593a8c564e0e58a", null ]
 ];

@@ -12,5 +12,5 @@ var group__module_filtering =
       [ "gradient_modulation_scale", "structlagrange_1_1filtering_1_1_smoothing_options.html#a3e770b6a4ad8cafb6d15c0b26dd050c3", null ],
       [ "normal_projection_weight", "structlagrange_1_1filtering_1_1_smoothing_options.html#ad1793283ca02ce3e5d0de8eb098173c3", null ]
     ] ],
-    [ "lagrange::filtering::mesh_smoothing", "group__module-filtering.html#ga9d7b6a6f5311d27958ebfc43306612dd", null ]
+    [ "mesh_smoothing", "group__module-filtering.html#gab846e5534f1d237eab35abe1f898bc36", null ]
 ];
