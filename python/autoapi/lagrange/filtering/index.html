@@ -6,7 +6,7 @@
 <link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" />
 
     <!-- Generated with Sphinx 7.4.7 and Furo 2023.09.10 -->
-        <title>lagrange.filtering - Lagrange documentation</title>
+        <title>&lt;no title&gt; - Lagrange documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=a746c00c" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?v=135e06be" />
     <link rel="stylesheet" type="text/css" href="../../../_static/graphviz.css?v=fd3f3429" />
@@ -135,7 +135,7 @@
           <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
         </button>
       </div>
-      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
         <div class="visually-hidden">Toggle table of contents sidebar</div>
         <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
       </label>
@@ -155,13 +155,7 @@
   <input type="hidden" name="area" value="default">
 </form>
 <div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
-  <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
-<ul>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../index.html">API Reference</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of API Reference</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="simple">
-</ul>
-</li>
-</ul>
-
+  
 </div>
 </div>
 
@@ -188,83 +182,13 @@
               <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
             </button>
           </div>
-          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+          <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
             <div class="visually-hidden">Toggle table of contents sidebar</div>
             <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
           </label>
         </div>
         <article role="main">
-          <section id="module-lagrange.filtering">
-<span id="lagrange-filtering"></span><h1><a class="reference internal" href="#module-lagrange.filtering" title="lagrange.filtering"><code class="xref py py-mod docutils literal notranslate"><span class="pre">lagrange.filtering</span></code></a><a class="headerlink" href="#module-lagrange.filtering" title="Link to this heading">¶</a></h1>
-<section id="module-contents">
-<h2>Module Contents<a class="headerlink" href="#module-contents" title="Link to this heading">¶</a></h2>
-<section id="functions">
-<h3>Functions<a class="headerlink" href="#functions" title="Link to this heading">¶</a></h3>
-<div class="table-wrapper autosummary longtable docutils container">
-<table class="autosummary longtable docutils align-default">
-<tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#lagrange.filtering.mesh_smoothing" title="lagrange.filtering.mesh_smoothing"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mesh_smoothing</span></code></a>(mesh[, method, curvature_weight, ...])</p></td>
-<td><p>Smooths a mesh using anisotropic mesh smoothing.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#lagrange.filtering.scalar_attribute_smoothing" title="lagrange.filtering.scalar_attribute_smoothing"><code class="xref py py-obj docutils literal notranslate"><span class="pre">scalar_attribute_smoothing</span></code></a>(mesh[, attribute_name, ...])</p></td>
-<td><p>Smooths a (multi-channel) scalar attribute on a surface mesh.</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<dl class="py function">
-<dt class="sig sig-object py" id="lagrange.filtering.mesh_smoothing">
-<span class="sig-prename descclassname"><span class="pre">lagrange.filtering.</span></span><span class="sig-name descname"><span class="pre">mesh_smoothing</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mesh</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">method</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'NormalSmoothing'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">curvature_weight</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.02</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normal_smoothing_weight</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0001</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gradient_weight</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0001</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gradient_modulation_scale</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normal_projection_weight</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lagrange.filtering.mesh_smoothing" title="Link to this definition">¶</a></dt>
-<dd><p>Smooths a mesh using anisotropic mesh smoothing.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>mesh</strong> (<a class="reference internal" href="../core/index.html#lagrange.core.SurfaceMesh" title="lagrange.core.SurfaceMesh"><em>lagrange.core.SurfaceMesh</em></a>) – Input mesh.</p></li>
-<li><p><strong>method</strong> (<em>str</em>) – The filtering method. Options are [‘VertexSmoothing’, ‘NormalSmoothing’]. Default is ‘NormalSmoothing’.</p></li>
-<li><p><strong>curvature_weight</strong> (<em>float</em>) – The curvature/inhomogeneity weight. Specifies the extent to which total curvature should be used to change the underlying metric. Setting =0 is equivalent to using standard homogeneous/anisotropic diffusion.</p></li>
-<li><p><strong>normal_smoothing_weight</strong> (<em>float</em>) – The normal smoothing weight. Specifies the extent to which normals should be diffused before curvature is estimated. Formally, this is the time-step for heat-diffusion performed on the normals. Setting =0 will reproduce the original normals.</p></li>
-<li><p><strong>gradient_weight</strong> (<em>float</em>) – Gradient fitting weight. Specifies the importance of matching the gradient constraints (objective #2) relative to matching the positional constraints (objective #1). Setting =0 reproduces the original normals.</p></li>
-<li><p><strong>gradient_modulation_scale</strong> (<em>float</em>) – Gradient modulation scale. Prescribes the scale factor relating the gradients of the source to those of the target. &lt;1 =&gt; gradients are dampened =&gt; smoothing. &gt;1 =&gt; gradients are amplified =&gt; sharpening. Setting =0 is equivalent to performing a semi-implicit step of heat-diffusion, with time-step equal to gradient_weight. Setting =1 reproduces the original normals.</p></li>
-<li><p><strong>normal_projection_weight</strong> (<em>float</em>) – Weight for fitting the surface to prescribed normals. Specifies the importance of matching the target normals (objective #2) relative to matching the original positions (objective #1). Setting =0 will reproduce the original geometry.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>The smoothed mesh.</p>
-</dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>None</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="lagrange.filtering.scalar_attribute_smoothing">
-<span class="sig-prename descclassname"><span class="pre">lagrange.filtering.</span></span><span class="sig-name descname"><span class="pre">scalar_attribute_smoothing</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mesh</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attribute_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">curvature_weight</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.02</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normal_smoothing_weight</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0001</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gradient_weight</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0001</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gradient_modulation_scale</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lagrange.filtering.scalar_attribute_smoothing" title="Link to this definition">¶</a></dt>
-<dd><p>Smooths a (multi-channel) scalar attribute on a surface mesh.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>mesh</strong> (<a class="reference internal" href="../core/index.html#lagrange.core.SurfaceMesh" title="lagrange.core.SurfaceMesh"><em>lagrange.core.SurfaceMesh</em></a>) – Input mesh.</p></li>
-<li><p><strong>attribute_name</strong> (<em>str</em>) – The name of the scalar vertex attribute to smooth. If empty, all attributes with scalar usage and vertex element type will be smoothed.</p></li>
-<li><p><strong>curvature_weight</strong> (<em>float</em>) – The curvature/inhomogeneity weight. Controls the strength of the smoothing operation. Higher values result in stretching in the surface metric, slowing down diffusion process. The default value of 0.02 provides a moderate smoothing effect. Values should typically be in the range [0.0, 1.0].</p></li>
-<li><p><strong>normal_smoothing_weight</strong> (<em>float</em>) – The normal smoothing weight. Specifies the extent to which normals should be diffused before curvature is estimated.</p></li>
-<li><p><strong>gradient_weight</strong> (<em>float</em>) – Gradient fitting weight. Specifies the importance of matching the gradient constraints.</p></li>
-<li><p><strong>gradient_modulation_scale</strong> (<em>float</em>) – Gradient modulation scale. Prescribes the scale factor relating the gradients of the source to those of the target.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>None. The attribute is modified in place.</p>
-</dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>None</p>
-</dd>
-</dl>
-</dd></dl>
-
-</section>
-</section>
-</section>
-
+          <span class="target" id="module-lagrange.filtering"></span>
         </article>
       </div>
       <footer>
@@ -290,34 +214,8 @@
         
       </footer>
     </div>
-    <aside class="toc-drawer">
+    <aside class="toc-drawer no-toc">
       
-      
-      <div class="toc-sticky toc-scroll">
-        <div class="toc-title-container">
-          <span class="toc-title">
-            On this page
-          </span>
-        </div>
-        <div class="toc-tree-container">
-          <div class="toc-tree">
-            <ul>
-<li><a class="reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">lagrange.filtering</span></code></a><ul>
-<li><a class="reference internal" href="#module-contents">Module Contents</a><ul>
-<li><a class="reference internal" href="#functions">Functions</a><ul>
-<li><a class="reference internal" href="#lagrange.filtering.mesh_smoothing"><code class="docutils literal notranslate"><span class="pre">mesh_smoothing()</span></code></a></li>
-<li><a class="reference internal" href="#lagrange.filtering.scalar_attribute_smoothing"><code class="docutils literal notranslate"><span class="pre">scalar_attribute_smoothing()</span></code></a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-
-          </div>
-        </div>
-      </div>
       
       
     </aside>

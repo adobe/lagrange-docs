@@ -21,6 +21,7 @@ var namespacelagrange_1_1internal =
     [ "to_string", "namespacelagrange_1_1internal.html#ad1ef58c4f14fd3da88c3ddfb8541c1fb", null ],
     [ "value_type_name", "namespacelagrange_1_1internal.html#a365755bee2e12743525ba9d78a556c09", null ],
     [ "value_type_name", "namespacelagrange_1_1internal.html#a252940a1c11ea835592d9e6d1952c868", null ],
+    [ "get_cpu_vendor_id", "namespacelagrange_1_1internal.html#a58d4a2c573d544f072be7e98c3dd1b4b", null ],
     [ "dijkstra", "namespacelagrange_1_1internal.html#a318ef64371a044ade0e7bf035cd67490", null ],
     [ "fast_edge_sort", "namespacelagrange_1_1internal.html#a999adf40cd91dcb3b7bb5bb6e3724584", null ],
     [ "find_matching_attribute", "namespacelagrange_1_1internal.html#aae5d3bb97af070a81d6a1d624fce12af", null ],

@@ -10,7 +10,7 @@ var searchData=
   ['imageview_7',['ImageView',['../classlagrange_1_1image_1_1_image_view.html',1,'lagrange::image']]],
   ['imageviewbase_8',['ImageViewBase',['../classlagrange_1_1image_1_1_image_view_base.html',1,'lagrange::image']]],
   ['immediateentities_9',['ImmediateEntities',['../structlagrange_1_1ui_1_1_immediate_entities.html',1,'lagrange::ui']]],
-  ['impl_10',['Impl',['../structlagrange_1_1poisson_1_1_attribute_evaluator_1_1_impl.html',1,'AttributeEvaluator::Impl'],['../structlagrange_1_1winding_1_1_fast_winding_number_1_1_impl.html',1,'FastWindingNumber::Impl']]],
+  ['impl_10',['Impl',['../structlagrange_1_1geodesic_1_1_geodesic_engine_heat_1_1_impl.html',1,'GeodesicEngineHeat&lt; Scalar, Index &gt;::Impl'],['../structlagrange_1_1geodesic_1_1_geodesic_engine_m_m_p_1_1_impl.html',1,'GeodesicEngineMMP&lt; Scalar, Index &gt;::Impl'],['../structlagrange_1_1poisson_1_1_attribute_evaluator_1_1_impl.html',1,'AttributeEvaluator::Impl'],['../structlagrange_1_1winding_1_1_fast_winding_number_1_1_impl.html',1,'FastWindingNumber::Impl']]],
   ['indexedattribute_11',['IndexedAttribute',['../classlagrange_1_1experimental_1_1_indexed_attribute.html',1,'IndexedAttribute'],['../classlagrange_1_1_indexed_attribute.html',1,'IndexedAttribute&lt; ValueType_, Index_ &gt;']]],
   ['indexedattributemanager_12',['IndexedAttributeManager',['../classlagrange_1_1experimental_1_1_indexed_attribute_manager.html',1,'lagrange::experimental']]],
   ['indexedattributes_13',['IndexedAttributes',['../classlagrange_1_1_indexed_attributes.html',1,'lagrange']]],

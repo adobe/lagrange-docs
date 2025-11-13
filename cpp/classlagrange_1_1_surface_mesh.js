@@ -113,6 +113,7 @@ var classlagrange_1_1_surface_mesh =
     [ "duplicate_attribute", "classlagrange_1_1_surface_mesh.html#ac105eafb5fa2eab8e87215d26ebb21c0", null ],
     [ "rename_attribute", "classlagrange_1_1_surface_mesh.html#aeb2d780919768c503a50a0947a21e856", null ],
     [ "delete_attribute", "classlagrange_1_1_surface_mesh.html#a1d338472b33656740632fd6d58dfc9a7", null ],
+    [ "delete_attribute", "classlagrange_1_1_surface_mesh.html#ac77ce42733ea00bbabb8a9caa17751aa", null ],
     [ "delete_and_export_attribute", "classlagrange_1_1_surface_mesh.html#a28d0478f3b515915db6dede4b645966c", null ],
     [ "delete_and_export_const_attribute", "classlagrange_1_1_surface_mesh.html#a545ec348c92a85cc38a6c6d3f5277535", null ],
     [ "delete_and_export_indexed_attribute", "classlagrange_1_1_surface_mesh.html#aacb851b667e316033ab311cb13ed0241", null ],

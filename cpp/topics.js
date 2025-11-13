@@ -7,6 +7,7 @@ var topics =
     [ "Image Module", "group__module-image.html", null ],
     [ "IO Module", "group__module-io.html", null ],
     [ "Partitioning Module", "group__module-partitioning.html", null ],
+    [ "PolyDDG Module", "group__module-polyddg.html", "group__module-polyddg" ],
     [ "Raycasting Module", "group__module-raycasting.html", null ],
     [ "Subdivision Module", "group__module-subdivision.html", "group__module-subdivision" ],
     [ "Texproc Module", "group__module-texproc.html", "group__module-texproc" ],

@@ -156,6 +156,15 @@ var menudata={children:[
 {text:"u",url:"functions_vars_u.html#index_u"},
 {text:"v",url:"functions_vars_v.html#index_v"},
 {text:"w",url:"functions_vars_w.html#index_w"}]},
-{text:"Typedefs",url:"functions_type.html"},
+{text:"Typedefs",url:"functions_type.html",children:[
+{text:"a",url:"functions_type.html#index_a"},
+{text:"e",url:"functions_type.html#index_e"},
+{text:"f",url:"functions_type.html#index_f"},
+{text:"g",url:"functions_type.html#index_g"},
+{text:"i",url:"functions_type.html#index_i"},
+{text:"m",url:"functions_type.html#index_m"},
+{text:"s",url:"functions_type.html#index_s"},
+{text:"u",url:"functions_type.html#index_u"},
+{text:"v",url:"functions_type.html#index_v"}]},
 {text:"Enumerations",url:"functions_enum.html"},
 {text:"Enumerator",url:"functions_eval.html"}]}]}]}

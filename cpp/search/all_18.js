@@ -5,7 +5,9 @@ var searchData=
   ['_7eattributeevaluator_2',['~AttributeEvaluator',['../classlagrange_1_1poisson_1_1_attribute_evaluator.html#acdcb7e6170d0eee886d6e1d183e0a355',1,'lagrange::poisson::AttributeEvaluator']]],
   ['_7eembreeraycaster_3',['~EmbreeRayCaster',['../classlagrange_1_1raycasting_1_1_embree_ray_caster.html#a483d2ac55ed7a139a407b0ee4b9eb4d3',1,'lagrange::raycasting::EmbreeRayCaster']]],
   ['_7efastwindingnumber_4',['~FastWindingNumber',['../classlagrange_1_1winding_1_1_fast_winding_number.html#a711b71ad5b64608ab4112e36dc862ec6',1,'lagrange::winding::FastWindingNumber']]],
-  ['_7eindexedattribute_5',['~IndexedAttribute',['../classlagrange_1_1_indexed_attribute.html#aa69361e851047416b6c25798eaa25f07',1,'lagrange::IndexedAttribute']]],
-  ['_7esurfacemesh_6',['~SurfaceMesh',['../classlagrange_1_1_surface_mesh.html#a80462de7e77a5231315f0e93e69fc1d2',1,'lagrange::SurfaceMesh']]],
-  ['_7etexturerasterizer_7',['~TextureRasterizer',['../classlagrange_1_1texproc_1_1_texture_rasterizer.html#aedabaef81d364b7a792e40c254251a8f',1,'lagrange::texproc::TextureRasterizer']]]
+  ['_7egeodesicengine_5',['~GeodesicEngine',['../classlagrange_1_1geodesic_1_1_geodesic_engine.html#a0cbc5992140b8129ed74dd657cce25d3',1,'lagrange::geodesic::GeodesicEngine']]],
+  ['_7egeodesicenginedgpc_6',['~GeodesicEngineDGPC',['../classlagrange_1_1geodesic_1_1_geodesic_engine_d_g_p_c.html#a76bd4d4d13f74a4ba012b93ba3fdb7b8',1,'lagrange::geodesic::GeodesicEngineDGPC']]],
+  ['_7eindexedattribute_7',['~IndexedAttribute',['../classlagrange_1_1_indexed_attribute.html#aa69361e851047416b6c25798eaa25f07',1,'lagrange::IndexedAttribute']]],
+  ['_7esurfacemesh_8',['~SurfaceMesh',['../classlagrange_1_1_surface_mesh.html#a80462de7e77a5231315f0e93e69fc1d2',1,'lagrange::SurfaceMesh']]],
+  ['_7etexturerasterizer_9',['~TextureRasterizer',['../classlagrange_1_1texproc_1_1_texture_rasterizer.html#aedabaef81d364b7a792e40c254251a8f',1,'lagrange::texproc::TextureRasterizer']]]
 ];

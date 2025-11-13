@@ -177,6 +177,12 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
 Enumerations</h2></td></tr>
+<tr class="memitem:a6ee932a915b2b397bf3444057506fad4" id="r_a6ee932a915b2b397bf3444057506fad4"><td class="memItemLeft" align="right" valign="top"><a id="a6ee932a915b2b397bf3444057506fad4" name="a6ee932a915b2b397bf3444057506fad4"></a>enum class &#160;</td><td class="memItemRight" valign="bottom"><b>VendorId</b> { <b>Unknown</b>
+, <b>Intel</b>
+, <b>AMD</b>
+, <b>ARM</b>
+ }</td></tr>
+<tr class="separator:a6ee932a915b2b397bf3444057506fad4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad55f96a0a38571fab295b3dcfa5ccaac" id="r_ad55f96a0a38571fab295b3dcfa5ccaac"><td class="memItemLeft" align="right" valign="top"><a id="ad55f96a0a38571fab295b3dcfa5ccaac" name="ad55f96a0a38571fab295b3dcfa5ccaac"></a>enum class &#160;</td><td class="memItemRight" valign="bottom"><b>ResetToDefault</b> { <b>Yes</b>
 , <b>No</b>
  }</td></tr>
@@ -205,6 +211,9 @@ Functions</h2></td></tr>
 template&lt;typename DerivedF, typename DerivedFF, typename DerivedC&gt; </td></tr>
 <tr class="memitem:a10b9d17084e2958faea52fd3672dea5f"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>bfs_orient</b> (const Eigen::MatrixBase&lt; DerivedF &gt; &amp;F, Eigen::PlainObjectBase&lt; DerivedFF &gt; &amp;FF, Eigen::PlainObjectBase&lt; DerivedC &gt; &amp;C)</td></tr>
 <tr class="separator:a10b9d17084e2958faea52fd3672dea5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58d4a2c573d544f072be7e98c3dd1b4b" id="r_a58d4a2c573d544f072be7e98c3dd1b4b"><td class="memItemLeft" align="right" valign="top">LA_CORE_API VendorId&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a58d4a2c573d544f072be7e98c3dd1b4b">get_cpu_vendor_id</a> ()</td></tr>
+<tr class="memdesc:a58d4a2c573d544f072be7e98c3dd1b4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the CPU vendor ID.  <br /></td></tr>
+<tr class="separator:a58d4a2c573d544f072be7e98c3dd1b4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa89dddd650407a9b863444bd13e75de1" id="r_aa89dddd650407a9b863444bd13e75de1"><td class="memTemplParams" colspan="2"><a id="aa89dddd650407a9b863444bd13e75de1" name="aa89dddd650407a9b863444bd13e75de1"></a>
 template&lt;typename Derived&gt; </td></tr>
 <tr class="memitem:aa89dddd650407a9b863444bd13e75de1"><td class="memTemplItemLeft" align="right" valign="top">std::array&lt; std::array&lt; uint8_t, 3 &gt;, 2 &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>delaunay_split</b> (const Eigen::DenseBase&lt; Derived &gt; &amp;p0, const Eigen::DenseBase&lt; Derived &gt; &amp;p1, const Eigen::DenseBase&lt; Derived &gt; &amp;p2, const Eigen::DenseBase&lt; Derived &gt; &amp;p3)</td></tr>
@@ -583,6 +592,26 @@ template&lt;typename ValueType&gt; </div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>String representation. </dd></dl>
+
+</div>
+</div>
+<a id="a58d4a2c573d544f072be7e98c3dd1b4b" name="a58d4a2c573d544f072be7e98c3dd1b4b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a58d4a2c573d544f072be7e98c3dd1b4b">&#9670;&#160;</a></span>get_cpu_vendor_id()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">VendorId get_cpu_vendor_id </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the CPU vendor ID. </p>
+<dl class="section return"><dt>Returns</dt><dd>The CPU vendor ID. </dd></dl>
 
 </div>
 </div>
@@ -1918,7 +1947,7 @@ template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacelagrange.html">lagrange</a></li><li class="navelem"><a class="el" href="namespacelagrange_1_1internal.html">internal</a></li>
-    <li class="footer">Generated on Wed Oct 29 2025 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+    <li class="footer">Generated on Thu Nov 13 2025 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>
 </body>

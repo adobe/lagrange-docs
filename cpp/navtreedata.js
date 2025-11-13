@@ -58,16 +58,17 @@ var NAVTREEINDEX =
 [
 "../",
 "classlagrange_1_1_mesh_navigation.html#a7f00680054ba02315da270847e05ceb1",
-"classlagrange_1_1_surface_mesh.html#acc2fb6f223bb81c84ab9242bf05593bc",
-"classlagrange_1_1internal_1_1shared__ptr.html#a7847556a2d009a5502a01989cf61d4e1",
-"classlagrange_1_1ui_1_1_camera.html#a7cf6e8c5a5bc5e7b2afef3647870b1c4abb2fe5c916efb43aab8cbb68f997d2ee",
-"functions_vars_p.html",
-"group__module-bvh.html",
-"namespacelagrange_1_1io.html#ade016c2a1e0d994a4684924f654eb3e4",
-"structlagrange_1_1_facet_circumcenter_options.html",
-"structlagrange_1_1filtering_1_1_smoothing_options.html#a76a55710d483a2df415863a6491ccc38",
-"structlagrange_1_1texproc_1_1_filtering_options.html#a100b2051d845229f0d19ef98b257a239",
-"structlagrange_1_1ui_1_1_selection_viewport.html"
+"classlagrange_1_1_surface_mesh.html#ac77ce42733ea00bbabb8a9caa17751aa",
+"classlagrange_1_1internal_1_1default__delete_3_01_t_0f_0e_4.html#a8d5654ff5e72f5312fe6241ce8904a10",
+"classlagrange_1_1scene_1_1_simple_scene.html#aa2350e78d3a9f786ea429950f906e425",
+"classlagrange_1_1volume_1_1legacy_1_1_mesh_adapter.html#adc98e2a86dc99dc2c124b575b1b26e85",
+"group__group-surfacemesh-utils.html#ggadab1480827f4522cbf1f9e1d4c28db91a6043446227f6a89342620a00a131257f",
+"namespacelagrange_1_1internal.html#a18efc9f6e2bdf77c1b85bc5c3794edd1",
+"namespacemembers_func_w.html",
+"structlagrange_1_1_transform_options.html",
+"structlagrange_1_1poisson_1_1_attribute_evaluator_1_1_impl.html",
+"structlagrange_1_1ui_1_1_immediate_entities.html",
+"structlagrange_1_1ui_1_1type__traits_3_01uint16__t_01_4.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';

@@ -58,6 +58,15 @@ var annotated_dup =
         [ "AttributeSmoothingOptions", "structlagrange_1_1filtering_1_1_attribute_smoothing_options.html", "structlagrange_1_1filtering_1_1_attribute_smoothing_options" ],
         [ "SmoothingOptions", "structlagrange_1_1filtering_1_1_smoothing_options.html", "structlagrange_1_1filtering_1_1_smoothing_options" ]
       ] ],
+      [ "geodesic", null, [
+        [ "GeodesicEngine", "classlagrange_1_1geodesic_1_1_geodesic_engine.html", "classlagrange_1_1geodesic_1_1_geodesic_engine" ],
+        [ "GeodesicEngineDGPC", "classlagrange_1_1geodesic_1_1_geodesic_engine_d_g_p_c.html", "classlagrange_1_1geodesic_1_1_geodesic_engine_d_g_p_c" ],
+        [ "GeodesicEngineHeat", "classlagrange_1_1geodesic_1_1_geodesic_engine_heat.html", "classlagrange_1_1geodesic_1_1_geodesic_engine_heat" ],
+        [ "GeodesicEngineMMP", "classlagrange_1_1geodesic_1_1_geodesic_engine_m_m_p.html", "classlagrange_1_1geodesic_1_1_geodesic_engine_m_m_p" ],
+        [ "PointToPointGeodesicOptions", "structlagrange_1_1geodesic_1_1_point_to_point_geodesic_options.html", "structlagrange_1_1geodesic_1_1_point_to_point_geodesic_options" ],
+        [ "SingleSourceGeodesicOptions", "structlagrange_1_1geodesic_1_1_single_source_geodesic_options.html", "structlagrange_1_1geodesic_1_1_single_source_geodesic_options" ],
+        [ "SingleSourceGeodesicResult", "structlagrange_1_1geodesic_1_1_single_source_geodesic_result.html", "structlagrange_1_1geodesic_1_1_single_source_geodesic_result" ]
+      ] ],
       [ "image", "namespacelagrange_1_1image.html", [
         [ "convert_image_pixel", "structlagrange_1_1image_1_1convert__image__pixel.html", null ],
         [ "ImageHistogram", "structlagrange_1_1image_1_1_image_histogram.html", "structlagrange_1_1image_1_1_image_histogram" ],
@@ -109,7 +118,7 @@ var annotated_dup =
         [ "ForwardMeshMapping", "structlagrange_1_1legacy_1_1_forward_mesh_mapping.html", null ],
         [ "MarchingTrianglesOutput", "structlagrange_1_1legacy_1_1_marching_triangles_output.html", null ],
         [ "MeshMapping", "structlagrange_1_1legacy_1_1_mesh_mapping.html", null ],
-        [ "MeshTopology", "classlagrange_1_1legacy_1_1_mesh_topology.html", "classlagrange_1_1legacy_1_1_mesh_topology" ],
+        [ "MeshTopology", "classlagrange_1_1legacy_1_1_mesh_topology.html", null ],
         [ "SelectFacetsByNormalSimilarityParameters", "structlagrange_1_1legacy_1_1_select_facets_by_normal_similarity_parameters.html", null ]
       ] ],
       [ "mapbox", null, [
@@ -135,6 +144,9 @@ var annotated_dup =
         [ "CommonOptions", "structlagrange_1_1poisson_1_1_common_options.html", "structlagrange_1_1poisson_1_1_common_options" ],
         [ "EvaluatorOptions", "structlagrange_1_1poisson_1_1_evaluator_options.html", "structlagrange_1_1poisson_1_1_evaluator_options" ],
         [ "ReconstructionOptions", "structlagrange_1_1poisson_1_1_reconstruction_options.html", "structlagrange_1_1poisson_1_1_reconstruction_options" ]
+      ] ],
+      [ "polyddg", null, [
+        [ "DifferentialOperators", "classlagrange_1_1polyddg_1_1_differential_operators.html", "classlagrange_1_1polyddg_1_1_differential_operators" ]
       ] ],
       [ "python", null, [
         [ "PyAttribute", "classlagrange_1_1python_1_1_py_attribute.html", null ],
@@ -166,6 +178,9 @@ var annotated_dup =
         [ "TextureInfo", "structlagrange_1_1scene_1_1_texture_info.html", "structlagrange_1_1scene_1_1_texture_info" ],
         [ "UserDataConverter", "structlagrange_1_1scene_1_1_user_data_converter.html", null ],
         [ "Value", "classlagrange_1_1scene_1_1_value.html", null ]
+      ] ],
+      [ "solver", null, [
+        [ "EigenResult", "structlagrange_1_1solver_1_1_eigen_result.html", "structlagrange_1_1solver_1_1_eigen_result" ]
       ] ],
       [ "subdivision", "namespacelagrange_1_1subdivision.html", [
         [ "internal", null, [

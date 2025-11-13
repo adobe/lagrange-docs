@@ -525,7 +525,7 @@ template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5
 <tr class="separator:ga4b70a6e7c30cd0524e2fc2490f280b69"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga9a5f380272eec2f91bbcdf4eeb04f591" id="r_ga9a5f380272eec2f91bbcdf4eeb04f591"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, typename Index&gt; </td></tr>
 <tr class="memitem:ga9a5f380272eec2f91bbcdf4eeb04f591"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="group__group-surfacemesh-attr.html#ga4d115376c2c766084ef808c837348fc3">AttributeId</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ga9a5f380272eec2f91bbcdf4eeb04f591">compute_vertex_is_manifold</a> (<a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index &gt; &amp;mesh, const <a class="el" href="structlagrange_1_1_vertex_manifold_options.html">VertexManifoldOptions</a> &amp;options={})</td></tr>
-<tr class="memdesc:ga9a5f380272eec2f91bbcdf4eeb04f591"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute a mesh attribute indicating vertex and edge manifoldness.  <br /></td></tr>
+<tr class="memdesc:ga9a5f380272eec2f91bbcdf4eeb04f591"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute a mesh attribute of value type <code>uint8_t</code> indicating vertex manifoldness.  <br /></td></tr>
 <tr class="separator:ga9a5f380272eec2f91bbcdf4eeb04f591"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gacc5a05b5bc041f50fbff82c00e18c631" id="r_gacc5a05b5bc041f50fbff82c00e18c631"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, typename Index, int Dimension&gt; </td></tr>
 <tr class="memitem:gacc5a05b5bc041f50fbff82c00e18c631"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#gacc5a05b5bc041f50fbff82c00e18c631">transform_mesh</a> (<a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index &gt; &amp;mesh, const Eigen::Transform&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Dimension, Eigen::Affine &gt; &amp;transform, const <a class="el" href="structlagrange_1_1_transform_options.html">TransformOptions</a> &amp;options={})</td></tr>
@@ -3079,7 +3079,7 @@ template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>AttributeId The attribute id of the selection, whose attribute name is given by options.output_attribute_name.</dd></dl>
 <dl class="section note"><dt>Note</dt><dd>Currently only support triangular mesh and will throw error if mesh.is_triangle_mesh() is false! The function will check if the mesh contains facet normal by looking for options.facet_normal_attribute_name, and if not found, will call compute_facet_normal(meshm, options.facet_normal_attribute_name).</dd></dl>
-<dl class="section see"><dt>See also</dt><dd>SelectFacetByNormalSimilarityOptions </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="structlagrange_1_1_select_facets_by_normal_similarity_options.html">SelectFacetsByNormalSimilarityOptions</a> </dd></dl>
 
 </div>
 </div>
@@ -3548,7 +3548,7 @@ template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5
 
 <p><code>#include &lt;lagrange/topology.h&gt;</code></p>
 
-<p>Compute a mesh attribute indicating vertex and edge manifoldness. </p>
+<p>Compute a mesh attribute of value type <code>uint8_t</code> indicating vertex manifoldness. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in,out]</td><td class="paramname">mesh</td><td>Input mesh. </td></tr>
@@ -3563,7 +3563,7 @@ template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Id of the newly added per-vertex attribute, of type uint8_t. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Id of the newly added per-vertex attribute. </dd></dl>
 
 </div>
 </div>
@@ -3728,7 +3728,7 @@ template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Wed Oct 29 2025 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+    <li class="footer">Generated on Thu Nov 13 2025 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>
 </body>

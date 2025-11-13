@@ -374,6 +374,9 @@ template&lt;typename SourceScalar, typename SourceIndex&gt; </td></tr>
 <tr class="memitem:a1d338472b33656740632fd6d58dfc9a7" id="r_a1d338472b33656740632fd6d58dfc9a7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1d338472b33656740632fd6d58dfc9a7">delete_attribute</a> (std::string_view name, <a class="el" href="group__group-surfacemesh-attr.html#gaa5f89459aeed8658ab8daf64e9b570e9">AttributeDeletePolicy</a> policy=<a class="el" href="group__group-surfacemesh-attr.html#ggaa5f89459aeed8658ab8daf64e9b570e9afc443f72fcb562a73b40af34ddb599a3">AttributeDeletePolicy::ErrorIfReserved</a>)</td></tr>
 <tr class="memdesc:a1d338472b33656740632fd6d58dfc9a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Delete an attribute given by name.  <br /></td></tr>
 <tr class="separator:a1d338472b33656740632fd6d58dfc9a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac77ce42733ea00bbabb8a9caa17751aa" id="r_ac77ce42733ea00bbabb8a9caa17751aa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac77ce42733ea00bbabb8a9caa17751aa">delete_attribute</a> (<a class="el" href="group__group-surfacemesh-attr.html#ga4d115376c2c766084ef808c837348fc3">AttributeId</a> id, <a class="el" href="group__group-surfacemesh-attr.html#gaa5f89459aeed8658ab8daf64e9b570e9">AttributeDeletePolicy</a> policy=<a class="el" href="group__group-surfacemesh-attr.html#ggaa5f89459aeed8658ab8daf64e9b570e9afc443f72fcb562a73b40af34ddb599a3">AttributeDeletePolicy::ErrorIfReserved</a>)</td></tr>
+<tr class="memdesc:ac77ce42733ea00bbabb8a9caa17751aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Delete an attribute given by its id.  <br /></td></tr>
+<tr class="separator:ac77ce42733ea00bbabb8a9caa17751aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a28d0478f3b515915db6dede4b645966c" id="r_a28d0478f3b515915db6dede4b645966c"><td class="memTemplParams" colspan="2">template&lt;typename ValueType&gt; </td></tr>
 <tr class="memitem:a28d0478f3b515915db6dede4b645966c"><td class="memTemplItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classlagrange_1_1_attribute.html">Attribute</a>&lt; ValueType &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a28d0478f3b515915db6dede4b645966c">delete_and_export_attribute</a> (std::string_view name, <a class="el" href="group__group-surfacemesh-attr.html#gaa5f89459aeed8658ab8daf64e9b570e9">AttributeDeletePolicy</a> delete_policy=<a class="el" href="group__group-surfacemesh-attr.html#ggaa5f89459aeed8658ab8daf64e9b570e9afc443f72fcb562a73b40af34ddb599a3">AttributeDeletePolicy::ErrorIfReserved</a>, <a class="el" href="group__group-surfacemesh-attr.html#ga4ffa0a4eff5003941fab38ce5e9fd3e6">AttributeExportPolicy</a> export_policy=<a class="el" href="group__group-surfacemesh-attr.html#gga4ffa0a4eff5003941fab38ce5e9fd3e6afe72de1001d465db9eb6ce5cb874c2cb">AttributeExportPolicy::CopyIfExternal</a>)</td></tr>
 <tr class="memdesc:a28d0478f3b515915db6dede4b645966c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Delete an attribute and export its content in a writable shared_ptr.  <br /></td></tr>
@@ -3554,7 +3557,7 @@ template&lt;typename ValueType&gt; </div>
 </div><div class="memdoc">
 
 <p>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </p>
-<dl class="section note"><dt>Note</dt><dd>This function differs from the prevous version by participating in shared ownership management of the buffer referred by <code>shared_values</code>. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>This function differs from the previous version by participating in shared ownership management of the buffer referred by <code>shared_values</code>. </dd></dl>
 
 </div>
 </div>
@@ -3657,7 +3660,7 @@ template&lt;typename ValueType&gt; </div>
 </div><div class="memdoc">
 
 <p>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </p>
-<dl class="section note"><dt>Note</dt><dd>This function differs from the prevous version by participating in shared ownership management of the buffer referred by <code>shared_values</code>. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>This function differs from the previous version by participating in shared ownership management of the buffer referred by <code>shared_values</code>. </dd></dl>
 
 </div>
 </div>
@@ -3771,7 +3774,7 @@ template&lt;typename ValueType&gt; </div>
 </div><div class="memdoc">
 
 <p>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </p>
-<dl class="section note"><dt>Note</dt><dd>This function differs from the prevous version by participating in shared ownership management of the buffer referred by <code>shared_values</code> and <code>shared_indices</code>. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>This function differs from the previous version by participating in shared ownership management of the buffer referred by <code>shared_values</code> and <code>shared_indices</code>. </dd></dl>
 
 </div>
 </div>
@@ -3819,7 +3822,7 @@ template&lt;typename ValueType&gt; </div>
 </div><div class="memdoc">
 
 <p>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </p>
-<dl class="section note"><dt>Note</dt><dd>This function differs from the prevous version by participating in shared ownership management of the buffer referred by <code>shared_indices</code>. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>This function differs from the previous version by participating in shared ownership management of the buffer referred by <code>shared_indices</code>. </dd></dl>
 
 </div>
 </div>
@@ -3867,7 +3870,7 @@ template&lt;typename ValueType&gt; </div>
 </div><div class="memdoc">
 
 <p>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </p>
-<dl class="section note"><dt>Note</dt><dd>This function differs from the prevous version by participating in shared ownership management of the buffer referred by <code>shared_values</code>. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>This function differs from the previous version by participating in shared ownership management of the buffer referred by <code>shared_values</code>. </dd></dl>
 
 </div>
 </div>
@@ -3981,7 +3984,7 @@ template&lt;typename ValueType&gt; </div>
 </div><div class="memdoc">
 
 <p>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </p>
-<dl class="section note"><dt>Note</dt><dd>This function differs from the prevous version by participating in shared ownership management of the buffers referred by <code>shared_values</code> and <code>shared_indices</code>. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>This function differs from the previous version by participating in shared ownership management of the buffers referred by <code>shared_values</code> and <code>shared_indices</code>. </dd></dl>
 
 </div>
 </div>
@@ -4029,7 +4032,7 @@ template&lt;typename ValueType&gt; </div>
 </div><div class="memdoc">
 
 <p>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </p>
-<dl class="section note"><dt>Note</dt><dd>This function differs from the prevous version by participating in shared ownership management of the buffer referred by <code>shared_indices</code>. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>This function differs from the previous version by participating in shared ownership management of the buffer referred by <code>shared_indices</code>. </dd></dl>
 
 </div>
 </div>
@@ -4077,7 +4080,7 @@ template&lt;typename ValueType&gt; </div>
 </div><div class="memdoc">
 
 <p>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </p>
-<dl class="section note"><dt>Note</dt><dd>This function differs from the prevous version by participating in shared ownership management of the buffer referred by <code>shared_values</code>. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>This function differs from the previous version by participating in shared ownership management of the buffer referred by <code>shared_values</code>. </dd></dl>
 
 </div>
 </div>
@@ -4138,7 +4141,7 @@ template&lt;typename <a class="el" href="#a6e7ee8ed1fabd5e89d353a7e9596009e">Sca
 </div><div class="memdoc">
 
 <p>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </p>
-<dl class="section note"><dt>Note</dt><dd>This function differs from the prevous version by participating in shared ownership management of the buffer referred by <code>shared_vertices</code>. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>This function differs from the previous version by participating in shared ownership management of the buffer referred by <code>shared_vertices</code>. </dd></dl>
 
 </div>
 </div>
@@ -4199,7 +4202,7 @@ template&lt;typename <a class="el" href="#a6e7ee8ed1fabd5e89d353a7e9596009e">Sca
 </div><div class="memdoc">
 
 <p>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </p>
-<dl class="section note"><dt>Note</dt><dd>This function differs from the prevous version by participating in shared ownership management of the buffer referred by <code>shared_vertices</code>. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>This function differs from the previous version by participating in shared ownership management of the buffer referred by <code>shared_vertices</code>. </dd></dl>
 
 </div>
 </div>
@@ -4270,7 +4273,7 @@ template&lt;typename <a class="el" href="#a6e7ee8ed1fabd5e89d353a7e9596009e">Sca
 </div><div class="memdoc">
 
 <p>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </p>
-<dl class="section note"><dt>Note</dt><dd>This function differs from the prevous version by participating in shared ownership management of the buffer referred by <code>shared_facets</code>. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>This function differs from the previous version by participating in shared ownership management of the buffer referred by <code>shared_facets</code>. </dd></dl>
 
 </div>
 </div>
@@ -4341,7 +4344,7 @@ template&lt;typename <a class="el" href="#a6e7ee8ed1fabd5e89d353a7e9596009e">Sca
 </div><div class="memdoc">
 
 <p>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </p>
-<dl class="section note"><dt>Note</dt><dd>This function differs from the prevous version by participating in shared ownership management of the buffer referred by <code>shared_facets</code>. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>This function differs from the previous version by participating in shared ownership management of the buffer referred by <code>shared_facets</code>. </dd></dl>
 
 </div>
 </div>
@@ -4423,7 +4426,7 @@ template&lt;typename <a class="el" href="#a6e7ee8ed1fabd5e89d353a7e9596009e">Sca
 </div><div class="memdoc">
 
 <p>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </p>
-<dl class="section note"><dt>Note</dt><dd>This function differs from the prevous version by participating in shared ownership management of the buffers referred by <code>shared_offsets</code> and <code>shared_facets</code>. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>This function differs from the previous version by participating in shared ownership management of the buffers referred by <code>shared_offsets</code> and <code>shared_facets</code>. </dd></dl>
 
 </div>
 </div>
@@ -4459,7 +4462,7 @@ template&lt;typename <a class="el" href="#a6e7ee8ed1fabd5e89d353a7e9596009e">Sca
 </div><div class="memdoc">
 
 <p>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </p>
-<dl class="section note"><dt>Note</dt><dd>This function differs from the prevous version by participating in shared ownership management of the buffer referred by <code>shared_facets</code>. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>This function differs from the previous version by participating in shared ownership management of the buffer referred by <code>shared_facets</code>. </dd></dl>
 
 </div>
 </div>
@@ -4495,7 +4498,7 @@ template&lt;typename <a class="el" href="#a6e7ee8ed1fabd5e89d353a7e9596009e">Sca
 </div><div class="memdoc">
 
 <p>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </p>
-<dl class="section note"><dt>Note</dt><dd>This function differs from the prevous version by participating in shared ownership management of the buffer referred by <code>shared_offsets</code>. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>This function differs from the previous version by participating in shared ownership management of the buffer referred by <code>shared_offsets</code>. </dd></dl>
 
 </div>
 </div>
@@ -4577,7 +4580,7 @@ template&lt;typename <a class="el" href="#a6e7ee8ed1fabd5e89d353a7e9596009e">Sca
 </div><div class="memdoc">
 
 <p>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </p>
-<dl class="section note"><dt>Note</dt><dd>This function differs from the prevous version by participating in shared ownership management of the buffers referred by <code>shared_offsets</code> and <code>shared_facets</code>. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>This function differs from the previous version by participating in shared ownership management of the buffers referred by <code>shared_offsets</code> and <code>shared_facets</code>. </dd></dl>
 
 </div>
 </div>
@@ -4613,7 +4616,7 @@ template&lt;typename <a class="el" href="#a6e7ee8ed1fabd5e89d353a7e9596009e">Sca
 </div><div class="memdoc">
 
 <p>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </p>
-<dl class="section note"><dt>Note</dt><dd>This function differs from the prevous version by participating in shared ownership management of the buffer referred by <code>shared_facets</code>. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>This function differs from the previous version by participating in shared ownership management of the buffer referred by <code>shared_facets</code>. </dd></dl>
 
 </div>
 </div>
@@ -4649,7 +4652,7 @@ template&lt;typename <a class="el" href="#a6e7ee8ed1fabd5e89d353a7e9596009e">Sca
 </div><div class="memdoc">
 
 <p>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </p>
-<dl class="section note"><dt>Note</dt><dd>This function differs from the prevous version by participating in shared ownership management of the buffer referred by <code>shared_offsets</code>. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>This function differs from the previous version by participating in shared ownership management of the buffer referred by <code>shared_offsets</code>. </dd></dl>
 
 </div>
 </div>
@@ -4721,7 +4724,7 @@ template&lt;typename <a class="el" href="#a6e7ee8ed1fabd5e89d353a7e9596009e">Sca
 </div>
 </div>
 <a id="a1d338472b33656740632fd6d58dfc9a7" name="a1d338472b33656740632fd6d58dfc9a7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1d338472b33656740632fd6d58dfc9a7">&#9670;&#160;</a></span>delete_attribute()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d338472b33656740632fd6d58dfc9a7">&#9670;&#160;</a></span>delete_attribute() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -4742,11 +4745,43 @@ template&lt;typename <a class="el" href="#a6e7ee8ed1fabd5e89d353a7e9596009e">Sca
 </div><div class="memdoc">
 
 <p>Delete an attribute given by name. </p>
-<p>The attribute must exist. If the attribute is a reserved name (starts with a "$"), then you must specify force=true to delete the attribute.</p>
-<dl class="section note"><dt>Note</dt><dd>There is no performance benefit in deleting an attribute given by id only, as we would need to free its name from the list of existing attributes anyway.</dd></dl>
+<p>The attribute must exist. If the attribute is a reserved name (starts with a "$"), then you must use AttributeDeletePolicy::Force to delete the attribute.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>Attribute name. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">policy</td><td>Delete policy for reserved attribute names. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ac77ce42733ea00bbabb8a9caa17751aa" name="ac77ce42733ea00bbabb8a9caa17751aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac77ce42733ea00bbabb8a9caa17751aa">&#9670;&#160;</a></span>delete_attribute() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename <a class="el" href="#a6e7ee8ed1fabd5e89d353a7e9596009e">Scalar</a>, typename <a class="el" href="#a726cb631080e40f5e472e0c3f6e59eda">Index</a>&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void delete_attribute </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__group-surfacemesh-attr.html#ga4d115376c2c766084ef808c837348fc3">AttributeId</a></td>          <td class="paramname"><span class="paramname"><em>id</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__group-surfacemesh-attr.html#gaa5f89459aeed8658ab8daf64e9b570e9">AttributeDeletePolicy</a></td>          <td class="paramname"><span class="paramname"><em>policy</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="group__group-surfacemesh-attr.html#ggaa5f89459aeed8658ab8daf64e9b570e9afc443f72fcb562a73b40af34ddb599a3">AttributeDeletePolicy::ErrorIfReserved</a></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Delete an attribute given by its id. </p>
+<p>The attribute must exist. If the attribute is a reserved name (starts with a "$"), then you must use AttributeDeletePolicy::Force to delete the attribute.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">id</td><td>Attribute id. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">policy</td><td>Delete policy for reserved attribute names. </td></tr>
   </table>
   </dd>
@@ -8643,7 +8678,7 @@ template&lt;typename Scalar_, typename Index_&gt; </div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacelagrange.html">lagrange</a></li><li class="navelem"><a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a></li>
-    <li class="footer">Generated on Wed Oct 29 2025 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+    <li class="footer">Generated on Thu Nov 13 2025 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>
 </body>

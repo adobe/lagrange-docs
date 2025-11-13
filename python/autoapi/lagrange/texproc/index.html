@@ -6,7 +6,7 @@
 <link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" />
 
     <!-- Generated with Sphinx 7.4.7 and Furo 2023.09.10 -->
-        <title>lagrange.texproc - Lagrange documentation</title>
+        <title>&lt;no title&gt; - Lagrange documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=a746c00c" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?v=135e06be" />
     <link rel="stylesheet" type="text/css" href="../../../_static/graphviz.css?v=fd3f3429" />
@@ -135,7 +135,7 @@
           <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
         </button>
       </div>
-      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
         <div class="visually-hidden">Toggle table of contents sidebar</div>
         <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
       </label>
@@ -155,13 +155,7 @@
   <input type="hidden" name="area" value="default">
 </form>
 <div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
-  <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
-<ul>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../index.html">API Reference</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of API Reference</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="simple">
-</ul>
-</li>
-</ul>
-
+  
 </div>
 </div>
 
@@ -188,189 +182,13 @@
               <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
             </button>
           </div>
-          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+          <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
             <div class="visually-hidden">Toggle table of contents sidebar</div>
             <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
           </label>
         </div>
         <article role="main">
-          <section id="module-lagrange.texproc">
-<span id="lagrange-texproc"></span><h1><a class="reference internal" href="#module-lagrange.texproc" title="lagrange.texproc"><code class="xref py py-mod docutils literal notranslate"><span class="pre">lagrange.texproc</span></code></a><a class="headerlink" href="#module-lagrange.texproc" title="Link to this heading">¶</a></h1>
-<section id="module-contents">
-<h2>Module Contents<a class="headerlink" href="#module-contents" title="Link to this heading">¶</a></h2>
-<section id="functions">
-<h3>Functions<a class="headerlink" href="#functions" title="Link to this heading">¶</a></h3>
-<div class="table-wrapper autosummary longtable docutils container">
-<table class="autosummary longtable docutils align-default">
-<tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#lagrange.texproc.geodesic_dilation" title="lagrange.texproc.geodesic_dilation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">geodesic_dilation</span></code></a>(mesh, image[, dilation_radius])</p></td>
-<td><p>Extend pixels of a texture beyond the defined UV mesh by walking along the 3D surface.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#lagrange.texproc.geodesic_position" title="lagrange.texproc.geodesic_position"><code class="xref py py-obj docutils literal notranslate"><span class="pre">geodesic_position</span></code></a>(mesh, width, height[, dilation_radius])</p></td>
-<td><p>Computes a dilated position map to extend a texture beyond the defined UV mesh by walking along the 3D surface.</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#lagrange.texproc.rasterize_textures_from_renders" title="lagrange.texproc.rasterize_textures_from_renders"><code class="xref py py-obj docutils literal notranslate"><span class="pre">rasterize_textures_from_renders</span></code></a>(scene, renders[, ...])</p></td>
-<td><p>Rasterize one (color, weight) per (render, camera) and filter our low-confidence weights.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#lagrange.texproc.texture_compositing" title="lagrange.texproc.texture_compositing"><code class="xref py py-obj docutils literal notranslate"><span class="pre">texture_compositing</span></code></a>(mesh, colors, weights[, ...])</p></td>
-<td><p>Composite multiple (color, weight) into a single texture given a unwrapped mesh.</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#lagrange.texproc.texture_filtering" title="lagrange.texproc.texture_filtering"><code class="xref py py-obj docutils literal notranslate"><span class="pre">texture_filtering</span></code></a>(mesh, image[, value_weight, ...])</p></td>
-<td><p>&quot;Smooth or sharpen a texture image associated with a mesh.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#lagrange.texproc.texture_stitching" title="lagrange.texproc.texture_stitching"><code class="xref py py-obj docutils literal notranslate"><span class="pre">texture_stitching</span></code></a>(mesh, image[, exterior_only, ...])</p></td>
-<td><p>Smooth or sharpen a texture image associated with a mesh.</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<dl class="py function">
-<dt class="sig sig-object py" id="lagrange.texproc.geodesic_dilation">
-<span class="sig-prename descclassname"><span class="pre">lagrange.texproc.</span></span><span class="sig-name descname"><span class="pre">geodesic_dilation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mesh</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">image</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dilation_radius</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lagrange.texproc.geodesic_dilation" title="Link to this definition">¶</a></dt>
-<dd><p>Extend pixels of a texture beyond the defined UV mesh by walking along the 3D surface.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>mesh</strong> (<a class="reference internal" href="../core/index.html#lagrange.core.SurfaceMesh" title="lagrange.core.SurfaceMesh"><em>lagrange.core.SurfaceMesh</em></a>) – Input mesh with UV attributes.</p></li>
-<li><p><strong>image</strong> (<em>Annotated</em><em>[</em><em>numpy.typing.NDArray</em><em>[</em><em>numpy.float32</em><em>]</em><em>, </em><em>dict</em><em>(</em><em>shape=</em><em>(</em><em>None</em><em>, </em><em>None</em><em>, </em><em>None</em><em>)</em><em>, </em><em>order='C'</em><em>, </em><em>device='cpu'</em><em>)</em><em>]</em>) – Texture to extend beyond UV mesh boundaries.</p></li>
-<li><p><strong>dilation_radius</strong> (<em>float</em>) – The radius by which the texture should be dilated into the gutter.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>The dilated texture image.</p>
-</dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>object</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="lagrange.texproc.geodesic_position">
-<span class="sig-prename descclassname"><span class="pre">lagrange.texproc.</span></span><span class="sig-name descname"><span class="pre">geodesic_position</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mesh</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">width</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">height</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dilation_radius</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lagrange.texproc.geodesic_position" title="Link to this definition">¶</a></dt>
-<dd><p>Computes a dilated position map to extend a texture beyond the defined UV mesh by walking along the 3D surface.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>mesh</strong> (<a class="reference internal" href="../core/index.html#lagrange.core.SurfaceMesh" title="lagrange.core.SurfaceMesh"><em>lagrange.core.SurfaceMesh</em></a>) – Input mesh with UV attributes.</p></li>
-<li><p><strong>width</strong> (<em>int</em>) – Width of the output position map.</p></li>
-<li><p><strong>height</strong> (<em>int</em>) – Height of the output position map.</p></li>
-<li><p><strong>dilation_radius</strong> (<em>float</em>) – The radius by which the texture should be dilated into the gutter.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>The dilated position map.</p>
-</dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>object</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="lagrange.texproc.rasterize_textures_from_renders">
-<span class="sig-prename descclassname"><span class="pre">lagrange.texproc.</span></span><span class="sig-name descname"><span class="pre">rasterize_textures_from_renders</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">scene</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">renders</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">width</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">height</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">low_confidence_ratio</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.75</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">base_confidence</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lagrange.texproc.rasterize_textures_from_renders" title="Link to this definition">¶</a></dt>
-<dd><p>Rasterize one (color, weight) per (render, camera) and filter our low-confidence weights.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>scene</strong> (<a class="reference internal" href="../scene/index.html#lagrange.scene.Scene" title="lagrange.scene.Scene"><em>lagrange.scene.Scene</em></a>) – Scene containing a single mesh (possibly with a base texture), and multiple cameras.</p></li>
-<li><p><strong>renders</strong> (<em>collections.abc.Sequence</em><em>[</em><em>Annotated</em><em>[</em><em>numpy.typing.NDArray</em><em>[</em><em>numpy.float32</em><em>]</em><em>, </em><em>dict</em><em>(</em><em>shape=</em><em>(</em><em>None</em><em>, </em><em>None</em><em>, </em><em>None</em><em>)</em><em>, </em><em>order='C'</em><em>, </em><em>device='cpu'</em><em>)</em><em>]</em><em>]</em>) – List of rendered images, one per camera.</p></li>
-<li><p><strong>width</strong> (<em>int</em><em> | </em><em>None</em>) – Width of the rasterized textures. Must match the width of the base texture if present. Otherwise, defaults to 1024.</p></li>
-<li><p><strong>height</strong> (<em>int</em><em> | </em><em>None</em>) – Height of the rasterized textures. Must match the height of the base texture if present. Otherwise, defaults to 1024.</p></li>
-<li><p><strong>low_confidence_ratio</strong> (<em>float</em>) – Discard low confidence texels whose weights are &lt; ratio * max_weight.</p></li>
-<li><p><strong>base_confidence</strong> (<em>float</em><em> | </em><em>None</em>) – Confidence value for the base texture if present in the scene. If set to 0, ignore the base texture of the mesh. Defaults to 0.3 otherwise.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>A pair of lists (textures, weights), one per camera.</p>
-</dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>tuple[list[object], list[object]]</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="lagrange.texproc.texture_compositing">
-<span class="sig-prename descclassname"><span class="pre">lagrange.texproc.</span></span><span class="sig-name descname"><span class="pre">texture_compositing</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mesh</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">colors</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">weights</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value_weight</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1000.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">quadrature_samples</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">6</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">jitter_epsilon</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0001</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">smooth_low_weight_areas</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_multigrid_levels</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">4</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_gauss_seidel_iterations</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_v_cycles</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lagrange.texproc.texture_compositing" title="Link to this definition">¶</a></dt>
-<dd><p>Composite multiple (color, weight) into a single texture given a unwrapped mesh.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>mesh</strong> (<a class="reference internal" href="../core/index.html#lagrange.core.SurfaceMesh" title="lagrange.core.SurfaceMesh"><em>lagrange.core.SurfaceMesh</em></a>) – Input mesh with UV attributes.</p></li>
-<li><p><strong>colors</strong> (<em>collections.abc.Sequence</em><em>[</em><em>Annotated</em><em>[</em><em>numpy.typing.NDArray</em><em>[</em><em>numpy.float32</em><em>]</em><em>, </em><em>dict</em><em>(</em><em>shape=</em><em>(</em><em>None</em><em>, </em><em>None</em><em>, </em><em>None</em><em>)</em><em>, </em><em>order='C'</em><em>, </em><em>device='cpu'</em><em>)</em><em>]</em><em>]</em>) – List of texture images to composite. Input textures must have the same dimensions.</p></li>
-<li><p><strong>weights</strong> (<em>collections.abc.Sequence</em><em>[</em><em>Annotated</em><em>[</em><em>numpy.typing.NDArray</em><em>[</em><em>numpy.float32</em><em>]</em><em>, </em><em>dict</em><em>(</em><em>shape=</em><em>(</em><em>None</em><em>, </em><em>None</em><em>, </em><em>None</em><em>)</em><em>, </em><em>order='C'</em><em>, </em><em>device='cpu'</em><em>)</em><em>]</em><em>]</em>) – List of confidence weights for each texel. 0 means the texel should be ignored, 1 means the texel should be fully trusted. Input weights must have the same dimensions as colors.</p></li>
-<li><p><strong>value_weight</strong> (<em>float</em>) – The weight for fitting the values of the signal.</p></li>
-<li><p><strong>quadrature_samples</strong> (<em>int</em>) – The number of quadrature samples to use for integration (in {1, 3, 6, 12, 24, 32}).</p></li>
-<li><p><strong>jitter_epsilon</strong> (<em>float</em>) – Jitter amount per texel (0 to deactivate).</p></li>
-<li><p><strong>smooth_low_weight_areas</strong> (<em>bool</em>) – Whether to smooth pixels with a low total weight (&lt; 1). When enabled, this will not dampen the gradient terms for pixels with a low total weight, resulting in a smoother texture in low-confidence areas.</p></li>
-<li><p><strong>num_multigrid_levels</strong> (<em>int</em>) – Number of multigrid levels.</p></li>
-<li><p><strong>num_gauss_seidel_iterations</strong> (<em>int</em>) – Number of Gauss-Seidel iterations per multigrid level.</p></li>
-<li><p><strong>num_v_cycles</strong> (<em>int</em>) – Number of V-cycles to perform.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>The composited texture image.</p>
-</dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>object</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="lagrange.texproc.texture_filtering">
-<span class="sig-prename descclassname"><span class="pre">lagrange.texproc.</span></span><span class="sig-name descname"><span class="pre">texture_filtering</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mesh</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">image</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value_weight</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1000.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gradient_weight</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gradient_scale</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">quadrature_samples</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">6</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">jitter_epsilon</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0001</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lagrange.texproc.texture_filtering" title="Link to this definition">¶</a></dt>
-<dd><p>“Smooth or sharpen a texture image associated with a mesh.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>mesh</strong> (<a class="reference internal" href="../core/index.html#lagrange.core.SurfaceMesh" title="lagrange.core.SurfaceMesh"><em>lagrange.core.SurfaceMesh</em></a>) – Input mesh with UV attributes.</p></li>
-<li><p><strong>image</strong> (<em>Annotated</em><em>[</em><em>numpy.typing.NDArray</em><em>[</em><em>numpy.float32</em><em>]</em><em>, </em><em>dict</em><em>(</em><em>shape=</em><em>(</em><em>None</em><em>, </em><em>None</em><em>, </em><em>None</em><em>)</em><em>, </em><em>order='C'</em><em>, </em><em>device='cpu'</em><em>)</em><em>]</em>) – Texture image to filter.</p></li>
-<li><p><strong>value_weight</strong> (<em>float</em>) – The weight for fitting the values of the signal.</p></li>
-<li><p><strong>gradient_weight</strong> (<em>float</em>) – The weight for fitting the modulated gradients of the signal.</p></li>
-<li><p><strong>gradient_scale</strong> (<em>float</em>) – The gradient modulation weight. Use a value of 0 for smoothing, and use a value between [2, 10] for sharpening.</p></li>
-<li><p><strong>quadrature_samples</strong> (<em>int</em>) – The number of quadrature samples to use for integration (in {1, 3, 6, 12, 24, 32}).</p></li>
-<li><p><strong>jitter_epsilon</strong> (<em>float</em>) – Jitter amount per texel (0 to deactivate).</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>The filtered texture image.</p>
-</dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>object</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="lagrange.texproc.texture_stitching">
-<span class="sig-prename descclassname"><span class="pre">lagrange.texproc.</span></span><span class="sig-name descname"><span class="pre">texture_stitching</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mesh</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">image</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exterior_only</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">quadrature_samples</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">6</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">jitter_epsilon</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0001</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lagrange.texproc.texture_stitching" title="Link to this definition">¶</a></dt>
-<dd><p>Smooth or sharpen a texture image associated with a mesh.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>mesh</strong> (<a class="reference internal" href="../core/index.html#lagrange.core.SurfaceMesh" title="lagrange.core.SurfaceMesh"><em>lagrange.core.SurfaceMesh</em></a>) – Input mesh with UV attributes.</p></li>
-<li><p><strong>image</strong> (<em>Annotated</em><em>[</em><em>numpy.typing.NDArray</em><em>[</em><em>numpy.float32</em><em>]</em><em>, </em><em>dict</em><em>(</em><em>shape=</em><em>(</em><em>None</em><em>, </em><em>None</em><em>, </em><em>None</em><em>)</em><em>, </em><em>order='C'</em><em>, </em><em>device='cpu'</em><em>)</em><em>]</em>) – Texture image to stitch.</p></li>
-<li><p><strong>exterior_only</strong> (<em>bool</em>) – If true, interior texels are fixed degrees of freedom.</p></li>
-<li><p><strong>quadrature_samples</strong> (<em>int</em>) – The number of quadrature samples to use for integration (in {1, 3, 6, 12, 24, 32}).</p></li>
-<li><p><strong>jitter_epsilon</strong> (<em>float</em>) – Jitter amount per texel (0 to deactivate).</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>The stitched texture image.</p>
-</dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>object</p>
-</dd>
-</dl>
-</dd></dl>
-
-</section>
-</section>
-</section>
-
+          <span class="target" id="module-lagrange.texproc"></span>
         </article>
       </div>
       <footer>
@@ -396,38 +214,8 @@
         
       </footer>
     </div>
-    <aside class="toc-drawer">
+    <aside class="toc-drawer no-toc">
       
-      
-      <div class="toc-sticky toc-scroll">
-        <div class="toc-title-container">
-          <span class="toc-title">
-            On this page
-          </span>
-        </div>
-        <div class="toc-tree-container">
-          <div class="toc-tree">
-            <ul>
-<li><a class="reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">lagrange.texproc</span></code></a><ul>
-<li><a class="reference internal" href="#module-contents">Module Contents</a><ul>
-<li><a class="reference internal" href="#functions">Functions</a><ul>
-<li><a class="reference internal" href="#lagrange.texproc.geodesic_dilation"><code class="docutils literal notranslate"><span class="pre">geodesic_dilation()</span></code></a></li>
-<li><a class="reference internal" href="#lagrange.texproc.geodesic_position"><code class="docutils literal notranslate"><span class="pre">geodesic_position()</span></code></a></li>
-<li><a class="reference internal" href="#lagrange.texproc.rasterize_textures_from_renders"><code class="docutils literal notranslate"><span class="pre">rasterize_textures_from_renders()</span></code></a></li>
-<li><a class="reference internal" href="#lagrange.texproc.texture_compositing"><code class="docutils literal notranslate"><span class="pre">texture_compositing()</span></code></a></li>
-<li><a class="reference internal" href="#lagrange.texproc.texture_filtering"><code class="docutils literal notranslate"><span class="pre">texture_filtering()</span></code></a></li>
-<li><a class="reference internal" href="#lagrange.texproc.texture_stitching"><code class="docutils literal notranslate"><span class="pre">texture_stitching()</span></code></a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-
-          </div>
-        </div>
-      </div>
       
       
     </aside>
