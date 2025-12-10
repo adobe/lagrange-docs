@@ -1,5 +1,6 @@
 var NAVTREEINDEX9 =
 {
+"structlagrange_1_1_thicken_and_close_options.html#afe36a9a93cf82f24011222fc231c9602":[4,0,1,104,4],
 "structlagrange_1_1_transform_options.html":[2,1,1,1,31],
 "structlagrange_1_1_transform_options.html#aab5e6e7c0226df5f9e151b0fefdfe21f":[2,1,1,1,31,2],
 "structlagrange_1_1_transform_options.html#ab325d5223b6259782405a0d4d87a6540":[2,1,1,1,31,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX9 =
 "structlagrange_1_1legacy_1_1_forward_mesh_mapping.html":[4,0,1,8,5],
 "structlagrange_1_1legacy_1_1_marching_triangles_output.html":[4,0,1,8,6],
 "structlagrange_1_1legacy_1_1_mesh_mapping.html":[4,0,1,8,7],
-"structlagrange_1_1legacy_1_1_select_facets_by_normal_similarity_parameters.html":[4,0,1,8,9],
-"structlagrange_1_1mapbox_1_1util_1_1nth.html":[4,0,1,9,1,0]
+"structlagrange_1_1legacy_1_1_select_facets_by_normal_similarity_parameters.html":[4,0,1,8,9]
 };

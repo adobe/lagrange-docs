@@ -1,5 +1,6 @@
 var NAVTREEINDEX8 =
 {
+"namespacemembers_func_v.html":[3,1,1,19],
 "namespacemembers_func_w.html":[3,1,1,20],
 "namespacemembers_g.html":[3,1,0,6],
 "namespacemembers_h.html":[3,1,0,7],
@@ -248,6 +249,5 @@ var NAVTREEINDEX8 =
 "structlagrange_1_1_thicken_and_close_options.html#a924c5f0b82bf8d7877e7e1a4516bdf9f":[4,0,1,104,1],
 "structlagrange_1_1_thicken_and_close_options.html#afd42b20443806dc854dab304e36546f0":[3,0,0,89,2],
 "structlagrange_1_1_thicken_and_close_options.html#afd42b20443806dc854dab304e36546f0":[4,0,1,104,2],
-"structlagrange_1_1_thicken_and_close_options.html#afe36a9a93cf82f24011222fc231c9602":[3,0,0,89,4],
-"structlagrange_1_1_thicken_and_close_options.html#afe36a9a93cf82f24011222fc231c9602":[4,0,1,104,4]
+"structlagrange_1_1_thicken_and_close_options.html#afe36a9a93cf82f24011222fc231c9602":[3,0,0,89,4]
 };

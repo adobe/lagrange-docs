@@ -63,10 +63,10 @@ var NAVTREEINDEX =
 "classlagrange_1_1scene_1_1_simple_scene.html#aa2350e78d3a9f786ea429950f906e425",
 "classlagrange_1_1volume_1_1legacy_1_1_mesh_adapter.html#adc98e2a86dc99dc2c124b575b1b26e85",
 "group__group-surfacemesh-utils.html#ggadab1480827f4522cbf1f9e1d4c28db91a6043446227f6a89342620a00a131257f",
-"namespacelagrange_1_1internal.html#a18efc9f6e2bdf77c1b85bc5c3794edd1",
-"namespacemembers_func_w.html",
-"structlagrange_1_1_transform_options.html",
-"structlagrange_1_1poisson_1_1_attribute_evaluator_1_1_impl.html",
+"namespacelagrange_1_1internal.html#a1566fc02a68fa88d2d979e717b19aa62",
+"namespacemembers_func_v.html",
+"structlagrange_1_1_thicken_and_close_options.html#afe36a9a93cf82f24011222fc231c9602",
+"structlagrange_1_1mapbox_1_1util_1_1nth.html",
 "structlagrange_1_1ui_1_1_immediate_entities.html",
 "structlagrange_1_1ui_1_1type__traits_3_01uint16__t_01_4.html"
 ];

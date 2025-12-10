@@ -11,5 +11,6 @@ var group__group_utils_warning =
     [ "LA_IGNORE_NONVOID_NORETURN_WARNING_BEGIN", "group__group-utils-warning.html#ga0389098498063fcb92805d5a018b45d8", null ],
     [ "LA_IGNORE", "group__group-utils-warning.html#gab4318b2844c981f0adf329ddf66b14e7", null ],
     [ "LA_IGNORE_RANGE_LOOP_ANALYSIS_BEGIN", "group__group-utils-warning.html#gaea1008e72c7279ac1c0683098356e09f", null ],
-    [ "LA_IGNORE_ARRAY_BOUNDS_BEGIN", "group__group-utils-warning.html#ga9b6149cadf64b2baab9316211e0fc12d", null ]
+    [ "LA_IGNORE_ARRAY_BOUNDS_BEGIN", "group__group-utils-warning.html#ga9b6149cadf64b2baab9316211e0fc12d", null ],
+    [ "LA_IGNORE_MAYBE_UNINITIALIZED_START", "group__group-utils-warning.html#gaf41bbe93ccaed818d4bdb6e5dc4f3d52", null ]
 ];

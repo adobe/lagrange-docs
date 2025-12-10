@@ -1,5 +1,6 @@
 var NAVTREEINDEX7 =
 {
+"namespacelagrange_1_1internal.html#a1566fc02a68fa88d2d979e717b19aa62":[3,0,0,2,54],
 "namespacelagrange_1_1internal.html#a18efc9f6e2bdf77c1b85bc5c3794edd1":[3,0,0,2,51],
 "namespacelagrange_1_1internal.html#a1bf501173c662983dbe2e4436cd90f35":[3,0,0,2,17],
 "namespacelagrange_1_1internal.html#a252940a1c11ea835592d9e6d1952c868":[3,0,0,2,20],
@@ -248,6 +249,5 @@ var NAVTREEINDEX7 =
 "namespacemembers_func_r.html":[3,1,1,15],
 "namespacemembers_func_s.html":[3,1,1,16],
 "namespacemembers_func_t.html":[3,1,1,17],
-"namespacemembers_func_u.html":[3,1,1,18],
-"namespacemembers_func_v.html":[3,1,1,19]
+"namespacemembers_func_u.html":[3,1,1,18]
 };

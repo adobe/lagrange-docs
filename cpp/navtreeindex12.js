@@ -1,5 +1,6 @@
 var NAVTREEINDEX12 =
 {
+"structlagrange_1_1ui_1_1type__traits_3_01uint16__t_01_4.html":[3,0,0,7,116],
 "structlagrange_1_1ui_1_1type__traits_3_01uint16__t_01_4.html":[4,0,1,20,119],
 "structlagrange_1_1ui_1_1type__traits_3_01uint32__t_01_4.html":[3,0,0,7,117],
 "structlagrange_1_1ui_1_1type__traits_3_01uint32__t_01_4.html":[4,0,1,20,120],

@@ -1,5 +1,6 @@
 var NAVTREEINDEX10 =
 {
+"structlagrange_1_1mapbox_1_1util_1_1nth.html":[4,0,1,9,1,0],
 "structlagrange_1_1poisson_1_1_attribute_evaluator_1_1_impl.html":[4,0,1,11,1,0],
 "structlagrange_1_1poisson_1_1_attribute_evaluator_1_1_impl_1_1_derived.html":[4,0,1,11,1,0,0],
 "structlagrange_1_1poisson_1_1_common_options.html":[4,0,1,11,2],
@@ -248,6 +249,5 @@ var NAVTREEINDEX10 =
 "structlagrange_1_1ui_1_1_i_b_l.html#ae009859343aa5d570f0b1ce2db59c48b":[3,0,0,7,44,2],
 "structlagrange_1_1ui_1_1_i_b_l.html#ae009859343aa5d570f0b1ce2db59c48b":[4,0,1,20,47,2],
 "structlagrange_1_1ui_1_1_i_b_l_changed_event.html":[3,0,0,7,45],
-"structlagrange_1_1ui_1_1_i_b_l_changed_event.html":[4,0,1,20,48],
-"structlagrange_1_1ui_1_1_immediate_entities.html":[3,0,0,7,46]
+"structlagrange_1_1ui_1_1_i_b_l_changed_event.html":[4,0,1,20,48]
 };

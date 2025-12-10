@@ -1,5 +1,6 @@
 var NAVTREEINDEX11 =
 {
+"structlagrange_1_1ui_1_1_immediate_entities.html":[3,0,0,7,46],
 "structlagrange_1_1ui_1_1_immediate_entities.html":[4,0,1,20,49],
 "structlagrange_1_1ui_1_1_input_state.html":[3,0,0,7,47],
 "structlagrange_1_1ui_1_1_input_state.html":[4,0,1,20,50],
@@ -248,6 +249,5 @@ var NAVTREEINDEX11 =
 "structlagrange_1_1ui_1_1type__traits_3_01int32__t_01_4.html":[3,0,0,7,114],
 "structlagrange_1_1ui_1_1type__traits_3_01int32__t_01_4.html":[4,0,1,20,117],
 "structlagrange_1_1ui_1_1type__traits_3_01int8__t_01_4.html":[3,0,0,7,115],
-"structlagrange_1_1ui_1_1type__traits_3_01int8__t_01_4.html":[4,0,1,20,118],
-"structlagrange_1_1ui_1_1type__traits_3_01uint16__t_01_4.html":[3,0,0,7,116]
+"structlagrange_1_1ui_1_1type__traits_3_01int8__t_01_4.html":[4,0,1,20,118]
 };
