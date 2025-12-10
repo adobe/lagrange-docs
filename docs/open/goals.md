@@ -82,13 +82,13 @@ design principles that go into Lagrange.
 
         | Format | Read                    | Write              | Comment                           |
         | ------ | ----------------------- | ------------------ | --------------------------------- |
-        | FBX    | :heavy_check_mark:[^io] | :x:                | Via Assimp                        |
+        | FBX    | :heavy_check_mark:      | :x:                | Via ufbx.                         |
         | glTF   | :heavy_check_mark:      | :heavy_check_mark: | Via tinygltf                      |
         | HDF5   | :x:                     | :x:                | Planned                           |
         | MSH    | :heavy_check_mark:      | :heavy_check_mark: | Via MshIO                         |
         | OBJ    | :heavy_check_mark:      | :heavy_check_mark: | Read via tinyobj, custom writer   |
         | PLY    | :heavy_check_mark:      | :heavy_check_mark: | Read via libigl, write via happly |
-        | USD    | :x:                     | :x:                | Planned                           |
+        | USD    | :heavy_check_mark:      | :heavy_check_mark: | Via our usd module                |
         | Other  | :heavy_check_mark:[^io] | :x:                | Via Assimp                        |
 
         #### Simple Scene IO
@@ -116,14 +116,14 @@ design principles that go into Lagrange.
         - Easy to add your own UI via ImGui
         - Variety of visualization options - mix and match indexing/colormapping/rendered primitive/shading.
 
-10. **Robustness/Support**. Being backed by a company, Lagrange has a strong focus on correctness/being as bug-free as possible. We have extensive unit testing internally, with more than 400 unit tests. Specifically, we try to ensure the following:
+3.  **Robustness/Support**. Being backed by a company, Lagrange has a strong focus on correctness/being as bug-free as possible. We have extensive unit testing internally, with more than 400 unit tests. Specifically, we try to ensure the following:
     - **Corner Cases**. Special cases should not crash the program. Incorrect inputs may result in exceptions being thrown.
     - **Determinism**. Parallel algorithms should produce the same results when called repeatedly with the same inputs.
     - **Regression Tests**. We should have unit tests to ensure that algorithms produce the same output whenever code changes. Changes in algorithm behaviors should be documented.
     - **Cross-Platform**. Algorithms should produce the same result on all three platforms whenever possible (macOS/Linux/Windows). This means avoiding `std::default_random_engine` and other platform-specific constructs.
-11. **Useful Feedbacks**. Being integrated into a product means we often need to provide some simple feedback mechanisms, such as logging, cancellation and progress report.
+4.  **Useful Feedbacks**. Being integrated into a product means we often need to provide some simple feedback mechanisms, such as logging, cancellation and progress report.
     - **Logger**. We use [spdlog](https://github.com/gabime/spdlog) to provide beautiful logging messages. The global logger is thread-safe, and can be turned off or redirected as needed by the client application.
     - **Cancellation**. It should be possible to cancel any running function by switching a `std::atomic_bool &` flag.
     - **Progress Report**. A simple thread-safe callback mechanism can be used in certain functions to report progress. This is useful to inform the user about the advancement of certain tasks that can be slow (e.g. mesh cleanup, etc.).
     - **Error Mechanism**. We use exception throwing as the mechanism to report an error. While returning error code has certain advantages over exceptions, third-party libraries or the STL can still throw exceptions, and thus it is the user's responsibility to catch them should they occur.
-12. **Documentation/Code Style**. Our codebase is formatted via clang-format for consistency. We aim to provide both libigl-style tutorials to get started using Lagrange, as well as detailed API documentation written in Doxygen.
+5.  **Documentation/Code Style**. Our codebase is formatted via clang-format for consistency. We aim to provide both libigl-style tutorials to get started using Lagrange, as well as detailed API documentation written in Doxygen.

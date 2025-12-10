@@ -80,4 +80,3 @@ registry.emplace<MyPositionComponent>(entity, MyPositionComponent(0,0,0));
 ## Further Documentation
 
 [Doxygen generated documentation](../../{{ dox_folder }}/namespacelagrange_1_1ui.html)
-

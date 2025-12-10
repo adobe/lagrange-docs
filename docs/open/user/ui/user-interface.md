@@ -36,4 +36,3 @@ auto panel1 = ui::add_panel(registry,"panel with x = 1",panel_fn);
 registry.emplace<MyPanelState>(panel1, MyPanelState{1})
 
 ```
-

@@ -188,4 +188,3 @@ assert(dihedral_angle.cols() == 1);
     The dihedral angle is only well-defined for 3D _manifold_ meshes.
 
 [dihedral angle]: http://mathworld.wolfram.com/DihedralAngle.html
-

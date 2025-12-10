@@ -38,8 +38,9 @@ automatically downloaded by our CMake system depending on which Lagrange module 
 | [OpenSubdiv](https://github.com/PixarAnimationStudios/OpenSubdiv)                              | Apache 2                          | Subdivision                                           |
 | [OpenVDB](https://github.com/AcademySoftwareFoundation/openvdb)                                | MPL2                              | Volume                                                |
 | [PoissonRecon](https://github.com/mkazhdan/PoissonRecon)                                       | MIT                               | Poisson                                               |
-| [Polyscope](https://github.com/nmwsharp/polyscope)                                             | MIT                               | Examples (Core)                                       |
+| [Polyscope](https://github.com/nmwsharp/polyscope)                                             | MIT                               | Polyscope                                             |
 | [Portable File Dialogs](https://github.com/samhocevar/portable-file-dialogs)                   | WTFPL (public domain)             | UI                                                    |
+| [RectangleBinPack](https://github.com/juj/RectangleBinPack)                                    | Public domain                     | Packing                                               |
 | [Shape Gradient Domain](https://github.com/mkazhdan/ShapeGradientDomain)                       | MIT                               | Filtering                                             |
 | [Threading Building Blocks](https://github.com/oneapi-src/oneTBB)                              | Apache 2                          | Core, Solver                                          |
 | [TinyEXR](https://github.com/syoyo/tinyexr)                                                    | BSD-3                             | Image_IO                                              |
@@ -61,7 +62,7 @@ automatically downloaded by our CMake system depending on which Lagrange module 
 [^0_assimp]:          Assimp is an optional dependency of the IO module.
 [^1_blas]:            Either MKL or Accelerate depending on the platform.
 [^2_boost]:           Boost::filesystem is an optional backend of the FS module.
-[^3_cli11_examples]:  CLI11 is used by the examples in the following modules: BVH, Core, Filtering, IO, Image, Image_IO, Partitioning, Poisson, Raycasting, Subdivision, Texproc, UI, Volume, Winding
+[^3_cli11_examples]:  CLI11 is used by the examples in the following modules: BVH, Core, Filtering, IO, Image, Image_IO, Partitioning, Poisson, Polyscope, Primitive, Raycasting, Subdivision, Texproc, UI, Volume, Winding
 [^4_filesystem]:      `gulrak/filesystem` is only needed when the IO module is compiled in C++14 mode. In C++17 mode, the IO module will defaults to `std::filesystem`.
 [^5_tracy]:           Tracy is an optional dependency of the core module.
 

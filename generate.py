@@ -27,8 +27,8 @@ def parse_args():
 
 def prepare_open():
     script_dir = Path(__file__).parent.resolve()
-    (script_dir / "mkdocs.yml").unlink()
-    (script_dir / "mkdocs.open.yml").rename("mkdocs.yml")
+    (script_dir / "mkdocs.yaml").unlink()
+    (script_dir / "mkdocs.open.yml").rename("mkdocs.yaml")
 
 
 def main():

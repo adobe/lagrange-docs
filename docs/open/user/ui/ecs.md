@@ -119,5 +119,3 @@ Rules to follow when designing components and systems:
 - Components have no functions, only data
 - Systems have no data
 - State associated with systems is stored as context variable (`registry.ctx<T>()`)
-
-
