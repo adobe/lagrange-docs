@@ -1,0 +1,128 @@
+lagrange.image
+==============
+
+.. py:module:: lagrange.image
+
+
+Classes
+-------
+
+.. autoapisummary::
+
+   lagrange.image.ImageChannel
+   lagrange.image.ImagePrecision
+   lagrange.image.ImageStorage
+
+
+Module Contents
+---------------
+
+.. py:class:: ImageChannel(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   Image channel
+
+
+   .. py:attribute:: four
+      :value: 4
+
+
+
+   .. py:attribute:: one
+      :value: 1
+
+
+
+   .. py:attribute:: three
+      :value: 3
+
+
+
+   .. py:attribute:: unknown
+      :value: 5
+
+
+
+.. py:class:: ImagePrecision(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   Image pixel precision
+
+
+   .. py:attribute:: float16
+      :value: 6
+
+
+
+   .. py:attribute:: float32
+      :value: 4
+
+
+
+   .. py:attribute:: float64
+      :value: 5
+
+
+
+   .. py:attribute:: int32
+      :value: 3
+
+
+
+   .. py:attribute:: int8
+      :value: 1
+
+
+
+   .. py:attribute:: uint32
+      :value: 2
+
+
+
+   .. py:attribute:: uint8
+      :value: 0
+
+
+
+   .. py:attribute:: unknown
+      :value: 7
+
+
+
+.. py:class:: ImageStorage(width, height, alignment)
+
+   Image storage class
+
+
+   .. py:property:: data
+      :type: Annotated[numpy.typing.NDArray[numpy.uint8], dict(order='C', device='cpu')]
+
+
+      Raw image data
+
+
+   .. py:property:: height
+      :type: int
+
+
+      Image height
+
+
+   .. py:property:: stride
+      :type: int
+
+
+      Image stride
+
+
+   .. py:property:: width
+      :type: int
+
+
+      Image width
+
+

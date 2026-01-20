@@ -60,15 +60,16 @@ var NAVTREEINDEX =
 "classlagrange_1_1_mesh_navigation.html#a7f00680054ba02315da270847e05ceb1",
 "classlagrange_1_1_surface_mesh.html#ac77ce42733ea00bbabb8a9caa17751aa",
 "classlagrange_1_1internal_1_1default__delete_3_01_t_0f_0e_4.html#a8d5654ff5e72f5312fe6241ce8904a10",
-"classlagrange_1_1scene_1_1_simple_scene.html#aa2350e78d3a9f786ea429950f906e425",
-"classlagrange_1_1volume_1_1legacy_1_1_mesh_adapter.html#adc98e2a86dc99dc2c124b575b1b26e85",
-"group__group-surfacemesh-utils.html#ggadab1480827f4522cbf1f9e1d4c28db91a6043446227f6a89342620a00a131257f",
-"namespacelagrange_1_1internal.html#a1566fc02a68fa88d2d979e717b19aa62",
-"namespacemembers_func_v.html",
-"structlagrange_1_1_thicken_and_close_options.html#afe36a9a93cf82f24011222fc231c9602",
-"structlagrange_1_1mapbox_1_1util_1_1nth.html",
-"structlagrange_1_1ui_1_1_immediate_entities.html",
-"structlagrange_1_1ui_1_1type__traits_3_01uint16__t_01_4.html"
+"classlagrange_1_1raycasting_1_1_embree_ray_caster.html#a2675bbad5adeffccffac66f35b98ba44",
+"classlagrange_1_1ui_1_1_log_data.html",
+"group__group-surfacemesh-iterate.html#ga19bb2dad60b7ae26ae8149b50e3d5e7e",
+"namespacelagrange.html#a312f57b0318728667933d7254778058b",
+"namespacelagrange_1_1ui.html#a46ade071c393ba918f7a20d609938c4e",
+"structlagrange_1_1_pointcloud_p_c_a_output.html",
+"structlagrange_1_1internal_1_1_bucket_sort_offset.html#ae2a4cebc3b9b9b3b1e03fe54b2be4692",
+"structlagrange_1_1primitive_1_1legacy_1_1_torus_config.html",
+"structlagrange_1_1ui_1_1_input_state_1_1_mouse.html#a00dde4d404c8cbc0140241d8016581f6",
+"structlagrange_1_1ui_1_1type__traits_3_01uint8__t_01_4.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';

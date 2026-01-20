@@ -46,6 +46,7 @@ var namespacelagrange =
     [ "DisjointSets", "classlagrange_1_1_disjoint_sets.html", "classlagrange_1_1_disjoint_sets" ],
     [ "DisjointSetsWithSize", "classlagrange_1_1_disjoint_sets_with_size.html", null ],
     [ "EdgeLengthOptions", "structlagrange_1_1_edge_length_options.html", "structlagrange_1_1_edge_length_options" ],
+    [ "EdgeManifoldOptions", "structlagrange_1_1_edge_manifold_options.html", "structlagrange_1_1_edge_manifold_options" ],
     [ "EdgeType", "classlagrange_1_1_edge_type.html", "classlagrange_1_1_edge_type" ],
     [ "Error", "structlagrange_1_1_error.html", null ],
     [ "ExactPredicates", "classlagrange_1_1_exact_predicates.html", "classlagrange_1_1_exact_predicates" ],
@@ -189,6 +190,10 @@ var namespacelagrange =
       [ "RemapInvalidAlways", "group__group-surfacemesh-attr.html#ggaea766ecc22bd1ae50438168e2623ce13a91cc01e53b43be31a6db7aa5d1d9b111", null ],
       [ "DoNotRemapInvalid", "group__group-surfacemesh-attr.html#ggaea766ecc22bd1ae50438168e2623ce13a9ec8b601d33247efe78cb6a70882600f", null ]
     ] ],
+    [ "AttributeReorientPolicy", "group__group-surfacemesh-attr.html#ga08ad5f3b2f569ea9f2c9a15705d8170f", [
+      [ "None", "group__group-surfacemesh-attr.html#gga08ad5f3b2f569ea9f2c9a15705d8170fa6adf97f83acf6453d4a6a4b1070f3754", null ],
+      [ "Reorient", "group__group-surfacemesh-attr.html#gga08ad5f3b2f569ea9f2c9a15705d8170fae679ea3b7c35ed985d184df6b2d86d14", null ]
+    ] ],
     [ "AttributeValueType", "group__group-surfacemesh-attr.html#gaa6b9ce91409ac67b7b5319cf573f66b8", [
       [ "LA_X_attribute_value_type_enum", "group__group-surfacemesh-attr.html#ggaa6b9ce91409ac67b7b5319cf573f66b8aaeb8dcf28eadfda06e20b664896d316a", null ]
     ] ],
@@ -238,6 +243,7 @@ var namespacelagrange =
     [ "compute_facet_vector_area", "group__group-surfacemesh-utils.html#ga74b1a033edc3d51789be0bcadcc1ec35", null ],
     [ "compute_mesh_area", "group__group-surfacemesh-utils.html#ga685d104f63c148710e7f8e3ffb2bb779", null ],
     [ "compute_mesh_area", "group__group-surfacemesh-utils.html#gad3b913ec3b353ba77d4b71549e8079a1", null ],
+    [ "compute_uv_area", "group__group-surfacemesh-utils.html#ga1a4db8fae2a8f84bbc6891098f86c988", null ],
     [ "compute_facet_centroid", "group__group-surfacemesh-utils.html#ga9362d326a1cbd65aca95f481bc2d5e3c", null ],
     [ "compute_mesh_centroid", "group__group-surfacemesh-utils.html#gae64040c03275b07fff5b820f2a61d0ba", null ],
     [ "compute_components", "group__group-surfacemesh-utils.html#gafedc8c0d66af62d6f3d540465c0018c6", null ],
@@ -336,6 +342,7 @@ var namespacelagrange =
     [ "is_edge_manifold", "group__group-surfacemesh-utils.html#ga52aec6a70ed2240fe977f81f393d1259", null ],
     [ "is_manifold", "group__group-surfacemesh-utils.html#ga4b70a6e7c30cd0524e2fc2490f280b69", null ],
     [ "compute_vertex_is_manifold", "group__group-surfacemesh-utils.html#ga9a5f380272eec2f91bbcdf4eeb04f591", null ],
+    [ "compute_edge_is_manifold", "group__group-surfacemesh-utils.html#gac632adf2b9d90586893cba9ac070fad5", null ],
     [ "transform_mesh", "group__group-surfacemesh-utils.html#gacc5a05b5bc041f50fbff82c00e18c631", null ],
     [ "transformed_mesh", "group__group-surfacemesh-utils.html#gac646c16958d9cb11644e1c9e72e305dc", null ],
     [ "triangulate_polygonal_facets", "group__group-surfacemesh-utils.html#ga8842b75f11402e01405aaa861a8cbb2c", null ],
@@ -395,8 +402,8 @@ var namespacelagrange =
     [ "sign", "namespacelagrange.html#a6379785ff623923a5a20a5bf935d5e70", null ],
     [ "gaussian", "namespacelagrange.html#aa3da204f09c1661c538eaa8eb680b1a7", null ],
     [ "make_value_ptr", "group__group-utils-misc.html#gaeb6c32297561f1bd7fa1a6fdc4396a9c", null ],
-    [ "uv_mesh_ref", "namespacelagrange.html#ad12b843acd76f7ad84f4cb86aebf7b78", null ],
-    [ "uv_mesh_view", "namespacelagrange.html#a20369090f503f98b3756a2fe6d9478e5", null ],
+    [ "uv_mesh_ref", "namespacelagrange.html#ae68df8e09ed4829ef852e47518e5a47d", null ],
+    [ "uv_mesh_view", "namespacelagrange.html#a9701752c8bd35e6cb8a9189cff79636a", null ],
     [ "matrix_ref", "group__group-surfacemesh-views.html#gaf2e0d4ab50ffdc84c4431d699f6741fe", null ],
     [ "matrix_view", "group__group-surfacemesh-views.html#ga0ae9d0742709686405adad75e20e8bc8", null ],
     [ "vector_ref", "group__group-surfacemesh-views.html#ga1fe8e6f4f2ff0c10903d49ec085e541a", null ],

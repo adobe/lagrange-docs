@@ -640,7 +640,7 @@ $(function(){initNavTree('earcut_8h_source.html',''); initResizable(true); });
 <div class="line"><a id="l00509" name="l00509"></a><span class="lineno">  509</span>            p = start = b;</div>
 <div class="line"><a id="l00510" name="l00510"></a><span class="lineno">  510</span>        }</div>
 <div class="line"><a id="l00511" name="l00511"></a><span class="lineno">  511</span>        p = p-&gt;next;</div>
-<div class="line"><a id="l00512" name="l00512"></a><span class="lineno">  512</span>    } <span class="keywordflow">while</span> (p != start);</div>
+<div class="line"><a id="l00512" name="l00512"></a><span class="lineno">  512</span>    } <span class="keywordflow">while</span> ((p != start) &amp;&amp; (p != p-&gt;next) &amp;&amp; (p != p-&gt;next-&gt;next));</div>
 <div class="line"><a id="l00513" name="l00513"></a><span class="lineno">  513</span> </div>
 <div class="line"><a id="l00514" name="l00514"></a><span class="lineno">  514</span>    <span class="keywordflow">return</span> filterPoints(p);</div>
 <div class="line"><a id="l00515" name="l00515"></a><span class="lineno">  515</span>}</div>
@@ -1110,7 +1110,7 @@ $(function(){initNavTree('earcut_8h_source.html',''); initResizable(true); });
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_970cbed13761df348e6a52eb6580069d.html">mapbox</a></li><li class="navelem"><b>earcut.h</b></li>
-    <li class="footer">Generated on Wed Dec 10 2025 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+    <li class="footer">Generated on Tue Jan 20 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>
 </body>

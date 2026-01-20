@@ -167,35 +167,39 @@ $(function(){initNavTree('texproc_2src_2_thread_pool_8h_source.html',''); initRe
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Function&gt;</div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="keyword">static</span> <span class="keywordtype">void</span> ParallelFor(<span class="keywordtype">size_t</span> begin, <span class="keywordtype">size_t</span> end, Function&amp;&amp; func)</div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    {</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        <span class="comment">// Keeping this commented block for quick debugging of multithread issues.</span></div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="preprocessor">#if 0</span></div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        <span class="keywordtype">int</span> thread_index = 0;</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = begin; i &lt; end; ++i) {</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>            func(thread_index, i);</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        }</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="preprocessor">#else</span></div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">bool</span> NeedsThreadIndex =</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>            std::is_convertible_v&lt;Function, std::function&lt;void(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>, <span class="keywordtype">size_t</span>)&gt;&gt;;</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        tbb::parallel_for(</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>            tbb::blocked_range&lt;size_t&gt;(begin, end),</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>            [&amp;](<span class="keyword">const</span> tbb::blocked_range&lt;size_t&gt;&amp; r) {</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>                <span class="keywordtype">int</span> thread_index = tbb::this_task_arena::current_thread_index();</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>                <a class="code hl_define" href="group__group-utils-assert.html#ga5b5259c4072f1caaa696e074f2f7ea15">la_debug_assert</a>(thread_index != tbb::task_arena::not_initialized);</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>                <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = r.begin(); i &lt; r.end(); ++i) {</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>                    <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (NeedsThreadIndex)</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>                        func(thread_index, i);</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>                    <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>                        func(i);</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>                }</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>            });</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    }</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>};</div>
-</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">bool</span> NeedsThreadIndex =</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>            std::is_convertible_v&lt;Function, std::function&lt;void(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>, <span class="keywordtype">size_t</span>)&gt;&gt;;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        <span class="comment">// Keeping this commented block for quick debugging of multithread issues.</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="preprocessor">#if 0</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        <span class="keywordtype">int</span> thread_index = 0;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = begin; i &lt; end; ++i) {</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>            <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (NeedsThreadIndex)</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>                func(thread_index, i);</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>            <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>                func(i);</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        }</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="preprocessor">#else</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        tbb::parallel_for(</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>            tbb::blocked_range&lt;size_t&gt;(begin, end),</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>            [&amp;](<span class="keyword">const</span> tbb::blocked_range&lt;size_t&gt;&amp; r) {</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>                <span class="keywordtype">int</span> thread_index = tbb::this_task_arena::current_thread_index();</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>                <a class="code hl_define" href="group__group-utils-assert.html#ga5b5259c4072f1caaa696e074f2f7ea15">la_debug_assert</a>(thread_index != tbb::task_arena::not_initialized);</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>                <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = r.begin(); i &lt; r.end(); ++i) {</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>                    <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (NeedsThreadIndex)</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>                        func(thread_index, i);</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>                    <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>                        func(i);</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>                }</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>            });</div>
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>} <span class="comment">// namespace lagrange::texproc::threadpool</span></div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    }</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>};</div>
+</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>} <span class="comment">// namespace lagrange::texproc::threadpool</span></div>
 </div>
 <div class="ttc" id="agroup__group-utils-assert_html_ga5b5259c4072f1caaa696e074f2f7ea15"><div class="ttname"><a href="group__group-utils-assert.html#ga5b5259c4072f1caaa696e074f2f7ea15">la_debug_assert</a></div><div class="ttdeci">#define la_debug_assert(...)</div><div class="ttdoc">Debug assertion check.</div><div class="ttdef"><b>Definition</b> assert.h:194</div></div>
 <div class="ttc" id="astructlagrange_1_1texproc_1_1threadpool_1_1_thread_pool_html"><div class="ttname"><a href="structlagrange_1_1texproc_1_1threadpool_1_1_thread_pool.html">lagrange::texproc::threadpool::ThreadPool</a></div><div class="ttdef"><b>Definition</b> ThreadPool.h:26</div></div>
@@ -205,7 +209,7 @@ $(function(){initNavTree('texproc_2src_2_thread_pool_8h_source.html',''); initRe
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>ThreadPool.h</b></li>
-    <li class="footer">Generated on Wed Dec 10 2025 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+    <li class="footer">Generated on Tue Jan 20 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>
 </body>

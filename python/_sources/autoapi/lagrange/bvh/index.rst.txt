@@ -1,0 +1,215 @@
+lagrange.bvh
+============
+
+.. py:module:: lagrange.bvh
+
+
+Classes
+-------
+
+.. autoapisummary::
+
+   lagrange.bvh.EdgeAABBTree2D
+   lagrange.bvh.EdgeAABBTree3D
+   lagrange.bvh.TriangleAABBTree2D
+   lagrange.bvh.TriangleAABBTree3D
+
+
+Functions
+---------
+
+.. autoapisummary::
+
+   lagrange.bvh.weld_vertices
+
+
+Module Contents
+---------------
+
+.. py:class:: EdgeAABBTree2D(vertices, edges)
+
+   .. py:method:: empty()
+
+      Check if the tree is empty
+
+
+
+   .. py:method:: get_closest_point(query_point)
+
+      Find the closest element and point within the element to the query point
+
+      :param query_point: Query point.
+      :return: A tuple containing:
+          - The index of the closest element.
+          - A NumPy array representing the closest point on the element.
+          - The squared distance between the query point and the closest point.
+
+
+
+   .. py:method:: get_containing_elements(query_point)
+
+      Find all elements that contain the query point.
+
+      :param query_point: Query point.
+      :return: A list of element indices that contain the query point.
+
+
+
+   .. py:method:: get_element_closest_point(query_point, element_id)
+
+      Get the closest point on a specific edge.
+
+      :param query_point: Query point.
+      :param element_id: Index of the edge to query.
+
+      :return: A tuple containing:
+          - A NumPy array representing the closest point on the edge.
+          - The squared distance between the query point and the closest point.
+
+
+
+   .. py:method:: get_elements_in_radius(query_point, radius)
+
+      Find all elements within a given radius from a query point.
+
+      :param query_point: Query point.
+      :param radius: Search radius.
+
+      :return: A tuple containing:
+          - A list of element indices within the specified radius.
+          - A NumPy array of shape (N, 2) containing the closest points on each element.
+
+
+
+.. py:class:: EdgeAABBTree3D(vertices, edges)
+
+   .. py:method:: empty()
+
+      Check if the tree is empty
+
+
+
+   .. py:method:: get_closest_point(query_point)
+
+      Find the closest element and point within the element to the query point
+
+      :param query_point: Query point.
+      :return: A tuple containing:
+          - The index of the closest element.
+          - A NumPy array representing the closest point on the element.
+          - The squared distance between the query point and the closest point.
+
+
+
+   .. py:method:: get_containing_elements(query_point)
+
+      Find all elements that contain the query point.
+
+      :param query_point: Query point.
+      :return: A list of element indices that contain the query point.
+
+
+
+   .. py:method:: get_element_closest_point(query_point, element_id)
+
+      Get the closest point on a specific edge.
+
+      :param query_point: Query point.
+      :param element_id: Index of the edge to query.
+
+      :return: A tuple containing:
+          - A NumPy array representing the closest point on the edge.
+          - The squared distance between the query point and the closest point.
+
+
+
+   .. py:method:: get_elements_in_radius(query_point, radius)
+
+      Find all elements within a given radius from a query point.
+
+      :param query_point: Query point.
+      :param radius: Search radius.
+
+      :return: A tuple containing:
+          - A list of element indices within the specified radius.
+          - A NumPy array of shape (N, 3) containing the closest points on each element.
+
+
+
+.. py:class:: TriangleAABBTree2D(mesh)
+
+   .. py:method:: empty()
+
+      Check if the tree is empty
+
+
+
+   .. py:method:: get_closest_point(query_point)
+
+      Find the closest element and point within the element to the query point
+
+      :param query_point: Query point.
+      :return: A tuple containing:
+          - The index of the closest element.
+          - A NumPy array representing the closest point on the element.
+          - The squared distance between the query point and the closest point.
+
+
+
+   .. py:method:: get_elements_in_radius(query_point, radius)
+
+      Find all elements within a given radius from a query point.
+
+      :param query_point: Query point.
+      :param radius: Search radius.
+
+      :return: A tuple containing:
+          - A list of element indices within the specified radius.
+          - A NumPy array of shape (N, 2) containing the closest points on each element.
+
+
+
+.. py:class:: TriangleAABBTree3D(mesh)
+
+   .. py:method:: empty()
+
+      Check if the tree is empty
+
+
+
+   .. py:method:: get_closest_point(query_point)
+
+      Find the closest element and point within the element to the query point
+
+      :param query_point: Query point.
+      :return: A tuple containing:
+          - The index of the closest element.
+          - A NumPy array representing the closest point on the element.
+          - The squared distance between the query point and the closest point.
+
+
+
+   .. py:method:: get_elements_in_radius(query_point, radius)
+
+      Find all elements within a given radius from a query point.
+
+      :param query_point: Query point.
+      :param radius: Search radius.
+
+      :return: A tuple containing:
+          - A list of element indices within the specified radius.
+          - A NumPy array of shape (N, 3) containing the closest points on each element.
+
+
+
+.. py:function:: weld_vertices(mesh, radius = 9.999999974752427e-07, boundary_only = False)
+
+   Weld nearby vertices together of a surface mesh.
+
+   :param mesh: The target surface mesh to be welded in place.
+   :param radius: The maximum distance between vertices to be considered for welding. Default is 1e-6.
+   :param boundary_only: If true, only boundary vertices will be considered for welding. Defaults to False.
+
+   .. warning:: This method may introduce non-manifoldness and degeneracy in the mesh.
+
+

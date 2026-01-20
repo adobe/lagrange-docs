@@ -163,6 +163,9 @@ var group__group_surfacemesh_utils =
     [ "VertexManifoldOptions", "structlagrange_1_1_vertex_manifold_options.html", [
       [ "output_attribute_name", "structlagrange_1_1_vertex_manifold_options.html#ad9fcba39803c665ca7be48a39d079f00", null ]
     ] ],
+    [ "EdgeManifoldOptions", "structlagrange_1_1_edge_manifold_options.html", [
+      [ "output_attribute_name", "structlagrange_1_1_edge_manifold_options.html#ad9fcba39803c665ca7be48a39d079f00", null ]
+    ] ],
     [ "TriangulationOptions", "structlagrange_1_1_triangulation_options.html", [
       [ "Scheme", "structlagrange_1_1_triangulation_options.html#a5c5181a54a4f46149d9c9662b2694167", [
         [ "Earcut", "structlagrange_1_1_triangulation_options.html#a5c5181a54a4f46149d9c9662b2694167a5bc26b4c10e53460ffdb83dcb1cd44c6", null ],
@@ -199,6 +202,7 @@ var group__group_surfacemesh_utils =
     [ "compute_facet_vector_area", "group__group-surfacemesh-utils.html#ga74b1a033edc3d51789be0bcadcc1ec35", null ],
     [ "compute_mesh_area", "group__group-surfacemesh-utils.html#ga685d104f63c148710e7f8e3ffb2bb779", null ],
     [ "compute_mesh_area", "group__group-surfacemesh-utils.html#gad3b913ec3b353ba77d4b71549e8079a1", null ],
+    [ "compute_uv_area", "group__group-surfacemesh-utils.html#ga1a4db8fae2a8f84bbc6891098f86c988", null ],
     [ "compute_facet_centroid", "group__group-surfacemesh-utils.html#ga9362d326a1cbd65aca95f481bc2d5e3c", null ],
     [ "compute_mesh_centroid", "group__group-surfacemesh-utils.html#gae64040c03275b07fff5b820f2a61d0ba", null ],
     [ "compute_components", "group__group-surfacemesh-utils.html#gafedc8c0d66af62d6f3d540465c0018c6", null ],
@@ -253,6 +257,7 @@ var group__group_surfacemesh_utils =
     [ "is_edge_manifold", "group__group-surfacemesh-utils.html#ga52aec6a70ed2240fe977f81f393d1259", null ],
     [ "is_manifold", "group__group-surfacemesh-utils.html#ga4b70a6e7c30cd0524e2fc2490f280b69", null ],
     [ "compute_vertex_is_manifold", "group__group-surfacemesh-utils.html#ga9a5f380272eec2f91bbcdf4eeb04f591", null ],
+    [ "compute_edge_is_manifold", "group__group-surfacemesh-utils.html#gac632adf2b9d90586893cba9ac070fad5", null ],
     [ "transform_mesh", "group__group-surfacemesh-utils.html#gacc5a05b5bc041f50fbff82c00e18c631", null ],
     [ "transformed_mesh", "group__group-surfacemesh-utils.html#gac646c16958d9cb11644e1c9e72e305dc", null ],
     [ "triangulate_polygonal_facets", "group__group-surfacemesh-utils.html#ga8842b75f11402e01405aaa861a8cbb2c", null ]

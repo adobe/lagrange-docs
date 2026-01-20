@@ -1,0 +1,157 @@
+lagrange.subdivision
+====================
+
+.. py:module:: lagrange.subdivision
+
+
+Classes
+-------
+
+.. autoapisummary::
+
+   lagrange.subdivision.FaceVaryingInterpolation
+   lagrange.subdivision.InterpolatedAttributesSelection
+   lagrange.subdivision.SchemeType
+   lagrange.subdivision.VertexBoundaryInterpolation
+
+
+Functions
+---------
+
+.. autoapisummary::
+
+   lagrange.subdivision.subdivide_mesh
+
+
+Module Contents
+---------------
+
+.. py:class:: FaceVaryingInterpolation(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   Face-varying interpolation rule
+
+
+   .. py:attribute:: All
+      :value: 5
+
+
+
+   .. py:attribute:: Boundaries
+      :value: 4
+
+
+
+   .. py:attribute:: CornersOnly
+      :value: 1
+
+
+
+   .. py:attribute:: CornersPlus1
+      :value: 2
+
+
+
+   .. py:attribute:: CornersPlus2
+      :value: 3
+
+
+
+   .. py:attribute:: Smooth
+      :value: 0
+
+
+
+.. py:class:: InterpolatedAttributesSelection(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   Selection tag for interpolated attributes
+
+
+   .. py:attribute:: All
+      :value: 0
+
+
+
+   .. py:attribute:: Empty
+      :value: 1
+
+
+
+   .. py:attribute:: Selected
+      :value: 2
+
+
+
+.. py:class:: SchemeType(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   Subdivision scheme type
+
+
+   .. py:attribute:: Bilinear
+      :value: 0
+
+
+
+   .. py:attribute:: CatmullClark
+      :value: 1
+
+
+
+   .. py:attribute:: Loop
+      :value: 2
+
+
+
+.. py:class:: VertexBoundaryInterpolation(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   Vertex boundary interpolation rule
+
+
+   .. py:attribute:: EdgeAndCorner
+      :value: 2
+
+
+
+   .. py:attribute:: EdgeOnly
+      :value: 1
+
+
+
+   .. py:attribute:: NoInterpolation
+      :value: 0
+
+
+
+.. py:function:: subdivide_mesh(mesh, num_levels, scheme = None, adaptive = False, max_edge_length = None, vertex_boundary_interpolation = VertexBoundaryInterpolation.EdgeOnly, face_varying_interpolation = FaceVaryingInterpolation.Smooth, use_limit_surface = False, interpolated_attributes_selection = InterpolatedAttributesSelection.All, interpolated_smooth_attributes = None, interpolated_linear_attributes = None, edge_sharpness_attr = None, vertex_sharpness_attr = None, face_hole_attr = None, output_limit_normals = None, output_limit_tangents = None, output_limit_bitangents = None)
+
+   Evaluates the subdivision surface of a polygonal mesh.
+
+   :param mesh:                  The source mesh.
+   :param num_levels:            The number of levels of subdivision to apply.
+   :param scheme:                The subdivision scheme to use.
+   :param adaptive:              Whether to use adaptive subdivision.
+   :param max_edge_length:       The maximum edge length for adaptive subdivision.
+   :param vertex_boundary_interpolation:  Vertex boundary interpolation rule.
+   :param face_varying_interpolation:     Face-varying interpolation rule.
+   :param use_limit_surface:      Interpolate all data to the limit surface.
+   :param edge_sharpness_attr:    Per-edge scalar attribute denoting edge sharpness. Sharpness values must be in [0, 1] (0 means smooth, 1 means sharp).
+   :param vertex_sharpness_attr:  Per-vertex scalar attribute denoting vertex sharpness (e.g. for boundary corners). Sharpness values must be in [0, 1] (0 means smooth, 1 means sharp).
+   :param face_hole_attr:         Per-face integer attribute denoting face holes. A non-zero value means the facet is a hole. If a face is tagged as a hole, the limit surface will not be generated for that face.
+   :param output_limit_normals:   Output name for a newly computed per-vertex attribute containing the normals to the limit surface. Skipped if left empty.
+   :param output_limit_tangents:  Output name for a newly computed per-vertex attribute containing the tangents (first derivatives) to the limit surface. Skipped if left empty.
+   :param output_limit_bitangents: Output name for a newly computed per-vertex attribute containing the bitangents (second derivative) to the limit surface. Skipped if left empty.
+
+   :return: The subdivided mesh.
+
+

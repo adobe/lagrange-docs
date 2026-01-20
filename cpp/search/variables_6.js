@@ -8,9 +8,10 @@ var searchData=
   ['facet_5fnormal_5fattribute_5fname_5',['facet_normal_attribute_name',['../structlagrange_1_1_dihedral_angle_options.html#a4c122150ae238de703e9610a0bc2469d',1,'lagrange::DihedralAngleOptions::facet_normal_attribute_name'],['../structlagrange_1_1_normal_options.html#a4c122150ae238de703e9610a0bc2469d',1,'lagrange::NormalOptions::facet_normal_attribute_name'],['../structlagrange_1_1_select_facets_by_normal_similarity_options.html#a4c122150ae238de703e9610a0bc2469d',1,'lagrange::SelectFacetsByNormalSimilarityOptions::facet_normal_attribute_name']]],
   ['fill_5fcolor_6',['fill_color',['../structlagrange_1_1image__io_1_1_s_v_g_setting.html#a44d2616e2be8c44f3f7995d1a7e0dd4d',1,'lagrange::image_io::SVGSetting']]],
   ['filter_5fmethod_7',['filter_method',['../structlagrange_1_1filtering_1_1_smoothing_options.html#a76a55710d483a2df415863a6491ccc38',1,'lagrange::filtering::SmoothingOptions']]],
-  ['flood_5ferror_5flimit_8',['flood_error_limit',['../structlagrange_1_1_select_facets_by_normal_similarity_options.html#a800bd73c3b114e156c375e2bd0e981b5',1,'lagrange::SelectFacetsByNormalSimilarityOptions']]],
-  ['flood_5fsecond_5fto_5ffirst_5forder_5flimit_5fratio_9',['flood_second_to_first_order_limit_ratio',['../structlagrange_1_1_select_facets_by_normal_similarity_options.html#a7d7a656568e71c99b6ec89473713cddf',1,'lagrange::SelectFacetsByNormalSimilarityOptions']]],
-  ['focus_5fon_5fshow_10',['focus_on_show',['../structlagrange_1_1ui_1_1_viewer_1_1_window_options.html#ab6a258228bcf9430de46ab783bc265ef',1,'lagrange::ui::Viewer::WindowOptions']]],
-  ['frustum_11',['frustum',['../structlagrange_1_1ui_1_1_selection_context.html#abe1837a57eb3e099b7b2ef01334bd01d',1,'lagrange::ui::SelectionContext']]],
-  ['fullscreen_12',['fullscreen',['../structlagrange_1_1ui_1_1_viewer_1_1_window_options.html#a5a9147cb82d1cbeefadd62beb9e6910b',1,'lagrange::ui::Viewer::WindowOptions']]]
+  ['fixed_5fuv_8',['fixed_uv',['../structlagrange_1_1primitive_1_1_primitive_options.html#af415958265b08fa7358207e75cf7af8a',1,'lagrange::primitive::PrimitiveOptions']]],
+  ['flood_5ferror_5flimit_9',['flood_error_limit',['../structlagrange_1_1_select_facets_by_normal_similarity_options.html#a800bd73c3b114e156c375e2bd0e981b5',1,'lagrange::SelectFacetsByNormalSimilarityOptions']]],
+  ['flood_5fsecond_5fto_5ffirst_5forder_5flimit_5fratio_10',['flood_second_to_first_order_limit_ratio',['../structlagrange_1_1_select_facets_by_normal_similarity_options.html#a7d7a656568e71c99b6ec89473713cddf',1,'lagrange::SelectFacetsByNormalSimilarityOptions']]],
+  ['focus_5fon_5fshow_11',['focus_on_show',['../structlagrange_1_1ui_1_1_viewer_1_1_window_options.html#ab6a258228bcf9430de46ab783bc265ef',1,'lagrange::ui::Viewer::WindowOptions']]],
+  ['frustum_12',['frustum',['../structlagrange_1_1ui_1_1_selection_context.html#abe1837a57eb3e099b7b2ef01334bd01d',1,'lagrange::ui::SelectionContext']]],
+  ['fullscreen_13',['fullscreen',['../structlagrange_1_1ui_1_1_viewer_1_1_window_options.html#a5a9147cb82d1cbeefadd62beb9e6910b',1,'lagrange::ui::Viewer::WindowOptions']]]
 ];

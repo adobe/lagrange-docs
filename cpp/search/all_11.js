@@ -6,5 +6,5 @@ var searchData=
   ['query_3',['Query',['../structlagrange_1_1ui_1_1_rasterizer_options.html#ab6ac481b6d88f1e2847c89ee9311dcc2',1,'lagrange::ui::RasterizerOptions']]],
   ['query_5fclosest_5fpoint_4',['query_closest_point',['../classlagrange_1_1raycasting_1_1_embree_ray_caster.html#ac09062b95d27e1a948235b8f855a8a63',1,'lagrange::raycasting::EmbreeRayCaster']]],
   ['quick_20links_5',['Quick links',['../group__module-core.html#autotoc_md0',1,'Quick links'],['../group__module-image.html#autotoc_md1',1,'Quick links'],['../group__module-io.html#autotoc_md2',1,'Quick links'],['../index.html#autotoc_md3',1,'Quick links'],['../group__module-partitioning.html#autotoc_md4',1,'Quick links'],['../group__module-raycasting.html#autotoc_md5',1,'Quick links']]],
-  ['quiet_6',['quiet',['../structlagrange_1_1io_1_1_load_options.html#ae4426f467d61ae456b95844d4d9c2dcd',1,'lagrange::io::LoadOptions']]]
+  ['quiet_6',['quiet',['../structlagrange_1_1io_1_1_save_options.html#ae4426f467d61ae456b95844d4d9c2dcd',1,'lagrange::io::SaveOptions::quiet'],['../structlagrange_1_1io_1_1_load_options.html#ae4426f467d61ae456b95844d4d9c2dcd',1,'lagrange::io::LoadOptions::quiet']]]
 ];

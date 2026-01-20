@@ -17,8 +17,9 @@ var searchData=
   ['dihedralangleoptions_14',['DihedralAngleOptions',['../structlagrange_1_1_dihedral_angle_options.html',1,'lagrange']]],
   ['dijkstradistanceoptions_15',['DijkstraDistanceOptions',['../structlagrange_1_1_dijkstra_distance_options.html',1,'lagrange']]],
   ['dilationoptions_16',['DilationOptions',['../structlagrange_1_1texproc_1_1_dilation_options.html',1,'lagrange::texproc']]],
-  ['disjointsets_17',['DisjointSets',['../classlagrange_1_1_disjoint_sets.html',1,'lagrange']]],
-  ['disjointsetswithsize_18',['DisjointSetsWithSize',['../classlagrange_1_1_disjoint_sets_with_size.html',1,'lagrange']]],
-  ['dockspace_19',['Dockspace',['../structlagrange_1_1ui_1_1_dockspace.html',1,'lagrange::ui']]],
-  ['downloadresult_20',['DownloadResult',['../structlagrange_1_1ui_1_1_texture_1_1_download_result.html',1,'lagrange::ui::Texture']]]
+  ['discoptions_17',['DiscOptions',['../structlagrange_1_1primitive_1_1_disc_options.html',1,'lagrange::primitive']]],
+  ['disjointsets_18',['DisjointSets',['../classlagrange_1_1_disjoint_sets.html',1,'lagrange']]],
+  ['disjointsetswithsize_19',['DisjointSetsWithSize',['../classlagrange_1_1_disjoint_sets_with_size.html',1,'lagrange']]],
+  ['dockspace_20',['Dockspace',['../structlagrange_1_1ui_1_1_dockspace.html',1,'lagrange::ui']]],
+  ['downloadresult_21',['DownloadResult',['../structlagrange_1_1ui_1_1_texture_1_1_download_result.html',1,'lagrange::ui::Texture']]]
 ];

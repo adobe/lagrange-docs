@@ -4,5 +4,10 @@ var searchData=
   ['has_5fattribute_1',['has_attribute',['../classlagrange_1_1_surface_mesh.html#a50303aab396d555e2ad0e6fa1f7d4b58',1,'lagrange::SurfaceMesh']]],
   ['has_5fcamera_5fscheme_2',['has_camera_scheme',['../namespacelagrange_1_1ui.html#a46ade071c393ba918f7a20d609938c4e',1,'lagrange::ui']]],
   ['has_5fedges_3',['has_edges',['../classlagrange_1_1_surface_mesh.html#aa9b58744bd298398b70869f693b21f35',1,'lagrange::SurfaceMesh']]],
-  ['hash_5fcombine_4',['hash_combine',['../group__group-utils-misc.html#gabc213e8639504f32e944828c1634d13e',1,'lagrange']]]
+  ['has_5fframes_4',['has_frames',['../classlagrange_1_1primitive_1_1_sweep_options.html#a5fd3fd6d44435271d7a301a8aaa594ec',1,'lagrange::primitive::SweepOptions']]],
+  ['has_5foffsets_5',['has_offsets',['../classlagrange_1_1primitive_1_1_sweep_options.html#a5deed3d1b59b3573670d0531cb357902',1,'lagrange::primitive::SweepOptions']]],
+  ['has_5fpositions_6',['has_positions',['../classlagrange_1_1primitive_1_1_sweep_options.html#aa96dfb879d6eadad6f2d6f036b05291c',1,'lagrange::primitive::SweepOptions']]],
+  ['has_5ftapers_7',['has_tapers',['../classlagrange_1_1primitive_1_1_sweep_options.html#a02b70d94ff8e327b3b86419aee8c3e9c',1,'lagrange::primitive::SweepOptions']]],
+  ['has_5ftwists_8',['has_twists',['../classlagrange_1_1primitive_1_1_sweep_options.html#a2281cc1fcbdd6fa8a02cee5498bc40b1',1,'lagrange::primitive::SweepOptions']]],
+  ['hash_5fcombine_9',['hash_combine',['../group__group-utils-misc.html#gabc213e8639504f32e944828c1634d13e',1,'lagrange']]]
 ];

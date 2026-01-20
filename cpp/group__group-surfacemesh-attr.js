@@ -167,6 +167,10 @@ var group__group_surfacemesh_attr =
       [ "RemapInvalidAlways", "group__group-surfacemesh-attr.html#ggaea766ecc22bd1ae50438168e2623ce13a91cc01e53b43be31a6db7aa5d1d9b111", null ],
       [ "DoNotRemapInvalid", "group__group-surfacemesh-attr.html#ggaea766ecc22bd1ae50438168e2623ce13a9ec8b601d33247efe78cb6a70882600f", null ]
     ] ],
+    [ "AttributeReorientPolicy", "group__group-surfacemesh-attr.html#ga08ad5f3b2f569ea9f2c9a15705d8170f", [
+      [ "None", "group__group-surfacemesh-attr.html#gga08ad5f3b2f569ea9f2c9a15705d8170fa6adf97f83acf6453d4a6a4b1070f3754", null ],
+      [ "Reorient", "group__group-surfacemesh-attr.html#gga08ad5f3b2f569ea9f2c9a15705d8170fae679ea3b7c35ed985d184df6b2d86d14", null ]
+    ] ],
     [ "AttributeValueType", "group__group-surfacemesh-attr.html#gaa6b9ce91409ac67b7b5319cf573f66b8", null ],
     [ "invalid_attribute_id", "group__group-surfacemesh-attr.html#gaaf6e674ed673001dca1c6390bc0e0fc9", null ],
     [ "make_attribute_value_type", "group__group-surfacemesh-attr.html#gad2d86eeda7595f41169e9a4b928f6452", null ]

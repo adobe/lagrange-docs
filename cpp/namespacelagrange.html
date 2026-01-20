@@ -224,6 +224,9 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlagrange_1_1_edge_length_options.html">EdgeLengthOptions</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlagrange_1_1_edge_manifold_options.html">EdgeManifoldOptions</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Option struct for computing edge manifold flags.  <a href="structlagrange_1_1_edge_manifold_options.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlagrange_1_1_edge_type.html">EdgeType</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlagrange_1_1_error.html">Error</a></td></tr>
@@ -638,6 +641,11 @@ Enumerations</h2></td></tr>
  }</td></tr>
 <tr class="memdesc:gaea766ecc22bd1ae50438168e2623ce13"><td class="mdescLeft">&#160;</td><td class="mdescRight">Policy for remapping invalid values when casting to a different value type.  <a href="group__group-surfacemesh-attr.html#gaea766ecc22bd1ae50438168e2623ce13">More...</a><br /></td></tr>
 <tr class="separator:gaea766ecc22bd1ae50438168e2623ce13"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga08ad5f3b2f569ea9f2c9a15705d8170f" id="r_ga08ad5f3b2f569ea9f2c9a15705d8170f"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group-surfacemesh-attr.html#ga08ad5f3b2f569ea9f2c9a15705d8170f">AttributeReorientPolicy</a> : uint8_t { <a class="el" href="group__group-surfacemesh-attr.html#gga08ad5f3b2f569ea9f2c9a15705d8170fa6adf97f83acf6453d4a6a4b1070f3754">None</a>
+, <a class="el" href="group__group-surfacemesh-attr.html#gga08ad5f3b2f569ea9f2c9a15705d8170fae679ea3b7c35ed985d184df6b2d86d14">Reorient</a>
+ }</td></tr>
+<tr class="memdesc:ga08ad5f3b2f569ea9f2c9a15705d8170f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Policy for updating attribute values when reorienting mesh facets.  <a href="group__group-surfacemesh-attr.html#ga08ad5f3b2f569ea9f2c9a15705d8170f">More...</a><br /></td></tr>
+<tr class="separator:ga08ad5f3b2f569ea9f2c9a15705d8170f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaa6b9ce91409ac67b7b5319cf573f66b8" id="r_gaa6b9ce91409ac67b7b5319cf573f66b8"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group-surfacemesh-attr.html#gaa6b9ce91409ac67b7b5319cf573f66b8">AttributeValueType</a> : uint8_t { <b>LA_X_attribute_value_type_enum</b>
  }</td></tr>
 <tr class="memdesc:gaa6b9ce91409ac67b7b5319cf573f66b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enum describing at runtime the value type of an attribute.  <a href="group__group-surfacemesh-attr.html#gaa6b9ce91409ac67b7b5319cf573f66b8">More...</a><br /></td></tr>
@@ -766,6 +774,10 @@ template&lt;class T&gt; </td></tr>
 <tr class="memitem:gad3b913ec3b353ba77d4b71549e8079a1"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__group-surfacemesh-utils.html#gad3b913ec3b353ba77d4b71549e8079a1">compute_mesh_area</a> (const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index &gt; &amp;mesh, const Eigen::Transform&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Dimension, Eigen::Affine &gt; &amp;transformation, <a class="el" href="structlagrange_1_1_mesh_area_options.html">MeshAreaOptions</a> options={})</td></tr>
 <tr class="memdesc:gad3b913ec3b353ba77d4b71549e8079a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute mesh area.  <br /></td></tr>
 <tr class="separator:gad3b913ec3b353ba77d4b71549e8079a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1a4db8fae2a8f84bbc6891098f86c988" id="r_ga1a4db8fae2a8f84bbc6891098f86c988"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, typename Index&gt; </td></tr>
+<tr class="memitem:ga1a4db8fae2a8f84bbc6891098f86c988"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__group-surfacemesh-utils.html#ga1a4db8fae2a8f84bbc6891098f86c988">compute_uv_area</a> (const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index &gt; &amp;mesh, <a class="el" href="structlagrange_1_1_mesh_area_options.html">MeshAreaOptions</a> options={})</td></tr>
+<tr class="memdesc:ga1a4db8fae2a8f84bbc6891098f86c988"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute UV mesh area.  <br /></td></tr>
+<tr class="separator:ga1a4db8fae2a8f84bbc6891098f86c988"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9401f16e9e8981b93819bbee5aa846b5" id="r_a9401f16e9e8981b93819bbee5aa846b5"><td class="memTemplParams" colspan="2"><a id="a9401f16e9e8981b93819bbee5aa846b5" name="a9401f16e9e8981b93819bbee5aa846b5"></a>
 template&lt;typename PointType&gt; </td></tr>
 <tr class="memitem:a9401f16e9e8981b93819bbee5aa846b5"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><b>compute_barycentric_coordinates</b> (const Eigen::MatrixBase&lt; PointType &gt; &amp;v0, const Eigen::MatrixBase&lt; PointType &gt; &amp;v1, const Eigen::MatrixBase&lt; PointType &gt; &amp;v2, const Eigen::MatrixBase&lt; PointType &gt; &amp;p) -&gt; Eigen::Matrix&lt; typename PointType::Scalar, 3, 1 &gt;</td></tr>
@@ -1193,6 +1205,10 @@ template&lt;typename <a class="el" href="classlagrange_1_1_mesh.html">MeshType</
 <tr class="memitem:ga9a5f380272eec2f91bbcdf4eeb04f591"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="group__group-surfacemesh-attr.html#ga4d115376c2c766084ef808c837348fc3">AttributeId</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__group-surfacemesh-utils.html#ga9a5f380272eec2f91bbcdf4eeb04f591">compute_vertex_is_manifold</a> (<a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index &gt; &amp;mesh, const <a class="el" href="structlagrange_1_1_vertex_manifold_options.html">VertexManifoldOptions</a> &amp;options={})</td></tr>
 <tr class="memdesc:ga9a5f380272eec2f91bbcdf4eeb04f591"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute a mesh attribute of value type <code>uint8_t</code> indicating vertex manifoldness.  <br /></td></tr>
 <tr class="separator:ga9a5f380272eec2f91bbcdf4eeb04f591"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac632adf2b9d90586893cba9ac070fad5" id="r_gac632adf2b9d90586893cba9ac070fad5"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, typename Index&gt; </td></tr>
+<tr class="memitem:gac632adf2b9d90586893cba9ac070fad5"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="group__group-surfacemesh-attr.html#ga4d115376c2c766084ef808c837348fc3">AttributeId</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__group-surfacemesh-utils.html#gac632adf2b9d90586893cba9ac070fad5">compute_edge_is_manifold</a> (<a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index &gt; &amp;mesh, const <a class="el" href="structlagrange_1_1_edge_manifold_options.html">EdgeManifoldOptions</a> &amp;options={})</td></tr>
+<tr class="memdesc:gac632adf2b9d90586893cba9ac070fad5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute a mesh attribute of value type <code>uint8_t</code> indicating edge manifoldness.  <br /></td></tr>
+<tr class="separator:gac632adf2b9d90586893cba9ac070fad5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gacc5a05b5bc041f50fbff82c00e18c631" id="r_gacc5a05b5bc041f50fbff82c00e18c631"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, typename Index, int Dimension&gt; </td></tr>
 <tr class="memitem:gacc5a05b5bc041f50fbff82c00e18c631"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__group-surfacemesh-utils.html#gacc5a05b5bc041f50fbff82c00e18c631">transform_mesh</a> (<a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index &gt; &amp;mesh, const Eigen::Transform&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Dimension, Eigen::Affine &gt; &amp;transform, const <a class="el" href="structlagrange_1_1_transform_options.html">TransformOptions</a> &amp;options={})</td></tr>
 <tr class="memdesc:gacc5a05b5bc041f50fbff82c00e18c631"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply an affine transform \( M \) to a mesh in-place.  <br /></td></tr>
@@ -1484,14 +1500,14 @@ template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5
 <tr class="memitem:gaeb6c32297561f1bd7fa1a6fdc4396a9c"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classlagrange_1_1value__ptr.html">value_ptr</a>&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__group-utils-misc.html#gaeb6c32297561f1bd7fa1a6fdc4396a9c">make_value_ptr</a> (<a class="el" href="struct_args.html">Args</a> &amp;&amp;... args)</td></tr>
 <tr class="memdesc:gaeb6c32297561f1bd7fa1a6fdc4396a9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper function to create a value_ptr for a given type.  <br /></td></tr>
 <tr class="separator:gaeb6c32297561f1bd7fa1a6fdc4396a9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad12b843acd76f7ad84f4cb86aebf7b78" id="r_ad12b843acd76f7ad84f4cb86aebf7b78"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, typename Index&gt; </td></tr>
-<tr class="memitem:ad12b843acd76f7ad84f4cb86aebf7b78"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ad12b843acd76f7ad84f4cb86aebf7b78">uv_mesh_ref</a> (<a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index &gt; &amp;mesh, const <a class="el" href="structlagrange_1_1_u_v_mesh_options.html">UVMeshOptions</a> &amp;options={})</td></tr>
-<tr class="memdesc:ad12b843acd76f7ad84f4cb86aebf7b78"><td class="mdescLeft">&#160;</td><td class="mdescRight">Extract a UV mesh reference from an input mesh.  <br /></td></tr>
-<tr class="separator:ad12b843acd76f7ad84f4cb86aebf7b78"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a20369090f503f98b3756a2fe6d9478e5" id="r_a20369090f503f98b3756a2fe6d9478e5"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, typename Index&gt; </td></tr>
-<tr class="memitem:a20369090f503f98b3756a2fe6d9478e5"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a20369090f503f98b3756a2fe6d9478e5">uv_mesh_view</a> (const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index &gt; &amp;mesh, const <a class="el" href="structlagrange_1_1_u_v_mesh_options.html">UVMeshOptions</a> &amp;options={})</td></tr>
-<tr class="memdesc:a20369090f503f98b3756a2fe6d9478e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Extract a UV mesh view from an input mesh.  <br /></td></tr>
-<tr class="separator:a20369090f503f98b3756a2fe6d9478e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae68df8e09ed4829ef852e47518e5a47d" id="r_ae68df8e09ed4829ef852e47518e5a47d"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, typename Index, typename UVScalar = Scalar&gt; </td></tr>
+<tr class="memitem:ae68df8e09ed4829ef852e47518e5a47d"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; UVScalar, Index &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ae68df8e09ed4829ef852e47518e5a47d">uv_mesh_ref</a> (<a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index &gt; &amp;mesh, const <a class="el" href="structlagrange_1_1_u_v_mesh_options.html">UVMeshOptions</a> &amp;options={})</td></tr>
+<tr class="memdesc:ae68df8e09ed4829ef852e47518e5a47d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Extract a UV mesh reference from an input mesh.  <br /></td></tr>
+<tr class="separator:ae68df8e09ed4829ef852e47518e5a47d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9701752c8bd35e6cb8a9189cff79636a" id="r_a9701752c8bd35e6cb8a9189cff79636a"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, typename Index, typename UVScalar = Scalar&gt; </td></tr>
+<tr class="memitem:a9701752c8bd35e6cb8a9189cff79636a"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; UVScalar, Index &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a9701752c8bd35e6cb8a9189cff79636a">uv_mesh_view</a> (const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index &gt; &amp;mesh, const <a class="el" href="structlagrange_1_1_u_v_mesh_options.html">UVMeshOptions</a> &amp;options={})</td></tr>
+<tr class="memdesc:a9701752c8bd35e6cb8a9189cff79636a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Extract a UV mesh view from an input mesh.  <br /></td></tr>
+<tr class="separator:a9701752c8bd35e6cb8a9189cff79636a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a052022d40408195a7e6f641ecc6f1b0e" id="r_a052022d40408195a7e6f641ecc6f1b0e"><td class="memTemplParams" colspan="2"><a id="a052022d40408195a7e6f641ecc6f1b0e" name="a052022d40408195a7e6f641ecc6f1b0e"></a>
 template&lt;typename TargetScalar, typename TargetIndex, typename SourceScalar, typename SourceIndex&gt; </td></tr>
 <tr class="memitem:a052022d40408195a7e6f641ecc6f1b0e"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; TargetScalar, TargetIndex &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>cast</b> (const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; SourceScalar, SourceIndex &gt; &amp;source_mesh, const <a class="el" href="structlagrange_1_1_attribute_filter.html">AttributeFilter</a> &amp;convertible_attributes, std::vector&lt; std::string &gt; *converted_attributes_names)</td></tr>
@@ -4156,16 +4172,16 @@ template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5
 
 </div>
 </div>
-<a id="ad12b843acd76f7ad84f4cb86aebf7b78" name="ad12b843acd76f7ad84f4cb86aebf7b78"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad12b843acd76f7ad84f4cb86aebf7b78">&#9670;&#160;</a></span>uv_mesh_ref()</h2>
+<a id="ae68df8e09ed4829ef852e47518e5a47d" name="ae68df8e09ed4829ef852e47518e5a47d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae68df8e09ed4829ef852e47518e5a47d">&#9670;&#160;</a></span>uv_mesh_ref()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, typename Index&gt; </div>
+template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, typename Index, typename UVScalar = Scalar&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index &gt; uv_mesh_ref </td>
+          <td class="memname"><a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; UVScalar, Index &gt; uv_mesh_ref </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>mesh</em></span>, </td>
         </tr>
@@ -4179,6 +4195,7 @@ template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5
 
 <p>Extract a UV mesh reference from an input mesh. </p>
 <p>This method will create a new mesh with the same topology as the input mesh, but with vertex positions set to the corresponding UV coordinates. Modification of UV mesh vertices will be reflected in the input mesh.</p>
+<dl class="section warning"><dt>Warning</dt><dd>This method requires that the input UV attribute is an indexed or vertex attribute. Corner attributes are not supported by this function.</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">mesh</td><td>Input mesh. </td></tr>
@@ -4189,7 +4206,8 @@ template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">Scalar</td><td>Mesh scalar type. </td></tr>
-    <tr><td class="paramname">Index</td><td>Mesh index type.</td></tr>
+    <tr><td class="paramname">Index</td><td>Mesh index type. </td></tr>
+    <tr><td class="paramname">UVScalar</td><td>Target UV attribute value type.</td></tr>
   </table>
   </dd>
 </dl>
@@ -4198,16 +4216,16 @@ template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5
 
 </div>
 </div>
-<a id="a20369090f503f98b3756a2fe6d9478e5" name="a20369090f503f98b3756a2fe6d9478e5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a20369090f503f98b3756a2fe6d9478e5">&#9670;&#160;</a></span>uv_mesh_view()</h2>
+<a id="a9701752c8bd35e6cb8a9189cff79636a" name="a9701752c8bd35e6cb8a9189cff79636a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9701752c8bd35e6cb8a9189cff79636a">&#9670;&#160;</a></span>uv_mesh_view()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, typename Index&gt; </div>
+template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, typename Index, typename UVScalar = Scalar&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index &gt; uv_mesh_view </td>
+          <td class="memname"><a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; UVScalar, Index &gt; uv_mesh_view </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>mesh</em></span>, </td>
         </tr>
@@ -4221,6 +4239,7 @@ template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5
 
 <p>Extract a UV mesh view from an input mesh. </p>
 <p>This method will create a new mesh with the same topology as the input mesh, but with vertex positions set to the corresponding UV coordinates. The output UV mesh cannot be modified.</p>
+<dl class="section warning"><dt>Warning</dt><dd>This method requires that the input UV attribute is an indexed or vertex attribute. Corner attributes are not supported by this function.</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">mesh</td><td>Input mesh. </td></tr>
@@ -4231,7 +4250,8 @@ template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">Scalar</td><td>Mesh scalar type. </td></tr>
-    <tr><td class="paramname">Index</td><td>Mesh index type.</td></tr>
+    <tr><td class="paramname">Index</td><td>Mesh index type. </td></tr>
+    <tr><td class="paramname">UVScalar</td><td>Target UV attribute value type.</td></tr>
   </table>
   </dd>
 </dl>
@@ -4337,7 +4357,7 @@ template&lt;typename DerivedV, typename DerivedE&gt; </div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacelagrange.html">lagrange</a></li>
-    <li class="footer">Generated on Wed Dec 10 2025 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+    <li class="footer">Generated on Tue Jan 20 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>
 </body>

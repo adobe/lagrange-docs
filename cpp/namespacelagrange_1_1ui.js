@@ -119,6 +119,7 @@ var namespacelagrange_1_1ui =
     [ "type_traits< uint16_t >", "structlagrange_1_1ui_1_1type__traits_3_01uint16__t_01_4.html", null ],
     [ "type_traits< uint32_t >", "structlagrange_1_1ui_1_1type__traits_3_01uint32__t_01_4.html", null ],
     [ "type_traits< uint8_t >", "structlagrange_1_1ui_1_1type__traits_3_01uint8__t_01_4.html", null ],
+    [ "TypeData", "structlagrange_1_1ui_1_1_type_data.html", null ],
     [ "UIPanel", "structlagrange_1_1ui_1_1_u_i_panel.html", "structlagrange_1_1ui_1_1_u_i_panel" ],
     [ "UIWidget", "classlagrange_1_1ui_1_1_u_i_widget.html", "classlagrange_1_1ui_1_1_u_i_widget" ],
     [ "VAO", "structlagrange_1_1ui_1_1_v_a_o.html", null ],

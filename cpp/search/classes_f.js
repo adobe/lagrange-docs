@@ -14,7 +14,15 @@ var searchData=
   ['removeduplicateverticesoptions_11',['RemoveDuplicateVerticesOptions',['../structlagrange_1_1_remove_duplicate_vertices_options.html',1,'lagrange']]],
   ['removenullareafacetsoptions_12',['RemoveNullAreaFacetsOptions',['../structlagrange_1_1_remove_null_area_facets_options.html',1,'lagrange']]],
   ['rendercontext_13',['RenderContext',['../structlagrange_1_1ui_1_1_render_context.html',1,'lagrange::ui']]],
-  ['rescaleuvoptions_14',['RescaleUVOptions',['../structlagrange_1_1_rescale_u_v_options.html',1,'lagrange']]],
-  ['reservedattributeids_15',['ReservedAttributeIds',['../structlagrange_1_1_surface_mesh_1_1_reserved_attribute_ids.html',1,'lagrange::SurfaceMesh']]],
-  ['rotatetooltag_16',['RotateToolTag',['../structlagrange_1_1ui_1_1_rotate_tool_tag.html',1,'lagrange::ui']]]
+  ['repackoptions_14',['RepackOptions',['../structlagrange_1_1packing_1_1_repack_options.html',1,'lagrange::packing']]],
+  ['rescaleuvoptions_15',['RescaleUVOptions',['../structlagrange_1_1_rescale_u_v_options.html',1,'lagrange']]],
+  ['reservedattributeids_16',['ReservedAttributeIds',['../structlagrange_1_1_surface_mesh_1_1_reserved_attribute_ids.html',1,'lagrange::SurfaceMesh']]],
+  ['rotatetooltag_17',['RotateToolTag',['../structlagrange_1_1ui_1_1_rotate_tool_tag.html',1,'lagrange::ui']]],
+  ['roundedconeconfig_18',['RoundedConeConfig',['../structlagrange_1_1primitive_1_1legacy_1_1_rounded_cone_config.html',1,'lagrange::primitive::legacy']]],
+  ['roundedconeoptions_19',['RoundedConeOptions',['../structlagrange_1_1primitive_1_1_rounded_cone_options.html',1,'lagrange::primitive']]],
+  ['roundedcubeconfig_20',['RoundedCubeConfig',['../structlagrange_1_1primitive_1_1legacy_1_1_rounded_cube_config.html',1,'lagrange::primitive::legacy']]],
+  ['roundedcubeoptions_21',['RoundedCubeOptions',['../structlagrange_1_1primitive_1_1_rounded_cube_options.html',1,'lagrange::primitive']]],
+  ['roundedcylinderconfig_22',['RoundedCylinderConfig',['../structlagrange_1_1primitive_1_1legacy_1_1_rounded_cylinder_config.html',1,'lagrange::primitive::legacy']]],
+  ['roundedplaneconfig_23',['RoundedPlaneConfig',['../structlagrange_1_1primitive_1_1legacy_1_1_rounded_plane_config.html',1,'lagrange::primitive::legacy']]],
+  ['roundedplaneoptions_24',['RoundedPlaneOptions',['../structlagrange_1_1primitive_1_1_rounded_plane_options.html',1,'lagrange::primitive']]]
 ];

@@ -116,10 +116,12 @@ var annotated_dup =
         [ "ComputeMeshCentroidOutput", "structlagrange_1_1legacy_1_1_compute_mesh_centroid_output.html", null ],
         [ "ComputePointcloudPCAOutput", "structlagrange_1_1legacy_1_1_compute_pointcloud_p_c_a_output.html", null ],
         [ "ForwardMeshMapping", "structlagrange_1_1legacy_1_1_forward_mesh_mapping.html", null ],
+        [ "GeometricProfile", "structlagrange_1_1legacy_1_1_geometric_profile.html", null ],
         [ "MarchingTrianglesOutput", "structlagrange_1_1legacy_1_1_marching_triangles_output.html", null ],
         [ "MeshMapping", "structlagrange_1_1legacy_1_1_mesh_mapping.html", null ],
         [ "MeshTopology", "classlagrange_1_1legacy_1_1_mesh_topology.html", null ],
-        [ "SelectFacetsByNormalSimilarityParameters", "structlagrange_1_1legacy_1_1_select_facets_by_normal_similarity_parameters.html", null ]
+        [ "SelectFacetsByNormalSimilarityParameters", "structlagrange_1_1legacy_1_1_select_facets_by_normal_similarity_parameters.html", null ],
+        [ "SubdividedMeshData", "structlagrange_1_1legacy_1_1_subdivided_mesh_data.html", null ]
       ] ],
       [ "mapbox", null, [
         [ "detail", null, [
@@ -136,6 +138,14 @@ var annotated_dup =
         [ "is_mesh_smart_ptr_helper< MeshTypePtr, typename Void< typename MeshTypePtr::element_type, typename MeshTypePtr::element_type::VertexArray, typename MeshTypePtr::element_type::FacetArray >::type >", "structlagrange_1_1_mesh_trait_helper_1_1is__mesh__smart__ptr__helper_3_01_mesh_type_ptr_00_01typdd3a1b441f06e428de34247e1df62704.html", null ],
         [ "Void", "structlagrange_1_1_mesh_trait_helper_1_1_void.html", null ]
       ] ],
+      [ "packing", null, [
+        [ "legacy", null, [
+          [ "PackingFailure", "classlagrange_1_1packing_1_1legacy_1_1_packing_failure.html", null ],
+          [ "PackingOptions", "structlagrange_1_1packing_1_1legacy_1_1_packing_options.html", "structlagrange_1_1packing_1_1legacy_1_1_packing_options" ]
+        ] ],
+        [ "PackingFailure", "classlagrange_1_1packing_1_1_packing_failure.html", null ],
+        [ "RepackOptions", "structlagrange_1_1packing_1_1_repack_options.html", "structlagrange_1_1packing_1_1_repack_options" ]
+      ] ],
       [ "poisson", null, [
         [ "threadpool", null, [
           [ "ThreadPool", "structlagrange_1_1poisson_1_1threadpool_1_1_thread_pool.html", null ]
@@ -147,6 +157,35 @@ var annotated_dup =
       ] ],
       [ "polyddg", null, [
         [ "DifferentialOperators", "classlagrange_1_1polyddg_1_1_differential_operators.html", "classlagrange_1_1polyddg_1_1_differential_operators" ]
+      ] ],
+      [ "polyscope", null, [
+        [ "PolyscopeTrait", "structlagrange_1_1polyscope_1_1_polyscope_trait.html", null ]
+      ] ],
+      [ "primitive", null, [
+        [ "legacy", null, [
+          [ "CircularArcSweepPath", "classlagrange_1_1primitive_1_1legacy_1_1_circular_arc_sweep_path.html", "classlagrange_1_1primitive_1_1legacy_1_1_circular_arc_sweep_path" ],
+          [ "LinearSweepPath", "classlagrange_1_1primitive_1_1legacy_1_1_linear_sweep_path.html", "classlagrange_1_1primitive_1_1legacy_1_1_linear_sweep_path" ],
+          [ "PolylineSweepPath", "classlagrange_1_1primitive_1_1legacy_1_1_polyline_sweep_path.html", "classlagrange_1_1primitive_1_1legacy_1_1_polyline_sweep_path" ],
+          [ "RoundedConeConfig", "structlagrange_1_1primitive_1_1legacy_1_1_rounded_cone_config.html", "structlagrange_1_1primitive_1_1legacy_1_1_rounded_cone_config" ],
+          [ "RoundedCubeConfig", "structlagrange_1_1primitive_1_1legacy_1_1_rounded_cube_config.html", "structlagrange_1_1primitive_1_1legacy_1_1_rounded_cube_config" ],
+          [ "RoundedCylinderConfig", "structlagrange_1_1primitive_1_1legacy_1_1_rounded_cylinder_config.html", "structlagrange_1_1primitive_1_1legacy_1_1_rounded_cylinder_config" ],
+          [ "RoundedPlaneConfig", "structlagrange_1_1primitive_1_1legacy_1_1_rounded_plane_config.html", "structlagrange_1_1primitive_1_1legacy_1_1_rounded_plane_config" ],
+          [ "SphereConfig", "structlagrange_1_1primitive_1_1legacy_1_1_sphere_config.html", "structlagrange_1_1primitive_1_1legacy_1_1_sphere_config" ],
+          [ "SweepPath", "classlagrange_1_1primitive_1_1legacy_1_1_sweep_path.html", "classlagrange_1_1primitive_1_1legacy_1_1_sweep_path" ],
+          [ "TorusConfig", "structlagrange_1_1primitive_1_1legacy_1_1_torus_config.html", "structlagrange_1_1primitive_1_1legacy_1_1_torus_config" ]
+        ] ],
+        [ "DiscOptions", "structlagrange_1_1primitive_1_1_disc_options.html", "structlagrange_1_1primitive_1_1_disc_options" ],
+        [ "IcosahedronOptions", "structlagrange_1_1primitive_1_1_icosahedron_options.html", "structlagrange_1_1primitive_1_1_icosahedron_options" ],
+        [ "OctahedronOptions", "structlagrange_1_1primitive_1_1_octahedron_options.html", "structlagrange_1_1primitive_1_1_octahedron_options" ],
+        [ "PrimitiveOptions", "structlagrange_1_1primitive_1_1_primitive_options.html", "structlagrange_1_1primitive_1_1_primitive_options" ],
+        [ "RoundedConeOptions", "structlagrange_1_1primitive_1_1_rounded_cone_options.html", "structlagrange_1_1primitive_1_1_rounded_cone_options" ],
+        [ "RoundedCubeOptions", "structlagrange_1_1primitive_1_1_rounded_cube_options.html", "structlagrange_1_1primitive_1_1_rounded_cube_options" ],
+        [ "RoundedPlaneOptions", "structlagrange_1_1primitive_1_1_rounded_plane_options.html", "structlagrange_1_1primitive_1_1_rounded_plane_options" ],
+        [ "SphereOptions", "structlagrange_1_1primitive_1_1_sphere_options.html", "structlagrange_1_1primitive_1_1_sphere_options" ],
+        [ "SubdividedSphereOptions", "structlagrange_1_1primitive_1_1_subdivided_sphere_options.html", "structlagrange_1_1primitive_1_1_subdivided_sphere_options" ],
+        [ "SweepOptions", "classlagrange_1_1primitive_1_1_sweep_options.html", "classlagrange_1_1primitive_1_1_sweep_options" ],
+        [ "SweptSurfaceOptions", "structlagrange_1_1primitive_1_1_swept_surface_options.html", "structlagrange_1_1primitive_1_1_swept_surface_options" ],
+        [ "TorusOptions", "structlagrange_1_1primitive_1_1_torus_options.html", "structlagrange_1_1primitive_1_1_torus_options" ]
       ] ],
       [ "python", null, [
         [ "PyAttribute", "classlagrange_1_1python_1_1_py_attribute.html", null ],
@@ -351,6 +390,7 @@ var annotated_dup =
         [ "type_traits< uint16_t >", "structlagrange_1_1ui_1_1type__traits_3_01uint16__t_01_4.html", null ],
         [ "type_traits< uint32_t >", "structlagrange_1_1ui_1_1type__traits_3_01uint32__t_01_4.html", null ],
         [ "type_traits< uint8_t >", "structlagrange_1_1ui_1_1type__traits_3_01uint8__t_01_4.html", null ],
+        [ "TypeData", "structlagrange_1_1ui_1_1_type_data.html", null ],
         [ "UIPanel", "structlagrange_1_1ui_1_1_u_i_panel.html", "structlagrange_1_1ui_1_1_u_i_panel" ],
         [ "UIWidget", "classlagrange_1_1ui_1_1_u_i_widget.html", "classlagrange_1_1ui_1_1_u_i_widget" ],
         [ "VAO", "structlagrange_1_1ui_1_1_v_a_o.html", null ],
@@ -398,6 +438,7 @@ var annotated_dup =
       [ "DisjointSets", "classlagrange_1_1_disjoint_sets.html", "classlagrange_1_1_disjoint_sets" ],
       [ "DisjointSetsWithSize", "classlagrange_1_1_disjoint_sets_with_size.html", null ],
       [ "EdgeLengthOptions", "structlagrange_1_1_edge_length_options.html", "structlagrange_1_1_edge_length_options" ],
+      [ "EdgeManifoldOptions", "structlagrange_1_1_edge_manifold_options.html", "structlagrange_1_1_edge_manifold_options" ],
       [ "EdgeType", "classlagrange_1_1_edge_type.html", "classlagrange_1_1_edge_type" ],
       [ "Error", "structlagrange_1_1_error.html", null ],
       [ "ExactPredicates", "classlagrange_1_1_exact_predicates.html", "classlagrange_1_1_exact_predicates" ],
@@ -473,7 +514,6 @@ var annotated_dup =
       [ "hash< lagrange::EdgeType< Index > >", "structstd_1_1hash_3_01lagrange_1_1_edge_type_3_01_index_01_4_01_4.html", null ]
     ] ],
     [ "Args", "struct_args.html", null ],
-    [ "MeshFacetAdapter", "struct_mesh_facet_adapter.html", null ],
     [ "type_caster< lagrange::scene::Value >", "structtype__caster_3_01lagrange_1_1scene_1_1_value_01_4.html", null ],
     [ "type_caster< lagrange::StackVector< T, N > >", "structtype__caster_3_01lagrange_1_1_stack_vector_3_01_t_00_01_n_01_4_01_4.html", null ]
 ];

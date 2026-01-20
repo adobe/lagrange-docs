@@ -1,0 +1,156 @@
+var group__module_primitive =
+[
+    [ "DiscOptions", "structlagrange_1_1primitive_1_1_disc_options.html", [
+      [ "radius", "structlagrange_1_1primitive_1_1_disc_options.html#ab3e4a3f725642180f73777ee68654e76", null ],
+      [ "start_angle", "structlagrange_1_1primitive_1_1_disc_options.html#aa9311e67f9ba441acc0f6e8c9368bb83", null ],
+      [ "end_angle", "structlagrange_1_1primitive_1_1_disc_options.html#a1a36e9c3aed42bde1f8fefba7b5c2645", null ],
+      [ "radial_sections", "structlagrange_1_1primitive_1_1_disc_options.html#a1a133525964501b9d909c45e9bf3a589", null ],
+      [ "num_rings", "structlagrange_1_1primitive_1_1_disc_options.html#aea88d7515cc685c5630bba0f55b792b2", null ],
+      [ "normal", "structlagrange_1_1primitive_1_1_disc_options.html#a9b6e3ff9624080c0492283af712f291e", null ]
+    ] ],
+    [ "IcosahedronOptions", "structlagrange_1_1primitive_1_1_icosahedron_options.html", [
+      [ "project_to_valid_range", "structlagrange_1_1primitive_1_1_icosahedron_options.html#a1180fcc7096856a2fcf8bf37bd85ed19", null ],
+      [ "radius", "structlagrange_1_1primitive_1_1_icosahedron_options.html#ab3e4a3f725642180f73777ee68654e76", null ]
+    ] ],
+    [ "OctahedronOptions", "structlagrange_1_1primitive_1_1_octahedron_options.html", [
+      [ "project_to_valid_range", "structlagrange_1_1primitive_1_1_octahedron_options.html#a1180fcc7096856a2fcf8bf37bd85ed19", null ],
+      [ "radius", "structlagrange_1_1primitive_1_1_octahedron_options.html#ab3e4a3f725642180f73777ee68654e76", null ]
+    ] ],
+    [ "RoundedConeOptions", "structlagrange_1_1primitive_1_1_rounded_cone_options.html", [
+      [ "project_to_valid_range", "structlagrange_1_1primitive_1_1_rounded_cone_options.html#a1180fcc7096856a2fcf8bf37bd85ed19", null ],
+      [ "get_max_cone_bevel", "structlagrange_1_1primitive_1_1_rounded_cone_options.html#aa11a64b7845ac0bd746e0e43fc8064d5", null ],
+      [ "radius_top", "structlagrange_1_1primitive_1_1_rounded_cone_options.html#a4c0728ca47894084a1c93fa93506cf67", null ],
+      [ "radius_bottom", "structlagrange_1_1primitive_1_1_rounded_cone_options.html#a152380e93b8a84cec4b38af91d705480", null ],
+      [ "height", "structlagrange_1_1primitive_1_1_rounded_cone_options.html#a662fdf470fa4ef8f085be8f66e072c61", null ],
+      [ "bevel_radius_top", "structlagrange_1_1primitive_1_1_rounded_cone_options.html#a7ea4834ca4e876d1a9342a00a2ee8279", null ],
+      [ "bevel_radius_bottom", "structlagrange_1_1primitive_1_1_rounded_cone_options.html#aae48f74077f2ebc979d2bb3abc2475bc", null ],
+      [ "radial_sections", "structlagrange_1_1primitive_1_1_rounded_cone_options.html#ab30d69c69f426b88eb89db5abd45f8f0", null ],
+      [ "bevel_segments_top", "structlagrange_1_1primitive_1_1_rounded_cone_options.html#a3d2f4c69e0ad9408f1307781ff7fa983", null ],
+      [ "bevel_segments_bottom", "structlagrange_1_1primitive_1_1_rounded_cone_options.html#a7a6f1671bb73f0971b1a31d09b86cba2", null ],
+      [ "side_segments", "structlagrange_1_1primitive_1_1_rounded_cone_options.html#aa9a605924af139225fe7922bd177ed56", null ],
+      [ "top_segments", "structlagrange_1_1primitive_1_1_rounded_cone_options.html#a4838e5ee02b6d225105c704156edbd5d", null ],
+      [ "bottom_segments", "structlagrange_1_1primitive_1_1_rounded_cone_options.html#ac8e03c27a0682d210bec860dcc42af96", null ],
+      [ "start_sweep_angle", "structlagrange_1_1primitive_1_1_rounded_cone_options.html#a19f6b66c0494fd4b75e1d47273df32e8", null ],
+      [ "end_sweep_angle", "structlagrange_1_1primitive_1_1_rounded_cone_options.html#af84e4f499deca8a374a862610ba61a79", null ]
+    ] ],
+    [ "RoundedCubeOptions", "structlagrange_1_1primitive_1_1_rounded_cube_options.html", [
+      [ "project_to_valid_range", "structlagrange_1_1primitive_1_1_rounded_cube_options.html#a1180fcc7096856a2fcf8bf37bd85ed19", null ],
+      [ "width", "structlagrange_1_1primitive_1_1_rounded_cube_options.html#a68004c24d3bfd822acecc9698f983a96", null ],
+      [ "height", "structlagrange_1_1primitive_1_1_rounded_cube_options.html#a662fdf470fa4ef8f085be8f66e072c61", null ],
+      [ "depth", "structlagrange_1_1primitive_1_1_rounded_cube_options.html#a97d6509bbe25b3f7aac1f4433a360d7c", null ],
+      [ "width_segments", "structlagrange_1_1primitive_1_1_rounded_cube_options.html#a12e4d3a7add49d6e0e86e47e6a16244b", null ],
+      [ "height_segments", "structlagrange_1_1primitive_1_1_rounded_cube_options.html#a2f69d1dcee1d2114d07fbbbe630b4549", null ],
+      [ "depth_segments", "structlagrange_1_1primitive_1_1_rounded_cube_options.html#a29bda3c549f4e4c588c95f10ea07de03", null ],
+      [ "bevel_radius", "structlagrange_1_1primitive_1_1_rounded_cube_options.html#a6bd4b5557bd13d401d6b5e8d3785a939", null ],
+      [ "bevel_segments", "structlagrange_1_1primitive_1_1_rounded_cube_options.html#ad51e1706264bb40bd1e32ae57b432c30", null ]
+    ] ],
+    [ "RoundedPlaneOptions", "structlagrange_1_1primitive_1_1_rounded_plane_options.html", [
+      [ "project_to_valid_range", "structlagrange_1_1primitive_1_1_rounded_plane_options.html#a1180fcc7096856a2fcf8bf37bd85ed19", null ],
+      [ "width", "structlagrange_1_1primitive_1_1_rounded_plane_options.html#a68004c24d3bfd822acecc9698f983a96", null ],
+      [ "height", "structlagrange_1_1primitive_1_1_rounded_plane_options.html#a662fdf470fa4ef8f085be8f66e072c61", null ],
+      [ "bevel_radius", "structlagrange_1_1primitive_1_1_rounded_plane_options.html#a6bd4b5557bd13d401d6b5e8d3785a939", null ],
+      [ "width_segments", "structlagrange_1_1primitive_1_1_rounded_plane_options.html#a12e4d3a7add49d6e0e86e47e6a16244b", null ],
+      [ "height_segments", "structlagrange_1_1primitive_1_1_rounded_plane_options.html#a2f69d1dcee1d2114d07fbbbe630b4549", null ],
+      [ "bevel_segments", "structlagrange_1_1primitive_1_1_rounded_plane_options.html#ad51e1706264bb40bd1e32ae57b432c30", null ],
+      [ "normal", "structlagrange_1_1primitive_1_1_rounded_plane_options.html#a9b6e3ff9624080c0492283af712f291e", null ]
+    ] ],
+    [ "SphereOptions", "structlagrange_1_1primitive_1_1_sphere_options.html", [
+      [ "project_to_valid_range", "structlagrange_1_1primitive_1_1_sphere_options.html#a1180fcc7096856a2fcf8bf37bd85ed19", null ],
+      [ "radius", "structlagrange_1_1primitive_1_1_sphere_options.html#ab3e4a3f725642180f73777ee68654e76", null ],
+      [ "start_sweep_angle", "structlagrange_1_1primitive_1_1_sphere_options.html#a19f6b66c0494fd4b75e1d47273df32e8", null ],
+      [ "end_sweep_angle", "structlagrange_1_1primitive_1_1_sphere_options.html#af84e4f499deca8a374a862610ba61a79", null ],
+      [ "num_longitude_sections", "structlagrange_1_1primitive_1_1_sphere_options.html#a779a63664bc7695506607cb63aca461a", null ],
+      [ "num_latitude_sections", "structlagrange_1_1primitive_1_1_sphere_options.html#a394f043f1a780c496ea993dccb885067", null ]
+    ] ],
+    [ "SubdividedSphereOptions", "structlagrange_1_1primitive_1_1_subdivided_sphere_options.html", [
+      [ "project_to_valid_range", "structlagrange_1_1primitive_1_1_subdivided_sphere_options.html#a1180fcc7096856a2fcf8bf37bd85ed19", null ],
+      [ "radius", "structlagrange_1_1primitive_1_1_subdivided_sphere_options.html#ab3e4a3f725642180f73777ee68654e76", null ],
+      [ "subdiv_level", "structlagrange_1_1primitive_1_1_subdivided_sphere_options.html#aabb4e5eaf8b7c760df0d042f5c43bc8c", null ]
+    ] ],
+    [ "SweptSurfaceOptions", "structlagrange_1_1primitive_1_1_swept_surface_options.html", [
+      [ "latitude_attribute_name", "structlagrange_1_1primitive_1_1_swept_surface_options.html#a9158dc65e8eb55bb28d278261153823d", null ],
+      [ "longitude_attribute_name", "structlagrange_1_1primitive_1_1_swept_surface_options.html#a1f58e6ef7ce3ebfd689080f5f511c78c", null ],
+      [ "use_u_as_profile_length", "structlagrange_1_1primitive_1_1_swept_surface_options.html#a28b9780c4c6da1a2657e24b0bec408e2", null ],
+      [ "profile_angle_threshold", "structlagrange_1_1primitive_1_1_swept_surface_options.html#ab3a4bcb8f2257fbced8b829cda0256ae", null ],
+      [ "max_profile_length", "structlagrange_1_1primitive_1_1_swept_surface_options.html#a7aecd403bb1b878746409e7666509f0a", null ]
+    ] ],
+    [ "TorusOptions", "structlagrange_1_1primitive_1_1_torus_options.html", [
+      [ "project_to_valid_range", "structlagrange_1_1primitive_1_1_torus_options.html#a1180fcc7096856a2fcf8bf37bd85ed19", null ],
+      [ "major_radius", "structlagrange_1_1primitive_1_1_torus_options.html#a883fb5403385ae72f1425afa72a4d6aa", null ],
+      [ "minor_radius", "structlagrange_1_1primitive_1_1_torus_options.html#a6ea15935e2fe90a2ec266e6b60391d7e", null ],
+      [ "ring_segments", "structlagrange_1_1primitive_1_1_torus_options.html#a5b7e52b997de7bd640018afcb3343214", null ],
+      [ "pipe_segments", "structlagrange_1_1primitive_1_1_torus_options.html#afb490a27538eb061b7b027f42626ca56", null ],
+      [ "start_sweep_angle", "structlagrange_1_1primitive_1_1_torus_options.html#a19f6b66c0494fd4b75e1d47273df32e8", null ],
+      [ "end_sweep_angle", "structlagrange_1_1primitive_1_1_torus_options.html#af84e4f499deca8a374a862610ba61a79", null ]
+    ] ],
+    [ "PrimitiveOptions", "structlagrange_1_1primitive_1_1_primitive_options.html", [
+      [ "center", "structlagrange_1_1primitive_1_1_primitive_options.html#a20dc93aa9cf2ccacbee86c1660060176", null ],
+      [ "with_top_cap", "structlagrange_1_1primitive_1_1_primitive_options.html#a023f9dd42026382d00c90fbc0bba0ab6", null ],
+      [ "with_bottom_cap", "structlagrange_1_1primitive_1_1_primitive_options.html#aeb0fd575d93888da925a4b01829f9ee6", null ],
+      [ "with_cross_section", "structlagrange_1_1primitive_1_1_primitive_options.html#a7137ca8fb9d04bb88835365487d9f959", null ],
+      [ "triangulate", "structlagrange_1_1primitive_1_1_primitive_options.html#abe2f6144e25d7ce8c9d818b3926a5a39", null ],
+      [ "fixed_uv", "structlagrange_1_1primitive_1_1_primitive_options.html#af415958265b08fa7358207e75cf7af8a", null ],
+      [ "normal_attribute_name", "structlagrange_1_1primitive_1_1_primitive_options.html#a51066a9b87ceffa1db37243770584972", null ],
+      [ "uv_attribute_name", "structlagrange_1_1primitive_1_1_primitive_options.html#a812bd5f3c809396ee71d159824173876", null ],
+      [ "semantic_label_attribute_name", "structlagrange_1_1primitive_1_1_primitive_options.html#a81bce256e47cda241a05d4d499d4ea65", null ],
+      [ "dist_threshold", "structlagrange_1_1primitive_1_1_primitive_options.html#a737bd93608c158d58db286dfc6e49b07", null ],
+      [ "angle_threshold", "structlagrange_1_1primitive_1_1_primitive_options.html#a822bca7499d352157dd21715a9f8e4dc", null ],
+      [ "epsilon", "structlagrange_1_1primitive_1_1_primitive_options.html#a8e63e3d5bbb2cd8977d79f21ce6f3ecc", null ],
+      [ "uv_padding", "structlagrange_1_1primitive_1_1_primitive_options.html#a1710e1e9811046d1f3e262d89a858b10", null ]
+    ] ],
+    [ "SweepOptions< Scalar >", "classlagrange_1_1primitive_1_1_sweep_options.html", [
+      [ "sample_transforms", "classlagrange_1_1primitive_1_1_sweep_options.html#adff105a1f9b6533196942991487ec326", null ],
+      [ "sample_transform", "classlagrange_1_1primitive_1_1_sweep_options.html#a0f68ee5e95d254e5875530b3fc8a86c0", null ],
+      [ "sample_offsets", "classlagrange_1_1primitive_1_1_sweep_options.html#a9e18652f47d5789dcd02b93569567b59", null ],
+      [ "sample_offset", "classlagrange_1_1primitive_1_1_sweep_options.html#ad9037e0d7e36a1e594d10916b1bffea4", null ],
+      [ "set_pivot", "classlagrange_1_1primitive_1_1_sweep_options.html#ab1d1e790f6479a55578ef22cbc0c1700", null ],
+      [ "get_pivot", "classlagrange_1_1primitive_1_1_sweep_options.html#a130fc842b3ff4eb2393b2ffb07ee8837", null ],
+      [ "set_normalization", "classlagrange_1_1primitive_1_1_sweep_options.html#a5bd206f29756e65179bdca45426b8888", null ],
+      [ "get_normalization", "classlagrange_1_1primitive_1_1_sweep_options.html#ab26d5fbe7656ed2b6b0af96b263fcbc8", null ],
+      [ "set_num_samples", "classlagrange_1_1primitive_1_1_sweep_options.html#a78ec5bf3bd33f7731c45ba93211b675d", null ],
+      [ "get_num_samples", "classlagrange_1_1primitive_1_1_sweep_options.html#a2d03464bb7f0d3168b532ea7ee6f70f3", null ],
+      [ "set_periodic", "classlagrange_1_1primitive_1_1_sweep_options.html#a3d3a63ca25b38509717d7f62ee87514c", null ],
+      [ "is_periodic", "classlagrange_1_1primitive_1_1_sweep_options.html#a7bb3fb70e4d534f4872b38209eb25326", null ],
+      [ "set_domain", "classlagrange_1_1primitive_1_1_sweep_options.html#ab0d740780350790397dee2545bdb70b0", null ],
+      [ "get_domain", "classlagrange_1_1primitive_1_1_sweep_options.html#aaf0ecb5c4a337f55fe9f1d097c8eb73f", null ],
+      [ "is_closed", "classlagrange_1_1primitive_1_1_sweep_options.html#a8a5e6d255f86080f0f9590c64155c235", null ],
+      [ "set_position_function", "classlagrange_1_1primitive_1_1_sweep_options.html#ab697383a0f44bc890f3f4e46f82bd620", null ],
+      [ "has_positions", "classlagrange_1_1primitive_1_1_sweep_options.html#aa96dfb879d6eadad6f2d6f036b05291c", null ],
+      [ "set_frame_function", "classlagrange_1_1primitive_1_1_sweep_options.html#a77d47fb20916781abbc848e8738194bd", null ],
+      [ "has_frames", "classlagrange_1_1primitive_1_1_sweep_options.html#a5fd3fd6d44435271d7a301a8aaa594ec", null ],
+      [ "set_twist_function", "classlagrange_1_1primitive_1_1_sweep_options.html#a13a051ec031fd7252d88179c8782c763", null ],
+      [ "has_twists", "classlagrange_1_1primitive_1_1_sweep_options.html#a2281cc1fcbdd6fa8a02cee5498bc40b1", null ],
+      [ "set_taper_function", "classlagrange_1_1primitive_1_1_sweep_options.html#af006f17633435919ac42cb79e81ab255", null ],
+      [ "has_tapers", "classlagrange_1_1primitive_1_1_sweep_options.html#a02b70d94ff8e327b3b86419aee8c3e9c", null ],
+      [ "set_offset_function", "classlagrange_1_1primitive_1_1_sweep_options.html#a4a6be3d676ee5b9fc1309768b650eb6a", null ],
+      [ "has_offsets", "classlagrange_1_1primitive_1_1_sweep_options.html#a5deed3d1b59b3573670d0531cb357902", null ],
+      [ "m_pivot", "classlagrange_1_1primitive_1_1_sweep_options.html#aefc6b34b62d6c207de6e4b6d588a9e21", null ],
+      [ "m_normalization", "classlagrange_1_1primitive_1_1_sweep_options.html#ad27d65f92204e2ba004b7a4cdec38cbd", null ],
+      [ "m_num_samples", "classlagrange_1_1primitive_1_1_sweep_options.html#a8c7fccd3d5eda4416fa8d2e75baa95ee", null ],
+      [ "m_periodic", "classlagrange_1_1primitive_1_1_sweep_options.html#a9c410fba51652497beb4b424ebf8aecc", null ],
+      [ "m_domain", "classlagrange_1_1primitive_1_1_sweep_options.html#aef7b1191f52a6231019a429031e7bb05", null ],
+      [ "m_position_fn", "classlagrange_1_1primitive_1_1_sweep_options.html#a65c3a1f11ccf1e97ce2633648f2429e1", null ],
+      [ "m_frame_fn", "classlagrange_1_1primitive_1_1_sweep_options.html#a91c6b6a8dfb04b39cbcf365828013df0", null ],
+      [ "m_twist_fn", "classlagrange_1_1primitive_1_1_sweep_options.html#a0883b4a38ee15239006e3fb571a66a31", null ],
+      [ "m_taper_fn", "classlagrange_1_1primitive_1_1_sweep_options.html#a5999ed8343d2d7b7a1b2b27dfddaffa0", null ],
+      [ "m_offset_fn", "classlagrange_1_1primitive_1_1_sweep_options.html#a65469fb07047c47223d3755c5eae0cb9", null ]
+    ] ],
+    [ "SemanticLabel", "group__module-primitive.html#gae521e500502eae3849d46dc92a5ab7fe", [
+      [ "Side", "group__module-primitive.html#ggae521e500502eae3849d46dc92a5ab7feac142a73b77f3c3df40777af2651f4915", null ],
+      [ "Top", "group__module-primitive.html#ggae521e500502eae3849d46dc92a5ab7feaa4ffdcf0dc1f31b9acaf295d75b51d00", null ],
+      [ "Bottom", "group__module-primitive.html#ggae521e500502eae3849d46dc92a5ab7fea2ad9d63b69c4a10a5cc9cad923133bc4", null ],
+      [ "Bevel", "group__module-primitive.html#ggae521e500502eae3849d46dc92a5ab7fea1b9ae4ca6d43fc984af318046e1e7bb5", null ],
+      [ "CrossSection", "group__module-primitive.html#ggae521e500502eae3849d46dc92a5ab7fea01558f38ee0590b11fd9284029626849", null ],
+      [ "Unknown", "group__module-primitive.html#ggae521e500502eae3849d46dc92a5ab7fea88183b946cc5f0e8c96b2e66e1c74a7e", null ]
+    ] ],
+    [ "generate_disc", "group__module-primitive.html#ga7db2d80a82af83f04db3d868bdba3258", null ],
+    [ "generate_icosahedron", "group__module-primitive.html#gabc29769f500eb5ba509deff2f7c7fc6a", null ],
+    [ "generate_octahedron", "group__module-primitive.html#ga421c794ff673ade77ba37787687136a1", null ],
+    [ "generate_rounded_cone", "group__module-primitive.html#ga4e9f3a3b9208141ba90ec8fa06e94cf2", null ],
+    [ "generate_rounded_cube", "group__module-primitive.html#gad8e7b47c2dd983d46079f072b19a4a93", null ],
+    [ "generate_rounded_plane", "group__module-primitive.html#ga86ed6d1ba85290cebd235da9c2d2a362", null ],
+    [ "generate_sphere", "group__module-primitive.html#gaaa427855f0f229da092f01a980ca947e", null ],
+    [ "generate_subdivided_sphere", "group__module-primitive.html#ga04f78e3e0c3b2fecb874cec028a27c20", null ],
+    [ "generate_swept_surface", "group__module-primitive.html#ga77ef143987e654fc9282681179ebab4c", null ],
+    [ "generate_torus", "group__module-primitive.html#gafd1edbdcf03d784f6cbb203f0313a568", null ]
+];

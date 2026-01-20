@@ -251,6 +251,11 @@ Enumerations</h2></td></tr>
  }</td></tr>
 <tr class="memdesc:gaea766ecc22bd1ae50438168e2623ce13"><td class="mdescLeft">&#160;</td><td class="mdescRight">Policy for remapping invalid values when casting to a different value type.  <a href="#gaea766ecc22bd1ae50438168e2623ce13">More...</a><br /></td></tr>
 <tr class="separator:gaea766ecc22bd1ae50438168e2623ce13"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga08ad5f3b2f569ea9f2c9a15705d8170f" id="r_ga08ad5f3b2f569ea9f2c9a15705d8170f"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga08ad5f3b2f569ea9f2c9a15705d8170f">AttributeReorientPolicy</a> : uint8_t { <a class="el" href="#gga08ad5f3b2f569ea9f2c9a15705d8170fa6adf97f83acf6453d4a6a4b1070f3754">None</a>
+, <a class="el" href="#gga08ad5f3b2f569ea9f2c9a15705d8170fae679ea3b7c35ed985d184df6b2d86d14">Reorient</a>
+ }</td></tr>
+<tr class="memdesc:ga08ad5f3b2f569ea9f2c9a15705d8170f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Policy for updating attribute values when reorienting mesh facets.  <a href="#ga08ad5f3b2f569ea9f2c9a15705d8170f">More...</a><br /></td></tr>
+<tr class="separator:ga08ad5f3b2f569ea9f2c9a15705d8170f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaa6b9ce91409ac67b7b5319cf573f66b8" id="r_gaa6b9ce91409ac67b7b5319cf573f66b8"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaa6b9ce91409ac67b7b5319cf573f66b8">AttributeValueType</a> : uint8_t { <b>LA_X_attribute_value_type_enum</b>
  }</td></tr>
 <tr class="memdesc:gaa6b9ce91409ac67b7b5319cf573f66b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enum describing at runtime the value type of an attribute.  <a href="#gaa6b9ce91409ac67b7b5319cf573f66b8">More...</a><br /></td></tr>
@@ -833,6 +838,39 @@ constexpr <a class="el" href="#ga4d115376c2c766084ef808c837348fc3">AttributeId</
 
 </div>
 </div>
+<a id="ga08ad5f3b2f569ea9f2c9a15705d8170f" name="ga08ad5f3b2f569ea9f2c9a15705d8170f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga08ad5f3b2f569ea9f2c9a15705d8170f">&#9670;&#160;</a></span>AttributeReorientPolicy</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum class <a class="el" href="#ga08ad5f3b2f569ea9f2c9a15705d8170f">AttributeReorientPolicy</a> : uint8_t</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel strong">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;lagrange/AttributeFwd.h&gt;</code></p>
+
+<p>Policy for updating attribute values when reorienting mesh facets. </p>
+<p>By default, attributes such as normals, tangents, and bitangents are reoriented when mesh facets are flipped. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="gga08ad5f3b2f569ea9f2c9a15705d8170fa6adf97f83acf6453d4a6a4b1070f3754" name="gga08ad5f3b2f569ea9f2c9a15705d8170fa6adf97f83acf6453d4a6a4b1070f3754"></a>None&#160;</td><td class="fielddoc"><p>Do not reorient attribute values when flipping mesh facets. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga08ad5f3b2f569ea9f2c9a15705d8170fae679ea3b7c35ed985d184df6b2d86d14" name="gga08ad5f3b2f569ea9f2c9a15705d8170fae679ea3b7c35ed985d184df6b2d86d14"></a>Reorient&#160;</td><td class="fielddoc"><p>Reorient attribute values when flipping mesh facets. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
 <a id="gaa6b9ce91409ac67b7b5319cf573f66b8" name="gaa6b9ce91409ac67b7b5319cf573f66b8"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#gaa6b9ce91409ac67b7b5319cf573f66b8">&#9670;&#160;</a></span>AttributeValueType</h2>
 
@@ -904,7 +942,7 @@ template&lt;typename ValueType&gt; </div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Wed Dec 10 2025 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+    <li class="footer">Generated on Tue Jan 20 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>
 </body>

@@ -16,5 +16,6 @@ var searchData=
   ['cornersonly_13',['CornersOnly',['../group__module-subdivision.html#gga18fb36949d8541f36a871b958052e9cda65e745641efb8abb0f3ed8d4e38e47e6',1,'lagrange::subdivision']]],
   ['cornersplus1_14',['CornersPlus1',['../group__module-subdivision.html#gga18fb36949d8541f36a871b958052e9cda7842f906dde4df50b36380e5903de0bd',1,'lagrange::subdivision']]],
   ['cornersplus2_15',['CornersPlus2',['../group__module-subdivision.html#gga18fb36949d8541f36a871b958052e9cda1299749c8483efe1ddbd40a5886eae6f',1,'lagrange::subdivision']]],
-  ['cornertrianglearea_16',['CornerTriangleArea',['../group__group-surfacemesh-utils.html#ggaa88e833ed770762b02e187f0c2377d3da84f023fc44b6b158de6ccc157c8dab06',1,'lagrange']]]
+  ['cornertrianglearea_16',['CornerTriangleArea',['../group__group-surfacemesh-utils.html#ggaa88e833ed770762b02e187f0c2377d3da84f023fc44b6b158de6ccc157c8dab06',1,'lagrange']]],
+  ['crosssection_17',['CrossSection',['../group__module-primitive.html#ggae521e500502eae3849d46dc92a5ab7fea01558f38ee0590b11fd9284029626849',1,'lagrange::primitive']]]
 ];
