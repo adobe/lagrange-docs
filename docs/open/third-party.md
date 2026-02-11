@@ -36,9 +36,9 @@ automatically downloaded by our CMake system depending on which Lagrange module 
 | [MshIO](https://github.com/qnzhou/MshIO)                                                       | Apache 2                          | IO                                                    |
 | [Nanobind](https://github.com/wjakob/nanobind)                                                 | BSD-3                             | Python                                                |
 | [OpenSubdiv](https://github.com/PixarAnimationStudios/OpenSubdiv)                              | Apache 2                          | Subdivision                                           |
-| [OpenVDB](https://github.com/AcademySoftwareFoundation/openvdb)                                | MPL2                              | Volume                                                |
+| [OpenVDB](https://github.com/AcademySoftwareFoundation/openvdb)                                | MPL2                              | Examples (Volume), Python Bindings (Volume), Volume   |
 | [PoissonRecon](https://github.com/mkazhdan/PoissonRecon)                                       | MIT                               | Poisson                                               |
-| [Polyscope](https://github.com/nmwsharp/polyscope)                                             | MIT                               | Polyscope                                             |
+| [Polyscope](https://github.com/nmwsharp/polyscope)                                             | MIT                               | Examples (Volume), Polyscope                          |
 | [Portable File Dialogs](https://github.com/samhocevar/portable-file-dialogs)                   | WTFPL (public domain)             | UI                                                    |
 | [RectangleBinPack](https://github.com/juj/RectangleBinPack)                                    | Public domain                     | Packing                                               |
 | [Shape Gradient Domain](https://github.com/mkazhdan/ShapeGradientDomain)                       | MIT                               | Filtering                                             |
@@ -49,6 +49,7 @@ automatically downloaded by our CMake system depending on which Lagrange module 
 | [geometry-centrl](https://github.com/nmwsharp/geometry-central)                                | MIT                               | Geodesic                                              |
 | [gl3w](https://github.com/skaslev/gl3w)                                                        | MIT                               | UI                                                    |
 | [imgui fonts](https://github.com/HasKha/imgui-fonts)                                           | MIT                               | UI                                                    |
+| [instant-meshes-core](https://github.com/qnzhou/instant-meshes-core)                           | BSD-3                             | Remeshing_IM                                          |
 | [mdspan](https://github.com/kokkos/mdspan)                                                     | Apache 2                          | Image                                                 |
 | [nanoflann](https://github.com/jlblancoc/nanoflann)                                            | BSD-2                             | BVH, UI                                               |
 | [span-lite](https://github.com/martinmoene/span-lite)                                          | Boost                             | Core                                                  |
