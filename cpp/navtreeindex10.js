@@ -1,5 +1,8 @@
 var NAVTREEINDEX10 =
 {
+"structlagrange_1_1internal_1_1_bucket_sort_offset.html":[4,0,1,6,0],
+"structlagrange_1_1internal_1_1_bucket_sort_offset.html#ab3caef73b39b6c78fef58146d093e08d":[3,0,0,2,0,0],
+"structlagrange_1_1internal_1_1_bucket_sort_offset.html#ab3caef73b39b6c78fef58146d093e08d":[4,0,1,6,0,0],
 "structlagrange_1_1internal_1_1_bucket_sort_offset.html#ae2a4cebc3b9b9b3b1e03fe54b2be4692":[3,0,0,2,0,1],
 "structlagrange_1_1internal_1_1_bucket_sort_offset.html#ae2a4cebc3b9b9b3b1e03fe54b2be4692":[4,0,1,6,0,1],
 "structlagrange_1_1internal_1_1_bucket_sort_result.html":[3,0,0,2,1],
@@ -246,8 +249,5 @@ var NAVTREEINDEX10 =
 "structlagrange_1_1primitive_1_1legacy_1_1_rounded_plane_config.html#a737bd93608c158d58db286dfc6e49b07":[4,0,1,15,0,6,1],
 "structlagrange_1_1primitive_1_1legacy_1_1_sphere_config.html":[4,0,1,15,0,7],
 "structlagrange_1_1primitive_1_1legacy_1_1_sphere_config.html#a1180fcc7096856a2fcf8bf37bd85ed19":[4,0,1,15,0,7,0],
-"structlagrange_1_1primitive_1_1legacy_1_1_sphere_config.html#a822bca7499d352157dd21715a9f8e4dc":[4,0,1,15,0,7,3],
-"structlagrange_1_1primitive_1_1legacy_1_1_sphere_config.html#a887dfa54f88f81fc02b85e099cd46cfb":[4,0,1,15,0,7,1],
-"structlagrange_1_1primitive_1_1legacy_1_1_sphere_config.html#a8e63e3d5bbb2cd8977d79f21ce6f3ecc":[4,0,1,15,0,7,4],
-"structlagrange_1_1primitive_1_1legacy_1_1_sphere_config.html#ade89ec76799e0a58f7b92532a540e0f7":[4,0,1,15,0,7,2]
+"structlagrange_1_1primitive_1_1legacy_1_1_sphere_config.html#a822bca7499d352157dd21715a9f8e4dc":[4,0,1,15,0,7,3]
 };

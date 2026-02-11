@@ -31,7 +31,7 @@ var searchData=
   ['vertex_5fbasis_28',['vertex_basis',['../classlagrange_1_1polyddg_1_1_differential_operators.html#a08316000af97e2f8f64958157c99a830',1,'lagrange::polyddg::DifferentialOperators']]],
   ['vertex_5fboundary_5finterpolation_29',['vertex_boundary_interpolation',['../structlagrange_1_1subdivision_1_1_subdivision_options.html#a56ecf395ef5c7f6bca751e06c42f02a2',1,'lagrange::subdivision::SubdivisionOptions']]],
   ['vertex_5fref_30',['vertex_ref',['../group__group-surfacemesh-views.html#ga6b51e5a79a66e11c3dff4c1d68015c1c',1,'lagrange']]],
-  ['vertex_5fsharpness_5fattr_31',['vertex_sharpness_attr',['../structlagrange_1_1subdivision_1_1_subdivision_options.html#a63d403295b7ddae95fee09538bb46cfe',1,'lagrange::subdivision::SubdivisionOptions']]],
+  ['vertex_5fsharpness_5fattr_31',['vertex_sharpness_attr',['../structlagrange_1_1subdivision_1_1_sharpness_results.html#a63d403295b7ddae95fee09538bb46cfe',1,'lagrange::subdivision::SharpnessResults::vertex_sharpness_attr'],['../structlagrange_1_1subdivision_1_1_subdivision_options.html#a63d403295b7ddae95fee09538bb46cfe',1,'lagrange::subdivision::SubdivisionOptions::vertex_sharpness_attr']]],
   ['vertex_5ftangent_5fcoordinates_32',['vertex_tangent_coordinates',['../classlagrange_1_1polyddg_1_1_differential_operators.html#a70bb5aecc042bdaac3a7ef85bd5d0204',1,'lagrange::polyddg::DifferentialOperators']]],
   ['vertex_5fview_33',['vertex_view',['../group__group-surfacemesh-views.html#ga2e034be5f010e6956225e15059825146',1,'lagrange']]],
   ['vertexboundaryinterpolation_34',['VertexBoundaryInterpolation',['../group__module-subdivision.html#ga4189a9f8863a8107f9686281bdbe9364',1,'lagrange::subdivision']]],

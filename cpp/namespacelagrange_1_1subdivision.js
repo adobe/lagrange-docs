@@ -3,6 +3,8 @@ var namespacelagrange_1_1subdivision =
     [ "InterpolatedAttributeIds", "structlagrange_1_1subdivision_1_1_interpolated_attribute_ids.html", null ],
     [ "InterpolatedAttributes", "classlagrange_1_1subdivision_1_1_interpolated_attributes.html", "classlagrange_1_1subdivision_1_1_interpolated_attributes" ],
     [ "MeshConverter", "structlagrange_1_1subdivision_1_1_mesh_converter.html", null ],
+    [ "SharpnessOptions", "structlagrange_1_1subdivision_1_1_sharpness_options.html", "structlagrange_1_1subdivision_1_1_sharpness_options" ],
+    [ "SharpnessResults", "structlagrange_1_1subdivision_1_1_sharpness_results.html", "structlagrange_1_1subdivision_1_1_sharpness_results" ],
     [ "SubdivisionOptions", "structlagrange_1_1subdivision_1_1_subdivision_options.html", "structlagrange_1_1subdivision_1_1_subdivision_options" ],
     [ "SchemeType", "group__module-subdivision.html#gaa3daa2f428c6be2b1cb394f3a525833d", [
       [ "Bilinear", "group__module-subdivision.html#ggaa3daa2f428c6be2b1cb394f3a525833daaf17c98bbd83c27d6426d2ff3fa81d7f", null ],
@@ -26,6 +28,7 @@ var namespacelagrange_1_1subdivision =
       [ "Uniform", "group__module-subdivision.html#ggaac5ae01fdafef92da6cdf7fcaa27bed2af19516d11f2946f894070e92fcb56b6d", null ],
       [ "EdgeAdaptive", "group__module-subdivision.html#ggaac5ae01fdafef92da6cdf7fcaa27bed2a231aed9401f31afda5dc12fd6952e324", null ]
     ] ],
+    [ "compute_sharpness", "group__module-subdivision.html#gadc9a4e6974a57b177a7dd86921554c85", null ],
     [ "subdivide_mesh", "group__module-subdivision.html#gab830dbf13f0590f7397036d72e396d0d", null ],
     [ "midpoint_subdivision", "group__module-subdivision.html#ga5bb45b1783fc315efefb291e2d2dbd9f", null ],
     [ "sqrt_subdivision", "group__module-subdivision.html#ga956eef31bf35351dff901a7f4d758f5f", null ]

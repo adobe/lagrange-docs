@@ -1,5 +1,14 @@
 var group__module_subdivision =
 [
+    [ "SharpnessResults", "structlagrange_1_1subdivision_1_1_sharpness_results.html", [
+      [ "normal_attr", "structlagrange_1_1subdivision_1_1_sharpness_results.html#a840d7d29f34ea2e7d48bdcba1b5414d9", null ],
+      [ "vertex_sharpness_attr", "structlagrange_1_1subdivision_1_1_sharpness_results.html#a63d403295b7ddae95fee09538bb46cfe", null ],
+      [ "edge_sharpness_attr", "structlagrange_1_1subdivision_1_1_sharpness_results.html#a1f54c0b91b23661df594458959dfba70", null ]
+    ] ],
+    [ "SharpnessOptions", "structlagrange_1_1subdivision_1_1_sharpness_options.html", [
+      [ "normal_attribute_name", "structlagrange_1_1subdivision_1_1_sharpness_options.html#a51066a9b87ceffa1db37243770584972", null ],
+      [ "feature_angle_threshold", "structlagrange_1_1subdivision_1_1_sharpness_options.html#a5d7ef067a18ea41f0acb829fbba244a1", null ]
+    ] ],
     [ "InterpolatedAttributes", "classlagrange_1_1subdivision_1_1_interpolated_attributes.html", [
       [ "SelectionType", "classlagrange_1_1subdivision_1_1_interpolated_attributes.html#acffca3b33fddce63d3220bc7487e879d", [
         [ "All", "classlagrange_1_1subdivision_1_1_interpolated_attributes.html#acffca3b33fddce63d3220bc7487e879dab1c94ca2fbc3e78fc30069c8d0f01680", null ],
@@ -52,6 +61,7 @@ var group__module_subdivision =
       [ "Uniform", "group__module-subdivision.html#ggaac5ae01fdafef92da6cdf7fcaa27bed2af19516d11f2946f894070e92fcb56b6d", null ],
       [ "EdgeAdaptive", "group__module-subdivision.html#ggaac5ae01fdafef92da6cdf7fcaa27bed2a231aed9401f31afda5dc12fd6952e324", null ]
     ] ],
+    [ "compute_sharpness", "group__module-subdivision.html#gadc9a4e6974a57b177a7dd86921554c85", null ],
     [ "subdivide_mesh", "group__module-subdivision.html#gab830dbf13f0590f7397036d72e396d0d", null ],
     [ "midpoint_subdivision", "group__module-subdivision.html#ga5bb45b1783fc315efefb291e2d2dbd9f", null ],
     [ "sqrt_subdivision", "group__module-subdivision.html#ga956eef31bf35351dff901a7f4d758f5f", null ]

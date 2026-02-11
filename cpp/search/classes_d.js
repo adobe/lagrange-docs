@@ -7,6 +7,7 @@ var searchData=
   ['orderedpairhash_3c_20std_3a_3apair_3c_20u_2c_20v_20_3e_20_3e_4',['OrderedPairHash&lt; std::pair&lt; U, V &gt; &gt;',['../structlagrange_1_1_ordered_pair_hash_3_01std_1_1pair_3_01_u_00_01_v_01_4_01_4.html',1,'lagrange']]],
   ['orientationoptions_5',['OrientationOptions',['../structlagrange_1_1_orientation_options.html',1,'lagrange']]],
   ['orientoptions_6',['OrientOptions',['../structlagrange_1_1_orient_options.html',1,'lagrange']]],
-  ['osduv_7',['OSDUV',['../structlagrange_1_1subdivision_1_1internal_1_1_o_s_d_u_v.html',1,'lagrange::subdivision::internal']]],
-  ['osdvertex_8',['OSDVertex',['../structlagrange_1_1subdivision_1_1internal_1_1_o_s_d_vertex.html',1,'lagrange::subdivision::internal']]]
+  ['orientreturn_7',['OrientReturn',['../struct_orient_return.html',1,'']]],
+  ['osduv_8',['OSDUV',['../structlagrange_1_1subdivision_1_1internal_1_1_o_s_d_u_v.html',1,'lagrange::subdivision::internal']]],
+  ['osdvertex_9',['OSDVertex',['../structlagrange_1_1subdivision_1_1internal_1_1_o_s_d_vertex.html',1,'lagrange::subdivision::internal']]]
 ];

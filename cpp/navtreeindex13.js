@@ -1,5 +1,15 @@
 var NAVTREEINDEX13 =
 {
+"structlagrange_1_1ui_1_1type__traits_3_01int16__t_01_4.html":[4,0,1,23,116],
+"structlagrange_1_1ui_1_1type__traits_3_01int32__t_01_4.html":[3,0,0,7,114],
+"structlagrange_1_1ui_1_1type__traits_3_01int32__t_01_4.html":[4,0,1,23,117],
+"structlagrange_1_1ui_1_1type__traits_3_01int8__t_01_4.html":[3,0,0,7,115],
+"structlagrange_1_1ui_1_1type__traits_3_01int8__t_01_4.html":[4,0,1,23,118],
+"structlagrange_1_1ui_1_1type__traits_3_01uint16__t_01_4.html":[3,0,0,7,116],
+"structlagrange_1_1ui_1_1type__traits_3_01uint16__t_01_4.html":[4,0,1,23,119],
+"structlagrange_1_1ui_1_1type__traits_3_01uint32__t_01_4.html":[3,0,0,7,117],
+"structlagrange_1_1ui_1_1type__traits_3_01uint32__t_01_4.html":[4,0,1,23,120],
+"structlagrange_1_1ui_1_1type__traits_3_01uint8__t_01_4.html":[3,0,0,7,118],
 "structlagrange_1_1ui_1_1type__traits_3_01uint8__t_01_4.html":[4,0,1,23,121],
 "structlagrange_1_1ui_1_1util_1_1_as_function.html":[4,0,1,23,1,0],
 "structlagrange_1_1ui_1_1util_1_1_as_function_3_01_return_type_07_5_08_07_arg_08_4.html":[4,0,1,23,1,1],
@@ -18,6 +28,7 @@ var NAVTREEINDEX13 =
 "structlagrange_1_1volume_1_1_mesh_to_volume_options.html#ad870f3a2c3baacb65e34071ae73c66cb":[4,0,1,24,1,0],
 "structlagrange_1_1volume_1_1_mesh_to_volume_options.html#ad870f3a2c3baacb65e34071ae73c66cba516bb4c8a929221ac00eda157b11d6cb":[4,0,1,24,1,0,1],
 "structlagrange_1_1volume_1_1_mesh_to_volume_options.html#ad870f3a2c3baacb65e34071ae73c66cba87a1c3c5015e671a91f7947ffb19d20b":[4,0,1,24,1,0,0],
+"structlagrange_1_1volume_1_1_mesh_to_volume_options.html#ad870f3a2c3baacb65e34071ae73c66cbaa1a914735b205424ba6c40b85528d78a":[4,0,1,24,1,0,2],
 "structlagrange_1_1volume_1_1_normals_from_volume_options.html":[4,0,1,24,2],
 "structlagrange_1_1volume_1_1_normals_from_volume_options.html#a51066a9b87ceffa1db37243770584972":[4,0,1,24,2,0],
 "structlagrange_1_1volume_1_1_volume_to_mesh_options.html":[4,0,1,24,3],
@@ -26,8 +37,8 @@ var NAVTREEINDEX13 =
 "structlagrange_1_1volume_1_1_volume_to_mesh_options.html#a51066a9b87ceffa1db37243770584972":[4,0,1,24,3,2],
 "structlagrange_1_1winding_1_1_fast_winding_number_1_1_impl.html":[4,0,1,25,0,0],
 "structstd_1_1hash_3_01lagrange_1_1_edge_type_3_01_index_01_4_01_4.html":[4,0,2,0],
-"structtype__caster_3_01lagrange_1_1_stack_vector_3_01_t_00_01_n_01_4_01_4.html":[4,0,5],
-"structtype__caster_3_01lagrange_1_1scene_1_1_value_01_4.html":[4,0,4],
+"structtype__caster_3_01lagrange_1_1_stack_vector_3_01_t_00_01_n_01_4_01_4.html":[4,0,6],
+"structtype__caster_3_01lagrange_1_1scene_1_1_value_01_4.html":[4,0,5],
 "topics.html":[2],
 "":[3,0,0,0]
 };

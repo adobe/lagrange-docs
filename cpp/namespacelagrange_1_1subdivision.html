@@ -143,6 +143,12 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlagrange_1_1subdivision_1_1_mesh_converter.html">MeshConverter</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlagrange_1_1subdivision_1_1_sharpness_options.html">SharpnessOptions</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Input options for the <code>compute_sharpness</code> function.  <a href="structlagrange_1_1subdivision_1_1_sharpness_options.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlagrange_1_1subdivision_1_1_sharpness_results.html">SharpnessResults</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Attribute ids returned by the <code>compute_sharpness</code> function.  <a href="structlagrange_1_1subdivision_1_1_sharpness_results.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlagrange_1_1subdivision_1_1_subdivision_options.html">SubdivisionOptions</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mesh subdivision options.  <a href="structlagrange_1_1subdivision_1_1_subdivision_options.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -187,6 +193,10 @@ Enumerations</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:gadc9a4e6974a57b177a7dd86921554c85" id="r_gadc9a4e6974a57b177a7dd86921554c85"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, typename Index&gt; </td></tr>
+<tr class="memitem:gadc9a4e6974a57b177a7dd86921554c85"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structlagrange_1_1subdivision_1_1_sharpness_results.html">SharpnessResults</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__module-subdivision.html#gadc9a4e6974a57b177a7dd86921554c85">compute_sharpness</a> (<a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index &gt; &amp;mesh, const <a class="el" href="structlagrange_1_1subdivision_1_1_sharpness_options.html">SharpnessOptions</a> &amp;options={})</td></tr>
+<tr class="memdesc:gadc9a4e6974a57b177a7dd86921554c85"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute subdivision options to handle sharp edges and vertices based on existing mesh attributes.  <br /></td></tr>
+<tr class="separator:gadc9a4e6974a57b177a7dd86921554c85"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acfed8fc28e1669e42b22e1f5df90172c" id="r_acfed8fc28e1669e42b22e1f5df90172c"><td class="memTemplParams" colspan="2"><a id="acfed8fc28e1669e42b22e1f5df90172c" name="acfed8fc28e1669e42b22e1f5df90172c"></a>
 template&lt;typename input_meshType, typename output_meshType&gt; </td></tr>
 <tr class="memitem:acfed8fc28e1669e42b22e1f5df90172c"><td class="memTemplItemLeft" align="right" valign="top">std::unique_ptr&lt; output_meshType &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>subdivide_mesh</b> (const input_meshType &amp;input_mesh, SubdivisionScheme scheme_type, int maxlevel, OpenSubdiv::Sdc::Options::VtxBoundaryInterpolation vertexInterp=OpenSubdiv::Sdc::Options::VTX_BOUNDARY_EDGE_ONLY, OpenSubdiv::Sdc::Options::FVarLinearInterpolation primvarInterp=OpenSubdiv::Sdc::Options::FVAR_LINEAR_ALL)</td></tr>
@@ -220,7 +230,7 @@ template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacelagrange.html">lagrange</a></li><li class="navelem"><a class="el" href="namespacelagrange_1_1subdivision.html">subdivision</a></li>
-    <li class="footer">Generated on Tue Jan 20 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+    <li class="footer">Generated on Wed Feb 11 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>
 </body>

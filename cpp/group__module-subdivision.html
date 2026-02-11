@@ -135,6 +135,12 @@ $(function(){initNavTree('group__module-subdivision.html',''); initResizable(tru
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlagrange_1_1subdivision_1_1_sharpness_results.html">SharpnessResults</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Attribute ids returned by the <code>compute_sharpness</code> function.  <a href="structlagrange_1_1subdivision_1_1_sharpness_results.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlagrange_1_1subdivision_1_1_sharpness_options.html">SharpnessOptions</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Input options for the <code>compute_sharpness</code> function.  <a href="structlagrange_1_1subdivision_1_1_sharpness_options.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlagrange_1_1subdivision_1_1_interpolated_attributes.html">InterpolatedAttributes</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper class to select which attributes to interpolate.  <a href="classlagrange_1_1subdivision_1_1_interpolated_attributes.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -176,6 +182,10 @@ Enumerations</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:gadc9a4e6974a57b177a7dd86921554c85" id="r_gadc9a4e6974a57b177a7dd86921554c85"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, typename Index&gt; </td></tr>
+<tr class="memitem:gadc9a4e6974a57b177a7dd86921554c85"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structlagrange_1_1subdivision_1_1_sharpness_results.html">SharpnessResults</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#gadc9a4e6974a57b177a7dd86921554c85">compute_sharpness</a> (<a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index &gt; &amp;mesh, const <a class="el" href="structlagrange_1_1subdivision_1_1_sharpness_options.html">SharpnessOptions</a> &amp;options={})</td></tr>
+<tr class="memdesc:gadc9a4e6974a57b177a7dd86921554c85"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute subdivision options to handle sharp edges and vertices based on existing mesh attributes.  <br /></td></tr>
+<tr class="separator:gadc9a4e6974a57b177a7dd86921554c85"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gab830dbf13f0590f7397036d72e396d0d" id="r_gab830dbf13f0590f7397036d72e396d0d"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, typename Index&gt; </td></tr>
 <tr class="memitem:gab830dbf13f0590f7397036d72e396d0d"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#gab830dbf13f0590f7397036d72e396d0d">subdivide_mesh</a> (const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index &gt; &amp;mesh, const <a class="el" href="structlagrange_1_1subdivision_1_1_subdivision_options.html">SubdivisionOptions</a> &amp;options={})</td></tr>
 <tr class="memdesc:gab830dbf13f0590f7397036d72e396d0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluates the subdivision surface of a polygonal mesh.  <br /></td></tr>
@@ -335,6 +345,55 @@ Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="gadc9a4e6974a57b177a7dd86921554c85" name="gadc9a4e6974a57b177a7dd86921554c85"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gadc9a4e6974a57b177a7dd86921554c85">&#9670;&#160;</a></span>compute_sharpness()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, typename Index&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structlagrange_1_1subdivision_1_1_sharpness_results.html">SharpnessResults</a> compute_sharpness </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>mesh</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structlagrange_1_1subdivision_1_1_sharpness_options.html">SharpnessOptions</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>options</em></span><span class="paramdefsep"> = </span><span class="paramdefval">{}</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;lagrange/subdivision/compute_sharpness.h&gt;</code></p>
+
+<p>Compute subdivision options to handle sharp edges and vertices based on existing mesh attributes. </p>
+<p>This function performs the following operations:</p><ol type="1">
+<li>Find an attribute to use as indexed normals to define sharp edges.</li>
+<li>If not found, compute indexed corner normals based on a user-defined feature angle threshold.</li>
+<li>Compute edge and vertex sharpness <code>float</code> attributes based on indexed normals topology.</li>
+</ol>
+<p>The mesh is modified in place to add the necessary attributes. If no indexed normal attribute is found, and no autosmooth feature angle threshold is provided, then no sharpness information is computed.</p>
+<dl class="section note"><dt>Note</dt><dd>Please ensure that relevant input indexed normals are properly welded before calling this function.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">mesh</td><td>Input mesh to prepare for subdivision. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">options</td><td>Input options for computing sharpness information.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Scalar</td><td>Mesh scalar type. </td></tr>
+    <tr><td class="paramname">Index</td><td>Mesh index type.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Normal, edge and vertex sharpness attribute ids. </dd></dl>
+
+</div>
+</div>
 <a id="gab830dbf13f0590f7397036d72e396d0d" name="gab830dbf13f0590f7397036d72e396d0d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#gab830dbf13f0590f7397036d72e396d0d">&#9670;&#160;</a></span>subdivide_mesh()</h2>
 
@@ -462,7 +521,7 @@ template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Tue Jan 20 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+    <li class="footer">Generated on Wed Feb 11 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>
 </body>

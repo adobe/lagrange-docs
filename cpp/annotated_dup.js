@@ -229,6 +229,8 @@ var annotated_dup =
         [ "InterpolatedAttributeIds", "structlagrange_1_1subdivision_1_1_interpolated_attribute_ids.html", null ],
         [ "InterpolatedAttributes", "classlagrange_1_1subdivision_1_1_interpolated_attributes.html", "classlagrange_1_1subdivision_1_1_interpolated_attributes" ],
         [ "MeshConverter", "structlagrange_1_1subdivision_1_1_mesh_converter.html", null ],
+        [ "SharpnessOptions", "structlagrange_1_1subdivision_1_1_sharpness_options.html", "structlagrange_1_1subdivision_1_1_sharpness_options" ],
+        [ "SharpnessResults", "structlagrange_1_1subdivision_1_1_sharpness_results.html", "structlagrange_1_1subdivision_1_1_sharpness_results" ],
         [ "SubdivisionOptions", "structlagrange_1_1subdivision_1_1_subdivision_options.html", "structlagrange_1_1subdivision_1_1_subdivision_options" ]
       ] ],
       [ "testing", null, [
@@ -514,6 +516,8 @@ var annotated_dup =
       [ "hash< lagrange::EdgeType< Index > >", "structstd_1_1hash_3_01lagrange_1_1_edge_type_3_01_index_01_4_01_4.html", null ]
     ] ],
     [ "Args", "struct_args.html", null ],
+    [ "OrientReturn", "struct_orient_return.html", null ],
     [ "type_caster< lagrange::scene::Value >", "structtype__caster_3_01lagrange_1_1scene_1_1_value_01_4.html", null ],
-    [ "type_caster< lagrange::StackVector< T, N > >", "structtype__caster_3_01lagrange_1_1_stack_vector_3_01_t_00_01_n_01_4_01_4.html", null ]
+    [ "type_caster< lagrange::StackVector< T, N > >", "structtype__caster_3_01lagrange_1_1_stack_vector_3_01_t_00_01_n_01_4_01_4.html", null ],
+    [ "UiState", "struct_ui_state.html", null ]
 ];

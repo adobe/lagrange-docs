@@ -1,5 +1,6 @@
 var NAVTREEINDEX8 =
 {
+"namespacelagrange_1_1ui.html#a4392bf38acedc6dd21b6c7e8b61efe0b":[3,0,0,7,169],
 "namespacelagrange_1_1ui.html#a46ade071c393ba918f7a20d609938c4e":[3,0,0,7,138],
 "namespacelagrange_1_1ui.html#a4b122d4ce7d7a121348f21e5ff6d2e7d":[3,0,0,7,206],
 "namespacelagrange_1_1ui.html#a4e40b311ce6190037d61ce221c6c344a":[3,0,0,7,148],
@@ -126,6 +127,8 @@ var NAVTREEINDEX8 =
 "namespaces.html":[3,0],
 "pages.html":[],
 "struct_args.html":[4,0,3],
+"struct_orient_return.html":[4,0,4],
+"struct_ui_state.html":[4,0,7],
 "structfmt_1_1formatter_3_01_t_00_01std_1_1enable__if__t_3_01std_1_1is__base__of_3_01_eigen_1_1_d4cad164886cc373111d40252deee7ffc.html":[4,0,0,0],
 "structfmt_1_1is__range_3_01_derived_00_01std_1_1enable__if__t_3_01std_1_1is__base__of_3_01_eigen8831e8e9466b492bd5196648eda925fb.html":[4,0,0,1],
 "structlagrange_1_1_attribute_filter.html":[2,1,1,1,19],
@@ -246,8 +249,5 @@ var NAVTREEINDEX8 =
 "structlagrange_1_1_orient_options.html":[3,0,0,62],
 "structlagrange_1_1_orient_options.html":[4,0,1,80],
 "structlagrange_1_1_orient_options.html#acdea3192c7c9a99816f27e88da0eeff2":[3,0,0,62,0],
-"structlagrange_1_1_orient_options.html#acdea3192c7c9a99816f27e88da0eeff2":[4,0,1,80,0],
-"structlagrange_1_1_orientation_options.html":[2,1,1,1,22],
-"structlagrange_1_1_orientation_options.html#ad9fcba39803c665ca7be48a39d079f00":[2,1,1,1,22,0],
-"structlagrange_1_1_parsing_error.html":[2,1,2,0,3]
+"structlagrange_1_1_orient_options.html#acdea3192c7c9a99816f27e88da0eeff2":[4,0,1,80,0]
 };
