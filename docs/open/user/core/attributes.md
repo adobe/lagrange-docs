@@ -77,7 +77,7 @@ Mesh attributes are buffers of data associated to a mesh element. They are chara
     will be stored in memory as `[x0, y0, z0, x1, y1, z1, ...]` etc. If you need to wrap external
     data with a compatible memory layout, please read our dedicated section on [wrapping external
     buffers](#wrapping-external-buffers). If you need to track ownership, you can use a
-    [SharedSpan](../general-utilities/#shared-span) object.
+    [SharedSpan](general-utilities.md#shared-span) object.
 
 ## Attribute Creation
 
@@ -414,11 +414,11 @@ mesh.wrap_as_const_attribute(
 
 !!! tip "Tracking Ownership And Moving Eigen Matrices"
     If you need to track the ownership of an external buffer being wrapped as a mesh attribute,
-    please read our documentation about [SharedSpan](../general-utilities/#shared-span) objects. Any
+    please read our documentation about [SharedSpan](general-utilities.md#shared-span) objects. Any
     `wrap_*` method that accepts a regular `span<>` object should also work with a managed
     `SharedSpan` object.
 
-    Using a [SharedSpan](../general-utilities/#shared-span) object to wrap an external object as
+    Using a [SharedSpan](general-utilities.md#shared-span) object to wrap an external object as
     attribute allows moving a Eigen::Matrix and other arbitrary objects into mesh attributes without
     any extra buffer copy, as long as the memory layout of the coordinates are compatible.
 

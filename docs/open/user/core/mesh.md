@@ -202,8 +202,8 @@ mesh.add_hybrid(4,
 
 !!! tip "Wrapping External Buffers ans Eigen Matrices"
     Please read our dedicated section on [wrapping external
-    buffer](../attributes/#wrapping-external-buffers), as well as our documentation on
-    [SharedSpan](../general-utilities/#shared-span) for tracking ownership of shared objects when
+    buffer](attributes.md#wrapping-external-buffers), as well as our documentation on
+    [SharedSpan](general-utilities.md#shared-span) for tracking ownership of shared objects when
     wrapping external buffers.
 
 ## Removing Vertices/Facets
@@ -266,7 +266,7 @@ reason, we distinguish most accessors between **getters** and **setters**:
   uniquely owned (i.e. there are more than 1 object referencing the same buffer).
 
 Note that both getters and setters are **safe to use concurrently**. Please read our ["note on
-thread-safety"](#a-note-on-thread-safety) for more information.
+thread-safety"](attributes.md#a-note-on-thread-safety) for more information.
 
 See below for a short example:
 
@@ -340,7 +340,7 @@ V_ref.rowwise() -= V_ref.colwise().mean();
 
 !!! tip "Mesh Attributes"
     Arbitrary mesh attributes can be viewed as Eigen matrices via the `matrix_view()` and
-    `matrix_ref()` functions. Please read our [attribute documentation](../attributes) for some
+    `matrix_ref()` functions. Please read our [attribute documentation](attributes.md) for some
     examples.
 
 ## Mesh Edges
