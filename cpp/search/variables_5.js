@@ -15,5 +15,6 @@ var searchData=
   ['export_5fmaterials_12',['export_materials',['../structlagrange_1_1io_1_1_save_options.html#af20d5daaff3e4179c1df8f8238a219bc',1,'lagrange::io::SaveOptions']]],
   ['extensions_13',['extensions',['../structlagrange_1_1scene_1_1_image_experimental.html#a08936f4f41506b0b95105d8e620a9a96',1,'lagrange::scene::ImageExperimental']]],
   ['exterior_5fonly_14',['exterior_only',['../structlagrange_1_1texproc_1_1_stitching_options.html#aa1c5474979d2ade3016e457d168d2f38',1,'lagrange::texproc::StitchingOptions']]],
-  ['extra_5fattributes_15',['extra_attributes',['../structlagrange_1_1_remove_duplicate_vertices_options.html#a1f3274faf4d13c22001e47b145c5ff3f',1,'lagrange::RemoveDuplicateVerticesOptions']]]
+  ['extra_5fattributes_15',['extra_attributes',['../structlagrange_1_1_remove_duplicate_vertices_options.html#a1f3274faf4d13c22001e47b145c5ff3f',1,'lagrange::RemoveDuplicateVerticesOptions']]],
+  ['extrinsic_16',['extrinsic',['../structlagrange_1_1remeshing__im_1_1_remeshing_options.html#a91d779f476665f38b96028533a714c55',1,'lagrange::remeshing_im::RemeshingOptions']]]
 ];

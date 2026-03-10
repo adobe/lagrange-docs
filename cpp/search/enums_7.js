@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['outputattributes_0',['OutputAttributes',['../structlagrange_1_1io_1_1_save_options.html#aedcab510bc8bc3dfcda7e3e1cb486091',1,'lagrange::io::SaveOptions']]]
+  ['normalweightingtype_0',['NormalWeightingType',['../group__group-surfacemesh-utils.html#gaa88e833ed770762b02e187f0c2377d3d',1,'lagrange']]]
 ];

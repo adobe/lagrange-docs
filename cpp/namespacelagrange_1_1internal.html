@@ -142,6 +142,9 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlagrange_1_1internal_1_1_bucket_sort_result.html">BucketSortResult</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bucket sort result object.  <a href="structlagrange_1_1internal_1_1_bucket_sort_result.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlagrange_1_1internal_1_1_check_attribute_result.html">CheckAttributeResult</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Result of a check_attribute call.  <a href="structlagrange_1_1internal_1_1_check_attribute_result.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlagrange_1_1internal_1_1control__block.html">control_block</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">NOT implemented: custom allocator support.  <a href="classlagrange_1_1internal_1_1control__block.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -183,10 +186,16 @@ Enumerations</h2></td></tr>
 , <b>ARM</b>
  }</td></tr>
 <tr class="separator:a6ee932a915b2b397bf3444057506fad4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad55f96a0a38571fab295b3dcfa5ccaac" id="r_ad55f96a0a38571fab295b3dcfa5ccaac"><td class="memItemLeft" align="right" valign="top"><a id="ad55f96a0a38571fab295b3dcfa5ccaac" name="ad55f96a0a38571fab295b3dcfa5ccaac"></a>enum class &#160;</td><td class="memItemRight" valign="bottom"><b>ResetToDefault</b> { <b>Yes</b>
+<tr class="memitem:ad55f96a0a38571fab295b3dcfa5ccaac" id="r_ad55f96a0a38571fab295b3dcfa5ccaac"><td class="memItemLeft" align="right" valign="top"><a id="ad55f96a0a38571fab295b3dcfa5ccaac" name="ad55f96a0a38571fab295b3dcfa5ccaac"></a>enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad55f96a0a38571fab295b3dcfa5ccaac">ResetToDefault</a> { <b>Yes</b>
 , <b>No</b>
  }</td></tr>
+<tr class="memdesc:ad55f96a0a38571fab295b3dcfa5ccaac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether to reset the attribute values to default when an existing attribute is found. <br /></td></tr>
 <tr class="separator:ad55f96a0a38571fab295b3dcfa5ccaac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8131b5d272d562a69c79fbca67db5209" id="r_a8131b5d272d562a69c79fbca67db5209"><td class="memItemLeft" align="right" valign="top"><a id="a8131b5d272d562a69c79fbca67db5209" name="a8131b5d272d562a69c79fbca67db5209"></a>enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8131b5d272d562a69c79fbca67db5209">ShouldBeWritable</a> { <b>Yes</b>
+, <b>No</b>
+ }</td></tr>
+<tr class="memdesc:a8131b5d272d562a69c79fbca67db5209"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether the attribute should be writable. <br /></td></tr>
+<tr class="separator:a8131b5d272d562a69c79fbca67db5209"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
@@ -230,6 +239,10 @@ template&lt;typename DerivedV, typename DerivedF, typename DeriveddblA&gt; </td>
 <tr class="memitem:a999adf40cd91dcb3b7bb5bb6e3724584"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; Index &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a999adf40cd91dcb3b7bb5bb6e3724584">fast_edge_sort</a> (Index num_edges, Index num_vertices, Func get_edge, <a class="el" href="group__group-utils-misc.html#ga4afead0b9ccc53fe4fca896787595d26">span</a>&lt; Index &gt; vertex_to_first_edge={})</td></tr>
 <tr class="memdesc:a999adf40cd91dcb3b7bb5bb6e3724584"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sort an array of edges using a parallel bucket sort.  <br /></td></tr>
 <tr class="separator:a999adf40cd91dcb3b7bb5bb6e3724584"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3777d5f3ebce8993a3de327e95891210" id="r_a3777d5f3ebce8993a3de327e95891210"><td class="memTemplParams" colspan="2">template&lt;typename ExpectedValueType, typename <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, typename Index&gt; </td></tr>
+<tr class="memitem:a3777d5f3ebce8993a3de327e95891210"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structlagrange_1_1internal_1_1_check_attribute_result.html">CheckAttributeResult</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a3777d5f3ebce8993a3de327e95891210">check_attribute</a> (const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index &gt; &amp;mesh, <a class="el" href="group__group-surfacemesh-attr.html#ga4d115376c2c766084ef808c837348fc3">AttributeId</a> id, <a class="el" href="classlagrange_1_1_bit_field.html">BitField</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#ga9d8ab208822bab9987e9652dda49d89a">AttributeElement</a> &gt; expected_element, <a class="el" href="group__group-surfacemesh-attr.html#ga5a2f28c8b9e2f8fce6e70b2418c46e45">AttributeUsage</a> expected_usage, size_t expected_channels, <a class="el" href="#a8131b5d272d562a69c79fbca67db5209">ShouldBeWritable</a> expected_writable=ShouldBeWritable::No)</td></tr>
+<tr class="memdesc:a3777d5f3ebce8993a3de327e95891210"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check that an attribute matches the expected value type, element type, usage and number of channels.  <br /></td></tr>
+<tr class="separator:a3777d5f3ebce8993a3de327e95891210"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aae5d3bb97af070a81d6a1d624fce12af" id="r_aae5d3bb97af070a81d6a1d624fce12af"><td class="memTemplParams" colspan="2">template&lt;typename ExpectedValueType, typename <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, typename Index&gt; </td></tr>
 <tr class="memitem:aae5d3bb97af070a81d6a1d624fce12af"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="group__group-surfacemesh-attr.html#ga4d115376c2c766084ef808c837348fc3">AttributeId</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#aae5d3bb97af070a81d6a1d624fce12af">find_matching_attribute</a> (const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index &gt; &amp;mesh, std::string_view name, <a class="el" href="classlagrange_1_1_bit_field.html">BitField</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#ga9d8ab208822bab9987e9652dda49d89a">AttributeElement</a> &gt; expected_element, <a class="el" href="group__group-surfacemesh-attr.html#ga5a2f28c8b9e2f8fce6e70b2418c46e45">AttributeUsage</a> expected_usage, size_t expected_channels)</td></tr>
 <tr class="memdesc:aae5d3bb97af070a81d6a1d624fce12af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Find an attribute with a given name, ensuring the usage and element type match an expected target.  <br /></td></tr>
@@ -243,9 +256,13 @@ template&lt;typename DerivedV, typename DerivedF, typename DeriveddblA&gt; </td>
 <tr class="memdesc:a4e449214cdb7a7f4c42a69d9eb718483"><td class="mdescLeft">&#160;</td><td class="mdescRight">Find an attribute with a given name, ensuring the usage and element type match an expected target.  <br /></td></tr>
 <tr class="separator:a4e449214cdb7a7f4c42a69d9eb718483"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adbcff88ab81e30f4cd399e5fd3fb2ab2" id="r_adbcff88ab81e30f4cd399e5fd3fb2ab2"><td class="memTemplParams" colspan="2">template&lt;typename ExpectedValueType, typename <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, typename Index&gt; </td></tr>
-<tr class="memitem:adbcff88ab81e30f4cd399e5fd3fb2ab2"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="group__group-surfacemesh-attr.html#ga4d115376c2c766084ef808c837348fc3">AttributeId</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#adbcff88ab81e30f4cd399e5fd3fb2ab2">find_or_create_attribute</a> (<a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index &gt; &amp;mesh, std::string_view name, <a class="el" href="group__group-surfacemesh-attr.html#ga9d8ab208822bab9987e9652dda49d89a">AttributeElement</a> expected_element, <a class="el" href="group__group-surfacemesh-attr.html#ga5a2f28c8b9e2f8fce6e70b2418c46e45">AttributeUsage</a> expected_usage, size_t expected_channels, ResetToDefault reset_tag)</td></tr>
+<tr class="memitem:adbcff88ab81e30f4cd399e5fd3fb2ab2"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="group__group-surfacemesh-attr.html#ga4d115376c2c766084ef808c837348fc3">AttributeId</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#adbcff88ab81e30f4cd399e5fd3fb2ab2">find_or_create_attribute</a> (<a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index &gt; &amp;mesh, std::string_view name, <a class="el" href="group__group-surfacemesh-attr.html#ga9d8ab208822bab9987e9652dda49d89a">AttributeElement</a> expected_element, <a class="el" href="group__group-surfacemesh-attr.html#ga5a2f28c8b9e2f8fce6e70b2418c46e45">AttributeUsage</a> expected_usage, size_t expected_channels, <a class="el" href="#ad55f96a0a38571fab295b3dcfa5ccaac">ResetToDefault</a> reset_tag)</td></tr>
 <tr class="memdesc:adbcff88ab81e30f4cd399e5fd3fb2ab2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Either retrieve or create an attribute with a prescribed name, element type and usage.  <br /></td></tr>
 <tr class="separator:adbcff88ab81e30f4cd399e5fd3fb2ab2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae608619099d2ee29b481cc01aca331c4" id="r_ae608619099d2ee29b481cc01aca331c4"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, typename Index&gt; </td></tr>
+<tr class="memitem:ae608619099d2ee29b481cc01aca331c4"><td class="memTemplItemLeft" align="right" valign="top">std::string&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ae608619099d2ee29b481cc01aca331c4">get_unique_attribute_name</a> (const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index &gt; &amp;mesh, std::string_view name)</td></tr>
+<tr class="memdesc:ae608619099d2ee29b481cc01aca331c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a unique attribute name by appending a suffix if necessary.  <br /></td></tr>
+<tr class="separator:ae608619099d2ee29b481cc01aca331c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a72537d0a83e0b4e55792d4a10f984255" id="r_a72537d0a83e0b4e55792d4a10f984255"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, typename Index, typename UVScalar = Scalar&gt; </td></tr>
 <tr class="memitem:a72537d0a83e0b4e55792d4a10f984255"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="group__group-surfacemesh-attr.html#ga4d115376c2c766084ef808c837348fc3">AttributeId</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a72537d0a83e0b4e55792d4a10f984255">get_uv_id</a> (const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index &gt; &amp;mesh, std::string_view uv_attribute_name=&quot;&quot;)</td></tr>
 <tr class="memdesc:a72537d0a83e0b4e55792d4a10f984255"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the ID of the UV attribute of a mesh.  <br /></td></tr>
@@ -731,6 +748,72 @@ template&lt;typename Index, typename Func&gt; </div>
 
 </div>
 </div>
+<a id="a3777d5f3ebce8993a3de327e95891210" name="a3777d5f3ebce8993a3de327e95891210"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3777d5f3ebce8993a3de327e95891210">&#9670;&#160;</a></span>check_attribute()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ExpectedValueType, typename <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, typename Index&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structlagrange_1_1internal_1_1_check_attribute_result.html">CheckAttributeResult</a> check_attribute </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>mesh</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__group-surfacemesh-attr.html#ga4d115376c2c766084ef808c837348fc3">AttributeId</a></td>          <td class="paramname"><span class="paramname"><em>id</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classlagrange_1_1_bit_field.html">BitField</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#ga9d8ab208822bab9987e9652dda49d89a">AttributeElement</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>expected_element</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__group-surfacemesh-attr.html#ga5a2f28c8b9e2f8fce6e70b2418c46e45">AttributeUsage</a></td>          <td class="paramname"><span class="paramname"><em>expected_usage</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>expected_channels</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#a8131b5d272d562a69c79fbca67db5209">ShouldBeWritable</a></td>          <td class="paramname"><span class="paramname"><em>expected_writable</em></span><span class="paramdefsep"> = </span><span class="paramdefval">ShouldBeWritable::No</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Check that an attribute matches the expected value type, element type, usage and number of channels. </p>
+<p>Optionally verify that the attribute is writable.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir"></td><td class="paramname">mesh</td><td>Mesh where to look for the attribute. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">id</td><td>Attribute id to check. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">expected_element</td><td>Expected element type. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">expected_usage</td><td>Expected attribute usage. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">expected_channels</td><td>Expected number of channels. If 0, then the check is skipped. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">expected_writable</td><td>Whether the attribute should be writable.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">ExpectedValueType</td><td>Expected attribute value type. </td></tr>
+    <tr><td class="paramname">Scalar</td><td>Mesh scalar type. </td></tr>
+    <tr><td class="paramname">Index</td><td>Mesh index type.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A CheckAttributeResult indicating success or failure with an error message. </dd></dl>
+
+</div>
+</div>
 <a id="aae5d3bb97af070a81d6a1d624fce12af" name="aae5d3bb97af070a81d6a1d624fce12af"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aae5d3bb97af070a81d6a1d624fce12af">&#9670;&#160;</a></span>find_matching_attribute() <span class="overload">[1/2]</span></h2>
 
@@ -947,7 +1030,7 @@ template&lt;typename ExpectedValueType, typename <a class="el" href="group__grou
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">ResetToDefault</td>          <td class="paramname"><span class="paramname"><em>reset_tag</em></span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="#ad55f96a0a38571fab295b3dcfa5ccaac">ResetToDefault</a></td>          <td class="paramname"><span class="paramname"><em>reset_tag</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -974,6 +1057,47 @@ template&lt;typename ExpectedValueType, typename <a class="el" href="group__grou
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Attribute id for the retrieved attribute. </dd></dl>
+
+</div>
+</div>
+<a id="ae608619099d2ee29b481cc01aca331c4" name="ae608619099d2ee29b481cc01aca331c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae608619099d2ee29b481cc01aca331c4">&#9670;&#160;</a></span>get_unique_attribute_name()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, typename Index&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string get_unique_attribute_name </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>mesh</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>name</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a unique attribute name by appending a suffix if necessary. </p>
+<p>If the input name does not exist in the mesh, it is returned as is. If it already exists, a suffix of the form ".0", ".1", etc. is appended until a unique name is found. If a unique name cannot be found after 1000 attempts, an error is thrown.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mesh</td><td>The mesh to check for existing attribute names. </td></tr>
+    <tr><td class="paramname">name</td><td>The desired attribute name.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Scalar</td><td>Mesh scalar type. </td></tr>
+    <tr><td class="paramname">Index</td><td>Mesh index type.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A unique attribute name. </dd></dl>
 
 </div>
 </div>
@@ -1971,7 +2095,7 @@ template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacelagrange.html">lagrange</a></li><li class="navelem"><a class="el" href="namespacelagrange_1_1internal.html">internal</a></li>
-    <li class="footer">Generated on Wed Feb 11 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+    <li class="footer">Generated on Tue Mar 10 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>
 </body>

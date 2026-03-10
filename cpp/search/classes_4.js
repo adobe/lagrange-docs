@@ -16,7 +16,7 @@ var searchData=
   ['elementface_13',['ElementFace',['../structlagrange_1_1ui_1_1_element_face.html',1,'lagrange::ui']]],
   ['elementobject_14',['ElementObject',['../structlagrange_1_1ui_1_1_element_object.html',1,'lagrange::ui']]],
   ['elementvertex_15',['ElementVertex',['../structlagrange_1_1ui_1_1_element_vertex.html',1,'lagrange::ui']]],
-  ['embreeraycaster_16',['EmbreeRayCaster',['../classlagrange_1_1raycasting_1_1_embree_ray_caster.html',1,'lagrange::raycasting']]],
+  ['embreeraycaster_16',['EmbreeRayCaster',['../classlagrange_1_1raycasting_1_1legacy_1_1_embree_ray_caster.html',1,'lagrange::raycasting::legacy']]],
   ['enumtoscalar_17',['EnumToScalar',['../structlagrange_1_1experimental_1_1_enum_to_scalar.html',1,'lagrange::experimental']]],
   ['enumtoscalar_3c_20scalarenum_3a_3adouble_20_3e_18',['EnumToScalar&lt; ScalarEnum::DOUBLE &gt;',['../structlagrange_1_1experimental_1_1_enum_to_scalar_3_01_scalar_enum_1_1_d_o_u_b_l_e_01_4.html',1,'lagrange::experimental']]],
   ['enumtoscalar_3c_20scalarenum_3a_3afloat_20_3e_19',['EnumToScalar&lt; ScalarEnum::FLOAT &gt;',['../structlagrange_1_1experimental_1_1_enum_to_scalar_3_01_scalar_enum_1_1_f_l_o_a_t_01_4.html',1,'lagrange::experimental']]],
@@ -33,5 +33,6 @@ var searchData=
   ['eventemitter_30',['EventEmitter',['../structlagrange_1_1ui_1_1_event_emitter.html',1,'lagrange::ui']]],
   ['exactpredicates_31',['ExactPredicates',['../classlagrange_1_1_exact_predicates.html',1,'lagrange']]],
   ['exactpredicatesshewchuk_32',['ExactPredicatesShewchuk',['../classlagrange_1_1_exact_predicates_shewchuk.html',1,'lagrange']]],
-  ['extensions_33',['Extensions',['../structlagrange_1_1scene_1_1_extensions.html',1,'lagrange::scene']]]
+  ['extensions_33',['Extensions',['../structlagrange_1_1scene_1_1_extensions.html',1,'lagrange::scene']]],
+  ['extractmeshwithalphamaskoptions_34',['ExtractMeshWithAlphaMaskOptions',['../structlagrange_1_1texproc_1_1_extract_mesh_with_alpha_mask_options.html',1,'lagrange::texproc']]]
 ];

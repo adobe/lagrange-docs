@@ -9,6 +9,9 @@ var group__module_bvh =
       [ "foreach_element_within_radius", "classlagrange_1_1bvh_1_1_a_a_b_b.html#a2d930cef55e1e8ec3fc4b2660b2dff0c", null ],
       [ "empty", "classlagrange_1_1bvh_1_1_a_a_b_b.html#a644718bb2fb240de962dc3c9a1fdf0dc", null ]
     ] ],
+    [ "MeshDistancesOptions", "structlagrange_1_1bvh_1_1_mesh_distances_options.html", [
+      [ "output_attribute_name", "structlagrange_1_1bvh_1_1_mesh_distances_options.html#a564252f2b3418a9ac0ac9d55937990da", null ]
+    ] ],
     [ "EdgeAABBTree< VertexArray, EdgeArray, Dim >", "structlagrange_1_1bvh_1_1_edge_a_a_b_b_tree.html", [
       [ "ActionCallback", "group__module-bvh.html#ga386999d5e43dd47823f5b247745957ef", null ],
       [ "EdgeAABBTree", "group__module-bvh.html#gadd5d672df21cf5d9157453f22576742f", null ],
@@ -32,6 +35,9 @@ var group__module_bvh =
       [ "collision_policy_integral", "structlagrange_1_1bvh_1_1_weld_options.html#a94ac297735205e785dffc9ff7c370eb3", null ]
     ] ],
     [ "ActionCallback", "group__module-bvh.html#ga386999d5e43dd47823f5b247745957ef", null ],
+    [ "compute_mesh_distances", "group__module-bvh.html#ga5f64c98d00b325344dd5b57e51f16451", null ],
+    [ "compute_hausdorff", "group__module-bvh.html#ga0ffd251371a17cc104cfcf1be0affad1", null ],
+    [ "compute_chamfer", "group__module-bvh.html#ga3cd0f3afed6a3bae7aae59407e491489", null ],
     [ "EdgeAABBTree", "group__module-bvh.html#gadd5d672df21cf5d9157453f22576742f", null ],
     [ "empty", "group__module-bvh.html#ga644718bb2fb240de962dc3c9a1fdf0dc", null ],
     [ "get_element_closest_point", "group__module-bvh.html#ga0777d5965f6f3176e6bb70e57cd0e7af", null ],

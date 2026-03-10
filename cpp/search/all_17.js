@@ -48,6 +48,5 @@ var searchData=
   ['wrap_5fconst_45',['wrap_const',['../classlagrange_1_1_attribute.html#a533dd1690d70c2fac47a6fcf95b31b76',1,'lagrange::Attribute::wrap_const(span&lt; const ValueType &gt; buffer, size_t num_elements)'],['../classlagrange_1_1_attribute.html#a07965c43f94c1a08685b3a8c442ca67e',1,'lagrange::Attribute::wrap_const(SharedSpan&lt; const ValueType &gt; shared_buffer, size_t num_elements)']]],
   ['wrap_5fmode_46',['wrap_mode',['../classlagrange_1_1image_1_1_raw_input_image.html#a7209540f4aa3a68da254973604ce9f84',1,'lagrange::image::RawInputImage']]],
   ['wrap_5fuv_47',['wrap_uv',['../namespacelagrange_1_1image.html#a6c25d8608ea79f8de310f2cb299ada8b',1,'lagrange::image']]],
-  ['wrap_5fwith_5fmesh_48',['wrap_with_mesh',['../namespacelagrange.html#ae14b46e06f926a32bb0cb2d0ce2052d3',1,'lagrange']]],
-  ['wrapmode_49',['WrapMode',['../namespacelagrange_1_1raycasting.html#a9ee2fe0bc570d84074a12e3088c7c5e4',1,'lagrange::raycasting']]]
+  ['wrap_5fwith_5fmesh_48',['wrap_with_mesh',['../namespacelagrange.html#ae14b46e06f926a32bb0cb2d0ce2052d3',1,'lagrange']]]
 ];

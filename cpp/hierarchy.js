@@ -35,9 +35,6 @@ var hierarchy =
     [ "Attributes< _AttributeArray >", "classlagrange_1_1_attributes.html", null ],
     [ "AttributeSmoothingOptions", "structlagrange_1_1filtering_1_1_attribute_smoothing_options.html", null ],
     [ "BareMeshTag", "structlagrange_1_1_surface_mesh_1_1_bare_mesh_tag.html", null ],
-    [ "base_sink", null, [
-      [ "PythonLoggingSink", "classlagrange_1_1python_1_1_python_logging_sink.html", null ]
-    ] ],
     [ "BitField< EnumType_ >", "classlagrange_1_1_bit_field.html", null ],
     [ "bitset", null, [
       [ "Layer", "structlagrange_1_1ui_1_1_layer.html", null ]
@@ -59,9 +56,10 @@ var hierarchy =
     [ "CameraTurntable", "structlagrange_1_1ui_1_1_camera_turntable.html", null ],
     [ "ChainEdgesOptions", "structlagrange_1_1_chain_edges_options.html", null ],
     [ "ChainEdgesResult< Index >", "structlagrange_1_1_chain_edges_result.html", null ],
+    [ "CheckAttributeResult", "structlagrange_1_1internal_1_1_check_attribute_result.html", null ],
     [ "CloseSmallHolesOptions", "structlagrange_1_1_close_small_holes_options.html", null ],
     [ "ClosestPoint", "structlagrange_1_1bvh_1_1_b_v_h_1_1_closest_point.html", null ],
-    [ "ClosestPointResult< Scalar >", "structlagrange_1_1raycasting_1_1_closest_point_result.html", null ],
+    [ "ClosestPointResult< Scalar >", "structlagrange_1_1raycasting_1_1legacy_1_1_closest_point_result.html", null ],
     [ "ColormapShaderMode", "structlagrange_1_1ui_1_1_colormap_shader_mode.html", null ],
     [ "CommonOptions", "structlagrange_1_1poisson_1_1_common_options.html", [
       [ "EvaluatorOptions", "structlagrange_1_1poisson_1_1_evaluator_options.html", null ],
@@ -96,6 +94,7 @@ var hierarchy =
     [ "DefaultSystems", "structlagrange_1_1ui_1_1_default_systems.html", null ],
     [ "DefaultTools", "structlagrange_1_1ui_1_1_default_tools.html", null ],
     [ "DehoveredEvent", "structlagrange_1_1ui_1_1_dehovered_event.html", null ],
+    [ "DemoState", "struct_demo_state.html", null ],
     [ "DeselectedEvent", "structlagrange_1_1ui_1_1_deselected_event.html", null ],
     [ "DifferentialOperators< Scalar, Index >", "classlagrange_1_1polyddg_1_1_differential_operators.html", null ],
     [ "DihedralAngleOptions", "structlagrange_1_1_dihedral_angle_options.html", null ],
@@ -117,7 +116,7 @@ var hierarchy =
     [ "ElementFace", "structlagrange_1_1ui_1_1_element_face.html", null ],
     [ "ElementObject", "structlagrange_1_1ui_1_1_element_object.html", null ],
     [ "ElementVertex", "structlagrange_1_1ui_1_1_element_vertex.html", null ],
-    [ "EmbreeRayCaster< ScalarType >", "classlagrange_1_1raycasting_1_1_embree_ray_caster.html", null ],
+    [ "EmbreeRayCaster< ScalarType >", "classlagrange_1_1raycasting_1_1legacy_1_1_embree_ray_caster.html", null ],
     [ "emitter", null, [
       [ "EventEmitter", "structlagrange_1_1ui_1_1_event_emitter.html", null ]
     ] ],
@@ -136,6 +135,7 @@ var hierarchy =
       [ "ExactPredicatesShewchuk", "classlagrange_1_1_exact_predicates_shewchuk.html", null ]
     ] ],
     [ "Extensions", "structlagrange_1_1scene_1_1_extensions.html", null ],
+    [ "ExtractMeshWithAlphaMaskOptions", "structlagrange_1_1texproc_1_1_extract_mesh_with_alpha_mask_options.html", null ],
     [ "FacetAreaOptions", "structlagrange_1_1_facet_area_options.html", null ],
     [ "FacetCentroidOptions", "structlagrange_1_1_facet_centroid_options.html", null ],
     [ "FacetCircumcenterOptions", "structlagrange_1_1_facet_circumcenter_options.html", null ],
@@ -181,6 +181,20 @@ var hierarchy =
     [ "GPUBuffer", "structlagrange_1_1ui_1_1_g_p_u_buffer.html", null ],
     [ "GreedyColoringOptions", "structlagrange_1_1_greedy_coloring_options.html", null ],
     [ "hash< lagrange::EdgeType< Index > >", "structstd_1_1hash_3_01lagrange_1_1_edge_type_3_01_index_01_4_01_4.html", null ],
+    [ "HitBase", "structlagrange_1_1raycasting_1_1_hit_base.html", [
+      [ "ClosestPointHit", "structlagrange_1_1raycasting_1_1_closest_point_hit.html", null ],
+      [ "RayHit", "structlagrange_1_1raycasting_1_1_ray_hit.html", null ]
+    ] ],
+    [ "HitBaseN< N >", "structlagrange_1_1raycasting_1_1_hit_base_n.html", [
+      [ "ClosestPointHitN< 4 >", "structlagrange_1_1raycasting_1_1_closest_point_hit_n.html", null ],
+      [ "ClosestPointHitN< 8 >", "structlagrange_1_1raycasting_1_1_closest_point_hit_n.html", null ],
+      [ "ClosestPointHitN< 16 >", "structlagrange_1_1raycasting_1_1_closest_point_hit_n.html", null ],
+      [ "RayHitN< 4 >", "structlagrange_1_1raycasting_1_1_ray_hit_n.html", null ],
+      [ "RayHitN< 8 >", "structlagrange_1_1raycasting_1_1_ray_hit_n.html", null ],
+      [ "RayHitN< 16 >", "structlagrange_1_1raycasting_1_1_ray_hit_n.html", null ],
+      [ "ClosestPointHitN< N >", "structlagrange_1_1raycasting_1_1_closest_point_hit_n.html", null ],
+      [ "RayHitN< N >", "structlagrange_1_1raycasting_1_1_ray_hit_n.html", null ]
+    ] ],
     [ "Hovered", "structlagrange_1_1ui_1_1_hovered.html", null ],
     [ "HoveredEvent", "structlagrange_1_1ui_1_1_hovered_event.html", null ],
     [ "HoveredTemp", "structlagrange_1_1ui_1_1_hovered_temp.html", null ],
@@ -198,6 +212,7 @@ var hierarchy =
     [ "Impl", "structlagrange_1_1poisson_1_1_attribute_evaluator_1_1_impl.html", [
       [ "Derived< ValueType >", "structlagrange_1_1poisson_1_1_attribute_evaluator_1_1_impl_1_1_derived.html", null ]
     ] ],
+    [ "Impl", "structlagrange_1_1raycasting_1_1_ray_caster_1_1_impl.html", null ],
     [ "Impl", "structlagrange_1_1winding_1_1_fast_winding_number_1_1_impl.html", null ],
     [ "IndexedAttribute", "classlagrange_1_1experimental_1_1_indexed_attribute.html", null ],
     [ "IndexedAttributeManager", "classlagrange_1_1experimental_1_1_indexed_attribute_manager.html", null ],
@@ -249,7 +264,9 @@ var hierarchy =
     [ "MeshCovarianceOptions", "structlagrange_1_1_mesh_covariance_options.html", null ],
     [ "MeshData", "structlagrange_1_1ui_1_1_mesh_data.html", null ],
     [ "MeshDataDirty", "structlagrange_1_1ui_1_1_mesh_data_dirty.html", null ],
+    [ "MeshDistancesOptions", "structlagrange_1_1bvh_1_1_mesh_distances_options.html", null ],
     [ "MeshElementIDMaterial", "structlagrange_1_1ui_1_1_mesh_element_i_d_material.html", null ],
+    [ "MeshesAndMaterialsResult< Scalar, Index >", "structlagrange_1_1scene_1_1_meshes_and_materials_result.html", null ],
     [ "MeshGeometry< _VertexArray, _FacetArray >", "classlagrange_1_1_mesh_geometry.html", [
       [ "GenuineMeshGeometry< AttributeArray, IndexArray >", "classlagrange_1_1_genuine_mesh_geometry.html", null ],
       [ "ActingMeshGeometry< _VertexArray, _FacetArray >", "classlagrange_1_1_acting_mesh_geometry.html", null ],
@@ -297,6 +314,7 @@ var hierarchy =
     [ "PayloadComponent", "structlagrange_1_1ui_1_1_payload_component.html", null ],
     [ "PayloadEntity", "structlagrange_1_1ui_1_1_payload_entity.html", null ],
     [ "PBRMaterial", "structlagrange_1_1ui_1_1_p_b_r_material.html", null ],
+    [ "PickedPoint", "struct_picked_point.html", null ],
     [ "PixelTraits< Scalar, NumChannels >", "structlagrange_1_1image_1_1_raw_input_image_1_1_pixel_traits.html", null ],
     [ "PixelTraits< Scalar, 1 >", "structlagrange_1_1image_1_1_raw_input_image_1_1_pixel_traits_3_01_scalar_00_011_01_4.html", null ],
     [ "Plane", "structlagrange_1_1_frustum_1_1_plane.html", null ],
@@ -316,7 +334,14 @@ var hierarchy =
       [ "SweptSurfaceOptions", "structlagrange_1_1primitive_1_1_swept_surface_options.html", null ],
       [ "TorusOptions", "structlagrange_1_1primitive_1_1_torus_options.html", null ]
     ] ],
+    [ "PrincipalCurvaturesOptions", "structlagrange_1_1polyddg_1_1_principal_curvatures_options.html", null ],
+    [ "PrincipalCurvaturesResult", "structlagrange_1_1polyddg_1_1_principal_curvatures_result.html", null ],
     [ "ProgressCallback", "classlagrange_1_1_progress_callback.html", null ],
+    [ "ProjectCommonOptions", "structlagrange_1_1raycasting_1_1_project_common_options.html", [
+      [ "ProjectDirectionalOptions", "structlagrange_1_1raycasting_1_1_project_directional_options.html", [
+        [ "ProjectOptions", "structlagrange_1_1raycasting_1_1_project_options.html", null ]
+      ] ]
+    ] ],
     [ "ptr< T, D >", "classlagrange_1_1internal_1_1ptr.html", null ],
     [ "PyAttribute", "classlagrange_1_1python_1_1_py_attribute.html", null ],
     [ "PyEdgeAABBTree< Scalar, Index, Dim >", "classlagrange_1_1bvh_1_1_py_edge_a_a_b_b_tree.html", null ],
@@ -325,11 +350,13 @@ var hierarchy =
     [ "RawArray< _Scalar, _Rows, _Cols, _Options, IsConst >", "classlagrange_1_1experimental_1_1_raw_array.html", null ],
     [ "RawInputImage", "classlagrange_1_1image_1_1_raw_input_image.html", null ],
     [ "Ray", "structlagrange_1_1ui_1_1_camera_1_1_ray.html", null ],
-    [ "RaycasterMesh", "classlagrange_1_1raycasting_1_1_raycaster_mesh.html", [
-      [ "RaycasterMeshDerived< MeshType >", "classlagrange_1_1raycasting_1_1_raycaster_mesh_derived.html", null ]
+    [ "RayCaster", "classlagrange_1_1raycasting_1_1_ray_caster.html", null ],
+    [ "RaycasterMesh", "classlagrange_1_1raycasting_1_1legacy_1_1_raycaster_mesh.html", [
+      [ "RaycasterMeshDerived< MeshType >", "classlagrange_1_1raycasting_1_1legacy_1_1_raycaster_mesh_derived.html", null ]
     ] ],
     [ "RayFacetHit", "structlagrange_1_1ui_1_1_ray_facet_hit.html", null ],
     [ "RemapVerticesOptions", "structlagrange_1_1_remap_vertices_options.html", null ],
+    [ "RemeshingOptions", "structlagrange_1_1remeshing__im_1_1_remeshing_options.html", null ],
     [ "RemeshingOptions", "structlagrange_1_1scene_1_1_remeshing_options.html", null ],
     [ "RemoveDuplicateFacetOptions", "structlagrange_1_1_remove_duplicate_facet_options.html", null ],
     [ "RemoveDuplicateVerticesOptions", "structlagrange_1_1_remove_duplicate_vertices_options.html", null ],

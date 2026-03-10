@@ -1,5 +1,17 @@
 var group__module_polyddg =
 [
+    [ "PrincipalCurvaturesOptions", "structlagrange_1_1polyddg_1_1_principal_curvatures_options.html", [
+      [ "kappa_min_attribute", "structlagrange_1_1polyddg_1_1_principal_curvatures_options.html#a87e591340329e07a84cbaeb30b261287", null ],
+      [ "kappa_max_attribute", "structlagrange_1_1polyddg_1_1_principal_curvatures_options.html#a83d458e9153b35c1f8b0f6dbff5a9527", null ],
+      [ "direction_min_attribute", "structlagrange_1_1polyddg_1_1_principal_curvatures_options.html#aed92e7ea55803e82cb1f02ad98ac23af", null ],
+      [ "direction_max_attribute", "structlagrange_1_1polyddg_1_1_principal_curvatures_options.html#acb473a4ae6299e3752608a2b588dd5d9", null ]
+    ] ],
+    [ "PrincipalCurvaturesResult", "structlagrange_1_1polyddg_1_1_principal_curvatures_result.html", [
+      [ "kappa_min_id", "structlagrange_1_1polyddg_1_1_principal_curvatures_result.html#a22c432b75f8409f122c761036680c1ae", null ],
+      [ "kappa_max_id", "structlagrange_1_1polyddg_1_1_principal_curvatures_result.html#a564733bf9f82795dfbc4cefbe04af836", null ],
+      [ "direction_min_id", "structlagrange_1_1polyddg_1_1_principal_curvatures_result.html#a5ad17e9321fdd742eaf620a0b4624ea6", null ],
+      [ "direction_max_id", "structlagrange_1_1polyddg_1_1_principal_curvatures_result.html#a66211ed810b57f3195e4c41ceb9da2fb", null ]
+    ] ],
     [ "DifferentialOperators< Scalar, Index >", "classlagrange_1_1polyddg_1_1_differential_operators.html", [
       [ "DifferentialOperators", "classlagrange_1_1polyddg_1_1_differential_operators.html#a2f75035fba48ce262b19c492d7333ca8", null ],
       [ "gradient", "classlagrange_1_1polyddg_1_1_differential_operators.html#ac4492dcf51ac60d1917f637f4da7cdf8", null ],
@@ -23,6 +35,9 @@ var group__module_polyddg =
       [ "levi_civita_nrosy", "classlagrange_1_1polyddg_1_1_differential_operators.html#a183799c4a9e9a2747ec497625a8d8fe2", null ],
       [ "covariant_derivative", "classlagrange_1_1polyddg_1_1_differential_operators.html#abe885d459b6dacb9471375bbe149f88a", null ],
       [ "covariant_derivative_nrosy", "classlagrange_1_1polyddg_1_1_differential_operators.html#a4748bbe4d99bc0cc8cb135607de0497c", null ],
+      [ "shape_operator", "classlagrange_1_1polyddg_1_1_differential_operators.html#a39cc0bd805fcd4adf39e7669fba4d6ba", null ],
+      [ "adjoint_gradient", "classlagrange_1_1polyddg_1_1_differential_operators.html#aef60985d7b46ec5fca11629511167cae", null ],
+      [ "adjoint_shape_operator", "classlagrange_1_1polyddg_1_1_differential_operators.html#a408dd682f17086e987f6e02e21235881", null ],
       [ "connection_laplacian", "classlagrange_1_1polyddg_1_1_differential_operators.html#a9a7f1bd5aa69346db687a424fa09af8e", null ],
       [ "connection_laplacian_nrosy", "classlagrange_1_1polyddg_1_1_differential_operators.html#a4c61f36015860e2d4e6b3c8a7ea43aef", null ],
       [ "gradient", "classlagrange_1_1polyddg_1_1_differential_operators.html#ae4f47d19cfb2d6fd90f2b02529d229ee", null ],
@@ -41,6 +56,9 @@ var group__module_polyddg =
       [ "levi_civita_nrosy", "classlagrange_1_1polyddg_1_1_differential_operators.html#a19be96f68690e29769f53937ab115428", null ],
       [ "covariant_derivative", "classlagrange_1_1polyddg_1_1_differential_operators.html#ac93b3b14bb6b7a8726d392d3dfc6e352", null ],
       [ "covariant_derivative_nrosy", "classlagrange_1_1polyddg_1_1_differential_operators.html#a0c206809d0f02cbc32041bd11f0fbf5f", null ],
+      [ "shape_operator", "classlagrange_1_1polyddg_1_1_differential_operators.html#a2454b7bc989601bd59699c76a2366006", null ],
+      [ "adjoint_gradient", "classlagrange_1_1polyddg_1_1_differential_operators.html#a37497d66a1c6929379c1dcdec2ac86ca", null ],
+      [ "adjoint_shape_operator", "classlagrange_1_1polyddg_1_1_differential_operators.html#ab740ce979f594308cf9aa12c1632aaf7", null ],
       [ "covariant_projection", "classlagrange_1_1polyddg_1_1_differential_operators.html#ac2781457140cdd6e0d0f8342b721c204", null ],
       [ "covariant_projection_nrosy", "classlagrange_1_1polyddg_1_1_differential_operators.html#acc55fd22d6d3d9ed9a4a6491fc903db8", null ],
       [ "connection_laplacian", "classlagrange_1_1polyddg_1_1_differential_operators.html#a345db4e148b0bd9d757ce4941a71adb5", null ],
@@ -50,5 +68,7 @@ var group__module_polyddg =
       [ "get_vector_area_attribute_id", "classlagrange_1_1polyddg_1_1_differential_operators.html#a398bc4ad79628a37287f0a0c7ef3bcc0", null ],
       [ "get_centroid_attribute_id", "classlagrange_1_1polyddg_1_1_differential_operators.html#af819c50425903c1f0d0e15af6e119cde", null ],
       [ "get_vertex_normal_attribute_id", "classlagrange_1_1polyddg_1_1_differential_operators.html#acb0deac865e2d5312e24038e8b466229", null ]
-    ] ]
+    ] ],
+    [ "compute_principal_curvatures", "group__module-polyddg.html#ga1a2667035180bd33a1927b87e9e2202d", null ],
+    [ "compute_principal_curvatures", "group__module-polyddg.html#ga55bce86c9cd4b27f84a0c7ea45dea472", null ]
 ];

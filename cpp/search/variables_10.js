@@ -11,10 +11,14 @@ var searchData=
   ['polygonmode_8',['PolygonMode',['../structlagrange_1_1ui_1_1_rasterizer_options.html#a924282ce59d722ae91954c7dd216ab69',1,'lagrange::ui::RasterizerOptions']]],
   ['pos_5fx_9',['pos_x',['../structlagrange_1_1ui_1_1_viewer_1_1_window_options.html#a989d3e09b707fb1f4bc2355ba5855a0c',1,'lagrange::ui::Viewer::WindowOptions']]],
   ['pos_5fy_10',['pos_y',['../structlagrange_1_1ui_1_1_viewer_1_1_window_options.html#a769c689813b19fb03572dc4937b40993',1,'lagrange::ui::Viewer::WindowOptions']]],
-  ['position_11',['position',['../structlagrange_1_1ui_1_1_input_state_1_1_mouse.html#a81f80e875fa7bc858012e2786d091838',1,'lagrange::ui::InputState::Mouse']]],
-  ['positive_12',['positive',['../structlagrange_1_1_orient_options.html#acdea3192c7c9a99816f27e88da0eeff2',1,'lagrange::OrientOptions']]],
-  ['preserve_5fshared_5findices_13',['preserve_shared_indices',['../structlagrange_1_1subdivision_1_1_subdivision_options.html#a125a455b3b6c3394a1d6a77e09034994',1,'lagrange::subdivision::SubdivisionOptions']]],
-  ['primitive_14',['Primitive',['../structlagrange_1_1ui_1_1_rasterizer_options.html#ad2b41d5a764fd797c80c0d30f1eb0980',1,'lagrange::ui::RasterizerOptions']]],
-  ['profile_5fangle_5fthreshold_15',['profile_angle_threshold',['../structlagrange_1_1primitive_1_1_swept_surface_options.html#ab3a4bcb8f2257fbced8b829cda0256ae',1,'lagrange::primitive::SweptSurfaceOptions']]],
-  ['projection_5ftransform_16',['projection_transform',['../structlagrange_1_1texproc_1_1_camera_options.html#a170e05b3d1b429f882d1d0584e141051',1,'lagrange::texproc::CameraOptions']]]
+  ['position_11',['position',['../structlagrange_1_1raycasting_1_1_hit_base.html#acc1edd471973ce745cdba2f560d7f01a',1,'lagrange::raycasting::HitBase::position'],['../structlagrange_1_1ui_1_1_input_state_1_1_mouse.html#a81f80e875fa7bc858012e2786d091838',1,'lagrange::ui::InputState::Mouse::position']]],
+  ['positions_12',['positions',['../structlagrange_1_1raycasting_1_1_hit_base_n.html#a6b1805bee7a9d154db1167595316e7d4',1,'lagrange::raycasting::HitBaseN']]],
+  ['positive_13',['positive',['../structlagrange_1_1_orient_options.html#acdea3192c7c9a99816f27e88da0eeff2',1,'lagrange::OrientOptions']]],
+  ['posy_14',['posy',['../structlagrange_1_1remeshing__im_1_1_remeshing_options.html#a58f4de07eb2087e38e4cbc7fa507c1d0',1,'lagrange::remeshing_im::RemeshingOptions']]],
+  ['preserve_5fshared_5findices_15',['preserve_shared_indices',['../structlagrange_1_1subdivision_1_1_subdivision_options.html#a125a455b3b6c3394a1d6a77e09034994',1,'lagrange::subdivision::SubdivisionOptions']]],
+  ['primitive_16',['Primitive',['../structlagrange_1_1ui_1_1_rasterizer_options.html#ad2b41d5a764fd797c80c0d30f1eb0980',1,'lagrange::ui::RasterizerOptions']]],
+  ['profile_5fangle_5fthreshold_17',['profile_angle_threshold',['../structlagrange_1_1primitive_1_1_swept_surface_options.html#ab3a4bcb8f2257fbced8b829cda0256ae',1,'lagrange::primitive::SweptSurfaceOptions']]],
+  ['project_5fmode_18',['project_mode',['../structlagrange_1_1raycasting_1_1_project_options.html#a141e1498fe63f2dad4b085cb40139d63',1,'lagrange::raycasting::ProjectOptions']]],
+  ['project_5fvertices_19',['project_vertices',['../structlagrange_1_1raycasting_1_1_project_common_options.html#a8a0dc0726cbebdebe3f804d9d823851f',1,'lagrange::raycasting::ProjectCommonOptions']]],
+  ['projection_5ftransform_20',['projection_transform',['../structlagrange_1_1texproc_1_1_camera_options.html#a170e05b3d1b429f882d1d0584e141051',1,'lagrange::texproc::CameraOptions']]]
 ];

@@ -126,10 +126,13 @@ $(function(){initNavTree('functions_c.html',''); initResizable(true); });
 
 <h3><a id="index_c" name="index_c"></a>- c -</h3><ul>
 <li>camera&#160;:&#160;<a class="el" href="structlagrange_1_1ui_1_1_selection_context.html#a2008f4ab70b5e4104c2ca43932536ddf">SelectionContext</a></li>
-<li>cast()&#160;:&#160;<a class="el" href="classlagrange_1_1raycasting_1_1_embree_ray_caster.html#a43952b3aabf5fe0825046a835c69c417">EmbreeRayCaster&lt; ScalarType &gt;</a></li>
-<li>cast4()&#160;:&#160;<a class="el" href="classlagrange_1_1raycasting_1_1_embree_ray_caster.html#a7106fc40cfae3b6ab06c04267ad08412">EmbreeRayCaster&lt; ScalarType &gt;</a></li>
+<li>cast()&#160;:&#160;<a class="el" href="classlagrange_1_1raycasting_1_1legacy_1_1_embree_ray_caster.html#a43952b3aabf5fe0825046a835c69c417">EmbreeRayCaster&lt; ScalarType &gt;</a>, <a class="el" href="classlagrange_1_1raycasting_1_1_ray_caster.html#a07d057379a73c1e9880c0e4a9213b9a7">RayCaster</a></li>
+<li>cast16()&#160;:&#160;<a class="el" href="classlagrange_1_1raycasting_1_1_ray_caster.html#a8419d21a95c1381f8129191ffbffe57a">RayCaster</a></li>
+<li>cast4()&#160;:&#160;<a class="el" href="classlagrange_1_1raycasting_1_1legacy_1_1_embree_ray_caster.html#a7106fc40cfae3b6ab06c04267ad08412">EmbreeRayCaster&lt; ScalarType &gt;</a>, <a class="el" href="classlagrange_1_1raycasting_1_1_ray_caster.html#a7c567a0501b776bb5dc6a1576e4a9a78">RayCaster</a></li>
+<li>cast8()&#160;:&#160;<a class="el" href="classlagrange_1_1raycasting_1_1_ray_caster.html#a9f3679e1b9dbf25c3a9b6d2f445868df">RayCaster</a></li>
 <li>cast_assign()&#160;:&#160;<a class="el" href="classlagrange_1_1_attribute.html#af82273faa8b80252a38cb0737909bdfc">Attribute&lt; ValueType_ &gt;</a></li>
 <li>cast_copy()&#160;:&#160;<a class="el" href="classlagrange_1_1_attribute.html#aa2ee259c043adb1e65823febb9fa52ad">Attribute&lt; ValueType_ &gt;</a></li>
+<li>cast_mode&#160;:&#160;<a class="el" href="structlagrange_1_1raycasting_1_1_project_directional_options.html#a599ead07a9a1d25fa2b69a34db47f177">ProjectDirectionalOptions</a></li>
 <li>cast_ray()&#160;:&#160;<a class="el" href="classlagrange_1_1ui_1_1_camera.html#ac08fb0aacecc50dd68a996f6816d06fa">Camera</a></li>
 <li>center&#160;:&#160;<a class="el" href="structlagrange_1_1_mesh_covariance_options.html#a09495d225bdbb9d167086d6c25c1848b">MeshCovarianceOptions</a>, <a class="el" href="structlagrange_1_1_pointcloud_p_c_a_output.html#a20dc93aa9cf2ccacbee86c1660060176">PointcloudPCAOutput&lt; Scalar &gt;</a>, <a class="el" href="structlagrange_1_1primitive_1_1_primitive_options.html#a20dc93aa9cf2ccacbee86c1660060176">PrimitiveOptions</a></li>
 <li>chains&#160;:&#160;<a class="el" href="structlagrange_1_1_chain_edges_result.html#a77557eee4ea17c27d3c6a5405d0111ca">ChainEdgesResult&lt; Index &gt;</a></li>
@@ -149,12 +152,21 @@ $(function(){initNavTree('functions_c.html',''); initResizable(true); });
 <li>clip&#160;:&#160;<a class="el" href="structlagrange_1_1ui_1_1_camera_1_1_viewport_transform.html#aa95b44777caefd6beb9d0d038d72e7f4">Camera::ViewportTransform</a></li>
 <li>clone()&#160;:&#160;<a class="el" href="classlagrange_1_1primitive_1_1legacy_1_1_circular_arc_sweep_path.html#af0b35665ae9e16c42dabe7b47dfad6f2">CircularArcSweepPath&lt; _Scalar &gt;</a>, <a class="el" href="classlagrange_1_1primitive_1_1legacy_1_1_linear_sweep_path.html#af0b35665ae9e16c42dabe7b47dfad6f2">LinearSweepPath&lt; _Scalar &gt;</a>, <a class="el" href="classlagrange_1_1primitive_1_1legacy_1_1_polyline_sweep_path.html#af0b35665ae9e16c42dabe7b47dfad6f2">PolylineSweepPath&lt; _VertexArray &gt;</a>, <a class="el" href="classlagrange_1_1primitive_1_1legacy_1_1_sweep_path.html#a738a3c83f807fed7a73c1ceb9d1d1979">SweepPath&lt; _Scalar &gt;</a></li>
 <li>close_loop_with_identical_vertices&#160;:&#160;<a class="el" href="structlagrange_1_1_chain_edges_options.html#aa7cff3abc485cc580e790f40e1927389">ChainEdgesOptions</a></li>
+<li>closest_point()&#160;:&#160;<a class="el" href="classlagrange_1_1raycasting_1_1_ray_caster.html#a902358824af69167985ef6b6fa119929">RayCaster</a></li>
+<li>closest_point16()&#160;:&#160;<a class="el" href="classlagrange_1_1raycasting_1_1_ray_caster.html#a36338246998ce1a918605bcdd9a9ca8b">RayCaster</a></li>
+<li>closest_point4()&#160;:&#160;<a class="el" href="classlagrange_1_1raycasting_1_1_ray_caster.html#acf1b15a504fe703067b8b64ae41c87dc">RayCaster</a></li>
+<li>closest_point8()&#160;:&#160;<a class="el" href="classlagrange_1_1raycasting_1_1_ray_caster.html#a76b57518ee95b5faf4b74eac9051f299">RayCaster</a></li>
+<li>closest_vertex()&#160;:&#160;<a class="el" href="classlagrange_1_1raycasting_1_1_ray_caster.html#a84c28a724a08f84da4d2c780b01973d3">RayCaster</a></li>
+<li>closest_vertex16()&#160;:&#160;<a class="el" href="classlagrange_1_1raycasting_1_1_ray_caster.html#af13269a358251c25eef494d5bef65d3f">RayCaster</a></li>
+<li>closest_vertex4()&#160;:&#160;<a class="el" href="classlagrange_1_1raycasting_1_1_ray_caster.html#a916d82b6c877551a8b8dda8eaf927c2d">RayCaster</a></li>
+<li>closest_vertex8()&#160;:&#160;<a class="el" href="classlagrange_1_1raycasting_1_1_ray_caster.html#a27d0dc945a48c270be73d66f10661262">RayCaster</a></li>
 <li>collinear3D()&#160;:&#160;<a class="el" href="classlagrange_1_1_exact_predicates.html#a25030f847f76f6acdd7567938f2b83de">ExactPredicates</a></li>
 <li>collision_policy_float&#160;:&#160;<a class="el" href="structlagrange_1_1bvh_1_1_weld_options.html#aba646447e3f4cc302e44fc4bc074c27f">WeldOptions</a>, <a class="el" href="structlagrange_1_1internal_1_1_map_attributes_options.html#aba646447e3f4cc302e44fc4bc074c27f">MapAttributesOptions</a>, <a class="el" href="structlagrange_1_1_remap_vertices_options.html#afefe76052ce1fa3ed45b6aee79876855">RemapVerticesOptions</a></li>
 <li>collision_policy_integral&#160;:&#160;<a class="el" href="structlagrange_1_1bvh_1_1_weld_options.html#a94ac297735205e785dffc9ff7c370eb3">WeldOptions</a>, <a class="el" href="structlagrange_1_1internal_1_1_map_attributes_options.html#a94ac297735205e785dffc9ff7c370eb3">MapAttributesOptions</a>, <a class="el" href="structlagrange_1_1_remap_vertices_options.html#adfe0aeb79b764bf99539a0f3ca973207">RemapVerticesOptions</a></li>
 <li>color&#160;:&#160;<a class="el" href="structlagrange_1_1_attribute_name.html#a41c9e95cdb2dd1e4fd6daf0f8a845743">AttributeName</a></li>
 <li>color_space&#160;:&#160;<a class="el" href="classlagrange_1_1image_1_1_raw_input_image.html#a609c1f2c8828267fe31da1947b988a36">RawInputImage</a></li>
-<li>commit_scene_changes()&#160;:&#160;<a class="el" href="classlagrange_1_1raycasting_1_1_embree_ray_caster.html#ab3f429768257565881f062d0de81c6b2">EmbreeRayCaster&lt; ScalarType &gt;</a></li>
+<li>commit_scene_changes()&#160;:&#160;<a class="el" href="classlagrange_1_1raycasting_1_1legacy_1_1_embree_ray_caster.html#ab3f429768257565881f062d0de81c6b2">EmbreeRayCaster&lt; ScalarType &gt;</a></li>
+<li>commit_updates()&#160;:&#160;<a class="el" href="classlagrange_1_1raycasting_1_1_ray_caster.html#ab38358cbbe72474a7824da1a4316cee1">RayCaster</a></li>
 <li>compress_if_regular()&#160;:&#160;<a class="el" href="classlagrange_1_1_surface_mesh.html#a9cb3b1a40e1f2b467d5831ec86540610">SurfaceMesh&lt; Scalar_, Index_ &gt;</a></li>
 <li>compute_corner_to_facet_internal()&#160;:&#160;<a class="el" href="classlagrange_1_1_surface_mesh.html#a7bd14a2e9f34e21802ba9488082088da">SurfaceMesh&lt; Scalar_, Index_ &gt;</a></li>
 <li>compute_num_instances()&#160;:&#160;<a class="el" href="classlagrange_1_1scene_1_1_simple_scene.html#ae98a26281b6075ba8cf0fc9148820bee">SimpleScene&lt; Scalar, Index, Dimension &gt;</a></li>
@@ -171,6 +183,7 @@ $(function(){initNavTree('functions_c.html',''); initResizable(true); });
 <li>covariant_derivative_nrosy()&#160;:&#160;<a class="el" href="classlagrange_1_1polyddg_1_1_differential_operators.html#a4748bbe4d99bc0cc8cb135607de0497c">DifferentialOperators&lt; Scalar, Index &gt;</a></li>
 <li>covariant_projection()&#160;:&#160;<a class="el" href="classlagrange_1_1polyddg_1_1_differential_operators.html#ac2781457140cdd6e0d0f8342b721c204">DifferentialOperators&lt; Scalar, Index &gt;</a></li>
 <li>covariant_projection_nrosy()&#160;:&#160;<a class="el" href="classlagrange_1_1polyddg_1_1_differential_operators.html#acc55fd22d6d3d9ed9a4a6491fc903db8">DifferentialOperators&lt; Scalar, Index &gt;</a></li>
+<li>crease_angle&#160;:&#160;<a class="el" href="structlagrange_1_1remeshing__im_1_1_remeshing_options.html#ad125c6817b0fc1a6960acd1697d6d49f">RemeshingOptions</a></li>
 <li>create()&#160;:&#160;<a class="el" href="classlagrange_1_1_exact_predicates.html#a12d70c80be9e836b6b0453fc40091ca6">ExactPredicates</a></li>
 <li>create_attribute()&#160;:&#160;<a class="el" href="classlagrange_1_1_surface_mesh.html#a378678c13a2ce7be484f3f0034fd1100">SurfaceMesh&lt; Scalar_, Index_ &gt;</a></li>
 <li>create_attribute_from()&#160;:&#160;<a class="el" href="classlagrange_1_1_surface_mesh.html#a6ae3cb86e951fb27826bc12d8018d03c">SurfaceMesh&lt; Scalar_, Index_ &gt;</a></li>
@@ -185,7 +198,7 @@ $(function(){initNavTree('functions_c.html',''); initResizable(true); });
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Wed Feb 11 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+    <li class="footer">Generated on Tue Mar 10 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>
 </body>

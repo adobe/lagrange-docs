@@ -209,7 +209,7 @@ std::vector&lt; <a class="el" href="#aea37efe150fbf93ebd0d33db5ef6ea47">MeshType
 <tr class="separator:a942aa050392e89d1c2cfe006dde7d5e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7be28437e7ccc9c3b84e2ced1faba164" id="r_a7be28437e7ccc9c3b84e2ced1faba164"><td class="memItemLeft" align="right" valign="top"><a id="a7be28437e7ccc9c3b84e2ced1faba164" name="a7be28437e7ccc9c3b84e2ced1faba164"></a>
 std::vector&lt; std::vector&lt; <a class="el" href="#a042153808e72744a2a3dbdb1a7ed02c7">InstanceType</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>m_instances</b></td></tr>
-<tr class="memdesc:a7be28437e7ccc9c3b84e2ced1faba164"><td class="mdescLeft">&#160;</td><td class="mdescRight">List of mesh instances in the scene. Stored as a list of instance per parent mesh. <br /></td></tr>
+<tr class="memdesc:a7be28437e7ccc9c3b84e2ced1faba164"><td class="mdescLeft">&#160;</td><td class="mdescRight">List of mesh instances in the scene. Stored as a list of instances per source mesh. <br /></td></tr>
 <tr class="separator:a7be28437e7ccc9c3b84e2ced1faba164"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -416,8 +416,8 @@ template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5
 <p>Get a const reference to a mesh instance in the scene. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">mesh_index</td><td>Index of the parent mesh in the scene. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">instance_index</td><td>Local instance index respective to the parent mesh.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mesh_index</td><td>Index of the source mesh in the scene. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">instance_index</td><td>Local instance index relative to other instances of the same source mesh.</td></tr>
   </table>
   </dd>
 </dl>
@@ -457,8 +457,8 @@ template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5
 <p>Get a reference to a mesh instance in the scene. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">mesh_index</td><td>Index of the parent mesh in the scene. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">instance_index</td><td>Local instance index respective to the parent mesh.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mesh_index</td><td>Index of the source mesh in the scene. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">instance_index</td><td>Local instance index relative to other instances of the same source mesh.</td></tr>
   </table>
   </dd>
 </dl>
@@ -650,7 +650,7 @@ template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacelagrange.html">lagrange</a></li><li class="navelem"><b>scene</b></li><li class="navelem"><a class="el" href="classlagrange_1_1scene_1_1_simple_scene.html">SimpleScene</a></li>
-    <li class="footer">Generated on Wed Feb 11 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+    <li class="footer">Generated on Tue Mar 10 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>
 </body>

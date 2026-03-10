@@ -11,6 +11,7 @@ var annotated_dup =
         [ "BVH", "classlagrange_1_1bvh_1_1_b_v_h.html", "classlagrange_1_1bvh_1_1_b_v_h" ],
         [ "BVHNanoflann", "classlagrange_1_1bvh_1_1_b_v_h_nanoflann.html", "classlagrange_1_1bvh_1_1_b_v_h_nanoflann" ],
         [ "EdgeAABBTree", "structlagrange_1_1bvh_1_1_edge_a_a_b_b_tree.html", "structlagrange_1_1bvh_1_1_edge_a_a_b_b_tree" ],
+        [ "MeshDistancesOptions", "structlagrange_1_1bvh_1_1_mesh_distances_options.html", "structlagrange_1_1bvh_1_1_mesh_distances_options" ],
         [ "PyEdgeAABBTree", "classlagrange_1_1bvh_1_1_py_edge_a_a_b_b_tree.html", null ],
         [ "TriangleAABBTree", "classlagrange_1_1bvh_1_1_triangle_a_a_b_b_tree.html", "classlagrange_1_1bvh_1_1_triangle_a_a_b_b_tree" ],
         [ "WeldOptions", "structlagrange_1_1bvh_1_1_weld_options.html", "structlagrange_1_1bvh_1_1_weld_options" ]
@@ -83,6 +84,7 @@ var annotated_dup =
       [ "internal", "namespacelagrange_1_1internal.html", [
         [ "BucketSortOffset", "structlagrange_1_1internal_1_1_bucket_sort_offset.html", "structlagrange_1_1internal_1_1_bucket_sort_offset" ],
         [ "BucketSortResult", "structlagrange_1_1internal_1_1_bucket_sort_result.html", "structlagrange_1_1internal_1_1_bucket_sort_result" ],
+        [ "CheckAttributeResult", "structlagrange_1_1internal_1_1_check_attribute_result.html", "structlagrange_1_1internal_1_1_check_attribute_result" ],
         [ "control_block", "classlagrange_1_1internal_1_1control__block.html", null ],
         [ "control_block_base", "classlagrange_1_1internal_1_1control__block__base.html", null ],
         [ "default_delete", "classlagrange_1_1internal_1_1default__delete.html", "classlagrange_1_1internal_1_1default__delete" ],
@@ -156,7 +158,9 @@ var annotated_dup =
         [ "ReconstructionOptions", "structlagrange_1_1poisson_1_1_reconstruction_options.html", "structlagrange_1_1poisson_1_1_reconstruction_options" ]
       ] ],
       [ "polyddg", null, [
-        [ "DifferentialOperators", "classlagrange_1_1polyddg_1_1_differential_operators.html", "classlagrange_1_1polyddg_1_1_differential_operators" ]
+        [ "DifferentialOperators", "classlagrange_1_1polyddg_1_1_differential_operators.html", "classlagrange_1_1polyddg_1_1_differential_operators" ],
+        [ "PrincipalCurvaturesOptions", "structlagrange_1_1polyddg_1_1_principal_curvatures_options.html", "structlagrange_1_1polyddg_1_1_principal_curvatures_options" ],
+        [ "PrincipalCurvaturesResult", "structlagrange_1_1polyddg_1_1_principal_curvatures_result.html", "structlagrange_1_1polyddg_1_1_principal_curvatures_result" ]
       ] ],
       [ "polyscope", null, [
         [ "PolyscopeTrait", "structlagrange_1_1polyscope_1_1_polyscope_trait.html", null ]
@@ -189,14 +193,28 @@ var annotated_dup =
       ] ],
       [ "python", null, [
         [ "PyAttribute", "classlagrange_1_1python_1_1_py_attribute.html", null ],
-        [ "PyIndexedAttribute", "classlagrange_1_1python_1_1_py_indexed_attribute.html", null ],
-        [ "PythonLoggingSink", "classlagrange_1_1python_1_1_python_logging_sink.html", null ]
+        [ "PyIndexedAttribute", "classlagrange_1_1python_1_1_py_indexed_attribute.html", null ]
       ] ],
       [ "raycasting", "namespacelagrange_1_1raycasting.html", [
-        [ "ClosestPointResult", "structlagrange_1_1raycasting_1_1_closest_point_result.html", null ],
-        [ "EmbreeRayCaster", "classlagrange_1_1raycasting_1_1_embree_ray_caster.html", "classlagrange_1_1raycasting_1_1_embree_ray_caster" ],
-        [ "RaycasterMesh", "classlagrange_1_1raycasting_1_1_raycaster_mesh.html", null ],
-        [ "RaycasterMeshDerived", "classlagrange_1_1raycasting_1_1_raycaster_mesh_derived.html", null ]
+        [ "legacy", null, [
+          [ "ClosestPointResult", "structlagrange_1_1raycasting_1_1legacy_1_1_closest_point_result.html", null ],
+          [ "EmbreeRayCaster", "classlagrange_1_1raycasting_1_1legacy_1_1_embree_ray_caster.html", "classlagrange_1_1raycasting_1_1legacy_1_1_embree_ray_caster" ],
+          [ "RaycasterMesh", "classlagrange_1_1raycasting_1_1legacy_1_1_raycaster_mesh.html", null ],
+          [ "RaycasterMeshDerived", "classlagrange_1_1raycasting_1_1legacy_1_1_raycaster_mesh_derived.html", null ]
+        ] ],
+        [ "ClosestPointHit", "structlagrange_1_1raycasting_1_1_closest_point_hit.html", "structlagrange_1_1raycasting_1_1_closest_point_hit" ],
+        [ "ClosestPointHitN", "structlagrange_1_1raycasting_1_1_closest_point_hit_n.html", "structlagrange_1_1raycasting_1_1_closest_point_hit_n" ],
+        [ "HitBase", "structlagrange_1_1raycasting_1_1_hit_base.html", "structlagrange_1_1raycasting_1_1_hit_base" ],
+        [ "HitBaseN", "structlagrange_1_1raycasting_1_1_hit_base_n.html", "structlagrange_1_1raycasting_1_1_hit_base_n" ],
+        [ "ProjectCommonOptions", "structlagrange_1_1raycasting_1_1_project_common_options.html", "structlagrange_1_1raycasting_1_1_project_common_options" ],
+        [ "ProjectDirectionalOptions", "structlagrange_1_1raycasting_1_1_project_directional_options.html", "structlagrange_1_1raycasting_1_1_project_directional_options" ],
+        [ "ProjectOptions", "structlagrange_1_1raycasting_1_1_project_options.html", "structlagrange_1_1raycasting_1_1_project_options" ],
+        [ "RayCaster", "classlagrange_1_1raycasting_1_1_ray_caster.html", "classlagrange_1_1raycasting_1_1_ray_caster" ],
+        [ "RayHit", "structlagrange_1_1raycasting_1_1_ray_hit.html", "structlagrange_1_1raycasting_1_1_ray_hit" ],
+        [ "RayHitN", "structlagrange_1_1raycasting_1_1_ray_hit_n.html", "structlagrange_1_1raycasting_1_1_ray_hit_n" ]
+      ] ],
+      [ "remeshing_im", null, [
+        [ "RemeshingOptions", "structlagrange_1_1remeshing__im_1_1_remeshing_options.html", "structlagrange_1_1remeshing__im_1_1_remeshing_options" ]
       ] ],
       [ "scene", null, [
         [ "Animation", "structlagrange_1_1scene_1_1_animation.html", null ],
@@ -206,6 +224,7 @@ var annotated_dup =
         [ "ImageExperimental", "structlagrange_1_1scene_1_1_image_experimental.html", "structlagrange_1_1scene_1_1_image_experimental" ],
         [ "Light", "structlagrange_1_1scene_1_1_light.html", null ],
         [ "MaterialExperimental", "structlagrange_1_1scene_1_1_material_experimental.html", null ],
+        [ "MeshesAndMaterialsResult", "structlagrange_1_1scene_1_1_meshes_and_materials_result.html", "structlagrange_1_1scene_1_1_meshes_and_materials_result" ],
         [ "MeshInstance", "structlagrange_1_1scene_1_1_mesh_instance.html", "structlagrange_1_1scene_1_1_mesh_instance" ],
         [ "Node", "structlagrange_1_1scene_1_1_node.html", null ],
         [ "RemeshingOptions", "structlagrange_1_1scene_1_1_remeshing_options.html", "structlagrange_1_1scene_1_1_remeshing_options" ],
@@ -247,6 +266,7 @@ var annotated_dup =
         [ "CompositingOptions", "structlagrange_1_1texproc_1_1_compositing_options.html", "structlagrange_1_1texproc_1_1_compositing_options" ],
         [ "ConstWeightedTextureView", "structlagrange_1_1texproc_1_1_const_weighted_texture_view.html", "structlagrange_1_1texproc_1_1_const_weighted_texture_view" ],
         [ "DilationOptions", "structlagrange_1_1texproc_1_1_dilation_options.html", "structlagrange_1_1texproc_1_1_dilation_options" ],
+        [ "ExtractMeshWithAlphaMaskOptions", "structlagrange_1_1texproc_1_1_extract_mesh_with_alpha_mask_options.html", "structlagrange_1_1texproc_1_1_extract_mesh_with_alpha_mask_options" ],
         [ "FilteringOptions", "structlagrange_1_1texproc_1_1_filtering_options.html", "structlagrange_1_1texproc_1_1_filtering_options" ],
         [ "Padding", "classlagrange_1_1texproc_1_1_padding.html", null ],
         [ "StitchingOptions", "structlagrange_1_1texproc_1_1_stitching_options.html", "structlagrange_1_1texproc_1_1_stitching_options" ],
@@ -516,7 +536,9 @@ var annotated_dup =
       [ "hash< lagrange::EdgeType< Index > >", "structstd_1_1hash_3_01lagrange_1_1_edge_type_3_01_index_01_4_01_4.html", null ]
     ] ],
     [ "Args", "struct_args.html", null ],
+    [ "DemoState", "struct_demo_state.html", null ],
     [ "OrientReturn", "struct_orient_return.html", null ],
+    [ "PickedPoint", "struct_picked_point.html", null ],
     [ "type_caster< lagrange::scene::Value >", "structtype__caster_3_01lagrange_1_1scene_1_1_value_01_4.html", null ],
     [ "type_caster< lagrange::StackVector< T, N > >", "structtype__caster_3_01lagrange_1_1_stack_vector_3_01_t_00_01_n_01_4_01_4.html", null ],
     [ "UiState", "struct_ui_state.html", null ]

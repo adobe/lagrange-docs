@@ -256,6 +256,11 @@ Enumerations</h2></td></tr>
  }</td></tr>
 <tr class="memdesc:ga08ad5f3b2f569ea9f2c9a15705d8170f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Policy for updating attribute values when reorienting mesh facets.  <a href="#ga08ad5f3b2f569ea9f2c9a15705d8170f">More...</a><br /></td></tr>
 <tr class="separator:ga08ad5f3b2f569ea9f2c9a15705d8170f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2cf5e71c1be237fca7a904f589970fde" id="r_ga2cf5e71c1be237fca7a904f589970fde"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga2cf5e71c1be237fca7a904f589970fde">AttributeRefPolicy</a> : uint8_t { <a class="el" href="#gga2cf5e71c1be237fca7a904f589970fdea7a1920d61156abc05a60135aefe8bc67">Default</a>
+, <a class="el" href="#gga2cf5e71c1be237fca7a904f589970fdea9eb6b78a99cdb6ffd3d40d18621d9f80">Force</a>
+ }</td></tr>
+<tr class="memdesc:ga2cf5e71c1be237fca7a904f589970fde"><td class="mdescLeft">&#160;</td><td class="mdescRight">Policy for retrieving writable references to attribute buffers.  <a href="#ga2cf5e71c1be237fca7a904f589970fde">More...</a><br /></td></tr>
+<tr class="separator:ga2cf5e71c1be237fca7a904f589970fde"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaa6b9ce91409ac67b7b5319cf573f66b8" id="r_gaa6b9ce91409ac67b7b5319cf573f66b8"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaa6b9ce91409ac67b7b5319cf573f66b8">AttributeValueType</a> : uint8_t { <b>LA_X_attribute_value_type_enum</b>
  }</td></tr>
 <tr class="memdesc:gaa6b9ce91409ac67b7b5319cf573f66b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enum describing at runtime the value type of an attribute.  <a href="#gaa6b9ce91409ac67b7b5319cf573f66b8">More...</a><br /></td></tr>
@@ -871,6 +876,39 @@ constexpr <a class="el" href="#ga4d115376c2c766084ef808c837348fc3">AttributeId</
 
 </div>
 </div>
+<a id="ga2cf5e71c1be237fca7a904f589970fde" name="ga2cf5e71c1be237fca7a904f589970fde"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2cf5e71c1be237fca7a904f589970fde">&#9670;&#160;</a></span>AttributeRefPolicy</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum class <a class="el" href="#ga2cf5e71c1be237fca7a904f589970fde">AttributeRefPolicy</a> : uint8_t</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel strong">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;lagrange/AttributeFwd.h&gt;</code></p>
+
+<p>Policy for retrieving writable references to attribute buffers. </p>
+<p>By default, it is not allowed to get a writable reference to the corner -&gt; vertex id attribute when a mesh has edge/connectivity information. This policy can be used to change that. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="gga2cf5e71c1be237fca7a904f589970fdea7a1920d61156abc05a60135aefe8bc67" name="gga2cf5e71c1be237fca7a904f589970fdea7a1920d61156abc05a60135aefe8bc67"></a>Default&#160;</td><td class="fielddoc"><p>Throws an exception if the attribute is the corner -&gt; vertex id attribute and the mesh has edge/connectivity information. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga2cf5e71c1be237fca7a904f589970fdea9eb6b78a99cdb6ffd3d40d18621d9f80" name="gga2cf5e71c1be237fca7a904f589970fdea9eb6b78a99cdb6ffd3d40d18621d9f80"></a>Force&#160;</td><td class="fielddoc"><p>Allows retrieving writable references even if the attribute is the corner -&gt; vertex id attribute and the mesh has edge/connectivity information. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
 <a id="gaa6b9ce91409ac67b7b5319cf573f66b8" name="gaa6b9ce91409ac67b7b5319cf573f66b8"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#gaa6b9ce91409ac67b7b5319cf573f66b8">&#9670;&#160;</a></span>AttributeValueType</h2>
 
@@ -942,7 +980,7 @@ template&lt;typename ValueType&gt; </div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Wed Feb 11 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+    <li class="footer">Generated on Tue Mar 10 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>
 </body>

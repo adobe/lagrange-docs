@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['valuetype_0',['ValueType',['../classlagrange_1_1_attribute.html#a48f6eee0351a3cea4b2c4fb25705241a',1,'lagrange::Attribute::ValueType'],['../classlagrange_1_1_indexed_attribute.html#a48f6eee0351a3cea4b2c4fb25705241a',1,'lagrange::IndexedAttribute::ValueType']]],
-  ['vector_1',['Vector',['../group__group-surfacemesh-views.html#ga0fed807d227a1b730ca7ebcc01d897e2',1,'lagrange']]],
-  ['vectorview_2',['VectorView',['../group__group-surfacemesh-views.html#ga373c385fbf8ee25f008de6d6575118ab',1,'lagrange']]]
+  ['rowmatrix_0',['RowMatrix',['../group__group-surfacemesh-views.html#ga6344979b33dfbf6508e97dadab610258',1,'lagrange']]],
+  ['rowmatrixview_1',['RowMatrixView',['../group__group-surfacemesh-views.html#ga06ca3172e4577c726eaf8d2ab26a1ab5',1,'lagrange']]]
 ];

@@ -1,7 +1,4 @@
 var searchData=
 [
-  ['castmode_0',['CastMode',['../namespacelagrange_1_1raycasting.html#a4cacb45d286bda3567a5eedf0ea57c9a',1,'lagrange::raycasting']]],
-  ['color_5fspace_1',['color_space',['../classlagrange_1_1image_1_1_raw_input_image.html#a609c1f2c8828267fe31da1947b988a36',1,'lagrange::image::RawInputImage']]],
-  ['connectivitytype_2',['ConnectivityType',['../namespacelagrange.html#a312f57b0318728667933d7254778058b',1,'lagrange']]],
-  ['cornermappingtype_3',['CornerMappingType',['../classlagrange_1_1_surface_mesh.html#aee50b76f699900fa6e88a87a5d0940c9',1,'lagrange::SurfaceMesh']]]
+  ['buildquality_0',['BuildQuality',['../namespacelagrange_1_1raycasting.html#ade737eff21604d56d55bdb5f62280f67',1,'lagrange::raycasting']]]
 ];

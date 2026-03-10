@@ -2,6 +2,7 @@ var namespacelagrange_1_1internal =
 [
     [ "BucketSortOffset", "structlagrange_1_1internal_1_1_bucket_sort_offset.html", "structlagrange_1_1internal_1_1_bucket_sort_offset" ],
     [ "BucketSortResult", "structlagrange_1_1internal_1_1_bucket_sort_result.html", "structlagrange_1_1internal_1_1_bucket_sort_result" ],
+    [ "CheckAttributeResult", "structlagrange_1_1internal_1_1_check_attribute_result.html", "structlagrange_1_1internal_1_1_check_attribute_result" ],
     [ "control_block", "classlagrange_1_1internal_1_1control__block.html", null ],
     [ "control_block_base", "classlagrange_1_1internal_1_1control__block__base.html", null ],
     [ "default_delete", "classlagrange_1_1internal_1_1default__delete.html", "classlagrange_1_1internal_1_1default__delete" ],
@@ -16,6 +17,14 @@ var namespacelagrange_1_1internal =
     [ "SkinningExtractNResult", "structlagrange_1_1internal_1_1_skinning_extract_n_result.html", "structlagrange_1_1internal_1_1_skinning_extract_n_result" ],
     [ "UnorientedEdge", "structlagrange_1_1internal_1_1_unoriented_edge.html", null ],
     [ "weak_ptr", "classlagrange_1_1internal_1_1weak__ptr.html", "classlagrange_1_1internal_1_1weak__ptr" ],
+    [ "ResetToDefault", "namespacelagrange_1_1internal.html#ad55f96a0a38571fab295b3dcfa5ccaac", [
+      [ "Yes", "namespacelagrange_1_1internal.html#ad55f96a0a38571fab295b3dcfa5ccaaca93cba07454f06a4a960172bbd6e2a435", null ],
+      [ "No", "namespacelagrange_1_1internal.html#ad55f96a0a38571fab295b3dcfa5ccaacabafd7322c6e97d25b6299b5d6fe8920b", null ]
+    ] ],
+    [ "ShouldBeWritable", "namespacelagrange_1_1internal.html#a8131b5d272d562a69c79fbca67db5209", [
+      [ "Yes", "namespacelagrange_1_1internal.html#a8131b5d272d562a69c79fbca67db5209a93cba07454f06a4a960172bbd6e2a435", null ],
+      [ "No", "namespacelagrange_1_1internal.html#a8131b5d272d562a69c79fbca67db5209abafd7322c6e97d25b6299b5d6fe8920b", null ]
+    ] ],
     [ "to_string", "namespacelagrange_1_1internal.html#a1094c838f626d32cbbd591b269c17aba", null ],
     [ "to_string", "namespacelagrange_1_1internal.html#a1bf501173c662983dbe2e4436cd90f35", null ],
     [ "to_string", "namespacelagrange_1_1internal.html#ad1ef58c4f14fd3da88c3ddfb8541c1fb", null ],
@@ -24,10 +33,12 @@ var namespacelagrange_1_1internal =
     [ "get_cpu_vendor_id", "namespacelagrange_1_1internal.html#a58d4a2c573d544f072be7e98c3dd1b4b", null ],
     [ "dijkstra", "namespacelagrange_1_1internal.html#a318ef64371a044ade0e7bf035cd67490", null ],
     [ "fast_edge_sort", "namespacelagrange_1_1internal.html#a999adf40cd91dcb3b7bb5bb6e3724584", null ],
+    [ "check_attribute", "namespacelagrange_1_1internal.html#a3777d5f3ebce8993a3de327e95891210", null ],
     [ "find_matching_attribute", "namespacelagrange_1_1internal.html#aae5d3bb97af070a81d6a1d624fce12af", null ],
     [ "find_matching_attribute", "namespacelagrange_1_1internal.html#a8107009117bbde794f9885c9b11c29d8", null ],
     [ "find_attribute", "namespacelagrange_1_1internal.html#a4e449214cdb7a7f4c42a69d9eb718483", null ],
     [ "find_or_create_attribute", "namespacelagrange_1_1internal.html#adbcff88ab81e30f4cd399e5fd3fb2ab2", null ],
+    [ "get_unique_attribute_name", "namespacelagrange_1_1internal.html#ae608619099d2ee29b481cc01aca331c4", null ],
     [ "get_uv_id", "namespacelagrange_1_1internal.html#a72537d0a83e0b4e55792d4a10f984255", null ],
     [ "get_uv_attribute", "namespacelagrange_1_1internal.html#aa966791cea3705e76eab23eaf769db41", null ],
     [ "ref_uv_attribute", "namespacelagrange_1_1internal.html#a9f60c2c90c864c5e9d47b9b8a80e3e90", null ],

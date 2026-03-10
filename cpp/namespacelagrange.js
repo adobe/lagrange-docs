@@ -194,6 +194,10 @@ var namespacelagrange =
       [ "None", "group__group-surfacemesh-attr.html#gga08ad5f3b2f569ea9f2c9a15705d8170fa6adf97f83acf6453d4a6a4b1070f3754", null ],
       [ "Reorient", "group__group-surfacemesh-attr.html#gga08ad5f3b2f569ea9f2c9a15705d8170fae679ea3b7c35ed985d184df6b2d86d14", null ]
     ] ],
+    [ "AttributeRefPolicy", "group__group-surfacemesh-attr.html#ga2cf5e71c1be237fca7a904f589970fde", [
+      [ "Default", "group__group-surfacemesh-attr.html#gga2cf5e71c1be237fca7a904f589970fdea7a1920d61156abc05a60135aefe8bc67", null ],
+      [ "Force", "group__group-surfacemesh-attr.html#gga2cf5e71c1be237fca7a904f589970fdea9eb6b78a99cdb6ffd3d40d18621d9f80", null ]
+    ] ],
     [ "AttributeValueType", "group__group-surfacemesh-attr.html#gaa6b9ce91409ac67b7b5319cf573f66b8", [
       [ "LA_X_attribute_value_type_enum", "group__group-surfacemesh-attr.html#ggaa6b9ce91409ac67b7b5319cf573f66b8aaeb8dcf28eadfda06e20b664896d316a", null ]
     ] ],

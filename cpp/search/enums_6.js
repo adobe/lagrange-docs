@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['normalweightingtype_0',['NormalWeightingType',['../group__group-surfacemesh-utils.html#gaa88e833ed770762b02e187f0c2377d3d',1,'lagrange']]]
+  ['mappingpolicy_0',['MappingPolicy',['../namespacelagrange.html#af15e960c877b7516935402a9080b7e1a',1,'lagrange']]]
 ];

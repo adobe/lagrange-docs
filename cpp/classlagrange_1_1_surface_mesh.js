@@ -149,7 +149,7 @@ var classlagrange_1_1_surface_mesh =
     [ "get_vertex_to_position", "classlagrange_1_1_surface_mesh.html#aee3a373ed58ff8f9908b54ff36a0921b", null ],
     [ "ref_vertex_to_position", "classlagrange_1_1_surface_mesh.html#a0b8e21c22801c3e1b32392c15c4c9e05", null ],
     [ "get_corner_to_vertex", "classlagrange_1_1_surface_mesh.html#a8a4de76f0e87a0509babc2bd81c0abaf", null ],
-    [ "ref_corner_to_vertex", "classlagrange_1_1_surface_mesh.html#ad3cd66ddb6e7a1f1023d197653a9d02e", null ],
+    [ "ref_corner_to_vertex", "classlagrange_1_1_surface_mesh.html#ae4b92bc440c8a575401dda1718d953eb", null ],
     [ "attr_id_vertex_to_position", "classlagrange_1_1_surface_mesh.html#a0453afe84f040b43f9c7cfa670065d4d", null ],
     [ "attr_id_vertex_to_positions", "classlagrange_1_1_surface_mesh.html#a5f1d893c997417a38024fd08c22fe42b", null ],
     [ "attr_id_corner_to_vertex", "classlagrange_1_1_surface_mesh.html#a3c2c966fb4632c7ed1f17c24cab22393", null ],

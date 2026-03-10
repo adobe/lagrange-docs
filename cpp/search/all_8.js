@@ -14,9 +14,13 @@ var searchData=
   ['hash_5fcombine_11',['hash_combine',['../group__group-utils-misc.html#gabc213e8639504f32e944828c1634d13e',1,'lagrange']]],
   ['height_12',['height',['../structlagrange_1_1image__io_1_1_s_v_g_setting.html#a48083b65ac9a863566dc3e3fff09a5b4',1,'lagrange::image_io::SVGSetting::height'],['../structlagrange_1_1primitive_1_1_rounded_cone_options.html#a662fdf470fa4ef8f085be8f66e072c61',1,'lagrange::primitive::RoundedConeOptions::height'],['../structlagrange_1_1primitive_1_1_rounded_cube_options.html#a662fdf470fa4ef8f085be8f66e072c61',1,'lagrange::primitive::RoundedCubeOptions::height'],['../structlagrange_1_1primitive_1_1_rounded_plane_options.html#a662fdf470fa4ef8f085be8f66e072c61',1,'lagrange::primitive::RoundedPlaneOptions::height'],['../structlagrange_1_1scene_1_1_image_buffer_experimental.html#a02afeaaf8574e7a78d6b466ff2695052',1,'lagrange::scene::ImageBufferExperimental::height'],['../structlagrange_1_1texproc_1_1_texture_rasterizer_options.html#a02afeaaf8574e7a78d6b466ff2695052',1,'lagrange::texproc::TextureRasterizerOptions::height'],['../structlagrange_1_1ui_1_1_viewer_1_1_window_options.html#ad12fc34ce789bce6c8a05d8a17138534',1,'lagrange::ui::Viewer::WindowOptions::height']]],
   ['height_5fsegments_13',['height_segments',['../structlagrange_1_1primitive_1_1_rounded_cube_options.html#a2f69d1dcee1d2114d07fbbbe630b4549',1,'lagrange::primitive::RoundedCubeOptions::height_segments'],['../structlagrange_1_1primitive_1_1_rounded_plane_options.html#a2f69d1dcee1d2114d07fbbbe630b4549',1,'lagrange::primitive::RoundedPlaneOptions::height_segments']]],
-  ['hilbert_14',['Hilbert',['../namespacelagrange.html#a3cce9a28814e60e46fc8877d69ce28e3ac98cbfb539a3891d9db35c17c7c184b3',1,'lagrange']]],
-  ['hovered_15',['Hovered',['../structlagrange_1_1ui_1_1_hovered.html',1,'lagrange::ui']]],
-  ['hovered_20tt_20and_20tt_20selected_20tt_16',['&lt;tt&gt;Hovered&lt;/tt&gt; and &lt;tt&gt;Selected&lt;/tt&gt;',['..//home/runner/work/lagrange-docs/lagrange-docs/lagrange_tmp/modules/ui/README.md#autotoc_md27',1,'']]],
-  ['hoveredevent_17',['HoveredEvent',['../structlagrange_1_1ui_1_1_hovered_event.html',1,'lagrange::ui']]],
-  ['hoveredtemp_18',['HoveredTemp',['../structlagrange_1_1ui_1_1_hovered_temp.html',1,'lagrange::ui']]]
+  ['high_14',['High',['../namespacelagrange_1_1raycasting.html#ade737eff21604d56d55bdb5f62280f67a655d20c1ca69519ca647684edbb2db35',1,'lagrange::raycasting']]],
+  ['hilbert_15',['Hilbert',['../namespacelagrange.html#a3cce9a28814e60e46fc8877d69ce28e3ac98cbfb539a3891d9db35c17c7c184b3',1,'lagrange']]],
+  ['hit_16',['Hit',['../classlagrange_1_1raycasting_1_1_ray_caster.html#a90d6b9b0f8c155ccf6257d7e25b140b6',1,'lagrange::raycasting::RayCaster']]],
+  ['hitbase_17',['HitBase',['../structlagrange_1_1raycasting_1_1_hit_base.html',1,'lagrange::raycasting']]],
+  ['hitbasen_18',['HitBaseN',['../structlagrange_1_1raycasting_1_1_hit_base_n.html',1,'lagrange::raycasting']]],
+  ['hovered_19',['Hovered',['../structlagrange_1_1ui_1_1_hovered.html',1,'lagrange::ui']]],
+  ['hovered_20tt_20and_20tt_20selected_20tt_20',['&lt;tt&gt;Hovered&lt;/tt&gt; and &lt;tt&gt;Selected&lt;/tt&gt;',['..//home/runner/work/lagrange-docs/lagrange-docs/lagrange_tmp/modules/ui/README.md#autotoc_md27',1,'']]],
+  ['hoveredevent_21',['HoveredEvent',['../structlagrange_1_1ui_1_1_hovered_event.html',1,'lagrange::ui']]],
+  ['hoveredtemp_22',['HoveredTemp',['../structlagrange_1_1ui_1_1_hovered_temp.html',1,'lagrange::ui']]]
 ];

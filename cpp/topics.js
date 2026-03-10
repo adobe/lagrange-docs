@@ -11,7 +11,9 @@ var topics =
     [ "Polyscope Module", "group__module-polyscope.html", null ],
     [ "Primitive Module", "group__module-primitive.html", "group__module-primitive" ],
     [ "Raycasting Module", "group__module-raycasting.html", null ],
+    [ "Remeshing-Instant-Meshes Module", "group__module-remeshing__im.html", null ],
     [ "Subdivision Module", "group__module-subdivision.html", "group__module-subdivision" ],
     [ "Texproc Module", "group__module-texproc.html", "group__module-texproc" ],
-    [ "UI Module", "group__module-ui.html", null ]
+    [ "UI Module", "group__module-ui.html", null ],
+    [ "Group-raycasting", "group__group-raycasting.html", "group__group-raycasting" ]
 ];

@@ -61,6 +61,7 @@ var group__group_surfacemesh_attr =
       [ "get", "classlagrange_1_1_attribute.html#ae61ed0c572059caf9ed53e2bb93ac614", null ],
       [ "ref", "classlagrange_1_1_attribute.html#a64ec5111359ba201a6313d775f0e1cd0", null ],
       [ "get_all", "classlagrange_1_1_attribute.html#a0689838581e50aaa8c31e29063fcd451", null ],
+      [ "get_all_with_padding", "classlagrange_1_1_attribute.html#abb63d546098ae48706553a3bc15e7fb4", null ],
       [ "ref_all", "classlagrange_1_1_attribute.html#ad58d646f33a647ce9abbc4f3535da646", null ],
       [ "get_first", "classlagrange_1_1_attribute.html#a5288779aeb588bf29bccfb466fa457dc", null ],
       [ "ref_first", "classlagrange_1_1_attribute.html#a36fc196dc0b22baf04430613c0fa55d3", null ],
@@ -170,6 +171,10 @@ var group__group_surfacemesh_attr =
     [ "AttributeReorientPolicy", "group__group-surfacemesh-attr.html#ga08ad5f3b2f569ea9f2c9a15705d8170f", [
       [ "None", "group__group-surfacemesh-attr.html#gga08ad5f3b2f569ea9f2c9a15705d8170fa6adf97f83acf6453d4a6a4b1070f3754", null ],
       [ "Reorient", "group__group-surfacemesh-attr.html#gga08ad5f3b2f569ea9f2c9a15705d8170fae679ea3b7c35ed985d184df6b2d86d14", null ]
+    ] ],
+    [ "AttributeRefPolicy", "group__group-surfacemesh-attr.html#ga2cf5e71c1be237fca7a904f589970fde", [
+      [ "Default", "group__group-surfacemesh-attr.html#gga2cf5e71c1be237fca7a904f589970fdea7a1920d61156abc05a60135aefe8bc67", null ],
+      [ "Force", "group__group-surfacemesh-attr.html#gga2cf5e71c1be237fca7a904f589970fdea9eb6b78a99cdb6ffd3d40d18621d9f80", null ]
     ] ],
     [ "AttributeValueType", "group__group-surfacemesh-attr.html#gaa6b9ce91409ac67b7b5319cf573f66b8", null ],
     [ "invalid_attribute_id", "group__group-surfacemesh-attr.html#gaaf6e674ed673001dca1c6390bc0e0fc9", null ],

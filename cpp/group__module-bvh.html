@@ -138,6 +138,9 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlagrange_1_1bvh_1_1_a_a_b_b.html">AABB&lt; Scalar, Dim &gt;</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Axis-Aligned Bounding Box (AABB) tree for efficient spatial queries.  <a href="classlagrange_1_1bvh_1_1_a_a_b_b.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlagrange_1_1bvh_1_1_mesh_distances_options.html">MeshDistancesOptions</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Options for compute_mesh_distances.  <a href="structlagrange_1_1bvh_1_1_mesh_distances_options.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlagrange_1_1bvh_1_1_edge_a_a_b_b_tree.html">EdgeAABBTree&lt; VertexArray, EdgeArray, Dim &gt;</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlagrange_1_1bvh_1_1_triangle_a_a_b_b_tree.html">TriangleAABBTree&lt; Scalar, Index, Dim &gt;</a></td></tr>
@@ -167,6 +170,18 @@ using&#160;</td><td class="memItemRight" valign="bottom"><b>ActionCallback</b> =
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:ga5f64c98d00b325344dd5b57e51f16451" id="r_ga5f64c98d00b325344dd5b57e51f16451"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, typename Index&gt; </td></tr>
+<tr class="memitem:ga5f64c98d00b325344dd5b57e51f16451"><td class="memTemplItemLeft" align="right" valign="top">LA_BVH_API <a class="el" href="group__group-surfacemesh-attr.html#ga4d115376c2c766084ef808c837348fc3">AttributeId</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ga5f64c98d00b325344dd5b57e51f16451">compute_mesh_distances</a> (<a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index &gt; &amp;source, const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index &gt; &amp;target, const <a class="el" href="structlagrange_1_1bvh_1_1_mesh_distances_options.html">MeshDistancesOptions</a> &amp;options={})</td></tr>
+<tr class="memdesc:ga5f64c98d00b325344dd5b57e51f16451"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the distance from each vertex in <code class="param">source</code> to the closest point on <code class="param">target</code>, and store the result as a per-vertex scalar attribute on <code class="param">source</code>.  <br /></td></tr>
+<tr class="separator:ga5f64c98d00b325344dd5b57e51f16451"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0ffd251371a17cc104cfcf1be0affad1" id="r_ga0ffd251371a17cc104cfcf1be0affad1"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, typename Index&gt; </td></tr>
+<tr class="memitem:ga0ffd251371a17cc104cfcf1be0affad1"><td class="memTemplItemLeft" align="right" valign="top">LA_BVH_API <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ga0ffd251371a17cc104cfcf1be0affad1">compute_hausdorff</a> (const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index &gt; &amp;source, const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index &gt; &amp;target)</td></tr>
+<tr class="memdesc:ga0ffd251371a17cc104cfcf1be0affad1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the symmetric Hausdorff distance between <code class="param">source</code> and <code class="param">target</code>.  <br /></td></tr>
+<tr class="separator:ga0ffd251371a17cc104cfcf1be0affad1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3cd0f3afed6a3bae7aae59407e491489" id="r_ga3cd0f3afed6a3bae7aae59407e491489"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, typename Index&gt; </td></tr>
+<tr class="memitem:ga3cd0f3afed6a3bae7aae59407e491489"><td class="memTemplItemLeft" align="right" valign="top">LA_BVH_API <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ga3cd0f3afed6a3bae7aae59407e491489">compute_chamfer</a> (const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index &gt; &amp;source, const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index &gt; &amp;target)</td></tr>
+<tr class="memdesc:ga3cd0f3afed6a3bae7aae59407e491489"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the Chamfer distance between <code class="param">source</code> and <code class="param">target</code>.  <br /></td></tr>
+<tr class="separator:ga3cd0f3afed6a3bae7aae59407e491489"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gadd5d672df21cf5d9157453f22576742f" id="r_gadd5d672df21cf5d9157453f22576742f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gadd5d672df21cf5d9157453f22576742f">EdgeAABBTree</a> (const VertexArray &amp;V, const EdgeArray &amp;E)</td></tr>
 <tr class="memdesc:gadd5d672df21cf5d9157453f22576742f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct an AABB over the given edge graph.  <br /></td></tr>
 <tr class="separator:gadd5d672df21cf5d9157453f22576742f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -193,6 +208,155 @@ Functions</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>Bounding Volume Hierarchy (BVH) construction and traversal. </p>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="ga5f64c98d00b325344dd5b57e51f16451" name="ga5f64c98d00b325344dd5b57e51f16451"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5f64c98d00b325344dd5b57e51f16451">&#9670;&#160;</a></span>compute_mesh_distances()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, typename Index&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">LA_BVH_API <a class="el" href="group__group-surfacemesh-attr.html#ga4d115376c2c766084ef808c837348fc3">AttributeId</a> compute_mesh_distances </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>source</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>target</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structlagrange_1_1bvh_1_1_mesh_distances_options.html">MeshDistancesOptions</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>options</em></span><span class="paramdefsep"> = </span><span class="paramdefval">{}</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;lagrange/bvh/compute_mesh_distances.h&gt;</code></p>
+
+<p>Compute the distance from each vertex in <code class="param">source</code> to the closest point on <code class="param">target</code>, and store the result as a per-vertex scalar attribute on <code class="param">source</code>. </p>
+<p>Both meshes must have the same spatial dimension. <code class="param">target</code> must be a triangle mesh.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">source</td><td>Mesh whose vertices are queried. The output attribute is added here. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">target</td><td>Triangle mesh against which distances are computed. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">options</td><td>Options controlling the name of the output attribute.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>AttributeId of the newly created (or overwritten) distance attribute on <code class="param">source</code>.</dd></dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Scalar</td><td>Mesh scalar type. </td></tr>
+    <tr><td class="paramname">Index</td><td>Mesh index type. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga0ffd251371a17cc104cfcf1be0affad1" name="ga0ffd251371a17cc104cfcf1be0affad1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga0ffd251371a17cc104cfcf1be0affad1">&#9670;&#160;</a></span>compute_hausdorff()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, typename Index&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">LA_BVH_API <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a> compute_hausdorff </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>source</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>target</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;lagrange/bvh/compute_mesh_distances.h&gt;</code></p>
+
+<p>Compute the symmetric Hausdorff distance between <code class="param">source</code> and <code class="param">target</code>. </p>
+<p>The Hausdorff distance is the maximum of the two directed Hausdorff distances:      </p><p class="formulaDsp">
+\[  H(A, B) = \max\!\left(
+    \max_{a \in A} \mathrm{dist}(a, B),\;
+    \max_{b \in B} \mathrm{dist}(b, A)
+  \right)
+\]
+</p>
+<p> where \( \mathrm{dist}(v, M) \) is the distance from vertex \( v \) to the closest point on mesh \( M \).</p>
+<p>Both meshes must have the same spatial dimension and must be triangle meshes.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">source</td><td>First mesh. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">target</td><td>Second mesh.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Hausdorff distance.</dd></dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Scalar</td><td>Mesh scalar type. </td></tr>
+    <tr><td class="paramname">Index</td><td>Mesh index type. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga3cd0f3afed6a3bae7aae59407e491489" name="ga3cd0f3afed6a3bae7aae59407e491489"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3cd0f3afed6a3bae7aae59407e491489">&#9670;&#160;</a></span>compute_chamfer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, typename Index&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">LA_BVH_API <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a> compute_chamfer </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>source</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>target</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;lagrange/bvh/compute_mesh_distances.h&gt;</code></p>
+
+<p>Compute the Chamfer distance between <code class="param">source</code> and <code class="param">target</code>. </p>
+<p>The Chamfer distance is defined as:    </p><p class="formulaDsp">
+\[  C(A, B) = \frac{1}{|A|} \sum_{a \in A} \mathrm{dist}(a, B)^2
+          + \frac{1}{|B|} \sum_{b \in B} \mathrm{dist}(b, A)^2
+\]
+</p>
+<p> where \( \mathrm{dist}(v, M) \) is the distance from vertex \( v \) to the closest point on mesh \( M \).</p>
+<p>Both meshes must have the same spatial dimension and must be triangle meshes.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">source</td><td>First mesh. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">target</td><td>Second mesh.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Chamfer distance.</dd></dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Scalar</td><td>Mesh scalar type. </td></tr>
+    <tr><td class="paramname">Index</td><td>Mesh index type. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="gadd5d672df21cf5d9157453f22576742f" name="gadd5d672df21cf5d9157453f22576742f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#gadd5d672df21cf5d9157453f22576742f">&#9670;&#160;</a></span>EdgeAABBTree()</h2>
 
@@ -473,7 +637,7 @@ template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Wed Feb 11 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+    <li class="footer">Generated on Tue Mar 10 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>
 </body>

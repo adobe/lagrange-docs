@@ -396,209 +396,214 @@ $(function(){initNavTree('mesh__utils_8h_source.html',''); initResizable(true); 
 <div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span> </div>
 <div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span><span class="comment">// Add combinatorial stiffness regularization</span></div>
 <div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> Scalar&gt;</div>
-<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>Eigen::SparseMatrix&lt;Scalar&gt; laplacian_regularization(Eigen::SparseMatrix&lt;Scalar&gt; S, <a class="code hl_enumvalue" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a> eps)</div>
+<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>Eigen::SparseMatrix&lt;Scalar&gt; laplacian_regularization(Eigen::SparseMatrix&lt;Scalar&gt; S, <a class="code hl_enumvalue" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a> weight)</div>
 <div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>{</div>
-<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>    <span class="keywordflow">if</span> (eps &gt; 0) {</div>
-<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>        tbb::parallel_for(<span class="keywordtype">size_t</span>(0), <span class="keywordtype">size_t</span>(S.outerSize()), [&amp;](<span class="keywordtype">size_t</span> c) {</div>
-<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>            size_t count = 0;</div>
-<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>            for (typename Eigen::SparseMatrix&lt;Scalar&gt;::InnerIterator it(S, c); it; ++it) {</div>
-<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>                if (it.row() != it.col()) {</div>
-<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>                    it.valueRef() -= eps;</div>
-<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>                    ++count;</div>
-<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>                }</div>
-<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>            }</div>
-<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>            for (<span class="keyword">typename</span> Eigen::SparseMatrix&lt;Scalar&gt;::InnerIterator it(S, c); it; ++it) {</div>
-<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>                <span class="keywordflow">if</span> (it.row() == it.col()) {</div>
-<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>                    it.valueRef() += eps * count;</div>
-<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>                }</div>
-<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>            }</div>
-<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>        });</div>
-<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>    }</div>
-<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>    <span class="keywordflow">return</span> S;</div>
-<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>}</div>
-<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span> </div>
-<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> Scalar, <span class="keyword">typename</span> Index&gt;</div>
-<div class="foldopen" id="foldopen00294" data-start="{" data-end="};">
-<div class="line"><a id="l00294" name="l00294"></a><span class="lineno"><a class="line" href="structlagrange_1_1texproc_1_1mesh__utils_1_1_mesh_wrapper.html">  294</a></span><span class="keyword">struct </span>MeshWrapper</div>
-<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>{</div>
-<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>    MeshWrapper(<span class="keyword">const</span> <a class="code hl_class" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh&lt;Scalar, Index&gt;</a>&amp; mesh_)</div>
-<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>        : mesh(mesh_)</div>
-<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>    {}</div>
-<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span> </div>
-<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>    <span class="keywordtype">size_t</span> num_simplices()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><span class="keywordtype">size_t</span><span class="keyword">&gt;</span>(mesh.get_num_facets()); }</div>
-<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span>    <span class="keywordtype">size_t</span> num_vertices()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><span class="keywordtype">size_t</span><span class="keyword">&gt;</span>(mesh.get_num_vertices()); }</div>
-<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span>    <span class="keywordtype">size_t</span> num_texcoords()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> texcoords.size() / K; }</div>
-<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span> </div>
-<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span>    <a class="code hl_typedef" href="group__group-surfacemesh-views.html#ga0fed807d227a1b730ca7ebcc01d897e2">Vector&lt;double, Dim&gt;</a> vertex(<span class="keywordtype">size_t</span> i)<span class="keyword"> const</span></div>
-<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span><span class="keyword">    </span>{</div>
-<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>        <a class="code hl_typedef" href="group__group-surfacemesh-views.html#ga0fed807d227a1b730ca7ebcc01d897e2">Vector&lt;double, Dim&gt;</a> p;</div>
-<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span>        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> d = 0; d &lt; Dim; d++) {</div>
-<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span>            p[d] = <span class="keyword">static_cast&lt;</span><span class="keywordtype">double</span><span class="keyword">&gt;</span>(vertices[i * Dim + d]);</div>
-<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span>        }</div>
-<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span>        <span class="keywordflow">return</span> p;</div>
-<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span>    }</div>
-<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span> </div>
-<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span>    <a class="code hl_typedef" href="group__group-surfacemesh-views.html#ga0fed807d227a1b730ca7ebcc01d897e2">Vector&lt;double, K&gt;</a> texcoord(<span class="keywordtype">size_t</span> i)<span class="keyword"> const</span></div>
-<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span><span class="keyword">    </span>{</div>
-<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span>        <a class="code hl_typedef" href="group__group-surfacemesh-views.html#ga0fed807d227a1b730ca7ebcc01d897e2">Vector&lt;double, K&gt;</a> q;</div>
-<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span>        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> k = 0; k &lt; K; k++) {</div>
-<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span>            q[k] = <span class="keyword">static_cast&lt;</span><span class="keywordtype">double</span><span class="keyword">&gt;</span>(texcoords[i * K + k]);</div>
-<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span>        }</div>
-<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span>        <span class="keywordflow">return</span> q;</div>
-<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span>    }</div>
-<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span> </div>
-<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span>    <a class="code hl_typedef" href="group__group-surfacemesh-views.html#ga0fed807d227a1b730ca7ebcc01d897e2">Vector&lt;double, K&gt;</a> vflipped_texcoord(<span class="keywordtype">size_t</span> i)<span class="keyword"> const</span></div>
-<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span><span class="keyword">    </span>{</div>
-<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span>        <a class="code hl_typedef" href="group__group-surfacemesh-views.html#ga0fed807d227a1b730ca7ebcc01d897e2">Vector&lt;double, K&gt;</a> q;</div>
-<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span>        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> k = 0; k &lt; K; k++) {</div>
-<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span>            q[k] = <span class="keyword">static_cast&lt;</span><span class="keywordtype">double</span><span class="keyword">&gt;</span>(texcoords[i * K + k]);</div>
-<div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span>        }</div>
-<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span>        q[1] = 1.0 - q[1];</div>
-<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span>        <span class="keywordflow">return</span> q;</div>
-<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span>    }</div>
-<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span> </div>
-<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span>    <span class="keywordtype">int</span> vertex_index(<span class="keywordtype">size_t</span> f, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> k)<span class="keyword"> const</span></div>
-<div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span><span class="keyword">    </span>{</div>
-<div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span>        <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(vertex_indices[f * (K + 1) + k]);</div>
+<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>    <span class="keywordflow">if</span> (std::abs(weight) &gt; std::numeric_limits&lt;Scalar&gt;().denorm_min()) {</div>
+<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>        <a class="code hl_define" href="group__group-utils-assert.html#ga1ccafcb14523a1aae57dcac3c3f32ecd">la_runtime_assert</a>(S.rows() == S.cols());</div>
+<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>        <a class="code hl_define" href="group__group-utils-assert.html#ga1ccafcb14523a1aae57dcac3c3f32ecd">la_runtime_assert</a>(S.nonZeros() &gt;= S.rows());</div>
+<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>        <a class="code hl_define" href="group__group-utils-assert.html#ga1ccafcb14523a1aae57dcac3c3f32ecd">la_runtime_assert</a>(weight &gt; <a class="code hl_enumvalue" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>(0));</div>
+<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span> </div>
+<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>        tbb::parallel_for(<span class="keywordtype">size_t</span>(0), <span class="keywordtype">size_t</span>(S.outerSize()), [&amp;S, weight](<span class="keywordtype">size_t</span> c) {</div>
+<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>            size_t count = 0;</div>
+<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>            for (typename Eigen::SparseMatrix&lt;Scalar&gt;::InnerIterator it(S, c); it; ++it) {</div>
+<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>                if (it.row() != it.col()) {</div>
+<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>                    it.valueRef() -= weight;</div>
+<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>                    ++count;</div>
+<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>                }</div>
+<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>            }</div>
+<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>            for (<span class="keyword">typename</span> Eigen::SparseMatrix&lt;Scalar&gt;::InnerIterator it(S, c); it; ++it) {</div>
+<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>                <span class="keywordflow">if</span> (it.row() == it.col()) {</div>
+<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>                    it.valueRef() += weight * count;</div>
+<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>                }</div>
+<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>            }</div>
+<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>        });</div>
+<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>    }</div>
+<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span> </div>
+<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>    <span class="keywordflow">return</span> S;</div>
+<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>}</div>
+<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span> </div>
+<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> Scalar, <span class="keyword">typename</span> Index&gt;</div>
+<div class="foldopen" id="foldopen00299" data-start="{" data-end="};">
+<div class="line"><a id="l00299" name="l00299"></a><span class="lineno"><a class="line" href="structlagrange_1_1texproc_1_1mesh__utils_1_1_mesh_wrapper.html">  299</a></span><span class="keyword">struct </span>MeshWrapper</div>
+<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>{</div>
+<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span>    MeshWrapper(<span class="keyword">const</span> <a class="code hl_class" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh&lt;Scalar, Index&gt;</a>&amp; mesh_)</div>
+<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span>        : mesh(mesh_)</div>
+<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span>    {}</div>
+<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span> </div>
+<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>    <span class="keywordtype">size_t</span> num_simplices()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><span class="keywordtype">size_t</span><span class="keyword">&gt;</span>(mesh.get_num_facets()); }</div>
+<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>    <span class="keywordtype">size_t</span> num_vertices()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><span class="keywordtype">size_t</span><span class="keyword">&gt;</span>(mesh.get_num_vertices()); }</div>
+<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span>    <span class="keywordtype">size_t</span> num_texcoords()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> texcoords.size() / K; }</div>
+<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span> </div>
+<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span>    <a class="code hl_typedef" href="group__group-surfacemesh-views.html#ga0fed807d227a1b730ca7ebcc01d897e2">Vector&lt;double, Dim&gt;</a> vertex(<span class="keywordtype">size_t</span> i)<span class="keyword"> const</span></div>
+<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span><span class="keyword">    </span>{</div>
+<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span>        <a class="code hl_typedef" href="group__group-surfacemesh-views.html#ga0fed807d227a1b730ca7ebcc01d897e2">Vector&lt;double, Dim&gt;</a> p;</div>
+<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span>        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> d = 0; d &lt; Dim; d++) {</div>
+<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span>            p[d] = <span class="keyword">static_cast&lt;</span><span class="keywordtype">double</span><span class="keyword">&gt;</span>(vertices[i * Dim + d]);</div>
+<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span>        }</div>
+<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span>        <span class="keywordflow">return</span> p;</div>
+<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span>    }</div>
+<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span> </div>
+<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span>    <a class="code hl_typedef" href="group__group-surfacemesh-views.html#ga0fed807d227a1b730ca7ebcc01d897e2">Vector&lt;double, K&gt;</a> texcoord(<span class="keywordtype">size_t</span> i)<span class="keyword"> const</span></div>
+<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span><span class="keyword">    </span>{</div>
+<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span>        <a class="code hl_typedef" href="group__group-surfacemesh-views.html#ga0fed807d227a1b730ca7ebcc01d897e2">Vector&lt;double, K&gt;</a> q;</div>
+<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span>        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> k = 0; k &lt; K; k++) {</div>
+<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span>            q[k] = <span class="keyword">static_cast&lt;</span><span class="keywordtype">double</span><span class="keyword">&gt;</span>(texcoords[i * K + k]);</div>
+<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span>        }</div>
+<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span>        <span class="keywordflow">return</span> q;</div>
+<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span>    }</div>
+<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span> </div>
+<div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span>    <a class="code hl_typedef" href="group__group-surfacemesh-views.html#ga0fed807d227a1b730ca7ebcc01d897e2">Vector&lt;double, K&gt;</a> vflipped_texcoord(<span class="keywordtype">size_t</span> i)<span class="keyword"> const</span></div>
+<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span><span class="keyword">    </span>{</div>
+<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span>        <a class="code hl_typedef" href="group__group-surfacemesh-views.html#ga0fed807d227a1b730ca7ebcc01d897e2">Vector&lt;double, K&gt;</a> q;</div>
+<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span>        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> k = 0; k &lt; K; k++) {</div>
+<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span>            q[k] = <span class="keyword">static_cast&lt;</span><span class="keywordtype">double</span><span class="keyword">&gt;</span>(texcoords[i * K + k]);</div>
+<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span>        }</div>
+<div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span>        q[1] = 1.0 - q[1];</div>
+<div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span>        <span class="keywordflow">return</span> q;</div>
 <div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span>    }</div>
 <div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span> </div>
-<div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span>    <span class="keywordtype">int</span> texture_index(<span class="keywordtype">size_t</span> f, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> k)<span class="keyword"> const</span></div>
+<div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span>    <span class="keywordtype">int</span> vertex_index(<span class="keywordtype">size_t</span> f, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> k)<span class="keyword"> const</span></div>
 <div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span><span class="keyword">    </span>{</div>
-<div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span>        <span class="keywordflow">switch</span> (texture_element) {</div>
-<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="group__group-surfacemesh-attr.html#gga9d8ab208822bab9987e9652dda49d89aa93747573a820d43208a296f9f56bf54e">AttributeElement::Indexed</a>: <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(texture_indices[f * (K + 1) + k]);</div>
-<div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="group__group-surfacemesh-attr.html#gga9d8ab208822bab9987e9652dda49d89aad013c4439c3e09308d6b2eef2a4025ae">AttributeElement::Vertex</a>: <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(vertex_indices[f * (K + 1) + k]);</div>
-<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="group__group-surfacemesh-attr.html#gga9d8ab208822bab9987e9652dda49d89aab9925c71d0b2b9131518c35c9ebbad92">AttributeElement::Corner</a>: <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(f * (K + 1) + k);</div>
-<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span>        <span class="keywordflow">default</span>: <a class="code hl_define" href="group__group-utils-assert.html#ga5b5259c4072f1caaa696e074f2f7ea15">la_debug_assert</a>(<span class="stringliteral">&quot;Unsupported texture element type&quot;</span>); <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span>        }</div>
-<div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span>    }</div>
-<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span> </div>
-<div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span>    Simplex&lt;double, K, K&gt; simplex_texcoords(<span class="keywordtype">size_t</span> f)<span class="keyword"> const</span></div>
-<div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span><span class="keyword">    </span>{</div>
-<div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span>        Simplex&lt;double, K, K&gt; s;</div>
-<div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span>        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> k = 0; k &lt;= K; k++) {</div>
-<div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span>            s[k] = texcoord(texture_index(f, k));</div>
-<div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span>        }</div>
-<div class="line"><a id="l00353" name="l00353"></a><span class="lineno">  353</span>        <span class="keywordflow">return</span> s;</div>
-<div class="line"><a id="l00354" name="l00354"></a><span class="lineno">  354</span>    }</div>
-<div class="line"><a id="l00355" name="l00355"></a><span class="lineno">  355</span> </div>
-<div class="line"><a id="l00356" name="l00356"></a><span class="lineno">  356</span>    Simplex&lt;double, K, K&gt; vflipped_simplex_texcoords(<span class="keywordtype">size_t</span> f)<span class="keyword"> const</span></div>
-<div class="line"><a id="l00357" name="l00357"></a><span class="lineno">  357</span><span class="keyword">    </span>{</div>
-<div class="line"><a id="l00358" name="l00358"></a><span class="lineno">  358</span>        Simplex&lt;double, K, K&gt; s;</div>
-<div class="line"><a id="l00359" name="l00359"></a><span class="lineno">  359</span>        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> k = 0; k &lt;= K; k++) {</div>
-<div class="line"><a id="l00360" name="l00360"></a><span class="lineno">  360</span>            s[k] = vflipped_texcoord(texture_index(f, k));</div>
-<div class="line"><a id="l00361" name="l00361"></a><span class="lineno">  361</span>        }</div>
-<div class="line"><a id="l00362" name="l00362"></a><span class="lineno">  362</span>        <span class="keywordflow">return</span> s;</div>
-<div class="line"><a id="l00363" name="l00363"></a><span class="lineno">  363</span>    }</div>
-<div class="line"><a id="l00364" name="l00364"></a><span class="lineno">  364</span> </div>
-<div class="line"><a id="l00365" name="l00365"></a><span class="lineno">  365</span>    Simplex&lt;double, Dim, K&gt; simplex_vertices(<span class="keywordtype">size_t</span> f)<span class="keyword"> const</span></div>
-<div class="line"><a id="l00366" name="l00366"></a><span class="lineno">  366</span><span class="keyword">    </span>{</div>
-<div class="line"><a id="l00367" name="l00367"></a><span class="lineno">  367</span>        Simplex&lt;double, Dim, K&gt; s;</div>
-<div class="line"><a id="l00368" name="l00368"></a><span class="lineno">  368</span>        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> k = 0; k &lt;= K; k++) {</div>
-<div class="line"><a id="l00369" name="l00369"></a><span class="lineno">  369</span>            s[k] = vertex(vertex_index(f, k));</div>
-<div class="line"><a id="l00370" name="l00370"></a><span class="lineno">  370</span>        }</div>
-<div class="line"><a id="l00371" name="l00371"></a><span class="lineno">  371</span>        <span class="keywordflow">return</span> s;</div>
-<div class="line"><a id="l00372" name="l00372"></a><span class="lineno">  372</span>    }</div>
-<div class="line"><a id="l00373" name="l00373"></a><span class="lineno">  373</span> </div>
-<div class="line"><a id="l00374" name="l00374"></a><span class="lineno">  374</span>    SimplexIndex&lt;K&gt; facet_indices(<span class="keywordtype">size_t</span> f)<span class="keyword"> const</span></div>
-<div class="line"><a id="l00375" name="l00375"></a><span class="lineno">  375</span><span class="keyword">    </span>{</div>
-<div class="line"><a id="l00376" name="l00376"></a><span class="lineno">  376</span>        SimplexIndex&lt;K&gt; simplex;</div>
-<div class="line"><a id="l00377" name="l00377"></a><span class="lineno">  377</span>        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> k = 0; k &lt;= K; ++k) {</div>
-<div class="line"><a id="l00378" name="l00378"></a><span class="lineno">  378</span>            simplex[k] = <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(vertex_indices[f * (K + 1) + k]);</div>
-<div class="line"><a id="l00379" name="l00379"></a><span class="lineno">  379</span>        }</div>
-<div class="line"><a id="l00380" name="l00380"></a><span class="lineno">  380</span>        <span class="keywordflow">return</span> simplex;</div>
-<div class="line"><a id="l00381" name="l00381"></a><span class="lineno">  381</span>    }</div>
-<div class="line"><a id="l00382" name="l00382"></a><span class="lineno">  382</span> </div>
-<div class="line"><a id="l00383" name="l00383"></a><span class="lineno">  383</span>    <a class="code hl_class" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh&lt;Scalar, Index&gt;</a> mesh;</div>
-<div class="line"><a id="l00384" name="l00384"></a><span class="lineno">  384</span>    <a class="code hl_typedef" href="group__group-utils-misc.html#ga4afead0b9ccc53fe4fca896787595d26">span&lt;const Scalar&gt;</a> vertices;</div>
-<div class="line"><a id="l00385" name="l00385"></a><span class="lineno">  385</span>    <a class="code hl_typedef" href="group__group-utils-misc.html#ga4afead0b9ccc53fe4fca896787595d26">span&lt;Scalar&gt;</a> texcoords;</div>
-<div class="line"><a id="l00386" name="l00386"></a><span class="lineno">  386</span>    <a class="code hl_typedef" href="group__group-utils-misc.html#ga4afead0b9ccc53fe4fca896787595d26">span&lt;const Index&gt;</a> vertex_indices;</div>
-<div class="line"><a id="l00387" name="l00387"></a><span class="lineno">  387</span>    <a class="code hl_typedef" href="group__group-utils-misc.html#ga4afead0b9ccc53fe4fca896787595d26">span&lt;const Index&gt;</a> texture_indices;</div>
-<div class="line"><a id="l00388" name="l00388"></a><span class="lineno">  388</span>    <a class="code hl_enumeration" href="group__group-surfacemesh-attr.html#ga9d8ab208822bab9987e9652dda49d89a">AttributeElement</a> texture_element = <a class="code hl_enumvalue" href="group__group-surfacemesh-attr.html#gga9d8ab208822bab9987e9652dda49d89aa050889cfb2c606473596b8f70f702769">AttributeElement::Value</a>;</div>
-<div class="line"><a id="l00389" name="l00389"></a><span class="lineno">  389</span>};</div>
+<div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span>        <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(vertex_indices[f * (K + 1) + k]);</div>
+<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span>    }</div>
+<div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span> </div>
+<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span>    <span class="keywordtype">int</span> texture_index(<span class="keywordtype">size_t</span> f, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> k)<span class="keyword"> const</span></div>
+<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span><span class="keyword">    </span>{</div>
+<div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span>        <span class="keywordflow">switch</span> (texture_element) {</div>
+<div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="group__group-surfacemesh-attr.html#gga9d8ab208822bab9987e9652dda49d89aa93747573a820d43208a296f9f56bf54e">AttributeElement::Indexed</a>: <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(texture_indices[f * (K + 1) + k]);</div>
+<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="group__group-surfacemesh-attr.html#gga9d8ab208822bab9987e9652dda49d89aad013c4439c3e09308d6b2eef2a4025ae">AttributeElement::Vertex</a>: <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(vertex_indices[f * (K + 1) + k]);</div>
+<div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="group__group-surfacemesh-attr.html#gga9d8ab208822bab9987e9652dda49d89aab9925c71d0b2b9131518c35c9ebbad92">AttributeElement::Corner</a>: <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(f * (K + 1) + k);</div>
+<div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span>        <span class="keywordflow">default</span>: <a class="code hl_define" href="group__group-utils-assert.html#ga5b5259c4072f1caaa696e074f2f7ea15">la_debug_assert</a>(<span class="stringliteral">&quot;Unsupported texture element type&quot;</span>); <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span>        }</div>
+<div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span>    }</div>
+<div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span> </div>
+<div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span>    Simplex&lt;double, K, K&gt; simplex_texcoords(<span class="keywordtype">size_t</span> f)<span class="keyword"> const</span></div>
+<div class="line"><a id="l00353" name="l00353"></a><span class="lineno">  353</span><span class="keyword">    </span>{</div>
+<div class="line"><a id="l00354" name="l00354"></a><span class="lineno">  354</span>        Simplex&lt;double, K, K&gt; s;</div>
+<div class="line"><a id="l00355" name="l00355"></a><span class="lineno">  355</span>        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> k = 0; k &lt;= K; k++) {</div>
+<div class="line"><a id="l00356" name="l00356"></a><span class="lineno">  356</span>            s[k] = texcoord(texture_index(f, k));</div>
+<div class="line"><a id="l00357" name="l00357"></a><span class="lineno">  357</span>        }</div>
+<div class="line"><a id="l00358" name="l00358"></a><span class="lineno">  358</span>        <span class="keywordflow">return</span> s;</div>
+<div class="line"><a id="l00359" name="l00359"></a><span class="lineno">  359</span>    }</div>
+<div class="line"><a id="l00360" name="l00360"></a><span class="lineno">  360</span> </div>
+<div class="line"><a id="l00361" name="l00361"></a><span class="lineno">  361</span>    Simplex&lt;double, K, K&gt; vflipped_simplex_texcoords(<span class="keywordtype">size_t</span> f)<span class="keyword"> const</span></div>
+<div class="line"><a id="l00362" name="l00362"></a><span class="lineno">  362</span><span class="keyword">    </span>{</div>
+<div class="line"><a id="l00363" name="l00363"></a><span class="lineno">  363</span>        Simplex&lt;double, K, K&gt; s;</div>
+<div class="line"><a id="l00364" name="l00364"></a><span class="lineno">  364</span>        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> k = 0; k &lt;= K; k++) {</div>
+<div class="line"><a id="l00365" name="l00365"></a><span class="lineno">  365</span>            s[k] = vflipped_texcoord(texture_index(f, k));</div>
+<div class="line"><a id="l00366" name="l00366"></a><span class="lineno">  366</span>        }</div>
+<div class="line"><a id="l00367" name="l00367"></a><span class="lineno">  367</span>        <span class="keywordflow">return</span> s;</div>
+<div class="line"><a id="l00368" name="l00368"></a><span class="lineno">  368</span>    }</div>
+<div class="line"><a id="l00369" name="l00369"></a><span class="lineno">  369</span> </div>
+<div class="line"><a id="l00370" name="l00370"></a><span class="lineno">  370</span>    Simplex&lt;double, Dim, K&gt; simplex_vertices(<span class="keywordtype">size_t</span> f)<span class="keyword"> const</span></div>
+<div class="line"><a id="l00371" name="l00371"></a><span class="lineno">  371</span><span class="keyword">    </span>{</div>
+<div class="line"><a id="l00372" name="l00372"></a><span class="lineno">  372</span>        Simplex&lt;double, Dim, K&gt; s;</div>
+<div class="line"><a id="l00373" name="l00373"></a><span class="lineno">  373</span>        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> k = 0; k &lt;= K; k++) {</div>
+<div class="line"><a id="l00374" name="l00374"></a><span class="lineno">  374</span>            s[k] = vertex(vertex_index(f, k));</div>
+<div class="line"><a id="l00375" name="l00375"></a><span class="lineno">  375</span>        }</div>
+<div class="line"><a id="l00376" name="l00376"></a><span class="lineno">  376</span>        <span class="keywordflow">return</span> s;</div>
+<div class="line"><a id="l00377" name="l00377"></a><span class="lineno">  377</span>    }</div>
+<div class="line"><a id="l00378" name="l00378"></a><span class="lineno">  378</span> </div>
+<div class="line"><a id="l00379" name="l00379"></a><span class="lineno">  379</span>    SimplexIndex&lt;K&gt; facet_indices(<span class="keywordtype">size_t</span> f)<span class="keyword"> const</span></div>
+<div class="line"><a id="l00380" name="l00380"></a><span class="lineno">  380</span><span class="keyword">    </span>{</div>
+<div class="line"><a id="l00381" name="l00381"></a><span class="lineno">  381</span>        SimplexIndex&lt;K&gt; simplex;</div>
+<div class="line"><a id="l00382" name="l00382"></a><span class="lineno">  382</span>        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> k = 0; k &lt;= K; ++k) {</div>
+<div class="line"><a id="l00383" name="l00383"></a><span class="lineno">  383</span>            simplex[k] = <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(vertex_indices[f * (K + 1) + k]);</div>
+<div class="line"><a id="l00384" name="l00384"></a><span class="lineno">  384</span>        }</div>
+<div class="line"><a id="l00385" name="l00385"></a><span class="lineno">  385</span>        <span class="keywordflow">return</span> simplex;</div>
+<div class="line"><a id="l00386" name="l00386"></a><span class="lineno">  386</span>    }</div>
+<div class="line"><a id="l00387" name="l00387"></a><span class="lineno">  387</span> </div>
+<div class="line"><a id="l00388" name="l00388"></a><span class="lineno">  388</span>    <a class="code hl_class" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh&lt;Scalar, Index&gt;</a> mesh;</div>
+<div class="line"><a id="l00389" name="l00389"></a><span class="lineno">  389</span>    <a class="code hl_typedef" href="group__group-utils-misc.html#ga4afead0b9ccc53fe4fca896787595d26">span&lt;const Scalar&gt;</a> vertices;</div>
+<div class="line"><a id="l00390" name="l00390"></a><span class="lineno">  390</span>    <a class="code hl_typedef" href="group__group-utils-misc.html#ga4afead0b9ccc53fe4fca896787595d26">span&lt;Scalar&gt;</a> texcoords;</div>
+<div class="line"><a id="l00391" name="l00391"></a><span class="lineno">  391</span>    <a class="code hl_typedef" href="group__group-utils-misc.html#ga4afead0b9ccc53fe4fca896787595d26">span&lt;const Index&gt;</a> vertex_indices;</div>
+<div class="line"><a id="l00392" name="l00392"></a><span class="lineno">  392</span>    <a class="code hl_typedef" href="group__group-utils-misc.html#ga4afead0b9ccc53fe4fca896787595d26">span&lt;const Index&gt;</a> texture_indices;</div>
+<div class="line"><a id="l00393" name="l00393"></a><span class="lineno">  393</span>    <a class="code hl_enumeration" href="group__group-surfacemesh-attr.html#ga9d8ab208822bab9987e9652dda49d89a">AttributeElement</a> texture_element = <a class="code hl_enumvalue" href="group__group-surfacemesh-attr.html#gga9d8ab208822bab9987e9652dda49d89aa050889cfb2c606473596b8f70f702769">AttributeElement::Value</a>;</div>
+<div class="line"><a id="l00394" name="l00394"></a><span class="lineno">  394</span>};</div>
 </div>
-<div class="line"><a id="l00390" name="l00390"></a><span class="lineno">  390</span> </div>
-<div class="line"><a id="l00391" name="l00391"></a><span class="lineno">  391</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> Scalar, <span class="keyword">typename</span> Index&gt;</div>
-<div class="line"><a id="l00392" name="l00392"></a><span class="lineno">  392</span><a class="code hl_struct" href="structlagrange_1_1texproc_1_1mesh__utils_1_1_mesh_wrapper.html">MeshWrapper&lt;Scalar, Index&gt;</a> create_mesh_wrapper(</div>
-<div class="line"><a id="l00393" name="l00393"></a><span class="lineno">  393</span>    <span class="keyword">const</span> <a class="code hl_class" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh&lt;Scalar, Index&gt;</a>&amp; mesh_in,</div>
-<div class="line"><a id="l00394" name="l00394"></a><span class="lineno">  394</span>    RequiresIndexedTexcoords requires_indexed_texcoords,</div>
-<div class="line"><a id="l00395" name="l00395"></a><span class="lineno">  395</span>    CheckFlippedUV check_flipped_uv)</div>
-<div class="line"><a id="l00396" name="l00396"></a><span class="lineno">  396</span>{</div>
-<div class="line"><a id="l00397" name="l00397"></a><span class="lineno">  397</span>    <a class="code hl_struct" href="structlagrange_1_1texproc_1_1mesh__utils_1_1_mesh_wrapper.html">MeshWrapper</a> wrapper(mesh_in);</div>
-<div class="line"><a id="l00398" name="l00398"></a><span class="lineno">  398</span>    <a class="code hl_class" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh&lt;Scalar, Index&gt;</a>&amp; _mesh = wrapper.mesh;</div>
-<div class="line"><a id="l00399" name="l00399"></a><span class="lineno">  399</span> </div>
-<div class="line"><a id="l00400" name="l00400"></a><span class="lineno">  400</span>    <a class="code hl_function" href="group__group-surfacemesh-utils.html#ga8842b75f11402e01405aaa861a8cbb2c">triangulate_polygonal_facets</a>(_mesh);</div>
-<div class="line"><a id="l00401" name="l00401"></a><span class="lineno">  401</span> </div>
-<div class="line"><a id="l00402" name="l00402"></a><span class="lineno">  402</span>    <span class="comment">// Get the texcoord id (and set the texcoords if they weren&#39;t already)</span></div>
-<div class="line"><a id="l00403" name="l00403"></a><span class="lineno">  403</span>    <a class="code hl_typedef" href="group__group-surfacemesh-attr.html#ga4d115376c2c766084ef808c837348fc3">AttributeId</a> texcoord_id;</div>
+<div class="line"><a id="l00395" name="l00395"></a><span class="lineno">  395</span> </div>
+<div class="line"><a id="l00396" name="l00396"></a><span class="lineno">  396</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> Scalar, <span class="keyword">typename</span> Index&gt;</div>
+<div class="line"><a id="l00397" name="l00397"></a><span class="lineno">  397</span><a class="code hl_struct" href="structlagrange_1_1texproc_1_1mesh__utils_1_1_mesh_wrapper.html">MeshWrapper&lt;Scalar, Index&gt;</a> create_mesh_wrapper(</div>
+<div class="line"><a id="l00398" name="l00398"></a><span class="lineno">  398</span>    <span class="keyword">const</span> <a class="code hl_class" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh&lt;Scalar, Index&gt;</a>&amp; mesh_in,</div>
+<div class="line"><a id="l00399" name="l00399"></a><span class="lineno">  399</span>    RequiresIndexedTexcoords requires_indexed_texcoords,</div>
+<div class="line"><a id="l00400" name="l00400"></a><span class="lineno">  400</span>    CheckFlippedUV check_flipped_uv)</div>
+<div class="line"><a id="l00401" name="l00401"></a><span class="lineno">  401</span>{</div>
+<div class="line"><a id="l00402" name="l00402"></a><span class="lineno">  402</span>    <a class="code hl_struct" href="structlagrange_1_1texproc_1_1mesh__utils_1_1_mesh_wrapper.html">MeshWrapper</a> wrapper(mesh_in);</div>
+<div class="line"><a id="l00403" name="l00403"></a><span class="lineno">  403</span>    <a class="code hl_class" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh&lt;Scalar, Index&gt;</a>&amp; _mesh = wrapper.mesh;</div>
 <div class="line"><a id="l00404" name="l00404"></a><span class="lineno">  404</span> </div>
-<div class="line"><a id="l00405" name="l00405"></a><span class="lineno">  405</span>    <span class="comment">// If the mesh comes with UVs</span></div>
-<div class="line"><a id="l00406" name="l00406"></a><span class="lineno">  406</span>    <span class="keywordflow">if</span> (<span class="keyword">auto</span> res = <a class="code hl_function" href="group__group-surfacemesh-utils.html#ga873bcef943334f351e11bd312d105385">find_matching_attribute</a>(_mesh, <a class="code hl_enumvalue" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45adeaa2adbeb26802ae61609c3f3642d82">AttributeUsage::UV</a>)) {</div>
-<div class="line"><a id="l00407" name="l00407"></a><span class="lineno">  407</span>        texcoord_id = res.value();</div>
-<div class="line"><a id="l00408" name="l00408"></a><span class="lineno">  408</span>    } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00409" name="l00409"></a><span class="lineno">  409</span>        <a class="code hl_define" href="group__group-utils-assert.html#ga1ccafcb14523a1aae57dcac3c3f32ecd">la_runtime_assert</a>(<span class="keyword">false</span>, <span class="stringliteral">&quot;Requires uv coordinates.&quot;</span>);</div>
-<div class="line"><a id="l00410" name="l00410"></a><span class="lineno">  410</span>    }</div>
-<div class="line"><a id="l00411" name="l00411"></a><span class="lineno">  411</span>    <span class="comment">// Make sure the UV coordinate type is the same as that of the vertices</span></div>
-<div class="line"><a id="l00412" name="l00412"></a><span class="lineno">  412</span>    <span class="keywordflow">if</span> (!_mesh.template is_attribute_type&lt;Scalar&gt;(texcoord_id)) {</div>
-<div class="line"><a id="l00413" name="l00413"></a><span class="lineno">  413</span>        <a class="code hl_function" href="group__group-logger.html#ga84167f554a5d7594c0ba4ae760f31599">logger</a>().warn(</div>
-<div class="line"><a id="l00414" name="l00414"></a><span class="lineno">  414</span>            <span class="stringliteral">&quot;Input uv coordinates do not have the same scalar type as the input points. Casting &quot;</span></div>
-<div class="line"><a id="l00415" name="l00415"></a><span class="lineno">  415</span>            <span class="stringliteral">&quot;attribute.&quot;</span>);</div>
-<div class="line"><a id="l00416" name="l00416"></a><span class="lineno">  416</span>        texcoord_id = <a class="code hl_function" href="group__group-surfacemesh-utils.html#ga12f4ef03251b7be96fe1c67e16649ea5">cast_attribute_in_place&lt;Scalar&gt;</a>(_mesh, texcoord_id);</div>
-<div class="line"><a id="l00417" name="l00417"></a><span class="lineno">  417</span>    }</div>
-<div class="line"><a id="l00418" name="l00418"></a><span class="lineno">  418</span> </div>
-<div class="line"><a id="l00419" name="l00419"></a><span class="lineno">  419</span>    <span class="comment">// Make sure the UV coordinates are indexed</span></div>
-<div class="line"><a id="l00420" name="l00420"></a><span class="lineno">  420</span>    <span class="keywordflow">if</span> (requires_indexed_texcoords == RequiresIndexedTexcoords::Yes &amp;&amp;</div>
-<div class="line"><a id="l00421" name="l00421"></a><span class="lineno">  421</span>        _mesh.<a class="code hl_function" href="classlagrange_1_1_surface_mesh.html#a70acd5189ef3b33e3e272a16215a6ed1">get_attribute_base</a>(texcoord_id).<a class="code hl_function" href="classlagrange_1_1_attribute_base.html#a67bf9f71528ce0d583864bf0743fc49a">get_element_type</a>() != <a class="code hl_enumvalue" href="group__group-surfacemesh-attr.html#gga9d8ab208822bab9987e9652dda49d89aa93747573a820d43208a296f9f56bf54e">AttributeElement::Indexed</a>) {</div>
-<div class="line"><a id="l00422" name="l00422"></a><span class="lineno">  422</span>        <a class="code hl_function" href="group__group-logger.html#ga84167f554a5d7594c0ba4ae760f31599">logger</a>().warn(<span class="stringliteral">&quot;UV coordinates are not indexed. Welding.&quot;</span>);</div>
-<div class="line"><a id="l00423" name="l00423"></a><span class="lineno">  423</span>        texcoord_id = <a class="code hl_function" href="group__group-surfacemesh-attr-utils.html#gacd6500c173df1a5bc53e2c9b32e08309">map_attribute_in_place</a>(_mesh, texcoord_id, <a class="code hl_enumvalue" href="group__group-surfacemesh-attr.html#gga9d8ab208822bab9987e9652dda49d89aa93747573a820d43208a296f9f56bf54e">AttributeElement::Indexed</a>);</div>
-<div class="line"><a id="l00424" name="l00424"></a><span class="lineno">  424</span>        weld_indexed_attribute(_mesh, texcoord_id);</div>
-<div class="line"><a id="l00425" name="l00425"></a><span class="lineno">  425</span>    }</div>
-<div class="line"><a id="l00426" name="l00426"></a><span class="lineno">  426</span> </div>
-<div class="line"><a id="l00427" name="l00427"></a><span class="lineno">  427</span>    <span class="comment">// Make sure that the number of corners is equal to (K+1) time sthe number of simplices</span></div>
-<div class="line"><a id="l00428" name="l00428"></a><span class="lineno">  428</span>    <a class="code hl_define" href="group__group-utils-assert.html#ga1ccafcb14523a1aae57dcac3c3f32ecd">la_runtime_assert</a>(</div>
-<div class="line"><a id="l00429" name="l00429"></a><span class="lineno">  429</span>        _mesh.<a class="code hl_function" href="classlagrange_1_1_surface_mesh.html#afe4c8dc375784713f55d92df922f9f05">get_num_corners</a>() == _mesh.<a class="code hl_function" href="classlagrange_1_1_surface_mesh.html#abcf8a67369f4ebda946306ae39673d4a">get_num_facets</a>() * (K + 1),</div>
-<div class="line"><a id="l00430" name="l00430"></a><span class="lineno">  430</span>        <span class="stringliteral">&quot;Numer of corners doesn&#39;t match the number of simplices&quot;</span>);</div>
+<div class="line"><a id="l00405" name="l00405"></a><span class="lineno">  405</span>    <a class="code hl_function" href="group__group-surfacemesh-utils.html#ga8842b75f11402e01405aaa861a8cbb2c">triangulate_polygonal_facets</a>(_mesh);</div>
+<div class="line"><a id="l00406" name="l00406"></a><span class="lineno">  406</span> </div>
+<div class="line"><a id="l00407" name="l00407"></a><span class="lineno">  407</span>    <span class="comment">// Get the texcoord id (and set the texcoords if they weren&#39;t already)</span></div>
+<div class="line"><a id="l00408" name="l00408"></a><span class="lineno">  408</span>    <a class="code hl_typedef" href="group__group-surfacemesh-attr.html#ga4d115376c2c766084ef808c837348fc3">AttributeId</a> texcoord_id;</div>
+<div class="line"><a id="l00409" name="l00409"></a><span class="lineno">  409</span> </div>
+<div class="line"><a id="l00410" name="l00410"></a><span class="lineno">  410</span>    <span class="comment">// If the mesh comes with UVs</span></div>
+<div class="line"><a id="l00411" name="l00411"></a><span class="lineno">  411</span>    <span class="keywordflow">if</span> (<span class="keyword">auto</span> res = <a class="code hl_function" href="group__group-surfacemesh-utils.html#ga873bcef943334f351e11bd312d105385">find_matching_attribute</a>(_mesh, <a class="code hl_enumvalue" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45adeaa2adbeb26802ae61609c3f3642d82">AttributeUsage::UV</a>)) {</div>
+<div class="line"><a id="l00412" name="l00412"></a><span class="lineno">  412</span>        texcoord_id = res.value();</div>
+<div class="line"><a id="l00413" name="l00413"></a><span class="lineno">  413</span>    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00414" name="l00414"></a><span class="lineno">  414</span>        <a class="code hl_define" href="group__group-utils-assert.html#ga1ccafcb14523a1aae57dcac3c3f32ecd">la_runtime_assert</a>(<span class="keyword">false</span>, <span class="stringliteral">&quot;Requires uv coordinates.&quot;</span>);</div>
+<div class="line"><a id="l00415" name="l00415"></a><span class="lineno">  415</span>    }</div>
+<div class="line"><a id="l00416" name="l00416"></a><span class="lineno">  416</span>    <span class="comment">// Make sure the UV coordinate type is the same as that of the vertices</span></div>
+<div class="line"><a id="l00417" name="l00417"></a><span class="lineno">  417</span>    <span class="keywordflow">if</span> (!_mesh.template is_attribute_type&lt;Scalar&gt;(texcoord_id)) {</div>
+<div class="line"><a id="l00418" name="l00418"></a><span class="lineno">  418</span>        <a class="code hl_function" href="group__group-logger.html#ga84167f554a5d7594c0ba4ae760f31599">logger</a>().warn(</div>
+<div class="line"><a id="l00419" name="l00419"></a><span class="lineno">  419</span>            <span class="stringliteral">&quot;Input uv coordinates do not have the same scalar type as the input points. Casting &quot;</span></div>
+<div class="line"><a id="l00420" name="l00420"></a><span class="lineno">  420</span>            <span class="stringliteral">&quot;attribute.&quot;</span>);</div>
+<div class="line"><a id="l00421" name="l00421"></a><span class="lineno">  421</span>        texcoord_id = <a class="code hl_function" href="group__group-surfacemesh-utils.html#ga12f4ef03251b7be96fe1c67e16649ea5">cast_attribute_in_place&lt;Scalar&gt;</a>(_mesh, texcoord_id);</div>
+<div class="line"><a id="l00422" name="l00422"></a><span class="lineno">  422</span>    }</div>
+<div class="line"><a id="l00423" name="l00423"></a><span class="lineno">  423</span> </div>
+<div class="line"><a id="l00424" name="l00424"></a><span class="lineno">  424</span>    <span class="comment">// Make sure the UV coordinates are indexed</span></div>
+<div class="line"><a id="l00425" name="l00425"></a><span class="lineno">  425</span>    <span class="keywordflow">if</span> (requires_indexed_texcoords == RequiresIndexedTexcoords::Yes &amp;&amp;</div>
+<div class="line"><a id="l00426" name="l00426"></a><span class="lineno">  426</span>        _mesh.<a class="code hl_function" href="classlagrange_1_1_surface_mesh.html#a70acd5189ef3b33e3e272a16215a6ed1">get_attribute_base</a>(texcoord_id).<a class="code hl_function" href="classlagrange_1_1_attribute_base.html#a67bf9f71528ce0d583864bf0743fc49a">get_element_type</a>() != <a class="code hl_enumvalue" href="group__group-surfacemesh-attr.html#gga9d8ab208822bab9987e9652dda49d89aa93747573a820d43208a296f9f56bf54e">AttributeElement::Indexed</a>) {</div>
+<div class="line"><a id="l00427" name="l00427"></a><span class="lineno">  427</span>        <a class="code hl_function" href="group__group-logger.html#ga84167f554a5d7594c0ba4ae760f31599">logger</a>().warn(<span class="stringliteral">&quot;UV coordinates are not indexed. Welding.&quot;</span>);</div>
+<div class="line"><a id="l00428" name="l00428"></a><span class="lineno">  428</span>        texcoord_id = <a class="code hl_function" href="group__group-surfacemesh-attr-utils.html#gacd6500c173df1a5bc53e2c9b32e08309">map_attribute_in_place</a>(_mesh, texcoord_id, <a class="code hl_enumvalue" href="group__group-surfacemesh-attr.html#gga9d8ab208822bab9987e9652dda49d89aa93747573a820d43208a296f9f56bf54e">AttributeElement::Indexed</a>);</div>
+<div class="line"><a id="l00429" name="l00429"></a><span class="lineno">  429</span>        weld_indexed_attribute(_mesh, texcoord_id);</div>
+<div class="line"><a id="l00430" name="l00430"></a><span class="lineno">  430</span>    }</div>
 <div class="line"><a id="l00431" name="l00431"></a><span class="lineno">  431</span> </div>
-<div class="line"><a id="l00432" name="l00432"></a><span class="lineno">  432</span>    <span class="keywordflow">if</span> (check_flipped_uv == CheckFlippedUV::Yes) {</div>
-<div class="line"><a id="l00433" name="l00433"></a><span class="lineno">  433</span>        check_for_flipped_uv(_mesh, texcoord_id);</div>
-<div class="line"><a id="l00434" name="l00434"></a><span class="lineno">  434</span>    }</div>
-<div class="line"><a id="l00435" name="l00435"></a><span class="lineno">  435</span> </div>
-<div class="line"><a id="l00436" name="l00436"></a><span class="lineno">  436</span>    wrapper.vertices = _mesh.<a class="code hl_function" href="classlagrange_1_1_surface_mesh.html#aee3a373ed58ff8f9908b54ff36a0921b">get_vertex_to_position</a>().get_all();</div>
-<div class="line"><a id="l00437" name="l00437"></a><span class="lineno">  437</span>    wrapper.vertex_indices = _mesh.<a class="code hl_function" href="classlagrange_1_1_surface_mesh.html#a8a4de76f0e87a0509babc2bd81c0abaf">get_corner_to_vertex</a>().<a class="code hl_function" href="classlagrange_1_1_attribute.html#a0689838581e50aaa8c31e29063fcd451">get_all</a>();</div>
-<div class="line"><a id="l00438" name="l00438"></a><span class="lineno">  438</span>    <span class="keywordflow">if</span> (_mesh.<a class="code hl_function" href="classlagrange_1_1_surface_mesh.html#a8957ea4b91cd0a8462521eb27ecf13ee">is_attribute_indexed</a>(texcoord_id)) {</div>
-<div class="line"><a id="l00439" name="l00439"></a><span class="lineno">  439</span>        <span class="keyword">auto</span>&amp; uv_attr = _mesh.template ref_indexed_attribute&lt;Scalar&gt;(texcoord_id);</div>
-<div class="line"><a id="l00440" name="l00440"></a><span class="lineno">  440</span>        wrapper.texcoords = uv_attr.values().ref_all();</div>
-<div class="line"><a id="l00441" name="l00441"></a><span class="lineno">  441</span>        wrapper.texture_indices = uv_attr.indices().get_all();</div>
-<div class="line"><a id="l00442" name="l00442"></a><span class="lineno">  442</span>        wrapper.texture_element = <a class="code hl_enumvalue" href="group__group-surfacemesh-attr.html#gga9d8ab208822bab9987e9652dda49d89aa93747573a820d43208a296f9f56bf54e">AttributeElement::Indexed</a>;</div>
-<div class="line"><a id="l00443" name="l00443"></a><span class="lineno">  443</span>    } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00444" name="l00444"></a><span class="lineno">  444</span>        <span class="keyword">auto</span>&amp; uv_attr = _mesh.template ref_attribute&lt;Scalar&gt;(texcoord_id);</div>
-<div class="line"><a id="l00445" name="l00445"></a><span class="lineno">  445</span>        wrapper.texcoords = uv_attr.ref_all();</div>
-<div class="line"><a id="l00446" name="l00446"></a><span class="lineno">  446</span>        wrapper.texture_indices = {};</div>
-<div class="line"><a id="l00447" name="l00447"></a><span class="lineno">  447</span>        wrapper.texture_element = uv_attr.get_element_type();</div>
-<div class="line"><a id="l00448" name="l00448"></a><span class="lineno">  448</span>    }</div>
-<div class="line"><a id="l00449" name="l00449"></a><span class="lineno">  449</span> </div>
-<div class="line"><a id="l00450" name="l00450"></a><span class="lineno">  450</span>    <span class="keywordflow">return</span> wrapper;</div>
-<div class="line"><a id="l00451" name="l00451"></a><span class="lineno">  451</span>}</div>
-<div class="line"><a id="l00452" name="l00452"></a><span class="lineno">  452</span> </div>
-<div class="line"><a id="l00453" name="l00453"></a><span class="lineno">  453</span><span class="comment">// Pad input texture to ensure that texture coordinates fall within the rectangle defined by the</span></div>
-<div class="line"><a id="l00454" name="l00454"></a><span class="lineno">  454</span><span class="comment">// _centers_ of the corner texels.</span></div>
-<div class="line"><a id="l00455" name="l00455"></a><span class="lineno">  455</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> Scalar, <span class="keyword">typename</span> Index&gt;</div>
-<div class="line"><a id="l00456" name="l00456"></a><span class="lineno">  456</span><a class="code hl_class" href="classlagrange_1_1texproc_1_1_padding.html">Padding</a> create_padding(MeshWrapper&lt;Scalar, Index&gt;&amp; wrapper, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> width, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> height)</div>
-<div class="line"><a id="l00457" name="l00457"></a><span class="lineno">  457</span>{</div>
-<div class="line"><a id="l00458" name="l00458"></a><span class="lineno">  458</span>    <span class="keyword">static_assert</span>(<span class="keyword">sizeof</span>(std::array&lt;Scalar, 2&gt;) == 2 * <span class="keyword">sizeof</span>(<a class="code hl_enumvalue" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>));</div>
-<div class="line"><a id="l00459" name="l00459"></a><span class="lineno">  459</span>    <a class="code hl_typedef" href="group__group-utils-misc.html#ga4afead0b9ccc53fe4fca896787595d26">span&lt;std::array&lt;Scalar, 2&gt;</a>&gt; texcoords(</div>
-<div class="line"><a id="l00460" name="l00460"></a><span class="lineno">  460</span>        <span class="keyword">reinterpret_cast&lt;</span>std::array&lt;Scalar, 2&gt;*<span class="keyword">&gt;</span>(wrapper.texcoords.data()),</div>
-<div class="line"><a id="l00461" name="l00461"></a><span class="lineno">  461</span>        wrapper.num_texcoords());</div>
-<div class="line"><a id="l00462" name="l00462"></a><span class="lineno">  462</span>    <a class="code hl_class" href="classlagrange_1_1texproc_1_1_padding.html">Padding</a> padding;</div>
-<div class="line"><a id="l00463" name="l00463"></a><span class="lineno">  463</span>    padding = Padding::init&lt;Scalar&gt;(width, height, texcoords);</div>
-<div class="line"><a id="l00464" name="l00464"></a><span class="lineno">  464</span>    padding.pad(width, height, texcoords);</div>
-<div class="line"><a id="l00465" name="l00465"></a><span class="lineno">  465</span>    <span class="keywordflow">return</span> padding;</div>
-<div class="line"><a id="l00466" name="l00466"></a><span class="lineno">  466</span>}</div>
-<div class="line"><a id="l00467" name="l00467"></a><span class="lineno">  467</span> </div>
-<div class="line"><a id="l00468" name="l00468"></a><span class="lineno">  468</span>} <span class="comment">// namespace mesh_utils</span></div>
-<div class="line"><a id="l00469" name="l00469"></a><span class="lineno">  469</span> </div>
-<div class="line"><a id="l00470" name="l00470"></a><span class="lineno">  470</span>} <span class="comment">// namespace lagrange::texproc</span></div>
+<div class="line"><a id="l00432" name="l00432"></a><span class="lineno">  432</span>    <span class="comment">// Make sure that the number of corners is equal to (K+1) time sthe number of simplices</span></div>
+<div class="line"><a id="l00433" name="l00433"></a><span class="lineno">  433</span>    <a class="code hl_define" href="group__group-utils-assert.html#ga1ccafcb14523a1aae57dcac3c3f32ecd">la_runtime_assert</a>(</div>
+<div class="line"><a id="l00434" name="l00434"></a><span class="lineno">  434</span>        _mesh.<a class="code hl_function" href="classlagrange_1_1_surface_mesh.html#afe4c8dc375784713f55d92df922f9f05">get_num_corners</a>() == _mesh.<a class="code hl_function" href="classlagrange_1_1_surface_mesh.html#abcf8a67369f4ebda946306ae39673d4a">get_num_facets</a>() * (K + 1),</div>
+<div class="line"><a id="l00435" name="l00435"></a><span class="lineno">  435</span>        <span class="stringliteral">&quot;Numer of corners doesn&#39;t match the number of simplices&quot;</span>);</div>
+<div class="line"><a id="l00436" name="l00436"></a><span class="lineno">  436</span> </div>
+<div class="line"><a id="l00437" name="l00437"></a><span class="lineno">  437</span>    <span class="keywordflow">if</span> (check_flipped_uv == CheckFlippedUV::Yes) {</div>
+<div class="line"><a id="l00438" name="l00438"></a><span class="lineno">  438</span>        check_for_flipped_uv(_mesh, texcoord_id);</div>
+<div class="line"><a id="l00439" name="l00439"></a><span class="lineno">  439</span>    }</div>
+<div class="line"><a id="l00440" name="l00440"></a><span class="lineno">  440</span> </div>
+<div class="line"><a id="l00441" name="l00441"></a><span class="lineno">  441</span>    wrapper.vertices = _mesh.<a class="code hl_function" href="classlagrange_1_1_surface_mesh.html#aee3a373ed58ff8f9908b54ff36a0921b">get_vertex_to_position</a>().get_all();</div>
+<div class="line"><a id="l00442" name="l00442"></a><span class="lineno">  442</span>    wrapper.vertex_indices = _mesh.<a class="code hl_function" href="classlagrange_1_1_surface_mesh.html#a8a4de76f0e87a0509babc2bd81c0abaf">get_corner_to_vertex</a>().<a class="code hl_function" href="classlagrange_1_1_attribute.html#a0689838581e50aaa8c31e29063fcd451">get_all</a>();</div>
+<div class="line"><a id="l00443" name="l00443"></a><span class="lineno">  443</span>    <span class="keywordflow">if</span> (_mesh.<a class="code hl_function" href="classlagrange_1_1_surface_mesh.html#a8957ea4b91cd0a8462521eb27ecf13ee">is_attribute_indexed</a>(texcoord_id)) {</div>
+<div class="line"><a id="l00444" name="l00444"></a><span class="lineno">  444</span>        <span class="keyword">auto</span>&amp; uv_attr = _mesh.template ref_indexed_attribute&lt;Scalar&gt;(texcoord_id);</div>
+<div class="line"><a id="l00445" name="l00445"></a><span class="lineno">  445</span>        wrapper.texcoords = uv_attr.values().ref_all();</div>
+<div class="line"><a id="l00446" name="l00446"></a><span class="lineno">  446</span>        wrapper.texture_indices = uv_attr.indices().get_all();</div>
+<div class="line"><a id="l00447" name="l00447"></a><span class="lineno">  447</span>        wrapper.texture_element = <a class="code hl_enumvalue" href="group__group-surfacemesh-attr.html#gga9d8ab208822bab9987e9652dda49d89aa93747573a820d43208a296f9f56bf54e">AttributeElement::Indexed</a>;</div>
+<div class="line"><a id="l00448" name="l00448"></a><span class="lineno">  448</span>    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00449" name="l00449"></a><span class="lineno">  449</span>        <span class="keyword">auto</span>&amp; uv_attr = _mesh.template ref_attribute&lt;Scalar&gt;(texcoord_id);</div>
+<div class="line"><a id="l00450" name="l00450"></a><span class="lineno">  450</span>        wrapper.texcoords = uv_attr.ref_all();</div>
+<div class="line"><a id="l00451" name="l00451"></a><span class="lineno">  451</span>        wrapper.texture_indices = {};</div>
+<div class="line"><a id="l00452" name="l00452"></a><span class="lineno">  452</span>        wrapper.texture_element = uv_attr.get_element_type();</div>
+<div class="line"><a id="l00453" name="l00453"></a><span class="lineno">  453</span>    }</div>
+<div class="line"><a id="l00454" name="l00454"></a><span class="lineno">  454</span> </div>
+<div class="line"><a id="l00455" name="l00455"></a><span class="lineno">  455</span>    <span class="keywordflow">return</span> wrapper;</div>
+<div class="line"><a id="l00456" name="l00456"></a><span class="lineno">  456</span>}</div>
+<div class="line"><a id="l00457" name="l00457"></a><span class="lineno">  457</span> </div>
+<div class="line"><a id="l00458" name="l00458"></a><span class="lineno">  458</span><span class="comment">// Pad input texture to ensure that texture coordinates fall within the rectangle defined by the</span></div>
+<div class="line"><a id="l00459" name="l00459"></a><span class="lineno">  459</span><span class="comment">// _centers_ of the corner texels.</span></div>
+<div class="line"><a id="l00460" name="l00460"></a><span class="lineno">  460</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> Scalar, <span class="keyword">typename</span> Index&gt;</div>
+<div class="line"><a id="l00461" name="l00461"></a><span class="lineno">  461</span><a class="code hl_class" href="classlagrange_1_1texproc_1_1_padding.html">Padding</a> create_padding(MeshWrapper&lt;Scalar, Index&gt;&amp; wrapper, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> width, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> height)</div>
+<div class="line"><a id="l00462" name="l00462"></a><span class="lineno">  462</span>{</div>
+<div class="line"><a id="l00463" name="l00463"></a><span class="lineno">  463</span>    <span class="keyword">static_assert</span>(<span class="keyword">sizeof</span>(std::array&lt;Scalar, 2&gt;) == 2 * <span class="keyword">sizeof</span>(<a class="code hl_enumvalue" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>));</div>
+<div class="line"><a id="l00464" name="l00464"></a><span class="lineno">  464</span>    <a class="code hl_typedef" href="group__group-utils-misc.html#ga4afead0b9ccc53fe4fca896787595d26">span&lt;std::array&lt;Scalar, 2&gt;</a>&gt; texcoords(</div>
+<div class="line"><a id="l00465" name="l00465"></a><span class="lineno">  465</span>        <span class="keyword">reinterpret_cast&lt;</span>std::array&lt;Scalar, 2&gt;*<span class="keyword">&gt;</span>(wrapper.texcoords.data()),</div>
+<div class="line"><a id="l00466" name="l00466"></a><span class="lineno">  466</span>        wrapper.num_texcoords());</div>
+<div class="line"><a id="l00467" name="l00467"></a><span class="lineno">  467</span>    <a class="code hl_class" href="classlagrange_1_1texproc_1_1_padding.html">Padding</a> padding;</div>
+<div class="line"><a id="l00468" name="l00468"></a><span class="lineno">  468</span>    padding = Padding::init&lt;Scalar&gt;(width, height, texcoords);</div>
+<div class="line"><a id="l00469" name="l00469"></a><span class="lineno">  469</span>    padding.pad(width, height, texcoords);</div>
+<div class="line"><a id="l00470" name="l00470"></a><span class="lineno">  470</span>    <span class="keywordflow">return</span> padding;</div>
+<div class="line"><a id="l00471" name="l00471"></a><span class="lineno">  471</span>}</div>
+<div class="line"><a id="l00472" name="l00472"></a><span class="lineno">  472</span> </div>
+<div class="line"><a id="l00473" name="l00473"></a><span class="lineno">  473</span>} <span class="comment">// namespace mesh_utils</span></div>
+<div class="line"><a id="l00474" name="l00474"></a><span class="lineno">  474</span> </div>
+<div class="line"><a id="l00475" name="l00475"></a><span class="lineno">  475</span>} <span class="comment">// namespace lagrange::texproc</span></div>
 <div class="ttc" id="aclasslagrange_1_1_attribute_base_html_a67bf9f71528ce0d583864bf0743fc49a"><div class="ttname"><a href="classlagrange_1_1_attribute_base.html#a67bf9f71528ce0d583864bf0743fc49a">lagrange::AttributeBase::get_element_type</a></div><div class="ttdeci">AttributeElement get_element_type() const</div><div class="ttdoc">Gets the attribute element type.</div><div class="ttdef"><b>Definition</b> Attribute.h:101</div></div>
-<div class="ttc" id="aclasslagrange_1_1_attribute_html_a0689838581e50aaa8c31e29063fcd451"><div class="ttname"><a href="classlagrange_1_1_attribute.html#a0689838581e50aaa8c31e29063fcd451">lagrange::Attribute::get_all</a></div><div class="ttdeci">lagrange::span&lt; const ValueType &gt; get_all() const</div><div class="ttdoc">Returns a read-only view of the buffer spanning num elements x num channels.</div><div class="ttdef"><b>Definition</b> Attribute.cpp:512</div></div>
+<div class="ttc" id="aclasslagrange_1_1_attribute_html_a0689838581e50aaa8c31e29063fcd451"><div class="ttname"><a href="classlagrange_1_1_attribute.html#a0689838581e50aaa8c31e29063fcd451">lagrange::Attribute::get_all</a></div><div class="ttdeci">lagrange::span&lt; const ValueType &gt; get_all() const</div><div class="ttdoc">Returns a read-only view of the buffer spanning num elements x num channels.</div><div class="ttdef"><b>Definition</b> Attribute.cpp:525</div></div>
 <div class="ttc" id="aclasslagrange_1_1_exact_predicates_shewchuk_html_a80c2052a05245456fad1d39004a08a15"><div class="ttname"><a href="classlagrange_1_1_exact_predicates_shewchuk.html#a80c2052a05245456fad1d39004a08a15">lagrange::ExactPredicatesShewchuk::orient2D</a></div><div class="ttdeci">virtual short orient2D(double p1[2], double p2[2], double p3[2]) const</div><div class="ttdoc">Exact 2D orientation test.</div><div class="ttdef"><b>Definition</b> ExactPredicatesShewchuk.cpp:37</div></div>
 <div class="ttc" id="aclasslagrange_1_1_surface_mesh_html"><div class="ttname"><a href="classlagrange_1_1_surface_mesh.html">lagrange::SurfaceMesh</a></div><div class="ttdoc">A general purpose polygonal mesh class.</div><div class="ttdef"><b>Definition</b> SurfaceMesh.h:66</div></div>
 <div class="ttc" id="aclasslagrange_1_1_surface_mesh_html_a70acd5189ef3b33e3e272a16215a6ed1"><div class="ttname"><a href="classlagrange_1_1_surface_mesh.html#a70acd5189ef3b33e3e272a16215a6ed1">lagrange::SurfaceMesh::get_attribute_base</a></div><div class="ttdeci">const AttributeBase &amp; get_attribute_base(std::string_view name) const</div><div class="ttdoc">Gets a read-only reference to the base class of attribute given its name.</div><div class="ttdef"><b>Definition</b> SurfaceMesh.cpp:1277</div></div>
@@ -609,7 +614,7 @@ $(function(){initNavTree('mesh__utils_8h_source.html',''); initResizable(true); 
 <div class="ttc" id="aclasslagrange_1_1_surface_mesh_html_afe4c8dc375784713f55d92df922f9f05"><div class="ttname"><a href="classlagrange_1_1_surface_mesh.html#afe4c8dc375784713f55d92df922f9f05">lagrange::SurfaceMesh::get_num_corners</a></div><div class="ttdeci">Index get_num_corners() const</div><div class="ttdoc">Retrieves the number of corners.</div><div class="ttdef"><b>Definition</b> SurfaceMesh.h:694</div></div>
 <div class="ttc" id="aclasslagrange_1_1texproc_1_1_padding_html"><div class="ttname"><a href="classlagrange_1_1texproc_1_1_padding.html">lagrange::texproc::Padding</a></div><div class="ttdef"><b>Definition</b> Padding.h:57</div></div>
 <div class="ttc" id="agroup__group-logger_html_ga84167f554a5d7594c0ba4ae760f31599"><div class="ttname"><a href="group__group-logger.html#ga84167f554a5d7594c0ba4ae760f31599">lagrange::logger</a></div><div class="ttdeci">LA_CORE_API spdlog::logger &amp; logger()</div><div class="ttdoc">Retrieves the current logger.</div><div class="ttdef"><b>Definition</b> Logger.cpp:40</div></div>
-<div class="ttc" id="agroup__group-surfacemesh-attr-utils_html_gacd6500c173df1a5bc53e2c9b32e08309"><div class="ttname"><a href="group__group-surfacemesh-attr-utils.html#gacd6500c173df1a5bc53e2c9b32e08309">lagrange::map_attribute_in_place</a></div><div class="ttdeci">AttributeId map_attribute_in_place(SurfaceMesh&lt; Scalar, Index &gt; &amp;mesh, AttributeId id, AttributeElement new_element)</div><div class="ttdoc">Map attribute values to a different element type.</div><div class="ttdef"><b>Definition</b> map_attribute.cpp:270</div></div>
+<div class="ttc" id="agroup__group-surfacemesh-attr-utils_html_gacd6500c173df1a5bc53e2c9b32e08309"><div class="ttname"><a href="group__group-surfacemesh-attr-utils.html#gacd6500c173df1a5bc53e2c9b32e08309">lagrange::map_attribute_in_place</a></div><div class="ttdeci">AttributeId map_attribute_in_place(SurfaceMesh&lt; Scalar, Index &gt; &amp;mesh, AttributeId id, AttributeElement new_element)</div><div class="ttdoc">Map attribute values to a different element type.</div><div class="ttdef"><b>Definition</b> map_attribute.cpp:291</div></div>
 <div class="ttc" id="agroup__group-surfacemesh-attr_html_ga4d115376c2c766084ef808c837348fc3"><div class="ttname"><a href="group__group-surfacemesh-attr.html#ga4d115376c2c766084ef808c837348fc3">lagrange::AttributeId</a></div><div class="ttdeci">uint32_t AttributeId</div><div class="ttdoc">Identified to be used to access an attribute.</div><div class="ttdef"><b>Definition</b> AttributeFwd.h:73</div></div>
 <div class="ttc" id="agroup__group-surfacemesh-attr_html_ga9d8ab208822bab9987e9652dda49d89a"><div class="ttname"><a href="group__group-surfacemesh-attr.html#ga9d8ab208822bab9987e9652dda49d89a">lagrange::AttributeElement</a></div><div class="ttdeci">AttributeElement</div><div class="ttdoc">Type of element to which the attribute is attached.</div><div class="ttdef"><b>Definition</b> AttributeFwd.h:26</div></div>
 <div class="ttc" id="agroup__group-surfacemesh-attr_html_gga5a2f28c8b9e2f8fce6e70b2418c46e45adeaa2adbeb26802ae61609c3f3642d82"><div class="ttname"><a href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45adeaa2adbeb26802ae61609c3f3642d82">lagrange::AttributeUsage::UV</a></div><div class="ttdeci">@ UV</div><div class="ttdoc">Mesh attribute must have exactly 2 channels.</div><div class="ttdef"><b>Definition</b> AttributeFwd.h:62</div></div>
@@ -632,14 +637,14 @@ $(function(){initNavTree('mesh__utils_8h_source.html',''); initResizable(true); 
 <div class="ttc" id="agroup__group-utils-misc_html_ga41568d17fc48cea4a31db0e40cd93cf8"><div class="ttname"><a href="group__group-utils-misc.html#ga41568d17fc48cea4a31db0e40cd93cf8">lagrange::range</a></div><div class="ttdeci">internal::Range&lt; Index &gt; range(Index end)</div><div class="ttdoc">Returns an iterable object representing the range [0, end).</div><div class="ttdef"><b>Definition</b> range.h:176</div></div>
 <div class="ttc" id="agroup__group-utils-misc_html_ga4afead0b9ccc53fe4fca896787595d26"><div class="ttname"><a href="group__group-utils-misc.html#ga4afead0b9ccc53fe4fca896787595d26">lagrange::span</a></div><div class="ttdeci">::nonstd::span&lt; T, Extent &gt; span</div><div class="ttdoc">A bounds-safe view for sequences of objects.</div><div class="ttdef"><b>Definition</b> span.h:27</div></div>
 <div class="ttc" id="anamespacelagrange_html_af15e960c877b7516935402a9080b7e1aa902b0d55fddef6f8d651fe1035b7d4bd"><div class="ttname"><a href="namespacelagrange.html#af15e960c877b7516935402a9080b7e1aa902b0d55fddef6f8d651fe1035b7d4bd">lagrange::MappingPolicy::Error</a></div><div class="ttdeci">@ Error</div><div class="ttdoc">Throw an error if collision is detected.</div><div class="ttdef"><b>Definition</b> MappingPolicy.h:24</div></div>
-<div class="ttc" id="astructlagrange_1_1texproc_1_1mesh__utils_1_1_mesh_wrapper_html"><div class="ttname"><a href="structlagrange_1_1texproc_1_1mesh__utils_1_1_mesh_wrapper.html">lagrange::texproc::mesh_utils::MeshWrapper</a></div><div class="ttdef"><b>Definition</b> mesh_utils.h:295</div></div>
+<div class="ttc" id="astructlagrange_1_1texproc_1_1mesh__utils_1_1_mesh_wrapper_html"><div class="ttname"><a href="structlagrange_1_1texproc_1_1mesh__utils_1_1_mesh_wrapper.html">lagrange::texproc::mesh_utils::MeshWrapper</a></div><div class="ttdef"><b>Definition</b> mesh_utils.h:300</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>mesh_utils.h</b></li>
-    <li class="footer">Generated on Wed Feb 11 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+    <li class="footer">Generated on Tue Mar 10 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>
 </body>

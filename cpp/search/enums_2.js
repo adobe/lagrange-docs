@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['defaultcamerascheme_0',['DefaultCameraScheme',['../namespacelagrange_1_1ui.html#acefab9cca2101dc1e52735a19afb7c39',1,'lagrange::ui']]],
-  ['dir_1',['Dir',['../classlagrange_1_1ui_1_1_camera.html#a7cf6e8c5a5bc5e7b2afef3647870b1c4',1,'lagrange::ui::Camera']]],
-  ['distortionmetric_2',['DistortionMetric',['../group__group-surfacemesh-utils.html#gadab1480827f4522cbf1f9e1d4c28db91',1,'lagrange']]]
+  ['castmode_0',['CastMode',['../namespacelagrange_1_1raycasting.html#a4cacb45d286bda3567a5eedf0ea57c9a',1,'lagrange::raycasting']]],
+  ['color_5fspace_1',['color_space',['../classlagrange_1_1image_1_1_raw_input_image.html#a609c1f2c8828267fe31da1947b988a36',1,'lagrange::image::RawInputImage']]],
+  ['connectivitytype_2',['ConnectivityType',['../namespacelagrange.html#a312f57b0318728667933d7254778058b',1,'lagrange']]],
+  ['cornermappingtype_3',['CornerMappingType',['../classlagrange_1_1_surface_mesh.html#aee50b76f699900fa6e88a87a5d0940c9',1,'lagrange::SurfaceMesh']]]
 ];

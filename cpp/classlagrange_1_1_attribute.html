@@ -257,6 +257,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>clear</b> ()</td></tr
 <tr class="memitem:a0689838581e50aaa8c31e29063fcd451" id="r_a0689838581e50aaa8c31e29063fcd451"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__group-utils-misc.html#ga4afead0b9ccc53fe4fca896787595d26">lagrange::span</a>&lt; const <a class="el" href="#a48f6eee0351a3cea4b2c4fb25705241a">ValueType</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0689838581e50aaa8c31e29063fcd451">get_all</a> () const</td></tr>
 <tr class="memdesc:a0689838581e50aaa8c31e29063fcd451"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a read-only view of the buffer spanning num elements x num channels.  <br /></td></tr>
 <tr class="separator:a0689838581e50aaa8c31e29063fcd451"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb63d546098ae48706553a3bc15e7fb4" id="r_abb63d546098ae48706553a3bc15e7fb4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__group-utils-misc.html#ga4afead0b9ccc53fe4fca896787595d26">lagrange::span</a>&lt; const <a class="el" href="#a48f6eee0351a3cea4b2c4fb25705241a">ValueType</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abb63d546098ae48706553a3bc15e7fb4">get_all_with_padding</a> () const</td></tr>
+<tr class="memdesc:abb63d546098ae48706553a3bc15e7fb4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a read-only view of the full allocated buffer, including any padding entries added via reserve_entries().  <br /></td></tr>
+<tr class="separator:abb63d546098ae48706553a3bc15e7fb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad58d646f33a647ce9abbc4f3535da646" id="r_ad58d646f33a647ce9abbc4f3535da646"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__group-utils-misc.html#ga4afead0b9ccc53fe4fca896787595d26">lagrange::span</a>&lt; <a class="el" href="#a48f6eee0351a3cea4b2c4fb25705241a">ValueType</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad58d646f33a647ce9abbc4f3535da646">ref_all</a> ()</td></tr>
 <tr class="memdesc:ad58d646f33a647ce9abbc4f3535da646"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a writable view of the buffer spanning num elements x num channels.  <br /></td></tr>
 <tr class="separator:ad58d646f33a647ce9abbc4f3535da646"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1709,6 +1712,29 @@ template&lt;typename <a class="el" href="#a48f6eee0351a3cea4b2c4fb25705241a">Val
 
 </div>
 </div>
+<a id="abb63d546098ae48706553a3bc15e7fb4" name="abb63d546098ae48706553a3bc15e7fb4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb63d546098ae48706553a3bc15e7fb4">&#9670;&#160;</a></span>get_all_with_padding()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename <a class="el" href="#a48f6eee0351a3cea4b2c4fb25705241a">ValueType</a>&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__group-utils-misc.html#ga4afead0b9ccc53fe4fca896787595d26">lagrange::span</a>&lt; const <a class="el" href="#a48f6eee0351a3cea4b2c4fb25705241a">ValueType</a> &gt; get_all_with_padding </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a read-only view of the full allocated buffer, including any padding entries added via reserve_entries(). </p>
+<p>For external attributes, this is equivalent to get_all().</p>
+<dl class="section return"><dt>Returns</dt><dd>A read-only view of the full attribute buffer including padding. </dd></dl>
+
+</div>
+</div>
 <a id="ad58d646f33a647ce9abbc4f3535da646" name="ad58d646f33a647ce9abbc4f3535da646"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad58d646f33a647ce9abbc4f3535da646">&#9670;&#160;</a></span>ref_all()</h2>
 
@@ -2085,7 +2111,7 @@ template&lt;typename ValueType_&gt; </div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacelagrange.html">lagrange</a></li><li class="navelem"><a class="el" href="classlagrange_1_1_attribute.html">Attribute</a></li>
-    <li class="footer">Generated on Wed Feb 11 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+    <li class="footer">Generated on Tue Mar 10 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>
 </body>
