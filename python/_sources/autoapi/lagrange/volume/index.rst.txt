@@ -1,0 +1,250 @@
+lagrange.volume
+===============
+
+.. py:module:: lagrange.volume
+
+
+Classes
+-------
+
+.. autoapisummary::
+
+   lagrange.volume.Compression
+   lagrange.volume.Grid
+   lagrange.volume.Sign
+
+
+Module Contents
+---------------
+
+.. py:class:: Compression(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   Compression method for VDB and NanoVDB grid IO
+
+
+   .. py:attribute:: Blosc
+      :value: 2
+
+
+      Blosc compression.
+
+
+   .. py:attribute:: Uncompressed
+      :value: 0
+
+
+      No compression.
+
+
+   .. py:attribute:: Zip
+      :value: 1
+
+
+      Zip compression.
+
+
+.. py:class:: Grid
+
+   .. py:method:: densify()
+
+      Densify the grid by filling in inactive voxels within the active voxel bounding box.
+
+      :returns: Densified grid.
+
+
+
+   .. py:method:: from_mesh(mesh, voxel_size = -0.01, signing_method = Sign.FloodFill, dtype = numpy.float32)
+      :staticmethod:
+
+
+      Convert a triangle mesh to a sparse voxel grid, writing the result to a file.
+
+      :param mesh: Input mesh. Must be a triangle mesh, a quad-mesh, or a quad-dominant mesh.
+      :param voxel_size: Voxel size. Negative means relative to bbox diagonal (`vs -> -vs * bbox_diag`).
+      :param signing_method: Method used to compute the sign of the distance field.
+      :param dtype: Scalar type of the output grid (float32 or float64).
+
+      :returns: Generated sparse voxel grid.
+
+
+
+   .. py:method:: index_to_world(indices)
+
+      Convert a set of voxel indices to world coordinates.
+
+      :param indices: Input voxel indices as an (N, 3) array of integers or double.
+
+      :returns: World coordinates as an (N, 3) array of double.
+
+
+
+   .. py:method:: load(input_path_or_buffer)
+      :staticmethod:
+
+
+      Load a grid from a file or memory buffer.
+
+      :param input_path_or_buffer: Input file path (str or pathlib.Path) or memory buffer (bytes).
+
+      :returns: Loaded grid.
+
+
+
+   .. py:method:: offset_in_place(offset_radius, relative = False)
+
+      Apply an offset to the signed distance field in-place.
+
+      :param offset_radius: Offset radius. A negative value dilates the surface, a positive value erodes it.
+      :param relative: Whether the offset radius is relative to the grid voxel size.
+
+
+
+   .. py:method:: redistance()
+
+      Recompute the signed distance values of the grid using a fast sweeping method.
+
+      :returns: Redistanced grid.
+
+
+
+   .. py:method:: resample(voxel_size)
+
+      Resample the grid to a new voxel size.
+
+      :param voxel_size: New voxel size. Negative means relative to the input grid voxel size.
+
+      :returns: Resampled grid.
+
+
+
+   .. py:method:: sample_trilinear_index_space(points)
+
+      Sample the grid at the given world coordinates using trilinear interpolation.
+
+      :param points: Input index coordinates as an (N, 3) array of integers or double.
+
+      :returns: Sampled values as an (N,) array of double.
+
+
+
+   .. py:method:: sample_trilinear_world_space(points)
+
+      Sample the grid at the given world coordinates using trilinear interpolation.
+
+      :param points: Input world coordinates as an (N, 3) array of double.
+
+      :returns: Sampled values as an (N,) array of double.
+
+
+
+   .. py:method:: save(output_path, compression = Compression.Blosc)
+
+      Save the grid to a file.
+
+      :param output_path: Output file path (str or pathlib.Path).
+      :param compression: Compression method to use. Default is Blosc.
+
+
+
+   .. py:method:: to_buffer(compression = Compression.Blosc)
+
+      Save the grid to a memory buffer.
+
+      :param grid_type: Output grid type, either 'vdb' or 'nvdb'.
+      :param compression: Compression method to use. Default is Blosc.
+
+      :returns: Memory buffer (bytes).
+
+
+
+   .. py:method:: to_mesh(isovalue = 0.0, adaptivity = 0.0, relax_disoriented_triangles = True, normal_attribute_name = None)
+
+      Mesh the isosurface of a sparse voxel grid.
+
+      :param grid: Input grid to mesh.
+      :param isovalue: Value of the isosurface.
+      :param adaptivity: Surface adaptivity threshold [0 to 1]. 0 keeps the original quad mesh, while 1 simplifies the most.
+      :param relax_disoriented_triangles: Toggle relaxing disoriented triangles during adaptive meshing.
+      :param normal_attribute_name: If provided, computes vertex normals from the volume and store them in the appropriately named attribute.
+
+      :returns: Meshed isosurface.
+
+
+
+   .. py:method:: world_to_index(points)
+
+      Convert a set of world coordinates to voxel indices.
+
+      :param points: Input world coordinates as an (N, 3) array of double.
+
+      :returns: Voxel indices as an (N, 3) array of double.
+
+
+
+   .. py:property:: background
+      :type: float | float
+
+
+      Return the grid background value.
+
+
+   .. py:property:: bbox_index
+      :type: Annotated[numpy.typing.NDArray[numpy.int32], dict(shape=(2, 3), order='F')]
+
+
+      Return the axis-aligned bounding box of all active voxels in index space. If the grid is empty a default bbox is returned.
+
+
+   .. py:property:: bbox_world
+      :type: Annotated[numpy.typing.NDArray[numpy.float64], dict(shape=(2, 3), order='F')]
+
+
+      Return the axis-aligned bounding box of all active voxels in world space. If the grid is empty a default bbox is returned.
+
+
+   .. py:property:: num_active_voxels
+      :type: int
+
+
+      Return the number of active voxels in the grid.
+
+
+   .. py:property:: voxel_size
+      :type: Annotated[numpy.typing.NDArray[numpy.float64], dict(shape=3, order='C')]
+
+
+      Return the grid voxel size.
+
+
+.. py:class:: Sign(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   Signing method used to determine inside/outside voxels
+
+
+   .. py:attribute:: FloodFill
+      :value: 0
+
+
+      Default voxel flood-fill method used by OpenVDB.
+
+
+   .. py:attribute:: Unsigned
+      :value: 2
+
+
+      Do not compute sign, output unsigned distance field.
+
+
+   .. py:attribute:: WindingNumber
+      :value: 1
+
+
+      Fast winding number method based on [Barill et al. 2018].
+
+

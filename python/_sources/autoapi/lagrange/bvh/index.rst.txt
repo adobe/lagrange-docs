@@ -1,0 +1,288 @@
+lagrange.bvh
+============
+
+.. py:module:: lagrange.bvh
+
+
+Classes
+-------
+
+.. autoapisummary::
+
+   lagrange.bvh.EdgeAABBTree2D
+   lagrange.bvh.EdgeAABBTree3D
+   lagrange.bvh.TriangleAABBTree2D
+   lagrange.bvh.TriangleAABBTree3D
+
+
+Functions
+---------
+
+.. autoapisummary::
+
+   lagrange.bvh.compute_chamfer
+   lagrange.bvh.compute_hausdorff
+   lagrange.bvh.compute_mesh_distances
+   lagrange.bvh.remove_interior_shells
+   lagrange.bvh.weld_vertices
+
+
+Module Contents
+---------------
+
+.. py:class:: EdgeAABBTree2D(vertices, edges)
+
+   .. py:method:: empty()
+
+      Check if the tree is empty
+
+
+
+   .. py:method:: get_closest_point(query_point)
+
+      Find the closest element and point within the element to the query point
+
+      :param query_point: Query point.
+      :return: A tuple containing:
+          - The index of the closest element.
+          - A NumPy array representing the closest point on the element.
+          - The squared distance between the query point and the closest point.
+
+
+
+   .. py:method:: get_containing_elements(query_point)
+
+      Find all elements that contain the query point.
+
+      :param query_point: Query point.
+      :return: A list of element indices that contain the query point.
+
+
+
+   .. py:method:: get_element_closest_point(query_point, element_id)
+
+      Get the closest point on a specific edge.
+
+      :param query_point: Query point.
+      :param element_id: Index of the edge to query.
+
+      :return: A tuple containing:
+          - A NumPy array representing the closest point on the edge.
+          - The squared distance between the query point and the closest point.
+
+
+
+   .. py:method:: get_elements_in_radius(query_point, radius)
+
+      Find all elements within a given radius from a query point.
+
+      :param query_point: Query point.
+      :param radius: Search radius.
+
+      :return: A tuple containing:
+          - A list of element indices within the specified radius.
+          - A NumPy array of shape (N, 2) containing the closest points on each element.
+
+
+
+.. py:class:: EdgeAABBTree3D(vertices, edges)
+
+   .. py:method:: empty()
+
+      Check if the tree is empty
+
+
+
+   .. py:method:: get_closest_point(query_point)
+
+      Find the closest element and point within the element to the query point
+
+      :param query_point: Query point.
+      :return: A tuple containing:
+          - The index of the closest element.
+          - A NumPy array representing the closest point on the element.
+          - The squared distance between the query point and the closest point.
+
+
+
+   .. py:method:: get_containing_elements(query_point)
+
+      Find all elements that contain the query point.
+
+      :param query_point: Query point.
+      :return: A list of element indices that contain the query point.
+
+
+
+   .. py:method:: get_element_closest_point(query_point, element_id)
+
+      Get the closest point on a specific edge.
+
+      :param query_point: Query point.
+      :param element_id: Index of the edge to query.
+
+      :return: A tuple containing:
+          - A NumPy array representing the closest point on the edge.
+          - The squared distance between the query point and the closest point.
+
+
+
+   .. py:method:: get_elements_in_radius(query_point, radius)
+
+      Find all elements within a given radius from a query point.
+
+      :param query_point: Query point.
+      :param radius: Search radius.
+
+      :return: A tuple containing:
+          - A list of element indices within the specified radius.
+          - A NumPy array of shape (N, 3) containing the closest points on each element.
+
+
+
+.. py:class:: TriangleAABBTree2D(mesh)
+
+   .. py:method:: empty()
+
+      Check if the tree is empty
+
+
+
+   .. py:method:: get_closest_point(query_point)
+
+      Find the closest element and point within the element to the query point
+
+      :param query_point: Query point.
+      :return: A tuple containing:
+          - The index of the closest element.
+          - A NumPy array representing the closest point on the element.
+          - The squared distance between the query point and the closest point.
+
+
+
+   .. py:method:: get_elements_in_radius(query_point, radius)
+
+      Find all elements within a given radius from a query point.
+
+      :param query_point: Query point.
+      :param radius: Search radius.
+
+      :return: A tuple containing:
+          - A list of element indices within the specified radius.
+          - A NumPy array of shape (N, 2) containing the closest points on each element.
+
+
+
+.. py:class:: TriangleAABBTree3D(mesh)
+
+   .. py:method:: empty()
+
+      Check if the tree is empty
+
+
+
+   .. py:method:: get_closest_point(query_point)
+
+      Find the closest element and point within the element to the query point
+
+      :param query_point: Query point.
+      :return: A tuple containing:
+          - The index of the closest element.
+          - A NumPy array representing the closest point on the element.
+          - The squared distance between the query point and the closest point.
+
+
+
+   .. py:method:: get_elements_in_radius(query_point, radius)
+
+      Find all elements within a given radius from a query point.
+
+      :param query_point: Query point.
+      :param radius: Search radius.
+
+      :return: A tuple containing:
+          - A list of element indices within the specified radius.
+          - A NumPy array of shape (N, 3) containing the closest points on each element.
+
+
+
+.. py:function:: compute_chamfer(source, target)
+
+   Compute the Chamfer distance between two meshes.
+
+   The Chamfer distance is defined as:
+   .. math::
+
+      \begin{aligned}
+        C(A, B) = &\frac{1}{\|A\|} \sum_{a \in A} \text{dist}(a, B)^2 \\
+                  &+ \frac{1}{\|B\|} \sum_{b \in B} \text{dist}(b, A)^2
+      \end{aligned}
+
+   where dist(v, M) is the distance from vertex v to the closest point on mesh M.
+
+   Both meshes must have the same spatial dimension and must be triangle meshes.
+
+   :param source: First mesh.
+   :param target: Second mesh.
+
+   :return: Chamfer distance.
+
+
+.. py:function:: compute_hausdorff(source, target)
+
+   Compute the symmetric Hausdorff distance between two meshes.
+
+   The Hausdorff distance is the maximum of the two directed Hausdorff distances:
+   .. math::
+
+      H(A, B) = \max \left(
+        \max_{a \in A} \text{dist}(a, B), \quad
+        \max_{b \in B} \text{dist}(b, A)
+      \right)
+
+   where dist(v, M) is the distance from vertex v to the closest point on mesh M.
+
+   Both meshes must have the same spatial dimension and must be triangle meshes.
+
+   :param source: First mesh.
+   :param target: Second mesh.
+
+   :return: Hausdorff distance.
+
+
+.. py:function:: compute_mesh_distances(source, target, output_attribute_name = '@distance_to_mesh')
+
+   Compute the distance from each vertex in source to the closest point on target.
+
+   The result is stored as a per-vertex scalar attribute on source.
+   Both meshes must have the same spatial dimension and target must be a triangle mesh.
+
+   :param source: Mesh whose vertices are queried. The output attribute is added here.
+   :param target: Triangle mesh against which distances are computed.
+   :param output_attribute_name: Name of the output per-vertex attribute.
+
+   :return: AttributeId of the newly created (or overwritten) distance attribute on source.
+
+
+.. py:function:: remove_interior_shells(mesh)
+
+   Removes interior shells from a (manifold, non-intersecting) mesh
+
+   .. warning:: This method assumes that the input mesh is closed, manifold and has no self-intersections.
+                The result may be invalid if these conditions are not met.
+
+   :param mesh: Input mesh to process.
+   :return: A new mesh with interior shells removed.
+
+
+.. py:function:: weld_vertices(mesh, radius = 9.999999974752427e-07, boundary_only = False)
+
+   Weld nearby vertices together of a surface mesh.
+
+   :param mesh: The target surface mesh to be welded in place.
+   :param radius: The maximum distance between vertices to be considered for welding. Default is 1e-6.
+   :param boundary_only: If true, only boundary vertices will be considered for welding. Defaults to False.
+
+   .. warning:: This method may introduce non-manifoldness and degeneracy in the mesh.
+
+

@@ -1,0 +1,3170 @@
+lagrange.core
+=============
+
+.. py:module:: lagrange.core
+
+
+Attributes
+----------
+
+.. autoapisummary::
+
+   lagrange.core.invalid_index
+   lagrange.core.invalid_scalar
+
+
+Classes
+-------
+
+.. autoapisummary::
+
+   lagrange.core.Attribute
+   lagrange.core.AttributeCastPolicy
+   lagrange.core.AttributeCopyPolicy
+   lagrange.core.AttributeCreatePolicy
+   lagrange.core.AttributeDeletePolicy
+   lagrange.core.AttributeElement
+   lagrange.core.AttributeExportPolicy
+   lagrange.core.AttributeGrowthPolicy
+   lagrange.core.AttributeReorientPolicy
+   lagrange.core.AttributeShrinkPolicy
+   lagrange.core.AttributeUsage
+   lagrange.core.AttributeWritePolicy
+   lagrange.core.CentroidWeightingType
+   lagrange.core.ConnectivityType
+   lagrange.core.DistortionMetric
+   lagrange.core.FacetAreaOptions
+   lagrange.core.FacetCentroidOptions
+   lagrange.core.FacetNormalOptions
+   lagrange.core.IndexedAttribute
+   lagrange.core.MappingPolicy
+   lagrange.core.MeshAreaOptions
+   lagrange.core.MeshCentroidOptions
+   lagrange.core.MetaData
+   lagrange.core.NormalOptions
+   lagrange.core.NormalWeightingType
+   lagrange.core.RemapVerticesOptions
+   lagrange.core.SurfaceMesh
+   lagrange.core.TangentBitangentOptions
+   lagrange.core.TangentBitangentResult
+   lagrange.core.VertexNormalOptions
+   lagrange.core.VertexValenceOptions
+
+
+Functions
+---------
+
+.. autoapisummary::
+
+   lagrange.core.cast_attribute
+   lagrange.core.close_small_holes
+   lagrange.core.combine_meshes
+   lagrange.core.compute_components
+   lagrange.core.compute_dihedral_angles
+   lagrange.core.compute_dijkstra_distance
+   lagrange.core.compute_edge_is_manifold
+   lagrange.core.compute_edge_is_oriented
+   lagrange.core.compute_edge_lengths
+   lagrange.core.compute_euler
+   lagrange.core.compute_facet_area
+   lagrange.core.compute_facet_centroid
+   lagrange.core.compute_facet_circumcenter
+   lagrange.core.compute_facet_normal
+   lagrange.core.compute_facet_vector_area
+   lagrange.core.compute_greedy_coloring
+   lagrange.core.compute_mesh_area
+   lagrange.core.compute_mesh_centroid
+   lagrange.core.compute_mesh_covariance
+   lagrange.core.compute_normal
+   lagrange.core.compute_pointcloud_pca
+   lagrange.core.compute_seam_edges
+   lagrange.core.compute_tangent_bitangent
+   lagrange.core.compute_uv_area
+   lagrange.core.compute_uv_charts
+   lagrange.core.compute_uv_distortion
+   lagrange.core.compute_vertex_is_manifold
+   lagrange.core.compute_vertex_normal
+   lagrange.core.compute_vertex_valence
+   lagrange.core.detect_degenerate_facets
+   lagrange.core.extract_boundary_edges
+   lagrange.core.extract_boundary_loops
+   lagrange.core.extract_isoline
+   lagrange.core.extract_submesh
+   lagrange.core.filter_attributes
+   lagrange.core.is_closed
+   lagrange.core.is_edge_manifold
+   lagrange.core.is_manifold
+   lagrange.core.is_oriented
+   lagrange.core.is_vertex_manifold
+   lagrange.core.map_attribute
+   lagrange.core.map_attribute_in_place
+   lagrange.core.normalize_mesh
+   lagrange.core.normalize_mesh_with_transform
+   lagrange.core.normalize_mesh_with_transform_2d
+   lagrange.core.normalize_meshes
+   lagrange.core.normalize_meshes_with_transform
+   lagrange.core.normalize_meshes_with_transform_2d
+   lagrange.core.orient_outward
+   lagrange.core.permute_facets
+   lagrange.core.permute_vertices
+   lagrange.core.remap_vertices
+   lagrange.core.remove_degenerate_facets
+   lagrange.core.remove_duplicate_facets
+   lagrange.core.remove_duplicate_vertices
+   lagrange.core.remove_isolated_vertices
+   lagrange.core.remove_null_area_facets
+   lagrange.core.remove_short_edges
+   lagrange.core.remove_topologically_degenerate_facets
+   lagrange.core.reorder_mesh
+   lagrange.core.rescale_uv_charts
+   lagrange.core.resolve_nonmanifoldness
+   lagrange.core.resolve_vertex_nonmanifoldness
+   lagrange.core.select_facets_by_normal_similarity
+   lagrange.core.select_facets_in_frustum
+   lagrange.core.separate_by_components
+   lagrange.core.separate_by_facet_groups
+   lagrange.core.split_facets_by_material
+   lagrange.core.split_long_edges
+   lagrange.core.thicken_and_close_mesh
+   lagrange.core.transform_mesh
+   lagrange.core.triangulate_polygonal_facets
+   lagrange.core.trim_by_isoline
+   lagrange.core.unify_index_buffer
+   lagrange.core.uv_mesh_ref
+   lagrange.core.uv_mesh_view
+   lagrange.core.weld_indexed_attribute
+
+
+Module Contents
+---------------
+
+.. py:class:: Attribute
+
+   Attribute data associated with mesh elements (vertices, facets, corners, edges).
+
+
+   .. py:method:: clear()
+
+      Remove all elements from the attribute.
+
+
+
+   .. py:method:: create_internal_copy()
+
+      Create an internal copy if the attribute wraps external data.
+
+
+
+   .. py:method:: empty()
+
+      Check if the attribute has no elements.
+
+
+
+   .. py:method:: insert_elements(num_elements: int) -> None
+                  insert_elements(tensor: object) -> None
+
+      Insert new elements to the attribute.
+
+      :param tensor: A tensor with shape (num_elements, num_channels) or (num_elements,).
+
+
+
+   .. py:method:: reserve_entries(num_entries)
+
+      Reserve enough memory for `num_entries` entries.
+
+      :param num_entries: Number of entries to reserve. It does not need to be a multiple of `num_channels`.
+
+
+
+   .. py:property:: cast_policy
+      :type: AttributeCastPolicy
+
+
+      Policy for casting the attribute to different types.
+
+
+   .. py:property:: copy_policy
+      :type: AttributeCopyPolicy
+
+
+      Policy for copying the attribute.
+
+
+   .. py:property:: data
+      :type: numpy.typing.NDArray
+
+
+      Raw data as a numpy array.
+
+
+   .. py:property:: default_value
+      :type: object
+
+
+      Default value for new elements.
+
+
+   .. py:property:: dtype
+      :type: type | None
+
+
+      NumPy dtype of the attribute values.
+
+
+   .. py:property:: element_type
+      :type: AttributeElement
+
+
+      Element type (Vertex, Facet, Corner, Edge, Value).
+
+
+   .. py:property:: external
+      :type: bool
+
+
+      Check if the attribute wraps external data.
+
+
+   .. py:property:: growth_policy
+      :type: AttributeGrowthPolicy
+
+
+      Policy for growing the attribute when elements are added.
+
+
+   .. py:property:: num_channels
+      :type: int
+
+
+      Number of channels per element.
+
+
+   .. py:property:: num_elements
+      :type: int
+
+
+      Number of elements in the attribute.
+
+
+   .. py:property:: readonly
+      :type: bool
+
+
+      Check if the attribute is read-only.
+
+
+   .. py:property:: shrink_policy
+      :type: AttributeShrinkPolicy
+
+
+      Policy for shrinking the attribute when elements are removed.
+
+
+   .. py:property:: usage
+      :type: AttributeUsage
+
+
+      Usage type (Position, Normal, UV, Color, etc.).
+
+
+   .. py:property:: write_policy
+      :type: AttributeWritePolicy
+
+
+      Policy for write operations on the attribute.
+
+
+.. py:class:: AttributeCastPolicy(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   Policy for remapping invalid values when casting to a different value type
+
+
+   .. py:attribute:: DoNotRemapInvalid
+      :value: 2
+
+
+      Do not remap invalid values. They are simply static_cast<> to the target type
+
+
+   .. py:attribute:: RemapInvalidAlways
+      :value: 1
+
+
+      Always remap invalid values from source type to target type, regardless of AttributeUsage
+
+
+   .. py:attribute:: RemapInvalidIndices
+      :value: 0
+
+
+      Map invalid values only if the AttributeUsage represents indices
+
+
+.. py:class:: AttributeCopyPolicy(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   Policy for copying attribute that is a view of an external buffer
+
+
+   .. py:attribute:: CopyIfExternal
+      :value: 0
+
+
+      Copy attribute to internal buffer
+
+
+   .. py:attribute:: ErrorIfExternal
+      :value: 2
+
+
+      Error if external buffer is used
+
+
+   .. py:attribute:: KeepExternalPtr
+      :value: 1
+
+
+      Keep external buffer pointer
+
+
+.. py:class:: AttributeCreatePolicy(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   Attribute creation policy
+
+
+   .. py:attribute:: ErrorIfReserved
+      :value: 0
+
+
+      Default policy, error if attribute name is reserved
+
+
+   .. py:attribute:: Force
+      :value: 1
+
+
+      Force create attribute even if name is reserved
+
+
+.. py:class:: AttributeDeletePolicy(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   Policy for deleting attributes with reserved names
+
+
+   .. py:attribute:: ErrorIfReserved
+      :value: 0
+
+
+      Disallow deletion (default)
+
+
+   .. py:attribute:: Force
+      :value: 1
+
+
+      Force delete attribute
+
+
+.. py:class:: AttributeElement
+
+   Bases: :py:obj:`enum.IntEnum`
+
+
+   Attribute element type
+
+
+   .. py:attribute:: Corner
+      :value: 8
+
+
+      Per-corner attribute
+
+
+   .. py:attribute:: Edge
+      :value: 4
+
+
+      Per-edge attribute
+
+
+   .. py:attribute:: Facet
+      :value: 2
+
+
+      Per-facet attribute
+
+
+   .. py:attribute:: Indexed
+      :value: 32
+
+
+      Indexed attribute
+
+
+   .. py:attribute:: Value
+      :value: 16
+
+
+      Value attribute not attached to any mesh elements
+
+
+   .. py:attribute:: Vertex
+      :value: 1
+
+
+      Per-vertex attribute
+
+
+.. py:class:: AttributeExportPolicy(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   Policy for exporting attribute that is a view of an external buffer
+
+
+   .. py:attribute:: CopyIfExternal
+      :value: 0
+
+
+      Copy attribute to internal buffer
+
+
+   .. py:attribute:: CopyIfUnmanaged
+      :value: 1
+
+
+      Copy attribute to internal buffer if the external buffer is unmanaged (i.e. not reference counted)
+
+
+   .. py:attribute:: ErrorIfExternal
+      :value: 3
+
+
+      Error if external buffer is used
+
+
+   .. py:attribute:: KeepExternalPtr
+      :value: 2
+
+
+      Keep external buffer pointer
+
+
+.. py:class:: AttributeGrowthPolicy(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   Attribute growth policy (for external buffers)
+
+
+   .. py:attribute:: AllowWithinCapacity
+      :value: 1
+
+
+      Allow growth as long as it is within the capacity of the external buffer
+
+
+   .. py:attribute:: ErrorIfExtenal
+      :value: 0
+
+
+      Disallow growth if external buffer is used (default)
+
+
+   .. py:attribute:: SilentCopy
+      :value: 3
+
+
+      Silently copy attribute to internal buffer when growth exceeds external buffer capacity
+
+
+   .. py:attribute:: WarnAndCopy
+      :value: 2
+
+
+      Warn and copy attribute to internal buffer when growth exceeds external buffer capacity
+
+
+.. py:class:: AttributeReorientPolicy(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   Policy for updating attributes values when reorienting mesh facets
+
+
+   .. py:attribute:: NoReorient
+      :value: 0
+
+
+      Do not reorient attributes when flipping facets
+
+
+   .. py:attribute:: Reorient
+      :value: 1
+
+
+      Reorient attributes when flipping facets
+
+
+.. py:class:: AttributeShrinkPolicy(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   Attribute shrink policy (for external buffers)
+
+
+   .. py:attribute:: ErrorIfExternal
+      :value: 0
+
+
+      Disallow shrink if external buffer is used (default)
+
+
+   .. py:attribute:: IgnoreIfExternal
+      :value: 1
+
+
+      Ignore shrink if external buffer is used
+
+
+   .. py:attribute:: SilentCopy
+      :value: 3
+
+
+      Silently copy attribute to internal buffer when shrinking below external buffer capacity
+
+
+   .. py:attribute:: WarnAndCopy
+      :value: 2
+
+
+      Warn and copy attribute to internal buffer when shrinking below external buffer capacity
+
+
+.. py:class:: AttributeUsage(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   Attribute usage type
+
+
+   .. py:attribute:: Bitangent
+      :value: 32
+
+
+      Bitangent attribute must have exactly dim channels
+
+
+   .. py:attribute:: Color
+      :value: 64
+
+
+      Color attribute may have 1, 2, 3 or 4 channels
+
+
+   .. py:attribute:: CornerIndex
+      :value: 1024
+
+
+      Single channel integer attribute indexing mesh corners
+
+
+   .. py:attribute:: EdgeIndex
+      :value: 2048
+
+
+      Single channel integer attribute indexing mesh edges
+
+
+   .. py:attribute:: FacetIndex
+      :value: 512
+
+
+      Single channel integer attribute indexing mesh facets
+
+
+   .. py:attribute:: Normal
+      :value: 8
+
+
+      Normal attribute must have exactly dim channels
+
+
+   .. py:attribute:: Position
+      :value: 4
+
+
+      Position attribute must have exactly dim channels
+
+
+   .. py:attribute:: Scalar
+      :value: 2
+
+
+      Scalar attribute that has exactly 1 channel
+
+
+   .. py:attribute:: Tangent
+      :value: 16
+
+
+      Tangent attribute must have exactly dim channels
+
+
+   .. py:attribute:: UV
+      :value: 128
+
+
+      UV attribute has exactly 2 channels
+
+
+   .. py:attribute:: Vector
+      :value: 1
+
+
+      Vector attribute that may have any number of channels
+
+
+   .. py:attribute:: VertexIndex
+      :value: 256
+
+
+      Single channel integer attribute indexing mesh vertices
+
+
+.. py:class:: AttributeWritePolicy(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   Policy for attempting to write to read-only external buffer
+
+
+   .. py:attribute:: ErrorIfReadOnly
+      :value: 0
+
+
+      Disallow writing to read-only external buffer (default)
+
+
+   .. py:attribute:: SilentCopy
+      :value: 2
+
+
+      Silently copy attribute to internal buffer when writing to read-only external buffer
+
+
+   .. py:attribute:: WarnAndCopy
+      :value: 1
+
+
+      Warn and copy attribute to internal buffer when writing to read-only external buffer
+
+
+.. py:class:: CentroidWeightingType(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   Centroid weighting type.
+
+
+   .. py:attribute:: Area
+      :value: 1
+
+
+      Area weighting.
+
+
+   .. py:attribute:: Uniform
+      :value: 0
+
+
+      Uniform weighting.
+
+
+.. py:class:: ConnectivityType(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   Mesh connectivity type
+
+
+   .. py:attribute:: Edge
+      :value: 1
+
+
+      Two facets are connected if they share an edge
+
+
+   .. py:attribute:: Vertex
+      :value: 0
+
+
+      Two facets are connected if they share a vertex
+
+
+.. py:class:: DistortionMetric(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   Distortion metric.
+
+
+   .. py:attribute:: AreaRatio
+      :value: 3
+
+
+      Area ratio
+
+
+   .. py:attribute:: Dirichlet
+      :value: 0
+
+
+      Dirichlet energy
+
+
+   .. py:attribute:: InverseDirichlet
+      :value: 1
+
+
+      Inverse Dirichlet energy
+
+
+   .. py:attribute:: MIPS
+      :value: 4
+
+
+      Most isotropic parameterization energy
+
+
+   .. py:attribute:: SymmetricDirichlet
+      :value: 2
+
+
+      Symmetric Dirichlet energy
+
+
+.. py:class:: FacetAreaOptions
+
+   Options for computing facet area.
+
+
+   .. py:property:: output_attribute_name
+      :type: str
+
+
+      The name of the output attribute.
+
+
+.. py:class:: FacetCentroidOptions
+
+   Facet centroid options.
+
+
+   .. py:property:: output_attribute_name
+      :type: str
+
+
+      The name of the output attribute.
+
+
+.. py:class:: FacetNormalOptions
+
+   Facet normal computation options.
+
+
+   .. py:property:: output_attribute_name
+      :type: str
+
+
+      `@facet_normal`
+
+      :type: Output attribute name. Default
+
+
+.. py:class:: IndexedAttribute
+
+   Indexed attribute data structure.
+
+   An indexed attribute stores values and indices separately, allowing for efficient
+   storage when multiple elements share the same values. This is commonly used for
+   UV coordinates, normals, or colors where the same value may be referenced by
+   multiple vertices, corners, or facets.
+
+
+   .. py:property:: element_type
+      :type: AttributeElement
+
+
+      Element type (i.e. Indexed).
+
+
+   .. py:property:: indices
+      :type: Attribute
+
+
+      The indices array of the indexed attribute.
+
+      :returns: Attribute containing the indices that reference into the values array
+
+
+   .. py:property:: num_channels
+      :type: int
+
+
+      Number of channels per element.
+
+
+   .. py:property:: usage
+      :type: AttributeUsage
+
+
+      Usage type (Position, Normal, UV, Color, etc.).
+
+
+   .. py:property:: values
+      :type: Attribute
+
+
+      The values array of the indexed attribute.
+
+      :returns: Attribute containing the unique values referenced by the indices
+
+
+.. py:class:: MappingPolicy(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   Mapping policy for handling collisions.
+
+
+   .. py:attribute:: Average
+      :value: 0
+
+
+      Compute the average of the collided values.
+
+
+   .. py:attribute:: Error
+      :value: 2
+
+
+      Throw an error when collision happens.
+
+
+   .. py:attribute:: KeepFirst
+      :value: 1
+
+
+      Keep the first collided value.
+
+
+.. py:class:: MeshAreaOptions
+
+   Options for computing mesh area.
+
+
+   .. py:property:: input_attribute_name
+      :type: str
+
+
+      The name of the pre-computed facet area attribute, default is `@facet_area`.
+
+
+   .. py:property:: use_signed_area
+      :type: bool
+
+
+      Whether to use signed area.
+
+
+.. py:class:: MeshCentroidOptions
+
+   Mesh centroid options.
+
+
+   .. py:property:: facet_area_attribute_name
+      :type: str
+
+
+      The name of the pre-computed facet area attribute if available.
+
+
+   .. py:property:: facet_centroid_attribute_name
+      :type: str
+
+
+      The name of the pre-computed facet centroid attribute if available.
+
+
+   .. py:property:: weighting_type
+      :type: CentroidWeightingType
+
+
+      The weighting type.
+
+
+.. py:class:: MetaData
+
+   Metadata `dict` of the mesh
+
+
+   .. py:method:: __delitem__(arg, /)
+
+
+   .. py:method:: __getitem__(arg, /)
+
+
+   .. py:method:: __len__()
+
+
+   .. py:method:: __repr__()
+
+
+   .. py:method:: __setitem__(arg0, arg1, /)
+
+
+.. py:class:: NormalOptions
+
+   Normal computation options.
+
+
+   .. py:property:: distance_tolerance
+      :type: float
+
+
+      Distance tolerance for degenerate edge check. (Only used to bypass degenerate edge in polygon facets.)
+
+
+   .. py:property:: facet_normal_attribute_name
+      :type: str
+
+
+      Facet normal attribute name to use. Default is `@facet_normal`.
+
+
+   .. py:property:: keep_facet_normals
+      :type: bool
+
+
+      Whether to keep the computed facet normal attribute. Default is false.
+
+
+   .. py:property:: output_attribute_name
+      :type: str
+
+
+      `@normal`
+
+      :type: Output attribute name. Default
+
+
+   .. py:property:: recompute_facet_normals
+      :type: bool
+
+
+      Whether to recompute facet normals. Default is false.
+
+
+   .. py:property:: weight_type
+      :type: NormalWeightingType
+
+
+      Weighting type for normal computation. Default is Angle.
+
+
+.. py:class:: NormalWeightingType(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   Normal weighting type.
+
+
+   .. py:attribute:: Angle
+      :value: 2
+
+
+      Weight by corner angle
+
+
+   .. py:attribute:: CornerTriangleArea
+      :value: 1
+
+
+      Weight by corner triangle area
+
+
+   .. py:attribute:: Uniform
+      :value: 0
+
+
+      Uniform weighting
+
+
+.. py:class:: RemapVerticesOptions
+
+   Options for remapping vertices.
+
+
+   .. py:property:: collision_policy_float
+      :type: MappingPolicy
+
+
+      The collision policy for float attributes.
+
+
+   .. py:property:: collision_policy_integral
+      :type: MappingPolicy
+
+
+      The collision policy for integral attributes.
+
+
+.. py:class:: SurfaceMesh(dimension = 3)
+
+   Surface mesh data structure
+
+
+   .. py:method:: __attribute_ref_count__(id)
+
+      Get the reference count of an attribute (for debugging purposes).
+
+      :param id: attribute ID
+
+      :returns: reference count of the attribute
+
+
+
+   .. py:method:: __copy__()
+
+      Create a shallow copy of this mesh.
+
+
+
+   .. py:method:: __deepcopy__(memo = None)
+
+      Create a deep copy of this mesh.
+
+
+
+   .. py:method:: add_hybrid(sizes, indices)
+
+      Add hybrid facets (polygons with varying number of vertices) to the mesh.
+
+      :param sizes: 1D tensor specifying the number of vertices for each facet
+      :param indices: 1D tensor of vertex indices for all facets concatenated together
+
+
+
+   .. py:method:: add_polygon(vertices)
+
+      Add a polygon to the mesh.
+
+      :param vertices: 1D tensor of vertex indices defining the polygon
+
+      :returns: facet index of the added polygon
+
+
+
+   .. py:method:: add_polygons(polygons)
+
+      Add multiple regular polygons to the mesh.
+
+      :param polygons: N x K tensor of vertex indices, where N is the number of polygons and K is the number of vertices per polygon
+
+
+
+   .. py:method:: add_quad(v0, v1, v2, v3)
+
+      Add a quad to the mesh.
+
+      :param v0: first vertex index
+      :param v1: second vertex index
+      :param v2: third vertex index
+      :param v3: fourth vertex index
+
+      :returns: facet index of the added quad
+
+
+
+   .. py:method:: add_quads(quads)
+
+      Add multiple quads to the mesh.
+
+      :param quads: N x 4 tensor of vertex indices, where N is the number of quads
+
+
+
+   .. py:method:: add_triangle(v0, v1, v2)
+
+      Add a triangle to the mesh.
+
+      :param v0: first vertex index
+      :param v1: second vertex index
+      :param v2: third vertex index
+
+      :returns: facet index of the added triangle
+
+
+
+   .. py:method:: add_triangles(triangles)
+
+      Add multiple triangles to the mesh.
+
+      :param triangles: N x 3 tensor of vertex indices, where N is the number of triangles
+
+
+
+   .. py:method:: add_vertex(vertex: Annotated[numpy.typing.NDArray[numpy.float64], dict(order='C', device='cpu')]) -> None
+                  add_vertex(vertex: list) -> None
+
+      Add a vertex to the mesh.
+
+      :param vertex: vertex coordinates as a list
+
+
+
+   .. py:method:: add_vertices(vertices)
+
+      Add multiple vertices to the mesh.
+
+      :param vertices: N x D tensor of vertex coordinates, where N is the number of vertices and D is the dimension
+
+
+
+   .. py:method:: attr_name_is_reserved(name)
+      :staticmethod:
+
+
+      Check if an attribute name is reserved.
+
+      :param name: attribute name to check
+
+      :returns: True if the name is reserved, False otherwise
+
+
+
+   .. py:method:: attribute(id: int, sharing: bool = True) -> Attribute
+                  attribute(name: str, sharing: bool = True) -> Attribute
+
+      Get an attribute by name.
+
+      :param name: Name of the attribute.
+      :param sharing: Whether to allow sharing the attribute with other meshes.
+
+      :return: The attribute.
+
+
+
+   .. py:method:: clear_edges()
+
+      Clear all edge connectivity information.
+
+
+
+   .. py:method:: clear_facets()
+
+      Remove all facets from the mesh.
+
+
+
+   .. py:method:: clear_vertices()
+
+      Remove all vertices from the mesh.
+
+
+
+   .. py:method:: clone(strip = False)
+
+      Create a deep copy of this mesh.
+
+      :param strip: If True, strip the mesh of all attributes except for the reserved attributes.
+
+
+
+   .. py:method:: compress_if_regular()
+
+      Compress the mesh representation if it is regular (all facets have the same number of vertices).
+
+      :returns: True if the mesh was compressed, False otherwise
+
+
+
+   .. py:method:: corners_around_edge(edge_id)
+
+      Get all corners around an edge.
+
+      :param edge_id: edge index
+
+      :returns: list of corner indices
+
+      .. code-block:: python
+
+          corners = mesh.corners_around_edge(eid)
+          for cid in corners:
+              print(cid)
+
+
+
+   .. py:method:: corners_around_vertex(vertex_id)
+
+      Get all corners around a vertex.
+
+      :param vertex_id: vertex index
+
+      :returns: list of corner indices
+
+      .. code-block:: python
+
+          corners = mesh.corners_around_vertex(vid)
+          for cid in corners:
+              print(cid)
+
+
+
+   .. py:method:: count_num_corners_around_edge(edge_id)
+
+      Count the number of corners around an edge.
+
+      :param edge_id: edge index
+
+      :returns: number of corners around the edge
+
+
+
+   .. py:method:: count_num_corners_around_vertex(vertex_id)
+
+      Count the number of corners around a vertex.
+
+      :param vertex_id: vertex index
+
+      :returns: number of corners around the vertex
+
+
+
+   .. py:method:: create_attribute(name, element = None, usage = None, initial_values = None, initial_indices = None, num_channels = None, dtype = None)
+
+      Create an attribute.
+
+      :param name: Name of the attribute.
+      :param element: Element type of the attribute. If None, derive from the shape of initial values.
+      :param usage: Usage type of the attribute. If None, derive from the shape of initial values or the number of channels.
+      :param initial_values: Initial values of the attribute.
+      :param initial_indices: Initial indices of the attribute (Indexed attribute only).
+      :param num_channels: Number of channels of the attribute.
+      :param dtype: Data type of the attribute.
+
+      :returns: The id of the created attribute.
+
+      .. note::
+         If `element` is None, it will be derived based on the cardinality of the mesh elements.
+         If there is an ambiguity, an exception will be raised.
+         In addition, explicit `element` specification is required for value attributes.
+
+      .. note::
+         If `usage` is None, it will be derived based on the shape of `initial_values` or `num_channels` if specified.
+
+
+
+   .. py:method:: create_attribute_from(name, source_mesh, source_name = '')
+
+      Shallow copy an attribute from another mesh.
+
+      :param name: Name of the attribute.
+      :param source_mesh: Source mesh.
+      :param source_name: Name of the attribute in the source mesh. If empty, use the same name as `name`.
+
+      :returns: The id of the created attribute.
+
+
+
+   .. py:method:: delete_attribute(name: str, policy: AttributeDeletePolicy = AttributeDeletePolicy.ErrorIfReserved) -> None
+                  delete_attribute(id: int, policy: AttributeDeletePolicy = AttributeDeletePolicy.ErrorIfReserved) -> None
+
+      Delete an attribute by id.
+
+      :param id: Id of the attribute.
+      :param policy: Deletion policy for reserved attributes.
+
+
+
+   .. py:method:: duplicate_attribute(old_name, new_name)
+
+      Duplicate an attribute with a new name.
+
+      :param old_name: name of the attribute to duplicate
+      :param new_name: name for the new attribute
+
+      :returns: attribute ID of the duplicated attribute
+
+
+
+   .. py:method:: edges_around_vertex(vertex_id)
+
+      Get all edges around a vertex.
+
+      .. note::
+          Each incident edge will be visited once for each incident facet.
+          Thus, manifold edge will be visited exactly twice,
+          boundary edge will be visited exactly once,
+          non-manifold edges will be visited more than twice.
+
+      :param vertex_id: vertex index
+
+      :returns: list of edge indices (with duplicates)
+
+      .. code-block:: python
+
+          edges = mesh.edges_around_vertex(vid)
+          for eid in edges:
+              print(eid)
+
+
+
+   .. py:method:: facets_around_edge(edge_id)
+
+      Get all facets around an edge.
+
+      :param edge_id: edge index
+
+      :returns: list of facet indices
+
+      .. code-block:: python
+
+          facets = mesh.facets_around_edge(eid)
+          for fid in facets:
+              print(fid)
+
+
+
+   .. py:method:: facets_around_facet(facet_id)
+
+      Get all adjacent facets around a facet.
+
+      :param facet_id: facet index
+
+      :returns: list of adjacent facet indices
+
+      .. code-block:: python
+
+          facets = mesh.facets_around_facet(fid)
+          for afid in facets:
+              print(afid)
+
+
+
+   .. py:method:: facets_around_vertex(vertex_id)
+
+      Get all facets around a vertex.
+
+      :param vertex_id: vertex index
+
+      :returns: list of facet indices
+
+      .. code-block:: python
+
+          facets = mesh.facets_around_vertex(vid)
+          for fid in facets:
+              print(fid)
+
+
+
+   .. py:method:: find_edge_from_vertices(vertex1_id, vertex2_id)
+
+      Find the edge connecting two vertices.
+
+      :param vertex1_id: first vertex index
+      :param vertex2_id: second vertex index
+
+      :returns: edge index, or invalid_index if no such edge exists
+
+
+
+   .. py:method:: flip_facets(facets: Annotated[numpy.typing.NDArray[numpy.uint32], dict(order='C', device='cpu')], policy: AttributeReorientPolicy = AttributeReorientPolicy.NoReorient) -> None
+                  flip_facets(facets: list, policy: AttributeReorientPolicy = AttributeReorientPolicy.NoReorient) -> None
+
+      Flip the orientation of selected facets.
+
+      :param facets: list of facet indices to flip
+      :param policy: Whether to reorient associated attributes like normals and bitangents.
+
+
+
+   .. py:method:: foreach_corner_around_edge(edge_id, func)
+
+      Iterate over all corners around an edge.
+
+      :param edge_id: edge index
+      :param func: function to call for each corner index
+
+      .. code-block:: python
+
+          mesh.foreach_corner_around_edge(eid, lambda cid: print(cid))
+
+
+
+   .. py:method:: foreach_corner_around_vertex(vertex_id, func)
+
+      Iterate over all corners around a vertex.
+
+      :param vertex_id: vertex index
+      :param func: function to call for each corner index
+
+      .. code-block:: python
+
+          mesh.foreach_corner_around_vertex(vid, lambda cid: print(cid))
+
+
+
+   .. py:method:: foreach_edge_around_vertex(vertex_id, func)
+
+      Iterate over all edges around a vertex.
+
+      .. note::
+          Each incident edge will be visited once for each incident facet.
+          Thus, manifold edge will be visited exactly twice,
+          boundary edge will be visited exactly once,
+          non-manifold edges will be visited more than twice.
+
+      :param vertex_id: vertex index
+      :param func: function to call for each edge index
+
+      .. code-block:: python
+
+          mesh.foreach_edge_around_vertex(vid, lambda eid: print(eid))
+
+
+
+   .. py:method:: foreach_facet_around_edge(edge_id, func)
+
+      Iterate over all facets around an edge.
+
+      :param edge_id: edge index
+      :param func: function to call for each facet index
+
+      .. code-block:: python
+
+          mesh.foreach_facet_around_edge(eid, lambda fid: print(fid))
+
+
+
+   .. py:method:: foreach_facet_around_facet(facet_id, func)
+
+      Iterate over all adjacent facets around a facet.
+
+      :param facet_id: facet index
+      :param func: function to call for each adjacent facet index
+
+      .. code-block:: python
+
+          mesh.foreach_facet_around_facet(fid, lambda afid: print(afid))
+
+
+
+   .. py:method:: foreach_facet_around_vertex(vertex_id, func)
+
+      Iterate over all facets around a vertex.
+
+      :param vertex_id: vertex index
+      :param func: function to call for each facet index
+
+      .. code-block:: python
+
+          mesh.foreach_facet_around_vertex(vid, lambda fid: print(fid))
+
+
+
+   .. py:method:: get_attribute_id(name)
+
+      Get the attribute ID by name.
+
+      :param name: attribute name
+
+      :returns: attribute ID
+
+
+
+   .. py:method:: get_attribute_name(id)
+
+      Get the attribute name by ID.
+
+      :param id: attribute ID
+
+      :returns: attribute name
+
+
+
+   .. py:method:: get_clockwise_corner_around_vertex(corner)
+
+      Get the clockwise corner around the vertex associated with the input corner.
+
+      .. note::
+          If the vertex is a non-manifold vertex, only one "umbrella" (a set of connected
+          corners based on edge-connectivity) will be visited.
+
+          If the traversal reaches a boundary or a non-manifold edge, the next adjacent corner
+          is not well defined. It will return `invalid_index` in this case.
+
+      :param corner: The input corner index.
+
+      :returns: The clockwise corner index or `invalid_index` if none exists.
+
+
+
+   .. py:method:: get_corner_edge(corner_id)
+
+      Get the edge index associated with a corner.
+
+      :param corner_id: corner index
+
+      :returns: edge index
+
+
+
+   .. py:method:: get_corner_facet(corner_id)
+
+      Get the facet index associated with a corner.
+
+      :param corner_id: corner index
+
+      :returns: facet index
+
+
+
+   .. py:method:: get_corner_vertex(corner_id)
+
+      Get the vertex index associated with a corner.
+
+      :param corner_id: corner index
+
+      :returns: vertex index
+
+
+
+   .. py:method:: get_counterclockwise_corner_around_vertex(corner)
+
+      Get the counterclockwise corner around the vertex associated with the input corner.
+
+      .. note::
+          If the vertex is a non-manifold vertex, only one "umbrella" (a set of connected
+          corners based on edge-connectivity) will be visited.
+
+          If the traversal reaches a boundary or a non-manifold edge, the next adjacent corner
+          is not well defined. It will return `invalid_index` in this case.
+
+      :param corner: The input corner index.
+
+      :returns: The counterclockwise corner index or `invalid_index` if none exists.
+
+
+
+   .. py:method:: get_edge(facet_id, lv)
+
+      Get the edge index associated with a local vertex of a facet.
+
+      :param facet_id: facet index
+      :param lv: local vertex index of the facet
+
+      :returns: edge index
+
+
+
+   .. py:method:: get_edge_vertices(edge_id)
+
+      Get the two vertex indices of an edge.
+
+      :param edge_id: edge index
+
+      :returns: tuple of (vertex1_id, vertex2_id)
+
+
+
+   .. py:method:: get_facet_corner_begin(facet_id)
+
+      Get the first corner index of a facet.
+
+      :param facet_id: facet index
+
+      :returns: first corner index of the facet
+
+
+
+   .. py:method:: get_facet_corner_end(facet_id)
+
+      Get the end corner index of a facet (one past the last corner).
+
+      :param facet_id: facet index
+
+      :returns: end corner index of the facet
+
+
+
+   .. py:method:: get_facet_size(facet_id)
+
+      Get the number of vertices in a facet.
+
+      :param facet_id: facet index
+
+      :returns: number of vertices in the facet
+
+
+
+   .. py:method:: get_facet_vertex(facet_id, local_vertex_id)
+
+      Get a vertex index from a facet.
+
+      :param facet_id: facet index
+      :param local_vertex_id: local vertex index within the facet (0 to facet_size-1)
+
+      :returns: global vertex index
+
+
+
+   .. py:method:: get_facet_vertices(facet_id)
+
+      Get all vertex indices of a facet.
+
+      :param facet_id: facet index
+
+      :returns: vertex indices as a tensor
+
+
+
+   .. py:method:: get_first_corner_around_edge(edge_id)
+
+      Get the first corner around an edge.
+
+      :param edge_id: edge index
+
+      :returns: first corner index around the edge
+
+
+
+   .. py:method:: get_first_corner_around_vertex(vertex_id)
+
+      Get the first corner around a vertex.
+
+      :param vertex_id: vertex index
+
+      :returns: first corner index around the vertex
+
+
+
+   .. py:method:: get_matching_attribute_id(element = None, usage = None, num_channels = 0)
+
+      Get one matching attribute id with the desired element type, usage and number of channels.
+
+      :param element:       The target element type. None matches all element types.
+      :param usage:         The target usage type.  None matches all usage types.
+      :param num_channels:  The target number of channels. 0 matches arbitrary number of channels.
+
+      :returns: An attribute id matching the target element, usage and number of channels, if found. None otherwise.
+
+
+
+   .. py:method:: get_matching_attribute_ids(element = None, usage = None, num_channels = 0)
+
+      Get all matching attribute ids with the desired element type, usage and number of channels.
+
+      :param element:       The target element type. None matches all element types.
+      :param usage:         The target usage type.  None matches all usage types.
+      :param num_channels:  The target number of channels. 0 matches arbitrary number of channels.
+
+      :returns: A list of attribute ids matching the target element, usage and number of channels.
+
+
+
+   .. py:method:: get_next_corner_around_edge(corner_id)
+
+      Get the next corner around the same edge.
+
+      :param corner_id: current corner index
+
+      :returns: next corner index around the same edge
+
+
+
+   .. py:method:: get_next_corner_around_vertex(corner_id)
+
+      Get the next corner around the same vertex.
+
+      :param corner_id: current corner index
+
+      :returns: next corner index around the same vertex
+
+
+
+   .. py:method:: get_one_corner_around_edge(edge_id)
+
+      Get one corner around an edge.
+
+      :param edge_id: edge index
+
+      :returns: corner index around the edge
+
+
+
+   .. py:method:: get_one_corner_around_vertex(vertex_id)
+
+      Get one corner around a vertex.
+
+      :param vertex_id: vertex index
+
+      :returns: corner index around the vertex
+
+
+
+   .. py:method:: get_one_facet_around_edge(edge_id)
+
+      Get one facet adjacent to an edge.
+
+      :param edge_id: edge index
+
+      :returns: facet index adjacent to the edge
+
+
+
+   .. py:method:: get_position(vertex_id)
+
+      Get the position of a vertex.
+
+      :param vertex_id: vertex index
+
+      :returns: position coordinates as a tensor
+
+
+
+   .. py:method:: has_attribute(name)
+
+      Check if an attribute exists.
+
+      :param name: attribute name
+
+      :returns: True if the attribute exists, False otherwise
+
+
+
+   .. py:method:: indexed_attribute(id: int, sharing: bool = True) -> IndexedAttribute
+                  indexed_attribute(name: str, sharing: bool = True) -> IndexedAttribute
+
+      Get an indexed attribute by name.
+
+      :param name: Name of the attribute.
+      :param sharing: Whether to allow sharing the attribute with other meshes.
+
+      :returns: The indexed attribute.
+
+
+
+   .. py:method:: initialize_edges(edges = None)
+
+      Initialize the edges.
+
+      The `edges` tensor provides a predefined ordering of the edges.
+      If not provided, the edges are initialized in an arbitrary order.
+
+      :param edges: M x 2 tensor of predefined edge vertex indices, where M is the number of edges.
+
+
+
+   .. py:method:: is_attribute_indexed(id: int) -> bool
+                  is_attribute_indexed(name: str) -> bool
+
+      Check if an attribute is indexed.
+
+      :param name: attribute name
+
+      :returns: True if the attribute is indexed, False otherwise
+
+
+
+   .. py:method:: is_boundary_edge(edge_id)
+
+      Check if an edge is on the boundary.
+
+      :param edge_id: edge index
+
+      :returns: True if the edge is on the boundary, False otherwise
+
+
+
+   .. py:method:: ref_facet_vertices(facet_id)
+
+      Get a mutable reference to all vertex indices of a facet.
+
+      :param facet_id: facet index
+
+      :returns: mutable vertex indices as a tensor
+
+
+
+   .. py:method:: ref_position(vertex_id)
+
+      Get a mutable reference to the position of a vertex.
+
+      :param vertex_id: vertex index
+
+      :returns: mutable position coordinates as a tensor
+
+
+
+   .. py:method:: remove_facets(facets: Annotated[numpy.typing.NDArray[numpy.uint32], dict(order='C', device='cpu')]) -> None
+                  remove_facets(facets: list) -> None
+
+      Remove selected facets from the mesh.
+
+      :param facets: list of facet indices to remove
+
+
+
+   .. py:method:: remove_vertices(vertices: Annotated[numpy.typing.NDArray[numpy.uint32], dict(order='C', device='cpu')]) -> None
+                  remove_vertices(vertices: list) -> None
+
+      Remove selected vertices from the mesh.
+
+      :param vertices: list of vertex indices to remove
+
+
+
+   .. py:method:: rename_attribute(old_name, new_name)
+
+      Rename an attribute.
+
+      :param old_name: current name of the attribute
+      :param new_name: new name for the attribute
+
+
+
+   .. py:method:: shrink_to_fit()
+
+      Shrink the internal storage to fit the current mesh size.
+
+
+
+   .. py:method:: wrap_as_attribute(name, element, usage, values)
+
+      Wrap an existing numpy array as an attribute.
+
+      :param name: Name of the attribute.
+      :param element: Element type of the attribute.
+      :param usage: Usage type of the attribute.
+      :param values: Values of the attribute.
+
+      :returns: The id of the created attribute.
+
+
+
+   .. py:method:: wrap_as_facets(tensor: Annotated[numpy.typing.NDArray[numpy.uint32], dict(order='C', device='cpu')], num_facets: int, vertex_per_facet: int) -> int
+                  wrap_as_facets(offsets: Annotated[numpy.typing.NDArray[numpy.uint32], dict(order='C', device='cpu')], num_facets: int, facets: Annotated[numpy.typing.NDArray[numpy.uint32], dict(order='C', device='cpu')], num_corners: int) -> int
+
+      Wrap a tensor as a list of hybrid facets.
+
+      :param offsets: The offset indices into the facets array.
+      :param num_facets: Number of facets.
+      :param facets: The indices of the vertices of the facets.
+      :param num_corners: Number of corners.
+
+      :return: The id of the wrapped facet attribute.
+
+
+
+   .. py:method:: wrap_as_indexed_attribute(name, usage, values, indices)
+
+      Wrap an existing numpy array as an indexed attribute.
+
+      :param name: Name of the attribute.
+      :param usage: Usage type of the attribute.
+      :param values: Values of the attribute.
+      :param indices: Indices of the attribute.
+
+      :returns: The id of the created attribute.
+
+
+
+   .. py:method:: wrap_as_vertices(tensor, num_vertices)
+
+      Wrap a tensor as vertices.
+
+      :param tensor: The tensor to wrap.
+      :param num_vertices: Number of vertices.
+
+      :return: The id of the wrapped vertices attribute.
+
+
+
+   .. py:property:: attr_id_corner_to_edge
+      :type: int
+
+
+
+   .. py:property:: attr_id_corner_to_facet
+      :type: int
+
+
+
+   .. py:property:: attr_id_corner_to_vertex
+      :type: int
+
+
+
+   .. py:property:: attr_id_edge_to_first_corner
+      :type: int
+
+
+
+   .. py:property:: attr_id_facet_to_first_corner
+      :type: int
+
+
+
+   .. py:property:: attr_id_next_corner_around_edge
+      :type: int
+
+
+
+   .. py:property:: attr_id_next_corner_around_vertex
+      :type: int
+
+
+
+   .. py:property:: attr_id_vertex_to_first_corner
+      :type: int
+
+
+
+   .. py:property:: attr_id_vertex_to_position
+      :type: int
+
+
+
+   .. py:attribute:: attr_name_corner_to_edge
+      :type:  str
+      :value: Ellipsis
+
+
+      The name of the attribute that stores the corner to edge mapping.
+
+
+   .. py:attribute:: attr_name_corner_to_facet
+      :type:  str
+      :value: Ellipsis
+
+
+      The name of the attribute that stores the corner to facet mapping.
+
+
+   .. py:attribute:: attr_name_corner_to_vertex
+      :type:  str
+      :value: Ellipsis
+
+
+      The name of the attribute that stores the corner to vertex mapping.
+
+
+   .. py:attribute:: attr_name_edge_to_first_corner
+      :type:  str
+      :value: Ellipsis
+
+
+      The name of the attribute that stores the edge to first corner mapping.
+
+
+   .. py:attribute:: attr_name_facet_to_first_corner
+      :type:  str
+      :value: Ellipsis
+
+
+      The name of the attribute that stores the facet to first corner mapping.
+
+
+   .. py:attribute:: attr_name_next_corner_around_edge
+      :type:  str
+      :value: Ellipsis
+
+
+      The name of the attribute that stores the next corner around edge mapping.
+
+
+   .. py:attribute:: attr_name_next_corner_around_vertex
+      :type:  str
+      :value: Ellipsis
+
+
+      The name of the attribute that stores the next corner around vertex mapping.
+
+
+   .. py:attribute:: attr_name_vertex_to_first_corner
+      :type:  str
+      :value: Ellipsis
+
+
+      The name of the attribute that stores the vertex to first corner mapping.
+
+
+   .. py:attribute:: attr_name_vertex_to_position
+      :type:  str
+      :value: Ellipsis
+
+
+      The name of the attribute that stores the vertex positions.
+
+
+   .. py:property:: dimension
+      :type: int
+
+
+
+   .. py:property:: edges
+      :type: Annotated[numpy.typing.NDArray[numpy.uint32], dict(shape=(None, 2), order='C', device='cpu')]
+
+
+      Edges of the mesh.
+
+
+   .. py:property:: facets
+      :type: Annotated[numpy.typing.NDArray[numpy.uint32], dict(order='C', device='cpu')]
+
+
+      Facets of the mesh.
+
+
+   .. py:property:: has_edges
+      :type: bool
+
+
+
+   .. py:property:: is_hybrid
+      :type: bool
+
+
+
+   .. py:property:: is_quad_mesh
+      :type: bool
+
+
+
+   .. py:property:: is_regular
+      :type: bool
+
+
+
+   .. py:property:: is_triangle_mesh
+      :type: bool
+
+
+
+   .. py:property:: metadata
+      :type: MetaData
+
+
+      Metadata of the mesh.
+
+
+   .. py:property:: num_corners
+      :type: int
+
+
+
+   .. py:property:: num_edges
+      :type: int
+
+
+
+   .. py:property:: num_facets
+      :type: int
+
+
+
+   .. py:property:: num_vertices
+      :type: int
+
+
+
+   .. py:property:: vertex_per_facet
+      :type: int
+
+
+
+   .. py:property:: vertices
+      :type: Annotated[numpy.typing.NDArray[numpy.float64], dict(order='C', device='cpu')]
+
+
+      Vertices of the mesh.
+
+
+.. py:class:: TangentBitangentOptions
+
+   Tangent bitangent options
+
+
+   .. py:property:: bitangent_attribute_name
+      :type: str
+
+
+      The name of the output bitangent attribute, default is `@bitangent`
+
+
+   .. py:property:: keep_existing_tangent
+      :type: bool
+
+
+      Whether to recompute tangent if the tangent attribute (specified by tangent_attribute_name) already exists. If true, bitangent is computed by normalizing cross(normal, tangent) and param orthogonalize_bitangent must be true.
+
+
+   .. py:property:: normal_attribute_name
+      :type: str
+
+
+      The name of the normal attribute
+
+
+   .. py:property:: orthogonalize_bitangent
+      :type: bool
+
+
+      Whether to compute the bitangent as cross(normal, tangent). If false, the bitangent is computed as the derivative of v-coordinate
+
+
+   .. py:property:: output_element_type
+      :type: AttributeElement
+
+
+      The output element type
+
+
+   .. py:property:: pad_with_sign
+      :type: bool
+
+
+      Whether to pad the output tangent/bitangent with sign
+
+
+   .. py:property:: tangent_attribute_name
+      :type: str
+
+
+      The name of the output tangent attribute, default is `@tangent`
+
+
+   .. py:property:: uv_attribute_name
+      :type: str
+
+
+      The name of the uv attribute
+
+
+.. py:class:: TangentBitangentResult
+
+   Tangent bitangent result
+
+
+   .. py:property:: bitangent_id
+      :type: int
+
+
+      The output bitangent attribute id
+
+
+   .. py:property:: tangent_id
+      :type: int
+
+
+      The output tangent attribute id
+
+
+.. py:class:: VertexNormalOptions
+
+   Options for computing vertex normals
+
+
+   .. py:property:: distance_tolerance
+      :type: float
+
+
+      Distance tolerance for degenerate edge check in polygon facets.
+
+
+   .. py:property:: keep_weighted_corner_normals
+      :type: bool
+
+
+      false).
+
+      :type: Whether to keep the weighted corner normal attribute (default
+
+
+   .. py:property:: output_attribute_name
+      :type: str
+
+
+      Output attribute name. Default is `@vertex_normal`.
+
+
+   .. py:property:: recompute_weighted_corner_normals
+      :type: bool
+
+
+      false).
+
+      :type: Whether to recompute weighted corner normals (default
+
+
+   .. py:property:: weight_type
+      :type: NormalWeightingType
+
+
+      Weighting type for normal computation. Default is Angle.
+
+
+   .. py:property:: weighted_corner_normal_attribute_name
+      :type: str
+
+
+      @weighted_corner_normal).
+
+      If attribute exists, the precomputed weighted corner normal will be used.
+
+      :type: Precomputed weighted corner normals attribute name (default
+
+
+.. py:class:: VertexValenceOptions
+
+   Vertex valence options
+
+
+   .. py:property:: induced_by_attribute
+      :type: str
+
+
+      Optional per-edge attribute used as indicator function to restrict the graph used for vertex valence computation
+
+
+   .. py:property:: output_attribute_name
+      :type: str
+
+
+      The name of the output attribute
+
+
+.. py:function:: cast_attribute(mesh, input_attribute, dtype, output_attribute_name = None)
+
+   Cast an attribute to a new dtype.
+
+   :param mesh:            The input mesh.
+   :param input_attribute: The input attribute id or name.
+   :param dtype:           The new dtype.
+   :param output_attribute_name: The output attribute name. If none, cast will replace the input attribute.
+
+   :returns: The id of the new attribute.
+
+
+.. py:function:: close_small_holes(mesh, max_hole_size = 16, triangulate_holes = True)
+
+   Close small holes in a mesh.
+
+   :param mesh: Input mesh (modified in place).
+   :param max_hole_size: Maximum number of vertices on a hole to be closed.
+   :param triangulate_holes: Whether to triangulate holes (if false, fill with polygons).
+
+
+.. py:function:: combine_meshes(meshes, preserve_attributes = True)
+
+   Combine a list of meshes into a single mesh.
+
+   :param meshes: Input meshes.
+   :param preserve_attributes: Whether to preserve attributes.
+
+   :returns: The combined mesh.
+
+
+.. py:function:: compute_components(mesh, output_attribute_name = None, connectivity_type = None, blocker_elements = None)
+
+   Compute connected components.
+
+   This method will create a per-facet component id attribute named by the `output_attribute_name`
+   argument. Each component id is in [0, num_components-1] range.
+
+   :param mesh: The input mesh.
+   :param output_attribute_name: The name of the output attribute.
+   :param connectivity_type: The connectivity type.  Either "Vertex" or "Edge".
+   :param blocker_elements: The list of blocker element indices. If `connectivity_type` is `Edge`, facets adjacent to a blocker edge are not considered as connected through this edge. If `connectivity_type` is `Vertex`, facets sharing a blocker vertex are not considered as connected through this vertex.
+
+   :returns: The total number of components.
+
+
+.. py:function:: compute_dihedral_angles(mesh, output_attribute_name = None, facet_normal_attribute_name = None, recompute_facet_normals = None, keep_facet_normals = None)
+
+   Compute dihedral angles for each edge.
+
+   The dihedral angle of an edge is defined as the angle between the __normals__ of two facets adjacent
+   to the edge. The dihedral angle is always in the range [0, pi] for manifold edges. For boundary
+   edges, the dihedral angle defaults to 0.  For non-manifold edges, the dihedral angle is not
+   well-defined and will be set to the special value 2 * π.
+
+   :param mesh:                        The source mesh.
+   :param output_attribute_name:       The optional edge attribute name to store the dihedral angles.
+   :param facet_normal_attribute_name: The optional attribute name to store the facet normals.
+   :param recompute_facet_normals:     Whether to recompute facet normals.
+   :param keep_facet_normals:          Whether to keep newly computed facet normals. It has no effect on pre-existing facet normals.
+
+   :return: The edge attribute id of dihedral angles.
+
+
+.. py:function:: compute_dijkstra_distance(mesh, seed_facet, barycentric_coords, radius = None, output_attribute_name = '@dijkstra_distance', output_involved_vertices = False)
+
+   Compute Dijkstra distance from a seed facet.
+
+   :param mesh:                  The source mesh.
+   :param seed_facet:            The seed facet index.
+   :param barycentric_coords:    The barycentric coordinates of the seed facet.
+   :param radius:                The maximum radius of the dijkstra distance.
+   :param output_attribute_name: The output attribute name to store the dijkstra distance.
+   :param output_involved_vertices: Whether to output the list of involved vertices.
+
+
+.. py:function:: compute_edge_is_manifold(mesh, output_attribute_name = '@edge_is_manifold')
+
+   Compute whether each edge is manifold.
+
+   An edge is considered manifold if it is adjacent to one or two facets.
+
+   :param mesh: The source mesh.
+   :param output_attribute_name: The output edge attribute name.
+
+   :return: The attribute id of an edge attribute indicating whether an edge is manifold.
+
+
+.. py:function:: compute_edge_is_oriented(mesh, output_attribute_name = '@edge_is_oriented')
+
+   Compute whether each edge is oriented.
+
+   An interior edge is considered as oriented if it has the same number of half-edges for each edge
+   direction. I.e. the number of facets that use the edge in one direction equals to the number of
+   facets that use the edge in the opposite direction. Boundary edges are always considered as
+   oriented.
+
+   :param mesh: The source mesh.
+   :param output_attribute_name: The output edge attribute name.
+
+   :return: The attribute id of an edge attribute indicating whether an edge is oriented.
+
+
+.. py:function:: compute_edge_lengths(mesh, output_attribute_name = None)
+
+   Compute edge lengths.
+
+   :param mesh:                  The source mesh.
+   :param output_attribute_name: The optional edge attribute name to store the edge lengths.
+
+   :return: The edge attribute id of edge lengths.
+
+
+.. py:function:: compute_euler(mesh)
+
+   Compute the Euler characteristic.
+
+   :param mesh: The source mesh.
+
+   :return: The Euler characteristic.
+
+
+.. py:function:: compute_facet_area(mesh: SurfaceMesh, options: FacetAreaOptions = ...) -> int
+                 compute_facet_area(mesh: SurfaceMesh, output_attribute_name: str | None = None) -> int
+
+   Compute facet area (Pythonic API).
+
+   :param mesh: The input mesh.
+   :param output_attribute_name: The name of the output attribute.
+
+   :returns: The id of the new attribute.
+
+
+.. py:function:: compute_facet_centroid(mesh: SurfaceMesh, options: FacetCentroidOptions = ...) -> int
+                 compute_facet_centroid(mesh: SurfaceMesh, output_attribute_name: str | None = None) -> int
+
+   Compute facet centroid (Pythonic API).
+
+   :param mesh: Input mesh.
+   :param output_attribute_name: Output attribute name.
+
+   :returns: Attribute ID.
+
+
+.. py:function:: compute_facet_circumcenter(mesh, output_attribute_name = None)
+
+   Compute facet circumcenter (Pythonic API).
+
+   :param mesh: The input mesh.
+   :param output_attribute_name: The name of the output attribute.
+
+   :returns: The id of the new attribute.
+
+
+.. py:function:: compute_facet_normal(mesh: SurfaceMesh, options: FacetNormalOptions = ...) -> int
+                 compute_facet_normal(mesh: SurfaceMesh, output_attribute_name: str | None = None) -> int
+
+   Compute facet normal (Pythonic API).
+
+   :param mesh: Input mesh.
+   :param output_attribute_name: Output attribute name.
+
+   :returns: Facet normal attribute id.
+
+
+.. py:function:: compute_facet_vector_area(mesh, output_attribute_name = None)
+
+   Compute facet vector area (Pythonic API).
+
+   Vector area is defined as the area multiplied by the facet normal.
+   For triangular facets, it is equivalent to half of the cross product of two edges.
+   For non-planar polygonal facets, the vector area offers a robust way to compute the area and normal.
+   The magnitude of the vector area is the largest area of any orthogonal projection of the facet.
+   The direction of the vector area is the normal direction that maximizes the projected area [1, 2].
+
+   [1] Sullivan, John M. "Curvatures of smooth and discrete surfaces." Discrete differential geometry.
+   Basel: Birkhäuser Basel, 2008. 175-188.
+
+   [2] Alexa, Marc, and Max Wardetzky. "Discrete Laplacians on general polygonal meshes." ACM SIGGRAPH
+   2011 papers. 2011. 1-10.
+
+   :param mesh: The input mesh.
+   :param output_attribute_name: The name of the output attribute.
+
+   :returns: The id of the new attribute.
+
+
+.. py:function:: compute_greedy_coloring(mesh, element_type = AttributeElement.Facet, num_color_used = 8, output_attribute_name = None)
+
+   Compute greedy coloring of mesh elements.
+
+   :param mesh: Input mesh.
+   :param element_type: Element type to be colored. Can be either Vertex or Facet.
+   :param num_color_used: Minimum number of colors to use. The algorithm will cycle through them but may use more.
+   :param output_attribute_name: Output attribute name.
+
+   :returns: Color attribute id.
+
+
+.. py:function:: compute_mesh_area(mesh: SurfaceMesh, options: MeshAreaOptions = ...) -> float
+                 compute_mesh_area(mesh: SurfaceMesh, input_attribute_name: str | None = None, use_signed_area: bool | None = None) -> float
+
+   Compute mesh area (Pythonic API).
+
+   :param mesh: The input mesh.
+   :param input_attribute_name: The name of the pre-computed facet area attribute.
+   :param use_signed_area: Whether to use signed area.
+
+   :returns: The mesh area.
+
+
+.. py:function:: compute_mesh_centroid(mesh: SurfaceMesh, options: MeshCentroidOptions = ...) -> list[float]
+                 compute_mesh_centroid(mesh: SurfaceMesh, weighting_type: CentroidWeightingType | None = None, facet_centroid_attribute_name: str | None = None, facet_area_attribute_name: str | None = None) -> list[float]
+
+   Compute mesh centroid (Pythonic API).
+
+   :param mesh: Input mesh.
+   :param weighting_type: Weighting type (default: Area).
+   :param facet_centroid_attribute_name: Pre-computed facet centroid attribute name.
+   :param facet_area_attribute_name: Pre-computed facet area attribute name.
+
+   :returns: Mesh centroid coordinates.
+
+
+.. py:function:: compute_mesh_covariance(mesh, center, active_facets_attribute_name = None)
+
+   Compute the covariance matrix of a mesh w.r.t. a center (Pythonic API).
+
+   :param mesh: Input mesh.
+   :param center: The center of the covariance computation.
+   :param active_facets_attribute_name: (optional) Attribute name of whether a facet should be considered in the computation.
+
+   :returns: The 3 by 3 covariance matrix, which should be symmetric.
+
+
+.. py:function:: compute_normal(mesh: SurfaceMesh, feature_angle_threshold: float = 0.7853981633974483, cone_vertices: object | None = None, options: NormalOptions | None = None) -> int
+                 compute_normal(mesh: SurfaceMesh, feature_angle_threshold: float = 0.7853981633974483, cone_vertices: object | None = None, output_attribute_name: str | None = None, weight_type: NormalWeightingType | None = None, facet_normal_attribute_name: str | None = None, recompute_facet_normals: bool | None = None, keep_facet_normals: bool | None = None, distance_tolerance: float | None = None) -> int
+
+   Compute indexed normal attribute (Pythonic API).
+
+   :param mesh: input mesh
+   :param feature_angle_threshold: feature angle threshold
+   :param cone_vertices: cone vertices
+   :param output_attribute_name: output normal attribute name
+   :param weight_type: normal weighting type
+   :param facet_normal_attribute_name: facet normal attribute name
+   :param recompute_facet_normals: whether to recompute facet normals
+   :param keep_facet_normals: whether to keep the computed facet normal attribute
+   :param distance_tolerance: distance tolerance for degenerate edge check
+                              (only used to bypass degenerate edges in polygon facets)
+
+   :returns: the id of the indexed normal attribute.
+
+
+.. py:function:: compute_pointcloud_pca(points, shift_centroid = False, normalize = False)
+
+   Compute principal components of a point cloud.
+
+   :param points: Input points.
+   :param shift_centroid: When true: covariance = (P-centroid)^T (P-centroid), when false: covariance = (P)^T (P).
+   :param normalize: Should we divide the result by number of points?
+
+   :returns: tuple of (center, eigenvectors, eigenvalues).
+
+
+.. py:function:: compute_seam_edges(mesh, indexed_attribute_id, output_attribute_name = None)
+
+   Compute seam edges for a given indexed attribute.
+
+   :param mesh: Input mesh.
+   :param indexed_attribute_id: Input indexed attribute id.
+   :param output_attribute_name: Output attribute name.
+
+   :returns: Attribute id for the output per-edge seam attribute (1 is a seam, 0 is not).
+
+
+.. py:function:: compute_tangent_bitangent(mesh: SurfaceMesh, options: TangentBitangentOptions = ...) -> TangentBitangentResult
+                 compute_tangent_bitangent(mesh: SurfaceMesh, tangent_attribute_name: str | None = None, bitangent_attribute_name: str | None = None, uv_attribute_name: str | None = None, normal_attribute_name: str | None = None, output_attribute_type: AttributeElement | None = None, pad_with_sign: bool | None = None, orthogonalize_bitangent: bool | None = None, keep_existing_tangent: bool | None = None) -> tuple[int, int]
+
+   Compute tangent and bitangent vector attributes (Pythonic API).
+
+   :param mesh: The input mesh.
+   :param tangent_attribute_name: The name of the output tangent attribute.
+   :param bitangent_attribute_name: The name of the output bitangent attribute.
+   :param uv_attribute_name: The name of the uv attribute.
+   :param normal_attribute_name: The name of the normal attribute.
+   :param output_attribute_type: The output element type.
+   :param pad_with_sign: Whether to pad the output tangent/bitangent with sign.
+   :param orthogonalize_bitangent: Whether to compute the bitangent as sign * cross(normal, tangent).
+   :param keep_existing_tangent: Whether to recompute tangent if the tangent attribute (specified by tangent_attribute_name) already exists. If true, bitangent is computed by normalizing cross(normal, tangent) and param orthogonalize_bitangent must be true.
+
+   :returns: The tangent and bitangent attribute ids
+
+
+.. py:function:: compute_uv_area(mesh, options = ...)
+
+   Compute UV mesh area.
+
+   :param mesh: The input mesh.
+   :param options: The options for computing mesh area.
+
+   :returns: The UV mesh area.
+
+
+.. py:function:: compute_uv_charts(mesh, uv_attribute_name = '', output_attribute_name = '@chart_id', connectivity_type = 'Edge')
+
+   Compute UV charts.
+
+   @param mesh: Input mesh.
+   @param uv_attribute_name: Name of the UV attribute.
+   @param output_attribute_name: Name of the output attribute to store the chart ids.
+   @param connectivity_type: Type of connectivity to use for chart computation. Can be "Vertex" or "Edge".
+
+   @returns: A list of chart ids for each vertex.
+
+
+.. py:function:: compute_uv_distortion(mesh, uv_attribute_name = '@uv', output_attribute_name = '@uv_measure', metric = DistortionMetric.MIPS)
+
+   Compute UV distortion.
+
+   :param mesh: Input mesh.
+   :param uv_attribute_name: UV attribute name (default: "@uv").
+   :param output_attribute_name: Output attribute name (default: "@uv_measure").
+   :param metric: Distortion metric (default: MIPS).
+
+   :returns: Facet attribute ID for distortion.
+
+
+.. py:function:: compute_vertex_is_manifold(mesh, output_attribute_name = '@vertex_is_manifold')
+
+   Compute whether each vertex is manifold.
+
+   A vertex is considered manifold if its one-ring neighborhood is homeomorphic to a disk.
+
+   :param mesh: The source mesh.
+   :param output_attribute_name: The output vertex attribute name.
+
+   :return: The attribute id of a vertex attribute indicating whether a vertex is manifold.
+
+
+.. py:function:: compute_vertex_normal(mesh: SurfaceMesh, options: VertexNormalOptions = ...) -> int
+                 compute_vertex_normal(mesh: SurfaceMesh, output_attribute_name: str | None = None, weight_type: NormalWeightingType | None = None, weighted_corner_normal_attribute_name: str | None = None, recompute_weighted_corner_normals: bool | None = None, keep_weighted_corner_normals: bool | None = None, distance_tolerance: float | None = None) -> int
+
+   Compute vertex normal (Pythonic API).
+
+   :param mesh: Input mesh.
+   :param output_attribute_name: Output attribute name.
+   :param weight_type: Weighting type for normal computation.
+   :param weighted_corner_normal_attribute_name: Precomputed weighted corner normals attribute name.
+   :param recompute_weighted_corner_normals: Whether to recompute weighted corner normals.
+   :param keep_weighted_corner_normals: Whether to keep the weighted corner normal attribute.
+   :param distance_tolerance: Distance tolerance for degenerate edge check.
+                              (Only used to bypass degenerate edge in polygon facets.)
+
+   :returns: Vertex normal attribute id.
+
+
+.. py:function:: compute_vertex_valence(mesh: SurfaceMesh, options: VertexValenceOptions = ...) -> int
+                 compute_vertex_valence(mesh: SurfaceMesh, output_attribute_name: str | None = None, induced_by_attribute: str | None = None) -> int
+
+   Compute vertex valence);
+
+   :param mesh: The input mesh.
+   :param output_attribute_name: The name of the output attribute.
+   :param induced_by_attribute: Optional per-edge attribute used as indicator function to restrict the graph used for vertex valence computation.
+
+   :returns: The vertex valence attribute id
+
+
+.. py:function:: detect_degenerate_facets(mesh)
+
+   Detect degenerate facets in a mesh.
+
+   .. note::
+       Only exactly degenerate facets are detected.
+
+   :param mesh: Input mesh.
+
+   :returns: List of degenerate facet indices.
+
+
+.. py:function:: extract_boundary_edges(mesh)
+
+   Extract boundary edges from a mesh.
+
+   :param mesh: Input mesh.
+
+   :returns: A list of boundary edge indices.
+
+
+.. py:function:: extract_boundary_loops(mesh)
+
+   Extract boundary loops from a mesh.
+
+   :param mesh: Input mesh.
+
+   :returns: A list of boundary loops, each represented as a list of vertex indices.
+
+
+.. py:function:: extract_isoline(mesh, attribute, isovalue = 0.0)
+
+   Extract the isoline of an implicit function defined on the mesh vertices/corners.
+
+   The input mesh must be a triangle mesh.
+
+   :param mesh:       Input triangle mesh to extract the isoline from.
+   :param attribute:  Attribute id or name of the scalar field to use. Can be a vertex or indexed attribute.
+   :param isovalue:   Isovalue to extract.
+
+   :return: A mesh whose facets is a collection of size 2 elements representing the extracted isoline.
+
+
+.. py:function:: extract_submesh(mesh, selected_facets, source_vertex_attr_name = '', source_facet_attr_name = '', map_attributes = False)
+
+   Extract a submesh based on the selected facets.
+
+   :param mesh:                    The source mesh.
+   :param selected_facets:         A listed of facet ids to extract.
+   :param source_vertex_attr_name: The optional attribute name to track source vertices.
+   :param source_facet_attr_name:  The optional attribute name to track source facets.
+   :param map_attributes:          Map attributes from the source to target meshes.
+
+   :returns: A mesh that contains only the selected facets.
+
+
+.. py:function:: filter_attributes(mesh, included_attributes = None, excluded_attributes = None, included_usages = None, included_element_types = None)
+
+   Filters the attributes of mesh according to user specifications.
+
+   :param mesh: Input mesh.
+   :param included_attributes: List of attribute names or ids to include. By default, all attributes are included.
+   :param excluded_attributes: List of attribute names or ids to exclude. By default, no attribute is excluded.
+   :param included_usages: List of attribute usages to include. By default, all usages are included.
+   :param included_element_types: List of attribute element types to include. By default, all element types are included.
+
+
+.. py:function:: is_closed(mesh)
+
+   Check if the mesh is closed.
+
+   A mesh is considered closed if it has no boundary edges.
+
+   :param mesh: The source mesh.
+
+   :return: Whether the mesh is closed.
+
+
+.. py:function:: is_edge_manifold(mesh)
+
+   Check if the mesh is edge manifold.
+
+   :param mesh: The source mesh.
+
+   :return: Whether the mesh is edge manifold.
+
+
+.. py:function:: is_manifold(mesh)
+
+   Check if the mesh is manifold.
+
+   A mesh considered as manifold if it is both vertex and edge manifold.
+
+   :param mesh: The source mesh.
+
+   :return: Whether the mesh is manifold.
+
+
+.. py:function:: is_oriented(mesh)
+
+   Check if the mesh is oriented.
+
+   A mesh is oriented if all interior edges are oriented. An interior edge is considered as
+   oriented if it has the same number of half-edges for each edge direction. I.e. the number of
+   facets that use the edge in one direction equals the number of facets that use the edge in the
+   opposite direction. Boundary edges are always considered as oriented.
+
+   :param mesh: The source mesh.
+
+   :return: Whether the mesh is oriented.
+
+
+.. py:function:: is_vertex_manifold(mesh)
+
+   Check if the mesh is vertex manifold.
+
+   :param mesh: The source mesh.
+
+   :return: Whether the mesh is vertex manifold.
+
+
+.. py:function:: map_attribute(mesh: SurfaceMesh, old_attribute_id: int, new_attribute_name: str, new_element: AttributeElement) -> int
+                 map_attribute(mesh: SurfaceMesh, old_attribute_name: str, new_attribute_name: str, new_element: AttributeElement) -> int
+
+   Map an attribute to a new element type.
+
+   :param mesh: The input mesh.
+   :param old_attribute_name: The name of the input attribute.
+   :param new_attribute_name: The name of the new attribute.
+   :param new_element: The new element type.
+
+   :returns: The id of the new attribute.
+
+
+.. py:function:: map_attribute_in_place(mesh: SurfaceMesh, id: int, new_element: AttributeElement) -> int
+                 map_attribute_in_place(mesh: SurfaceMesh, name: str, new_element: AttributeElement) -> int
+
+   Map an attribute to a new element type in place.
+
+   :param mesh: The input mesh.
+   :param name: The name of the input attribute.
+   :param new_element: The new element type.
+
+   :returns: The id of the new attribute.
+
+
+.. py:function:: normalize_mesh(mesh, normalize_normals = True, normalize_tangents_bitangents = True)
+
+   Normalize a mesh to fit into a unit box centered at the origin.
+
+   :param mesh: Input mesh.
+   :param normalize_normals:             Whether to normalize normals.
+   :param normalize_tangents_bitangents: Whether to normalize tangents and bitangents.
+
+
+.. py:function:: normalize_mesh_with_transform(mesh, normalize_normals = True, normalize_tangents_bitangents = True)
+
+   Normalize a mesh to fit into a unit box centered at the origin.
+
+   :param mesh: Input mesh.
+   :param normalize_normals:             Whether to normalize normals.
+   :param normalize_tangents_bitangents: Whether to normalize tangents and bitangents.
+
+   :return Inverse transform, can be used to undo the normalization process.
+
+
+.. py:function:: normalize_mesh_with_transform_2d(mesh, normalize_normals = True, normalize_tangents_bitangents = True)
+
+   Normalize a mesh to fit into a unit box centered at the origin.
+
+   :param mesh: Input mesh.
+   :param normalize_normals:             Whether to normalize normals.
+   :param normalize_tangents_bitangents: Whether to normalize tangents and bitangents.
+
+   :return Inverse transform, can be used to undo the normalization process.
+
+
+.. py:function:: normalize_meshes(meshes, normalize_normals = True, normalize_tangents_bitangents = True)
+
+   Normalize a list of meshes to fit into a unit box centered at the origin.
+
+   :param meshes: Input meshes.
+   :param normalize_normals:             Whether to normalize normals.
+   :param normalize_tangents_bitangents: Whether to normalize tangents and bitangents.
+
+
+.. py:function:: normalize_meshes_with_transform(meshes, normalize_normals = True, normalize_tangents_bitangents = True)
+
+   Normalize a mesh to fit into a unit box centered at the origin.
+
+   :param meshes: Input meshes.
+   :param normalize_normals:             Whether to normalize normals.
+   :param normalize_tangents_bitangents: Whether to normalize tangents and bitangents.
+
+   :return Inverse transform, can be used to undo the normalization process.
+
+
+.. py:function:: normalize_meshes_with_transform_2d(meshes, normalize_normals = True, normalize_tangents_bitangents = True)
+
+   Normalize a mesh to fit into a unit box centered at the origin.
+
+   :param meshes: Input meshes.
+   :param normalize_normals:             Whether to normalize normals.
+   :param normalize_tangents_bitangents: Whether to normalize tangents and bitangents.
+
+   :return Inverse transform, can be used to undo the normalization process.
+
+
+.. py:function:: orient_outward(mesh, positive = True)
+
+   Orient mesh facets to ensure positive or negative signed volume.
+
+   :param mesh: Input mesh.
+   :param positive: Whether to orient volumes positively or negatively.
+
+
+.. py:function:: permute_facets(mesh, new_to_old)
+
+   Reorder facets of a mesh in place based on a permutation.
+
+   :param mesh: input mesh
+   :param new_to_old: permutation vector for facets
+
+
+.. py:function:: permute_vertices(mesh, new_to_old)
+
+   Reorder vertices of a mesh in place based on a permutation.
+
+   :param mesh: input mesh
+   :param new_to_old: permutation vector for vertices
+
+
+.. py:function:: remap_vertices(mesh: SurfaceMesh, old_to_new: Annotated[numpy.typing.NDArray[numpy.uint32], dict(order='C', device='cpu')], options: RemapVerticesOptions = ...) -> None
+                 remap_vertices(mesh: SurfaceMesh, old_to_new: Annotated[numpy.typing.NDArray[numpy.uint32], dict(order='C', device='cpu')], collision_policy_float: MappingPolicy | None = None, collision_policy_integral: MappingPolicy | None = None) -> None
+
+   Remap vertices of a mesh in place based on a permutation (Pythonic API).
+
+   :param mesh: input mesh
+   :param old_to_new: permutation vector for vertices
+   :param collision_policy_float: The collision policy for float attributes.
+   :param collision_policy_integral: The collision policy for integral attributes.
+
+
+.. py:function:: remove_degenerate_facets(mesh)
+
+   Remove degenerate facets from a mesh.
+
+   .. note::
+       Assumes triangular mesh. Use `triangulate_polygonal_facets` for non-triangular meshes.
+       Adjacent non-degenerate facets may be re-triangulated during removal.
+
+   :param mesh: Input mesh (modified in place).
+
+
+.. py:function:: remove_duplicate_facets(mesh, consider_orientation = False)
+
+   Remove duplicate facets from a mesh.
+
+   Facets with different orientations (e.g. (0,1,2) and (2,1,0)) are considered duplicates.
+   If both orientations have equal counts, all are removed.
+   If one orientation has more duplicates, all but one of the majority orientation are kept.
+
+   :param mesh: Input mesh (modified in place).
+   :param consider_orientation: Whether to consider orientation when detecting duplicates.
+
+
+.. py:function:: remove_duplicate_vertices(mesh, extra_attributes = None, boundary_only = False)
+
+   Remove duplicate vertices from a mesh.
+
+   :param mesh: Input mesh (modified in place).
+   :param extra_attributes: Additional attributes to consider when detecting duplicates.
+   :param boundary_only: Only remove duplicate vertices on the boundary.
+
+
+.. py:function:: remove_isolated_vertices(mesh)
+
+   Remove isolated vertices from a mesh.
+
+   .. note::
+       A vertex is considered isolated if it is not referenced by any facet.
+
+   :param mesh: Input mesh (modified in place).
+
+
+.. py:function:: remove_null_area_facets(mesh, null_area_threshold = 0, remove_isolated_vertices = False)
+
+   Remove facets with unsigned facets area <= `null_area_threhsold`.
+
+   :param mesh: Input mesh (modified in place).
+   :param null_area_threshold: Area threshold below which facets are considered null.
+   :param remove_isolated_vertices: Whether to remove isolated vertices after removing null area facets.
+
+
+.. py:function:: remove_short_edges(mesh, threshold = 0)
+
+   Remove short edges from a mesh.
+
+   :param mesh: Input mesh (modified in place).
+   :param threshold: Minimum edge length below which edges are considered short.
+
+
+.. py:function:: remove_topologically_degenerate_facets(mesh)
+
+   Remove topologically degenerate facets such as (0,1,1).
+
+   For polygons, topological degeneracy means the polygon has at most two unique vertices.
+   E.g. quad (0,0,1,1) is degenerate, while (1,1,2,3) is not.
+
+   :param mesh: Input mesh (modified in place).
+
+
+.. py:function:: reorder_mesh(mesh, method)
+
+   Reorder a mesh in place.
+
+   :param mesh: input mesh
+   :param method: reordering method, options are 'Lexicographic', 'Morton', 'Hilbert', 'None' (default is 'Morton').
+
+
+.. py:function:: rescale_uv_charts(mesh, uv_attribute_name = '', chart_id_attribute_name = '', uv_area_threshold = 1e-06)
+
+   Rescale UV charts to match their 3D aspect ratios.
+
+   :param mesh: Input mesh (modified in place).
+   :param uv_attribute_name: UV attribute name for rescaling.
+                            If empty, uses first UV attribute found.
+   :param chart_id_attribute_name: Patch ID attribute name.
+                                   If empty, computes patches from UV chart connectivity.
+   :param uv_area_threshold: UV area threshold.
+                            Triangles below this threshold don't contribute to scale computation.
+
+
+.. py:function:: resolve_nonmanifoldness(mesh)
+
+   Resolve both vertex and edge nonmanifoldness in a mesh.
+
+   :param mesh: Input mesh (modified in place).
+
+
+.. py:function:: resolve_vertex_nonmanifoldness(mesh)
+
+   Resolve vertex non-manifoldness in a mesh.
+
+   :param mesh: Input mesh (modified in place).
+
+   :raises RuntimeError: If the input mesh is not edge-manifold.
+
+
+.. py:function:: select_facets_by_normal_similarity(mesh, seed_facet_id, flood_error_limit = None, flood_second_to_first_order_limit_ratio = None, facet_normal_attribute_name = None, is_facet_selectable_attribute_name = None, output_attribute_name = None, search_type = None, num_smooth_iterations = None)
+
+   Select facets by normal similarity (Pythonic API).
+
+   :param mesh: Input mesh.
+   :param seed_facet_id: Index of the seed facet.
+   :param flood_error_limit: Tolerance for normals of the seed and the selected facets. Higher limit leads to larger selected region.
+   :param flood_second_to_first_order_limit_ratio: Ratio of the flood_error_limit and the tolerance for normals of neighboring selected facets. Higher ratio leads to more curvature in selected region.
+   :param facet_normal_attribute_name: Attribute name of the facets normal. If the mesh doesn't have this attribute, it will call compute_facet_normal to compute it.
+   :param is_facet_selectable_attribute_name: If provided, this function will look for this attribute to determine if a facet is selectable.
+   :param output_attribute_name: Attribute name of whether a facet is selected.
+   :param search_type: Use 'BFS' for breadth-first search or 'DFS' for depth-first search.
+   :param num_smooth_iterations: Number of iterations to smooth the boundary of the selected region.
+
+   :returns: Id of the attribute on whether a facet is selected.
+
+
+.. py:function:: select_facets_in_frustum(mesh, frustum_plane_points, frustum_plane_normals, greedy = None, output_attribute_name = None)
+
+   Select facets in a frustum (Pythonic API).
+
+   :param mesh: Input mesh.
+   :param frustum_plane_points: Four points on each of the frustum planes.
+   :param frustum_plane_normals: Four normals of each of the frustum planes.
+   :param greedy: If true, the function returns as soon as the first facet is found.
+   :param output_attribute_name: Attribute name of whether a facet is selected.
+
+   :returns: Whether any facets got selected.
+
+
+.. py:function:: separate_by_components(mesh, source_vertex_attr_name = '', source_facet_attr_name = '', map_attributes = False, connectivity_type = ConnectivityType.Edge)
+
+   Extract a set of submeshes based on connected components.
+
+   :param mesh:                    The source mesh.
+   :param source_vertex_attr_name: The optional attribute name to track source vertices.
+   :param source_facet_attr_name:  The optional attribute name to track source facets.
+   :param map_attributes:          Map attributes from the source to target meshes.
+   :param connectivity_type:       The connectivity used for component computation.
+
+   :returns: A list of meshes, one for each connected component.
+
+
+.. py:function:: separate_by_facet_groups(mesh, facet_group_indices, source_vertex_attr_name = '', source_facet_attr_name = '', map_attributes = False)
+
+   Extract a set of submeshes based on facet groups.
+
+   :param mesh:                    The source mesh.
+   :param facet_group_indices:     The group index for each facet. Each group index must be in the range of [0, max(facet_group_indices)]
+   :param source_vertex_attr_name: The optional attribute name to track source vertices.
+   :param source_facet_attr_name:  The optional attribute name to track source facets.
+
+   :returns: A list of meshes, one for each facet group.
+
+
+.. py:function:: split_facets_by_material(mesh, material_attribute_name)
+
+   Split mesh facets based on a material attribute.
+
+   @param mesh: Input mesh on which material segmentation will be applied in place.
+   @param material_attribute_name: Name of the material attribute to use for inserting boundaries.
+
+   @note The material attribute should be n by k vertex attribute, where n is the number of vertices,
+   and k is the number of materials. The value at row i and column j indicates the probability of vertex
+   i belonging to material j. The function will insert boundaries between different materials based on
+   the material attribute.
+
+
+.. py:function:: split_long_edges(mesh, max_edge_length = 0.10000000149011612, recursive = True, active_region_attribute = None, edge_length_attribute = None)
+
+   Split edges longer than max_edge_length.
+
+   :param mesh: Input mesh (modified in place).
+   :param max_edge_length: Maximum edge length threshold.
+   :param recursive: If true, apply recursively until no edge exceeds threshold.
+   :param active_region_attribute: Facet attribute name for active region (uint8_t type).
+                                   If None, all edges are considered.
+   :param edge_length_attribute: Edge length attribute name.
+                                 If None, edge lengths are computed.
+
+
+.. py:function:: thicken_and_close_mesh(mesh, offset_amount = None, direction = None, mirror_ratio = None, num_segments = None, indexed_attributes = None)
+
+   Thicken a mesh by offsetting it, and close the shape into a thick 3D solid.
+
+   :param mesh: Input mesh.
+   :param direction: Direction of the offset. Can be an attribute name or a fixed 3D vector.
+   :param offset_amount: Amount of offset.
+   :param mirror_ratio: Ratio of the offset amount to mirror the mesh.
+   :param num_segments: Number of segments to use for the thickening.
+   :param indexed_attributes: List of indexed attributes to copy to the new mesh.
+
+   :returns: The thickened and closed mesh.
+
+
+.. py:function:: transform_mesh(mesh, affine_transform, normalize_normals = True, normalize_tangents_bitangents = True, in_place = True)
+
+   Apply affine transformation to a mesh.
+
+   :param mesh: Input mesh.
+   :param affine_transform: Affine transformation matrix.
+   :param normalize_normals: Whether to normalize normals.
+   :param normalize_tangents_bitangents: Whether to normalize tangents and bitangents.
+   :param in_place: Whether to apply transformation in place.
+
+   :returns: Transformed mesh if in_place is False.
+
+
+.. py:function:: triangulate_polygonal_facets(mesh, scheme = 'earcut')
+
+   Triangulate polygonal facets of the mesh.
+
+   :param mesh: The input mesh to be triangulated in place.
+   :param scheme: The triangulation scheme (options are 'earcut' and 'centroid_fan')
+
+
+.. py:function:: trim_by_isoline(mesh, attribute, isovalue = 0.0, keep_below = True)
+
+   Trim a triangle mesh by an isoline.
+
+   :param mesh: Input triangle mesh.
+   :param attribute: Attribute ID or name of scalar field (vertex or indexed).
+   :param isovalue: Isovalue to trim with.
+   :param keep_below: Whether to keep the part below the isoline.
+
+   :returns: Trimmed mesh.
+
+
+.. py:function:: unify_index_buffer(mesh: SurfaceMesh) -> SurfaceMesh
+                 unify_index_buffer(mesh: SurfaceMesh, attribute_ids: collections.abc.Sequence[int]) -> SurfaceMesh
+                 unify_index_buffer(mesh: SurfaceMesh, attribute_names: collections.abc.Sequence[str]) -> SurfaceMesh
+
+   Unify the index buffer for selected attributes.
+
+   :param mesh: Input mesh.
+   :param attribute_names: Attribute names to unify.
+
+   :returns: Unified mesh.
+
+
+.. py:function:: uv_mesh_ref(mesh, uv_attribute_name = '')
+
+   Extract a UV mesh reference from a 3D mesh.
+
+   :param mesh: Input mesh.
+   :param uv_attribute_name: Name of the (indexed or vertex) UV attribute.
+
+   :return: A new mesh representing the UV mesh.
+
+
+.. py:function:: uv_mesh_view(mesh, uv_attribute_name = '')
+
+   Extract a UV mesh view from a 3D mesh.
+
+   :param mesh: Input mesh.
+   :param uv_attribute_name: Name of the (indexed or vertex) UV attribute.
+
+   :return: A new mesh representing the UV mesh.
+
+
+.. py:function:: weld_indexed_attribute(mesh, attribute_id, epsilon_rel = None, epsilon_abs = None, angle_abs = None, exclude_vertices = None)
+
+   Weld indexed attribute.
+
+   :param mesh:         The source mesh to be updated in place.
+   :param attribute_id: The indexed attribute id to weld.
+   :param epsilon_rel:  The relative tolerance for welding.
+   :param epsilon_abs:  The absolute tolerance for welding.
+   :param angle_abs:    The absolute angle tolerance for welding.
+   :param exclude_vertices: Optional list of vertex indices to exclude from welding.
+
+
+.. py:data:: invalid_index
+   :type:  int
+   :value: 4294967295
+
+
+.. py:data:: invalid_scalar
+   :type:  float
+

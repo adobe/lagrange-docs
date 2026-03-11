@@ -1,0 +1,869 @@
+<!doctype html>
+<html class="no-js" lang="en" data-content_root="../../../">
+  <head><meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="index" title="Index" href="../../../genindex.html"><link rel="search" title="Search" href="../../../search.html"><link rel="next" title="lagrange.scene" href="../scene/index.html"><link rel="prev" title="lagrange.primitive" href="../primitive/index.html">
+
+    <!-- Generated with Sphinx 8.2.3 and Furo 2025.09.25 -->
+        <title>lagrange.raycasting - Lagrange documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=d111a655" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?v=580074bf" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/graphviz.css?v=4ae1632d" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?v=8dab3a3b" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f2f2f2;
+  --color-code-foreground: #1e1e1e;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+      }
+    }
+  }
+</style></head>
+  <body>
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-with-moon" viewBox="0 0 24 24">
+    <title>Auto light/dark, in light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
+      <path style="opacity: 50%" d="M 5.411 14.504 C 5.471 14.504 5.532 14.504 5.591 14.504 C 3.639 16.319 4.383 19.569 6.931 20.352 C 7.693 20.586 8.512 20.551 9.25 20.252 C 8.023 23.207 4.056 23.725 2.11 21.184 C 0.166 18.642 1.702 14.949 4.874 14.536 C 5.051 14.512 5.231 14.5 5.411 14.5 L 5.411 14.504 Z"/>
+      <line x1="14.5" y1="3.25" x2="14.5" y2="1.25"/>
+      <line x1="14.5" y1="15.85" x2="14.5" y2="17.85"/>
+      <line x1="10.044" y1="5.094" x2="8.63" y2="3.68"/>
+      <line x1="19" y1="14.05" x2="20.414" y2="15.464"/>
+      <line x1="8.2" y1="9.55" x2="6.2" y2="9.55"/>
+      <line x1="20.8" y1="9.55" x2="22.8" y2="9.55"/>
+      <line x1="10.044" y1="14.006" x2="8.63" y2="15.42"/>
+      <line x1="19" y1="5.05" x2="20.414" y2="3.636"/>
+      <circle cx="14.5" cy="9.55" r="3.6"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon-with-sun" viewBox="0 0 24 24">
+    <title>Auto light/dark, in dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
+      <path d="M 8.282 7.007 C 8.385 7.007 8.494 7.007 8.595 7.007 C 5.18 10.184 6.481 15.869 10.942 17.24 C 12.275 17.648 13.706 17.589 15 17.066 C 12.851 22.236 5.91 23.143 2.505 18.696 C -0.897 14.249 1.791 7.786 7.342 7.063 C 7.652 7.021 7.965 7 8.282 7 L 8.282 7.007 Z"/>
+      <line style="opacity: 50%" x1="18" y1="3.705" x2="18" y2="2.5"/>
+      <line style="opacity: 50%" x1="18" y1="11.295" x2="18" y2="12.5"/>
+      <line style="opacity: 50%" x1="15.316" y1="4.816" x2="14.464" y2="3.964"/>
+      <line style="opacity: 50%" x1="20.711" y1="10.212" x2="21.563" y2="11.063"/>
+      <line style="opacity: 50%" x1="14.205" y1="7.5" x2="13.001" y2="7.5"/>
+      <line style="opacity: 50%" x1="21.795" y1="7.5" x2="23" y2="7.5"/>
+      <line style="opacity: 50%" x1="15.316" y1="10.184" x2="14.464" y2="11.036"/>
+      <line style="opacity: 50%" x1="20.711" y1="4.789" x2="21.563" y2="3.937"/>
+      <circle style="opacity: 50%" cx="18" cy="7.5" r="2.169"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-pencil" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-pencil-code">
+      <path d="M4 20h4l10.5 -10.5a2.828 2.828 0 1 0 -4 -4l-10.5 10.5v4" />
+      <path d="M13.5 6.5l4 4" />
+      <path d="M20 21l2 -2l-2 -2" />
+      <path d="M17 17l-2 2l2 2" />
+    </svg>
+  </symbol>
+  <symbol id="svg-eye" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-eye-code">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+      <path
+        d="M11.11 17.958c-3.209 -.307 -5.91 -2.293 -8.11 -5.958c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6c-.21 .352 -.427 .688 -.647 1.008" />
+      <path d="M20 21l2 -2l-2 -2" />
+      <path d="M17 17l-2 2l2 2" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle site navigation sidebar">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc" aria-label="Toggle table of contents sidebar">
+<label class="overlay sidebar-overlay" for="__navigation"></label>
+<label class="overlay toc-overlay" for="__toc"></label>
+
+<a class="skip-to-content muted-link" href="#furo-main-content">Skip to content</a>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <span class="icon"><svg><use href="#svg-menu"></use></svg></span>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../../../index.html"><div class="brand">Lagrange  documentation</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle" aria-label="Toggle Light / Dark / Auto color theme">
+          <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
+          <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <span class="icon"><svg><use href="#svg-toc"></use></svg></span>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="../../../index.html">
+  
+  <span class="sidebar-brand-text">Lagrange  documentation</span>
+  
+</a><form class="sidebar-search-container" method="get" action="../../../search.html" role="search">
+  <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current has-children"><a class="reference internal" href="../index.html">lagrange</a><input aria-label="Toggle navigation of lagrange" checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../bvh/index.html">lagrange.bvh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../core/index.html">lagrange.core</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../filtering/index.html">lagrange.filtering</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../geodesic/index.html">lagrange.geodesic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../image/index.html">lagrange.image</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../io/index.html">lagrange.io</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../poisson/index.html">lagrange.poisson</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../polyddg/index.html">lagrange.polyddg</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../primitive/index.html">lagrange.primitive</a></li>
+<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">lagrange.raycasting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../scene/index.html">lagrange.scene</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../solver/index.html">lagrange.solver</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../subdivision/index.html">lagrange.subdivision</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../texproc/index.html">lagrange.texproc</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../volume/index.html">lagrange.volume</a></li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container">
+          
+
+<div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle" aria-label="Toggle Light / Dark / Auto color theme">
+              <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
+              <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <span class="icon"><svg><use href="#svg-toc"></use></svg></span>
+          </label>
+        </div>
+        <article role="main" id="furo-main-content">
+          <section id="module-lagrange.raycasting">
+<span id="lagrange-raycasting"></span><h1>lagrange.raycasting<a class="headerlink" href="#module-lagrange.raycasting" title="Link to this heading">¶</a></h1>
+<section id="classes">
+<h2>Classes<a class="headerlink" href="#classes" title="Link to this heading">¶</a></h2>
+<div class="table-wrapper autosummary longtable docutils container">
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#lagrange.raycasting.BuildQuality" title="lagrange.raycasting.BuildQuality"><code class="xref py py-obj docutils literal notranslate"><span class="pre">BuildQuality</span></code></a></p></td>
+<td><p>BVH construction quality level.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#lagrange.raycasting.CastMode" title="lagrange.raycasting.CastMode"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CastMode</span></code></a></p></td>
+<td><p>Ray-casting direction mode.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#lagrange.raycasting.FallbackMode" title="lagrange.raycasting.FallbackMode"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FallbackMode</span></code></a></p></td>
+<td><p>Fallback mode for vertices without a ray hit.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#lagrange.raycasting.ProjectMode" title="lagrange.raycasting.ProjectMode"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ProjectMode</span></code></a></p></td>
+<td><p>Main projection mode.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#lagrange.raycasting.RayCaster" title="lagrange.raycasting.RayCaster"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RayCaster</span></code></a></p></td>
+<td><p>A ray caster built on top of Embree.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#lagrange.raycasting.SceneFlags" title="lagrange.raycasting.SceneFlags"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SceneFlags</span></code></a></p></td>
+<td><p>Flags for configuring the Embree scene.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="functions">
+<h2>Functions<a class="headerlink" href="#functions" title="Link to this heading">¶</a></h2>
+<div class="table-wrapper autosummary longtable docutils container">
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#lagrange.raycasting.project" title="lagrange.raycasting.project"><code class="xref py py-obj docutils literal notranslate"><span class="pre">project</span></code></a>(…)</p></td>
+<td><p>Project query points onto a source mesh.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#lagrange.raycasting.project_closest_point" title="lagrange.raycasting.project_closest_point"><code class="xref py py-obj docutils literal notranslate"><span class="pre">project_closest_point</span></code></a>(…)</p></td>
+<td><p>Project query points onto a source mesh by closest-point interpolation.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#lagrange.raycasting.project_closest_vertex" title="lagrange.raycasting.project_closest_vertex"><code class="xref py py-obj docutils literal notranslate"><span class="pre">project_closest_vertex</span></code></a>(…)</p></td>
+<td><p>Project query points onto a source mesh by closest-vertex snapping.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#lagrange.raycasting.project_directional" title="lagrange.raycasting.project_directional"><code class="xref py py-obj docutils literal notranslate"><span class="pre">project_directional</span></code></a>(…)</p></td>
+<td><p>Project query points onto a source mesh along a prescribed direction.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="module-contents">
+<h2>Module Contents<a class="headerlink" href="#module-contents" title="Link to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="lagrange.raycasting.BuildQuality">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">lagrange.raycasting.</span></span><span class="sig-name descname"><span class="pre">BuildQuality</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwds</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lagrange.raycasting.BuildQuality" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">enum.Enum</span></code></p>
+<p>BVH construction quality level.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lagrange.raycasting.BuildQuality.High">
+<span class="sig-name descname"><span class="pre">High</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2</span></em><a class="headerlink" href="#lagrange.raycasting.BuildQuality.High" title="Link to this definition">¶</a></dt>
+<dd><p>Slowest build time, highest BVH quality.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lagrange.raycasting.BuildQuality.Low">
+<span class="sig-name descname"><span class="pre">Low</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#lagrange.raycasting.BuildQuality.Low" title="Link to this definition">¶</a></dt>
+<dd><p>Fastest build time, lowest BVH quality.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lagrange.raycasting.BuildQuality.Medium">
+<span class="sig-name descname"><span class="pre">Medium</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#lagrange.raycasting.BuildQuality.Medium" title="Link to this definition">¶</a></dt>
+<dd><p>Moderate build time and BVH quality.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="lagrange.raycasting.CastMode">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">lagrange.raycasting.</span></span><span class="sig-name descname"><span class="pre">CastMode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwds</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lagrange.raycasting.CastMode" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">enum.Enum</span></code></p>
+<p>Ray-casting direction mode.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lagrange.raycasting.CastMode.BothWays">
+<span class="sig-name descname"><span class="pre">BothWays</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#lagrange.raycasting.CastMode.BothWays" title="Link to this definition">¶</a></dt>
+<dd><p>Cast forward and backward.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lagrange.raycasting.CastMode.OneWay">
+<span class="sig-name descname"><span class="pre">OneWay</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#lagrange.raycasting.CastMode.OneWay" title="Link to this definition">¶</a></dt>
+<dd><p>Cast forward only.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="lagrange.raycasting.FallbackMode">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">lagrange.raycasting.</span></span><span class="sig-name descname"><span class="pre">FallbackMode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwds</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lagrange.raycasting.FallbackMode" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">enum.Enum</span></code></p>
+<p>Fallback mode for vertices without a ray hit.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lagrange.raycasting.FallbackMode.ClosestPoint">
+<span class="sig-name descname"><span class="pre">ClosestPoint</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2</span></em><a class="headerlink" href="#lagrange.raycasting.FallbackMode.ClosestPoint" title="Link to this definition">¶</a></dt>
+<dd><p>Interpolate from the closest surface point.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lagrange.raycasting.FallbackMode.ClosestVertex">
+<span class="sig-name descname"><span class="pre">ClosestVertex</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#lagrange.raycasting.FallbackMode.ClosestVertex" title="Link to this definition">¶</a></dt>
+<dd><p>Copy from the closest vertex.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lagrange.raycasting.FallbackMode.Constant">
+<span class="sig-name descname"><span class="pre">Constant</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#lagrange.raycasting.FallbackMode.Constant" title="Link to this definition">¶</a></dt>
+<dd><p>Fill with a constant value.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="lagrange.raycasting.ProjectMode">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">lagrange.raycasting.</span></span><span class="sig-name descname"><span class="pre">ProjectMode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwds</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lagrange.raycasting.ProjectMode" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">enum.Enum</span></code></p>
+<p>Main projection mode.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lagrange.raycasting.ProjectMode.ClosestPoint">
+<span class="sig-name descname"><span class="pre">ClosestPoint</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#lagrange.raycasting.ProjectMode.ClosestPoint" title="Link to this definition">¶</a></dt>
+<dd><p>Interpolate from the closest surface point.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lagrange.raycasting.ProjectMode.ClosestVertex">
+<span class="sig-name descname"><span class="pre">ClosestVertex</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#lagrange.raycasting.ProjectMode.ClosestVertex" title="Link to this definition">¶</a></dt>
+<dd><p>Copy from the closest vertex.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lagrange.raycasting.ProjectMode.RayCasting">
+<span class="sig-name descname"><span class="pre">RayCasting</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2</span></em><a class="headerlink" href="#lagrange.raycasting.ProjectMode.RayCasting" title="Link to this definition">¶</a></dt>
+<dd><p>Project along a prescribed direction.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="lagrange.raycasting.RayCaster">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">lagrange.raycasting.</span></span><span class="sig-name descname"><span class="pre">RayCaster</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">scene_flags</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">4</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">build_quality</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">BuildQuality.Medium</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lagrange.raycasting.RayCaster" title="Link to this definition">¶</a></dt>
+<dd><p>A ray caster built on top of Embree.</p>
+<p>This class manages an Embree BVH scene for efficient spatial queries.  In the
+Python API it is exposed purely as a <em>caching</em> object: build the scene once,
+then pass it to the various <code class="docutils literal notranslate"><span class="pre">project_*</span></code> functions to avoid rebuilding the BVH
+on every call.</p>
+<p>Example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">caster</span> <span class="o">=</span> <span class="n">lagrange</span><span class="o">.</span><span class="n">raycasting</span><span class="o">.</span><span class="n">RayCaster</span><span class="p">()</span>
+<span class="n">caster</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">source</span><span class="p">)</span>
+<span class="n">caster</span><span class="o">.</span><span class="n">commit_updates</span><span class="p">()</span>
+
+<span class="n">lagrange</span><span class="o">.</span><span class="n">raycasting</span><span class="o">.</span><span class="n">project_closest_point</span><span class="p">(</span>
+    <span class="n">source</span><span class="p">,</span> <span class="n">target</span><span class="p">,</span> <span class="n">attribute_ids</span><span class="o">=</span><span class="p">[</span><span class="n">attr_id</span><span class="p">],</span> <span class="n">project_vertices</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">ray_caster</span><span class="o">=</span><span class="n">caster</span><span class="p">)</span>
+<span class="n">lagrange</span><span class="o">.</span><span class="n">raycasting</span><span class="o">.</span><span class="n">project_closest_vertex</span><span class="p">(</span>
+    <span class="n">source</span><span class="p">,</span> <span class="n">target</span><span class="p">,</span> <span class="n">attribute_ids</span><span class="o">=</span><span class="p">[</span><span class="n">attr_id</span><span class="p">],</span> <span class="n">project_vertices</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">ray_caster</span><span class="o">=</span><span class="n">caster</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>scene_flags</strong> (<em>int</em>)</p></li>
+<li><p><strong>build_quality</strong> (<a class="reference internal" href="#lagrange.raycasting.BuildQuality" title="lagrange.raycasting.BuildQuality"><em>BuildQuality</em></a>)</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="lagrange.raycasting.RayCaster.add_instance">
+<span class="sig-name descname"><span class="pre">add_instance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mesh_index</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">transform</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lagrange.raycasting.RayCaster.add_instance" title="Link to this definition">¶</a></dt>
+<dd><p>Add an instance of an existing mesh with a given transform.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>mesh_index</strong> (<em>int</em>) – Index of the source mesh (returned by <a class="reference internal" href="#lagrange.raycasting.RayCaster.add_mesh" title="lagrange.raycasting.RayCaster.add_mesh"><code class="xref py py-meth docutils literal notranslate"><span class="pre">add_mesh()</span></code></a>).</p></li>
+<li><p><strong>transform</strong> (<em>Annotated</em><em>[</em><em>numpy.typing.NDArray</em><em>[</em><em>numpy.float32</em><em>]</em><em>, </em><em>dict</em><em>(</em><em>shape=</em><em>(</em><em>4</em><em>, </em><em>4</em><em>)</em><em>, </em><em>order='F'</em><em>)</em><em>]</em>) – 4×4 affine transformation matrix (float32).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Local instance index relative to the source mesh.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lagrange.raycasting.RayCaster.add_mesh">
+<span class="sig-name descname"><span class="pre">add_mesh</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mesh</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">transform</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">...</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lagrange.raycasting.RayCaster.add_mesh" title="Link to this definition">¶</a></dt>
+<dd><p>Add a triangle mesh to the scene.</p>
+<p>The mesh is moved into the ray caster.  Call <a class="reference internal" href="#lagrange.raycasting.RayCaster.commit_updates" title="lagrange.raycasting.RayCaster.commit_updates"><code class="xref py py-meth docutils literal notranslate"><span class="pre">commit_updates()</span></code></a> after
+adding all meshes.</p>
+<p>By default a single instance with an identity transform is created.  Pass
+<code class="docutils literal notranslate"><span class="pre">None</span></code> to add the mesh without any instance (use <a class="reference internal" href="#lagrange.raycasting.RayCaster.add_instance" title="lagrange.raycasting.RayCaster.add_instance"><code class="xref py py-meth docutils literal notranslate"><span class="pre">add_instance()</span></code></a> to
+create instances later).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>mesh</strong> (<a class="reference internal" href="../core/index.html#lagrange.core.SurfaceMesh" title="lagrange.core.SurfaceMesh"><em>lagrange.core.SurfaceMesh</em></a>) – Triangle mesh.</p></li>
+<li><p><strong>transform</strong> (<em>Annotated</em><em>[</em><em>numpy.typing.NDArray</em><em>[</em><em>numpy.float32</em><em>]</em><em>, </em><em>dict</em><em>(</em><em>shape=</em><em>(</em><em>4</em><em>, </em><em>4</em><em>)</em><em>, </em><em>order='F'</em><em>)</em><em>] </em><em>| </em><em>None</em>) – 4×4 affine transformation matrix (float32), or <code class="docutils literal notranslate"><span class="pre">None</span></code>
+to add the mesh without creating an instance.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Index of the source mesh in the scene.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lagrange.raycasting.RayCaster.add_scene">
+<span class="sig-name descname"><span class="pre">add_scene</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">simple_scene</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lagrange.raycasting.RayCaster.add_scene" title="Link to this definition">¶</a></dt>
+<dd><p>Add all meshes and instances from a SimpleScene.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>simple_scene</strong> (<a class="reference internal" href="../scene/index.html#lagrange.scene.SimpleScene3D" title="lagrange.scene.SimpleScene3D"><em>lagrange.scene.SimpleScene3D</em></a>) – Scene containing meshes and their instances.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lagrange.raycasting.RayCaster.commit_updates">
+<span class="sig-name descname"><span class="pre">commit_updates</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lagrange.raycasting.RayCaster.commit_updates" title="Link to this definition">¶</a></dt>
+<dd><p>Rebuild the BVH after adding or modifying meshes.</p>
+<p>Must be called before any query or project function.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lagrange.raycasting.RayCaster.get_transform">
+<span class="sig-name descname"><span class="pre">get_transform</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mesh_index</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">instance_index</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lagrange.raycasting.RayCaster.get_transform" title="Link to this definition">¶</a></dt>
+<dd><p>Get the affine transform of a mesh instance.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>mesh_index</strong> (<em>int</em>) – Index of the source mesh.</p></li>
+<li><p><strong>instance_index</strong> (<em>int</em>) – Local instance index.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>4×4 affine transformation matrix (float32).</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Annotated[numpy.typing.NDArray[numpy.float32], dict(shape=(4, 4), order=’F’)]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lagrange.raycasting.RayCaster.get_visibility">
+<span class="sig-name descname"><span class="pre">get_visibility</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mesh_index</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">instance_index</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lagrange.raycasting.RayCaster.get_visibility" title="Link to this definition">¶</a></dt>
+<dd><p>Get the visibility flag of a mesh instance.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>mesh_index</strong> (<em>int</em>) – Index of the source mesh.</p></li>
+<li><p><strong>instance_index</strong> (<em>int</em>) – Local instance index.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>True if the instance is visible.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lagrange.raycasting.RayCaster.update_mesh">
+<span class="sig-name descname"><span class="pre">update_mesh</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mesh_index</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mesh</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lagrange.raycasting.RayCaster.update_mesh" title="Link to this definition">¶</a></dt>
+<dd><p>Replace a mesh in the scene.</p>
+<p>All instances of the old mesh will reference the new mesh.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>mesh_index</strong> (<em>int</em>) – Index of the mesh to replace.</p></li>
+<li><p><strong>mesh</strong> (<a class="reference internal" href="../core/index.html#lagrange.core.SurfaceMesh" title="lagrange.core.SurfaceMesh"><em>lagrange.core.SurfaceMesh</em></a>) – New triangle mesh.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lagrange.raycasting.RayCaster.update_transform">
+<span class="sig-name descname"><span class="pre">update_transform</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mesh_index</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">instance_index</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">transform</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lagrange.raycasting.RayCaster.update_transform" title="Link to this definition">¶</a></dt>
+<dd><p>Update the affine transform of a mesh instance.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>mesh_index</strong> (<em>int</em>) – Index of the source mesh.</p></li>
+<li><p><strong>instance_index</strong> (<em>int</em>) – Local instance index.</p></li>
+<li><p><strong>transform</strong> (<em>Annotated</em><em>[</em><em>numpy.typing.NDArray</em><em>[</em><em>numpy.float32</em><em>]</em><em>, </em><em>dict</em><em>(</em><em>shape=</em><em>(</em><em>4</em><em>, </em><em>4</em><em>)</em><em>, </em><em>order='F'</em><em>)</em><em>]</em>) – New 4×4 affine transformation matrix (float32).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lagrange.raycasting.RayCaster.update_vertices">
+<span class="sig-name descname"><span class="pre">update_vertices</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mesh_index</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mesh</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lagrange.raycasting.RayCaster.update_vertices" title="Link to this definition">¶</a></dt>
+<dd><p>Notify that vertices of a mesh have been modified.</p>
+<p>The number and order of vertices must not change.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>mesh_index</strong> (<em>int</em>) – Index of the mesh whose vertices changed.</p></li>
+<li><p><strong>mesh</strong> (<a class="reference internal" href="../core/index.html#lagrange.core.SurfaceMesh" title="lagrange.core.SurfaceMesh"><em>lagrange.core.SurfaceMesh</em></a>) – The modified mesh with updated vertex positions.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lagrange.raycasting.RayCaster.update_visibility">
+<span class="sig-name descname"><span class="pre">update_visibility</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mesh_index</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">instance_index</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">visible</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lagrange.raycasting.RayCaster.update_visibility" title="Link to this definition">¶</a></dt>
+<dd><p>Update the visibility of a mesh instance.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>mesh_index</strong> (<em>int</em>) – Index of the source mesh.</p></li>
+<li><p><strong>instance_index</strong> (<em>int</em>) – Local instance index.</p></li>
+<li><p><strong>visible</strong> (<em>bool</em>) – True to make visible, False to hide.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="lagrange.raycasting.SceneFlags">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">lagrange.raycasting.</span></span><span class="sig-name descname"><span class="pre">SceneFlags</span></span><a class="headerlink" href="#lagrange.raycasting.SceneFlags" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">enum.IntEnum</span></code></p>
+<p>Flags for configuring the Embree scene.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lagrange.raycasting.SceneFlags.Compact">
+<span class="sig-name descname"><span class="pre">Compact</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2</span></em><a class="headerlink" href="#lagrange.raycasting.SceneFlags.Compact" title="Link to this definition">¶</a></dt>
+<dd><p>Compact BVH layout.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lagrange.raycasting.SceneFlags.Dynamic">
+<span class="sig-name descname"><span class="pre">Dynamic</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#lagrange.raycasting.SceneFlags.Dynamic" title="Link to this definition">¶</a></dt>
+<dd><p>Scene will be updated frequently.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lagrange.raycasting.SceneFlags.Empty">
+<span class="sig-name descname"><span class="pre">Empty</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#lagrange.raycasting.SceneFlags.Empty" title="Link to this definition">¶</a></dt>
+<dd><p>No special behavior.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lagrange.raycasting.SceneFlags.Filter">
+<span class="sig-name descname"><span class="pre">Filter</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">8</span></em><a class="headerlink" href="#lagrange.raycasting.SceneFlags.Filter" title="Link to this definition">¶</a></dt>
+<dd><p>Enable user-defined filters.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lagrange.raycasting.SceneFlags.Robust">
+<span class="sig-name descname"><span class="pre">Robust</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">4</span></em><a class="headerlink" href="#lagrange.raycasting.SceneFlags.Robust" title="Link to this definition">¶</a></dt>
+<dd><p>Robust BVH traversal.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="lagrange.raycasting.project">
+<span class="sig-prename descclassname"><span class="pre">lagrange.raycasting.</span></span><span class="sig-name descname"><span class="pre">project</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">source</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../core/index.html#lagrange.core.SurfaceMesh" title="lagrange.core.SurfaceMesh"><span class="pre">lagrange.core.SurfaceMesh</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../core/index.html#lagrange.core.SurfaceMesh" title="lagrange.core.SurfaceMesh"><span class="pre">lagrange.core.SurfaceMesh</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">attribute_ids</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">collections.abc.Sequence</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">project_vertices</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">project_mode</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#lagrange.raycasting.ProjectMode" title="lagrange.raycasting.ProjectMode"><span class="pre">ProjectMode</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">ProjectMode.ClosestPoint</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">direction</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cast_mode</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#lagrange.raycasting.CastMode" title="lagrange.raycasting.CastMode"><span class="pre">CastMode</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">CastMode.BothWays</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fallback_mode</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#lagrange.raycasting.FallbackMode" title="lagrange.raycasting.FallbackMode"><span class="pre">FallbackMode</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">FallbackMode.Constant</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">default_value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ray_caster</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#lagrange.raycasting.RayCaster" title="lagrange.raycasting.RayCaster"><span class="pre">RayCaster</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#lagrange.raycasting.project" title="Link to this definition">¶</a></dt>
+<dt class="sig sig-object py">
+<span class="sig-prename descclassname"><span class="pre">lagrange.raycasting.</span></span><span class="sig-name descname"><span class="pre">project</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">source</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../core/index.html#lagrange.core.SurfaceMesh" title="lagrange.core.SurfaceMesh"><span class="pre">lagrange.core.SurfaceMesh</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">points</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Annotated</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.typing.NDArray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">(</span></span><span class="n"><span class="pre">shape</span></span><span class="o"><span class="pre">=</span></span><span class="pre">None</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">order</span></span><span class="o"><span class="pre">=</span></span><span class="s"><span class="pre">'C'</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">device</span></span><span class="o"><span class="pre">=</span></span><span class="s"><span class="pre">'cpu'</span></span><span class="p"><span class="pre">)</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">project_mode</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#lagrange.raycasting.ProjectMode" title="lagrange.raycasting.ProjectMode"><span class="pre">ProjectMode</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">direction</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Annotated</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.typing.NDArray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float32</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">(</span></span><span class="n"><span class="pre">shape</span></span><span class="o"><span class="pre">=</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">order</span></span><span class="o"><span class="pre">=</span></span><span class="s"><span class="pre">'C'</span></span><span class="p"><span class="pre">)</span></span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">Annotated</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.typing.NDArray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">(</span></span><span class="n"><span class="pre">shape</span></span><span class="o"><span class="pre">=</span></span><span class="pre">None</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">order</span></span><span class="o"><span class="pre">=</span></span><span class="s"><span class="pre">'C'</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">device</span></span><span class="o"><span class="pre">=</span></span><span class="s"><span class="pre">'cpu'</span></span><span class="p"><span class="pre">)</span></span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cast_mode</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#lagrange.raycasting.CastMode" title="lagrange.raycasting.CastMode"><span class="pre">CastMode</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">CastMode.BothWays</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fallback_mode</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#lagrange.raycasting.FallbackMode" title="lagrange.raycasting.FallbackMode"><span class="pre">FallbackMode</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">FallbackMode.Constant</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">default_value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ray_caster</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#lagrange.raycasting.RayCaster" title="lagrange.raycasting.RayCaster"><span class="pre">RayCaster</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Annotated</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.typing.NDArray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">(</span></span><span class="n"><span class="pre">shape</span></span><span class="o"><span class="pre">=</span></span><span class="pre">None</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">order</span></span><span class="o"><span class="pre">=</span></span><span class="s"><span class="pre">'C'</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">device</span></span><span class="o"><span class="pre">=</span></span><span class="s"><span class="pre">'cpu'</span></span><span class="p"><span class="pre">)</span></span><span class="p"><span class="pre">]</span></span></span></span></dt>
+<dd><p>Project query points onto a source mesh.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>source</strong> – Source triangle mesh.</p></li>
+<li><p><strong>points</strong> – (N, 3) NumPy array of query point positions (float64). Modified in place to store the projected positions.</p></li>
+<li><p><strong>project_mode</strong> – Projection mode (default: <code class="docutils literal notranslate"><span class="pre">ProjectMode.ClosestPoint</span></code>).</p></li>
+<li><p><strong>direction</strong> – Ray direction. Can be a 3D vector, or a numpy array of shape (N, 3) for per-vertex directions.
+Only used with <code class="docutils literal notranslate"><span class="pre">ProjectMode.RayCasting</span></code>.</p></li>
+<li><p><strong>cast_mode</strong> – Forward-only or both directions (only used with <code class="docutils literal notranslate"><span class="pre">ProjectMode.RayCasting</span></code>).</p></li>
+<li><p><strong>fallback_mode</strong> – Fallback for missed vertices (only used with <code class="docutils literal notranslate"><span class="pre">ProjectMode.RayCasting</span></code>).</p></li>
+<li><p><strong>default_value</strong> – Fill value for <code class="docutils literal notranslate"><span class="pre">FallbackMode.Constant</span></code> (default: 0).</p></li>
+<li><p><strong>ray_caster</strong> – Optional pre-built <a class="reference internal" href="#lagrange.raycasting.RayCaster" title="lagrange.raycasting.RayCaster"><code class="xref py py-class docutils literal notranslate"><span class="pre">RayCaster</span></code></a> for caching.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>(N, 3) NumPy array of projected positions (float64).</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="lagrange.raycasting.project_closest_point">
+<span class="sig-prename descclassname"><span class="pre">lagrange.raycasting.</span></span><span class="sig-name descname"><span class="pre">project_closest_point</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">source</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../core/index.html#lagrange.core.SurfaceMesh" title="lagrange.core.SurfaceMesh"><span class="pre">lagrange.core.SurfaceMesh</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../core/index.html#lagrange.core.SurfaceMesh" title="lagrange.core.SurfaceMesh"><span class="pre">lagrange.core.SurfaceMesh</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">attribute_ids</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">collections.abc.Sequence</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">project_vertices</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ray_caster</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#lagrange.raycasting.RayCaster" title="lagrange.raycasting.RayCaster"><span class="pre">RayCaster</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#lagrange.raycasting.project_closest_point" title="Link to this definition">¶</a></dt>
+<dt class="sig sig-object py">
+<span class="sig-prename descclassname"><span class="pre">lagrange.raycasting.</span></span><span class="sig-name descname"><span class="pre">project_closest_point</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">source</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../core/index.html#lagrange.core.SurfaceMesh" title="lagrange.core.SurfaceMesh"><span class="pre">lagrange.core.SurfaceMesh</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">points</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Annotated</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.typing.NDArray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">(</span></span><span class="n"><span class="pre">shape</span></span><span class="o"><span class="pre">=</span></span><span class="pre">None</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">order</span></span><span class="o"><span class="pre">=</span></span><span class="s"><span class="pre">'C'</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">device</span></span><span class="o"><span class="pre">=</span></span><span class="s"><span class="pre">'cpu'</span></span><span class="p"><span class="pre">)</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ray_caster</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#lagrange.raycasting.RayCaster" title="lagrange.raycasting.RayCaster"><span class="pre">RayCaster</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Annotated</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.typing.NDArray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">(</span></span><span class="n"><span class="pre">shape</span></span><span class="o"><span class="pre">=</span></span><span class="pre">None</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">order</span></span><span class="o"><span class="pre">=</span></span><span class="s"><span class="pre">'C'</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">device</span></span><span class="o"><span class="pre">=</span></span><span class="s"><span class="pre">'cpu'</span></span><span class="p"><span class="pre">)</span></span><span class="p"><span class="pre">]</span></span></span></span></dt>
+<dd><p>Project query points onto a source mesh by closest-point interpolation.</p>
+<p>For each query point, the closest point on the source mesh surface is found.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>source</strong> – Source triangle mesh.</p></li>
+<li><p><strong>points</strong> – (N, 3) NumPy array of query point positions (float64). Modified in place to store the projected positions.</p></li>
+<li><p><strong>ray_caster</strong> – Optional pre-built <a class="reference internal" href="#lagrange.raycasting.RayCaster" title="lagrange.raycasting.RayCaster"><code class="xref py py-class docutils literal notranslate"><span class="pre">RayCaster</span></code></a> for caching.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>(N, 3) NumPy array of projected positions (float64).</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="lagrange.raycasting.project_closest_vertex">
+<span class="sig-prename descclassname"><span class="pre">lagrange.raycasting.</span></span><span class="sig-name descname"><span class="pre">project_closest_vertex</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">source</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../core/index.html#lagrange.core.SurfaceMesh" title="lagrange.core.SurfaceMesh"><span class="pre">lagrange.core.SurfaceMesh</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../core/index.html#lagrange.core.SurfaceMesh" title="lagrange.core.SurfaceMesh"><span class="pre">lagrange.core.SurfaceMesh</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">attribute_ids</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">collections.abc.Sequence</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">project_vertices</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ray_caster</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#lagrange.raycasting.RayCaster" title="lagrange.raycasting.RayCaster"><span class="pre">RayCaster</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#lagrange.raycasting.project_closest_vertex" title="Link to this definition">¶</a></dt>
+<dt class="sig sig-object py">
+<span class="sig-prename descclassname"><span class="pre">lagrange.raycasting.</span></span><span class="sig-name descname"><span class="pre">project_closest_vertex</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">source</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../core/index.html#lagrange.core.SurfaceMesh" title="lagrange.core.SurfaceMesh"><span class="pre">lagrange.core.SurfaceMesh</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">points</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Annotated</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.typing.NDArray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">(</span></span><span class="n"><span class="pre">shape</span></span><span class="o"><span class="pre">=</span></span><span class="pre">None</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">order</span></span><span class="o"><span class="pre">=</span></span><span class="s"><span class="pre">'C'</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">device</span></span><span class="o"><span class="pre">=</span></span><span class="s"><span class="pre">'cpu'</span></span><span class="p"><span class="pre">)</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ray_caster</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#lagrange.raycasting.RayCaster" title="lagrange.raycasting.RayCaster"><span class="pre">RayCaster</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Annotated</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.typing.NDArray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">(</span></span><span class="n"><span class="pre">shape</span></span><span class="o"><span class="pre">=</span></span><span class="pre">None</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">order</span></span><span class="o"><span class="pre">=</span></span><span class="s"><span class="pre">'C'</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">device</span></span><span class="o"><span class="pre">=</span></span><span class="s"><span class="pre">'cpu'</span></span><span class="p"><span class="pre">)</span></span><span class="p"><span class="pre">]</span></span></span></span></dt>
+<dd><p>Project query points onto a source mesh by closest-vertex snapping.</p>
+<p>For each query point, the closest surface point is found and snapped to the
+nearest source vertex.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>source</strong> – Source triangle mesh.</p></li>
+<li><p><strong>points</strong> – (N, 3) NumPy array of query point positions (float64). Modified in place to store the projected positions.</p></li>
+<li><p><strong>ray_caster</strong> – Optional pre-built <a class="reference internal" href="#lagrange.raycasting.RayCaster" title="lagrange.raycasting.RayCaster"><code class="xref py py-class docutils literal notranslate"><span class="pre">RayCaster</span></code></a> for caching.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>(N, 3) NumPy array of projected positions (float64).</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="lagrange.raycasting.project_directional">
+<span class="sig-prename descclassname"><span class="pre">lagrange.raycasting.</span></span><span class="sig-name descname"><span class="pre">project_directional</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">source</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../core/index.html#lagrange.core.SurfaceMesh" title="lagrange.core.SurfaceMesh"><span class="pre">lagrange.core.SurfaceMesh</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../core/index.html#lagrange.core.SurfaceMesh" title="lagrange.core.SurfaceMesh"><span class="pre">lagrange.core.SurfaceMesh</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">attribute_ids</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">collections.abc.Sequence</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">project_vertices</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">direction</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cast_mode</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#lagrange.raycasting.CastMode" title="lagrange.raycasting.CastMode"><span class="pre">CastMode</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">CastMode.BothWays</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fallback_mode</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#lagrange.raycasting.FallbackMode" title="lagrange.raycasting.FallbackMode"><span class="pre">FallbackMode</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">FallbackMode.Constant</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">default_value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ray_caster</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#lagrange.raycasting.RayCaster" title="lagrange.raycasting.RayCaster"><span class="pre">RayCaster</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#lagrange.raycasting.project_directional" title="Link to this definition">¶</a></dt>
+<dt class="sig sig-object py">
+<span class="sig-prename descclassname"><span class="pre">lagrange.raycasting.</span></span><span class="sig-name descname"><span class="pre">project_directional</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">source</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../core/index.html#lagrange.core.SurfaceMesh" title="lagrange.core.SurfaceMesh"><span class="pre">lagrange.core.SurfaceMesh</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">points</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Annotated</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.typing.NDArray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">(</span></span><span class="n"><span class="pre">shape</span></span><span class="o"><span class="pre">=</span></span><span class="pre">None</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">order</span></span><span class="o"><span class="pre">=</span></span><span class="s"><span class="pre">'C'</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">device</span></span><span class="o"><span class="pre">=</span></span><span class="s"><span class="pre">'cpu'</span></span><span class="p"><span class="pre">)</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">direction</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Annotated</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.typing.NDArray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float32</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">(</span></span><span class="n"><span class="pre">shape</span></span><span class="o"><span class="pre">=</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">order</span></span><span class="o"><span class="pre">=</span></span><span class="s"><span class="pre">'C'</span></span><span class="p"><span class="pre">)</span></span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">Annotated</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.typing.NDArray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">(</span></span><span class="n"><span class="pre">shape</span></span><span class="o"><span class="pre">=</span></span><span class="pre">None</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">order</span></span><span class="o"><span class="pre">=</span></span><span class="s"><span class="pre">'C'</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">device</span></span><span class="o"><span class="pre">=</span></span><span class="s"><span class="pre">'cpu'</span></span><span class="p"><span class="pre">)</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cast_mode</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#lagrange.raycasting.CastMode" title="lagrange.raycasting.CastMode"><span class="pre">CastMode</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">CastMode.BothWays</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fallback_mode</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#lagrange.raycasting.FallbackMode" title="lagrange.raycasting.FallbackMode"><span class="pre">FallbackMode</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">FallbackMode.Constant</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">default_value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ray_caster</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#lagrange.raycasting.RayCaster" title="lagrange.raycasting.RayCaster"><span class="pre">RayCaster</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Annotated</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.typing.NDArray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">(</span></span><span class="n"><span class="pre">shape</span></span><span class="o"><span class="pre">=</span></span><span class="pre">None</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">order</span></span><span class="o"><span class="pre">=</span></span><span class="s"><span class="pre">'C'</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">device</span></span><span class="o"><span class="pre">=</span></span><span class="s"><span class="pre">'cpu'</span></span><span class="p"><span class="pre">)</span></span><span class="p"><span class="pre">]</span></span></span></span></dt>
+<dd><p>Project query points onto a source mesh along a prescribed direction.</p>
+<p>For each query point, a ray is cast in the given direction.  If it hits the
+source mesh, vertex positions are set from the hit.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>source</strong> – Source triangle mesh.</p></li>
+<li><p><strong>points</strong> – (N, 3) NumPy array of query point positions (float64). Modified in place to store the projected positions.</p></li>
+<li><p><strong>direction</strong> – Ray direction. Can be a 3D vector, or a numpy array of shape (N, 3) for per-vertex directions,</p></li>
+<li><p><strong>cast_mode</strong> – Forward-only or both directions (default: <code class="docutils literal notranslate"><span class="pre">CastMode.BothWays</span></code>).</p></li>
+<li><p><strong>fallback_mode</strong> – Fallback for missed vertices (default: <code class="docutils literal notranslate"><span class="pre">FallbackMode.Constant</span></code>).</p></li>
+<li><p><strong>default_value</strong> – Fill value for <code class="docutils literal notranslate"><span class="pre">FallbackMode.Constant</span></code> (default: 0).</p></li>
+<li><p><strong>ray_caster</strong> – Optional pre-built <a class="reference internal" href="#lagrange.raycasting.RayCaster" title="lagrange.raycasting.RayCaster"><code class="xref py py-class docutils literal notranslate"><span class="pre">RayCaster</span></code></a> for caching.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>(N, 3) NumPy array of projected positions (float64).</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          <a class="next-page" href="../scene/index.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">lagrange.scene</div>
+              </div>
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="../primitive/index.html">
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">lagrange.primitive</div>
+                
+              </div>
+            </a>
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2023, Adobe
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">raycasting</a><ul>
+<li><a class="reference internal" href="#classes">Classes</a></li>
+<li><a class="reference internal" href="#functions">Functions</a></li>
+<li><a class="reference internal" href="#module-contents">Module Contents</a><ul>
+<li><a class="reference internal" href="#lagrange.raycasting.BuildQuality"><code class="docutils literal notranslate"><span class="pre">BuildQuality</span></code></a><ul>
+<li><a class="reference internal" href="#lagrange.raycasting.BuildQuality.High"><code class="docutils literal notranslate"><span class="pre">BuildQuality.High</span></code></a></li>
+<li><a class="reference internal" href="#lagrange.raycasting.BuildQuality.Low"><code class="docutils literal notranslate"><span class="pre">BuildQuality.Low</span></code></a></li>
+<li><a class="reference internal" href="#lagrange.raycasting.BuildQuality.Medium"><code class="docutils literal notranslate"><span class="pre">BuildQuality.Medium</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#lagrange.raycasting.CastMode"><code class="docutils literal notranslate"><span class="pre">CastMode</span></code></a><ul>
+<li><a class="reference internal" href="#lagrange.raycasting.CastMode.BothWays"><code class="docutils literal notranslate"><span class="pre">CastMode.BothWays</span></code></a></li>
+<li><a class="reference internal" href="#lagrange.raycasting.CastMode.OneWay"><code class="docutils literal notranslate"><span class="pre">CastMode.OneWay</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#lagrange.raycasting.FallbackMode"><code class="docutils literal notranslate"><span class="pre">FallbackMode</span></code></a><ul>
+<li><a class="reference internal" href="#lagrange.raycasting.FallbackMode.ClosestPoint"><code class="docutils literal notranslate"><span class="pre">FallbackMode.ClosestPoint</span></code></a></li>
+<li><a class="reference internal" href="#lagrange.raycasting.FallbackMode.ClosestVertex"><code class="docutils literal notranslate"><span class="pre">FallbackMode.ClosestVertex</span></code></a></li>
+<li><a class="reference internal" href="#lagrange.raycasting.FallbackMode.Constant"><code class="docutils literal notranslate"><span class="pre">FallbackMode.Constant</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#lagrange.raycasting.ProjectMode"><code class="docutils literal notranslate"><span class="pre">ProjectMode</span></code></a><ul>
+<li><a class="reference internal" href="#lagrange.raycasting.ProjectMode.ClosestPoint"><code class="docutils literal notranslate"><span class="pre">ProjectMode.ClosestPoint</span></code></a></li>
+<li><a class="reference internal" href="#lagrange.raycasting.ProjectMode.ClosestVertex"><code class="docutils literal notranslate"><span class="pre">ProjectMode.ClosestVertex</span></code></a></li>
+<li><a class="reference internal" href="#lagrange.raycasting.ProjectMode.RayCasting"><code class="docutils literal notranslate"><span class="pre">ProjectMode.RayCasting</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#lagrange.raycasting.RayCaster"><code class="docutils literal notranslate"><span class="pre">RayCaster</span></code></a><ul>
+<li><a class="reference internal" href="#lagrange.raycasting.RayCaster.add_instance"><code class="docutils literal notranslate"><span class="pre">RayCaster.add_instance()</span></code></a></li>
+<li><a class="reference internal" href="#lagrange.raycasting.RayCaster.add_mesh"><code class="docutils literal notranslate"><span class="pre">RayCaster.add_mesh()</span></code></a></li>
+<li><a class="reference internal" href="#lagrange.raycasting.RayCaster.add_scene"><code class="docutils literal notranslate"><span class="pre">RayCaster.add_scene()</span></code></a></li>
+<li><a class="reference internal" href="#lagrange.raycasting.RayCaster.commit_updates"><code class="docutils literal notranslate"><span class="pre">RayCaster.commit_updates()</span></code></a></li>
+<li><a class="reference internal" href="#lagrange.raycasting.RayCaster.get_transform"><code class="docutils literal notranslate"><span class="pre">RayCaster.get_transform()</span></code></a></li>
+<li><a class="reference internal" href="#lagrange.raycasting.RayCaster.get_visibility"><code class="docutils literal notranslate"><span class="pre">RayCaster.get_visibility()</span></code></a></li>
+<li><a class="reference internal" href="#lagrange.raycasting.RayCaster.update_mesh"><code class="docutils literal notranslate"><span class="pre">RayCaster.update_mesh()</span></code></a></li>
+<li><a class="reference internal" href="#lagrange.raycasting.RayCaster.update_transform"><code class="docutils literal notranslate"><span class="pre">RayCaster.update_transform()</span></code></a></li>
+<li><a class="reference internal" href="#lagrange.raycasting.RayCaster.update_vertices"><code class="docutils literal notranslate"><span class="pre">RayCaster.update_vertices()</span></code></a></li>
+<li><a class="reference internal" href="#lagrange.raycasting.RayCaster.update_visibility"><code class="docutils literal notranslate"><span class="pre">RayCaster.update_visibility()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#lagrange.raycasting.SceneFlags"><code class="docutils literal notranslate"><span class="pre">SceneFlags</span></code></a><ul>
+<li><a class="reference internal" href="#lagrange.raycasting.SceneFlags.Compact"><code class="docutils literal notranslate"><span class="pre">SceneFlags.Compact</span></code></a></li>
+<li><a class="reference internal" href="#lagrange.raycasting.SceneFlags.Dynamic"><code class="docutils literal notranslate"><span class="pre">SceneFlags.Dynamic</span></code></a></li>
+<li><a class="reference internal" href="#lagrange.raycasting.SceneFlags.Empty"><code class="docutils literal notranslate"><span class="pre">SceneFlags.Empty</span></code></a></li>
+<li><a class="reference internal" href="#lagrange.raycasting.SceneFlags.Filter"><code class="docutils literal notranslate"><span class="pre">SceneFlags.Filter</span></code></a></li>
+<li><a class="reference internal" href="#lagrange.raycasting.SceneFlags.Robust"><code class="docutils literal notranslate"><span class="pre">SceneFlags.Robust</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#lagrange.raycasting.project"><code class="docutils literal notranslate"><span class="pre">project()</span></code></a></li>
+<li><a class="reference internal" href="#lagrange.raycasting.project_closest_point"><code class="docutils literal notranslate"><span class="pre">project_closest_point()</span></code></a></li>
+<li><a class="reference internal" href="#lagrange.raycasting.project_closest_vertex"><code class="docutils literal notranslate"><span class="pre">project_closest_vertex()</span></code></a></li>
+<li><a class="reference internal" href="#lagrange.raycasting.project_directional"><code class="docutils literal notranslate"><span class="pre">project_directional()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script src="../../../_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="../../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/scripts/furo.js?v=46bd48cc"></script>
+    </body>
+</html>

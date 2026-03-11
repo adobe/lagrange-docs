@@ -1,0 +1,396 @@
+lagrange.polyddg
+================
+
+.. py:module:: lagrange.polyddg
+
+
+Classes
+-------
+
+.. autoapisummary::
+
+   lagrange.polyddg.DifferentialOperators
+
+
+Functions
+---------
+
+.. autoapisummary::
+
+   lagrange.polyddg.compute_principal_curvatures
+
+
+Module Contents
+---------------
+
+.. py:class:: DifferentialOperators(mesh)
+
+   Polygonal mesh discrete differential operators
+
+
+   .. py:method:: adjoint_gradient() -> scipy.sparse.csc_matrix[float]
+                  adjoint_gradient(vid: int) -> Annotated[numpy.typing.NDArray[numpy.float64], dict(shape=(3, None), order='F')]
+
+      Compute the adjoint gradient operator for a single vertex (Eq. (24), de Goes et al. 2020).
+
+      Returns a ``(3, k)`` dense matrix of area-weighted, parallel-transported per-corner gradient
+      vectors, where k is the number of incident faces. Columns are in the same incident-face traversal
+      order used by ``adjoint_shape_operator(vid)``.
+
+      :param vid: Vertex index.
+
+      :return: A dense matrix of shape ``(3, k)`` where k is the number of incident faces.
+
+
+
+   .. py:method:: adjoint_shape_operator() -> scipy.sparse.csc_matrix[float]
+                  adjoint_shape_operator(vid: int) -> Annotated[numpy.typing.NDArray[numpy.float64], dict(shape=(2, 2), order='F')]
+
+      Compute the adjoint shape operator for a single vertex (Eq. (26), de Goes et al. 2020).
+
+      The vertex-centred dual of the per-facet shape operator. Applies the adjoint gradient to the unit
+      normals of the incident faces and symmetrizes the result in the vertex tangent plane. The returned
+      2x2 matrix is symmetric; its trace divided by two gives the mean curvature at the vertex, and its
+      determinant gives the Gaussian curvature.
+
+      :param vid: Vertex index.
+
+      :return: A 2x2 dense symmetric matrix.
+
+
+
+   .. py:method:: connection_laplacian(*, beta: float = 1) -> scipy.sparse.csc_matrix[float]
+                  connection_laplacian(fid: int, *, beta: float = 1) -> Annotated[numpy.typing.NDArray[numpy.float64], dict(shape=(None, None), order='F')]
+
+      Compute the discrete connection Laplacian operator for a single facet.
+
+      :param fid: Facet index.
+      :param beta: Weight of projection term (default: 1).
+
+      :return: A dense matrix representing the per-facet connection Laplacian operator.
+
+
+
+   .. py:method:: connection_laplacian_nrosy(*, n: int, beta: float = 1) -> scipy.sparse.csc_matrix[float]
+                  connection_laplacian_nrosy(fid: int, *, n: int, beta: float = 1) -> Annotated[numpy.typing.NDArray[numpy.float64], dict(shape=(None, None), order='F')]
+
+      n-rosy variant of connection_laplacian(fid).
+
+      :param fid: Facet index.
+      :param n: Symmetry order of the rosy field (applies the connection n times).
+      :param beta: Weight of projection term (default: 1).
+
+      :return: A dense matrix of size ``(2*nf, 2*nf)`` representing the per-facet connection Laplacian.
+
+
+
+   .. py:method:: covariant_derivative() -> scipy.sparse.csc_matrix[float]
+                  covariant_derivative(fid: int) -> Annotated[numpy.typing.NDArray[numpy.float64], dict(shape=(4, None), order='F')]
+
+      Compute the discrete covariant derivative operator for a single facet.
+
+      :param fid: Facet index.
+
+      :return: A dense matrix representing the per-facet covariant derivative operator.
+
+
+
+   .. py:method:: covariant_derivative_nrosy(*, n: int) -> scipy.sparse.csc_matrix[float]
+                  covariant_derivative_nrosy(fid: int, n: int) -> Annotated[numpy.typing.NDArray[numpy.float64], dict(shape=(4, None), order='F')]
+
+      n-rosy variant of covariant_derivative(fid).
+
+      :param fid: Facet index.
+      :param n: Symmetry order of the rosy field (applies the connection n times).
+
+      :return: A dense matrix of size ``(4, 2*nf)`` representing the per-facet covariant derivative.
+
+
+
+   .. py:method:: covariant_projection(fid)
+
+      Compute the discrete covariant projection operator for a single facet.
+
+      :param fid: Facet index.
+
+      :return: A dense matrix representing the per-facet covariant projection operator.
+
+
+
+   .. py:method:: covariant_projection_nrosy(fid, n)
+
+      n-rosy variant of covariant_projection(fid).
+
+      :param fid: Facet index.
+      :param n: Symmetry order of the rosy field (applies the connection n times).
+
+      :return: A dense matrix of size ``(2*nf, 2*nf)`` representing the per-facet covariant projection.
+
+
+
+   .. py:method:: curl()
+
+      Compute the discrete polygonal curl operator.
+
+      :return: A sparse matrix representing the curl operator.
+
+
+
+   .. py:method:: d0() -> scipy.sparse.csc_matrix[float]
+                  d0(fid: int) -> Annotated[numpy.typing.NDArray[numpy.float64], dict(shape=(None, None), order='F')]
+
+      Compute the discrete d0 operator for a single facet.
+
+      The discrete d0 operator for a single facet is a n by n matrix, where n is the number vertices/edges
+      in the facet. It maps a scalar functions defined on the vertices to a 1-form defined on the edges.
+
+      :param fid: Facet index.
+
+      :return: A dense matrix representing the per-facet d0 operator.
+
+
+
+   .. py:method:: d1() -> scipy.sparse.csc_matrix[float]
+                  d1(fid: int) -> Annotated[numpy.typing.NDArray[numpy.float64], dict(shape=(None, ), order='C')]
+
+      Compute the discrete d1 operator for a single facet.
+
+      The discrete d1 operator for a single facet is a row vector of size 1 by n, where n is the number
+      edges in the facet. It maps a 1-form defined on the edges to a 2-form defined on the facet.
+
+      :param fid: Facet index.
+
+      :return: A dense matrix representing the per-facet d1 operator.
+
+
+
+   .. py:method:: divergence(*, beta = 1)
+
+      Compute the discrete polygonal divergence operator.
+
+      :param beta: Weight of projection term for the 1-form inner product (default: 1).
+
+      :return: A sparse matrix representing the divergence operator.
+
+
+
+   .. py:method:: facet_tangent_coordinates()
+
+      Compute the per-facet coordinate transformation from the global 3D frame to the local tangent basis at each facet.
+
+      :return: A sparse matrix of size (#F * 2, #F * 3).
+
+
+
+   .. py:method:: flat() -> scipy.sparse.csc_matrix[float]
+                  flat(fid: int) -> Annotated[numpy.typing.NDArray[numpy.float64], dict(shape=(None, 3), order='F')]
+
+      Compute the discrete flat operator for a single facet.
+
+      The discrete flat operator for a single facet is a n by 3 matrix, where n is the number of
+      edges of the facet. It maps a vector field defined on the facet to a 1-form defined on
+      the edges of the facet.
+
+      :param fid: Facet index.
+
+      :return: A Nx3 dense matrix representing the per-facet flat operator.
+
+
+
+   .. py:method:: gradient() -> scipy.sparse.csc_matrix[float]
+                  gradient(fid: int) -> Annotated[numpy.typing.NDArray[numpy.float64], dict(shape=(3, None), order='F')]
+
+      Compute the per-corner gradient vectors for a single facet (Eq. (8), de Goes et al. 2020).
+
+      Returns a ``(3, nf)`` matrix whose column ``l`` is ``(a_f x e_f^l) / (2 * |a_f|^2)``, where
+      ``a_f`` is the facet vector area and ``e_f^l = x_{l-1} - x_{l+1}`` spans the opposite edge.
+
+      :param fid: Facet index.
+
+      :return: A dense matrix of shape ``(3, nf)``.
+
+
+
+   .. py:method:: inner_product_0_form() -> scipy.sparse.csc_matrix[float]
+                  inner_product_0_form(fid: int) -> Annotated[numpy.typing.NDArray[numpy.float64], dict(shape=(None, None), order='F')]
+
+      Compute the discrete inner product operator for 0-forms for a single facet.
+
+      :param fid: Facet index.
+
+      :return: A dense matrix representing the per-facet inner product operator for 0-forms.
+
+
+
+   .. py:method:: inner_product_1_form(*, beta: float = 1) -> scipy.sparse.csc_matrix[float]
+                  inner_product_1_form(fid: int, beta: float = 1) -> Annotated[numpy.typing.NDArray[numpy.float64], dict(shape=(None, None), order='F')]
+
+      Compute the discrete inner product operator for 1-forms for a single facet.
+
+      :param fid: Facet index.
+      :param beta: Weight of projection term (default: 1).
+
+      :return: A dense matrix representing the per-facet inner product operator for 1-forms.
+
+
+
+   .. py:method:: inner_product_2_form() -> scipy.sparse.csc_matrix[float]
+                  inner_product_2_form(fid: int) -> Annotated[numpy.typing.NDArray[numpy.float64], dict(shape=1, order='C')]
+
+      Compute the discrete inner product operator for 2-forms for a single facet.
+
+      :param fid: Facet index.
+
+      :return: A 1x1 dense matrix representing the per-facet inner product operator for 2-forms.
+
+
+
+   .. py:method:: laplacian(*, beta: float = 1) -> scipy.sparse.csc_matrix[float]
+                  laplacian(fid: int, *, beta: float = 1) -> Annotated[numpy.typing.NDArray[numpy.float64], dict(shape=(None, None), order='F')]
+
+      Compute the discrete Laplacian operator for a single facet.
+
+      :param fid: Facet index.
+      :param beta: Weight of projection term (default: 1).
+
+      :return: A dense matrix representing the per-facet Laplacian operator.
+
+
+
+   .. py:method:: levi_civita() -> scipy.sparse.csc_matrix[float]
+                  levi_civita(fid: int, lv: int) -> Annotated[numpy.typing.NDArray[numpy.float64], dict(shape=(2, 2), order='F')]
+                  levi_civita(fid: int) -> Annotated[numpy.typing.NDArray[numpy.float64], dict(shape=(None, None), order='F')]
+
+      Compute the discrete Levi-Civita connection for a single facet.
+
+      :param fid: Facet index.
+
+      :return: A dense matrix representing the per-facet Levi-Civita connection.
+
+
+
+   .. py:method:: levi_civita_nrosy(*, n: int) -> scipy.sparse.csc_matrix[float]
+                  levi_civita_nrosy(fid: int, lv: int, *, n: int) -> Annotated[numpy.typing.NDArray[numpy.float64], dict(shape=(2, 2), order='F')]
+                  levi_civita_nrosy(fid: int, *, n: int) -> Annotated[numpy.typing.NDArray[numpy.float64], dict(shape=(None, None), order='F')]
+
+      n-rosy variant of levi_civita(fid).
+
+      :param fid: Facet index.
+      :param n: Symmetry order of the rosy field (applies the connection n times).
+
+      :return: A dense matrix of size ``(2*nf, 2*nf)`` representing the per-facet Levi-Civita connection.
+
+
+
+   .. py:method:: projection(fid)
+
+      Compute the discrete projection operator for a single facet.
+
+      :param fid: Facet index.
+
+      :return: A dense matrix representing the per-facet projection operator.
+
+
+
+   .. py:method:: shape_operator() -> scipy.sparse.csc_matrix[float]
+                  shape_operator(fid: int) -> Annotated[numpy.typing.NDArray[numpy.float64], dict(shape=(2, 2), order='F')]
+
+      Compute the discrete shape operator for a single facet (Eq. (23), de Goes et al. 2020).
+
+      Applies the per-facet gradient to the precomputed per-vertex normals and symmetrizes the result
+      in the facet tangent plane. The returned 2x2 matrix is symmetric; its trace divided by two gives
+      the mean curvature at the facet, and its determinant gives the Gaussian curvature.
+
+      :param fid: Facet index.
+
+      :return: A 2x2 dense symmetric matrix.
+
+
+
+   .. py:method:: sharp() -> scipy.sparse.csc_matrix[float]
+                  sharp(fid: int) -> Annotated[numpy.typing.NDArray[numpy.float64], dict(shape=(3, None), order='F')]
+
+      Compute the discrete sharp operator for a single facet.
+
+      :param fid: Facet index.
+
+      :return: A 3xN dense matrix representing the per-facet sharp operator.
+
+
+
+   .. py:method:: star0()
+
+      Compute the discrete Hodge star operator for 0-forms (diagonal mass matrix, size #V x #V).
+
+      :return: A diagonal sparse matrix of size (#V, #V).
+
+
+
+   .. py:method:: star1()
+
+      Compute the discrete Hodge star operator for 1-forms (diagonal mass matrix, size #E x #E).
+
+      :return: A diagonal sparse matrix of size (#E, #E).
+
+
+
+   .. py:method:: star2()
+
+      Compute the discrete Hodge star operator for 2-forms (diagonal mass matrix, size #F x #F).
+
+      :return: A diagonal sparse matrix of size (#F, #F).
+
+
+
+   .. py:method:: vertex_tangent_coordinates()
+
+      Compute the per-vertex coordinate transformation from the global 3D frame to the local tangent basis at each vertex.
+
+      :return: A sparse matrix of size (#V * 2, #V * 3).
+
+
+
+   .. py:property:: centroid_attribute_id
+      :type: int
+
+
+      Attribute ID of the per-facet centroid attribute.
+
+
+   .. py:property:: vector_area_attribute_id
+      :type: int
+
+
+      Attribute ID of the per-facet vector area attribute.
+
+
+   .. py:property:: vertex_normal_attribute_id
+      :type: int
+
+
+      Attribute ID of the per-vertex normal attribute.
+
+
+.. py:function:: compute_principal_curvatures(mesh: lagrange.core.SurfaceMesh, ops: DifferentialOperators, *, kappa_min_attribute: str = '@kappa_min', kappa_max_attribute: str = '@kappa_max', direction_min_attribute: str = '@principal_direction_min', direction_max_attribute: str = '@principal_direction_max') -> tuple[int, int, int, int]
+                 compute_principal_curvatures(mesh: lagrange.core.SurfaceMesh, *, kappa_min_attribute: str = '@kappa_min', kappa_max_attribute: str = '@kappa_max', direction_min_attribute: str = '@principal_direction_min', direction_max_attribute: str = '@principal_direction_max') -> tuple[int, int, int, int]
+
+   Compute per-vertex principal curvatures and principal curvature directions.
+
+   Eigendecomposes the adjoint shape operator at each vertex. A :class:`DifferentialOperators`
+   instance is constructed internally. The eigenvalues (``kappa_min <= kappa_max``) are the
+   principal curvatures and the eigenvectors, mapped back to 3-D through the vertex tangent basis,
+   are the principal directions. All four quantities are stored as vertex attributes in the mesh.
+
+   :param mesh: Input surface mesh (modified in place with new attributes).
+   :param kappa_min_attribute: Output attribute name for the minimum principal curvature
+       (default: ``"@kappa_min"``).
+   :param kappa_max_attribute: Output attribute name for the maximum principal curvature
+       (default: ``"@kappa_max"``).
+   :param direction_min_attribute: Output attribute name for the kappa_min direction
+       (default: ``"@principal_direction_min"``).
+   :param direction_max_attribute: Output attribute name for the kappa_max direction
+       (default: ``"@principal_direction_max"``).
+
+   :return: A tuple ``(kappa_min_id, kappa_max_id, direction_min_id, direction_max_id)`` of attribute IDs.
+
+

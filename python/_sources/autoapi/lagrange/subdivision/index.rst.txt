@@ -1,0 +1,210 @@
+lagrange.subdivision
+====================
+
+.. py:module:: lagrange.subdivision
+
+
+Classes
+-------
+
+.. autoapisummary::
+
+   lagrange.subdivision.FaceVaryingInterpolation
+   lagrange.subdivision.InterpolatedAttributesSelection
+   lagrange.subdivision.SchemeType
+   lagrange.subdivision.VertexBoundaryInterpolation
+
+
+Functions
+---------
+
+.. autoapisummary::
+
+   lagrange.subdivision.compute_sharpness
+   lagrange.subdivision.subdivide_mesh
+
+
+Module Contents
+---------------
+
+.. py:class:: FaceVaryingInterpolation(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   Face-varying interpolation rule
+
+
+   .. py:attribute:: All
+      :value: 5
+
+
+      Linear interpolation everywhere.
+
+
+   .. py:attribute:: Boundaries
+      :value: 4
+
+
+      Linear interpolation along all boundaries.
+
+
+   .. py:attribute:: CornersOnly
+      :value: 1
+
+
+      Linear interpolation at corners only.
+
+
+   .. py:attribute:: CornersPlus1
+      :value: 2
+
+
+      CornersOnly plus sharpening at junctions of 3+ regions.
+
+
+   .. py:attribute:: CornersPlus2
+      :value: 3
+
+
+      CornersPlus1 plus sharpening of darts and concave corners.
+
+
+   .. py:attribute:: Smooth
+      :value: 0
+
+
+      Smooth interpolation everywhere the mesh is smooth.
+
+
+.. py:class:: InterpolatedAttributesSelection(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   Selection tag for interpolated attributes
+
+
+   .. py:attribute:: All
+      :value: 0
+
+
+      Interpolate all compatible attributes.
+
+
+   .. py:attribute:: Empty
+      :value: 1
+
+
+      Do not interpolate any attributes.
+
+
+   .. py:attribute:: Selected
+      :value: 2
+
+
+      Interpolate only selected attributes.
+
+
+.. py:class:: SchemeType(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   Subdivision scheme type
+
+
+   .. py:attribute:: Bilinear
+      :value: 0
+
+
+      Bilinear scheme, useful before applying displacement.
+
+
+   .. py:attribute:: CatmullClark
+      :value: 1
+
+
+      Catmull-Clark scheme for quad-dominant meshes.
+
+
+   .. py:attribute:: Loop
+      :value: 2
+
+
+      Loop scheme for triangle meshes.
+
+
+.. py:class:: VertexBoundaryInterpolation(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   Vertex boundary interpolation rule
+
+
+   .. py:attribute:: EdgeAndCorner
+      :value: 2
+
+
+      Interpolate boundary edges and corners.
+
+
+   .. py:attribute:: EdgeOnly
+      :value: 1
+
+
+      Interpolate boundary edges only.
+
+
+   .. py:attribute:: NoInterpolation
+      :value: 0
+
+
+      Do not interpolate boundary edges.
+
+
+.. py:function:: compute_sharpness(mesh, normal_attribute_name = None, feature_angle_threshold = None)
+
+   Computes sharpness attributes for subdivision based on existing mesh normals.
+
+   :param mesh: The input mesh. Modified in place to add the necessary attributes.
+   :param normal_attribute_name: If provided, name of the normal attribute to use as indexed normals to
+       define sharp edges. If not provided, the function will attempt to find an existing indexed normal
+       attribute. If no such attribute is found, autosmooth normals will be computed based on the
+       `feature_angle_threshold` parameter.
+   :param feature_angle_threshold: Feature angle threshold (in radians) to detect sharp edges when
+       computing autosmooth normals. By default, if no indexed normal attribute is found, no autosmooth
+       normals will be computed.
+
+   :returns: A tuple containing:
+       - vertex_sharpness_attr: Attribute id to use for vertex sharpness in the `subdivide_mesh` function.
+       - edge_sharpness_attr: Attribute id to use for edge sharpness in the `subdivide_mesh` function.
+       - normal_attr: Attribute id of the indexed normal attribute used to compute sharpness information.
+
+
+.. py:function:: subdivide_mesh(mesh, num_levels = 1, scheme = None, adaptive = False, max_edge_length = None, vertex_boundary_interpolation = VertexBoundaryInterpolation.EdgeOnly, face_varying_interpolation = FaceVaryingInterpolation.Smooth, use_limit_surface = False, interpolated_attributes_selection = InterpolatedAttributesSelection.All, interpolated_smooth_attributes = None, interpolated_linear_attributes = None, edge_sharpness_attr = None, vertex_sharpness_attr = None, face_hole_attr = None, output_limit_normals = None, output_limit_tangents = None, output_limit_bitangents = None)
+
+   Evaluates the subdivision surface of a polygonal mesh.
+
+   :param mesh: The source mesh.
+   :param num_levels: The number of levels of subdivision to apply.
+   :param scheme: Subdivision scheme. If None, uses Loop for triangle meshes and CatmullClark for quad-dominant meshes.
+   :param adaptive: Whether to use edge-adaptive refinement.
+   :param max_edge_length: Maximum edge length for adaptive refinement. If None, uses longest edge / num_levels. Ignored when adaptive is False.
+   :param vertex_boundary_interpolation: Vertex boundary interpolation rule.
+   :param face_varying_interpolation: Face-varying interpolation rule.
+   :param use_limit_surface: Interpolate all data to the limit surface.
+   :param interpolated_attributes_selection: Whether to interpolate all, none, or selected attributes.
+   :param interpolated_smooth_attributes: Attribute ids to smoothly interpolate (per-vertex or indexed).
+   :param interpolated_linear_attributes: Attribute ids to linearly interpolate (per-vertex only).
+   :param edge_sharpness_attr: Per-edge scalar attribute denoting edge sharpness. Sharpness values must be in [0, 1] (0 means smooth, 1 means sharp).
+   :param vertex_sharpness_attr: Per-vertex scalar attribute denoting vertex sharpness (e.g. for boundary corners). Sharpness values must be in [0, 1] (0 means smooth, 1 means sharp).
+   :param face_hole_attr: Per-face integer attribute denoting face holes. A non-zero value means the facet is a hole. If a face is tagged as a hole, the limit surface will not be generated for that face.
+   :param output_limit_normals: Output name for a newly computed per-vertex attribute containing the normals to the limit surface. Skipped if left empty.
+   :param output_limit_tangents: Output name for a newly computed per-vertex attribute containing the tangents (first derivatives) to the limit surface. Skipped if left empty.
+   :param output_limit_bitangents: Output name for a newly computed per-vertex attribute containing the bitangents (second derivative) to the limit surface. Skipped if left empty.
+
+   :return: The subdivided mesh.
+
+

@@ -1,0 +1,377 @@
+lagrange.raycasting
+===================
+
+.. py:module:: lagrange.raycasting
+
+
+Classes
+-------
+
+.. autoapisummary::
+
+   lagrange.raycasting.BuildQuality
+   lagrange.raycasting.CastMode
+   lagrange.raycasting.FallbackMode
+   lagrange.raycasting.ProjectMode
+   lagrange.raycasting.RayCaster
+   lagrange.raycasting.SceneFlags
+
+
+Functions
+---------
+
+.. autoapisummary::
+
+   lagrange.raycasting.project
+   lagrange.raycasting.project_closest_point
+   lagrange.raycasting.project_closest_vertex
+   lagrange.raycasting.project_directional
+
+
+Module Contents
+---------------
+
+.. py:class:: BuildQuality(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   BVH construction quality level.
+
+
+   .. py:attribute:: High
+      :value: 2
+
+
+      Slowest build time, highest BVH quality.
+
+
+   .. py:attribute:: Low
+      :value: 0
+
+
+      Fastest build time, lowest BVH quality.
+
+
+   .. py:attribute:: Medium
+      :value: 1
+
+
+      Moderate build time and BVH quality.
+
+
+.. py:class:: CastMode(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   Ray-casting direction mode.
+
+
+   .. py:attribute:: BothWays
+      :value: 1
+
+
+      Cast forward and backward.
+
+
+   .. py:attribute:: OneWay
+      :value: 0
+
+
+      Cast forward only.
+
+
+.. py:class:: FallbackMode(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   Fallback mode for vertices without a ray hit.
+
+
+   .. py:attribute:: ClosestPoint
+      :value: 2
+
+
+      Interpolate from the closest surface point.
+
+
+   .. py:attribute:: ClosestVertex
+      :value: 1
+
+
+      Copy from the closest vertex.
+
+
+   .. py:attribute:: Constant
+      :value: 0
+
+
+      Fill with a constant value.
+
+
+.. py:class:: ProjectMode(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   Main projection mode.
+
+
+   .. py:attribute:: ClosestPoint
+      :value: 1
+
+
+      Interpolate from the closest surface point.
+
+
+   .. py:attribute:: ClosestVertex
+      :value: 0
+
+
+      Copy from the closest vertex.
+
+
+   .. py:attribute:: RayCasting
+      :value: 2
+
+
+      Project along a prescribed direction.
+
+
+.. py:class:: RayCaster(scene_flags = 4, build_quality = BuildQuality.Medium)
+
+   A ray caster built on top of Embree.
+
+   This class manages an Embree BVH scene for efficient spatial queries.  In the
+   Python API it is exposed purely as a *caching* object: build the scene once,
+   then pass it to the various ``project_*`` functions to avoid rebuilding the BVH
+   on every call.
+
+   Example::
+
+       caster = lagrange.raycasting.RayCaster()
+       caster.add_mesh(source)
+       caster.commit_updates()
+
+       lagrange.raycasting.project_closest_point(
+           source, target, attribute_ids=[attr_id], project_vertices=False,
+           ray_caster=caster)
+       lagrange.raycasting.project_closest_vertex(
+           source, target, attribute_ids=[attr_id], project_vertices=False,
+           ray_caster=caster)
+
+
+   .. py:method:: add_instance(mesh_index, transform)
+
+      Add an instance of an existing mesh with a given transform.
+
+      :param mesh_index: Index of the source mesh (returned by :meth:`add_mesh`).
+      :param transform:  4×4 affine transformation matrix (float32).
+      :return: Local instance index relative to the source mesh.
+
+
+
+   .. py:method:: add_mesh(mesh, transform = ...)
+
+      Add a triangle mesh to the scene.
+
+      The mesh is moved into the ray caster.  Call :meth:`commit_updates` after
+      adding all meshes.
+
+      By default a single instance with an identity transform is created.  Pass
+      ``None`` to add the mesh without any instance (use :meth:`add_instance` to
+      create instances later).
+
+      :param mesh:      Triangle mesh.
+      :param transform: 4×4 affine transformation matrix (float32), or ``None``
+                        to add the mesh without creating an instance.
+      :return: Index of the source mesh in the scene.
+
+
+
+   .. py:method:: add_scene(simple_scene)
+
+      Add all meshes and instances from a SimpleScene.
+
+      :param simple_scene: Scene containing meshes and their instances.
+
+
+
+   .. py:method:: commit_updates()
+
+      Rebuild the BVH after adding or modifying meshes.
+
+      Must be called before any query or project function.
+
+
+
+   .. py:method:: get_transform(mesh_index, instance_index)
+
+      Get the affine transform of a mesh instance.
+
+      :param mesh_index:     Index of the source mesh.
+      :param instance_index: Local instance index.
+      :return: 4×4 affine transformation matrix (float32).
+
+
+
+   .. py:method:: get_visibility(mesh_index, instance_index)
+
+      Get the visibility flag of a mesh instance.
+
+      :param mesh_index:     Index of the source mesh.
+      :param instance_index: Local instance index.
+      :return: True if the instance is visible.
+
+
+
+   .. py:method:: update_mesh(mesh_index, mesh)
+
+      Replace a mesh in the scene.
+
+      All instances of the old mesh will reference the new mesh.
+
+      :param mesh_index: Index of the mesh to replace.
+      :param mesh:       New triangle mesh.
+
+
+
+   .. py:method:: update_transform(mesh_index, instance_index, transform)
+
+      Update the affine transform of a mesh instance.
+
+      :param mesh_index:     Index of the source mesh.
+      :param instance_index: Local instance index.
+      :param transform:      New 4×4 affine transformation matrix (float32).
+
+
+
+   .. py:method:: update_vertices(mesh_index, mesh)
+
+      Notify that vertices of a mesh have been modified.
+
+      The number and order of vertices must not change.
+
+      :param mesh_index: Index of the mesh whose vertices changed.
+      :param mesh:       The modified mesh with updated vertex positions.
+
+
+
+   .. py:method:: update_visibility(mesh_index, instance_index, visible)
+
+      Update the visibility of a mesh instance.
+
+      :param mesh_index:     Index of the source mesh.
+      :param instance_index: Local instance index.
+      :param visible:        True to make visible, False to hide.
+
+
+
+.. py:class:: SceneFlags
+
+   Bases: :py:obj:`enum.IntEnum`
+
+
+   Flags for configuring the Embree scene.
+
+
+   .. py:attribute:: Compact
+      :value: 2
+
+
+      Compact BVH layout.
+
+
+   .. py:attribute:: Dynamic
+      :value: 1
+
+
+      Scene will be updated frequently.
+
+
+   .. py:attribute:: Empty
+      :value: 0
+
+
+      No special behavior.
+
+
+   .. py:attribute:: Filter
+      :value: 8
+
+
+      Enable user-defined filters.
+
+
+   .. py:attribute:: Robust
+      :value: 4
+
+
+      Robust BVH traversal.
+
+
+.. py:function:: project(source: lagrange.core.SurfaceMesh, target: lagrange.core.SurfaceMesh, attribute_ids: collections.abc.Sequence[int] = [], project_vertices: bool = True, project_mode: ProjectMode = ProjectMode.ClosestPoint, direction: object | None = None, cast_mode: CastMode = CastMode.BothWays, fallback_mode: FallbackMode = FallbackMode.Constant, default_value: float = 0.0, ray_caster: RayCaster | None = None) -> None
+                 project(source: lagrange.core.SurfaceMesh, points: Annotated[numpy.typing.NDArray[numpy.float64], dict(shape=(None, 3), order='C', device='cpu')], project_mode: ProjectMode, direction: Annotated[numpy.typing.NDArray[numpy.float32], dict(shape=3, order='C')] | Annotated[numpy.typing.NDArray[numpy.float64], dict(shape=(None, 3), order='C', device='cpu')] | None = None, cast_mode: CastMode = CastMode.BothWays, fallback_mode: FallbackMode = FallbackMode.Constant, default_value: float = 0.0, ray_caster: RayCaster | None = None) -> Annotated[numpy.typing.NDArray[numpy.float64], dict(shape=(None, 3), order='C', device='cpu')]
+
+   Project query points onto a source mesh.
+
+   :param source:          Source triangle mesh.
+   :param points:          (N, 3) NumPy array of query point positions (float64). Modified in place to store the projected positions.
+   :param project_mode:    Projection mode (default: ``ProjectMode.ClosestPoint``).
+   :param direction:       Ray direction. Can be a 3D vector, or a numpy array of shape (N, 3) for per-vertex directions.
+                           Only used with ``ProjectMode.RayCasting``.
+   :param cast_mode:       Forward-only or both directions (only used with ``ProjectMode.RayCasting``).
+   :param fallback_mode:   Fallback for missed vertices (only used with ``ProjectMode.RayCasting``).
+   :param default_value:   Fill value for ``FallbackMode.Constant`` (default: 0).
+   :param ray_caster:      Optional pre-built :class:`RayCaster` for caching.
+
+   :return: (N, 3) NumPy array of projected positions (float64).
+
+
+.. py:function:: project_closest_point(source: lagrange.core.SurfaceMesh, target: lagrange.core.SurfaceMesh, attribute_ids: collections.abc.Sequence[int] = [], project_vertices: bool = True, ray_caster: RayCaster | None = None) -> None
+                 project_closest_point(source: lagrange.core.SurfaceMesh, points: Annotated[numpy.typing.NDArray[numpy.float64], dict(shape=(None, 3), order='C', device='cpu')], ray_caster: RayCaster | None = None) -> Annotated[numpy.typing.NDArray[numpy.float64], dict(shape=(None, 3), order='C', device='cpu')]
+
+   Project query points onto a source mesh by closest-point interpolation.
+
+   For each query point, the closest point on the source mesh surface is found.
+
+   :param source:          Source triangle mesh.
+   :param points:          (N, 3) NumPy array of query point positions (float64). Modified in place to store the projected positions.
+   :param ray_caster:      Optional pre-built :class:`RayCaster` for caching.
+   :return: (N, 3) NumPy array of projected positions (float64).
+
+
+.. py:function:: project_closest_vertex(source: lagrange.core.SurfaceMesh, target: lagrange.core.SurfaceMesh, attribute_ids: collections.abc.Sequence[int] = [], project_vertices: bool = True, ray_caster: RayCaster | None = None) -> None
+                 project_closest_vertex(source: lagrange.core.SurfaceMesh, points: Annotated[numpy.typing.NDArray[numpy.float64], dict(shape=(None, 3), order='C', device='cpu')], ray_caster: RayCaster | None = None) -> Annotated[numpy.typing.NDArray[numpy.float64], dict(shape=(None, 3), order='C', device='cpu')]
+
+   Project query points onto a source mesh by closest-vertex snapping.
+
+   For each query point, the closest surface point is found and snapped to the
+   nearest source vertex.
+
+   :param source:          Source triangle mesh.
+   :param points:          (N, 3) NumPy array of query point positions (float64). Modified in place to store the projected positions.
+   :param ray_caster:      Optional pre-built :class:`RayCaster` for caching.
+   :return: (N, 3) NumPy array of projected positions (float64).
+
+
+.. py:function:: project_directional(source: lagrange.core.SurfaceMesh, target: lagrange.core.SurfaceMesh, attribute_ids: collections.abc.Sequence[int] = [], project_vertices: bool = True, direction: object | None = None, cast_mode: CastMode = CastMode.BothWays, fallback_mode: FallbackMode = FallbackMode.Constant, default_value: float = 0.0, ray_caster: RayCaster | None = None) -> None
+                 project_directional(source: lagrange.core.SurfaceMesh, points: Annotated[numpy.typing.NDArray[numpy.float64], dict(shape=(None, 3), order='C', device='cpu')], direction: Annotated[numpy.typing.NDArray[numpy.float32], dict(shape=3, order='C')] | Annotated[numpy.typing.NDArray[numpy.float64], dict(shape=(None, 3), order='C', device='cpu')], cast_mode: CastMode = CastMode.BothWays, fallback_mode: FallbackMode = FallbackMode.Constant, default_value: float = 0.0, ray_caster: RayCaster | None = None) -> Annotated[numpy.typing.NDArray[numpy.float64], dict(shape=(None, 3), order='C', device='cpu')]
+
+   Project query points onto a source mesh along a prescribed direction.
+
+   For each query point, a ray is cast in the given direction.  If it hits the
+   source mesh, vertex positions are set from the hit.
+
+   :param source:          Source triangle mesh.
+   :param points:          (N, 3) NumPy array of query point positions (float64). Modified in place to store the projected positions.
+   :param direction:       Ray direction. Can be a 3D vector, or a numpy array of shape (N, 3) for per-vertex directions,
+   :param cast_mode:       Forward-only or both directions (default: ``CastMode.BothWays``).
+   :param fallback_mode:   Fallback for missed vertices (default: ``FallbackMode.Constant``).
+   :param default_value:   Fill value for ``FallbackMode.Constant`` (default: 0).
+   :param ray_caster:      Optional pre-built :class:`RayCaster` for caching.
+   :return: (N, 3) NumPy array of projected positions (float64).
+
+
