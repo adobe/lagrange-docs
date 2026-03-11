@@ -584,11 +584,11 @@ auto attr_ptr3 = mesh.delete_and_export_attribute<Scalar>(
     AttributeExportPolicy::KeepExternalPtr);
 ```
 
-[Attribute usage]: ../../../{{ dox_folder }}/group__group-surfacemesh-attr.html#ga35b5eb426384b257452ee0ffdb732c27
-[Attribute iteration]: ../../../{{ dox_folder }}/group__group-surfacemesh-iterate.html
-[Create policy]: ../../../{{ dox_folder }}/group__group-surfacemesh-attr.html#ga809dfcec94612491ec5be8bb8614ceab
-[Growth policy]: ../../../{{ dox_folder }}/group__group-surfacemesh-attr.html#gaee0f51b5f793101c19bd6dede5db7a7a
-[Write policy]: ../../../{{ dox_folder }}/group__group-surfacemesh-attr.html#ga3018d576f81897e1712c3601b9625cb9
-[Export policy]: ../../../{{ dox_folder }}/group__group-surfacemesh-attr.html#gade3ae5b7e72e9d4f92f29c6563551c10
-[Delete policy]: ../../../{{ dox_folder }}/group__group-surfacemesh-attr.html#gad17b213b11e78aeb807ad3ece7e67e84
-[Copy policy]: ../../../{{ dox_folder }}/group__group-surfacemesh-attr.html#ga450ef027eac01dd93a89a15ff55de63f
+[Attribute usage]: ../../{{ dox_folder }}/group__group-surfacemesh-attr.html#ga35b5eb426384b257452ee0ffdb732c27
+[Attribute iteration]: ../../{{ dox_folder }}/group__group-surfacemesh-iterate.html
+[Create policy]: ../../{{ dox_folder }}/group__group-surfacemesh-attr.html#ga809dfcec94612491ec5be8bb8614ceab
+[Growth policy]: ../../{{ dox_folder }}/group__group-surfacemesh-attr.html#gaee0f51b5f793101c19bd6dede5db7a7a
+[Write policy]: ../../{{ dox_folder }}/group__group-surfacemesh-attr.html#ga3018d576f81897e1712c3601b9625cb9
+[Export policy]: ../../{{ dox_folder }}/group__group-surfacemesh-attr.html#gade3ae5b7e72e9d4f92f29c6563551c10
+[Delete policy]: ../../{{ dox_folder }}/group__group-surfacemesh-attr.html#gad17b213b11e78aeb807ad3ece7e67e84
+[Copy policy]: ../../{{ dox_folder }}/group__group-surfacemesh-attr.html#ga450ef027eac01dd93a89a15ff55de63f

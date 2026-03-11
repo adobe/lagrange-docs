@@ -213,7 +213,7 @@ std::vector<Edge> min_spanning_tree(
     For simplicity, our Disjoint-Set data structure currently only implements _path compression_,
     but not union by rank.
 
-[disjoint-sets]: ../../../{{ dox_folder }}/classlagrange_1_1_disjoint_sets.html
+[disjoint-sets]: ../../{{ dox_folder }}/classlagrange_1_1_disjoint_sets.html
 
 ## BitField
 
@@ -237,7 +237,7 @@ if (op.test(Operation::Scaling)) {
 }
 ```
 
-[bit-field]: ../../../{{ dox_folder }}/classlagrange_1_1_bit_field.html
+[bit-field]: ../../{{ dox_folder }}/classlagrange_1_1_bit_field.html
 
 ## Floating Point Exceptions
 
@@ -265,7 +265,7 @@ void my_main() {
     macOS M1, Emscripten, etc.), it is possible to disable the feature explicitly by setting the
     CMake option `LAGRANGE_DISABLE_FPE=ON`. In this case, calling `enable_fpe()` will do nothing.
 
-[fpe]: ../../../{{ dox_folder }}/group__group-utils-misc.html#ga19b64389774c826a71abae902e0b46b9
+[fpe]: ../../{{ dox_folder }}/group__group-utils-misc.html#ga19b64389774c826a71abae902e0b46b9
 
 ## Scope Guard
 
@@ -305,7 +305,7 @@ state" in an object, and you want to ensure the `begin_edit()` and `end_edit()` 
 called together. It can also be use to wrap calls to `glBegin()` and `glEnd()` in OpenGL, ensuring
 the state machine stays consistent.
 
-[make-scope-guard]: ../../../{{ dox_folder }}/group__group-utils-misc.html#ga473b5d2b31badd808124196a21ce0b45
+[make-scope-guard]: ../../{{ dox_folder }}/group__group-utils-misc.html#ga473b5d2b31badd808124196a21ce0b45
 
 ## Stack-Allocated Containers
 
@@ -324,9 +324,9 @@ Lagrange currently provide the following implementations:
 - **[StackSet][stack-set]**. An implementation of a `std::set<>` with a fixed upper size provided at
   compile-time. Inserting new elements beyond the limit will throw an exception.
 
-[small-vector]: ../../../{{ dox_folder }}/classlagrange_1_1_small_vector.html
-[stack-vector]: ../../../{{ dox_folder }}/structlagrange_1_1_stack_vector.html
-[stack-set]: ../../../{{ dox_folder }}/structlagrange_1_1_stack_set.html
+[small-vector]: ../../{{ dox_folder }}/classlagrange_1_1_small_vector.html
+[stack-vector]: ../../{{ dox_folder }}/structlagrange_1_1_stack_vector.html
+[stack-set]: ../../{{ dox_folder }}/structlagrange_1_1_stack_set.html
 
 ## Shared Span
 
@@ -400,10 +400,10 @@ over a raw pointer, while tracking the actual owner object via a different `std:
     ```
 
 
-[span]: ../../../{{ dox_folder }}/group__group-utils-misc.html#ga4afead0b9ccc53fe4fca896787595d26
-[shared-span]: ../../../{{ dox_folder }}/classlagrange_1_1_shared_span.html
+[span]: ../../{{ dox_folder }}/group__group-utils-misc.html#ga4afead0b9ccc53fe4fca896787595d26
+[shared-span]: ../../{{ dox_folder }}/classlagrange_1_1_shared_span.html
 
-[range]: ../../../{{ dox_folder }}/group__group-utils-misc.html#ga68084717e646e9a6073e533d0b83a2b7
+[range]: ../../{{ dox_folder }}/group__group-utils-misc.html#ga68084717e646e9a6073e533d0b83a2b7
 [spdlog]: https://github.com/gabime/spdlog
 [CLI11]: https://github.com/CLIUtils/CLI11
 [chrono]: https://en.cppreference.com/w/cpp/chrono

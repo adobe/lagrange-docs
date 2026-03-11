@@ -388,5 +388,5 @@ if (mesh.has_vertex_attribute("attr_name")) {
 }
 ```
 
-[Mesh class]: ../../../{{ dox_folder }}/classlagrange_1_1_mesh.html
+[Mesh class]: ../../{{ dox_folder }}/classlagrange_1_1_mesh.html
 [Eigen]: http://eigen.tuxfamily.org

@@ -229,8 +229,8 @@ auto unified_mesh = unify_index_buffer(mesh, {"normals", "uv"});
 
 See: [Attributes Utilities][attr-utils] documentation.
 
-[attr-utils]: ../../../{{ dox_folder }}/group__group-surfacemesh-attr-utils.html
-[mesh-utils]: ../../../{{ dox_folder }}/group__group-surfacemesh-utils.html
+[attr-utils]: ../../{{ dox_folder }}/group__group-surfacemesh-attr-utils.html
+[mesh-utils]: ../../{{ dox_folder }}/group__group-surfacemesh-utils.html
 
 ## Connected Components
 
@@ -257,7 +257,7 @@ for (Index f = 0; f < mesh.get_num_facets(); ++f) {
 You can choose between edge-connected and vertex-connected components via the
 `options.connectivity_type` parameter.
 
-[compute-components]: ../../../{{ dox_folder }}/group__group-surfacemesh-utils.html#gafedc8c0d66af62d6f3d540465c0018c6
+[compute-components]: ../../{{ dox_folder }}/group__group-surfacemesh-utils.html#gafedc8c0d66af62d6f3d540465c0018c6
 
 ## Combine Meshes
 
@@ -290,7 +290,7 @@ auto aggregate_mesh3 = lagrange::combine_meshes(num_meshes,
     });
 ```
 
-[combine-meshes]: ../../../{{ dox_folder }}/group__group-surfacemesh-utils.html#ga363707c2e65474638292c738c072868c
+[combine-meshes]: ../../{{ dox_folder }}/group__group-surfacemesh-utils.html#ga363707c2e65474638292c738c072868c
 
 ## Vertex Valence
 
@@ -314,7 +314,7 @@ auto num_regular_vertices = (vertex_valence.array() == 6).count();
 lagrange::logger().info("The mesh has {} regular vertices", num_regular_vertices);
 ```
 
-[compute-vertex-valence]: ../../../{{ dox_folder }}/group__group-surfacemesh-utils.html#ga6a2a7d7f5165ef7f5433ef67efad4306
+[compute-vertex-valence]: ../../{{ dox_folder }}/group__group-surfacemesh-utils.html#ga6a2a7d7f5165ef7f5433ef67efad4306
 
 ## Adjacency Graph
 
@@ -347,4 +347,4 @@ for (Index x = 0; x < mesh.get_num_vertices(); ++x) {
     call `mesh.initialize_edges()` beforehand, `compute_vertex_vertex_adjacency()` does not have
     such a requirement, and will compute vertex-vertex connectivity information directly.
 
-[compute-vertex-vertex-adjacency]: ../../../{{ dox_folder }}/group__group-surfacemesh-utils.html#ga203af050581e879b52d339558b788a08
+[compute-vertex-vertex-adjacency]: ../../{{ dox_folder }}/group__group-surfacemesh-utils.html#ga203af050581e879b52d339558b788a08

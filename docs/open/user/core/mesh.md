@@ -531,8 +531,8 @@ We provide the following type aliases for convenience:
     LA_SURFACE_MESH_X(views_mesh, 0)
     ```
 
-[SurfaceMesh]: ../../../{{ dox_folder }}/classlagrange_1_1_surface_mesh.html
-[X macros]: ../../../{{ dox_folder }}/group__group-surfacemesh.html
-[Attribute]: ../../../{{ dox_folder }}/classlagrange_1_1_attribute.html
+[SurfaceMesh]: ../../{{ dox_folder }}/classlagrange_1_1_surface_mesh.html
+[X macros]: ../../{{ dox_folder }}/group__group-surfacemesh.html
+[Attribute]: ../../{{ dox_folder }}/classlagrange_1_1_attribute.html
 [Eigen]: http://eigen.tuxfamily.org
 [libigl]: https://libigl.github.io/
