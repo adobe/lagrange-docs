@@ -18,6 +18,7 @@ automatically downloaded by our CMake system depending on which Lagrange module 
 | [Boost](https://www.boost.org/)[^2_boost]                                                      | Boost                             | FS                                                    |
 | [CLI11](https://github.com/CLIUtils/CLI11)                                                     | BSD-3                             | Examples[^3_cli11_examples], Performance Tests (Core) |
 | [Catch2](https://github.com/catchorg/Catch2)                                                   | Boost                             | Testing, Unit Tests (Core)                            |
+| [Cista](https://github.com/felixguendling/cista)                                               | MIT                               | Serialization2, Unit Tests (Serialization2)           |
 | [Cpptrace](https://github.com/jeremy-rifkin/cpptrace)                                          | MIT                               | Testing                                               |
 | [Dear ImGui](https://github.com/ocornut/imgui)                                                 | MIT                               | UI                                                    |
 | [Eigen](https://eigen.tuxfamily.org/)                                                          | MPL2                              | Core, Solver, UI, Unit Tests (Core)                   |
@@ -46,6 +47,7 @@ automatically downloaded by our CMake system depending on which Lagrange module 
 | [TinyEXR](https://github.com/syoyo/tinyexr)                                                    | BSD-3                             | Image_IO                                              |
 | [Tracy](https://github.com/wolfpld/tracy)[^5_tracy]                                            | BSD-3                             | Core                                                  |
 | [WindingNumber](https://github.com/sideeffects/WindingNumber)                                  | MIT                               | Unit Tests (Winding), Winding                         |
+| [Zstd](https://github.com/facebook/zstd)                                                       | BSD-3                             | Serialization2                                        |
 | [geometry-central](https://github.com/nmwsharp/geometry-central)                               | MIT                               | Geodesic                                              |
 | [gl3w](https://github.com/skaslev/gl3w)                                                        | MIT                               | UI                                                    |
 | [imgui fonts](https://github.com/HasKha/imgui-fonts)                                           | MIT                               | UI                                                    |
