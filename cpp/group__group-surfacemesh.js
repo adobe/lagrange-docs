@@ -4,6 +4,7 @@ var group__group_surfacemesh =
     [ "Mesh utilities", "group__group-surfacemesh-utils.html", "group__group-surfacemesh-utils" ],
     [ "Attributes iterators", "group__group-surfacemesh-iterate.html", "group__group-surfacemesh-iterate" ],
     [ "Attributes utilities", "group__group-surfacemesh-attr-utils.html", "group__group-surfacemesh-attr-utils" ],
+    [ "Mesh cleanup", "group__group-surfacemesh-cleanup.html", "group__group-surfacemesh-cleanup" ],
     [ "Eigen views", "group__group-surfacemesh-views.html", "group__group-surfacemesh-views" ],
     [ "SurfaceMesh< Scalar_, Index_ >", "classlagrange_1_1_surface_mesh.html", [
       [ "BareMeshTag", "structlagrange_1_1_surface_mesh_1_1_bare_mesh_tag.html", null ],

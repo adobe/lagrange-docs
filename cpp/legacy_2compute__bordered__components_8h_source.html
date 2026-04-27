@@ -217,27 +217,27 @@ $(function(){initNavTree('legacy_2compute__bordered__components_8h_source.html',
 <div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
 <div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    Index num_components = 0;</div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> i : <a class="code hl_function" href="group__group-utils-misc.html#ga41568d17fc48cea4a31db0e40cd93cf8">range</a>(mesh.<a class="code hl_function" href="classlagrange_1_1_surface_mesh.html#abcf8a67369f4ebda946306ae39673d4a">get_num_facets</a>())) {</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> i : <a class="code hl_function" href="group__group-utils-misc.html#ga41568d17fc48cea4a31db0e40cd93cf8">range</a>(mesh.get_num_facets())) {</div>
 <div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>        <span class="keywordflow">if</span> (facet_component_ids[i] == <a class="code hl_function" href="group__group-utils-misc.html#ga6c3e5aabde25a440beb7fc174ab081df">invalid&lt;Index&gt;</a>()) {</div>
 <div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>            perform_bfs(i, num_components);</div>
 <div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>            ++num_components;</div>
 <div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>        }</div>
 <div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    }</div>
 <div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    <a class="code hl_define" href="group__group-utils-assert.html#ga1ccafcb14523a1aae57dcac3c3f32ecd">la_runtime_assert</a>(</div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>        num_components &gt; 0 || mesh.<a class="code hl_function" href="classlagrange_1_1_surface_mesh.html#abcf8a67369f4ebda946306ae39673d4a">get_num_facets</a>() == 0,</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>        num_components &gt; 0 || mesh.get_num_facets() == 0,</div>
 <div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>        <span class="stringliteral">&quot;Extracted &quot;</span> + std::to_string(num_components) + <span class="stringliteral">&quot; comps out of &quot;</span> +</div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>            std::to_string(mesh.<a class="code hl_function" href="classlagrange_1_1_surface_mesh.html#abcf8a67369f4ebda946306ae39673d4a">get_num_facets</a>()) + <span class="stringliteral">&quot; facets&quot;</span>);</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>            std::to_string(mesh.get_num_facets()) + <span class="stringliteral">&quot; facets&quot;</span>);</div>
 <div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
 <div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    std::vector&lt;std::vector&lt;Index&gt;&gt; component_to_facets(num_components);</div>
 <div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    std::vector&lt;Index&gt; num_component_facets(num_components, 0);</div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> i : <a class="code hl_function" href="group__group-utils-misc.html#ga41568d17fc48cea4a31db0e40cd93cf8">range</a>(mesh.<a class="code hl_function" href="classlagrange_1_1_surface_mesh.html#abcf8a67369f4ebda946306ae39673d4a">get_num_facets</a>())) {</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> i : <a class="code hl_function" href="group__group-utils-misc.html#ga41568d17fc48cea4a31db0e40cd93cf8">range</a>(mesh.get_num_facets())) {</div>
 <div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>        <span class="keyword">const</span> <span class="keyword">auto</span> component_id = facet_component_ids[i];</div>
 <div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>        ++num_component_facets[component_id];</div>
 <div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    }</div>
 <div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> i : <a class="code hl_function" href="group__group-utils-misc.html#ga41568d17fc48cea4a31db0e40cd93cf8">range</a>(num_components)) {</div>
 <div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>        component_to_facets[i].reserve(num_component_facets[i]);</div>
 <div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    }</div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> i : <a class="code hl_function" href="group__group-utils-misc.html#ga41568d17fc48cea4a31db0e40cd93cf8">range</a>(mesh.<a class="code hl_function" href="classlagrange_1_1_surface_mesh.html#abcf8a67369f4ebda946306ae39673d4a">get_num_facets</a>())) {</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> i : <a class="code hl_function" href="group__group-utils-misc.html#ga41568d17fc48cea4a31db0e40cd93cf8">range</a>(mesh.get_num_facets())) {</div>
 <div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>        <span class="keyword">const</span> <span class="keyword">auto</span> component_id = facet_component_ids[i];</div>
 <div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>        component_to_facets[component_id].push_back(i);</div>
 <div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    }</div>
@@ -252,7 +252,6 @@ $(function(){initNavTree('legacy_2compute__bordered__components_8h_source.html',
 <div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span> </div>
 <div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>} <span class="comment">// namespace legacy</span></div>
 <div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>} <span class="comment">// namespace lagrange</span></div>
-<div class="ttc" id="aclasslagrange_1_1_surface_mesh_html_abcf8a67369f4ebda946306ae39673d4a"><div class="ttname"><a href="classlagrange_1_1_surface_mesh.html#abcf8a67369f4ebda946306ae39673d4a">lagrange::SurfaceMesh::get_num_facets</a></div><div class="ttdeci">Index get_num_facets() const</div><div class="ttdoc">Retrieves the number of facets.</div><div class="ttdef"><b>Definition</b> SurfaceMesh.h:687</div></div>
 <div class="ttc" id="agroup__group-utils-assert_html_ga1ccafcb14523a1aae57dcac3c3f32ecd"><div class="ttname"><a href="group__group-utils-assert.html#ga1ccafcb14523a1aae57dcac3c3f32ecd">la_runtime_assert</a></div><div class="ttdeci">#define la_runtime_assert(...)</div><div class="ttdoc">Runtime assertion check.</div><div class="ttdef"><b>Definition</b> assert.h:174</div></div>
 <div class="ttc" id="agroup__group-utils-misc_html_ga41568d17fc48cea4a31db0e40cd93cf8"><div class="ttname"><a href="group__group-utils-misc.html#ga41568d17fc48cea4a31db0e40cd93cf8">lagrange::range</a></div><div class="ttdeci">internal::Range&lt; Index &gt; range(Index end)</div><div class="ttdoc">Returns an iterable object representing the range [0, end).</div><div class="ttdef"><b>Definition</b> range.h:176</div></div>
 <div class="ttc" id="agroup__group-utils-misc_html_ga6c3e5aabde25a440beb7fc174ab081df"><div class="ttname"><a href="group__group-utils-misc.html#ga6c3e5aabde25a440beb7fc174ab081df">lagrange::invalid</a></div><div class="ttdeci">constexpr T invalid()</div><div class="ttdoc">You can use invalid&lt;T&gt;() to get a value that can represent &quot;invalid&quot; values, such as invalid indices ...</div><div class="ttdef"><b>Definition</b> invalid.h:40</div></div>
@@ -265,7 +264,7 @@ $(function(){initNavTree('legacy_2compute__bordered__components_8h_source.html',
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_e277d0e790805391a364b883bec7db94.html">lagrange</a></li><li class="navelem"><a class="el" href="dir_3e86c1114dca7f32217f9b892f901fa0.html">legacy</a></li><li class="navelem"><b>compute_bordered_components.h</b></li>
-    <li class="footer">Generated on Fri Mar 27 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+    <li class="footer">Generated on Mon Apr 27 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>
 </body>

@@ -14,6 +14,8 @@ var annotated_dup =
         [ "MeshDistancesOptions", "structlagrange_1_1bvh_1_1_mesh_distances_options.html", "structlagrange_1_1bvh_1_1_mesh_distances_options" ],
         [ "PyEdgeAABBTree", "classlagrange_1_1bvh_1_1_py_edge_a_a_b_b_tree.html", null ],
         [ "TriangleAABBTree", "classlagrange_1_1bvh_1_1_triangle_a_a_b_b_tree.html", "classlagrange_1_1bvh_1_1_triangle_a_a_b_b_tree" ],
+        [ "UVOverlapOptions", "structlagrange_1_1bvh_1_1_u_v_overlap_options.html", "structlagrange_1_1bvh_1_1_u_v_overlap_options" ],
+        [ "UVOverlapResult", "structlagrange_1_1bvh_1_1_u_v_overlap_result.html", "structlagrange_1_1bvh_1_1_u_v_overlap_result" ],
         [ "WeldOptions", "structlagrange_1_1bvh_1_1_weld_options.html", "structlagrange_1_1bvh_1_1_weld_options" ]
       ] ],
       [ "experimental", null, [
@@ -82,6 +84,7 @@ var annotated_dup =
         [ "SVGSetting", "structlagrange_1_1image__io_1_1_s_v_g_setting.html", "structlagrange_1_1image__io_1_1_s_v_g_setting" ]
       ] ],
       [ "internal", "namespacelagrange_1_1internal.html", [
+        [ "AttributeInfo", "structlagrange_1_1internal_1_1_attribute_info.html", "structlagrange_1_1internal_1_1_attribute_info" ],
         [ "BucketSortOffset", "structlagrange_1_1internal_1_1_bucket_sort_offset.html", "structlagrange_1_1internal_1_1_bucket_sort_offset" ],
         [ "BucketSortResult", "structlagrange_1_1internal_1_1_bucket_sort_result.html", "structlagrange_1_1internal_1_1_bucket_sort_result" ],
         [ "CheckAttributeResult", "structlagrange_1_1internal_1_1_check_attribute_result.html", "structlagrange_1_1internal_1_1_check_attribute_result" ],
@@ -97,6 +100,7 @@ var annotated_dup =
         [ "shared_ptr_access< T, false, true >", "classlagrange_1_1internal_1_1shared__ptr__access_3_01_t_00_01false_00_01true_01_4.html", "classlagrange_1_1internal_1_1shared__ptr__access_3_01_t_00_01false_00_01true_01_4" ],
         [ "shared_ptr_access< T, true, false >", "classlagrange_1_1internal_1_1shared__ptr__access_3_01_t_00_01true_00_01false_01_4.html", "classlagrange_1_1internal_1_1shared__ptr__access_3_01_t_00_01true_00_01false_01_4" ],
         [ "SkinningExtractNResult", "structlagrange_1_1internal_1_1_skinning_extract_n_result.html", "structlagrange_1_1internal_1_1_skinning_extract_n_result" ],
+        [ "SurfaceMeshInfo", "structlagrange_1_1internal_1_1_surface_mesh_info.html", "structlagrange_1_1internal_1_1_surface_mesh_info" ],
         [ "UnorientedEdge", "structlagrange_1_1internal_1_1_unoriented_edge.html", null ],
         [ "weak_ptr", "classlagrange_1_1internal_1_1weak__ptr.html", "classlagrange_1_1internal_1_1weak__ptr" ]
       ] ],
@@ -159,8 +163,11 @@ var annotated_dup =
       ] ],
       [ "polyddg", null, [
         [ "DifferentialOperators", "classlagrange_1_1polyddg_1_1_differential_operators.html", "classlagrange_1_1polyddg_1_1_differential_operators" ],
+        [ "HodgeDecompositionOptions", "structlagrange_1_1polyddg_1_1_hodge_decomposition_options.html", "structlagrange_1_1polyddg_1_1_hodge_decomposition_options" ],
+        [ "HodgeDecompositionResult", "structlagrange_1_1polyddg_1_1_hodge_decomposition_result.html", "structlagrange_1_1polyddg_1_1_hodge_decomposition_result" ],
         [ "PrincipalCurvaturesOptions", "structlagrange_1_1polyddg_1_1_principal_curvatures_options.html", "structlagrange_1_1polyddg_1_1_principal_curvatures_options" ],
-        [ "PrincipalCurvaturesResult", "structlagrange_1_1polyddg_1_1_principal_curvatures_result.html", "structlagrange_1_1polyddg_1_1_principal_curvatures_result" ]
+        [ "PrincipalCurvaturesResult", "structlagrange_1_1polyddg_1_1_principal_curvatures_result.html", "structlagrange_1_1polyddg_1_1_principal_curvatures_result" ],
+        [ "SmoothDirectionFieldOptions", "structlagrange_1_1polyddg_1_1_smooth_direction_field_options.html", "structlagrange_1_1polyddg_1_1_smooth_direction_field_options" ]
       ] ],
       [ "polyscope", null, [
         [ "PolyscopeTrait", "structlagrange_1_1polyscope_1_1_polyscope_trait.html", null ]
@@ -206,6 +213,7 @@ var annotated_dup =
         [ "ClosestPointHitN", "structlagrange_1_1raycasting_1_1_closest_point_hit_n.html", "structlagrange_1_1raycasting_1_1_closest_point_hit_n" ],
         [ "HitBase", "structlagrange_1_1raycasting_1_1_hit_base.html", "structlagrange_1_1raycasting_1_1_hit_base" ],
         [ "HitBaseN", "structlagrange_1_1raycasting_1_1_hit_base_n.html", "structlagrange_1_1raycasting_1_1_hit_base_n" ],
+        [ "LocalFeatureSizeOptions", "structlagrange_1_1raycasting_1_1_local_feature_size_options.html", "structlagrange_1_1raycasting_1_1_local_feature_size_options" ],
         [ "ProjectCommonOptions", "structlagrange_1_1raycasting_1_1_project_common_options.html", "structlagrange_1_1raycasting_1_1_project_common_options" ],
         [ "ProjectDirectionalOptions", "structlagrange_1_1raycasting_1_1_project_directional_options.html", "structlagrange_1_1raycasting_1_1_project_directional_options" ],
         [ "ProjectOptions", "structlagrange_1_1raycasting_1_1_project_options.html", "structlagrange_1_1raycasting_1_1_project_options" ],
@@ -217,6 +225,9 @@ var annotated_dup =
         [ "RemeshingOptions", "structlagrange_1_1remeshing__im_1_1_remeshing_options.html", "structlagrange_1_1remeshing__im_1_1_remeshing_options" ]
       ] ],
       [ "scene", null, [
+        [ "internal", null, [
+          [ "SingleMeshToSceneOptions", "structlagrange_1_1scene_1_1internal_1_1_single_mesh_to_scene_options.html", null ]
+        ] ],
         [ "Animation", "structlagrange_1_1scene_1_1_animation.html", null ],
         [ "Camera", "structlagrange_1_1scene_1_1_camera.html", null ],
         [ "Extensions", "structlagrange_1_1scene_1_1_extensions.html", "structlagrange_1_1scene_1_1_extensions" ],
@@ -236,6 +247,30 @@ var annotated_dup =
         [ "TextureInfo", "structlagrange_1_1scene_1_1_texture_info.html", "structlagrange_1_1scene_1_1_texture_info" ],
         [ "UserDataConverter", "structlagrange_1_1scene_1_1_user_data_converter.html", null ],
         [ "Value", "classlagrange_1_1scene_1_1_value.html", null ]
+      ] ],
+      [ "serialization", null, [
+        [ "internal", null, [
+          [ "CistaAnimation", "structlagrange_1_1serialization_1_1internal_1_1_cista_animation.html", null ],
+          [ "CistaAttributeInfo", "structlagrange_1_1serialization_1_1internal_1_1_cista_attribute_info.html", null ],
+          [ "CistaCamera", "structlagrange_1_1serialization_1_1internal_1_1_cista_camera.html", null ],
+          [ "CistaExtensions", "structlagrange_1_1serialization_1_1internal_1_1_cista_extensions.html", null ],
+          [ "CistaImage", "structlagrange_1_1serialization_1_1internal_1_1_cista_image.html", null ],
+          [ "CistaImageBuffer", "structlagrange_1_1serialization_1_1internal_1_1_cista_image_buffer.html", null ],
+          [ "CistaInstance", "structlagrange_1_1serialization_1_1internal_1_1_cista_instance.html", "structlagrange_1_1serialization_1_1internal_1_1_cista_instance" ],
+          [ "CistaLight", "structlagrange_1_1serialization_1_1internal_1_1_cista_light.html", null ],
+          [ "CistaMaterial", "structlagrange_1_1serialization_1_1internal_1_1_cista_material.html", null ],
+          [ "CistaMesh", "structlagrange_1_1serialization_1_1internal_1_1_cista_mesh.html", null ],
+          [ "CistaNode", "structlagrange_1_1serialization_1_1internal_1_1_cista_node.html", null ],
+          [ "CistaScene", "structlagrange_1_1serialization_1_1internal_1_1_cista_scene.html", null ],
+          [ "CistaSceneMeshInstance", "structlagrange_1_1serialization_1_1internal_1_1_cista_scene_mesh_instance.html", null ],
+          [ "CistaSimpleScene", "structlagrange_1_1serialization_1_1internal_1_1_cista_simple_scene.html", "structlagrange_1_1serialization_1_1internal_1_1_cista_simple_scene" ],
+          [ "CistaSkeleton", "structlagrange_1_1serialization_1_1internal_1_1_cista_skeleton.html", null ],
+          [ "CistaTexture", "structlagrange_1_1serialization_1_1internal_1_1_cista_texture.html", null ],
+          [ "CistaTextureInfo", "structlagrange_1_1serialization_1_1internal_1_1_cista_texture_info.html", null ],
+          [ "CistaValue", "structlagrange_1_1serialization_1_1internal_1_1_cista_value.html", null ]
+        ] ],
+        [ "DeserializeOptions", "structlagrange_1_1serialization_1_1_deserialize_options.html", "structlagrange_1_1serialization_1_1_deserialize_options" ],
+        [ "SerializeOptions", "structlagrange_1_1serialization_1_1_serialize_options.html", "structlagrange_1_1serialization_1_1_serialize_options" ]
       ] ],
       [ "solver", null, [
         [ "EigenResult", "structlagrange_1_1solver_1_1_eigen_result.html", "structlagrange_1_1solver_1_1_eigen_result" ]
@@ -536,7 +571,7 @@ var annotated_dup =
       [ "hash< lagrange::EdgeType< Index > >", "structstd_1_1hash_3_01lagrange_1_1_edge_type_3_01_index_01_4_01_4.html", null ]
     ] ],
     [ "Args", "struct_args.html", null ],
-    [ "DemoState", "struct_demo_state.html", null ],
+    [ "DemoState", "struct_demo_state.html", "struct_demo_state" ],
     [ "OrientReturn", "struct_orient_return.html", null ],
     [ "PickedPoint", "struct_picked_point.html", null ],
     [ "type_caster< lagrange::scene::Value >", "structtype__caster_3_01lagrange_1_1scene_1_1_value_01_4.html", null ],

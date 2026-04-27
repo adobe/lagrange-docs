@@ -61,7 +61,6 @@ var group__group_surfacemesh_attr =
       [ "get", "classlagrange_1_1_attribute.html#ae61ed0c572059caf9ed53e2bb93ac614", null ],
       [ "ref", "classlagrange_1_1_attribute.html#a64ec5111359ba201a6313d775f0e1cd0", null ],
       [ "get_all", "classlagrange_1_1_attribute.html#a0689838581e50aaa8c31e29063fcd451", null ],
-      [ "get_all_with_padding", "classlagrange_1_1_attribute.html#abb63d546098ae48706553a3bc15e7fb4", null ],
       [ "ref_all", "classlagrange_1_1_attribute.html#ad58d646f33a647ce9abbc4f3535da646", null ],
       [ "get_first", "classlagrange_1_1_attribute.html#a5288779aeb588bf29bccfb466fa457dc", null ],
       [ "ref_first", "classlagrange_1_1_attribute.html#a36fc196dc0b22baf04430613c0fa55d3", null ],
@@ -85,6 +84,7 @@ var group__group_surfacemesh_attr =
       [ "m_is_read_only", "classlagrange_1_1_attribute.html#a7e74c73b00954699a4853bface6ac78a", null ],
       [ "m_num_elements", "classlagrange_1_1_attribute.html#acc6eff2b70d120ff54b4d64be2e3f8bc", null ]
     ] ],
+    [ "AttributeName", "structlagrange_1_1_attribute_name.html", null ],
     [ "IndexedAttribute< ValueType_, Index_ >", "classlagrange_1_1_indexed_attribute.html", [
       [ "ValueType", "classlagrange_1_1_indexed_attribute.html#a48f6eee0351a3cea4b2c4fb25705241a", null ],
       [ "Index", "classlagrange_1_1_indexed_attribute.html#a726cb631080e40f5e472e0c3f6e59eda", null ],

@@ -10,7 +10,8 @@ var searchData=
   ['linearsweeppath_7',['LinearSweepPath',['../classlagrange_1_1primitive_1_1legacy_1_1_linear_sweep_path.html',1,'lagrange::primitive::legacy']]],
   ['loadimageresult_8',['LoadImageResult',['../structlagrange_1_1image__io_1_1_load_image_result.html',1,'lagrange::image_io']]],
   ['loadoptions_9',['LoadOptions',['../structlagrange_1_1io_1_1_load_options.html',1,'lagrange::io']]],
-  ['logdata_10',['LogData',['../classlagrange_1_1ui_1_1_log_data.html',1,'lagrange::ui']]],
-  ['loggercontextdata_11',['LoggerContextData',['../structlagrange_1_1ui_1_1_logger_context_data.html',1,'lagrange::ui']]],
-  ['loggerpanel_12',['LoggerPanel',['../structlagrange_1_1ui_1_1_logger_panel.html',1,'lagrange::ui']]]
+  ['localfeaturesizeoptions_10',['LocalFeatureSizeOptions',['../structlagrange_1_1raycasting_1_1_local_feature_size_options.html',1,'lagrange::raycasting']]],
+  ['logdata_11',['LogData',['../classlagrange_1_1ui_1_1_log_data.html',1,'lagrange::ui']]],
+  ['loggercontextdata_12',['LoggerContextData',['../structlagrange_1_1ui_1_1_logger_context_data.html',1,'lagrange::ui']]],
+  ['loggerpanel_13',['LoggerPanel',['../structlagrange_1_1ui_1_1_logger_panel.html',1,'lagrange::ui']]]
 ];

@@ -1,7 +1,7 @@
 var searchData=
 [
   ['uiwidget_0',['UIWidget',['../classlagrange_1_1ui_1_1_u_i_widget.html#a14511cf0ba99175a0ffe42bc00761a92',1,'lagrange::ui::UIWidget']]],
-  ['unflip_5fuv_5ftriangles_1',['unflip_uv_triangles',['../namespacelagrange.html#a1a52980d167584935ed162810d2a71ba',1,'lagrange']]],
+  ['unflip_5fuv_5ftriangles_1',['unflip_uv_triangles',['../group__group-surfacemesh-cleanup.html#ga1a52980d167584935ed162810d2a71ba',1,'lagrange']]],
   ['ungroup_2',['ungroup',['../namespacelagrange_1_1ui.html#a57db003f1a25650af9e71a40cc0303e7',1,'lagrange::ui']]],
   ['unify_5findex_5fbuffer_3',['unify_index_buffer',['../group__group-surfacemesh-attr-utils.html#gae8deb2977d6d78e0b8e3a9a7773b6c72',1,'lagrange']]],
   ['unify_5fnamed_5findex_5fbuffer_4',['unify_named_index_buffer',['../group__group-surfacemesh-attr-utils.html#ga40817d91add1d124cc9f362f019d1f0c',1,'lagrange']]],
@@ -27,6 +27,6 @@ var searchData=
   ['update_5fvertices_24',['update_vertices',['../classlagrange_1_1raycasting_1_1_ray_caster.html#a0e7d1eb80032b34bfd8dc328a131ab3d',1,'lagrange::raycasting::RayCaster::update_vertices(uint32_t mesh_index, const SurfaceMesh&lt; Scalar, Index &gt; &amp;mesh)'],['../classlagrange_1_1raycasting_1_1_ray_caster.html#aa19acc969aa45e6b85d85da15475425c',1,'lagrange::raycasting::RayCaster::update_vertices(uint32_t mesh_index, span&lt; const Scalar &gt; vertices)']]],
   ['update_5fvisibility_25',['update_visibility',['../classlagrange_1_1raycasting_1_1legacy_1_1_embree_ray_caster.html#ac3ddf8fda06773cbdd7693b35ce6d8e7',1,'lagrange::raycasting::legacy::EmbreeRayCaster::update_visibility()'],['../classlagrange_1_1raycasting_1_1_ray_caster.html#af45318f327ed64d1a89a027a85e51f29',1,'lagrange::raycasting::RayCaster::update_visibility()']]],
   ['use_5fcount_26',['use_count',['../classlagrange_1_1internal_1_1shared__ptr.html#a68779c565035025326e9065c5edee1e6',1,'lagrange::internal::shared_ptr::use_count()'],['../classlagrange_1_1internal_1_1weak__ptr.html#a68779c565035025326e9065c5edee1e6',1,'lagrange::internal::weak_ptr::use_count()']]],
-  ['uv_5fmesh_5fref_27',['uv_mesh_ref',['../namespacelagrange.html#ae68df8e09ed4829ef852e47518e5a47d',1,'lagrange']]],
-  ['uv_5fmesh_5fview_28',['uv_mesh_view',['../namespacelagrange.html#a9701752c8bd35e6cb8a9189cff79636a',1,'lagrange']]]
+  ['uv_5fmesh_5fref_27',['uv_mesh_ref',['../group__group-surfacemesh-utils.html#gae68df8e09ed4829ef852e47518e5a47d',1,'lagrange']]],
+  ['uv_5fmesh_5fview_28',['uv_mesh_view',['../group__group-surfacemesh-utils.html#ga9701752c8bd35e6cb8a9189cff79636a',1,'lagrange']]]
 ];

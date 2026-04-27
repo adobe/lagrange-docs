@@ -2537,7 +2537,7 @@ pointer to invoke Lagrange functions.  It can be done easily:</p>
 <span class="c1">// Convert to shared_ptr.</span>
 <span class="k">auto</span><span class="w"> </span><span class="n">mesh_shared</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lagrange</span><span class="o">::</span><span class="n">to_shared_ptr</span><span class="p">(</span><span class="n">mesh_unique</span><span class="p">);</span>
 <span class="c1">// `shared_mesh` is of type `std::shared_ptr&lt;MeshType&gt;`</span>
-<span class="n">assert</span><span class="p">(</span><span class="n">mesh_unique</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="k">nullptr</span><span class="p">);</span>
+<span class="n">assert</span><span class="p">(</span><span class="n">mesh_unique</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">nullptr</span><span class="p">);</span>
 
 <span class="c1">// Get a raw pointer.</span>
 <span class="c1">// Warning: Never (!!) wrap the same raw pointer into</span>

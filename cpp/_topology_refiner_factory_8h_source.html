@@ -157,14 +157,14 @@ $(function(){initNavTree('_topology_refiner_factory_8h_source.html',''); initRes
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="keyword">const</span> <span class="keyword">auto</span>&amp; mesh = conv.mesh;</div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="comment">// Number of vertices</span></div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="keywordtype">int</span> num_vertices = <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(mesh.<a class="code hl_function" href="classlagrange_1_1_surface_mesh.html#a1ed57c732bcdb304ed7033147f5d9002">get_num_vertices</a>());</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="keywordtype">int</span> num_vertices = <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(mesh.get_num_vertices());</div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    setNumBaseVertices(refiner, num_vertices);</div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="comment">// Number of faces and face-vertices (corners)</span></div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="keywordtype">int</span> num_facets = <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(mesh.<a class="code hl_function" href="classlagrange_1_1_surface_mesh.html#abcf8a67369f4ebda946306ae39673d4a">get_num_facets</a>());</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="keywordtype">int</span> num_facets = <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(mesh.get_num_facets());</div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    setNumBaseFaces(refiner, num_facets);</div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> facet = 0; facet &lt; num_facets; ++facet) {</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        <span class="keywordtype">int</span> nv = <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(mesh.<a class="code hl_function" href="classlagrange_1_1_surface_mesh.html#af08dee4f91c8d35b17755d5020b11f70">get_facet_size</a>(facet));</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        <span class="keywordtype">int</span> nv = <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(mesh.get_facet_size(facet));</div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        setNumBaseFaceVertices(refiner, facet, nv);</div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    }</div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
@@ -182,11 +182,11 @@ $(function(){initNavTree('_topology_refiner_factory_8h_source.html',''); initRes
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <span class="keyword">using </span>Far::IndexArray;</div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <span class="comment">// Face relations</span></div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="keywordtype">int</span> num_facets = <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(mesh.<a class="code hl_function" href="classlagrange_1_1_surface_mesh.html#abcf8a67369f4ebda946306ae39673d4a">get_num_facets</a>());</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="keywordtype">int</span> num_facets = <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(mesh.get_num_facets());</div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> facet = 0; facet &lt; num_facets; ++facet) {</div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        IndexArray dst_facet_vertices = getBaseFaceVertices(refiner, facet);</div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        <span class="keyword">auto</span> fv = mesh.<a class="code hl_function" href="classlagrange_1_1_surface_mesh.html#aae46ecc7ee5bfd74ed48a4666496d915">get_facet_vertices</a>(facet);</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        <span class="keyword">auto</span> fv = mesh.get_facet_vertices(facet);</div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> lv = 0; lv &lt; fv.size(); ++lv) {</div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>            dst_facet_vertices[lv] = <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(fv[lv]);</div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        }</div>
@@ -296,7 +296,7 @@ $(function(){initNavTree('_topology_refiner_factory_8h_source.html',''); initRes
 <div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>                    auto values = attr.get_all();</div>
 <div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>                    for (int f = 0; f &lt; static_cast&lt;int&gt;(values.size()); ++f) {</div>
 <div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>                        if (values[f] != ValueType(0)) {</div>
-<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>                            lagrange::logger().warn(<span class="stringliteral">&quot;Setting facet f{} as a hole&quot;</span>, f);</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>                            lagrange::logger().debug(<span class="stringliteral">&quot;Setting facet f{} as a hole&quot;</span>, f);</div>
 <div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>                            setBaseFaceHole(refiner, f, true);</div>
 <div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>                        }</div>
 <div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>                    }</div>
@@ -365,10 +365,6 @@ $(function(){initNavTree('_topology_refiner_factory_8h_source.html',''); initRes
 <div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span> </div>
 <div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>} <span class="comment">// namespace OPENSUBDIV_VERSION</span></div>
 <div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>} <span class="comment">// namespace OpenSubdiv</span></div>
-<div class="ttc" id="aclasslagrange_1_1_surface_mesh_html_a1ed57c732bcdb304ed7033147f5d9002"><div class="ttname"><a href="classlagrange_1_1_surface_mesh.html#a1ed57c732bcdb304ed7033147f5d9002">lagrange::SurfaceMesh::get_num_vertices</a></div><div class="ttdeci">Index get_num_vertices() const</div><div class="ttdoc">Retrieves the number of vertices.</div><div class="ttdef"><b>Definition</b> SurfaceMesh.h:680</div></div>
-<div class="ttc" id="aclasslagrange_1_1_surface_mesh_html_aae46ecc7ee5bfd74ed48a4666496d915"><div class="ttname"><a href="classlagrange_1_1_surface_mesh.html#aae46ecc7ee5bfd74ed48a4666496d915">lagrange::SurfaceMesh::get_facet_vertices</a></div><div class="ttdeci">span&lt; const Index &gt; get_facet_vertices(Index f) const</div><div class="ttdoc">Retrieves a read-only pointer to a facet indices.</div><div class="ttdef"><b>Definition</b> SurfaceMesh.cpp:2409</div></div>
-<div class="ttc" id="aclasslagrange_1_1_surface_mesh_html_abcf8a67369f4ebda946306ae39673d4a"><div class="ttname"><a href="classlagrange_1_1_surface_mesh.html#abcf8a67369f4ebda946306ae39673d4a">lagrange::SurfaceMesh::get_num_facets</a></div><div class="ttdeci">Index get_num_facets() const</div><div class="ttdoc">Retrieves the number of facets.</div><div class="ttdef"><b>Definition</b> SurfaceMesh.h:687</div></div>
-<div class="ttc" id="aclasslagrange_1_1_surface_mesh_html_af08dee4f91c8d35b17755d5020b11f70"><div class="ttname"><a href="classlagrange_1_1_surface_mesh.html#af08dee4f91c8d35b17755d5020b11f70">lagrange::SurfaceMesh::get_facet_size</a></div><div class="ttdeci">Index get_facet_size(Index f) const</div><div class="ttdoc">Number of vertices in the facet.</div><div class="ttdef"><b>Definition</b> SurfaceMesh.h:728</div></div>
 <div class="ttc" id="agroup__group-logger_html_ga84167f554a5d7594c0ba4ae760f31599"><div class="ttname"><a href="group__group-logger.html#ga84167f554a5d7594c0ba4ae760f31599">lagrange::logger</a></div><div class="ttdeci">LA_CORE_API spdlog::logger &amp; logger()</div><div class="ttdoc">Retrieves the current logger.</div><div class="ttdef"><b>Definition</b> Logger.cpp:40</div></div>
 <div class="ttc" id="agroup__group-surfacemesh-attr_html_ga4d115376c2c766084ef808c837348fc3"><div class="ttname"><a href="group__group-surfacemesh-attr.html#ga4d115376c2c766084ef808c837348fc3">lagrange::AttributeId</a></div><div class="ttdeci">uint32_t AttributeId</div><div class="ttdoc">Identified to be used to access an attribute.</div><div class="ttdef"><b>Definition</b> AttributeFwd.h:73</div></div>
 <div class="ttc" id="agroup__group-utils-assert_html_ga1ccafcb14523a1aae57dcac3c3f32ecd"><div class="ttname"><a href="group__group-utils-assert.html#ga1ccafcb14523a1aae57dcac3c3f32ecd">la_runtime_assert</a></div><div class="ttdeci">#define la_runtime_assert(...)</div><div class="ttdoc">Runtime assertion check.</div><div class="ttdef"><b>Definition</b> assert.h:174</div></div>
@@ -380,7 +376,7 @@ $(function(){initNavTree('_topology_refiner_factory_8h_source.html',''); initRes
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>TopologyRefinerFactory.h</b></li>
-    <li class="footer">Generated on Fri Mar 27 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+    <li class="footer">Generated on Mon Apr 27 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>
 </body>

@@ -140,33 +140,35 @@ $(function(){initNavTree('compute__seam__edges_8h_source.html',''); initResizabl
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacelagrange.html">lagrange</a> {</div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span></div>
-<div class="foldopen" id="foldopen00019" data-start="{" data-end="};">
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="structlagrange_1_1_seam_edges_options.html">   19</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structlagrange_1_1_seam_edges_options.html">SeamEdgesOptions</a></div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>{</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="structlagrange_1_1_seam_edges_options.html#ad9fcba39803c665ca7be48a39d079f00">   22</a></span>    std::string_view <a class="code hl_variable" href="structlagrange_1_1_seam_edges_options.html#ad9fcba39803c665ca7be48a39d079f00">output_attribute_name</a> = <span class="stringliteral">&quot;@seam_edges&quot;</span>;</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>};</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span></div>
+<div class="foldopen" id="foldopen00024" data-start="{" data-end="};">
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="structlagrange_1_1_seam_edges_options.html">   24</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structlagrange_1_1_seam_edges_options.html">SeamEdgesOptions</a></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>{</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="structlagrange_1_1_seam_edges_options.html#ad9fcba39803c665ca7be48a39d079f00">   27</a></span>    std::string_view <a class="code hl_variable" href="structlagrange_1_1_seam_edges_options.html#ad9fcba39803c665ca7be48a39d079f00">output_attribute_name</a> = <span class="stringliteral">&quot;@seam_edges&quot;</span>;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>};</div>
 </div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span></div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> Scalar, <span class="keyword">typename</span> Index&gt;</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><a class="code hl_typedef" href="group__group-surfacemesh-attr.html#ga4d115376c2c766084ef808c837348fc3">AttributeId</a> <a class="code hl_function" href="namespacelagrange.html#aeff08ff1337ff749b51eecdf94cc44c9">compute_seam_edges</a>(</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <a class="code hl_class" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh&lt;Scalar, Index&gt;</a>&amp; mesh,</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <a class="code hl_typedef" href="group__group-surfacemesh-attr.html#ga4d115376c2c766084ef808c837348fc3">AttributeId</a> indexed_attribute_id,</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="keyword">const</span> <a class="code hl_struct" href="structlagrange_1_1_seam_edges_options.html">SeamEdgesOptions</a>&amp; options = {});</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>} <span class="comment">// namespace lagrange</span></div>
-<div class="ttc" id="aclasslagrange_1_1_surface_mesh_html"><div class="ttname"><a href="classlagrange_1_1_surface_mesh.html">lagrange::SurfaceMesh</a></div><div class="ttdoc">A general purpose polygonal mesh class.</div><div class="ttdef"><b>Definition</b> SurfaceMesh.h:66</div></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> Scalar, <span class="keyword">typename</span> Index&gt;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><a class="code hl_typedef" href="group__group-surfacemesh-attr.html#ga4d115376c2c766084ef808c837348fc3">AttributeId</a> <a class="code hl_function" href="group__group-surfacemesh-utils.html#gaeff08ff1337ff749b51eecdf94cc44c9">compute_seam_edges</a>(</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <a class="code hl_class" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh&lt;Scalar, Index&gt;</a>&amp; mesh,</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <a class="code hl_typedef" href="group__group-surfacemesh-attr.html#ga4d115376c2c766084ef808c837348fc3">AttributeId</a> indexed_attribute_id,</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="keyword">const</span> <a class="code hl_struct" href="structlagrange_1_1_seam_edges_options.html">SeamEdgesOptions</a>&amp; options = {});</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>} <span class="comment">// namespace lagrange</span></div>
+<div class="ttc" id="aclasslagrange_1_1_surface_mesh_html"><div class="ttname"><a href="classlagrange_1_1_surface_mesh.html">lagrange::SurfaceMesh</a></div><div class="ttdoc">A general purpose polygonal mesh class.</div><div class="ttdef"><b>Definition</b> SurfaceMesh.h:73</div></div>
 <div class="ttc" id="agroup__group-surfacemesh-attr_html_ga4d115376c2c766084ef808c837348fc3"><div class="ttname"><a href="group__group-surfacemesh-attr.html#ga4d115376c2c766084ef808c837348fc3">lagrange::AttributeId</a></div><div class="ttdeci">uint32_t AttributeId</div><div class="ttdoc">Identified to be used to access an attribute.</div><div class="ttdef"><b>Definition</b> AttributeFwd.h:73</div></div>
+<div class="ttc" id="agroup__group-surfacemesh-utils_html_gaeff08ff1337ff749b51eecdf94cc44c9"><div class="ttname"><a href="group__group-surfacemesh-utils.html#gaeff08ff1337ff749b51eecdf94cc44c9">lagrange::compute_seam_edges</a></div><div class="ttdeci">AttributeId compute_seam_edges(SurfaceMesh&lt; Scalar, Index &gt; &amp;mesh, AttributeId indexed_attribute_id, const SeamEdgesOptions &amp;options={})</div><div class="ttdoc">Computes the seam edges for a given indexed attribute.</div><div class="ttdef"><b>Definition</b> compute_seam_edges.cpp:35</div></div>
 <div class="ttc" id="anamespacelagrange_html"><div class="ttname"><a href="namespacelagrange.html">lagrange</a></div><div class="ttdoc">Main namespace for Lagrange.</div></div>
-<div class="ttc" id="anamespacelagrange_html_aeff08ff1337ff749b51eecdf94cc44c9"><div class="ttname"><a href="namespacelagrange.html#aeff08ff1337ff749b51eecdf94cc44c9">lagrange::compute_seam_edges</a></div><div class="ttdeci">AttributeId compute_seam_edges(SurfaceMesh&lt; Scalar, Index &gt; &amp;mesh, AttributeId indexed_attribute_id, const SeamEdgesOptions &amp;options={})</div><div class="ttdoc">Computes the seam edges for a given indexed attribute.</div><div class="ttdef"><b>Definition</b> compute_seam_edges.cpp:35</div></div>
-<div class="ttc" id="astructlagrange_1_1_seam_edges_options_html"><div class="ttname"><a href="structlagrange_1_1_seam_edges_options.html">lagrange::SeamEdgesOptions</a></div><div class="ttdoc">Options for computing seam edges.</div><div class="ttdef"><b>Definition</b> compute_seam_edges.h:20</div></div>
-<div class="ttc" id="astructlagrange_1_1_seam_edges_options_html_ad9fcba39803c665ca7be48a39d079f00"><div class="ttname"><a href="structlagrange_1_1_seam_edges_options.html#ad9fcba39803c665ca7be48a39d079f00">lagrange::SeamEdgesOptions::output_attribute_name</a></div><div class="ttdeci">std::string_view output_attribute_name</div><div class="ttdoc">Output attribute name.</div><div class="ttdef"><b>Definition</b> compute_seam_edges.h:22</div></div>
+<div class="ttc" id="astructlagrange_1_1_seam_edges_options_html"><div class="ttname"><a href="structlagrange_1_1_seam_edges_options.html">lagrange::SeamEdgesOptions</a></div><div class="ttdoc">Options for computing seam edges.</div><div class="ttdef"><b>Definition</b> compute_seam_edges.h:25</div></div>
+<div class="ttc" id="astructlagrange_1_1_seam_edges_options_html_ad9fcba39803c665ca7be48a39d079f00"><div class="ttname"><a href="structlagrange_1_1_seam_edges_options.html#ad9fcba39803c665ca7be48a39d079f00">lagrange::SeamEdgesOptions::output_attribute_name</a></div><div class="ttdeci">std::string_view output_attribute_name</div><div class="ttdoc">Output attribute name.</div><div class="ttdef"><b>Definition</b> compute_seam_edges.h:27</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_e277d0e790805391a364b883bec7db94.html">lagrange</a></li><li class="navelem"><b>compute_seam_edges.h</b></li>
-    <li class="footer">Generated on Fri Mar 27 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+    <li class="footer">Generated on Mon Apr 27 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>
 </body>

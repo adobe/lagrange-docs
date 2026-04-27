@@ -123,18 +123,61 @@ $(function(){initNavTree('structlagrange_1_1_u_v_mesh_options.html',''); initRes
 
 <div class="header">
   <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="structlagrange_1_1_u_v_mesh_options-members.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">UVMeshOptions Struct Reference</div></div>
+  <div class="headertitle"><div class="title">UVMeshOptions Struct Reference<div class="ingroups"><a class="el" href="group__module-core.html">Core Module</a> &raquo; <a class="el" href="group__group-surfacemesh.html">SurfaceMesh</a> &raquo; <a class="el" href="group__group-surfacemesh-utils.html">Mesh utilities</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:a4dac7d7422057ff1ccf75ff7fbd92a97" id="r_a4dac7d7422057ff1ccf75ff7fbd92a97"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4dac7d7422057ff1ccf75ff7fbd92a97">ElementTypes</a> { <a class="el" href="#a4dac7d7422057ff1ccf75ff7fbd92a97ab1c3ec3943278b146893f9f92daf7aa5">IndexedOrVertex</a>
+, <a class="el" href="#a4dac7d7422057ff1ccf75ff7fbd92a97ab1c94ca2fbc3e78fc30069c8d0f01680">All</a>
+ }</td></tr>
+<tr class="memdesc:a4dac7d7422057ff1ccf75ff7fbd92a97"><td class="mdescLeft">&#160;</td><td class="mdescRight">Supported element types for UV mesh extraction.  <a href="#a4dac7d7422057ff1ccf75ff7fbd92a97">More...</a><br /></td></tr>
+<tr class="separator:a4dac7d7422057ff1ccf75ff7fbd92a97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a812bd5f3c809396ee71d159824173876" id="r_a812bd5f3c809396ee71d159824173876"><td class="memItemLeft" align="right" valign="top">std::string_view&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a812bd5f3c809396ee71d159824173876">uv_attribute_name</a> = &quot;&quot;</td></tr>
 <tr class="memdesc:a812bd5f3c809396ee71d159824173876"><td class="mdescLeft">&#160;</td><td class="mdescRight">Input UV attribute name.  <br /></td></tr>
 <tr class="separator:a812bd5f3c809396ee71d159824173876"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2dbd104b371415a9acc0b0f0e4f2920d" id="r_a2dbd104b371415a9acc0b0f0e4f2920d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a4dac7d7422057ff1ccf75ff7fbd92a97">ElementTypes</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2dbd104b371415a9acc0b0f0e4f2920d">element_types</a> = <a class="el" href="#a4dac7d7422057ff1ccf75ff7fbd92a97ab1c3ec3943278b146893f9f92daf7aa5">ElementTypes::IndexedOrVertex</a></td></tr>
+<tr class="memdesc:a2dbd104b371415a9acc0b0f0e4f2920d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Supported element types for UV attribute lookup.  <br /></td></tr>
+<tr class="separator:a2dbd104b371415a9acc0b0f0e4f2920d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Member Enumeration Documentation</h2>
+<a id="a4dac7d7422057ff1ccf75ff7fbd92a97" name="a4dac7d7422057ff1ccf75ff7fbd92a97"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4dac7d7422057ff1ccf75ff7fbd92a97">&#9670;&#160;</a></span>ElementTypes</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum class <a class="el" href="#a4dac7d7422057ff1ccf75ff7fbd92a97">ElementTypes</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel strong">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Supported element types for UV mesh extraction. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a4dac7d7422057ff1ccf75ff7fbd92a97ab1c3ec3943278b146893f9f92daf7aa5" name="a4dac7d7422057ff1ccf75ff7fbd92a97ab1c3ec3943278b146893f9f92daf7aa5"></a>IndexedOrVertex&#160;</td><td class="fielddoc"><p>Only indexed/vertex attributes (zero-copy, no allocation). </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a4dac7d7422057ff1ccf75ff7fbd92a97ab1c94ca2fbc3e78fc30069c8d0f01680" name="a4dac7d7422057ff1ccf75ff7fbd92a97ab1c94ca2fbc3e78fc30069c8d0f01680"></a>All&#160;</td><td class="fielddoc"><p>Also supports corner attributes (may allocate an index buffer). </p>
+</td></tr>
+</table>
+
+</div>
+</div>
 <h2 class="groupheader">Member Data Documentation</h2>
 <a id="a812bd5f3c809396ee71d159824173876" name="a812bd5f3c809396ee71d159824173876"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a812bd5f3c809396ee71d159824173876">&#9670;&#160;</a></span>uv_attribute_name</h2>
@@ -149,7 +192,24 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Input UV attribute name. </p>
-<p>The attribute must be a vertex or indexed attribute of type <code>Scalar</code>. If empty, the first UV attribute will be used. </p>
+<p>The attribute must be a UV attribute of type <code>UVScalar</code> with 2 channels. Supported element types depend on the <code>element_types</code> option. If empty, the first matching UV attribute will be used. </p>
+
+</div>
+</div>
+<a id="a2dbd104b371415a9acc0b0f0e4f2920d" name="a2dbd104b371415a9acc0b0f0e4f2920d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2dbd104b371415a9acc0b0f0e4f2920d">&#9670;&#160;</a></span>element_types</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a4dac7d7422057ff1ccf75ff7fbd92a97">ElementTypes</a> element_types = <a class="el" href="#a4dac7d7422057ff1ccf75ff7fbd92a97ab1c3ec3943278b146893f9f92daf7aa5">ElementTypes::IndexedOrVertex</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Supported element types for UV attribute lookup. </p>
+<p>By default, only indexed and vertex attributes are supported (zero-copy). Set to ElementTypes::All to also support corner attributes, which may allocate an index buffer. </p>
 
 </div>
 </div>
@@ -162,7 +222,7 @@ Public Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacelagrange.html">lagrange</a></li><li class="navelem"><a class="el" href="structlagrange_1_1_u_v_mesh_options.html">UVMeshOptions</a></li>
-    <li class="footer">Generated on Fri Mar 27 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+    <li class="footer">Generated on Mon Apr 27 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>
 </body>

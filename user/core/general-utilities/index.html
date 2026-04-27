@@ -2526,7 +2526,7 @@ Lagrange provide a handy function that avoid repeated type specification:</p>
 
 <span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="w"> </span><span class="n">unique_val</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">...;</span>
 <span class="k">auto</span><span class="w"> </span><span class="n">shared_val</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lagrange</span><span class="o">::</span><span class="n">to_shared_ptr</span><span class="p">(</span><span class="n">unique_val</span><span class="p">);</span>
-<span class="n">assert</span><span class="p">(</span><span class="n">unique_val</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="k">nullptr</span><span class="p">);</span>
+<span class="n">assert</span><span class="p">(</span><span class="n">unique_val</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">nullptr</span><span class="p">);</span>
 <span class="n">assert</span><span class="p">(</span><span class="n">shared_val</span><span class="p">.</span><span class="n">use_count</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
 </code></pre></div>
 <h2 id="range">Range</h2>

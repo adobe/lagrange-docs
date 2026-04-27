@@ -151,6 +151,9 @@ unsigned&#160;</td><td class="memItemRight" valign="bottom"><b>num_levels</b> = 
 <tr class="memitem:a3e8bcbb0c92920e576a6a8a024260590" id="r_a3e8bcbb0c92920e576a6a8a024260590"><td class="memItemLeft" align="right" valign="top">std::optional&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3e8bcbb0c92920e576a6a8a024260590">max_edge_length</a></td></tr>
 <tr class="memdesc:a3e8bcbb0c92920e576a6a8a024260590"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum edge length for adaptive tessellation.  <br /></td></tr>
 <tr class="separator:a3e8bcbb0c92920e576a6a8a024260590"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc406039b6497ce6ae981511d2ea2d77" id="r_adc406039b6497ce6ae981511d2ea2d77"><td class="memItemLeft" align="right" valign="top">std::optional&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adc406039b6497ce6ae981511d2ea2d77">max_chordal_deviation</a></td></tr>
+<tr class="memdesc:adc406039b6497ce6ae981511d2ea2d77"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum chordal deviation for adaptive tessellation.  <br /></td></tr>
+<tr class="separator:adc406039b6497ce6ae981511d2ea2d77"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Interpolation Rules</div></td></tr>
 <tr class="memitem:a56ecf395ef5c7f6bca751e06c42f02a2" id="r_a56ecf395ef5c7f6bca751e06c42f02a2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__module-subdivision.html#ga4189a9f8863a8107f9686281bdbe9364">VertexBoundaryInterpolation</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a56ecf395ef5c7f6bca751e06c42f02a2">vertex_boundary_interpolation</a></td></tr>
 <tr class="memdesc:a56ecf395ef5c7f6bca751e06c42f02a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vertex boundary interpolation rule.  <br /></td></tr>
@@ -228,7 +231,28 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>use_limit_surface</b>
 </div><div class="memdoc">
 
 <p>Maximum edge length for adaptive tessellation. </p>
-<p>If not specified, it is set to the longest edge length divided by num_levels. </p>
+<p>If not specified, it is set to the longest edge length divided by num_levels.</p>
+<dl class="section note"><dt>Note</dt><dd>Mutually exclusive with max_chordal_deviation. </dd></dl>
+
+</div>
+</div>
+<a id="adc406039b6497ce6ae981511d2ea2d77" name="adc406039b6497ce6ae981511d2ea2d77"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc406039b6497ce6ae981511d2ea2d77">&#9670;&#160;</a></span>max_chordal_deviation</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::optional&lt;float&gt; max_chordal_deviation</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Maximum chordal deviation for adaptive tessellation. </p>
+<p>This controls the maximum distance between the limit surface and its piecewise-linear approximation. For each edge, the peak deviation is found using Newton's method on the squared-distance function, and the tessellation rate is chosen so that all sub-segment deviations stay below this threshold. Rates are defined intrinsically per edge (shared consistently across adjacent faces).</p>
+<dl class="section note"><dt>Note</dt><dd>This option is only supported for meshes with 3D vertex positions; using it with other dimensionalities will trigger runtime assertions. The value must be strictly positive (greater than zero).</dd>
+<dd>
+Mutually exclusive with max_edge_length. </dd></dl>
 
 </div>
 </div>
@@ -417,7 +441,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>use_limit_surface</b>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacelagrange.html">lagrange</a></li><li class="navelem"><a class="el" href="namespacelagrange_1_1subdivision.html">subdivision</a></li><li class="navelem"><a class="el" href="structlagrange_1_1subdivision_1_1_subdivision_options.html">SubdivisionOptions</a></li>
-    <li class="footer">Generated on Fri Mar 27 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+    <li class="footer">Generated on Mon Apr 27 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>
 </body>

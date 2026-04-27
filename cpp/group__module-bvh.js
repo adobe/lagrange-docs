@@ -12,6 +12,20 @@ var group__module_bvh =
     [ "MeshDistancesOptions", "structlagrange_1_1bvh_1_1_mesh_distances_options.html", [
       [ "output_attribute_name", "structlagrange_1_1bvh_1_1_mesh_distances_options.html#a564252f2b3418a9ac0ac9d55937990da", null ]
     ] ],
+    [ "UVOverlapOptions", "structlagrange_1_1bvh_1_1_u_v_overlap_options.html", [
+      [ "uv_attribute_name", "structlagrange_1_1bvh_1_1_u_v_overlap_options.html#a043e0ecf242c6e7364c40e6ce7f318a0", null ],
+      [ "compute_overlap_area", "structlagrange_1_1bvh_1_1_u_v_overlap_options.html#a3528283ad3d2650db6e436cc6a3181fb", null ],
+      [ "compute_overlap_coloring", "structlagrange_1_1bvh_1_1_u_v_overlap_options.html#a31372e52d378c847fb0b8be0813af575", null ],
+      [ "overlap_coloring_attribute_name", "structlagrange_1_1bvh_1_1_u_v_overlap_options.html#aee140fbd245286f9c52d45c15a25bb95", null ],
+      [ "compute_overlapping_pairs", "structlagrange_1_1bvh_1_1_u_v_overlap_options.html#aafb0bdf836430e11c50fe0f6aa0d4091", null ],
+      [ "method", "structlagrange_1_1bvh_1_1_u_v_overlap_options.html#a560b194fa26b5a332de5067896d7a883", null ]
+    ] ],
+    [ "UVOverlapResult< Scalar, Index >", "structlagrange_1_1bvh_1_1_u_v_overlap_result.html", [
+      [ "has_overlap", "structlagrange_1_1bvh_1_1_u_v_overlap_result.html#a0a94d10e397673decb68c1a97199b824", null ],
+      [ "overlap_area", "structlagrange_1_1bvh_1_1_u_v_overlap_result.html#a25b663c02a8a6a74d75dacb17cd2fcfb", null ],
+      [ "overlapping_pairs", "structlagrange_1_1bvh_1_1_u_v_overlap_result.html#a2b8111df3dd5ec18e5fdb98c5d17c4b8", null ],
+      [ "overlap_coloring_id", "structlagrange_1_1bvh_1_1_u_v_overlap_result.html#abd1f958d29127911ccfac0324657d6e1", null ]
+    ] ],
     [ "EdgeAABBTree< VertexArray, EdgeArray, Dim >", "structlagrange_1_1bvh_1_1_edge_a_a_b_b_tree.html", [
       [ "ActionCallback", "group__module-bvh.html#ga386999d5e43dd47823f5b247745957ef", null ],
       [ "EdgeAABBTree", "group__module-bvh.html#gadd5d672df21cf5d9157453f22576742f", null ],
@@ -35,9 +49,15 @@ var group__module_bvh =
       [ "collision_policy_integral", "structlagrange_1_1bvh_1_1_weld_options.html#a94ac297735205e785dffc9ff7c370eb3", null ]
     ] ],
     [ "ActionCallback", "group__module-bvh.html#ga386999d5e43dd47823f5b247745957ef", null ],
+    [ "UVOverlapMethod", "group__module-bvh.html#ga7e55018c6fcf6fb3e8f6b02e4fc46892", [
+      [ "SweepAndPrune", "group__module-bvh.html#gga7e55018c6fcf6fb3e8f6b02e4fc46892ac490cb8cd3c70c9f65c380176d0099ea", null ],
+      [ "BVH", "group__module-bvh.html#gga7e55018c6fcf6fb3e8f6b02e4fc46892a9f81c52bdd5797801a0bd46508fa27a6", null ],
+      [ "Hybrid", "group__module-bvh.html#gga7e55018c6fcf6fb3e8f6b02e4fc46892afb1b6e23a3767d2a31ef7899e6dd3f1e", null ]
+    ] ],
     [ "compute_mesh_distances", "group__module-bvh.html#ga5f64c98d00b325344dd5b57e51f16451", null ],
     [ "compute_hausdorff", "group__module-bvh.html#ga0ffd251371a17cc104cfcf1be0affad1", null ],
     [ "compute_chamfer", "group__module-bvh.html#ga3cd0f3afed6a3bae7aae59407e491489", null ],
+    [ "compute_uv_overlap", "group__module-bvh.html#ga32a555d00a25d570ed2b9fa2e0940bd1", null ],
     [ "EdgeAABBTree", "group__module-bvh.html#gadd5d672df21cf5d9157453f22576742f", null ],
     [ "empty", "group__module-bvh.html#ga644718bb2fb240de962dc3c9a1fdf0dc", null ],
     [ "get_element_closest_point", "group__module-bvh.html#ga0777d5965f6f3176e6bb70e57cd0e7af", null ],

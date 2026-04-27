@@ -24,8 +24,10 @@ var searchData=
   ['matrix_5fview_21',['matrix_view',['../group__group-surfacemesh-views.html#ga0ae9d0742709686405adad75e20e8bc8',1,'lagrange']]],
   ['merge_22',['merge',['../classlagrange_1_1_disjoint_sets.html#a3ee2d4bff5bd1dc9d4f8b7eecd8e3dbc',1,'lagrange::DisjointSets']]],
   ['mesh_23',['Mesh',['../classlagrange_1_1_mesh.html#a2a23c7c0c4e0da252b7bc0e13b6f81d8',1,'lagrange::Mesh']]],
-  ['mesh_5fsmoothing_24',['mesh_smoothing',['../group__module-filtering.html#gab846e5534f1d237eab35abe1f898bc36',1,'lagrange::filtering::mesh_smoothing(SurfaceMesh&lt; Scalar, Index &gt; &amp;mesh, const SmoothingOptions &amp;options={})'],['../group__module-filtering.html#gab846e5534f1d237eab35abe1f898bc36',1,'lagrange::filtering::mesh_smoothing(SurfaceMesh&lt; Scalar, Index &gt; &amp;mesh, const SmoothingOptions &amp;options)']]],
-  ['meshadapter_25',['MeshAdapter',['../classlagrange_1_1volume_1_1legacy_1_1_mesh_adapter.html#adc98e2a86dc99dc2c124b575b1b26e85',1,'lagrange::volume::legacy::MeshAdapter']]],
-  ['midpoint_5fsubdivision_26',['midpoint_subdivision',['../group__module-subdivision.html#ga5bb45b1783fc315efefb291e2d2dbd9f',1,'lagrange::subdivision']]],
-  ['move_5fdata_27',['move_data',['../namespacelagrange.html#a45f1c6cc55a36fae54bcd3723d8255e2',1,'lagrange']]]
+  ['mesh_5fbbox_24',['mesh_bbox',['../group__group-surfacemesh-utils.html#gabf3517305e7ccc7062aab01527e78468',1,'lagrange']]],
+  ['mesh_5fformat_5fversion_25',['mesh_format_version',['../group__group-serialization2.html#ga9631bdca8831cc1e577e44d0ff2c88ad',1,'lagrange::serialization']]],
+  ['mesh_5fsmoothing_26',['mesh_smoothing',['../group__module-filtering.html#gab846e5534f1d237eab35abe1f898bc36',1,'lagrange::filtering::mesh_smoothing(SurfaceMesh&lt; Scalar, Index &gt; &amp;mesh, const SmoothingOptions &amp;options={})'],['../group__module-filtering.html#gab846e5534f1d237eab35abe1f898bc36',1,'lagrange::filtering::mesh_smoothing(SurfaceMesh&lt; Scalar, Index &gt; &amp;mesh, const SmoothingOptions &amp;options)']]],
+  ['meshadapter_27',['MeshAdapter',['../classlagrange_1_1volume_1_1legacy_1_1_mesh_adapter.html#adc98e2a86dc99dc2c124b575b1b26e85',1,'lagrange::volume::legacy::MeshAdapter']]],
+  ['midpoint_5fsubdivision_28',['midpoint_subdivision',['../group__module-subdivision.html#ga5bb45b1783fc315efefb291e2d2dbd9f',1,'lagrange::subdivision']]],
+  ['move_5fdata_29',['move_data',['../namespacelagrange.html#a45f1c6cc55a36fae54bcd3723d8255e2',1,'lagrange']]]
 ];

@@ -27,6 +27,7 @@ var group__module_subdivision =
       [ "num_levels", "structlagrange_1_1subdivision_1_1_subdivision_options.html#a2b40d61424462dd2754d3417e3176afd", null ],
       [ "refinement", "structlagrange_1_1subdivision_1_1_subdivision_options.html#ac29dbec90f9bb71496e1c60960739e7d", null ],
       [ "max_edge_length", "structlagrange_1_1subdivision_1_1_subdivision_options.html#a3e8bcbb0c92920e576a6a8a024260590", null ],
+      [ "max_chordal_deviation", "structlagrange_1_1subdivision_1_1_subdivision_options.html#adc406039b6497ce6ae981511d2ea2d77", null ],
       [ "vertex_boundary_interpolation", "structlagrange_1_1subdivision_1_1_subdivision_options.html#a56ecf395ef5c7f6bca751e06c42f02a2", null ],
       [ "face_varying_interpolation", "structlagrange_1_1subdivision_1_1_subdivision_options.html#af579dd0506d1dcc4da54734113dd1cae", null ],
       [ "use_limit_surface", "structlagrange_1_1subdivision_1_1_subdivision_options.html#ae6dff69007ad483b891625f80f0320dc", null ],

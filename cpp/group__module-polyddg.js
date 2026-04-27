@@ -12,13 +12,20 @@ var group__module_polyddg =
       [ "direction_min_id", "structlagrange_1_1polyddg_1_1_principal_curvatures_result.html#a5ad17e9321fdd742eaf620a0b4624ea6", null ],
       [ "direction_max_id", "structlagrange_1_1polyddg_1_1_principal_curvatures_result.html#a66211ed810b57f3195e4c41ceb9da2fb", null ]
     ] ],
+    [ "SmoothDirectionFieldOptions", "structlagrange_1_1polyddg_1_1_smooth_direction_field_options.html", [
+      [ "nrosy", "structlagrange_1_1polyddg_1_1_smooth_direction_field_options.html#aacc7a92d3958d4189b5c4026a5b97a1b", null ],
+      [ "lambda", "structlagrange_1_1polyddg_1_1_smooth_direction_field_options.html#a3db359547eed8cfd48ca821d95f577af", null ],
+      [ "alignment_attribute", "structlagrange_1_1polyddg_1_1_smooth_direction_field_options.html#a292f3e347464872968533368a13f5844", null ],
+      [ "alignment_weight", "structlagrange_1_1polyddg_1_1_smooth_direction_field_options.html#acdeee5ae01a0d788019a7cdedc907798", null ],
+      [ "direction_field_attribute", "structlagrange_1_1polyddg_1_1_smooth_direction_field_options.html#a823f08e066137b1d117eca4ad6f09c3c", null ]
+    ] ],
     [ "DifferentialOperators< Scalar, Index >", "classlagrange_1_1polyddg_1_1_differential_operators.html", [
       [ "DifferentialOperators", "classlagrange_1_1polyddg_1_1_differential_operators.html#a2f75035fba48ce262b19c492d7333ca8", null ],
       [ "gradient", "classlagrange_1_1polyddg_1_1_differential_operators.html#ac4492dcf51ac60d1917f637f4da7cdf8", null ],
       [ "d0", "classlagrange_1_1polyddg_1_1_differential_operators.html#a67d16ac7728c3e48e905c7091c366ff4", null ],
       [ "d1", "classlagrange_1_1polyddg_1_1_differential_operators.html#a2c3ba43cb7c1187a1b868e08faad3ec5", null ],
       [ "star0", "classlagrange_1_1polyddg_1_1_differential_operators.html#ae4eb9d8d0fbd64fa163486ed687e97a1", null ],
-      [ "star1", "classlagrange_1_1polyddg_1_1_differential_operators.html#a75615e6407cc17085fc55897ddcdba95", null ],
+      [ "star1", "classlagrange_1_1polyddg_1_1_differential_operators.html#a4c3cfc353e43c705edd94b3ad85b1f30", null ],
       [ "star2", "classlagrange_1_1polyddg_1_1_differential_operators.html#a79d6c4558242ca7038c7c43510476a00", null ],
       [ "flat", "classlagrange_1_1polyddg_1_1_differential_operators.html#a85a787014238d11997eadd6a5f87ad46", null ],
       [ "sharp", "classlagrange_1_1polyddg_1_1_differential_operators.html#a67d2c803ee19871429fb48d2e198ce8c", null ],
@@ -29,6 +36,10 @@ var group__module_polyddg =
       [ "divergence", "classlagrange_1_1polyddg_1_1_differential_operators.html#a0a7397da26ca360971191add8c6eed9b", null ],
       [ "curl", "classlagrange_1_1polyddg_1_1_differential_operators.html#aa9cad601d4240fa0b70e421fd5999dc1", null ],
       [ "laplacian", "classlagrange_1_1polyddg_1_1_differential_operators.html#a8934dc504b649aefae1e588445ea2190", null ],
+      [ "delta1", "classlagrange_1_1polyddg_1_1_differential_operators.html#aa53e91db0e23d3b5f65be872df4508ea", null ],
+      [ "delta2", "classlagrange_1_1polyddg_1_1_differential_operators.html#a44f1cc2ada0419a0c76f78ef745795d9", null ],
+      [ "laplacian2", "classlagrange_1_1polyddg_1_1_differential_operators.html#a28551f01b460e8237bfbefef29b6cccd", null ],
+      [ "laplacian1", "classlagrange_1_1polyddg_1_1_differential_operators.html#a6063fd51b334fc470bf0b51d2d2ed344", null ],
       [ "vertex_tangent_coordinates", "classlagrange_1_1polyddg_1_1_differential_operators.html#a70bb5aecc042bdaac3a7ef85bd5d0204", null ],
       [ "facet_tangent_coordinates", "classlagrange_1_1polyddg_1_1_differential_operators.html#acb0c122abec8b242f31e5c750994ee23", null ],
       [ "levi_civita", "classlagrange_1_1polyddg_1_1_differential_operators.html#aab1a2579bbb482f5c45c297a1645fa9f", null ],
@@ -69,6 +80,24 @@ var group__module_polyddg =
       [ "get_centroid_attribute_id", "classlagrange_1_1polyddg_1_1_differential_operators.html#af819c50425903c1f0d0e15af6e119cde", null ],
       [ "get_vertex_normal_attribute_id", "classlagrange_1_1polyddg_1_1_differential_operators.html#acb0deac865e2d5312e24038e8b466229", null ]
     ] ],
+    [ "HodgeDecompositionOptions", "structlagrange_1_1polyddg_1_1_hodge_decomposition_options.html", [
+      [ "lambda", "structlagrange_1_1polyddg_1_1_hodge_decomposition_options.html#a3db359547eed8cfd48ca821d95f577af", null ],
+      [ "nrosy", "structlagrange_1_1polyddg_1_1_hodge_decomposition_options.html#aacc7a92d3958d4189b5c4026a5b97a1b", null ],
+      [ "input_attribute", "structlagrange_1_1polyddg_1_1_hodge_decomposition_options.html#a93fd9c564e6c8123698c390ea35158ff", null ],
+      [ "exact_attribute", "structlagrange_1_1polyddg_1_1_hodge_decomposition_options.html#a4b4d978b93b08f82522424eebfff71dc", null ],
+      [ "coexact_attribute", "structlagrange_1_1polyddg_1_1_hodge_decomposition_options.html#a6f1f431be5ecadf00fd16907409f14a7", null ],
+      [ "harmonic_attribute", "structlagrange_1_1polyddg_1_1_hodge_decomposition_options.html#a01f519111d91f641dcc81b0fa07d2b89", null ]
+    ] ],
+    [ "HodgeDecompositionResult", "structlagrange_1_1polyddg_1_1_hodge_decomposition_result.html", [
+      [ "exact_id", "structlagrange_1_1polyddg_1_1_hodge_decomposition_result.html#afbc69b7bfe35f9c0e363fb9bf1222f2c", null ],
+      [ "coexact_id", "structlagrange_1_1polyddg_1_1_hodge_decomposition_result.html#a48a28003dd3c34b4eb2de30774144c9e", null ],
+      [ "harmonic_id", "structlagrange_1_1polyddg_1_1_hodge_decomposition_result.html#a3590b71a4b95e250d0c27aa666866f66", null ]
+    ] ],
     [ "compute_principal_curvatures", "group__module-polyddg.html#ga1a2667035180bd33a1927b87e9e2202d", null ],
-    [ "compute_principal_curvatures", "group__module-polyddg.html#ga55bce86c9cd4b27f84a0c7ea45dea472", null ]
+    [ "compute_principal_curvatures", "group__module-polyddg.html#ga55bce86c9cd4b27f84a0c7ea45dea472", null ],
+    [ "compute_smooth_direction_field", "group__module-polyddg.html#ga5df3086e2ff6fc5c887491b4e4f68bcc", null ],
+    [ "hodge_decomposition_1_form", "group__module-polyddg.html#gafeb428f5d53beae60db19349b12f1501", null ],
+    [ "hodge_decomposition_1_form", "group__module-polyddg.html#gaf12652b12d46556b9a8469131c237a79", null ],
+    [ "hodge_decomposition_vector_field", "group__module-polyddg.html#gaaaba548b130abc31c6e7e7d55f006026", null ],
+    [ "hodge_decomposition_vector_field", "group__module-polyddg.html#gabf7ad9c779e15c0c9da82865c3a819d3", null ]
 ];

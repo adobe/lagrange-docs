@@ -158,9 +158,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ae4eb9d8d0fbd64fa163486ed687e97a1" id="r_ae4eb9d8d0fbd64fa163486ed687e97a1"><td class="memItemLeft" align="right" valign="top">Eigen::SparseMatrix&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae4eb9d8d0fbd64fa163486ed687e97a1">star0</a> () const</td></tr>
 <tr class="memdesc:ae4eb9d8d0fbd64fa163486ed687e97a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the discrete Hodge star operator for 0-forms (diagonal mass matrix, size V x V).  <br /></td></tr>
 <tr class="separator:ae4eb9d8d0fbd64fa163486ed687e97a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a75615e6407cc17085fc55897ddcdba95" id="r_a75615e6407cc17085fc55897ddcdba95"><td class="memItemLeft" align="right" valign="top">Eigen::SparseMatrix&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a75615e6407cc17085fc55897ddcdba95">star1</a> () const</td></tr>
-<tr class="memdesc:a75615e6407cc17085fc55897ddcdba95"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the discrete Hodge star operator for 1-forms (diagonal mass matrix, size E x E).  <br /></td></tr>
-<tr class="separator:a75615e6407cc17085fc55897ddcdba95"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c3cfc353e43c705edd94b3ad85b1f30" id="r_a4c3cfc353e43c705edd94b3ad85b1f30"><td class="memItemLeft" align="right" valign="top">Eigen::SparseMatrix&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4c3cfc353e43c705edd94b3ad85b1f30">star1</a> (<a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a> lambda=1) const</td></tr>
+<tr class="memdesc:a4c3cfc353e43c705edd94b3ad85b1f30"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the discrete Hodge star operator for 1-forms (size E x E).  <br /></td></tr>
+<tr class="separator:a4c3cfc353e43c705edd94b3ad85b1f30"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a79d6c4558242ca7038c7c43510476a00" id="r_a79d6c4558242ca7038c7c43510476a00"><td class="memItemLeft" align="right" valign="top">Eigen::SparseMatrix&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a79d6c4558242ca7038c7c43510476a00">star2</a> () const</td></tr>
 <tr class="memdesc:a79d6c4558242ca7038c7c43510476a00"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the discrete Hodge star operator for 2-forms (diagonal mass matrix, size F x F).  <br /></td></tr>
 <tr class="separator:a79d6c4558242ca7038c7c43510476a00"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -189,8 +189,20 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:aa9cad601d4240fa0b70e421fd5999dc1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the discrete curl operator.  <br /></td></tr>
 <tr class="separator:aa9cad601d4240fa0b70e421fd5999dc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8934dc504b649aefae1e588445ea2190" id="r_a8934dc504b649aefae1e588445ea2190"><td class="memItemLeft" align="right" valign="top">Eigen::SparseMatrix&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8934dc504b649aefae1e588445ea2190">laplacian</a> (<a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a> lambda=1) const</td></tr>
-<tr class="memdesc:a8934dc504b649aefae1e588445ea2190"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the discrete Laplacian operator.  <br /></td></tr>
+<tr class="memdesc:a8934dc504b649aefae1e588445ea2190"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the discrete weak-form Laplacian operator ( \( \Delta : \Omega^0 \to \tilde{\Omega}^2 \)).  <br /></td></tr>
 <tr class="separator:a8934dc504b649aefae1e588445ea2190"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa53e91db0e23d3b5f65be872df4508ea" id="r_aa53e91db0e23d3b5f65be872df4508ea"><td class="memItemLeft" align="right" valign="top">Eigen::SparseMatrix&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa53e91db0e23d3b5f65be872df4508ea">delta1</a> (<a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a> lambda=1) const</td></tr>
+<tr class="memdesc:aa53e91db0e23d3b5f65be872df4508ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the discrete weak-form co-differential operator ( \( \delta_1 : \Omega^1 \to \tilde{\Omega}^2 \)).  <br /></td></tr>
+<tr class="separator:aa53e91db0e23d3b5f65be872df4508ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44f1cc2ada0419a0c76f78ef745795d9" id="r_a44f1cc2ada0419a0c76f78ef745795d9"><td class="memItemLeft" align="right" valign="top">Eigen::SparseMatrix&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a44f1cc2ada0419a0c76f78ef745795d9">delta2</a> () const</td></tr>
+<tr class="memdesc:a44f1cc2ada0419a0c76f78ef745795d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the discrete weak-form co-differential operator ( \( \delta_2 : \Omega^2 \to \tilde{\Omega}^1 \)).  <br /></td></tr>
+<tr class="separator:a44f1cc2ada0419a0c76f78ef745795d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28551f01b460e8237bfbefef29b6cccd" id="r_a28551f01b460e8237bfbefef29b6cccd"><td class="memItemLeft" align="right" valign="top">Eigen::SparseMatrix&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a28551f01b460e8237bfbefef29b6cccd">laplacian2</a> () const</td></tr>
+<tr class="memdesc:a28551f01b460e8237bfbefef29b6cccd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the discrete weak-form Laplacian operator on 2-forms ( \( \Delta_2 : \Omega^2 \to \tilde{\Omega}^0 \)).  <br /></td></tr>
+<tr class="separator:a28551f01b460e8237bfbefef29b6cccd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6063fd51b334fc470bf0b51d2d2ed344" id="r_a6063fd51b334fc470bf0b51d2d2ed344"><td class="memItemLeft" align="right" valign="top">Eigen::SparseMatrix&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6063fd51b334fc470bf0b51d2d2ed344">laplacian1</a> (<a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a> lambda=1) const</td></tr>
+<tr class="memdesc:a6063fd51b334fc470bf0b51d2d2ed344"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the discrete weak-form Hodge Laplacian on 1-forms ( \( \Delta_1 : \Omega^1 \to \tilde{\Omega}^1 \)).  <br /></td></tr>
+<tr class="separator:a6063fd51b334fc470bf0b51d2d2ed344"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a70bb5aecc042bdaac3a7ef85bd5d0204" id="r_a70bb5aecc042bdaac3a7ef85bd5d0204"><td class="memItemLeft" align="right" valign="top">Eigen::SparseMatrix&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a70bb5aecc042bdaac3a7ef85bd5d0204">vertex_tangent_coordinates</a> () const</td></tr>
 <tr class="memdesc:a70bb5aecc042bdaac3a7ef85bd5d0204"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the coordinate transformation that maps a per-vertex tangent vector field expressed in the global 3D coordinate to the local tangent basis at each vertex.  <br /></td></tr>
 <tr class="separator:a70bb5aecc042bdaac3a7ef85bd5d0204"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -442,8 +454,8 @@ template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5
 
 </div>
 </div>
-<a id="a75615e6407cc17085fc55897ddcdba95" name="a75615e6407cc17085fc55897ddcdba95"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a75615e6407cc17085fc55897ddcdba95">&#9670;&#160;</a></span>star1()</h2>
+<a id="a4c3cfc353e43c705edd94b3ad85b1f30" name="a4c3cfc353e43c705edd94b3ad85b1f30"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c3cfc353e43c705edd94b3ad85b1f30">&#9670;&#160;</a></span>star1()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -453,14 +465,27 @@ template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5
         <tr>
           <td class="memname">Eigen::SparseMatrix&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a> &gt; star1 </td>
           <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a></td>          <td class="paramname"><span class="paramname"><em>lambda</em></span><span class="paramdefsep"> = </span><span class="paramdefval">1</span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Compute the discrete Hodge star operator for 1-forms (diagonal mass matrix, size E x E). </p>
-<dl class="section return"><dt>Returns</dt><dd>A diagonal sparse matrix of size E x E. </dd></dl>
+<p>Compute the discrete Hodge star operator for 1-forms (size E x E). </p>
+<p>Following de Goes, Butts and Desbrun (ACM Trans. Graph. 2020, Section 4.4), the 1-form Hodge star is the VEM-stabilized inner product</p>
+<p class="formulaDsp">
+\[  M_1 = \sum_f \text{area}^f U_f^T U_f + \lambda P_f^T P_f
+\]
+</p>
+<p>where \( U_f \) is the per-face sharp operator and \( P_f = I - V_f U_f \) is the projection onto the kernel of \( U_f \). This matrix is symmetric positive-definite, scale-invariant, and constant-precise for arbitrary polygons (including non-planar faces).</p>
+<p>This mirrors the convention used for star0() and star2(), which also delegate to their respective inner-product operators. For triangulated meshes, λ=1 is recommended and coincides with the standard cotangent Laplacian construction.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">lambda</td><td>Stabilization weight for the VEM projection term (default 1).</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A symmetric positive-definite sparse matrix of size E x E. </dd></dl>
 
 </div>
 </div>
@@ -699,8 +724,8 @@ template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5
       </table>
 </div><div class="memdoc">
 
-<p>Compute the discrete Laplacian operator. </p>
-<p>The Laplacian operator computes the Laplacian of a 0-form (i.e. scalar field). The discrete Laplacian operator is a matrix of size V by V.</p>
+<p>Compute the discrete weak-form Laplacian operator ( \( \Delta : \Omega^0 \to \tilde{\Omega}^2 \)). </p>
+<p>Maps a primal 0-form (per-vertex scalar) to a dual 2-form (integrated value over each dual cell, also per-vertex). This is the weak-form (Galerkin) Laplacian: \( \Delta = d_0^T \cdot M_1 \cdot d_0 \), so the right-hand side of \( \Delta u = f \) must be assembled as a dual 2-form (i.e. \( \int f \varphi_v dA \) per vertex), not as pointwise vertex values. The matrix is of size V by V.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">lambda</td><td>Weight of projection term for the 1-form inner product (default: 1).</td></tr>
@@ -708,6 +733,116 @@ template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A sparse matrix representing the discrete Laplacian operator. </dd></dl>
+
+</div>
+</div>
+<a id="aa53e91db0e23d3b5f65be872df4508ea" name="aa53e91db0e23d3b5f65be872df4508ea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa53e91db0e23d3b5f65be872df4508ea">&#9670;&#160;</a></span>delta1()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, typename Index&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">Eigen::SparseMatrix&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a> &gt; delta1 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a></td>          <td class="paramname"><span class="paramname"><em>lambda</em></span><span class="paramdefsep"> = </span><span class="paramdefval">1</span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Compute the discrete weak-form co-differential operator ( \( \delta_1 : \Omega^1 \to \tilde{\Omega}^2 \)). </p>
+<p>This is a weak-form (Galerkin) operator. It maps a primal 1-form (per-edge scalar, size E) to a dual 2-form (integrated value over each dual cell, per-vertex, size V). The output is NOT a primal 0-form; to recover a primal 0-form one would need to apply the inverse vertex mass matrix \( M_0^{-1} \) (strong form: \( M_0^{-1} d_0^T M_1 \)).</p>
+<p>Equals divergence(lambda): \( \delta_1 = d_0^T \cdot M_1(\lambda) \). The matrix is of size V by E.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">lambda</td><td>Weight of projection term for the 1-form inner product (default: 1).</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A sparse matrix representing the weak-form 1-form co-differential operator. </dd></dl>
+
+</div>
+</div>
+<a id="a44f1cc2ada0419a0c76f78ef745795d9" name="a44f1cc2ada0419a0c76f78ef745795d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a44f1cc2ada0419a0c76f78ef745795d9">&#9670;&#160;</a></span>delta2()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, typename Index&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">Eigen::SparseMatrix&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a> &gt; delta2 </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Compute the discrete weak-form co-differential operator ( \( \delta_2 : \Omega^2 \to \tilde{\Omega}^1 \)). </p>
+<p>This is a weak-form (Galerkin) operator. It maps a primal 2-form (per-facet scalar, size F) to a dual 1-form (integrated value over each dual edge, per-edge, size E). The output is NOT a primal 1-form; to recover a primal 1-form one would need to apply the inverse edge mass matrix \( M_1^{-1} \) (strong form: \( M_1^{-1} d_1^T M_2 \)).</p>
+<p>\( \delta_2 = d_1^T \cdot M_2 \) where \( M_2 = \) inner_product_2_form(). The matrix is of size E by F.</p>
+<dl class="section return"><dt>Returns</dt><dd>A sparse matrix representing the weak-form 2-form co-differential operator. </dd></dl>
+
+</div>
+</div>
+<a id="a28551f01b460e8237bfbefef29b6cccd" name="a28551f01b460e8237bfbefef29b6cccd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a28551f01b460e8237bfbefef29b6cccd">&#9670;&#160;</a></span>laplacian2()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, typename Index&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">Eigen::SparseMatrix&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a> &gt; laplacian2 </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Compute the discrete weak-form Laplacian operator on 2-forms ( \( \Delta_2 : \Omega^2 \to \tilde{\Omega}^0 \)). </p>
+<p>Maps a primal 2-form (per-facet scalar, size F) to a dual 0-form (integrated value over each dual vertex, per-facet, size F). This is a weak-form operator: \( \Delta_2 = d_1 \cdot \delta_2 = d_1 \cdot d_1^T \cdot M_2 \). The matrix is of size F by F.</p>
+<dl class="section return"><dt>Returns</dt><dd>A sparse matrix representing the weak-form 2-form Laplacian operator. </dd></dl>
+
+</div>
+</div>
+<a id="a6063fd51b334fc470bf0b51d2d2ed344" name="a6063fd51b334fc470bf0b51d2d2ed344"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6063fd51b334fc470bf0b51d2d2ed344">&#9670;&#160;</a></span>laplacian1()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, typename Index&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">Eigen::SparseMatrix&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a> &gt; laplacian1 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a></td>          <td class="paramname"><span class="paramname"><em>lambda</em></span><span class="paramdefsep"> = </span><span class="paramdefval">1</span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Compute the discrete weak-form Hodge Laplacian on 1-forms ( \( \Delta_1 : \Omega^1 \to \tilde{\Omega}^1 \)). </p>
+<p>Maps a primal 1-form (per-edge scalar, size E) to a dual 1-form (per-edge, size E). Decomposes into an exact part ( \( d_0 \delta_1 \)) and a co-exact part ( \( \delta_2 d_1 \)), both weak-form:   </p><p class="formulaDsp">
+\[  \Delta_1 = d_0 \cdot \delta_1(\lambda) + \delta_2 \cdot d_1
+\]
+</p>
+<p>This operator is required for Helmholtz-Hodge decomposition of 1-forms and is distinct from connection_laplacian(), which operates on tangent vector fields at vertices. The matrix is of size E by E.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">lambda</td><td>Weight of projection term for the 1-form inner product (default: 1).</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A sparse matrix representing the weak-form Hodge Laplacian on 1-forms. </dd></dl>
 
 </div>
 </div>
@@ -829,7 +964,7 @@ template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5
 
 <p>Compute the discrete covariant derivative operator. </p>
 <p>The covariant derivative operator measures the change of a tangent vector field with respect to another tangent vector field using the Levi-Civita connection. In the discrete setting, both vector fields are defined on the vertices. The output covariant derivative is a flattened 2x2 matrix defined on each facet.</p>
-<dl class="section return"><dt>Returns</dt><dd>A sparse matrix representing the discrete covariant derivative operator. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>A sparse matrix of size (F * 4) x (V * 2) representing the discrete covariant derivative operator. </dd></dl>
 
 </div>
 </div>
@@ -1874,7 +2009,7 @@ template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacelagrange.html">lagrange</a></li><li class="navelem"><b>polyddg</b></li><li class="navelem"><a class="el" href="classlagrange_1_1polyddg_1_1_differential_operators.html">DifferentialOperators</a></li>
-    <li class="footer">Generated on Fri Mar 27 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+    <li class="footer">Generated on Mon Apr 27 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>
 </body>

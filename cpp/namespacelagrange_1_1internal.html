@@ -136,6 +136,9 @@ $(function(){initNavTree('namespacelagrange_1_1internal.html',''); initResizable
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlagrange_1_1internal_1_1_attribute_info.html">AttributeInfo</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metadata and raw byte views for a single serialized attribute.  <a href="structlagrange_1_1internal_1_1_attribute_info.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlagrange_1_1internal_1_1_bucket_sort_offset.html">BucketSortOffset</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bucket sort offset infos.  <a href="structlagrange_1_1internal_1_1_bucket_sort_offset.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -172,6 +175,9 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlagrange_1_1internal_1_1shared__ptr__access_3_01_t_00_01true_00_01false_01_4.html">shared_ptr_access&lt; T, true, false &gt;</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlagrange_1_1internal_1_1_skinning_extract_n_result.html">SkinningExtractNResult</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlagrange_1_1internal_1_1_surface_mesh_info.html">SurfaceMeshInfo</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Complete serialized mesh representation using standard types.  <a href="structlagrange_1_1internal_1_1_surface_mesh_info.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlagrange_1_1internal_1_1_unoriented_edge.html">UnorientedEdge</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -263,10 +269,10 @@ template&lt;typename DerivedV, typename DerivedF, typename DeriveddblA&gt; </td>
 <tr class="memitem:ae608619099d2ee29b481cc01aca331c4"><td class="memTemplItemLeft" align="right" valign="top">std::string&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ae608619099d2ee29b481cc01aca331c4">get_unique_attribute_name</a> (const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index &gt; &amp;mesh, std::string_view name)</td></tr>
 <tr class="memdesc:ae608619099d2ee29b481cc01aca331c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a unique attribute name by appending a suffix if necessary.  <br /></td></tr>
 <tr class="separator:ae608619099d2ee29b481cc01aca331c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a72537d0a83e0b4e55792d4a10f984255" id="r_a72537d0a83e0b4e55792d4a10f984255"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, typename Index, typename UVScalar = Scalar&gt; </td></tr>
-<tr class="memitem:a72537d0a83e0b4e55792d4a10f984255"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="group__group-surfacemesh-attr.html#ga4d115376c2c766084ef808c837348fc3">AttributeId</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a72537d0a83e0b4e55792d4a10f984255">get_uv_id</a> (const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index &gt; &amp;mesh, std::string_view uv_attribute_name=&quot;&quot;)</td></tr>
-<tr class="memdesc:a72537d0a83e0b4e55792d4a10f984255"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the ID of the UV attribute of a mesh.  <br /></td></tr>
-<tr class="separator:a72537d0a83e0b4e55792d4a10f984255"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a542c97cc6896e44bca85a3d96b2e7866" id="r_a542c97cc6896e44bca85a3d96b2e7866"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, typename Index, typename UVScalar = Scalar&gt; </td></tr>
+<tr class="memitem:a542c97cc6896e44bca85a3d96b2e7866"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="group__group-surfacemesh-attr.html#ga4d115376c2c766084ef808c837348fc3">AttributeId</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a542c97cc6896e44bca85a3d96b2e7866">get_uv_id</a> (const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index &gt; &amp;mesh, std::string_view uv_attribute_name=&quot;&quot;, <a class="el" href="structlagrange_1_1_u_v_mesh_options.html#a4dac7d7422057ff1ccf75ff7fbd92a97">UVMeshOptions::ElementTypes</a> element_types=<a class="el" href="structlagrange_1_1_u_v_mesh_options.html#a4dac7d7422057ff1ccf75ff7fbd92a97ab1c3ec3943278b146893f9f92daf7aa5">UVMeshOptions::ElementTypes::IndexedOrVertex</a>)</td></tr>
+<tr class="memdesc:a542c97cc6896e44bca85a3d96b2e7866"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the ID of the UV attribute of a mesh.  <br /></td></tr>
+<tr class="separator:a542c97cc6896e44bca85a3d96b2e7866"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa966791cea3705e76eab23eaf769db41" id="r_aa966791cea3705e76eab23eaf769db41"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, typename Index, typename UVScalar = Scalar&gt; </td></tr>
 <tr class="memitem:aa966791cea3705e76eab23eaf769db41"><td class="memTemplItemLeft" align="right" valign="top">std::tuple&lt; <a class="el" href="group__group-surfacemesh-views.html#gabdf68813d2c56704e10b6ba3c5b9aa6d">ConstRowMatrixView</a>&lt; UVScalar &gt;, <a class="el" href="group__group-surfacemesh-views.html#gab4f42fe9cfd8b46f3f4a0c81ab791c1f">ConstVectorView</a>&lt; Index &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#aa966791cea3705e76eab23eaf769db41">get_uv_attribute</a> (const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index &gt; &amp;mesh, std::string_view uv_attribute_name=&quot;&quot;)</td></tr>
 <tr class="memdesc:aa966791cea3705e76eab23eaf769db41"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the constant UV attribute buffers of a mesh.  <br /></td></tr>
@@ -299,6 +305,10 @@ template&lt;typename DerivedF, typename DerivedC, typename AScalar&gt; </td></tr
 template&lt;typename DerivedF, typename DerivedC&gt; </td></tr>
 <tr class="memitem:afff7d9e150e94dda90548aa05385e452"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>orientable_patches</b> (const Eigen::MatrixBase&lt; DerivedF &gt; &amp;F, Eigen::PlainObjectBase&lt; DerivedC &gt; &amp;C)</td></tr>
 <tr class="separator:afff7d9e150e94dda90548aa05385e452"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9df24832b109461a412c5946825640db" id="r_ga9df24832b109461a412c5946825640db"><td class="memTemplParams" colspan="2">template&lt;typename ValueType, typename Index&gt; </td></tr>
+<tr class="memitem:ga9df24832b109461a412c5946825640db"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__group-surfacemesh-attr-utils.html#ga9df24832b109461a412c5946825640db">set_invalid_indexed_values</a> (<a class="el" href="classlagrange_1_1_indexed_attribute.html">IndexedAttribute</a>&lt; ValueType, Index &gt; &amp;attr)</td></tr>
+<tr class="memdesc:ga9df24832b109461a412c5946825640db"><td class="mdescLeft">&#160;</td><td class="mdescRight">For each element in the index buffer set to <code>invalid&lt;Index&gt;()</code>, appends a new value set to invalid&lt;ValueType&gt;() and updates the index to point to it.  <br /></td></tr>
+<tr class="separator:ga9df24832b109461a412c5946825640db"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa6ef256275abbacbafd29fa49b709b7f" id="r_aa6ef256275abbacbafd29fa49b709b7f"><td class="memTemplParams" colspan="2"><a id="aa6ef256275abbacbafd29fa49b709b7f" name="aa6ef256275abbacbafd29fa49b709b7f"></a>
 template&lt;typename T, typename... Args&gt; </td></tr>
 <tr class="memitem:aa6ef256275abbacbafd29fa49b709b7f"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classlagrange_1_1internal_1_1shared__ptr.html">shared_ptr</a>&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>make_shared</b> (<a class="el" href="struct_args.html">Args</a> &amp;&amp;... args)</td></tr>
@@ -399,6 +409,14 @@ template&lt;typename DerivedX&gt; </td></tr>
 <tr class="memitem:a2557ea7a3130377e7bd3d96f199bbe72"><td class="memTemplItemLeft" align="right" valign="top">std::string_view&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a2557ea7a3130377e7bd3d96f199bbe72">string_from_scalar</a> ()</td></tr>
 <tr class="memdesc:a2557ea7a3130377e7bd3d96f199bbe72"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a human-readable string from any supported attribute value type.  <br /></td></tr>
 <tr class="separator:a2557ea7a3130377e7bd3d96f199bbe72"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4672ec496454346e79b3c5a30400a18" id="r_ac4672ec496454346e79b3c5a30400a18"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, typename Index&gt; </td></tr>
+<tr class="memitem:ac4672ec496454346e79b3c5a30400a18"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structlagrange_1_1internal_1_1_surface_mesh_info.html">SurfaceMeshInfo</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ac4672ec496454346e79b3c5a30400a18">from_surface_mesh</a> (const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index &gt; &amp;mesh)</td></tr>
+<tr class="memdesc:ac4672ec496454346e79b3c5a30400a18"><td class="mdescLeft">&#160;</td><td class="mdescRight">Extract a SurfaceMeshInfo from a SurfaceMesh.  <br /></td></tr>
+<tr class="separator:ac4672ec496454346e79b3c5a30400a18"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3abc290a03bef506784b7458427dda59" id="r_a3abc290a03bef506784b7458427dda59"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, typename Index&gt; </td></tr>
+<tr class="memitem:a3abc290a03bef506784b7458427dda59"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a3abc290a03bef506784b7458427dda59">to_surface_mesh</a> (const <a class="el" href="structlagrange_1_1internal_1_1_surface_mesh_info.html">SurfaceMeshInfo</a> &amp;info)</td></tr>
+<tr class="memdesc:a3abc290a03bef506784b7458427dda59"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reconstruct a SurfaceMesh from a SurfaceMeshInfo.  <br /></td></tr>
+<tr class="separator:a3abc290a03bef506784b7458427dda59"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abe26af952d8bb3b8cc5dad9fbe582042" id="r_abe26af952d8bb3b8cc5dad9fbe582042"><td class="memTemplParams" colspan="2"><a id="abe26af952d8bb3b8cc5dad9fbe582042" name="abe26af952d8bb3b8cc5dad9fbe582042"></a>
 template&lt;typename DerivedA, typename DerivedC, typename DerivedIA, typename DerivedIC&gt; </td></tr>
 <tr class="memitem:abe26af952d8bb3b8cc5dad9fbe582042"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>unique_rows</b> (const Eigen::DenseBase&lt; DerivedA &gt; &amp;A, Eigen::PlainObjectBase&lt; DerivedC &gt; &amp;C, Eigen::PlainObjectBase&lt; DerivedIA &gt; &amp;IA, Eigen::PlainObjectBase&lt; DerivedIC &gt; &amp;IC)</td></tr>
@@ -436,6 +454,10 @@ bool LA_CORE_API&#160;</td><td class="memItemRight" valign="bottom"><b>point_on_
 <tr class="memitem:a736a015927ef32c48b086e91011056a5" id="r_a736a015927ef32c48b086e91011056a5"><td class="memItemLeft" align="right" valign="top"><a id="a736a015927ef32c48b086e91011056a5" name="a736a015927ef32c48b086e91011056a5"></a>
 bool LA_CORE_API&#160;</td><td class="memItemRight" valign="bottom"><b>point_on_segment_3d</b> (Eigen::Vector3d p, Eigen::Vector3d a, Eigen::Vector3d b)</td></tr>
 <tr class="separator:a736a015927ef32c48b086e91011056a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36bb9797090c957d9c0676a675d678b4" id="r_a36bb9797090c957d9c0676a675d678b4"><td class="memTemplParams" colspan="2"><a id="a36bb9797090c957d9c0676a675d678b4" name="a36bb9797090c957d9c0676a675d678b4"></a>
+template&lt;typename ValueType&gt; </td></tr>
+<tr class="memitem:a36bb9797090c957d9c0676a675d678b4"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="group__group-utils-misc.html#ga4afead0b9ccc53fe4fca896787595d26">lagrange::span</a>&lt; const ValueType &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>get_all_unpoisoned</b> (const <a class="el" href="classlagrange_1_1_attribute.html">Attribute</a>&lt; ValueType &gt; &amp;attr)</td></tr>
+<tr class="separator:a36bb9797090c957d9c0676a675d678b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a87a49ab6f672c04f4f72e198181a887c" id="r_a87a49ab6f672c04f4f72e198181a887c"><td class="memTemplParams" colspan="2">template&lt;typename Index&gt; </td></tr>
 <tr class="memitem:a87a49ab6f672c04f4f72e198181a887c"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structlagrange_1_1internal_1_1_bucket_sort_result.html">BucketSortResult</a>&lt; Index &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a87a49ab6f672c04f4f72e198181a887c">bucket_sort</a> (<a class="el" href="classlagrange_1_1_disjoint_sets.html">DisjointSets</a>&lt; Index &gt; &amp;unified_indices, <a class="el" href="group__group-utils-misc.html#ga4afead0b9ccc53fe4fca896787595d26">span</a>&lt; Index &gt; element_representative)</td></tr>
 <tr class="memdesc:a87a49ab6f672c04f4f72e198181a887c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs a bucket sort over a range of elements.  <br /></td></tr>
@@ -1101,8 +1123,8 @@ template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5
 
 </div>
 </div>
-<a id="a72537d0a83e0b4e55792d4a10f984255" name="a72537d0a83e0b4e55792d4a10f984255"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a72537d0a83e0b4e55792d4a10f984255">&#9670;&#160;</a></span>get_uv_id()</h2>
+<a id="a542c97cc6896e44bca85a3d96b2e7866" name="a542c97cc6896e44bca85a3d96b2e7866"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a542c97cc6896e44bca85a3d96b2e7866">&#9670;&#160;</a></span>get_uv_id()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1117,7 +1139,12 @@ template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>uv_attribute_name</em></span><span class="paramdefsep"> = </span><span class="paramdefval">&quot;&quot;</span>&#160;)</td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>uv_attribute_name</em></span><span class="paramdefsep"> = </span><span class="paramdefval">&quot;&quot;</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structlagrange_1_1_u_v_mesh_options.html#a4dac7d7422057ff1ccf75ff7fbd92a97">UVMeshOptions::ElementTypes</a></td>          <td class="paramname"><span class="paramname"><em>element_types</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="structlagrange_1_1_u_v_mesh_options.html#a4dac7d7422057ff1ccf75ff7fbd92a97ab1c3ec3943278b146893f9f92daf7aa5">UVMeshOptions::ElementTypes::IndexedOrVertex</a></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1126,7 +1153,8 @@ template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">mesh</td><td>The mesh to get the UV attribute from. </td></tr>
-    <tr><td class="paramname">uv_attribute_name</td><td>The name of the UV attribute. If empty, use the first indexed or vertex UV attribute.</td></tr>
+    <tr><td class="paramname">uv_attribute_name</td><td>The name of the UV attribute. If empty, use the first indexed or vertex UV attribute or, if element_types is set to UVMeshOptions::ElementTypes::All, the first corner attribute. </td></tr>
+    <tr><td class="paramname">element_types</td><td>Supported element types for the UV attribute lookup.</td></tr>
   </table>
   </dd>
 </dl>
@@ -1759,6 +1787,78 @@ template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5
 
 </div>
 </div>
+<a id="ac4672ec496454346e79b3c5a30400a18" name="ac4672ec496454346e79b3c5a30400a18"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac4672ec496454346e79b3c5a30400a18">&#9670;&#160;</a></span>from_surface_mesh()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, typename Index&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structlagrange_1_1internal_1_1_surface_mesh_info.html">SurfaceMeshInfo</a> from_surface_mesh </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>mesh</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Extract a SurfaceMeshInfo from a SurfaceMesh. </p>
+<p>The returned info contains non-owning spans pointing into the mesh's attribute buffers. The mesh must outlive the returned SurfaceMeshInfo.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">mesh</td><td>The source mesh.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Scalar</td><td>Mesh scalar type. </td></tr>
+    <tr><td class="paramname">Index</td><td>Mesh index type.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A SurfaceMeshInfo with spans into the mesh's data. </dd></dl>
+
+</div>
+</div>
+<a id="a3abc290a03bef506784b7458427dda59" name="a3abc290a03bef506784b7458427dda59"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3abc290a03bef506784b7458427dda59">&#9670;&#160;</a></span>to_surface_mesh()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, typename Index&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index &gt; to_surface_mesh </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structlagrange_1_1internal_1_1_surface_mesh_info.html">SurfaceMeshInfo</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>info</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Reconstruct a SurfaceMesh from a SurfaceMeshInfo. </p>
+<p>This directly populates the mesh's internal data structures, avoiding expensive topology reconstruction (e.g. initialize_edges). All attributes, including reserved ones, are restored from the stored byte data.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">info</td><td>The mesh info to restore from.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Scalar</td><td>Mesh scalar type. </td></tr>
+    <tr><td class="paramname">Index</td><td>Mesh index type.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The reconstructed mesh. </dd></dl>
+
+</div>
+</div>
 <a id="ac4b70a7b72930733983ddcd0c3f0b32c" name="ac4b70a7b72930733983ddcd0c3f0b32c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac4b70a7b72930733983ddcd0c3f0b32c">&#9670;&#160;</a></span>visit_attribute_read()</h2>
 
@@ -2095,7 +2195,7 @@ template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacelagrange.html">lagrange</a></li><li class="navelem"><a class="el" href="namespacelagrange_1_1internal.html">internal</a></li>
-    <li class="footer">Generated on Fri Mar 27 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+    <li class="footer">Generated on Mon Apr 27 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>
 </body>

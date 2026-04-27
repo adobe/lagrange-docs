@@ -166,7 +166,7 @@ $(function(){initNavTree('legacy_2compute__edge__lengths_8h_source.html',''); in
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="keyword">const</span> <span class="keyword">auto</span>&amp; vertices = mesh.get_vertices();</div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    eval_as_edge_attribute_new(mesh, <span class="stringliteral">&quot;length&quot;</span>, [&amp;](Index e_idx) {</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        <span class="keyword">auto</span> v = mesh.<a class="code hl_function" href="classlagrange_1_1_surface_mesh.html#a29302efd8dd0d5b7c28f28f901b62d36">get_edge_vertices</a>(e_idx);</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        <span class="keyword">auto</span> v = mesh.get_edge_vertices(e_idx);</div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        <span class="keyword">auto</span> p0 = vertices.row(v[0]);</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        <span class="keyword">auto</span> p1 = vertices.row(v[1]);</div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        <span class="keywordflow">return</span> (p0 - p1).norm();</div>
@@ -174,7 +174,6 @@ $(function(){initNavTree('legacy_2compute__edge__lengths_8h_source.html',''); in
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>}</div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>} <span class="comment">// namespace legacy</span></div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>} <span class="comment">// namespace lagrange</span></div>
-<div class="ttc" id="aclasslagrange_1_1_surface_mesh_html_a29302efd8dd0d5b7c28f28f901b62d36"><div class="ttname"><a href="classlagrange_1_1_surface_mesh.html#a29302efd8dd0d5b7c28f28f901b62d36">lagrange::SurfaceMesh::get_edge_vertices</a></div><div class="ttdeci">std::array&lt; Index, 2 &gt; get_edge_vertices(Index e) const</div><div class="ttdoc">Retrieve edge endpoints.</div><div class="ttdef"><b>Definition</b> SurfaceMesh.cpp:2684</div></div>
 <div class="ttc" id="anamespacelagrange_html"><div class="ttname"><a href="namespacelagrange.html">lagrange</a></div><div class="ttdoc">Main namespace for Lagrange.</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
@@ -182,7 +181,7 @@ $(function(){initNavTree('legacy_2compute__edge__lengths_8h_source.html',''); in
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_e277d0e790805391a364b883bec7db94.html">lagrange</a></li><li class="navelem"><a class="el" href="dir_3e86c1114dca7f32217f9b892f901fa0.html">legacy</a></li><li class="navelem"><b>compute_edge_lengths.h</b></li>
-    <li class="footer">Generated on Fri Mar 27 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+    <li class="footer">Generated on Mon Apr 27 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>
 </body>

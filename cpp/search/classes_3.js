@@ -14,13 +14,14 @@ var searchData=
   ['demostate_11',['DemoState',['../struct_demo_state.html',1,'']]],
   ['derived_12',['Derived',['../structlagrange_1_1poisson_1_1_attribute_evaluator_1_1_impl_1_1_derived.html',1,'lagrange::poisson::AttributeEvaluator::Impl']]],
   ['deselectedevent_13',['DeselectedEvent',['../structlagrange_1_1ui_1_1_deselected_event.html',1,'lagrange::ui']]],
-  ['differentialoperators_14',['DifferentialOperators',['../classlagrange_1_1polyddg_1_1_differential_operators.html',1,'lagrange::polyddg']]],
-  ['dihedralangleoptions_15',['DihedralAngleOptions',['../structlagrange_1_1_dihedral_angle_options.html',1,'lagrange']]],
-  ['dijkstradistanceoptions_16',['DijkstraDistanceOptions',['../structlagrange_1_1_dijkstra_distance_options.html',1,'lagrange']]],
-  ['dilationoptions_17',['DilationOptions',['../structlagrange_1_1texproc_1_1_dilation_options.html',1,'lagrange::texproc']]],
-  ['discoptions_18',['DiscOptions',['../structlagrange_1_1primitive_1_1_disc_options.html',1,'lagrange::primitive']]],
-  ['disjointsets_19',['DisjointSets',['../classlagrange_1_1_disjoint_sets.html',1,'lagrange']]],
-  ['disjointsetswithsize_20',['DisjointSetsWithSize',['../classlagrange_1_1_disjoint_sets_with_size.html',1,'lagrange']]],
-  ['dockspace_21',['Dockspace',['../structlagrange_1_1ui_1_1_dockspace.html',1,'lagrange::ui']]],
-  ['downloadresult_22',['DownloadResult',['../structlagrange_1_1ui_1_1_texture_1_1_download_result.html',1,'lagrange::ui::Texture']]]
+  ['deserializeoptions_14',['DeserializeOptions',['../structlagrange_1_1serialization_1_1_deserialize_options.html',1,'lagrange::serialization']]],
+  ['differentialoperators_15',['DifferentialOperators',['../classlagrange_1_1polyddg_1_1_differential_operators.html',1,'lagrange::polyddg']]],
+  ['dihedralangleoptions_16',['DihedralAngleOptions',['../structlagrange_1_1_dihedral_angle_options.html',1,'lagrange']]],
+  ['dijkstradistanceoptions_17',['DijkstraDistanceOptions',['../structlagrange_1_1_dijkstra_distance_options.html',1,'lagrange']]],
+  ['dilationoptions_18',['DilationOptions',['../structlagrange_1_1texproc_1_1_dilation_options.html',1,'lagrange::texproc']]],
+  ['discoptions_19',['DiscOptions',['../structlagrange_1_1primitive_1_1_disc_options.html',1,'lagrange::primitive']]],
+  ['disjointsets_20',['DisjointSets',['../classlagrange_1_1_disjoint_sets.html',1,'lagrange']]],
+  ['disjointsetswithsize_21',['DisjointSetsWithSize',['../classlagrange_1_1_disjoint_sets_with_size.html',1,'lagrange']]],
+  ['dockspace_22',['Dockspace',['../structlagrange_1_1ui_1_1_dockspace.html',1,'lagrange::ui']]],
+  ['downloadresult_23',['DownloadResult',['../structlagrange_1_1ui_1_1_texture_1_1_download_result.html',1,'lagrange::ui::Texture']]]
 ];

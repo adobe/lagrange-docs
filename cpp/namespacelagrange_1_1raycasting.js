@@ -4,12 +4,18 @@ var namespacelagrange_1_1raycasting =
     [ "ClosestPointHitN", "structlagrange_1_1raycasting_1_1_closest_point_hit_n.html", "structlagrange_1_1raycasting_1_1_closest_point_hit_n" ],
     [ "HitBase", "structlagrange_1_1raycasting_1_1_hit_base.html", "structlagrange_1_1raycasting_1_1_hit_base" ],
     [ "HitBaseN", "structlagrange_1_1raycasting_1_1_hit_base_n.html", "structlagrange_1_1raycasting_1_1_hit_base_n" ],
+    [ "LocalFeatureSizeOptions", "structlagrange_1_1raycasting_1_1_local_feature_size_options.html", "structlagrange_1_1raycasting_1_1_local_feature_size_options" ],
     [ "ProjectCommonOptions", "structlagrange_1_1raycasting_1_1_project_common_options.html", "structlagrange_1_1raycasting_1_1_project_common_options" ],
     [ "ProjectDirectionalOptions", "structlagrange_1_1raycasting_1_1_project_directional_options.html", "structlagrange_1_1raycasting_1_1_project_directional_options" ],
     [ "ProjectOptions", "structlagrange_1_1raycasting_1_1_project_options.html", "structlagrange_1_1raycasting_1_1_project_options" ],
     [ "RayCaster", "classlagrange_1_1raycasting_1_1_ray_caster.html", "classlagrange_1_1raycasting_1_1_ray_caster" ],
     [ "RayHit", "structlagrange_1_1raycasting_1_1_ray_hit.html", "structlagrange_1_1raycasting_1_1_ray_hit" ],
     [ "RayHitN", "structlagrange_1_1raycasting_1_1_ray_hit_n.html", "structlagrange_1_1raycasting_1_1_ray_hit_n" ],
+    [ "RayDirectionMode", "group__group-raycasting.html#ga11f6a306cbbe434415ce7498b22290e3", [
+      [ "Interior", "group__group-raycasting.html#gga11f6a306cbbe434415ce7498b22290e3aebbcc9b3b8fc5c7d79d0126910b82a69", null ],
+      [ "Exterior", "group__group-raycasting.html#gga11f6a306cbbe434415ce7498b22290e3ad9b3dceaf520ba1fa45c371c498c6baf", null ],
+      [ "Both", "group__group-raycasting.html#gga11f6a306cbbe434415ce7498b22290e3a130c5b3473c57faa76e2a1c54e26f88e", null ]
+    ] ],
     [ "ProjectMode", "namespacelagrange_1_1raycasting.html#a1bf0ebeb95eeae0cf367574faaecd8dd", [
       [ "CLOSEST_VERTEX", "namespacelagrange_1_1raycasting.html#a1bf0ebeb95eeae0cf367574faaecd8ddafb31cbcd18a304c6cb21abc93fa62018", null ],
       [ "CLOSEST_POINT", "namespacelagrange_1_1raycasting.html#a1bf0ebeb95eeae0cf367574faaecd8dda5a2b10bd73e37dbac3ad940711176c29", null ],
@@ -45,11 +51,14 @@ var namespacelagrange_1_1raycasting =
       [ "High", "namespacelagrange_1_1raycasting.html#ade737eff21604d56d55bdb5f62280f67a655d20c1ca69519ca647684edbb2db35", null ]
     ] ],
     [ "FallbackMode", "namespacelagrange_1_1raycasting.html#a2f74394b5033a3b8844015cdfc1454d5", null ],
+    [ "compute_local_feature_size", "group__group-raycasting.html#ga092e714b33f7282761b6eb171d0bf9d9", null ],
     [ "project_modes", "namespacelagrange_1_1raycasting.html#afbefaf5b72491a9d7cc540f1d328f6cc", null ],
     [ "project", "group__group-raycasting.html#gacca5b0a47fbc939327dac6d2c82a9abb", null ],
     [ "project_closest_point", "group__group-raycasting.html#ga96bff6490abc440e6e07d2a12a13f3eb", null ],
     [ "project_closest_vertex", "group__group-raycasting.html#ga5e52705d00882e910fcf65942e5351e7", null ],
     [ "project_directional", "group__group-raycasting.html#ga5fa3bb4021bb067476cca74f2f304b44", null ],
+    [ "closest_vertex_from_barycentric", "namespacelagrange_1_1raycasting.html#a8e7cec78da1487564fefd67166d0ca5e", null ],
+    [ "compute_local_feature_size", "group__group-raycasting.html#ga092e714b33f7282761b6eb171d0bf9d9", null ],
     [ "project", "group__group-raycasting.html#gacca5b0a47fbc939327dac6d2c82a9abb", null ],
     [ "project_closest_point", "group__group-raycasting.html#ga96bff6490abc440e6e07d2a12a13f3eb", null ],
     [ "project_closest_vertex", "group__group-raycasting.html#ga5e52705d00882e910fcf65942e5351e7", null ],

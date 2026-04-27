@@ -146,31 +146,33 @@ $(function(){initNavTree('remove__duplicate__facets_8h_source.html',''); initRes
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacelagrange.html">lagrange</a> {</div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span></div>
-<div class="foldopen" id="foldopen00025" data-start="{" data-end="};">
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="structlagrange_1_1_remove_duplicate_facet_options.html">   25</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structlagrange_1_1_remove_duplicate_facet_options.html">RemoveDuplicateFacetOptions</a></div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>{</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="structlagrange_1_1_remove_duplicate_facet_options.html#a3a53d38d37410f88be10879cb048e27d">   29</a></span>    <span class="keywordtype">bool</span> <a class="code hl_variable" href="structlagrange_1_1_remove_duplicate_facet_options.html#a3a53d38d37410f88be10879cb048e27d">consider_orientation</a> = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>};</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span></div>
+<div class="foldopen" id="foldopen00030" data-start="{" data-end="};">
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="structlagrange_1_1_remove_duplicate_facet_options.html">   30</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structlagrange_1_1_remove_duplicate_facet_options.html">RemoveDuplicateFacetOptions</a></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>{</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="structlagrange_1_1_remove_duplicate_facet_options.html#a3a53d38d37410f88be10879cb048e27d">   34</a></span>    <span class="keywordtype">bool</span> <a class="code hl_variable" href="structlagrange_1_1_remove_duplicate_facet_options.html#a3a53d38d37410f88be10879cb048e27d">consider_orientation</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>};</div>
 </div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span></div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> Scalar, <span class="keyword">typename</span> Index&gt;</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="keywordtype">void</span> <a class="code hl_function" href="namespacelagrange.html#a144f50badc977a6cc9e3b61b66dc2bec">remove_duplicate_facets</a>(</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <a class="code hl_class" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh&lt;Scalar, Index&gt;</a>&amp; mesh,</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="keyword">const</span> <a class="code hl_struct" href="structlagrange_1_1_remove_duplicate_facet_options.html">RemoveDuplicateFacetOptions</a>&amp; opts = {});</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>} <span class="comment">// namespace lagrange</span></div>
-<div class="ttc" id="aclasslagrange_1_1_surface_mesh_html"><div class="ttname"><a href="classlagrange_1_1_surface_mesh.html">lagrange::SurfaceMesh</a></div><div class="ttdoc">A general purpose polygonal mesh class.</div><div class="ttdef"><b>Definition</b> SurfaceMesh.h:66</div></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> Scalar, <span class="keyword">typename</span> Index&gt;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="keywordtype">void</span> <a class="code hl_function" href="group__group-surfacemesh-cleanup.html#ga144f50badc977a6cc9e3b61b66dc2bec">remove_duplicate_facets</a>(</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <a class="code hl_class" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh&lt;Scalar, Index&gt;</a>&amp; mesh,</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <span class="keyword">const</span> <a class="code hl_struct" href="structlagrange_1_1_remove_duplicate_facet_options.html">RemoveDuplicateFacetOptions</a>&amp; opts = {});</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>} <span class="comment">// namespace lagrange</span></div>
+<div class="ttc" id="aclasslagrange_1_1_surface_mesh_html"><div class="ttname"><a href="classlagrange_1_1_surface_mesh.html">lagrange::SurfaceMesh</a></div><div class="ttdoc">A general purpose polygonal mesh class.</div><div class="ttdef"><b>Definition</b> SurfaceMesh.h:73</div></div>
+<div class="ttc" id="agroup__group-surfacemesh-cleanup_html_ga144f50badc977a6cc9e3b61b66dc2bec"><div class="ttname"><a href="group__group-surfacemesh-cleanup.html#ga144f50badc977a6cc9e3b61b66dc2bec">lagrange::remove_duplicate_facets</a></div><div class="ttdeci">void remove_duplicate_facets(SurfaceMesh&lt; Scalar, Index &gt; &amp;mesh, const RemoveDuplicateFacetOptions &amp;opts={})</div><div class="ttdoc">Remove duplicate facets in the mesh.</div><div class="ttdef"><b>Definition</b> remove_duplicate_facets.cpp:235</div></div>
 <div class="ttc" id="anamespacelagrange_html"><div class="ttname"><a href="namespacelagrange.html">lagrange</a></div><div class="ttdoc">Main namespace for Lagrange.</div></div>
-<div class="ttc" id="anamespacelagrange_html_a144f50badc977a6cc9e3b61b66dc2bec"><div class="ttname"><a href="namespacelagrange.html#a144f50badc977a6cc9e3b61b66dc2bec">lagrange::remove_duplicate_facets</a></div><div class="ttdeci">void remove_duplicate_facets(SurfaceMesh&lt; Scalar, Index &gt; &amp;mesh, const RemoveDuplicateFacetOptions &amp;opts={})</div><div class="ttdoc">Remove duplicate facets in the mesh.</div><div class="ttdef"><b>Definition</b> remove_duplicate_facets.cpp:235</div></div>
-<div class="ttc" id="astructlagrange_1_1_remove_duplicate_facet_options_html"><div class="ttname"><a href="structlagrange_1_1_remove_duplicate_facet_options.html">lagrange::RemoveDuplicateFacetOptions</a></div><div class="ttdoc">Options for remove_duplicate_facets.</div><div class="ttdef"><b>Definition</b> remove_duplicate_facets.h:26</div></div>
-<div class="ttc" id="astructlagrange_1_1_remove_duplicate_facet_options_html_a3a53d38d37410f88be10879cb048e27d"><div class="ttname"><a href="structlagrange_1_1_remove_duplicate_facet_options.html#a3a53d38d37410f88be10879cb048e27d">lagrange::RemoveDuplicateFacetOptions::consider_orientation</a></div><div class="ttdeci">bool consider_orientation</div><div class="ttdoc">If true, facets with opposite orientations (e.g.</div><div class="ttdef"><b>Definition</b> remove_duplicate_facets.h:29</div></div>
+<div class="ttc" id="astructlagrange_1_1_remove_duplicate_facet_options_html"><div class="ttname"><a href="structlagrange_1_1_remove_duplicate_facet_options.html">lagrange::RemoveDuplicateFacetOptions</a></div><div class="ttdoc">Options for remove_duplicate_facets.</div><div class="ttdef"><b>Definition</b> remove_duplicate_facets.h:31</div></div>
+<div class="ttc" id="astructlagrange_1_1_remove_duplicate_facet_options_html_a3a53d38d37410f88be10879cb048e27d"><div class="ttname"><a href="structlagrange_1_1_remove_duplicate_facet_options.html#a3a53d38d37410f88be10879cb048e27d">lagrange::RemoveDuplicateFacetOptions::consider_orientation</a></div><div class="ttdeci">bool consider_orientation</div><div class="ttdoc">If true, facets with opposite orientations (e.g.</div><div class="ttdef"><b>Definition</b> remove_duplicate_facets.h:34</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_e277d0e790805391a364b883bec7db94.html">lagrange</a></li><li class="navelem"><a class="el" href="dir_75e0496104c9e7e6e5aa94b4468f4343.html">mesh_cleanup</a></li><li class="navelem"><b>remove_duplicate_facets.h</b></li>
-    <li class="footer">Generated on Fri Mar 27 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+    <li class="footer">Generated on Mon Apr 27 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>
 </body>

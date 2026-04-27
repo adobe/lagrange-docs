@@ -715,7 +715,7 @@ $(function(){initNavTree('legacy_2generation__utils_8h_source.html',''); initRes
 <div class="line"><a id="l00618" name="l00618"></a><span class="lineno">  618</span>    <span class="keyword">using </span>AttributeArray = <span class="keyword">typename</span> MeshType::AttributeArray;</div>
 <div class="line"><a id="l00619" name="l00619"></a><span class="lineno">  619</span>    <span class="keyword">using </span><a class="code hl_enumvalue" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a> = <span class="keyword">typename</span> MeshType::Scalar;</div>
 <div class="line"><a id="l00620" name="l00620"></a><span class="lineno">  620</span>    AttributeArray semantic_label =</div>
-<div class="line"><a id="l00621" name="l00621"></a><span class="lineno">  621</span>        AttributeArray::Constant(mesh.<a class="code hl_function" href="classlagrange_1_1_surface_mesh.html#abcf8a67369f4ebda946306ae39673d4a">get_num_facets</a>(), 1, <a class="code hl_function" href="group__group-utils-misc.html#ga99785544251e0424c9d08a688fe70838">safe_cast_enum&lt;Scalar&gt;</a>(label));</div>
+<div class="line"><a id="l00621" name="l00621"></a><span class="lineno">  621</span>        AttributeArray::Constant(mesh.get_num_facets(), 1, <a class="code hl_function" href="group__group-utils-misc.html#ga99785544251e0424c9d08a688fe70838">safe_cast_enum&lt;Scalar&gt;</a>(label));</div>
 <div class="line"><a id="l00622" name="l00622"></a><span class="lineno">  622</span>    <span class="keywordflow">if</span> (!mesh.has_facet_attribute(<span class="stringliteral">&quot;semantic_label&quot;</span>)) {</div>
 <div class="line"><a id="l00623" name="l00623"></a><span class="lineno">  623</span>        mesh.add_facet_attribute(<span class="stringliteral">&quot;semantic_label&quot;</span>);</div>
 <div class="line"><a id="l00624" name="l00624"></a><span class="lineno">  624</span>    }</div>
@@ -735,7 +735,7 @@ $(function(){initNavTree('legacy_2generation__utils_8h_source.html',''); initRes
 <div class="line"><a id="l00638" name="l00638"></a><span class="lineno">  638</span>    <span class="keyword">using </span>UVArray = <span class="keyword">typename</span> MeshType::UVArray;</div>
 <div class="line"><a id="l00639" name="l00639"></a><span class="lineno">  639</span>    <span class="keyword">using </span><a class="code hl_enumvalue" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a> = <span class="keyword">typename</span> MeshType::Scalar;</div>
 <div class="line"><a id="l00640" name="l00640"></a><span class="lineno">  640</span> </div>
-<div class="line"><a id="l00641" name="l00641"></a><span class="lineno">  641</span>    <span class="keyword">const</span> Index num_vertices = mesh.<a class="code hl_function" href="classlagrange_1_1_surface_mesh.html#a1ed57c732bcdb304ed7033147f5d9002">get_num_vertices</a>();</div>
+<div class="line"><a id="l00641" name="l00641"></a><span class="lineno">  641</span>    <span class="keyword">const</span> Index num_vertices = mesh.get_num_vertices();</div>
 <div class="line"><a id="l00642" name="l00642"></a><span class="lineno">  642</span>    <span class="keyword">const</span> <span class="keyword">auto</span>&amp; vertices = mesh.get_vertices();</div>
 <div class="line"><a id="l00643" name="l00643"></a><span class="lineno">  643</span> </div>
 <div class="line"><a id="l00644" name="l00644"></a><span class="lineno">  644</span>    UVArray uvs_per_vertex(num_vertices, 2);</div>
@@ -748,9 +748,9 @@ $(function(){initNavTree('legacy_2generation__utils_8h_source.html',''); initRes
 <div class="line"><a id="l00651" name="l00651"></a><span class="lineno">  651</span>            phi / lagrange::internal::pi;</div>
 <div class="line"><a id="l00652" name="l00652"></a><span class="lineno">  652</span>    }</div>
 <div class="line"><a id="l00653" name="l00653"></a><span class="lineno">  653</span> </div>
-<div class="line"><a id="l00654" name="l00654"></a><span class="lineno">  654</span>    <span class="keyword">const</span> Index num_facets = mesh.<a class="code hl_function" href="classlagrange_1_1_surface_mesh.html#abcf8a67369f4ebda946306ae39673d4a">get_num_facets</a>();</div>
+<div class="line"><a id="l00654" name="l00654"></a><span class="lineno">  654</span>    <span class="keyword">const</span> Index num_facets = mesh.get_num_facets();</div>
 <div class="line"><a id="l00655" name="l00655"></a><span class="lineno">  655</span>    <span class="keyword">const</span> <span class="keyword">auto</span>&amp; facets = mesh.get_facets();</div>
-<div class="line"><a id="l00656" name="l00656"></a><span class="lineno">  656</span>    <span class="keyword">const</span> Index vertex_per_facet = mesh.<a class="code hl_function" href="classlagrange_1_1_surface_mesh.html#abd39a328d5689f8b05c3f871079d77ce">get_vertex_per_facet</a>();</div>
+<div class="line"><a id="l00656" name="l00656"></a><span class="lineno">  656</span>    <span class="keyword">const</span> Index vertex_per_facet = mesh.get_vertex_per_facet();</div>
 <div class="line"><a id="l00657" name="l00657"></a><span class="lineno">  657</span>    UVArray uvs(num_facets * vertex_per_facet, uvs_per_vertex.cols());</div>
 <div class="line"><a id="l00658" name="l00658"></a><span class="lineno">  658</span> </div>
 <div class="line"><a id="l00659" name="l00659"></a><span class="lineno">  659</span>    <span class="comment">// Assign UVs per face</span></div>
@@ -837,9 +837,6 @@ $(function(){initNavTree('legacy_2generation__utils_8h_source.html',''); initRes
 <div class="line"><a id="l00740" name="l00740"></a><span class="lineno">  740</span> </div>
 <div class="line"><a id="l00741" name="l00741"></a><span class="lineno">  741</span>} <span class="comment">// namespace legacy</span></div>
 <div class="line"><a id="l00742" name="l00742"></a><span class="lineno">  742</span>} <span class="comment">// namespace lagrange</span></div>
-<div class="ttc" id="aclasslagrange_1_1_surface_mesh_html_a1ed57c732bcdb304ed7033147f5d9002"><div class="ttname"><a href="classlagrange_1_1_surface_mesh.html#a1ed57c732bcdb304ed7033147f5d9002">lagrange::SurfaceMesh::get_num_vertices</a></div><div class="ttdeci">Index get_num_vertices() const</div><div class="ttdoc">Retrieves the number of vertices.</div><div class="ttdef"><b>Definition</b> SurfaceMesh.h:680</div></div>
-<div class="ttc" id="aclasslagrange_1_1_surface_mesh_html_abcf8a67369f4ebda946306ae39673d4a"><div class="ttname"><a href="classlagrange_1_1_surface_mesh.html#abcf8a67369f4ebda946306ae39673d4a">lagrange::SurfaceMesh::get_num_facets</a></div><div class="ttdeci">Index get_num_facets() const</div><div class="ttdoc">Retrieves the number of facets.</div><div class="ttdef"><b>Definition</b> SurfaceMesh.h:687</div></div>
-<div class="ttc" id="aclasslagrange_1_1_surface_mesh_html_abd39a328d5689f8b05c3f871079d77ce"><div class="ttname"><a href="classlagrange_1_1_surface_mesh.html#abd39a328d5689f8b05c3f871079d77ce">lagrange::SurfaceMesh::get_vertex_per_facet</a></div><div class="ttdeci">Index get_vertex_per_facet() const</div><div class="ttdoc">Retrieves the number of vertex per facet in a regular mesh.</div><div class="ttdef"><b>Definition</b> SurfaceMesh.cpp:2345</div></div>
 <div class="ttc" id="agroup__group-surfacemesh-attr_html_gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74"><div class="ttname"><a href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">lagrange::AttributeUsage::Scalar</a></div><div class="ttdeci">@ Scalar</div><div class="ttdoc">Mesh attribute must have exactly 1 channel.</div><div class="ttdef"><b>Definition</b> AttributeFwd.h:56</div></div>
 <div class="ttc" id="agroup__group-utils-assert_html_ga1ccafcb14523a1aae57dcac3c3f32ecd"><div class="ttname"><a href="group__group-utils-assert.html#ga1ccafcb14523a1aae57dcac3c3f32ecd">la_runtime_assert</a></div><div class="ttdeci">#define la_runtime_assert(...)</div><div class="ttdoc">Runtime assertion check.</div><div class="ttdef"><b>Definition</b> assert.h:174</div></div>
 <div class="ttc" id="agroup__group-utils-misc_html_ga41568d17fc48cea4a31db0e40cd93cf8"><div class="ttname"><a href="group__group-utils-misc.html#ga41568d17fc48cea4a31db0e40cd93cf8">lagrange::range</a></div><div class="ttdeci">internal::Range&lt; Index &gt; range(Index end)</div><div class="ttdoc">Returns an iterable object representing the range [0, end).</div><div class="ttdef"><b>Definition</b> range.h:176</div></div>
@@ -856,7 +853,7 @@ $(function(){initNavTree('legacy_2generation__utils_8h_source.html',''); initRes
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_e36f8fa9358c3f75a04901d63ff66590.html">lagrange</a></li><li class="navelem"><a class="el" href="dir_d0409b165963810c6de8a88faa72c0ab.html">primitive</a></li><li class="navelem"><a class="el" href="dir_8e3c3d59295e9db4176b9ac801b97c1f.html">legacy</a></li><li class="navelem"><b>generation_utils.h</b></li>
-    <li class="footer">Generated on Fri Mar 27 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+    <li class="footer">Generated on Mon Apr 27 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>
 </body>

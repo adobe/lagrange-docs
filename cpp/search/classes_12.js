@@ -8,5 +8,7 @@ var searchData=
   ['userdataconverter_5',['UserDataConverter',['../structlagrange_1_1scene_1_1_user_data_converter.html',1,'lagrange::scene']]],
   ['uvchartoptions_6',['UVChartOptions',['../structlagrange_1_1_u_v_chart_options.html',1,'lagrange']]],
   ['uvdistortionoptions_7',['UVDistortionOptions',['../structlagrange_1_1_u_v_distortion_options.html',1,'lagrange']]],
-  ['uvmeshoptions_8',['UVMeshOptions',['../structlagrange_1_1_u_v_mesh_options.html',1,'lagrange']]]
+  ['uvmeshoptions_8',['UVMeshOptions',['../structlagrange_1_1_u_v_mesh_options.html',1,'lagrange']]],
+  ['uvoverlapoptions_9',['UVOverlapOptions',['../structlagrange_1_1bvh_1_1_u_v_overlap_options.html',1,'lagrange::bvh']]],
+  ['uvoverlapresult_10',['UVOverlapResult',['../structlagrange_1_1bvh_1_1_u_v_overlap_result.html',1,'lagrange::bvh']]]
 ];

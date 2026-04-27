@@ -183,7 +183,7 @@ Module Contents
        - normal_attr: Attribute id of the indexed normal attribute used to compute sharpness information.
 
 
-.. py:function:: subdivide_mesh(mesh, num_levels = 1, scheme = None, adaptive = False, max_edge_length = None, vertex_boundary_interpolation = VertexBoundaryInterpolation.EdgeOnly, face_varying_interpolation = FaceVaryingInterpolation.Smooth, use_limit_surface = False, interpolated_attributes_selection = InterpolatedAttributesSelection.All, interpolated_smooth_attributes = None, interpolated_linear_attributes = None, edge_sharpness_attr = None, vertex_sharpness_attr = None, face_hole_attr = None, output_limit_normals = None, output_limit_tangents = None, output_limit_bitangents = None)
+.. py:function:: subdivide_mesh(mesh, num_levels = 1, scheme = None, adaptive = False, max_edge_length = None, max_chordal_deviation = None, vertex_boundary_interpolation = VertexBoundaryInterpolation.EdgeOnly, face_varying_interpolation = FaceVaryingInterpolation.Smooth, use_limit_surface = False, interpolated_attributes_selection = InterpolatedAttributesSelection.All, interpolated_smooth_attributes = None, interpolated_linear_attributes = None, edge_sharpness_attr = None, vertex_sharpness_attr = None, face_hole_attr = None, output_limit_normals = None, output_limit_tangents = None, output_limit_bitangents = None)
 
    Evaluates the subdivision surface of a polygonal mesh.
 
@@ -191,7 +191,8 @@ Module Contents
    :param num_levels: The number of levels of subdivision to apply.
    :param scheme: Subdivision scheme. If None, uses Loop for triangle meshes and CatmullClark for quad-dominant meshes.
    :param adaptive: Whether to use edge-adaptive refinement.
-   :param max_edge_length: Maximum edge length for adaptive refinement. If None, uses longest edge / num_levels. Ignored when adaptive is False.
+   :param max_edge_length: Maximum edge length for adaptive refinement. If None, uses longest edge / num_levels. Ignored when adaptive is False. Mutually exclusive with max_chordal_deviation.
+   :param max_chordal_deviation: Maximum chordal deviation for adaptive refinement. This controls the maximum distance between the limit surface and its piecewise-linear approximation. For each edge, the peak deviation is found using Newton's method on the squared-distance function, and the tessellation rate is chosen so that all sub-segment deviations stay below this threshold. Only supported for meshes with 3D vertex positions. The value must be strictly positive. Ignored when adaptive is False. Mutually exclusive with max_edge_length.
    :param vertex_boundary_interpolation: Vertex boundary interpolation rule.
    :param face_varying_interpolation: Face-varying interpolation rule.
    :param use_limit_surface: Interpolate all data to the limit surface.

@@ -22,6 +22,7 @@ Functions
 
 .. autoapisummary::
 
+   lagrange.raycasting.compute_local_feature_size
    lagrange.raycasting.project
    lagrange.raycasting.project_closest_point
    lagrange.raycasting.project_closest_vertex
@@ -310,6 +311,31 @@ Module Contents
 
 
       Robust BVH traversal.
+
+
+.. py:function:: compute_local_feature_size(mesh, *, output_attribute_name = '@lfs', direction_mode = 'interior', ray_offset = 9.999999747378752e-05, default_lfs = float('inf'), medial_axis_tolerance = 9.999999747378752e-05, ray_caster = None)
+
+   Compute local feature size for each vertex using medial axis approximation.
+
+   The local feature size is stored as a per-vertex attribute on the mesh.
+
+   :param mesh:                    Triangle mesh (modified in place to add the LFS attribute).
+   :param output_attribute_name:   Name of the output LFS attribute (default: ``"@lfs"``).
+   :param direction_mode:          Ray direction mode -- ``"interior"``, ``"exterior"``, or
+                                   ``"both"`` (default: ``"interior"``).
+   :param ray_offset:              Ray offset along the vertex normal to avoid self-intersection
+                                   (relative to bounding box diagonal). The actual offset distance
+                                   is ``ray_offset * bbox_diagonal`` (default: 1e-4).
+   :param default_lfs:             Default local feature size value used when raycasting fails
+                                   to find valid hits (default: infinity).
+   :param medial_axis_tolerance:   Error tolerance for medial axis binary search convergence
+                                   (relative to bounding box diagonal). The binary search stops
+                                   when ``|distance_to_surface - depth_along_ray| < tolerance *
+                                   bbox_diagonal``. Smaller values produce more accurate results
+                                   but require more iterations (default: 1e-4).
+   :param ray_caster:              Optional pre-built :class:`RayCaster` for caching.
+   :return: Attribute id of the newly added LFS attribute.
+   :rtype: int
 
 
 .. py:function:: project(source: lagrange.core.SurfaceMesh, target: lagrange.core.SurfaceMesh, attribute_ids: collections.abc.Sequence[int] = [], project_vertices: bool = True, project_mode: ProjectMode = ProjectMode.ClosestPoint, direction: object | None = None, cast_mode: CastMode = CastMode.BothWays, fallback_mode: FallbackMode = FallbackMode.Constant, default_value: float = 0.0, ray_caster: RayCaster | None = None) -> None

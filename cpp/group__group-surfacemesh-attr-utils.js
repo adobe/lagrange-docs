@@ -1,5 +1,6 @@
 var group__group_surfacemesh_attr_utils =
 [
+    [ "set_invalid_indexed_values", "group__group-surfacemesh-attr-utils.html#ga9df24832b109461a412c5946825640db", null ],
     [ "map_attribute", "group__group-surfacemesh-attr-utils.html#gad7a1e90b26e460f8b9afc7efbca95cc4", null ],
     [ "map_attribute", "group__group-surfacemesh-attr-utils.html#ga38348fa42743d4cb72a1a2975483acc1", null ],
     [ "map_attribute_in_place", "group__group-surfacemesh-attr-utils.html#gacd6500c173df1a5bc53e2c9b32e08309", null ],

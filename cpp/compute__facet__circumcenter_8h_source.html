@@ -141,33 +141,35 @@ $(function(){initNavTree('compute__facet__circumcenter_8h_source.html',''); init
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;lagrange/SurfaceMesh.h&gt;</span></div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacelagrange.html">lagrange</a> {</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
-<div class="foldopen" id="foldopen00018" data-start="{" data-end="};">
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="structlagrange_1_1_facet_circumcenter_options.html">   18</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structlagrange_1_1_facet_circumcenter_options.html">FacetCircumcenterOptions</a></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>{</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="structlagrange_1_1_facet_circumcenter_options.html#ad9fcba39803c665ca7be48a39d079f00">   21</a></span>    std::string_view <a class="code hl_variable" href="structlagrange_1_1_facet_circumcenter_options.html#ad9fcba39803c665ca7be48a39d079f00">output_attribute_name</a> = <span class="stringliteral">&quot;@facet_circumcenter&quot;</span>;</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>};</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="foldopen" id="foldopen00023" data-start="{" data-end="};">
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="structlagrange_1_1_facet_circumcenter_options.html">   23</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structlagrange_1_1_facet_circumcenter_options.html">FacetCircumcenterOptions</a></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>{</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="structlagrange_1_1_facet_circumcenter_options.html#ad9fcba39803c665ca7be48a39d079f00">   26</a></span>    std::string_view <a class="code hl_variable" href="structlagrange_1_1_facet_circumcenter_options.html#ad9fcba39803c665ca7be48a39d079f00">output_attribute_name</a> = <span class="stringliteral">&quot;@facet_circumcenter&quot;</span>;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>};</div>
 </div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span></div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> Scalar, <span class="keyword">typename</span> Index&gt;</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><a class="code hl_typedef" href="group__group-surfacemesh-attr.html#ga4d115376c2c766084ef808c837348fc3">AttributeId</a> <a class="code hl_function" href="namespacelagrange.html#acfb6197a434be9f7c931295ecf406b46">compute_facet_circumcenter</a>(</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <a class="code hl_class" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh&lt;Scalar, Index&gt;</a>&amp; mesh,</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <a class="code hl_struct" href="structlagrange_1_1_facet_circumcenter_options.html">FacetCircumcenterOptions</a> options = {});</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>} <span class="comment">// namespace lagrange</span></div>
-<div class="ttc" id="aclasslagrange_1_1_surface_mesh_html"><div class="ttname"><a href="classlagrange_1_1_surface_mesh.html">lagrange::SurfaceMesh</a></div><div class="ttdoc">A general purpose polygonal mesh class.</div><div class="ttdef"><b>Definition</b> SurfaceMesh.h:66</div></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> Scalar, <span class="keyword">typename</span> Index&gt;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><a class="code hl_typedef" href="group__group-surfacemesh-attr.html#ga4d115376c2c766084ef808c837348fc3">AttributeId</a> <a class="code hl_function" href="group__group-surfacemesh-utils.html#gacfb6197a434be9f7c931295ecf406b46">compute_facet_circumcenter</a>(</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <a class="code hl_class" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh&lt;Scalar, Index&gt;</a>&amp; mesh,</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <a class="code hl_struct" href="structlagrange_1_1_facet_circumcenter_options.html">FacetCircumcenterOptions</a> options = {});</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>} <span class="comment">// namespace lagrange</span></div>
+<div class="ttc" id="aclasslagrange_1_1_surface_mesh_html"><div class="ttname"><a href="classlagrange_1_1_surface_mesh.html">lagrange::SurfaceMesh</a></div><div class="ttdoc">A general purpose polygonal mesh class.</div><div class="ttdef"><b>Definition</b> SurfaceMesh.h:73</div></div>
 <div class="ttc" id="agroup__group-surfacemesh-attr_html_ga4d115376c2c766084ef808c837348fc3"><div class="ttname"><a href="group__group-surfacemesh-attr.html#ga4d115376c2c766084ef808c837348fc3">lagrange::AttributeId</a></div><div class="ttdeci">uint32_t AttributeId</div><div class="ttdoc">Identified to be used to access an attribute.</div><div class="ttdef"><b>Definition</b> AttributeFwd.h:73</div></div>
+<div class="ttc" id="agroup__group-surfacemesh-utils_html_gacfb6197a434be9f7c931295ecf406b46"><div class="ttname"><a href="group__group-surfacemesh-utils.html#gacfb6197a434be9f7c931295ecf406b46">lagrange::compute_facet_circumcenter</a></div><div class="ttdeci">AttributeId compute_facet_circumcenter(SurfaceMesh&lt; Scalar, Index &gt; &amp;mesh, FacetCircumcenterOptions options={})</div><div class="ttdoc">Compute per-facet circumcenter.</div><div class="ttdef"><b>Definition</b> compute_facet_circumcenter.cpp:32</div></div>
 <div class="ttc" id="anamespacelagrange_html"><div class="ttname"><a href="namespacelagrange.html">lagrange</a></div><div class="ttdoc">Main namespace for Lagrange.</div></div>
-<div class="ttc" id="anamespacelagrange_html_acfb6197a434be9f7c931295ecf406b46"><div class="ttname"><a href="namespacelagrange.html#acfb6197a434be9f7c931295ecf406b46">lagrange::compute_facet_circumcenter</a></div><div class="ttdeci">AttributeId compute_facet_circumcenter(SurfaceMesh&lt; Scalar, Index &gt; &amp;mesh, FacetCircumcenterOptions options={})</div><div class="ttdoc">Compute per-facet circumcenter.</div><div class="ttdef"><b>Definition</b> compute_facet_circumcenter.cpp:32</div></div>
-<div class="ttc" id="astructlagrange_1_1_facet_circumcenter_options_html"><div class="ttname"><a href="structlagrange_1_1_facet_circumcenter_options.html">lagrange::FacetCircumcenterOptions</a></div><div class="ttdef"><b>Definition</b> compute_facet_circumcenter.h:19</div></div>
-<div class="ttc" id="astructlagrange_1_1_facet_circumcenter_options_html_ad9fcba39803c665ca7be48a39d079f00"><div class="ttname"><a href="structlagrange_1_1_facet_circumcenter_options.html#ad9fcba39803c665ca7be48a39d079f00">lagrange::FacetCircumcenterOptions::output_attribute_name</a></div><div class="ttdeci">std::string_view output_attribute_name</div><div class="ttdoc">Output facet circumcenter attribute name.</div><div class="ttdef"><b>Definition</b> compute_facet_circumcenter.h:21</div></div>
+<div class="ttc" id="astructlagrange_1_1_facet_circumcenter_options_html"><div class="ttname"><a href="structlagrange_1_1_facet_circumcenter_options.html">lagrange::FacetCircumcenterOptions</a></div><div class="ttdef"><b>Definition</b> compute_facet_circumcenter.h:24</div></div>
+<div class="ttc" id="astructlagrange_1_1_facet_circumcenter_options_html_ad9fcba39803c665ca7be48a39d079f00"><div class="ttname"><a href="structlagrange_1_1_facet_circumcenter_options.html#ad9fcba39803c665ca7be48a39d079f00">lagrange::FacetCircumcenterOptions::output_attribute_name</a></div><div class="ttdeci">std::string_view output_attribute_name</div><div class="ttdoc">Output facet circumcenter attribute name.</div><div class="ttdef"><b>Definition</b> compute_facet_circumcenter.h:26</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_e277d0e790805391a364b883bec7db94.html">lagrange</a></li><li class="navelem"><b>compute_facet_circumcenter.h</b></li>
-    <li class="footer">Generated on Fri Mar 27 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+    <li class="footer">Generated on Mon Apr 27 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>
 </body>

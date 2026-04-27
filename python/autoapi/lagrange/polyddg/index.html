@@ -267,6 +267,15 @@
 <tr class="row-odd"><td><p><a class="reference internal" href="#lagrange.polyddg.compute_principal_curvatures" title="lagrange.polyddg.compute_principal_curvatures"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compute_principal_curvatures</span></code></a>(…)</p></td>
 <td><p>Compute per-vertex principal curvatures and principal curvature directions.</p></td>
 </tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#lagrange.polyddg.compute_smooth_direction_field" title="lagrange.polyddg.compute_smooth_direction_field"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compute_smooth_direction_field</span></code></a>(mesh, ops, *[, nrosy, ...])</p></td>
+<td><p>Compute the globally smoothest n-direction field on a surface mesh.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#lagrange.polyddg.hodge_decomposition_1_form" title="lagrange.polyddg.hodge_decomposition_1_form"><code class="xref py py-obj docutils literal notranslate"><span class="pre">hodge_decomposition_1_form</span></code></a>(…)</p></td>
+<td><p>Compute the Helmholtz-Hodge decomposition of a 1-form on a closed surface mesh.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#lagrange.polyddg.hodge_decomposition_vector_field" title="lagrange.polyddg.hodge_decomposition_vector_field"><code class="xref py py-obj docutils literal notranslate"><span class="pre">hodge_decomposition_vector_field</span></code></a>(…)</p></td>
+<td><p>Compute the Helmholtz-Hodge decomposition of a per-vertex vector field on a surface mesh.</p></td>
+</tr>
 </tbody>
 </table>
 </div>
@@ -483,6 +492,45 @@ edges in the facet. It maps a 1-form defined on the edges to a 2-form defined on
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="lagrange.polyddg.DifferentialOperators.delta1">
+<span class="sig-name descname"><span class="pre">delta1</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">beta</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lagrange.polyddg.DifferentialOperators.delta1" title="Link to this definition">¶</a></dt>
+<dd><p>Compute the discrete co-differential operator <span class="math notranslate nohighlight">\(\delta_1\)</span> in weak form.</p>
+<p>The co-differential is the formal adjoint of <code class="docutils literal notranslate"><span class="pre">d0</span></code> with respect to the 1-form inner product.
+In this implementation <code class="docutils literal notranslate"><span class="pre">delta1</span></code> returns the weak-form operator <span class="math notranslate nohighlight">\(d_0^T \cdot M_1\)</span>: when applied to a
+primal per-edge scalar 1-form it produces a dual 0-form (an integrated scalar per vertex star),
+not a pointwise primal per-vertex quantity. To obtain a primal 0-form one must apply the inverse
+vertex mass matrix, e.g. <span class="math notranslate nohighlight">\(M_0^{-1} \cdot \text{delta1}(\text{beta}) \cdot \alpha\)</span> for a 1-form <span class="math notranslate nohighlight">\(\alpha\)</span>.</p>
+<p>Equal to <code class="docutils literal notranslate"><span class="pre">divergence(beta)</span></code> in weak form.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>beta</strong> (<em>float</em>) – Weight of projection term for the 1-form inner product (default: 1).</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A sparse matrix of size (#V, #E) implementing <span class="math notranslate nohighlight">\(d_0^T \cdot M_1\)</span>.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>scipy.sparse.csc_matrix[float]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lagrange.polyddg.DifferentialOperators.delta2">
+<span class="sig-name descname"><span class="pre">delta2</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lagrange.polyddg.DifferentialOperators.delta2" title="Link to this definition">¶</a></dt>
+<dd><p>Compute the discrete co-differential operator (<span class="math notranslate nohighlight">\(\delta_2 : \Omega^2 \to \Omega^1\)</span>).</p>
+<p>The co-differential is the formal adjoint of <code class="docutils literal notranslate"><span class="pre">d1</span></code> with respect to the 2-form inner product.
+It maps a per-facet scalar 2-form to a per-edge scalar 1-form.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A sparse matrix of size (#E, #F).</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>scipy.sparse.csc_matrix[float]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="lagrange.polyddg.DifferentialOperators.divergence">
 <span class="sig-name descname"><span class="pre">divergence</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">beta</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lagrange.polyddg.DifferentialOperators.divergence" title="Link to this definition">¶</a></dt>
 <dd><p>Compute the discrete polygonal divergence operator.</p>
@@ -495,6 +543,23 @@ edges in the facet. It maps a 1-form defined on the edges to a 2-form defined on
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>scipy.sparse.csc_matrix[float]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lagrange.polyddg.DifferentialOperators.facet_basis">
+<span class="sig-name descname"><span class="pre">facet_basis</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fid</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lagrange.polyddg.DifferentialOperators.facet_basis" title="Link to this definition">¶</a></dt>
+<dd><p>Compute the local tangent basis for a single facet.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>fid</strong> (<em>int</em>) – Facet index.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A 3x2 matrix whose columns are orthonormal tangent vectors.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Annotated[numpy.typing.NDArray[numpy.float64], dict(shape=(3, 2), order=’F’)]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -621,6 +686,42 @@ the edges of the facet.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="lagrange.polyddg.DifferentialOperators.laplacian1">
+<span class="sig-name descname"><span class="pre">laplacian1</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">beta</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lagrange.polyddg.DifferentialOperators.laplacian1" title="Link to this definition">¶</a></dt>
+<dd><p>Compute the discrete Hodge Laplacian on 1-forms (<span class="math notranslate nohighlight">\(\Delta_1 : \Omega^1 \to \Omega^1\)</span>).</p>
+<p>Combines the exact part (<code class="docutils literal notranslate"><span class="pre">d0</span> <span class="pre">·</span> <span class="pre">delta1(beta)</span></code>) and the co-exact part
+(<code class="docutils literal notranslate"><span class="pre">delta2()</span> <span class="pre">·</span> <span class="pre">d1()</span></code>). Required for full Helmholtz-Hodge decomposition.
+Distinct from <code class="docutils literal notranslate"><span class="pre">connection_laplacian()</span></code>, which acts on tangent vector fields at vertices.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>beta</strong> (<em>float</em>) – Weight of projection term for the 1-form inner product (default: 1).</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A sparse matrix of size (#E, #E).</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>scipy.sparse.csc_matrix[float]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lagrange.polyddg.DifferentialOperators.laplacian2">
+<span class="sig-name descname"><span class="pre">laplacian2</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lagrange.polyddg.DifferentialOperators.laplacian2" title="Link to this definition">¶</a></dt>
+<dd><p>Compute the discrete Laplacian on 2-forms (<span class="math notranslate nohighlight">\(\Delta_2 : \Omega^2 \to \Omega^2\)</span>).</p>
+<p>Equal to <code class="docutils literal notranslate"><span class="pre">d1</span> <span class="pre">·</span> <span class="pre">delta2()</span></code>. Analogous to <code class="docutils literal notranslate"><span class="pre">laplacian()</span></code> but acting on per-facet
+scalar 2-forms. Required for computing the co-exact component in Helmholtz-Hodge decomposition.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A sparse matrix of size (#F, #F).</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>scipy.sparse.csc_matrix[float]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="lagrange.polyddg.DifferentialOperators.levi_civita">
 <span class="sig-name descname"><span class="pre">levi_civita</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">scipy.sparse.csc_matrix</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#lagrange.polyddg.DifferentialOperators.levi_civita" title="Link to this definition">¶</a></dt>
 <dt class="sig sig-object py">
@@ -661,17 +762,16 @@ the edges of the facet.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="lagrange.polyddg.DifferentialOperators.projection">
-<span class="sig-name descname"><span class="pre">projection</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fid</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lagrange.polyddg.DifferentialOperators.projection" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">projection</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">scipy.sparse.csc_matrix</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#lagrange.polyddg.DifferentialOperators.projection" title="Link to this definition">¶</a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">projection</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fid</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Annotated</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.typing.NDArray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">(</span></span><span class="n"><span class="pre">shape</span></span><span class="o"><span class="pre">=</span></span><span class="pre">None</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">None</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">order</span></span><span class="o"><span class="pre">=</span></span><span class="s"><span class="pre">'F'</span></span><span class="p"><span class="pre">)</span></span><span class="p"><span class="pre">]</span></span></span></span></dt>
 <dd><p>Compute the discrete projection operator for a single facet.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>fid</strong> (<em>int</em>) – Facet index.</p>
+<dd class="field-odd"><p><strong>fid</strong> – Facet index.</p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>A dense matrix representing the per-facet projection operator.</p>
-</dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>Annotated[numpy.typing.NDArray[numpy.float64], dict(shape=(None, None), order=’F’)]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -727,14 +827,27 @@ the mean curvature at the facet, and its determinant gives the Gaussian curvatur
 
 <dl class="py method">
 <dt class="sig sig-object py" id="lagrange.polyddg.DifferentialOperators.star1">
-<span class="sig-name descname"><span class="pre">star1</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lagrange.polyddg.DifferentialOperators.star1" title="Link to this definition">¶</a></dt>
-<dd><p>Compute the discrete Hodge star operator for 1-forms (diagonal mass matrix, size #E x #E).</p>
+<span class="sig-name descname"><span class="pre">star1</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">beta</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lagrange.polyddg.DifferentialOperators.star1" title="Link to this definition">¶</a></dt>
+<dd><p>Compute the discrete Hodge star operator for 1-forms (size #E x #E).</p>
+<p>Following de Goes, Butts and Desbrun (ACM Trans. Graph. 2020, Section 4.4), this is the
+VEM-stabilized 1-form inner product assembled from per-face Gram matrices:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">M_f</span> <span class="o">=</span> <span class="n">area_f</span> <span class="o">*</span> <span class="n">U_f</span><span class="o">^</span><span class="n">T</span> <span class="n">U_f</span>  <span class="o">+</span>  <span class="n">beta</span> <span class="o">*</span> <span class="n">P_f</span><span class="o">^</span><span class="n">T</span> <span class="n">P_f</span>
+</pre></div>
+</div>
+<p>where <code class="docutils literal notranslate"><span class="pre">U_f</span></code> is the per-face sharp operator and <code class="docutils literal notranslate"><span class="pre">P_f</span> <span class="pre">=</span> <span class="pre">I</span> <span class="pre">-</span> <span class="pre">V_f</span> <span class="pre">U_f</span></code> projects onto the
+kernel of <code class="docutils literal notranslate"><span class="pre">U_f</span></code>.  The result is a symmetric positive-definite sparse matrix (non-diagonal
+for polygonal meshes).  <code class="docutils literal notranslate"><span class="pre">beta</span> <span class="pre">=</span> <span class="pre">1</span></code> is recommended and gives the best accuracy.</p>
+<p>This is consistent with <a class="reference internal" href="#lagrange.polyddg.DifferentialOperators.star0" title="lagrange.polyddg.DifferentialOperators.star0"><code class="xref py py-meth docutils literal notranslate"><span class="pre">star0()</span></code></a> and <a class="reference internal" href="#lagrange.polyddg.DifferentialOperators.star2" title="lagrange.polyddg.DifferentialOperators.star2"><code class="xref py py-meth docutils literal notranslate"><span class="pre">star2()</span></code></a>, which also delegate to their
+respective inner-product operators.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>A diagonal sparse matrix of size (#E, #E).</p>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>beta</strong> (<em>float</em>) – Stabilization weight for the VEM projection term (default 1).</p>
 </dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p>scipy.sparse.csc_matrix[float]</p>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A symmetric positive-definite sparse matrix of size (#E, #E).</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>scipy.sparse.csc_matrix[float]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -749,6 +862,23 @@ the mean curvature at the facet, and its determinant gives the Gaussian curvatur
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
 <dd class="field-even"><p>scipy.sparse.csc_matrix[float]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lagrange.polyddg.DifferentialOperators.vertex_basis">
+<span class="sig-name descname"><span class="pre">vertex_basis</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vid</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lagrange.polyddg.DifferentialOperators.vertex_basis" title="Link to this definition">¶</a></dt>
+<dd><p>Compute the local tangent basis for a single vertex.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>vid</strong> (<em>int</em>) – Vertex index.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A 3x2 matrix whose columns are orthonormal tangent vectors.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Annotated[numpy.typing.NDArray[numpy.float64], dict(shape=(3, 2), order=’F’)]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -832,6 +962,106 @@ are the principal directions. All four quantities are stored as vertex attribute
 </dl>
 </dd></dl>
 
+<dl class="py function">
+<dt class="sig sig-object py" id="lagrange.polyddg.compute_smooth_direction_field">
+<span class="sig-prename descclassname"><span class="pre">lagrange.polyddg.</span></span><span class="sig-name descname"><span class="pre">compute_smooth_direction_field</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mesh</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ops</span></span></em>, <em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">nrosy</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">4</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">beta</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alignment_attribute</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alignment_weight</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">direction_field_attribute</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'&#64;smooth_direction_field'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lagrange.polyddg.compute_smooth_direction_field" title="Link to this definition">¶</a></dt>
+<dd><p>Compute the globally smoothest n-direction field on a surface mesh.</p>
+<p>Based on: Knöppel et al., “Globally optimal direction fields”, ACM ToG 32(4), 2013.</p>
+<p>Without alignment constraints (<code class="docutils literal notranslate"><span class="pre">alignment_attribute</span></code> is empty), solves the generalized
+eigenvalue problem <span class="math notranslate nohighlight">\(L u = \sigma M u\)</span> for the smallest eigenvector. The result
+minimizes the Dirichlet energy of the connection.</p>
+<p>With alignment constraints, reads per-vertex prescribed 3-D tangent vectors from the given
+attribute (zero-length vectors are unconstrained) and solves the shifted linear system
+<span class="math notranslate nohighlight">\((L - \alpha M) u = M q\)</span>, where <span class="math notranslate nohighlight">\(q\)</span> is the M-normalized prescribed field and
+<span class="math notranslate nohighlight">\(\alpha = \texttt{alignment\_lambda} \cdot \sigma_{\min}\)</span>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>mesh</strong> (<a class="reference internal" href="../core/index.html#lagrange.core.SurfaceMesh" title="lagrange.core.SurfaceMesh"><em>lagrange.core.SurfaceMesh</em></a>) – Input surface mesh (modified in place with the new attribute).</p></li>
+<li><p><strong>ops</strong> (<a class="reference internal" href="#lagrange.polyddg.DifferentialOperators" title="lagrange.polyddg.DifferentialOperators"><em>DifferentialOperators</em></a>) – Precomputed <a class="reference internal" href="#lagrange.polyddg.DifferentialOperators" title="lagrange.polyddg.DifferentialOperators"><code class="xref py py-class docutils literal notranslate"><span class="pre">DifferentialOperators</span></code></a> for the mesh.</p></li>
+<li><p><strong>nrosy</strong> (<em>int</em>) – Symmetry order of the direction field (1 = vector field, 2 = line field,
+4 = cross field, default: 4).</p></li>
+<li><p><strong>beta</strong> (<em>float</em>) – Stabilization weight for the VEM projection term in the connection Laplacian
+(default: 1).</p></li>
+<li><p><strong>alignment_attribute</strong> (<em>str</em>) – Name of a per-vertex 3-D alignment vector attribute (zero =
+unconstrained). If empty, the unconstrained smoothest field is computed.</p></li>
+<li><p><strong>alignment_weight</strong> (<em>float</em>) – Scaling factor for the spectral shift (default: 1). The actual
+shift is <code class="docutils literal notranslate"><span class="pre">alignment_weight</span> <span class="pre">*</span> <span class="pre">sigma_min</span></code>, where <code class="docutils literal notranslate"><span class="pre">sigma_min</span></code> is the smallest eigenvalue
+of the connection Laplacian (computed automatically). Values in (0, 1) give weaker
+alignment (more smoothness).</p></li>
+<li><p><strong>direction_field_attribute</strong> (<em>str</em>) – Output attribute name for the per-vertex 3-D direction
+field (default: <code class="docutils literal notranslate"><span class="pre">&quot;&#64;smooth_direction_field&quot;</span></code>).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Attribute ID of the output per-vertex direction field.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="lagrange.polyddg.hodge_decomposition_1_form">
+<span class="sig-prename descclassname"><span class="pre">lagrange.polyddg.</span></span><span class="sig-name descname"><span class="pre">hodge_decomposition_1_form</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mesh</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../core/index.html#lagrange.core.SurfaceMesh" title="lagrange.core.SurfaceMesh"><span class="pre">lagrange.core.SurfaceMesh</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">ops</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#lagrange.polyddg.DifferentialOperators" title="lagrange.polyddg.DifferentialOperators"><span class="pre">DifferentialOperators</span></a></span></em>, <em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_attribute</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'&#64;hodge_input'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exact_attribute</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'&#64;hodge_exact'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">coexact_attribute</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'&#64;hodge_coexact'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">harmonic_attribute</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'&#64;hodge_harmonic'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">beta</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1.0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#lagrange.polyddg.hodge_decomposition_1_form" title="Link to this definition">¶</a></dt>
+<dt class="sig sig-object py">
+<span class="sig-prename descclassname"><span class="pre">lagrange.polyddg.</span></span><span class="sig-name descname"><span class="pre">hodge_decomposition_1_form</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mesh</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../core/index.html#lagrange.core.SurfaceMesh" title="lagrange.core.SurfaceMesh"><span class="pre">lagrange.core.SurfaceMesh</span></a></span></em>, <em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_attribute</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'&#64;hodge_input'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exact_attribute</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'&#64;hodge_exact'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">coexact_attribute</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'&#64;hodge_coexact'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">harmonic_attribute</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'&#64;hodge_harmonic'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">beta</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1.0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></span></dt>
+<dd><p>Compute the Helmholtz-Hodge decomposition of a 1-form on a closed surface mesh.</p>
+<p>Convenience overload that constructs a <a class="reference internal" href="#lagrange.polyddg.DifferentialOperators" title="lagrange.polyddg.DifferentialOperators"><code class="xref py py-class docutils literal notranslate"><span class="pre">DifferentialOperators</span></code></a> instance internally.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>mesh</strong> – Input surface mesh (modified in place with new attributes). The input attribute
+(per-edge scalar) must already exist on the mesh.</p></li>
+<li><p><strong>input_attribute</strong> – Edge attribute name of the input 1-form
+(default: <code class="docutils literal notranslate"><span class="pre">&quot;&#64;hodge_1form_input&quot;</span></code>).</p></li>
+<li><p><strong>exact_attribute</strong> – Output edge attribute name for the exact component
+(default: <code class="docutils literal notranslate"><span class="pre">&quot;&#64;hodge_1form_exact&quot;</span></code>).</p></li>
+<li><p><strong>coexact_attribute</strong> – Output edge attribute name for the co-exact component
+(default: <code class="docutils literal notranslate"><span class="pre">&quot;&#64;hodge_1form_coexact&quot;</span></code>).</p></li>
+<li><p><strong>harmonic_attribute</strong> – Output edge attribute name for the harmonic component
+(default: <code class="docutils literal notranslate"><span class="pre">&quot;&#64;hodge_1form_harmonic&quot;</span></code>).</p></li>
+<li><p><strong>beta</strong> – Stabilization weight for the VEM 1-form inner product (default: 1).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A tuple <code class="docutils literal notranslate"><span class="pre">(exact_id,</span> <span class="pre">coexact_id,</span> <span class="pre">harmonic_id)</span></code> of edge attribute IDs.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="lagrange.polyddg.hodge_decomposition_vector_field">
+<span class="sig-prename descclassname"><span class="pre">lagrange.polyddg.</span></span><span class="sig-name descname"><span class="pre">hodge_decomposition_vector_field</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mesh</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../core/index.html#lagrange.core.SurfaceMesh" title="lagrange.core.SurfaceMesh"><span class="pre">lagrange.core.SurfaceMesh</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">ops</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#lagrange.polyddg.DifferentialOperators" title="lagrange.polyddg.DifferentialOperators"><span class="pre">DifferentialOperators</span></a></span></em>, <em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_attribute</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'&#64;hodge_input'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exact_attribute</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'&#64;hodge_exact'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">coexact_attribute</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'&#64;hodge_coexact'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">harmonic_attribute</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'&#64;hodge_harmonic'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">beta</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nrosy</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#lagrange.polyddg.hodge_decomposition_vector_field" title="Link to this definition">¶</a></dt>
+<dt class="sig sig-object py">
+<span class="sig-prename descclassname"><span class="pre">lagrange.polyddg.</span></span><span class="sig-name descname"><span class="pre">hodge_decomposition_vector_field</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mesh</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../core/index.html#lagrange.core.SurfaceMesh" title="lagrange.core.SurfaceMesh"><span class="pre">lagrange.core.SurfaceMesh</span></a></span></em>, <em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_attribute</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'&#64;hodge_input'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exact_attribute</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'&#64;hodge_exact'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">coexact_attribute</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'&#64;hodge_coexact'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">harmonic_attribute</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'&#64;hodge_harmonic'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">beta</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nrosy</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></span></dt>
+<dd><p>Compute the Helmholtz-Hodge decomposition of a per-vertex vector field on a surface mesh.</p>
+<p>Convenience overload that constructs a <a class="reference internal" href="#lagrange.polyddg.DifferentialOperators" title="lagrange.polyddg.DifferentialOperators"><code class="xref py py-class docutils literal notranslate"><span class="pre">DifferentialOperators</span></code></a> instance internally.</p>
+<p>When <code class="docutils literal notranslate"><span class="pre">nrosy</span> <span class="pre">&gt;</span> <span class="pre">1</span></code>, the input is treated as one representative vector of an n-rosy field.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>mesh</strong> – Input surface mesh (modified in place with new attributes). The input attribute
+(per-vertex 3D vector) must already exist on the mesh.</p></li>
+<li><p><strong>input_attribute</strong> – Vertex attribute name of the input vector field
+(default: <code class="docutils literal notranslate"><span class="pre">&quot;&#64;hodge_input&quot;</span></code>).</p></li>
+<li><p><strong>exact_attribute</strong> – Output vertex attribute name for the exact component
+(default: <code class="docutils literal notranslate"><span class="pre">&quot;&#64;hodge_exact&quot;</span></code>).</p></li>
+<li><p><strong>coexact_attribute</strong> – Output vertex attribute name for the co-exact component
+(default: <code class="docutils literal notranslate"><span class="pre">&quot;&#64;hodge_coexact&quot;</span></code>).</p></li>
+<li><p><strong>harmonic_attribute</strong> – Output vertex attribute name for the harmonic component
+(default: <code class="docutils literal notranslate"><span class="pre">&quot;&#64;hodge_harmonic&quot;</span></code>).</p></li>
+<li><p><strong>beta</strong> – Stabilization weight for the VEM 1-form inner product (default: 1).</p></li>
+<li><p><strong>nrosy</strong> – N-rosy symmetry order (default: 1 for plain vector fields).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A tuple <code class="docutils literal notranslate"><span class="pre">(exact_id,</span> <span class="pre">coexact_id,</span> <span class="pre">harmonic_id)</span></code> of vertex attribute IDs.</p>
+</dd>
+</dl>
+</dd></dl>
+
 </section>
 </section>
 
@@ -906,7 +1136,10 @@ are the principal directions. All four quantities are stored as vertex attribute
 <li><a class="reference internal" href="#lagrange.polyddg.DifferentialOperators.curl"><code class="docutils literal notranslate"><span class="pre">DifferentialOperators.curl()</span></code></a></li>
 <li><a class="reference internal" href="#lagrange.polyddg.DifferentialOperators.d0"><code class="docutils literal notranslate"><span class="pre">DifferentialOperators.d0()</span></code></a></li>
 <li><a class="reference internal" href="#lagrange.polyddg.DifferentialOperators.d1"><code class="docutils literal notranslate"><span class="pre">DifferentialOperators.d1()</span></code></a></li>
+<li><a class="reference internal" href="#lagrange.polyddg.DifferentialOperators.delta1"><code class="docutils literal notranslate"><span class="pre">DifferentialOperators.delta1()</span></code></a></li>
+<li><a class="reference internal" href="#lagrange.polyddg.DifferentialOperators.delta2"><code class="docutils literal notranslate"><span class="pre">DifferentialOperators.delta2()</span></code></a></li>
 <li><a class="reference internal" href="#lagrange.polyddg.DifferentialOperators.divergence"><code class="docutils literal notranslate"><span class="pre">DifferentialOperators.divergence()</span></code></a></li>
+<li><a class="reference internal" href="#lagrange.polyddg.DifferentialOperators.facet_basis"><code class="docutils literal notranslate"><span class="pre">DifferentialOperators.facet_basis()</span></code></a></li>
 <li><a class="reference internal" href="#lagrange.polyddg.DifferentialOperators.facet_tangent_coordinates"><code class="docutils literal notranslate"><span class="pre">DifferentialOperators.facet_tangent_coordinates()</span></code></a></li>
 <li><a class="reference internal" href="#lagrange.polyddg.DifferentialOperators.flat"><code class="docutils literal notranslate"><span class="pre">DifferentialOperators.flat()</span></code></a></li>
 <li><a class="reference internal" href="#lagrange.polyddg.DifferentialOperators.gradient"><code class="docutils literal notranslate"><span class="pre">DifferentialOperators.gradient()</span></code></a></li>
@@ -914,6 +1147,8 @@ are the principal directions. All four quantities are stored as vertex attribute
 <li><a class="reference internal" href="#lagrange.polyddg.DifferentialOperators.inner_product_1_form"><code class="docutils literal notranslate"><span class="pre">DifferentialOperators.inner_product_1_form()</span></code></a></li>
 <li><a class="reference internal" href="#lagrange.polyddg.DifferentialOperators.inner_product_2_form"><code class="docutils literal notranslate"><span class="pre">DifferentialOperators.inner_product_2_form()</span></code></a></li>
 <li><a class="reference internal" href="#lagrange.polyddg.DifferentialOperators.laplacian"><code class="docutils literal notranslate"><span class="pre">DifferentialOperators.laplacian()</span></code></a></li>
+<li><a class="reference internal" href="#lagrange.polyddg.DifferentialOperators.laplacian1"><code class="docutils literal notranslate"><span class="pre">DifferentialOperators.laplacian1()</span></code></a></li>
+<li><a class="reference internal" href="#lagrange.polyddg.DifferentialOperators.laplacian2"><code class="docutils literal notranslate"><span class="pre">DifferentialOperators.laplacian2()</span></code></a></li>
 <li><a class="reference internal" href="#lagrange.polyddg.DifferentialOperators.levi_civita"><code class="docutils literal notranslate"><span class="pre">DifferentialOperators.levi_civita()</span></code></a></li>
 <li><a class="reference internal" href="#lagrange.polyddg.DifferentialOperators.levi_civita_nrosy"><code class="docutils literal notranslate"><span class="pre">DifferentialOperators.levi_civita_nrosy()</span></code></a></li>
 <li><a class="reference internal" href="#lagrange.polyddg.DifferentialOperators.projection"><code class="docutils literal notranslate"><span class="pre">DifferentialOperators.projection()</span></code></a></li>
@@ -922,6 +1157,7 @@ are the principal directions. All four quantities are stored as vertex attribute
 <li><a class="reference internal" href="#lagrange.polyddg.DifferentialOperators.star0"><code class="docutils literal notranslate"><span class="pre">DifferentialOperators.star0()</span></code></a></li>
 <li><a class="reference internal" href="#lagrange.polyddg.DifferentialOperators.star1"><code class="docutils literal notranslate"><span class="pre">DifferentialOperators.star1()</span></code></a></li>
 <li><a class="reference internal" href="#lagrange.polyddg.DifferentialOperators.star2"><code class="docutils literal notranslate"><span class="pre">DifferentialOperators.star2()</span></code></a></li>
+<li><a class="reference internal" href="#lagrange.polyddg.DifferentialOperators.vertex_basis"><code class="docutils literal notranslate"><span class="pre">DifferentialOperators.vertex_basis()</span></code></a></li>
 <li><a class="reference internal" href="#lagrange.polyddg.DifferentialOperators.vertex_tangent_coordinates"><code class="docutils literal notranslate"><span class="pre">DifferentialOperators.vertex_tangent_coordinates()</span></code></a></li>
 <li><a class="reference internal" href="#lagrange.polyddg.DifferentialOperators.centroid_attribute_id"><code class="docutils literal notranslate"><span class="pre">DifferentialOperators.centroid_attribute_id</span></code></a></li>
 <li><a class="reference internal" href="#lagrange.polyddg.DifferentialOperators.vector_area_attribute_id"><code class="docutils literal notranslate"><span class="pre">DifferentialOperators.vector_area_attribute_id</span></code></a></li>
@@ -929,6 +1165,9 @@ are the principal directions. All four quantities are stored as vertex attribute
 </ul>
 </li>
 <li><a class="reference internal" href="#lagrange.polyddg.compute_principal_curvatures"><code class="docutils literal notranslate"><span class="pre">compute_principal_curvatures()</span></code></a></li>
+<li><a class="reference internal" href="#lagrange.polyddg.compute_smooth_direction_field"><code class="docutils literal notranslate"><span class="pre">compute_smooth_direction_field()</span></code></a></li>
+<li><a class="reference internal" href="#lagrange.polyddg.hodge_decomposition_1_form"><code class="docutils literal notranslate"><span class="pre">hodge_decomposition_1_form()</span></code></a></li>
+<li><a class="reference internal" href="#lagrange.polyddg.hodge_decomposition_vector_field"><code class="docutils literal notranslate"><span class="pre">hodge_decomposition_vector_field()</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -946,5 +1185,6 @@ are the principal directions. All four quantities are stored as vertex attribute
     <script src="../../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../_static/scripts/furo.js?v=46bd48cc"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     </body>
 </html>

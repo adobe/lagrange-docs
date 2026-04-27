@@ -160,7 +160,7 @@ $(function(){initNavTree('legacy_2remove__duplicate__facets_8h_source.html','');
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="keyword">using </span>Index = <span class="keyword">typename</span> MeshType::FacetArray::Scalar;</div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="keyword">using </span><a class="code hl_enumvalue" href="group__group-surfacemesh-attr.html#gga9d8ab208822bab9987e9652dda49d89aa9b112d86d52178fe18e47e14bb6aeb35">Facet</a> = std::array&lt;Index, 3&gt;;</div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="keyword">const</span> Index num_facets = mesh.<a class="code hl_function" href="classlagrange_1_1_surface_mesh.html#abcf8a67369f4ebda946306ae39673d4a">get_num_facets</a>();</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="keyword">const</span> Index num_facets = mesh.get_num_facets();</div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="keyword">const</span> <span class="keyword">auto</span>&amp; facets = mesh.get_facets();</div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <span class="keyword">auto</span> facet_hash = [](<span class="keyword">const</span> <a class="code hl_enumvalue" href="group__group-surfacemesh-attr.html#gga9d8ab208822bab9987e9652dda49d89aa9b112d86d52178fe18e47e14bb6aeb35">Facet</a>&amp; f) { <span class="keywordflow">return</span> f[0] + f[1] + f[2]; };</div>
@@ -226,7 +226,6 @@ $(function(){initNavTree('legacy_2remove__duplicate__facets_8h_source.html','');
 <div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>}</div>
 <div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>} <span class="comment">// namespace legacy</span></div>
 <div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>} <span class="comment">// namespace lagrange</span></div>
-<div class="ttc" id="aclasslagrange_1_1_surface_mesh_html_abcf8a67369f4ebda946306ae39673d4a"><div class="ttname"><a href="classlagrange_1_1_surface_mesh.html#abcf8a67369f4ebda946306ae39673d4a">lagrange::SurfaceMesh::get_num_facets</a></div><div class="ttdeci">Index get_num_facets() const</div><div class="ttdoc">Retrieves the number of facets.</div><div class="ttdef"><b>Definition</b> SurfaceMesh.h:687</div></div>
 <div class="ttc" id="agroup__group-surfacemesh-attr_html_gga9d8ab208822bab9987e9652dda49d89aa9b112d86d52178fe18e47e14bb6aeb35"><div class="ttname"><a href="group__group-surfacemesh-attr.html#gga9d8ab208822bab9987e9652dda49d89aa9b112d86d52178fe18e47e14bb6aeb35">lagrange::Facet</a></div><div class="ttdeci">@ Facet</div><div class="ttdoc">Per-facet mesh attributes.</div><div class="ttdef"><b>Definition</b> AttributeFwd.h:31</div></div>
 <div class="ttc" id="anamespacelagrange_html"><div class="ttname"><a href="namespacelagrange.html">lagrange</a></div><div class="ttdoc">Main namespace for Lagrange.</div></div>
 <div class="ttc" id="anamespacelagrange_html_a01a55c916bd22d4ee64baa54c4993344"><div class="ttname"><a href="namespacelagrange.html#a01a55c916bd22d4ee64baa54c4993344">lagrange::create_mesh</a></div><div class="ttdeci">auto create_mesh(const Eigen::MatrixBase&lt; DerivedV &gt; &amp;vertices, const Eigen::MatrixBase&lt; DerivedF &gt; &amp;facets)</div><div class="ttdoc">This function create a new mesh given the vertex and facet arrays by copying data into the Mesh objec...</div><div class="ttdef"><b>Definition</b> create_mesh.h:39</div></div>
@@ -236,7 +235,7 @@ $(function(){initNavTree('legacy_2remove__duplicate__facets_8h_source.html','');
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_e277d0e790805391a364b883bec7db94.html">lagrange</a></li><li class="navelem"><a class="el" href="dir_75e0496104c9e7e6e5aa94b4468f4343.html">mesh_cleanup</a></li><li class="navelem"><a class="el" href="dir_add1cb73fbf1b581a4edbc1bea2ee870.html">legacy</a></li><li class="navelem"><b>remove_duplicate_facets.h</b></li>
-    <li class="footer">Generated on Fri Mar 27 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+    <li class="footer">Generated on Mon Apr 27 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>
 </body>

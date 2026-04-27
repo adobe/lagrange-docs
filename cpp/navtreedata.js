@@ -57,19 +57,20 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "../",
-"classlagrange_1_1_mesh_navigation.html#a7f00680054ba02315da270847e05ceb1",
-"classlagrange_1_1_surface_mesh.html#ac157b831ddc57161b8ed54625946b33d",
-"classlagrange_1_1internal_1_1default__delete_3_01_t_0f_0e_4.html#a8d5654ff5e72f5312fe6241ce8904a10",
-"classlagrange_1_1raycasting_1_1_ray_caster.html#a092f143ba56c05bd8d0a75375938cfba",
-"classlagrange_1_1ui_1_1_frame_buffer.html",
-"group__group-surfacemesh-attr.html#gaa6b9ce91409ac67b7b5319cf573f66b8",
-"group__module-primitive.html#ga04f78e3e0c3b2fecb874cec028a27c20",
-"namespacelagrange_1_1io.html#a92d9ed7dedce77061a4ae4b48cf1e696",
-"structlagrange_1_1_corner_normal_options.html#adb3d5d7fc11c1d2a87c6d678f225e981",
-"structlagrange_1_1experimental_1_1_enum_to_scalar_3_01_scalar_enum_1_1_u_i_n_t64_01_4.html",
-"structlagrange_1_1primitive_1_1_octahedron_options.html",
-"structlagrange_1_1subdivision_1_1_subdivision_options.html#a691ba1d5855d3a5db8b178244dfa0f4b",
-"structlagrange_1_1ui_1_1_selected_event.html"
+"classlagrange_1_1_mesh_navigation.html#ab4b72663d159f5e5280c524fab4cebc3",
+"classlagrange_1_1_surface_mesh.html#add807d4ec4699aba67e2e2857599b50f",
+"classlagrange_1_1internal_1_1shared__ptr.html#a3791260580b750b7e8b2c6ae900f787f",
+"classlagrange_1_1raycasting_1_1_ray_caster.html#a2e00419dd6871a0befba5a2f16f5a743",
+"classlagrange_1_1ui_1_1_keybinds.html#a0d187713751b35153120f90c2ab685ac",
+"group__group-surfacemesh-attr-utils.html#gae8deb2977d6d78e0b8e3a9a7773b6c72",
+"group__group-utils-misc.html#gabc213e8639504f32e944828c1634d13e",
+"namespacelagrange_1_1io.html#a187a3b61d73c5c89bc62f363e2028d8d",
+"structlagrange_1_1_attribute_filter.html#af506671fd3483ecdc257a2a205e45dd4",
+"structlagrange_1_1experimental_1_1_scalar_to_enum_3_01float_00_01void_01_4.html",
+"structlagrange_1_1polyddg_1_1_principal_curvatures_options.html",
+"structlagrange_1_1scene_1_1_texture.html",
+"structlagrange_1_1ui_1_1_input_state_1_1_mouse.html#a03c7b11f1388dad69110dd19809558de",
+"structlagrange_1_1ui_1_1util_1_1_as_function.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';

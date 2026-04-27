@@ -125,6 +125,7 @@ $(function(){initNavTree('group__module-bvh.html',''); initResizable(true); });
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#typedef-members">Typedefs</a> &#124;
+<a href="#enum-members">Enumerations</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">BVH Module</div></div>
 </div><!--header-->
@@ -140,6 +141,12 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlagrange_1_1bvh_1_1_mesh_distances_options.html">MeshDistancesOptions</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Options for compute_mesh_distances.  <a href="structlagrange_1_1bvh_1_1_mesh_distances_options.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlagrange_1_1bvh_1_1_u_v_overlap_options.html">UVOverlapOptions</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Options for compute_uv_overlap.  <a href="structlagrange_1_1bvh_1_1_u_v_overlap_options.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlagrange_1_1bvh_1_1_u_v_overlap_result.html">UVOverlapResult&lt; Scalar, Index &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Result of compute_uv_overlap.  <a href="structlagrange_1_1bvh_1_1_u_v_overlap_result.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlagrange_1_1bvh_1_1_edge_a_a_b_b_tree.html">EdgeAABBTree&lt; VertexArray, EdgeArray, Dim &gt;</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -168,6 +175,15 @@ using&#160;</td><td class="memItemRight" valign="bottom"><b>ActionCallback</b> =
 <tr class="memdesc:ga386999d5e43dd47823f5b247745957ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">closest_sq_dist x element_id x closest_point <br /></td></tr>
 <tr class="separator:ga386999d5e43dd47823f5b247745957ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:ga7e55018c6fcf6fb3e8f6b02e4fc46892" id="r_ga7e55018c6fcf6fb3e8f6b02e4fc46892"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga7e55018c6fcf6fb3e8f6b02e4fc46892">UVOverlapMethod</a> { <a class="el" href="#gga7e55018c6fcf6fb3e8f6b02e4fc46892ac490cb8cd3c70c9f65c380176d0099ea">SweepAndPrune</a>
+, <a class="el" href="#gga7e55018c6fcf6fb3e8f6b02e4fc46892a9f81c52bdd5797801a0bd46508fa27a6">BVH</a>
+, <a class="el" href="#gga7e55018c6fcf6fb3e8f6b02e4fc46892afb1b6e23a3767d2a31ef7899e6dd3f1e">Hybrid</a>
+ }</td></tr>
+<tr class="memdesc:ga7e55018c6fcf6fb3e8f6b02e4fc46892"><td class="mdescLeft">&#160;</td><td class="mdescRight">Algorithm used to find candidate bounding-box pairs in compute_uv_overlap.  <a href="#ga7e55018c6fcf6fb3e8f6b02e4fc46892">More...</a><br /></td></tr>
+<tr class="separator:ga7e55018c6fcf6fb3e8f6b02e4fc46892"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:ga5f64c98d00b325344dd5b57e51f16451" id="r_ga5f64c98d00b325344dd5b57e51f16451"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, typename Index&gt; </td></tr>
@@ -182,6 +198,10 @@ Functions</h2></td></tr>
 <tr class="memitem:ga3cd0f3afed6a3bae7aae59407e491489"><td class="memTemplItemLeft" align="right" valign="top">LA_BVH_API <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ga3cd0f3afed6a3bae7aae59407e491489">compute_chamfer</a> (const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index &gt; &amp;source, const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index &gt; &amp;target)</td></tr>
 <tr class="memdesc:ga3cd0f3afed6a3bae7aae59407e491489"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the Chamfer distance between <code class="param">source</code> and <code class="param">target</code>.  <br /></td></tr>
 <tr class="separator:ga3cd0f3afed6a3bae7aae59407e491489"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga32a555d00a25d570ed2b9fa2e0940bd1" id="r_ga32a555d00a25d570ed2b9fa2e0940bd1"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, typename Index&gt; </td></tr>
+<tr class="memitem:ga32a555d00a25d570ed2b9fa2e0940bd1"><td class="memTemplItemLeft" align="right" valign="top">LA_BVH_API <a class="el" href="structlagrange_1_1bvh_1_1_u_v_overlap_result.html">UVOverlapResult</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ga32a555d00a25d570ed2b9fa2e0940bd1">compute_uv_overlap</a> (<a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index &gt; &amp;mesh, const <a class="el" href="structlagrange_1_1bvh_1_1_u_v_overlap_options.html">UVOverlapOptions</a> &amp;options={})</td></tr>
+<tr class="memdesc:ga32a555d00a25d570ed2b9fa2e0940bd1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute pairwise UV triangle overlap.  <br /></td></tr>
+<tr class="separator:ga32a555d00a25d570ed2b9fa2e0940bd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gadd5d672df21cf5d9157453f22576742f" id="r_gadd5d672df21cf5d9157453f22576742f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gadd5d672df21cf5d9157453f22576742f">EdgeAABBTree</a> (const VertexArray &amp;V, const EdgeArray &amp;E)</td></tr>
 <tr class="memdesc:gadd5d672df21cf5d9157453f22576742f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct an AABB over the given edge graph.  <br /></td></tr>
 <tr class="separator:gadd5d672df21cf5d9157453f22576742f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -207,6 +227,45 @@ Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>Bounding Volume Hierarchy (BVH) construction and traversal. </p>
+<h2 class="groupheader">Enumeration Type Documentation</h2>
+<a id="ga7e55018c6fcf6fb3e8f6b02e4fc46892" name="ga7e55018c6fcf6fb3e8f6b02e4fc46892"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga7e55018c6fcf6fb3e8f6b02e4fc46892">&#9670;&#160;</a></span>UVOverlapMethod</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum class <a class="el" href="#ga7e55018c6fcf6fb3e8f6b02e4fc46892">UVOverlapMethod</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel strong">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;lagrange/bvh/compute_uv_overlap.h&gt;</code></p>
+
+<p>Algorithm used to find candidate bounding-box pairs in compute_uv_overlap. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="gga7e55018c6fcf6fb3e8f6b02e4fc46892ac490cb8cd3c70c9f65c380176d0099ea" name="gga7e55018c6fcf6fb3e8f6b02e4fc46892ac490cb8cd3c70c9f65c380176d0099ea"></a>SweepAndPrune&#160;</td><td class="fielddoc"><p>Zomorodian-Edelsbrunner sweep-and-prune. </p>
+<p>Sorts triangle bounding-box x-intervals and sweeps a 1-D active set to enumerate all overlapping pairs in O((n + k) log n) time, where k is the output size. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga7e55018c6fcf6fb3e8f6b02e4fc46892a9f81c52bdd5797801a0bd46508fa27a6" name="gga7e55018c6fcf6fb3e8f6b02e4fc46892a9f81c52bdd5797801a0bd46508fa27a6"></a>BVH&#160;</td><td class="fielddoc"><p>AABB tree per-triangle query. </p>
+<p>Builds an <a class="el" href="classlagrange_1_1bvh_1_1_a_a_b_b.html">AABB&lt;Scalar,2&gt;</a> tree on all triangle bounding boxes, then queries each box against the tree in parallel. Useful for benchmarking and cross-validation against the sweep-and-prune path. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga7e55018c6fcf6fb3e8f6b02e4fc46892afb1b6e23a3767d2a31ef7899e6dd3f1e" name="gga7e55018c6fcf6fb3e8f6b02e4fc46892afb1b6e23a3767d2a31ef7899e6dd3f1e"></a>Hybrid&#160;</td><td class="fielddoc"><p>Zomorodian-Edelsbrunner HYBRID algorithm (recursive divide-and-conquer). </p>
+<p>Based on the HYBRID procedure from Figure 5 of "Fast Software for Box
+Intersections" (Zomorodian &amp; Edelsbrunner, 2002), simplified for the 2-D complete case. Recursively splits on the y-dimension median, handles spanning intervals at each node with a one-dimensional OneWayScan, and falls through to scanning for subsets below a cutoff size. See the implementation file for a detailed description of the differences from the paper's algorithm. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="ga5f64c98d00b325344dd5b57e51f16451" name="ga5f64c98d00b325344dd5b57e51f16451"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga5f64c98d00b325344dd5b57e51f16451">&#9670;&#160;</a></span>compute_mesh_distances()</h2>
@@ -347,6 +406,50 @@ template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Chamfer distance.</dd></dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Scalar</td><td>Mesh scalar type. </td></tr>
+    <tr><td class="paramname">Index</td><td>Mesh index type. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga32a555d00a25d570ed2b9fa2e0940bd1" name="ga32a555d00a25d570ed2b9fa2e0940bd1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga32a555d00a25d570ed2b9fa2e0940bd1">&#9670;&#160;</a></span>compute_uv_overlap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, typename Index&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">LA_BVH_API <a class="el" href="structlagrange_1_1bvh_1_1_u_v_overlap_result.html">UVOverlapResult</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index &gt; compute_uv_overlap </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>mesh</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structlagrange_1_1bvh_1_1_u_v_overlap_options.html">UVOverlapOptions</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>options</em></span><span class="paramdefsep"> = </span><span class="paramdefval">{}</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;lagrange/bvh/compute_uv_overlap.h&gt;</code></p>
+
+<p>Compute pairwise UV triangle overlap. </p>
+<p>For every pair of UV-space triangles whose 2-D axis-aligned bounding boxes intersect (detected via the Zomorodian-Edelsbrunner sweep-and-prune or a BVH), an exact separating-axis test using orient2D predicates is applied to confirm a genuine interior intersection before computing the intersection area using Sutherland-Hodgman polygon clipping.</p>
+<p>Triangles that share only a boundary edge or a single vertex are never counted as overlapping — the exact orient2D predicate handles boundary contacts correctly.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">mesh</td><td>Input triangle mesh with a UV attribute. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">options</td><td>Options controlling algorithm and output.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="structlagrange_1_1bvh_1_1_u_v_overlap_result.html">UVOverlapResult</a> containing the optional total overlap area and the optional AttributeId of the per-facet coloring attribute.</dd></dl>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">Scalar</td><td>Mesh scalar type. </td></tr>
@@ -637,7 +740,7 @@ template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Fri Mar 27 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+    <li class="footer">Generated on Mon Apr 27 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>
 </body>

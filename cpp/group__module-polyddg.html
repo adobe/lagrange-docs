@@ -140,8 +140,17 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlagrange_1_1polyddg_1_1_principal_curvatures_result.html">PrincipalCurvaturesResult</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Result of compute_principal_curvatures().  <a href="structlagrange_1_1polyddg_1_1_principal_curvatures_result.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlagrange_1_1polyddg_1_1_smooth_direction_field_options.html">SmoothDirectionFieldOptions</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Options for compute_smooth_direction_field().  <a href="structlagrange_1_1polyddg_1_1_smooth_direction_field_options.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlagrange_1_1polyddg_1_1_differential_operators.html">DifferentialOperators&lt; Scalar, Index &gt;</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Polygonal mesh discrete differential operators.  <a href="classlagrange_1_1polyddg_1_1_differential_operators.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlagrange_1_1polyddg_1_1_hodge_decomposition_options.html">HodgeDecompositionOptions</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Options for Hodge decomposition functions.  <a href="structlagrange_1_1polyddg_1_1_hodge_decomposition_options.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlagrange_1_1polyddg_1_1_hodge_decomposition_result.html">HodgeDecompositionResult</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Result of Hodge decomposition functions.  <a href="structlagrange_1_1polyddg_1_1_hodge_decomposition_result.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
@@ -154,6 +163,28 @@ Functions</h2></td></tr>
 <tr class="memitem:ga55bce86c9cd4b27f84a0c7ea45dea472"><td class="memTemplItemLeft" align="right" valign="top">LA_POLYDDG_API <a class="el" href="structlagrange_1_1polyddg_1_1_principal_curvatures_result.html">PrincipalCurvaturesResult</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ga55bce86c9cd4b27f84a0c7ea45dea472">compute_principal_curvatures</a> (<a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index &gt; &amp;mesh, <a class="el" href="structlagrange_1_1polyddg_1_1_principal_curvatures_options.html">PrincipalCurvaturesOptions</a> options={})</td></tr>
 <tr class="memdesc:ga55bce86c9cd4b27f84a0c7ea45dea472"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute per-vertex principal curvatures and principal curvature directions.  <br /></td></tr>
 <tr class="separator:ga55bce86c9cd4b27f84a0c7ea45dea472"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5df3086e2ff6fc5c887491b4e4f68bcc" id="r_ga5df3086e2ff6fc5c887491b4e4f68bcc"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, typename Index&gt; </td></tr>
+<tr class="memitem:ga5df3086e2ff6fc5c887491b4e4f68bcc"><td class="memTemplItemLeft" align="right" valign="top">LA_POLYDDG_API <a class="el" href="group__group-surfacemesh-attr.html#ga4d115376c2c766084ef808c837348fc3">AttributeId</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ga5df3086e2ff6fc5c887491b4e4f68bcc">compute_smooth_direction_field</a> (<a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index &gt; &amp;mesh, const <a class="el" href="classlagrange_1_1polyddg_1_1_differential_operators.html">DifferentialOperators</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index &gt; &amp;ops, <a class="el" href="structlagrange_1_1polyddg_1_1_smooth_direction_field_options.html">SmoothDirectionFieldOptions</a> options={})</td></tr>
+<tr class="memdesc:ga5df3086e2ff6fc5c887491b4e4f68bcc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the globally smoothest n-direction field on a surface mesh.  <br /></td></tr>
+<tr class="separator:ga5df3086e2ff6fc5c887491b4e4f68bcc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gafeb428f5d53beae60db19349b12f1501" id="r_gafeb428f5d53beae60db19349b12f1501"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, typename Index&gt; </td></tr>
+<tr class="memitem:gafeb428f5d53beae60db19349b12f1501"><td class="memTemplItemLeft" align="right" valign="top">LA_POLYDDG_API <a class="el" href="structlagrange_1_1polyddg_1_1_hodge_decomposition_result.html">HodgeDecompositionResult</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#gafeb428f5d53beae60db19349b12f1501">hodge_decomposition_1_form</a> (<a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index &gt; &amp;mesh, const <a class="el" href="classlagrange_1_1polyddg_1_1_differential_operators.html">DifferentialOperators</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index &gt; &amp;ops, <a class="el" href="structlagrange_1_1polyddg_1_1_hodge_decomposition_options.html">HodgeDecompositionOptions</a> options={})</td></tr>
+<tr class="memdesc:gafeb428f5d53beae60db19349b12f1501"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the Helmholtz-Hodge decomposition of a 1-form on a closed surface mesh.  <br /></td></tr>
+<tr class="separator:gafeb428f5d53beae60db19349b12f1501"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf12652b12d46556b9a8469131c237a79" id="r_gaf12652b12d46556b9a8469131c237a79"><td class="memTemplParams" colspan="2"><a id="gaf12652b12d46556b9a8469131c237a79" name="gaf12652b12d46556b9a8469131c237a79"></a>
+template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, typename Index&gt; </td></tr>
+<tr class="memitem:gaf12652b12d46556b9a8469131c237a79"><td class="memTemplItemLeft" align="right" valign="top">LA_POLYDDG_API <a class="el" href="structlagrange_1_1polyddg_1_1_hodge_decomposition_result.html">HodgeDecompositionResult</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><b>hodge_decomposition_1_form</b> (<a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index &gt; &amp;mesh, <a class="el" href="structlagrange_1_1polyddg_1_1_hodge_decomposition_options.html">HodgeDecompositionOptions</a> options={})</td></tr>
+<tr class="memdesc:gaf12652b12d46556b9a8469131c237a79"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convenience overload that constructs a DifferentialOperators object internally. <br /></td></tr>
+<tr class="separator:gaf12652b12d46556b9a8469131c237a79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaaaba548b130abc31c6e7e7d55f006026" id="r_gaaaba548b130abc31c6e7e7d55f006026"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, typename Index&gt; </td></tr>
+<tr class="memitem:gaaaba548b130abc31c6e7e7d55f006026"><td class="memTemplItemLeft" align="right" valign="top">LA_POLYDDG_API <a class="el" href="structlagrange_1_1polyddg_1_1_hodge_decomposition_result.html">HodgeDecompositionResult</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#gaaaba548b130abc31c6e7e7d55f006026">hodge_decomposition_vector_field</a> (<a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index &gt; &amp;mesh, const <a class="el" href="classlagrange_1_1polyddg_1_1_differential_operators.html">DifferentialOperators</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index &gt; &amp;ops, <a class="el" href="structlagrange_1_1polyddg_1_1_hodge_decomposition_options.html">HodgeDecompositionOptions</a> options={})</td></tr>
+<tr class="memdesc:gaaaba548b130abc31c6e7e7d55f006026"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the Helmholtz-Hodge decomposition of a per-vertex vector field on a surface mesh.  <br /></td></tr>
+<tr class="separator:gaaaba548b130abc31c6e7e7d55f006026"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gabf7ad9c779e15c0c9da82865c3a819d3" id="r_gabf7ad9c779e15c0c9da82865c3a819d3"><td class="memTemplParams" colspan="2"><a id="gabf7ad9c779e15c0c9da82865c3a819d3" name="gabf7ad9c779e15c0c9da82865c3a819d3"></a>
+template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, typename Index&gt; </td></tr>
+<tr class="memitem:gabf7ad9c779e15c0c9da82865c3a819d3"><td class="memTemplItemLeft" align="right" valign="top">LA_POLYDDG_API <a class="el" href="structlagrange_1_1polyddg_1_1_hodge_decomposition_result.html">HodgeDecompositionResult</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><b>hodge_decomposition_vector_field</b> (<a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index &gt; &amp;mesh, <a class="el" href="structlagrange_1_1polyddg_1_1_hodge_decomposition_options.html">HodgeDecompositionOptions</a> options={})</td></tr>
+<tr class="memdesc:gabf7ad9c779e15c0c9da82865c3a819d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convenience overload that constructs a DifferentialOperators object internally. <br /></td></tr>
+<tr class="separator:gabf7ad9c779e15c0c9da82865c3a819d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>Polygonal Discrete Differential Geometry (PolyDDG) algorithms and data structures. </p>
@@ -239,12 +270,156 @@ template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5
 
 </div>
 </div>
+<a id="ga5df3086e2ff6fc5c887491b4e4f68bcc" name="ga5df3086e2ff6fc5c887491b4e4f68bcc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5df3086e2ff6fc5c887491b4e4f68bcc">&#9670;&#160;</a></span>compute_smooth_direction_field()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, typename Index&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">LA_POLYDDG_API <a class="el" href="group__group-surfacemesh-attr.html#ga4d115376c2c766084ef808c837348fc3">AttributeId</a> compute_smooth_direction_field </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>mesh</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classlagrange_1_1polyddg_1_1_differential_operators.html">DifferentialOperators</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>ops</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structlagrange_1_1polyddg_1_1_smooth_direction_field_options.html">SmoothDirectionFieldOptions</a></td>          <td class="paramname"><span class="paramname"><em>options</em></span><span class="paramdefsep"> = </span><span class="paramdefval">{}</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;lagrange/polyddg/compute_smooth_direction_field.h&gt;</code></p>
+
+<p>Compute the globally smoothest n-direction field on a surface mesh. </p>
+<p>This function is based on the following paper:</p>
+<p>Knöppel, Felix, et al. "Globally optimal direction fields." ACM Transactions on Graphics (ToG) 32.4 (2013): 1-10.</p>
+<p>The solution is stored as a per-vertex 3-D tangent vector attribute in world-space coordinates, obtained by mapping the local 2-D solution through the vertex tangent basis.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">mesh</td><td>Input surface mesh. The output attribute is added or overwritten. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">ops</td><td>Precomputed differential operators for the mesh. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">options</td><td>Options controlling the rosy order, stabilization weight, optional alignment constraints, and output attribute name.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Attribute ID of the output direction field attribute. </dd></dl>
+
+</div>
+</div>
+<a id="gafeb428f5d53beae60db19349b12f1501" name="gafeb428f5d53beae60db19349b12f1501"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gafeb428f5d53beae60db19349b12f1501">&#9670;&#160;</a></span>hodge_decomposition_1_form()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, typename Index&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">LA_POLYDDG_API <a class="el" href="structlagrange_1_1polyddg_1_1_hodge_decomposition_result.html">HodgeDecompositionResult</a> hodge_decomposition_1_form </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>mesh</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classlagrange_1_1polyddg_1_1_differential_operators.html">DifferentialOperators</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>ops</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structlagrange_1_1polyddg_1_1_hodge_decomposition_options.html">HodgeDecompositionOptions</a></td>          <td class="paramname"><span class="paramname"><em>options</em></span><span class="paramdefsep"> = </span><span class="paramdefval">{}</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;lagrange/polyddg/hodge_decomposition.h&gt;</code></p>
+
+<p>Compute the Helmholtz-Hodge decomposition of a 1-form on a closed surface mesh. </p>
+<p>Takes a discrete 1-form (scalar per edge) and decomposes it into three orthogonal components:</p>
+<p class="formulaDsp">
+\[  \omega = \omega_{\text{exact}} + \omega_{\text{coexact}} + \omega_{\text{harmonic}}
+\]
+</p>
+<p>where:</p><ul>
+<li>\( \omega_{\text{exact}} = d_0 \alpha \) is the <b>exact</b> (curl-free) part,</li>
+<li>\( \omega_{\text{coexact}} \) is the <b>co-exact</b> (divergence-free) part,</li>
+<li>\( \omega_{\text{harmonic}} \) is the <b>harmonic</b> part (zero for genus-0 surfaces).</li>
+</ul>
+<p>The exact part is obtained by solving the scalar Laplacian \( L_0 \alpha = \delta_1 \omega \). The co-exact part is obtained by solving a saddle-point system that minimizes the \( M_1 \)-norm subject to the constraint \( d_1 \omega_{\text{coexact}} = d_1 \omega \). The harmonic part is the residual.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">mesh</td><td>Input surface mesh. Must be closed with a single connected component. The input edge attribute must already exist. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">ops</td><td>Precomputed differential operators for the mesh. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">options</td><td>Options. The nrosy field is ignored for 1-form decomposition.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Attribute IDs of the three output per-edge scalar attributes. </dd></dl>
+
+</div>
+</div>
+<a id="gaaaba548b130abc31c6e7e7d55f006026" name="gaaaba548b130abc31c6e7e7d55f006026"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaaaba548b130abc31c6e7e7d55f006026">&#9670;&#160;</a></span>hodge_decomposition_vector_field()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, typename Index&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">LA_POLYDDG_API <a class="el" href="structlagrange_1_1polyddg_1_1_hodge_decomposition_result.html">HodgeDecompositionResult</a> hodge_decomposition_vector_field </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>mesh</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classlagrange_1_1polyddg_1_1_differential_operators.html">DifferentialOperators</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>ops</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structlagrange_1_1polyddg_1_1_hodge_decomposition_options.html">HodgeDecompositionOptions</a></td>          <td class="paramname"><span class="paramname"><em>options</em></span><span class="paramdefsep"> = </span><span class="paramdefval">{}</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;lagrange/polyddg/hodge_decomposition.h&gt;</code></p>
+
+<p>Compute the Helmholtz-Hodge decomposition of a per-vertex vector field on a surface mesh. </p>
+<p>Takes a per-vertex vector field in global 3D coordinates and decomposes it into three orthogonal components, each stored as a per-vertex vector field in global coordinates:</p>
+<p class="formulaDsp">
+\[  V = V_{\text{exact}} + V_{\text{coexact}} + V_{\text{harmonic}}
+\]
+</p>
+<p>Internally, the per-vertex vector field is converted to a 1-form (scalar per edge) using midpoint integration along edges: \( \omega_e = \frac{V_i + V_j}{2} \cdot (x_j - x_i) \). Any normal component of the input vectors is automatically annihilated by the dot product with the edge vector, so explicit tangent-plane projection is not needed for n=1. The 1-form is then decomposed using hodge_decomposition_1_form(), and each component is converted back to a per-vertex vector field using the discrete sharp operator followed by area-weighted averaging from faces to vertices.</p>
+<p>When the n-rosy option is greater than 1, each input vector is first projected into the local vertex tangent plane and its angle is multiplied by n (encoding), converting the n-rosy representative into a regular vector field. After decomposition, each output component is decoded by dividing the tangent-plane angle by n.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">mesh</td><td>Input surface mesh. The input attribute (per-vertex 3D vector) must already exist. Output attributes are created or overwritten. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">ops</td><td>Precomputed differential operators for the mesh. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">options</td><td>Options.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Attribute IDs of the three output per-vertex vector attributes. </dd></dl>
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Fri Mar 27 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+    <li class="footer">Generated on Mon Apr 27 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>
 </body>

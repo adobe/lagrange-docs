@@ -122,6 +122,8 @@ $(function(){initNavTree('group__group-surfacemesh-attr-utils.html',''); initRes
 </div>
 
 <div class="header">
+  <div class="summary">
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">Attributes utilities<div class="ingroups"><a class="el" href="group__module-core.html">Core Module</a> &raquo; <a class="el" href="group__group-surfacemesh.html">SurfaceMesh</a></div></div></div>
 </div><!--header-->
 <div class="contents">
@@ -129,6 +131,13 @@ $(function(){initNavTree('group__group-surfacemesh-attr-utils.html',''); initRes
 <p>Various attribute processing utilities.  
 <a href="#details">More...</a></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:ga9df24832b109461a412c5946825640db" id="r_ga9df24832b109461a412c5946825640db"><td class="memTemplParams" colspan="2">template&lt;typename ValueType, typename Index&gt; </td></tr>
+<tr class="memitem:ga9df24832b109461a412c5946825640db"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ga9df24832b109461a412c5946825640db">set_invalid_indexed_values</a> (<a class="el" href="classlagrange_1_1_indexed_attribute.html">IndexedAttribute</a>&lt; ValueType, Index &gt; &amp;attr)</td></tr>
+<tr class="memdesc:ga9df24832b109461a412c5946825640db"><td class="mdescLeft">&#160;</td><td class="mdescRight">For each element in the index buffer set to <code>invalid&lt;Index&gt;()</code>, appends a new value set to invalid&lt;ValueType&gt;() and updates the index to point to it.  <br /></td></tr>
+<tr class="separator:ga9df24832b109461a412c5946825640db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader">Attribute remapping</h2></td></tr>
 <tr><td class="ititle" colspan="2"><p>Mapping attributes between different element types.</p>
 <ul>
@@ -166,6 +175,42 @@ $(function(){initNavTree('group__group-surfacemesh-attr-utils.html',''); initRes
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>Various attribute processing utilities. </p>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="ga9df24832b109461a412c5946825640db" name="ga9df24832b109461a412c5946825640db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9df24832b109461a412c5946825640db">&#9670;&#160;</a></span>set_invalid_indexed_values()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ValueType, typename Index&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void set_invalid_indexed_values </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classlagrange_1_1_indexed_attribute.html">IndexedAttribute</a>&lt; ValueType, Index &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>attr</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;lagrange/internal/set_invalid_indexed_values.h&gt;</code></p>
+
+<p>For each element in the index buffer set to <code>invalid&lt;Index&gt;()</code>, appends a new value set to invalid&lt;ValueType&gt;() and updates the index to point to it. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">ValueType</td><td>Attribute value type. </td></tr>
+    <tr><td class="paramname">Index</td><td>Attribute index type.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">attr</td><td>The indexed attribute to fix up. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="gad7a1e90b26e460f8b9afc7efbca95cc4" name="gad7a1e90b26e460f8b9afc7efbca95cc4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#gad7a1e90b26e460f8b9afc7efbca95cc4">&#9670;&#160;</a></span>map_attribute() <span class="overload">[1/2]</span></h2>
 
@@ -454,7 +499,7 @@ template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Fri Mar 27 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+    <li class="footer">Generated on Mon Apr 27 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>
 </body>

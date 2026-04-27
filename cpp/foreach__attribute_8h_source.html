@@ -203,7 +203,7 @@ $(function(){initNavTree('foreach__attribute_8h_source.html',''); initResizable(
 <div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    };</div>
 <div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (ordering == Ordering::Sequential) {</div>
 <div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>        <span class="keywordflow">if</span> (ids.empty()) {</div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>            mesh.<a class="code hl_function" href="classlagrange_1_1_surface_mesh.html#affeb2a94afa3e342e3adf7f5351c4e5f">seq_foreach_attribute_id</a>(cb);</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>            mesh.seq_foreach_attribute_id(cb);</div>
 <div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>        } <span class="keywordflow">else</span> {</div>
 <div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>            std::for_each(ids.begin(), ids.end(), [&amp;](<a class="code hl_typedef" href="group__group-surfacemesh-attr.html#ga4d115376c2c766084ef808c837348fc3">AttributeId</a> <span class="keywordtype">id</span>) {</div>
 <div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>                cb(mesh.get_attribute_name(id), id);</div>
@@ -211,10 +211,10 @@ $(function(){initNavTree('foreach__attribute_8h_source.html',''); initResizable(
 <div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>        }</div>
 <div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>    } <span class="keywordflow">else</span> {</div>
 <div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>        <span class="keywordflow">if</span> (ids.empty()) {</div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>            mesh.<a class="code hl_function" href="classlagrange_1_1_surface_mesh.html#a09be8d43ffe0507de31bccd15143f928">par_foreach_attribute_id</a>(cb);</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>            mesh.par_foreach_attribute_id(cb);</div>
 <div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>        } <span class="keywordflow">else</span> {</div>
 <div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>            par_foreach_attribute_id(ids, [&amp;](<a class="code hl_typedef" href="group__group-surfacemesh-attr.html#ga4d115376c2c766084ef808c837348fc3">AttributeId</a> <span class="keywordtype">id</span>) {</div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>                cb(mesh.<a class="code hl_function" href="classlagrange_1_1_surface_mesh.html#a0aa87b8195ea787f9117193eb16a43f6">get_attribute_name</a>(<span class="keywordtype">id</span>), <span class="keywordtype">id</span>);</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>                cb(mesh.get_attribute_name(<span class="keywordtype">id</span>), <span class="keywordtype">id</span>);</div>
 <div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>            });</div>
 <div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>        }</div>
 <div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    }</div>
@@ -262,13 +262,13 @@ $(function(){initNavTree('foreach__attribute_8h_source.html',''); initResizable(
 <div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>    };</div>
 <div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>    <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (ordering == Ordering::Sequential) {</div>
 <div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>        <span class="keywordflow">if</span> (ids.empty()) {</div>
-<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>            mesh.<a class="code hl_function" href="classlagrange_1_1_surface_mesh.html#affeb2a94afa3e342e3adf7f5351c4e5f">seq_foreach_attribute_id</a>(cb);</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>            mesh.seq_foreach_attribute_id(cb);</div>
 <div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>        } <span class="keywordflow">else</span> {</div>
 <div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>            std::for_each(ids.begin(), ids.end(), cb);</div>
 <div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>        }</div>
 <div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>    } <span class="keywordflow">else</span> {</div>
 <div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>        <span class="keywordflow">if</span> (ids.empty()) {</div>
-<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>            mesh.<a class="code hl_function" href="classlagrange_1_1_surface_mesh.html#a09be8d43ffe0507de31bccd15143f928">par_foreach_attribute_id</a>(cb);</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>            mesh.par_foreach_attribute_id(cb);</div>
 <div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>        } <span class="keywordflow">else</span> {</div>
 <div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>            par_foreach_attribute_id(ids, cb);</div>
 <div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>        }</div>
@@ -404,10 +404,7 @@ $(function(){initNavTree('foreach__attribute_8h_source.html',''); initResizable(
 <div class="line"><a id="l00418" name="l00418"></a><span class="lineno">  418</span> </div>
 <div class="line"><a id="l00419" name="l00419"></a><span class="lineno">  419</span>} <span class="comment">// namespace lagrange</span></div>
 <div class="ttc" id="aclasslagrange_1_1_bit_field_html_aa374b975e72d9d4ab780fdadac236616"><div class="ttname"><a href="classlagrange_1_1_bit_field.html#aa374b975e72d9d4ab780fdadac236616">lagrange::BitField::all</a></div><div class="ttdeci">static constexpr BitField all()</div><div class="ttdoc">Named constructor returning a bitfield set to 1.</div><div class="ttdef"><b>Definition</b> BitField.h:76</div></div>
-<div class="ttc" id="aclasslagrange_1_1_surface_mesh_html"><div class="ttname"><a href="classlagrange_1_1_surface_mesh.html">lagrange::SurfaceMesh</a></div><div class="ttdoc">A general purpose polygonal mesh class.</div><div class="ttdef"><b>Definition</b> SurfaceMesh.h:66</div></div>
-<div class="ttc" id="aclasslagrange_1_1_surface_mesh_html_a09be8d43ffe0507de31bccd15143f928"><div class="ttname"><a href="classlagrange_1_1_surface_mesh.html#a09be8d43ffe0507de31bccd15143f928">lagrange::SurfaceMesh::par_foreach_attribute_id</a></div><div class="ttdeci">void par_foreach_attribute_id(function_ref&lt; void(AttributeId)&gt; func) const</div><div class="ttdoc">Iterates over all attribute ids in parallel.</div><div class="ttdef"><b>Definition</b> SurfaceMesh.cpp:1263</div></div>
-<div class="ttc" id="aclasslagrange_1_1_surface_mesh_html_a0aa87b8195ea787f9117193eb16a43f6"><div class="ttname"><a href="classlagrange_1_1_surface_mesh.html#a0aa87b8195ea787f9117193eb16a43f6">lagrange::SurfaceMesh::get_attribute_name</a></div><div class="ttdeci">std::string_view get_attribute_name(AttributeId id) const</div><div class="ttdoc">Retrieve attribute name from its id.</div><div class="ttdef"><b>Definition</b> SurfaceMesh.cpp:356</div></div>
-<div class="ttc" id="aclasslagrange_1_1_surface_mesh_html_affeb2a94afa3e342e3adf7f5351c4e5f"><div class="ttname"><a href="classlagrange_1_1_surface_mesh.html#affeb2a94afa3e342e3adf7f5351c4e5f">lagrange::SurfaceMesh::seq_foreach_attribute_id</a></div><div class="ttdeci">void seq_foreach_attribute_id(function_ref&lt; void(AttributeId)&gt; func) const</div><div class="ttdoc">Iterates over all attribute ids sequentially.</div><div class="ttdef"><b>Definition</b> SurfaceMesh.cpp:1249</div></div>
+<div class="ttc" id="aclasslagrange_1_1_surface_mesh_html"><div class="ttname"><a href="classlagrange_1_1_surface_mesh.html">lagrange::SurfaceMesh</a></div><div class="ttdoc">A general purpose polygonal mesh class.</div><div class="ttdef"><b>Definition</b> SurfaceMesh.h:73</div></div>
 <div class="ttc" id="agroup__group-surfacemesh-attr_html_ga4d115376c2c766084ef808c837348fc3"><div class="ttname"><a href="group__group-surfacemesh-attr.html#ga4d115376c2c766084ef808c837348fc3">lagrange::AttributeId</a></div><div class="ttdeci">uint32_t AttributeId</div><div class="ttdoc">Identified to be used to access an attribute.</div><div class="ttdef"><b>Definition</b> AttributeFwd.h:73</div></div>
 <div class="ttc" id="agroup__group-surfacemesh-attr_html_gabdd5375a7155af710e703e21e723e834"><div class="ttname"><a href="group__group-surfacemesh-attr.html#gabdd5375a7155af710e703e21e723e834">LA_ATTRIBUTE_X</a></div><div class="ttdeci">#define LA_ATTRIBUTE_X(mode, data)</div><div class="ttdoc">X Macro arguments for the Attribute&lt;&gt; class.</div><div class="ttdef"><b>Definition</b> AttributeTypes.h:48</div></div>
 <div class="ttc" id="agroup__group-surfacemesh-attr_html_gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74"><div class="ttname"><a href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">lagrange::AttributeUsage::Scalar</a></div><div class="ttdeci">@ Scalar</div><div class="ttdoc">Mesh attribute must have exactly 1 channel.</div><div class="ttdef"><b>Definition</b> AttributeFwd.h:56</div></div>
@@ -428,7 +425,7 @@ $(function(){initNavTree('foreach__attribute_8h_source.html',''); initResizable(
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_e277d0e790805391a364b883bec7db94.html">lagrange</a></li><li class="navelem"><b>foreach_attribute.h</b></li>
-    <li class="footer">Generated on Fri Mar 27 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+    <li class="footer">Generated on Mon Apr 27 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>
 </body>

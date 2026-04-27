@@ -8,5 +8,6 @@ var searchData=
   ['single_5fp_5',['single_p',['../classlagrange_1_1image_1_1_raw_input_image.html#a9787de65a5d182eca6c2d71efc190779acb30f91034ce024e3c059693de0bcb7e',1,'lagrange::image::RawInputImage']]],
   ['srgb_6',['sRGB',['../classlagrange_1_1image_1_1_raw_input_image.html#a609c1f2c8828267fe31da1947b988a36a9ed33d9be17d174aeb4393a989586ed9',1,'lagrange::image::RawInputImage']]],
   ['string_7',['String',['../group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45a27118326006d3829667a400ad23d5d98',1,'lagrange']]],
-  ['symmetricdirichlet_8',['SymmetricDirichlet',['../group__group-surfacemesh-utils.html#ggadab1480827f4522cbf1f9e1d4c28db91a6043446227f6a89342620a00a131257f',1,'lagrange']]]
+  ['sweepandprune_8',['SweepAndPrune',['../group__module-bvh.html#gga7e55018c6fcf6fb3e8f6b02e4fc46892ac490cb8cd3c70c9f65c380176d0099ea',1,'lagrange::bvh']]],
+  ['symmetricdirichlet_9',['SymmetricDirichlet',['../group__group-surfacemesh-utils.html#ggadab1480827f4522cbf1f9e1d4c28db91a6043446227f6a89342620a00a131257f',1,'lagrange']]]
 ];

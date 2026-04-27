@@ -377,8 +377,8 @@ $(function(){initNavTree('include_2lagrange_2scene_2scene_8h_source.html',''); i
 <div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span> </div>
 <div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>    <span class="comment">// inner and outer angle of a spot light&#39;s light cone</span></div>
 <div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>    <span class="comment">// they are both 2PI for point lights, and undefined for directional lights.</span></div>
-<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>    <span class="keywordtype">float</span> angle_inner_cone;</div>
-<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>    <span class="keywordtype">float</span> angle_outer_cone;</div>
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>    std::optional&lt;float&gt; angle_inner_cone;</div>
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>    std::optional&lt;float&gt; angle_outer_cone;</div>
 <div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span> </div>
 <div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>    <span class="comment">// size of area light source</span></div>
 <div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>    Eigen::Vector2f size = Eigen::Vector2f::Zero();</div>
@@ -567,7 +567,7 @@ $(function(){initNavTree('include_2lagrange_2scene_2scene_8h_source.html',''); i
 <div class="line"><a id="l00455" name="l00455"></a><span class="lineno">  455</span><span class="keyword">using </span>Scene64d = <a class="code hl_struct" href="structlagrange_1_1scene_1_1_scene.html">Scene&lt;double, uint64_t&gt;</a>;</div>
 <div class="line"><a id="l00456" name="l00456"></a><span class="lineno">  456</span> </div>
 <div class="line"><a id="l00457" name="l00457"></a><span class="lineno">  457</span>} <span class="comment">// namespace lagrange::scene</span></div>
-<div class="ttc" id="aclasslagrange_1_1_surface_mesh_html"><div class="ttname"><a href="classlagrange_1_1_surface_mesh.html">lagrange::SurfaceMesh</a></div><div class="ttdoc">A general purpose polygonal mesh class.</div><div class="ttdef"><b>Definition</b> SurfaceMesh.h:66</div></div>
+<div class="ttc" id="aclasslagrange_1_1_surface_mesh_html"><div class="ttname"><a href="classlagrange_1_1_surface_mesh.html">lagrange::SurfaceMesh</a></div><div class="ttdoc">A general purpose polygonal mesh class.</div><div class="ttdef"><b>Definition</b> SurfaceMesh.h:73</div></div>
 <div class="ttc" id="agroup__group-surfacemesh-attr_html_gaa6b9ce91409ac67b7b5319cf573f66b8"><div class="ttname"><a href="group__group-surfacemesh-attr.html#gaa6b9ce91409ac67b7b5319cf573f66b8">lagrange::AttributeValueType</a></div><div class="ttdeci">AttributeValueType</div><div class="ttdoc">Enum describing at runtime the value type of an attribute.</div><div class="ttdef"><b>Definition</b> AttributeValueType.h:25</div></div>
 <div class="ttc" id="agroup__group-utils-misc_html_ga6c3e5aabde25a440beb7fc174ab081df"><div class="ttname"><a href="group__group-utils-misc.html#ga6c3e5aabde25a440beb7fc174ab081df">lagrange::invalid</a></div><div class="ttdeci">constexpr T invalid()</div><div class="ttdoc">You can use invalid&lt;T&gt;() to get a value that can represent &quot;invalid&quot; values, such as invalid indices ...</div><div class="ttdef"><b>Definition</b> invalid.h:40</div></div>
 <div class="ttc" id="anamespacelagrange_html"><div class="ttname"><a href="namespacelagrange.html">lagrange</a></div><div class="ttdoc">Main namespace for Lagrange.</div></div>
@@ -604,7 +604,7 @@ $(function(){initNavTree('include_2lagrange_2scene_2scene_8h_source.html',''); i
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_47b2d292899280db2fcec7f6d8eaff50.html">lagrange</a></li><li class="navelem"><a class="el" href="dir_3487e1ae95bb6a87eb4d9cf0bdfd330a.html">scene</a></li><li class="navelem"><b>Scene.h</b></li>
-    <li class="footer">Generated on Fri Mar 27 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+    <li class="footer">Generated on Mon Apr 27 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>
 </body>

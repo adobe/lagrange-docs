@@ -264,6 +264,9 @@
 <tr class="row-even"><td><p><a class="reference internal" href="#lagrange.bvh.TriangleAABBTree3D" title="lagrange.bvh.TriangleAABBTree3D"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TriangleAABBTree3D</span></code></a></p></td>
 <td><p></p></td>
 </tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#lagrange.bvh.UVOverlapMethod" title="lagrange.bvh.UVOverlapMethod"><code class="xref py py-obj docutils literal notranslate"><span class="pre">UVOverlapMethod</span></code></a></p></td>
+<td><p>Create a collection of name/value pairs.</p></td>
+</tr>
 </tbody>
 </table>
 </div>
@@ -282,10 +285,13 @@
 <tr class="row-odd"><td><p><a class="reference internal" href="#lagrange.bvh.compute_mesh_distances" title="lagrange.bvh.compute_mesh_distances"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compute_mesh_distances</span></code></a>(source, target[, ...])</p></td>
 <td><p>Compute the distance from each vertex in source to the closest point on target.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#lagrange.bvh.remove_interior_shells" title="lagrange.bvh.remove_interior_shells"><code class="xref py py-obj docutils literal notranslate"><span class="pre">remove_interior_shells</span></code></a>(mesh)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#lagrange.bvh.compute_uv_overlap" title="lagrange.bvh.compute_uv_overlap"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compute_uv_overlap</span></code></a>(mesh[, uv_attribute_name, ...])</p></td>
+<td><p>Compute pairwise UV triangle overlap.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#lagrange.bvh.remove_interior_shells" title="lagrange.bvh.remove_interior_shells"><code class="xref py py-obj docutils literal notranslate"><span class="pre">remove_interior_shells</span></code></a>(mesh)</p></td>
 <td><p>Removes interior shells from a (manifold, non-intersecting) mesh</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#lagrange.bvh.weld_vertices" title="lagrange.bvh.weld_vertices"><code class="xref py py-obj docutils literal notranslate"><span class="pre">weld_vertices</span></code></a>(mesh[, radius, boundary_only])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#lagrange.bvh.weld_vertices" title="lagrange.bvh.weld_vertices"><code class="xref py py-obj docutils literal notranslate"><span class="pre">weld_vertices</span></code></a>(mesh[, radius, boundary_only])</p></td>
 <td><p>Weld nearby vertices together of a surface mesh.</p></td>
 </tr>
 </tbody>
@@ -630,6 +636,70 @@
 
 </dd></dl>
 
+<dl class="py class">
+<dt class="sig sig-object py" id="lagrange.bvh.UVOverlapMethod">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">lagrange.bvh.</span></span><span class="sig-name descname"><span class="pre">UVOverlapMethod</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwds</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lagrange.bvh.UVOverlapMethod" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">enum.Enum</span></code></p>
+<p>Create a collection of name/value pairs.</p>
+<p>Example enumeration:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">class</span><span class="w"> </span><span class="nc">Color</span><span class="p">(</span><span class="n">Enum</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="n">RED</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="gp">... </span>    <span class="n">BLUE</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="gp">... </span>    <span class="n">GREEN</span> <span class="o">=</span> <span class="mi">3</span>
+</pre></div>
+</div>
+<p>Access them by:</p>
+<ul>
+<li><p>attribute access:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">Color</span><span class="o">.</span><span class="n">RED</span>
+<span class="go">&lt;Color.RED: 1&gt;</span>
+</pre></div>
+</div>
+</li>
+<li><p>value lookup:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">Color</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="go">&lt;Color.RED: 1&gt;</span>
+</pre></div>
+</div>
+</li>
+<li><p>name lookup:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">Color</span><span class="p">[</span><span class="s1">&#39;RED&#39;</span><span class="p">]</span>
+<span class="go">&lt;Color.RED: 1&gt;</span>
+</pre></div>
+</div>
+</li>
+</ul>
+<p>Enumerations can be iterated over, and know how many members they have:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">len</span><span class="p">(</span><span class="n">Color</span><span class="p">)</span>
+<span class="go">3</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">list</span><span class="p">(</span><span class="n">Color</span><span class="p">)</span>
+<span class="go">[&lt;Color.RED: 1&gt;, &lt;Color.BLUE: 2&gt;, &lt;Color.GREEN: 3&gt;]</span>
+</pre></div>
+</div>
+<p>Methods can be added to enumerations, and members can have their own
+attributes – see the documentation for details.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lagrange.bvh.UVOverlapMethod.BVH">
+<span class="sig-name descname"><span class="pre">BVH</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#lagrange.bvh.UVOverlapMethod.BVH" title="Link to this definition">¶</a></dt>
+<dd><p>AABB tree per-triangle query.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lagrange.bvh.UVOverlapMethod.Hybrid">
+<span class="sig-name descname"><span class="pre">Hybrid</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2</span></em><a class="headerlink" href="#lagrange.bvh.UVOverlapMethod.Hybrid" title="Link to this definition">¶</a></dt>
+<dd><p>Zomorodian-Edelsbrunner HYBRID algorithm (recursive divide-and-conquer).</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lagrange.bvh.UVOverlapMethod.SweepAndPrune">
+<span class="sig-name descname"><span class="pre">SweepAndPrune</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#lagrange.bvh.UVOverlapMethod.SweepAndPrune" title="Link to this definition">¶</a></dt>
+<dd><p>Zomorodian-Edelsbrunner sweep-and-prune.</p>
+</dd></dl>
+
+</dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="lagrange.bvh.compute_chamfer">
 <span class="sig-prename descclassname"><span class="pre">lagrange.bvh.</span></span><span class="sig-name descname"><span class="pre">compute_chamfer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">source</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lagrange.bvh.compute_chamfer" title="Link to this definition">¶</a></dt>
@@ -709,6 +779,36 @@ Both meshes must have the same spatial dimension and target must be a triangle m
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="lagrange.bvh.compute_uv_overlap">
+<span class="sig-prename descclassname"><span class="pre">lagrange.bvh.</span></span><span class="sig-name descname"><span class="pre">compute_uv_overlap</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mesh</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">uv_attribute_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compute_overlap_area</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compute_overlap_coloring</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">overlap_coloring_attribute_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'&#64;uv_overlap_color'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compute_overlapping_pairs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">method</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">UVOverlapMethod.Hybrid</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lagrange.bvh.compute_uv_overlap" title="Link to this definition">¶</a></dt>
+<dd><p>Compute pairwise UV triangle overlap.</p>
+<p>For every pair of UV-space triangles whose 2-D bounding boxes intersect, an exact
+separating-axis test using orient2D predicates confirms a genuine interior intersection
+before computing the intersection area via Sutherland-Hodgman clipping.</p>
+<p>Triangles that share only a boundary edge or a single vertex are never counted as
+overlapping.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>mesh</strong> (<a class="reference internal" href="../core/index.html#lagrange.core.SurfaceMesh" title="lagrange.core.SurfaceMesh"><em>lagrange.core.SurfaceMesh</em></a>) – Input triangle mesh with a UV attribute.</p></li>
+<li><p><strong>uv_attribute_name</strong> (<em>str</em>) – UV attribute name. Empty string uses the first UV attribute found. Vertex, indexed and corner attributes are supported.</p></li>
+<li><p><strong>compute_overlap_area</strong> (<em>bool</em>) – If True, compute the total overlap area (default: True).</p></li>
+<li><p><strong>compute_overlap_coloring</strong> (<em>bool</em>) – If True, compute a per-facet coloring attribute (default: False).</p></li>
+<li><p><strong>overlap_coloring_attribute_name</strong> (<em>str</em>) – Name of the coloring attribute (default: “&#64;uv_overlap_color”).</p></li>
+<li><p><strong>compute_overlapping_pairs</strong> (<em>bool</em>) – If True, return the list of overlapping pairs (default: False).</p></li>
+<li><p><strong>method</strong> (<a class="reference internal" href="#lagrange.bvh.UVOverlapMethod" title="lagrange.bvh.UVOverlapMethod"><em>UVOverlapMethod</em></a>) – Candidate detection algorithm (default: UVOverlapMethod.Hybrid).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>UVOverlapResult containing overlap detection results.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>object</p>
 </dd>
 </dl>
 </dd></dl>
@@ -847,9 +947,16 @@ The result may be invalid if these conditions are not met.</p>
 <li><a class="reference internal" href="#lagrange.bvh.TriangleAABBTree3D.get_elements_in_radius"><code class="docutils literal notranslate"><span class="pre">TriangleAABBTree3D.get_elements_in_radius()</span></code></a></li>
 </ul>
 </li>
+<li><a class="reference internal" href="#lagrange.bvh.UVOverlapMethod"><code class="docutils literal notranslate"><span class="pre">UVOverlapMethod</span></code></a><ul>
+<li><a class="reference internal" href="#lagrange.bvh.UVOverlapMethod.BVH"><code class="docutils literal notranslate"><span class="pre">UVOverlapMethod.BVH</span></code></a></li>
+<li><a class="reference internal" href="#lagrange.bvh.UVOverlapMethod.Hybrid"><code class="docutils literal notranslate"><span class="pre">UVOverlapMethod.Hybrid</span></code></a></li>
+<li><a class="reference internal" href="#lagrange.bvh.UVOverlapMethod.SweepAndPrune"><code class="docutils literal notranslate"><span class="pre">UVOverlapMethod.SweepAndPrune</span></code></a></li>
+</ul>
+</li>
 <li><a class="reference internal" href="#lagrange.bvh.compute_chamfer"><code class="docutils literal notranslate"><span class="pre">compute_chamfer()</span></code></a></li>
 <li><a class="reference internal" href="#lagrange.bvh.compute_hausdorff"><code class="docutils literal notranslate"><span class="pre">compute_hausdorff()</span></code></a></li>
 <li><a class="reference internal" href="#lagrange.bvh.compute_mesh_distances"><code class="docutils literal notranslate"><span class="pre">compute_mesh_distances()</span></code></a></li>
+<li><a class="reference internal" href="#lagrange.bvh.compute_uv_overlap"><code class="docutils literal notranslate"><span class="pre">compute_uv_overlap()</span></code></a></li>
 <li><a class="reference internal" href="#lagrange.bvh.remove_interior_shells"><code class="docutils literal notranslate"><span class="pre">remove_interior_shells()</span></code></a></li>
 <li><a class="reference internal" href="#lagrange.bvh.weld_vertices"><code class="docutils literal notranslate"><span class="pre">weld_vertices()</span></code></a></li>
 </ul>

@@ -289,11 +289,11 @@
 <li><p><strong>mesh</strong> (<a class="reference internal" href="../core/index.html#lagrange.core.SurfaceMesh" title="lagrange.core.SurfaceMesh"><em>lagrange.core.SurfaceMesh</em></a>) – Input mesh.</p></li>
 <li><p><strong>image</strong> (<em>Annotated</em><em>[</em><em>numpy.typing.NDArray</em><em>[</em><em>numpy.float32</em><em>]</em><em>, </em><em>dict</em><em>(</em><em>shape=</em><em>(</em><em>None</em><em>, </em><em>None</em><em>, </em><em>None</em><em>)</em><em>, </em><em>order='C'</em><em>, </em><em>device='cpu'</em><em>)</em><em>]</em>) – RGBA non-opaque texture.</p></li>
 <li><p><strong>texcoord_id</strong> (<em>int</em><em> | </em><em>None</em>) – Indexed UV attribute id.</p></li>
-<li><p><strong>alpha_threshold</strong> (<em>float</em>) – Opaque mask theshold.</p></li>
+<li><p><strong>alpha_threshold</strong> (<em>float</em>) – Opaque mask threshold.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>Tesselated mesh.</p>
+<dd class="field-even"><p>Tessellated triangle mesh, quad mesh or quad-dominant mesh.</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p><a class="reference internal" href="../core/index.html#lagrange.core.SurfaceMesh" title="lagrange.core.SurfaceMesh">core.SurfaceMesh</a></p>

@@ -42,6 +42,9 @@ var group__group_surfacemesh_utils =
     [ "EdgeLengthOptions", "structlagrange_1_1_edge_length_options.html", [
       [ "output_attribute_name", "structlagrange_1_1_edge_length_options.html#ad9fcba39803c665ca7be48a39d079f00", null ]
     ] ],
+    [ "FacetCircumcenterOptions", "structlagrange_1_1_facet_circumcenter_options.html", [
+      [ "output_attribute_name", "structlagrange_1_1_facet_circumcenter_options.html#ad9fcba39803c665ca7be48a39d079f00", null ]
+    ] ],
     [ "FacetNormalOptions", "structlagrange_1_1_facet_normal_options.html", [
       [ "output_attribute_name", "structlagrange_1_1_facet_normal_options.html#ad9fcba39803c665ca7be48a39d079f00", null ]
     ] ],
@@ -50,6 +53,10 @@ var group__group_surfacemesh_utils =
       [ "element_type", "structlagrange_1_1_greedy_coloring_options.html#ae25137421e69fb211c5fd3bf517b2829", null ],
       [ "num_color_used", "structlagrange_1_1_greedy_coloring_options.html#a81f5acc6d6adddb797813a0eb72a1d47", null ]
     ] ],
+    [ "MeshCovarianceOptions", "structlagrange_1_1_mesh_covariance_options.html", [
+      [ "center", "structlagrange_1_1_mesh_covariance_options.html#a09495d225bdbb9d167086d6c25c1848b", null ],
+      [ "active_facets_attribute_name", "structlagrange_1_1_mesh_covariance_options.html#a5cc3e5dc2766b3d6532b498f6921f645", null ]
+    ] ],
     [ "NormalOptions", "structlagrange_1_1_normal_options.html", [
       [ "output_attribute_name", "structlagrange_1_1_normal_options.html#ad9fcba39803c665ca7be48a39d079f00", null ],
       [ "weight_type", "structlagrange_1_1_normal_options.html#aedcf335906b67a37d8680b02b3a2a58a", null ],
@@ -57,6 +64,18 @@ var group__group_surfacemesh_utils =
       [ "recompute_facet_normals", "structlagrange_1_1_normal_options.html#a817eeb2e63429b8cc839da0d1e79fa2f", null ],
       [ "keep_facet_normals", "structlagrange_1_1_normal_options.html#a352c5412d6b65484c180375041e6c255", null ],
       [ "distance_tolerance", "structlagrange_1_1_normal_options.html#adb3d5d7fc11c1d2a87c6d678f225e981", null ]
+    ] ],
+    [ "ComputePointcloudPCAOptions", "structlagrange_1_1_compute_pointcloud_p_c_a_options.html", [
+      [ "shift_centroid", "structlagrange_1_1_compute_pointcloud_p_c_a_options.html#a132c483ac88db69269a8d838f63a782b", null ],
+      [ "normalize", "structlagrange_1_1_compute_pointcloud_p_c_a_options.html#af605523fa15cd8296704092afd159029", null ]
+    ] ],
+    [ "PointcloudPCAOutput< Scalar >", "structlagrange_1_1_pointcloud_p_c_a_output.html", [
+      [ "center", "structlagrange_1_1_pointcloud_p_c_a_output.html#a20dc93aa9cf2ccacbee86c1660060176", null ],
+      [ "eigenvectors", "structlagrange_1_1_pointcloud_p_c_a_output.html#a2f13f46dd9110f360bdc5dc896de3aa8", null ],
+      [ "eigenvalues", "structlagrange_1_1_pointcloud_p_c_a_output.html#a83a3e8f3cabad55fd29844db987524ab", null ]
+    ] ],
+    [ "SeamEdgesOptions", "structlagrange_1_1_seam_edges_options.html", [
+      [ "output_attribute_name", "structlagrange_1_1_seam_edges_options.html#ad9fcba39803c665ca7be48a39d079f00", null ]
     ] ],
     [ "TangentBitangentOptions", "structlagrange_1_1_tangent_bitangent_options.html", [
       [ "tangent_attribute_name", "structlagrange_1_1_tangent_bitangent_options.html#a5505da898942fbe9ee150d5253a75bea", null ],
@@ -71,6 +90,11 @@ var group__group_surfacemesh_utils =
     [ "TangentBitangentResult", "structlagrange_1_1_tangent_bitangent_result.html", [
       [ "tangent_id", "structlagrange_1_1_tangent_bitangent_result.html#a46c2f467917671e030772bb7a6b65ac4", null ],
       [ "bitangent_id", "structlagrange_1_1_tangent_bitangent_result.html#ac83f6c18baa7406972b12445f0799343", null ]
+    ] ],
+    [ "UVChartOptions", "structlagrange_1_1_u_v_chart_options.html", [
+      [ "uv_attribute_name", "structlagrange_1_1_u_v_chart_options.html#a812bd5f3c809396ee71d159824173876", null ],
+      [ "output_attribute_name", "structlagrange_1_1_u_v_chart_options.html#ad9fcba39803c665ca7be48a39d079f00", null ],
+      [ "connectivity_type", "structlagrange_1_1_u_v_chart_options.html#accfe9b30382e2dcad87be9a59c7ecb17", null ]
     ] ],
     [ "UVDistortionOptions", "structlagrange_1_1_u_v_distortion_options.html", [
       [ "uv_attribute_name", "structlagrange_1_1_u_v_distortion_options.html#a812bd5f3c809396ee71d159824173876", null ],
@@ -120,6 +144,9 @@ var group__group_surfacemesh_utils =
       [ "isovalue", "structlagrange_1_1_isoline_options.html#a4f872975d082a5c218816be05ff08fce", null ],
       [ "keep_below", "structlagrange_1_1_isoline_options.html#ad569f1ddf959f44cfcde73d1f065d59f", null ]
     ] ],
+    [ "OrientOptions", "structlagrange_1_1_orient_options.html", [
+      [ "positive", "structlagrange_1_1_orient_options.html#acdea3192c7c9a99816f27e88da0eeff2", null ]
+    ] ],
     [ "OrientationOptions", "structlagrange_1_1_orientation_options.html", [
       [ "output_attribute_name", "structlagrange_1_1_orientation_options.html#ad9fcba39803c665ca7be48a39d079f00", null ]
     ] ],
@@ -160,6 +187,13 @@ var group__group_surfacemesh_utils =
       [ "source_facet_attr_name", "structlagrange_1_1_separate_by_facet_groups_options.html#a09443d2b35a544bc3b02fa83f747535d", null ],
       [ "map_attributes", "structlagrange_1_1_separate_by_facet_groups_options.html#a2faf2887807897e0dd2c8e403a6c2a20", null ]
     ] ],
+    [ "ThickenAndCloseOptions", "structlagrange_1_1_thicken_and_close_options.html", [
+      [ "direction", "structlagrange_1_1_thicken_and_close_options.html#a79d4f4019cd208503e65ac6f544c62c3", null ],
+      [ "offset_amount", "structlagrange_1_1_thicken_and_close_options.html#a924c5f0b82bf8d7877e7e1a4516bdf9f", null ],
+      [ "mirror_ratio", "structlagrange_1_1_thicken_and_close_options.html#afd42b20443806dc854dab304e36546f0", null ],
+      [ "num_segments", "structlagrange_1_1_thicken_and_close_options.html#a8a2e782c4c6a655578ac31923a8b8f6d", null ],
+      [ "indexed_attributes", "structlagrange_1_1_thicken_and_close_options.html#afe36a9a93cf82f24011222fc231c9602", null ]
+    ] ],
     [ "VertexManifoldOptions", "structlagrange_1_1_vertex_manifold_options.html", [
       [ "output_attribute_name", "structlagrange_1_1_vertex_manifold_options.html#ad9fcba39803c665ca7be48a39d079f00", null ]
     ] ],
@@ -178,6 +212,14 @@ var group__group_surfacemesh_utils =
       [ "normalize_tangents_bitangents", "structlagrange_1_1_transform_options.html#adb325bf37307e1d4836ea6886c266e83", null ],
       [ "reorient", "structlagrange_1_1_transform_options.html#aab5e6e7c0226df5f9e151b0fefdfe21f", null ]
     ] ],
+    [ "UVMeshOptions", "structlagrange_1_1_u_v_mesh_options.html", [
+      [ "ElementTypes", "structlagrange_1_1_u_v_mesh_options.html#a4dac7d7422057ff1ccf75ff7fbd92a97", [
+        [ "IndexedOrVertex", "structlagrange_1_1_u_v_mesh_options.html#a4dac7d7422057ff1ccf75ff7fbd92a97ab1c3ec3943278b146893f9f92daf7aa5", null ],
+        [ "All", "structlagrange_1_1_u_v_mesh_options.html#a4dac7d7422057ff1ccf75ff7fbd92a97ab1c94ca2fbc3e78fc30069c8d0f01680", null ]
+      ] ],
+      [ "uv_attribute_name", "structlagrange_1_1_u_v_mesh_options.html#a812bd5f3c809396ee71d159824173876", null ],
+      [ "element_types", "structlagrange_1_1_u_v_mesh_options.html#a2dbd104b371415a9acc0b0f0e4f2920d", null ]
+    ] ],
     [ "DistortionMetric", "group__group-surfacemesh-utils.html#gadab1480827f4522cbf1f9e1d4c28db91", [
       [ "Dirichlet", "group__group-surfacemesh-utils.html#ggadab1480827f4522cbf1f9e1d4c28db91abac152b762896edff34ed668ae1a546f", null ],
       [ "InverseDirichlet", "group__group-surfacemesh-utils.html#ggadab1480827f4522cbf1f9e1d4c28db91a541c024e21b5989aa74764f7c362dfd2", null ],
@@ -188,6 +230,12 @@ var group__group_surfacemesh_utils =
       [ "Uniform", "group__group-surfacemesh-utils.html#ggaa88e833ed770762b02e187f0c2377d3daf19516d11f2946f894070e92fcb56b6d", null ],
       [ "CornerTriangleArea", "group__group-surfacemesh-utils.html#ggaa88e833ed770762b02e187f0c2377d3da84f023fc44b6b158de6ccc157c8dab06", null ],
       [ "Angle", "group__group-surfacemesh-utils.html#ggaa88e833ed770762b02e187f0c2377d3da45f4ce6c3306644b1efe333f4f8d6929", null ]
+    ] ],
+    [ "ReorderingMethod", "group__group-surfacemesh-utils.html#ga3cce9a28814e60e46fc8877d69ce28e3", [
+      [ "Lexicographic", "group__group-surfacemesh-utils.html#gga3cce9a28814e60e46fc8877d69ce28e3a00af2052da1d2929181bea6b434ebf4f", null ],
+      [ "Morton", "group__group-surfacemesh-utils.html#gga3cce9a28814e60e46fc8877d69ce28e3ae83fefe6389add51a1520328ad1740aa", null ],
+      [ "Hilbert", "group__group-surfacemesh-utils.html#gga3cce9a28814e60e46fc8877d69ce28e3ac98cbfb539a3891d9db35c17c7c184b3", null ],
+      [ "None", "group__group-surfacemesh-utils.html#gga3cce9a28814e60e46fc8877d69ce28e3a6adf97f83acf6453d4a6a4b1070f3754", null ]
     ] ],
     [ "cast", "group__group-surfacemesh-utils.html#gab7596be540e8db5808abc8c322fd7460", null ],
     [ "cast_attribute", "group__group-surfacemesh-utils.html#ga5ad144e6af73b1f97c048b3ee5ccc1d2", null ],
@@ -210,12 +258,18 @@ var group__group_surfacemesh_utils =
     [ "compute_dihedral_angles", "group__group-surfacemesh-utils.html#gab65464571f0034e009273ade90fcb4bf", null ],
     [ "compute_dijkstra_distance", "group__group-surfacemesh-utils.html#ga63cc672971ecc26849450a45db354f6b", null ],
     [ "compute_edge_lengths", "group__group-surfacemesh-utils.html#ga58593e3709263771bc25ff51f473c92a", null ],
+    [ "compute_facet_circumcenter", "group__group-surfacemesh-utils.html#gacfb6197a434be9f7c931295ecf406b46", null ],
+    [ "compute_facet_facet_adjacency", "group__group-surfacemesh-utils.html#gae8857569ff13729d4721feb0b41f521d", null ],
     [ "compute_facet_normal", "group__group-surfacemesh-utils.html#ga50e835144b2dd2ad5df9848293c8b097", null ],
     [ "compute_greedy_coloring", "group__group-surfacemesh-utils.html#ga2d693ab4db6092d9984a55b6073c2d8f", null ],
+    [ "compute_mesh_covariance", "group__group-surfacemesh-utils.html#ga1abef284cf8170f9412b2a922e577d44", null ],
     [ "compute_normal", "group__group-surfacemesh-utils.html#ga0d1dc948d0cb8aa8b7759e34a34df7bc", null ],
     [ "compute_normal", "group__group-surfacemesh-utils.html#gabe91547f24b4936c8feddd9b74b1aa02", null ],
     [ "compute_normal", "group__group-surfacemesh-utils.html#ga668cc68bd27510b1bec92cf8dbe0e362", null ],
+    [ "compute_pointcloud_pca", "group__group-surfacemesh-utils.html#ga9483b80f75f7e1e9b3807192964490c3", null ],
+    [ "compute_seam_edges", "group__group-surfacemesh-utils.html#gaeff08ff1337ff749b51eecdf94cc44c9", null ],
     [ "compute_tangent_bitangent", "group__group-surfacemesh-utils.html#gac0b89e21157c268e2931da3910bc2930", null ],
+    [ "compute_uv_charts", "group__group-surfacemesh-utils.html#ga2419166d1b1b00586fe027f43a09a392", null ],
     [ "compute_uv_distortion", "group__group-surfacemesh-utils.html#gad96a9c0374e82142015e619d6cf3bf67", null ],
     [ "compute_uv_tile_list", "group__group-surfacemesh-utils.html#gaa9c124c65e79e319a4aefc92ccb5ce7f", null ],
     [ "compute_vertex_normal", "group__group-surfacemesh-utils.html#ga8c1ac1ec1658273f6e6bb312dd2b0718", null ],
@@ -233,6 +287,7 @@ var group__group_surfacemesh_utils =
     [ "find_matching_attributes", "group__group-surfacemesh-utils.html#ga5f8560d698163d4c9d75d3b8ed9de3ed", null ],
     [ "trim_by_isoline", "group__group-surfacemesh-utils.html#ga0e2ab861e8faec161cd8613e8a9362de", null ],
     [ "extract_isoline", "group__group-surfacemesh-utils.html#gafef35c376e1761a87d7ffdc81e845adf", null ],
+    [ "mesh_bbox", "group__group-surfacemesh-utils.html#gabf3517305e7ccc7062aab01527e78468", null ],
     [ "to_surface_mesh_copy", "group__group-surfacemesh-utils.html#gabb5fc3fc93e8d973bcc534398eeb0aa9", null ],
     [ "to_surface_mesh_wrap", "group__group-surfacemesh-utils.html#ga68ad17ee5b7475decfbaf17fcfa63d65", null ],
     [ "to_legacy_mesh", "group__group-surfacemesh-utils.html#gac349d354b36d62bc2efeb93dd2b7f078", null ],
@@ -240,17 +295,22 @@ var group__group_surfacemesh_utils =
     [ "normalize_mesh", "group__group-surfacemesh-utils.html#ga7338d1f11a59b043aecad72a3cf708bf", null ],
     [ "normalize_meshes_with_transform", "group__group-surfacemesh-utils.html#gaff1990dcc852e6a57d266bd14c6a2343", null ],
     [ "normalize_meshes", "group__group-surfacemesh-utils.html#gaca4977e11607d038c9754e12dc7271c6", null ],
+    [ "orient_outward", "group__group-surfacemesh-utils.html#ga5146fd14484d1ca61328735d4875f273", null ],
     [ "is_oriented", "group__group-surfacemesh-utils.html#ga40b789004d6fc0e7ca4cf13fd0c811e8", null ],
     [ "compute_edge_is_oriented", "group__group-surfacemesh-utils.html#ga3424db415f75216333a8568e158d2832", null ],
     [ "permute_facets", "group__group-surfacemesh-utils.html#ga4bb6f1ff87f6aac0062ac21dba0f2349", null ],
     [ "permute_vertices", "group__group-surfacemesh-utils.html#ga8aea6bef4481de2ace23921d95fdc8fe", null ],
     [ "remap_vertices", "group__group-surfacemesh-utils.html#ga78898b0da8d43677481cdc176f2391f8", null ],
+    [ "reorder_mesh", "group__group-surfacemesh-utils.html#gaf8a7a76a593e3ece762e98f1fec1e13a", null ],
+    [ "segment_segment_squared_distance", "group__group-surfacemesh-utils.html#gac1bc8764fc5a64c99f00713d7b034580", null ],
     [ "select_facets_by_normal_similarity", "group__group-surfacemesh-utils.html#gaa1d91a293ac5a8930d258295b751eb6a", null ],
     [ "select_facets_in_frustum", "group__group-surfacemesh-utils.html#ga2a4c19c8eb140fe6e67990da8b65736e", null ],
     [ "separate_by_components", "group__group-surfacemesh-utils.html#ga954105400081aec257b861eabc11caa4", null ],
     [ "separate_by_facet_groups", "group__group-surfacemesh-utils.html#ga3a916fec3d88a2f142479beb6d1dabbc", null ],
     [ "separate_by_facet_groups", "group__group-surfacemesh-utils.html#ga8bfc61d050dfff96cd48f72f4bd4b149", null ],
     [ "separate_by_facet_groups", "group__group-surfacemesh-utils.html#ga987e83dd82916a9347d04f1d45a7934e", null ],
+    [ "split_facets_by_material", "group__group-surfacemesh-utils.html#ga773705dae58296a6d8bf45f41644a5cb", null ],
+    [ "thicken_and_close_mesh", "group__group-surfacemesh-utils.html#ga4b1d5d73a85f019a87286d7ee39acaa7", null ],
     [ "compute_euler", "group__group-surfacemesh-utils.html#ga256e7ab23f324bc2f7fb5fd977405932", null ],
     [ "is_closed", "group__group-surfacemesh-utils.html#ga14626b3d3cff28aeb7230a4f6f9fbb8c", null ],
     [ "is_vertex_manifold", "group__group-surfacemesh-utils.html#ga8c7a15cae60d68a94bac4068de177b4a", null ],
@@ -260,5 +320,7 @@ var group__group_surfacemesh_utils =
     [ "compute_edge_is_manifold", "group__group-surfacemesh-utils.html#gac632adf2b9d90586893cba9ac070fad5", null ],
     [ "transform_mesh", "group__group-surfacemesh-utils.html#gacc5a05b5bc041f50fbff82c00e18c631", null ],
     [ "transformed_mesh", "group__group-surfacemesh-utils.html#gac646c16958d9cb11644e1c9e72e305dc", null ],
-    [ "triangulate_polygonal_facets", "group__group-surfacemesh-utils.html#ga8842b75f11402e01405aaa861a8cbb2c", null ]
+    [ "triangulate_polygonal_facets", "group__group-surfacemesh-utils.html#ga8842b75f11402e01405aaa861a8cbb2c", null ],
+    [ "uv_mesh_ref", "group__group-surfacemesh-utils.html#gae68df8e09ed4829ef852e47518e5a47d", null ],
+    [ "uv_mesh_view", "group__group-surfacemesh-utils.html#ga9701752c8bd35e6cb8a9189cff79636a", null ]
 ];

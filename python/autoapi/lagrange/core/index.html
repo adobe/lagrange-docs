@@ -4325,7 +4325,7 @@ Basel: Birkhäuser Basel, 2008. 175-188.</p>
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>mesh</strong> (<a class="reference internal" href="#lagrange.core.SurfaceMesh" title="lagrange.core.SurfaceMesh"><em>SurfaceMesh</em></a>) – The source mesh.</p></li>
-<li><p><strong>selected_facets</strong> (<em>Annotated</em><em>[</em><em>numpy.typing.NDArray</em><em>[</em><em>numpy.uint32</em><em>]</em><em>, </em><em>dict</em><em>(</em><em>order='C'</em><em>, </em><em>device='cpu'</em><em>)</em><em>]</em>) – A listed of facet ids to extract.</p></li>
+<li><p><strong>selected_facets</strong> (<em>Annotated</em><em>[</em><em>numpy.typing.NDArray</em><em>[</em><em>numpy.uint32</em><em>]</em><em>, </em><em>dict</em><em>(</em><em>order='C'</em><em>, </em><em>device='cpu'</em><em>)</em><em>] </em><em>| </em><em>list</em>) – A list or tensor of facet ids to extract.</p></li>
 <li><p><strong>source_vertex_attr_name</strong> (<em>str</em>) – The optional attribute name to track source vertices.</p></li>
 <li><p><strong>source_facet_attr_name</strong> (<em>str</em>) – The optional attribute name to track source facets.</p></li>
 <li><p><strong>map_attributes</strong> (<em>bool</em>) – Map attributes from the source to target meshes.</p></li>

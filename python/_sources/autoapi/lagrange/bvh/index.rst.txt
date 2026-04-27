@@ -13,6 +13,7 @@ Classes
    lagrange.bvh.EdgeAABBTree3D
    lagrange.bvh.TriangleAABBTree2D
    lagrange.bvh.TriangleAABBTree3D
+   lagrange.bvh.UVOverlapMethod
 
 
 Functions
@@ -23,6 +24,7 @@ Functions
    lagrange.bvh.compute_chamfer
    lagrange.bvh.compute_hausdorff
    lagrange.bvh.compute_mesh_distances
+   lagrange.bvh.compute_uv_overlap
    lagrange.bvh.remove_interior_shells
    lagrange.bvh.weld_vertices
 
@@ -206,6 +208,70 @@ Module Contents
 
 
 
+.. py:class:: UVOverlapMethod(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   Create a collection of name/value pairs.
+
+   Example enumeration:
+
+   >>> class Color(Enum):
+   ...     RED = 1
+   ...     BLUE = 2
+   ...     GREEN = 3
+
+   Access them by:
+
+   - attribute access:
+
+     >>> Color.RED
+     <Color.RED: 1>
+
+   - value lookup:
+
+     >>> Color(1)
+     <Color.RED: 1>
+
+   - name lookup:
+
+     >>> Color['RED']
+     <Color.RED: 1>
+
+   Enumerations can be iterated over, and know how many members they have:
+
+   >>> len(Color)
+   3
+
+   >>> list(Color)
+   [<Color.RED: 1>, <Color.BLUE: 2>, <Color.GREEN: 3>]
+
+   Methods can be added to enumerations, and members can have their own
+   attributes -- see the documentation for details.
+
+
+   .. py:attribute:: BVH
+      :value: 1
+
+
+      AABB tree per-triangle query.
+
+
+   .. py:attribute:: Hybrid
+      :value: 2
+
+
+      Zomorodian-Edelsbrunner HYBRID algorithm (recursive divide-and-conquer).
+
+
+   .. py:attribute:: SweepAndPrune
+      :value: 0
+
+
+      Zomorodian-Edelsbrunner sweep-and-prune.
+
+
 .. py:function:: compute_chamfer(source, target)
 
    Compute the Chamfer distance between two meshes.
@@ -262,6 +328,28 @@ Module Contents
    :param output_attribute_name: Name of the output per-vertex attribute.
 
    :return: AttributeId of the newly created (or overwritten) distance attribute on source.
+
+
+.. py:function:: compute_uv_overlap(mesh, uv_attribute_name = '', compute_overlap_area = True, compute_overlap_coloring = False, overlap_coloring_attribute_name = '@uv_overlap_color', compute_overlapping_pairs = False, method = UVOverlapMethod.Hybrid)
+
+   Compute pairwise UV triangle overlap.
+
+   For every pair of UV-space triangles whose 2-D bounding boxes intersect, an exact
+   separating-axis test using orient2D predicates confirms a genuine interior intersection
+   before computing the intersection area via Sutherland-Hodgman clipping.
+
+   Triangles that share only a boundary edge or a single vertex are never counted as
+   overlapping.
+
+   :param mesh: Input triangle mesh with a UV attribute.
+   :param uv_attribute_name: UV attribute name. Empty string uses the first UV attribute found. Vertex, indexed and corner attributes are supported.
+   :param compute_overlap_area: If True, compute the total overlap area (default: True).
+   :param compute_overlap_coloring: If True, compute a per-facet coloring attribute (default: False).
+   :param overlap_coloring_attribute_name: Name of the coloring attribute (default: "@uv_overlap_color").
+   :param compute_overlapping_pairs: If True, return the list of overlapping pairs (default: False).
+   :param method: Candidate detection algorithm (default: UVOverlapMethod.Hybrid).
+
+   :return: UVOverlapResult containing overlap detection results.
 
 
 .. py:function:: remove_interior_shells(mesh)
