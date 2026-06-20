@@ -399,7 +399,7 @@ There are several ways to implement a PIMPL in your code (from bad to good):
 
 !!! example
     An example usage of the PIMPL idiom in Lagrange is the `AttributeManager` class in
-    [SurfaceMesh.h]({{ repo_url }}/blob/main/modules/src/SurfaceMesh.cpp).
+    [SurfaceMesh.cpp]({{ repo_url }}/blob/main/modules/core/src/SurfaceMesh.cpp).
 
 ### X Macro Trick For Explicit Instantiations
 

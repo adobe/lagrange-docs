@@ -61,11 +61,12 @@ automatically downloaded by our CMake system depending on which Lagrange module 
 | [tinygltf](https://github.com/syoyo/tinygltf)                                                  | MIT                               | IO                                                    |
 | [tinyobjloader](https://github.com/tinyobjloader/tinyobjloader)                                | MIT                               | IO                                                    |
 | [ufbx](https://github.com/ufbx/ufbx)                                                           | MIT                               | IO                                                    |
+| [xatlas](https://github.com/jpcy/xatlas)                                                       | MIT                               | Xatlas                                                |
 
 [^0_assimp]:          Assimp is an optional dependency of the IO module.
 [^1_blas]:            Either MKL or Accelerate depending on the platform.
 [^2_boost]:           Boost::filesystem is an optional backend of the FS module.
-[^3_cli11_examples]:  CLI11 is used by the examples in the following modules: BVH, Core, Filtering, IO, Image, Image_IO, Partitioning, Poisson, Polyscope, Primitive, Raycasting, Subdivision, Texproc, UI, Volume, Winding
+[^3_cli11_examples]:  CLI11 is used by the examples in the following modules: BVH, Core, Filtering, IO, Image, Image_IO, Partitioning, Poisson, Polyscope, Primitive, Raycasting, Subdivision, Texproc, UI, Volume, Winding, Xatlas
 [^4_filesystem]:      `gulrak/filesystem` is only needed when the IO module is compiled in C++14 mode. In C++17 mode, the IO module will defaults to `std::filesystem`.
 [^5_tracy]:           Tracy is an optional dependency of the core module.
 

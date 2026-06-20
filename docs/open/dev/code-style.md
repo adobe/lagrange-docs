@@ -7,6 +7,16 @@
     allow you to automatically format your code to adopt a consistent style with the rest of
     Lagrange.
 
+!!! tip "Prek hook"
+    [prek](https://github.com/j178/prek) is a Rust-based git hook manager (like [pre-commit](https://pre-commit.com/)) that enforces code
+    quality automatically on every commit: formatting C++ via clang-format,
+    linting/formatting Python via ruff, validating YAML/JSON, and regenerating
+    auto-managed files (CMake presets, export headers, license notices, etc.).
+    Install once with `uvx prek install`; after that hooks run automatically on git
+    commit. To run manually: `uvx prek run --all-files` (all hooks) or `uvx prek run
+    <hook-id>` (one hook). Config lives in `prek.toml` at the repo root.
+
+
 We follow the [Google C++ Style Guide](https://google.github.io/styleguide/cppguide.html), modified
 for the needs of the Lagrange project. To get a quick taste of our style, here is a simple function
 declaration:
