@@ -139,20 +139,19 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:aacc7a92d3958d4189b5c4026a5b97a1b" id="r_aacc7a92d3958d4189b5c4026a5b97a1b"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aacc7a92d3958d4189b5c4026a5b97a1b">nrosy</a> = 4</td></tr>
 <tr class="memdesc:aacc7a92d3958d4189b5c4026a5b97a1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Symmetry order of the direction field (e.g.  <br /></td></tr>
 <tr class="separator:aacc7a92d3958d4189b5c4026a5b97a1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a650d9b28565137517f5f823c480ee063" id="r_a650d9b28565137517f5f823c480ee063"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__group-surfacemesh-attr.html#ga9d8ab208822bab9987e9652dda49d89a">AttributeElement</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a650d9b28565137517f5f823c480ee063">output_element_type</a> = <a class="el" href="group__group-surfacemesh-attr.html#gga9d8ab208822bab9987e9652dda49d89aad013c4439c3e09308d6b2eef2a4025ae">AttributeElement::Vertex</a></td></tr>
+<tr class="memdesc:a650d9b28565137517f5f823c480ee063"><td class="mdescLeft">&#160;</td><td class="mdescRight">Controls where the output direction field is stored.  <br /></td></tr>
+<tr class="separator:a650d9b28565137517f5f823c480ee063"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3db359547eed8cfd48ca821d95f577af" id="r_a3db359547eed8cfd48ca821d95f577af"><td class="memItemLeft" align="right" valign="top"><a id="a3db359547eed8cfd48ca821d95f577af" name="a3db359547eed8cfd48ca821d95f577af"></a>
 double&#160;</td><td class="memItemRight" valign="bottom"><b>lambda</b> = 1.0</td></tr>
-<tr class="memdesc:a3db359547eed8cfd48ca821d95f577af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stabilization weight for the VEM projection term in the connection Laplacian. <br /></td></tr>
+<tr class="memdesc:a3db359547eed8cfd48ca821d95f577af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stabilization weight for the VEM projection term in the connection Laplacian (vertex-based path only). <br /></td></tr>
 <tr class="separator:a3db359547eed8cfd48ca821d95f577af"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a292f3e347464872968533368a13f5844" id="r_a292f3e347464872968533368a13f5844"><td class="memItemLeft" align="right" valign="top">std::string_view&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a292f3e347464872968533368a13f5844">alignment_attribute</a> = &quot;&quot;</td></tr>
-<tr class="memdesc:a292f3e347464872968533368a13f5844"><td class="mdescLeft">&#160;</td><td class="mdescRight">Name of a per-vertex 3-D tangent vector field attribute used as alignment constraints.  <br /></td></tr>
+<tr class="memdesc:a292f3e347464872968533368a13f5844"><td class="mdescLeft">&#160;</td><td class="mdescRight">Name of an alignment constraint attribute used as soft constraints.  <br /></td></tr>
 <tr class="separator:a292f3e347464872968533368a13f5844"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acdeee5ae01a0d788019a7cdedc907798" id="r_acdeee5ae01a0d788019a7cdedc907798"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acdeee5ae01a0d788019a7cdedc907798">alignment_weight</a> = 1.0</td></tr>
-<tr class="memdesc:acdeee5ae01a0d788019a7cdedc907798"><td class="mdescLeft">&#160;</td><td class="mdescRight">Scaling factor for the spectral shift in the alignment solve, following the fieldgen formulation (Knöppel et al.  <br /></td></tr>
-<tr class="separator:acdeee5ae01a0d788019a7cdedc907798"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a823f08e066137b1d117eca4ad6f09c3c" id="r_a823f08e066137b1d117eca4ad6f09c3c"><td class="memItemLeft" align="right" valign="top"><a id="a823f08e066137b1d117eca4ad6f09c3c" name="a823f08e066137b1d117eca4ad6f09c3c"></a>
-std::string_view&#160;</td><td class="memItemRight" valign="bottom"><b>direction_field_attribute</b> = &quot;@smooth_direction_field&quot;</td></tr>
-<tr class="memdesc:a823f08e066137b1d117eca4ad6f09c3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Output attribute name for the smooth direction field (3-D vector, per vertex). <br /></td></tr>
-<tr class="separator:a823f08e066137b1d117eca4ad6f09c3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa528c6ad17d6f25b72b2f45fed63611a" id="r_aa528c6ad17d6f25b72b2f45fed63611a"><td class="memItemLeft" align="right" valign="top">std::optional&lt; std::string_view &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa528c6ad17d6f25b72b2f45fed63611a">direction_field_attribute</a></td></tr>
+<tr class="memdesc:aa528c6ad17d6f25b72b2f45fed63611a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Output attribute name for the smooth direction field.  <br /></td></tr>
+<tr class="separator:aa528c6ad17d6f25b72b2f45fed63611a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Options for compute_smooth_direction_field(). </p>
@@ -174,6 +173,26 @@ std::string_view&#160;</td><td class="memItemRight" valign="bottom"><b>direction
 
 </div>
 </div>
+<a id="a650d9b28565137517f5f823c480ee063" name="a650d9b28565137517f5f823c480ee063"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a650d9b28565137517f5f823c480ee063">&#9670;&#160;</a></span>output_element_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__group-surfacemesh-attr.html#ga9d8ab208822bab9987e9652dda49d89a">AttributeElement</a> output_element_type = <a class="el" href="group__group-surfacemesh-attr.html#gga9d8ab208822bab9987e9652dda49d89aad013c4439c3e09308d6b2eef2a4025ae">AttributeElement::Vertex</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Controls where the output direction field is stored. </p>
+<ul>
+<li><code>AttributeElement::Vertex</code> (default): stores a per-vertex 3-D tangent vector attribute using the vertex-based connection Laplacian (Knöppel et al. 2013).</li>
+<li><code>AttributeElement::Facet:</code> stores a per-facet 3-D tangent vector attribute using the face-based connection Laplacian. </li>
+</ul>
+
+</div>
+</div>
 <a id="a292f3e347464872968533368a13f5844" name="a292f3e347464872968533368a13f5844"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a292f3e347464872968533368a13f5844">&#9670;&#160;</a></span>alignment_attribute</h2>
 
@@ -186,26 +205,33 @@ std::string_view&#160;</td><td class="memItemRight" valign="bottom"><b>direction
       </table>
 </div><div class="memdoc">
 
-<p>Name of a per-vertex 3-D tangent vector field attribute used as alignment constraints. </p>
-<p>Each vertex with a non-zero vector is softly constrained to align to that direction. Vertices with a zero vector are unconstrained. If empty (the default), no alignment constraints are applied and the globally smoothest field is computed via inverse power iteration. </p>
+<p>Name of an alignment constraint attribute used as soft constraints. </p>
+<p>Each non-zero entry is softly constrained to align to that direction; zero entries are unconstrained. If empty (the default), no constraints are applied and the globally smoothest field is computed.</p>
+<p>Must match the element type selected by <code>output_element_type:</code> </p><ul>
+<li><code>AttributeElement::Vertex:</code> a per-vertex 3-D tangent vector attribute (AttributeElement::Vertex, AttributeUsage::Vector, 3 channels).</li>
+<li><code>AttributeElement::Facet:</code> a per-facet 3-D tangent vector attribute (AttributeElement::Facet, AttributeUsage::Vector, 3 channels). </li>
+</ul>
 
 </div>
 </div>
-<a id="acdeee5ae01a0d788019a7cdedc907798" name="acdeee5ae01a0d788019a7cdedc907798"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acdeee5ae01a0d788019a7cdedc907798">&#9670;&#160;</a></span>alignment_weight</h2>
+<a id="aa528c6ad17d6f25b72b2f45fed63611a" name="aa528c6ad17d6f25b72b2f45fed63611a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa528c6ad17d6f25b72b2f45fed63611a">&#9670;&#160;</a></span>direction_field_attribute</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">double alignment_weight = 1.0</td>
+          <td class="memname">std::optional&lt;std::string_view&gt; direction_field_attribute</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Scaling factor for the spectral shift in the alignment solve, following the fieldgen formulation (Knöppel et al. </p>
-<p>2013). The actual shift is  \( \alpha = s \cdot
-\sigma_{\min} \), where \( s \) is this value and \( \sigma_{\min} \) is the smallest eigenvalue of the connection Laplacian (computed automatically). At the default value of 1.0, the shift equals \( \sigma_{\min} \), giving maximum alignment. Values in (0, 1) give weaker alignment (more smoothness). </p>
+<p>Output attribute name for the smooth direction field. </p>
+<p>If not set (std::nullopt, the default), the canonical name depends on <code>output_element_type:</code> </p>
+<ul>
+<li><code>AttributeElement::Vertex:</code> <code>@smooth_direction_field</code> </li>
+<li><code>AttributeElement::Facet:</code> <code>@smooth_direction_field_facets</code> </li>
+</ul>
 
 </div>
 </div>
@@ -218,7 +244,7 @@ std::string_view&#160;</td><td class="memItemRight" valign="bottom"><b>direction
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacelagrange.html">lagrange</a></li><li class="navelem"><b>polyddg</b></li><li class="navelem"><a class="el" href="structlagrange_1_1polyddg_1_1_smooth_direction_field_options.html">SmoothDirectionFieldOptions</a></li>
-    <li class="footer">Generated on Mon Apr 27 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+    <li class="footer">Generated on Sat Jun 20 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>
 </body>

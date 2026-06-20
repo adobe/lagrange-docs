@@ -17,11 +17,14 @@ var searchData=
   ['deserializeoptions_14',['DeserializeOptions',['../structlagrange_1_1serialization_1_1_deserialize_options.html',1,'lagrange::serialization']]],
   ['differentialoperators_15',['DifferentialOperators',['../classlagrange_1_1polyddg_1_1_differential_operators.html',1,'lagrange::polyddg']]],
   ['dihedralangleoptions_16',['DihedralAngleOptions',['../structlagrange_1_1_dihedral_angle_options.html',1,'lagrange']]],
-  ['dijkstradistanceoptions_17',['DijkstraDistanceOptions',['../structlagrange_1_1_dijkstra_distance_options.html',1,'lagrange']]],
-  ['dilationoptions_18',['DilationOptions',['../structlagrange_1_1texproc_1_1_dilation_options.html',1,'lagrange::texproc']]],
-  ['discoptions_19',['DiscOptions',['../structlagrange_1_1primitive_1_1_disc_options.html',1,'lagrange::primitive']]],
-  ['disjointsets_20',['DisjointSets',['../classlagrange_1_1_disjoint_sets.html',1,'lagrange']]],
-  ['disjointsetswithsize_21',['DisjointSetsWithSize',['../classlagrange_1_1_disjoint_sets_with_size.html',1,'lagrange']]],
-  ['dockspace_22',['Dockspace',['../structlagrange_1_1ui_1_1_dockspace.html',1,'lagrange::ui']]],
-  ['downloadresult_23',['DownloadResult',['../structlagrange_1_1ui_1_1_texture_1_1_download_result.html',1,'lagrange::ui::Texture']]]
+  ['dijkstracache_17',['DijkstraCache',['../structlagrange_1_1internal_1_1_dijkstra_cache.html',1,'lagrange::internal']]],
+  ['dijkstradistanceoptions_18',['DijkstraDistanceOptions',['../structlagrange_1_1_dijkstra_distance_options.html',1,'lagrange']]],
+  ['dijkstraoptions_19',['DijkstraOptions',['../structlagrange_1_1internal_1_1_dijkstra_options.html',1,'lagrange::internal']]],
+  ['dilationoptions_20',['DilationOptions',['../structlagrange_1_1texproc_1_1_dilation_options.html',1,'lagrange::texproc']]],
+  ['disconnectuvchartsoptions_21',['DisconnectUVChartsOptions',['../structlagrange_1_1_disconnect_u_v_charts_options.html',1,'lagrange']]],
+  ['discoptions_22',['DiscOptions',['../structlagrange_1_1primitive_1_1_disc_options.html',1,'lagrange::primitive']]],
+  ['disjointsets_23',['DisjointSets',['../classlagrange_1_1_disjoint_sets.html',1,'lagrange']]],
+  ['disjointsetswithsize_24',['DisjointSetsWithSize',['../classlagrange_1_1_disjoint_sets_with_size.html',1,'lagrange']]],
+  ['dockspace_25',['Dockspace',['../structlagrange_1_1ui_1_1_dockspace.html',1,'lagrange::ui']]],
+  ['downloadresult_26',['DownloadResult',['../structlagrange_1_1ui_1_1_texture_1_1_download_result.html',1,'lagrange::ui::Texture']]]
 ];

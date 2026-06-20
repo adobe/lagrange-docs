@@ -1,0 +1,205 @@
+lagrange.serialization
+======================
+
+.. py:module:: lagrange.serialization
+
+
+Functions
+---------
+
+.. autoapisummary::
+
+   lagrange.serialization.deserialize_mesh
+   lagrange.serialization.deserialize_scene
+   lagrange.serialization.deserialize_simple_scene
+   lagrange.serialization.load_mesh
+   lagrange.serialization.load_scene
+   lagrange.serialization.load_simple_scene
+   lagrange.serialization.mesh_format_version
+   lagrange.serialization.save_mesh
+   lagrange.serialization.save_scene
+   lagrange.serialization.save_simple_scene
+   lagrange.serialization.scene_format_version
+   lagrange.serialization.serialize_mesh
+   lagrange.serialization.serialize_scene
+   lagrange.serialization.serialize_simple_scene
+   lagrange.serialization.simple_scene_format_version
+
+
+Module Contents
+---------------
+
+.. py:function:: deserialize_mesh(data, allow_scene_conversion = False, allow_type_cast = False, quiet = False)
+
+   Deserialize a mesh from a bytes buffer.
+
+   Auto-detects compression. If the buffer contains a SimpleScene or Scene, it can be converted
+   when allow_scene_conversion is enabled. Type casting can be enabled via allow_type_cast.
+
+   :param data:                   A bytes object containing the serialized data.
+   :param allow_scene_conversion: Allow converting between meshes and scenes. Defaults to False.
+   :param allow_type_cast:        Allow casting scalar and index types. Defaults to False.
+   :param quiet:                  Suppress warnings. Defaults to False.
+
+   :return SurfaceMesh: The deserialized mesh.
+
+
+.. py:function:: deserialize_scene(data, allow_scene_conversion = False, allow_type_cast = False, quiet = False)
+
+   Deserialize a scene from a bytes buffer.
+
+   Auto-detects compression. If the buffer contains a SurfaceMesh or SimpleScene, it can be converted
+   when allow_scene_conversion is enabled. Type casting can be enabled via allow_type_cast.
+
+   :param data:                   A bytes object containing the serialized data.
+   :param allow_scene_conversion: Allow converting between meshes and scenes. Defaults to False.
+   :param allow_type_cast:        Allow casting scalar and index types. Defaults to False.
+   :param quiet:                  Suppress warnings. Defaults to False.
+
+   :return Scene: The deserialized scene.
+
+
+.. py:function:: deserialize_simple_scene(data, allow_scene_conversion = False, allow_type_cast = False, quiet = False)
+
+   Deserialize a simple scene from a bytes buffer.
+
+   Auto-detects compression. If the buffer contains a SurfaceMesh or Scene, it can be converted
+   when allow_scene_conversion is enabled. Type casting can be enabled via allow_type_cast.
+
+   :param data:                   A bytes object containing the serialized data.
+   :param allow_scene_conversion: Allow converting between meshes and scenes. Defaults to False.
+   :param allow_type_cast:        Allow casting scalar and index types. Defaults to False.
+   :param quiet:                  Suppress warnings. Defaults to False.
+
+   :return SimpleScene: The deserialized simple scene.
+
+
+.. py:function:: load_mesh(filename, allow_scene_conversion = False, allow_type_cast = False, quiet = False)
+
+   Load a mesh from a binary file.
+
+   Auto-detects compression. If the file contains a SimpleScene or Scene, it can be converted
+   when allow_scene_conversion is enabled. Type casting can be enabled via allow_type_cast.
+
+   :param filename:               Input file path.
+   :param allow_scene_conversion: Allow converting between meshes and scenes. Defaults to False.
+   :param allow_type_cast:        Allow casting scalar and index types. Defaults to False.
+   :param quiet:                  Suppress warnings. Defaults to False.
+
+   :return SurfaceMesh: The loaded mesh.
+
+
+.. py:function:: load_scene(filename, allow_scene_conversion = False, allow_type_cast = False, quiet = False)
+
+   Load a scene from a binary file.
+
+   Auto-detects compression. If the file contains a SurfaceMesh or SimpleScene, it can be converted
+   when allow_scene_conversion is enabled. Type casting can be enabled via allow_type_cast.
+
+   :param filename:               Input file path.
+   :param allow_scene_conversion: Allow converting between meshes and scenes. Defaults to False.
+   :param allow_type_cast:        Allow casting scalar and index types. Defaults to False.
+   :param quiet:                  Suppress warnings. Defaults to False.
+
+   :return Scene: The loaded scene.
+
+
+.. py:function:: load_simple_scene(filename, allow_scene_conversion = False, allow_type_cast = False, quiet = False)
+
+   Load a simple scene from a binary file.
+
+   Auto-detects compression. If the file contains a SurfaceMesh or Scene, it can be converted
+   when allow_scene_conversion is enabled. Type casting can be enabled via allow_type_cast.
+
+   :param filename:               Input file path.
+   :param allow_scene_conversion: Allow converting between meshes and scenes. Defaults to False.
+   :param allow_type_cast:        Allow casting scalar and index types. Defaults to False.
+   :param quiet:                  Suppress warnings. Defaults to False.
+
+   :return SimpleScene: The loaded simple scene.
+
+
+.. py:function:: mesh_format_version()
+
+   Return the current mesh serialization format version.
+
+
+.. py:function:: save_mesh(filename, mesh, compress = True, compression_level = 3, num_threads = 0)
+
+   Save a mesh to a binary file.
+
+   :param filename:          Output file path.
+   :param mesh:              The mesh to save.
+   :param compress:          Enable zstd compression. Defaults to True.
+   :param compression_level: Zstd compression level (1-22). Defaults to 3.
+   :param num_threads:       Number of compression threads. 0 = automatic, 1 = single-threaded. Defaults to 0.
+
+
+.. py:function:: save_scene(filename, scene, compress = True, compression_level = 3, num_threads = 0)
+
+   Save a scene to a binary file.
+
+   :param filename:          Output file path.
+   :param scene:             The scene to save.
+   :param compress:          Enable zstd compression. Defaults to True.
+   :param compression_level: Zstd compression level (1-22). Defaults to 3.
+   :param num_threads:       Number of compression threads. 0 = automatic, 1 = single-threaded. Defaults to 0.
+
+
+.. py:function:: save_simple_scene(filename, scene, compress = True, compression_level = 3, num_threads = 0)
+
+   Save a simple scene to a binary file.
+
+   :param filename:          Output file path.
+   :param scene:             The simple scene to save.
+   :param compress:          Enable zstd compression. Defaults to True.
+   :param compression_level: Zstd compression level (1-22). Defaults to 3.
+   :param num_threads:       Number of compression threads. 0 = automatic, 1 = single-threaded. Defaults to 0.
+
+
+.. py:function:: scene_format_version()
+
+   Return the current scene serialization format version.
+
+
+.. py:function:: serialize_mesh(mesh, compress = True, compression_level = 3, num_threads = 0)
+
+   Serialize a mesh to a bytes buffer.
+
+   :param mesh:              The mesh to serialize.
+   :param compress:          Enable zstd compression. Defaults to True.
+   :param compression_level: Zstd compression level (1-22). Defaults to 3.
+   :param num_threads:       Number of compression threads. 0 = automatic, 1 = single-threaded. Defaults to 0.
+
+   :return bytes: A bytes object containing the serialized mesh.
+
+
+.. py:function:: serialize_scene(scene, compress = True, compression_level = 3, num_threads = 0)
+
+   Serialize a scene to a bytes buffer.
+
+   :param scene:             The scene to serialize.
+   :param compress:          Enable zstd compression. Defaults to True.
+   :param compression_level: Zstd compression level (1-22). Defaults to 3.
+   :param num_threads:       Number of compression threads. 0 = automatic, 1 = single-threaded. Defaults to 0.
+
+   :return bytes: A bytes object containing the serialized scene.
+
+
+.. py:function:: serialize_simple_scene(scene, compress = True, compression_level = 3, num_threads = 0)
+
+   Serialize a simple scene to a bytes buffer.
+
+   :param scene:             The simple scene to serialize.
+   :param compress:          Enable zstd compression. Defaults to True.
+   :param compression_level: Zstd compression level (1-22). Defaults to 3.
+   :param num_threads:       Number of compression threads. 0 = automatic, 1 = single-threaded. Defaults to 0.
+
+   :return bytes: A bytes object containing the serialized simple scene.
+
+
+.. py:function:: simple_scene_format_version()
+
+   Return the current simple scene serialization format version.
+
+

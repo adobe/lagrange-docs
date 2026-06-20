@@ -200,11 +200,17 @@
 <li class="toctree-l2"><a class="reference internal" href="../geodesic/index.html">lagrange.geodesic</a></li>
 <li class="toctree-l2 current current-page"><a class="current reference internal" href="#">lagrange.image</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../io/index.html">lagrange.io</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../packing/index.html">lagrange.packing</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../poisson/index.html">lagrange.poisson</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../polyddg/index.html">lagrange.polyddg</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../primitive/index.html">lagrange.primitive</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../raycasting/index.html">lagrange.raycasting</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../scene/index.html">lagrange.scene</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../scripts/index.html">lagrange.scripts</a><input aria-label="Toggle navigation of lagrange.scripts" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../scripts/meshstat/index.html">lagrange.scripts.meshstat</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../serialization/index.html">lagrange.serialization</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../solver/index.html">lagrange.solver</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../subdivision/index.html">lagrange.subdivision</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../texproc/index.html">lagrange.texproc</a></li>
@@ -265,11 +271,23 @@
 </table>
 </div>
 </section>
+<section id="functions">
+<h2>Functions<a class="headerlink" href="#functions" title="Link to this heading">¶</a></h2>
+<div class="table-wrapper autosummary longtable docutils container">
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#lagrange.image.split_grid" title="lagrange.image.split_grid"><code class="xref py py-obj docutils literal notranslate"><span class="pre">split_grid</span></code></a>(grid, num_cells[, rows, cols])</p></td>
+<td><p>Split a grid image into <code class="docutils literal notranslate"><span class="pre">num_cells</span></code> row-major sub-images.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
 <section id="module-contents">
 <h2>Module Contents<a class="headerlink" href="#module-contents" title="Link to this heading">¶</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="lagrange.image.ImageChannel">
-<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">lagrange.image.</span></span><span class="sig-name descname"><span class="pre">ImageChannel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwds</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lagrange.image.ImageChannel" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">lagrange.image.</span></span><span class="sig-name descname"><span class="pre">ImageChannel</span></span><a class="headerlink" href="#lagrange.image.ImageChannel" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">enum.Enum</span></code></p>
 <p>Image channel</p>
 <dl class="py attribute">
@@ -296,27 +314,27 @@
 
 <dl class="py class">
 <dt class="sig sig-object py" id="lagrange.image.ImagePrecision">
-<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">lagrange.image.</span></span><span class="sig-name descname"><span class="pre">ImagePrecision</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwds</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lagrange.image.ImagePrecision" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">lagrange.image.</span></span><span class="sig-name descname"><span class="pre">ImagePrecision</span></span><a class="headerlink" href="#lagrange.image.ImagePrecision" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">enum.Enum</span></code></p>
 <p>Image pixel precision</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="lagrange.image.ImagePrecision.float16">
-<span class="sig-name descname"><span class="pre">float16</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">6</span></em><a class="headerlink" href="#lagrange.image.ImagePrecision.float16" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">float16</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">7</span></em><a class="headerlink" href="#lagrange.image.ImagePrecision.float16" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="lagrange.image.ImagePrecision.float32">
-<span class="sig-name descname"><span class="pre">float32</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">4</span></em><a class="headerlink" href="#lagrange.image.ImagePrecision.float32" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">float32</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">5</span></em><a class="headerlink" href="#lagrange.image.ImagePrecision.float32" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="lagrange.image.ImagePrecision.float64">
-<span class="sig-name descname"><span class="pre">float64</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">5</span></em><a class="headerlink" href="#lagrange.image.ImagePrecision.float64" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">float64</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">6</span></em><a class="headerlink" href="#lagrange.image.ImagePrecision.float64" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="lagrange.image.ImagePrecision.int32">
-<span class="sig-name descname"><span class="pre">int32</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">3</span></em><a class="headerlink" href="#lagrange.image.ImagePrecision.int32" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">int32</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">4</span></em><a class="headerlink" href="#lagrange.image.ImagePrecision.int32" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
@@ -326,7 +344,7 @@
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="lagrange.image.ImagePrecision.uint32">
-<span class="sig-name descname"><span class="pre">uint32</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2</span></em><a class="headerlink" href="#lagrange.image.ImagePrecision.uint32" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">uint32</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">3</span></em><a class="headerlink" href="#lagrange.image.ImagePrecision.uint32" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
@@ -336,7 +354,7 @@
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="lagrange.image.ImagePrecision.unknown">
-<span class="sig-name descname"><span class="pre">unknown</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">7</span></em><a class="headerlink" href="#lagrange.image.ImagePrecision.unknown" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">unknown</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">8</span></em><a class="headerlink" href="#lagrange.image.ImagePrecision.unknown" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -400,6 +418,37 @@
 
 </dd></dl>
 
+<dl class="py function">
+<dt class="sig sig-object py" id="lagrange.image.split_grid">
+<span class="sig-prename descclassname"><span class="pre">lagrange.image.</span></span><span class="sig-name descname"><span class="pre">split_grid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">grid</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_cells</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rows</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cols</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lagrange.image.split_grid" title="Link to this definition">¶</a></dt>
+<dd><p>Split a grid image into <code class="docutils literal notranslate"><span class="pre">num_cells</span></code> row-major sub-images.</p>
+<p>The grid is split into <code class="docutils literal notranslate"><span class="pre">rows</span></code> x <code class="docutils literal notranslate"><span class="pre">cols</span></code> cells. A value of zero on either dimension means
+auto-detect:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">rows=0,</span> <span class="pre">cols=0</span></code>: pick the factorization producing cells closest to square.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">rows=R,</span> <span class="pre">cols=0</span></code>: derive <code class="docutils literal notranslate"><span class="pre">cols</span> <span class="pre">=</span> <span class="pre">num_cells</span> <span class="pre">/</span> <span class="pre">R</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">rows=0,</span> <span class="pre">cols=C</span></code>: derive <code class="docutils literal notranslate"><span class="pre">rows</span> <span class="pre">=</span> <span class="pre">num_cells</span> <span class="pre">/</span> <span class="pre">C</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">rows=R,</span> <span class="pre">cols=C</span></code>: validate <code class="docutils literal notranslate"><span class="pre">R</span> <span class="pre">*</span> <span class="pre">C</span> <span class="pre">==</span> <span class="pre">num_cells</span></code>.</p></li>
+</ul>
+<p>Returned views share memory with the input grid (no copy).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>grid</strong> (<em>Annotated</em><em>[</em><em>numpy.typing.NDArray</em><em>[</em><em>numpy.float32</em><em>]</em><em>, </em><em>dict</em><em>(</em><em>shape=</em><em>(</em><em>None</em><em>, </em><em>None</em><em>, </em><em>None</em><em>)</em><em>, </em><em>order='C'</em><em>, </em><em>device='cpu'</em><em>)</em><em>]</em>) – HxWxC grid image as a numpy array.</p></li>
+<li><p><strong>num_cells</strong> (<em>int</em>) – Number of cells to split the grid into.</p></li>
+<li><p><strong>rows</strong> (<em>int</em>) – Number of cell rows in the grid (0 = auto).</p></li>
+<li><p><strong>cols</strong> (<em>int</em>) – Number of cell columns in the grid (0 = auto).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>List of <code class="docutils literal notranslate"><span class="pre">num_cells</span></code> numpy views into the grid, in row-major order.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list[object]</p>
+</dd>
+</dl>
+</dd></dl>
+
 </section>
 </section>
 
@@ -460,6 +509,7 @@
             <ul>
 <li><a class="reference internal" href="#">image</a><ul>
 <li><a class="reference internal" href="#classes">Classes</a></li>
+<li><a class="reference internal" href="#functions">Functions</a></li>
 <li><a class="reference internal" href="#module-contents">Module Contents</a><ul>
 <li><a class="reference internal" href="#lagrange.image.ImageChannel"><code class="docutils literal notranslate"><span class="pre">ImageChannel</span></code></a><ul>
 <li><a class="reference internal" href="#lagrange.image.ImageChannel.four"><code class="docutils literal notranslate"><span class="pre">ImageChannel.four</span></code></a></li>
@@ -486,6 +536,7 @@
 <li><a class="reference internal" href="#lagrange.image.ImageStorage.width"><code class="docutils literal notranslate"><span class="pre">ImageStorage.width</span></code></a></li>
 </ul>
 </li>
+<li><a class="reference internal" href="#lagrange.image.split_grid"><code class="docutils literal notranslate"><span class="pre">split_grid()</span></code></a></li>
 </ul>
 </li>
 </ul>

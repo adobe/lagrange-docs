@@ -49,7 +49,7 @@ var group__group_utils_misc =
     [ "ends_with", "group__group-utils-misc.html#ga8eef11056e4525af0cd41aeb98869cbb", null ],
     [ "to_lower", "group__group-utils-misc.html#ga40b443ced6fb40c747991e41e12494f4", null ],
     [ "to_upper", "group__group-utils-misc.html#ga81d5673419396307677f905d5f4033ce", null ],
-    [ "string_format", "group__group-utils-misc.html#ga45e3802af95f6c48e3f3173abe05e488", null ],
+    [ "string_format", "group__group-utils-misc.html#gab0ccfafd7993dceb16b5cda49fa5ea36", null ],
     [ "make_value_ptr", "group__group-utils-misc.html#gaeb6c32297561f1bd7fa1a6fdc4396a9c", null ],
     [ "create_image", "group__group-utils-misc.html#gae0fffe7b49e591a21043fb43bcad7826", null ]
 ];

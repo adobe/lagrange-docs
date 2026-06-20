@@ -150,9 +150,9 @@ Public Member Functions</h2></td></tr>
 &#160;</td><td class="memItemRight" valign="bottom"><b>~TextureRasterizer</b> ()</td></tr>
 <tr class="memdesc:aedabaef81d364b7a792e40c254251a8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor. <br /></td></tr>
 <tr class="separator:aedabaef81d364b7a792e40c254251a8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aabcb6155f6d28112be1743bb2ad747cf" id="r_aabcb6155f6d28112be1743bb2ad747cf"><td class="memItemLeft" align="right" valign="top">std::pair&lt; Array3Df, Array3Df &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aabcb6155f6d28112be1743bb2ad747cf">weighted_texture_from_render</a> (image::experimental::View3D&lt; const float &gt; image, const <a class="el" href="structlagrange_1_1texproc_1_1_camera_options.html">CameraOptions</a> &amp;options) const</td></tr>
-<tr class="memdesc:aabcb6155f6d28112be1743bb2ad747cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unproject a rendered image into a UV texture and confidence map.  <br /></td></tr>
-<tr class="separator:aabcb6155f6d28112be1743bb2ad747cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a27488a89d0f208566814c868d27d0c5b" id="r_a27488a89d0f208566814c868d27d0c5b"><td class="memItemLeft" align="right" valign="top">std::pair&lt; Array3Df, Array3Df &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a27488a89d0f208566814c868d27d0c5b">weighted_texture_from_render</a> (image::experimental::View3D&lt; const float &gt; image, const <a class="el" href="structlagrange_1_1_camera_transforms.html">CameraTransforms</a> &amp;transforms) const</td></tr>
+<tr class="memdesc:a27488a89d0f208566814c868d27d0c5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unproject a rendered image into a UV texture and confidence map.  <br /></td></tr>
+<tr class="separator:a27488a89d0f208566814c868d27d0c5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, typename Index&gt;<br />
@@ -198,8 +198,8 @@ template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="aabcb6155f6d28112be1743bb2ad747cf" name="aabcb6155f6d28112be1743bb2ad747cf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aabcb6155f6d28112be1743bb2ad747cf">&#9670;&#160;</a></span>weighted_texture_from_render()</h2>
+<a id="a27488a89d0f208566814c868d27d0c5b" name="a27488a89d0f208566814c868d27d0c5b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a27488a89d0f208566814c868d27d0c5b">&#9670;&#160;</a></span>weighted_texture_from_render()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -214,7 +214,7 @@ template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="structlagrange_1_1texproc_1_1_camera_options.html">CameraOptions</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>options</em></span>&#160;) const</td>
+          <td class="paramtype">const <a class="el" href="structlagrange_1_1_camera_transforms.html">CameraTransforms</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>transforms</em></span>&#160;) const</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -223,7 +223,7 @@ template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">image</td><td>Input rendered color image. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">options</td><td>Camera option.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">transforms</td><td>Camera view and projection transforms.</td></tr>
   </table>
   </dd>
 </dl>
@@ -240,7 +240,7 @@ template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacelagrange.html">lagrange</a></li><li class="navelem"><b>texproc</b></li><li class="navelem"><a class="el" href="classlagrange_1_1texproc_1_1_texture_rasterizer.html">TextureRasterizer</a></li>
-    <li class="footer">Generated on Mon Apr 27 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+    <li class="footer">Generated on Sat Jun 20 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>
 </body>

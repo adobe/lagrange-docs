@@ -1,0 +1,32 @@
+lagrange.packing
+================
+
+.. py:module:: lagrange.packing
+
+
+Functions
+---------
+
+.. autoapisummary::
+
+   lagrange.packing.repack_uv_charts
+
+
+Module Contents
+---------------
+
+.. py:function:: repack_uv_charts(mesh, *, uv_attribute_name = '', chart_attribute_name = '', normalize = True, margin = 0.0010000000474974513)
+
+   Pack UV charts of a given mesh.
+
+   The UV attribute is updated in place.
+
+   :param mesh: The mesh with UV attribute.
+   :param uv_attribute_name: Name of the indexed attribute to use as UV coordinates. If empty, the first indexed UV attribute will be used.
+   :param chart_attribute_name: Name of the facet attribute that groups facets into UV charts. If empty, it will be computed based on UV chart connectivity.
+   :param normalize: Whether the output should be normalized to fit into a unit box. When false, the packed charts preserve their original scale but are still translated so the minimum UV is at the origin.
+   :param margin: Minimum allowed distance between two boxes. When ``normalize`` is true, this value is measured in the normalized ``[0, 1]`` output domain. When ``normalize`` is false, it is interpreted as an absolute distance in the original UV units.
+
+   :return: None. The UV attribute is modified in place.
+
+

@@ -59,18 +59,18 @@ var NAVTREEINDEX =
 "../",
 "classlagrange_1_1_mesh_navigation.html#ab4b72663d159f5e5280c524fab4cebc3",
 "classlagrange_1_1_surface_mesh.html#add807d4ec4699aba67e2e2857599b50f",
-"classlagrange_1_1internal_1_1shared__ptr.html#a3791260580b750b7e8b2c6ae900f787f",
-"classlagrange_1_1raycasting_1_1_ray_caster.html#a2e00419dd6871a0befba5a2f16f5a743",
-"classlagrange_1_1ui_1_1_keybinds.html#a0d187713751b35153120f90c2ab685ac",
-"group__group-surfacemesh-attr-utils.html#gae8deb2977d6d78e0b8e3a9a7773b6c72",
-"group__group-utils-misc.html#gabc213e8639504f32e944828c1634d13e",
-"namespacelagrange_1_1io.html#a187a3b61d73c5c89bc62f363e2028d8d",
-"structlagrange_1_1_attribute_filter.html#af506671fd3483ecdc257a2a205e45dd4",
-"structlagrange_1_1experimental_1_1_scalar_to_enum_3_01float_00_01void_01_4.html",
-"structlagrange_1_1polyddg_1_1_principal_curvatures_options.html",
-"structlagrange_1_1scene_1_1_texture.html",
-"structlagrange_1_1ui_1_1_input_state_1_1_mouse.html#a03c7b11f1388dad69110dd19809558de",
-"structlagrange_1_1ui_1_1util_1_1_as_function.html"
+"classlagrange_1_1internal_1_1shared__ptr.html",
+"classlagrange_1_1raycasting_1_1_occluded_facet_sampler.html#a7be221a7284e1955af3e9be0c3e02535",
+"classlagrange_1_1ui_1_1_camera.html#a934411a296eecd8b436943aa86460edb",
+"functions_vars_u.html",
+"group__group-surfacemesh-views.html#ga06ca3172e4577c726eaf8d2ab26a1ab5",
+"namespacelagrange_1_1image.html#ab07cb71e1aaf9a4252a65a47b290731e",
+"namespacelagrange_1_1ui.html#adb59191923a2d859ee51c6219c74abae",
+"structlagrange_1_1_submesh_options.html#a98857c3e0ea471a5dc0af5aef9050ff5",
+"structlagrange_1_1internal_1_1_skinning_extract_n_result.html",
+"structlagrange_1_1primitive_1_1legacy_1_1_rounded_plane_config.html#a1180fcc7096856a2fcf8bf37bd85ed19",
+"structlagrange_1_1texproc_1_1_compositing_options.html#ad3e7cea1a808330f227ccb31f07fe84c",
+"structlagrange_1_1ui_1_1_selection_context.html#a8b963fe1458b187752424884e52cc3b8"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';

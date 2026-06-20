@@ -4,7 +4,7 @@ var searchData=
   ['camerachangedevent_1',['CameraChangedEvent',['../structlagrange_1_1ui_1_1_camera_changed_event.html',1,'lagrange::ui']]],
   ['cameracontroller_2',['CameraController',['../structlagrange_1_1ui_1_1_camera_controller.html',1,'lagrange::ui']]],
   ['camerafocusandfit_3',['CameraFocusAndFit',['../structlagrange_1_1ui_1_1_camera_focus_and_fit.html',1,'lagrange::ui']]],
-  ['cameraoptions_4',['CameraOptions',['../structlagrange_1_1texproc_1_1_camera_options.html',1,'lagrange::texproc']]],
+  ['cameratransforms_4',['CameraTransforms',['../structlagrange_1_1_camera_transforms.html',1,'lagrange']]],
   ['cameraturntable_5',['CameraTurntable',['../structlagrange_1_1ui_1_1_camera_turntable.html',1,'lagrange::ui']]],
   ['chainedgesoptions_6',['ChainEdgesOptions',['../structlagrange_1_1_chain_edges_options.html',1,'lagrange']]],
   ['chainedgesresult_7',['ChainEdgesResult',['../structlagrange_1_1_chain_edges_result.html',1,'lagrange']]],

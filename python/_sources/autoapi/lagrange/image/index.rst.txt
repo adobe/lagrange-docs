@@ -14,10 +14,18 @@ Classes
    lagrange.image.ImageStorage
 
 
+Functions
+---------
+
+.. autoapisummary::
+
+   lagrange.image.split_grid
+
+
 Module Contents
 ---------------
 
-.. py:class:: ImageChannel(*args, **kwds)
+.. py:class:: ImageChannel
 
    Bases: :py:obj:`enum.Enum`
 
@@ -45,7 +53,7 @@ Module Contents
 
 
 
-.. py:class:: ImagePrecision(*args, **kwds)
+.. py:class:: ImagePrecision
 
    Bases: :py:obj:`enum.Enum`
 
@@ -54,22 +62,22 @@ Module Contents
 
 
    .. py:attribute:: float16
-      :value: 6
+      :value: 7
 
 
 
    .. py:attribute:: float32
-      :value: 4
-
-
-
-   .. py:attribute:: float64
       :value: 5
 
 
 
+   .. py:attribute:: float64
+      :value: 6
+
+
+
    .. py:attribute:: int32
-      :value: 3
+      :value: 4
 
 
 
@@ -79,7 +87,7 @@ Module Contents
 
 
    .. py:attribute:: uint32
-      :value: 2
+      :value: 3
 
 
 
@@ -89,7 +97,7 @@ Module Contents
 
 
    .. py:attribute:: unknown
-      :value: 7
+      :value: 8
 
 
 
@@ -124,5 +132,27 @@ Module Contents
 
 
       Image width
+
+
+.. py:function:: split_grid(grid, num_cells, rows = 0, cols = 0)
+
+   Split a grid image into ``num_cells`` row-major sub-images.
+
+   The grid is split into ``rows`` x ``cols`` cells. A value of zero on either dimension means
+   auto-detect:
+
+   - ``rows=0, cols=0``: pick the factorization producing cells closest to square.
+   - ``rows=R, cols=0``: derive ``cols = num_cells / R``.
+   - ``rows=0, cols=C``: derive ``rows = num_cells / C``.
+   - ``rows=R, cols=C``: validate ``R * C == num_cells``.
+
+   Returned views share memory with the input grid (no copy).
+
+   :param grid: HxWxC grid image as a numpy array.
+   :param num_cells: Number of cells to split the grid into.
+   :param rows: Number of cell rows in the grid (0 = auto).
+   :param cols: Number of cell columns in the grid (0 = auto).
+
+   :return: List of ``num_cells`` numpy views into the grid, in row-major order.
 
 

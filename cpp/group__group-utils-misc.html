@@ -279,10 +279,10 @@ Functions</h2></td></tr>
 <tr class="memitem:ga81d5673419396307677f905d5f4033ce" id="r_ga81d5673419396307677f905d5f4033ce"><td class="memItemLeft" align="right" valign="top">LA_CORE_API std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga81d5673419396307677f905d5f4033ce">to_upper</a> (std::string str)</td></tr>
 <tr class="memdesc:ga81d5673419396307677f905d5f4033ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert a string to uppercase.  <br /></td></tr>
 <tr class="separator:ga81d5673419396307677f905d5f4033ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga45e3802af95f6c48e3f3173abe05e488" id="r_ga45e3802af95f6c48e3f3173abe05e488"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
-<tr class="memitem:ga45e3802af95f6c48e3f3173abe05e488"><td class="memTemplItemLeft" align="right" valign="top">std::string&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ga45e3802af95f6c48e3f3173abe05e488">string_format</a> (fmt::format_string&lt; Args... &gt; format, <a class="el" href="struct_args.html">Args</a> &amp;&amp;... args)</td></tr>
-<tr class="memdesc:ga45e3802af95f6c48e3f3173abe05e488"><td class="mdescLeft">&#160;</td><td class="mdescRight">Format args according to the format string fmt, and return the result as a string.  <br /></td></tr>
-<tr class="separator:ga45e3802af95f6c48e3f3173abe05e488"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab0ccfafd7993dceb16b5cda49fa5ea36" id="r_gab0ccfafd7993dceb16b5cda49fa5ea36"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
+<tr class="memitem:gab0ccfafd7993dceb16b5cda49fa5ea36"><td class="memTemplItemLeft" align="right" valign="top">std::string&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#gab0ccfafd7993dceb16b5cda49fa5ea36">string_format</a> (lagrange::format_string&lt; Args... &gt; format, <a class="el" href="struct_args.html">Args</a> &amp;&amp;... args)</td></tr>
+<tr class="memdesc:gab0ccfafd7993dceb16b5cda49fa5ea36"><td class="mdescLeft">&#160;</td><td class="mdescRight">Format args according to the format string fmt, and return the result as a string.  <br /></td></tr>
+<tr class="separator:gab0ccfafd7993dceb16b5cda49fa5ea36"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaeb6c32297561f1bd7fa1a6fdc4396a9c" id="r_gaeb6c32297561f1bd7fa1a6fdc4396a9c"><td class="memTemplParams" colspan="2">template&lt;class T, class... Args&gt; </td></tr>
 <tr class="memitem:gaeb6c32297561f1bd7fa1a6fdc4396a9c"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classlagrange_1_1value__ptr.html">value_ptr</a>&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#gaeb6c32297561f1bd7fa1a6fdc4396a9c">make_value_ptr</a> (<a class="el" href="struct_args.html">Args</a> &amp;&amp;... args)</td></tr>
 <tr class="memdesc:gaeb6c32297561f1bd7fa1a6fdc4396a9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper function to create a value_ptr for a given type.  <br /></td></tr>
@@ -622,7 +622,7 @@ template&lt;typename TargetType, typename SourceType&gt; </div>
 <div class="line"><span class="keywordtype">int</span> x = <a class="code hl_function" href="#gafc5798c28b15e46d20d0234b72c4ef63">lagrange::safe_cast&lt;int&gt;</a>(<span class="stringliteral">&quot;-1.0&quot;</span>);     <span class="comment">// fail because incompatible types.</span></div>
 <div class="line"><span class="keywordtype">size_t</span> x = <a class="code hl_function" href="#gafc5798c28b15e46d20d0234b72c4ef63">lagrange::safe_cast&lt;size_t&gt;</a>(-1.0); <span class="comment">// fail because sign change.</span></div>
 <div class="line"><span class="keywordtype">int</span> x = <a class="code hl_function" href="#gafc5798c28b15e46d20d0234b72c4ef63">lagrange::safe_cast&lt;int&gt;</a>(-1.5);       <span class="comment">// fail because truncation error.</span></div>
-<div class="ttc" id="agroup__group-utils-misc_html_gafc5798c28b15e46d20d0234b72c4ef63"><div class="ttname"><a href="#gafc5798c28b15e46d20d0234b72c4ef63">lagrange::safe_cast</a></div><div class="ttdeci">constexpr auto safe_cast(SourceType value) -&gt; std::enable_if_t&lt;!std::is_same&lt; SourceType, TargetType &gt;::value, TargetType &gt;</div><div class="ttdoc">Perform safe cast from SourceType to TargetType, where &quot;safe&quot; means:</div><div class="ttdef"><b>Definition</b> safe_cast.h:50</div></div>
+<div class="ttc" id="agroup__group-utils-misc_html_gafc5798c28b15e46d20d0234b72c4ef63"><div class="ttname"><a href="#gafc5798c28b15e46d20d0234b72c4ef63">lagrange::safe_cast</a></div><div class="ttdeci">constexpr auto safe_cast(SourceType value) -&gt; std::enable_if_t&lt;!std::is_same&lt; SourceType, TargetType &gt;::value, TargetType &gt;</div><div class="ttdoc">Perform safe cast from SourceType to TargetType, where &quot;safe&quot; means:</div><div class="ttdef"><b>Definition</b> safe_cast.h:51</div></div>
 </div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">value</td><td>Value to cast.</td></tr>
@@ -1026,8 +1026,8 @@ template&lt;typename T, typename Y&gt; </div>
 
 </div>
 </div>
-<a id="ga45e3802af95f6c48e3f3173abe05e488" name="ga45e3802af95f6c48e3f3173abe05e488"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga45e3802af95f6c48e3f3173abe05e488">&#9670;&#160;</a></span>string_format()</h2>
+<a id="gab0ccfafd7993dceb16b5cda49fa5ea36" name="gab0ccfafd7993dceb16b5cda49fa5ea36"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab0ccfafd7993dceb16b5cda49fa5ea36">&#9670;&#160;</a></span>string_format()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1037,7 +1037,7 @@ template&lt;typename... Args&gt; </div>
         <tr>
           <td class="memname">std::string string_format </td>
           <td>(</td>
-          <td class="paramtype">fmt::format_string&lt; Args... &gt;</td>          <td class="paramname"><span class="paramname"><em>format</em></span>, </td>
+          <td class="paramtype">lagrange::format_string&lt; Args... &gt;</td>          <td class="paramname"><span class="paramname"><em>format</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -1157,7 +1157,7 @@ template&lt;typename T&gt; </div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Mon Apr 27 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+    <li class="footer">Generated on Sat Jun 20 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>
 </body>

@@ -1,5 +1,8 @@
 var searchData=
 [
-  ['warnandcopy_0',['WarnAndCopy',['../group__group-surfacemesh-attr.html#gga790f065d45f011268208d588a8251846aef773dc1e1097301a1bf955bfa9857ec',1,'lagrange::WarnAndCopy'],['../group__group-surfacemesh-attr.html#gga4dfaa0766598cfdf33ee2a4a8288f9f0aef773dc1e1097301a1bf955bfa9857ec',1,'lagrange::WarnAndCopy'],['../group__group-surfacemesh-attr.html#ggae33502272f9bf0b7ca929b1418472853aef773dc1e1097301a1bf955bfa9857ec',1,'lagrange::WarnAndCopy']]],
-  ['windingnumber_1',['WindingNumber',['../structlagrange_1_1volume_1_1_mesh_to_volume_options.html#ad870f3a2c3baacb65e34071ae73c66cba516bb4c8a929221ac00eda157b11d6cb',1,'lagrange::volume::MeshToVolumeOptions']]]
+  ['value_0',['Value',['../group__group-surfacemesh-attr.html#gga9d8ab208822bab9987e9652dda49d89aa050889cfb2c606473596b8f70f702769',1,'lagrange']]],
+  ['vector_1',['Vector',['../group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45a57dea6f5039281b7fee517fc43bf3110',1,'lagrange']]],
+  ['vertex_2',['Vertex',['../group__group-surfacemesh-attr.html#gga9d8ab208822bab9987e9652dda49d89aad013c4439c3e09308d6b2eef2a4025ae',1,'lagrange::Vertex'],['../namespacelagrange.html#a312f57b0318728667933d7254778058bab22b929ba52471a02d18bb3a4e4472e6',1,'lagrange::Vertex']]],
+  ['vertexindex_3',['VertexIndex',['../group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45a7302d7da6a3804b1edf63b4b16198d80',1,'lagrange']]],
+  ['vertexsmoothing_4',['VertexSmoothing',['../structlagrange_1_1filtering_1_1_smoothing_options.html#af519bba7690aa5b018873bd29e379711a49de4e538079bb5a7d5f8cc06eef2957',1,'lagrange::filtering::SmoothingOptions']]]
 ];

@@ -184,18 +184,22 @@ $(function(){initNavTree('scene_2include_2lagrange_2scene_2scene__utils_8h_sourc
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <span class="keywordflow">return</span> compute_global_node_transform&lt;Scalar, Index&gt;(scene, n.parent) * n.transform;</div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>}</div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span></div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>LA_SCENE_API Eigen::Affine3f camera_view_transform(</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    <span class="keyword">const</span> Camera&amp; camera,</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    <span class="keyword">const</span> Eigen::Affine3f&amp; world_from_local = Eigen::Affine3f::Identity());</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span></div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>LA_SCENE_API Eigen::Projective3f camera_projection_transform(<span class="keyword">const</span> Camera&amp; camera);</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span></div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> Scalar, <span class="keyword">typename</span> Index&gt;</div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span><span class="keywordtype">void</span> convert_texcoord_uv_st(</div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    SurfaceMesh&lt;Scalar, Index&gt;&amp; mesh,</div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    <a class="code hl_typedef" href="group__group-surfacemesh-attr.html#ga4d115376c2c766084ef808c837348fc3">AttributeId</a> attribute_id = <a class="code hl_function" href="group__group-utils-misc.html#ga6c3e5aabde25a440beb7fc174ab081df">invalid&lt;AttributeId&gt;</a>());</div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>} <span class="comment">// namespace lagrange::scene::utils</span></div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>LA_SCENE_API Eigen::Affine3f camera_view_transform(</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    <span class="keyword">const</span> Camera&amp; camera,</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    <span class="keyword">const</span> Eigen::Affine3f&amp; world_from_local = Eigen::Affine3f::Identity());</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span></div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>LA_SCENE_API Eigen::Affine3f camera_view_transform(</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    <span class="keyword">const</span> Camera&amp; camera,</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    <span class="keyword">const</span> Eigen::Isometry3f&amp; world_from_local);</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span></div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>LA_SCENE_API Eigen::Projective3f camera_projection_transform(<span class="keyword">const</span> Camera&amp; camera);</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span></div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> Scalar, <span class="keyword">typename</span> Index&gt;</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span><span class="keywordtype">void</span> convert_texcoord_uv_st(</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    SurfaceMesh&lt;Scalar, Index&gt;&amp; mesh,</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>    <a class="code hl_typedef" href="group__group-surfacemesh-attr.html#ga4d115376c2c766084ef808c837348fc3">AttributeId</a> attribute_id = <a class="code hl_function" href="group__group-utils-misc.html#ga6c3e5aabde25a440beb7fc174ab081df">invalid&lt;AttributeId&gt;</a>());</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span> </div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>} <span class="comment">// namespace lagrange::scene::utils</span></div>
 <div class="ttc" id="agroup__group-surfacemesh-attr_html_ga4d115376c2c766084ef808c837348fc3"><div class="ttname"><a href="group__group-surfacemesh-attr.html#ga4d115376c2c766084ef808c837348fc3">lagrange::AttributeId</a></div><div class="ttdeci">uint32_t AttributeId</div><div class="ttdoc">Identified to be used to access an attribute.</div><div class="ttdef"><b>Definition</b> AttributeFwd.h:73</div></div>
 <div class="ttc" id="agroup__group-utils-misc_html_ga6c3e5aabde25a440beb7fc174ab081df"><div class="ttname"><a href="group__group-utils-misc.html#ga6c3e5aabde25a440beb7fc174ab081df">lagrange::invalid</a></div><div class="ttdeci">constexpr T invalid()</div><div class="ttdoc">You can use invalid&lt;T&gt;() to get a value that can represent &quot;invalid&quot; values, such as invalid indices ...</div><div class="ttdef"><b>Definition</b> invalid.h:40</div></div>
 </div><!-- fragment --></div><!-- contents -->
@@ -204,7 +208,7 @@ $(function(){initNavTree('scene_2include_2lagrange_2scene_2scene__utils_8h_sourc
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_47b2d292899280db2fcec7f6d8eaff50.html">lagrange</a></li><li class="navelem"><a class="el" href="dir_3487e1ae95bb6a87eb4d9cf0bdfd330a.html">scene</a></li><li class="navelem"><b>scene_utils.h</b></li>
-    <li class="footer">Generated on Mon Apr 27 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+    <li class="footer">Generated on Sat Jun 20 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>
 </body>

@@ -176,123 +176,130 @@ $(function(){initNavTree('primitive__utils_8h_source.html',''); initResizable(tr
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    std::string_view name,</div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    <span class="keyword">const</span> <a class="code hl_enumeration" href="group__module-primitive.html#gae521e500502eae3849d46dc92a5ab7fe">SemanticLabel</a> label)</div>
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>{</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    mesh.template create_attribute&lt;uint8_t&gt;(</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        name,</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        <a class="code hl_enumvalue" href="group__group-surfacemesh-attr.html#gga9d8ab208822bab9987e9652dda49d89aa9b112d86d52178fe18e47e14bb6aeb35">AttributeElement::Facet</a>,</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        1,</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        <a class="code hl_enumvalue" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">AttributeUsage::Scalar</a>);</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    <span class="keyword">auto</span> values = <a class="code hl_function" href="group__group-surfacemesh-views.html#ga5edab3687afa62046eaf874ceae232f8">attribute_vector_ref&lt;uint8_t&gt;</a>(mesh, name);</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    values.setConstant(<span class="keyword">static_cast&lt;</span>uint8_t<span class="keyword">&gt;</span>(label));</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>}</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span></div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> Scalar, <span class="keyword">typename</span> Index&gt;</div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span><span class="keywordtype">void</span> normalize_uv(</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    SurfaceMesh&lt;Scalar, Index&gt;&amp; mesh,</div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    Eigen::Matrix&lt;Scalar, 1, 2&gt; min_uv,</div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    Eigen::Matrix&lt;Scalar, 1, 2&gt; max_uv)</div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>{</div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    <span class="keyword">auto</span> uv_mesh = <a class="code hl_function" href="group__group-surfacemesh-utils.html#gae68df8e09ed4829ef852e47518e5a47d">uv_mesh_ref</a>(mesh);</div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    <span class="keyword">auto</span> uvs = <a class="code hl_function" href="group__group-surfacemesh-views.html#ga6b51e5a79a66e11c3dff4c1d68015c1c">vertex_ref</a>(uv_mesh);</div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span> </div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    Eigen::Matrix&lt;Scalar, 1, 2&gt; bbox_min = uvs.colwise().minCoeff();</div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    Eigen::Matrix&lt;Scalar, 1, 2&gt; bbox_max = uvs.colwise().maxCoeff();</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    <span class="keywordflow">if</span> (name.empty()) {</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    }</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    mesh.template create_attribute&lt;uint8_t&gt;(</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        name,</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        <a class="code hl_enumvalue" href="group__group-surfacemesh-attr.html#gga9d8ab208822bab9987e9652dda49d89aa9b112d86d52178fe18e47e14bb6aeb35">AttributeElement::Facet</a>,</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        1,</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        <a class="code hl_enumvalue" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">AttributeUsage::Scalar</a>);</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    <span class="keyword">auto</span> values = <a class="code hl_function" href="group__group-surfacemesh-views.html#ga5edab3687afa62046eaf874ceae232f8">attribute_vector_ref&lt;uint8_t&gt;</a>(mesh, name);</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    values.setConstant(<span class="keyword">static_cast&lt;</span>uint8_t<span class="keyword">&gt;</span>(label));</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>}</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span></div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> Scalar, <span class="keyword">typename</span> Index&gt;</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span><span class="keywordtype">void</span> normalize_uv(</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    SurfaceMesh&lt;Scalar, Index&gt;&amp; mesh,</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    Eigen::Matrix&lt;Scalar, 1, 2&gt; min_uv,</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    Eigen::Matrix&lt;Scalar, 1, 2&gt; max_uv)</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>{</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    <span class="keyword">auto</span> uv_mesh = <a class="code hl_function" href="group__group-surfacemesh-utils.html#gae68df8e09ed4829ef852e47518e5a47d">uv_mesh_ref</a>(mesh);</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    <span class="keyword">auto</span> uvs = <a class="code hl_function" href="group__group-surfacemesh-views.html#ga6b51e5a79a66e11c3dff4c1d68015c1c">vertex_ref</a>(uv_mesh);</div>
 <div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span> </div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    uvs =</div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>        (((uvs.rowwise() - bbox_min).array().rowwise() / (bbox_max - bbox_min).array()).rowwise() *</div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>         (max_uv - min_uv).array())</div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>            .rowwise() +</div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>        min_uv.array();</div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>}</div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span></div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> Scalar, <span class="keyword">typename</span> Index, <span class="keyword">typename</span> ValueType&gt;</div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span><span class="keywordtype">void</span> center_mesh(SurfaceMesh&lt;Scalar, Index&gt;&amp; mesh, std::array&lt;ValueType, 3&gt; center)</div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>{</div>
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>    Eigen::Transform&lt;Scalar, 3, Eigen::Affine&gt; transform;</div>
-<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>    transform.setIdentity();</div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    transform.translate(</div>
-<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>        Eigen::Matrix&lt;Scalar, 3, 1&gt;(</div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>            <span class="keyword">static_cast&lt;</span><a class="code hl_enumvalue" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a><span class="keyword">&gt;</span>(center[0]),</div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>            <span class="keyword">static_cast&lt;</span><a class="code hl_enumvalue" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a><span class="keyword">&gt;</span>(center[1]),</div>
-<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>            <span class="keyword">static_cast&lt;</span><a class="code hl_enumvalue" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a><span class="keyword">&gt;</span>(center[2])));</div>
-<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>    <a class="code hl_function" href="group__group-surfacemesh-utils.html#gacc5a05b5bc041f50fbff82c00e18c631">transform_mesh</a>(mesh, transform);</div>
-<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>}</div>
-<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span></div>
-<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> Scalar, <span class="keyword">typename</span> Index&gt;</div>
-<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>SurfaceMesh&lt;Scalar, Index&gt; boundary_to_mesh(</div>
-<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>    <a class="code hl_typedef" href="group__group-utils-misc.html#ga4afead0b9ccc53fe4fca896787595d26">span&lt;Scalar&gt;</a> boundary,</div>
-<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>    std::string_view uv_attribute_name,</div>
-<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>    std::string_view normal_attribute_name,</div>
-<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>    <span class="keywordtype">bool</span> flipped = <span class="keyword">false</span>)</div>
-<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>{</div>
-<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>    <a class="code hl_define" href="group__group-utils-assert.html#ga5b5259c4072f1caaa696e074f2f7ea15">la_debug_assert</a>(boundary.size() % 2 == 0);</div>
-<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span> </div>
-<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>    Eigen::Map&lt;Eigen::Matrix&lt;Scalar, Eigen::Dynamic, 2, Eigen::RowMajor&gt;&gt; boundary_map(</div>
-<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>        boundary.data(),</div>
-<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>        boundary.size() / 2,</div>
-<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>        2);</div>
-<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span> </div>
-<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>    Index num_vertices = <span class="keyword">static_cast&lt;</span>Index<span class="keyword">&gt;</span>(boundary.size() / 2);</div>
-<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>    SurfaceMesh&lt;Scalar, Index&gt; mesh;</div>
-<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>    mesh.add_vertices(num_vertices);</div>
-<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>    <span class="keyword">auto</span> vertices = <a class="code hl_function" href="group__group-surfacemesh-views.html#ga6b51e5a79a66e11c3dff4c1d68015c1c">vertex_ref</a>(mesh);</div>
-<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>    vertices.setZero();</div>
-<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>    vertices.template leftCols&lt;2&gt;() = boundary_map;</div>
-<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span> </div>
-<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>    std::vector&lt;Index&gt; indices(num_vertices);</div>
-<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>    std::iota(indices.begin(), indices.end(), 0);</div>
-<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>    <span class="keywordflow">if</span> (flipped) {</div>
-<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>        std::reverse(indices.begin(), indices.end());</div>
-<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>    }</div>
-<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>    mesh.add_polygon({indices.data(), indices.size()});</div>
-<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span> </div>
-<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>    <span class="comment">// Generate UV coordinates</span></div>
-<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>    <span class="keyword">auto</span> uv_attr_id = mesh.template create_attribute&lt;Scalar&gt;(</div>
-<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>        uv_attribute_name,</div>
-<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>        <a class="code hl_enumvalue" href="group__group-surfacemesh-attr.html#gga9d8ab208822bab9987e9652dda49d89aa93747573a820d43208a296f9f56bf54e">AttributeElement::Indexed</a>,</div>
-<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>        2,</div>
-<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>        <a class="code hl_enumvalue" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45adeaa2adbeb26802ae61609c3f3642d82">AttributeUsage::UV</a>);</div>
-<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>    <span class="keyword">auto</span>&amp; uv_attr = mesh.template ref_indexed_attribute&lt;Scalar&gt;(uv_attr_id);</div>
-<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>    <span class="keyword">auto</span>&amp; uv_values = uv_attr.values();</div>
-<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>    <span class="keyword">auto</span>&amp; uv_indices = uv_attr.indices();</div>
-<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>    uv_values.resize_elements(num_vertices);</div>
-<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>    <span class="keyword">auto</span> uv_indices_ref = uv_indices.ref_all();</div>
-<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span> </div>
-<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>    <a class="code hl_function" href="group__group-surfacemesh-views.html#gaf2e0d4ab50ffdc84c4431d699f6741fe">matrix_ref</a>(uv_values) = vertices.template leftCols&lt;2&gt;();</div>
-<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>    <span class="keywordflow">if</span> (flipped) {</div>
-<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>        <a class="code hl_function" href="group__group-surfacemesh-views.html#gaf2e0d4ab50ffdc84c4431d699f6741fe">matrix_ref</a>(uv_values).col(0) *= -1; <span class="comment">// Flip UVs if the mesh is flipped</span></div>
-<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>    }</div>
-<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>    std::copy(indices.begin(), indices.end(), uv_indices_ref.begin());</div>
-<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span> </div>
-<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>    <span class="comment">// Generate normals</span></div>
-<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>    <span class="keyword">auto</span> normal_attr_id = mesh.template create_attribute&lt;Scalar&gt;(</div>
-<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>        normal_attribute_name,</div>
-<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>        <a class="code hl_enumvalue" href="group__group-surfacemesh-attr.html#gga9d8ab208822bab9987e9652dda49d89aa93747573a820d43208a296f9f56bf54e">AttributeElement::Indexed</a>,</div>
-<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>        3,</div>
-<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>        <a class="code hl_enumvalue" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45a960b44c579bc2f6818d2daaf9e4c16f0">AttributeUsage::Normal</a>);</div>
-<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>    <span class="keyword">auto</span>&amp; normal_attr = mesh.template ref_indexed_attribute&lt;Scalar&gt;(normal_attr_id);</div>
-<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>    <span class="keyword">auto</span>&amp; normal_values = normal_attr.values();</div>
-<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>    <span class="keyword">auto</span>&amp; normal_indices = normal_attr.indices();</div>
-<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>    normal_values.resize_elements(1);</div>
-<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span> </div>
-<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>    <a class="code hl_function" href="group__group-surfacemesh-views.html#gaf2e0d4ab50ffdc84c4431d699f6741fe">matrix_ref</a>(normal_values).row(0) &lt;&lt; 0, 0, (flipped ? -1 : 1);</div>
-<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>    <a class="code hl_function" href="group__group-surfacemesh-views.html#ga1fe8e6f4f2ff0c10903d49ec085e541a">vector_ref</a>(normal_indices).setZero(); <span class="comment">// All facets share the same normal</span></div>
-<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span> </div>
-<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>    <span class="keywordflow">return</span> mesh;</div>
-<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>}</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    Eigen::Matrix&lt;Scalar, 1, 2&gt; bbox_min = uvs.colwise().minCoeff();</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    Eigen::Matrix&lt;Scalar, 1, 2&gt; bbox_max = uvs.colwise().maxCoeff();</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span> </div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    uvs =</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>        (((uvs.rowwise() - bbox_min).array().rowwise() / (bbox_max - bbox_min).array()).rowwise() *</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>         (max_uv - min_uv).array())</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>            .rowwise() +</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>        min_uv.array();</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>}</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span></div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> Scalar, <span class="keyword">typename</span> Index, <span class="keyword">typename</span> ValueType&gt;</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span><span class="keywordtype">void</span> center_mesh(SurfaceMesh&lt;Scalar, Index&gt;&amp; mesh, std::array&lt;ValueType, 3&gt; center)</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>{</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>    Eigen::Transform&lt;Scalar, 3, Eigen::Affine&gt; transform;</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>    transform.setIdentity();</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>    transform.translate(</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>        Eigen::Matrix&lt;Scalar, 3, 1&gt;(</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>            <span class="keyword">static_cast&lt;</span><a class="code hl_enumvalue" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a><span class="keyword">&gt;</span>(center[0]),</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>            <span class="keyword">static_cast&lt;</span><a class="code hl_enumvalue" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a><span class="keyword">&gt;</span>(center[1]),</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>            <span class="keyword">static_cast&lt;</span><a class="code hl_enumvalue" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a><span class="keyword">&gt;</span>(center[2])));</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>    <a class="code hl_function" href="group__group-surfacemesh-utils.html#gacc5a05b5bc041f50fbff82c00e18c631">transform_mesh</a>(mesh, transform);</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>}</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span></div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> Scalar, <span class="keyword">typename</span> Index&gt;</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>SurfaceMesh&lt;Scalar, Index&gt; boundary_to_mesh(</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>    <a class="code hl_typedef" href="group__group-utils-misc.html#ga4afead0b9ccc53fe4fca896787595d26">span&lt;Scalar&gt;</a> boundary,</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>    std::string_view uv_attribute_name,</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>    std::string_view normal_attribute_name,</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>    <span class="keywordtype">bool</span> flipped = <span class="keyword">false</span>)</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>{</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>    <a class="code hl_define" href="group__group-utils-assert.html#ga5b5259c4072f1caaa696e074f2f7ea15">la_debug_assert</a>(boundary.size() % 2 == 0);</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span> </div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>    Eigen::Map&lt;Eigen::Matrix&lt;Scalar, Eigen::Dynamic, 2, Eigen::RowMajor&gt;&gt; boundary_map(</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>        boundary.data(),</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>        boundary.size() / 2,</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>        2);</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span> </div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>    Index num_vertices = <span class="keyword">static_cast&lt;</span>Index<span class="keyword">&gt;</span>(boundary.size() / 2);</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>    SurfaceMesh&lt;Scalar, Index&gt; mesh;</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>    mesh.add_vertices(num_vertices);</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>    <span class="keyword">auto</span> vertices = <a class="code hl_function" href="group__group-surfacemesh-views.html#ga6b51e5a79a66e11c3dff4c1d68015c1c">vertex_ref</a>(mesh);</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>    vertices.setZero();</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>    vertices.template leftCols&lt;2&gt;() = boundary_map;</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span> </div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>    std::vector&lt;Index&gt; indices(num_vertices);</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>    std::iota(indices.begin(), indices.end(), 0);</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>    <span class="keywordflow">if</span> (flipped) {</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>        std::reverse(indices.begin(), indices.end());</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>    }</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>    mesh.add_polygon({indices.data(), indices.size()});</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span> </div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>    <span class="comment">// Generate UV coordinates</span></div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>    <span class="keywordflow">if</span> (!uv_attribute_name.empty()) {</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>        <span class="keyword">auto</span> uv_attr_id = mesh.template create_attribute&lt;Scalar&gt;(</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>            uv_attribute_name,</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>            <a class="code hl_enumvalue" href="group__group-surfacemesh-attr.html#gga9d8ab208822bab9987e9652dda49d89aa93747573a820d43208a296f9f56bf54e">AttributeElement::Indexed</a>,</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>            2,</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>            <a class="code hl_enumvalue" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45adeaa2adbeb26802ae61609c3f3642d82">AttributeUsage::UV</a>);</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>        <span class="keyword">auto</span>&amp; uv_attr = mesh.template ref_indexed_attribute&lt;Scalar&gt;(uv_attr_id);</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>        <span class="keyword">auto</span>&amp; uv_values = uv_attr.values();</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>        <span class="keyword">auto</span>&amp; uv_indices = uv_attr.indices();</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>        uv_values.resize_elements(num_vertices);</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>        <span class="keyword">auto</span> uv_indices_ref = uv_indices.ref_all();</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span> </div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>        <a class="code hl_function" href="group__group-surfacemesh-views.html#gaf2e0d4ab50ffdc84c4431d699f6741fe">matrix_ref</a>(uv_values) = vertices.template leftCols&lt;2&gt;();</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>        <span class="keywordflow">if</span> (flipped) {</div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>            <a class="code hl_function" href="group__group-surfacemesh-views.html#gaf2e0d4ab50ffdc84c4431d699f6741fe">matrix_ref</a>(uv_values).col(0) *= -1; <span class="comment">// Flip UVs if the mesh is flipped</span></div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>        }</div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>        std::copy(indices.begin(), indices.end(), uv_indices_ref.begin());</div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>    }</div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span> </div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>    <span class="comment">// Generate normals</span></div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>    <span class="keywordflow">if</span> (!normal_attribute_name.empty()) {</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>        <span class="keyword">auto</span> normal_attr_id = mesh.template create_attribute&lt;Scalar&gt;(</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>            normal_attribute_name,</div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>            <a class="code hl_enumvalue" href="group__group-surfacemesh-attr.html#gga9d8ab208822bab9987e9652dda49d89aa93747573a820d43208a296f9f56bf54e">AttributeElement::Indexed</a>,</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>            3,</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>            <a class="code hl_enumvalue" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45a960b44c579bc2f6818d2daaf9e4c16f0">AttributeUsage::Normal</a>);</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>        <span class="keyword">auto</span>&amp; normal_attr = mesh.template ref_indexed_attribute&lt;Scalar&gt;(normal_attr_id);</div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>        <span class="keyword">auto</span>&amp; normal_values = normal_attr.values();</div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>        <span class="keyword">auto</span>&amp; normal_indices = normal_attr.indices();</div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>        normal_values.resize_elements(1);</div>
 <div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span> </div>
-<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>} <span class="comment">// namespace lagrange::primitive</span></div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>        <a class="code hl_function" href="group__group-surfacemesh-views.html#gaf2e0d4ab50ffdc84c4431d699f6741fe">matrix_ref</a>(normal_values).row(0) &lt;&lt; 0, 0, (flipped ? -1 : 1);</div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>        <a class="code hl_function" href="group__group-surfacemesh-views.html#ga1fe8e6f4f2ff0c10903d49ec085e541a">vector_ref</a>(normal_indices).setZero(); <span class="comment">// All facets share the same normal</span></div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>    }</div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span> </div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>    <span class="keywordflow">return</span> mesh;</div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>}</div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span> </div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>} <span class="comment">// namespace lagrange::primitive</span></div>
 <div class="ttc" id="agroup__group-surfacemesh-attr_html_gga5a2f28c8b9e2f8fce6e70b2418c46e45a960b44c579bc2f6818d2daaf9e4c16f0"><div class="ttname"><a href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45a960b44c579bc2f6818d2daaf9e4c16f0">lagrange::AttributeUsage::Normal</a></div><div class="ttdeci">@ Normal</div><div class="ttdoc">Mesh attribute can have dim or dim + 1 channels.</div><div class="ttdef"><b>Definition</b> AttributeFwd.h:58</div></div>
 <div class="ttc" id="agroup__group-surfacemesh-attr_html_gga5a2f28c8b9e2f8fce6e70b2418c46e45adeaa2adbeb26802ae61609c3f3642d82"><div class="ttname"><a href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45adeaa2adbeb26802ae61609c3f3642d82">lagrange::AttributeUsage::UV</a></div><div class="ttdeci">@ UV</div><div class="ttdoc">Mesh attribute must have exactly 2 channels.</div><div class="ttdef"><b>Definition</b> AttributeFwd.h:62</div></div>
 <div class="ttc" id="agroup__group-surfacemesh-attr_html_gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74"><div class="ttname"><a href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">lagrange::AttributeUsage::Scalar</a></div><div class="ttdeci">@ Scalar</div><div class="ttdoc">Mesh attribute must have exactly 1 channel.</div><div class="ttdef"><b>Definition</b> AttributeFwd.h:56</div></div>
 <div class="ttc" id="agroup__group-surfacemesh-attr_html_gga9d8ab208822bab9987e9652dda49d89aa93747573a820d43208a296f9f56bf54e"><div class="ttname"><a href="group__group-surfacemesh-attr.html#gga9d8ab208822bab9987e9652dda49d89aa93747573a820d43208a296f9f56bf54e">lagrange::Indexed</a></div><div class="ttdeci">@ Indexed</div><div class="ttdoc">Indexed mesh attributes.</div><div class="ttdef"><b>Definition</b> AttributeFwd.h:45</div></div>
 <div class="ttc" id="agroup__group-surfacemesh-attr_html_gga9d8ab208822bab9987e9652dda49d89aa9b112d86d52178fe18e47e14bb6aeb35"><div class="ttname"><a href="group__group-surfacemesh-attr.html#gga9d8ab208822bab9987e9652dda49d89aa9b112d86d52178fe18e47e14bb6aeb35">lagrange::Facet</a></div><div class="ttdeci">@ Facet</div><div class="ttdoc">Per-facet mesh attributes.</div><div class="ttdef"><b>Definition</b> AttributeFwd.h:31</div></div>
-<div class="ttc" id="agroup__group-surfacemesh-utils_html_gacc5a05b5bc041f50fbff82c00e18c631"><div class="ttname"><a href="group__group-surfacemesh-utils.html#gacc5a05b5bc041f50fbff82c00e18c631">lagrange::transform_mesh</a></div><div class="ttdeci">void transform_mesh(SurfaceMesh&lt; Scalar, Index &gt; &amp;mesh, const Eigen::Transform&lt; Scalar, Dimension, Eigen::Affine &gt; &amp;transform, const TransformOptions &amp;options={})</div><div class="ttdoc">Apply an affine transform  to a mesh in-place.</div><div class="ttdef"><b>Definition</b> transform_mesh.cpp:199</div></div>
+<div class="ttc" id="agroup__group-surfacemesh-utils_html_gacc5a05b5bc041f50fbff82c00e18c631"><div class="ttname"><a href="group__group-surfacemesh-utils.html#gacc5a05b5bc041f50fbff82c00e18c631">lagrange::transform_mesh</a></div><div class="ttdeci">void transform_mesh(SurfaceMesh&lt; Scalar, Index &gt; &amp;mesh, const Eigen::Transform&lt; Scalar, Dimension, Eigen::Affine &gt; &amp;transform, const TransformOptions &amp;options={})</div><div class="ttdoc">Apply an affine transform  to a mesh in-place.</div><div class="ttdef"><b>Definition</b> transform_mesh.cpp:137</div></div>
 <div class="ttc" id="agroup__group-surfacemesh-utils_html_gae68df8e09ed4829ef852e47518e5a47d"><div class="ttname"><a href="group__group-surfacemesh-utils.html#gae68df8e09ed4829ef852e47518e5a47d">lagrange::uv_mesh_ref</a></div><div class="ttdeci">SurfaceMesh&lt; UVScalar, Index &gt; uv_mesh_ref(SurfaceMesh&lt; Scalar, Index &gt; &amp;mesh, const UVMeshOptions &amp;options={})</div><div class="ttdoc">Extract a UV mesh reference from an input mesh.</div><div class="ttdef"><b>Definition</b> uv_mesh.cpp:40</div></div>
 <div class="ttc" id="agroup__group-surfacemesh-views_html_ga1fe8e6f4f2ff0c10903d49ec085e541a"><div class="ttname"><a href="group__group-surfacemesh-views.html#ga1fe8e6f4f2ff0c10903d49ec085e541a">lagrange::vector_ref</a></div><div class="ttdeci">VectorView&lt; ValueType &gt; vector_ref(Attribute&lt; ValueType &gt; &amp;attribute)</div><div class="ttdoc">Returns a writable view of a scalar attribute in the form of an Eigen vector.</div><div class="ttdef"><b>Definition</b> views.cpp:44</div></div>
 <div class="ttc" id="agroup__group-surfacemesh-views_html_ga5edab3687afa62046eaf874ceae232f8"><div class="ttname"><a href="group__group-surfacemesh-views.html#ga5edab3687afa62046eaf874ceae232f8">lagrange::attribute_vector_ref</a></div><div class="ttdeci">VectorView&lt; ValueType &gt; attribute_vector_ref(SurfaceMesh&lt; Scalar, Index &gt; &amp;mesh, std::string_view name)</div><div class="ttdoc">Returns a writable view of a mesh attribute in the form of an Eigen vector.</div><div class="ttdef"><b>Definition</b> views.cpp:104</div></div>
 <div class="ttc" id="agroup__group-surfacemesh-views_html_ga6b51e5a79a66e11c3dff4c1d68015c1c"><div class="ttname"><a href="group__group-surfacemesh-views.html#ga6b51e5a79a66e11c3dff4c1d68015c1c">lagrange::vertex_ref</a></div><div class="ttdeci">RowMatrixView&lt; Scalar &gt; vertex_ref(SurfaceMesh&lt; Scalar, Index &gt; &amp;mesh)</div><div class="ttdoc">Returns a writable view of the mesh vertices in the form of an Eigen matrix.</div><div class="ttdef"><b>Definition</b> views.cpp:150</div></div>
 <div class="ttc" id="agroup__group-surfacemesh-views_html_gaf2e0d4ab50ffdc84c4431d699f6741fe"><div class="ttname"><a href="group__group-surfacemesh-views.html#gaf2e0d4ab50ffdc84c4431d699f6741fe">lagrange::matrix_ref</a></div><div class="ttdeci">RowMatrixView&lt; ValueType &gt; matrix_ref(Attribute&lt; ValueType &gt; &amp;attribute)</div><div class="ttdoc">Returns a writable view of a given attribute in the form of an Eigen matrix.</div><div class="ttdef"><b>Definition</b> views.cpp:26</div></div>
-<div class="ttc" id="agroup__group-utils-assert_html_ga5b5259c4072f1caaa696e074f2f7ea15"><div class="ttname"><a href="group__group-utils-assert.html#ga5b5259c4072f1caaa696e074f2f7ea15">la_debug_assert</a></div><div class="ttdeci">#define la_debug_assert(...)</div><div class="ttdoc">Debug assertion check.</div><div class="ttdef"><b>Definition</b> assert.h:194</div></div>
+<div class="ttc" id="agroup__group-utils-assert_html_ga5b5259c4072f1caaa696e074f2f7ea15"><div class="ttname"><a href="group__group-utils-assert.html#ga5b5259c4072f1caaa696e074f2f7ea15">la_debug_assert</a></div><div class="ttdeci">#define la_debug_assert(...)</div><div class="ttdoc">Debug assertion check.</div><div class="ttdef"><b>Definition</b> assert.h:195</div></div>
 <div class="ttc" id="agroup__group-utils-misc_html_ga4afead0b9ccc53fe4fca896787595d26"><div class="ttname"><a href="group__group-utils-misc.html#ga4afead0b9ccc53fe4fca896787595d26">lagrange::span</a></div><div class="ttdeci">::nonstd::span&lt; T, Extent &gt; span</div><div class="ttdoc">A bounds-safe view for sequences of objects.</div><div class="ttdef"><b>Definition</b> span.h:27</div></div>
 <div class="ttc" id="agroup__module-primitive_html_gae521e500502eae3849d46dc92a5ab7fe"><div class="ttname"><a href="group__module-primitive.html#gae521e500502eae3849d46dc92a5ab7fe">lagrange::primitive::SemanticLabel</a></div><div class="ttdeci">SemanticLabel</div><div class="ttdoc">Semantic labels are used to classify different parts of a primitive mesh.</div><div class="ttdef"><b>Definition</b> SemanticLabel.h:22</div></div>
 </div><!-- fragment --></div><!-- contents -->
@@ -301,7 +308,7 @@ $(function(){initNavTree('primitive__utils_8h_source.html',''); initResizable(tr
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>primitive_utils.h</b></li>
-    <li class="footer">Generated on Mon Apr 27 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+    <li class="footer">Generated on Sat Jun 20 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>
 </body>

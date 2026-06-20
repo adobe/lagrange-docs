@@ -90,6 +90,20 @@ Module Contents
 
 
 
+   .. py:method:: point_to_point_geodesic_path(source_facet_id, target_facet_id, source_facet_bc, target_facet_bc)
+
+      Compute the geodesic path between two points on the mesh.
+
+      :param source_facet_id: Facet containing the source point.
+      :param target_facet_id: Facet containing the target point.
+      :param source_facet_bc: Barycentric coordinates of the source point within the source facet. Given a triangle (p1, p2, p3), the barycentric coordinates (u, v) are such that the surface point is represented by p = (1 - u - v) * p1 + u * p2 + v * p3.
+      :param target_facet_bc: Barycentric coordinates of the target point within the target facet. Given a triangle (p1, p2, p3), the barycentric coordinates (u, v) are such that the surface point is represented by p = (1 - u - v) * p1 + u * p2 + v * p3.
+
+      :returns: A tuple of (points, facet_ids) where points is a list of [x, y, z] coordinates along the geodesic path (first is source, last is target), and facet_ids is a list of facet indices for each path segment.
+      :raises RuntimeError: If the engine does not support path extraction.
+
+
+
    .. py:method:: single_source_geodesic(source_facet_id, source_facet_bc, radius = -1.0, output_geodesic_attribute_name = '@geodesic_distance')
 
       Compute single-source geodesic distances on the mesh.

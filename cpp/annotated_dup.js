@@ -1,6 +1,8 @@
 var annotated_dup =
 [
     [ "fmt", null, [
+      [ "formatter< lagrange::fmt_detail::range_join_view< Range >, char >", "structfmt_1_1formatter_3_01lagrange_1_1fmt__detail_1_1range__join__view_3_01_range_01_4_00_01char_01_4.html", null ],
+      [ "formatter< lagrange::fmt_detail::tuple_join_view< Tuple >, char >", "structfmt_1_1formatter_3_01lagrange_1_1fmt__detail_1_1tuple__join__view_3_01_tuple_01_4_00_01char_01_4.html", null ],
       [ "formatter< T, std::enable_if_t< std::is_base_of< Eigen::DenseBase< T >, T >::value, char > >", "structfmt_1_1formatter_3_01_t_00_01std_1_1enable__if__t_3_01std_1_1is__base__of_3_01_eigen_1_1_d4cad164886cc373111d40252deee7ffc.html", null ],
       [ "is_range< Derived, std::enable_if_t< std::is_base_of< Eigen::DenseBase< Derived >, Derived >::value, char > >", "structfmt_1_1is__range_3_01_derived_00_01std_1_1enable__if__t_3_01std_1_1is__base__of_3_01_eigen8831e8e9466b492bd5196648eda925fb.html", null ]
     ] ],
@@ -66,7 +68,9 @@ var annotated_dup =
         [ "GeodesicEngineDGPC", "classlagrange_1_1geodesic_1_1_geodesic_engine_d_g_p_c.html", "classlagrange_1_1geodesic_1_1_geodesic_engine_d_g_p_c" ],
         [ "GeodesicEngineHeat", "classlagrange_1_1geodesic_1_1_geodesic_engine_heat.html", "classlagrange_1_1geodesic_1_1_geodesic_engine_heat" ],
         [ "GeodesicEngineMMP", "classlagrange_1_1geodesic_1_1_geodesic_engine_m_m_p.html", "classlagrange_1_1geodesic_1_1_geodesic_engine_m_m_p" ],
+        [ "GeodesicPathResult", "structlagrange_1_1geodesic_1_1_geodesic_path_result.html", "structlagrange_1_1geodesic_1_1_geodesic_path_result" ],
         [ "PointToPointGeodesicOptions", "structlagrange_1_1geodesic_1_1_point_to_point_geodesic_options.html", "structlagrange_1_1geodesic_1_1_point_to_point_geodesic_options" ],
+        [ "PointToPointGeodesicPathOptions", "structlagrange_1_1geodesic_1_1_point_to_point_geodesic_path_options.html", "structlagrange_1_1geodesic_1_1_point_to_point_geodesic_path_options" ],
         [ "SingleSourceGeodesicOptions", "structlagrange_1_1geodesic_1_1_single_source_geodesic_options.html", "structlagrange_1_1geodesic_1_1_single_source_geodesic_options" ],
         [ "SingleSourceGeodesicResult", "structlagrange_1_1geodesic_1_1_single_source_geodesic_result.html", "structlagrange_1_1geodesic_1_1_single_source_geodesic_result" ]
       ] ],
@@ -92,6 +96,8 @@ var annotated_dup =
         [ "control_block_base", "classlagrange_1_1internal_1_1control__block__base.html", null ],
         [ "default_delete", "classlagrange_1_1internal_1_1default__delete.html", "classlagrange_1_1internal_1_1default__delete" ],
         [ "default_delete< T[]>", "classlagrange_1_1internal_1_1default__delete_3_01_t_0f_0e_4.html", "classlagrange_1_1internal_1_1default__delete_3_01_t_0f_0e_4" ],
+        [ "DijkstraCache", "structlagrange_1_1internal_1_1_dijkstra_cache.html", null ],
+        [ "DijkstraOptions", "structlagrange_1_1internal_1_1_dijkstra_options.html", "structlagrange_1_1internal_1_1_dijkstra_options" ],
         [ "InverseMapping", "structlagrange_1_1internal_1_1_inverse_mapping.html", "structlagrange_1_1internal_1_1_inverse_mapping" ],
         [ "MapAttributesOptions", "structlagrange_1_1internal_1_1_map_attributes_options.html", "structlagrange_1_1internal_1_1_map_attributes_options" ],
         [ "ptr", "classlagrange_1_1internal_1_1ptr.html", null ],
@@ -102,6 +108,7 @@ var annotated_dup =
         [ "SkinningExtractNResult", "structlagrange_1_1internal_1_1_skinning_extract_n_result.html", "structlagrange_1_1internal_1_1_skinning_extract_n_result" ],
         [ "SurfaceMeshInfo", "structlagrange_1_1internal_1_1_surface_mesh_info.html", "structlagrange_1_1internal_1_1_surface_mesh_info" ],
         [ "UnorientedEdge", "structlagrange_1_1internal_1_1_unoriented_edge.html", null ],
+        [ "UVScalarTag", "structlagrange_1_1internal_1_1_u_v_scalar_tag.html", null ],
         [ "weak_ptr", "classlagrange_1_1internal_1_1weak__ptr.html", "classlagrange_1_1internal_1_1weak__ptr" ]
       ] ],
       [ "io", "namespacelagrange_1_1io.html", [
@@ -199,10 +206,21 @@ var annotated_dup =
         [ "TorusOptions", "structlagrange_1_1primitive_1_1_torus_options.html", "structlagrange_1_1primitive_1_1_torus_options" ]
       ] ],
       [ "python", null, [
+        [ "GridWrapper", "structlagrange_1_1python_1_1_grid_wrapper.html", null ],
         [ "PyAttribute", "classlagrange_1_1python_1_1_py_attribute.html", null ],
         [ "PyIndexedAttribute", "classlagrange_1_1python_1_1_py_indexed_attribute.html", null ]
       ] ],
       [ "raycasting", "namespacelagrange_1_1raycasting.html", [
+        [ "detail", null, [
+          [ "FacetInstanceData", "structlagrange_1_1raycasting_1_1detail_1_1_facet_instance_data.html", "structlagrange_1_1raycasting_1_1detail_1_1_facet_instance_data" ],
+          [ "ImplBase", "structlagrange_1_1raycasting_1_1detail_1_1_impl_base.html", null ],
+          [ "InstanceData", "structlagrange_1_1raycasting_1_1detail_1_1_instance_data.html", null ],
+          [ "RayPacket16", "structlagrange_1_1raycasting_1_1detail_1_1_ray_packet16.html", "structlagrange_1_1raycasting_1_1detail_1_1_ray_packet16" ],
+          [ "RaySampler", "structlagrange_1_1raycasting_1_1detail_1_1_ray_sampler.html", "structlagrange_1_1raycasting_1_1detail_1_1_ray_sampler" ]
+        ] ],
+        [ "internal", null, [
+          [ "RayCasterOBBAccess", "structlagrange_1_1raycasting_1_1internal_1_1_ray_caster_o_b_b_access.html", null ]
+        ] ],
         [ "legacy", null, [
           [ "ClosestPointResult", "structlagrange_1_1raycasting_1_1legacy_1_1_closest_point_result.html", null ],
           [ "EmbreeRayCaster", "classlagrange_1_1raycasting_1_1legacy_1_1_embree_ray_caster.html", "classlagrange_1_1raycasting_1_1legacy_1_1_embree_ray_caster" ],
@@ -214,17 +232,26 @@ var annotated_dup =
         [ "HitBase", "structlagrange_1_1raycasting_1_1_hit_base.html", "structlagrange_1_1raycasting_1_1_hit_base" ],
         [ "HitBaseN", "structlagrange_1_1raycasting_1_1_hit_base_n.html", "structlagrange_1_1raycasting_1_1_hit_base_n" ],
         [ "LocalFeatureSizeOptions", "structlagrange_1_1raycasting_1_1_local_feature_size_options.html", "structlagrange_1_1raycasting_1_1_local_feature_size_options" ],
+        [ "OccludedFacetEstimateOptions", "structlagrange_1_1raycasting_1_1_occluded_facet_estimate_options.html", "structlagrange_1_1raycasting_1_1_occluded_facet_estimate_options" ],
+        [ "OccludedFacetSampler", "classlagrange_1_1raycasting_1_1_occluded_facet_sampler.html", "classlagrange_1_1raycasting_1_1_occluded_facet_sampler" ],
+        [ "OccludedFacetSamplerOptions", "structlagrange_1_1raycasting_1_1_occluded_facet_sampler_options.html", "structlagrange_1_1raycasting_1_1_occluded_facet_sampler_options" ],
+        [ "OccludedInstanceEstimateOptions", "structlagrange_1_1raycasting_1_1_occluded_instance_estimate_options.html", "structlagrange_1_1raycasting_1_1_occluded_instance_estimate_options" ],
+        [ "OccludedInstanceSampler", "classlagrange_1_1raycasting_1_1_occluded_instance_sampler.html", "classlagrange_1_1raycasting_1_1_occluded_instance_sampler" ],
         [ "ProjectCommonOptions", "structlagrange_1_1raycasting_1_1_project_common_options.html", "structlagrange_1_1raycasting_1_1_project_common_options" ],
         [ "ProjectDirectionalOptions", "structlagrange_1_1raycasting_1_1_project_directional_options.html", "structlagrange_1_1raycasting_1_1_project_directional_options" ],
         [ "ProjectOptions", "structlagrange_1_1raycasting_1_1_project_options.html", "structlagrange_1_1raycasting_1_1_project_options" ],
         [ "RayCaster", "classlagrange_1_1raycasting_1_1_ray_caster.html", "classlagrange_1_1raycasting_1_1_ray_caster" ],
         [ "RayHit", "structlagrange_1_1raycasting_1_1_ray_hit.html", "structlagrange_1_1raycasting_1_1_ray_hit" ],
-        [ "RayHitN", "structlagrange_1_1raycasting_1_1_ray_hit_n.html", "structlagrange_1_1raycasting_1_1_ray_hit_n" ]
+        [ "RayHitN", "structlagrange_1_1raycasting_1_1_ray_hit_n.html", "structlagrange_1_1raycasting_1_1_ray_hit_n" ],
+        [ "RemoveOccludedFacetsOptions", "structlagrange_1_1raycasting_1_1_remove_occluded_facets_options.html", "structlagrange_1_1raycasting_1_1_remove_occluded_facets_options" ]
       ] ],
       [ "remeshing_im", null, [
         [ "RemeshingOptions", "structlagrange_1_1remeshing__im_1_1_remeshing_options.html", "structlagrange_1_1remeshing__im_1_1_remeshing_options" ]
       ] ],
       [ "scene", null, [
+        [ "detail", null, [
+          [ "type_identity", "structlagrange_1_1scene_1_1detail_1_1type__identity.html", null ]
+        ] ],
         [ "internal", null, [
           [ "SingleMeshToSceneOptions", "structlagrange_1_1scene_1_1internal_1_1_single_mesh_to_scene_options.html", null ]
         ] ],
@@ -297,7 +324,6 @@ var annotated_dup =
         [ "threadpool", null, [
           [ "ThreadPool", "structlagrange_1_1texproc_1_1threadpool_1_1_thread_pool.html", null ]
         ] ],
-        [ "CameraOptions", "structlagrange_1_1texproc_1_1_camera_options.html", "structlagrange_1_1texproc_1_1_camera_options" ],
         [ "CompositingOptions", "structlagrange_1_1texproc_1_1_compositing_options.html", "structlagrange_1_1texproc_1_1_compositing_options" ],
         [ "ConstWeightedTextureView", "structlagrange_1_1texproc_1_1_const_weighted_texture_view.html", "structlagrange_1_1texproc_1_1_const_weighted_texture_view" ],
         [ "DilationOptions", "structlagrange_1_1texproc_1_1_dilation_options.html", "structlagrange_1_1texproc_1_1_dilation_options" ],
@@ -482,6 +508,7 @@ var annotated_dup =
       [ "Attributes", "classlagrange_1_1_attributes.html", null ],
       [ "BadCastError", "structlagrange_1_1_bad_cast_error.html", null ],
       [ "BitField", "classlagrange_1_1_bit_field.html", "classlagrange_1_1_bit_field" ],
+      [ "CameraTransforms", "structlagrange_1_1_camera_transforms.html", "structlagrange_1_1_camera_transforms" ],
       [ "ChainEdgesOptions", "structlagrange_1_1_chain_edges_options.html", "structlagrange_1_1_chain_edges_options" ],
       [ "ChainEdgesResult", "structlagrange_1_1_chain_edges_result.html", "structlagrange_1_1_chain_edges_result" ],
       [ "CloseSmallHolesOptions", "structlagrange_1_1_close_small_holes_options.html", "structlagrange_1_1_close_small_holes_options" ],
@@ -492,6 +519,7 @@ var annotated_dup =
       [ "CornerNormalOptions", "structlagrange_1_1_corner_normal_options.html", "structlagrange_1_1_corner_normal_options" ],
       [ "DihedralAngleOptions", "structlagrange_1_1_dihedral_angle_options.html", "structlagrange_1_1_dihedral_angle_options" ],
       [ "DijkstraDistanceOptions", "structlagrange_1_1_dijkstra_distance_options.html", "structlagrange_1_1_dijkstra_distance_options" ],
+      [ "DisconnectUVChartsOptions", "structlagrange_1_1_disconnect_u_v_charts_options.html", "structlagrange_1_1_disconnect_u_v_charts_options" ],
       [ "DisjointSets", "classlagrange_1_1_disjoint_sets.html", "classlagrange_1_1_disjoint_sets" ],
       [ "DisjointSetsWithSize", "classlagrange_1_1_disjoint_sets_with_size.html", null ],
       [ "EdgeLengthOptions", "structlagrange_1_1_edge_length_options.html", "structlagrange_1_1_edge_length_options" ],
@@ -534,6 +562,7 @@ var annotated_dup =
       [ "RemoveDuplicateFacetOptions", "structlagrange_1_1_remove_duplicate_facet_options.html", "structlagrange_1_1_remove_duplicate_facet_options" ],
       [ "RemoveDuplicateVerticesOptions", "structlagrange_1_1_remove_duplicate_vertices_options.html", "structlagrange_1_1_remove_duplicate_vertices_options" ],
       [ "RemoveNullAreaFacetsOptions", "structlagrange_1_1_remove_null_area_facets_options.html", "structlagrange_1_1_remove_null_area_facets_options" ],
+      [ "RemoveShortEdgesOptions", "structlagrange_1_1_remove_short_edges_options.html", "structlagrange_1_1_remove_short_edges_options" ],
       [ "RescaleUVOptions", "structlagrange_1_1_rescale_u_v_options.html", "structlagrange_1_1_rescale_u_v_options" ],
       [ "SamplePointsOnSurfaceOutput", "structlagrange_1_1_sample_points_on_surface_output.html", null ],
       [ "ScopedLogLevel", "classlagrange_1_1_scoped_log_level.html", "classlagrange_1_1_scoped_log_level" ],
@@ -557,10 +586,14 @@ var annotated_dup =
       [ "ThickenAndCloseOptions", "structlagrange_1_1_thicken_and_close_options.html", "structlagrange_1_1_thicken_and_close_options" ],
       [ "TransformOptions", "structlagrange_1_1_transform_options.html", "structlagrange_1_1_transform_options" ],
       [ "TriangulationOptions", "structlagrange_1_1_triangulation_options.html", "structlagrange_1_1_triangulation_options" ],
+      [ "UnflipUVChartsOptions", "structlagrange_1_1_unflip_u_v_charts_options.html", "structlagrange_1_1_unflip_u_v_charts_options" ],
       [ "UnflipUVOptions", "structlagrange_1_1_unflip_u_v_options.html", "structlagrange_1_1_unflip_u_v_options" ],
+      [ "UniqueAttributeNameOptions", "structlagrange_1_1_unique_attribute_name_options.html", "structlagrange_1_1_unique_attribute_name_options" ],
       [ "UVChartOptions", "structlagrange_1_1_u_v_chart_options.html", "structlagrange_1_1_u_v_chart_options" ],
       [ "UVDistortionOptions", "structlagrange_1_1_u_v_distortion_options.html", "structlagrange_1_1_u_v_distortion_options" ],
       [ "UVMeshOptions", "structlagrange_1_1_u_v_mesh_options.html", "structlagrange_1_1_u_v_mesh_options" ],
+      [ "UVOrientationCount", "structlagrange_1_1_u_v_orientation_count.html", "structlagrange_1_1_u_v_orientation_count" ],
+      [ "UVOrientationOptions", "structlagrange_1_1_u_v_orientation_options.html", "structlagrange_1_1_u_v_orientation_options" ],
       [ "value_ptr", "classlagrange_1_1value__ptr.html", null ],
       [ "VerboseTimer", "classlagrange_1_1_verbose_timer.html", "classlagrange_1_1_verbose_timer" ],
       [ "VertexManifoldOptions", "structlagrange_1_1_vertex_manifold_options.html", "structlagrange_1_1_vertex_manifold_options" ],

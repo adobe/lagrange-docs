@@ -171,6 +171,9 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><b>~GeodesicEngine</b
 <tr class="memitem:a734ef0cdff002ae346bcc6a87430d5fa" id="r_a734ef0cdff002ae346bcc6a87430d5fa"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a734ef0cdff002ae346bcc6a87430d5fa">point_to_point_geodesic</a> (const <a class="el" href="structlagrange_1_1geodesic_1_1_point_to_point_geodesic_options.html">PointToPointGeodesicOptions</a> &amp;options)</td></tr>
 <tr class="memdesc:a734ef0cdff002ae346bcc6a87430d5fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the geodesic distance between two points on the mesh.  <br /></td></tr>
 <tr class="separator:a734ef0cdff002ae346bcc6a87430d5fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2259e228f0ee7ccd7949048212a76c9" id="r_aa2259e228f0ee7ccd7949048212a76c9"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="structlagrange_1_1geodesic_1_1_geodesic_path_result.html">GeodesicPathResult</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa2259e228f0ee7ccd7949048212a76c9">point_to_point_geodesic_path</a> (const <a class="el" href="structlagrange_1_1geodesic_1_1_point_to_point_geodesic_path_options.html">PointToPointGeodesicPathOptions</a> &amp;options)</td></tr>
+<tr class="memdesc:aa2259e228f0ee7ccd7949048212a76c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the geodesic path between two points on the mesh.  <br /></td></tr>
+<tr class="separator:aa2259e228f0ee7ccd7949048212a76c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
@@ -302,6 +305,51 @@ template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5
 
 </div>
 </div>
+<a id="aa2259e228f0ee7ccd7949048212a76c9" name="aa2259e228f0ee7ccd7949048212a76c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa2259e228f0ee7ccd7949048212a76c9">&#9670;&#160;</a></span>point_to_point_geodesic_path()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, typename Index&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structlagrange_1_1geodesic_1_1_geodesic_path_result.html">GeodesicPathResult</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index &gt; point_to_point_geodesic_path </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structlagrange_1_1geodesic_1_1_point_to_point_geodesic_path_options.html">PointToPointGeodesicPathOptions</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>options</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Computes the geodesic path between two points on the mesh. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">options</td><td>Input options for point-to-point path computation.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A GeodesicPathResult containing the ordered path points and the facet index for each path segment.</dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">lagrange::Error</td><td>if the engine does not support path extraction.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>Not all engines support path extraction. The default implementation throws an exception. Currently, only GeodesicEngineMMP provides exact path extraction. </dd></dl>
+
+<p>Reimplemented in <a class="el" href="classlagrange_1_1geodesic_1_1_geodesic_engine_m_m_p.html#aec8834b45bc62ed23955c974c8b6dfab">GeodesicEngineMMP&lt; Scalar, Index &gt;::Impl</a>, and <a class="el" href="classlagrange_1_1geodesic_1_1_geodesic_engine_m_m_p.html#aec8834b45bc62ed23955c974c8b6dfab">GeodesicEngineMMP&lt; Scalar, Index &gt;</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>lagrange/geodesic/<a class="el" href="_geodesic_engine_8h_source.html">GeodesicEngine.h</a></li>
 <li><b>GeodesicEngine.cpp</b></li>
@@ -312,7 +360,7 @@ template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacelagrange.html">lagrange</a></li><li class="navelem"><b>geodesic</b></li><li class="navelem"><a class="el" href="classlagrange_1_1geodesic_1_1_geodesic_engine.html">GeodesicEngine</a></li>
-    <li class="footer">Generated on Mon Apr 27 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+    <li class="footer">Generated on Sat Jun 20 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>
 </body>

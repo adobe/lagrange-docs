@@ -11,13 +11,14 @@ Classes
 
    lagrange.volume.Compression
    lagrange.volume.Grid
+   lagrange.volume.GridClass
    lagrange.volume.Sign
 
 
 Module Contents
 ---------------
 
-.. py:class:: Compression(*args, **kwds)
+.. py:class:: Compression
 
    Bases: :py:obj:`enum.Enum`
 
@@ -48,6 +49,70 @@ Module Contents
 
 .. py:class:: Grid
 
+   .. py:method:: comp_div(other)
+
+      Per-voxel ``self / other``, stored in ``self``. ``other`` is left empty.
+
+      :param other: Grid of the same scalar type.
+
+
+
+   .. py:method:: comp_max(other)
+
+      Per-voxel ``max(self, other)``, stored in ``self``. ``other`` is left empty.
+
+      :param other: Grid of the same scalar type.
+
+
+
+   .. py:method:: comp_min(other)
+
+      Per-voxel ``min(self, other)``, stored in ``self``. ``other`` is left empty.
+
+      :param other: Grid of the same scalar type.
+
+
+
+   .. py:method:: comp_mul(other)
+
+      Per-voxel ``self * other``, stored in ``self``. ``other`` is left empty.
+
+      :param other: Grid of the same scalar type.
+
+
+
+   .. py:method:: comp_sum(other)
+
+      Per-voxel ``self + other``, stored in ``self``. ``other`` is left empty.
+
+      :param other: Grid of the same scalar type.
+
+
+
+   .. py:method:: csg_difference(other)
+
+      Replace this level set grid with the CSG difference ``self`` minus ``other``.
+
+      :param other: Level set grid of the same scalar type. Left empty after the call.
+
+
+
+   .. py:method:: csg_intersection(other)
+
+      Replace this level set grid with the CSG intersection of itself and ``other``.
+
+      :param other: Level set grid of the same scalar type. Left empty after the call.
+
+
+
+   .. py:method:: csg_union(other)
+
+      Replace this level set grid with the CSG union of itself and ``other``.
+
+      :param other: Level set grid of the same scalar type. Left empty after the call.
+
+
+
    .. py:method:: densify()
 
       Densify the grid by filling in inactive voxels within the active voxel bounding box.
@@ -68,6 +133,20 @@ Module Contents
       :param dtype: Scalar type of the output grid (float32 or float64).
 
       :returns: Generated sparse voxel grid.
+
+
+
+   .. py:method:: from_points(points, values, dtype = numpy.float32)
+      :staticmethod:
+
+
+      Create a sparse voxel grid from a list of voxel index coordinates and values.
+
+      :param points: Voxel index-space coordinates as an (N, 3) array of int32.
+      :param values: Values at each voxel as a 1D array of float32 or float64 of length N.
+      :param dtype: Scalar type of the output grid (float32 or float64).
+
+      :returns: Sparse voxel grid with the given values active at the given index coordinates.
 
 
 
@@ -99,6 +178,14 @@ Module Contents
 
       :param offset_radius: Offset radius. A negative value dilates the surface, a positive value erodes it.
       :param relative: Whether the offset radius is relative to the grid voxel size.
+
+
+
+   .. py:method:: prune(tolerance = 0.0)
+
+      Remove nodes whose values all equal the background value within the given tolerance.
+
+      :param tolerance: Tolerance for pruning. Default is 0.
 
 
 
@@ -188,7 +275,7 @@ Module Contents
       :type: float | float
 
 
-      Return the grid background value.
+      The grid background value.
 
 
    .. py:property:: bbox_index
@@ -205,11 +292,32 @@ Module Contents
       Return the axis-aligned bounding box of all active voxels in world space. If the grid is empty a default bbox is returned.
 
 
+   .. py:property:: grid_class
+      :type: GridClass
+
+
+      The grid class tag.
+
+
+   .. py:property:: name
+      :type: str
+
+
+      The grid name.
+
+
    .. py:property:: num_active_voxels
       :type: int
 
 
       Return the number of active voxels in the grid.
+
+
+   .. py:property:: transform
+      :type: Annotated[numpy.typing.NDArray[numpy.float64], dict(shape=(4, 4), order='F')]
+
+
+      The grid's index-to-world 4x4 affine transform matrix (column-vector convention).
 
 
    .. py:property:: voxel_size
@@ -219,7 +327,43 @@ Module Contents
       Return the grid voxel size.
 
 
-.. py:class:: Sign(*args, **kwds)
+.. py:class:: GridClass
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   Grid class tag indicating the semantic interpretation of voxel values
+
+
+   .. py:attribute:: FogVolume
+      :value: 2
+
+
+      Fog volume (density values).
+
+
+   .. py:attribute:: LevelSet
+      :value: 1
+
+
+      Narrow-band signed distance field.
+
+
+   .. py:attribute:: Staggered
+      :value: 3
+
+
+      Staggered vector field.
+
+
+   .. py:attribute:: Unknown
+      :value: 0
+
+
+      Unknown or generic grid class.
+
+
+.. py:class:: Sign
 
    Bases: :py:obj:`enum.Enum`
 

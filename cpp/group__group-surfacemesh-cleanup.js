@@ -15,6 +15,11 @@ var group__group_surfacemesh_cleanup =
       [ "null_area_threshold", "structlagrange_1_1_remove_null_area_facets_options.html#ad49f5977fbc988e5d27cb0ece3e6cb00", null ],
       [ "remove_isolated_vertices", "structlagrange_1_1_remove_null_area_facets_options.html#a7912fd3c8e4930cec8ed8c05567434a4", null ]
     ] ],
+    [ "RemoveShortEdgesOptions", "structlagrange_1_1_remove_short_edges_options.html", [
+      [ "threshold", "structlagrange_1_1_remove_short_edges_options.html#afcfbedec6ebde62c6a091ce335836ef1", null ],
+      [ "vertex_importance_attribute_name", "structlagrange_1_1_remove_short_edges_options.html#af5af4d74f410e3e14d1b7330f8c54526", null ],
+      [ "max_normal_deviation_angle", "structlagrange_1_1_remove_short_edges_options.html#a1a87c0737e82b4b4b407ad12230c8650", null ]
+    ] ],
     [ "RescaleUVOptions", "structlagrange_1_1_rescale_u_v_options.html", [
       [ "uv_attribute_name", "structlagrange_1_1_rescale_u_v_options.html#a812bd5f3c809396ee71d159824173876", null ],
       [ "chart_id_attribute_name", "structlagrange_1_1_rescale_u_v_options.html#a7a9b3ee01d09fd1ca8c095780db3b70e", null ],
@@ -37,6 +42,7 @@ var group__group_surfacemesh_cleanup =
     [ "remove_isolated_vertices", "group__group-surfacemesh-cleanup.html#ga52c66ca364fc0c9eb6d9b63052fa80ab", null ],
     [ "remove_null_area_facets", "group__group-surfacemesh-cleanup.html#gac0ed135d2a082f05bbbc207aa379459a", null ],
     [ "remove_short_edges", "group__group-surfacemesh-cleanup.html#gaf4e66a59e8f4a1728dc59ae651718524", null ],
+    [ "remove_short_edges", "group__group-surfacemesh-cleanup.html#gab5f64098632dd7392a0dc669324f77b3", null ],
     [ "remove_topologically_degenerate_facets", "group__group-surfacemesh-cleanup.html#ga524a3bb96df80562c5ab14a870bdbed7", null ],
     [ "rescale_uv_charts", "group__group-surfacemesh-cleanup.html#ga49e53fd95cd499b2b9bd4370aca137b1", null ],
     [ "resolve_nonmanifoldness", "group__group-surfacemesh-cleanup.html#gaff610cf8951744d2f65f7e03d8613d7f", null ],

@@ -146,6 +146,9 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlagrange_1_1_remove_null_area_facets_options.html">RemoveNullAreaFacetsOptions</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Option struct for remove_null_area_facets.  <a href="structlagrange_1_1_remove_null_area_facets_options.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlagrange_1_1_remove_short_edges_options.html">RemoveShortEdgesOptions</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Options for remove_short_edges function.  <a href="structlagrange_1_1_remove_short_edges_options.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlagrange_1_1_rescale_u_v_options.html">RescaleUVOptions</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlagrange_1_1_split_long_edges_options.html">SplitLongEdgesOptions</a></td></tr>
@@ -187,6 +190,10 @@ Functions</h2></td></tr>
 <tr class="memitem:gaf4e66a59e8f4a1728dc59ae651718524"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#gaf4e66a59e8f4a1728dc59ae651718524">remove_short_edges</a> (<a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index &gt; &amp;mesh, <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a> threshold=0)</td></tr>
 <tr class="memdesc:gaf4e66a59e8f4a1728dc59ae651718524"><td class="mdescLeft">&#160;</td><td class="mdescRight">Collapse all edges shorter than a given tolerance.  <br /></td></tr>
 <tr class="separator:gaf4e66a59e8f4a1728dc59ae651718524"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab5f64098632dd7392a0dc669324f77b3" id="r_gab5f64098632dd7392a0dc669324f77b3"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, typename Index&gt; </td></tr>
+<tr class="memitem:gab5f64098632dd7392a0dc669324f77b3"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#gab5f64098632dd7392a0dc669324f77b3">remove_short_edges</a> (<a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index &gt; &amp;mesh, const <a class="el" href="structlagrange_1_1_remove_short_edges_options.html">RemoveShortEdgesOptions</a> &amp;options)</td></tr>
+<tr class="memdesc:gab5f64098632dd7392a0dc669324f77b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Collapse all edges shorter than a given tolerance.  <br /></td></tr>
+<tr class="separator:gab5f64098632dd7392a0dc669324f77b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga524a3bb96df80562c5ab14a870bdbed7" id="r_ga524a3bb96df80562c5ab14a870bdbed7"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, typename Index&gt; </td></tr>
 <tr class="memitem:ga524a3bb96df80562c5ab14a870bdbed7"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ga524a3bb96df80562c5ab14a870bdbed7">remove_topologically_degenerate_facets</a> (<a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index &gt; &amp;mesh)</td></tr>
 <tr class="memdesc:ga524a3bb96df80562c5ab14a870bdbed7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove topologically degenerate facets (i.e.  <br /></td></tr>
@@ -480,7 +487,7 @@ template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5
 </div>
 </div>
 <a id="gaf4e66a59e8f4a1728dc59ae651718524" name="gaf4e66a59e8f4a1728dc59ae651718524"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gaf4e66a59e8f4a1728dc59ae651718524">&#9670;&#160;</a></span>remove_short_edges()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf4e66a59e8f4a1728dc59ae651718524">&#9670;&#160;</a></span>remove_short_edges() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -507,6 +514,40 @@ template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5
   <table class="params">
     <tr><td class="paramname">mesh</td><td>Input mesh to be updated in place. </td></tr>
     <tr><td class="paramname">threshold</td><td>Edges with length &lt;= threshold will be removed. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="gab5f64098632dd7392a0dc669324f77b3" name="gab5f64098632dd7392a0dc669324f77b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab5f64098632dd7392a0dc669324f77b3">&#9670;&#160;</a></span>remove_short_edges() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, typename Index&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void remove_short_edges </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>mesh</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structlagrange_1_1_remove_short_edges_options.html">RemoveShortEdgesOptions</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>options</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;lagrange/mesh_cleanup/remove_short_edges.h&gt;</code></p>
+
+<p>Collapse all edges shorter than a given tolerance. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mesh</td><td>Input mesh to be updated in place. </td></tr>
+    <tr><td class="paramname">options</td><td>Options for edge removal including threshold and importance attribute. </td></tr>
   </table>
   </dd>
 </dl>
@@ -734,7 +775,7 @@ template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Mon Apr 27 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+    <li class="footer">Generated on Sat Jun 20 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>
 </body>

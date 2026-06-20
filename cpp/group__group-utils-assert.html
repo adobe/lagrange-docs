@@ -184,14 +184,14 @@ LA_CORE_API void&#160;</td><td class="memItemRight" valign="bottom"><b>trigger_b
 <li>Debug assertions la_debug_assert(). Those are only checked in Debug code (macro <code>NDEBUG</code> is undefined). A debug assert is used to check internal code validity, and should <em>not</em> be triggered under any circumstance by client code. A failed debug assert indicates an error in the programmer's code, and should be fixed accordingly.</li>
 </ul>
 <p>Note that assert macros behave as functions, meaning they expand to a <code>void</code> expression and can be used in an expression such as <code>y = (la_debug_assert(true), x)</code>.</p>
-<p>Finally, our assertion macros can take either 1 or 2 arguments, the second argument being an optional error message. To conveniently format assertion messages with a printf-like syntax, use <code>fmt::format</code>:</p>
+<p>Finally, our assertion macros can take either 1 or 2 arguments, the second argument being an optional error message. To conveniently format assertion messages with a printf-like syntax, use <code>lagrange::format</code>:</p>
 <div class="fragment"><div class="line"><span class="preprocessor">#include &lt;lagrange/utils/assert.h&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;spdlog/fmt/fmt.h&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;lagrange/utils/fmt/format.h&gt;</span></div>
 <div class="line"> </div>
 <div class="line"><a class="code hl_define" href="#ga5b5259c4072f1caaa696e074f2f7ea15">la_debug_assert</a>(x == 3);</div>
 <div class="line"><a class="code hl_define" href="#ga5b5259c4072f1caaa696e074f2f7ea15">la_debug_assert</a>(x == 3, <span class="stringliteral">&quot;Error message&quot;</span>);</div>
-<div class="line"><a class="code hl_define" href="#ga5b5259c4072f1caaa696e074f2f7ea15">la_debug_assert</a>(x == 3, fmt::format(<span class="stringliteral">&quot;Incorrect value of x: {}&quot;</span>, x));</div>
-<div class="ttc" id="agroup__group-utils-assert_html_ga5b5259c4072f1caaa696e074f2f7ea15"><div class="ttname"><a href="#ga5b5259c4072f1caaa696e074f2f7ea15">la_debug_assert</a></div><div class="ttdeci">#define la_debug_assert(...)</div><div class="ttdoc">Debug assertion check.</div><div class="ttdef"><b>Definition</b> assert.h:194</div></div>
+<div class="line"><a class="code hl_define" href="#ga5b5259c4072f1caaa696e074f2f7ea15">la_debug_assert</a>(x == 3, lagrange::format(<span class="stringliteral">&quot;Incorrect value of x: {}&quot;</span>, x));</div>
+<div class="ttc" id="agroup__group-utils-assert_html_ga5b5259c4072f1caaa696e074f2f7ea15"><div class="ttname"><a href="#ga5b5259c4072f1caaa696e074f2f7ea15">la_debug_assert</a></div><div class="ttdeci">#define la_debug_assert(...)</div><div class="ttdoc">Debug assertion check.</div><div class="ttdef"><b>Definition</b> assert.h:195</div></div>
 </div><!-- fragment --> <h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="ga1ccafcb14523a1aae57dcac3c3f32ecd" name="ga1ccafcb14523a1aae57dcac3c3f32ecd"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga1ccafcb14523a1aae57dcac3c3f32ecd">&#9670;&#160;</a></span>la_runtime_assert</h2>
@@ -359,7 +359,7 @@ LA_CORE_API void&#160;</td><td class="memItemRight" valign="bottom"><b>trigger_b
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Mon Apr 27 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+    <li class="footer">Generated on Sat Jun 20 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>
 </body>

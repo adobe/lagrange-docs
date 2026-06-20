@@ -200,11 +200,17 @@
 <li class="toctree-l2"><a class="reference internal" href="../geodesic/index.html">lagrange.geodesic</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../image/index.html">lagrange.image</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../io/index.html">lagrange.io</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../packing/index.html">lagrange.packing</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../poisson/index.html">lagrange.poisson</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../polyddg/index.html">lagrange.polyddg</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../primitive/index.html">lagrange.primitive</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../raycasting/index.html">lagrange.raycasting</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../scene/index.html">lagrange.scene</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../scripts/index.html">lagrange.scripts</a><input aria-label="Toggle navigation of lagrange.scripts" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../scripts/meshstat/index.html">lagrange.scripts.meshstat</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../serialization/index.html">lagrange.serialization</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../solver/index.html">lagrange.solver</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../subdivision/index.html">lagrange.subdivision</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../texproc/index.html">lagrange.texproc</a></li>
@@ -303,56 +309,62 @@
 <tr class="row-even"><td><p><a class="reference internal" href="#lagrange.core.AttributeWritePolicy" title="lagrange.core.AttributeWritePolicy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">AttributeWritePolicy</span></code></a></p></td>
 <td><p>Policy for attempting to write to read-only external buffer</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#lagrange.core.CentroidWeightingType" title="lagrange.core.CentroidWeightingType"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CentroidWeightingType</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#lagrange.core.CameraTransforms" title="lagrange.core.CameraTransforms"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CameraTransforms</span></code></a></p></td>
+<td><p>View and projection matrices defining a camera in world space.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#lagrange.core.CentroidWeightingType" title="lagrange.core.CentroidWeightingType"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CentroidWeightingType</span></code></a></p></td>
 <td><p>Centroid weighting type.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#lagrange.core.ConnectivityType" title="lagrange.core.ConnectivityType"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ConnectivityType</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#lagrange.core.ConnectivityType" title="lagrange.core.ConnectivityType"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ConnectivityType</span></code></a></p></td>
 <td><p>Mesh connectivity type</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#lagrange.core.DistortionMetric" title="lagrange.core.DistortionMetric"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DistortionMetric</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#lagrange.core.DistortionMetric" title="lagrange.core.DistortionMetric"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DistortionMetric</span></code></a></p></td>
 <td><p>Distortion metric.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#lagrange.core.FacetAreaOptions" title="lagrange.core.FacetAreaOptions"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FacetAreaOptions</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#lagrange.core.FacetAreaOptions" title="lagrange.core.FacetAreaOptions"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FacetAreaOptions</span></code></a></p></td>
 <td><p>Options for computing facet area.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#lagrange.core.FacetCentroidOptions" title="lagrange.core.FacetCentroidOptions"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FacetCentroidOptions</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#lagrange.core.FacetCentroidOptions" title="lagrange.core.FacetCentroidOptions"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FacetCentroidOptions</span></code></a></p></td>
 <td><p>Facet centroid options.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#lagrange.core.FacetNormalOptions" title="lagrange.core.FacetNormalOptions"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FacetNormalOptions</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#lagrange.core.FacetNormalOptions" title="lagrange.core.FacetNormalOptions"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FacetNormalOptions</span></code></a></p></td>
 <td><p>Facet normal computation options.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#lagrange.core.IndexedAttribute" title="lagrange.core.IndexedAttribute"><code class="xref py py-obj docutils literal notranslate"><span class="pre">IndexedAttribute</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#lagrange.core.IndexedAttribute" title="lagrange.core.IndexedAttribute"><code class="xref py py-obj docutils literal notranslate"><span class="pre">IndexedAttribute</span></code></a></p></td>
 <td><p>Indexed attribute data structure.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#lagrange.core.MappingPolicy" title="lagrange.core.MappingPolicy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MappingPolicy</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#lagrange.core.MappingPolicy" title="lagrange.core.MappingPolicy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MappingPolicy</span></code></a></p></td>
 <td><p>Mapping policy for handling collisions.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#lagrange.core.MeshAreaOptions" title="lagrange.core.MeshAreaOptions"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MeshAreaOptions</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#lagrange.core.MeshAreaOptions" title="lagrange.core.MeshAreaOptions"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MeshAreaOptions</span></code></a></p></td>
 <td><p>Options for computing mesh area.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#lagrange.core.MeshCentroidOptions" title="lagrange.core.MeshCentroidOptions"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MeshCentroidOptions</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#lagrange.core.MeshCentroidOptions" title="lagrange.core.MeshCentroidOptions"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MeshCentroidOptions</span></code></a></p></td>
 <td><p>Mesh centroid options.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#lagrange.core.MetaData" title="lagrange.core.MetaData"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MetaData</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#lagrange.core.MetaData" title="lagrange.core.MetaData"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MetaData</span></code></a></p></td>
 <td><p>Metadata <cite>dict</cite> of the mesh</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#lagrange.core.NormalOptions" title="lagrange.core.NormalOptions"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NormalOptions</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#lagrange.core.NormalOptions" title="lagrange.core.NormalOptions"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NormalOptions</span></code></a></p></td>
 <td><p>Normal computation options.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#lagrange.core.NormalWeightingType" title="lagrange.core.NormalWeightingType"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NormalWeightingType</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#lagrange.core.NormalWeightingType" title="lagrange.core.NormalWeightingType"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NormalWeightingType</span></code></a></p></td>
 <td><p>Normal weighting type.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#lagrange.core.RemapVerticesOptions" title="lagrange.core.RemapVerticesOptions"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RemapVerticesOptions</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#lagrange.core.RemapVerticesOptions" title="lagrange.core.RemapVerticesOptions"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RemapVerticesOptions</span></code></a></p></td>
 <td><p>Options for remapping vertices.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#lagrange.core.SurfaceMesh" title="lagrange.core.SurfaceMesh"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SurfaceMesh</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#lagrange.core.SurfaceMesh" title="lagrange.core.SurfaceMesh"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SurfaceMesh</span></code></a></p></td>
 <td><p>Surface mesh data structure</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#lagrange.core.TangentBitangentOptions" title="lagrange.core.TangentBitangentOptions"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TangentBitangentOptions</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#lagrange.core.TangentBitangentOptions" title="lagrange.core.TangentBitangentOptions"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TangentBitangentOptions</span></code></a></p></td>
 <td><p>Tangent bitangent options</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#lagrange.core.TangentBitangentResult" title="lagrange.core.TangentBitangentResult"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TangentBitangentResult</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#lagrange.core.TangentBitangentResult" title="lagrange.core.TangentBitangentResult"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TangentBitangentResult</span></code></a></p></td>
 <td><p>Tangent bitangent result</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#lagrange.core.UVOrientationCount" title="lagrange.core.UVOrientationCount"><code class="xref py py-obj docutils literal notranslate"><span class="pre">UVOrientationCount</span></code></a></p></td>
+<td><p>Counts of per-facet UV orientations.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#lagrange.core.VertexNormalOptions" title="lagrange.core.VertexNormalOptions"><code class="xref py py-obj docutils literal notranslate"><span class="pre">VertexNormalOptions</span></code></a></p></td>
 <td><p>Options for computing vertex normals</p></td>
@@ -447,17 +459,23 @@
 <tr class="row-even"><td><p><a class="reference internal" href="#lagrange.core.compute_uv_distortion" title="lagrange.core.compute_uv_distortion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compute_uv_distortion</span></code></a>(mesh[, uv_attribute_name, ...])</p></td>
 <td><p>Compute UV distortion.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#lagrange.core.compute_vertex_is_manifold" title="lagrange.core.compute_vertex_is_manifold"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compute_vertex_is_manifold</span></code></a>(mesh[, output_attribute_name])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#lagrange.core.compute_uv_orientation" title="lagrange.core.compute_uv_orientation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compute_uv_orientation</span></code></a>(mesh[, uv_attribute_name, ...])</p></td>
+<td><p>Compute a per-facet orientation attribute using Shewchuk's exact <code class="docutils literal notranslate"><span class="pre">orient2D</span></code> predicate.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#lagrange.core.compute_vertex_is_manifold" title="lagrange.core.compute_vertex_is_manifold"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compute_vertex_is_manifold</span></code></a>(mesh[, output_attribute_name])</p></td>
 <td><p>Compute whether each vertex is manifold.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#lagrange.core.compute_vertex_normal" title="lagrange.core.compute_vertex_normal"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compute_vertex_normal</span></code></a>(…)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#lagrange.core.compute_vertex_normal" title="lagrange.core.compute_vertex_normal"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compute_vertex_normal</span></code></a>(…)</p></td>
 <td><p>Compute vertex normal (Pythonic API).</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#lagrange.core.compute_vertex_valence" title="lagrange.core.compute_vertex_valence"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compute_vertex_valence</span></code></a>(…)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#lagrange.core.compute_vertex_valence" title="lagrange.core.compute_vertex_valence"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compute_vertex_valence</span></code></a>(…)</p></td>
 <td><p>Compute vertex valence);</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#lagrange.core.detect_degenerate_facets" title="lagrange.core.detect_degenerate_facets"><code class="xref py py-obj docutils literal notranslate"><span class="pre">detect_degenerate_facets</span></code></a>(mesh)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#lagrange.core.detect_degenerate_facets" title="lagrange.core.detect_degenerate_facets"><code class="xref py py-obj docutils literal notranslate"><span class="pre">detect_degenerate_facets</span></code></a>(mesh)</p></td>
 <td><p>Detect degenerate facets in a mesh.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#lagrange.core.disconnect_uv_charts" title="lagrange.core.disconnect_uv_charts"><code class="xref py py-obj docutils literal notranslate"><span class="pre">disconnect_uv_charts</span></code></a>(mesh[, uv_attribute_name, ...])</p></td>
+<td><p>Disconnect UV charts by duplicating UV vertices shared across different charts.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#lagrange.core.extract_boundary_edges" title="lagrange.core.extract_boundary_edges"><code class="xref py py-obj docutils literal notranslate"><span class="pre">extract_boundary_edges</span></code></a>(mesh)</p></td>
 <td><p>Extract boundary edges from a mesh.</p></td>
@@ -474,119 +492,125 @@
 <tr class="row-odd"><td><p><a class="reference internal" href="#lagrange.core.filter_attributes" title="lagrange.core.filter_attributes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">filter_attributes</span></code></a>(mesh[, included_attributes, ...])</p></td>
 <td><p>Filters the attributes of mesh according to user specifications.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#lagrange.core.is_closed" title="lagrange.core.is_closed"><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_closed</span></code></a>(mesh)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#lagrange.core.get_unique_attribute_name" title="lagrange.core.get_unique_attribute_name"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_unique_attribute_name</span></code></a>(mesh, name[, separator, ...])</p></td>
+<td><p>Get a unique attribute name for a mesh.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#lagrange.core.is_closed" title="lagrange.core.is_closed"><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_closed</span></code></a>(mesh)</p></td>
 <td><p>Check if the mesh is closed.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#lagrange.core.is_edge_manifold" title="lagrange.core.is_edge_manifold"><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_edge_manifold</span></code></a>(mesh)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#lagrange.core.is_edge_manifold" title="lagrange.core.is_edge_manifold"><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_edge_manifold</span></code></a>(mesh)</p></td>
 <td><p>Check if the mesh is edge manifold.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#lagrange.core.is_manifold" title="lagrange.core.is_manifold"><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_manifold</span></code></a>(mesh)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#lagrange.core.is_manifold" title="lagrange.core.is_manifold"><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_manifold</span></code></a>(mesh)</p></td>
 <td><p>Check if the mesh is manifold.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#lagrange.core.is_oriented" title="lagrange.core.is_oriented"><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_oriented</span></code></a>(mesh)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#lagrange.core.is_oriented" title="lagrange.core.is_oriented"><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_oriented</span></code></a>(mesh)</p></td>
 <td><p>Check if the mesh is oriented.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#lagrange.core.is_vertex_manifold" title="lagrange.core.is_vertex_manifold"><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_vertex_manifold</span></code></a>(mesh)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#lagrange.core.is_vertex_manifold" title="lagrange.core.is_vertex_manifold"><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_vertex_manifold</span></code></a>(mesh)</p></td>
 <td><p>Check if the mesh is vertex manifold.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#lagrange.core.map_attribute" title="lagrange.core.map_attribute"><code class="xref py py-obj docutils literal notranslate"><span class="pre">map_attribute</span></code></a>(…)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#lagrange.core.map_attribute" title="lagrange.core.map_attribute"><code class="xref py py-obj docutils literal notranslate"><span class="pre">map_attribute</span></code></a>(…)</p></td>
 <td><p>Map an attribute to a new element type.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#lagrange.core.map_attribute_in_place" title="lagrange.core.map_attribute_in_place"><code class="xref py py-obj docutils literal notranslate"><span class="pre">map_attribute_in_place</span></code></a>(…)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#lagrange.core.map_attribute_in_place" title="lagrange.core.map_attribute_in_place"><code class="xref py py-obj docutils literal notranslate"><span class="pre">map_attribute_in_place</span></code></a>(…)</p></td>
 <td><p>Map an attribute to a new element type in place.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#lagrange.core.normalize_mesh" title="lagrange.core.normalize_mesh"><code class="xref py py-obj docutils literal notranslate"><span class="pre">normalize_mesh</span></code></a>(mesh[, normalize_normals, ...])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#lagrange.core.normalize_mesh" title="lagrange.core.normalize_mesh"><code class="xref py py-obj docutils literal notranslate"><span class="pre">normalize_mesh</span></code></a>(mesh[, normalize_normals, ...])</p></td>
 <td><p>Normalize a mesh to fit into a unit box centered at the origin.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#lagrange.core.normalize_mesh_with_transform" title="lagrange.core.normalize_mesh_with_transform"><code class="xref py py-obj docutils literal notranslate"><span class="pre">normalize_mesh_with_transform</span></code></a>(mesh[, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#lagrange.core.normalize_mesh_with_transform" title="lagrange.core.normalize_mesh_with_transform"><code class="xref py py-obj docutils literal notranslate"><span class="pre">normalize_mesh_with_transform</span></code></a>(mesh[, ...])</p></td>
 <td><p>Normalize a mesh to fit into a unit box centered at the origin.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#lagrange.core.normalize_mesh_with_transform_2d" title="lagrange.core.normalize_mesh_with_transform_2d"><code class="xref py py-obj docutils literal notranslate"><span class="pre">normalize_mesh_with_transform_2d</span></code></a>(mesh[, ...])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#lagrange.core.normalize_mesh_with_transform_2d" title="lagrange.core.normalize_mesh_with_transform_2d"><code class="xref py py-obj docutils literal notranslate"><span class="pre">normalize_mesh_with_transform_2d</span></code></a>(mesh[, ...])</p></td>
 <td><p>Normalize a mesh to fit into a unit box centered at the origin.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#lagrange.core.normalize_meshes" title="lagrange.core.normalize_meshes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">normalize_meshes</span></code></a>(meshes[, normalize_normals, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#lagrange.core.normalize_meshes" title="lagrange.core.normalize_meshes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">normalize_meshes</span></code></a>(meshes[, normalize_normals, ...])</p></td>
 <td><p>Normalize a list of meshes to fit into a unit box centered at the origin.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#lagrange.core.normalize_meshes_with_transform" title="lagrange.core.normalize_meshes_with_transform"><code class="xref py py-obj docutils literal notranslate"><span class="pre">normalize_meshes_with_transform</span></code></a>(meshes[, ...])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#lagrange.core.normalize_meshes_with_transform" title="lagrange.core.normalize_meshes_with_transform"><code class="xref py py-obj docutils literal notranslate"><span class="pre">normalize_meshes_with_transform</span></code></a>(meshes[, ...])</p></td>
 <td><p>Normalize a mesh to fit into a unit box centered at the origin.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#lagrange.core.normalize_meshes_with_transform_2d" title="lagrange.core.normalize_meshes_with_transform_2d"><code class="xref py py-obj docutils literal notranslate"><span class="pre">normalize_meshes_with_transform_2d</span></code></a>(meshes[, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#lagrange.core.normalize_meshes_with_transform_2d" title="lagrange.core.normalize_meshes_with_transform_2d"><code class="xref py py-obj docutils literal notranslate"><span class="pre">normalize_meshes_with_transform_2d</span></code></a>(meshes[, ...])</p></td>
 <td><p>Normalize a mesh to fit into a unit box centered at the origin.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#lagrange.core.orient_outward" title="lagrange.core.orient_outward"><code class="xref py py-obj docutils literal notranslate"><span class="pre">orient_outward</span></code></a>(mesh[, positive])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#lagrange.core.orient_outward" title="lagrange.core.orient_outward"><code class="xref py py-obj docutils literal notranslate"><span class="pre">orient_outward</span></code></a>(mesh[, positive])</p></td>
 <td><p>Orient mesh facets to ensure positive or negative signed volume.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#lagrange.core.permute_facets" title="lagrange.core.permute_facets"><code class="xref py py-obj docutils literal notranslate"><span class="pre">permute_facets</span></code></a>(mesh, new_to_old)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#lagrange.core.permute_facets" title="lagrange.core.permute_facets"><code class="xref py py-obj docutils literal notranslate"><span class="pre">permute_facets</span></code></a>(mesh, new_to_old)</p></td>
 <td><p>Reorder facets of a mesh in place based on a permutation.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#lagrange.core.permute_vertices" title="lagrange.core.permute_vertices"><code class="xref py py-obj docutils literal notranslate"><span class="pre">permute_vertices</span></code></a>(mesh, new_to_old)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#lagrange.core.permute_vertices" title="lagrange.core.permute_vertices"><code class="xref py py-obj docutils literal notranslate"><span class="pre">permute_vertices</span></code></a>(mesh, new_to_old)</p></td>
 <td><p>Reorder vertices of a mesh in place based on a permutation.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#lagrange.core.remap_vertices" title="lagrange.core.remap_vertices"><code class="xref py py-obj docutils literal notranslate"><span class="pre">remap_vertices</span></code></a>(…)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#lagrange.core.remap_vertices" title="lagrange.core.remap_vertices"><code class="xref py py-obj docutils literal notranslate"><span class="pre">remap_vertices</span></code></a>(…)</p></td>
 <td><p>Remap vertices of a mesh in place based on a permutation (Pythonic API).</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#lagrange.core.remove_degenerate_facets" title="lagrange.core.remove_degenerate_facets"><code class="xref py py-obj docutils literal notranslate"><span class="pre">remove_degenerate_facets</span></code></a>(mesh)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#lagrange.core.remove_degenerate_facets" title="lagrange.core.remove_degenerate_facets"><code class="xref py py-obj docutils literal notranslate"><span class="pre">remove_degenerate_facets</span></code></a>(mesh)</p></td>
 <td><p>Remove degenerate facets from a mesh.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#lagrange.core.remove_duplicate_facets" title="lagrange.core.remove_duplicate_facets"><code class="xref py py-obj docutils literal notranslate"><span class="pre">remove_duplicate_facets</span></code></a>(mesh[, consider_orientation])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#lagrange.core.remove_duplicate_facets" title="lagrange.core.remove_duplicate_facets"><code class="xref py py-obj docutils literal notranslate"><span class="pre">remove_duplicate_facets</span></code></a>(mesh[, consider_orientation])</p></td>
 <td><p>Remove duplicate facets from a mesh.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#lagrange.core.remove_duplicate_vertices" title="lagrange.core.remove_duplicate_vertices"><code class="xref py py-obj docutils literal notranslate"><span class="pre">remove_duplicate_vertices</span></code></a>(mesh[, extra_attributes, ...])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#lagrange.core.remove_duplicate_vertices" title="lagrange.core.remove_duplicate_vertices"><code class="xref py py-obj docutils literal notranslate"><span class="pre">remove_duplicate_vertices</span></code></a>(mesh[, extra_attributes, ...])</p></td>
 <td><p>Remove duplicate vertices from a mesh.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#lagrange.core.remove_isolated_vertices" title="lagrange.core.remove_isolated_vertices"><code class="xref py py-obj docutils literal notranslate"><span class="pre">remove_isolated_vertices</span></code></a>(mesh)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#lagrange.core.remove_isolated_vertices" title="lagrange.core.remove_isolated_vertices"><code class="xref py py-obj docutils literal notranslate"><span class="pre">remove_isolated_vertices</span></code></a>(mesh)</p></td>
 <td><p>Remove isolated vertices from a mesh.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#lagrange.core.remove_null_area_facets" title="lagrange.core.remove_null_area_facets"><code class="xref py py-obj docutils literal notranslate"><span class="pre">remove_null_area_facets</span></code></a>(mesh[, null_area_threshold, ...])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#lagrange.core.remove_null_area_facets" title="lagrange.core.remove_null_area_facets"><code class="xref py py-obj docutils literal notranslate"><span class="pre">remove_null_area_facets</span></code></a>(mesh[, null_area_threshold, ...])</p></td>
 <td><p>Remove facets with unsigned facets area &lt;= <cite>null_area_threhsold</cite>.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#lagrange.core.remove_short_edges" title="lagrange.core.remove_short_edges"><code class="xref py py-obj docutils literal notranslate"><span class="pre">remove_short_edges</span></code></a>(mesh[, threshold])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#lagrange.core.remove_short_edges" title="lagrange.core.remove_short_edges"><code class="xref py py-obj docutils literal notranslate"><span class="pre">remove_short_edges</span></code></a>(mesh, *[, threshold, ...])</p></td>
 <td><p>Remove short edges from a mesh.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#lagrange.core.remove_topologically_degenerate_facets" title="lagrange.core.remove_topologically_degenerate_facets"><code class="xref py py-obj docutils literal notranslate"><span class="pre">remove_topologically_degenerate_facets</span></code></a>(mesh)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#lagrange.core.remove_topologically_degenerate_facets" title="lagrange.core.remove_topologically_degenerate_facets"><code class="xref py py-obj docutils literal notranslate"><span class="pre">remove_topologically_degenerate_facets</span></code></a>(mesh)</p></td>
 <td><p>Remove topologically degenerate facets such as (0,1,1).</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#lagrange.core.reorder_mesh" title="lagrange.core.reorder_mesh"><code class="xref py py-obj docutils literal notranslate"><span class="pre">reorder_mesh</span></code></a>(mesh, method)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#lagrange.core.reorder_mesh" title="lagrange.core.reorder_mesh"><code class="xref py py-obj docutils literal notranslate"><span class="pre">reorder_mesh</span></code></a>(mesh, method)</p></td>
 <td><p>Reorder a mesh in place.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#lagrange.core.rescale_uv_charts" title="lagrange.core.rescale_uv_charts"><code class="xref py py-obj docutils literal notranslate"><span class="pre">rescale_uv_charts</span></code></a>(mesh[, uv_attribute_name, ...])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#lagrange.core.rescale_uv_charts" title="lagrange.core.rescale_uv_charts"><code class="xref py py-obj docutils literal notranslate"><span class="pre">rescale_uv_charts</span></code></a>(mesh[, uv_attribute_name, ...])</p></td>
 <td><p>Rescale UV charts to match their 3D aspect ratios.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#lagrange.core.resolve_nonmanifoldness" title="lagrange.core.resolve_nonmanifoldness"><code class="xref py py-obj docutils literal notranslate"><span class="pre">resolve_nonmanifoldness</span></code></a>(mesh)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#lagrange.core.resolve_nonmanifoldness" title="lagrange.core.resolve_nonmanifoldness"><code class="xref py py-obj docutils literal notranslate"><span class="pre">resolve_nonmanifoldness</span></code></a>(mesh)</p></td>
 <td><p>Resolve both vertex and edge nonmanifoldness in a mesh.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#lagrange.core.resolve_vertex_nonmanifoldness" title="lagrange.core.resolve_vertex_nonmanifoldness"><code class="xref py py-obj docutils literal notranslate"><span class="pre">resolve_vertex_nonmanifoldness</span></code></a>(mesh)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#lagrange.core.resolve_vertex_nonmanifoldness" title="lagrange.core.resolve_vertex_nonmanifoldness"><code class="xref py py-obj docutils literal notranslate"><span class="pre">resolve_vertex_nonmanifoldness</span></code></a>(mesh)</p></td>
 <td><p>Resolve vertex non-manifoldness in a mesh.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#lagrange.core.select_facets_by_normal_similarity" title="lagrange.core.select_facets_by_normal_similarity"><code class="xref py py-obj docutils literal notranslate"><span class="pre">select_facets_by_normal_similarity</span></code></a>(mesh, seed_facet_id)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#lagrange.core.select_facets_by_normal_similarity" title="lagrange.core.select_facets_by_normal_similarity"><code class="xref py py-obj docutils literal notranslate"><span class="pre">select_facets_by_normal_similarity</span></code></a>(mesh, seed_facet_id)</p></td>
 <td><p>Select facets by normal similarity (Pythonic API).</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#lagrange.core.select_facets_in_frustum" title="lagrange.core.select_facets_in_frustum"><code class="xref py py-obj docutils literal notranslate"><span class="pre">select_facets_in_frustum</span></code></a>(mesh, frustum_plane_points, ...)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#lagrange.core.select_facets_in_frustum" title="lagrange.core.select_facets_in_frustum"><code class="xref py py-obj docutils literal notranslate"><span class="pre">select_facets_in_frustum</span></code></a>(mesh, frustum_plane_points, ...)</p></td>
 <td><p>Select facets in a frustum (Pythonic API).</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#lagrange.core.separate_by_components" title="lagrange.core.separate_by_components"><code class="xref py py-obj docutils literal notranslate"><span class="pre">separate_by_components</span></code></a>(mesh[, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#lagrange.core.separate_by_components" title="lagrange.core.separate_by_components"><code class="xref py py-obj docutils literal notranslate"><span class="pre">separate_by_components</span></code></a>(mesh[, ...])</p></td>
 <td><p>Extract a set of submeshes based on connected components.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#lagrange.core.separate_by_facet_groups" title="lagrange.core.separate_by_facet_groups"><code class="xref py py-obj docutils literal notranslate"><span class="pre">separate_by_facet_groups</span></code></a>(mesh, facet_group_indices[, ...])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#lagrange.core.separate_by_facet_groups" title="lagrange.core.separate_by_facet_groups"><code class="xref py py-obj docutils literal notranslate"><span class="pre">separate_by_facet_groups</span></code></a>(mesh, facet_group_indices[, ...])</p></td>
 <td><p>Extract a set of submeshes based on facet groups.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#lagrange.core.split_facets_by_material" title="lagrange.core.split_facets_by_material"><code class="xref py py-obj docutils literal notranslate"><span class="pre">split_facets_by_material</span></code></a>(mesh, material_attribute_name)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#lagrange.core.split_facets_by_material" title="lagrange.core.split_facets_by_material"><code class="xref py py-obj docutils literal notranslate"><span class="pre">split_facets_by_material</span></code></a>(mesh, material_attribute_name)</p></td>
 <td><p>Split mesh facets based on a material attribute.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#lagrange.core.split_long_edges" title="lagrange.core.split_long_edges"><code class="xref py py-obj docutils literal notranslate"><span class="pre">split_long_edges</span></code></a>(mesh[, max_edge_length, recursive, ...])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#lagrange.core.split_long_edges" title="lagrange.core.split_long_edges"><code class="xref py py-obj docutils literal notranslate"><span class="pre">split_long_edges</span></code></a>(mesh[, max_edge_length, recursive, ...])</p></td>
 <td><p>Split edges longer than max_edge_length.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#lagrange.core.thicken_and_close_mesh" title="lagrange.core.thicken_and_close_mesh"><code class="xref py py-obj docutils literal notranslate"><span class="pre">thicken_and_close_mesh</span></code></a>(mesh[, offset_amount, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#lagrange.core.thicken_and_close_mesh" title="lagrange.core.thicken_and_close_mesh"><code class="xref py py-obj docutils literal notranslate"><span class="pre">thicken_and_close_mesh</span></code></a>(mesh[, offset_amount, ...])</p></td>
 <td><p>Thicken a mesh by offsetting it, and close the shape into a thick 3D solid.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#lagrange.core.transform_mesh" title="lagrange.core.transform_mesh"><code class="xref py py-obj docutils literal notranslate"><span class="pre">transform_mesh</span></code></a>(mesh, affine_transform[, ...])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#lagrange.core.transform_mesh" title="lagrange.core.transform_mesh"><code class="xref py py-obj docutils literal notranslate"><span class="pre">transform_mesh</span></code></a>(mesh, affine_transform[, ...])</p></td>
 <td><p>Apply affine transformation to a mesh.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#lagrange.core.triangulate_polygonal_facets" title="lagrange.core.triangulate_polygonal_facets"><code class="xref py py-obj docutils literal notranslate"><span class="pre">triangulate_polygonal_facets</span></code></a>(mesh[, scheme])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#lagrange.core.triangulate_polygonal_facets" title="lagrange.core.triangulate_polygonal_facets"><code class="xref py py-obj docutils literal notranslate"><span class="pre">triangulate_polygonal_facets</span></code></a>(mesh[, scheme])</p></td>
 <td><p>Triangulate polygonal facets of the mesh.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#lagrange.core.trim_by_isoline" title="lagrange.core.trim_by_isoline"><code class="xref py py-obj docutils literal notranslate"><span class="pre">trim_by_isoline</span></code></a>(mesh, attribute[, isovalue, keep_below])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#lagrange.core.trim_by_isoline" title="lagrange.core.trim_by_isoline"><code class="xref py py-obj docutils literal notranslate"><span class="pre">trim_by_isoline</span></code></a>(mesh, attribute[, isovalue, keep_below])</p></td>
 <td><p>Trim a triangle mesh by an isoline.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#lagrange.core.unflip_uv_charts" title="lagrange.core.unflip_uv_charts"><code class="xref py py-obj docutils literal notranslate"><span class="pre">unflip_uv_charts</span></code></a>(mesh[, uv_attribute_name, ...])</p></td>
+<td><p>Mirror the UV positions of every UV vertex in any chart that is &quot;flipped&quot; by negating</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#lagrange.core.unify_index_buffer" title="lagrange.core.unify_index_buffer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">unify_index_buffer</span></code></a>(…)</p></td>
 <td><p>Unify the index buffer for selected attributes.</p></td>
@@ -828,7 +852,7 @@
 
 <dl class="py class">
 <dt class="sig sig-object py" id="lagrange.core.AttributeCastPolicy">
-<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">lagrange.core.</span></span><span class="sig-name descname"><span class="pre">AttributeCastPolicy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwds</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lagrange.core.AttributeCastPolicy" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">lagrange.core.</span></span><span class="sig-name descname"><span class="pre">AttributeCastPolicy</span></span><a class="headerlink" href="#lagrange.core.AttributeCastPolicy" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">enum.Enum</span></code></p>
 <p>Policy for remapping invalid values when casting to a different value type</p>
 <dl class="py attribute">
@@ -853,7 +877,7 @@
 
 <dl class="py class">
 <dt class="sig sig-object py" id="lagrange.core.AttributeCopyPolicy">
-<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">lagrange.core.</span></span><span class="sig-name descname"><span class="pre">AttributeCopyPolicy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwds</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lagrange.core.AttributeCopyPolicy" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">lagrange.core.</span></span><span class="sig-name descname"><span class="pre">AttributeCopyPolicy</span></span><a class="headerlink" href="#lagrange.core.AttributeCopyPolicy" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">enum.Enum</span></code></p>
 <p>Policy for copying attribute that is a view of an external buffer</p>
 <dl class="py attribute">
@@ -878,7 +902,7 @@
 
 <dl class="py class">
 <dt class="sig sig-object py" id="lagrange.core.AttributeCreatePolicy">
-<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">lagrange.core.</span></span><span class="sig-name descname"><span class="pre">AttributeCreatePolicy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwds</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lagrange.core.AttributeCreatePolicy" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">lagrange.core.</span></span><span class="sig-name descname"><span class="pre">AttributeCreatePolicy</span></span><a class="headerlink" href="#lagrange.core.AttributeCreatePolicy" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">enum.Enum</span></code></p>
 <p>Attribute creation policy</p>
 <dl class="py attribute">
@@ -897,7 +921,7 @@
 
 <dl class="py class">
 <dt class="sig sig-object py" id="lagrange.core.AttributeDeletePolicy">
-<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">lagrange.core.</span></span><span class="sig-name descname"><span class="pre">AttributeDeletePolicy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwds</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lagrange.core.AttributeDeletePolicy" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">lagrange.core.</span></span><span class="sig-name descname"><span class="pre">AttributeDeletePolicy</span></span><a class="headerlink" href="#lagrange.core.AttributeDeletePolicy" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">enum.Enum</span></code></p>
 <p>Policy for deleting attributes with reserved names</p>
 <dl class="py attribute">
@@ -959,7 +983,7 @@
 
 <dl class="py class">
 <dt class="sig sig-object py" id="lagrange.core.AttributeExportPolicy">
-<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">lagrange.core.</span></span><span class="sig-name descname"><span class="pre">AttributeExportPolicy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwds</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lagrange.core.AttributeExportPolicy" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">lagrange.core.</span></span><span class="sig-name descname"><span class="pre">AttributeExportPolicy</span></span><a class="headerlink" href="#lagrange.core.AttributeExportPolicy" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">enum.Enum</span></code></p>
 <p>Policy for exporting attribute that is a view of an external buffer</p>
 <dl class="py attribute">
@@ -990,7 +1014,7 @@
 
 <dl class="py class">
 <dt class="sig sig-object py" id="lagrange.core.AttributeGrowthPolicy">
-<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">lagrange.core.</span></span><span class="sig-name descname"><span class="pre">AttributeGrowthPolicy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwds</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lagrange.core.AttributeGrowthPolicy" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">lagrange.core.</span></span><span class="sig-name descname"><span class="pre">AttributeGrowthPolicy</span></span><a class="headerlink" href="#lagrange.core.AttributeGrowthPolicy" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">enum.Enum</span></code></p>
 <p>Attribute growth policy (for external buffers)</p>
 <dl class="py attribute">
@@ -1021,7 +1045,7 @@
 
 <dl class="py class">
 <dt class="sig sig-object py" id="lagrange.core.AttributeReorientPolicy">
-<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">lagrange.core.</span></span><span class="sig-name descname"><span class="pre">AttributeReorientPolicy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwds</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lagrange.core.AttributeReorientPolicy" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">lagrange.core.</span></span><span class="sig-name descname"><span class="pre">AttributeReorientPolicy</span></span><a class="headerlink" href="#lagrange.core.AttributeReorientPolicy" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">enum.Enum</span></code></p>
 <p>Policy for updating attributes values when reorienting mesh facets</p>
 <dl class="py attribute">
@@ -1040,7 +1064,7 @@
 
 <dl class="py class">
 <dt class="sig sig-object py" id="lagrange.core.AttributeShrinkPolicy">
-<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">lagrange.core.</span></span><span class="sig-name descname"><span class="pre">AttributeShrinkPolicy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwds</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lagrange.core.AttributeShrinkPolicy" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">lagrange.core.</span></span><span class="sig-name descname"><span class="pre">AttributeShrinkPolicy</span></span><a class="headerlink" href="#lagrange.core.AttributeShrinkPolicy" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">enum.Enum</span></code></p>
 <p>Attribute shrink policy (for external buffers)</p>
 <dl class="py attribute">
@@ -1071,7 +1095,7 @@
 
 <dl class="py class">
 <dt class="sig sig-object py" id="lagrange.core.AttributeUsage">
-<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">lagrange.core.</span></span><span class="sig-name descname"><span class="pre">AttributeUsage</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwds</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lagrange.core.AttributeUsage" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">lagrange.core.</span></span><span class="sig-name descname"><span class="pre">AttributeUsage</span></span><a class="headerlink" href="#lagrange.core.AttributeUsage" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">enum.Enum</span></code></p>
 <p>Attribute usage type</p>
 <dl class="py attribute">
@@ -1150,7 +1174,7 @@
 
 <dl class="py class">
 <dt class="sig sig-object py" id="lagrange.core.AttributeWritePolicy">
-<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">lagrange.core.</span></span><span class="sig-name descname"><span class="pre">AttributeWritePolicy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwds</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lagrange.core.AttributeWritePolicy" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">lagrange.core.</span></span><span class="sig-name descname"><span class="pre">AttributeWritePolicy</span></span><a class="headerlink" href="#lagrange.core.AttributeWritePolicy" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">enum.Enum</span></code></p>
 <p>Policy for attempting to write to read-only external buffer</p>
 <dl class="py attribute">
@@ -1174,8 +1198,43 @@
 </dd></dl>
 
 <dl class="py class">
+<dt class="sig sig-object py" id="lagrange.core.CameraTransforms">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">lagrange.core.</span></span><span class="sig-name descname"><span class="pre">CameraTransforms</span></span><a class="headerlink" href="#lagrange.core.CameraTransforms" title="Link to this definition">¶</a></dt>
+<dd><p>View and projection matrices defining a camera in world space.</p>
+<dl class="py property">
+<dt class="sig sig-object py" id="lagrange.core.CameraTransforms.projection">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">projection</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Annotated</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.typing.NDArray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float32</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">(</span></span><span class="n"><span class="pre">shape</span></span><span class="o"><span class="pre">=</span></span><span class="m"><span class="pre">4</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">4</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">order</span></span><span class="o"><span class="pre">=</span></span><span class="s"><span class="pre">'F'</span></span><span class="p"><span class="pre">)</span></span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#lagrange.core.CameraTransforms.projection" title="Link to this definition">¶</a></dt>
+<dd><p>4x4 projection transform (view space -&gt; NDC space, depth in [-1, 1]).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Annotated[numpy.typing.NDArray[numpy.float32], dict(shape=(4, 4), order=’F’)]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="lagrange.core.CameraTransforms.view">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">view</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Annotated</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.typing.NDArray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float32</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">(</span></span><span class="n"><span class="pre">shape</span></span><span class="o"><span class="pre">=</span></span><span class="m"><span class="pre">4</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">4</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">order</span></span><span class="o"><span class="pre">=</span></span><span class="s"><span class="pre">'F'</span></span><span class="p"><span class="pre">)</span></span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#lagrange.core.CameraTransforms.view" title="Link to this definition">¶</a></dt>
+<dd><p>4×4 view transform (world space -&gt; view space).</p>
+<p>Accepts a <code class="docutils literal notranslate"><span class="pre">(4,</span> <span class="pre">4)</span></code> or <code class="docutils literal notranslate"><span class="pre">(3,</span> <span class="pre">4)</span></code> numpy array:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">(4,</span> <span class="pre">4)</span></code>: full homogeneous matrix; last row must be <code class="docutils literal notranslate"><span class="pre">[0,</span> <span class="pre">0,</span> <span class="pre">0,</span> <span class="pre">1]</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">(3,</span> <span class="pre">4)</span></code>: compact <code class="docutils literal notranslate"><span class="pre">[R</span> <span class="pre">|</span> <span class="pre">t]</span></code> form; the implicit last row <code class="docutils literal notranslate"><span class="pre">[0,</span> <span class="pre">0,</span> <span class="pre">0,</span> <span class="pre">1]</span></code> is appended
+automatically.</p></li>
+</ul>
+<p>The getter always returns a <code class="docutils literal notranslate"><span class="pre">(4,</span> <span class="pre">4)</span></code> numpy array.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Annotated[numpy.typing.NDArray[numpy.float32], dict(shape=(4, 4), order=’F’)]</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
 <dt class="sig sig-object py" id="lagrange.core.CentroidWeightingType">
-<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">lagrange.core.</span></span><span class="sig-name descname"><span class="pre">CentroidWeightingType</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwds</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lagrange.core.CentroidWeightingType" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">lagrange.core.</span></span><span class="sig-name descname"><span class="pre">CentroidWeightingType</span></span><a class="headerlink" href="#lagrange.core.CentroidWeightingType" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">enum.Enum</span></code></p>
 <p>Centroid weighting type.</p>
 <dl class="py attribute">
@@ -1194,7 +1253,7 @@
 
 <dl class="py class">
 <dt class="sig sig-object py" id="lagrange.core.ConnectivityType">
-<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">lagrange.core.</span></span><span class="sig-name descname"><span class="pre">ConnectivityType</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwds</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lagrange.core.ConnectivityType" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">lagrange.core.</span></span><span class="sig-name descname"><span class="pre">ConnectivityType</span></span><a class="headerlink" href="#lagrange.core.ConnectivityType" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">enum.Enum</span></code></p>
 <p>Mesh connectivity type</p>
 <dl class="py attribute">
@@ -1213,7 +1272,7 @@
 
 <dl class="py class">
 <dt class="sig sig-object py" id="lagrange.core.DistortionMetric">
-<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">lagrange.core.</span></span><span class="sig-name descname"><span class="pre">DistortionMetric</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwds</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lagrange.core.DistortionMetric" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">lagrange.core.</span></span><span class="sig-name descname"><span class="pre">DistortionMetric</span></span><a class="headerlink" href="#lagrange.core.DistortionMetric" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">enum.Enum</span></code></p>
 <p>Distortion metric.</p>
 <dl class="py attribute">
@@ -1375,7 +1434,7 @@ multiple vertices, corners, or facets.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="lagrange.core.MappingPolicy">
-<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">lagrange.core.</span></span><span class="sig-name descname"><span class="pre">MappingPolicy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwds</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lagrange.core.MappingPolicy" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">lagrange.core.</span></span><span class="sig-name descname"><span class="pre">MappingPolicy</span></span><a class="headerlink" href="#lagrange.core.MappingPolicy" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">enum.Enum</span></code></p>
 <p>Mapping policy for handling collisions.</p>
 <dl class="py attribute">
@@ -1610,7 +1669,7 @@ multiple vertices, corners, or facets.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="lagrange.core.NormalWeightingType">
-<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">lagrange.core.</span></span><span class="sig-name descname"><span class="pre">NormalWeightingType</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwds</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lagrange.core.NormalWeightingType" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">lagrange.core.</span></span><span class="sig-name descname"><span class="pre">NormalWeightingType</span></span><a class="headerlink" href="#lagrange.core.NormalWeightingType" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">enum.Enum</span></code></p>
 <p>Normal weighting type.</p>
 <dl class="py attribute">
@@ -3500,6 +3559,45 @@ If not provided, the edges are initialized in an arbitrary order.</p>
 </dd></dl>
 
 <dl class="py class">
+<dt class="sig sig-object py" id="lagrange.core.UVOrientationCount">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">lagrange.core.</span></span><span class="sig-name descname"><span class="pre">UVOrientationCount</span></span><a class="headerlink" href="#lagrange.core.UVOrientationCount" title="Link to this definition">¶</a></dt>
+<dd><p>Counts of per-facet UV orientations.</p>
+<dl class="py property">
+<dt class="sig sig-object py" id="lagrange.core.UVOrientationCount.degenerate">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">degenerate</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#lagrange.core.UVOrientationCount.degenerate" title="Link to this definition">¶</a></dt>
+<dd><p>Number of degenerate (zero-area) facets.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="lagrange.core.UVOrientationCount.negative">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">negative</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#lagrange.core.UVOrientationCount.negative" title="Link to this definition">¶</a></dt>
+<dd><p>Number of CW (negatively oriented / flipped) facets.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="lagrange.core.UVOrientationCount.positive">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">positive</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#lagrange.core.UVOrientationCount.positive" title="Link to this definition">¶</a></dt>
+<dd><p>Number of CCW (positively oriented) facets.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
 <dt class="sig sig-object py" id="lagrange.core.VertexNormalOptions">
 <em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">lagrange.core.</span></span><span class="sig-name descname"><span class="pre">VertexNormalOptions</span></span><a class="headerlink" href="#lagrange.core.VertexNormalOptions" title="Link to this definition">¶</a></dt>
 <dd><p>Options for computing vertex normals</p>
@@ -4063,7 +4161,7 @@ Basel: Birkhäuser Basel, 2008. 175-188.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="lagrange.core.compute_seam_edges">
-<span class="sig-prename descclassname"><span class="pre">lagrange.core.</span></span><span class="sig-name descname"><span class="pre">compute_seam_edges</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mesh</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">indexed_attribute_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_attribute_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lagrange.core.compute_seam_edges" title="Link to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">lagrange.core.</span></span><span class="sig-name descname"><span class="pre">compute_seam_edges</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mesh</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">indexed_attribute_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_attribute_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">include_boundary_edges</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lagrange.core.compute_seam_edges" title="Link to this definition">¶</a></dt>
 <dd><p>Compute seam edges for a given indexed attribute.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -4071,6 +4169,7 @@ Basel: Birkhäuser Basel, 2008. 175-188.</p>
 <li><p><strong>mesh</strong> (<a class="reference internal" href="#lagrange.core.SurfaceMesh" title="lagrange.core.SurfaceMesh"><em>SurfaceMesh</em></a>) – Input mesh.</p></li>
 <li><p><strong>indexed_attribute_id</strong> (<em>int</em>) – Input indexed attribute id.</p></li>
 <li><p><strong>output_attribute_name</strong> (<em>str</em><em> | </em><em>None</em>) – Output attribute name.</p></li>
+<li><p><strong>include_boundary_edges</strong> (<em>bool</em>) – If true, boundary edges are also marked as seam edges.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
@@ -4132,22 +4231,20 @@ Basel: Birkhäuser Basel, 2008. 175-188.</p>
 <dt class="sig sig-object py" id="lagrange.core.compute_uv_charts">
 <span class="sig-prename descclassname"><span class="pre">lagrange.core.</span></span><span class="sig-name descname"><span class="pre">compute_uv_charts</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mesh</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">uv_attribute_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_attribute_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'&#64;chart_id'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">connectivity_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Edge'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lagrange.core.compute_uv_charts" title="Link to this definition">¶</a></dt>
 <dd><p>Compute UV charts.</p>
-<p>&#64;param mesh: Input mesh.
-&#64;param uv_attribute_name: Name of the UV attribute.
-&#64;param output_attribute_name: Name of the output attribute to store the chart ids.
-&#64;param connectivity_type: Type of connectivity to use for chart computation. Can be “Vertex” or “Edge”.</p>
-<p>&#64;returns: A list of chart ids for each vertex.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>mesh</strong> (<a class="reference internal" href="#lagrange.core.SurfaceMesh" title="lagrange.core.SurfaceMesh"><em>SurfaceMesh</em></a>)</p></li>
-<li><p><strong>uv_attribute_name</strong> (<em>str</em>)</p></li>
-<li><p><strong>output_attribute_name</strong> (<em>str</em>)</p></li>
-<li><p><strong>connectivity_type</strong> (<em>str</em>)</p></li>
+<li><p><strong>mesh</strong> (<a class="reference internal" href="#lagrange.core.SurfaceMesh" title="lagrange.core.SurfaceMesh"><em>SurfaceMesh</em></a>) – Input mesh.</p></li>
+<li><p><strong>uv_attribute_name</strong> (<em>str</em>) – Name of the UV attribute.</p></li>
+<li><p><strong>output_attribute_name</strong> (<em>str</em>) – Name of the output attribute to store the chart ids.</p></li>
+<li><p><strong>connectivity_type</strong> (<em>str</em>) – Type of connectivity to use for chart computation. Can be “Vertex” or “Edge”.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p>int</p>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The number of charts.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
 </dd>
 </dl>
 </dd></dl>
@@ -4170,6 +4267,29 @@ Basel: Birkhäuser Basel, 2008. 175-188.</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="lagrange.core.compute_uv_orientation">
+<span class="sig-prename descclassname"><span class="pre">lagrange.core.</span></span><span class="sig-name descname"><span class="pre">compute_uv_orientation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mesh</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">uv_attribute_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_attribute_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'&#64;uv_orientation'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lagrange.core.compute_uv_orientation" title="Link to this definition">¶</a></dt>
+<dd><p>Compute a per-facet orientation attribute using Shewchuk’s exact <code class="docutils literal notranslate"><span class="pre">orient2D</span></code> predicate.</p>
+<p>Each facet is assigned an <code class="docutils literal notranslate"><span class="pre">int8</span></code> value: <code class="docutils literal notranslate"><span class="pre">+1</span></code> for CCW (positively oriented), <code class="docutils literal notranslate"><span class="pre">0</span></code> for
+degenerate, <code class="docutils literal notranslate"><span class="pre">-1</span></code> for CW (negatively oriented / flipped).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>mesh</strong> (<a class="reference internal" href="#lagrange.core.SurfaceMesh" title="lagrange.core.SurfaceMesh"><em>SurfaceMesh</em></a>) – Input triangle mesh.</p></li>
+<li><p><strong>uv_attribute_name</strong> (<em>str</em>) – Name of the UV attribute. If empty, uses the first UV attribute.</p></li>
+<li><p><strong>output_attribute_name</strong> (<em>str</em>) – Name of the output per-facet attribute (int8).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A <a class="reference internal" href="#lagrange.core.UVOrientationCount" title="lagrange.core.UVOrientationCount"><code class="xref py py-class docutils literal notranslate"><span class="pre">UVOrientationCount</span></code></a> with counts of positive, degenerate, and negative facets.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#lagrange.core.UVOrientationCount" title="lagrange.core.UVOrientationCount">UVOrientationCount</a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -4257,6 +4377,31 @@ Basel: Birkhäuser Basel, 2008. 175-188.</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>list[int]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="lagrange.core.disconnect_uv_charts">
+<span class="sig-prename descclassname"><span class="pre">lagrange.core.</span></span><span class="sig-name descname"><span class="pre">disconnect_uv_charts</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mesh</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">uv_attribute_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chart_id_attribute_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lagrange.core.disconnect_uv_charts" title="Link to this definition">¶</a></dt>
+<dd><p>Disconnect UV charts by duplicating UV vertices shared across different charts.</p>
+<p>After this operation, no two facets belonging to different UV charts will share a UV vertex
+index. Without any input chart id attribute, this eliminates non-manifold UV vertices (pinch
+points) where charts touch at a single vertex.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>mesh</strong> (<a class="reference internal" href="#lagrange.core.SurfaceMesh" title="lagrange.core.SurfaceMesh"><em>SurfaceMesh</em></a>) – Input mesh. The UV attribute must be indexed.</p></li>
+<li><p><strong>uv_attribute_name</strong> (<em>str</em>) – Name of the UV attribute. If empty, uses the first indexed UV attribute.</p></li>
+<li><p><strong>chart_id_attribute_name</strong> (<em>str</em>) – Optional per-facet chart id attribute name. If empty, chart ids
+are computed automatically using edge connectivity on the UV mesh.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The number of UV vertices that were duplicated.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
 </dd>
 </dl>
 </dd></dl>
@@ -4356,6 +4501,34 @@ Basel: Birkhäuser Basel, 2008. 175-188.</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
 <dd class="field-even"><p><a class="reference internal" href="#lagrange.core.SurfaceMesh" title="lagrange.core.SurfaceMesh">SurfaceMesh</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="lagrange.core.get_unique_attribute_name">
+<span class="sig-prename descclassname"><span class="pre">lagrange.core.</span></span><span class="sig-name descname"><span class="pre">get_unique_attribute_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mesh</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">separator</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'.'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">postfix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_increment</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">emit_warning</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lagrange.core.get_unique_attribute_name" title="Link to this definition">¶</a></dt>
+<dd><p>Get a unique attribute name for a mesh.</p>
+<p>If the desired name does not exist on the mesh it is returned as-is. If it
+already exists, a suffix of the form <code class="docutils literal notranslate"><span class="pre">{separator}{count}{postfix}</span></code> is appended
+until a unique name is found. An exception is raised if no unique name can be
+found after <code class="docutils literal notranslate"><span class="pre">max_increment</span></code> attempts.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>mesh</strong> (<a class="reference internal" href="#lagrange.core.SurfaceMesh" title="lagrange.core.SurfaceMesh"><em>SurfaceMesh</em></a>) – The input mesh.</p></li>
+<li><p><strong>name</strong> (<em>str</em>) – The desired attribute name.</p></li>
+<li><p><strong>separator</strong> (<em>str</em>) – Separator between the base name and counter (default: “.”).</p></li>
+<li><p><strong>postfix</strong> (<em>str</em>) – Postfix to append after the counter (default: “”).</p></li>
+<li><p><strong>max_increment</strong> (<em>int</em>) – Maximum number of attempts to find a unique name (default: 1000).</p></li>
+<li><p><strong>emit_warning</strong> (<em>bool</em>) – Whether to log a warning when a collision is detected (default: True).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A unique attribute name.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
 </dd>
 </dl>
 </dd></dl>
@@ -4768,13 +4941,14 @@ If one orientation has more duplicates, all but one of the majority orientation 
 
 <dl class="py function">
 <dt class="sig sig-object py" id="lagrange.core.remove_short_edges">
-<span class="sig-prename descclassname"><span class="pre">lagrange.core.</span></span><span class="sig-name descname"><span class="pre">remove_short_edges</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mesh</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">threshold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lagrange.core.remove_short_edges" title="Link to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">lagrange.core.</span></span><span class="sig-name descname"><span class="pre">remove_short_edges</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mesh</span></span></em>, <em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">threshold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vertex_importance_attribute</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lagrange.core.remove_short_edges" title="Link to this definition">¶</a></dt>
 <dd><p>Remove short edges from a mesh.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>mesh</strong> (<a class="reference internal" href="#lagrange.core.SurfaceMesh" title="lagrange.core.SurfaceMesh"><em>SurfaceMesh</em></a>) – Input mesh (modified in place).</p></li>
 <li><p><strong>threshold</strong> (<em>float</em>) – Minimum edge length below which edges are considered short.</p></li>
+<li><p><strong>vertex_importance_attribute</strong> (<em>str</em><em> | </em><em>None</em>) – Optional vertex attribute name for importance values used to determine which vertex to keep during edge collapse.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
@@ -5097,6 +5271,32 @@ If None, edge lengths are computed.</p></li>
 </dd></dl>
 
 <dl class="py function">
+<dt class="sig sig-object py" id="lagrange.core.unflip_uv_charts">
+<span class="sig-prename descclassname"><span class="pre">lagrange.core.</span></span><span class="sig-name descname"><span class="pre">unflip_uv_charts</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mesh</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">uv_attribute_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chart_id_attribute_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lagrange.core.unflip_uv_charts" title="Link to this definition">¶</a></dt>
+<dd><p>Mirror the UV positions of every UV vertex in any chart that is “flipped” by negating
+its U coordinate. A chart is considered flipped when either its total signed UV area is negative,
+OR every triangle in the chart is individually flipped (per <a class="reference internal" href="#lagrange.core.compute_uv_orientation" title="lagrange.core.compute_uv_orientation"><code class="xref py py-func docutils literal notranslate"><span class="pre">compute_uv_orientation()</span></code></a>); the
+latter rule catches charts whose floating-point area sum is non-negative due to nearly-degenerate
+triangles. Assumes UV vertices are not shared across charts.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>mesh</strong> (<a class="reference internal" href="#lagrange.core.SurfaceMesh" title="lagrange.core.SurfaceMesh"><em>SurfaceMesh</em></a>) – Input triangle mesh. The UV attribute must be indexed.</p></li>
+<li><p><strong>uv_attribute_name</strong> (<em>str</em>) – Name of the UV attribute. If empty, uses the first indexed UV attribute.</p></li>
+<li><p><strong>chart_id_attribute_name</strong> (<em>str</em>) – Optional per-facet chart id attribute name. If empty, charts are
+computed automatically using edge connectivity on the UV mesh.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The number of charts that were unflipped.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
 <dt class="sig sig-object py" id="lagrange.core.unify_index_buffer">
 <span class="sig-prename descclassname"><span class="pre">lagrange.core.</span></span><span class="sig-name descname"><span class="pre">unify_index_buffer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mesh</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#lagrange.core.SurfaceMesh" title="lagrange.core.SurfaceMesh"><span class="pre">SurfaceMesh</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#lagrange.core.SurfaceMesh" title="lagrange.core.SurfaceMesh"><span class="pre">SurfaceMesh</span></a></span></span><a class="headerlink" href="#lagrange.core.unify_index_buffer" title="Link to this definition">¶</a></dt>
 <dt class="sig sig-object py">
@@ -5351,6 +5551,11 @@ If None, edge lengths are computed.</p></li>
 <li><a class="reference internal" href="#lagrange.core.AttributeWritePolicy.WarnAndCopy"><code class="docutils literal notranslate"><span class="pre">AttributeWritePolicy.WarnAndCopy</span></code></a></li>
 </ul>
 </li>
+<li><a class="reference internal" href="#lagrange.core.CameraTransforms"><code class="docutils literal notranslate"><span class="pre">CameraTransforms</span></code></a><ul>
+<li><a class="reference internal" href="#lagrange.core.CameraTransforms.projection"><code class="docutils literal notranslate"><span class="pre">CameraTransforms.projection</span></code></a></li>
+<li><a class="reference internal" href="#lagrange.core.CameraTransforms.view"><code class="docutils literal notranslate"><span class="pre">CameraTransforms.view</span></code></a></li>
+</ul>
+</li>
 <li><a class="reference internal" href="#lagrange.core.CentroidWeightingType"><code class="docutils literal notranslate"><span class="pre">CentroidWeightingType</span></code></a><ul>
 <li><a class="reference internal" href="#lagrange.core.CentroidWeightingType.Area"><code class="docutils literal notranslate"><span class="pre">CentroidWeightingType.Area</span></code></a></li>
 <li><a class="reference internal" href="#lagrange.core.CentroidWeightingType.Uniform"><code class="docutils literal notranslate"><span class="pre">CentroidWeightingType.Uniform</span></code></a></li>
@@ -5564,6 +5769,12 @@ If None, edge lengths are computed.</p></li>
 <li><a class="reference internal" href="#lagrange.core.TangentBitangentResult.tangent_id"><code class="docutils literal notranslate"><span class="pre">TangentBitangentResult.tangent_id</span></code></a></li>
 </ul>
 </li>
+<li><a class="reference internal" href="#lagrange.core.UVOrientationCount"><code class="docutils literal notranslate"><span class="pre">UVOrientationCount</span></code></a><ul>
+<li><a class="reference internal" href="#lagrange.core.UVOrientationCount.degenerate"><code class="docutils literal notranslate"><span class="pre">UVOrientationCount.degenerate</span></code></a></li>
+<li><a class="reference internal" href="#lagrange.core.UVOrientationCount.negative"><code class="docutils literal notranslate"><span class="pre">UVOrientationCount.negative</span></code></a></li>
+<li><a class="reference internal" href="#lagrange.core.UVOrientationCount.positive"><code class="docutils literal notranslate"><span class="pre">UVOrientationCount.positive</span></code></a></li>
+</ul>
+</li>
 <li><a class="reference internal" href="#lagrange.core.VertexNormalOptions"><code class="docutils literal notranslate"><span class="pre">VertexNormalOptions</span></code></a><ul>
 <li><a class="reference internal" href="#lagrange.core.VertexNormalOptions.distance_tolerance"><code class="docutils literal notranslate"><span class="pre">VertexNormalOptions.distance_tolerance</span></code></a></li>
 <li><a class="reference internal" href="#lagrange.core.VertexNormalOptions.keep_weighted_corner_normals"><code class="docutils literal notranslate"><span class="pre">VertexNormalOptions.keep_weighted_corner_normals</span></code></a></li>
@@ -5604,15 +5815,18 @@ If None, edge lengths are computed.</p></li>
 <li><a class="reference internal" href="#lagrange.core.compute_uv_area"><code class="docutils literal notranslate"><span class="pre">compute_uv_area()</span></code></a></li>
 <li><a class="reference internal" href="#lagrange.core.compute_uv_charts"><code class="docutils literal notranslate"><span class="pre">compute_uv_charts()</span></code></a></li>
 <li><a class="reference internal" href="#lagrange.core.compute_uv_distortion"><code class="docutils literal notranslate"><span class="pre">compute_uv_distortion()</span></code></a></li>
+<li><a class="reference internal" href="#lagrange.core.compute_uv_orientation"><code class="docutils literal notranslate"><span class="pre">compute_uv_orientation()</span></code></a></li>
 <li><a class="reference internal" href="#lagrange.core.compute_vertex_is_manifold"><code class="docutils literal notranslate"><span class="pre">compute_vertex_is_manifold()</span></code></a></li>
 <li><a class="reference internal" href="#lagrange.core.compute_vertex_normal"><code class="docutils literal notranslate"><span class="pre">compute_vertex_normal()</span></code></a></li>
 <li><a class="reference internal" href="#lagrange.core.compute_vertex_valence"><code class="docutils literal notranslate"><span class="pre">compute_vertex_valence()</span></code></a></li>
 <li><a class="reference internal" href="#lagrange.core.detect_degenerate_facets"><code class="docutils literal notranslate"><span class="pre">detect_degenerate_facets()</span></code></a></li>
+<li><a class="reference internal" href="#lagrange.core.disconnect_uv_charts"><code class="docutils literal notranslate"><span class="pre">disconnect_uv_charts()</span></code></a></li>
 <li><a class="reference internal" href="#lagrange.core.extract_boundary_edges"><code class="docutils literal notranslate"><span class="pre">extract_boundary_edges()</span></code></a></li>
 <li><a class="reference internal" href="#lagrange.core.extract_boundary_loops"><code class="docutils literal notranslate"><span class="pre">extract_boundary_loops()</span></code></a></li>
 <li><a class="reference internal" href="#lagrange.core.extract_isoline"><code class="docutils literal notranslate"><span class="pre">extract_isoline()</span></code></a></li>
 <li><a class="reference internal" href="#lagrange.core.extract_submesh"><code class="docutils literal notranslate"><span class="pre">extract_submesh()</span></code></a></li>
 <li><a class="reference internal" href="#lagrange.core.filter_attributes"><code class="docutils literal notranslate"><span class="pre">filter_attributes()</span></code></a></li>
+<li><a class="reference internal" href="#lagrange.core.get_unique_attribute_name"><code class="docutils literal notranslate"><span class="pre">get_unique_attribute_name()</span></code></a></li>
 <li><a class="reference internal" href="#lagrange.core.is_closed"><code class="docutils literal notranslate"><span class="pre">is_closed()</span></code></a></li>
 <li><a class="reference internal" href="#lagrange.core.is_edge_manifold"><code class="docutils literal notranslate"><span class="pre">is_edge_manifold()</span></code></a></li>
 <li><a class="reference internal" href="#lagrange.core.is_manifold"><code class="docutils literal notranslate"><span class="pre">is_manifold()</span></code></a></li>
@@ -5651,6 +5865,7 @@ If None, edge lengths are computed.</p></li>
 <li><a class="reference internal" href="#lagrange.core.transform_mesh"><code class="docutils literal notranslate"><span class="pre">transform_mesh()</span></code></a></li>
 <li><a class="reference internal" href="#lagrange.core.triangulate_polygonal_facets"><code class="docutils literal notranslate"><span class="pre">triangulate_polygonal_facets()</span></code></a></li>
 <li><a class="reference internal" href="#lagrange.core.trim_by_isoline"><code class="docutils literal notranslate"><span class="pre">trim_by_isoline()</span></code></a></li>
+<li><a class="reference internal" href="#lagrange.core.unflip_uv_charts"><code class="docutils literal notranslate"><span class="pre">unflip_uv_charts()</span></code></a></li>
 <li><a class="reference internal" href="#lagrange.core.unify_index_buffer"><code class="docutils literal notranslate"><span class="pre">unify_index_buffer()</span></code></a></li>
 <li><a class="reference internal" href="#lagrange.core.uv_mesh_ref"><code class="docutils literal notranslate"><span class="pre">uv_mesh_ref()</span></code></a></li>
 <li><a class="reference internal" href="#lagrange.core.uv_mesh_view"><code class="docutils literal notranslate"><span class="pre">uv_mesh_view()</span></code></a></li>

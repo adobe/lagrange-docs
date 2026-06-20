@@ -2,6 +2,7 @@ var classlagrange_1_1bvh_1_1_b_v_h_nanoflann =
 [
     [ "get_bvh_type", "classlagrange_1_1bvh_1_1_b_v_h_nanoflann.html#a5fa6249450bdf80e2feddd0d91ee8425", null ],
     [ "does_support_pointcloud", "classlagrange_1_1bvh_1_1_b_v_h_nanoflann.html#a12330ba11afd4b586e83b376117bbce9", null ],
+    [ "build", "classlagrange_1_1bvh_1_1_b_v_h_nanoflann.html#aa73fcb69f953372af8af7a3984969ba0", null ],
     [ "does_support_query_closest_point", "classlagrange_1_1bvh_1_1_b_v_h_nanoflann.html#aa5143dfb1f113244a946bf6749c0f89d", null ],
     [ "does_support_query_k_nearest_neighbours", "classlagrange_1_1bvh_1_1_b_v_h_nanoflann.html#a2975e07d4488b6525158a1af151a3a83", null ],
     [ "does_support_query_in_sphere_neighbours", "classlagrange_1_1bvh_1_1_b_v_h_nanoflann.html#ac759d15b3e57b89887848e61522427e3", null ],

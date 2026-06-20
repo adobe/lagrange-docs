@@ -162,6 +162,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ac6e69ee1ef8e19637fc8f9d108b93ab2" id="r_ac6e69ee1ef8e19637fc8f9d108b93ab2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac6e69ee1ef8e19637fc8f9d108b93ab2">get_closest_point</a> (const RowVectorType &amp;p, Index &amp;triangle_id, RowVectorType &amp;closest_point, <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a> &amp;closest_sq_dist) const</td></tr>
 <tr class="memdesc:ac6e69ee1ef8e19637fc8f9d108b93ab2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the nearest triangle to a query point using automatic hint optimization.  <br /></td></tr>
 <tr class="separator:ac6e69ee1ef8e19637fc8f9d108b93ab2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8bc99427f9ba79aefcf5a09b54055e57" id="r_a8bc99427f9ba79aefcf5a09b54055e57"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classlagrange_1_1bvh_1_1_a_a_b_b.html">AABB</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Dim &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8bc99427f9ba79aefcf5a09b54055e57">get_aabb</a> () const</td></tr>
+<tr class="memdesc:a8bc99427f9ba79aefcf5a09b54055e57"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a const reference to the underlying AABB tree.  <br /></td></tr>
+<tr class="separator:a8bc99427f9ba79aefcf5a09b54055e57"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, typename Index, int Dim = 3&gt;<br />
@@ -318,6 +321,36 @@ template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5
 
 </div>
 </div>
+<a id="a8bc99427f9ba79aefcf5a09b54055e57" name="a8bc99427f9ba79aefcf5a09b54055e57"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8bc99427f9ba79aefcf5a09b54055e57">&#9670;&#160;</a></span>get_aabb()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, typename Index, int Dim = 3&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classlagrange_1_1bvh_1_1_a_a_b_b.html">AABB</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Dim &gt; &amp; get_aabb </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get a const reference to the underlying AABB tree. </p>
+<dl class="section return"><dt>Returns</dt><dd>Const reference to the AABB tree. </dd></dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>lagrange/bvh/<a class="el" href="_triangle_a_a_b_b_tree_8h_source.html">TriangleAABBTree.h</a></li>
 <li><b>TriangleAABBTree.cpp</b></li>
@@ -328,7 +361,7 @@ template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacelagrange.html">lagrange</a></li><li class="navelem"><b>bvh</b></li><li class="navelem"><a class="el" href="classlagrange_1_1bvh_1_1_triangle_a_a_b_b_tree.html">TriangleAABBTree</a></li>
-    <li class="footer">Generated on Mon Apr 27 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+    <li class="footer">Generated on Sat Jun 20 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>
 </body>

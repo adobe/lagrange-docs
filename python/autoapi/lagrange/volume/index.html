@@ -200,11 +200,17 @@
 <li class="toctree-l2"><a class="reference internal" href="../geodesic/index.html">lagrange.geodesic</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../image/index.html">lagrange.image</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../io/index.html">lagrange.io</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../packing/index.html">lagrange.packing</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../poisson/index.html">lagrange.poisson</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../polyddg/index.html">lagrange.polyddg</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../primitive/index.html">lagrange.primitive</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../raycasting/index.html">lagrange.raycasting</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../scene/index.html">lagrange.scene</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../scripts/index.html">lagrange.scripts</a><input aria-label="Toggle navigation of lagrange.scripts" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../scripts/meshstat/index.html">lagrange.scripts.meshstat</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../serialization/index.html">lagrange.serialization</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../solver/index.html">lagrange.solver</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../subdivision/index.html">lagrange.subdivision</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../texproc/index.html">lagrange.texproc</a></li>
@@ -258,7 +264,10 @@
 <tr class="row-even"><td><p><a class="reference internal" href="#lagrange.volume.Grid" title="lagrange.volume.Grid"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Grid</span></code></a></p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#lagrange.volume.Sign" title="lagrange.volume.Sign"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Sign</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#lagrange.volume.GridClass" title="lagrange.volume.GridClass"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GridClass</span></code></a></p></td>
+<td><p>Grid class tag indicating the semantic interpretation of voxel values</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#lagrange.volume.Sign" title="lagrange.volume.Sign"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Sign</span></code></a></p></td>
 <td><p>Signing method used to determine inside/outside voxels</p></td>
 </tr>
 </tbody>
@@ -269,7 +278,7 @@
 <h2>Module Contents<a class="headerlink" href="#module-contents" title="Link to this heading">¶</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="lagrange.volume.Compression">
-<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">lagrange.volume.</span></span><span class="sig-name descname"><span class="pre">Compression</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwds</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lagrange.volume.Compression" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">lagrange.volume.</span></span><span class="sig-name descname"><span class="pre">Compression</span></span><a class="headerlink" href="#lagrange.volume.Compression" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">enum.Enum</span></code></p>
 <p>Compression method for VDB and NanoVDB grid IO</p>
 <dl class="py attribute">
@@ -296,6 +305,118 @@
 <dt class="sig sig-object py" id="lagrange.volume.Grid">
 <em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">lagrange.volume.</span></span><span class="sig-name descname"><span class="pre">Grid</span></span><a class="headerlink" href="#lagrange.volume.Grid" title="Link to this definition">¶</a></dt>
 <dd><dl class="py method">
+<dt class="sig sig-object py" id="lagrange.volume.Grid.comp_div">
+<span class="sig-name descname"><span class="pre">comp_div</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lagrange.volume.Grid.comp_div" title="Link to this definition">¶</a></dt>
+<dd><p>Per-voxel <code class="docutils literal notranslate"><span class="pre">self</span> <span class="pre">/</span> <span class="pre">other</span></code>, stored in <code class="docutils literal notranslate"><span class="pre">self</span></code>. <code class="docutils literal notranslate"><span class="pre">other</span></code> is left empty.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>other</strong> (<a class="reference internal" href="#lagrange.volume.Grid" title="lagrange.volume.Grid"><em>Grid</em></a>) – Grid of the same scalar type.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lagrange.volume.Grid.comp_max">
+<span class="sig-name descname"><span class="pre">comp_max</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lagrange.volume.Grid.comp_max" title="Link to this definition">¶</a></dt>
+<dd><p>Per-voxel <code class="docutils literal notranslate"><span class="pre">max(self,</span> <span class="pre">other)</span></code>, stored in <code class="docutils literal notranslate"><span class="pre">self</span></code>. <code class="docutils literal notranslate"><span class="pre">other</span></code> is left empty.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>other</strong> (<a class="reference internal" href="#lagrange.volume.Grid" title="lagrange.volume.Grid"><em>Grid</em></a>) – Grid of the same scalar type.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lagrange.volume.Grid.comp_min">
+<span class="sig-name descname"><span class="pre">comp_min</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lagrange.volume.Grid.comp_min" title="Link to this definition">¶</a></dt>
+<dd><p>Per-voxel <code class="docutils literal notranslate"><span class="pre">min(self,</span> <span class="pre">other)</span></code>, stored in <code class="docutils literal notranslate"><span class="pre">self</span></code>. <code class="docutils literal notranslate"><span class="pre">other</span></code> is left empty.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>other</strong> (<a class="reference internal" href="#lagrange.volume.Grid" title="lagrange.volume.Grid"><em>Grid</em></a>) – Grid of the same scalar type.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lagrange.volume.Grid.comp_mul">
+<span class="sig-name descname"><span class="pre">comp_mul</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lagrange.volume.Grid.comp_mul" title="Link to this definition">¶</a></dt>
+<dd><p>Per-voxel <code class="docutils literal notranslate"><span class="pre">self</span> <span class="pre">*</span> <span class="pre">other</span></code>, stored in <code class="docutils literal notranslate"><span class="pre">self</span></code>. <code class="docutils literal notranslate"><span class="pre">other</span></code> is left empty.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>other</strong> (<a class="reference internal" href="#lagrange.volume.Grid" title="lagrange.volume.Grid"><em>Grid</em></a>) – Grid of the same scalar type.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lagrange.volume.Grid.comp_sum">
+<span class="sig-name descname"><span class="pre">comp_sum</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lagrange.volume.Grid.comp_sum" title="Link to this definition">¶</a></dt>
+<dd><p>Per-voxel <code class="docutils literal notranslate"><span class="pre">self</span> <span class="pre">+</span> <span class="pre">other</span></code>, stored in <code class="docutils literal notranslate"><span class="pre">self</span></code>. <code class="docutils literal notranslate"><span class="pre">other</span></code> is left empty.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>other</strong> (<a class="reference internal" href="#lagrange.volume.Grid" title="lagrange.volume.Grid"><em>Grid</em></a>) – Grid of the same scalar type.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lagrange.volume.Grid.csg_difference">
+<span class="sig-name descname"><span class="pre">csg_difference</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lagrange.volume.Grid.csg_difference" title="Link to this definition">¶</a></dt>
+<dd><p>Replace this level set grid with the CSG difference <code class="docutils literal notranslate"><span class="pre">self</span></code> minus <code class="docutils literal notranslate"><span class="pre">other</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>other</strong> (<a class="reference internal" href="#lagrange.volume.Grid" title="lagrange.volume.Grid"><em>Grid</em></a>) – Level set grid of the same scalar type. Left empty after the call.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lagrange.volume.Grid.csg_intersection">
+<span class="sig-name descname"><span class="pre">csg_intersection</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lagrange.volume.Grid.csg_intersection" title="Link to this definition">¶</a></dt>
+<dd><p>Replace this level set grid with the CSG intersection of itself and <code class="docutils literal notranslate"><span class="pre">other</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>other</strong> (<a class="reference internal" href="#lagrange.volume.Grid" title="lagrange.volume.Grid"><em>Grid</em></a>) – Level set grid of the same scalar type. Left empty after the call.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lagrange.volume.Grid.csg_union">
+<span class="sig-name descname"><span class="pre">csg_union</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lagrange.volume.Grid.csg_union" title="Link to this definition">¶</a></dt>
+<dd><p>Replace this level set grid with the CSG union of itself and <code class="docutils literal notranslate"><span class="pre">other</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>other</strong> (<a class="reference internal" href="#lagrange.volume.Grid" title="lagrange.volume.Grid"><em>Grid</em></a>) – Level set grid of the same scalar type. Left empty after the call.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="lagrange.volume.Grid.densify">
 <span class="sig-name descname"><span class="pre">densify</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lagrange.volume.Grid.densify" title="Link to this definition">¶</a></dt>
 <dd><p>Densify the grid by filling in inactive voxels within the active voxel bounding box.</p>
@@ -324,6 +445,27 @@
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>Generated sparse voxel grid.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#lagrange.volume.Grid" title="lagrange.volume.Grid">Grid</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lagrange.volume.Grid.from_points">
+<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_points</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">points</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">values</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dtype</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">numpy.float32</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lagrange.volume.Grid.from_points" title="Link to this definition">¶</a></dt>
+<dd><p>Create a sparse voxel grid from a list of voxel index coordinates and values.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>points</strong> (<em>Annotated</em><em>[</em><em>numpy.typing.NDArray</em><em>[</em><em>numpy.int32</em><em>]</em><em>, </em><em>dict</em><em>(</em><em>shape=</em><em>(</em><em>None</em><em>, </em><em>3</em><em>)</em><em>, </em><em>order='C'</em><em>, </em><em>device='cpu'</em><em>, </em><em>writable=False</em><em>)</em><em>]</em>) – Voxel index-space coordinates as an (N, 3) array of int32.</p></li>
+<li><p><strong>values</strong> (<em>Annotated</em><em>[</em><em>numpy.typing.NDArray</em><em>[</em><em>numpy.float32</em><em>]</em><em>, </em><em>dict</em><em>(</em><em>shape=</em><em>(</em><em>None</em><em>, </em><em>)</em><em>, </em><em>order='C'</em><em>, </em><em>device='cpu'</em><em>, </em><em>writable=False</em><em>)</em><em>] </em><em>| </em><em>Annotated</em><em>[</em><em>numpy.typing.NDArray</em><em>[</em><em>numpy.float64</em><em>]</em><em>, </em><em>dict</em><em>(</em><em>shape=</em><em>(</em><em>None</em><em>, </em><em>)</em><em>, </em><em>order='C'</em><em>, </em><em>device='cpu'</em><em>, </em><em>writable=False</em><em>)</em><em>]</em>) – Values at each voxel as a 1D array of float32 or float64 of length N.</p></li>
+<li><p><strong>dtype</strong> (<em>type</em>) – Scalar type of the output grid (float32 or float64).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Sparse voxel grid with the given values active at the given index coordinates.</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p><a class="reference internal" href="#lagrange.volume.Grid" title="lagrange.volume.Grid">Grid</a></p>
@@ -375,6 +517,20 @@
 <li><p><strong>offset_radius</strong> (<em>float</em>) – Offset radius. A negative value dilates the surface, a positive value erodes it.</p></li>
 <li><p><strong>relative</strong> (<em>bool</em>) – Whether the offset radius is relative to the grid voxel size.</p></li>
 </ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lagrange.volume.Grid.prune">
+<span class="sig-name descname"><span class="pre">prune</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tolerance</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lagrange.volume.Grid.prune" title="Link to this definition">¶</a></dt>
+<dd><p>Remove nodes whose values all equal the background value within the given tolerance.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>tolerance</strong> (<em>float</em>) – Tolerance for pruning. Default is 0.</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
 <dd class="field-even"><p>None</p>
@@ -527,7 +683,7 @@
 <dl class="py property">
 <dt class="sig sig-object py" id="lagrange.volume.Grid.background">
 <em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">background</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#lagrange.volume.Grid.background" title="Link to this definition">¶</a></dt>
-<dd><p>Return the grid background value.</p>
+<dd><p>The grid background value.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>float | float</p>
@@ -558,12 +714,45 @@
 </dd></dl>
 
 <dl class="py property">
+<dt class="sig sig-object py" id="lagrange.volume.Grid.grid_class">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">grid_class</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#lagrange.volume.GridClass" title="lagrange.volume.GridClass"><span class="pre">GridClass</span></a></em><a class="headerlink" href="#lagrange.volume.Grid.grid_class" title="Link to this definition">¶</a></dt>
+<dd><p>The grid class tag.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#lagrange.volume.GridClass" title="lagrange.volume.GridClass">GridClass</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="lagrange.volume.Grid.name">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#lagrange.volume.Grid.name" title="Link to this definition">¶</a></dt>
+<dd><p>The grid name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
 <dt class="sig sig-object py" id="lagrange.volume.Grid.num_active_voxels">
 <em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">num_active_voxels</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#lagrange.volume.Grid.num_active_voxels" title="Link to this definition">¶</a></dt>
 <dd><p>Return the number of active voxels in the grid.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="lagrange.volume.Grid.transform">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">transform</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Annotated</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.typing.NDArray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">(</span></span><span class="n"><span class="pre">shape</span></span><span class="o"><span class="pre">=</span></span><span class="m"><span class="pre">4</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">4</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">order</span></span><span class="o"><span class="pre">=</span></span><span class="s"><span class="pre">'F'</span></span><span class="p"><span class="pre">)</span></span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#lagrange.volume.Grid.transform" title="Link to this definition">¶</a></dt>
+<dd><p>The grid’s index-to-world 4x4 affine transform matrix (column-vector convention).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Annotated[numpy.typing.NDArray[numpy.float64], dict(shape=(4, 4), order=’F’)]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -582,8 +771,39 @@
 </dd></dl>
 
 <dl class="py class">
+<dt class="sig sig-object py" id="lagrange.volume.GridClass">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">lagrange.volume.</span></span><span class="sig-name descname"><span class="pre">GridClass</span></span><a class="headerlink" href="#lagrange.volume.GridClass" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">enum.Enum</span></code></p>
+<p>Grid class tag indicating the semantic interpretation of voxel values</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lagrange.volume.GridClass.FogVolume">
+<span class="sig-name descname"><span class="pre">FogVolume</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2</span></em><a class="headerlink" href="#lagrange.volume.GridClass.FogVolume" title="Link to this definition">¶</a></dt>
+<dd><p>Fog volume (density values).</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lagrange.volume.GridClass.LevelSet">
+<span class="sig-name descname"><span class="pre">LevelSet</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#lagrange.volume.GridClass.LevelSet" title="Link to this definition">¶</a></dt>
+<dd><p>Narrow-band signed distance field.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lagrange.volume.GridClass.Staggered">
+<span class="sig-name descname"><span class="pre">Staggered</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">3</span></em><a class="headerlink" href="#lagrange.volume.GridClass.Staggered" title="Link to this definition">¶</a></dt>
+<dd><p>Staggered vector field.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lagrange.volume.GridClass.Unknown">
+<span class="sig-name descname"><span class="pre">Unknown</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#lagrange.volume.GridClass.Unknown" title="Link to this definition">¶</a></dt>
+<dd><p>Unknown or generic grid class.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
 <dt class="sig sig-object py" id="lagrange.volume.Sign">
-<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">lagrange.volume.</span></span><span class="sig-name descname"><span class="pre">Sign</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwds</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lagrange.volume.Sign" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">lagrange.volume.</span></span><span class="sig-name descname"><span class="pre">Sign</span></span><a class="headerlink" href="#lagrange.volume.Sign" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">enum.Enum</span></code></p>
 <p>Signing method used to determine inside/outside voxels</p>
 <dl class="py attribute">
@@ -666,11 +886,21 @@
 </ul>
 </li>
 <li><a class="reference internal" href="#lagrange.volume.Grid"><code class="docutils literal notranslate"><span class="pre">Grid</span></code></a><ul>
+<li><a class="reference internal" href="#lagrange.volume.Grid.comp_div"><code class="docutils literal notranslate"><span class="pre">Grid.comp_div()</span></code></a></li>
+<li><a class="reference internal" href="#lagrange.volume.Grid.comp_max"><code class="docutils literal notranslate"><span class="pre">Grid.comp_max()</span></code></a></li>
+<li><a class="reference internal" href="#lagrange.volume.Grid.comp_min"><code class="docutils literal notranslate"><span class="pre">Grid.comp_min()</span></code></a></li>
+<li><a class="reference internal" href="#lagrange.volume.Grid.comp_mul"><code class="docutils literal notranslate"><span class="pre">Grid.comp_mul()</span></code></a></li>
+<li><a class="reference internal" href="#lagrange.volume.Grid.comp_sum"><code class="docutils literal notranslate"><span class="pre">Grid.comp_sum()</span></code></a></li>
+<li><a class="reference internal" href="#lagrange.volume.Grid.csg_difference"><code class="docutils literal notranslate"><span class="pre">Grid.csg_difference()</span></code></a></li>
+<li><a class="reference internal" href="#lagrange.volume.Grid.csg_intersection"><code class="docutils literal notranslate"><span class="pre">Grid.csg_intersection()</span></code></a></li>
+<li><a class="reference internal" href="#lagrange.volume.Grid.csg_union"><code class="docutils literal notranslate"><span class="pre">Grid.csg_union()</span></code></a></li>
 <li><a class="reference internal" href="#lagrange.volume.Grid.densify"><code class="docutils literal notranslate"><span class="pre">Grid.densify()</span></code></a></li>
 <li><a class="reference internal" href="#lagrange.volume.Grid.from_mesh"><code class="docutils literal notranslate"><span class="pre">Grid.from_mesh()</span></code></a></li>
+<li><a class="reference internal" href="#lagrange.volume.Grid.from_points"><code class="docutils literal notranslate"><span class="pre">Grid.from_points()</span></code></a></li>
 <li><a class="reference internal" href="#lagrange.volume.Grid.index_to_world"><code class="docutils literal notranslate"><span class="pre">Grid.index_to_world()</span></code></a></li>
 <li><a class="reference internal" href="#lagrange.volume.Grid.load"><code class="docutils literal notranslate"><span class="pre">Grid.load()</span></code></a></li>
 <li><a class="reference internal" href="#lagrange.volume.Grid.offset_in_place"><code class="docutils literal notranslate"><span class="pre">Grid.offset_in_place()</span></code></a></li>
+<li><a class="reference internal" href="#lagrange.volume.Grid.prune"><code class="docutils literal notranslate"><span class="pre">Grid.prune()</span></code></a></li>
 <li><a class="reference internal" href="#lagrange.volume.Grid.redistance"><code class="docutils literal notranslate"><span class="pre">Grid.redistance()</span></code></a></li>
 <li><a class="reference internal" href="#lagrange.volume.Grid.resample"><code class="docutils literal notranslate"><span class="pre">Grid.resample()</span></code></a></li>
 <li><a class="reference internal" href="#lagrange.volume.Grid.sample_trilinear_index_space"><code class="docutils literal notranslate"><span class="pre">Grid.sample_trilinear_index_space()</span></code></a></li>
@@ -682,8 +912,18 @@
 <li><a class="reference internal" href="#lagrange.volume.Grid.background"><code class="docutils literal notranslate"><span class="pre">Grid.background</span></code></a></li>
 <li><a class="reference internal" href="#lagrange.volume.Grid.bbox_index"><code class="docutils literal notranslate"><span class="pre">Grid.bbox_index</span></code></a></li>
 <li><a class="reference internal" href="#lagrange.volume.Grid.bbox_world"><code class="docutils literal notranslate"><span class="pre">Grid.bbox_world</span></code></a></li>
+<li><a class="reference internal" href="#lagrange.volume.Grid.grid_class"><code class="docutils literal notranslate"><span class="pre">Grid.grid_class</span></code></a></li>
+<li><a class="reference internal" href="#lagrange.volume.Grid.name"><code class="docutils literal notranslate"><span class="pre">Grid.name</span></code></a></li>
 <li><a class="reference internal" href="#lagrange.volume.Grid.num_active_voxels"><code class="docutils literal notranslate"><span class="pre">Grid.num_active_voxels</span></code></a></li>
+<li><a class="reference internal" href="#lagrange.volume.Grid.transform"><code class="docutils literal notranslate"><span class="pre">Grid.transform</span></code></a></li>
 <li><a class="reference internal" href="#lagrange.volume.Grid.voxel_size"><code class="docutils literal notranslate"><span class="pre">Grid.voxel_size</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#lagrange.volume.GridClass"><code class="docutils literal notranslate"><span class="pre">GridClass</span></code></a><ul>
+<li><a class="reference internal" href="#lagrange.volume.GridClass.FogVolume"><code class="docutils literal notranslate"><span class="pre">GridClass.FogVolume</span></code></a></li>
+<li><a class="reference internal" href="#lagrange.volume.GridClass.LevelSet"><code class="docutils literal notranslate"><span class="pre">GridClass.LevelSet</span></code></a></li>
+<li><a class="reference internal" href="#lagrange.volume.GridClass.Staggered"><code class="docutils literal notranslate"><span class="pre">GridClass.Staggered</span></code></a></li>
+<li><a class="reference internal" href="#lagrange.volume.GridClass.Unknown"><code class="docutils literal notranslate"><span class="pre">GridClass.Unknown</span></code></a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#lagrange.volume.Sign"><code class="docutils literal notranslate"><span class="pre">Sign</span></code></a><ul>

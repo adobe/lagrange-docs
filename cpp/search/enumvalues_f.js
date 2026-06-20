@@ -1,13 +1,13 @@
 var searchData=
 [
-  ['scalar_0',['Scalar',['../group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74',1,'lagrange']]],
-  ['selectedonly_1',['SelectedOnly',['../structlagrange_1_1io_1_1_save_options.html#aedcab510bc8bc3dfcda7e3e1cb486091ac53c58440d344b71e0b47b1dd9ef0772',1,'lagrange::io::SaveOptions']]],
-  ['side_2',['Side',['../group__module-primitive.html#ggae521e500502eae3849d46dc92a5ab7feac142a73b77f3c3df40777af2651f4915',1,'lagrange::primitive']]],
-  ['silentcopy_3',['SilentCopy',['../group__group-surfacemesh-attr.html#gga790f065d45f011268208d588a8251846ae1ed7e29bdcf7fc9d30c50447e35ab92',1,'lagrange::SilentCopy'],['../group__group-surfacemesh-attr.html#gga4dfaa0766598cfdf33ee2a4a8288f9f0ae1ed7e29bdcf7fc9d30c50447e35ab92',1,'lagrange::SilentCopy'],['../group__group-surfacemesh-attr.html#ggae33502272f9bf0b7ca929b1418472853ae1ed7e29bdcf7fc9d30c50447e35ab92',1,'lagrange::SilentCopy']]],
-  ['silentoverwrite_4',['SilentOverwrite',['../namespacelagrange_1_1ui.html#a52d48398347230f843dc5ad2635ffdfba4f84b2462bdf64b68ecfd7939cb11b6b',1,'lagrange::ui']]],
-  ['single_5fp_5',['single_p',['../classlagrange_1_1image_1_1_raw_input_image.html#a9787de65a5d182eca6c2d71efc190779acb30f91034ce024e3c059693de0bcb7e',1,'lagrange::image::RawInputImage']]],
-  ['srgb_6',['sRGB',['../classlagrange_1_1image_1_1_raw_input_image.html#a609c1f2c8828267fe31da1947b988a36a9ed33d9be17d174aeb4393a989586ed9',1,'lagrange::image::RawInputImage']]],
-  ['string_7',['String',['../group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45a27118326006d3829667a400ad23d5d98',1,'lagrange']]],
-  ['sweepandprune_8',['SweepAndPrune',['../group__module-bvh.html#gga7e55018c6fcf6fb3e8f6b02e4fc46892ac490cb8cd3c70c9f65c380176d0099ea',1,'lagrange::bvh']]],
-  ['symmetricdirichlet_9',['SymmetricDirichlet',['../group__group-surfacemesh-utils.html#ggadab1480827f4522cbf1f9e1d4c28db91a6043446227f6a89342620a00a131257f',1,'lagrange']]]
+  ['ray_5fcasting_0',['RAY_CASTING',['../namespacelagrange_1_1raycasting.html#a1bf0ebeb95eeae0cf367574faaecd8dda8c1a06fda3cb6a681071165ed84ec988',1,'lagrange::raycasting']]],
+  ['raycasting_1',['RayCasting',['../namespacelagrange_1_1raycasting.html#a1bf0ebeb95eeae0cf367574faaecd8dda39abd7f47d464a5caf55fd4f711926ad',1,'lagrange::raycasting']]],
+  ['regular_2',['Regular',['../namespacelagrange_1_1image.html#a8e6284ad7e06f43b78507d005604ea73ad2203cb1237cb6460cbad94564e39345',1,'lagrange::image']]],
+  ['remapinvalidalways_3',['RemapInvalidAlways',['../group__group-surfacemesh-attr.html#ggaea766ecc22bd1ae50438168e2623ce13a91cc01e53b43be31a6db7aa5d1d9b111',1,'lagrange']]],
+  ['remapinvalidindices_4',['RemapInvalidIndices',['../group__group-surfacemesh-attr.html#ggaea766ecc22bd1ae50438168e2623ce13a109c10bfcd9b81228b39100a8bd88caa',1,'lagrange']]],
+  ['removingfacets_5',['RemovingFacets',['../classlagrange_1_1_surface_mesh.html#aee50b76f699900fa6e88a87a5d0940c9a30ded11c0080ed170a5b52f43c182dfb',1,'lagrange::SurfaceMesh']]],
+  ['reorient_6',['Reorient',['../group__group-surfacemesh-attr.html#gga08ad5f3b2f569ea9f2c9a15705d8170fae679ea3b7c35ed985d184df6b2d86d14',1,'lagrange']]],
+  ['repeat_7',['repeat',['../classlagrange_1_1image_1_1_raw_input_image.html#a7209540f4aa3a68da254973604ce9f84a32cf6da134a8b268cf4ab6b79a9a5ad9',1,'lagrange::image::RawInputImage']]],
+  ['reversingfacets_8',['ReversingFacets',['../classlagrange_1_1_surface_mesh.html#aee50b76f699900fa6e88a87a5d0940c9a80f6b60c98374a937bf41a07d611b2e9',1,'lagrange::SurfaceMesh']]],
+  ['robust_9',['Robust',['../namespacelagrange_1_1raycasting.html#aa377521412bad2c1fefb773f703d0884acd8257a80d3498e67b8972607c8377c0',1,'lagrange::raycasting']]]
 ];

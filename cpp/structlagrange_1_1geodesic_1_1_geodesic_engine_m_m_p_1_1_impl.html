@@ -177,6 +177,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ab40c2997367b224ea98abfb8d476290d" id="r_ab40c2997367b224ea98abfb8d476290d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structlagrange_1_1geodesic_1_1_single_source_geodesic_result.html">SingleSourceGeodesicResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlagrange_1_1geodesic_1_1_geodesic_engine_m_m_p.html#ab40c2997367b224ea98abfb8d476290d">single_source_geodesic</a> (const <a class="el" href="structlagrange_1_1geodesic_1_1_single_source_geodesic_options.html">SingleSourceGeodesicOptions</a> &amp;options) override</td></tr>
 <tr class="memdesc:ab40c2997367b224ea98abfb8d476290d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute single source geodesic distances using the MMP algorithm.  <br /></td></tr>
 <tr class="separator:ab40c2997367b224ea98abfb8d476290d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec8834b45bc62ed23955c974c8b6dfab" id="r_aec8834b45bc62ed23955c974c8b6dfab"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structlagrange_1_1geodesic_1_1_geodesic_path_result.html">GeodesicPathResult</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlagrange_1_1geodesic_1_1_geodesic_engine_m_m_p.html#aec8834b45bc62ed23955c974c8b6dfab">point_to_point_geodesic_path</a> (const <a class="el" href="structlagrange_1_1geodesic_1_1_point_to_point_geodesic_path_options.html">PointToPointGeodesicPathOptions</a> &amp;options) override</td></tr>
+<tr class="memdesc:aec8834b45bc62ed23955c974c8b6dfab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the exact geodesic path between two points using the MMP algorithm.  <br /></td></tr>
+<tr class="separator:aec8834b45bc62ed23955c974c8b6dfab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classlagrange_1_1geodesic_1_1_geodesic_engine"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classlagrange_1_1geodesic_1_1_geodesic_engine')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classlagrange_1_1geodesic_1_1_geodesic_engine.html">GeodesicEngine&lt; Scalar, Index &gt;</a></td></tr>
 <tr class="memitem:a537b9da74cee29a6a78171efabcbb551 inherit pub_methods_classlagrange_1_1geodesic_1_1_geodesic_engine" id="r_a537b9da74cee29a6a78171efabcbb551"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlagrange_1_1geodesic_1_1_geodesic_engine.html#a537b9da74cee29a6a78171efabcbb551">GeodesicEngine</a> (<a class="el" href="classlagrange_1_1geodesic_1_1_geodesic_engine.html#a6114549ab83e362eabc8a69f471bd51f">Mesh</a> &amp;mesh)</td></tr>
 <tr class="memdesc:a537b9da74cee29a6a78171efabcbb551 inherit pub_methods_classlagrange_1_1geodesic_1_1_geodesic_engine"><td class="mdescLeft">&#160;</td><td class="mdescRight">Base class constructor.  <br /></td></tr>
@@ -292,6 +295,43 @@ const <a class="el" href="classlagrange_1_1geodesic_1_1_geodesic_engine.html#a61
 
 </div>
 </div>
+<a id="aec8834b45bc62ed23955c974c8b6dfab" name="aec8834b45bc62ed23955c974c8b6dfab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec8834b45bc62ed23955c974c8b6dfab">&#9670;&#160;</a></span>point_to_point_geodesic_path()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structlagrange_1_1geodesic_1_1_geodesic_path_result.html">GeodesicPathResult</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index &gt; point_to_point_geodesic_path </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structlagrange_1_1geodesic_1_1_point_to_point_geodesic_path_options.html">PointToPointGeodesicPathOptions</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>options</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Compute the exact geodesic path between two points using the MMP algorithm. </p>
+<p>This function computes the shortest path on the surface between two points.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">options</td><td>The options for the path computation.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A GeodesicPathResult containing the ordered path points and segment facet indices. Returns an empty result if no path exists. </dd></dl>
+
+<p>Reimplemented from <a class="el" href="classlagrange_1_1geodesic_1_1_geodesic_engine.html#aa2259e228f0ee7ccd7949048212a76c9">GeodesicEngine&lt; Scalar, Index &gt;</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
 <li><b>GeodesicEngineMMP.cpp</b></li>
 </ul>
@@ -301,7 +341,7 @@ const <a class="el" href="classlagrange_1_1geodesic_1_1_geodesic_engine.html#a61
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacelagrange.html">lagrange</a></li><li class="navelem"><b>geodesic</b></li><li class="navelem"><a class="el" href="classlagrange_1_1geodesic_1_1_geodesic_engine_m_m_p.html">GeodesicEngineMMP</a></li><li class="navelem"><a class="el" href="structlagrange_1_1geodesic_1_1_geodesic_engine_m_m_p_1_1_impl.html">Impl</a></li>
-    <li class="footer">Generated on Mon Apr 27 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+    <li class="footer">Generated on Sat Jun 20 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>
 </body>

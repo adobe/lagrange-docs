@@ -2,6 +2,7 @@ var hierarchy =
 [
     [ "AABB< Scalar, Dim >", "classlagrange_1_1bvh_1_1_a_a_b_b.html", null ],
     [ "AcceleratedPicking", "structlagrange_1_1ui_1_1_accelerated_picking.html", null ],
+    [ "AdaptiveCandidate", "structlagrange_1_1raycasting_1_1_occluded_facet_sampler_1_1_impl_1_1_adaptive_candidate.html", null ],
     [ "AdjacencyList< Index >", "classlagrange_1_1_adjacency_list.html", null ],
     [ "AlignedBox3f", null, [
       [ "AABB", "classlagrange_1_1ui_1_1_a_a_b_b.html", null ]
@@ -53,7 +54,7 @@ var hierarchy =
     [ "CameraChangedEvent", "structlagrange_1_1ui_1_1_camera_changed_event.html", null ],
     [ "CameraController", "structlagrange_1_1ui_1_1_camera_controller.html", null ],
     [ "CameraFocusAndFit", "structlagrange_1_1ui_1_1_camera_focus_and_fit.html", null ],
-    [ "CameraOptions", "structlagrange_1_1texproc_1_1_camera_options.html", null ],
+    [ "CameraTransforms", "structlagrange_1_1_camera_transforms.html", null ],
     [ "CameraTurntable", "structlagrange_1_1ui_1_1_camera_turntable.html", null ],
     [ "ChainEdgesOptions", "structlagrange_1_1_chain_edges_options.html", null ],
     [ "ChainEdgesResult< Index >", "structlagrange_1_1_chain_edges_result.html", null ],
@@ -118,8 +119,11 @@ var hierarchy =
     [ "DeserializeOptions", "structlagrange_1_1serialization_1_1_deserialize_options.html", null ],
     [ "DifferentialOperators< Scalar, Index >", "classlagrange_1_1polyddg_1_1_differential_operators.html", null ],
     [ "DihedralAngleOptions", "structlagrange_1_1_dihedral_angle_options.html", null ],
+    [ "DijkstraCache< Scalar, Index >", "structlagrange_1_1internal_1_1_dijkstra_cache.html", null ],
     [ "DijkstraDistanceOptions< Scalar, Index >", "structlagrange_1_1_dijkstra_distance_options.html", null ],
+    [ "DijkstraOptions< Scalar >", "structlagrange_1_1internal_1_1_dijkstra_options.html", null ],
     [ "DilationOptions", "structlagrange_1_1texproc_1_1_dilation_options.html", null ],
+    [ "DisconnectUVChartsOptions", "structlagrange_1_1_disconnect_u_v_charts_options.html", null ],
     [ "DisjointSets< IndexType >", "classlagrange_1_1_disjoint_sets.html", [
       [ "DisjointSetsWithSize< IndexType >", "classlagrange_1_1_disjoint_sets_with_size.html", null ]
     ] ],
@@ -176,6 +180,8 @@ var hierarchy =
     [ "FileFilter", "structlagrange_1_1ui_1_1_file_filter.html", null ],
     [ "FilteringOptions", "structlagrange_1_1texproc_1_1_filtering_options.html", null ],
     [ "FocusedViewportPanel", "structlagrange_1_1ui_1_1_focused_viewport_panel.html", null ],
+    [ "formatter< lagrange::fmt_detail::range_join_view< Range >, char >", "structfmt_1_1formatter_3_01lagrange_1_1fmt__detail_1_1range__join__view_3_01_range_01_4_00_01char_01_4.html", null ],
+    [ "formatter< lagrange::fmt_detail::tuple_join_view< Tuple >, char >", "structfmt_1_1formatter_3_01lagrange_1_1fmt__detail_1_1tuple__join__view_3_01_tuple_01_4_00_01char_01_4.html", null ],
     [ "FrameBuffer", "classlagrange_1_1ui_1_1_frame_buffer.html", null ],
     [ "Frustum< Scalar >", "structlagrange_1_1_frustum.html", null ],
     [ "Frustum", "classlagrange_1_1ui_1_1_frustum.html", null ],
@@ -189,6 +195,7 @@ var hierarchy =
       [ "GeodesicEngineHeat< Scalar, Index >", "classlagrange_1_1geodesic_1_1_geodesic_engine_heat.html", null ],
       [ "GeodesicEngineMMP< Scalar, Index >", "classlagrange_1_1geodesic_1_1_geodesic_engine_m_m_p.html", null ]
     ] ],
+    [ "GeodesicPathResult< Scalar, Index >", "structlagrange_1_1geodesic_1_1_geodesic_path_result.html", null ],
     [ "GeometricProfile< VertexArray, Index >", "structlagrange_1_1legacy_1_1_geometric_profile.html", null ],
     [ "GizmoContext", "structlagrange_1_1ui_1_1_gizmo_context.html", null ],
     [ "GizmoObjectTransform", "structlagrange_1_1ui_1_1_gizmo_object_transform.html", null ],
@@ -200,6 +207,7 @@ var hierarchy =
     [ "GLState", "structlagrange_1_1ui_1_1_g_l_state.html", null ],
     [ "GPUBuffer", "structlagrange_1_1ui_1_1_g_p_u_buffer.html", null ],
     [ "GreedyColoringOptions", "structlagrange_1_1_greedy_coloring_options.html", null ],
+    [ "GridWrapper", "structlagrange_1_1python_1_1_grid_wrapper.html", null ],
     [ "hash< lagrange::EdgeType< Index > >", "structstd_1_1hash_3_01lagrange_1_1_edge_type_3_01_index_01_4_01_4.html", null ],
     [ "HitBase", "structlagrange_1_1raycasting_1_1_hit_base.html", [
       [ "ClosestPointHit", "structlagrange_1_1raycasting_1_1_closest_point_hit.html", null ],
@@ -235,10 +243,18 @@ var hierarchy =
       [ "Derived< ValueType >", "structlagrange_1_1poisson_1_1_attribute_evaluator_1_1_impl_1_1_derived.html", null ]
     ] ],
     [ "Impl", "structlagrange_1_1winding_1_1_fast_winding_number_1_1_impl.html", null ],
+    [ "ImplBase< Derived, Scalar, Index >", "structlagrange_1_1raycasting_1_1detail_1_1_impl_base.html", [
+      [ "Impl", "structlagrange_1_1raycasting_1_1_occluded_facet_sampler_1_1_impl.html", null ],
+      [ "Impl", "structlagrange_1_1raycasting_1_1_occluded_instance_sampler_1_1_impl.html", null ]
+    ] ],
     [ "IndexedAttribute", "classlagrange_1_1experimental_1_1_indexed_attribute.html", null ],
     [ "IndexedAttributeManager", "classlagrange_1_1experimental_1_1_indexed_attribute_manager.html", null ],
     [ "IndexedAttributes< _AttributeArray, _IndexArray >", "classlagrange_1_1_indexed_attributes.html", null ],
     [ "InputState", "structlagrange_1_1ui_1_1_input_state.html", null ],
+    [ "InstanceData< Scalar, Index >", "structlagrange_1_1raycasting_1_1detail_1_1_instance_data.html", [
+      [ "FacetInstanceData< Scalar, Index >", "structlagrange_1_1raycasting_1_1detail_1_1_facet_instance_data.html", null ]
+    ] ],
+    [ "InstanceInfo", "structlagrange_1_1raycasting_1_1_occluded_facet_sampler_1_1_instance_info.html", null ],
     [ "InterpolatedAttributeIds", "structlagrange_1_1subdivision_1_1_interpolated_attribute_ids.html", null ],
     [ "InterpolatedAttributes", "classlagrange_1_1subdivision_1_1_interpolated_attributes.html", null ],
     [ "InverseMapping< Index >", "structlagrange_1_1internal_1_1_inverse_mapping.html", null ],
@@ -321,6 +337,11 @@ var hierarchy =
     [ "nth< I, T >", "structlagrange_1_1mapbox_1_1util_1_1nth.html", null ],
     [ "ObjectIDViewport", "structlagrange_1_1ui_1_1_object_i_d_viewport.html", null ],
     [ "ObjReaderResult< Scalar, Index >", "structlagrange_1_1io_1_1internal_1_1_obj_reader_result.html", null ],
+    [ "OccludedFacetEstimateOptions", "structlagrange_1_1raycasting_1_1_occluded_facet_estimate_options.html", null ],
+    [ "OccludedFacetSampler< Scalar, Index >", "classlagrange_1_1raycasting_1_1_occluded_facet_sampler.html", null ],
+    [ "OccludedFacetSamplerOptions", "structlagrange_1_1raycasting_1_1_occluded_facet_sampler_options.html", null ],
+    [ "OccludedInstanceEstimateOptions", "structlagrange_1_1raycasting_1_1_occluded_instance_estimate_options.html", null ],
+    [ "OccludedInstanceSampler< Scalar, Index >", "classlagrange_1_1raycasting_1_1_occluded_instance_sampler.html", null ],
     [ "OrderedPairHash< T, Enable >", "structlagrange_1_1_ordered_pair_hash.html", null ],
     [ "OrderedPairHash< std::pair< U, V > >", "structlagrange_1_1_ordered_pair_hash_3_01std_1_1pair_3_01_u_00_01_v_01_4_01_4.html", null ],
     [ "OrientationOptions", "structlagrange_1_1_orientation_options.html", null ],
@@ -342,6 +363,7 @@ var hierarchy =
     [ "Plane", "structlagrange_1_1_frustum_1_1_plane.html", null ],
     [ "PointcloudPCAOutput< Scalar >", "structlagrange_1_1_pointcloud_p_c_a_output.html", null ],
     [ "PointToPointGeodesicOptions", "structlagrange_1_1geodesic_1_1_point_to_point_geodesic_options.html", null ],
+    [ "PointToPointGeodesicPathOptions", "structlagrange_1_1geodesic_1_1_point_to_point_geodesic_path_options.html", null ],
     [ "PolyscopeTrait< PolyscopeStructure >", "structlagrange_1_1polyscope_1_1_polyscope_trait.html", null ],
     [ "PostProcessQuadVertexData", "structlagrange_1_1ui_1_1_post_process_quad_vertex_data.html", null ],
     [ "PrimitiveOptions", "structlagrange_1_1primitive_1_1_primitive_options.html", [
@@ -379,13 +401,18 @@ var hierarchy =
     [ "RaycasterMesh", "classlagrange_1_1raycasting_1_1legacy_1_1_raycaster_mesh.html", [
       [ "RaycasterMeshDerived< MeshType >", "classlagrange_1_1raycasting_1_1legacy_1_1_raycaster_mesh_derived.html", null ]
     ] ],
+    [ "RayCasterOBBAccess", "structlagrange_1_1raycasting_1_1internal_1_1_ray_caster_o_b_b_access.html", null ],
     [ "RayFacetHit", "structlagrange_1_1ui_1_1_ray_facet_hit.html", null ],
+    [ "RayPacket16", "structlagrange_1_1raycasting_1_1detail_1_1_ray_packet16.html", null ],
+    [ "RaySampler< Scalar >", "structlagrange_1_1raycasting_1_1detail_1_1_ray_sampler.html", null ],
     [ "RemapVerticesOptions", "structlagrange_1_1_remap_vertices_options.html", null ],
     [ "RemeshingOptions", "structlagrange_1_1remeshing__im_1_1_remeshing_options.html", null ],
     [ "RemeshingOptions", "structlagrange_1_1scene_1_1_remeshing_options.html", null ],
     [ "RemoveDuplicateFacetOptions", "structlagrange_1_1_remove_duplicate_facet_options.html", null ],
     [ "RemoveDuplicateVerticesOptions", "structlagrange_1_1_remove_duplicate_vertices_options.html", null ],
     [ "RemoveNullAreaFacetsOptions", "structlagrange_1_1_remove_null_area_facets_options.html", null ],
+    [ "RemoveOccludedFacetsOptions", "structlagrange_1_1raycasting_1_1_remove_occluded_facets_options.html", null ],
+    [ "RemoveShortEdgesOptions", "structlagrange_1_1_remove_short_edges_options.html", null ],
     [ "RenderContext", "structlagrange_1_1ui_1_1_render_context.html", null ],
     [ "RepackOptions", "structlagrange_1_1packing_1_1_repack_options.html", null ],
     [ "RescaleUVOptions", "structlagrange_1_1_rescale_u_v_options.html", null ],
@@ -404,6 +431,7 @@ var hierarchy =
       [ "PackingFailure", "classlagrange_1_1packing_1_1legacy_1_1_packing_failure.html", null ],
       [ "ShaderException", "classlagrange_1_1ui_1_1_shader_exception.html", null ]
     ] ],
+    [ "Sample", "structlagrange_1_1raycasting_1_1detail_1_1_ray_sampler_1_1_sample.html", null ],
     [ "SamplePointsOnSurfaceOutput< MeshType >", "structlagrange_1_1_sample_points_on_surface_output.html", null ],
     [ "SavedView", "struct_demo_state_1_1_saved_view.html", null ],
     [ "SaveOptions", "structlagrange_1_1io_1_1_save_options.html", null ],
@@ -531,6 +559,7 @@ var hierarchy =
       [ "is_mesh_smart_ptr_helper< MeshTypePtr, typename Void< typename MeshTypePtr::element_type, typename MeshTypePtr::element_type::VertexArray, typename MeshTypePtr::element_type::FacetArray >::type >", "structlagrange_1_1_mesh_trait_helper_1_1is__mesh__smart__ptr__helper_3_01_mesh_type_ptr_00_01typdd3a1b441f06e428de34247e1df62704.html", null ]
     ] ],
     [ "type_caster< lagrange::scene::Value >", "structtype__caster_3_01lagrange_1_1scene_1_1_value_01_4.html", null ],
+    [ "type_identity< T >", "structlagrange_1_1scene_1_1detail_1_1type__identity.html", null ],
     [ "type_traits< T >", "structlagrange_1_1ui_1_1type__traits.html", null ],
     [ "type_traits< double >", "structlagrange_1_1ui_1_1type__traits_3_01double_01_4.html", null ],
     [ "type_traits< float >", "structlagrange_1_1ui_1_1type__traits_3_01float_01_4.html", null ],
@@ -544,14 +573,19 @@ var hierarchy =
     [ "UIPanel", "structlagrange_1_1ui_1_1_u_i_panel.html", null ],
     [ "UiState", "struct_ui_state.html", null ],
     [ "UIWidget", "classlagrange_1_1ui_1_1_u_i_widget.html", null ],
+    [ "UnflipUVChartsOptions", "structlagrange_1_1_unflip_u_v_charts_options.html", null ],
     [ "UnflipUVOptions", "structlagrange_1_1_unflip_u_v_options.html", null ],
+    [ "UniqueAttributeNameOptions", "structlagrange_1_1_unique_attribute_name_options.html", null ],
     [ "UnorientedEdge< Index >", "structlagrange_1_1internal_1_1_unoriented_edge.html", null ],
     [ "UserDataConverter", "structlagrange_1_1scene_1_1_user_data_converter.html", null ],
     [ "UVChartOptions", "structlagrange_1_1_u_v_chart_options.html", null ],
     [ "UVDistortionOptions", "structlagrange_1_1_u_v_distortion_options.html", null ],
     [ "UVMeshOptions", "structlagrange_1_1_u_v_mesh_options.html", null ],
+    [ "UVOrientationCount", "structlagrange_1_1_u_v_orientation_count.html", null ],
+    [ "UVOrientationOptions", "structlagrange_1_1_u_v_orientation_options.html", null ],
     [ "UVOverlapOptions", "structlagrange_1_1bvh_1_1_u_v_overlap_options.html", null ],
     [ "UVOverlapResult< Scalar, Index >", "structlagrange_1_1bvh_1_1_u_v_overlap_result.html", null ],
+    [ "UVScalarTag< T >", "structlagrange_1_1internal_1_1_u_v_scalar_tag.html", null ],
     [ "Value", "classlagrange_1_1scene_1_1_value.html", null ],
     [ "value_field< T >", "structlagrange_1_1ui_1_1utils_1_1value__field.html", null ],
     [ "value_field< double >", "structlagrange_1_1ui_1_1utils_1_1value__field_3_01double_01_4.html", null ],

@@ -144,6 +144,24 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlagrange_1_1raycasting_1_1_project_options.html">ProjectOptions</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Options for project().  <a href="structlagrange_1_1raycasting_1_1_project_options.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlagrange_1_1raycasting_1_1_occluded_facet_sampler_options.html">OccludedFacetSamplerOptions</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Options for OccludedFacetSampler.  <a href="structlagrange_1_1raycasting_1_1_occluded_facet_sampler_options.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlagrange_1_1raycasting_1_1_occluded_facet_sampler.html">OccludedFacetSampler&lt; Scalar, Index &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stateful algorithm for finding occluded facets across every instance of a scene.  <a href="classlagrange_1_1raycasting_1_1_occluded_facet_sampler.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlagrange_1_1raycasting_1_1_occluded_facet_estimate_options.html">OccludedFacetEstimateOptions</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loop options for <a class="el" href="#ga43b81f445c75823c966c76542e665142">estimate_occluded_facets()</a> and <a class="el" href="#ga04f6c6ef77ef136040a765cea8ae04b5">remove_occluded_facets()</a>.  <a href="structlagrange_1_1raycasting_1_1_occluded_facet_estimate_options.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlagrange_1_1raycasting_1_1_remove_occluded_facets_options.html">RemoveOccludedFacetsOptions</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Options for remove_occluded_facets().  <a href="structlagrange_1_1raycasting_1_1_remove_occluded_facets_options.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlagrange_1_1raycasting_1_1_occluded_instance_sampler.html">OccludedInstanceSampler&lt; Scalar, Index &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stateful algorithm for finding occluded instances in a scene.  <a href="classlagrange_1_1raycasting_1_1_occluded_instance_sampler.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlagrange_1_1raycasting_1_1_occluded_instance_estimate_options.html">OccludedInstanceEstimateOptions</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loop options for <a class="el" href="#ga352bc0b85ed4699daca8f9a147fd801a">estimate_occluded_instances()</a> and <a class="el" href="#ga08ecbd1269989afec22b4c0693136083">remove_occluded_instances()</a>.  <a href="structlagrange_1_1raycasting_1_1_occluded_instance_estimate_options.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
 Enumerations</h2></td></tr>
@@ -176,6 +194,26 @@ Functions</h2></td></tr>
 <tr class="memitem:ga5fa3bb4021bb067476cca74f2f304b44"><td class="memTemplItemLeft" align="right" valign="top">LA_RAYCASTING_API void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ga5fa3bb4021bb067476cca74f2f304b44">project_directional</a> (const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index &gt; &amp;source, <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index &gt; &amp;target, const <a class="el" href="structlagrange_1_1raycasting_1_1_project_directional_options.html">ProjectDirectionalOptions</a> &amp;options={}, const <a class="el" href="classlagrange_1_1raycasting_1_1_ray_caster.html">RayCaster</a> *ray_caster=nullptr)</td></tr>
 <tr class="memdesc:ga5fa3bb4021bb067476cca74f2f304b44"><td class="mdescLeft">&#160;</td><td class="mdescRight">Project vertex attributes from one mesh to another, by projecting target vertices along a prescribed direction, and interpolating surface values from facet corners of the source mesh.  <br /></td></tr>
 <tr class="separator:ga5fa3bb4021bb067476cca74f2f304b44"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga43b81f445c75823c966c76542e665142" id="r_ga43b81f445c75823c966c76542e665142"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, typename Index&gt; </td></tr>
+<tr class="memitem:ga43b81f445c75823c966c76542e665142"><td class="memTemplItemLeft" align="right" valign="top">LA_RAYCASTING_API void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ga43b81f445c75823c966c76542e665142">estimate_occluded_facets</a> (<a class="el" href="classlagrange_1_1raycasting_1_1_occluded_facet_sampler.html">OccludedFacetSampler</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index &gt; &amp;sampler, const <a class="el" href="structlagrange_1_1raycasting_1_1_occluded_facet_estimate_options.html">OccludedFacetEstimateOptions</a> &amp;options, <a class="el" href="classlagrange_1_1_progress_callback.html">ProgressCallback</a> &amp;progress, const std::atomic_bool *cancel=nullptr)</td></tr>
+<tr class="memdesc:ga43b81f445c75823c966c76542e665142"><td class="mdescLeft">&#160;</td><td class="mdescRight">Drive an <a class="el" href="classlagrange_1_1raycasting_1_1_occluded_facet_sampler.html">OccludedFacetSampler</a> progressively until the budget is exhausted, the search converges, or cancellation is requested.  <br /></td></tr>
+<tr class="separator:ga43b81f445c75823c966c76542e665142"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga04f6c6ef77ef136040a765cea8ae04b5" id="r_ga04f6c6ef77ef136040a765cea8ae04b5"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, typename Index&gt; </td></tr>
+<tr class="memitem:ga04f6c6ef77ef136040a765cea8ae04b5"><td class="memTemplItemLeft" align="right" valign="top">LA_RAYCASTING_API <a class="el" href="classlagrange_1_1scene_1_1_simple_scene.html">scene::SimpleScene</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index, 3 &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ga04f6c6ef77ef136040a765cea8ae04b5">remove_occluded_facets</a> (const <a class="el" href="classlagrange_1_1scene_1_1_simple_scene.html">scene::SimpleScene</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index, 3 &gt; &amp;scene, const <a class="el" href="structlagrange_1_1raycasting_1_1_remove_occluded_facets_options.html">RemoveOccludedFacetsOptions</a> &amp;options, <a class="el" href="classlagrange_1_1_progress_callback.html">ProgressCallback</a> &amp;progress, <a class="el" href="classlagrange_1_1function__ref.html">function_ref</a>&lt; bool(Index mesh_index, Index instance_index)&gt; is_occluder=[](Index, Index) { return true;}, const std::atomic_bool *cancel=nullptr)</td></tr>
+<tr class="memdesc:ga04f6c6ef77ef136040a765cea8ae04b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Build a new scene with facets not visible from the outside removed.  <br /></td></tr>
+<tr class="separator:ga04f6c6ef77ef136040a765cea8ae04b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga352bc0b85ed4699daca8f9a147fd801a" id="r_ga352bc0b85ed4699daca8f9a147fd801a"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, typename Index&gt; </td></tr>
+<tr class="memitem:ga352bc0b85ed4699daca8f9a147fd801a"><td class="memTemplItemLeft" align="right" valign="top">LA_RAYCASTING_API void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ga352bc0b85ed4699daca8f9a147fd801a">estimate_occluded_instances</a> (<a class="el" href="classlagrange_1_1raycasting_1_1_occluded_instance_sampler.html">OccludedInstanceSampler</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index &gt; &amp;sampler, const <a class="el" href="structlagrange_1_1raycasting_1_1_occluded_instance_estimate_options.html">OccludedInstanceEstimateOptions</a> &amp;options, <a class="el" href="classlagrange_1_1_progress_callback.html">ProgressCallback</a> &amp;progress, const std::atomic_bool *cancel=nullptr)</td></tr>
+<tr class="memdesc:ga352bc0b85ed4699daca8f9a147fd801a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Drive an <a class="el" href="classlagrange_1_1raycasting_1_1_occluded_instance_sampler.html">OccludedInstanceSampler</a> progressively.  <br /></td></tr>
+<tr class="separator:ga352bc0b85ed4699daca8f9a147fd801a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0c6b5e8ed4cd00ad0b68cc7c53c2499d" id="r_ga0c6b5e8ed4cd00ad0b68cc7c53c2499d"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, typename Index&gt; </td></tr>
+<tr class="memitem:ga0c6b5e8ed4cd00ad0b68cc7c53c2499d"><td class="memTemplItemLeft" align="right" valign="top">LA_RAYCASTING_API void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ga0c6b5e8ed4cd00ad0b68cc7c53c2499d">estimate_occluded_instances</a> (const <a class="el" href="classlagrange_1_1scene_1_1_simple_scene.html">scene::SimpleScene</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index, 3 &gt; &amp;scene, <a class="el" href="classlagrange_1_1function__ref.html">function_ref</a>&lt; void(Index mesh_index, Index instance_index)&gt; callback, const <a class="el" href="structlagrange_1_1raycasting_1_1_occluded_instance_estimate_options.html">OccludedInstanceEstimateOptions</a> &amp;options, <a class="el" href="classlagrange_1_1_progress_callback.html">ProgressCallback</a> &amp;progress, <a class="el" href="classlagrange_1_1function__ref.html">function_ref</a>&lt; bool(Index mesh_index, Index instance_index)&gt; is_occluder=[](Index, Index) { return true;}, const std::atomic_bool *cancel=nullptr)</td></tr>
+<tr class="memdesc:ga0c6b5e8ed4cd00ad0b68cc7c53c2499d"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.Convenience wrapper that builds an <a class="el" href="classlagrange_1_1raycasting_1_1_occluded_instance_sampler.html">OccludedInstanceSampler</a> internally and reports each occluded instance via <code class="param">callback</code>.  <br /></td></tr>
+<tr class="separator:ga0c6b5e8ed4cd00ad0b68cc7c53c2499d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga08ecbd1269989afec22b4c0693136083" id="r_ga08ecbd1269989afec22b4c0693136083"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, typename Index&gt; </td></tr>
+<tr class="memitem:ga08ecbd1269989afec22b4c0693136083"><td class="memTemplItemLeft" align="right" valign="top">LA_RAYCASTING_API <a class="el" href="classlagrange_1_1scene_1_1_simple_scene.html">scene::SimpleScene</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index, 3 &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ga08ecbd1269989afec22b4c0693136083">remove_occluded_instances</a> (const <a class="el" href="classlagrange_1_1scene_1_1_simple_scene.html">scene::SimpleScene</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index, 3 &gt; &amp;scene, const <a class="el" href="structlagrange_1_1raycasting_1_1_occluded_instance_estimate_options.html">OccludedInstanceEstimateOptions</a> &amp;options, <a class="el" href="classlagrange_1_1_progress_callback.html">ProgressCallback</a> &amp;progress, <a class="el" href="classlagrange_1_1function__ref.html">function_ref</a>&lt; bool(Index mesh_index, Index instance_index)&gt; is_occluder=[](Index, Index) { return true;}, const std::atomic_bool *cancel=nullptr)</td></tr>
+<tr class="memdesc:ga08ecbd1269989afec22b4c0693136083"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove fully-occluded mesh instances.  <br /></td></tr>
+<tr class="separator:ga08ecbd1269989afec22b4c0693136083"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <h2 class="groupheader">Enumeration Type Documentation</h2>
@@ -491,12 +529,309 @@ template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5
 
 </div>
 </div>
+<a id="ga43b81f445c75823c966c76542e665142" name="ga43b81f445c75823c966c76542e665142"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga43b81f445c75823c966c76542e665142">&#9670;&#160;</a></span>estimate_occluded_facets()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, typename Index&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">LA_RAYCASTING_API void estimate_occluded_facets </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classlagrange_1_1raycasting_1_1_occluded_facet_sampler.html">OccludedFacetSampler</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>sampler</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structlagrange_1_1raycasting_1_1_occluded_facet_estimate_options.html">OccludedFacetEstimateOptions</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>options</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classlagrange_1_1_progress_callback.html">ProgressCallback</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>progress</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::atomic_bool *</td>          <td class="paramname"><span class="paramname"><em>cancel</em></span><span class="paramdefsep"> = </span><span class="paramdefval">nullptr</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;lagrange/raycasting/remove_occluded_facets.h&gt;</code></p>
+
+<p>Drive an <a class="el" href="classlagrange_1_1raycasting_1_1_occluded_facet_sampler.html">OccludedFacetSampler</a> progressively until the budget is exhausted, the search converges, or cancellation is requested. </p>
+<p>Logs per-cycle progress via <code>lagrange::logger()</code> and reports a normalized [0, 1] fraction to <code class="param">progress</code>.</p>
+<p>The caller can inspect <code class="param">sampler</code> after the call returns to retrieve per-element stats, build an output scene, etc.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">sampler</td><td>Sampler to drive. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">options</td><td>Estimate options. </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">progress</td><td>Progress callback (default-constructed = silent). </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">cancel</td><td>Optional cancellation flag, polled at cycle boundaries.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Scalar</td><td>Mesh scalar type. </td></tr>
+    <tr><td class="paramname">Index</td><td>Mesh index type. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga04f6c6ef77ef136040a765cea8ae04b5" name="ga04f6c6ef77ef136040a765cea8ae04b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga04f6c6ef77ef136040a765cea8ae04b5">&#9670;&#160;</a></span>remove_occluded_facets()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, typename Index&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">LA_RAYCASTING_API <a class="el" href="classlagrange_1_1scene_1_1_simple_scene.html">scene::SimpleScene</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index, 3 &gt; remove_occluded_facets </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classlagrange_1_1scene_1_1_simple_scene.html">scene::SimpleScene</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index, 3 &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>scene</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structlagrange_1_1raycasting_1_1_remove_occluded_facets_options.html">RemoveOccludedFacetsOptions</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>options</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classlagrange_1_1_progress_callback.html">ProgressCallback</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>progress</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classlagrange_1_1function__ref.html">function_ref</a>&lt; bool(Index mesh_index, Index instance_index)&gt;</td>          <td class="paramname"><span class="paramname"><em>is_occluder</em></span><span class="paramdefsep"> = </span><span class="paramdefval">[](Index,&#160;Index)&#160;{&#160;return&#160;true;}</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::atomic_bool *</td>          <td class="paramname"><span class="paramname"><em>cancel</em></span><span class="paramdefsep"> = </span><span class="paramdefval">nullptr</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;lagrange/raycasting/remove_occluded_facets.h&gt;</code></p>
+
+<p>Build a new scene with facets not visible from the outside removed. </p>
+<p>The output contains one unique mesh per input instance: instances of the same source mesh can end up with different facets culled, so the input's instancing cannot be preserved.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">scene</td><td>Input scene. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">options</td><td>Options. </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">progress</td><td>Progress callback (see <a class="el" href="#ga43b81f445c75823c966c76542e665142">estimate_occluded_facets</a>). </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">is_occluder</td><td>Forwarded to the underlying <a class="el" href="classlagrange_1_1raycasting_1_1_occluded_facet_sampler.html">OccludedFacetSampler</a> ctor. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">cancel</td><td>Optional cancellation flag.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The filtered scene.</dd></dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Scalar</td><td>Mesh scalar type. </td></tr>
+    <tr><td class="paramname">Index</td><td>Mesh index type. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga352bc0b85ed4699daca8f9a147fd801a" name="ga352bc0b85ed4699daca8f9a147fd801a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga352bc0b85ed4699daca8f9a147fd801a">&#9670;&#160;</a></span>estimate_occluded_instances() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, typename Index&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">LA_RAYCASTING_API void estimate_occluded_instances </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classlagrange_1_1raycasting_1_1_occluded_instance_sampler.html">OccludedInstanceSampler</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>sampler</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structlagrange_1_1raycasting_1_1_occluded_instance_estimate_options.html">OccludedInstanceEstimateOptions</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>options</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classlagrange_1_1_progress_callback.html">ProgressCallback</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>progress</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::atomic_bool *</td>          <td class="paramname"><span class="paramname"><em>cancel</em></span><span class="paramdefsep"> = </span><span class="paramdefval">nullptr</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;lagrange/raycasting/remove_occluded_instances.h&gt;</code></p>
+
+<p>Drive an <a class="el" href="classlagrange_1_1raycasting_1_1_occluded_instance_sampler.html">OccludedInstanceSampler</a> progressively. </p>
+<p>See <a class="el" href="#ga43b81f445c75823c966c76542e665142">estimate_occluded_facets</a> for the shared semantics; the only difference here is per-batch (rather than per-cycle) granularity.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">sampler</td><td>Sampler to drive. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">options</td><td>Estimate options. </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">progress</td><td>Progress callback (default-constructed = silent). </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">cancel</td><td>Optional cancellation flag, polled at batch boundaries.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Scalar</td><td>Mesh scalar type. </td></tr>
+    <tr><td class="paramname">Index</td><td>Mesh index type. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga0c6b5e8ed4cd00ad0b68cc7c53c2499d" name="ga0c6b5e8ed4cd00ad0b68cc7c53c2499d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga0c6b5e8ed4cd00ad0b68cc7c53c2499d">&#9670;&#160;</a></span>estimate_occluded_instances() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, typename Index&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">LA_RAYCASTING_API void estimate_occluded_instances </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classlagrange_1_1scene_1_1_simple_scene.html">scene::SimpleScene</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index, 3 &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>scene</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classlagrange_1_1function__ref.html">function_ref</a>&lt; void(Index mesh_index, Index instance_index)&gt;</td>          <td class="paramname"><span class="paramname"><em>callback</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structlagrange_1_1raycasting_1_1_occluded_instance_estimate_options.html">OccludedInstanceEstimateOptions</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>options</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classlagrange_1_1_progress_callback.html">ProgressCallback</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>progress</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classlagrange_1_1function__ref.html">function_ref</a>&lt; bool(Index mesh_index, Index instance_index)&gt;</td>          <td class="paramname"><span class="paramname"><em>is_occluder</em></span><span class="paramdefsep"> = </span><span class="paramdefval">[](Index,&#160;Index)&#160;{&#160;return&#160;true;}</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::atomic_bool *</td>          <td class="paramname"><span class="paramname"><em>cancel</em></span><span class="paramdefsep"> = </span><span class="paramdefval">nullptr</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;lagrange/raycasting/remove_occluded_instances.h&gt;</code></p>
+
+<p>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.Convenience wrapper that builds an <a class="el" href="classlagrange_1_1raycasting_1_1_occluded_instance_sampler.html">OccludedInstanceSampler</a> internally and reports each occluded instance via <code class="param">callback</code>. </p>
+<dl class="section note"><dt>Note</dt><dd>Only 3D scenes are supported.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">scene</td><td>Scene to process. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">callback</td><td>Called as <code>callback(mesh_index, instance_index)</code>. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">options</td><td>Options. </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">progress</td><td>Progress callback. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">is_occluder</td><td>Forwarded to <a class="el" href="classlagrange_1_1raycasting_1_1_occluded_instance_sampler.html">OccludedInstanceSampler</a> ctor: returns whether <code>(mesh_index, instance_index)</code> should block rays. Non-occluder instances are still tested for visibility but don't contribute to the ray-caster scene. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">cancel</td><td>Optional cancellation flag.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Scalar</td><td>Mesh scalar type. </td></tr>
+    <tr><td class="paramname">Index</td><td>Mesh index type. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga08ecbd1269989afec22b4c0693136083" name="ga08ecbd1269989afec22b4c0693136083"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga08ecbd1269989afec22b4c0693136083">&#9670;&#160;</a></span>remove_occluded_instances()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, typename Index&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">LA_RAYCASTING_API <a class="el" href="classlagrange_1_1scene_1_1_simple_scene.html">scene::SimpleScene</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index, 3 &gt; remove_occluded_instances </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classlagrange_1_1scene_1_1_simple_scene.html">scene::SimpleScene</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index, 3 &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>scene</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structlagrange_1_1raycasting_1_1_occluded_instance_estimate_options.html">OccludedInstanceEstimateOptions</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>options</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classlagrange_1_1_progress_callback.html">ProgressCallback</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>progress</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classlagrange_1_1function__ref.html">function_ref</a>&lt; bool(Index mesh_index, Index instance_index)&gt;</td>          <td class="paramname"><span class="paramname"><em>is_occluder</em></span><span class="paramdefsep"> = </span><span class="paramdefval">[](Index,&#160;Index)&#160;{&#160;return&#160;true;}</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::atomic_bool *</td>          <td class="paramname"><span class="paramname"><em>cancel</em></span><span class="paramdefsep"> = </span><span class="paramdefval">nullptr</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;lagrange/raycasting/remove_occluded_instances.h&gt;</code></p>
+
+<p>Remove fully-occluded mesh instances. </p>
+<p>Convenience wrapper around <a class="el" href="#ga352bc0b85ed4699daca8f9a147fd801a">estimate_occluded_instances</a> + scene::filter_instances.</p>
+<dl class="section note"><dt>Note</dt><dd>Only 3D scenes are supported.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">scene</td><td>Scene to process. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">options</td><td>Options. </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">progress</td><td>Progress callback. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">is_occluder</td><td>Forwarded to the underlying sampler — see <a class="el" href="#ga352bc0b85ed4699daca8f9a147fd801a">estimate_occluded_instances</a>. Non-occluders are still candidates for removal but don't block rays from others. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">cancel</td><td>Optional cancellation flag.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Scalar</td><td>Mesh scalar type. </td></tr>
+    <tr><td class="paramname">Index</td><td>Mesh index type. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Mon Apr 27 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+    <li class="footer">Generated on Sat Jun 20 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>
 </body>

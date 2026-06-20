@@ -23,6 +23,7 @@ Functions
 
    lagrange.bvh.compute_chamfer
    lagrange.bvh.compute_hausdorff
+   lagrange.bvh.compute_intersecting_pairs
    lagrange.bvh.compute_mesh_distances
    lagrange.bvh.compute_uv_overlap
    lagrange.bvh.remove_interior_shells
@@ -208,7 +209,7 @@ Module Contents
 
 
 
-.. py:class:: UVOverlapMethod(*args, **kwds)
+.. py:class:: UVOverlapMethod
 
    Bases: :py:obj:`enum.Enum`
 
@@ -314,6 +315,25 @@ Module Contents
    :param target: Second mesh.
 
    :return: Hausdorff distance.
+
+
+.. py:function:: compute_intersecting_pairs(mesh)
+
+   Compute all pairs of intersecting facets in a triangle mesh using BVH acceleration.
+
+   Detects facet pairs whose interiors intersect using exact geometric predicates. Only facets
+   that do not share vertices are tested (vertex-adjacent facets are skipped).
+
+   :param mesh: The input triangle mesh. Must contain only triangular facets.
+
+   :returns: A list of tuples (i, j) where i < j representing non-vertex-adjacent facets
+             whose interiors intersect.
+
+   :raises RuntimeError: If the mesh is not a triangle mesh or if the mesh is not 3D.
+
+   .. note::
+      Vertex-adjacent facets are filtered before testing. The geometric test uses
+      include_boundary=false (interior intersection only).
 
 
 .. py:function:: compute_mesh_distances(source, target, output_attribute_name = '@distance_to_mesh')

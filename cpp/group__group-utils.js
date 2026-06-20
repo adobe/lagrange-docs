@@ -54,5 +54,7 @@ var group__group_utils =
     [ "StackSet< T, N >", "structlagrange_1_1_stack_set.html", null ],
     [ "StackVector< T, N >", "structlagrange_1_1_stack_vector.html", null ],
     [ "chain_directed_edges", "group__group-utils.html#gadc37a853021fc87c80d53f7cb0a21ae5", null ],
-    [ "chain_undirected_edges", "group__group-utils.html#ga85a228fdc8080ef275f963576cd9b4c9", null ]
+    [ "chain_undirected_edges", "group__group-utils.html#ga85a228fdc8080ef275f963576cd9b4c9", null ],
+    [ "compute_normal_cotransform", "group__group-utils.html#ga56808ccef3979da08fc33fdacdeb6eac", null ],
+    [ "compute_normal_cotransform", "group__group-utils.html#gaa59b87d694b6e05b46034d6b6782f909", null ]
 ];

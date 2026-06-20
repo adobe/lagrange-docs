@@ -14,10 +14,10 @@ var group__module_polyddg =
     ] ],
     [ "SmoothDirectionFieldOptions", "structlagrange_1_1polyddg_1_1_smooth_direction_field_options.html", [
       [ "nrosy", "structlagrange_1_1polyddg_1_1_smooth_direction_field_options.html#aacc7a92d3958d4189b5c4026a5b97a1b", null ],
+      [ "output_element_type", "structlagrange_1_1polyddg_1_1_smooth_direction_field_options.html#a650d9b28565137517f5f823c480ee063", null ],
       [ "lambda", "structlagrange_1_1polyddg_1_1_smooth_direction_field_options.html#a3db359547eed8cfd48ca821d95f577af", null ],
       [ "alignment_attribute", "structlagrange_1_1polyddg_1_1_smooth_direction_field_options.html#a292f3e347464872968533368a13f5844", null ],
-      [ "alignment_weight", "structlagrange_1_1polyddg_1_1_smooth_direction_field_options.html#acdeee5ae01a0d788019a7cdedc907798", null ],
-      [ "direction_field_attribute", "structlagrange_1_1polyddg_1_1_smooth_direction_field_options.html#a823f08e066137b1d117eca4ad6f09c3c", null ]
+      [ "direction_field_attribute", "structlagrange_1_1polyddg_1_1_smooth_direction_field_options.html#aa528c6ad17d6f25b72b2f45fed63611a", null ]
     ] ],
     [ "DifferentialOperators< Scalar, Index >", "classlagrange_1_1polyddg_1_1_differential_operators.html", [
       [ "DifferentialOperators", "classlagrange_1_1polyddg_1_1_differential_operators.html#a2f75035fba48ce262b19c492d7333ca8", null ],
@@ -96,6 +96,7 @@ var group__module_polyddg =
     [ "compute_principal_curvatures", "group__module-polyddg.html#ga1a2667035180bd33a1927b87e9e2202d", null ],
     [ "compute_principal_curvatures", "group__module-polyddg.html#ga55bce86c9cd4b27f84a0c7ea45dea472", null ],
     [ "compute_smooth_direction_field", "group__module-polyddg.html#ga5df3086e2ff6fc5c887491b4e4f68bcc", null ],
+    [ "compute_smooth_direction_field", "group__module-polyddg.html#ga1032ebc207582850b04d75904ac9b0db", null ],
     [ "hodge_decomposition_1_form", "group__module-polyddg.html#gafeb428f5d53beae60db19349b12f1501", null ],
     [ "hodge_decomposition_1_form", "group__module-polyddg.html#gaf12652b12d46556b9a8469131c237a79", null ],
     [ "hodge_decomposition_vector_field", "group__module-polyddg.html#gaaaba548b130abc31c6e7e7d55f006026", null ],

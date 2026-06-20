@@ -182,6 +182,14 @@ Functions</h2></td></tr>
 <tr class="memitem:ga85a228fdc8080ef275f963576cd9b4c9"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structlagrange_1_1_chain_edges_result.html">ChainEdgesResult</a>&lt; Index &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ga85a228fdc8080ef275f963576cd9b4c9">chain_undirected_edges</a> (const <a class="el" href="group__group-utils-misc.html#ga4afead0b9ccc53fe4fca896787595d26">span</a>&lt; const Index &gt; edges, const <a class="el" href="structlagrange_1_1_chain_edges_options.html">ChainEdgesOptions</a> &amp;options={})</td></tr>
 <tr class="memdesc:ga85a228fdc8080ef275f963576cd9b4c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Chain a set of undirected edges into loops and chains.  <br /></td></tr>
 <tr class="separator:ga85a228fdc8080ef275f963576cd9b4c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga56808ccef3979da08fc33fdacdeb6eac" id="r_ga56808ccef3979da08fc33fdacdeb6eac"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>&gt; </td></tr>
+<tr class="memitem:ga56808ccef3979da08fc33fdacdeb6eac"><td class="memTemplItemLeft" align="right" valign="top">Eigen::Matrix3&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ga56808ccef3979da08fc33fdacdeb6eac">compute_normal_cotransform</a> (const Eigen::Transform&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, 3, Eigen::Affine &gt; &amp;transform)</td></tr>
+<tr class="memdesc:ga56808ccef3979da08fc33fdacdeb6eac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the normal (cotransform) matrix for a 3D affine transform.  <br /></td></tr>
+<tr class="separator:ga56808ccef3979da08fc33fdacdeb6eac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa59b87d694b6e05b46034d6b6782f909" id="r_gaa59b87d694b6e05b46034d6b6782f909"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>&gt; </td></tr>
+<tr class="memitem:gaa59b87d694b6e05b46034d6b6782f909"><td class="memTemplItemLeft" align="right" valign="top">Eigen::Matrix2&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#gaa59b87d694b6e05b46034d6b6782f909">compute_normal_cotransform</a> (const Eigen::Transform&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, 2, Eigen::Affine &gt; &amp;transform)</td></tr>
+<tr class="memdesc:gaa59b87d694b6e05b46034d6b6782f909"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the normal (cotransform) matrix for a 2D affine transform.  <br /></td></tr>
+<tr class="separator:gaa59b87d694b6e05b46034d6b6782f909"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga30c54699aaf23b17c9d68bbb4f2f32ab" id="r_ga30c54699aaf23b17c9d68bbb4f2f32ab"><td class="memTemplParams" colspan="2"><a id="ga30c54699aaf23b17c9d68bbb4f2f32ab" name="ga30c54699aaf23b17c9d68bbb4f2f32ab"></a>
 template&lt;class T, size_t N&gt; </td></tr>
 <tr class="memitem:ga30c54699aaf23b17c9d68bbb4f2f32ab"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator==</b> (const <a class="el" href="structlagrange_1_1_stack_set.html">StackSet</a>&lt; T, N &gt; &amp;lhs, const <a class="el" href="structlagrange_1_1_stack_set.html">StackSet</a>&lt; T, N &gt; &amp;rhs)</td></tr>
@@ -290,12 +298,86 @@ template&lt;typename Index&gt; </div>
 
 </div>
 </div>
+<a id="ga56808ccef3979da08fc33fdacdeb6eac" name="ga56808ccef3979da08fc33fdacdeb6eac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga56808ccef3979da08fc33fdacdeb6eac">&#9670;&#160;</a></span>compute_normal_cotransform() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">Eigen::Matrix3&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a> &gt; compute_normal_cotransform </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::Transform&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, 3, Eigen::Affine &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>transform</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;lagrange/utils/compute_normal_cotransform.h&gt;</code></p>
+
+<p>Computes the normal (cotransform) matrix for a 3D affine transform. </p>
+<p>For transforming normals correctly under an affine transform M, one should use det(M) * M^{-T}, which equals the cofactor matrix of the linear part of M.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">transform</td><td>Input 3D affine transform. Since the translation part does not affect normal transformation, it is ignored and only the linear part is used.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Scalar</td><td>Scalar type.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A 3x3 matrix for transforming normals.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd>transform_mesh() for usage with mesh normal attributes. </dd></dl>
+
+</div>
+</div>
+<a id="gaa59b87d694b6e05b46034d6b6782f909" name="gaa59b87d694b6e05b46034d6b6782f909"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa59b87d694b6e05b46034d6b6782f909">&#9670;&#160;</a></span>compute_normal_cotransform() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">Eigen::Matrix2&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a> &gt; compute_normal_cotransform </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::Transform&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, 2, Eigen::Affine &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>transform</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;lagrange/utils/compute_normal_cotransform.h&gt;</code></p>
+
+<p>Computes the normal (cotransform) matrix for a 2D affine transform. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">transform</td><td>Input 2D affine transform. Since the translation part does not affect normal transformation, it is ignored and only the linear part is used.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Scalar</td><td>Scalar type.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A 2x2 matrix for transforming normals. </dd></dl>
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Mon Apr 27 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+    <li class="footer">Generated on Sat Jun 20 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>
 </body>

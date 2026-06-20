@@ -167,6 +167,11 @@ Functions</h2></td></tr>
 <tr class="memitem:ga5df3086e2ff6fc5c887491b4e4f68bcc"><td class="memTemplItemLeft" align="right" valign="top">LA_POLYDDG_API <a class="el" href="group__group-surfacemesh-attr.html#ga4d115376c2c766084ef808c837348fc3">AttributeId</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ga5df3086e2ff6fc5c887491b4e4f68bcc">compute_smooth_direction_field</a> (<a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index &gt; &amp;mesh, const <a class="el" href="classlagrange_1_1polyddg_1_1_differential_operators.html">DifferentialOperators</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index &gt; &amp;ops, <a class="el" href="structlagrange_1_1polyddg_1_1_smooth_direction_field_options.html">SmoothDirectionFieldOptions</a> options={})</td></tr>
 <tr class="memdesc:ga5df3086e2ff6fc5c887491b4e4f68bcc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the globally smoothest n-direction field on a surface mesh.  <br /></td></tr>
 <tr class="separator:ga5df3086e2ff6fc5c887491b4e4f68bcc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1032ebc207582850b04d75904ac9b0db" id="r_ga1032ebc207582850b04d75904ac9b0db"><td class="memTemplParams" colspan="2"><a id="ga1032ebc207582850b04d75904ac9b0db" name="ga1032ebc207582850b04d75904ac9b0db"></a>
+template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, typename Index&gt; </td></tr>
+<tr class="memitem:ga1032ebc207582850b04d75904ac9b0db"><td class="memTemplItemLeft" align="right" valign="top">LA_POLYDDG_API <a class="el" href="group__group-surfacemesh-attr.html#ga4d115376c2c766084ef808c837348fc3">AttributeId</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><b>compute_smooth_direction_field</b> (<a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index &gt; &amp;mesh, <a class="el" href="structlagrange_1_1polyddg_1_1_smooth_direction_field_options.html">SmoothDirectionFieldOptions</a> options={})</td></tr>
+<tr class="memdesc:ga1032ebc207582850b04d75904ac9b0db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convenience overload that constructs a DifferentialOperators object internally. <br /></td></tr>
+<tr class="separator:ga1032ebc207582850b04d75904ac9b0db"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gafeb428f5d53beae60db19349b12f1501" id="r_gafeb428f5d53beae60db19349b12f1501"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, typename Index&gt; </td></tr>
 <tr class="memitem:gafeb428f5d53beae60db19349b12f1501"><td class="memTemplItemLeft" align="right" valign="top">LA_POLYDDG_API <a class="el" href="structlagrange_1_1polyddg_1_1_hodge_decomposition_result.html">HodgeDecompositionResult</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#gafeb428f5d53beae60db19349b12f1501">hodge_decomposition_1_form</a> (<a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index &gt; &amp;mesh, const <a class="el" href="classlagrange_1_1polyddg_1_1_differential_operators.html">DifferentialOperators</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index &gt; &amp;ops, <a class="el" href="structlagrange_1_1polyddg_1_1_hodge_decomposition_options.html">HodgeDecompositionOptions</a> options={})</td></tr>
 <tr class="memdesc:gafeb428f5d53beae60db19349b12f1501"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the Helmholtz-Hodge decomposition of a 1-form on a closed surface mesh.  <br /></td></tr>
@@ -299,14 +304,16 @@ template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5
 <p><code>#include &lt;lagrange/polyddg/compute_smooth_direction_field.h&gt;</code></p>
 
 <p>Compute the globally smoothest n-direction field on a surface mesh. </p>
-<p>This function is based on the following paper:</p>
-<p>Knöppel, Felix, et al. "Globally optimal direction fields." ACM Transactions on Graphics (ToG) 32.4 (2013): 1-10.</p>
-<p>The solution is stored as a per-vertex 3-D tangent vector attribute in world-space coordinates, obtained by mapping the local 2-D solution through the vertex tangent basis.</p>
+<p>Dispatches to a vertex-based or facet-based implementation depending on <code>options.output_element_type:</code> </p>
+<ul>
+<li><code>AttributeElement::Vertex</code> (default): solves the vertex-based connection Laplacian (Knöppel et al., "Globally optimal direction fields", ACM ToG 32(4), 2013). The result is stored as a per-vertex 3-D tangent vector attribute.</li>
+<li><code>AttributeElement::Facet:</code> solves the face-based connection Laplacian, minimizing \( E(u) = \sum_{e=(f,g)} w_e \| R_{f \to g}^n u_f - u_g \|^2 \). The result is stored as a per-facet 3-D tangent vector attribute.</li>
+</ul>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in,out]</td><td class="paramname">mesh</td><td>Input surface mesh. The output attribute is added or overwritten. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">ops</td><td>Precomputed differential operators for the mesh. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">options</td><td>Options controlling the rosy order, stabilization weight, optional alignment constraints, and output attribute name.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">options</td><td>Options controlling the rosy order, output element type, stabilization weight, optional alignment constraints, and output attribute name.</td></tr>
   </table>
   </dd>
 </dl>
@@ -419,7 +426,7 @@ template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Mon Apr 27 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+    <li class="footer">Generated on Sat Jun 20 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>
 </body>

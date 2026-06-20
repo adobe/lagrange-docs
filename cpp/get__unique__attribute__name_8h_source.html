@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Lagrange: lagrange/internal/get_unique_attribute_name.h Source File</title>
+<title>Lagrange: lagrange/get_unique_attribute_name.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -138,47 +138,50 @@ $(function(){initNavTree('get__unique__attribute__name_8h_source.html',''); init
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment"> */</span></div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#pragma once</span></div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;lagrange/Logger.h&gt;</span></div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &lt;lagrange/SurfaceMesh.h&gt;</span></div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &lt;lagrange/utils/Error.h&gt;</span></div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#include &lt;string_view&gt;</span></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacelagrange_1_1internal.html">lagrange::internal</a> {</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span></div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> Scalar, <span class="keyword">typename</span> Index&gt;</div>
-<div class="foldopen" id="foldopen00037" data-start="{" data-end="}">
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="namespacelagrange_1_1internal.html#ae608619099d2ee29b481cc01aca331c4">   37</a></span>std::string <a class="code hl_function" href="namespacelagrange_1_1internal.html#ae608619099d2ee29b481cc01aca331c4">get_unique_attribute_name</a>(<span class="keyword">const</span> <a class="code hl_class" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh&lt;Scalar, Index&gt;</a>&amp; mesh, std::string_view name)</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>{</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="keywordflow">if</span> (!mesh.has_attribute(name)) {</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        <span class="keywordflow">return</span> std::string(name);</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        std::string new_name;</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> cnt = 0; cnt &lt; 1000; ++cnt) {</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>            new_name = fmt::format(<span class="stringliteral">&quot;{}.{}&quot;</span>, name, cnt);</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>            <span class="keywordflow">if</span> (!mesh.has_attribute(new_name)) {</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>                <a class="code hl_function" href="group__group-logger.html#ga84167f554a5d7594c0ba4ae760f31599">logger</a>().warn(<span class="stringliteral">&quot;Attribute &#39;{}&#39; already exists. Using &#39;{}&#39; instead.&quot;</span>, name, new_name);</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>                <span class="keywordflow">return</span> new_name;</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>            }</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        }</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        <span class="keywordflow">throw</span> <a class="code hl_enumvalue" href="namespacelagrange.html#af15e960c877b7516935402a9080b7e1aa902b0d55fddef6f8d651fe1035b7d4bd">Error</a>(fmt::format(<span class="stringliteral">&quot;Could not assign a unique attribute name for: {}&quot;</span>, name));</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    }</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>}</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;lagrange/SurfaceMesh.h&gt;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &lt;string_view&gt;</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacelagrange.html">lagrange</a> {</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span></div>
+<div class="foldopen" id="foldopen00032" data-start="{" data-end="};">
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="structlagrange_1_1_unique_attribute_name_options.html">   32</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structlagrange_1_1_unique_attribute_name_options.html">UniqueAttributeNameOptions</a></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>{</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="structlagrange_1_1_unique_attribute_name_options.html#a1039177320d28dc0db3f455c87c47072">   35</a></span>    std::string <a class="code hl_variable" href="structlagrange_1_1_unique_attribute_name_options.html#a1039177320d28dc0db3f455c87c47072">separator</a> = <span class="stringliteral">&quot;.&quot;</span>;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="structlagrange_1_1_unique_attribute_name_options.html#a665c89ac6156250f115b588774b4e85e">   38</a></span>    std::string <a class="code hl_variable" href="structlagrange_1_1_unique_attribute_name_options.html#a665c89ac6156250f115b588774b4e85e">postfix</a> = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="structlagrange_1_1_unique_attribute_name_options.html#a7f91c2db1508443beaf6bdb121989d19">   41</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="structlagrange_1_1_unique_attribute_name_options.html#a7f91c2db1508443beaf6bdb121989d19">max_increment</a> = 1000;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="structlagrange_1_1_unique_attribute_name_options.html#a1c7f127c8ae482ebe64a3a26b7c1e67b">   45</a></span>    <span class="keywordtype">bool</span> <a class="code hl_variable" href="structlagrange_1_1_unique_attribute_name_options.html#a1c7f127c8ae482ebe64a3a26b7c1e67b">emit_warning</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>};</div>
 </div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>} <span class="comment">// namespace lagrange::internal</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> Scalar, <span class="keyword">typename</span> Index&gt;</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>std::string <a class="code hl_function" href="group__group-surfacemesh-utils.html#ga352200edd00fae6cf18f656cf36be847">get_unique_attribute_name</a>(</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <span class="keyword">const</span> <a class="code hl_class" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh&lt;Scalar, Index&gt;</a>&amp; mesh,</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    std::string_view name,</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    <span class="keyword">const</span> <a class="code hl_struct" href="structlagrange_1_1_unique_attribute_name_options.html">UniqueAttributeNameOptions</a>&amp; options = {});</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span></div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>} <span class="comment">// namespace lagrange</span></div>
 <div class="ttc" id="aclasslagrange_1_1_surface_mesh_html"><div class="ttname"><a href="classlagrange_1_1_surface_mesh.html">lagrange::SurfaceMesh</a></div><div class="ttdoc">A general purpose polygonal mesh class.</div><div class="ttdef"><b>Definition</b> SurfaceMesh.h:73</div></div>
-<div class="ttc" id="agroup__group-logger_html_ga84167f554a5d7594c0ba4ae760f31599"><div class="ttname"><a href="group__group-logger.html#ga84167f554a5d7594c0ba4ae760f31599">lagrange::logger</a></div><div class="ttdeci">LA_CORE_API spdlog::logger &amp; logger()</div><div class="ttdoc">Retrieves the current logger.</div><div class="ttdef"><b>Definition</b> Logger.cpp:40</div></div>
-<div class="ttc" id="anamespacelagrange_1_1internal_html"><div class="ttname"><a href="namespacelagrange_1_1internal.html">lagrange::internal</a></div><div class="ttdoc">nullptr_t, size_t, ptrdiff_t basic_ostream bad_weak_ptr extent, remove_extent, is_array,...</div><div class="ttdef"><b>Definition</b> attribute_string_utils.h:21</div></div>
-<div class="ttc" id="anamespacelagrange_1_1internal_html_ae608619099d2ee29b481cc01aca331c4"><div class="ttname"><a href="namespacelagrange_1_1internal.html#ae608619099d2ee29b481cc01aca331c4">lagrange::internal::get_unique_attribute_name</a></div><div class="ttdeci">std::string get_unique_attribute_name(const SurfaceMesh&lt; Scalar, Index &gt; &amp;mesh, std::string_view name)</div><div class="ttdoc">Returns a unique attribute name by appending a suffix if necessary.</div><div class="ttdef"><b>Definition</b> get_unique_attribute_name.h:37</div></div>
-<div class="ttc" id="anamespacelagrange_html_af15e960c877b7516935402a9080b7e1aa902b0d55fddef6f8d651fe1035b7d4bd"><div class="ttname"><a href="namespacelagrange.html#af15e960c877b7516935402a9080b7e1aa902b0d55fddef6f8d651fe1035b7d4bd">lagrange::MappingPolicy::Error</a></div><div class="ttdeci">@ Error</div><div class="ttdoc">Throw an error if collision is detected.</div><div class="ttdef"><b>Definition</b> MappingPolicy.h:24</div></div>
+<div class="ttc" id="agroup__group-surfacemesh-utils_html_ga352200edd00fae6cf18f656cf36be847"><div class="ttname"><a href="group__group-surfacemesh-utils.html#ga352200edd00fae6cf18f656cf36be847">lagrange::get_unique_attribute_name</a></div><div class="ttdeci">std::string get_unique_attribute_name(const SurfaceMesh&lt; Scalar, Index &gt; &amp;mesh, std::string_view name, const UniqueAttributeNameOptions &amp;options={})</div><div class="ttdoc">Returns a unique attribute name by appending a suffix if necessary.</div><div class="ttdef"><b>Definition</b> get_unique_attribute_name.cpp:23</div></div>
+<div class="ttc" id="anamespacelagrange_html"><div class="ttname"><a href="namespacelagrange.html">lagrange</a></div><div class="ttdoc">Main namespace for Lagrange.</div></div>
+<div class="ttc" id="astructlagrange_1_1_unique_attribute_name_options_html"><div class="ttname"><a href="structlagrange_1_1_unique_attribute_name_options.html">lagrange::UniqueAttributeNameOptions</a></div><div class="ttdoc">Options for generating unique attribute names.</div><div class="ttdef"><b>Definition</b> get_unique_attribute_name.h:33</div></div>
+<div class="ttc" id="astructlagrange_1_1_unique_attribute_name_options_html_a1039177320d28dc0db3f455c87c47072"><div class="ttname"><a href="structlagrange_1_1_unique_attribute_name_options.html#a1039177320d28dc0db3f455c87c47072">lagrange::UniqueAttributeNameOptions::separator</a></div><div class="ttdeci">std::string separator</div><div class="ttdoc">Separator between the base name and the counter. Default is &quot;.&quot;.</div><div class="ttdef"><b>Definition</b> get_unique_attribute_name.h:35</div></div>
+<div class="ttc" id="astructlagrange_1_1_unique_attribute_name_options_html_a1c7f127c8ae482ebe64a3a26b7c1e67b"><div class="ttname"><a href="structlagrange_1_1_unique_attribute_name_options.html#a1c7f127c8ae482ebe64a3a26b7c1e67b">lagrange::UniqueAttributeNameOptions::emit_warning</a></div><div class="ttdeci">bool emit_warning</div><div class="ttdoc">Whether to emit a warning when a collision is detected and a suffix is added.</div><div class="ttdef"><b>Definition</b> get_unique_attribute_name.h:45</div></div>
+<div class="ttc" id="astructlagrange_1_1_unique_attribute_name_options_html_a665c89ac6156250f115b588774b4e85e"><div class="ttname"><a href="structlagrange_1_1_unique_attribute_name_options.html#a665c89ac6156250f115b588774b4e85e">lagrange::UniqueAttributeNameOptions::postfix</a></div><div class="ttdeci">std::string postfix</div><div class="ttdoc">Postfix to append after the counter. Default is empty.</div><div class="ttdef"><b>Definition</b> get_unique_attribute_name.h:38</div></div>
+<div class="ttc" id="astructlagrange_1_1_unique_attribute_name_options_html_a7f91c2db1508443beaf6bdb121989d19"><div class="ttname"><a href="structlagrange_1_1_unique_attribute_name_options.html#a7f91c2db1508443beaf6bdb121989d19">lagrange::UniqueAttributeNameOptions::max_increment</a></div><div class="ttdeci">int max_increment</div><div class="ttdoc">Maximum number of attempts to find a unique name. Default is 1000.</div><div class="ttdef"><b>Definition</b> get_unique_attribute_name.h:41</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_e277d0e790805391a364b883bec7db94.html">lagrange</a></li><li class="navelem"><a class="el" href="dir_f868e3065168465c1bbcc3009ef2971c.html">internal</a></li><li class="navelem"><b>get_unique_attribute_name.h</b></li>
-    <li class="footer">Generated on Mon Apr 27 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+    <li class="navelem"><a class="el" href="dir_e277d0e790805391a364b883bec7db94.html">lagrange</a></li><li class="navelem"><b>get_unique_attribute_name.h</b></li>
+    <li class="footer">Generated on Sat Jun 20 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>
 </body>

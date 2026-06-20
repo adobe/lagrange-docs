@@ -56,19 +56,8 @@ Module Contents
    :return: The dilated position map.
 
 
-.. py:function:: rasterize_textures_from_renders(scene, renders, width = None, height = None, low_confidence_ratio = 0.75, base_confidence = None)
-
-   Rasterize one (color, weight) per (render, camera) and filter our low-confidence weights.
-
-   :param scene: Scene containing a single mesh (possibly with a base texture), and multiple cameras.
-   :param renders: List of rendered images, one per camera.
-   :param width: Width of the rasterized textures. Must match the width of the base texture if present. Otherwise, defaults to 1024.
-   :param height: Height of the rasterized textures. Must match the height of the base texture if present. Otherwise, defaults to 1024.
-   :param low_confidence_ratio: Discard low confidence texels whose weights are < ratio * max_weight.
-   :param base_confidence: Confidence value for the base texture if present in the scene. If set to 0, ignore the base texture of the mesh. Defaults to 0.3 otherwise.
-
-   :return: A pair of lists (textures, weights), one per camera.
-
+.. py:function:: rasterize_textures_from_renders(scene: lagrange.scene.Scene, renders: collections.abc.Sequence[Annotated[numpy.typing.NDArray[numpy.float32], dict(shape=(None, None, None), order='C', device='cpu')]], *, base_texture: Annotated[numpy.typing.NDArray[numpy.float32], dict(shape=(None, None, None), order='C', device='cpu')] | None = None, width: int | None = None, height: int | None = None, low_confidence_ratio: float = 0.75, base_confidence: float | None = None) -> tuple[list[object], list[object]]
+                 rasterize_textures_from_renders(mesh: lagrange.core.SurfaceMesh, cameras: collections.abc.Sequence[lagrange.core.CameraTransforms], renders: collections.abc.Sequence[Annotated[numpy.typing.NDArray[numpy.float32], dict(shape=(None, None, None), order='C', device='cpu')]], *, base_texture: Annotated[numpy.typing.NDArray[numpy.float32], dict(shape=(None, None, None), order='C', device='cpu')] | None = None, width: int | None = None, height: int | None = None, low_confidence_ratio: float = 0.75, base_confidence: float | None = None) -> tuple[list[object], list[object]]
 
 .. py:function:: texture_compositing(mesh, colors, weights, value_weight = 1000.0, quadrature_samples = 6, jitter_epsilon = 0.0001, clamp_to_range = None, smooth_low_weight_areas = False, num_multigrid_levels = 4, num_gauss_seidel_iterations = 3, num_v_cycles = 5)
 

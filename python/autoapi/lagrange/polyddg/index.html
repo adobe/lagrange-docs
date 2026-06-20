@@ -200,11 +200,17 @@
 <li class="toctree-l2"><a class="reference internal" href="../geodesic/index.html">lagrange.geodesic</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../image/index.html">lagrange.image</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../io/index.html">lagrange.io</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../packing/index.html">lagrange.packing</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../poisson/index.html">lagrange.poisson</a></li>
 <li class="toctree-l2 current current-page"><a class="current reference internal" href="#">lagrange.polyddg</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../primitive/index.html">lagrange.primitive</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../raycasting/index.html">lagrange.raycasting</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../scene/index.html">lagrange.scene</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../scripts/index.html">lagrange.scripts</a><input aria-label="Toggle navigation of lagrange.scripts" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../scripts/meshstat/index.html">lagrange.scripts.meshstat</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../serialization/index.html">lagrange.serialization</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../solver/index.html">lagrange.solver</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../subdivision/index.html">lagrange.subdivision</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../texproc/index.html">lagrange.texproc</a></li>
@@ -267,7 +273,7 @@
 <tr class="row-odd"><td><p><a class="reference internal" href="#lagrange.polyddg.compute_principal_curvatures" title="lagrange.polyddg.compute_principal_curvatures"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compute_principal_curvatures</span></code></a>(…)</p></td>
 <td><p>Compute per-vertex principal curvatures and principal curvature directions.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#lagrange.polyddg.compute_smooth_direction_field" title="lagrange.polyddg.compute_smooth_direction_field"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compute_smooth_direction_field</span></code></a>(mesh, ops, *[, nrosy, ...])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#lagrange.polyddg.compute_smooth_direction_field" title="lagrange.polyddg.compute_smooth_direction_field"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compute_smooth_direction_field</span></code></a>(…)</p></td>
 <td><p>Compute the globally smoothest n-direction field on a surface mesh.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#lagrange.polyddg.hodge_decomposition_1_form" title="lagrange.polyddg.hodge_decomposition_1_form"><code class="xref py py-obj docutils literal notranslate"><span class="pre">hodge_decomposition_1_form</span></code></a>(…)</p></td>
@@ -964,40 +970,37 @@ are the principal directions. All four quantities are stored as vertex attribute
 
 <dl class="py function">
 <dt class="sig sig-object py" id="lagrange.polyddg.compute_smooth_direction_field">
-<span class="sig-prename descclassname"><span class="pre">lagrange.polyddg.</span></span><span class="sig-name descname"><span class="pre">compute_smooth_direction_field</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mesh</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ops</span></span></em>, <em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">nrosy</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">4</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">beta</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alignment_attribute</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alignment_weight</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">direction_field_attribute</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'&#64;smooth_direction_field'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lagrange.polyddg.compute_smooth_direction_field" title="Link to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">lagrange.polyddg.</span></span><span class="sig-name descname"><span class="pre">compute_smooth_direction_field</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mesh</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../core/index.html#lagrange.core.SurfaceMesh" title="lagrange.core.SurfaceMesh"><span class="pre">lagrange.core.SurfaceMesh</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">ops</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#lagrange.polyddg.DifferentialOperators" title="lagrange.polyddg.DifferentialOperators"><span class="pre">DifferentialOperators</span></a></span></em>, <em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">nrosy</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">4</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">beta</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_element_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../core/index.html#lagrange.core.AttributeElement" title="lagrange.core.AttributeElement"><span class="pre">lagrange.core.AttributeElement</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">AttributeElement.Vertex</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alignment_attribute</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">direction_field_attribute</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#lagrange.polyddg.compute_smooth_direction_field" title="Link to this definition">¶</a></dt>
+<dt class="sig sig-object py">
+<span class="sig-prename descclassname"><span class="pre">lagrange.polyddg.</span></span><span class="sig-name descname"><span class="pre">compute_smooth_direction_field</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mesh</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../core/index.html#lagrange.core.SurfaceMesh" title="lagrange.core.SurfaceMesh"><span class="pre">lagrange.core.SurfaceMesh</span></a></span></em>, <em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">nrosy</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">4</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">beta</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_element_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../core/index.html#lagrange.core.AttributeElement" title="lagrange.core.AttributeElement"><span class="pre">lagrange.core.AttributeElement</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">AttributeElement.Vertex</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alignment_attribute</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">direction_field_attribute</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span></dt>
 <dd><p>Compute the globally smoothest n-direction field on a surface mesh.</p>
-<p>Based on: Knöppel et al., “Globally optimal direction fields”, ACM ToG 32(4), 2013.</p>
-<p>Without alignment constraints (<code class="docutils literal notranslate"><span class="pre">alignment_attribute</span></code> is empty), solves the generalized
-eigenvalue problem <span class="math notranslate nohighlight">\(L u = \sigma M u\)</span> for the smallest eigenvector. The result
-minimizes the Dirichlet energy of the connection.</p>
-<p>With alignment constraints, reads per-vertex prescribed 3-D tangent vectors from the given
-attribute (zero-length vectors are unconstrained) and solves the shifted linear system
-<span class="math notranslate nohighlight">\((L - \alpha M) u = M q\)</span>, where <span class="math notranslate nohighlight">\(q\)</span> is the M-normalized prescribed field and
-<span class="math notranslate nohighlight">\(\alpha = \texttt{alignment\_lambda} \cdot \sigma_{\min}\)</span>.</p>
+<p>Convenience overload that constructs a <a class="reference internal" href="#lagrange.polyddg.DifferentialOperators" title="lagrange.polyddg.DifferentialOperators"><code class="xref py py-class docutils literal notranslate"><span class="pre">DifferentialOperators</span></code></a> instance internally.</p>
+<p>Dispatches to a vertex-based or facet-based implementation depending on
+<code class="docutils literal notranslate"><span class="pre">output_element_type</span></code>:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">AttributeElement.Vertex</span></code> (default): stores a per-vertex 3-D tangent vector attribute
+(default name <code class="docutils literal notranslate"><span class="pre">&quot;&#64;smooth_direction_field&quot;</span></code>).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">AttributeElement.Facet</span></code>: stores a per-facet 3-D tangent vector attribute (default name
+<code class="docutils literal notranslate"><span class="pre">&quot;&#64;smooth_direction_field_facets&quot;</span></code>).</p></li>
+</ul>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>mesh</strong> (<a class="reference internal" href="../core/index.html#lagrange.core.SurfaceMesh" title="lagrange.core.SurfaceMesh"><em>lagrange.core.SurfaceMesh</em></a>) – Input surface mesh (modified in place with the new attribute).</p></li>
-<li><p><strong>ops</strong> (<a class="reference internal" href="#lagrange.polyddg.DifferentialOperators" title="lagrange.polyddg.DifferentialOperators"><em>DifferentialOperators</em></a>) – Precomputed <a class="reference internal" href="#lagrange.polyddg.DifferentialOperators" title="lagrange.polyddg.DifferentialOperators"><code class="xref py py-class docutils literal notranslate"><span class="pre">DifferentialOperators</span></code></a> for the mesh.</p></li>
-<li><p><strong>nrosy</strong> (<em>int</em>) – Symmetry order of the direction field (1 = vector field, 2 = line field,
+<li><p><strong>mesh</strong> – Input surface mesh (modified in place with the new attribute).</p></li>
+<li><p><strong>nrosy</strong> – Symmetry order of the direction field (1 = vector field, 2 = line field,
 4 = cross field, default: 4).</p></li>
-<li><p><strong>beta</strong> (<em>float</em>) – Stabilization weight for the VEM projection term in the connection Laplacian
-(default: 1).</p></li>
-<li><p><strong>alignment_attribute</strong> (<em>str</em>) – Name of a per-vertex 3-D alignment vector attribute (zero =
-unconstrained). If empty, the unconstrained smoothest field is computed.</p></li>
-<li><p><strong>alignment_weight</strong> (<em>float</em>) – Scaling factor for the spectral shift (default: 1). The actual
-shift is <code class="docutils literal notranslate"><span class="pre">alignment_weight</span> <span class="pre">*</span> <span class="pre">sigma_min</span></code>, where <code class="docutils literal notranslate"><span class="pre">sigma_min</span></code> is the smallest eigenvalue
-of the connection Laplacian (computed automatically). Values in (0, 1) give weaker
-alignment (more smoothness).</p></li>
-<li><p><strong>direction_field_attribute</strong> (<em>str</em>) – Output attribute name for the per-vertex 3-D direction
-field (default: <code class="docutils literal notranslate"><span class="pre">&quot;&#64;smooth_direction_field&quot;</span></code>).</p></li>
+<li><p><strong>beta</strong> – Stabilization weight for the VEM projection term in the connection Laplacian
+(vertex-based path only, default: 1).</p></li>
+<li><p><strong>output_element_type</strong> – Where to store the result — <code class="docutils literal notranslate"><span class="pre">AttributeElement.Vertex</span></code>
+(default) for per-vertex output, or <code class="docutils literal notranslate"><span class="pre">AttributeElement.Facet</span></code> for per-facet output.</p></li>
+<li><p><strong>alignment_attribute</strong> – Name of an alignment vector attribute (zero = unconstrained).
+Must match <code class="docutils literal notranslate"><span class="pre">output_element_type</span></code>. If empty, the unconstrained smoothest field is computed.</p></li>
+<li><p><strong>direction_field_attribute</strong> – Output attribute name. Pass <code class="docutils literal notranslate"><span class="pre">&quot;&quot;</span></code> (the default) to use
+the canonical name.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>Attribute ID of the output per-vertex direction field.</p>
-</dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>int</p>
+<dd class="field-even"><p>Attribute ID of the output direction field.</p>
 </dd>
 </dl>
 </dd></dl>

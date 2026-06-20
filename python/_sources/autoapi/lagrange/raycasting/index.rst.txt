@@ -23,16 +23,19 @@ Functions
 .. autoapisummary::
 
    lagrange.raycasting.compute_local_feature_size
+   lagrange.raycasting.estimate_occluded_instances
    lagrange.raycasting.project
    lagrange.raycasting.project_closest_point
    lagrange.raycasting.project_closest_vertex
    lagrange.raycasting.project_directional
+   lagrange.raycasting.remove_occluded_facets
+   lagrange.raycasting.remove_occluded_instances
 
 
 Module Contents
 ---------------
 
-.. py:class:: BuildQuality(*args, **kwds)
+.. py:class:: BuildQuality
 
    Bases: :py:obj:`enum.Enum`
 
@@ -61,7 +64,7 @@ Module Contents
       Moderate build time and BVH quality.
 
 
-.. py:class:: CastMode(*args, **kwds)
+.. py:class:: CastMode
 
    Bases: :py:obj:`enum.Enum`
 
@@ -83,7 +86,7 @@ Module Contents
       Cast forward only.
 
 
-.. py:class:: FallbackMode(*args, **kwds)
+.. py:class:: FallbackMode
 
    Bases: :py:obj:`enum.Enum`
 
@@ -112,7 +115,7 @@ Module Contents
       Fill with a constant value.
 
 
-.. py:class:: ProjectMode(*args, **kwds)
+.. py:class:: ProjectMode
 
    Bases: :py:obj:`enum.Enum`
 
@@ -338,6 +341,20 @@ Module Contents
    :rtype: int
 
 
+.. py:function:: estimate_occluded_instances(scene, *, num_rays = 1600000000, batch_size = 20000000, until_converged = False, is_occluder = None)
+
+   Find mesh instances that are fully occluded by other geometry.
+
+   :param scene:           Input scene.
+   :param num_rays:        Total ray budget. Must be > 0 unless ``until_converged`` is True.
+   :param batch_size:      Rays per batch.
+   :param until_converged: Stop early when a batch finds no new visible instances.
+   :param is_occluder:     Optional callable ``(mesh_index, instance_index) -> bool``. See
+                           :py:func:`remove_occluded_instances`.
+
+   :return: List of ``(mesh_index, instance_index)`` pairs for occluded instances.
+
+
 .. py:function:: project(source: lagrange.core.SurfaceMesh, target: lagrange.core.SurfaceMesh, attribute_ids: collections.abc.Sequence[int] = [], project_vertices: bool = True, project_mode: ProjectMode = ProjectMode.ClosestPoint, direction: object | None = None, cast_mode: CastMode = CastMode.BothWays, fallback_mode: FallbackMode = FallbackMode.Constant, default_value: float = 0.0, ray_caster: RayCaster | None = None) -> None
                  project(source: lagrange.core.SurfaceMesh, points: Annotated[numpy.typing.NDArray[numpy.float64], dict(shape=(None, 3), order='C', device='cpu')], project_mode: ProjectMode, direction: Annotated[numpy.typing.NDArray[numpy.float32], dict(shape=3, order='C')] | Annotated[numpy.typing.NDArray[numpy.float64], dict(shape=(None, 3), order='C', device='cpu')] | None = None, cast_mode: CastMode = CastMode.BothWays, fallback_mode: FallbackMode = FallbackMode.Constant, default_value: float = 0.0, ray_caster: RayCaster | None = None) -> Annotated[numpy.typing.NDArray[numpy.float64], dict(shape=(None, 3), order='C', device='cpu')]
 
@@ -399,5 +416,47 @@ Module Contents
    :param default_value:   Fill value for ``FallbackMode.Constant`` (default: 0).
    :param ray_caster:      Optional pre-built :class:`RayCaster` for caching.
    :return: (N, 3) NumPy array of projected positions (float64).
+
+
+.. py:function:: remove_occluded_facets(scene, *, num_rays = 1600000000, batch_size = 20000000, num_adaptive_per_normal = 6, brute_force = False, until_converged = False, jitter_sigma = 0.025, visibility_threshold = 3, is_occluder = None)
+
+   Build a new scene with facets not visible from the outside removed.
+
+   The output contains one unique mesh per input instance: instances of the same source mesh can
+   end up with different facets culled, so the input's instancing cannot be preserved.
+
+   :param scene:                   Input scene.
+   :param num_rays:                Total ray budget. Must be > 0 unless ``until_converged`` is True.
+   :param batch_size:              Rays per batch.
+   :param num_adaptive_per_normal: Adaptive batches per normal batch (0 = pure cosine sampling).
+                                   Ignored when ``brute_force`` is True.
+   :param brute_force:             Run brute-force batches only — baseline for benchmarking.
+   :param until_converged:         Stop early when a cycle finds no new visible facets.
+   :param jitter_sigma:            Std-dev of Gaussian jitter applied to adaptive seed directions.
+   :param visibility_threshold:    Number of independent escapes required to mark a facet visible
+                                   (>= 1). 1 = first-escape-wins (original); 2-3 dampens hairline-
+                                   gap shrapnel.
+   :param is_occluder:             Optional callable ``(mesh_index, instance_index) -> bool``
+                                   returning whether an instance should block rays. Non-occluders
+                                   are still tested for visibility but do not contribute to the
+                                   ray-caster scene. Defaults to None (every instance is an
+                                   occluder).
+   :return: Scene with occluded facets removed.
+
+
+.. py:function:: remove_occluded_instances(scene, *, num_rays = 1600000000, batch_size = 20000000, until_converged = False, is_occluder = None)
+
+   Remove fully-occluded mesh instances from a scene.
+
+   :param scene:           Input scene.
+   :param num_rays:        Total ray budget. Must be > 0 unless ``until_converged`` is True.
+   :param batch_size:      Rays per batch.
+   :param until_converged: Stop early when a batch finds no new visible instances.
+   :param is_occluder:     Optional callable ``(mesh_index, instance_index) -> bool`` returning
+                           whether an instance should block rays. Non-occluders are still tested
+                           for visibility but do not contribute to the ray-caster scene. Defaults
+                           to None (every instance is an occluder).
+
+   :return: Scene with occluded instances removed.
 
 

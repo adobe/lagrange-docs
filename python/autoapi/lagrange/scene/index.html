@@ -3,7 +3,7 @@
   <head><meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="index" title="Index" href="../../../genindex.html"><link rel="search" title="Search" href="../../../search.html"><link rel="next" title="lagrange.solver" href="../solver/index.html"><link rel="prev" title="lagrange.raycasting" href="../raycasting/index.html">
+<link rel="index" title="Index" href="../../../genindex.html"><link rel="search" title="Search" href="../../../search.html"><link rel="next" title="lagrange.scripts" href="../scripts/index.html"><link rel="prev" title="lagrange.raycasting" href="../raycasting/index.html">
 
     <!-- Generated with Sphinx 8.2.3 and Furo 2025.09.25 -->
         <title>lagrange.scene - Lagrange documentation</title>
@@ -200,11 +200,17 @@
 <li class="toctree-l2"><a class="reference internal" href="../geodesic/index.html">lagrange.geodesic</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../image/index.html">lagrange.image</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../io/index.html">lagrange.io</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../packing/index.html">lagrange.packing</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../poisson/index.html">lagrange.poisson</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../polyddg/index.html">lagrange.polyddg</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../primitive/index.html">lagrange.primitive</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../raycasting/index.html">lagrange.raycasting</a></li>
 <li class="toctree-l2 current current-page"><a class="current reference internal" href="#">lagrange.scene</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../scripts/index.html">lagrange.scripts</a><input aria-label="Toggle navigation of lagrange.scripts" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../scripts/meshstat/index.html">lagrange.scripts.meshstat</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../serialization/index.html">lagrange.serialization</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../solver/index.html">lagrange.solver</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../subdivision/index.html">lagrange.subdivision</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../texproc/index.html">lagrange.texproc</a></li>
@@ -348,40 +354,49 @@
 <div class="table-wrapper autosummary longtable docutils container">
 <table class="autosummary longtable docutils align-default">
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#lagrange.scene.compute_global_node_transform" title="lagrange.scene.compute_global_node_transform"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compute_global_node_transform</span></code></a>(scene, node_idx)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#lagrange.scene.camera_transforms_from_scene" title="lagrange.scene.camera_transforms_from_scene"><code class="xref py py-obj docutils literal notranslate"><span class="pre">camera_transforms_from_scene</span></code></a>(scene)</p></td>
+<td><p>Extract view and projection transforms for every camera referenced by a node in the scene.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#lagrange.scene.compute_global_node_transform" title="lagrange.scene.compute_global_node_transform"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compute_global_node_transform</span></code></a>(scene, node_idx)</p></td>
 <td><p>Compute the global transform associated with a node.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#lagrange.scene.mesh_to_scene" title="lagrange.scene.mesh_to_scene"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mesh_to_scene</span></code></a>(mesh)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#lagrange.scene.compute_mesh_weights" title="lagrange.scene.compute_mesh_weights"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compute_mesh_weights</span></code></a>(scene[, facet_allocation_strategy])</p></td>
+<td><p>Computes mesh weights of a scene.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#lagrange.scene.filter_instances" title="lagrange.scene.filter_instances"><code class="xref py py-obj docutils literal notranslate"><span class="pre">filter_instances</span></code></a>(scene, keep)</p></td>
+<td><p>Build a new scene keeping only instances for which <code class="docutils literal notranslate"><span class="pre">keep(mesh_index,</span> <span class="pre">instance_index)</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#lagrange.scene.mesh_to_scene" title="lagrange.scene.mesh_to_scene"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mesh_to_scene</span></code></a>(mesh)</p></td>
 <td><p>Converts a single mesh into a scene with a single identity instance of the input mesh.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#lagrange.scene.mesh_to_simple_scene" title="lagrange.scene.mesh_to_simple_scene"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mesh_to_simple_scene</span></code></a>(mesh)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#lagrange.scene.mesh_to_simple_scene" title="lagrange.scene.mesh_to_simple_scene"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mesh_to_simple_scene</span></code></a>(mesh)</p></td>
 <td><p>Converts a single mesh into a simple scene with a single identity instance of the input mesh.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#lagrange.scene.meshes_to_scene" title="lagrange.scene.meshes_to_scene"><code class="xref py py-obj docutils literal notranslate"><span class="pre">meshes_to_scene</span></code></a>(meshes)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#lagrange.scene.meshes_to_scene" title="lagrange.scene.meshes_to_scene"><code class="xref py py-obj docutils literal notranslate"><span class="pre">meshes_to_scene</span></code></a>(meshes)</p></td>
 <td><p>Converts a list of meshes into a scene with a single identity instance of each input mesh.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#lagrange.scene.meshes_to_simple_scene" title="lagrange.scene.meshes_to_simple_scene"><code class="xref py py-obj docutils literal notranslate"><span class="pre">meshes_to_simple_scene</span></code></a>(meshes)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#lagrange.scene.meshes_to_simple_scene" title="lagrange.scene.meshes_to_simple_scene"><code class="xref py py-obj docutils literal notranslate"><span class="pre">meshes_to_simple_scene</span></code></a>(meshes)</p></td>
 <td><p>Converts a list of meshes into a simple scene with a single identity instance of each input mesh.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#lagrange.scene.scene_to_mesh" title="lagrange.scene.scene_to_mesh"><code class="xref py py-obj docutils literal notranslate"><span class="pre">scene_to_mesh</span></code></a>(scene[, normalize_normals, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#lagrange.scene.scene_to_mesh" title="lagrange.scene.scene_to_mesh"><code class="xref py py-obj docutils literal notranslate"><span class="pre">scene_to_mesh</span></code></a>(scene[, normalize_normals, ...])</p></td>
 <td><p>Converts a scene into a concatenated mesh with all the transforms applied.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#lagrange.scene.scene_to_meshes" title="lagrange.scene.scene_to_meshes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">scene_to_meshes</span></code></a>(scene[, normalize_normals, ...])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#lagrange.scene.scene_to_meshes" title="lagrange.scene.scene_to_meshes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">scene_to_meshes</span></code></a>(scene[, normalize_normals, ...])</p></td>
 <td><p>Converts a scene into a list of meshes with all the transforms applied.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#lagrange.scene.scene_to_meshes_and_materials" title="lagrange.scene.scene_to_meshes_and_materials"><code class="xref py py-obj docutils literal notranslate"><span class="pre">scene_to_meshes_and_materials</span></code></a>(scene[, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#lagrange.scene.scene_to_meshes_and_materials" title="lagrange.scene.scene_to_meshes_and_materials"><code class="xref py py-obj docutils literal notranslate"><span class="pre">scene_to_meshes_and_materials</span></code></a>(scene[, ...])</p></td>
 <td><p>Converts a scene into a list of meshes with all the transforms applied and a list of material IDs.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#lagrange.scene.scene_to_simple_scene" title="lagrange.scene.scene_to_simple_scene"><code class="xref py py-obj docutils literal notranslate"><span class="pre">scene_to_simple_scene</span></code></a>(scene)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#lagrange.scene.scene_to_simple_scene" title="lagrange.scene.scene_to_simple_scene"><code class="xref py py-obj docutils literal notranslate"><span class="pre">scene_to_simple_scene</span></code></a>(scene)</p></td>
 <td><p>Converts a Scene into a SimpleScene.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#lagrange.scene.simple_scene_to_mesh" title="lagrange.scene.simple_scene_to_mesh"><code class="xref py py-obj docutils literal notranslate"><span class="pre">simple_scene_to_mesh</span></code></a>(scene[, normalize_normals, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#lagrange.scene.simple_scene_to_mesh" title="lagrange.scene.simple_scene_to_mesh"><code class="xref py py-obj docutils literal notranslate"><span class="pre">simple_scene_to_mesh</span></code></a>(scene[, normalize_normals, ...])</p></td>
 <td><p>Converts a scene into a concatenated mesh with all the transforms applied.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#lagrange.scene.simple_scene_to_meshes" title="lagrange.scene.simple_scene_to_meshes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">simple_scene_to_meshes</span></code></a>(scene[, normalize_normals, ...])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#lagrange.scene.simple_scene_to_meshes" title="lagrange.scene.simple_scene_to_meshes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">simple_scene_to_meshes</span></code></a>(scene[, normalize_normals, ...])</p></td>
 <td><p>Converts a scene into a list of meshes with all the transforms applied.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#lagrange.scene.simple_scene_to_scene" title="lagrange.scene.simple_scene_to_scene"><code class="xref py py-obj docutils literal notranslate"><span class="pre">simple_scene_to_scene</span></code></a>(simple_scene)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#lagrange.scene.simple_scene_to_scene" title="lagrange.scene.simple_scene_to_scene"><code class="xref py py-obj docutils literal notranslate"><span class="pre">simple_scene_to_scene</span></code></a>(simple_scene)</p></td>
 <td><p>Converts a SimpleScene into a Scene.</p></td>
 </tr>
 </tbody>
@@ -636,7 +651,7 @@
 <dd><p>Camera</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="lagrange.scene.Camera.Type">
-<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Type</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwds</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lagrange.scene.Camera.Type" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Type</span></span><a class="headerlink" href="#lagrange.scene.Camera.Type" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">enum.Enum</span></code></p>
 <p>Camera type</p>
 <dl class="py attribute">
@@ -1263,7 +1278,7 @@
 
 <dl class="py class">
 <dt class="sig sig-object py" id="lagrange.scene.FacetAllocationStrategy">
-<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">lagrange.scene.</span></span><span class="sig-name descname"><span class="pre">FacetAllocationStrategy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwds</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lagrange.scene.FacetAllocationStrategy" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">lagrange.scene.</span></span><span class="sig-name descname"><span class="pre">FacetAllocationStrategy</span></span><a class="headerlink" href="#lagrange.scene.FacetAllocationStrategy" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">enum.Enum</span></code></p>
 <p>Facet allocation strategy for meshes in the scene during decimation or remeshing.</p>
 <dl class="py attribute">
@@ -1631,7 +1646,7 @@
 <dd><p>Light</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="lagrange.scene.Light.Type">
-<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Type</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwds</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lagrange.scene.Light.Type" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Type</span></span><a class="headerlink" href="#lagrange.scene.Light.Type" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">enum.Enum</span></code></p>
 <p>Light type</p>
 <dl class="py attribute">
@@ -2093,7 +2108,7 @@
 <dd><p>PBR material, based on the gltf specification. This is subject to change, to support more material models</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="lagrange.scene.Material.AlphaMode">
-<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">AlphaMode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwds</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lagrange.scene.Material.AlphaMode" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">AlphaMode</span></span><a class="headerlink" href="#lagrange.scene.Material.AlphaMode" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">enum.Enum</span></code></p>
 <p>Alpha mode</p>
 <dl class="py attribute">
@@ -3927,7 +3942,7 @@ input tensors are supported for setting the transform.</p>
 <dd><p>Texture</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="lagrange.scene.Texture.TextureFilter">
-<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">TextureFilter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwds</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lagrange.scene.Texture.TextureFilter" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">TextureFilter</span></span><a class="headerlink" href="#lagrange.scene.Texture.TextureFilter" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">enum.Enum</span></code></p>
 <p>Texture filter mode</p>
 <dl class="py attribute">
@@ -3976,7 +3991,7 @@ input tensors are supported for setting the transform.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="lagrange.scene.Texture.WrapMode">
-<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">WrapMode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwds</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lagrange.scene.Texture.WrapMode" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">WrapMode</span></span><a class="headerlink" href="#lagrange.scene.Texture.WrapMode" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">enum.Enum</span></code></p>
 <p>Texture wrap mode</p>
 <dl class="py attribute">
@@ -4369,7 +4384,7 @@ input tensors are supported for setting the transform.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="lagrange.scene.UninstantiatedMeshesStrategy">
-<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">lagrange.scene.</span></span><span class="sig-name descname"><span class="pre">UninstantiatedMeshesStrategy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwds</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lagrange.scene.UninstantiatedMeshesStrategy" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">lagrange.scene.</span></span><span class="sig-name descname"><span class="pre">UninstantiatedMeshesStrategy</span></span><a class="headerlink" href="#lagrange.scene.UninstantiatedMeshesStrategy" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">enum.Enum</span></code></p>
 <p>Strategy for meshes without instances in a scene.</p>
 <dl class="py attribute">
@@ -4393,6 +4408,23 @@ input tensors are supported for setting the transform.</p>
 </dd></dl>
 
 <dl class="py function">
+<dt class="sig sig-object py" id="lagrange.scene.camera_transforms_from_scene">
+<span class="sig-prename descclassname"><span class="pre">lagrange.scene.</span></span><span class="sig-name descname"><span class="pre">camera_transforms_from_scene</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">scene</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lagrange.scene.camera_transforms_from_scene" title="Link to this definition">¶</a></dt>
+<dd><p>Extract view and projection transforms for every camera referenced by a node in the scene.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>scene</strong> (<a class="reference internal" href="#lagrange.scene.Scene" title="lagrange.scene.Scene"><em>Scene</em></a>) – The input scene.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A list of CameraTransforms, one per camera instance in the scene.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list[<a class="reference internal" href="../core/index.html#lagrange.core.CameraTransforms" title="lagrange.core.CameraTransforms">core.CameraTransforms</a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
 <dt class="sig sig-object py" id="lagrange.scene.compute_global_node_transform">
 <span class="sig-prename descclassname"><span class="pre">lagrange.scene.</span></span><span class="sig-name descname"><span class="pre">compute_global_node_transform</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">scene</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">node_idx</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lagrange.scene.compute_global_node_transform" title="Link to this definition">¶</a></dt>
 <dd><p>Compute the global transform associated with a node.</p>
@@ -4408,6 +4440,53 @@ input tensors are supported for setting the transform.</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>Annotated[numpy.typing.NDArray[numpy.float32], dict(shape=(4, 4), order=’F’)]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="lagrange.scene.compute_mesh_weights">
+<span class="sig-prename descclassname"><span class="pre">lagrange.scene.</span></span><span class="sig-name descname"><span class="pre">compute_mesh_weights</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">scene</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">facet_allocation_strategy</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">FacetAllocationStrategy.EvenSplit</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lagrange.scene.compute_mesh_weights" title="Link to this definition">¶</a></dt>
+<dd><p>Computes mesh weights of a scene.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>scene</strong> (<a class="reference internal" href="#lagrange.scene.SimpleScene3D" title="lagrange.scene.SimpleScene3D"><em>SimpleScene3D</em></a>) – Input scene. Must contain at least one mesh. For
+<code class="docutils literal notranslate"><span class="pre">RelativeToMeshArea</span></code>, if the scene contains no instances (or only
+degenerate transforms) the total transformed area is zero and all returned
+weights are zero. For <code class="docutils literal notranslate"><span class="pre">RelativeToNumFacets</span></code> the total facet count must be
+positive, otherwise the returned weights will contain non-finite values.</p></li>
+<li><p><strong>facet_allocation_strategy</strong> (<a class="reference internal" href="#lagrange.scene.FacetAllocationStrategy" title="lagrange.scene.FacetAllocationStrategy"><em>FacetAllocationStrategy</em></a>) – Strategy used to compute the weights distribution. Defaults to
+<code class="docutils literal notranslate"><span class="pre">FacetAllocationStrategy.EvenSplit</span></code>. <code class="docutils literal notranslate"><span class="pre">FacetAllocationStrategy.Synchronized</span></code>
+is not supported by this function and will raise <code class="xref py py-class docutils literal notranslate"><span class="pre">RuntimeError</span></code>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Weights for each mesh of the scene that sum to unity, each in [0, 1].</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list[float]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="lagrange.scene.filter_instances">
+<span class="sig-prename descclassname"><span class="pre">lagrange.scene.</span></span><span class="sig-name descname"><span class="pre">filter_instances</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">scene</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">keep</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lagrange.scene.filter_instances" title="Link to this definition">¶</a></dt>
+<dd><p>Build a new scene keeping only instances for which <code class="docutils literal notranslate"><span class="pre">keep(mesh_index,</span> <span class="pre">instance_index)</span></code>
+returns True. Meshes with no remaining instances are dropped; mesh indices are compacted.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>scene</strong> (<a class="reference internal" href="#lagrange.scene.SimpleScene3D" title="lagrange.scene.SimpleScene3D"><em>SimpleScene3D</em></a>) – Input scene.</p></li>
+<li><p><strong>keep</strong> (<em>collections.abc.Callable</em><em>[</em><em>[</em><em>int</em><em>, </em><em>int</em><em>]</em><em>, </em><em>bool</em><em>]</em>) – Callable <code class="docutils literal notranslate"><span class="pre">(mesh_index,</span> <span class="pre">instance_index)</span> <span class="pre">-&gt;</span> <span class="pre">bool</span></code>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Filtered scene.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#lagrange.scene.SimpleScene3D" title="lagrange.scene.SimpleScene3D">SimpleScene3D</a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -4636,12 +4715,12 @@ by index.</p>
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="../solver/index.html">
+          <a class="next-page" href="../scripts/index.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">lagrange.solver</div>
+                <div class="title">lagrange.scripts</div>
               </div>
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
@@ -5136,7 +5215,10 @@ by index.</p>
 <li><a class="reference internal" href="#lagrange.scene.UninstantiatedMeshesStrategy.Skip"><code class="docutils literal notranslate"><span class="pre">UninstantiatedMeshesStrategy.Skip</span></code></a></li>
 </ul>
 </li>
+<li><a class="reference internal" href="#lagrange.scene.camera_transforms_from_scene"><code class="docutils literal notranslate"><span class="pre">camera_transforms_from_scene()</span></code></a></li>
 <li><a class="reference internal" href="#lagrange.scene.compute_global_node_transform"><code class="docutils literal notranslate"><span class="pre">compute_global_node_transform()</span></code></a></li>
+<li><a class="reference internal" href="#lagrange.scene.compute_mesh_weights"><code class="docutils literal notranslate"><span class="pre">compute_mesh_weights()</span></code></a></li>
+<li><a class="reference internal" href="#lagrange.scene.filter_instances"><code class="docutils literal notranslate"><span class="pre">filter_instances()</span></code></a></li>
 <li><a class="reference internal" href="#lagrange.scene.mesh_to_scene"><code class="docutils literal notranslate"><span class="pre">mesh_to_scene()</span></code></a></li>
 <li><a class="reference internal" href="#lagrange.scene.mesh_to_simple_scene"><code class="docutils literal notranslate"><span class="pre">mesh_to_simple_scene()</span></code></a></li>
 <li><a class="reference internal" href="#lagrange.scene.meshes_to_scene"><code class="docutils literal notranslate"><span class="pre">meshes_to_scene()</span></code></a></li>

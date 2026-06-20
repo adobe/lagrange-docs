@@ -162,13 +162,15 @@ Enumerations</h2></td></tr>
 <tr class="memitem:a2dcb234eaee670244cb660ae39416ad4" id="r_a2dcb234eaee670244cb660ae39416ad4"><td class="memItemLeft" align="right" valign="top"><a id="a2dcb234eaee670244cb660ae39416ad4" name="a2dcb234eaee670244cb660ae39416ad4"></a>enum class &#160;</td><td class="memItemRight" valign="bottom"><b>ImagePrecision</b> : unsigned int { <br />
 &#160;&#160;<b>uint8</b>
 , <b>int8</b>
+, <b>uint16</b>
 , <b>uint32</b>
-, <b>int32</b>
 , <br />
-&#160;&#160;<b>float32</b>
+&#160;&#160;<b>int32</b>
+, <b>float32</b>
 , <b>float64</b>
 , <b>float16</b>
-, <b>unknown</b>
+, <br />
+&#160;&#160;<b>unknown</b>
 <br />
  }</td></tr>
 <tr class="separator:a2dcb234eaee670244cb660ae39416ad4"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -266,9 +268,9 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>image_standard_devia
 template&lt;typename VALUE_SRC, typename VALUE_DST&gt; </td></tr>
 <tr class="memitem:a2bc876f7b56103b1d23bbfd4a6975b75"><td class="memTemplItemLeft" align="right" valign="top">VALUE_DST&#160;</td><td class="memTemplItemRight" valign="bottom"><b>convert_channel_value</b> (VALUE_SRC val)</td></tr>
 <tr class="separator:a2bc876f7b56103b1d23bbfd4a6975b75"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9d2c47b65ca5faa7e6b54dec02b35d52" id="r_a9d2c47b65ca5faa7e6b54dec02b35d52"><td class="memItemLeft" align="right" valign="top"><a id="a9d2c47b65ca5faa7e6b54dec02b35d52" name="a9d2c47b65ca5faa7e6b54dec02b35d52"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>LAGRANGE_IMAGE_TRAITS</b> (Eigen::Matrix&lt; unsigned char LAGRANGE_IMAGE_COMMA 3 LAGRANGE_IMAGE_COMMA 1 &gt;, unsigned char, 3, uint8, three) LAGRANGE_IMAGE_TRAITS(Eigen</td></tr>
-<tr class="separator:a9d2c47b65ca5faa7e6b54dec02b35d52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae8281428bcb7ae9d440bd7aed6517c7" id="r_aae8281428bcb7ae9d440bd7aed6517c7"><td class="memItemLeft" align="right" valign="top"><a id="aae8281428bcb7ae9d440bd7aed6517c7" name="aae8281428bcb7ae9d440bd7aed6517c7"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>LAGRANGE_IMAGE_TRAITS</b> (Eigen::Matrix&lt; uint16_t LAGRANGE_IMAGE_COMMA 3 LAGRANGE_IMAGE_COMMA 1 &gt;, uint16_t, 3, uint16, three) LAGRANGE_IMAGE_TRAITS(Eigen</td></tr>
+<tr class="separator:aae8281428bcb7ae9d440bd7aed6517c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9e45473662aae7ac8772caab5a840a55" id="r_a9e45473662aae7ac8772caab5a840a55"><td class="memTemplParams" colspan="2"><a id="a9e45473662aae7ac8772caab5a840a55" name="a9e45473662aae7ac8772caab5a840a55"></a>
 template&lt;typename Archive&gt; </td></tr>
 <tr class="memitem:a9e45473662aae7ac8772caab5a840a55"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>serialize</b> (<a class="el" href="classlagrange_1_1image_1_1_raw_input_image.html">lagrange::image::RawInputImage</a> &amp;image, Archive &amp;ar)</td></tr>
@@ -1091,7 +1093,7 @@ template&lt;typename T&gt; </td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacelagrange.html">lagrange</a></li><li class="navelem"><a class="el" href="namespacelagrange_1_1image.html">image</a></li>
-    <li class="footer">Generated on Mon Apr 27 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+    <li class="footer">Generated on Sat Jun 20 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>
 </body>

@@ -45,7 +45,10 @@ Functions
 
 .. autoapisummary::
 
+   lagrange.scene.camera_transforms_from_scene
    lagrange.scene.compute_global_node_transform
+   lagrange.scene.compute_mesh_weights
+   lagrange.scene.filter_instances
    lagrange.scene.mesh_to_scene
    lagrange.scene.mesh_to_simple_scene
    lagrange.scene.meshes_to_scene
@@ -172,7 +175,7 @@ Module Contents
    Camera
 
 
-   .. py:class:: Type(*args, **kwds)
+   .. py:class:: Type
 
       Bases: :py:obj:`enum.Enum`
 
@@ -476,7 +479,7 @@ Module Contents
 
 
 
-.. py:class:: FacetAllocationStrategy(*args, **kwds)
+.. py:class:: FacetAllocationStrategy
 
    Bases: :py:obj:`enum.Enum`
 
@@ -679,7 +682,7 @@ Module Contents
    Light
 
 
-   .. py:class:: Type(*args, **kwds)
+   .. py:class:: Type
 
       Bases: :py:obj:`enum.Enum`
 
@@ -949,7 +952,7 @@ Module Contents
    PBR material, based on the gltf specification. This is subject to change, to support more material models
 
 
-   .. py:class:: AlphaMode(*args, **kwds)
+   .. py:class:: AlphaMode
 
       Bases: :py:obj:`enum.Enum`
 
@@ -1882,7 +1885,7 @@ Module Contents
    Texture
 
 
-   .. py:class:: TextureFilter(*args, **kwds)
+   .. py:class:: TextureFilter
 
       Bases: :py:obj:`enum.Enum`
 
@@ -1940,7 +1943,7 @@ Module Contents
 
 
 
-   .. py:class:: WrapMode(*args, **kwds)
+   .. py:class:: WrapMode
 
       Bases: :py:obj:`enum.Enum`
 
@@ -2155,7 +2158,7 @@ Module Contents
 
 
 
-.. py:class:: UninstantiatedMeshesStrategy(*args, **kwds)
+.. py:class:: UninstantiatedMeshesStrategy
 
    Bases: :py:obj:`enum.Enum`
 
@@ -2184,6 +2187,15 @@ Module Contents
       Skip meshes with zero instances and keep originals in the output.
 
 
+.. py:function:: camera_transforms_from_scene(scene)
+
+   Extract view and projection transforms for every camera referenced by a node in the scene.
+
+   :param scene: The input scene.
+
+   :returns: A list of CameraTransforms, one per camera instance in the scene.
+
+
 .. py:function:: compute_global_node_transform(scene, node_idx)
 
    Compute the global transform associated with a node.
@@ -2192,6 +2204,33 @@ Module Contents
    :param node_idx: The index of the target node.
 
    :returns: The global transform of the target node, which is the combination of transforms from this node all the way to the root.
+
+
+.. py:function:: compute_mesh_weights(scene, facet_allocation_strategy = FacetAllocationStrategy.EvenSplit)
+
+   Computes mesh weights of a scene.
+
+   :param scene: Input scene. Must contain at least one mesh. For
+       ``RelativeToMeshArea``, if the scene contains no instances (or only
+       degenerate transforms) the total transformed area is zero and all returned
+       weights are zero. For ``RelativeToNumFacets`` the total facet count must be
+       positive, otherwise the returned weights will contain non-finite values.
+   :param facet_allocation_strategy: Strategy used to compute the weights distribution. Defaults to
+       ``FacetAllocationStrategy.EvenSplit``. ``FacetAllocationStrategy.Synchronized``
+       is not supported by this function and will raise :class:`RuntimeError`.
+
+   :return: Weights for each mesh of the scene that sum to unity, each in [0, 1].
+
+
+.. py:function:: filter_instances(scene, keep)
+
+   Build a new scene keeping only instances for which ``keep(mesh_index, instance_index)``
+   returns True. Meshes with no remaining instances are dropped; mesh indices are compacted.
+
+   :param scene: Input scene.
+   :param keep:  Callable ``(mesh_index, instance_index) -> bool``.
+
+   :return: Filtered scene.
 
 
 .. py:function:: mesh_to_scene(mesh)

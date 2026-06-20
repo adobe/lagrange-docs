@@ -37,10 +37,6 @@ var group__module_texproc =
       [ "clamp_to_range", "structlagrange_1_1texproc_1_1_stitching_options.html#a7f7515e85289d54ddb825f97d7c2f558", null ],
       [ "__randomize", "structlagrange_1_1texproc_1_1_stitching_options.html#abc55debe57196f8726a6553f516f41eb", null ]
     ] ],
-    [ "CameraOptions", "structlagrange_1_1texproc_1_1_camera_options.html", [
-      [ "view_transform", "structlagrange_1_1texproc_1_1_camera_options.html#a8b395be81e2f5e616c660c801c685c31", null ],
-      [ "projection_transform", "structlagrange_1_1texproc_1_1_camera_options.html#a170e05b3d1b429f882d1d0584e141051", null ]
-    ] ],
     [ "TextureRasterizerOptions", "structlagrange_1_1texproc_1_1_texture_rasterizer_options.html", [
       [ "depth_discontinuity_erosion_radius", "structlagrange_1_1texproc_1_1_texture_rasterizer_options.html#ae35905ac9447f734a0efcd6c8ef580a2", null ],
       [ "depth_discontinuity_threshold", "structlagrange_1_1texproc_1_1_texture_rasterizer_options.html#a8b65bd7670eb6bd683991bc9d201c11c", null ],
@@ -51,7 +47,7 @@ var group__module_texproc =
     [ "TextureRasterizer< Scalar, Index >", "classlagrange_1_1texproc_1_1_texture_rasterizer.html", [
       [ "TextureRasterizer", "classlagrange_1_1texproc_1_1_texture_rasterizer.html#a7611e56ef2e6684cf80d6ef630a21257", null ],
       [ "~TextureRasterizer", "classlagrange_1_1texproc_1_1_texture_rasterizer.html#aedabaef81d364b7a792e40c254251a8f", null ],
-      [ "weighted_texture_from_render", "classlagrange_1_1texproc_1_1_texture_rasterizer.html#aabcb6155f6d28112be1743bb2ad747cf", null ]
+      [ "weighted_texture_from_render", "classlagrange_1_1texproc_1_1_texture_rasterizer.html#a27488a89d0f208566814c868d27d0c5b", null ]
     ] ],
     [ "geodesic_dilation", "group__module-texproc.html#gafaf64c79dd34d7d6fa0ce97f0508a00f", null ],
     [ "texture_compositing", "group__module-texproc.html#gab3d8e8517a29a00717c081623b77ba66", null ],

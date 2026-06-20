@@ -200,11 +200,17 @@
 <li class="toctree-l2"><a class="reference internal" href="../geodesic/index.html">lagrange.geodesic</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../image/index.html">lagrange.image</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../io/index.html">lagrange.io</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../packing/index.html">lagrange.packing</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../poisson/index.html">lagrange.poisson</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../polyddg/index.html">lagrange.polyddg</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../primitive/index.html">lagrange.primitive</a></li>
 <li class="toctree-l2 current current-page"><a class="current reference internal" href="#">lagrange.raycasting</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../scene/index.html">lagrange.scene</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../scripts/index.html">lagrange.scripts</a><input aria-label="Toggle navigation of lagrange.scripts" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../scripts/meshstat/index.html">lagrange.scripts.meshstat</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../serialization/index.html">lagrange.serialization</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../solver/index.html">lagrange.solver</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../subdivision/index.html">lagrange.subdivision</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../texproc/index.html">lagrange.texproc</a></li>
@@ -282,17 +288,26 @@
 <tr class="row-odd"><td><p><a class="reference internal" href="#lagrange.raycasting.compute_local_feature_size" title="lagrange.raycasting.compute_local_feature_size"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compute_local_feature_size</span></code></a>(mesh, *[, ...])</p></td>
 <td><p>Compute local feature size for each vertex using medial axis approximation.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#lagrange.raycasting.project" title="lagrange.raycasting.project"><code class="xref py py-obj docutils literal notranslate"><span class="pre">project</span></code></a>(…)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#lagrange.raycasting.estimate_occluded_instances" title="lagrange.raycasting.estimate_occluded_instances"><code class="xref py py-obj docutils literal notranslate"><span class="pre">estimate_occluded_instances</span></code></a>(scene, *[, num_rays, ...])</p></td>
+<td><p>Find mesh instances that are fully occluded by other geometry.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#lagrange.raycasting.project" title="lagrange.raycasting.project"><code class="xref py py-obj docutils literal notranslate"><span class="pre">project</span></code></a>(…)</p></td>
 <td><p>Project query points onto a source mesh.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#lagrange.raycasting.project_closest_point" title="lagrange.raycasting.project_closest_point"><code class="xref py py-obj docutils literal notranslate"><span class="pre">project_closest_point</span></code></a>(…)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#lagrange.raycasting.project_closest_point" title="lagrange.raycasting.project_closest_point"><code class="xref py py-obj docutils literal notranslate"><span class="pre">project_closest_point</span></code></a>(…)</p></td>
 <td><p>Project query points onto a source mesh by closest-point interpolation.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#lagrange.raycasting.project_closest_vertex" title="lagrange.raycasting.project_closest_vertex"><code class="xref py py-obj docutils literal notranslate"><span class="pre">project_closest_vertex</span></code></a>(…)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#lagrange.raycasting.project_closest_vertex" title="lagrange.raycasting.project_closest_vertex"><code class="xref py py-obj docutils literal notranslate"><span class="pre">project_closest_vertex</span></code></a>(…)</p></td>
 <td><p>Project query points onto a source mesh by closest-vertex snapping.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#lagrange.raycasting.project_directional" title="lagrange.raycasting.project_directional"><code class="xref py py-obj docutils literal notranslate"><span class="pre">project_directional</span></code></a>(…)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#lagrange.raycasting.project_directional" title="lagrange.raycasting.project_directional"><code class="xref py py-obj docutils literal notranslate"><span class="pre">project_directional</span></code></a>(…)</p></td>
 <td><p>Project query points onto a source mesh along a prescribed direction.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#lagrange.raycasting.remove_occluded_facets" title="lagrange.raycasting.remove_occluded_facets"><code class="xref py py-obj docutils literal notranslate"><span class="pre">remove_occluded_facets</span></code></a>(scene, *[, num_rays, ...])</p></td>
+<td><p>Build a new scene with facets not visible from the outside removed.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#lagrange.raycasting.remove_occluded_instances" title="lagrange.raycasting.remove_occluded_instances"><code class="xref py py-obj docutils literal notranslate"><span class="pre">remove_occluded_instances</span></code></a>(scene, *[, num_rays, ...])</p></td>
+<td><p>Remove fully-occluded mesh instances from a scene.</p></td>
 </tr>
 </tbody>
 </table>
@@ -302,7 +317,7 @@
 <h2>Module Contents<a class="headerlink" href="#module-contents" title="Link to this heading">¶</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="lagrange.raycasting.BuildQuality">
-<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">lagrange.raycasting.</span></span><span class="sig-name descname"><span class="pre">BuildQuality</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwds</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lagrange.raycasting.BuildQuality" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">lagrange.raycasting.</span></span><span class="sig-name descname"><span class="pre">BuildQuality</span></span><a class="headerlink" href="#lagrange.raycasting.BuildQuality" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">enum.Enum</span></code></p>
 <p>BVH construction quality level.</p>
 <dl class="py attribute">
@@ -327,7 +342,7 @@
 
 <dl class="py class">
 <dt class="sig sig-object py" id="lagrange.raycasting.CastMode">
-<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">lagrange.raycasting.</span></span><span class="sig-name descname"><span class="pre">CastMode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwds</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lagrange.raycasting.CastMode" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">lagrange.raycasting.</span></span><span class="sig-name descname"><span class="pre">CastMode</span></span><a class="headerlink" href="#lagrange.raycasting.CastMode" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">enum.Enum</span></code></p>
 <p>Ray-casting direction mode.</p>
 <dl class="py attribute">
@@ -346,7 +361,7 @@
 
 <dl class="py class">
 <dt class="sig sig-object py" id="lagrange.raycasting.FallbackMode">
-<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">lagrange.raycasting.</span></span><span class="sig-name descname"><span class="pre">FallbackMode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwds</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lagrange.raycasting.FallbackMode" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">lagrange.raycasting.</span></span><span class="sig-name descname"><span class="pre">FallbackMode</span></span><a class="headerlink" href="#lagrange.raycasting.FallbackMode" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">enum.Enum</span></code></p>
 <p>Fallback mode for vertices without a ray hit.</p>
 <dl class="py attribute">
@@ -371,7 +386,7 @@
 
 <dl class="py class">
 <dt class="sig sig-object py" id="lagrange.raycasting.ProjectMode">
-<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">lagrange.raycasting.</span></span><span class="sig-name descname"><span class="pre">ProjectMode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwds</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lagrange.raycasting.ProjectMode" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">lagrange.raycasting.</span></span><span class="sig-name descname"><span class="pre">ProjectMode</span></span><a class="headerlink" href="#lagrange.raycasting.ProjectMode" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">enum.Enum</span></code></p>
 <p>Main projection mode.</p>
 <dl class="py attribute">
@@ -681,6 +696,30 @@ but require more iterations (default: 1e-4).</p></li>
 </dd></dl>
 
 <dl class="py function">
+<dt class="sig sig-object py" id="lagrange.raycasting.estimate_occluded_instances">
+<span class="sig-prename descclassname"><span class="pre">lagrange.raycasting.</span></span><span class="sig-name descname"><span class="pre">estimate_occluded_instances</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">scene</span></span></em>, <em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_rays</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1600000000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">batch_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">20000000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">until_converged</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_occluder</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lagrange.raycasting.estimate_occluded_instances" title="Link to this definition">¶</a></dt>
+<dd><p>Find mesh instances that are fully occluded by other geometry.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>scene</strong> (<a class="reference internal" href="../scene/index.html#lagrange.scene.SimpleScene3D" title="lagrange.scene.SimpleScene3D"><em>lagrange.scene.SimpleScene3D</em></a>) – Input scene.</p></li>
+<li><p><strong>num_rays</strong> (<em>int</em>) – Total ray budget. Must be &gt; 0 unless <code class="docutils literal notranslate"><span class="pre">until_converged</span></code> is True.</p></li>
+<li><p><strong>batch_size</strong> (<em>int</em>) – Rays per batch.</p></li>
+<li><p><strong>until_converged</strong> (<em>bool</em>) – Stop early when a batch finds no new visible instances.</p></li>
+<li><p><strong>is_occluder</strong> (<em>collections.abc.Callable</em><em>[</em><em>[</em><em>int</em><em>, </em><em>int</em><em>]</em><em>, </em><em>bool</em><em>] </em><em>| </em><em>None</em>) – Optional callable <code class="docutils literal notranslate"><span class="pre">(mesh_index,</span> <span class="pre">instance_index)</span> <span class="pre">-&gt;</span> <span class="pre">bool</span></code>. See
+<a class="reference internal" href="#lagrange.raycasting.remove_occluded_instances" title="lagrange.raycasting.remove_occluded_instances"><code class="xref py py-func docutils literal notranslate"><span class="pre">remove_occluded_instances()</span></code></a>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>List of <code class="docutils literal notranslate"><span class="pre">(mesh_index,</span> <span class="pre">instance_index)</span></code> pairs for occluded instances.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list[tuple[int, int]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
 <dt class="sig sig-object py" id="lagrange.raycasting.project">
 <span class="sig-prename descclassname"><span class="pre">lagrange.raycasting.</span></span><span class="sig-name descname"><span class="pre">project</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">source</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../core/index.html#lagrange.core.SurfaceMesh" title="lagrange.core.SurfaceMesh"><span class="pre">lagrange.core.SurfaceMesh</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../core/index.html#lagrange.core.SurfaceMesh" title="lagrange.core.SurfaceMesh"><span class="pre">lagrange.core.SurfaceMesh</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">attribute_ids</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">collections.abc.Sequence</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">project_vertices</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">project_mode</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#lagrange.raycasting.ProjectMode" title="lagrange.raycasting.ProjectMode"><span class="pre">ProjectMode</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">ProjectMode.ClosestPoint</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">direction</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cast_mode</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#lagrange.raycasting.CastMode" title="lagrange.raycasting.CastMode"><span class="pre">CastMode</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">CastMode.BothWays</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fallback_mode</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#lagrange.raycasting.FallbackMode" title="lagrange.raycasting.FallbackMode"><span class="pre">FallbackMode</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">FallbackMode.Constant</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">default_value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ray_caster</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#lagrange.raycasting.RayCaster" title="lagrange.raycasting.RayCaster"><span class="pre">RayCaster</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#lagrange.raycasting.project" title="Link to this definition">¶</a></dt>
 <dt class="sig sig-object py">
@@ -771,6 +810,68 @@ source mesh, vertex positions are set from the hit.</p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>(N, 3) NumPy array of projected positions (float64).</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="lagrange.raycasting.remove_occluded_facets">
+<span class="sig-prename descclassname"><span class="pre">lagrange.raycasting.</span></span><span class="sig-name descname"><span class="pre">remove_occluded_facets</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">scene</span></span></em>, <em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_rays</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1600000000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">batch_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">20000000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_adaptive_per_normal</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">6</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">brute_force</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">until_converged</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">jitter_sigma</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.025</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">visibility_threshold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_occluder</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lagrange.raycasting.remove_occluded_facets" title="Link to this definition">¶</a></dt>
+<dd><p>Build a new scene with facets not visible from the outside removed.</p>
+<p>The output contains one unique mesh per input instance: instances of the same source mesh can
+end up with different facets culled, so the input’s instancing cannot be preserved.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>scene</strong> (<a class="reference internal" href="../scene/index.html#lagrange.scene.SimpleScene3D" title="lagrange.scene.SimpleScene3D"><em>lagrange.scene.SimpleScene3D</em></a>) – Input scene.</p></li>
+<li><p><strong>num_rays</strong> (<em>int</em>) – Total ray budget. Must be &gt; 0 unless <code class="docutils literal notranslate"><span class="pre">until_converged</span></code> is True.</p></li>
+<li><p><strong>batch_size</strong> (<em>int</em>) – Rays per batch.</p></li>
+<li><p><strong>num_adaptive_per_normal</strong> (<em>int</em>) – Adaptive batches per normal batch (0 = pure cosine sampling).
+Ignored when <code class="docutils literal notranslate"><span class="pre">brute_force</span></code> is True.</p></li>
+<li><p><strong>brute_force</strong> (<em>bool</em>) – Run brute-force batches only — baseline for benchmarking.</p></li>
+<li><p><strong>until_converged</strong> (<em>bool</em>) – Stop early when a cycle finds no new visible facets.</p></li>
+<li><p><strong>jitter_sigma</strong> (<em>float</em>) – Std-dev of Gaussian jitter applied to adaptive seed directions.</p></li>
+<li><p><strong>visibility_threshold</strong> (<em>int</em>) – Number of independent escapes required to mark a facet visible
+(&gt;= 1). 1 = first-escape-wins (original); 2-3 dampens hairline-
+gap shrapnel.</p></li>
+<li><p><strong>is_occluder</strong> (<em>collections.abc.Callable</em><em>[</em><em>[</em><em>int</em><em>, </em><em>int</em><em>]</em><em>, </em><em>bool</em><em>] </em><em>| </em><em>None</em>) – Optional callable <code class="docutils literal notranslate"><span class="pre">(mesh_index,</span> <span class="pre">instance_index)</span> <span class="pre">-&gt;</span> <span class="pre">bool</span></code>
+returning whether an instance should block rays. Non-occluders
+are still tested for visibility but do not contribute to the
+ray-caster scene. Defaults to None (every instance is an
+occluder).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Scene with occluded facets removed.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="../scene/index.html#lagrange.scene.SimpleScene3D" title="lagrange.scene.SimpleScene3D">scene.SimpleScene3D</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="lagrange.raycasting.remove_occluded_instances">
+<span class="sig-prename descclassname"><span class="pre">lagrange.raycasting.</span></span><span class="sig-name descname"><span class="pre">remove_occluded_instances</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">scene</span></span></em>, <em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_rays</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1600000000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">batch_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">20000000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">until_converged</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_occluder</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lagrange.raycasting.remove_occluded_instances" title="Link to this definition">¶</a></dt>
+<dd><p>Remove fully-occluded mesh instances from a scene.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>scene</strong> (<a class="reference internal" href="../scene/index.html#lagrange.scene.SimpleScene3D" title="lagrange.scene.SimpleScene3D"><em>lagrange.scene.SimpleScene3D</em></a>) – Input scene.</p></li>
+<li><p><strong>num_rays</strong> (<em>int</em>) – Total ray budget. Must be &gt; 0 unless <code class="docutils literal notranslate"><span class="pre">until_converged</span></code> is True.</p></li>
+<li><p><strong>batch_size</strong> (<em>int</em>) – Rays per batch.</p></li>
+<li><p><strong>until_converged</strong> (<em>bool</em>) – Stop early when a batch finds no new visible instances.</p></li>
+<li><p><strong>is_occluder</strong> (<em>collections.abc.Callable</em><em>[</em><em>[</em><em>int</em><em>, </em><em>int</em><em>]</em><em>, </em><em>bool</em><em>] </em><em>| </em><em>None</em>) – Optional callable <code class="docutils literal notranslate"><span class="pre">(mesh_index,</span> <span class="pre">instance_index)</span> <span class="pre">-&gt;</span> <span class="pre">bool</span></code> returning
+whether an instance should block rays. Non-occluders are still tested
+for visibility but do not contribute to the ray-caster scene. Defaults
+to None (every instance is an occluder).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Scene with occluded instances removed.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="../scene/index.html#lagrange.scene.SimpleScene3D" title="lagrange.scene.SimpleScene3D">scene.SimpleScene3D</a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -882,10 +983,13 @@ source mesh, vertex positions are set from the hit.</p>
 </ul>
 </li>
 <li><a class="reference internal" href="#lagrange.raycasting.compute_local_feature_size"><code class="docutils literal notranslate"><span class="pre">compute_local_feature_size()</span></code></a></li>
+<li><a class="reference internal" href="#lagrange.raycasting.estimate_occluded_instances"><code class="docutils literal notranslate"><span class="pre">estimate_occluded_instances()</span></code></a></li>
 <li><a class="reference internal" href="#lagrange.raycasting.project"><code class="docutils literal notranslate"><span class="pre">project()</span></code></a></li>
 <li><a class="reference internal" href="#lagrange.raycasting.project_closest_point"><code class="docutils literal notranslate"><span class="pre">project_closest_point()</span></code></a></li>
 <li><a class="reference internal" href="#lagrange.raycasting.project_closest_vertex"><code class="docutils literal notranslate"><span class="pre">project_closest_vertex()</span></code></a></li>
 <li><a class="reference internal" href="#lagrange.raycasting.project_directional"><code class="docutils literal notranslate"><span class="pre">project_directional()</span></code></a></li>
+<li><a class="reference internal" href="#lagrange.raycasting.remove_occluded_facets"><code class="docutils literal notranslate"><span class="pre">remove_occluded_facets()</span></code></a></li>
+<li><a class="reference internal" href="#lagrange.raycasting.remove_occluded_instances"><code class="docutils literal notranslate"><span class="pre">remove_occluded_instances()</span></code></a></li>
 </ul>
 </li>
 </ul>

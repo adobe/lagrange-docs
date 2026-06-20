@@ -210,9 +210,8 @@ Macros</h2></td></tr>
 <tr class="memitem:ga16d15ae199152b5804daa0ea0339cf37" id="r_ga16d15ae199152b5804daa0ea0339cf37"><td class="memItemLeft" align="right" valign="top"><a id="ga16d15ae199152b5804daa0ea0339cf37" name="ga16d15ae199152b5804daa0ea0339cf37"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>LA_IGNORE_RANGE_LOOP_ANALYSIS_END</b></td></tr>
 <tr class="separator:ga16d15ae199152b5804daa0ea0339cf37"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga9b6149cadf64b2baab9316211e0fc12d" id="r_ga9b6149cadf64b2baab9316211e0fc12d"><td class="memItemLeft" align="right" valign="top"><a id="ga9b6149cadf64b2baab9316211e0fc12d" name="ga9b6149cadf64b2baab9316211e0fc12d"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>LA_IGNORE_ARRAY_BOUNDS_BEGIN</b></td></tr>
-<tr class="memdesc:ga9b6149cadf64b2baab9316211e0fc12d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ignore warning "out of bounds subscripts or offsets into arrays" This is used to bypass the following GCC bug: <a href="https://gcc.gnu.org/bugzilla/show_bug.cgi?id=106247">https://gcc.gnu.org/bugzilla/show_bug.cgi?id=106247</a>. <br /></td></tr>
+<tr class="memitem:ga9b6149cadf64b2baab9316211e0fc12d" id="r_ga9b6149cadf64b2baab9316211e0fc12d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga9b6149cadf64b2baab9316211e0fc12d">LA_IGNORE_ARRAY_BOUNDS_BEGIN</a></td></tr>
+<tr class="memdesc:ga9b6149cadf64b2baab9316211e0fc12d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ignore warning "out of bounds subscripts or offsets into arrays" This is used to bypass the following GCC bugs:  <br /></td></tr>
 <tr class="separator:ga9b6149cadf64b2baab9316211e0fc12d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaedadc673f2f4b11b435ea13207e8f026" id="r_gaedadc673f2f4b11b435ea13207e8f026"><td class="memItemLeft" align="right" valign="top"><a id="gaedadc673f2f4b11b435ea13207e8f026" name="gaedadc673f2f4b11b435ea13207e8f026"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>LA_IGNORE_ARRAY_BOUNDS_END</b></td></tr>
@@ -234,6 +233,28 @@ Macros</h2></td></tr>
 <div class="line">LA_IGNORE_DEPRECATION_WARNING_END</div>
 <div class="ttc" id="agroup__group-utils-warning_html_ga67365facef2eed9a96dc7889f58c50c1"><div class="ttname"><a href="#ga67365facef2eed9a96dc7889f58c50c1">LA_IGNORE_DEPRECATION_WARNING_BEGIN</a></div><div class="ttdeci">#define LA_IGNORE_DEPRECATION_WARNING_BEGIN</div><div class="ttdoc">Ignore deprecation warnings.</div><div class="ttdef"><b>Definition</b> warning.h:76</div></div>
 </div><!-- fragment --> <h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="ga9b6149cadf64b2baab9316211e0fc12d" name="ga9b6149cadf64b2baab9316211e0fc12d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9b6149cadf64b2baab9316211e0fc12d">&#9670;&#160;</a></span>LA_IGNORE_ARRAY_BOUNDS_BEGIN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LA_IGNORE_ARRAY_BOUNDS_BEGIN</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;lagrange/utils/warning.h&gt;</code></p>
+
+<p>Ignore warning "out of bounds subscripts or offsets into arrays" This is used to bypass the following GCC bugs: </p>
+<ul>
+<li><a href="https://gcc.gnu.org/bugzilla/show_bug.cgi?id=106247">https://gcc.gnu.org/bugzilla/show_bug.cgi?id=106247</a></li>
+<li><a href="https://gcc.gnu.org/bugzilla/show_bug.cgi?id=109727">https://gcc.gnu.org/bugzilla/show_bug.cgi?id=109727</a> False positive -Warray-bounds when using -fsanitize=address/undefined and single-element initializer lists in optimized builds (-O2/-O3). Affects GCC 13.1-13.3, fixed in GCC 13.4.0, 14.3.0, and 15.1.0. </li>
+</ul>
+
+</div>
+</div>
 <a id="gaf41bbe93ccaed818d4bdb6e5dc4f3d52" name="gaf41bbe93ccaed818d4bdb6e5dc4f3d52"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#gaf41bbe93ccaed818d4bdb6e5dc4f3d52">&#9670;&#160;</a></span>LA_IGNORE_MAYBE_UNINITIALIZED_START</h2>
 
@@ -258,7 +279,7 @@ Macros</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Mon Apr 27 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+    <li class="footer">Generated on Sat Jun 20 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>
 </body>

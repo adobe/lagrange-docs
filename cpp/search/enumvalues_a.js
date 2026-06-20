@@ -1,7 +1,8 @@
 var searchData=
 [
-  ['medium_0',['Medium',['../namespacelagrange_1_1raycasting.html#ade737eff21604d56d55bdb5f62280f67a87f8a6ab85c9ced3702b4ea641ad4bb5',1,'lagrange::raycasting']]],
-  ['mips_1',['MIPS',['../group__group-surfacemesh-utils.html#ggadab1480827f4522cbf1f9e1d4c28db91a16c8e070f0f6edd7ac0ae016e9bf2997',1,'lagrange']]],
-  ['mirror_2',['mirror',['../classlagrange_1_1image_1_1_raw_input_image.html#a7209540f4aa3a68da254973604ce9f84afbe322a89bc0ba531c3f0050e3935f28',1,'lagrange::image::RawInputImage']]],
-  ['morton_3',['Morton',['../group__group-surfacemesh-utils.html#gga3cce9a28814e60e46fc8877d69ce28e3ae83fefe6389add51a1520328ad1740aa',1,'lagrange']]]
+  ['lastopened_0',['LastOpened',['../namespacelagrange_1_1ui.html#a2f3d3a88d3547807933bce99b10c4b25ab522390b2f201f24eaa34c68ed37b880',1,'lagrange::ui']]],
+  ['lexicographic_1',['Lexicographic',['../group__group-surfacemesh-utils.html#gga3cce9a28814e60e46fc8877d69ce28e3a00af2052da1d2929181bea6b434ebf4f',1,'lagrange']]],
+  ['linear_2',['linear',['../classlagrange_1_1image_1_1_raw_input_image.html#a609c1f2c8828267fe31da1947b988a36a9a932b3cb396238423eb2f33ec17d6aa',1,'lagrange::image::RawInputImage']]],
+  ['loop_3',['Loop',['../group__module-subdivision.html#ggaa3daa2f428c6be2b1cb394f3a525833da89d7b10cb4238977d2b523dfd9ea7745',1,'lagrange::subdivision']]],
+  ['low_4',['Low',['../namespacelagrange_1_1raycasting.html#ade737eff21604d56d55bdb5f62280f67a28d0edd045e05cf5af64e35ae0c4c6ef',1,'lagrange::raycasting']]]
 ];

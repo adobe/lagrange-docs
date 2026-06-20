@@ -30,6 +30,7 @@ Classes
    lagrange.core.AttributeShrinkPolicy
    lagrange.core.AttributeUsage
    lagrange.core.AttributeWritePolicy
+   lagrange.core.CameraTransforms
    lagrange.core.CentroidWeightingType
    lagrange.core.ConnectivityType
    lagrange.core.DistortionMetric
@@ -47,6 +48,7 @@ Classes
    lagrange.core.SurfaceMesh
    lagrange.core.TangentBitangentOptions
    lagrange.core.TangentBitangentResult
+   lagrange.core.UVOrientationCount
    lagrange.core.VertexNormalOptions
    lagrange.core.VertexValenceOptions
 
@@ -82,15 +84,18 @@ Functions
    lagrange.core.compute_uv_area
    lagrange.core.compute_uv_charts
    lagrange.core.compute_uv_distortion
+   lagrange.core.compute_uv_orientation
    lagrange.core.compute_vertex_is_manifold
    lagrange.core.compute_vertex_normal
    lagrange.core.compute_vertex_valence
    lagrange.core.detect_degenerate_facets
+   lagrange.core.disconnect_uv_charts
    lagrange.core.extract_boundary_edges
    lagrange.core.extract_boundary_loops
    lagrange.core.extract_isoline
    lagrange.core.extract_submesh
    lagrange.core.filter_attributes
+   lagrange.core.get_unique_attribute_name
    lagrange.core.is_closed
    lagrange.core.is_edge_manifold
    lagrange.core.is_manifold
@@ -129,6 +134,7 @@ Functions
    lagrange.core.transform_mesh
    lagrange.core.triangulate_polygonal_facets
    lagrange.core.trim_by_isoline
+   lagrange.core.unflip_uv_charts
    lagrange.core.unify_index_buffer
    lagrange.core.uv_mesh_ref
    lagrange.core.uv_mesh_view
@@ -276,7 +282,7 @@ Module Contents
       Policy for write operations on the attribute.
 
 
-.. py:class:: AttributeCastPolicy(*args, **kwds)
+.. py:class:: AttributeCastPolicy
 
    Bases: :py:obj:`enum.Enum`
 
@@ -305,7 +311,7 @@ Module Contents
       Map invalid values only if the AttributeUsage represents indices
 
 
-.. py:class:: AttributeCopyPolicy(*args, **kwds)
+.. py:class:: AttributeCopyPolicy
 
    Bases: :py:obj:`enum.Enum`
 
@@ -334,7 +340,7 @@ Module Contents
       Keep external buffer pointer
 
 
-.. py:class:: AttributeCreatePolicy(*args, **kwds)
+.. py:class:: AttributeCreatePolicy
 
    Bases: :py:obj:`enum.Enum`
 
@@ -356,7 +362,7 @@ Module Contents
       Force create attribute even if name is reserved
 
 
-.. py:class:: AttributeDeletePolicy(*args, **kwds)
+.. py:class:: AttributeDeletePolicy
 
    Bases: :py:obj:`enum.Enum`
 
@@ -428,7 +434,7 @@ Module Contents
       Per-vertex attribute
 
 
-.. py:class:: AttributeExportPolicy(*args, **kwds)
+.. py:class:: AttributeExportPolicy
 
    Bases: :py:obj:`enum.Enum`
 
@@ -464,7 +470,7 @@ Module Contents
       Keep external buffer pointer
 
 
-.. py:class:: AttributeGrowthPolicy(*args, **kwds)
+.. py:class:: AttributeGrowthPolicy
 
    Bases: :py:obj:`enum.Enum`
 
@@ -500,7 +506,7 @@ Module Contents
       Warn and copy attribute to internal buffer when growth exceeds external buffer capacity
 
 
-.. py:class:: AttributeReorientPolicy(*args, **kwds)
+.. py:class:: AttributeReorientPolicy
 
    Bases: :py:obj:`enum.Enum`
 
@@ -522,7 +528,7 @@ Module Contents
       Reorient attributes when flipping facets
 
 
-.. py:class:: AttributeShrinkPolicy(*args, **kwds)
+.. py:class:: AttributeShrinkPolicy
 
    Bases: :py:obj:`enum.Enum`
 
@@ -558,7 +564,7 @@ Module Contents
       Warn and copy attribute to internal buffer when shrinking below external buffer capacity
 
 
-.. py:class:: AttributeUsage(*args, **kwds)
+.. py:class:: AttributeUsage
 
    Bases: :py:obj:`enum.Enum`
 
@@ -650,7 +656,7 @@ Module Contents
       Single channel integer attribute indexing mesh vertices
 
 
-.. py:class:: AttributeWritePolicy(*args, **kwds)
+.. py:class:: AttributeWritePolicy
 
    Bases: :py:obj:`enum.Enum`
 
@@ -679,7 +685,34 @@ Module Contents
       Warn and copy attribute to internal buffer when writing to read-only external buffer
 
 
-.. py:class:: CentroidWeightingType(*args, **kwds)
+.. py:class:: CameraTransforms
+
+   View and projection matrices defining a camera in world space.
+
+
+   .. py:property:: projection
+      :type: Annotated[numpy.typing.NDArray[numpy.float32], dict(shape=(4, 4), order='F')]
+
+
+      4x4 projection transform (view space -> NDC space, depth in [-1, 1]).
+
+
+   .. py:property:: view
+      :type: Annotated[numpy.typing.NDArray[numpy.float32], dict(shape=(4, 4), order='F')]
+
+
+      4×4 view transform (world space -> view space).
+
+      Accepts a ``(4, 4)`` or ``(3, 4)`` numpy array:
+
+      - ``(4, 4)``: full homogeneous matrix; last row must be ``[0, 0, 0, 1]``.
+      - ``(3, 4)``: compact ``[R | t]`` form; the implicit last row ``[0, 0, 0, 1]`` is appended
+        automatically.
+
+      The getter always returns a ``(4, 4)`` numpy array.
+
+
+.. py:class:: CentroidWeightingType
 
    Bases: :py:obj:`enum.Enum`
 
@@ -701,7 +734,7 @@ Module Contents
       Uniform weighting.
 
 
-.. py:class:: ConnectivityType(*args, **kwds)
+.. py:class:: ConnectivityType
 
    Bases: :py:obj:`enum.Enum`
 
@@ -723,7 +756,7 @@ Module Contents
       Two facets are connected if they share a vertex
 
 
-.. py:class:: DistortionMetric(*args, **kwds)
+.. py:class:: DistortionMetric
 
    Bases: :py:obj:`enum.Enum`
 
@@ -853,7 +886,7 @@ Module Contents
       :returns: Attribute containing the unique values referenced by the indices
 
 
-.. py:class:: MappingPolicy(*args, **kwds)
+.. py:class:: MappingPolicy
 
    Bases: :py:obj:`enum.Enum`
 
@@ -996,7 +1029,7 @@ Module Contents
       Weighting type for normal computation. Default is Angle.
 
 
-.. py:class:: NormalWeightingType(*args, **kwds)
+.. py:class:: NormalWeightingType
 
    Bases: :py:obj:`enum.Enum`
 
@@ -2196,6 +2229,32 @@ Module Contents
       The output tangent attribute id
 
 
+.. py:class:: UVOrientationCount
+
+   Counts of per-facet UV orientations.
+
+
+   .. py:property:: degenerate
+      :type: int
+
+
+      Number of degenerate (zero-area) facets.
+
+
+   .. py:property:: negative
+      :type: int
+
+
+      Number of CW (negatively oriented / flipped) facets.
+
+
+   .. py:property:: positive
+      :type: int
+
+
+      Number of CCW (positively oriented) facets.
+
+
 .. py:class:: VertexNormalOptions
 
    Options for computing vertex normals
@@ -2535,13 +2594,14 @@ Module Contents
    :returns: tuple of (center, eigenvectors, eigenvalues).
 
 
-.. py:function:: compute_seam_edges(mesh, indexed_attribute_id, output_attribute_name = None)
+.. py:function:: compute_seam_edges(mesh, indexed_attribute_id, output_attribute_name = None, include_boundary_edges = False)
 
    Compute seam edges for a given indexed attribute.
 
    :param mesh: Input mesh.
    :param indexed_attribute_id: Input indexed attribute id.
    :param output_attribute_name: Output attribute name.
+   :param include_boundary_edges: If true, boundary edges are also marked as seam edges.
 
    :returns: Attribute id for the output per-edge seam attribute (1 is a seam, 0 is not).
 
@@ -2578,12 +2638,12 @@ Module Contents
 
    Compute UV charts.
 
-   @param mesh: Input mesh.
-   @param uv_attribute_name: Name of the UV attribute.
-   @param output_attribute_name: Name of the output attribute to store the chart ids.
-   @param connectivity_type: Type of connectivity to use for chart computation. Can be "Vertex" or "Edge".
+   :param mesh: Input mesh.
+   :param uv_attribute_name: Name of the UV attribute.
+   :param output_attribute_name: Name of the output attribute to store the chart ids.
+   :param connectivity_type: Type of connectivity to use for chart computation. Can be "Vertex" or "Edge".
 
-   @returns: A list of chart ids for each vertex.
+   :returns: The number of charts.
 
 
 .. py:function:: compute_uv_distortion(mesh, uv_attribute_name = '@uv', output_attribute_name = '@uv_measure', metric = DistortionMetric.MIPS)
@@ -2596,6 +2656,20 @@ Module Contents
    :param metric: Distortion metric (default: MIPS).
 
    :returns: Facet attribute ID for distortion.
+
+
+.. py:function:: compute_uv_orientation(mesh, uv_attribute_name = '', output_attribute_name = '@uv_orientation')
+
+   Compute a per-facet orientation attribute using Shewchuk's exact ``orient2D`` predicate.
+
+   Each facet is assigned an ``int8`` value: ``+1`` for CCW (positively oriented), ``0`` for
+   degenerate, ``-1`` for CW (negatively oriented / flipped).
+
+   :param mesh: Input triangle mesh.
+   :param uv_attribute_name: Name of the UV attribute. If empty, uses the first UV attribute.
+   :param output_attribute_name: Name of the output per-facet attribute (int8).
+
+   :returns: A :class:`UVOrientationCount` with counts of positive, degenerate, and negative facets.
 
 
 .. py:function:: compute_vertex_is_manifold(mesh, output_attribute_name = '@vertex_is_manifold')
@@ -2651,6 +2725,22 @@ Module Contents
    :returns: List of degenerate facet indices.
 
 
+.. py:function:: disconnect_uv_charts(mesh, uv_attribute_name = '', chart_id_attribute_name = '')
+
+   Disconnect UV charts by duplicating UV vertices shared across different charts.
+
+   After this operation, no two facets belonging to different UV charts will share a UV vertex
+   index. Without any input chart id attribute, this eliminates non-manifold UV vertices (pinch
+   points) where charts touch at a single vertex.
+
+   :param mesh:                    Input mesh. The UV attribute must be indexed.
+   :param uv_attribute_name:       Name of the UV attribute. If empty, uses the first indexed UV attribute.
+   :param chart_id_attribute_name: Optional per-facet chart id attribute name. If empty, chart ids
+                                   are computed automatically using edge connectivity on the UV mesh.
+
+   :returns: The number of UV vertices that were duplicated.
+
+
 .. py:function:: extract_boundary_edges(mesh)
 
    Extract boundary edges from a mesh.
@@ -2704,6 +2794,25 @@ Module Contents
    :param excluded_attributes: List of attribute names or ids to exclude. By default, no attribute is excluded.
    :param included_usages: List of attribute usages to include. By default, all usages are included.
    :param included_element_types: List of attribute element types to include. By default, all element types are included.
+
+
+.. py:function:: get_unique_attribute_name(mesh, name, separator = '.', postfix = '', max_increment = 1000, emit_warning = True)
+
+   Get a unique attribute name for a mesh.
+
+   If the desired name does not exist on the mesh it is returned as-is. If it
+   already exists, a suffix of the form ``{separator}{count}{postfix}`` is appended
+   until a unique name is found. An exception is raised if no unique name can be
+   found after ``max_increment`` attempts.
+
+   :param mesh: The input mesh.
+   :param name: The desired attribute name.
+   :param separator: Separator between the base name and counter (default: ".").
+   :param postfix: Postfix to append after the counter (default: "").
+   :param max_increment: Maximum number of attempts to find a unique name (default: 1000).
+   :param emit_warning: Whether to log a warning when a collision is detected (default: True).
+
+   :returns: A unique attribute name.
 
 
 .. py:function:: is_closed(mesh)
@@ -2933,12 +3042,13 @@ Module Contents
    :param remove_isolated_vertices: Whether to remove isolated vertices after removing null area facets.
 
 
-.. py:function:: remove_short_edges(mesh, threshold = 0)
+.. py:function:: remove_short_edges(mesh, *, threshold = 0, vertex_importance_attribute = None)
 
    Remove short edges from a mesh.
 
    :param mesh: Input mesh (modified in place).
    :param threshold: Minimum edge length below which edges are considered short.
+   :param vertex_importance_attribute: Optional vertex attribute name for importance values used to determine which vertex to keep during edge collapse.
 
 
 .. py:function:: remove_topologically_degenerate_facets(mesh)
@@ -3114,6 +3224,22 @@ Module Contents
    :param keep_below: Whether to keep the part below the isoline.
 
    :returns: Trimmed mesh.
+
+
+.. py:function:: unflip_uv_charts(mesh, uv_attribute_name = '', chart_id_attribute_name = '')
+
+   Mirror the UV positions of every UV vertex in any chart that is "flipped" by negating
+   its U coordinate. A chart is considered flipped when either its total signed UV area is negative,
+   OR every triangle in the chart is individually flipped (per :func:`compute_uv_orientation`); the
+   latter rule catches charts whose floating-point area sum is non-negative due to nearly-degenerate
+   triangles. Assumes UV vertices are not shared across charts.
+
+   :param mesh: Input triangle mesh. The UV attribute must be indexed.
+   :param uv_attribute_name: Name of the UV attribute. If empty, uses the first indexed UV attribute.
+   :param chart_id_attribute_name: Optional per-facet chart id attribute name. If empty, charts are
+                                   computed automatically using edge connectivity on the UV mesh.
+
+   :returns: The number of charts that were unflipped.
 
 
 .. py:function:: unify_index_buffer(mesh: SurfaceMesh) -> SurfaceMesh

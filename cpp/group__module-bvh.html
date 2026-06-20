@@ -296,11 +296,11 @@ template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5
 <p><code>#include &lt;lagrange/bvh/compute_mesh_distances.h&gt;</code></p>
 
 <p>Compute the distance from each vertex in <code class="param">source</code> to the closest point on <code class="param">target</code>, and store the result as a per-vertex scalar attribute on <code class="param">source</code>. </p>
-<p>Both meshes must have the same spatial dimension. <code class="param">target</code> must be a triangle mesh.</p>
+<p>Both meshes must have the same spatial dimension. <code class="param">target</code> must be either a triangle mesh or a point cloud (no facets). If <code class="param">target</code> is a point cloud, distances are computed to the nearest vertex rather than to the nearest point on a triangle.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in,out]</td><td class="paramname">source</td><td>Mesh whose vertices are queried. The output attribute is added here. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">target</td><td>Triangle mesh against which distances are computed. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">target</td><td>Triangle mesh or point cloud against which distances are computed. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">options</td><td>Options controlling the name of the output attribute.</td></tr>
   </table>
   </dd>
@@ -347,12 +347,12 @@ template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5
   \right)
 \]
 </p>
-<p> where \( \mathrm{dist}(v, M) \) is the distance from vertex \( v \) to the closest point on mesh \( M \).</p>
-<p>Both meshes must have the same spatial dimension and must be triangle meshes.</p>
+<p> where \( \mathrm{dist}(v, M) \) is the distance from vertex \( v \) to the closest point on \( M \). For triangle meshes the closest point may lie on a triangle face or edge; for point clouds (no facets) it is the nearest vertex.</p>
+<p>Both meshes must have the same spatial dimension. Each mesh must be either a triangle mesh or a point cloud (no facets).</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">source</td><td>First mesh. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">target</td><td>Second mesh.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">source</td><td>First mesh or point cloud. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">target</td><td>Second mesh or point cloud.</td></tr>
   </table>
   </dd>
 </dl>
@@ -396,12 +396,12 @@ template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5
           + \frac{1}{|B|} \sum_{b \in B} \mathrm{dist}(b, A)^2
 \]
 </p>
-<p> where \( \mathrm{dist}(v, M) \) is the distance from vertex \( v \) to the closest point on mesh \( M \).</p>
-<p>Both meshes must have the same spatial dimension and must be triangle meshes.</p>
+<p> where \( \mathrm{dist}(v, M) \) is the distance from vertex \( v \) to the closest point on \( M \). For triangle meshes the closest point may lie on a triangle face or edge; for point clouds (no facets) it is the nearest vertex.</p>
+<p>Both meshes must have the same spatial dimension. Each mesh must be either a triangle mesh or a point cloud (no facets).</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">source</td><td>First mesh. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">target</td><td>Second mesh.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">source</td><td>First mesh or point cloud. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">target</td><td>Second mesh or point cloud.</td></tr>
   </table>
   </dd>
 </dl>
@@ -740,7 +740,7 @@ template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Mon Apr 27 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+    <li class="footer">Generated on Sat Jun 20 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>
 </body>

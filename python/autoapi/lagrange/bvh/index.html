@@ -200,11 +200,17 @@
 <li class="toctree-l2"><a class="reference internal" href="../geodesic/index.html">lagrange.geodesic</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../image/index.html">lagrange.image</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../io/index.html">lagrange.io</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../packing/index.html">lagrange.packing</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../poisson/index.html">lagrange.poisson</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../polyddg/index.html">lagrange.polyddg</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../primitive/index.html">lagrange.primitive</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../raycasting/index.html">lagrange.raycasting</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../scene/index.html">lagrange.scene</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../scripts/index.html">lagrange.scripts</a><input aria-label="Toggle navigation of lagrange.scripts" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../scripts/meshstat/index.html">lagrange.scripts.meshstat</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../serialization/index.html">lagrange.serialization</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../solver/index.html">lagrange.solver</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../subdivision/index.html">lagrange.subdivision</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../texproc/index.html">lagrange.texproc</a></li>
@@ -282,16 +288,19 @@
 <tr class="row-even"><td><p><a class="reference internal" href="#lagrange.bvh.compute_hausdorff" title="lagrange.bvh.compute_hausdorff"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compute_hausdorff</span></code></a>(source, target)</p></td>
 <td><p>Compute the symmetric Hausdorff distance between two meshes.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#lagrange.bvh.compute_mesh_distances" title="lagrange.bvh.compute_mesh_distances"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compute_mesh_distances</span></code></a>(source, target[, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#lagrange.bvh.compute_intersecting_pairs" title="lagrange.bvh.compute_intersecting_pairs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compute_intersecting_pairs</span></code></a>(mesh)</p></td>
+<td><p>Compute all pairs of intersecting facets in a triangle mesh using BVH acceleration.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#lagrange.bvh.compute_mesh_distances" title="lagrange.bvh.compute_mesh_distances"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compute_mesh_distances</span></code></a>(source, target[, ...])</p></td>
 <td><p>Compute the distance from each vertex in source to the closest point on target.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#lagrange.bvh.compute_uv_overlap" title="lagrange.bvh.compute_uv_overlap"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compute_uv_overlap</span></code></a>(mesh[, uv_attribute_name, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#lagrange.bvh.compute_uv_overlap" title="lagrange.bvh.compute_uv_overlap"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compute_uv_overlap</span></code></a>(mesh[, uv_attribute_name, ...])</p></td>
 <td><p>Compute pairwise UV triangle overlap.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#lagrange.bvh.remove_interior_shells" title="lagrange.bvh.remove_interior_shells"><code class="xref py py-obj docutils literal notranslate"><span class="pre">remove_interior_shells</span></code></a>(mesh)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#lagrange.bvh.remove_interior_shells" title="lagrange.bvh.remove_interior_shells"><code class="xref py py-obj docutils literal notranslate"><span class="pre">remove_interior_shells</span></code></a>(mesh)</p></td>
 <td><p>Removes interior shells from a (manifold, non-intersecting) mesh</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#lagrange.bvh.weld_vertices" title="lagrange.bvh.weld_vertices"><code class="xref py py-obj docutils literal notranslate"><span class="pre">weld_vertices</span></code></a>(mesh[, radius, boundary_only])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#lagrange.bvh.weld_vertices" title="lagrange.bvh.weld_vertices"><code class="xref py py-obj docutils literal notranslate"><span class="pre">weld_vertices</span></code></a>(mesh[, radius, boundary_only])</p></td>
 <td><p>Weld nearby vertices together of a surface mesh.</p></td>
 </tr>
 </tbody>
@@ -638,7 +647,7 @@
 
 <dl class="py class">
 <dt class="sig sig-object py" id="lagrange.bvh.UVOverlapMethod">
-<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">lagrange.bvh.</span></span><span class="sig-name descname"><span class="pre">UVOverlapMethod</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwds</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lagrange.bvh.UVOverlapMethod" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">lagrange.bvh.</span></span><span class="sig-name descname"><span class="pre">UVOverlapMethod</span></span><a class="headerlink" href="#lagrange.bvh.UVOverlapMethod" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">enum.Enum</span></code></p>
 <p>Create a collection of name/value pairs.</p>
 <p>Example enumeration:</p>
@@ -758,6 +767,34 @@ attributes – see the documentation for details.</p>
 <dd class="field-odd"><p>float</p>
 </dd>
 </dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="lagrange.bvh.compute_intersecting_pairs">
+<span class="sig-prename descclassname"><span class="pre">lagrange.bvh.</span></span><span class="sig-name descname"><span class="pre">compute_intersecting_pairs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mesh</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lagrange.bvh.compute_intersecting_pairs" title="Link to this definition">¶</a></dt>
+<dd><p>Compute all pairs of intersecting facets in a triangle mesh using BVH acceleration.</p>
+<p>Detects facet pairs whose interiors intersect using exact geometric predicates. Only facets
+that do not share vertices are tested (vertex-adjacent facets are skipped).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>mesh</strong> (<a class="reference internal" href="../core/index.html#lagrange.core.SurfaceMesh" title="lagrange.core.SurfaceMesh"><em>lagrange.core.SurfaceMesh</em></a>) – The input triangle mesh. Must contain only triangular facets.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A list of tuples (i, j) where i &lt; j representing non-vertex-adjacent facets
+whose interiors intersect.</p>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>RuntimeError</strong> – If the mesh is not a triangle mesh or if the mesh is not 3D.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>list[tuple[int, int]]</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Vertex-adjacent facets are filtered before testing. The geometric test uses
+include_boundary=false (interior intersection only).</p>
+</div>
 </dd></dl>
 
 <dl class="py function">
@@ -955,6 +992,7 @@ The result may be invalid if these conditions are not met.</p>
 </li>
 <li><a class="reference internal" href="#lagrange.bvh.compute_chamfer"><code class="docutils literal notranslate"><span class="pre">compute_chamfer()</span></code></a></li>
 <li><a class="reference internal" href="#lagrange.bvh.compute_hausdorff"><code class="docutils literal notranslate"><span class="pre">compute_hausdorff()</span></code></a></li>
+<li><a class="reference internal" href="#lagrange.bvh.compute_intersecting_pairs"><code class="docutils literal notranslate"><span class="pre">compute_intersecting_pairs()</span></code></a></li>
 <li><a class="reference internal" href="#lagrange.bvh.compute_mesh_distances"><code class="docutils literal notranslate"><span class="pre">compute_mesh_distances()</span></code></a></li>
 <li><a class="reference internal" href="#lagrange.bvh.compute_uv_overlap"><code class="docutils literal notranslate"><span class="pre">compute_uv_overlap()</span></code></a></li>
 <li><a class="reference internal" href="#lagrange.bvh.remove_interior_shells"><code class="docutils literal notranslate"><span class="pre">remove_interior_shells()</span></code></a></li>

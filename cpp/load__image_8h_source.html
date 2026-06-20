@@ -214,19 +214,27 @@ $(function(){initNavTree('load__image_8h_source.html',''); initResizable(true); 
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span><span class="preprocessor">        valid_conversion = img.convert_from(temp_image_view, 1); \</span></div>
 <div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span><span class="preprocessor">    }</span></div>
 <div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span><span class="preprocessor">#define LAGRANGE_TMP_COMMA ,</span></div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    LAGRANGE_TMP(uint8, one, <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>)</div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    <span class="keywordflow">else</span> LAGRANGE_TMP(uint8, three, Eigen::Matrix&lt;unsigned char LAGRANGE_TMP_COMMA 3 LAGRANGE_TMP_COMMA 1&gt;) <span class="keywordflow">else</span> LAGRANGE_TMP(</div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>        uint8,</div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>        four,</div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>        Eigen::</div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>            Matrix&lt;</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>                <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> LAGRANGE_TMP_COMMA 4 LAGRANGE_TMP_COMMA 1&gt;) else LAGRANGE_TMP(float32, one, <span class="keywordtype">float</span>) else LAGRANGE_TMP(float32, three, Eigen::Vector3f) else LAGRANGE_TMP(float32, four, Eigen::Vector4f) else LAGRANGE_TMP(float64, one, <span class="keywordtype">double</span>) else LAGRANGE_TMP(float64, three, Eigen::Vector3d) else LAGRANGE_TMP(float64, four, Eigen::Vector4d) return valid_conversion;</div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span><span class="preprocessor">#undef LAGRANGE_TMP</span></div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span><span class="preprocessor">#undef LAGRANGE_TMP_COMMA</span></div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>}</div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span> </div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>} <span class="comment">// namespace image_io</span></div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>} <span class="comment">// namespace lagrange</span></div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    <span class="comment">// clang-format off</span></div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    LAGRANGE_TMP(uint8, one, <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>)</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    <span class="keywordflow">else</span> LAGRANGE_TMP(uint8, three, Eigen::Matrix&lt;unsigned char LAGRANGE_TMP_COMMA 3 LAGRANGE_TMP_COMMA 1&gt;)</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    <span class="keywordflow">else</span> LAGRANGE_TMP(uint8, four, Eigen::Matrix&lt;unsigned char LAGRANGE_TMP_COMMA 4 LAGRANGE_TMP_COMMA 1&gt;)</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    <span class="keywordflow">else</span> LAGRANGE_TMP(uint16, one, uint16_t)</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    <span class="keywordflow">else</span> LAGRANGE_TMP(uint16, three, Eigen::Matrix&lt;uint16_t LAGRANGE_TMP_COMMA 3 LAGRANGE_TMP_COMMA 1&gt;)</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    <span class="keywordflow">else</span> LAGRANGE_TMP(uint16, four, Eigen::Matrix&lt;uint16_t LAGRANGE_TMP_COMMA 4 LAGRANGE_TMP_COMMA 1&gt;)</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    <span class="keywordflow">else</span> LAGRANGE_TMP(float32, one, <span class="keywordtype">float</span>)</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    <span class="keywordflow">else</span> LAGRANGE_TMP(float32, three, Eigen::Vector3f)</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    <span class="keywordflow">else</span> LAGRANGE_TMP(float32, four, Eigen::Vector4f)</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    <span class="keywordflow">else</span> LAGRANGE_TMP(float64, one, <span class="keywordtype">double</span>)</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    <span class="keywordflow">else</span> LAGRANGE_TMP(float64, three, Eigen::Vector3d)</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    <span class="keywordflow">else</span> LAGRANGE_TMP(float64, four, Eigen::Vector4d)</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>        <span class="comment">// clang-format on</span></div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>        <span class="keywordflow">return</span> valid_conversion;</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span><span class="preprocessor">#undef LAGRANGE_TMP</span></div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span><span class="preprocessor">#undef LAGRANGE_TMP_COMMA</span></div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>}</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span> </div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>} <span class="comment">// namespace image_io</span></div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>} <span class="comment">// namespace lagrange</span></div>
 <div class="ttc" id="aclasslagrange_1_1image_1_1_image_view_html"><div class="ttname"><a href="classlagrange_1_1image_1_1_image_view.html">lagrange::image::ImageView</a></div><div class="ttdef"><b>Definition</b> ImageView.h:56</div></div>
 <div class="ttc" id="anamespacelagrange_html"><div class="ttname"><a href="namespacelagrange.html">lagrange</a></div><div class="ttdoc">Main namespace for Lagrange.</div></div>
 <div class="ttc" id="astructlagrange_1_1image__io_1_1_load_image_result_html"><div class="ttname"><a href="structlagrange_1_1image__io_1_1_load_image_result.html">lagrange::image_io::LoadImageResult</a></div><div class="ttdef"><b>Definition</b> load_image.h:28</div></div>
@@ -236,7 +244,7 @@ $(function(){initNavTree('load__image_8h_source.html',''); initResizable(true); 
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_30a02758b85731ac1db6fde6807e91fc.html">lagrange</a></li><li class="navelem"><a class="el" href="dir_b0578c907285501e28b35942ae8beb96.html">image_io</a></li><li class="navelem"><b>load_image.h</b></li>
-    <li class="footer">Generated on Mon Apr 27 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+    <li class="footer">Generated on Sat Jun 20 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>
 </body>

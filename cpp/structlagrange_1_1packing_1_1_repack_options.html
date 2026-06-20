@@ -146,13 +146,11 @@ Public Attributes</h2></td></tr>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>allow_rotation</b> = true</td></tr>
 <tr class="memdesc:a9645d7a122975298f2cd5442d1d9b042"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether to allow box to rotate by 90 degree when packing. <br /></td></tr>
 <tr class="separator:a9645d7a122975298f2cd5442d1d9b042"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af605523fa15cd8296704092afd159029" id="r_af605523fa15cd8296704092afd159029"><td class="memItemLeft" align="right" valign="top"><a id="af605523fa15cd8296704092afd159029" name="af605523fa15cd8296704092afd159029"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>normalize</b> = true</td></tr>
-<tr class="memdesc:af605523fa15cd8296704092afd159029"><td class="mdescLeft">&#160;</td><td class="mdescRight">Should the output be normalized to fit into a unit box. <br /></td></tr>
+<tr class="memitem:af605523fa15cd8296704092afd159029" id="r_af605523fa15cd8296704092afd159029"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af605523fa15cd8296704092afd159029">normalize</a> = true</td></tr>
+<tr class="memdesc:af605523fa15cd8296704092afd159029"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether the output should be normalized to fit into a unit box.  <br /></td></tr>
 <tr class="separator:af605523fa15cd8296704092afd159029"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aea1419deaadb54e70abae7fe5aada09e" id="r_aea1419deaadb54e70abae7fe5aada09e"><td class="memItemLeft" align="right" valign="top"><a id="aea1419deaadb54e70abae7fe5aada09e" name="aea1419deaadb54e70abae7fe5aada09e"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>margin</b> = 1e-3f</td></tr>
-<tr class="memdesc:aea1419deaadb54e70abae7fe5aada09e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Minimum allowed distance between two boxes normalized within [0, 1] domain. <br /></td></tr>
+<tr class="memitem:aea1419deaadb54e70abae7fe5aada09e" id="r_aea1419deaadb54e70abae7fe5aada09e"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aea1419deaadb54e70abae7fe5aada09e">margin</a> = 1e-3f</td></tr>
+<tr class="memdesc:aea1419deaadb54e70abae7fe5aada09e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Minimum allowed distance between two boxes.  <br /></td></tr>
 <tr class="separator:aea1419deaadb54e70abae7fe5aada09e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -192,6 +190,40 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>margin</b> = 1e-3f</
 
 </div>
 </div>
+<a id="af605523fa15cd8296704092afd159029" name="af605523fa15cd8296704092afd159029"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af605523fa15cd8296704092afd159029">&#9670;&#160;</a></span>normalize</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool normalize = true</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Whether the output should be normalized to fit into a unit box. </p>
+<p>When false, the packed charts preserve their original scale but are still translated so the minimum UV is at the origin. </p>
+
+</div>
+</div>
+<a id="aea1419deaadb54e70abae7fe5aada09e" name="aea1419deaadb54e70abae7fe5aada09e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea1419deaadb54e70abae7fe5aada09e">&#9670;&#160;</a></span>margin</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float margin = 1e-3f</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Minimum allowed distance between two boxes. </p>
+<p>When <code>normalize</code> is true, this value is measured in the normalized [0, 1] output domain. When <code>normalize</code> is false, it is interpreted as an absolute distance in the original UV units. </p>
+
+</div>
+</div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
 <li>lagrange/packing/<a class="el" href="repack__uv__charts_8h_source.html">repack_uv_charts.h</a></li>
 </ul>
@@ -201,7 +233,7 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>margin</b> = 1e-3f</
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacelagrange.html">lagrange</a></li><li class="navelem"><b>packing</b></li><li class="navelem"><a class="el" href="structlagrange_1_1packing_1_1_repack_options.html">RepackOptions</a></li>
-    <li class="footer">Generated on Mon Apr 27 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+    <li class="footer">Generated on Sat Jun 20 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>
 </body>
