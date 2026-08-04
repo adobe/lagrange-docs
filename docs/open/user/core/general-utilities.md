@@ -32,6 +32,7 @@ struct
 {
     std::string log_file;
     int log_level = 2;
+    bool quiet = false;
 } args;
 
 // Parse command-line args with CLI11
@@ -125,14 +126,14 @@ type1 x = lagrange::safe_cast<type1>(y);
 
 ## Pointer Type Conversion
 
-It often necessary to convert a `std::unique_ptr` to `std::shared_ptr`.
-Lagrange provide a handy function that avoid repeated type specification:
+It is often necessary to convert a `std::unique_ptr` to `std::shared_ptr`.
+Lagrange provides a handy function that avoids repeated type specification:
 
 ```c++
 #include <lagrange/common.h>
 
 std::unique_ptr<T> unique_val = ...;
-auto shared_val = lagrange::to_shared_ptr(unique_val);
+auto shared_val = lagrange::to_shared_ptr(std::move(unique_val));
 assert(unique_val == nullptr);
 assert(shared_val.use_count() == 1);
 ```
@@ -196,8 +197,6 @@ std::vector<Edge> min_spanning_tree(
 
     // Iterate over all input edges in ascending order
     for (auto [x, y] : sorted_edges) {
-        [x, y] = sorted_edges[e];
-
         // If vertices belong to disconnected unrooted trees,
         // merge them and add edge (x, y) to the solution
         if (union_find.find(x) != union_find.find(y)) {
@@ -255,13 +254,13 @@ currently supports Linux and macOS. On non-supported platform, calling the funct
 
 void my_main() {
     lagrange::enable_fpe();
-    // call problematic operation []...]
+    // call problematic operation [...]
     lagrange::disable_fpe();
 }
 ```
 
 !!! tip "Compilation Issues"
-    If our implementation of `enable_fpe()` casues compilation issues on your target platform (e.g.
+    If our implementation of `enable_fpe()` causes compilation issues on your target platform (e.g.
     macOS M1, Emscripten, etc.), it is possible to disable the feature explicitly by setting the
     CMake option `LAGRANGE_DISABLE_FPE=ON`. In this case, calling `enable_fpe()` will do nothing.
 

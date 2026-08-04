@@ -1,10 +1,10 @@
 # Mesh Attributes
 
 !!! warning "Legacy Mesh vs Surface Mesh"
-    Since v6.0.0, Lagrange introduced a new polygonal mesh class that is meant to replace the
-    original mesh class used throughout Lagrange. While currently few of the Lagrange functions use
-    this new mesh class, over time old and new features will transition to use this new data
-    structure.
+    Since v6.0.0, Lagrange provides a polygonal mesh class ([SurfaceMesh](mesh.md)) that replaces the
+    original (legacy) mesh class. It is now the default mesh type used throughout Lagrange. The
+    legacy mesh class remains available only as an opt-in, via the `LAGRANGE_ENABLE_LEGACY_FUNCTIONS`
+    option.
 
 <!-- @header
 #include <lagrange/SurfaceMesh.h>
@@ -91,12 +91,12 @@ auto id0 = mesh.create_attribute<double>(
     "color",
     lagrange::AttributeElement::Corner);
 
-// Optionally specify usage tag + num channels.
+// Optionally specify num channels + usage tag.
 auto id1 = mesh.create_attribute<float>(
     "normals",
     lagrange::AttributeElement::Vertex,
-    lagrange::AttributeUsage::Normal,
-    3);
+    3,
+    lagrange::AttributeUsage::Normal);
 
 // View attribute as a Eigen::Map<const ...>
 auto attr_matrix = matrix_view(mesh.get_attribute<float>(id1));
@@ -151,7 +151,7 @@ lagrange::SurfaceMesh<Scalar, Index> mesh;
 
 // ...
 
-// Returns a const Attribute<T> &
+// Returns a const IndexedAttribute<T, Index> &
 const auto& attr = mesh.get_indexed_attribute<Scalar>("normals");
 
 const auto& attr_indices = attr.indices();

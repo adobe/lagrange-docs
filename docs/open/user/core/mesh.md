@@ -1,10 +1,10 @@
 # Mesh Class
 
 !!! warning "Legacy Mesh vs Surface Mesh"
-    Since v6.0.0, Lagrange introduced a new polygonal mesh class that is meant to replace the
-    original mesh class used throughout Lagrange. While currently few of the Lagrange functions use
-    this new mesh class, over time old and new features will transition to use this new data
-    structure.
+    Since v6.0.0, Lagrange provides a polygonal mesh class ([SurfaceMesh]) that replaces the
+    original (legacy) mesh class. It is now the default mesh type used throughout Lagrange. The
+    legacy mesh class remains available only as an opt-in, via the `LAGRANGE_ENABLE_LEGACY_FUNCTIONS`
+    option.
 
 <!-- @header
 #include <lagrange/SurfaceMesh.h>
@@ -52,7 +52,7 @@ polygonal meshes. This new data structure was designed with a couple of key feat
 - **Powerful attribute system**:
     - Generic attribute system supporting any fixed-size integer types (`int8_t` ... `uint64_t`) and
       floating point types (`float`, `double`).
-    - Attributes can be attached to any mesh element (vertex, facet, edge, corner), or can indexed
+    - Attributes can be attached to any mesh element (vertex, facet, edge, corner), or can be indexed
       by a secondary buffer (e.g. UVs).
     - Usage tag specifies how attributes are used and transformed (e.g. Color, Normals, UV, etc.).
 - **Optional edge/connectivity attributes**:
@@ -69,9 +69,9 @@ polygonal meshes. This new data structure was designed with a couple of key feat
     - Complete user guide (this document)
     - Full Doxygen API reference.
 
-[^1]: Note that while the new polygonal mesh class is using explicit template instantiation to
-    facilitate compilation, at the time most of Lagrange is still header-only and relying on our
-    legacy mesh data structure. Thus overall compilation times still have room for improvement.
+[^1]: The new polygonal mesh class uses explicit template instantiation to facilitate compilation.
+    Note that some legacy code paths remain header-only, so overall compilation times still have
+    room for improvement.
 
 ## Mesh Representation
 
@@ -112,11 +112,16 @@ surface, mesh containing isolated vertices, point clouds, etc.
   mesh is a hybrid mesh.
 - **Vertex valence**: Number of facet corners pointing to a given vertex (repeated vertex indices in
   a degenerate facet will count multiple times towards the vertex valence).
-- **Facet size**: Number of corners/vertices in a facet. Currently we require facet sizes to be > 2,
-  but this restriction will be lifted in a future version (supporting facets of size 1 and 2).
+- **Facet size**: Number of corners/vertices in a facet. Facet sizes must be > 0. Facets of size 1
+  and 2 are supported.
 
 A hybrid mesh will store an additional "offset" attribute for each facet, to determine where each
 facet starts/ends in the attribute buffer storing vertex indices.
+
+!!! tip "Querying Mesh Type"
+    The facet structure of a mesh can be queried at runtime: `is_regular()`, `is_hybrid()`,
+    `is_triangle_mesh()` and `is_quad_mesh()` return booleans, while `get_vertex_per_facet()`
+    returns the common facet size of a regular mesh.
 
 !!! example "Offset Indices"
     In the following mesh, facets `[f0, f1, f2]` have an "offset" attribute of `[0, 3, 7]`. This
@@ -135,7 +140,7 @@ Simple version:
 lagrange::SurfaceMesh<Scalar, Index> mesh;
 mesh.add_vertices(10); // adds 10 vertices with 0-initialized coordinates
 mesh.add_triangles(3); // adds 3 triangles with 0-initialized vertex indices
-mesh.add_quads(2); // adds 2 quads with 0-initialized vertex vertices
+mesh.add_quads(2); // adds 2 quads with 0-initialized vertex indices
 ```
 
 Another example:
@@ -143,7 +148,7 @@ Another example:
 ```c++
 lagrange::SurfaceMesh<Scalar, Index> mesh;
 mesh.add_vertex({0.5, 0.2, 0.9}); // adds a vertex at (0.5, 0.2, 0.9)
-mesh.add_triangle(1, 3, 4); // adds triangle (v1, v3, v3)
+mesh.add_triangle(1, 3, 4); // adds triangle (v1, v3, v4)
 mesh.add_quad(1, 3, 4, 2); // adds quad (v1, v3, v4, v2)
 mesh.add_polygon({1, 3, 4, 2, 5}); // adds polygon (v1, v3, v4, v2, v5)
 ```
@@ -173,6 +178,16 @@ mesh.add_vertices(
     {vertices.empty() ? nullptr : vertices[0].data(), 3 * vertices.size()});
 ```
 
+To add many facets that all share the *same* size in a single call, use `add_polygons()`:
+
+```c++
+lagrange::SurfaceMesh<Scalar, Index> mesh;
+mesh.add_vertices(20);
+
+// Add 4 pentagons (facet size = 5) with 0-initialized vertex indices
+mesh.add_polygons(4, 5);
+```
+
 You can add multiple polygonal facets with different sizes in the same function call by using the
 `add_hybrid()` method. While this method can take an existing buffer as input, it may be simpler to
 use it via user-defined callbacks:
@@ -200,8 +215,10 @@ mesh.add_hybrid(4,
 });
 ```
 
-!!! tip "Wrapping External Buffers ans Eigen Matrices"
-    Please read our dedicated section on [wrapping external
+!!! tip "Wrapping External Buffers and Eigen Matrices"
+    The buffer-taking `add_*()` overloads copy the input data into the mesh. To instead wrap an
+    existing external buffer as the vertex/facet data *without copying*, use `wrap_as_vertices()` and
+    `wrap_as_facets()`. Please read our dedicated section on [wrapping external
     buffer](attributes.md#wrapping-external-buffers), as well as our documentation on
     [SharedSpan](general-utilities.md#shared-span) for tracking ownership of shared objects when
     wrapping external buffers.
@@ -253,6 +270,88 @@ mesh.remove_facets([&](Index f) { return flip_coin(gen) == 1; });
     Removing a facet will **not** automatically remove any incident vertex. You can end up with
     floating/isolated vertices after facet removal. Consider filtering them as a post-processing.
 
+## Accessing Mesh Elements
+
+Beyond the [Eigen matrix views](#eigen-matrix-views), mesh elements can be queried directly, one
+element at a time. This works uniformly for regular and hybrid meshes.
+
+```c++
+lagrange::SurfaceMesh<Scalar, Index> mesh;
+
+// Fill up mesh...
+
+// Number of elements of each type
+Index nv = mesh.get_num_vertices();
+Index nf = mesh.get_num_facets();
+Index nc = mesh.get_num_corners();
+Index ne = mesh.get_num_edges(); // requires initialize_edges()
+
+// Read a vertex position (span of size get_dimension())
+auto p = mesh.get_position(0);
+
+// Iterate over facets and their corners
+for (Index f = 0; f < mesh.get_num_facets(); ++f) {
+    // Vertex indices of facet f (span of size get_facet_size(f))
+    auto facet_vertices = mesh.get_facet_vertices(f);
+
+    for (Index lv = 0; lv < mesh.get_facet_size(f); ++lv) {
+        Index v = facet_vertices[lv]; // lv-th vertex of facet f
+        // ...
+    }
+}
+
+// Corner <-> vertex/facet mapping
+for (Index c = 0; c < mesh.get_num_corners(); ++c) {
+    Index v = mesh.get_corner_vertex(c); // vertex referenced by corner c
+    Index f = mesh.get_corner_facet(c);  // facet owning corner c
+}
+```
+
+!!! tip "Corner Ranges"
+    The corners of a facet `f` occupy the contiguous range
+    `[mesh.get_facet_corner_begin(f), mesh.get_facet_corner_end(f))`. For a regular mesh this is
+    simply `[f * mesh.get_vertex_per_facet(), (f + 1) * mesh.get_vertex_per_facet())`.
+
+Use the `ref_xxx()` variants (e.g. `ref_position()`, `ref_facet_vertices()`) for writable access.
+See [Copy-On-Write](#copy-on-write) below.
+
+## Flipping Facet Orientation
+
+The orientation of one or more facets can be reversed in place with `flip_facets()`. As with facet
+removal, you can select facets via an explicit list or a predicate:
+
+```c++
+lagrange::SurfaceMesh<Scalar, Index> mesh;
+
+// Fill up mesh...
+
+// Flip a specific list of facets
+mesh.flip_facets({0, 2, 5});
+
+// Flip facets based on a predicate (e.g. flip every other facet)
+mesh.flip_facets([](Index f) { return (f % 2 == 0); });
+```
+
+!!! note "Reorienting Attributes"
+    `flip_facets()` accepts an optional `AttributeReorientPolicy` argument to control whether
+    orientation-sensitive attributes (e.g. normals) are reoriented along with the facets.
+
+## Clearing and Compacting Storage
+
+```c++
+// Remove all facets (vertices are kept)
+mesh.clear_facets();
+
+// Remove all vertices (this also removes all incident facets)
+mesh.clear_vertices();
+
+// Release excess memory reserved by the internal buffers
+mesh.shrink_to_fit();
+
+// Convert hybrid storage to regular storage if all facets have the same size
+mesh.compress_if_regular();
+```
+
 ## Copy-On-Write
 
 All mesh data is stored in an [Attribute] object, including vertex positions, facet indices, etc.
@@ -298,7 +397,7 @@ mesh.get_corner_to_vertex().get_all().data() ==
 
 ## Eigen Matrix Views
 
-Mesh attributes such as positions and facet indices can be views as [Eigen] matrices. Specifically,
+Mesh attributes such as positions and facet indices can be viewed as [Eigen] matrices. Specifically,
 we provide read-only views as `Eigen::Map<const ...>`:
 
 <!-- @views -->
@@ -446,8 +545,26 @@ for (Index v = 0; v < mesh.get_num_vertices(); ++v) {
 }
 ```
 
-In the example above, we could have use the method `count_num_corners_around_vertex()` to
+In the example above, we could have used the method `count_num_corners_around_vertex()` to
 compute vertex valence directly. See [SurfaceMesh] class documentation for a full reference.
+
+In addition to the `foreach_xxx_around_xxx()` helpers, the following accessors provide direct
+navigation once edges have been initialized:
+
+| Method | Description |
+|---|---|
+| `get_edge(f, lv)` | Edge id of the `lv`-th edge of facet `f`. |
+| `get_corner_edge(c)` | Edge id associated with corner `c`. |
+| `get_edge_vertices(e)` | The two endpoint vertices of edge `e`. |
+| `is_boundary_edge(e)` | Whether edge `e` lies on the mesh boundary. |
+| `get_one_facet_around_edge(e)` | An arbitrary facet incident to edge `e`. |
+| `get_clockwise_corner_around_vertex(c)` / `get_counterclockwise_corner_around_vertex(c)` | Traverse corners around a vertex (manifold ordering). |
+| `get_first_corner_around_vertex(v)` / `get_next_corner_around_vertex(c)` | Walk the chain of corners around a vertex. Works on non-manifold geometry; the chain order has no geometric meaning. |
+| `count_num_corners_around_vertex(v)` / `count_num_corners_around_edge(e)` | Count incident corners. |
+
+Additional traversal helpers include `foreach_facet_around_edge()`, `foreach_facet_around_facet()`,
+`foreach_corner_around_edge()` and `foreach_corner_around_vertex()`. See the [SurfaceMesh] class
+documentation for the full list.
 
 !!! danger "Degenerate Facets"
     If a mesh facet is degenerate, and references the same vertex several time (e.g. facet `f2 =
@@ -477,6 +594,24 @@ indices can be used to navigate around mesh elements the same way a half-edge da
     To implement the `twin(h_i)` operation, you can use `SurfaceMesh::get_next_corner_around_edge()`.
 
 In the future we may add a half-edge "proxy" structure to facilitate mesh navigation.
+
+## Mesh Metadata
+
+Besides typed [attributes](attributes.md), a mesh can store arbitrary string key/value pairs as
+**metadata**. This is handy for provenance information, units, author, etc.
+
+```c++
+lagrange::SurfaceMesh<Scalar, Index> mesh;
+
+// Create or update a metadata entry
+mesh.create_metadata("author", "Lagrange");
+mesh.set_metadata("author", "Lagrange Team");
+
+// Read it back
+std::string_view author = mesh.get_metadata("author");
+```
+
+Metadata is stored as value attributes, and is preserved when the mesh is copied.
 
 ## Supported Types
 
