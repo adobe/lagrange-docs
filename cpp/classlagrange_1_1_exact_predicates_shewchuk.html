@@ -144,13 +144,13 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:adb36070a236c8624b50fe5f2c795bf70"><td class="mdescLeft">&#160;</td><td class="mdescRight">Exact 2D orientation test.     <br /></td></tr>
 <tr class="separator:adb36070a236c8624b50fe5f2c795bf70"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa84507f00d4f18bf97c3bf67da33dc40" id="r_aa84507f00d4f18bf97c3bf67da33dc40"><td class="memItemLeft" align="right" valign="top">virtual short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa84507f00d4f18bf97c3bf67da33dc40">orient3D</a> (const double p1[3], const double p2[3], const double p3[3], const double p4[3]) const</td></tr>
-<tr class="memdesc:aa84507f00d4f18bf97c3bf67da33dc40"><td class="mdescLeft">&#160;</td><td class="mdescRight">Exact 2D orientation test.     <br /></td></tr>
+<tr class="memdesc:aa84507f00d4f18bf97c3bf67da33dc40"><td class="mdescLeft">&#160;</td><td class="mdescRight">Exact 3D orientation test.     <br /></td></tr>
 <tr class="separator:aa84507f00d4f18bf97c3bf67da33dc40"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab14b2e8432435128d4e9dab04fc04a58" id="r_ab14b2e8432435128d4e9dab04fc04a58"><td class="memItemLeft" align="right" valign="top">virtual short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab14b2e8432435128d4e9dab04fc04a58">incircle</a> (const double p1[2], const double p2[2], const double p3[2], const double p4[2]) const</td></tr>
-<tr class="memdesc:ab14b2e8432435128d4e9dab04fc04a58"><td class="mdescLeft">&#160;</td><td class="mdescRight">Exact 2D orientation test.     <br /></td></tr>
+<tr class="memdesc:ab14b2e8432435128d4e9dab04fc04a58"><td class="mdescLeft">&#160;</td><td class="mdescRight">Exact 2D incircle test.     <br /></td></tr>
 <tr class="separator:ab14b2e8432435128d4e9dab04fc04a58"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a77a5e37d83f93eb5b0c8aa25c144467d" id="r_a77a5e37d83f93eb5b0c8aa25c144467d"><td class="memItemLeft" align="right" valign="top">virtual short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a77a5e37d83f93eb5b0c8aa25c144467d">insphere</a> (const double p1[3], const double p2[3], const double p3[3], const double p4[3], const double p5[3]) const</td></tr>
-<tr class="memdesc:a77a5e37d83f93eb5b0c8aa25c144467d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Exact 2D orientation test.     <br /></td></tr>
+<tr class="memdesc:a77a5e37d83f93eb5b0c8aa25c144467d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Exact 3D insphere test.     <br /></td></tr>
 <tr class="separator:a77a5e37d83f93eb5b0c8aa25c144467d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classlagrange_1_1_exact_predicates"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classlagrange_1_1_exact_predicates')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classlagrange_1_1_exact_predicates.html">ExactPredicates</a></td></tr>
 <tr class="memitem:a9bacc05cd1da4ec1234b6b44eeb5ba1b inherit pub_methods_classlagrange_1_1_exact_predicates" id="r_a9bacc05cd1da4ec1234b6b44eeb5ba1b"><td class="memItemLeft" align="right" valign="top">virtual short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlagrange_1_1_exact_predicates.html#a9bacc05cd1da4ec1234b6b44eeb5ba1b">collinear3D</a> (const double p1[3], const double p2[3], const double p3[3]) const</td></tr>
@@ -249,16 +249,17 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Exact 2D orientation test.    </p>
+<p>Exact 3D orientation test.    </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">p1</td><td>First 2D point. </td></tr>
-    <tr><td class="paramname">p2</td><td>Second 2D point. </td></tr>
-    <tr><td class="paramname">p3</td><td>Third 2D point.</td></tr>
+    <tr><td class="paramname">p1</td><td>First 3D point. </td></tr>
+    <tr><td class="paramname">p2</td><td>Second 3D point. </td></tr>
+    <tr><td class="paramname">p3</td><td>Third 3D point. </td></tr>
+    <tr><td class="paramname">p4</td><td>Fourth 3D point.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Return a positive value if the points p1, p2, and p3 occur in counterclockwise order; a negative value if they occur in clockwise order; and zero if they are collinear.    </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Return a positive value if the point p4 lies below the plane passing through p1, p2, and p3; "below" is defined so that p1, p2, and p3 appear in counterclockwise order when viewed from above the plane. Returns a negative value if p4 lies above the plane. Returns zero if the points are coplanar.    </dd></dl>
 
 <p>Implements <a class="el" href="classlagrange_1_1_exact_predicates.html#a2c9ac1c86177dd0cc3c902b24e33c893">ExactPredicates</a>.</p>
 
@@ -301,16 +302,17 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Exact 2D orientation test.    </p>
+<p>Exact 2D incircle test.    </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">p1</td><td>First 2D point. </td></tr>
     <tr><td class="paramname">p2</td><td>Second 2D point. </td></tr>
-    <tr><td class="paramname">p3</td><td>Third 2D point.</td></tr>
+    <tr><td class="paramname">p3</td><td>Third 2D point. </td></tr>
+    <tr><td class="paramname">p4</td><td>Fourth 3D point.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Return a positive value if the points p1, p2, and p3 occur in counterclockwise order; a negative value if they occur in clockwise order; and zero if they are collinear.    </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Return a positive value if the point p4 lies inside the circle passing through p1, p2, and p3; a negative value if it lies outside; and zero if the four points are cocircular. The points p1, p2, and p3 must be in counterclockwise order, or the sign of the result will be reversed.    </dd></dl>
 
 <p>Implements <a class="el" href="classlagrange_1_1_exact_predicates.html#aa54106bf82c2a2804f5f229065787142">ExactPredicates</a>.</p>
 
@@ -358,16 +360,18 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Exact 2D orientation test.    </p>
+<p>Exact 3D insphere test.    </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">p1</td><td>First 2D point. </td></tr>
-    <tr><td class="paramname">p2</td><td>Second 2D point. </td></tr>
-    <tr><td class="paramname">p3</td><td>Third 2D point.</td></tr>
+    <tr><td class="paramname">p1</td><td>First 3D point. </td></tr>
+    <tr><td class="paramname">p2</td><td>Second 3D point. </td></tr>
+    <tr><td class="paramname">p3</td><td>Third 3D point. </td></tr>
+    <tr><td class="paramname">p4</td><td>Fourth 3D point. </td></tr>
+    <tr><td class="paramname">p5</td><td>Fifth 3D point.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Return a positive value if the points p1, p2, and p3 occur in counterclockwise order; a negative value if they occur in clockwise order; and zero if they are collinear.    </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Return a positive value if the point p5 lies inside the sphere passing through p1, p2, p3, and p4; a negative value if it lies outside; and zero if the five points are cospherical. The points p1, p2, p3, and p4 must be ordered so that they have a positive orientation (as defined by orient3d()), or the sign of the result will be reversed.    </dd></dl>
 
 <p>Implements <a class="el" href="classlagrange_1_1_exact_predicates.html#aa11a2f6a8a633085b2718ed5b1079bfa">ExactPredicates</a>.</p>
 
@@ -383,7 +387,7 @@ Additional Inherited Members</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacelagrange.html">lagrange</a></li><li class="navelem"><a class="el" href="classlagrange_1_1_exact_predicates_shewchuk.html">ExactPredicatesShewchuk</a></li>
-    <li class="footer">Generated on Sat Jun 20 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+    <li class="footer">Generated on Tue Aug 4 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>
 </body>

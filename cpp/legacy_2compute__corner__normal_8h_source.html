@@ -207,7 +207,7 @@ $(function(){initNavTree('legacy_2compute__corner__normal_8h_source.html',''); i
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    };</div>
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
 <div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    <span class="keyword">auto</span> get_corner_index = [vertex_per_facet, &amp;facets](<span class="keyword">const</span> Index fid, <span class="keyword">const</span> Index vid) -&gt; Index {</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        <span class="keywordflow">for</span> (<span class="keyword">auto</span> i : <a class="code hl_function" href="group__group-utils-misc.html#ga41568d17fc48cea4a31db0e40cd93cf8">range</a>(vertex_per_facet)) {</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        <span class="keywordflow">for</span> (<span class="keyword">auto</span> i : <a class="code hl_function" href="namespacelagrange.html#a41568d17fc48cea4a31db0e40cd93cf8">range</a>(vertex_per_facet)) {</div>
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>            <span class="keywordflow">if</span> (facets(fid, i) == vid) {</div>
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>                <span class="keywordflow">return</span> fid * vertex_per_facet + i;</div>
 <div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>            }</div>
@@ -259,7 +259,7 @@ $(function(){initNavTree('legacy_2compute__corner__normal_8h_source.html',''); i
 <div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>        std::transform(facet_ids.begin(), facet_ids.end(), facet_ids.begin(), get_1_ring_root);</div>
 <div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span> </div>
 <div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>        <span class="comment">// Accumulate normal to root corner.</span></div>
-<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>        <span class="keywordflow">for</span> (<span class="keyword">auto</span> i : <a class="code hl_function" href="group__group-utils-misc.html#ga41568d17fc48cea4a31db0e40cd93cf8">range</a>(num_adj_facets)) {</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>        <span class="keywordflow">for</span> (<span class="keyword">auto</span> i : <a class="code hl_function" href="namespacelagrange.html#a41568d17fc48cea4a31db0e40cd93cf8">range</a>(num_adj_facets)) {</div>
 <div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>            <span class="keyword">const</span> Index fid = adj_facets[i];</div>
 <div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>            <span class="keyword">const</span> Index corner_id = get_corner_index(fid, vi);</div>
 <div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>            <span class="keyword">const</span> Index root_fid = adj_facets[facet_ids[i]];</div>
@@ -272,7 +272,7 @@ $(function(){initNavTree('legacy_2compute__corner__normal_8h_source.html',''); i
 <div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>            }</div>
 <div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>        }</div>
 <div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>        <span class="comment">// Assign corner normal to each smooth group of the 1-ring.</span></div>
-<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>        <span class="keywordflow">for</span> (<span class="keyword">auto</span> i : <a class="code hl_function" href="group__group-utils-misc.html#ga41568d17fc48cea4a31db0e40cd93cf8">range</a>(num_adj_facets)) {</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>        <span class="keywordflow">for</span> (<span class="keyword">auto</span> i : <a class="code hl_function" href="namespacelagrange.html#a41568d17fc48cea4a31db0e40cd93cf8">range</a>(num_adj_facets)) {</div>
 <div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>            <span class="keyword">const</span> Index fid = adj_facets[i];</div>
 <div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>            <span class="keyword">const</span> Index root_fid = adj_facets[facet_ids[i]];</div>
 <div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>            <span class="keyword">const</span> Index curr_corner_id = get_corner_index(fid, vi);</div>
@@ -288,7 +288,7 @@ $(function(){initNavTree('legacy_2compute__corner__normal_8h_source.html',''); i
 <div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>        }</div>
 <div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>    };</div>
 <div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span> </div>
-<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> vi : <a class="code hl_function" href="group__group-utils-misc.html#ga41568d17fc48cea4a31db0e40cd93cf8">range</a>(num_vertices)) {</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> vi : <a class="code hl_function" href="namespacelagrange.html#a41568d17fc48cea4a31db0e40cd93cf8">range</a>(num_vertices)) {</div>
 <div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>        <span class="keywordflow">if</span> (is_cone_vertex(vi)) {</div>
 <div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>            compute_corner_normal_around_cone_vertex(vi);</div>
 <div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>        } <span class="keywordflow">else</span> {</div>
@@ -336,18 +336,18 @@ $(function(){initNavTree('legacy_2compute__corner__normal_8h_source.html',''); i
 <div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>} <span class="comment">// namespace legacy</span></div>
 <div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>} <span class="comment">// namespace lagrange</span></div>
 <div class="ttc" id="agroup__group-surfacemesh-attr_html_gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74"><div class="ttname"><a href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">lagrange::AttributeUsage::Scalar</a></div><div class="ttdeci">@ Scalar</div><div class="ttdoc">Mesh attribute must have exactly 1 channel.</div><div class="ttdef"><b>Definition</b> AttributeFwd.h:56</div></div>
-<div class="ttc" id="agroup__group-utils-assert_html_ga1ccafcb14523a1aae57dcac3c3f32ecd"><div class="ttname"><a href="group__group-utils-assert.html#ga1ccafcb14523a1aae57dcac3c3f32ecd">la_runtime_assert</a></div><div class="ttdeci">#define la_runtime_assert(...)</div><div class="ttdoc">Runtime assertion check.</div><div class="ttdef"><b>Definition</b> assert.h:175</div></div>
-<div class="ttc" id="agroup__group-utils-misc_html_ga41568d17fc48cea4a31db0e40cd93cf8"><div class="ttname"><a href="group__group-utils-misc.html#ga41568d17fc48cea4a31db0e40cd93cf8">lagrange::range</a></div><div class="ttdeci">internal::Range&lt; Index &gt; range(Index end)</div><div class="ttdoc">Returns an iterable object representing the range [0, end).</div><div class="ttdef"><b>Definition</b> range.h:176</div></div>
+<div class="ttc" id="agroup__group-utils-assert_html_ga1ccafcb14523a1aae57dcac3c3f32ecd"><div class="ttname"><a href="group__group-utils-assert.html#ga1ccafcb14523a1aae57dcac3c3f32ecd">la_runtime_assert</a></div><div class="ttdeci">#define la_runtime_assert(...)</div><div class="ttdoc">Runtime assertion check.</div><div class="ttdef"><b>Definition</b> assert.h:177</div></div>
 <div class="ttc" id="agroup__group-utils-misc_html_gafc5798c28b15e46d20d0234b72c4ef63"><div class="ttname"><a href="group__group-utils-misc.html#gafc5798c28b15e46d20d0234b72c4ef63">lagrange::safe_cast</a></div><div class="ttdeci">constexpr auto safe_cast(SourceType value) -&gt; std::enable_if_t&lt;!std::is_same&lt; SourceType, TargetType &gt;::value, TargetType &gt;</div><div class="ttdoc">Perform safe cast from SourceType to TargetType, where &quot;safe&quot; means:</div><div class="ttdef"><b>Definition</b> safe_cast.h:51</div></div>
 <div class="ttc" id="anamespacelagrange_1_1internal_html_a8d8b8c95bd1fe5343f763045a81314ee"><div class="ttname"><a href="namespacelagrange_1_1internal.html#a8d8b8c95bd1fe5343f763045a81314ee">lagrange::internal::internal_angles</a></div><div class="ttdeci">void internal_angles(const Eigen::MatrixBase&lt; DerivedV &gt; &amp;vertices, const Eigen::MatrixBase&lt; DerivedF &gt; &amp;facets, Eigen::PlainObjectBase&lt; DerivedK &gt; &amp;angles)</div><div class="ttdoc">Compute internal angles for a triangle mesh.</div><div class="ttdef"><b>Definition</b> internal_angles.h:39</div></div>
 <div class="ttc" id="anamespacelagrange_html"><div class="ttname"><a href="namespacelagrange.html">lagrange</a></div><div class="ttdoc">Main namespace for Lagrange.</div></div>
+<div class="ttc" id="anamespacelagrange_html_a41568d17fc48cea4a31db0e40cd93cf8"><div class="ttname"><a href="namespacelagrange.html#a41568d17fc48cea4a31db0e40cd93cf8">lagrange::range</a></div><div class="ttdeci">internal::Range&lt; Index &gt; range(Index end)</div><div class="ttdoc">Returns an iterable object representing the range [0, end).</div><div class="ttdef"><b>Definition</b> range.h:176</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_e277d0e790805391a364b883bec7db94.html">lagrange</a></li><li class="navelem"><a class="el" href="dir_3e86c1114dca7f32217f9b892f901fa0.html">legacy</a></li><li class="navelem"><b>compute_corner_normal.h</b></li>
-    <li class="footer">Generated on Sat Jun 20 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+    <li class="footer">Generated on Tue Aug 4 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>
 </body>

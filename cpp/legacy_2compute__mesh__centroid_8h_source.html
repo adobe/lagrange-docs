@@ -182,7 +182,7 @@ $(function(){initNavTree('legacy_2compute__mesh__centroid_8h_source.html',''); i
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    Vertex3 centroid = Vertex3::Zero();</div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <a class="code hl_enumvalue" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a> area = 0;</div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> facet_id : <a class="code hl_function" href="group__group-utils-misc.html#ga0361fdaa740fe7284fe2b7b10072e955">range_sparse</a>(mesh_ref.get_num_facets(), active_facets)) {</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> facet_id : <a class="code hl_function" href="namespacelagrange.html#a0361fdaa740fe7284fe2b7b10072e955">range_sparse</a>(mesh_ref.get_num_facets(), active_facets)) {</div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        <span class="keyword">const</span> Vertex3 v0 = vertices.row(facets(facet_id, 0));</div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        <span class="keyword">const</span> Vertex3 v1 = vertices.row(facets(facet_id, 1));</div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        <span class="keyword">const</span> Vertex3 v2 = vertices.row(facets(facet_id, 2));</div>
@@ -204,9 +204,9 @@ $(function(){initNavTree('legacy_2compute__mesh__centroid_8h_source.html',''); i
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>} <span class="comment">// namespace legacy</span></div>
 <div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>} <span class="comment">// namespace lagrange</span></div>
 <div class="ttc" id="agroup__group-surfacemesh-attr_html_gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74"><div class="ttname"><a href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">lagrange::AttributeUsage::Scalar</a></div><div class="ttdeci">@ Scalar</div><div class="ttdoc">Mesh attribute must have exactly 1 channel.</div><div class="ttdef"><b>Definition</b> AttributeFwd.h:56</div></div>
-<div class="ttc" id="agroup__group-utils-assert_html_ga1ccafcb14523a1aae57dcac3c3f32ecd"><div class="ttname"><a href="group__group-utils-assert.html#ga1ccafcb14523a1aae57dcac3c3f32ecd">la_runtime_assert</a></div><div class="ttdeci">#define la_runtime_assert(...)</div><div class="ttdoc">Runtime assertion check.</div><div class="ttdef"><b>Definition</b> assert.h:175</div></div>
-<div class="ttc" id="agroup__group-utils-misc_html_ga0361fdaa740fe7284fe2b7b10072e955"><div class="ttname"><a href="group__group-utils-misc.html#ga0361fdaa740fe7284fe2b7b10072e955">lagrange::range_sparse</a></div><div class="ttdeci">internal::SparseRange&lt; Index &gt; range_sparse(Index max, const std::vector&lt; Index &gt; &amp;active)</div><div class="ttdoc">Returns an iterable object representing a subset of the range [0, max).</div><div class="ttdef"><b>Definition</b> range.h:217</div></div>
+<div class="ttc" id="agroup__group-utils-assert_html_ga1ccafcb14523a1aae57dcac3c3f32ecd"><div class="ttname"><a href="group__group-utils-assert.html#ga1ccafcb14523a1aae57dcac3c3f32ecd">la_runtime_assert</a></div><div class="ttdeci">#define la_runtime_assert(...)</div><div class="ttdoc">Runtime assertion check.</div><div class="ttdef"><b>Definition</b> assert.h:177</div></div>
 <div class="ttc" id="anamespacelagrange_html"><div class="ttname"><a href="namespacelagrange.html">lagrange</a></div><div class="ttdoc">Main namespace for Lagrange.</div></div>
+<div class="ttc" id="anamespacelagrange_html_a0361fdaa740fe7284fe2b7b10072e955"><div class="ttname"><a href="namespacelagrange.html#a0361fdaa740fe7284fe2b7b10072e955">lagrange::range_sparse</a></div><div class="ttdeci">internal::SparseRange&lt; Index &gt; range_sparse(Index max, const std::vector&lt; Index &gt; &amp;active)</div><div class="ttdoc">Returns an iterable object representing a subset of the range [0, max).</div><div class="ttdef"><b>Definition</b> range.h:217</div></div>
 <div class="ttc" id="astructlagrange_1_1legacy_1_1_compute_mesh_centroid_output_html"><div class="ttname"><a href="structlagrange_1_1legacy_1_1_compute_mesh_centroid_output.html">lagrange::legacy::ComputeMeshCentroidOutput</a></div><div class="ttdef"><b>Definition</b> compute_mesh_centroid.h:26</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
@@ -214,7 +214,7 @@ $(function(){initNavTree('legacy_2compute__mesh__centroid_8h_source.html',''); i
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_e277d0e790805391a364b883bec7db94.html">lagrange</a></li><li class="navelem"><a class="el" href="dir_3e86c1114dca7f32217f9b892f901fa0.html">legacy</a></li><li class="navelem"><b>compute_mesh_centroid.h</b></li>
-    <li class="footer">Generated on Sat Jun 20 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+    <li class="footer">Generated on Tue Aug 4 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>
 </body>

@@ -124,7 +124,6 @@ $(function(){initNavTree('group__module-bvh.html',''); initResizable(true); });
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
-<a href="#typedef-members">Typedefs</a> &#124;
 <a href="#enum-members">Enumerations</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">BVH Module</div></div>
@@ -156,25 +155,6 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlagrange_1_1bvh_1_1_weld_options.html">WeldOptions</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
-Typedefs</h2></td></tr>
-<tr class="memitem:ga67c6272cb821c41deabb5f35d16e2486" id="r_ga67c6272cb821c41deabb5f35d16e2486"><td class="memItemLeft" align="right" valign="top"><a id="ga67c6272cb821c41deabb5f35d16e2486" name="ga67c6272cb821c41deabb5f35d16e2486"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>Scalar</b> = typename VertexArray::Scalar</td></tr>
-<tr class="separator:ga67c6272cb821c41deabb5f35d16e2486"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga340800bbab0584e71416ededa383d6cd" id="r_ga340800bbab0584e71416ededa383d6cd"><td class="memItemLeft" align="right" valign="top"><a id="ga340800bbab0584e71416ededa383d6cd" name="ga340800bbab0584e71416ededa383d6cd"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>Index</b> = typename EdgeArray::Scalar</td></tr>
-<tr class="separator:ga340800bbab0584e71416ededa383d6cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gab78367ded6eddb154a06510d1eb316bf" id="r_gab78367ded6eddb154a06510d1eb316bf"><td class="memItemLeft" align="right" valign="top"><a id="gab78367ded6eddb154a06510d1eb316bf" name="gab78367ded6eddb154a06510d1eb316bf"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>AlignedBoxType</b> = typename <a class="el" href="classlagrange_1_1bvh_1_1_a_a_b_b.html">AABB</a>&lt;Scalar, Dim&gt;::Box</td></tr>
-<tr class="separator:gab78367ded6eddb154a06510d1eb316bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga9c28e127172f8b51b703a8d38f4c68c4" id="r_ga9c28e127172f8b51b703a8d38f4c68c4"><td class="memItemLeft" align="right" valign="top"><a id="ga9c28e127172f8b51b703a8d38f4c68c4" name="ga9c28e127172f8b51b703a8d38f4c68c4"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>RowVectorType</b> = Eigen::Matrix&lt;Scalar, 1, Dim&gt;</td></tr>
-<tr class="separator:ga9c28e127172f8b51b703a8d38f4c68c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga386999d5e43dd47823f5b247745957ef" id="r_ga386999d5e43dd47823f5b247745957ef"><td class="memItemLeft" align="right" valign="top"><a id="ga386999d5e43dd47823f5b247745957ef" name="ga386999d5e43dd47823f5b247745957ef"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>ActionCallback</b> = <a class="el" href="classlagrange_1_1function__ref.html">function_ref</a>&lt;void(Scalar, Index, const RowVectorType&amp;)&gt;</td></tr>
-<tr class="memdesc:ga386999d5e43dd47823f5b247745957ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">closest_sq_dist x element_id x closest_point <br /></td></tr>
-<tr class="separator:ga386999d5e43dd47823f5b247745957ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
 Enumerations</h2></td></tr>
 <tr class="memitem:ga7e55018c6fcf6fb3e8f6b02e4fc46892" id="r_ga7e55018c6fcf6fb3e8f6b02e4fc46892"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga7e55018c6fcf6fb3e8f6b02e4fc46892">UVOverlapMethod</a> { <a class="el" href="#gga7e55018c6fcf6fb3e8f6b02e4fc46892ac490cb8cd3c70c9f65c380176d0099ea">SweepAndPrune</a>
@@ -186,6 +166,10 @@ Enumerations</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:ga4e4be146df5c66d9eec08e28fbc4dc83" id="r_ga4e4be146df5c66d9eec08e28fbc4dc83"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, typename Index&gt; </td></tr>
+<tr class="memitem:ga4e4be146df5c66d9eec08e28fbc4dc83"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classlagrange_1_1_adjacency_list.html">AdjacencyList</a>&lt; Index &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ga4e4be146df5c66d9eec08e28fbc4dc83">compute_intersecting_pairs</a> (const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index &gt; &amp;mesh)</td></tr>
+<tr class="memdesc:ga4e4be146df5c66d9eec08e28fbc4dc83"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute all pairs of intersecting facets in a mesh using an AABB tree for acceleration.  <br /></td></tr>
+<tr class="separator:ga4e4be146df5c66d9eec08e28fbc4dc83"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga5f64c98d00b325344dd5b57e51f16451" id="r_ga5f64c98d00b325344dd5b57e51f16451"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, typename Index&gt; </td></tr>
 <tr class="memitem:ga5f64c98d00b325344dd5b57e51f16451"><td class="memTemplItemLeft" align="right" valign="top">LA_BVH_API <a class="el" href="group__group-surfacemesh-attr.html#ga4d115376c2c766084ef808c837348fc3">AttributeId</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ga5f64c98d00b325344dd5b57e51f16451">compute_mesh_distances</a> (<a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index &gt; &amp;source, const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index &gt; &amp;target, const <a class="el" href="structlagrange_1_1bvh_1_1_mesh_distances_options.html">MeshDistancesOptions</a> &amp;options={})</td></tr>
 <tr class="memdesc:ga5f64c98d00b325344dd5b57e51f16451"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the distance from each vertex in <code class="param">source</code> to the closest point on <code class="param">target</code>, and store the result as a per-vertex scalar attribute on <code class="param">source</code>.  <br /></td></tr>
@@ -202,24 +186,6 @@ Functions</h2></td></tr>
 <tr class="memitem:ga32a555d00a25d570ed2b9fa2e0940bd1"><td class="memTemplItemLeft" align="right" valign="top">LA_BVH_API <a class="el" href="structlagrange_1_1bvh_1_1_u_v_overlap_result.html">UVOverlapResult</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ga32a555d00a25d570ed2b9fa2e0940bd1">compute_uv_overlap</a> (<a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index &gt; &amp;mesh, const <a class="el" href="structlagrange_1_1bvh_1_1_u_v_overlap_options.html">UVOverlapOptions</a> &amp;options={})</td></tr>
 <tr class="memdesc:ga32a555d00a25d570ed2b9fa2e0940bd1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute pairwise UV triangle overlap.  <br /></td></tr>
 <tr class="separator:ga32a555d00a25d570ed2b9fa2e0940bd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gadd5d672df21cf5d9157453f22576742f" id="r_gadd5d672df21cf5d9157453f22576742f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gadd5d672df21cf5d9157453f22576742f">EdgeAABBTree</a> (const VertexArray &amp;V, const EdgeArray &amp;E)</td></tr>
-<tr class="memdesc:gadd5d672df21cf5d9157453f22576742f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct an AABB over the given edge graph.  <br /></td></tr>
-<tr class="separator:gadd5d672df21cf5d9157453f22576742f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga644718bb2fb240de962dc3c9a1fdf0dc" id="r_ga644718bb2fb240de962dc3c9a1fdf0dc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga644718bb2fb240de962dc3c9a1fdf0dc">empty</a> () const</td></tr>
-<tr class="memdesc:ga644718bb2fb240de962dc3c9a1fdf0dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test whether the tree is empty.  <br /></td></tr>
-<tr class="separator:ga644718bb2fb240de962dc3c9a1fdf0dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga0777d5965f6f3176e6bb70e57cd0e7af" id="r_ga0777d5965f6f3176e6bb70e57cd0e7af"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga0777d5965f6f3176e6bb70e57cd0e7af">get_element_closest_point</a> (const RowVectorType &amp;p, Index element_id, RowVectorType &amp;closest_point, Scalar &amp;closest_sq_dist) const</td></tr>
-<tr class="memdesc:ga0777d5965f6f3176e6bb70e57cd0e7af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the closest point to a given element.  <br /></td></tr>
-<tr class="separator:ga0777d5965f6f3176e6bb70e57cd0e7af"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga8dc4c572d92b859e21ff0d584c9448b2" id="r_ga8dc4c572d92b859e21ff0d584c9448b2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga8dc4c572d92b859e21ff0d584c9448b2">foreach_element_in_radius</a> (const RowVectorType &amp;p, Scalar sq_dist, <a class="el" href="#ga386999d5e43dd47823f5b247745957ef">ActionCallback</a> func) const</td></tr>
-<tr class="memdesc:ga8dc4c572d92b859e21ff0d584c9448b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Iterate over edges within a prescribed distance from a query point.  <br /></td></tr>
-<tr class="separator:ga8dc4c572d92b859e21ff0d584c9448b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga67e1a0cd37c592ad6cffd3451d522d5f" id="r_ga67e1a0cd37c592ad6cffd3451d522d5f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga67e1a0cd37c592ad6cffd3451d522d5f">foreach_element_containing</a> (const RowVectorType &amp;p, <a class="el" href="#ga386999d5e43dd47823f5b247745957ef">ActionCallback</a> func) const</td></tr>
-<tr class="memdesc:ga67e1a0cd37c592ad6cffd3451d522d5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Iterate over edges that contain exactly a given query point.  <br /></td></tr>
-<tr class="separator:ga67e1a0cd37c592ad6cffd3451d522d5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga24fa34ce618bd63b0c9d9c4bdc3fc9c5" id="r_ga24fa34ce618bd63b0c9d9c4bdc3fc9c5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga24fa34ce618bd63b0c9d9c4bdc3fc9c5">get_closest_point</a> (const RowVectorType &amp;p, Index &amp;element_id, RowVectorType &amp;closest_point, Scalar &amp;closest_sq_dist, <a class="el" href="classlagrange_1_1function__ref.html">function_ref</a>&lt; bool(Index)&gt; filter_func=[](Index) { return true;}) const</td></tr>
-<tr class="memdesc:ga24fa34ce618bd63b0c9d9c4bdc3fc9c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the closest point to an element of the tree.  <br /></td></tr>
-<tr class="separator:ga24fa34ce618bd63b0c9d9c4bdc3fc9c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga4e23b9d49adcfe017da3455eb381ce13" id="r_ga4e23b9d49adcfe017da3455eb381ce13"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, typename Index&gt; </td></tr>
 <tr class="memitem:ga4e23b9d49adcfe017da3455eb381ce13"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ga4e23b9d49adcfe017da3455eb381ce13">weld_vertices</a> (<a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index &gt; &amp;mesh, <a class="el" href="structlagrange_1_1bvh_1_1_weld_options.html">WeldOptions</a> options={})</td></tr>
 <tr class="memdesc:ga4e23b9d49adcfe017da3455eb381ce13"><td class="mdescLeft">&#160;</td><td class="mdescRight">Weld nearby vertices together of a surface mesh.  <br /></td></tr>
@@ -267,6 +233,52 @@ Intersections" (Zomorodian &amp; Edelsbrunner, 2002), simplified for the 2-D com
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="ga4e4be146df5c66d9eec08e28fbc4dc83" name="ga4e4be146df5c66d9eec08e28fbc4dc83"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4e4be146df5c66d9eec08e28fbc4dc83">&#9670;&#160;</a></span>compute_intersecting_pairs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, typename Index&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classlagrange_1_1_adjacency_list.html">AdjacencyList</a>&lt; Index &gt; compute_intersecting_pairs </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>mesh</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;lagrange/bvh/compute_intersecting_pairs.h&gt;</code></p>
+
+<p>Compute all pairs of intersecting facets in a mesh using an AABB tree for acceleration. </p>
+<p>Detects facet pairs whose interiors overlap using exact geometric predicates. All facet pairs (including vertex- and edge-adjacent ones) are tested geometrically. Contacts at shared vertices or edges do not count as intersections; only interior overlaps are reported.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">mesh</td><td>The input mesh. Must be a triangle mesh (only triangular facets).</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Scalar</td><td>Mesh scalar type. </td></tr>
+    <tr><td class="paramname">Index</td><td>Mesh index type.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>An AdjacencyList representing the intersection graph. For each facet i, get_neighbors(i) returns all facets whose interior overlaps the interior of i.</dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::runtime_error</td><td>if the mesh is not a triangle mesh or not 3D.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>Uses exact predicates (orient3D, orient2D) with include_boundary=false. Boundary contacts (shared vertices or edges) are correctly excluded.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd>triangle_triangle_intersection </dd></dl>
+
+</div>
+</div>
 <a id="ga5f64c98d00b325344dd5b57e51f16451" name="ga5f64c98d00b325344dd5b57e51f16451"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga5f64c98d00b325344dd5b57e51f16451">&#9670;&#160;</a></span>compute_mesh_distances()</h2>
 
@@ -460,246 +472,6 @@ template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5
 
 </div>
 </div>
-<a id="gadd5d672df21cf5d9157453f22576742f" name="gadd5d672df21cf5d9157453f22576742f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gadd5d672df21cf5d9157453f22576742f">&#9670;&#160;</a></span>EdgeAABBTree()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename VertexArray, typename EdgeArray, int Dim&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="structlagrange_1_1bvh_1_1_edge_a_a_b_b_tree.html">EdgeAABBTree</a> </td>
-          <td>(</td>
-          <td class="paramtype">const VertexArray &amp;</td>          <td class="paramname"><span class="paramname"><em>V</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const EdgeArray &amp;</td>          <td class="paramname"><span class="paramname"><em>E</em></span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p><code>#include &lt;lagrange/bvh/EdgeAABBTree.h&gt;</code></p>
-
-<p>Construct an AABB over the given edge graph. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">V</td><td>V x Dim input vertex positions. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">E</td><td>E x 2 input edge vertices. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="ga644718bb2fb240de962dc3c9a1fdf0dc" name="ga644718bb2fb240de962dc3c9a1fdf0dc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga644718bb2fb240de962dc3c9a1fdf0dc">&#9670;&#160;</a></span>empty()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename VertexArray, typename EdgeArray, int Dim = 3&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool empty </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p><code>#include &lt;lagrange/bvh/EdgeAABBTree.h&gt;</code></p>
-
-<p>Test whether the tree is empty. </p>
-<dl class="section return"><dt>Returns</dt><dd>True iff empty, False otherwise. </dd></dl>
-
-</div>
-</div>
-<a id="ga0777d5965f6f3176e6bb70e57cd0e7af" name="ga0777d5965f6f3176e6bb70e57cd0e7af"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga0777d5965f6f3176e6bb70e57cd0e7af">&#9670;&#160;</a></span>get_element_closest_point()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename VertexArray, typename EdgeArray, int Dim&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">void get_element_closest_point </td>
-          <td>(</td>
-          <td class="paramtype">const RowVectorType &amp;</td>          <td class="paramname"><span class="paramname"><em>p</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">Index</td>          <td class="paramname"><span class="paramname"><em>element_id</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">RowVectorType &amp;</td>          <td class="paramname"><span class="paramname"><em>closest_point</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">Scalar &amp;</td>          <td class="paramname"><span class="paramname"><em>closest_sq_dist</em></span>&#160;) const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p><code>#include &lt;lagrange/bvh/EdgeAABBTree.h&gt;</code></p>
-
-<p>Gets the closest point to a given element. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">p</td><td>Query point. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">element_id</td><td>Element id. </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">closest_point</td><td>Closest point on the element. </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">closest_sq_dist</td><td>Squared distance between closest point and query point. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="ga8dc4c572d92b859e21ff0d584c9448b2" name="ga8dc4c572d92b859e21ff0d584c9448b2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga8dc4c572d92b859e21ff0d584c9448b2">&#9670;&#160;</a></span>foreach_element_in_radius()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename VertexArray, typename EdgeArray, int Dim = 3&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">void foreach_element_in_radius </td>
-          <td>(</td>
-          <td class="paramtype">const RowVectorType &amp;</td>          <td class="paramname"><span class="paramname"><em>p</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">Scalar</td>          <td class="paramname"><span class="paramname"><em>sq_dist</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="#ga386999d5e43dd47823f5b247745957ef">ActionCallback</a></td>          <td class="paramname"><span class="paramname"><em>func</em></span>&#160;) const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p><code>#include &lt;lagrange/bvh/EdgeAABBTree.h&gt;</code></p>
-
-<p>Iterate over edges within a prescribed distance from a query point. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">p</td><td>1 x Dim query point. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">sq_dist</td><td>Squared query radius. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">func</td><td>Function to apply to every edge within query distance. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="ga67e1a0cd37c592ad6cffd3451d522d5f" name="ga67e1a0cd37c592ad6cffd3451d522d5f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga67e1a0cd37c592ad6cffd3451d522d5f">&#9670;&#160;</a></span>foreach_element_containing()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename VertexArray, typename EdgeArray, int Dim = 3&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">void foreach_element_containing </td>
-          <td>(</td>
-          <td class="paramtype">const RowVectorType &amp;</td>          <td class="paramname"><span class="paramname"><em>p</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="#ga386999d5e43dd47823f5b247745957ef">ActionCallback</a></td>          <td class="paramname"><span class="paramname"><em>func</em></span>&#160;) const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p><code>#include &lt;lagrange/bvh/EdgeAABBTree.h&gt;</code></p>
-
-<p>Iterate over edges that contain exactly a given query point. </p>
-<p>This function uses exact predicates to determine whether the query point belong to an edge segment. Note that this is slightly different from calling foreach_element_in_radius with a search radius of 0, since foreach_element_in_radius does not use exact predicates, it might return false positives (i.e. points which are at distance 0, but not exactly collinear).</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">p</td><td>1 x Dim query point. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">func</td><td>Function to apply to every edge within query distance. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="ga24fa34ce618bd63b0c9d9c4bdc3fc9c5" name="ga24fa34ce618bd63b0c9d9c4bdc3fc9c5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga24fa34ce618bd63b0c9d9c4bdc3fc9c5">&#9670;&#160;</a></span>get_closest_point()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename VertexArray, typename EdgeArray, int Dim&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">void get_closest_point </td>
-          <td>(</td>
-          <td class="paramtype">const RowVectorType &amp;</td>          <td class="paramname"><span class="paramname"><em>p</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">Index &amp;</td>          <td class="paramname"><span class="paramname"><em>element_id</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">RowVectorType &amp;</td>          <td class="paramname"><span class="paramname"><em>closest_point</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">Scalar &amp;</td>          <td class="paramname"><span class="paramname"><em>closest_sq_dist</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classlagrange_1_1function__ref.html">function_ref</a>&lt; bool(Index)&gt;</td>          <td class="paramname"><span class="paramname"><em>filter_func</em></span><span class="paramdefsep"> = </span><span class="paramdefval">[](Index)&#160;{&#160;return&#160;true;&#160;}</span>&#160;) const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p><code>#include &lt;lagrange/bvh/EdgeAABBTree.h&gt;</code></p>
-
-<p>Gets the closest point to an element of the tree. </p>
-<p>Whereas get_element_closest_point returns the closest point to <em>a</em> queried element, this function recursively traverses the tree nodes to find the element which is closest to the query point.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">p</td><td>Query point. </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">element_id</td><td>Closest element id. </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">closest_point</td><td>Closest point on the element. </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">closest_sq_dist</td><td>Squared distance between closest point and query point. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">filter_func</td><td>Optional function to filter out elements from the test. Only elements for which filter_func(element_id) == true will be considered for closest point. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
 <a id="ga4e23b9d49adcfe017da3455eb381ce13" name="ga4e23b9d49adcfe017da3455eb381ce13"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga4e23b9d49adcfe017da3455eb381ce13">&#9670;&#160;</a></span>weld_vertices()</h2>
 
@@ -740,7 +512,7 @@ template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Sat Jun 20 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+    <li class="footer">Generated on Tue Aug 4 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>
 </body>

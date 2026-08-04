@@ -240,6 +240,10 @@ Functions</h2></td></tr>
 template&lt;typename DerivedF, typename DerivedFF, typename DerivedC&gt; </td></tr>
 <tr class="memitem:a10b9d17084e2958faea52fd3672dea5f"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>bfs_orient</b> (const Eigen::MatrixBase&lt; DerivedF &gt; &amp;F, Eigen::PlainObjectBase&lt; DerivedFF &gt; &amp;FF, Eigen::PlainObjectBase&lt; DerivedC &gt; &amp;C)</td></tr>
 <tr class="separator:a10b9d17084e2958faea52fd3672dea5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb75bde5221f9a2383407d0aa7de5f6b" id="r_adb75bde5221f9a2383407d0aa7de5f6b"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>&gt; </td></tr>
+<tr class="memitem:adb75bde5221f9a2383407d0aa7de5f6b"><td class="memTemplItemLeft" align="right" valign="top">Eigen::Vector3&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#adb75bde5221f9a2383407d0aa7de5f6b">clipped_triangle_circumcenter</a> (const Eigen::Vector3&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a> &gt; &amp;p1, const Eigen::Vector3&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a> &gt; &amp;p2, const Eigen::Vector3&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a> &gt; &amp;p3, <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a> &amp;lambda1, <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a> &amp;lambda2, <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a> &amp;lambda3)</td></tr>
+<tr class="memdesc:adb75bde5221f9a2383407d0aa7de5f6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the circumcenter of a triangle (p1, p2, p3), clipped to the triangle if it lies outside.  <br /></td></tr>
+<tr class="separator:adb75bde5221f9a2383407d0aa7de5f6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0b17eb97eebbacee7e14ec21abf6c6cb" id="r_a0b17eb97eebbacee7e14ec21abf6c6cb"><td class="memTemplParams" colspan="2">template&lt;typename Index&gt; </td></tr>
 <tr class="memitem:a0b17eb97eebbacee7e14ec21abf6c6cb"><td class="memTemplItemLeft" align="right" valign="top">std::pair&lt; std::vector&lt; Index &gt;, Index &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a0b17eb97eebbacee7e14ec21abf6c6cb">compact_chart_ids</a> (<a class="el" href="group__group-utils-misc.html#ga4afead0b9ccc53fe4fca896787595d26">span</a>&lt; const Index &gt; chart_ids)</td></tr>
 <tr class="memdesc:a0b17eb97eebbacee7e14ec21abf6c6cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compact chart ids to a dense [0, N) range so per-chart storage is bounded by the number of distinct charts, regardless of how sparse user-supplied chart ids may be.  <br /></td></tr>
@@ -303,6 +307,10 @@ template&lt;typename DerivedV, typename DerivedF, typename DeriveddblA&gt; </td>
 <tr class="memitem:a8d8b8c95bd1fe5343f763045a81314ee"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a8d8b8c95bd1fe5343f763045a81314ee">internal_angles</a> (const Eigen::MatrixBase&lt; DerivedV &gt; &amp;vertices, const Eigen::MatrixBase&lt; DerivedF &gt; &amp;facets, Eigen::PlainObjectBase&lt; DerivedK &gt; &amp;angles)</td></tr>
 <tr class="memdesc:a8d8b8c95bd1fe5343f763045a81314ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute internal angles for a triangle mesh.  <br /></td></tr>
 <tr class="separator:a8d8b8c95bd1fe5343f763045a81314ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4211676f240209716701ce2d88de224c" id="r_a4211676f240209716701ce2d88de224c"><td class="memTemplParams" colspan="2">template&lt;typename Derived, typename <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, typename Index&gt; </td></tr>
+<tr class="memitem:a4211676f240209716701ce2d88de224c"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a4211676f240209716701ce2d88de224c">interpolate_attribute_row</a> (Eigen::MatrixBase&lt; Derived &gt; &amp;data, Index row_to, Index row_from_1, Index row_from_2, <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a> t)</td></tr>
+<tr class="memdesc:a4211676f240209716701ce2d88de224c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Linearly interpolate row <code>row_to</code> from rows <code>row_from_1</code> and <code>row_from_2</code> of an attribute matrix: <code>data.row(row_to) = (1 - t) * data.row(row_from_1) + t * data.row(row_from_2)</code>.  <br /></td></tr>
+<tr class="separator:a4211676f240209716701ce2d88de224c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abb96d5d58ea98c2b3040e59c71c46dee" id="r_abb96d5d58ea98c2b3040e59c71c46dee"><td class="memTemplParams" colspan="2">template&lt;typename Index, typename Function&gt; </td></tr>
 <tr class="memitem:abb96d5d58ea98c2b3040e59c71c46dee"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structlagrange_1_1internal_1_1_inverse_mapping.html">InverseMapping</a>&lt; Index &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#abb96d5d58ea98c2b3040e59c71c46dee">invert_mapping</a> (Index num_source_elements, Function old_to_new, Index num_target_elements=<a class="el" href="group__group-utils-misc.html#ga6c3e5aabde25a440beb7fc174ab081df">invalid</a>&lt; Index &gt;())</td></tr>
 <tr class="memdesc:abb96d5d58ea98c2b3040e59c71c46dee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the target-to-source (i.e.  <br /></td></tr>
@@ -323,10 +331,18 @@ template&lt;typename DerivedF, typename DerivedC, typename AScalar&gt; </td></tr
 template&lt;typename DerivedF, typename DerivedC&gt; </td></tr>
 <tr class="memitem:afff7d9e150e94dda90548aa05385e452"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>orientable_patches</b> (const Eigen::MatrixBase&lt; DerivedF &gt; &amp;F, Eigen::PlainObjectBase&lt; DerivedC &gt; &amp;C)</td></tr>
 <tr class="separator:afff7d9e150e94dda90548aa05385e452"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6ba59a3f695fb5caaac99278d9591d50" id="r_ga6ba59a3f695fb5caaac99278d9591d50"><td class="memTemplParams" colspan="2">template&lt;typename ValueType, typename Index, typename Predicate&gt; </td></tr>
+<tr class="memitem:ga6ba59a3f695fb5caaac99278d9591d50"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__group-surfacemesh-attr-utils.html#ga6ba59a3f695fb5caaac99278d9591d50">set_predicated_indexed_values</a> (<a class="el" href="classlagrange_1_1_indexed_attribute.html">IndexedAttribute</a>&lt; ValueType, Index &gt; &amp;attr, Predicate &amp;&amp;predicate)</td></tr>
+<tr class="memdesc:ga6ba59a3f695fb5caaac99278d9591d50"><td class="mdescLeft">&#160;</td><td class="mdescRight">For each index matching the given predicate, appends a new value set to <code>invalid&lt;ValueType&gt;()</code> and reassigns the index to point to it.  <br /></td></tr>
+<tr class="separator:ga6ba59a3f695fb5caaac99278d9591d50"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga9df24832b109461a412c5946825640db" id="r_ga9df24832b109461a412c5946825640db"><td class="memTemplParams" colspan="2">template&lt;typename ValueType, typename Index&gt; </td></tr>
 <tr class="memitem:ga9df24832b109461a412c5946825640db"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__group-surfacemesh-attr-utils.html#ga9df24832b109461a412c5946825640db">set_invalid_indexed_values</a> (<a class="el" href="classlagrange_1_1_indexed_attribute.html">IndexedAttribute</a>&lt; ValueType, Index &gt; &amp;attr)</td></tr>
-<tr class="memdesc:ga9df24832b109461a412c5946825640db"><td class="mdescLeft">&#160;</td><td class="mdescRight">For each element in the index buffer set to <code>invalid&lt;Index&gt;()</code>, appends a new value set to invalid&lt;ValueType&gt;() and updates the index to point to it.  <br /></td></tr>
+<tr class="memdesc:ga9df24832b109461a412c5946825640db"><td class="mdescLeft">&#160;</td><td class="mdescRight">For each element in the index buffer set to <code>invalid&lt;Index&gt;()</code>, appends a new value set to <code>invalid&lt;ValueType&gt;()</code> and updates the index to point to it.  <br /></td></tr>
 <tr class="separator:ga9df24832b109461a412c5946825640db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5e509acad3e012840cb98d334cf59389" id="r_ga5e509acad3e012840cb98d334cf59389"><td class="memTemplParams" colspan="2">template&lt;typename ValueType, typename Index&gt; </td></tr>
+<tr class="memitem:ga5e509acad3e012840cb98d334cf59389"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__group-surfacemesh-attr-utils.html#ga5e509acad3e012840cb98d334cf59389">set_out_of_range_indexed_values</a> (<a class="el" href="classlagrange_1_1_indexed_attribute.html">IndexedAttribute</a>&lt; ValueType, Index &gt; &amp;attr)</td></tr>
+<tr class="memdesc:ga5e509acad3e012840cb98d334cf59389"><td class="mdescLeft">&#160;</td><td class="mdescRight">For each element in the index buffer pointing outside the value buffer, appends a new value set to <code>invalid&lt;ValueType&gt;()</code> and updates the index to point to it.  <br /></td></tr>
+<tr class="separator:ga5e509acad3e012840cb98d334cf59389"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa6ef256275abbacbafd29fa49b709b7f" id="r_aa6ef256275abbacbafd29fa49b709b7f"><td class="memTemplParams" colspan="2"><a id="aa6ef256275abbacbafd29fa49b709b7f" name="aa6ef256275abbacbafd29fa49b709b7f"></a>
 template&lt;typename T, typename... Args&gt; </td></tr>
 <tr class="memitem:aa6ef256275abbacbafd29fa49b709b7f"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classlagrange_1_1internal_1_1shared__ptr.html">shared_ptr</a>&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>make_shared</b> (<a class="el" href="struct_args.html">Args</a> &amp;&amp;... args)</td></tr>
@@ -466,12 +482,12 @@ template&lt;typename T&gt; </td></tr>
 <tr class="memitem:a18efc9f6e2bdf77c1b85bc5c3794edd1"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a18efc9f6e2bdf77c1b85bc5c3794edd1">compute_quad_areas</a> (const <a class="el" href="classlagrange_1_1_mesh.html">MeshType</a> &amp;mesh) -&gt; AttributeArrayOf&lt; <a class="el" href="classlagrange_1_1_mesh.html">MeshType</a> &gt;</td></tr>
 <tr class="memdesc:a18efc9f6e2bdf77c1b85bc5c3794edd1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the quad areas.  <br /></td></tr>
 <tr class="separator:a18efc9f6e2bdf77c1b85bc5c3794edd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac1913ecb96655b3d75c05d2814d01e8d" id="r_ac1913ecb96655b3d75c05d2814d01e8d"><td class="memItemLeft" align="right" valign="top"><a id="ac1913ecb96655b3d75c05d2814d01e8d" name="ac1913ecb96655b3d75c05d2814d01e8d"></a>
-bool LA_CORE_API&#160;</td><td class="memItemRight" valign="bottom"><b>point_on_segment_2d</b> (Eigen::Vector2d p, Eigen::Vector2d a, Eigen::Vector2d b)</td></tr>
-<tr class="separator:ac1913ecb96655b3d75c05d2814d01e8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a736a015927ef32c48b086e91011056a5" id="r_a736a015927ef32c48b086e91011056a5"><td class="memItemLeft" align="right" valign="top"><a id="a736a015927ef32c48b086e91011056a5" name="a736a015927ef32c48b086e91011056a5"></a>
-bool LA_CORE_API&#160;</td><td class="memItemRight" valign="bottom"><b>point_on_segment_3d</b> (Eigen::Vector3d p, Eigen::Vector3d a, Eigen::Vector3d b)</td></tr>
-<tr class="separator:a736a015927ef32c48b086e91011056a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e794ffa2c8760b606925b188fd91d57" id="r_a9e794ffa2c8760b606925b188fd91d57"><td class="memItemLeft" align="right" valign="top"><a id="a9e794ffa2c8760b606925b188fd91d57" name="a9e794ffa2c8760b606925b188fd91d57"></a>
+bool LA_CORE_API&#160;</td><td class="memItemRight" valign="bottom"><b>point_on_segment_2d</b> (const Eigen::Vector2d &amp;p, const Eigen::Vector2d &amp;a, const Eigen::Vector2d &amp;b)</td></tr>
+<tr class="separator:a9e794ffa2c8760b606925b188fd91d57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a746d32b6de76b0c863d06048dfb20c0b" id="r_a746d32b6de76b0c863d06048dfb20c0b"><td class="memItemLeft" align="right" valign="top"><a id="a746d32b6de76b0c863d06048dfb20c0b" name="a746d32b6de76b0c863d06048dfb20c0b"></a>
+bool LA_CORE_API&#160;</td><td class="memItemRight" valign="bottom"><b>point_on_segment_3d</b> (const Eigen::Vector3d &amp;p, const Eigen::Vector3d &amp;a, const Eigen::Vector3d &amp;b)</td></tr>
+<tr class="separator:a746d32b6de76b0c863d06048dfb20c0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a36bb9797090c957d9c0676a675d678b4" id="r_a36bb9797090c957d9c0676a675d678b4"><td class="memTemplParams" colspan="2"><a id="a36bb9797090c957d9c0676a675d678b4" name="a36bb9797090c957d9c0676a675d678b4"></a>
 template&lt;typename ValueType&gt; </td></tr>
 <tr class="memitem:a36bb9797090c957d9c0676a675d678b4"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="group__group-utils-misc.html#ga4afead0b9ccc53fe4fca896787595d26">lagrange::span</a>&lt; const ValueType &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>get_all_unpoisoned</b> (const <a class="el" href="classlagrange_1_1_attribute.html">Attribute</a>&lt; ValueType &gt; &amp;attr)</td></tr>
@@ -687,6 +703,52 @@ template&lt;typename ValueType&gt; </div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>String representation. </dd></dl>
+
+</div>
+</div>
+<a id="adb75bde5221f9a2383407d0aa7de5f6b" name="adb75bde5221f9a2383407d0aa7de5f6b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb75bde5221f9a2383407d0aa7de5f6b">&#9670;&#160;</a></span>clipped_triangle_circumcenter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">Eigen::Vector3&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a> &gt; clipped_triangle_circumcenter </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::Vector3&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>p1</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Vector3&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>p2</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Vector3&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>p3</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>lambda1</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>lambda2</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>lambda3</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Compute the circumcenter of a triangle (p1, p2, p3), clipped to the triangle if it lies outside. </p>
+<p>Barycentric coordinates of the returned point are written to lambda1, lambda2, lambda3 (each in [0, 1], summing to 1). </p>
 
 </div>
 </div>
@@ -1407,6 +1469,65 @@ template&lt;typename DerivedV, typename DerivedF, typename DerivedK&gt; </div>
     <tr><td class="paramname">DerivedV</td><td>Vertices matrix type. </td></tr>
     <tr><td class="paramname">DerivedF</td><td>Facets matrix type. </td></tr>
     <tr><td class="paramname">DerivedK</td><td>Angles matrix type. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a4211676f240209716701ce2d88de224c" name="a4211676f240209716701ce2d88de224c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4211676f240209716701ce2d88de224c">&#9670;&#160;</a></span>interpolate_attribute_row()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Derived, typename <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, typename Index&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void interpolate_attribute_row </td>
+          <td>(</td>
+          <td class="paramtype">Eigen::MatrixBase&lt; Derived &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>data</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Index</td>          <td class="paramname"><span class="paramname"><em>row_to</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Index</td>          <td class="paramname"><span class="paramname"><em>row_from_1</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Index</td>          <td class="paramname"><span class="paramname"><em>row_from_2</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a></td>          <td class="paramname"><span class="paramname"><em>t</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Linearly interpolate row <code>row_to</code> from rows <code>row_from_1</code> and <code>row_from_2</code> of an attribute matrix: <code>data.row(row_to) = (1 - t) * data.row(row_from_1) + t * data.row(row_from_2)</code>. </p>
+<p>Integer-valued attributes are interpolated in floating point and rounded.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">data</td><td>Attribute matrix. Row <code>row_to</code> is overwritten with the result. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">row_to</td><td>Destination row index. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">row_from_1</td><td>Source row index for weight <code>(1 - t)</code>. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">row_from_2</td><td>Source row index for weight <code>t</code>. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">t</td><td>Interpolation parameter in [0, 1].</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Derived</td><td>Eigen matrix expression type. </td></tr>
+    <tr><td class="paramname">Scalar</td><td>Floating-point type used for interpolation weights. </td></tr>
+    <tr><td class="paramname">Index</td><td>Integral row index type. </td></tr>
   </table>
   </dd>
 </dl>
@@ -2370,7 +2491,7 @@ template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacelagrange.html">lagrange</a></li><li class="navelem"><a class="el" href="namespacelagrange_1_1internal.html">internal</a></li>
-    <li class="footer">Generated on Sat Jun 20 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+    <li class="footer">Generated on Tue Aug 4 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>
 </body>

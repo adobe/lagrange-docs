@@ -27,13 +27,13 @@ var group__module_bvh =
       [ "overlap_coloring_id", "structlagrange_1_1bvh_1_1_u_v_overlap_result.html#abd1f958d29127911ccfac0324657d6e1", null ]
     ] ],
     [ "EdgeAABBTree< VertexArray, EdgeArray, Dim >", "structlagrange_1_1bvh_1_1_edge_a_a_b_b_tree.html", [
-      [ "ActionCallback", "group__module-bvh.html#ga386999d5e43dd47823f5b247745957ef", null ],
-      [ "EdgeAABBTree", "group__module-bvh.html#gadd5d672df21cf5d9157453f22576742f", null ],
-      [ "empty", "group__module-bvh.html#ga644718bb2fb240de962dc3c9a1fdf0dc", null ],
-      [ "get_element_closest_point", "group__module-bvh.html#ga0777d5965f6f3176e6bb70e57cd0e7af", null ],
-      [ "foreach_element_in_radius", "group__module-bvh.html#ga8dc4c572d92b859e21ff0d584c9448b2", null ],
-      [ "foreach_element_containing", "group__module-bvh.html#ga67e1a0cd37c592ad6cffd3451d522d5f", null ],
-      [ "get_closest_point", "group__module-bvh.html#ga24fa34ce618bd63b0c9d9c4bdc3fc9c5", null ]
+      [ "ActionCallback", "structlagrange_1_1bvh_1_1_edge_a_a_b_b_tree.html#a386999d5e43dd47823f5b247745957ef", null ],
+      [ "EdgeAABBTree", "structlagrange_1_1bvh_1_1_edge_a_a_b_b_tree.html#add5d672df21cf5d9157453f22576742f", null ],
+      [ "empty", "structlagrange_1_1bvh_1_1_edge_a_a_b_b_tree.html#a644718bb2fb240de962dc3c9a1fdf0dc", null ],
+      [ "get_element_closest_point", "structlagrange_1_1bvh_1_1_edge_a_a_b_b_tree.html#a0777d5965f6f3176e6bb70e57cd0e7af", null ],
+      [ "foreach_element_in_radius", "structlagrange_1_1bvh_1_1_edge_a_a_b_b_tree.html#a8dc4c572d92b859e21ff0d584c9448b2", null ],
+      [ "foreach_element_containing", "structlagrange_1_1bvh_1_1_edge_a_a_b_b_tree.html#a67e1a0cd37c592ad6cffd3451d522d5f", null ],
+      [ "get_closest_point", "structlagrange_1_1bvh_1_1_edge_a_a_b_b_tree.html#a24fa34ce618bd63b0c9d9c4bdc3fc9c5", null ]
     ] ],
     [ "TriangleAABBTree< Scalar, Index, Dim >", "classlagrange_1_1bvh_1_1_triangle_a_a_b_b_tree.html", [
       [ "ActionCallback", "classlagrange_1_1bvh_1_1_triangle_a_a_b_b_tree.html#a386999d5e43dd47823f5b247745957ef", null ],
@@ -49,21 +49,15 @@ var group__module_bvh =
       [ "collision_policy_float", "structlagrange_1_1bvh_1_1_weld_options.html#aba646447e3f4cc302e44fc4bc074c27f", null ],
       [ "collision_policy_integral", "structlagrange_1_1bvh_1_1_weld_options.html#a94ac297735205e785dffc9ff7c370eb3", null ]
     ] ],
-    [ "ActionCallback", "group__module-bvh.html#ga386999d5e43dd47823f5b247745957ef", null ],
     [ "UVOverlapMethod", "group__module-bvh.html#ga7e55018c6fcf6fb3e8f6b02e4fc46892", [
       [ "SweepAndPrune", "group__module-bvh.html#gga7e55018c6fcf6fb3e8f6b02e4fc46892ac490cb8cd3c70c9f65c380176d0099ea", null ],
       [ "BVH", "group__module-bvh.html#gga7e55018c6fcf6fb3e8f6b02e4fc46892a9f81c52bdd5797801a0bd46508fa27a6", null ],
       [ "Hybrid", "group__module-bvh.html#gga7e55018c6fcf6fb3e8f6b02e4fc46892afb1b6e23a3767d2a31ef7899e6dd3f1e", null ]
     ] ],
+    [ "compute_intersecting_pairs", "group__module-bvh.html#ga4e4be146df5c66d9eec08e28fbc4dc83", null ],
     [ "compute_mesh_distances", "group__module-bvh.html#ga5f64c98d00b325344dd5b57e51f16451", null ],
     [ "compute_hausdorff", "group__module-bvh.html#ga0ffd251371a17cc104cfcf1be0affad1", null ],
     [ "compute_chamfer", "group__module-bvh.html#ga3cd0f3afed6a3bae7aae59407e491489", null ],
     [ "compute_uv_overlap", "group__module-bvh.html#ga32a555d00a25d570ed2b9fa2e0940bd1", null ],
-    [ "EdgeAABBTree", "group__module-bvh.html#gadd5d672df21cf5d9157453f22576742f", null ],
-    [ "empty", "group__module-bvh.html#ga644718bb2fb240de962dc3c9a1fdf0dc", null ],
-    [ "get_element_closest_point", "group__module-bvh.html#ga0777d5965f6f3176e6bb70e57cd0e7af", null ],
-    [ "foreach_element_in_radius", "group__module-bvh.html#ga8dc4c572d92b859e21ff0d584c9448b2", null ],
-    [ "foreach_element_containing", "group__module-bvh.html#ga67e1a0cd37c592ad6cffd3451d522d5f", null ],
-    [ "get_closest_point", "group__module-bvh.html#ga24fa34ce618bd63b0c9d9c4bdc3fc9c5", null ],
     [ "weld_vertices", "group__module-bvh.html#ga4e23b9d49adcfe017da3455eb381ce13", null ]
 ];

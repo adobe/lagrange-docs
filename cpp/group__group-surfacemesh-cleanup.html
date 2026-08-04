@@ -153,6 +153,9 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlagrange_1_1_split_long_edges_options.html">SplitLongEdgesOptions</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlagrange_1_1_split_obtuse_triangles_options.html">SplitObtuseTrianglesOptions</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Options for the <code>split_obtuse_triangles</code> function.  <a href="structlagrange_1_1_split_obtuse_triangles_options.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlagrange_1_1_unflip_u_v_options.html">UnflipUVOptions</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -214,6 +217,10 @@ Functions</h2></td></tr>
 <tr class="memitem:ga7746c0138844828ccafc3836a65e403a"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ga7746c0138844828ccafc3836a65e403a">split_long_edges</a> (<a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index &gt; &amp;mesh, <a class="el" href="structlagrange_1_1_split_long_edges_options.html">SplitLongEdgesOptions</a> options={})</td></tr>
 <tr class="memdesc:ga7746c0138844828ccafc3836a65e403a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Split edges that are longer than <code>options.max_edge_length</code>.  <br /></td></tr>
 <tr class="separator:ga7746c0138844828ccafc3836a65e403a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gafbf32fb91c37243f3a00dd15a0bb40c8" id="r_gafbf32fb91c37243f3a00dd15a0bb40c8"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, typename Index&gt; </td></tr>
+<tr class="memitem:gafbf32fb91c37243f3a00dd15a0bb40c8"><td class="memTemplItemLeft" align="right" valign="top">size_t&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#gafbf32fb91c37243f3a00dd15a0bb40c8">split_obtuse_triangles</a> (<a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index &gt; &amp;mesh, <a class="el" href="structlagrange_1_1_split_obtuse_triangles_options.html">SplitObtuseTrianglesOptions</a> options={})</td></tr>
+<tr class="memdesc:gafbf32fb91c37243f3a00dd15a0bb40c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Iteratively split obtuse triangles by splitting their longest edge at the projection of the opposite (obtuse) vertex.  <br /></td></tr>
+<tr class="separator:gafbf32fb91c37243f3a00dd15a0bb40c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga1a52980d167584935ed162810d2a71ba" id="r_ga1a52980d167584935ed162810d2a71ba"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, typename Index&gt; </td></tr>
 <tr class="memitem:ga1a52980d167584935ed162810d2a71ba"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ga1a52980d167584935ed162810d2a71ba">unflip_uv_triangles</a> (<a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index &gt; &amp;mesh, const <a class="el" href="structlagrange_1_1_unflip_u_v_options.html">UnflipUVOptions</a> &amp;options={})</td></tr>
 <tr class="memdesc:ga1a52980d167584935ed162810d2a71ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unflip flipped UV triangles.  <br /></td></tr>
@@ -357,8 +364,9 @@ template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5
   </table>
   </dd>
 </dl>
-<p>@paramp[in,out] mesh Input mesh </p><dl class="params"><dt>Parameters</dt><dd>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">mesh</td><td>Input mesh </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">opts</td><td>Options</td></tr>
   </table>
   </dd>
@@ -733,6 +741,42 @@ template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5
 
 </div>
 </div>
+<a id="gafbf32fb91c37243f3a00dd15a0bb40c8" name="gafbf32fb91c37243f3a00dd15a0bb40c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gafbf32fb91c37243f3a00dd15a0bb40c8">&#9670;&#160;</a></span>split_obtuse_triangles()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, typename Index&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t split_obtuse_triangles </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>mesh</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structlagrange_1_1_split_obtuse_triangles_options.html">SplitObtuseTrianglesOptions</a></td>          <td class="paramname"><span class="paramname"><em>options</em></span><span class="paramdefsep"> = </span><span class="paramdefval">{}</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;lagrange/mesh_cleanup/split_obtuse_triangles.h&gt;</code></p>
+
+<p>Iteratively split obtuse triangles by splitting their longest edge at the projection of the opposite (obtuse) vertex. </p>
+<p>After each pass, both triangles incident to a split edge are re-tessellated. Vertex attributes are linearly interpolated along the split edge.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">mesh</td><td>Input triangle mesh, updated in place. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">options</td><td>Optional settings.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Total number of triangle splits performed across all iterations (a triangle re-split in a later iteration is counted again). </dd></dl>
+
+</div>
+</div>
 <a id="ga1a52980d167584935ed162810d2a71ba" name="ga1a52980d167584935ed162810d2a71ba"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga1a52980d167584935ed162810d2a71ba">&#9670;&#160;</a></span>unflip_uv_triangles()</h2>
 
@@ -775,7 +819,7 @@ template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Sat Jun 20 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+    <li class="footer">Generated on Tue Aug 4 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>
 </body>

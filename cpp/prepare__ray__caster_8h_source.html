@@ -150,7 +150,7 @@ $(function(){initNavTree('prepare__ray__caster_8h_source.html',''); initResizabl
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <span class="keywordflow">if</span> (!ray_caster) {</div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        engine = std::make_unique&lt;RayCaster&gt;(<a class="code hl_enumvalue" href="namespacelagrange_1_1raycasting.html#aa377521412bad2c1fefb773f703d0884acd8257a80d3498e67b8972607c8377c0">SceneFlags::Robust</a>, <a class="code hl_enumvalue" href="namespacelagrange_1_1raycasting.html#ade737eff21604d56d55bdb5f62280f67a655d20c1ca69519ca647684edbb2db35">BuildQuality::High</a>);</div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        SurfaceMesh&lt;Scalar, Index&gt; source_copy = source;</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        engine-&gt;add_mesh(std::move(source_copy));</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        engine-&gt;<a class="code hl_function" href="classlagrange_1_1xatlas_1_1_atlas_engine.html#a81c182e8bc5668405aab7c91e1fbcad0">add_mesh</a>(std::move(source_copy));</div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        engine-&gt;commit_updates();</div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        ray_caster = engine.get();</div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    }</div>
@@ -159,6 +159,7 @@ $(function(){initNavTree('prepare__ray__caster_8h_source.html',''); initResizabl
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>} <span class="comment">// namespace lagrange::raycasting</span></div>
 <div class="ttc" id="aclasslagrange_1_1raycasting_1_1_ray_caster_html"><div class="ttname"><a href="classlagrange_1_1raycasting_1_1_ray_caster.html">lagrange::raycasting::RayCaster</a></div><div class="ttdoc">A ray caster built on top of Embree that operates directly on SurfaceMesh and SimpleScene objects.</div><div class="ttdef"><b>Definition</b> RayCaster.h:196</div></div>
+<div class="ttc" id="aclasslagrange_1_1xatlas_1_1_atlas_engine_html_a81c182e8bc5668405aab7c91e1fbcad0"><div class="ttname"><a href="classlagrange_1_1xatlas_1_1_atlas_engine.html#a81c182e8bc5668405aab7c91e1fbcad0">lagrange::xatlas::AtlasEngine::add_mesh</a></div><div class="ttdeci">void add_mesh(const Mesh &amp;mesh, const UnwrapOptions &amp;options={})</div><div class="ttdoc">Add a mesh for unwrapping. Throws if any UV-only mesh has already been added.</div><div class="ttdef"><b>Definition</b> AtlasEngine.cpp:111</div></div>
 <div class="ttc" id="anamespacelagrange_1_1raycasting_html"><div class="ttname"><a href="namespacelagrange_1_1raycasting.html">lagrange::raycasting</a></div><div class="ttdoc">Raycasting operations.</div><div class="ttdef"><b>Definition</b> compute_local_feature_size.h:20</div></div>
 <div class="ttc" id="anamespacelagrange_1_1raycasting_html_aa377521412bad2c1fefb773f703d0884acd8257a80d3498e67b8972607c8377c0"><div class="ttname"><a href="namespacelagrange_1_1raycasting.html#aa377521412bad2c1fefb773f703d0884acd8257a80d3498e67b8972607c8377c0">lagrange::raycasting::SceneFlags::Robust</a></div><div class="ttdeci">@ Robust</div><div class="ttdoc">Use a more robust BVH traversal algorithm that is slower but less likely to miss hits due to numerica...</div><div class="ttdef"><b>Definition</b> RayCaster.h:157</div></div>
 <div class="ttc" id="anamespacelagrange_1_1raycasting_html_ade737eff21604d56d55bdb5f62280f67a655d20c1ca69519ca647684edbb2db35"><div class="ttname"><a href="namespacelagrange_1_1raycasting.html#ade737eff21604d56d55bdb5f62280f67a655d20c1ca69519ca647684edbb2db35">lagrange::raycasting::BuildQuality::High</a></div><div class="ttdeci">@ High</div><div class="ttdoc">Slowest build time, highest BVH quality.</div><div class="ttdef"><b>Definition</b> RayCaster.h:175</div></div>
@@ -168,7 +169,7 @@ $(function(){initNavTree('prepare__ray__caster_8h_source.html',''); initResizabl
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>prepare_ray_caster.h</b></li>
-    <li class="footer">Generated on Sat Jun 20 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+    <li class="footer">Generated on Tue Aug 4 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>
 </body>

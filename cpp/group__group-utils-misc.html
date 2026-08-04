@@ -123,26 +123,18 @@ $(function(){initNavTree('group__group-utils-misc.html',''); initResizable(true)
 
 <div class="header">
   <div class="summary">
-<a href="#groups">Topics</a> &#124;
 <a href="#namespaces">Namespaces</a> &#124;
 <a href="#nested-classes">Classes</a> &#124;
-<a href="#define-members">Macros</a> &#124;
 <a href="#typedef-members">Typedefs</a> &#124;
 <a href="#func-members">Functions</a> &#124;
 <a href="#var-members">Variables</a>  </div>
-  <div class="headertitle"><div class="title">Miscellaneous<div class="ingroups"><a class="el" href="group__module-core.html">Core Module</a> &raquo; <a class="el" href="group__group-utils.html">Utilites</a></div></div></div>
+  <div class="headertitle"><div class="title">Miscellaneous<div class="ingroups"><a class="el" href="group__module-core.html">Core Module</a> &raquo; <a class="el" href="group__group-utils.html">Utilities</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
 <p>Useful functions that don't have their place anywhere else.  
 <a href="#details">More...</a></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="groups" name="groups"></a>
-Topics</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group-utils-misc-functionref.html">function_ref</a></td></tr>
-<tr class="memdesc:group__group-utils-misc-functionref"><td class="mdescLeft">&#160;</td><td class="mdescRight">A lightweight non-owning reference to a callable. <br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
 Namespaces</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelagrange.html">lagrange</a></td></tr>
@@ -153,6 +145,12 @@ Namespaces</h2></td></tr>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlagrange_1_1copy__on__write__ptr.html">copy_on_write_ptr&lt; T &gt;</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A handle type with copy-on-write semantics.  <a href="classlagrange_1_1copy__on__write__ptr.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlagrange_1_1function__ref.html">function_ref&lt; F &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A lightweight non-owning reference to a callable.  <a href="classlagrange_1_1function__ref.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlagrange_1_1function__ref_3_01_r_07_args_8_8_8_08_4.html">function_ref&lt; R(Args...)&gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specialization for function types.  <a href="classlagrange_1_1function__ref_3_01_r_07_args_8_8_8_08_4.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlagrange_1_1_ordered_pair_hash.html">OrderedPairHash&lt; T, Enable &gt;</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute an order-dependent hash of a pair of values.  <a href="structlagrange_1_1_ordered_pair_hash.html#details">More...</a><br /></td></tr>
@@ -214,12 +212,24 @@ template&lt;typename T&gt; </td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ga7f5441f1abed7ed4b18603fb092a9088" id="r_ga7f5441f1abed7ed4b18603fb092a9088"><td class="memItemLeft" align="right" valign="top">LA_CORE_API void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga7f5441f1abed7ed4b18603fb092a9088">enable_fpe</a> ()</td></tr>
-<tr class="memdesc:ga7f5441f1abed7ed4b18603fb092a9088"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable floating-point exceptions (useful for debugging).  <br /></td></tr>
+<tr class="memitem:ga7f5441f1abed7ed4b18603fb092a9088" id="r_ga7f5441f1abed7ed4b18603fb092a9088"><td class="memItemLeft" align="right" valign="top"><a id="ga7f5441f1abed7ed4b18603fb092a9088" name="ga7f5441f1abed7ed4b18603fb092a9088"></a>
+LA_CORE_API void&#160;</td><td class="memItemRight" valign="bottom"><b>enable_fpe</b> ()</td></tr>
+<tr class="memdesc:ga7f5441f1abed7ed4b18603fb092a9088"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable floating-point exceptions (useful for debugging). <br /></td></tr>
 <tr class="separator:ga7f5441f1abed7ed4b18603fb092a9088"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga43e9d211a5c2057d21ea76850599f93d" id="r_ga43e9d211a5c2057d21ea76850599f93d"><td class="memItemLeft" align="right" valign="top">LA_CORE_API void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga43e9d211a5c2057d21ea76850599f93d">disable_fpe</a> ()</td></tr>
-<tr class="memdesc:ga43e9d211a5c2057d21ea76850599f93d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disable previously-enabled fpe.  <br /></td></tr>
+<tr class="memitem:ga43e9d211a5c2057d21ea76850599f93d" id="r_ga43e9d211a5c2057d21ea76850599f93d"><td class="memItemLeft" align="right" valign="top"><a id="ga43e9d211a5c2057d21ea76850599f93d" name="ga43e9d211a5c2057d21ea76850599f93d"></a>
+LA_CORE_API void&#160;</td><td class="memItemRight" valign="bottom"><b>disable_fpe</b> ()</td></tr>
+<tr class="memdesc:ga43e9d211a5c2057d21ea76850599f93d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disable previously-enabled fpe. <br /></td></tr>
 <tr class="separator:ga43e9d211a5c2057d21ea76850599f93d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga626fd0cc926eb83e8adb607687c3c8e2" id="r_ga626fd0cc926eb83e8adb607687c3c8e2"><td class="memTemplParams" colspan="2"><a id="ga626fd0cc926eb83e8adb607687c3c8e2" name="ga626fd0cc926eb83e8adb607687c3c8e2"></a>
+template&lt;typename R, typename... Args&gt; </td></tr>
+<tr class="memitem:ga626fd0cc926eb83e8adb607687c3c8e2"><td class="memTemplItemLeft" align="right" valign="top">constexpr void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>swap</b> (<a class="el" href="classlagrange_1_1function__ref.html">function_ref</a>&lt; R(Args...)&gt; &amp;lhs, <a class="el" href="classlagrange_1_1function__ref.html">function_ref</a>&lt; R(Args...)&gt; &amp;rhs) noexcept</td></tr>
+<tr class="memdesc:ga626fd0cc926eb83e8adb607687c3c8e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Swaps the referred callables of <code>lhs</code> and <code>rhs</code>. <br /></td></tr>
+<tr class="separator:ga626fd0cc926eb83e8adb607687c3c8e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gabdcfb06e9497d99667ce90201fa5c056" id="r_gabdcfb06e9497d99667ce90201fa5c056"><td class="memTemplParams" colspan="2"><a id="gabdcfb06e9497d99667ce90201fa5c056" name="gabdcfb06e9497d99667ce90201fa5c056"></a>
+template&lt;typename R, typename... Args&gt; </td></tr>
+<tr class="memitem:gabdcfb06e9497d99667ce90201fa5c056"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><b>function_ref</b> (R(*)(Args...)) -&gt; function_ref&lt; R(Args...)&gt;</td></tr>
+<tr class="memdesc:gabdcfb06e9497d99667ce90201fa5c056"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deduce function_ref type from a function pointer. <br /></td></tr>
+<tr class="separator:gabdcfb06e9497d99667ce90201fa5c056"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gabc213e8639504f32e944828c1634d13e" id="r_gabc213e8639504f32e944828c1634d13e"><td class="memTemplParams" colspan="2">template&lt;class T&gt; </td></tr>
 <tr class="memitem:gabc213e8639504f32e944828c1634d13e"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#gabc213e8639504f32e944828c1634d13e">hash_combine</a> (size_t &amp;seed, const T &amp;v)</td></tr>
 <tr class="memdesc:gabc213e8639504f32e944828c1634d13e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hash an object <em class="arg">v</em> and combine it with an existing hash value <em class="arg">seed</em>.  <br /></td></tr>
@@ -228,18 +238,6 @@ Functions</h2></td></tr>
 <tr class="memitem:ga6c3e5aabde25a440beb7fc174ab081df"><td class="memTemplItemLeft" align="right" valign="top">constexpr T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ga6c3e5aabde25a440beb7fc174ab081df">invalid</a> ()</td></tr>
 <tr class="memdesc:ga6c3e5aabde25a440beb7fc174ab081df"><td class="mdescLeft">&#160;</td><td class="mdescRight">You can use invalid&lt;T&gt;() to get a value that can represent "invalid" values, such as invalid indices or invalid float data.  <br /></td></tr>
 <tr class="separator:ga6c3e5aabde25a440beb7fc174ab081df"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga41568d17fc48cea4a31db0e40cd93cf8" id="r_ga41568d17fc48cea4a31db0e40cd93cf8"><td class="memTemplParams" colspan="2">template&lt;typename Index&gt; </td></tr>
-<tr class="memitem:ga41568d17fc48cea4a31db0e40cd93cf8"><td class="memTemplItemLeft" align="right" valign="top">internal::Range&lt; Index &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ga41568d17fc48cea4a31db0e40cd93cf8">range</a> (Index end)</td></tr>
-<tr class="memdesc:ga41568d17fc48cea4a31db0e40cd93cf8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an iterable object representing the range [0, end).  <br /></td></tr>
-<tr class="separator:ga41568d17fc48cea4a31db0e40cd93cf8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga2ba35aa7abcc560046e54c7701a64283" id="r_ga2ba35aa7abcc560046e54c7701a64283"><td class="memTemplParams" colspan="2">template&lt;typename Index&gt; </td></tr>
-<tr class="memitem:ga2ba35aa7abcc560046e54c7701a64283"><td class="memTemplItemLeft" align="right" valign="top">internal::Range&lt; Index &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ga2ba35aa7abcc560046e54c7701a64283">range</a> (Index begin, Index end)</td></tr>
-<tr class="memdesc:ga2ba35aa7abcc560046e54c7701a64283"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an iterable object representing the range [begin, end).  <br /></td></tr>
-<tr class="separator:ga2ba35aa7abcc560046e54c7701a64283"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga0361fdaa740fe7284fe2b7b10072e955" id="r_ga0361fdaa740fe7284fe2b7b10072e955"><td class="memTemplParams" colspan="2">template&lt;typename Index&gt; </td></tr>
-<tr class="memitem:ga0361fdaa740fe7284fe2b7b10072e955"><td class="memTemplItemLeft" align="right" valign="top">internal::SparseRange&lt; Index &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ga0361fdaa740fe7284fe2b7b10072e955">range_sparse</a> (Index max, const std::vector&lt; Index &gt; &amp;active)</td></tr>
-<tr class="memdesc:ga0361fdaa740fe7284fe2b7b10072e955"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an iterable object representing a subset of the range [0, max).  <br /></td></tr>
-<tr class="separator:ga0361fdaa740fe7284fe2b7b10072e955"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gafc5798c28b15e46d20d0234b72c4ef63" id="r_gafc5798c28b15e46d20d0234b72c4ef63"><td class="memTemplParams" colspan="2">template&lt;typename TargetType, typename SourceType&gt; </td></tr>
 <tr class="memitem:gafc5798c28b15e46d20d0234b72c4ef63"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#gafc5798c28b15e46d20d0234b72c4ef63">safe_cast</a> (SourceType value) -&gt; std::enable_if_t&lt;!std::is_same&lt; SourceType, TargetType &gt;::value, TargetType &gt;</td></tr>
 <tr class="memdesc:gafc5798c28b15e46d20d0234b72c4ef63"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform safe cast from <code>SourceType</code> to <code>TargetType</code>, where "safe" means:  <br /></td></tr>
@@ -345,48 +343,6 @@ template&lt;typename T&gt; </div>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="ga7f5441f1abed7ed4b18603fb092a9088" name="ga7f5441f1abed7ed4b18603fb092a9088"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga7f5441f1abed7ed4b18603fb092a9088">&#9670;&#160;</a></span>enable_fpe()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">LA_CORE_API void enable_fpe </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p><code>#include &lt;lagrange/utils/fpe.h&gt;</code></p>
-
-<p>Enable floating-point exceptions (useful for debugging). </p>
-
-</div>
-</div>
-<a id="ga43e9d211a5c2057d21ea76850599f93d" name="ga43e9d211a5c2057d21ea76850599f93d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga43e9d211a5c2057d21ea76850599f93d">&#9670;&#160;</a></span>disable_fpe()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">LA_CORE_API void disable_fpe </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p><code>#include &lt;lagrange/utils/fpe.h&gt;</code></p>
-
-<p>Disable previously-enabled fpe. </p>
-
-</div>
-</div>
 <a id="gabc213e8639504f32e944828c1634d13e" name="gabc213e8639504f32e944828c1634d13e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#gabc213e8639504f32e944828c1634d13e">&#9670;&#160;</a></span>hash_combine()</h2>
 
@@ -457,128 +413,6 @@ template&lt;typename T&gt; </div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A value considered invalid for the given type. </dd></dl>
-
-</div>
-</div>
-<a id="ga41568d17fc48cea4a31db0e40cd93cf8" name="ga41568d17fc48cea4a31db0e40cd93cf8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga41568d17fc48cea4a31db0e40cd93cf8">&#9670;&#160;</a></span>range() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename Index&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">internal::Range&lt; Index &gt; range </td>
-          <td>(</td>
-          <td class="paramtype">Index</td>          <td class="paramname"><span class="paramname"><em>end</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p><code>#include &lt;lagrange/utils/range.h&gt;</code></p>
-
-<p>Returns an iterable object representing the range [0, end). </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">end</td><td>End of the range. This bound is exclusive.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">Index</td><td>Index type.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Iterator for the range [0, end). </dd></dl>
-
-</div>
-</div>
-<a id="ga2ba35aa7abcc560046e54c7701a64283" name="ga2ba35aa7abcc560046e54c7701a64283"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga2ba35aa7abcc560046e54c7701a64283">&#9670;&#160;</a></span>range() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename Index&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">internal::Range&lt; Index &gt; range </td>
-          <td>(</td>
-          <td class="paramtype">Index</td>          <td class="paramname"><span class="paramname"><em>begin</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">Index</td>          <td class="paramname"><span class="paramname"><em>end</em></span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p><code>#include &lt;lagrange/utils/range.h&gt;</code></p>
-
-<p>Returns an iterable object representing the range [begin, end). </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">begin</td><td>Start of the range. This bound is inclusive. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">end</td><td>End of the range. This bound is exclusive.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">Index</td><td>Index type.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Iterator for the range [start, end). </dd></dl>
-
-</div>
-</div>
-<a id="ga0361fdaa740fe7284fe2b7b10072e955" name="ga0361fdaa740fe7284fe2b7b10072e955"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga0361fdaa740fe7284fe2b7b10072e955">&#9670;&#160;</a></span>range_sparse()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename Index&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">internal::SparseRange&lt; Index &gt; range_sparse </td>
-          <td>(</td>
-          <td class="paramtype">Index</td>          <td class="paramname"><span class="paramname"><em>max</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::vector&lt; Index &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>active</em></span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p><code>#include &lt;lagrange/utils/range.h&gt;</code></p>
-
-<p>Returns an iterable object representing a subset of the range [0, max). </p>
-<p>If active is non-empty, it will iterate through the elements of active. Otherwise, it will iterate from 0 to max.</p>
-<dl class="section warning"><dt>Warning</dt><dd>The <code>active</code> vector MUST exist while the range is being used. Do NOT write code such as: <div class="fragment"><div class="line"><span class="keywordflow">for</span> (<span class="keywordtype">int</span> i : <a class="code hl_function" href="#ga0361fdaa740fe7284fe2b7b10072e955">range_sparse</a>(n, { 0 })) { ... }   <span class="comment">// Bad</span></div>
-<div class="ttc" id="agroup__group-utils-misc_html_ga0361fdaa740fe7284fe2b7b10072e955"><div class="ttname"><a href="#ga0361fdaa740fe7284fe2b7b10072e955">lagrange::range_sparse</a></div><div class="ttdeci">internal::SparseRange&lt; Index &gt; range_sparse(Index max, const std::vector&lt; Index &gt; &amp;active)</div><div class="ttdoc">Returns an iterable object representing a subset of the range [0, max).</div><div class="ttdef"><b>Definition</b> range.h:217</div></div>
-</div><!-- fragment --> as the vector will be destructed while the iterator is still running.</dd></dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">max</td><td>End of the range. This bound is exclusive. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">active</td><td>Active indices in the range. If empty, it will iterate through the whole range instead.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">Index</td><td>Index type.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Sparse iterator for a subset of the range [0, max). </dd></dl>
 
 </div>
 </div>
@@ -1157,7 +991,7 @@ template&lt;typename T&gt; </div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Sat Jun 20 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+    <li class="footer">Generated on Tue Aug 4 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>
 </body>

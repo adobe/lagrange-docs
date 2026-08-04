@@ -1,6 +1,5 @@
 var group__group_utils_misc =
 [
-    [ "function_ref", "group__group-utils-misc-functionref.html", "group__group-utils-misc-functionref" ],
     [ "lagrange", "namespacelagrange.html", null ],
     [ "copy_on_write_ptr< T >", "classlagrange_1_1copy__on__write__ptr.html", [
       [ "copy_on_write_ptr", "classlagrange_1_1copy__on__write__ptr.html#ab930717803cea0aa378bc7d44fce3aeb", null ],
@@ -18,6 +17,16 @@ var group__group_utils_misc =
       [ "_get_weak_ptr", "classlagrange_1_1copy__on__write__ptr.html#a19c0ba82ff2a7619c0aded0d59e1c4eb", null ],
       [ "ensure_unique_owner", "classlagrange_1_1copy__on__write__ptr.html#ace507ce8f8222149bb2e8b7b9faa1025", null ]
     ] ],
+    [ "function_ref< F >", "classlagrange_1_1function__ref.html", null ],
+    [ "function_ref< R(Args...)>", "classlagrange_1_1function__ref_3_01_r_07_args_8_8_8_08_4.html", [
+      [ "function_ref", "classlagrange_1_1function__ref_3_01_r_07_args_8_8_8_08_4.html#ab633900525ae2b516f52ad47b0ef9527", null ],
+      [ "function_ref", "classlagrange_1_1function__ref_3_01_r_07_args_8_8_8_08_4.html#a28f690e82e5b64cfbac5b46d45c35fca", null ],
+      [ "operator=", "classlagrange_1_1function__ref_3_01_r_07_args_8_8_8_08_4.html#ae79aa46823ed0dce8ee758311a7f9a2d", null ],
+      [ "operator=", "classlagrange_1_1function__ref_3_01_r_07_args_8_8_8_08_4.html#aabfac5ac1d7f54ad44408363c623b4c8", null ],
+      [ "swap", "classlagrange_1_1function__ref_3_01_r_07_args_8_8_8_08_4.html#aa3ff002e75ec17482c16ce347e7933a6", null ],
+      [ "operator()", "classlagrange_1_1function__ref_3_01_r_07_args_8_8_8_08_4.html#ad7e5180a82f0d5ff79ede955169ab083", null ],
+      [ "operator bool", "classlagrange_1_1function__ref_3_01_r_07_args_8_8_8_08_4.html#a420e60e9788bfa3b52aa3aab72ea3a5e", null ]
+    ] ],
     [ "OrderedPairHash< T, Enable >", "structlagrange_1_1_ordered_pair_hash.html", null ],
     [ "OrderedPairHash< std::pair< U, V > >", "structlagrange_1_1_ordered_pair_hash_3_01std_1_1pair_3_01_u_00_01_v_01_4_01_4.html", null ],
     [ "SharedSpan< T >", "classlagrange_1_1_shared_span.html", [
@@ -33,11 +42,10 @@ var group__group_utils_misc =
     [ "extent_t", "group__group-utils-misc.html#gae583d66fa771f7d9dd1e1be075699c31", null ],
     [ "enable_fpe", "group__group-utils-misc.html#ga7f5441f1abed7ed4b18603fb092a9088", null ],
     [ "disable_fpe", "group__group-utils-misc.html#ga43e9d211a5c2057d21ea76850599f93d", null ],
+    [ "swap", "group__group-utils-misc.html#ga626fd0cc926eb83e8adb607687c3c8e2", null ],
+    [ "function_ref", "group__group-utils-misc.html#gabdcfb06e9497d99667ce90201fa5c056", null ],
     [ "hash_combine", "group__group-utils-misc.html#gabc213e8639504f32e944828c1634d13e", null ],
     [ "invalid", "group__group-utils-misc.html#ga6c3e5aabde25a440beb7fc174ab081df", null ],
-    [ "range", "group__group-utils-misc.html#ga41568d17fc48cea4a31db0e40cd93cf8", null ],
-    [ "range", "group__group-utils-misc.html#ga2ba35aa7abcc560046e54c7701a64283", null ],
-    [ "range_sparse", "group__group-utils-misc.html#ga0361fdaa740fe7284fe2b7b10072e955", null ],
     [ "safe_cast", "group__group-utils-misc.html#gafc5798c28b15e46d20d0234b72c4ef63", null ],
     [ "safe_cast", "group__group-utils-misc.html#ga54c86a2c4172b91a725779d97cfad3a6", null ],
     [ "safe_cast", "group__group-utils-misc.html#ga5d32f8f700ebb2954e902b13944cb67b", null ],

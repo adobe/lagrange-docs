@@ -156,83 +156,83 @@ $(function(){initNavTree('ui_2include_2lagrange_2ui_2utils_2io_8h_source.html','
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="keyword">const</span> fs::path&amp; path,</div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="keyword">const</span> <a class="code hl_struct" href="structlagrange_1_1ui_1_1_texture_1_1_params.html">Texture::Params</a>&amp; params = <a class="code hl_struct" href="structlagrange_1_1ui_1_1_texture_1_1_params.html">Texture::Params</a>());</div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span></div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>LA_UI_API std::shared_ptr&lt;Material&gt;</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><a class="code hl_function" href="namespacelagrange_1_1ui.html#ae5370f97dd15b8de2179dd1436a4fbb8">convert_material</a>(Registry&amp; r, <span class="keyword">const</span> fs::path&amp; base_dir, <span class="keyword">const</span> tinyobj::material_t&amp; tinymat);</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span></div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> MeshType&gt;</div>
-<div class="foldopen" id="foldopen00043" data-start="{" data-end="}">
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="namespacelagrange_1_1ui.html#a925b6a4384c5b5eacb7adca119638b09">   43</a></span>Entity <a class="code hl_function" href="namespacelagrange_1_1ui.html#a925b6a4384c5b5eacb7adca119638b09">load_obj</a>(</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    Registry&amp; r,</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="keyword">const</span> fs::path&amp; path,</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="keyword">const</span> io::MeshLoaderParams&amp; params = io::MeshLoaderParams())</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>{</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="keywordflow">if</span> (path.extension() != <span class="stringliteral">&quot;.obj&quot;</span>) {</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        <a class="code hl_function" href="group__group-logger.html#ga84167f554a5d7594c0ba4ae760f31599">lagrange::logger</a>().error(<span class="stringliteral">&quot;wrong file format &#39;{}&#39; for load_obj&quot;</span>, path.extension().string());</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        <span class="keywordflow">return</span> NullEntity;</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    }</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <span class="comment">// Override to load as one mesh</span></div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <span class="keyword">auto</span> p = params;</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    p.as_one_mesh = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    p.load_materials = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    p.triangulate = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <span class="keyword">auto</span> res = lagrange::io::load_mesh_ext&lt;MeshType&gt;(path, params);</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <span class="keywordflow">if</span> (!res.success) <span class="keywordflow">return</span> NullEntity;</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <span class="keyword">auto</span> mesh = <a class="code hl_function" href="namespacelagrange.html#a3d708c9fd9f08299ea623082bd61cb5e">lagrange::to_shared_ptr</a>(std::move(res.meshes.front()));</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <span class="keyword">auto</span> e = register_mesh&lt;MeshType&gt;(r, std::dynamic_pointer_cast&lt;MeshType&gt;(mesh));</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    ui::set_name(r, e, path.filename().string());</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <span class="keywordflow">return</span> e;</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>}</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>LA_UI_API std::shared_ptr&lt;Material&gt;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><a class="code hl_function" href="namespacelagrange_1_1ui.html#ae5370f97dd15b8de2179dd1436a4fbb8">convert_material</a>(Registry&amp; r, <span class="keyword">const</span> fs::path&amp; base_dir, <span class="keyword">const</span> tinyobj::material_t&amp; tinymat);</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> MeshType&gt;</div>
+<div class="foldopen" id="foldopen00044" data-start="{" data-end="}">
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="namespacelagrange_1_1ui.html#a925b6a4384c5b5eacb7adca119638b09">   44</a></span>Entity <a class="code hl_function" href="namespacelagrange_1_1ui.html#a925b6a4384c5b5eacb7adca119638b09">load_obj</a>(</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    Registry&amp; r,</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="keyword">const</span> fs::path&amp; path,</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="keyword">const</span> io::MeshLoaderParams&amp; params = io::MeshLoaderParams())</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>{</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="keywordflow">if</span> (path.extension() != <span class="stringliteral">&quot;.obj&quot;</span>) {</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        <a class="code hl_function" href="group__group-logger.html#ga84167f554a5d7594c0ba4ae760f31599">lagrange::logger</a>().error(<span class="stringliteral">&quot;wrong file format &#39;{}&#39; for load_obj&quot;</span>, path.extension().string());</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        <span class="keywordflow">return</span> NullEntity;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    }</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <span class="comment">// Override to load as one mesh</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <span class="keyword">auto</span> p = params;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    p.as_one_mesh = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    p.load_materials = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    p.triangulate = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <span class="keyword">auto</span> res = lagrange::io::load_mesh_ext&lt;MeshType&gt;(path, params);</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <span class="keywordflow">if</span> (!res.success) <span class="keywordflow">return</span> NullEntity;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <span class="keyword">auto</span> mesh = <a class="code hl_function" href="namespacelagrange.html#a3d708c9fd9f08299ea623082bd61cb5e">lagrange::to_shared_ptr</a>(std::move(res.meshes.front()));</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <span class="keyword">auto</span> e = register_mesh&lt;MeshType&gt;(r, std::dynamic_pointer_cast&lt;MeshType&gt;(mesh));</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    ui::set_name(r, e, path.filename().string());</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    <span class="keywordflow">return</span> e;</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>}</div>
 </div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span></div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> MeshType&gt;</div>
-<div class="foldopen" id="foldopen00073" data-start="{" data-end="}">
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="namespacelagrange_1_1ui.html#a6a302d38e531ee33f1adb9cc4c0ecf7a">   73</a></span>std::pair&lt;Entity, std::vector&lt;std::shared_ptr&lt;Material&gt;&gt;&gt; <a class="code hl_function" href="namespacelagrange_1_1ui.html#a6a302d38e531ee33f1adb9cc4c0ecf7a">load_obj_with_materials</a>(</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    Registry&amp; r,</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    <span class="keyword">const</span> fs::path&amp; path,</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    <span class="keyword">const</span> io::MeshLoaderParams&amp; params = io::MeshLoaderParams())</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>{</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    <span class="keywordflow">if</span> (path.extension() != <span class="stringliteral">&quot;.obj&quot;</span>) {</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        <a class="code hl_function" href="group__group-logger.html#ga84167f554a5d7594c0ba4ae760f31599">lagrange::logger</a>().error(<span class="stringliteral">&quot;wrong file format &#39;{}&#39; for load_obj&quot;</span>, path.extension().string());</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        <span class="keywordflow">return</span> {NullEntity, {}};</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    }</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    <span class="comment">// Override to load as one mesh</span></div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    <span class="keyword">auto</span> p = params;</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    p.as_one_mesh = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    p.load_materials = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    p.triangulate = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    <span class="keyword">auto</span> res = lagrange::io::load_mesh_ext&lt;MeshType&gt;(path, params);</div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    <span class="keywordflow">if</span> (!res.success) <span class="keywordflow">return</span> {NullEntity, {}};</div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    <span class="keyword">auto</span> mesh = <a class="code hl_function" href="namespacelagrange.html#a3d708c9fd9f08299ea623082bd61cb5e">lagrange::to_shared_ptr</a>(std::move(res.meshes.front()));</div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    <span class="keyword">auto</span> e = register_mesh&lt;MeshType&gt;(r, std::dynamic_pointer_cast&lt;MeshType&gt;(mesh));</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    ui::set_name(r, e, path.filename().string());</div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    std::vector&lt;std::shared_ptr&lt;Material&gt;&gt; mats;</div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    <span class="keyword">auto</span> base_dir = path;</div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    base_dir.remove_filename();</div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; tinymat : res.materials) {</div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>        mats.push_back(<a class="code hl_function" href="namespacelagrange_1_1ui.html#ae5370f97dd15b8de2179dd1436a4fbb8">convert_material</a>(r, base_dir, tinymat));</div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    }</div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span> </div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    <span class="keywordflow">return</span> {e, mats};</div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>}</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span></div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> MeshType&gt;</div>
+<div class="foldopen" id="foldopen00074" data-start="{" data-end="}">
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno"><a class="line" href="namespacelagrange_1_1ui.html#a6a302d38e531ee33f1adb9cc4c0ecf7a">   74</a></span>std::pair&lt;Entity, std::vector&lt;std::shared_ptr&lt;Material&gt;&gt;&gt; <a class="code hl_function" href="namespacelagrange_1_1ui.html#a6a302d38e531ee33f1adb9cc4c0ecf7a">load_obj_with_materials</a>(</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    Registry&amp; r,</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    <span class="keyword">const</span> fs::path&amp; path,</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    <span class="keyword">const</span> io::MeshLoaderParams&amp; params = io::MeshLoaderParams())</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>{</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    <span class="keywordflow">if</span> (path.extension() != <span class="stringliteral">&quot;.obj&quot;</span>) {</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        <a class="code hl_function" href="group__group-logger.html#ga84167f554a5d7594c0ba4ae760f31599">lagrange::logger</a>().error(<span class="stringliteral">&quot;wrong file format &#39;{}&#39; for load_obj&quot;</span>, path.extension().string());</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        <span class="keywordflow">return</span> {NullEntity, {}};</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    }</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    <span class="comment">// Override to load as one mesh</span></div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    <span class="keyword">auto</span> p = params;</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    p.as_one_mesh = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    p.load_materials = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    p.triangulate = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    <span class="keyword">auto</span> res = lagrange::io::load_mesh_ext&lt;MeshType&gt;(path, params);</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    <span class="keywordflow">if</span> (!res.success) <span class="keywordflow">return</span> {NullEntity, {}};</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    <span class="keyword">auto</span> mesh = <a class="code hl_function" href="namespacelagrange.html#a3d708c9fd9f08299ea623082bd61cb5e">lagrange::to_shared_ptr</a>(std::move(res.meshes.front()));</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    <span class="keyword">auto</span> e = register_mesh&lt;MeshType&gt;(r, std::dynamic_pointer_cast&lt;MeshType&gt;(mesh));</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    ui::set_name(r, e, path.filename().string());</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span> </div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    std::vector&lt;std::shared_ptr&lt;Material&gt;&gt; mats;</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    <span class="keyword">auto</span> base_dir = path;</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    base_dir.remove_filename();</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span> </div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; tinymat : res.materials) {</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>        mats.push_back(<a class="code hl_function" href="namespacelagrange_1_1ui.html#ae5370f97dd15b8de2179dd1436a4fbb8">convert_material</a>(r, base_dir, tinymat));</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    }</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span> </div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    <span class="keywordflow">return</span> {e, mats};</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>}</div>
 </div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span> </div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>} <span class="comment">// namespace ui</span></div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>} <span class="comment">// namespace lagrange</span></div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span> </div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>} <span class="comment">// namespace ui</span></div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>} <span class="comment">// namespace lagrange</span></div>
 <div class="ttc" id="agroup__group-logger_html_ga84167f554a5d7594c0ba4ae760f31599"><div class="ttname"><a href="group__group-logger.html#ga84167f554a5d7594c0ba4ae760f31599">lagrange::logger</a></div><div class="ttdeci">LA_CORE_API spdlog::logger &amp; logger()</div><div class="ttdoc">Retrieves the current logger.</div><div class="ttdef"><b>Definition</b> Logger.cpp:40</div></div>
 <div class="ttc" id="anamespacelagrange_1_1ui_html"><div class="ttname"><a href="namespacelagrange_1_1ui.html">lagrange::ui</a></div><div class="ttdoc">Lagrange UI Viewer and mini 3D engine.</div><div class="ttdef"><b>Definition</b> AcceleratedPicking.h:23</div></div>
-<div class="ttc" id="anamespacelagrange_1_1ui_html_a6a302d38e531ee33f1adb9cc4c0ecf7a"><div class="ttname"><a href="namespacelagrange_1_1ui.html#a6a302d38e531ee33f1adb9cc4c0ecf7a">lagrange::ui::load_obj_with_materials</a></div><div class="ttdeci">std::pair&lt; Entity, std::vector&lt; std::shared_ptr&lt; Material &gt; &gt; &gt; load_obj_with_materials(Registry &amp;r, const fs::path &amp;path, const io::MeshLoaderParams &amp;params=io::MeshLoaderParams())</div><div class="ttdoc">Loads obj as a single mesh and materials.</div><div class="ttdef"><b>Definition</b> io.h:73</div></div>
-<div class="ttc" id="anamespacelagrange_1_1ui_html_a925b6a4384c5b5eacb7adca119638b09"><div class="ttname"><a href="namespacelagrange_1_1ui.html#a925b6a4384c5b5eacb7adca119638b09">lagrange::ui::load_obj</a></div><div class="ttdeci">Entity load_obj(Registry &amp;r, const fs::path &amp;path, const io::MeshLoaderParams &amp;params=io::MeshLoaderParams())</div><div class="ttdoc">Loads obj as a single mesh.</div><div class="ttdef"><b>Definition</b> io.h:43</div></div>
-<div class="ttc" id="anamespacelagrange_1_1ui_html_ae5370f97dd15b8de2179dd1436a4fbb8"><div class="ttname"><a href="namespacelagrange_1_1ui.html#ae5370f97dd15b8de2179dd1436a4fbb8">lagrange::ui::convert_material</a></div><div class="ttdeci">LA_UI_API std::shared_ptr&lt; Material &gt; convert_material(Registry &amp;r, const fs::path &amp;base_dir, const tinyobj::material_t &amp;tinymat)</div><div class="ttdoc">Convertrs tinyobj&#39;s material_t to UI&#39;s Material.</div><div class="ttdef"><b>Definition</b> io.cpp:97</div></div>
+<div class="ttc" id="anamespacelagrange_1_1ui_html_a6a302d38e531ee33f1adb9cc4c0ecf7a"><div class="ttname"><a href="namespacelagrange_1_1ui.html#a6a302d38e531ee33f1adb9cc4c0ecf7a">lagrange::ui::load_obj_with_materials</a></div><div class="ttdeci">std::pair&lt; Entity, std::vector&lt; std::shared_ptr&lt; Material &gt; &gt; &gt; load_obj_with_materials(Registry &amp;r, const fs::path &amp;path, const io::MeshLoaderParams &amp;params=io::MeshLoaderParams())</div><div class="ttdoc">Loads obj as a single mesh and materials.</div><div class="ttdef"><b>Definition</b> io.h:74</div></div>
+<div class="ttc" id="anamespacelagrange_1_1ui_html_a925b6a4384c5b5eacb7adca119638b09"><div class="ttname"><a href="namespacelagrange_1_1ui.html#a925b6a4384c5b5eacb7adca119638b09">lagrange::ui::load_obj</a></div><div class="ttdeci">Entity load_obj(Registry &amp;r, const fs::path &amp;path, const io::MeshLoaderParams &amp;params=io::MeshLoaderParams())</div><div class="ttdoc">Loads obj as a single mesh.</div><div class="ttdef"><b>Definition</b> io.h:44</div></div>
+<div class="ttc" id="anamespacelagrange_1_1ui_html_ae5370f97dd15b8de2179dd1436a4fbb8"><div class="ttname"><a href="namespacelagrange_1_1ui.html#ae5370f97dd15b8de2179dd1436a4fbb8">lagrange::ui::convert_material</a></div><div class="ttdeci">LA_UI_API std::shared_ptr&lt; Material &gt; convert_material(Registry &amp;r, const fs::path &amp;base_dir, const tinyobj::material_t &amp;tinymat)</div><div class="ttdoc">Converts tinyobj&#39;s material_t to UI&#39;s Material.</div><div class="ttdef"><b>Definition</b> io.cpp:97</div></div>
 <div class="ttc" id="anamespacelagrange_html"><div class="ttname"><a href="namespacelagrange.html">lagrange</a></div><div class="ttdoc">Main namespace for Lagrange.</div></div>
 <div class="ttc" id="anamespacelagrange_html_a3d708c9fd9f08299ea623082bd61cb5e"><div class="ttname"><a href="namespacelagrange.html#a3d708c9fd9f08299ea623082bd61cb5e">lagrange::to_shared_ptr</a></div><div class="ttdeci">std::shared_ptr&lt; T &gt; to_shared_ptr(std::unique_ptr&lt; T &gt; &amp;&amp;ptr)</div><div class="ttdoc">Helper for automatic type deduction for unique_ptr to shared_ptr conversion.</div><div class="ttdef"><b>Definition</b> common.h:88</div></div>
 <div class="ttc" id="astructlagrange_1_1ui_1_1_texture_1_1_params_html"><div class="ttname"><a href="structlagrange_1_1ui_1_1_texture_1_1_params.html">lagrange::ui::Texture::Params</a></div><div class="ttdef"><b>Definition</b> Texture.h:45</div></div>
@@ -242,7 +242,7 @@ $(function(){initNavTree('ui_2include_2lagrange_2ui_2utils_2io_8h_source.html','
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_95d3c4dd232e168482f385e9dcc567c0.html">lagrange</a></li><li class="navelem"><a class="el" href="dir_840af7a4c0a0a7d566e78cb58e0e071b.html">ui</a></li><li class="navelem"><a class="el" href="dir_4279db23ab8e957d4bbb511db489e1df.html">utils</a></li><li class="navelem"><b>io.h</b></li>
-    <li class="footer">Generated on Sat Jun 20 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+    <li class="footer">Generated on Tue Aug 4 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>
 </body>

@@ -1,6 +1,5 @@
 var group__group_utils_assert =
 [
-    [ "lagrange", "namespacelagrange.html", null ],
     [ "Error", "structlagrange_1_1_error.html", null ],
     [ "BadCastError", "structlagrange_1_1_bad_cast_error.html", null ],
     [ "ParsingError", "structlagrange_1_1_parsing_error.html", null ],

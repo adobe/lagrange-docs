@@ -18,6 +18,10 @@ var searchData=
   ['remove_5fisolated_5fvertices_15',['remove_isolated_vertices',['../structlagrange_1_1_remove_null_area_facets_options.html#a7912fd3c8e4930cec8ed8c05567434a4',1,'lagrange::RemoveNullAreaFacetsOptions']]],
   ['reorient_16',['reorient',['../structlagrange_1_1_transform_options.html#aab5e6e7c0226df5f9e151b0fefdfe21f',1,'lagrange::TransformOptions']]],
   ['representative_5foffsets_17',['representative_offsets',['../structlagrange_1_1internal_1_1_bucket_sort_result.html#ae2a4cebc3b9b9b3b1e03fe54b2be4692',1,'lagrange::internal::BucketSortResult::representative_offsets'],['../structlagrange_1_1internal_1_1_bucket_sort_offset.html#ae2a4cebc3b9b9b3b1e03fe54b2be4692',1,'lagrange::internal::BucketSortOffset::representative_offsets']]],
-  ['ring_5fsegments_18',['ring_segments',['../structlagrange_1_1primitive_1_1_torus_options.html#a5b7e52b997de7bd640018afcb3343214',1,'lagrange::primitive::TorusOptions']]],
-  ['rosy_19',['rosy',['../structlagrange_1_1remeshing__im_1_1_remeshing_options.html#a87a98e1355ea157f92c1364cb3d21d56',1,'lagrange::remeshing_im::RemeshingOptions']]]
+  ['resolution_18',['resolution',['../structlagrange_1_1xatlas_1_1_pack_options.html#ae8834af86b361a19158f36f08eb13e87',1,'lagrange::xatlas::PackOptions']]],
+  ['ring_5fsegments_19',['ring_segments',['../structlagrange_1_1primitive_1_1_torus_options.html#a5b7e52b997de7bd640018afcb3343214',1,'lagrange::primitive::TorusOptions']]],
+  ['rosy_20',['rosy',['../structlagrange_1_1remeshing__im_1_1_remeshing_options.html#a87a98e1355ea157f92c1364cb3d21d56',1,'lagrange::remeshing_im::RemeshingOptions']]],
+  ['rotate_5fcharts_21',['rotate_charts',['../structlagrange_1_1xatlas_1_1_pack_options.html#a9177f8fdd775a07346c652cda4b2a587',1,'lagrange::xatlas::PackOptions']]],
+  ['rotate_5fcharts_5fto_5faxis_22',['rotate_charts_to_axis',['../structlagrange_1_1xatlas_1_1_pack_options.html#ae645a680e1903d77229db52a75038073',1,'lagrange::xatlas::PackOptions']]],
+  ['roundness_5fweight_23',['roundness_weight',['../structlagrange_1_1xatlas_1_1_chart_options.html#aaba78c4f8460ad976f0ed9d873f03a6f',1,'lagrange::xatlas::ChartOptions']]]
 ];

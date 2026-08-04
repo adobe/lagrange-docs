@@ -164,7 +164,7 @@ $(function(){initNavTree('legacy_2extract__boundary__loops_8h_source.html',''); 
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    std::vector&lt;Index&gt; boundary_next(num_vertices, <a class="code hl_function" href="group__group-utils-misc.html#ga6c3e5aabde25a440beb7fc174ab081df">invalid&lt;Index&gt;</a>());</div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="keyword">const</span> Index num_edges = mesh.get_num_edges();</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> ei : <a class="code hl_function" href="group__group-utils-misc.html#ga41568d17fc48cea4a31db0e40cd93cf8">range</a>(num_edges)) {</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> ei : <a class="code hl_function" href="namespacelagrange.html#a41568d17fc48cea4a31db0e40cd93cf8">range</a>(num_edges)) {</div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        <span class="keywordflow">if</span> (mesh.is_boundary_edge(ei)) {</div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>            <span class="keyword">const</span> <span class="keyword">auto</span> edge = mesh.get_edge_vertices(ei);</div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>            <span class="keywordflow">if</span> (boundary_next[edge[0]] != <a class="code hl_function" href="group__group-utils-misc.html#ga6c3e5aabde25a440beb7fc174ab081df">invalid&lt;Index&gt;</a>() &amp;&amp; boundary_next[edge[0]] != edge[1]) {</div>
@@ -196,16 +196,16 @@ $(function(){initNavTree('legacy_2extract__boundary__loops_8h_source.html',''); 
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>}</div>
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>} <span class="comment">// namespace legacy</span></div>
 <div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>} <span class="comment">// namespace lagrange</span></div>
-<div class="ttc" id="agroup__group-utils-misc_html_ga41568d17fc48cea4a31db0e40cd93cf8"><div class="ttname"><a href="group__group-utils-misc.html#ga41568d17fc48cea4a31db0e40cd93cf8">lagrange::range</a></div><div class="ttdeci">internal::Range&lt; Index &gt; range(Index end)</div><div class="ttdoc">Returns an iterable object representing the range [0, end).</div><div class="ttdef"><b>Definition</b> range.h:176</div></div>
 <div class="ttc" id="agroup__group-utils-misc_html_ga6c3e5aabde25a440beb7fc174ab081df"><div class="ttname"><a href="group__group-utils-misc.html#ga6c3e5aabde25a440beb7fc174ab081df">lagrange::invalid</a></div><div class="ttdeci">constexpr T invalid()</div><div class="ttdoc">You can use invalid&lt;T&gt;() to get a value that can represent &quot;invalid&quot; values, such as invalid indices ...</div><div class="ttdef"><b>Definition</b> invalid.h:40</div></div>
 <div class="ttc" id="anamespacelagrange_html"><div class="ttname"><a href="namespacelagrange.html">lagrange</a></div><div class="ttdoc">Main namespace for Lagrange.</div></div>
+<div class="ttc" id="anamespacelagrange_html_a41568d17fc48cea4a31db0e40cd93cf8"><div class="ttname"><a href="namespacelagrange.html#a41568d17fc48cea4a31db0e40cd93cf8">lagrange::range</a></div><div class="ttdeci">internal::Range&lt; Index &gt; range(Index end)</div><div class="ttdoc">Returns an iterable object representing the range [0, end).</div><div class="ttdef"><b>Definition</b> range.h:176</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_e277d0e790805391a364b883bec7db94.html">lagrange</a></li><li class="navelem"><a class="el" href="dir_3e86c1114dca7f32217f9b892f901fa0.html">legacy</a></li><li class="navelem"><b>extract_boundary_loops.h</b></li>
-    <li class="footer">Generated on Sat Jun 20 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+    <li class="footer">Generated on Tue Aug 4 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>
 </body>

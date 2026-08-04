@@ -213,6 +213,8 @@
 <li class="toctree-l2"><a class="reference internal" href="autoapi/lagrange/subdivision/index.html">lagrange.subdivision</a></li>
 <li class="toctree-l2"><a class="reference internal" href="autoapi/lagrange/texproc/index.html">lagrange.texproc</a></li>
 <li class="toctree-l2"><a class="reference internal" href="autoapi/lagrange/volume/index.html">lagrange.volume</a></li>
+<li class="toctree-l2"><a class="reference internal" href="autoapi/lagrange/winding/index.html">lagrange.winding</a></li>
+<li class="toctree-l2"><a class="reference internal" href="autoapi/lagrange/xatlas/index.html">lagrange.xatlas</a></li>
 </ul>
 </li>
 </ul>
@@ -542,6 +544,8 @@
         </ul></li>
         <li><a href="autoapi/lagrange/scripts/meshstat/index.html#lagrange.scripts.meshstat._colored">_colored() (in module lagrange.scripts.meshstat)</a>
 </li>
+        <li><a href="autoapi/lagrange/scripts/meshstat/index.html#lagrange.scripts.meshstat._delete_if_exists">_delete_if_exists() (in module lagrange.scripts.meshstat)</a>
+</li>
         <li><a href="autoapi/lagrange/scripts/meshstat/index.html#lagrange.scripts.meshstat._DISTORTION_METRIC_NAMES">_DISTORTION_METRIC_NAMES (in module lagrange.scripts.meshstat)</a>
 </li>
         <li><a href="autoapi/lagrange/scripts/meshstat/index.html#lagrange.scripts.meshstat._dtype_to_str">_dtype_to_str() (in module lagrange.scripts.meshstat)</a>
@@ -553,6 +557,8 @@
         <li><a href="autoapi/lagrange/scripts/meshstat/index.html#lagrange.scripts.meshstat._normalize_uv_attribute">_normalize_uv_attribute() (in module lagrange.scripts.meshstat)</a>
 </li>
         <li><a href="autoapi/lagrange/scripts/meshstat/index.html#lagrange.scripts.meshstat._safe_attribute_name">_safe_attribute_name() (in module lagrange.scripts.meshstat)</a>
+</li>
+        <li><a href="autoapi/lagrange/scripts/meshstat/index.html#lagrange.scripts.meshstat._temp_mesh_attribute">_temp_mesh_attribute() (in module lagrange.scripts.meshstat)</a>
 </li>
         <li><a href="autoapi/lagrange/scripts/meshstat/index.html#lagrange.scripts.meshstat._usage_to_str">_usage_to_str() (in module lagrange.scripts.meshstat)</a>
 </li>
@@ -756,6 +762,16 @@
     <td style="width: 33%; vertical-align: top;"><ul>
         <li><a href="autoapi/lagrange/volume/index.html#lagrange.volume.Grid.background">background (lagrange.volume.Grid property)</a>
 </li>
+        <li><a href="autoapi/lagrange/raycasting/index.html#lagrange.raycasting.ClosestPointHit.barycentric_coord">barycentric_coord (lagrange.raycasting.ClosestPointHit property)</a>
+
+        <ul>
+          <li><a href="autoapi/lagrange/raycasting/index.html#lagrange.raycasting.ClosestPointHits.barycentric_coord">(lagrange.raycasting.ClosestPointHits property)</a>
+</li>
+          <li><a href="autoapi/lagrange/raycasting/index.html#lagrange.raycasting.RayHit.barycentric_coord">(lagrange.raycasting.RayHit property)</a>
+</li>
+          <li><a href="autoapi/lagrange/raycasting/index.html#lagrange.raycasting.RayHits.barycentric_coord">(lagrange.raycasting.RayHits property)</a>
+</li>
+        </ul></li>
         <li><a href="autoapi/lagrange/scene/index.html#lagrange.scene.Material.base_color_texture">base_color_texture (lagrange.scene.Material property)</a>
 </li>
         <li><a href="autoapi/lagrange/scene/index.html#lagrange.scene.Material.base_color_value">base_color_value (lagrange.scene.Material property)</a>
@@ -766,12 +782,12 @@
 </li>
         <li><a href="autoapi/lagrange/subdivision/index.html#lagrange.subdivision.SchemeType.Bilinear">Bilinear (lagrange.subdivision.SchemeType attribute)</a>
 </li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
         <li><a href="autoapi/lagrange/io/index.html#lagrange.io.FileEncoding.Binary">Binary (lagrange.io.FileEncoding attribute)</a>
 </li>
         <li><a href="autoapi/lagrange/core/index.html#lagrange.core.AttributeUsage.Bitangent">Bitangent (lagrange.core.AttributeUsage attribute)</a>
 </li>
-    </ul></td>
-    <td style="width: 33%; vertical-align: top;"><ul>
         <li><a href="autoapi/lagrange/core/index.html#lagrange.core.TangentBitangentOptions.bitangent_attribute_name">bitangent_attribute_name (lagrange.core.TangentBitangentOptions property)</a>
 </li>
         <li><a href="autoapi/lagrange/core/index.html#lagrange.core.TangentBitangentResult.bitangent_id">bitangent_id (lagrange.core.TangentBitangentResult property)</a>
@@ -811,6 +827,8 @@
 </li>
         </ul></li>
         <li><a href="autoapi/lagrange/core/index.html#lagrange.core.CameraTransforms">CameraTransforms (class in lagrange.core)</a>
+</li>
+        <li><a href="autoapi/lagrange/raycasting/index.html#lagrange.raycasting.RayCaster.cast">cast() (lagrange.raycasting.RayCaster method)</a>
 </li>
         <li><a href="autoapi/lagrange/core/index.html#lagrange.core.cast_attribute">cast_attribute() (in module lagrange.core)</a>
 </li>
@@ -864,12 +882,18 @@
 </li>
         <li><a href="autoapi/lagrange/core/index.html#lagrange.core.close_small_holes">close_small_holes() (in module lagrange.core)</a>
 </li>
+        <li><a href="autoapi/lagrange/raycasting/index.html#lagrange.raycasting.RayCaster.closest_point">closest_point() (lagrange.raycasting.RayCaster method)</a>
+</li>
         <li><a href="autoapi/lagrange/raycasting/index.html#lagrange.raycasting.FallbackMode.ClosestPoint">ClosestPoint (lagrange.raycasting.FallbackMode attribute)</a>
 
         <ul>
           <li><a href="autoapi/lagrange/raycasting/index.html#lagrange.raycasting.ProjectMode.ClosestPoint">(lagrange.raycasting.ProjectMode attribute)</a>
 </li>
         </ul></li>
+        <li><a href="autoapi/lagrange/raycasting/index.html#lagrange.raycasting.ClosestPointHit">ClosestPointHit (class in lagrange.raycasting)</a>
+</li>
+        <li><a href="autoapi/lagrange/raycasting/index.html#lagrange.raycasting.ClosestPointHits">ClosestPointHits (class in lagrange.raycasting)</a>
+</li>
         <li><a href="autoapi/lagrange/raycasting/index.html#lagrange.raycasting.FallbackMode.ClosestVertex">ClosestVertex (lagrange.raycasting.FallbackMode attribute)</a>
 
         <ul>
@@ -936,12 +960,12 @@
 </li>
         <li><a href="autoapi/lagrange/core/index.html#lagrange.core.compute_facet_centroid">compute_facet_centroid() (in module lagrange.core)</a>
 </li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
         <li><a href="autoapi/lagrange/core/index.html#lagrange.core.compute_facet_circumcenter">compute_facet_circumcenter() (in module lagrange.core)</a>
 </li>
         <li><a href="autoapi/lagrange/core/index.html#lagrange.core.compute_facet_normal">compute_facet_normal() (in module lagrange.core)</a>
 </li>
-    </ul></td>
-    <td style="width: 33%; vertical-align: top;"><ul>
         <li><a href="autoapi/lagrange/core/index.html#lagrange.core.compute_facet_vector_area">compute_facet_vector_area() (in module lagrange.core)</a>
 </li>
         <li><a href="autoapi/lagrange/scene/index.html#lagrange.scene.compute_global_node_transform">compute_global_node_transform() (in module lagrange.scene)</a>
@@ -1124,10 +1148,10 @@
 </li>
         <li><a href="autoapi/lagrange/serialization/index.html#lagrange.serialization.deserialize_simple_scene">deserialize_simple_scene() (in module lagrange.serialization)</a>
 </li>
-    </ul></td>
-    <td style="width: 33%; vertical-align: top;"><ul>
         <li><a href="autoapi/lagrange/core/index.html#lagrange.core.detect_degenerate_facets">detect_degenerate_facets() (in module lagrange.core)</a>
 </li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
         <li><a href="autoapi/lagrange/polyddg/index.html#lagrange.polyddg.DifferentialOperators">DifferentialOperators (class in lagrange.polyddg)</a>
 </li>
         <li><a href="autoapi/lagrange/core/index.html#lagrange.core.SurfaceMesh.dimension">dimension (lagrange.core.SurfaceMesh property)</a>
@@ -1140,6 +1164,12 @@
 </li>
         <li><a href="autoapi/lagrange/core/index.html#lagrange.core.disconnect_uv_charts">disconnect_uv_charts() (in module lagrange.core)</a>
 </li>
+        <li><a href="autoapi/lagrange/raycasting/index.html#lagrange.raycasting.ClosestPointHit.distance">distance (lagrange.raycasting.ClosestPointHit property)</a>
+
+        <ul>
+          <li><a href="autoapi/lagrange/raycasting/index.html#lagrange.raycasting.ClosestPointHits.distance">(lagrange.raycasting.ClosestPointHits property)</a>
+</li>
+        </ul></li>
         <li><a href="autoapi/lagrange/core/index.html#lagrange.core.NormalOptions.distance_tolerance">distance_tolerance (lagrange.core.NormalOptions property)</a>
 
         <ul>
@@ -1240,16 +1270,22 @@
           <li><a href="autoapi/lagrange/core/index.html#lagrange.core.AttributeShrinkPolicy.ErrorIfExternal">(lagrange.core.AttributeShrinkPolicy attribute)</a>
 </li>
         </ul></li>
+        <li><a href="autoapi/lagrange/xatlas/index.html#lagrange.xatlas.ErrorIfMultiple">ErrorIfMultiple (in module lagrange.xatlas)</a>
+
+        <ul>
+          <li><a href="autoapi/lagrange/xatlas/index.html#lagrange.xatlas.MultiAtlasPolicy.ErrorIfMultiple">(lagrange.xatlas.MultiAtlasPolicy attribute)</a>
+</li>
+        </ul></li>
         <li><a href="autoapi/lagrange/core/index.html#lagrange.core.AttributeWritePolicy.ErrorIfReadOnly">ErrorIfReadOnly (lagrange.core.AttributeWritePolicy attribute)</a>
 </li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
         <li><a href="autoapi/lagrange/core/index.html#lagrange.core.AttributeCreatePolicy.ErrorIfReserved">ErrorIfReserved (lagrange.core.AttributeCreatePolicy attribute)</a>
 
         <ul>
           <li><a href="autoapi/lagrange/core/index.html#lagrange.core.AttributeDeletePolicy.ErrorIfReserved">(lagrange.core.AttributeDeletePolicy attribute)</a>
 </li>
         </ul></li>
-    </ul></td>
-    <td style="width: 33%; vertical-align: top;"><ul>
         <li><a href="autoapi/lagrange/raycasting/index.html#lagrange.raycasting.estimate_occluded_instances">estimate_occluded_instances() (in module lagrange.raycasting)</a>
 </li>
         <li><a href="autoapi/lagrange/scene/index.html#lagrange.scene.FacetAllocationStrategy.EvenSplit">EvenSplit (lagrange.scene.FacetAllocationStrategy attribute)</a>
@@ -1334,6 +1370,16 @@
 </li>
         <li><a href="autoapi/lagrange/core/index.html#lagrange.core.MeshCentroidOptions.facet_centroid_attribute_name">facet_centroid_attribute_name (lagrange.core.MeshCentroidOptions property)</a>
 </li>
+        <li><a href="autoapi/lagrange/raycasting/index.html#lagrange.raycasting.ClosestPointHit.facet_index">facet_index (lagrange.raycasting.ClosestPointHit property)</a>
+
+        <ul>
+          <li><a href="autoapi/lagrange/raycasting/index.html#lagrange.raycasting.ClosestPointHits.facet_index">(lagrange.raycasting.ClosestPointHits property)</a>
+</li>
+          <li><a href="autoapi/lagrange/raycasting/index.html#lagrange.raycasting.RayHit.facet_index">(lagrange.raycasting.RayHit property)</a>
+</li>
+          <li><a href="autoapi/lagrange/raycasting/index.html#lagrange.raycasting.RayHits.facet_index">(lagrange.raycasting.RayHits property)</a>
+</li>
+        </ul></li>
         <li><a href="autoapi/lagrange/core/index.html#lagrange.core.NormalOptions.facet_normal_attribute_name">facet_normal_attribute_name (lagrange.core.NormalOptions property)</a>
 </li>
         <li><a href="autoapi/lagrange/polyddg/index.html#lagrange.polyddg.DifferentialOperators.facet_tangent_coordinates">facet_tangent_coordinates() (lagrange.polyddg.DifferentialOperators method)</a>
@@ -1362,12 +1408,14 @@
 </li>
         <li><a href="autoapi/lagrange/scene/index.html#lagrange.scene.Camera.far_plane">far_plane (lagrange.scene.Camera property)</a>
 </li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="autoapi/lagrange/winding/index.html#lagrange.winding.FastWindingNumber">FastWindingNumber (class in lagrange.winding)</a>
+</li>
         <li><a href="autoapi/lagrange/io/index.html#lagrange.io.FileEncoding">FileEncoding (class in lagrange.io)</a>
 </li>
         <li><a href="autoapi/lagrange/raycasting/index.html#lagrange.raycasting.SceneFlags.Filter">Filter (lagrange.raycasting.SceneFlags attribute)</a>
 </li>
-    </ul></td>
-    <td style="width: 33%; vertical-align: top;"><ul>
         <li><a href="autoapi/lagrange/core/index.html#lagrange.core.filter_attributes">filter_attributes() (in module lagrange.core)</a>
 </li>
         <li><a href="autoapi/lagrange/scene/index.html#lagrange.scene.filter_instances">filter_instances() (in module lagrange.scene)</a>
@@ -1570,10 +1618,16 @@
           <li><a href="autoapi/lagrange/scene/index.html#lagrange.scene.ImageBuffer.height">(lagrange.scene.ImageBuffer property)</a>
 </li>
         </ul></li>
-    </ul></td>
-    <td style="width: 33%; vertical-align: top;"><ul>
         <li><a href="autoapi/lagrange/raycasting/index.html#lagrange.raycasting.BuildQuality.High">High (lagrange.raycasting.BuildQuality attribute)</a>
 </li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="autoapi/lagrange/raycasting/index.html#lagrange.raycasting.ClosestPointHits.hit">hit (lagrange.raycasting.ClosestPointHits property)</a>
+
+        <ul>
+          <li><a href="autoapi/lagrange/raycasting/index.html#lagrange.raycasting.RayHits.hit">(lagrange.raycasting.RayHits property)</a>
+</li>
+        </ul></li>
         <li><a href="autoapi/lagrange/polyddg/index.html#lagrange.polyddg.hodge_decomposition_1_form">hodge_decomposition_1_form() (in module lagrange.polyddg)</a>
 </li>
         <li><a href="autoapi/lagrange/polyddg/index.html#lagrange.polyddg.hodge_decomposition_vector_field">hodge_decomposition_vector_field() (in module lagrange.polyddg)</a>
@@ -1664,6 +1718,18 @@
     <td style="width: 33%; vertical-align: top;"><ul>
         <li><a href="autoapi/lagrange/core/index.html#lagrange.core.Attribute.insert_elements">insert_elements() (lagrange.core.Attribute method)</a>
 </li>
+        <li><a href="autoapi/lagrange/core/index.html#lagrange.core.insert_isoline">insert_isoline() (in module lagrange.core)</a>
+</li>
+        <li><a href="autoapi/lagrange/raycasting/index.html#lagrange.raycasting.ClosestPointHit.instance_index">instance_index (lagrange.raycasting.ClosestPointHit property)</a>
+
+        <ul>
+          <li><a href="autoapi/lagrange/raycasting/index.html#lagrange.raycasting.ClosestPointHits.instance_index">(lagrange.raycasting.ClosestPointHits property)</a>
+</li>
+          <li><a href="autoapi/lagrange/raycasting/index.html#lagrange.raycasting.RayHit.instance_index">(lagrange.raycasting.RayHit property)</a>
+</li>
+          <li><a href="autoapi/lagrange/raycasting/index.html#lagrange.raycasting.RayHits.instance_index">(lagrange.raycasting.RayHits property)</a>
+</li>
+        </ul></li>
         <li><a href="autoapi/lagrange/image/index.html#lagrange.image.ImagePrecision.int32">int32 (lagrange.image.ImagePrecision attribute)</a>
 </li>
         <li><a href="autoapi/lagrange/image/index.html#lagrange.image.ImagePrecision.int8">int8 (lagrange.image.ImagePrecision attribute)</a>
@@ -1687,6 +1753,8 @@
         <li><a href="autoapi/lagrange/core/index.html#lagrange.core.is_edge_manifold">is_edge_manifold() (in module lagrange.core)</a>
 </li>
         <li><a href="autoapi/lagrange/core/index.html#lagrange.core.SurfaceMesh.is_hybrid">is_hybrid (lagrange.core.SurfaceMesh property)</a>
+</li>
+        <li><a href="autoapi/lagrange/winding/index.html#lagrange.winding.FastWindingNumber.is_inside">is_inside() (lagrange.winding.FastWindingNumber method)</a>
 </li>
         <li><a href="autoapi/lagrange/core/index.html#lagrange.core.is_manifold">is_manifold() (in module lagrange.core)</a>
 </li>
@@ -1858,8 +1926,6 @@
           <li><a href="autoapi/lagrange/subdivision/index.html#module-lagrange.subdivision">module</a>
 </li>
         </ul></li>
-    </ul></td>
-    <td style="width: 33%; vertical-align: top;"><ul>
         <li>
     lagrange.texproc
 
@@ -1867,11 +1933,27 @@
           <li><a href="autoapi/lagrange/texproc/index.html#module-lagrange.texproc">module</a>
 </li>
         </ul></li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
         <li>
     lagrange.volume
 
         <ul>
           <li><a href="autoapi/lagrange/volume/index.html#module-lagrange.volume">module</a>
+</li>
+        </ul></li>
+        <li>
+    lagrange.winding
+
+        <ul>
+          <li><a href="autoapi/lagrange/winding/index.html#module-lagrange.winding">module</a>
+</li>
+        </ul></li>
+        <li>
+    lagrange.xatlas
+
+        <ul>
+          <li><a href="autoapi/lagrange/xatlas/index.html#module-lagrange.xatlas">module</a>
 </li>
         </ul></li>
         <li><a href="autoapi/lagrange/polyddg/index.html#lagrange.polyddg.DifferentialOperators.laplacian">laplacian() (lagrange.polyddg.DifferentialOperators method)</a>
@@ -1988,8 +2070,18 @@
 </li>
         <li><a href="autoapi/lagrange/poisson/index.html#lagrange.poisson.mesh_from_oriented_points">mesh_from_oriented_points() (in module lagrange.poisson)</a>
 </li>
-        <li><a href="autoapi/lagrange/scene/index.html#lagrange.scene.MeshInstance3D.mesh_index">mesh_index (lagrange.scene.MeshInstance3D property)</a>
+        <li><a href="autoapi/lagrange/raycasting/index.html#lagrange.raycasting.ClosestPointHit.mesh_index">mesh_index (lagrange.raycasting.ClosestPointHit property)</a>
+
+        <ul>
+          <li><a href="autoapi/lagrange/raycasting/index.html#lagrange.raycasting.ClosestPointHits.mesh_index">(lagrange.raycasting.ClosestPointHits property)</a>
 </li>
+          <li><a href="autoapi/lagrange/raycasting/index.html#lagrange.raycasting.RayHit.mesh_index">(lagrange.raycasting.RayHit property)</a>
+</li>
+          <li><a href="autoapi/lagrange/raycasting/index.html#lagrange.raycasting.RayHits.mesh_index">(lagrange.raycasting.RayHits property)</a>
+</li>
+          <li><a href="autoapi/lagrange/scene/index.html#lagrange.scene.MeshInstance3D.mesh_index">(lagrange.scene.MeshInstance3D property)</a>
+</li>
+        </ul></li>
         <li><a href="autoapi/lagrange/filtering/index.html#lagrange.filtering.mesh_smoothing">mesh_smoothing() (in module lagrange.filtering)</a>
 </li>
         <li><a href="autoapi/lagrange/scene/index.html#lagrange.scene.mesh_to_scene">mesh_to_scene() (in module lagrange.scene)</a>
@@ -2078,7 +2170,13 @@
 </li>
           <li><a href="autoapi/lagrange/volume/index.html#module-lagrange.volume">lagrange.volume</a>
 </li>
+          <li><a href="autoapi/lagrange/winding/index.html#module-lagrange.winding">lagrange.winding</a>
+</li>
+          <li><a href="autoapi/lagrange/xatlas/index.html#module-lagrange.xatlas">lagrange.xatlas</a>
+</li>
         </ul></li>
+        <li><a href="autoapi/lagrange/xatlas/index.html#lagrange.xatlas.MultiAtlasPolicy">MultiAtlasPolicy (class in lagrange.xatlas)</a>
+</li>
     </ul></td>
   </tr></table>
 </section>
@@ -2131,6 +2229,12 @@
 </li>
         <li><a href="autoapi/lagrange/core/index.html#lagrange.core.AttributeUsage.Normal">Normal (lagrange.core.AttributeUsage attribute)</a>
 </li>
+        <li><a href="autoapi/lagrange/raycasting/index.html#lagrange.raycasting.RayHit.normal">normal (lagrange.raycasting.RayHit property)</a>
+
+        <ul>
+          <li><a href="autoapi/lagrange/raycasting/index.html#lagrange.raycasting.RayHits.normal">(lagrange.raycasting.RayHits property)</a>
+</li>
+        </ul></li>
     </ul></td>
     <td style="width: 33%; vertical-align: top;"><ul>
         <li><a href="autoapi/lagrange/core/index.html#lagrange.core.TangentBitangentOptions.normal_attribute_name">normal_attribute_name (lagrange.core.TangentBitangentOptions property)</a>
@@ -2151,6 +2255,12 @@
 </li>
         <li><a href="autoapi/lagrange/core/index.html#lagrange.core.normalize_meshes_with_transform_2d">normalize_meshes_with_transform_2d() (in module lagrange.core)</a>
 </li>
+        <li><a href="autoapi/lagrange/xatlas/index.html#lagrange.xatlas.NormalizePerTile">NormalizePerTile (in module lagrange.xatlas)</a>
+
+        <ul>
+          <li><a href="autoapi/lagrange/xatlas/index.html#lagrange.xatlas.MultiAtlasPolicy.NormalizePerTile">(lagrange.xatlas.MultiAtlasPolicy attribute)</a>
+</li>
+        </ul></li>
         <li><a href="autoapi/lagrange/core/index.html#lagrange.core.NormalOptions">NormalOptions (class in lagrange.core)</a>
 </li>
         <li><a href="autoapi/lagrange/core/index.html#lagrange.core.NormalWeightingType">NormalWeightingType (class in lagrange.core)</a>
@@ -2187,6 +2297,8 @@
   <h2>O</h2>
   <table style="width: 100%" class="indextable genindextable"><tr>
     <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="autoapi/lagrange/raycasting/index.html#lagrange.raycasting.RayCaster.occluded">occluded() (lagrange.raycasting.RayCaster method)</a>
+</li>
         <li><a href="autoapi/lagrange/scene/index.html#lagrange.scene.Material.occlusion_strength">occlusion_strength (lagrange.scene.Material property)</a>
 </li>
         <li><a href="autoapi/lagrange/scene/index.html#lagrange.scene.Material.occlusion_texture">occlusion_texture (lagrange.scene.Material property)</a>
@@ -2291,9 +2403,17 @@
     <td style="width: 33%; vertical-align: top;"><ul>
         <li><a href="autoapi/lagrange/core/index.html#lagrange.core.AttributeUsage.Position">Position (lagrange.core.AttributeUsage attribute)</a>
 </li>
-        <li><a href="autoapi/lagrange/scene/index.html#lagrange.scene.Camera.position">position (lagrange.scene.Camera property)</a>
+        <li><a href="autoapi/lagrange/raycasting/index.html#lagrange.raycasting.ClosestPointHit.position">position (lagrange.raycasting.ClosestPointHit property)</a>
 
         <ul>
+          <li><a href="autoapi/lagrange/raycasting/index.html#lagrange.raycasting.ClosestPointHits.position">(lagrange.raycasting.ClosestPointHits property)</a>
+</li>
+          <li><a href="autoapi/lagrange/raycasting/index.html#lagrange.raycasting.RayHit.position">(lagrange.raycasting.RayHit property)</a>
+</li>
+          <li><a href="autoapi/lagrange/raycasting/index.html#lagrange.raycasting.RayHits.position">(lagrange.raycasting.RayHits property)</a>
+</li>
+          <li><a href="autoapi/lagrange/scene/index.html#lagrange.scene.Camera.position">(lagrange.scene.Camera property)</a>
+</li>
           <li><a href="autoapi/lagrange/scene/index.html#lagrange.scene.Light.position">(lagrange.scene.Light property)</a>
 </li>
         </ul></li>
@@ -2353,9 +2473,19 @@
 </li>
         <li><a href="autoapi/lagrange/texproc/index.html#lagrange.texproc.rasterize_textures_from_renders">rasterize_textures_from_renders() (in module lagrange.texproc)</a>
 </li>
+        <li><a href="autoapi/lagrange/raycasting/index.html#lagrange.raycasting.RayHit.ray_depth">ray_depth (lagrange.raycasting.RayHit property)</a>
+
+        <ul>
+          <li><a href="autoapi/lagrange/raycasting/index.html#lagrange.raycasting.RayHits.ray_depth">(lagrange.raycasting.RayHits property)</a>
+</li>
+        </ul></li>
         <li><a href="autoapi/lagrange/raycasting/index.html#lagrange.raycasting.RayCaster">RayCaster (class in lagrange.raycasting)</a>
 </li>
         <li><a href="autoapi/lagrange/raycasting/index.html#lagrange.raycasting.ProjectMode.RayCasting">RayCasting (lagrange.raycasting.ProjectMode attribute)</a>
+</li>
+        <li><a href="autoapi/lagrange/raycasting/index.html#lagrange.raycasting.RayHit">RayHit (class in lagrange.raycasting)</a>
+</li>
+        <li><a href="autoapi/lagrange/raycasting/index.html#lagrange.raycasting.RayHits">RayHits (class in lagrange.raycasting)</a>
 </li>
         <li><a href="autoapi/lagrange/core/index.html#lagrange.core.Attribute.readonly">readonly (lagrange.core.Attribute property)</a>
 </li>
@@ -2440,6 +2570,10 @@
         <li><a href="autoapi/lagrange/core/index.html#lagrange.core.reorder_mesh">reorder_mesh() (in module lagrange.core)</a>
 </li>
         <li><a href="autoapi/lagrange/core/index.html#lagrange.core.AttributeReorientPolicy.Reorient">Reorient (lagrange.core.AttributeReorientPolicy attribute)</a>
+</li>
+        <li><a href="autoapi/lagrange/xatlas/index.html#lagrange.xatlas.repack_mesh">repack_mesh() (in module lagrange.xatlas)</a>
+</li>
+        <li><a href="autoapi/lagrange/xatlas/index.html#lagrange.xatlas.repack_scene">repack_scene() (in module lagrange.xatlas)</a>
 </li>
         <li><a href="autoapi/lagrange/packing/index.html#lagrange.packing.repack_uv_charts">repack_uv_charts() (in module lagrange.packing)</a>
 </li>
@@ -2563,10 +2697,10 @@
 </li>
         <li><a href="autoapi/lagrange/polyddg/index.html#lagrange.polyddg.DifferentialOperators.shape_operator">shape_operator() (lagrange.polyddg.DifferentialOperators method)</a>
 </li>
-    </ul></td>
-    <td style="width: 33%; vertical-align: top;"><ul>
         <li><a href="autoapi/lagrange/polyddg/index.html#lagrange.polyddg.DifferentialOperators.sharp">sharp() (lagrange.polyddg.DifferentialOperators method)</a>
 </li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
         <li><a href="autoapi/lagrange/core/index.html#lagrange.core.Attribute.shrink_policy">shrink_policy (lagrange.core.Attribute property)</a>
 </li>
         <li><a href="autoapi/lagrange/core/index.html#lagrange.core.SurfaceMesh.shrink_to_fit">shrink_to_fit() (lagrange.core.SurfaceMesh method)</a>
@@ -2615,11 +2749,15 @@
 </li>
         <li><a href="autoapi/lagrange/subdivision/index.html#lagrange.subdivision.FaceVaryingInterpolation.Smooth">Smooth (lagrange.subdivision.FaceVaryingInterpolation attribute)</a>
 </li>
+        <li><a href="autoapi/lagrange/winding/index.html#lagrange.winding.FastWindingNumber.solid_angle">solid_angle() (lagrange.winding.FastWindingNumber method)</a>
+</li>
         <li><a href="autoapi/lagrange/core/index.html#lagrange.core.split_facets_by_material">split_facets_by_material() (in module lagrange.core)</a>
 </li>
         <li><a href="autoapi/lagrange/image/index.html#lagrange.image.split_grid">split_grid() (in module lagrange.image)</a>
 </li>
         <li><a href="autoapi/lagrange/core/index.html#lagrange.core.split_long_edges">split_long_edges() (in module lagrange.core)</a>
+</li>
+        <li><a href="autoapi/lagrange/core/index.html#lagrange.core.split_obtuse_triangles">split_obtuse_triangles() (in module lagrange.core)</a>
 </li>
         <li><a href="autoapi/lagrange/scene/index.html#lagrange.scene.Light.Type.Spot">Spot (lagrange.scene.Light.Type attribute)</a>
 </li>
@@ -2737,6 +2875,12 @@
   <h2>U</h2>
   <table style="width: 100%" class="indextable genindextable"><tr>
     <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="autoapi/lagrange/xatlas/index.html#lagrange.xatlas.Udim">Udim (in module lagrange.xatlas)</a>
+
+        <ul>
+          <li><a href="autoapi/lagrange/xatlas/index.html#lagrange.xatlas.MultiAtlasPolicy.Udim">(lagrange.xatlas.MultiAtlasPolicy attribute)</a>
+</li>
+        </ul></li>
         <li><a href="autoapi/lagrange/image/index.html#lagrange.image.ImagePrecision.uint32">uint32 (lagrange.image.ImagePrecision attribute)</a>
 </li>
         <li><a href="autoapi/lagrange/image/index.html#lagrange.image.ImagePrecision.uint8">uint8 (lagrange.image.ImagePrecision attribute)</a>
@@ -2775,6 +2919,10 @@
 </li>
     </ul></td>
     <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="autoapi/lagrange/xatlas/index.html#lagrange.xatlas.unwrap_mesh">unwrap_mesh() (in module lagrange.xatlas)</a>
+</li>
+        <li><a href="autoapi/lagrange/xatlas/index.html#lagrange.xatlas.unwrap_scene">unwrap_scene() (in module lagrange.xatlas)</a>
+</li>
         <li><a href="autoapi/lagrange/scene/index.html#lagrange.scene.Camera.up">up (lagrange.scene.Camera property)</a>
 
         <ul>

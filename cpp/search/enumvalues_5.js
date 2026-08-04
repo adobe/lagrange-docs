@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['facet_0',['Facet',['../group__group-surfacemesh-attr.html#gga9d8ab208822bab9987e9652dda49d89aa9b112d86d52178fe18e47e14bb6aeb35',1,'lagrange']]],
+  ['facet_0',['Facet',['../group__group-surfacemesh-attr.html#gga9d8ab208822bab9987e9652dda49d89aa9b112d86d52178fe18e47e14bb6aeb35',1,'lagrange::Facet'],['../namespacelagrange.html#a94b9fb92b7f050d2201011e9a1bea7a6a0b16659cd14eb8ec2cc6869c9c0f6f7e',1,'lagrange::Facet']]],
   ['facetindex_1',['FacetIndex',['../group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45aa3dfb9f32b810b4277c5c8387d7f03f5',1,'lagrange']]],
   ['filter_2',['Filter',['../namespacelagrange_1_1raycasting.html#aa377521412bad2c1fefb773f703d0884ad7778d0c64b6ba21494c97f77a66885a',1,'lagrange::raycasting']]],
   ['first_5fpixel_5frow_5fat_5fbottom_3',['first_pixel_row_at_bottom',['../classlagrange_1_1image_1_1_raw_input_image.html#a34696b388dbdf37225520d2c1a128765a1f8d89ba5fd1637f7ee665d47a0fc96f',1,'lagrange::image::RawInputImage']]],

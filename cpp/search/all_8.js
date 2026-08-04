@@ -27,8 +27,7 @@ var searchData=
   ['hodgedecompositionoptions_24',['HodgeDecompositionOptions',['../structlagrange_1_1polyddg_1_1_hodge_decomposition_options.html',1,'lagrange::polyddg']]],
   ['hodgedecompositionresult_25',['HodgeDecompositionResult',['../structlagrange_1_1polyddg_1_1_hodge_decomposition_result.html',1,'lagrange::polyddg']]],
   ['hovered_26',['Hovered',['../structlagrange_1_1ui_1_1_hovered.html',1,'lagrange::ui']]],
-  ['hovered_20tt_20and_20tt_20selected_20tt_27',['&lt;tt&gt;Hovered&lt;/tt&gt; and &lt;tt&gt;Selected&lt;/tt&gt;',['..//home/runner/work/lagrange-docs/lagrange-docs/lagrange_tmp/modules/ui/README.md#autotoc_md27',1,'']]],
-  ['hoveredevent_28',['HoveredEvent',['../structlagrange_1_1ui_1_1_hovered_event.html',1,'lagrange::ui']]],
-  ['hoveredtemp_29',['HoveredTemp',['../structlagrange_1_1ui_1_1_hovered_temp.html',1,'lagrange::ui']]],
-  ['hybrid_30',['Hybrid',['../group__module-bvh.html#gga7e55018c6fcf6fb3e8f6b02e4fc46892afb1b6e23a3767d2a31ef7899e6dd3f1e',1,'lagrange::bvh']]]
+  ['hoveredevent_27',['HoveredEvent',['../structlagrange_1_1ui_1_1_hovered_event.html',1,'lagrange::ui']]],
+  ['hoveredtemp_28',['HoveredTemp',['../structlagrange_1_1ui_1_1_hovered_temp.html',1,'lagrange::ui']]],
+  ['hybrid_29',['Hybrid',['../group__module-bvh.html#gga7e55018c6fcf6fb3e8f6b02e4fc46892afb1b6e23a3767d2a31ef7899e6dd3f1e',1,'lagrange::bvh']]]
 ];

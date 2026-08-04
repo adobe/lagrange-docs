@@ -9,12 +9,14 @@ var searchData=
   ['target_5fnum_5ffacets_6',['target_num_facets',['../structlagrange_1_1remeshing__im_1_1_remeshing_options.html#a5eefbab9dafdcacfea6286e2f70a4e7b',1,'lagrange::remeshing_im::RemeshingOptions']]],
   ['texcoord_7',['texcoord',['../structlagrange_1_1_attribute_name.html#a89974aafa583f7a43d53b3894eda5d89',1,'lagrange::AttributeName::texcoord'],['../structlagrange_1_1scene_1_1_texture_info.html#a57a4dd1e240a59db44ea00ae76549da3',1,'lagrange::scene::TextureInfo::texcoord']]],
   ['texcoord_5fid_8',['texcoord_id',['../structlagrange_1_1texproc_1_1_extract_mesh_with_alpha_mask_options.html#ad5f0215eb34230c90f219d3c53f3d73d',1,'lagrange::texproc::ExtractMeshWithAlphaMaskOptions']]],
-  ['texture_9',['texture',['../structlagrange_1_1texproc_1_1_const_weighted_texture_view.html#a2066685f4320f6c002ab273c370e72ca',1,'lagrange::texproc::ConstWeightedTextureView']]],
-  ['threshold_10',['threshold',['../structlagrange_1_1_remove_short_edges_options.html#afcfbedec6ebde62c6a091ce335836ef1',1,'lagrange::RemoveShortEdgesOptions']]],
-  ['title_11',['title',['../structlagrange_1_1ui_1_1_u_i_panel.html#ac30fed21fe991cc8475ce543929f8b72',1,'lagrange::ui::UIPanel']]],
-  ['top_5fsegments_12',['top_segments',['../structlagrange_1_1primitive_1_1_rounded_cone_options.html#a4838e5ee02b6d225105c704156edbd5d',1,'lagrange::primitive::RoundedConeOptions']]],
-  ['transform_13',['transform',['../structlagrange_1_1scene_1_1_mesh_instance.html#abbd6ccea530a2fa33fb91927d25eee36',1,'lagrange::scene::MeshInstance']]],
-  ['transform_5fbytes_14',['transform_bytes',['../structlagrange_1_1serialization_1_1internal_1_1_cista_instance.html#a799966d5318a075093c3cab392e94393',1,'lagrange::serialization::internal::CistaInstance']]],
-  ['triangulate_15',['triangulate',['../structlagrange_1_1io_1_1legacy_1_1_mesh_loader_params.html#abe2f6144e25d7ce8c9d818b3926a5a39',1,'lagrange::io::legacy::MeshLoaderParams::triangulate'],['../structlagrange_1_1io_1_1_load_options.html#a28b75c7a2a709f010d24914838a8acdb',1,'lagrange::io::LoadOptions::triangulate'],['../structlagrange_1_1primitive_1_1_primitive_options.html#abe2f6144e25d7ce8c9d818b3926a5a39',1,'lagrange::primitive::PrimitiveOptions::triangulate']]],
-  ['triangulate_5fholes_16',['triangulate_holes',['../structlagrange_1_1_close_small_holes_options.html#a2fb41141c15c3df4685d0b78d62c1359',1,'lagrange::CloseSmallHolesOptions']]]
+  ['texels_5fper_5funit_9',['texels_per_unit',['../structlagrange_1_1xatlas_1_1_pack_options.html#a20534f9288eb0a650eb7d6a3a6b4cc94',1,'lagrange::xatlas::PackOptions']]],
+  ['texture_10',['texture',['../structlagrange_1_1texproc_1_1_const_weighted_texture_view.html#a2066685f4320f6c002ab273c370e72ca',1,'lagrange::texproc::ConstWeightedTextureView']]],
+  ['texture_5fseam_5fweight_11',['texture_seam_weight',['../structlagrange_1_1xatlas_1_1_chart_options.html#a660262c445b6cc9b2a572e8a5d3d1b15',1,'lagrange::xatlas::ChartOptions']]],
+  ['threshold_12',['threshold',['../structlagrange_1_1_remove_short_edges_options.html#afcfbedec6ebde62c6a091ce335836ef1',1,'lagrange::RemoveShortEdgesOptions']]],
+  ['title_13',['title',['../structlagrange_1_1ui_1_1_u_i_panel.html#ac30fed21fe991cc8475ce543929f8b72',1,'lagrange::ui::UIPanel']]],
+  ['top_5fsegments_14',['top_segments',['../structlagrange_1_1primitive_1_1_rounded_cone_options.html#a4838e5ee02b6d225105c704156edbd5d',1,'lagrange::primitive::RoundedConeOptions']]],
+  ['transform_15',['transform',['../structlagrange_1_1scene_1_1_mesh_instance.html#abbd6ccea530a2fa33fb91927d25eee36',1,'lagrange::scene::MeshInstance']]],
+  ['transform_5fbytes_16',['transform_bytes',['../structlagrange_1_1serialization_1_1internal_1_1_cista_instance.html#a799966d5318a075093c3cab392e94393',1,'lagrange::serialization::internal::CistaInstance']]],
+  ['triangulate_17',['triangulate',['../structlagrange_1_1io_1_1legacy_1_1_mesh_loader_params.html#abe2f6144e25d7ce8c9d818b3926a5a39',1,'lagrange::io::legacy::MeshLoaderParams::triangulate'],['../structlagrange_1_1io_1_1_load_options.html#a28b75c7a2a709f010d24914838a8acdb',1,'lagrange::io::LoadOptions::triangulate'],['../structlagrange_1_1primitive_1_1_primitive_options.html#abe2f6144e25d7ce8c9d818b3926a5a39',1,'lagrange::primitive::PrimitiveOptions::triangulate']]],
+  ['triangulate_5fholes_18',['triangulate_holes',['../structlagrange_1_1_close_small_holes_options.html#a2fb41141c15c3df4685d0b78d62c1359',1,'lagrange::CloseSmallHolesOptions']]]
 ];

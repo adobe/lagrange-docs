@@ -25,9 +25,11 @@ var searchData=
   ['merge_22',['merge',['../classlagrange_1_1_disjoint_sets.html#a3ee2d4bff5bd1dc9d4f8b7eecd8e3dbc',1,'lagrange::DisjointSets']]],
   ['mesh_23',['Mesh',['../classlagrange_1_1_mesh.html#a2a23c7c0c4e0da252b7bc0e13b6f81d8',1,'lagrange::Mesh']]],
   ['mesh_5fbbox_24',['mesh_bbox',['../group__group-surfacemesh-utils.html#gabf3517305e7ccc7062aab01527e78468',1,'lagrange']]],
-  ['mesh_5fformat_5fversion_25',['mesh_format_version',['../group__group-serialization2.html#ga9631bdca8831cc1e577e44d0ff2c88ad',1,'lagrange::serialization']]],
-  ['mesh_5fsmoothing_26',['mesh_smoothing',['../group__module-filtering.html#gab846e5534f1d237eab35abe1f898bc36',1,'lagrange::filtering::mesh_smoothing(SurfaceMesh&lt; Scalar, Index &gt; &amp;mesh, const SmoothingOptions &amp;options={})'],['../group__module-filtering.html#gab846e5534f1d237eab35abe1f898bc36',1,'lagrange::filtering::mesh_smoothing(SurfaceMesh&lt; Scalar, Index &gt; &amp;mesh, const SmoothingOptions &amp;options)']]],
-  ['meshadapter_27',['MeshAdapter',['../classlagrange_1_1volume_1_1legacy_1_1_mesh_adapter.html#adc98e2a86dc99dc2c124b575b1b26e85',1,'lagrange::volume::legacy::MeshAdapter']]],
-  ['midpoint_5fsubdivision_28',['midpoint_subdivision',['../group__module-subdivision.html#ga5bb45b1783fc315efefb291e2d2dbd9f',1,'lagrange::subdivision']]],
-  ['move_5fdata_29',['move_data',['../namespacelagrange.html#a45f1c6cc55a36fae54bcd3723d8255e2',1,'lagrange']]]
+  ['mesh_5fcount_25',['mesh_count',['../classlagrange_1_1xatlas_1_1_atlas_engine.html#afe9cb861f0b60c779e54802de0078e17',1,'lagrange::xatlas::AtlasEngine::mesh_count()'],['../classlagrange_1_1xatlas_1_1_atlas_engine.html#afe9cb861f0b60c779e54802de0078e17',1,'lagrange::xatlas::AtlasEngine::Impl::mesh_count()']]],
+  ['mesh_5fformat_5fversion_26',['mesh_format_version',['../group__module-serialization2.html#ga9631bdca8831cc1e577e44d0ff2c88ad',1,'lagrange::serialization']]],
+  ['mesh_5ffrom_5foriented_5fpoints_27',['mesh_from_oriented_points',['../group__module-poisson.html#ga0483e4a9990c2e3c48d1a8dca597b415',1,'lagrange::poisson']]],
+  ['mesh_5fsmoothing_28',['mesh_smoothing',['../group__module-filtering.html#gab846e5534f1d237eab35abe1f898bc36',1,'lagrange::filtering::mesh_smoothing(SurfaceMesh&lt; Scalar, Index &gt; &amp;mesh, const SmoothingOptions &amp;options={})'],['../group__module-filtering.html#gab846e5534f1d237eab35abe1f898bc36',1,'lagrange::filtering::mesh_smoothing(SurfaceMesh&lt; Scalar, Index &gt; &amp;mesh, const SmoothingOptions &amp;options)']]],
+  ['meshadapter_29',['MeshAdapter',['../classlagrange_1_1volume_1_1legacy_1_1_mesh_adapter.html#adc98e2a86dc99dc2c124b575b1b26e85',1,'lagrange::volume::legacy::MeshAdapter']]],
+  ['midpoint_5fsubdivision_30',['midpoint_subdivision',['../group__module-subdivision.html#ga5bb45b1783fc315efefb291e2d2dbd9f',1,'lagrange::subdivision']]],
+  ['move_5fdata_31',['move_data',['../namespacelagrange.html#a45f1c6cc55a36fae54bcd3723d8255e2',1,'lagrange']]]
 ];

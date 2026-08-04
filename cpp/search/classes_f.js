@@ -25,7 +25,7 @@ var searchData=
   ['removeoccludedfacetsoptions_22',['RemoveOccludedFacetsOptions',['../structlagrange_1_1raycasting_1_1_remove_occluded_facets_options.html',1,'lagrange::raycasting']]],
   ['removeshortedgesoptions_23',['RemoveShortEdgesOptions',['../structlagrange_1_1_remove_short_edges_options.html',1,'lagrange']]],
   ['rendercontext_24',['RenderContext',['../structlagrange_1_1ui_1_1_render_context.html',1,'lagrange::ui']]],
-  ['repackoptions_25',['RepackOptions',['../structlagrange_1_1packing_1_1_repack_options.html',1,'lagrange::packing']]],
+  ['repackoptions_25',['RepackOptions',['../structlagrange_1_1packing_1_1_repack_options.html',1,'RepackOptions'],['../structlagrange_1_1xatlas_1_1_repack_options.html',1,'RepackOptions']]],
   ['rescaleuvoptions_26',['RescaleUVOptions',['../structlagrange_1_1_rescale_u_v_options.html',1,'lagrange']]],
   ['reservedattributeids_27',['ReservedAttributeIds',['../structlagrange_1_1_surface_mesh_1_1_reserved_attribute_ids.html',1,'lagrange::SurfaceMesh']]],
   ['rotatetooltag_28',['RotateToolTag',['../structlagrange_1_1ui_1_1_rotate_tool_tag.html',1,'lagrange::ui']]],

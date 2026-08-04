@@ -215,6 +215,8 @@
 <li class="toctree-l2"><a class="reference internal" href="../subdivision/index.html">lagrange.subdivision</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../texproc/index.html">lagrange.texproc</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../volume/index.html">lagrange.volume</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../winding/index.html">lagrange.winding</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../xatlas/index.html">lagrange.xatlas</a></li>
 </ul>
 </li>
 </ul>
@@ -378,22 +380,22 @@
 <tr class="row-even"><td><p><a class="reference internal" href="#lagrange.scene.meshes_to_simple_scene" title="lagrange.scene.meshes_to_simple_scene"><code class="xref py py-obj docutils literal notranslate"><span class="pre">meshes_to_simple_scene</span></code></a>(meshes)</p></td>
 <td><p>Converts a list of meshes into a simple scene with a single identity instance of each input mesh.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#lagrange.scene.scene_to_mesh" title="lagrange.scene.scene_to_mesh"><code class="xref py py-obj docutils literal notranslate"><span class="pre">scene_to_mesh</span></code></a>(scene[, normalize_normals, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#lagrange.scene.scene_to_mesh" title="lagrange.scene.scene_to_mesh"><code class="xref py py-obj docutils literal notranslate"><span class="pre">scene_to_mesh</span></code></a>(scene, *[, normalize_normals, ...])</p></td>
 <td><p>Converts a scene into a concatenated mesh with all the transforms applied.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#lagrange.scene.scene_to_meshes" title="lagrange.scene.scene_to_meshes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">scene_to_meshes</span></code></a>(scene[, normalize_normals, ...])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#lagrange.scene.scene_to_meshes" title="lagrange.scene.scene_to_meshes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">scene_to_meshes</span></code></a>(scene, *[, normalize_normals, ...])</p></td>
 <td><p>Converts a scene into a list of meshes with all the transforms applied.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#lagrange.scene.scene_to_meshes_and_materials" title="lagrange.scene.scene_to_meshes_and_materials"><code class="xref py py-obj docutils literal notranslate"><span class="pre">scene_to_meshes_and_materials</span></code></a>(scene[, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#lagrange.scene.scene_to_meshes_and_materials" title="lagrange.scene.scene_to_meshes_and_materials"><code class="xref py py-obj docutils literal notranslate"><span class="pre">scene_to_meshes_and_materials</span></code></a>(scene, *[, ...])</p></td>
 <td><p>Converts a scene into a list of meshes with all the transforms applied and a list of material IDs.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#lagrange.scene.scene_to_simple_scene" title="lagrange.scene.scene_to_simple_scene"><code class="xref py py-obj docutils literal notranslate"><span class="pre">scene_to_simple_scene</span></code></a>(scene)</p></td>
 <td><p>Converts a Scene into a SimpleScene.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#lagrange.scene.simple_scene_to_mesh" title="lagrange.scene.simple_scene_to_mesh"><code class="xref py py-obj docutils literal notranslate"><span class="pre">simple_scene_to_mesh</span></code></a>(scene[, normalize_normals, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#lagrange.scene.simple_scene_to_mesh" title="lagrange.scene.simple_scene_to_mesh"><code class="xref py py-obj docutils literal notranslate"><span class="pre">simple_scene_to_mesh</span></code></a>(scene, *[, normalize_normals, ...])</p></td>
 <td><p>Converts a scene into a concatenated mesh with all the transforms applied.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#lagrange.scene.simple_scene_to_meshes" title="lagrange.scene.simple_scene_to_meshes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">simple_scene_to_meshes</span></code></a>(scene[, normalize_normals, ...])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#lagrange.scene.simple_scene_to_meshes" title="lagrange.scene.simple_scene_to_meshes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">simple_scene_to_meshes</span></code></a>(scene, *[, normalize_normals, ...])</p></td>
 <td><p>Converts a scene into a list of meshes with all the transforms applied.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#lagrange.scene.simple_scene_to_scene" title="lagrange.scene.simple_scene_to_scene"><code class="xref py py-obj docutils literal notranslate"><span class="pre">simple_scene_to_scene</span></code></a>(simple_scene)</p></td>
@@ -1383,11 +1385,11 @@
 
 <dl class="py property">
 <dt class="sig sig-object py" id="lagrange.scene.ImageBuffer.data">
-<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">data</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">object</span></em><a class="headerlink" href="#lagrange.scene.ImageBuffer.data" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">data</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Annotated</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.typing.NDArray</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">(</span></span><span class="n"><span class="pre">order</span></span><span class="o"><span class="pre">=</span></span><span class="s"><span class="pre">'C'</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">device</span></span><span class="o"><span class="pre">=</span></span><span class="s"><span class="pre">'cpu'</span></span><span class="p"><span class="pre">)</span></span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#lagrange.scene.ImageBuffer.data" title="Link to this definition">¶</a></dt>
 <dd><p>Raw buffer of size (width * height * num_channels * num_bits_per_element / 8) bytes containing image data</p>
 <dl class="field-list simple">
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>object</p>
+<dd class="field-odd"><p>Annotated[numpy.typing.NDArray, dict(order=’C’, device=’cpu’)]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -4561,7 +4563,7 @@ returns True. Meshes with no remaining instances are dropped; mesh indices are c
 
 <dl class="py function">
 <dt class="sig sig-object py" id="lagrange.scene.scene_to_mesh">
-<span class="sig-prename descclassname"><span class="pre">lagrange.scene.</span></span><span class="sig-name descname"><span class="pre">scene_to_mesh</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">scene</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normalize_normals</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normalize_tangents_bitangents</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">preserve_attributes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lagrange.scene.scene_to_mesh" title="Link to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">lagrange.scene.</span></span><span class="sig-name descname"><span class="pre">scene_to_mesh</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">scene</span></span></em>, <em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">normalize_normals</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normalize_tangents_bitangents</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reorient</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">preserve_attributes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lagrange.scene.scene_to_mesh" title="Link to this definition">¶</a></dt>
 <dd><p>Converts a scene into a concatenated mesh with all the transforms applied.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -4569,6 +4571,7 @@ returns True. Meshes with no remaining instances are dropped; mesh indices are c
 <li><p><strong>scene</strong> (<a class="reference internal" href="#lagrange.scene.Scene" title="lagrange.scene.Scene"><em>Scene</em></a>) – Scene to convert.</p></li>
 <li><p><strong>normalize_normals</strong> (<em>bool</em>) – If enabled, normals are normalized after transformation.</p></li>
 <li><p><strong>normalize_tangents_bitangents</strong> (<em>bool</em>) – If enabled, tangents and bitangents are normalized after transformation.</p></li>
+<li><p><strong>reorient</strong> (<em>bool</em>) – If enabled, flip facets and reorient attributes for instances with a negative-determinant transform.</p></li>
 <li><p><strong>preserve_attributes</strong> (<em>bool</em>) – Preserve shared attributes and map them to the output mesh.</p></li>
 </ul>
 </dd>
@@ -4583,7 +4586,7 @@ returns True. Meshes with no remaining instances are dropped; mesh indices are c
 
 <dl class="py function">
 <dt class="sig sig-object py" id="lagrange.scene.scene_to_meshes">
-<span class="sig-prename descclassname"><span class="pre">lagrange.scene.</span></span><span class="sig-name descname"><span class="pre">scene_to_meshes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">scene</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normalize_normals</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normalize_tangents_bitangents</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lagrange.scene.scene_to_meshes" title="Link to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">lagrange.scene.</span></span><span class="sig-name descname"><span class="pre">scene_to_meshes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">scene</span></span></em>, <em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">normalize_normals</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normalize_tangents_bitangents</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reorient</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lagrange.scene.scene_to_meshes" title="Link to this definition">¶</a></dt>
 <dd><p>Converts a scene into a list of meshes with all the transforms applied.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -4591,6 +4594,7 @@ returns True. Meshes with no remaining instances are dropped; mesh indices are c
 <li><p><strong>scene</strong> (<a class="reference internal" href="#lagrange.scene.Scene" title="lagrange.scene.Scene"><em>Scene</em></a>) – Scene to convert.</p></li>
 <li><p><strong>normalize_normals</strong> (<em>bool</em>) – If enabled, normals are normalized after transformation.</p></li>
 <li><p><strong>normalize_tangents_bitangents</strong> (<em>bool</em>) – If enabled, tangents and bitangents are normalized after transformation.</p></li>
+<li><p><strong>reorient</strong> (<em>bool</em>) – If enabled, flip facets and reorient attributes for instances with a negative-determinant transform.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
@@ -4604,7 +4608,7 @@ returns True. Meshes with no remaining instances are dropped; mesh indices are c
 
 <dl class="py function">
 <dt class="sig sig-object py" id="lagrange.scene.scene_to_meshes_and_materials">
-<span class="sig-prename descclassname"><span class="pre">lagrange.scene.</span></span><span class="sig-name descname"><span class="pre">scene_to_meshes_and_materials</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">scene</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normalize_normals</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normalize_tangents_bitangents</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lagrange.scene.scene_to_meshes_and_materials" title="Link to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">lagrange.scene.</span></span><span class="sig-name descname"><span class="pre">scene_to_meshes_and_materials</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">scene</span></span></em>, <em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">normalize_normals</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normalize_tangents_bitangents</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reorient</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lagrange.scene.scene_to_meshes_and_materials" title="Link to this definition">¶</a></dt>
 <dd><p>Converts a scene into a list of meshes with all the transforms applied and a list of material IDs.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -4612,6 +4616,7 @@ returns True. Meshes with no remaining instances are dropped; mesh indices are c
 <li><p><strong>scene</strong> (<a class="reference internal" href="#lagrange.scene.Scene" title="lagrange.scene.Scene"><em>Scene</em></a>) – Scene to convert.</p></li>
 <li><p><strong>normalize_normals</strong> (<em>bool</em>) – If enabled, normals are normalized after transformation.</p></li>
 <li><p><strong>normalize_tangents_bitangents</strong> (<em>bool</em>) – If enabled, tangents and bitangents are normalized after transformation.</p></li>
+<li><p><strong>reorient</strong> (<em>bool</em>) – If enabled, flip facets and reorient attributes for instances with a negative-determinant transform.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
@@ -4646,7 +4651,7 @@ preserved in the SimpleScene.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="lagrange.scene.simple_scene_to_mesh">
-<span class="sig-prename descclassname"><span class="pre">lagrange.scene.</span></span><span class="sig-name descname"><span class="pre">simple_scene_to_mesh</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">scene</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normalize_normals</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normalize_tangents_bitangents</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">preserve_attributes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lagrange.scene.simple_scene_to_mesh" title="Link to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">lagrange.scene.</span></span><span class="sig-name descname"><span class="pre">simple_scene_to_mesh</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">scene</span></span></em>, <em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">normalize_normals</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normalize_tangents_bitangents</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reorient</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">preserve_attributes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lagrange.scene.simple_scene_to_mesh" title="Link to this definition">¶</a></dt>
 <dd><p>Converts a scene into a concatenated mesh with all the transforms applied.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -4654,6 +4659,7 @@ preserved in the SimpleScene.</p>
 <li><p><strong>scene</strong> (<a class="reference internal" href="#lagrange.scene.SimpleScene3D" title="lagrange.scene.SimpleScene3D"><em>SimpleScene3D</em></a>) – Scene to convert.</p></li>
 <li><p><strong>normalize_normals</strong> (<em>bool</em>) – If enabled, normals are normalized after transformation.</p></li>
 <li><p><strong>normalize_tangents_bitangents</strong> (<em>bool</em>) – If enabled, tangents and bitangents are normalized after transformation.</p></li>
+<li><p><strong>reorient</strong> (<em>bool</em>) – If enabled, flip facets and reorient attributes for instances with a negative-determinant transform.</p></li>
 <li><p><strong>preserve_attributes</strong> (<em>bool</em>) – Preserve shared attributes and map them to the output mesh.</p></li>
 </ul>
 </dd>
@@ -4668,7 +4674,7 @@ preserved in the SimpleScene.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="lagrange.scene.simple_scene_to_meshes">
-<span class="sig-prename descclassname"><span class="pre">lagrange.scene.</span></span><span class="sig-name descname"><span class="pre">simple_scene_to_meshes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">scene</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normalize_normals</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normalize_tangents_bitangents</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lagrange.scene.simple_scene_to_meshes" title="Link to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">lagrange.scene.</span></span><span class="sig-name descname"><span class="pre">simple_scene_to_meshes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">scene</span></span></em>, <em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">normalize_normals</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normalize_tangents_bitangents</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reorient</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lagrange.scene.simple_scene_to_meshes" title="Link to this definition">¶</a></dt>
 <dd><p>Converts a scene into a list of meshes with all the transforms applied.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -4676,6 +4682,7 @@ preserved in the SimpleScene.</p>
 <li><p><strong>scene</strong> (<a class="reference internal" href="#lagrange.scene.SimpleScene3D" title="lagrange.scene.SimpleScene3D"><em>SimpleScene3D</em></a>) – Scene to convert.</p></li>
 <li><p><strong>normalize_normals</strong> (<em>bool</em>) – If enabled, normals are normalized after transformation.</p></li>
 <li><p><strong>normalize_tangents_bitangents</strong> (<em>bool</em>) – If enabled, tangents and bitangents are normalized after transformation.</p></li>
+<li><p><strong>reorient</strong> (<em>bool</em>) – If enabled, flip facets and reorient attributes for instances with a negative-determinant transform.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>

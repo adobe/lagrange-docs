@@ -560,7 +560,7 @@ Module Contents
 
 
    .. py:property:: data
-      :type: object
+      :type: Annotated[numpy.typing.NDArray, dict(order='C', device='cpu')]
 
 
       Raw buffer of size (width * height * num_channels * num_bits_per_element / 8) bytes containing image data
@@ -2269,36 +2269,39 @@ Module Contents
    :return: Simple scene containing the input meshes.
 
 
-.. py:function:: scene_to_mesh(scene, normalize_normals = True, normalize_tangents_bitangents = True, preserve_attributes = True)
+.. py:function:: scene_to_mesh(scene, *, normalize_normals = True, normalize_tangents_bitangents = True, reorient = False, preserve_attributes = True)
 
    Converts a scene into a concatenated mesh with all the transforms applied.
 
    :param scene: Scene to convert.
    :param normalize_normals: If enabled, normals are normalized after transformation.
    :param normalize_tangents_bitangents: If enabled, tangents and bitangents are normalized after transformation.
+   :param reorient: If enabled, flip facets and reorient attributes for instances with a negative-determinant transform.
    :param preserve_attributes: Preserve shared attributes and map them to the output mesh.
 
    :return: Concatenated mesh.
 
 
-.. py:function:: scene_to_meshes(scene, normalize_normals = True, normalize_tangents_bitangents = True)
+.. py:function:: scene_to_meshes(scene, *, normalize_normals = True, normalize_tangents_bitangents = True, reorient = False)
 
    Converts a scene into a list of meshes with all the transforms applied.
 
    :param scene: Scene to convert.
    :param normalize_normals: If enabled, normals are normalized after transformation.
    :param normalize_tangents_bitangents: If enabled, tangents and bitangents are normalized after transformation.
+   :param reorient: If enabled, flip facets and reorient attributes for instances with a negative-determinant transform.
 
    :return: List of transformed meshes.
 
 
-.. py:function:: scene_to_meshes_and_materials(scene, normalize_normals = True, normalize_tangents_bitangents = True)
+.. py:function:: scene_to_meshes_and_materials(scene, *, normalize_normals = True, normalize_tangents_bitangents = True, reorient = False)
 
    Converts a scene into a list of meshes with all the transforms applied and a list of material IDs.
 
    :param scene: Scene to convert.
    :param normalize_normals: If enabled, normals are normalized after transformation.
    :param normalize_tangents_bitangents: If enabled, tangents and bitangents are normalized after transformation.
+   :param reorient: If enabled, flip facets and reorient attributes for instances with a negative-determinant transform.
 
    :return: List of meshes with transforms applied and a list of material IDs.
 
@@ -2317,25 +2320,27 @@ Module Contents
    :return: SimpleScene containing all mesh instances from the scene.
 
 
-.. py:function:: simple_scene_to_mesh(scene, normalize_normals = True, normalize_tangents_bitangents = True, preserve_attributes = True)
+.. py:function:: simple_scene_to_mesh(scene, *, normalize_normals = True, normalize_tangents_bitangents = True, reorient = False, preserve_attributes = True)
 
    Converts a scene into a concatenated mesh with all the transforms applied.
 
    :param scene: Scene to convert.
    :param normalize_normals: If enabled, normals are normalized after transformation.
    :param normalize_tangents_bitangents: If enabled, tangents and bitangents are normalized after transformation.
+   :param reorient: If enabled, flip facets and reorient attributes for instances with a negative-determinant transform.
    :param preserve_attributes: Preserve shared attributes and map them to the output mesh.
 
    :return: Concatenated mesh.
 
 
-.. py:function:: simple_scene_to_meshes(scene, normalize_normals = True, normalize_tangents_bitangents = True)
+.. py:function:: simple_scene_to_meshes(scene, *, normalize_normals = True, normalize_tangents_bitangents = True, reorient = False)
 
    Converts a scene into a list of meshes with all the transforms applied.
 
    :param scene: Scene to convert.
    :param normalize_normals: If enabled, normals are normalized after transformation.
    :param normalize_tangents_bitangents: If enabled, tangents and bitangents are normalized after transformation.
+   :param reorient: If enabled, flip facets and reorient attributes for instances with a negative-determinant transform.
 
    :return: List of transformed meshes.
 

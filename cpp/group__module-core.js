@@ -2,7 +2,7 @@ var group__module_core =
 [
     [ "Logging", "group__group-logger.html", "group__group-logger" ],
     [ "SurfaceMesh", "group__group-surfacemesh.html", "group__group-surfacemesh" ],
-    [ "Utilites", "group__group-utils.html", "group__group-utils" ],
+    [ "Utilities", "group__group-utils.html", "group__group-utils" ],
     [ "ExactPredicates", "classlagrange_1_1_exact_predicates.html", [
       [ "collinear3D", "classlagrange_1_1_exact_predicates.html#a9bacc05cd1da4ec1234b6b44eeb5ba1b", null ],
       [ "orient2D", "classlagrange_1_1_exact_predicates.html#a1e90bd036682e285c18b35622a00e856", null ],

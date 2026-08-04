@@ -29,10 +29,10 @@ var classlagrange_1_1ui_1_1_camera =
     [ "project_with_depth", "classlagrange_1_1ui_1_1_camera.html#a60bf737c769d7556af57aca7cbc84f7a", null ],
     [ "unproject", "classlagrange_1_1ui_1_1_camera.html#a05428503a3e3ba3b9ff24edc76049164", null ],
     [ "get_ray_to_screen", "classlagrange_1_1ui_1_1_camera.html#aa08ea427ef89368c960328ebe66bda0f", null ],
-    [ "rotate_turntable", "classlagrange_1_1ui_1_1_camera.html#a134f422abb6e684b6026cd8514a55229", null ],
+    [ "rotate_turntable", "classlagrange_1_1ui_1_1_camera.html#a129ad6eff8b4f804ef603d844a1091ac", null ],
     [ "get_retina_scale", "classlagrange_1_1ui_1_1_camera.html#aa6d639ff3805b3e1551dfd3e9959555b", null ],
     [ "set_retina_scale", "classlagrange_1_1ui_1_1_camera.html#a934411a296eecd8b436943aa86460edb", null ],
-    [ "set_ortho_viewport", "classlagrange_1_1ui_1_1_camera.html#a4ce168947d798892dd19de2e5e6aa1a9", null ],
+    [ "set_ortho_viewport", "classlagrange_1_1ui_1_1_camera.html#a216722b537d55dd37a79b9c470d888b7", null ],
     [ "transformed", "classlagrange_1_1ui_1_1_camera.html#aeee9730864397c4019d1773584626770", null ],
     [ "inverse_viewport_transform", "classlagrange_1_1ui_1_1_camera.html#a01b958794439142d5c2222d49c0f399c", null ],
     [ "is_pixel_in", "classlagrange_1_1ui_1_1_camera.html#a5f7ab9a0c1f2f752dddba795dd74d0ff", null ],
@@ -41,5 +41,5 @@ var classlagrange_1_1ui_1_1_camera =
     [ "set_orthogonal_direction", "classlagrange_1_1ui_1_1_camera.html#a487c9d02250350cb9782b14b25529a8a", null ],
     [ "get_orthogonal_direction", "classlagrange_1_1ui_1_1_camera.html#a1103d87a2866a1a8a11f7540d117988d", null ],
     [ "get_frustum", "classlagrange_1_1ui_1_1_camera.html#aa953c68969df93a7f0b1866e7732e128", null ],
-    [ "get_frustum", "classlagrange_1_1ui_1_1_camera.html#a3ed98cb1f6c337753b4b9b6970a74cc8", null ]
+    [ "get_frustum", "classlagrange_1_1ui_1_1_camera.html#a5eea25b41c327a52210a4f9b8aef0ce2", null ]
 ];

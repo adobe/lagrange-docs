@@ -261,7 +261,7 @@ $(function(){initNavTree('legacy_2attributes_2attribute__utils_8h_source.html','
 <div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span> </div>
 <div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>    <span class="keyword">auto</span> mapping_fn = [&amp;](Eigen::Index i, std::vector&lt;std::pair&lt;Eigen::Index, double&gt;&gt;&amp; weights) {</div>
 <div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>        weights.clear();</div>
-<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>        <span class="keywordflow">for</span> (<span class="keyword">auto</span> j : <a class="code hl_function" href="group__group-utils-misc.html#ga41568d17fc48cea4a31db0e40cd93cf8">range</a>(vertex_per_facet)) {</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>        <span class="keywordflow">for</span> (<span class="keyword">auto</span> j : <a class="code hl_function" href="namespacelagrange.html#a41568d17fc48cea4a31db0e40cd93cf8">range</a>(vertex_per_facet)) {</div>
 <div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>            weights.emplace_back(i * vertex_per_facet + j, 1.0 / vertex_per_facet);</div>
 <div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>        }</div>
 <div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>    };</div>
@@ -303,7 +303,7 @@ $(function(){initNavTree('legacy_2attributes_2attribute__utils_8h_source.html','
 <div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>    <span class="keyword">const</span> <span class="keyword">auto</span> vertex_per_facet = mesh.get_vertex_per_facet();</div>
 <div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>    <span class="keyword">auto</span> attr_values = mesh.get_facet_attribute(attr_name);</div>
 <div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>    IndexArray attr_indices(num_facets, vertex_per_facet);</div>
-<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> i : <a class="code hl_function" href="group__group-utils-misc.html#ga41568d17fc48cea4a31db0e40cd93cf8">range</a>(num_facets)) {</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> i : <a class="code hl_function" href="namespacelagrange.html#a41568d17fc48cea4a31db0e40cd93cf8">range</a>(num_facets)) {</div>
 <div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>        attr_indices.row(i).setConstant(i);</div>
 <div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>    }</div>
 <div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span> </div>
@@ -326,8 +326,8 @@ $(function(){initNavTree('legacy_2attributes_2attribute__utils_8h_source.html','
 <div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>    <span class="keyword">const</span> <span class="keyword">auto</span> vertex_per_facet = mesh.get_vertex_per_facet();</div>
 <div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>    <span class="keyword">auto</span> attr_values = mesh.get_corner_attribute(attr_name);</div>
 <div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>    IndexArray attr_indices(num_facets, vertex_per_facet);</div>
-<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> i : <a class="code hl_function" href="group__group-utils-misc.html#ga41568d17fc48cea4a31db0e40cd93cf8">range</a>(num_facets)) {</div>
-<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>        <span class="keywordflow">for</span> (<span class="keyword">auto</span> j : <a class="code hl_function" href="group__group-utils-misc.html#ga41568d17fc48cea4a31db0e40cd93cf8">range</a>(vertex_per_facet)) {</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> i : <a class="code hl_function" href="namespacelagrange.html#a41568d17fc48cea4a31db0e40cd93cf8">range</a>(num_facets)) {</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>        <span class="keywordflow">for</span> (<span class="keyword">auto</span> j : <a class="code hl_function" href="namespacelagrange.html#a41568d17fc48cea4a31db0e40cd93cf8">range</a>(vertex_per_facet)) {</div>
 <div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>            attr_indices(i, j) = i * vertex_per_facet + j;</div>
 <div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>        }</div>
 <div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>    }</div>
@@ -360,8 +360,8 @@ $(function(){initNavTree('legacy_2attributes_2attribute__utils_8h_source.html','
 <div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>    vertex_attr.setZero();</div>
 <div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>    Eigen::Matrix&lt;Scalar, Eigen::Dynamic, 1&gt; valence(num_vertices);</div>
 <div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>    valence.setZero();</div>
-<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> i : <a class="code hl_function" href="group__group-utils-misc.html#ga41568d17fc48cea4a31db0e40cd93cf8">range</a>(num_facets)) {</div>
-<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>        <span class="keywordflow">for</span> (<span class="keyword">auto</span> j : <a class="code hl_function" href="group__group-utils-misc.html#ga41568d17fc48cea4a31db0e40cd93cf8">range</a>(vertex_per_facet)) {</div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> i : <a class="code hl_function" href="namespacelagrange.html#a41568d17fc48cea4a31db0e40cd93cf8">range</a>(num_facets)) {</div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>        <span class="keywordflow">for</span> (<span class="keyword">auto</span> j : <a class="code hl_function" href="namespacelagrange.html#a41568d17fc48cea4a31db0e40cd93cf8">range</a>(vertex_per_facet)) {</div>
 <div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>            vertex_attr.row(facets(i, j)) += attr_values.row(attr_indices(i, j));</div>
 <div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>            valence[facets(i, j)] += 1;</div>
 <div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>        }</div>
@@ -390,8 +390,8 @@ $(function(){initNavTree('legacy_2attributes_2attribute__utils_8h_source.html','
 <div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>    <span class="keyword">const</span> <span class="keyword">auto</span> vertex_per_facet = mesh.get_vertex_per_facet();</div>
 <div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>    AttributeArray facet_attr(num_facets, attr_values.cols());</div>
 <div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>    facet_attr.setZero();</div>
-<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> i : <a class="code hl_function" href="group__group-utils-misc.html#ga41568d17fc48cea4a31db0e40cd93cf8">range</a>(num_facets)) {</div>
-<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>        <span class="keywordflow">for</span> (<span class="keyword">auto</span> j : <a class="code hl_function" href="group__group-utils-misc.html#ga41568d17fc48cea4a31db0e40cd93cf8">range</a>(vertex_per_facet)) {</div>
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> i : <a class="code hl_function" href="namespacelagrange.html#a41568d17fc48cea4a31db0e40cd93cf8">range</a>(num_facets)) {</div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>        <span class="keywordflow">for</span> (<span class="keyword">auto</span> j : <a class="code hl_function" href="namespacelagrange.html#a41568d17fc48cea4a31db0e40cd93cf8">range</a>(vertex_per_facet)) {</div>
 <div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>            facet_attr.row(i) += attr_values.row(attr_indices(i, j)) / vertex_per_facet;</div>
 <div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>        }</div>
 <div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>    }</div>
@@ -419,8 +419,8 @@ $(function(){initNavTree('legacy_2attributes_2attribute__utils_8h_source.html','
 <div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>    <span class="keyword">const</span> <span class="keyword">auto</span> vertex_per_facet = mesh.get_vertex_per_facet();</div>
 <div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>    AttributeArray corner_attr(num_facets * vertex_per_facet, attr_values.cols());</div>
 <div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>    corner_attr.setZero();</div>
-<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> i : <a class="code hl_function" href="group__group-utils-misc.html#ga41568d17fc48cea4a31db0e40cd93cf8">range</a>(num_facets)) {</div>
-<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>        <span class="keywordflow">for</span> (<span class="keyword">auto</span> j : <a class="code hl_function" href="group__group-utils-misc.html#ga41568d17fc48cea4a31db0e40cd93cf8">range</a>(vertex_per_facet)) {</div>
+<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> i : <a class="code hl_function" href="namespacelagrange.html#a41568d17fc48cea4a31db0e40cd93cf8">range</a>(num_facets)) {</div>
+<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>        <span class="keywordflow">for</span> (<span class="keyword">auto</span> j : <a class="code hl_function" href="namespacelagrange.html#a41568d17fc48cea4a31db0e40cd93cf8">range</a>(vertex_per_facet)) {</div>
 <div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>            <span class="keywordflow">if</span> (attr_indices(i, j) != <a class="code hl_function" href="group__group-utils-misc.html#ga6c3e5aabde25a440beb7fc174ab081df">invalid&lt;Index&gt;</a>()) {</div>
 <div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>                corner_attr.row(i * vertex_per_facet + j) = attr_values.row(attr_indices(i, j));</div>
 <div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>            }</div>
@@ -436,19 +436,19 @@ $(function(){initNavTree('legacy_2attributes_2attribute__utils_8h_source.html','
 <div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span>} <span class="comment">// namespace legacy</span></div>
 <div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span>} <span class="comment">// namespace lagrange</span></div>
 <div class="ttc" id="agroup__group-surfacemesh-attr_html_gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74"><div class="ttname"><a href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">lagrange::AttributeUsage::Scalar</a></div><div class="ttdeci">@ Scalar</div><div class="ttdoc">Mesh attribute must have exactly 1 channel.</div><div class="ttdef"><b>Definition</b> AttributeFwd.h:56</div></div>
-<div class="ttc" id="agroup__group-utils-assert_html_ga1ccafcb14523a1aae57dcac3c3f32ecd"><div class="ttname"><a href="group__group-utils-assert.html#ga1ccafcb14523a1aae57dcac3c3f32ecd">la_runtime_assert</a></div><div class="ttdeci">#define la_runtime_assert(...)</div><div class="ttdoc">Runtime assertion check.</div><div class="ttdef"><b>Definition</b> assert.h:175</div></div>
-<div class="ttc" id="agroup__group-utils-misc_html_ga41568d17fc48cea4a31db0e40cd93cf8"><div class="ttname"><a href="group__group-utils-misc.html#ga41568d17fc48cea4a31db0e40cd93cf8">lagrange::range</a></div><div class="ttdeci">internal::Range&lt; Index &gt; range(Index end)</div><div class="ttdoc">Returns an iterable object representing the range [0, end).</div><div class="ttdef"><b>Definition</b> range.h:176</div></div>
+<div class="ttc" id="agroup__group-utils-assert_html_ga1ccafcb14523a1aae57dcac3c3f32ecd"><div class="ttname"><a href="group__group-utils-assert.html#ga1ccafcb14523a1aae57dcac3c3f32ecd">la_runtime_assert</a></div><div class="ttdeci">#define la_runtime_assert(...)</div><div class="ttdoc">Runtime assertion check.</div><div class="ttdef"><b>Definition</b> assert.h:177</div></div>
 <div class="ttc" id="agroup__group-utils-misc_html_ga6c3e5aabde25a440beb7fc174ab081df"><div class="ttname"><a href="group__group-utils-misc.html#ga6c3e5aabde25a440beb7fc174ab081df">lagrange::invalid</a></div><div class="ttdeci">constexpr T invalid()</div><div class="ttdoc">You can use invalid&lt;T&gt;() to get a value that can represent &quot;invalid&quot; values, such as invalid indices ...</div><div class="ttdef"><b>Definition</b> invalid.h:40</div></div>
 <div class="ttc" id="agroup__group-utils-misc_html_gafc5798c28b15e46d20d0234b72c4ef63"><div class="ttname"><a href="group__group-utils-misc.html#gafc5798c28b15e46d20d0234b72c4ef63">lagrange::safe_cast</a></div><div class="ttdeci">constexpr auto safe_cast(SourceType value) -&gt; std::enable_if_t&lt;!std::is_same&lt; SourceType, TargetType &gt;::value, TargetType &gt;</div><div class="ttdoc">Perform safe cast from SourceType to TargetType, where &quot;safe&quot; means:</div><div class="ttdef"><b>Definition</b> safe_cast.h:51</div></div>
 <div class="ttc" id="anamespacelagrange_html"><div class="ttname"><a href="namespacelagrange.html">lagrange</a></div><div class="ttdoc">Main namespace for Lagrange.</div></div>
 <div class="ttc" id="anamespacelagrange_html_a3d708c9fd9f08299ea623082bd61cb5e"><div class="ttname"><a href="namespacelagrange.html#a3d708c9fd9f08299ea623082bd61cb5e">lagrange::to_shared_ptr</a></div><div class="ttdeci">std::shared_ptr&lt; T &gt; to_shared_ptr(std::unique_ptr&lt; T &gt; &amp;&amp;ptr)</div><div class="ttdoc">Helper for automatic type deduction for unique_ptr to shared_ptr conversion.</div><div class="ttdef"><b>Definition</b> common.h:88</div></div>
+<div class="ttc" id="anamespacelagrange_html_a41568d17fc48cea4a31db0e40cd93cf8"><div class="ttname"><a href="namespacelagrange.html#a41568d17fc48cea4a31db0e40cd93cf8">lagrange::range</a></div><div class="ttdeci">internal::Range&lt; Index &gt; range(Index end)</div><div class="ttdoc">Returns an iterable object representing the range [0, end).</div><div class="ttdef"><b>Definition</b> range.h:176</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_e277d0e790805391a364b883bec7db94.html">lagrange</a></li><li class="navelem"><a class="el" href="dir_3e86c1114dca7f32217f9b892f901fa0.html">legacy</a></li><li class="navelem"><a class="el" href="dir_61316d2c351d96b7ff54721ef4c8b757.html">attributes</a></li><li class="navelem"><b>attribute_utils.h</b></li>
-    <li class="footer">Generated on Sat Jun 20 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+    <li class="footer">Generated on Tue Aug 4 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>
 </body>

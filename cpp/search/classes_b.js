@@ -16,7 +16,7 @@ var searchData=
   ['mesh_3c_20vertices3d_2c_20triangles_20_3e_13',['Mesh&lt; Vertices3D, Triangles &gt;',['../classlagrange_1_1_mesh.html',1,'lagrange']]],
   ['mesh_3c_20vertices3df_2c_20quads_20_3e_14',['Mesh&lt; Vertices3Df, Quads &gt;',['../classlagrange_1_1_mesh.html',1,'lagrange']]],
   ['mesh_3c_20vertices3df_2c_20triangles_20_3e_15',['Mesh&lt; Vertices3Df, Triangles &gt;',['../classlagrange_1_1_mesh.html',1,'lagrange']]],
-  ['meshadapter_16',['MeshAdapter',['../classlagrange_1_1volume_1_1legacy_1_1_mesh_adapter.html',1,'lagrange::volume::legacy']]],
+  ['meshadapter_16',['MeshAdapter',['../classlagrange_1_1volume_1_1legacy_1_1_mesh_adapter.html',1,'MeshAdapter&lt; MeshType &gt;'],['../structlagrange_1_1xatlas_1_1internal_1_1_mesh_adapter.html',1,'MeshAdapter']]],
   ['meshareaoptions_17',['MeshAreaOptions',['../structlagrange_1_1_mesh_area_options.html',1,'lagrange']]],
   ['meshbase_18',['MeshBase',['../classlagrange_1_1_mesh_base.html',1,'lagrange']]],
   ['meshcentroidoptions_19',['MeshCentroidOptions',['../structlagrange_1_1_mesh_centroid_options.html',1,'lagrange']]],

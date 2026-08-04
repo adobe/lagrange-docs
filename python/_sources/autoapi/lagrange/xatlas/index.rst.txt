@@ -1,0 +1,175 @@
+lagrange.xatlas
+===============
+
+.. py:module:: lagrange.xatlas
+
+
+Attributes
+----------
+
+.. autoapisummary::
+
+   lagrange.xatlas.ErrorIfMultiple
+   lagrange.xatlas.NormalizePerTile
+   lagrange.xatlas.Udim
+
+
+Classes
+-------
+
+.. autoapisummary::
+
+   lagrange.xatlas.MultiAtlasPolicy
+
+
+Functions
+---------
+
+.. autoapisummary::
+
+   lagrange.xatlas.repack_mesh
+   lagrange.xatlas.repack_scene
+   lagrange.xatlas.unwrap_mesh
+   lagrange.xatlas.unwrap_scene
+
+
+Module Contents
+---------------
+
+.. py:class:: MultiAtlasPolicy
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   How to encode multi-atlas output.
+
+
+   .. py:attribute:: ErrorIfMultiple
+      :value: 2
+
+
+      Throw if xatlas produces more than one atlas tile.
+
+
+   .. py:attribute:: NormalizePerTile
+      :value: 0
+
+
+      UVs are normalized inside each atlas tile; tile id is stored separately.
+
+
+   .. py:attribute:: Udim
+      :value: 1
+
+
+      UVs include integer U offset = atlasIndex; V stays normalized in [0, 1].
+
+
+.. py:function:: repack_mesh(mesh, *, max_chart_size = 0, padding = 0, texels_per_unit = 0.0, resolution = 0, bilinear = True, block_align = False, brute_force = False, rotate_charts_to_axis = True, rotate_charts = True, input_uv_attribute_name = '', input_chart_attribute_name = '', output_uv_attribute_name = '@uv', output_atlas_attribute_name = '', output_chart_attribute_name = '', multi_atlas_policy = MultiAtlasPolicy.NormalizePerTile, enable_sharing_uvs_between_instances = False)
+
+   Repack the existing UV islands of a mesh using xatlas.
+
+   The mesh must be triangle-only and have an existing indexed UV attribute. All option fields are
+   passed as keyword arguments.
+
+   :param mesh: Triangle mesh with an existing indexed UV attribute.
+   :param max_chart_size: See PackOptions.max_chart_size.
+   :param padding: See PackOptions.padding.
+   :param texels_per_unit: See PackOptions.texels_per_unit.
+   :param resolution: See PackOptions.resolution.
+   :param bilinear: See PackOptions.bilinear.
+   :param block_align: See PackOptions.block_align.
+   :param brute_force: See PackOptions.brute_force.
+   :param rotate_charts_to_axis: See PackOptions.rotate_charts_to_axis.
+   :param rotate_charts: See PackOptions.rotate_charts.
+   :param input_uv_attribute_name: Input indexed UV attribute name.
+   :param input_chart_attribute_name: Optional per-facet chart id attribute. When set, each input UV island
+       is pinned to its own chart (forwarded to xatlas as faceMaterialData). If empty (default),
+       xatlas re-derives charts by flood-filling faces across shared UV edges, which can merge
+       logically-distinct islands that touch/overlap in UV space and cause the packer to overlap or
+       flip them. Set this to make repack preserve the existing island decomposition.
+   :param output_uv_attribute_name: Output indexed UV attribute name. If the attribute already exists,
+       its value type is preserved; otherwise, a new attribute is created using the mesh Scalar type.
+   :param output_atlas_attribute_name: Corner-attribute name for the per-corner atlas tile id.
+   :param output_chart_attribute_name: Corner-attribute name for the per-corner chart id.
+   :param multi_atlas_policy: How to encode multi-atlas output.
+   :param enable_sharing_uvs_between_instances: Scene-only; ignored for single-mesh repack.
+
+   :returns: A new mesh with the repacked UV attribute.
+
+
+.. py:function:: repack_scene(scene, *, max_chart_size = 0, padding = 0, texels_per_unit = 0.0, resolution = 0, bilinear = True, block_align = False, brute_force = False, rotate_charts_to_axis = True, rotate_charts = True, input_uv_attribute_name = '', input_chart_attribute_name = '', output_uv_attribute_name = '@uv', output_atlas_attribute_name = '', output_chart_attribute_name = '', multi_atlas_policy = MultiAtlasPolicy.NormalizePerTile, enable_sharing_uvs_between_instances = False, per_instance_importance = [])
+
+   Repack all UV islands in a scene using xatlas. See repack_mesh() for parameter docs.
+
+   Scene-specific kwargs:
+
+   :param per_instance_importance: Optional list of per-instance importance weights (>0, finite).
+
+
+.. py:function:: unwrap_mesh(mesh, *, max_chart_area = 0.0, max_boundary_length = 0.0, normal_deviation_weight = 2.0, roundness_weight = 0.009999999776482582, straightness_weight = 6.0, normal_seam_weight = 4.0, texture_seam_weight = 0.5, max_cost = 2.0, max_iterations = 1, use_input_mesh_uvs = False, fix_winding = True, max_chart_size = 0, padding = 0, texels_per_unit = 0.0, resolution = 0, bilinear = True, block_align = False, brute_force = False, rotate_charts_to_axis = True, rotate_charts = True, input_normal_attribute_name = '', input_uv_attribute_name = '', output_uv_attribute_name = '@uv', output_atlas_attribute_name = '', output_chart_attribute_name = '', multi_atlas_policy = MultiAtlasPolicy.NormalizePerTile, enable_sharing_uvs_between_instances = False)
+
+   Unwrap a single mesh using xatlas (segmentation + parameterization + packing).
+
+   The mesh must be triangle-only. All option fields are passed as keyword arguments; defaults match
+   those of the underlying xatlas C library.
+
+   :param mesh: Mesh to unwrap.
+
+   Chart options (segmentation):
+
+   :param max_chart_area: Maximum chart area in input units squared. 0 = no limit.
+   :param max_boundary_length: Maximum chart boundary length. 0 = no limit.
+   :param normal_deviation_weight: Cost weight on normal deviation; higher = flatter charts.
+   :param roundness_weight: Cost weight on roundness; higher = more disk-like charts.
+   :param straightness_weight: Cost weight on boundary straightness.
+   :param normal_seam_weight: Cost weight on crossing normal seams. >1000 forbids crossing.
+   :param texture_seam_weight: Cost weight on crossing input UV seams.
+   :param max_cost: Maximum cost; faces beyond this are not merged.
+   :param max_iterations: Number of segmentation iterations.
+   :param use_input_mesh_uvs: If True, treat the input UV attribute as the chart layout.
+   :param fix_winding: If True, ensure consistent triangle winding within charts.
+
+   Pack options:
+
+   :param max_chart_size: Maximum chart size in pixels. 0 = no limit.
+   :param padding: Empty pixels of padding around each chart.
+   :param texels_per_unit: Texel-to-world ratio. 0 = auto-estimate.
+   :param resolution: Atlas tile resolution in pixels. 0 = single tile sized by texels_per_unit.
+   :param bilinear: If True, leave a 1-pixel margin for safe bilinear filtering.
+   :param block_align: If True, align charts to 4-pixel blocks (BCn-friendly).
+   :param brute_force: If True, brute-force optimal placement (slow).
+   :param rotate_charts_to_axis: Rotate charts so longest axis aligns with U or V.
+   :param rotate_charts: Allow xatlas to rotate charts during packing.
+
+   Output options:
+
+   :param input_normal_attribute_name: Optional vertex normal attribute used as a chart hint.
+   :param input_uv_attribute_name: Optional UV attribute (vertex or indexed) used as a chart hint.
+   :param output_uv_attribute_name: Output indexed UV attribute name.
+   :param output_atlas_attribute_name: Corner-attribute name for the per-corner atlas tile id.
+   :param output_chart_attribute_name: Corner-attribute name for the per-corner chart id.
+   :param multi_atlas_policy: How to encode multi-atlas output (see MultiAtlasPolicy).
+   :param enable_sharing_uvs_between_instances: Scene-only; ignored for single-mesh unwrap.
+
+   :returns: A new mesh with the indexed UV attribute (and optional atlas/chart attributes).
+
+
+.. py:function:: unwrap_scene(scene, *, max_chart_area = 0.0, max_boundary_length = 0.0, normal_deviation_weight = 2.0, roundness_weight = 0.009999999776482582, straightness_weight = 6.0, normal_seam_weight = 4.0, texture_seam_weight = 0.5, max_cost = 2.0, max_iterations = 1, use_input_mesh_uvs = False, fix_winding = True, max_chart_size = 0, padding = 0, texels_per_unit = 0.0, resolution = 0, bilinear = True, block_align = False, brute_force = False, rotate_charts_to_axis = True, rotate_charts = True, input_normal_attribute_name = '', input_uv_attribute_name = '', output_uv_attribute_name = '@uv', output_atlas_attribute_name = '', output_chart_attribute_name = '', multi_atlas_policy = MultiAtlasPolicy.NormalizePerTile, enable_sharing_uvs_between_instances = False, per_instance_importance = [])
+
+   Unwrap all meshes in a scene using xatlas. See unwrap_mesh() for parameter docs.
+
+   Scene-specific kwargs:
+
+   :param per_instance_importance: Optional list of per-instance importance weights (>0, finite).
+
+
+.. py:data:: ErrorIfMultiple
+   :type:  MultiAtlasPolicy
+
+.. py:data:: NormalizePerTile
+   :type:  MultiAtlasPolicy
+
+.. py:data:: Udim
+   :type:  MultiAtlasPolicy
+

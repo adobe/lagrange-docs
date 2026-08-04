@@ -1,0 +1,51 @@
+lagrange.winding
+================
+
+.. py:module:: lagrange.winding
+
+
+Classes
+-------
+
+.. autoapisummary::
+
+   lagrange.winding.FastWindingNumber
+
+
+Module Contents
+---------------
+
+.. py:class:: FastWindingNumber(mesh)
+
+   Fast winding number engine for inside/outside queries on triangle soups.
+
+   Builds an acceleration structure over a triangle mesh to answer winding-number
+   based queries, following the fast winding number method of [Barill et al. 2018].
+
+   .. note::
+      Internally, point coordinates are converted to single precision and vertex
+      indices are converted to ``int``.
+
+
+   .. py:method:: is_inside(point: collections.abc.Sequence[float]) -> bool
+                  is_inside(points: Annotated[numpy.typing.NDArray[numpy.float64], dict(shape=(None, 3), order='C', device='cpu', writable=False)]) -> Annotated[numpy.typing.NDArray[numpy.bool], dict(shape=(None, ))]
+
+      Determine whether each of a batch of query points is inside the volume.
+
+      :param points: Query positions as a NumPy array of shape (N, 3).
+
+      :return: A NumPy array of shape (N,) of booleans, True where the point is inside.
+
+
+
+   .. py:method:: solid_angle(point: collections.abc.Sequence[float]) -> float
+                  solid_angle(points: Annotated[numpy.typing.NDArray[numpy.float64], dict(shape=(None, 3), order='C', device='cpu', writable=False)]) -> Annotated[numpy.typing.NDArray[numpy.float32], dict(shape=(None, ))]
+
+      Compute the solid angle at a batch of query points.
+
+      :param points: Query positions as a NumPy array of shape (N, 3).
+
+      :return: A NumPy array of shape (N,) of solid angles at each query point.
+
+
+

@@ -3,7 +3,7 @@
   <head><meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="index" title="Index" href="../../../genindex.html"><link rel="search" title="Search" href="../../../search.html"><link rel="prev" title="lagrange.texproc" href="../texproc/index.html">
+<link rel="index" title="Index" href="../../../genindex.html"><link rel="search" title="Search" href="../../../search.html"><link rel="next" title="lagrange.winding" href="../winding/index.html"><link rel="prev" title="lagrange.texproc" href="../texproc/index.html">
 
     <!-- Generated with Sphinx 8.2.3 and Furo 2025.09.25 -->
         <title>lagrange.volume - Lagrange documentation</title>
@@ -215,6 +215,8 @@
 <li class="toctree-l2"><a class="reference internal" href="../subdivision/index.html">lagrange.subdivision</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../texproc/index.html">lagrange.texproc</a></li>
 <li class="toctree-l2 current current-page"><a class="current reference internal" href="#">lagrange.volume</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../winding/index.html">lagrange.winding</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../xatlas/index.html">lagrange.xatlas</a></li>
 </ul>
 </li>
 </ul>
@@ -622,12 +624,12 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="lagrange.volume.Grid.to_buffer">
-<span class="sig-name descname"><span class="pre">to_buffer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">compression</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">Compression.Blosc</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lagrange.volume.Grid.to_buffer" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">to_buffer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">grid_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compression</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">Compression.Blosc</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lagrange.volume.Grid.to_buffer" title="Link to this definition">¶</a></dt>
 <dd><p>Save the grid to a memory buffer.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>grid_type</strong> – Output grid type, either ‘vdb’ or ‘nvdb’.</p></li>
+<li><p><strong>grid_type</strong> (<em>Literal</em><em>[</em><em>'vdb'</em><em>, </em><em>'nvdb'</em><em>]</em>) – Output grid type, either ‘vdb’ or ‘nvdb’.</p></li>
 <li><p><strong>compression</strong> (<a class="reference internal" href="#lagrange.volume.Compression" title="lagrange.volume.Compression"><em>Compression</em></a>) – Compression method to use. Default is Blosc.</p></li>
 </ul>
 </dd>
@@ -834,7 +836,15 @@
       <footer>
         
         <div class="related-pages">
-          
+          <a class="next-page" href="../winding/index.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">lagrange.winding</div>
+              </div>
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+            </a>
           <a class="prev-page" href="../texproc/index.html">
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">

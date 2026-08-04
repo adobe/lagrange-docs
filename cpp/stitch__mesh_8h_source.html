@@ -164,11 +164,12 @@ $(function(){initNavTree('stitch__mesh_8h_source.html',''); initResizable(true);
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    weld_opts.epsilon_abs = 0;</div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    weld_opts.epsilon_rel = 0;</div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> <span class="keywordtype">id</span> : <a class="code hl_function" href="group__group-surfacemesh-utils.html#ga30ee6653cef2bd30115135b678a70163">find_matching_attributes</a>(mesh, <a class="code hl_enumvalue" href="group__group-surfacemesh-attr.html#gga9d8ab208822bab9987e9652dda49d89aa93747573a820d43208a296f9f56bf54e">AttributeElement::Indexed</a>)) {</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        weld_indexed_attribute(mesh, <span class="keywordtype">id</span>, weld_opts);</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        <a class="code hl_function" href="group__group-surfacemesh-attr-utils.html#gac25160103a579bb49738ba559ec85fb8">weld_indexed_attribute</a>(mesh, <span class="keywordtype">id</span>, weld_opts);</div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    }</div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>}</div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>} <span class="comment">// namespace lagrange::io</span></div>
+<div class="ttc" id="agroup__group-surfacemesh-attr-utils_html_gac25160103a579bb49738ba559ec85fb8"><div class="ttname"><a href="group__group-surfacemesh-attr-utils.html#gac25160103a579bb49738ba559ec85fb8">lagrange::weld_indexed_attribute</a></div><div class="ttdeci">void weld_indexed_attribute(SurfaceMesh&lt; Scalar, Index &gt; &amp;mesh, AttributeId attr_id, const WeldOptions &amp;options={})</div><div class="ttdoc">Weld an indexed attribute by combining all corners around a vertex with the same attribute value.</div><div class="ttdef"><b>Definition</b> weld_indexed_attribute.cpp:320</div></div>
 <div class="ttc" id="agroup__group-surfacemesh-attr-utils_html_gacd6500c173df1a5bc53e2c9b32e08309"><div class="ttname"><a href="group__group-surfacemesh-attr-utils.html#gacd6500c173df1a5bc53e2c9b32e08309">lagrange::map_attribute_in_place</a></div><div class="ttdeci">AttributeId map_attribute_in_place(SurfaceMesh&lt; Scalar, Index &gt; &amp;mesh, AttributeId id, AttributeElement new_element)</div><div class="ttdoc">Map attribute values to a different element type.</div><div class="ttdef"><b>Definition</b> map_attribute.cpp:292</div></div>
 <div class="ttc" id="agroup__group-surfacemesh-attr_html_gga9d8ab208822bab9987e9652dda49d89aa93747573a820d43208a296f9f56bf54e"><div class="ttname"><a href="group__group-surfacemesh-attr.html#gga9d8ab208822bab9987e9652dda49d89aa93747573a820d43208a296f9f56bf54e">lagrange::Indexed</a></div><div class="ttdeci">@ Indexed</div><div class="ttdoc">Indexed mesh attributes.</div><div class="ttdef"><b>Definition</b> AttributeFwd.h:45</div></div>
 <div class="ttc" id="agroup__group-surfacemesh-attr_html_gga9d8ab208822bab9987e9652dda49d89aad013c4439c3e09308d6b2eef2a4025ae"><div class="ttname"><a href="group__group-surfacemesh-attr.html#gga9d8ab208822bab9987e9652dda49d89aad013c4439c3e09308d6b2eef2a4025ae">lagrange::Vertex</a></div><div class="ttdeci">@ Vertex</div><div class="ttdoc">Per-vertex mesh attributes.</div><div class="ttdef"><b>Definition</b> AttributeFwd.h:28</div></div>
@@ -181,7 +182,7 @@ $(function(){initNavTree('stitch__mesh_8h_source.html',''); initResizable(true);
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>stitch_mesh.h</b></li>
-    <li class="footer">Generated on Sat Jun 20 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+    <li class="footer">Generated on Tue Aug 4 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>
 </body>

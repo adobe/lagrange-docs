@@ -21,7 +21,7 @@
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -29,7 +29,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -732,6 +732,8 @@
       
         
       
+        
+      
     
     
     
@@ -1112,6 +1114,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../mesh-cleanup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mesh Cleanup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../general-utilities/" class="md-nav__link">
         
   
@@ -1161,10 +1191,10 @@
         
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_1_5" >
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_1_6" >
         
           
-          <label class="md-nav__link" for="__nav_2_1_5" id="__nav_2_1_5_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2_1_6" id="__nav_2_1_6_label" tabindex="0">
             
   
   
@@ -1182,8 +1212,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_1_5">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_6">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -1256,14 +1286,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../mesh-cleanup/" class="md-nav__link">
+      <a href="../legacy-mesh-cleanup/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Mesh Cleanup
+    Legacy Mesh Cleanup
   
 
     
@@ -2546,10 +2576,10 @@
 <h1 id="mesh-attributes">Mesh Attributes</h1>
 <div class="admonition warning">
 <p class="admonition-title">Legacy Mesh vs Surface Mesh</p>
-<p>Since v6.0.0, Lagrange introduced a new polygonal mesh class that is meant to replace the
-original mesh class used throughout Lagrange. While currently few of the Lagrange functions use
-this new mesh class, over time old and new features will transition to use this new data
-structure.</p>
+<p>Since v6.0.0, Lagrange provides a polygonal mesh class (<a href="../mesh/">SurfaceMesh</a>) that replaces the
+original (legacy) mesh class. It is now the default mesh type used throughout Lagrange. The
+legacy mesh class remains available only as an opt-in, via the <code>LAGRANGE_ENABLE_LEGACY_FUNCTIONS</code>
+option.</p>
 </div>
 <!-- @header
 #include <lagrange/SurfaceMesh.h>
@@ -2670,12 +2700,12 @@ buffers</a>. If you need to track ownership, you can use a
 <span class="w">    </span><span class="s">&quot;color&quot;</span><span class="p">,</span>
 <span class="w">    </span><span class="n">lagrange</span><span class="o">::</span><span class="n">AttributeElement</span><span class="o">::</span><span class="n">Corner</span><span class="p">);</span>
 
-<span class="c1">// Optionally specify usage tag + num channels.</span>
+<span class="c1">// Optionally specify num channels + usage tag.</span>
 <span class="k">auto</span><span class="w"> </span><span class="n">id1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mesh</span><span class="p">.</span><span class="n">create_attribute</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;</span><span class="p">(</span>
 <span class="w">    </span><span class="s">&quot;normals&quot;</span><span class="p">,</span>
 <span class="w">    </span><span class="n">lagrange</span><span class="o">::</span><span class="n">AttributeElement</span><span class="o">::</span><span class="n">Vertex</span><span class="p">,</span>
-<span class="w">    </span><span class="n">lagrange</span><span class="o">::</span><span class="n">AttributeUsage</span><span class="o">::</span><span class="n">Normal</span><span class="p">,</span>
-<span class="w">    </span><span class="mi">3</span><span class="p">);</span>
+<span class="w">    </span><span class="mi">3</span><span class="p">,</span>
+<span class="w">    </span><span class="n">lagrange</span><span class="o">::</span><span class="n">AttributeUsage</span><span class="o">::</span><span class="n">Normal</span><span class="p">);</span>
 
 <span class="c1">// View attribute as a Eigen::Map&lt;const ...&gt;</span>
 <span class="k">auto</span><span class="w"> </span><span class="n">attr_matrix</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">matrix_view</span><span class="p">(</span><span class="n">mesh</span><span class="p">.</span><span class="n">get_attribute</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;</span><span class="p">(</span><span class="n">id1</span><span class="p">));</span>
@@ -2723,7 +2753,7 @@ reason, the following code will <strong>not</strong> compile and produce an erro
 
 <span class="c1">// ...</span>
 
-<span class="c1">// Returns a const Attribute&lt;T&gt; &amp;</span>
+<span class="c1">// Returns a const IndexedAttribute&lt;T, Index&gt; &amp;</span>
 <span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="o">&amp;</span><span class="w"> </span><span class="n">attr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mesh</span><span class="p">.</span><span class="n">get_indexed_attribute</span><span class="o">&lt;</span><span class="n">Scalar</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;normals&quot;</span><span class="p">);</span>
 
 <span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="o">&amp;</span><span class="w"> </span><span class="n">attr_indices</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">attr</span><span class="p">.</span><span class="n">indices</span><span class="p">();</span>
@@ -3168,7 +3198,7 @@ documentation</a> for more details.</p>
       <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "navigation.indexes", "content.action.edit"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/tablesort.min.js"></script>
       

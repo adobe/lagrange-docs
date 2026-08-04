@@ -149,38 +149,38 @@ $(function(){initNavTree('strings_8h_source.html',''); initResizable(true); });
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacelagrange.html">lagrange</a> {</div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span></div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span></div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>LA_CORE_API std::vector&lt;std::string&gt; <a class="code hl_function" href="group__group-utils-misc.html#gad2f13bef4d8b9c7c6b2dc61b87d95bd4">string_split</a>(<span class="keyword">const</span> std::string&amp; str, <span class="keywordtype">char</span> delimiter);</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span></div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>LA_CORE_API <span class="keywordtype">bool</span> <a class="code hl_function" href="group__group-utils-misc.html#gaebb929afb5049cc3aaaabd296f556ac3">starts_with</a>(std::string_view str, std::string_view prefix);</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span></div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>LA_CORE_API <span class="keywordtype">bool</span> <a class="code hl_function" href="group__group-utils-misc.html#ga8eef11056e4525af0cd41aeb98869cbb">ends_with</a>(std::string_view str, std::string_view suffix);</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span></div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>LA_CORE_API std::string <a class="code hl_function" href="group__group-utils-misc.html#ga40b443ced6fb40c747991e41e12494f4">to_lower</a>(std::string str);</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span></div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>LA_CORE_API std::string <a class="code hl_function" href="group__group-utils-misc.html#ga81d5673419396307677f905d5f4033ce">to_upper</a>(std::string str);</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span></div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span>... Args&gt;</div>
-<div class="foldopen" id="foldopen00099" data-start="{" data-end="}">
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno"><a class="line" href="group__group-utils-misc.html#gab0ccfafd7993dceb16b5cda49fa5ea36">   99</a></span>std::string <a class="code hl_function" href="group__group-utils-misc.html#gab0ccfafd7993dceb16b5cda49fa5ea36">string_format</a>(lagrange::format_string&lt;Args...&gt; format, <a class="code hl_struct" href="struct_args.html">Args</a>&amp;&amp;... args)</div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>{</div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span><span class="comment">// TODO: Remove this string_format in our next major release...</span></div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span><span class="preprocessor">#ifdef SPDLOG_USE_STD_FORMAT</span></div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    <span class="keywordflow">return</span> std::format(format, std::forward&lt;Args&gt;(args)...);</div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span><span class="preprocessor">#elif FMT_VERSION &gt;= 90100</span></div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    <span class="keywordflow">return</span> fmt::format(fmt::runtime(format), std::forward&lt;Args&gt;(args)...);</div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span><span class="preprocessor">#else</span></div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    <span class="keywordflow">return</span> fmt::format(format, std::forward&lt;Args&gt;(args)...);</div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>}</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>LA_CORE_API std::vector&lt;std::string&gt; <a class="code hl_function" href="group__group-utils-misc.html#gad2f13bef4d8b9c7c6b2dc61b87d95bd4">string_split</a>(<span class="keyword">const</span> std::string&amp; str, <span class="keywordtype">char</span> delimiter);</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>LA_CORE_API <span class="keywordtype">bool</span> <a class="code hl_function" href="group__group-utils-misc.html#gaebb929afb5049cc3aaaabd296f556ac3">starts_with</a>(std::string_view str, std::string_view prefix);</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>LA_CORE_API <span class="keywordtype">bool</span> <a class="code hl_function" href="group__group-utils-misc.html#ga8eef11056e4525af0cd41aeb98869cbb">ends_with</a>(std::string_view str, std::string_view suffix);</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span></div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>LA_CORE_API std::string <a class="code hl_function" href="group__group-utils-misc.html#ga40b443ced6fb40c747991e41e12494f4">to_lower</a>(std::string str);</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span></div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>LA_CORE_API std::string <a class="code hl_function" href="group__group-utils-misc.html#ga81d5673419396307677f905d5f4033ce">to_upper</a>(std::string str);</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span></div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span>... Args&gt;</div>
+<div class="foldopen" id="foldopen00097" data-start="{" data-end="}">
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno"><a class="line" href="group__group-utils-misc.html#gab0ccfafd7993dceb16b5cda49fa5ea36">   97</a></span>std::string <a class="code hl_function" href="group__group-utils-misc.html#gab0ccfafd7993dceb16b5cda49fa5ea36">string_format</a>(lagrange::format_string&lt;Args...&gt; format, <a class="code hl_struct" href="struct_args.html">Args</a>&amp;&amp;... args)</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>{</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span><span class="comment">// TODO: Remove this string_format in our next major release...</span></div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span><span class="preprocessor">#ifdef SPDLOG_USE_STD_FORMAT</span></div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    <span class="keywordflow">return</span> std::format(format, std::forward&lt;Args&gt;(args)...);</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span><span class="preprocessor">#elif FMT_VERSION &gt;= 90100</span></div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    <span class="keywordflow">return</span> fmt::format(fmt::runtime(format), std::forward&lt;Args&gt;(args)...);</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span><span class="preprocessor">#else</span></div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    <span class="keywordflow">return</span> fmt::format(format, std::forward&lt;Args&gt;(args)...);</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>}</div>
 </div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span></div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span> </div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>} <span class="comment">// namespace lagrange</span></div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span></div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span> </div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>} <span class="comment">// namespace lagrange</span></div>
 <div class="ttc" id="agroup__group-utils-misc_html_ga40b443ced6fb40c747991e41e12494f4"><div class="ttname"><a href="group__group-utils-misc.html#ga40b443ced6fb40c747991e41e12494f4">lagrange::to_lower</a></div><div class="ttdeci">LA_CORE_API std::string to_lower(std::string str)</div><div class="ttdoc">Convert a string to lowercase.</div><div class="ttdef"><b>Definition</b> strings.cpp:43</div></div>
 <div class="ttc" id="agroup__group-utils-misc_html_ga81d5673419396307677f905d5f4033ce"><div class="ttname"><a href="group__group-utils-misc.html#ga81d5673419396307677f905d5f4033ce">lagrange::to_upper</a></div><div class="ttdeci">LA_CORE_API std::string to_upper(std::string str)</div><div class="ttdoc">Convert a string to uppercase.</div><div class="ttdef"><b>Definition</b> strings.cpp:51</div></div>
 <div class="ttc" id="agroup__group-utils-misc_html_ga8eef11056e4525af0cd41aeb98869cbb"><div class="ttname"><a href="group__group-utils-misc.html#ga8eef11056e4525af0cd41aeb98869cbb">lagrange::ends_with</a></div><div class="ttdeci">LA_CORE_API bool ends_with(std::string_view str, std::string_view suffix)</div><div class="ttdoc">Checks if the string ends with the given suffix.</div><div class="ttdef"><b>Definition</b> strings.cpp:31</div></div>
-<div class="ttc" id="agroup__group-utils-misc_html_gab0ccfafd7993dceb16b5cda49fa5ea36"><div class="ttname"><a href="group__group-utils-misc.html#gab0ccfafd7993dceb16b5cda49fa5ea36">lagrange::string_format</a></div><div class="ttdeci">std::string string_format(lagrange::format_string&lt; Args... &gt; format, Args &amp;&amp;... args)</div><div class="ttdoc">Format args according to the format string fmt, and return the result as a string.</div><div class="ttdef"><b>Definition</b> strings.h:99</div></div>
+<div class="ttc" id="agroup__group-utils-misc_html_gab0ccfafd7993dceb16b5cda49fa5ea36"><div class="ttname"><a href="group__group-utils-misc.html#gab0ccfafd7993dceb16b5cda49fa5ea36">lagrange::string_format</a></div><div class="ttdeci">std::string string_format(lagrange::format_string&lt; Args... &gt; format, Args &amp;&amp;... args)</div><div class="ttdoc">Format args according to the format string fmt, and return the result as a string.</div><div class="ttdef"><b>Definition</b> strings.h:97</div></div>
 <div class="ttc" id="agroup__group-utils-misc_html_gad2f13bef4d8b9c7c6b2dc61b87d95bd4"><div class="ttname"><a href="group__group-utils-misc.html#gad2f13bef4d8b9c7c6b2dc61b87d95bd4">lagrange::string_split</a></div><div class="ttdeci">LA_CORE_API std::vector&lt; std::string &gt; string_split(const std::string &amp;str, char delimiter)</div><div class="ttdoc">Split a std::string using a prescribed delimiter.</div><div class="ttdef"><b>Definition</b> strings.cpp:20</div></div>
 <div class="ttc" id="agroup__group-utils-misc_html_gaebb929afb5049cc3aaaabd296f556ac3"><div class="ttname"><a href="group__group-utils-misc.html#gaebb929afb5049cc3aaaabd296f556ac3">lagrange::starts_with</a></div><div class="ttdeci">LA_CORE_API bool starts_with(std::string_view str, std::string_view prefix)</div><div class="ttdoc">Checks if the string begins with the given prefix.</div><div class="ttdef"><b>Definition</b> strings.cpp:38</div></div>
 <div class="ttc" id="anamespacelagrange_html"><div class="ttname"><a href="namespacelagrange.html">lagrange</a></div><div class="ttdoc">Main namespace for Lagrange.</div></div>
@@ -191,7 +191,7 @@ $(function(){initNavTree('strings_8h_source.html',''); initResizable(true); });
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_e277d0e790805391a364b883bec7db94.html">lagrange</a></li><li class="navelem"><a class="el" href="dir_7ef152871a4677ccccc6e1c83ae16bce.html">utils</a></li><li class="navelem"><b>strings.h</b></li>
-    <li class="footer">Generated on Sat Jun 20 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+    <li class="footer">Generated on Tue Aug 4 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>
 </body>

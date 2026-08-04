@@ -215,6 +215,8 @@
 <li class="toctree-l2"><a class="reference internal" href="../../subdivision/index.html">lagrange.subdivision</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../texproc/index.html">lagrange.texproc</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../volume/index.html">lagrange.volume</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../winding/index.html">lagrange.winding</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../xatlas/index.html">lagrange.xatlas</a></li>
 </ul>
 </li>
 </ul>
@@ -277,20 +279,26 @@
 <tr class="row-odd"><td><p><a class="reference internal" href="#lagrange.scripts.meshstat._colored" title="lagrange.scripts.meshstat._colored"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_colored</span></code></a>(text, color)</p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#lagrange.scripts.meshstat._dtype_to_str" title="lagrange.scripts.meshstat._dtype_to_str"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_dtype_to_str</span></code></a>(dtype)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#lagrange.scripts.meshstat._delete_if_exists" title="lagrange.scripts.meshstat._delete_if_exists"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_delete_if_exists</span></code></a>(mesh, name)</p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#lagrange.scripts.meshstat._element_to_str" title="lagrange.scripts.meshstat._element_to_str"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_element_to_str</span></code></a>(element)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#lagrange.scripts.meshstat._dtype_to_str" title="lagrange.scripts.meshstat._dtype_to_str"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_dtype_to_str</span></code></a>(dtype)</p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#lagrange.scripts.meshstat._facet_type" title="lagrange.scripts.meshstat._facet_type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_facet_type</span></code></a>(mesh)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#lagrange.scripts.meshstat._element_to_str" title="lagrange.scripts.meshstat._element_to_str"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_element_to_str</span></code></a>(element)</p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#lagrange.scripts.meshstat._normalize_uv_attribute" title="lagrange.scripts.meshstat._normalize_uv_attribute"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_normalize_uv_attribute</span></code></a>(mesh, uv_attr_id)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#lagrange.scripts.meshstat._facet_type" title="lagrange.scripts.meshstat._facet_type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_facet_type</span></code></a>(mesh)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#lagrange.scripts.meshstat._normalize_uv_attribute" title="lagrange.scripts.meshstat._normalize_uv_attribute"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_normalize_uv_attribute</span></code></a>(mesh, uv_attr_id)</p></td>
 <td><p>Ensure the UV attribute is indexed and float64. Returns (id, name).</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#lagrange.scripts.meshstat._safe_attribute_name" title="lagrange.scripts.meshstat._safe_attribute_name"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_safe_attribute_name</span></code></a>(name)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#lagrange.scripts.meshstat._safe_attribute_name" title="lagrange.scripts.meshstat._safe_attribute_name"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_safe_attribute_name</span></code></a>(name)</p></td>
 <td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#lagrange.scripts.meshstat._temp_mesh_attribute" title="lagrange.scripts.meshstat._temp_mesh_attribute"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_temp_mesh_attribute</span></code></a>(mesh, name_hint)</p></td>
+<td><p>Reserve a unique attribute name; delete the attribute on exit if present.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#lagrange.scripts.meshstat._usage_to_str" title="lagrange.scripts.meshstat._usage_to_str"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_usage_to_str</span></code></a>(usage)</p></td>
 <td><p></p></td>
@@ -362,11 +370,24 @@
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>text</strong> (<em>str</em>)</p></li>
-<li><p><strong>color</strong> (<em>str</em>)</p></li>
+<li><p><strong>color</strong> (<em>object</em>)</p></li>
 </ul>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
 <dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="lagrange.scripts.meshstat._delete_if_exists">
+<span class="sig-prename descclassname"><span class="pre">lagrange.scripts.meshstat.</span></span><span class="sig-name descname"><span class="pre">_delete_if_exists</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mesh</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lagrange.scripts.meshstat._delete_if_exists" title="Link to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>name</strong> (<em>str</em>)</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
 </dd>
 </dl>
 </dd></dl>
@@ -424,6 +445,17 @@
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
 <dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="lagrange.scripts.meshstat._temp_mesh_attribute">
+<span class="sig-prename descclassname"><span class="pre">lagrange.scripts.meshstat.</span></span><span class="sig-name descname"><span class="pre">_temp_mesh_attribute</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mesh</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name_hint</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lagrange.scripts.meshstat._temp_mesh_attribute" title="Link to this definition">¶</a></dt>
+<dd><p>Reserve a unique attribute name; delete the attribute on exit if present.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>name_hint</strong> (<em>str</em>)</p>
 </dd>
 </dl>
 </dd></dl>
@@ -753,11 +785,13 @@ called).</p>
 <li><a class="reference internal" href="#functions">Functions</a></li>
 <li><a class="reference internal" href="#module-contents">Module Contents</a><ul>
 <li><a class="reference internal" href="#lagrange.scripts.meshstat._colored"><code class="docutils literal notranslate"><span class="pre">_colored()</span></code></a></li>
+<li><a class="reference internal" href="#lagrange.scripts.meshstat._delete_if_exists"><code class="docutils literal notranslate"><span class="pre">_delete_if_exists()</span></code></a></li>
 <li><a class="reference internal" href="#lagrange.scripts.meshstat._dtype_to_str"><code class="docutils literal notranslate"><span class="pre">_dtype_to_str()</span></code></a></li>
 <li><a class="reference internal" href="#lagrange.scripts.meshstat._element_to_str"><code class="docutils literal notranslate"><span class="pre">_element_to_str()</span></code></a></li>
 <li><a class="reference internal" href="#lagrange.scripts.meshstat._facet_type"><code class="docutils literal notranslate"><span class="pre">_facet_type()</span></code></a></li>
 <li><a class="reference internal" href="#lagrange.scripts.meshstat._normalize_uv_attribute"><code class="docutils literal notranslate"><span class="pre">_normalize_uv_attribute()</span></code></a></li>
 <li><a class="reference internal" href="#lagrange.scripts.meshstat._safe_attribute_name"><code class="docutils literal notranslate"><span class="pre">_safe_attribute_name()</span></code></a></li>
+<li><a class="reference internal" href="#lagrange.scripts.meshstat._temp_mesh_attribute"><code class="docutils literal notranslate"><span class="pre">_temp_mesh_attribute()</span></code></a></li>
 <li><a class="reference internal" href="#lagrange.scripts.meshstat._usage_to_str"><code class="docutils literal notranslate"><span class="pre">_usage_to_str()</span></code></a></li>
 <li><a class="reference internal" href="#lagrange.scripts.meshstat.collect_attributes"><code class="docutils literal notranslate"><span class="pre">collect_attributes()</span></code></a></li>
 <li><a class="reference internal" href="#lagrange.scripts.meshstat.collect_basic_info"><code class="docutils literal notranslate"><span class="pre">collect_basic_info()</span></code></a></li>

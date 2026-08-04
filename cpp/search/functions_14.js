@@ -28,7 +28,8 @@ var searchData=
   ['update_5fvertices_25',['update_vertices',['../classlagrange_1_1raycasting_1_1_ray_caster.html#a0e7d1eb80032b34bfd8dc328a131ab3d',1,'lagrange::raycasting::RayCaster::update_vertices(uint32_t mesh_index, const SurfaceMesh&lt; Scalar, Index &gt; &amp;mesh)'],['../classlagrange_1_1raycasting_1_1_ray_caster.html#aa19acc969aa45e6b85d85da15475425c',1,'lagrange::raycasting::RayCaster::update_vertices(uint32_t mesh_index, span&lt; const Scalar &gt; vertices)']]],
   ['update_5fvisibility_26',['update_visibility',['../classlagrange_1_1raycasting_1_1legacy_1_1_embree_ray_caster.html#ac3ddf8fda06773cbdd7693b35ce6d8e7',1,'lagrange::raycasting::legacy::EmbreeRayCaster::update_visibility()'],['../classlagrange_1_1raycasting_1_1_ray_caster.html#af45318f327ed64d1a89a027a85e51f29',1,'lagrange::raycasting::RayCaster::update_visibility()']]],
   ['use_5fcount_27',['use_count',['../classlagrange_1_1internal_1_1shared__ptr.html#a68779c565035025326e9065c5edee1e6',1,'lagrange::internal::shared_ptr::use_count()'],['../classlagrange_1_1internal_1_1weak__ptr.html#a68779c565035025326e9065c5edee1e6',1,'lagrange::internal::weak_ptr::use_count()']]],
-  ['uv_5fattribute_5fid_28',['uv_attribute_id',['../group__group-surfacemesh-utils.html#ga57384da3c2d456ce1b8ba941747bb548',1,'lagrange']]],
-  ['uv_5fmesh_5fref_29',['uv_mesh_ref',['../group__group-surfacemesh-utils.html#gae68df8e09ed4829ef852e47518e5a47d',1,'lagrange']]],
-  ['uv_5fmesh_5fview_30',['uv_mesh_view',['../group__group-surfacemesh-utils.html#ga9701752c8bd35e6cb8a9189cff79636a',1,'lagrange']]]
+  ['utilization_28',['utilization',['../classlagrange_1_1xatlas_1_1_atlas_engine.html#a70c8a79c424d13141ca7fef0396ad7ee',1,'lagrange::xatlas::AtlasEngine::utilization()'],['../classlagrange_1_1xatlas_1_1_atlas_engine.html#a70c8a79c424d13141ca7fef0396ad7ee',1,'lagrange::xatlas::AtlasEngine::Impl::utilization()']]],
+  ['uv_5fattribute_5fid_29',['uv_attribute_id',['../group__group-surfacemesh-utils.html#ga57384da3c2d456ce1b8ba941747bb548',1,'lagrange']]],
+  ['uv_5fmesh_5fref_30',['uv_mesh_ref',['../group__group-surfacemesh-utils.html#gae68df8e09ed4829ef852e47518e5a47d',1,'lagrange']]],
+  ['uv_5fmesh_5fview_31',['uv_mesh_view',['../group__group-surfacemesh-utils.html#ga9701752c8bd35e6cb8a9189cff79636a',1,'lagrange']]]
 ];

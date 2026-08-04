@@ -26,7 +26,7 @@ var NAVTREE =
 [
   [ "Lagrange", "index.html", [
     [ "Main Website", "../", null ],
-    [ "Lagrange Reference Documentation", "index.html", null ],
+    [ "Lagrange Reference Documentation", "index.html", "index" ],
     [ "Modules", "topics.html", "topics" ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],
@@ -62,15 +62,16 @@ var NAVTREEINDEX =
 "classlagrange_1_1internal_1_1shared__ptr.html",
 "classlagrange_1_1raycasting_1_1_occluded_facet_sampler.html#a7be221a7284e1955af3e9be0c3e02535",
 "classlagrange_1_1ui_1_1_camera.html#a934411a296eecd8b436943aa86460edb",
-"functions_vars_u.html",
-"group__group-surfacemesh-views.html#ga06ca3172e4577c726eaf8d2ab26a1ab5",
-"namespacelagrange_1_1image.html#ab07cb71e1aaf9a4252a65a47b290731e",
-"namespacelagrange_1_1ui.html#adb59191923a2d859ee51c6219c74abae",
-"structlagrange_1_1_submesh_options.html#a98857c3e0ea471a5dc0af5aef9050ff5",
-"structlagrange_1_1internal_1_1_skinning_extract_n_result.html",
-"structlagrange_1_1primitive_1_1legacy_1_1_rounded_plane_config.html#a1180fcc7096856a2fcf8bf37bd85ed19",
-"structlagrange_1_1texproc_1_1_compositing_options.html#ad3e7cea1a808330f227ccb31f07fe84c",
-"structlagrange_1_1ui_1_1_selection_context.html#a8b963fe1458b187752424884e52cc3b8"
+"functions_g.html",
+"group__group-surfacemesh-utils.html#gga3cce9a28814e60e46fc8877d69ce28e3a6adf97f83acf6453d4a6a4b1070f3754",
+"namespacelagrange.html#a95d31641c716cd245e77b01ea95552d2",
+"namespacelagrange_1_1ui.html#a672166f07d855923f4e2c9771be837ac",
+"structlagrange_1_1_remove_short_edges_options.html#a1a87c0737e82b4b4b407ad12230c8650",
+"structlagrange_1_1image__io_1_1_s_v_g_setting.html#a256a62497b659d1ae925d0115c0c2018",
+"structlagrange_1_1primitive_1_1_rounded_cone_options.html#ac8e03c27a0682d210bec860dcc42af96",
+"structlagrange_1_1serialization_1_1internal_1_1_cista_attribute_info.html",
+"structlagrange_1_1ui_1_1_logger_panel.html",
+"structlagrange_1_1volume_1_1_volume_to_mesh_options.html#a33c670c8edf0ebdf667dc5103097dc14"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';

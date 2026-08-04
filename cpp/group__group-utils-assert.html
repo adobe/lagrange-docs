@@ -123,23 +123,16 @@ $(function(){initNavTree('group__group-utils-assert.html',''); initResizable(tru
 
 <div class="header">
   <div class="summary">
-<a href="#namespaces">Namespaces</a> &#124;
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#define-members">Macros</a> &#124;
 <a href="#func-members">Functions</a>  </div>
-  <div class="headertitle"><div class="title">Assert and errors<div class="ingroups"><a class="el" href="group__module-core.html">Core Module</a> &raquo; <a class="el" href="group__group-utils.html">Utilites</a></div></div></div>
+  <div class="headertitle"><div class="title">Assert and errors<div class="ingroups"><a class="el" href="group__module-core.html">Core Module</a> &raquo; <a class="el" href="group__group-utils.html">Utilities</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
 <p>Assertions and exceptions.  
 <a href="#details">More...</a></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
-Namespaces</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelagrange.html">lagrange</a></td></tr>
-<tr class="memdesc:namespacelagrange"><td class="mdescLeft">&#160;</td><td class="mdescRight">Main namespace for Lagrange. <br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlagrange_1_1_error.html">Error</a></td></tr>
@@ -191,7 +184,7 @@ LA_CORE_API void&#160;</td><td class="memItemRight" valign="bottom"><b>trigger_b
 <div class="line"><a class="code hl_define" href="#ga5b5259c4072f1caaa696e074f2f7ea15">la_debug_assert</a>(x == 3);</div>
 <div class="line"><a class="code hl_define" href="#ga5b5259c4072f1caaa696e074f2f7ea15">la_debug_assert</a>(x == 3, <span class="stringliteral">&quot;Error message&quot;</span>);</div>
 <div class="line"><a class="code hl_define" href="#ga5b5259c4072f1caaa696e074f2f7ea15">la_debug_assert</a>(x == 3, lagrange::format(<span class="stringliteral">&quot;Incorrect value of x: {}&quot;</span>, x));</div>
-<div class="ttc" id="agroup__group-utils-assert_html_ga5b5259c4072f1caaa696e074f2f7ea15"><div class="ttname"><a href="#ga5b5259c4072f1caaa696e074f2f7ea15">la_debug_assert</a></div><div class="ttdeci">#define la_debug_assert(...)</div><div class="ttdoc">Debug assertion check.</div><div class="ttdef"><b>Definition</b> assert.h:195</div></div>
+<div class="ttc" id="agroup__group-utils-assert_html_ga5b5259c4072f1caaa696e074f2f7ea15"><div class="ttname"><a href="#ga5b5259c4072f1caaa696e074f2f7ea15">la_debug_assert</a></div><div class="ttdeci">#define la_debug_assert(...)</div><div class="ttdoc">Debug assertion check.</div><div class="ttdef"><b>Definition</b> assert.h:197</div></div>
 </div><!-- fragment --> <h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="ga1ccafcb14523a1aae57dcac3c3f32ecd" name="ga1ccafcb14523a1aae57dcac3c3f32ecd"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga1ccafcb14523a1aae57dcac3c3f32ecd">&#9670;&#160;</a></span>la_runtime_assert</h2>
@@ -212,13 +205,7 @@ LA_CORE_API void&#160;</td><td class="memItemRight" valign="bottom"><b>trigger_b
 
 <p>Runtime assertion check. </p>
 <p>This check is executed for both Debug and Release configurations, and should be used, e.g., to check the validity of user-given inputs.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">condition</td><td>Condition to check at runtime. </td></tr>
-    <tr><td class="paramname">message</td><td>Optional message argument.</td></tr>
-  </table>
-  </dd>
-</dl>
+<p>The first argument is the condition to check at runtime, and the optional second argument is a message describing the failure.</p>
 <dl class="section return"><dt>Returns</dt><dd>Void expression. </dd></dl>
 
 </div>
@@ -242,13 +229,7 @@ LA_CORE_API void&#160;</td><td class="memItemRight" valign="bottom"><b>trigger_b
 
 <p>Debug assertion check. </p>
 <p>This check is executed only for Debug configurations, and should be used as a sanity check for situations that should <em>never</em> arise in the program's normal execution (e.g., a doubled linked list is malformed).</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">condition</td><td>Condition to check at runtime. </td></tr>
-    <tr><td class="paramname">message</td><td>Optional message argument.</td></tr>
-  </table>
-  </dd>
-</dl>
+<p>The first argument is the condition to check at runtime, and the optional second argument is a message describing the failure.</p>
 <dl class="section return"><dt>Returns</dt><dd>Void expression. </dd></dl>
 
 </div>
@@ -359,7 +340,7 @@ LA_CORE_API void&#160;</td><td class="memItemRight" valign="bottom"><b>trigger_b
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Sat Jun 20 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+    <li class="footer">Generated on Tue Aug 4 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>
 </body>

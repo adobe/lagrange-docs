@@ -214,15 +214,15 @@ $(function(){initNavTree('legacy_2attributes_2condense__indexed__attribute_8h_so
 <div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    std::vector&lt;IndexEntry&gt; indices(num_facets * vertex_per_facet);</div>
 <div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    std::vector&lt;Index&gt; offsets(num_vertices + 2, 0);</div>
 <div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> fi : <a class="code hl_function" href="group__group-utils-misc.html#ga41568d17fc48cea4a31db0e40cd93cf8">range</a>(num_facets)) {</div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>        <span class="keywordflow">for</span> (<span class="keyword">auto</span> ci : <a class="code hl_function" href="group__group-utils-misc.html#ga41568d17fc48cea4a31db0e40cd93cf8">range</a>(vertex_per_facet)) {</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> fi : <a class="code hl_function" href="namespacelagrange.html#a41568d17fc48cea4a31db0e40cd93cf8">range</a>(num_facets)) {</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>        <span class="keywordflow">for</span> (<span class="keyword">auto</span> ci : <a class="code hl_function" href="namespacelagrange.html#a41568d17fc48cea4a31db0e40cd93cf8">range</a>(vertex_per_facet)) {</div>
 <div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>            offsets[facets(fi, ci) + 2]++;</div>
 <div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>        }</div>
 <div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    }</div>
 <div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    std::partial_sum(offsets.begin(), offsets.end(), offsets.begin());</div>
 <div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span> </div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> fi : <a class="code hl_function" href="group__group-utils-misc.html#ga41568d17fc48cea4a31db0e40cd93cf8">range</a>(num_facets)) {</div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>        <span class="keywordflow">for</span> (<span class="keyword">auto</span> ci : <a class="code hl_function" href="group__group-utils-misc.html#ga41568d17fc48cea4a31db0e40cd93cf8">range</a>(vertex_per_facet)) {</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> fi : <a class="code hl_function" href="namespacelagrange.html#a41568d17fc48cea4a31db0e40cd93cf8">range</a>(num_facets)) {</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>        <span class="keywordflow">for</span> (<span class="keyword">auto</span> ci : <a class="code hl_function" href="namespacelagrange.html#a41568d17fc48cea4a31db0e40cd93cf8">range</a>(vertex_per_facet)) {</div>
 <div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>            <span class="keyword">auto</span> vi = facets(fi, ci);</div>
 <div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>            indices[offsets[vi + 1]++] = {fi, ci};</div>
 <div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>        }</div>
@@ -239,7 +239,7 @@ $(function(){initNavTree('legacy_2attributes_2condense__indexed__attribute_8h_so
 <div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>            }</div>
 <div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>        });</div>
 <div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span> </div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> vi : <a class="code hl_function" href="group__group-utils-misc.html#ga41568d17fc48cea4a31db0e40cd93cf8">range</a>(num_vertices)) {</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> vi : <a class="code hl_function" href="namespacelagrange.html#a41568d17fc48cea4a31db0e40cd93cf8">range</a>(num_vertices)) {</div>
 <div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>        <span class="keyword">const</span> IndexEntry* local_indices = indices.data() + offsets[vi];</div>
 <div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>        <span class="keyword">const</span> Index num_adj_facets = <a class="code hl_function" href="group__group-utils-misc.html#gafc5798c28b15e46d20d0234b72c4ef63">safe_cast&lt;Index&gt;</a>(offsets[vi + 1] - offsets[vi]);</div>
 <div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>        <span class="keywordflow">for</span> (Index i = 0; i &lt; num_adj_facets; i++) {</div>
@@ -263,7 +263,7 @@ $(function(){initNavTree('legacy_2attributes_2condense__indexed__attribute_8h_so
 <div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>    assert(<a class="code hl_function" href="group__group-utils-misc.html#gafc5798c28b15e46d20d0234b72c4ef63">safe_cast&lt;Index&gt;</a>(condensed_attr_values_index.size()) == count);</div>
 <div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span> </div>
 <div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>    condensed_attr_values.resize(count, num_cols);</div>
-<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> i : <a class="code hl_function" href="group__group-utils-misc.html#ga41568d17fc48cea4a31db0e40cd93cf8">range</a>(count)) {</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> i : <a class="code hl_function" href="namespacelagrange.html#a41568d17fc48cea4a31db0e40cd93cf8">range</a>(count)) {</div>
 <div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>        condensed_attr_values.row(i) = attr_values.row(condensed_attr_values_index[i]);</div>
 <div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>    }</div>
 <div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span> </div>
@@ -277,17 +277,17 @@ $(function(){initNavTree('legacy_2attributes_2condense__indexed__attribute_8h_so
 <div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span> </div>
 <div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>} <span class="comment">// namespace legacy</span></div>
 <div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>} <span class="comment">// namespace lagrange</span></div>
-<div class="ttc" id="agroup__group-utils-assert_html_ga1ccafcb14523a1aae57dcac3c3f32ecd"><div class="ttname"><a href="group__group-utils-assert.html#ga1ccafcb14523a1aae57dcac3c3f32ecd">la_runtime_assert</a></div><div class="ttdeci">#define la_runtime_assert(...)</div><div class="ttdoc">Runtime assertion check.</div><div class="ttdef"><b>Definition</b> assert.h:175</div></div>
-<div class="ttc" id="agroup__group-utils-misc_html_ga41568d17fc48cea4a31db0e40cd93cf8"><div class="ttname"><a href="group__group-utils-misc.html#ga41568d17fc48cea4a31db0e40cd93cf8">lagrange::range</a></div><div class="ttdeci">internal::Range&lt; Index &gt; range(Index end)</div><div class="ttdoc">Returns an iterable object representing the range [0, end).</div><div class="ttdef"><b>Definition</b> range.h:176</div></div>
+<div class="ttc" id="agroup__group-utils-assert_html_ga1ccafcb14523a1aae57dcac3c3f32ecd"><div class="ttname"><a href="group__group-utils-assert.html#ga1ccafcb14523a1aae57dcac3c3f32ecd">la_runtime_assert</a></div><div class="ttdeci">#define la_runtime_assert(...)</div><div class="ttdoc">Runtime assertion check.</div><div class="ttdef"><b>Definition</b> assert.h:177</div></div>
 <div class="ttc" id="agroup__group-utils-misc_html_gafc5798c28b15e46d20d0234b72c4ef63"><div class="ttname"><a href="group__group-utils-misc.html#gafc5798c28b15e46d20d0234b72c4ef63">lagrange::safe_cast</a></div><div class="ttdeci">constexpr auto safe_cast(SourceType value) -&gt; std::enable_if_t&lt;!std::is_same&lt; SourceType, TargetType &gt;::value, TargetType &gt;</div><div class="ttdoc">Perform safe cast from SourceType to TargetType, where &quot;safe&quot; means:</div><div class="ttdef"><b>Definition</b> safe_cast.h:51</div></div>
 <div class="ttc" id="anamespacelagrange_html"><div class="ttname"><a href="namespacelagrange.html">lagrange</a></div><div class="ttdoc">Main namespace for Lagrange.</div></div>
+<div class="ttc" id="anamespacelagrange_html_a41568d17fc48cea4a31db0e40cd93cf8"><div class="ttname"><a href="namespacelagrange.html#a41568d17fc48cea4a31db0e40cd93cf8">lagrange::range</a></div><div class="ttdeci">internal::Range&lt; Index &gt; range(Index end)</div><div class="ttdoc">Returns an iterable object representing the range [0, end).</div><div class="ttdef"><b>Definition</b> range.h:176</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_e277d0e790805391a364b883bec7db94.html">lagrange</a></li><li class="navelem"><a class="el" href="dir_3e86c1114dca7f32217f9b892f901fa0.html">legacy</a></li><li class="navelem"><a class="el" href="dir_61316d2c351d96b7ff54721ef4c8b757.html">attributes</a></li><li class="navelem"><b>condense_indexed_attribute.h</b></li>
-    <li class="footer">Generated on Sat Jun 20 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+    <li class="footer">Generated on Tue Aug 4 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>
 </body>

@@ -279,9 +279,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>rotate_around_lookat<
 <tr class="memitem:a2b462678a592521a5092968fb7a08dcf" id="r_a2b462678a592521a5092968fb7a08dcf"><td class="memItemLeft" align="right" valign="top"><a id="a2b462678a592521a5092968fb7a08dcf" name="a2b462678a592521a5092968fb7a08dcf"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>rotate_tumble</b> (float yaw_delta, float pitch_delta)</td></tr>
 <tr class="separator:a2b462678a592521a5092968fb7a08dcf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a134f422abb6e684b6026cd8514a55229" id="r_a134f422abb6e684b6026cd8514a55229"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a134f422abb6e684b6026cd8514a55229">rotate_turntable</a> (float yaw_delta, float pitch_delta, Eigen::Vector3f primary_axis=Eigen::Vector3f::Zero())</td></tr>
-<tr class="memdesc:a134f422abb6e684b6026cd8514a55229"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rotates camera by yaw and pitch angles.  <br /></td></tr>
-<tr class="separator:a134f422abb6e684b6026cd8514a55229"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a129ad6eff8b4f804ef603d844a1091ac" id="r_a129ad6eff8b4f804ef603d844a1091ac"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a129ad6eff8b4f804ef603d844a1091ac">rotate_turntable</a> (float yaw_delta, float pitch_delta, const Eigen::Vector3f &amp;primary_axis=Eigen::Vector3f::Zero())</td></tr>
+<tr class="memdesc:a129ad6eff8b4f804ef603d844a1091ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rotates camera by yaw and pitch angles.  <br /></td></tr>
+<tr class="separator:a129ad6eff8b4f804ef603d844a1091ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4e507a5e4e53fbb6af95fbe61d12caa8" id="r_a4e507a5e4e53fbb6af95fbe61d12caa8"><td class="memItemLeft" align="right" valign="top"><a id="a4e507a5e4e53fbb6af95fbe61d12caa8" name="a4e507a5e4e53fbb6af95fbe61d12caa8"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>rotate_arcball</b> (const Eigen::Vector3f &amp;camera_pos_start, const Eigen::Vector3f &amp;camera_up_start, const Eigen::Vector2f &amp;mouse_start, const Eigen::Vector2f &amp;mouse_current)</td></tr>
 <tr class="separator:a4e507a5e4e53fbb6af95fbe61d12caa8"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -304,9 +304,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>move_right</b> (float
 <tr class="memitem:a01157fc92474d47a552bfa7e8945eda0" id="r_a01157fc92474d47a552bfa7e8945eda0"><td class="memItemLeft" align="right" valign="top"><a id="a01157fc92474d47a552bfa7e8945eda0" name="a01157fc92474d47a552bfa7e8945eda0"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>move_up</b> (float delta)</td></tr>
 <tr class="separator:a01157fc92474d47a552bfa7e8945eda0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4ce168947d798892dd19de2e5e6aa1a9" id="r_a4ce168947d798892dd19de2e5e6aa1a9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4ce168947d798892dd19de2e5e6aa1a9">set_ortho_viewport</a> (Eigen::Vector4f viewport)</td></tr>
-<tr class="memdesc:a4ce168947d798892dd19de2e5e6aa1a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the orthographic viewport.  <br /></td></tr>
-<tr class="separator:a4ce168947d798892dd19de2e5e6aa1a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a216722b537d55dd37a79b9c470d888b7" id="r_a216722b537d55dd37a79b9c470d888b7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a216722b537d55dd37a79b9c470d888b7">set_ortho_viewport</a> (const Eigen::Vector4f &amp;viewport)</td></tr>
+<tr class="memdesc:a216722b537d55dd37a79b9c470d888b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the orthographic viewport.  <br /></td></tr>
+<tr class="separator:a216722b537d55dd37a79b9c470d888b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af894d1a5b5452d1149e66856faf7ff6a" id="r_af894d1a5b5452d1149e66856faf7ff6a"><td class="memItemLeft" align="right" valign="top"><a id="af894d1a5b5452d1149e66856faf7ff6a" name="af894d1a5b5452d1149e66856faf7ff6a"></a>
 Eigen::Vector4f&#160;</td><td class="memItemRight" valign="bottom"><b>get_ortho_viewport</b> () const</td></tr>
 <tr class="separator:af894d1a5b5452d1149e66856faf7ff6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -351,9 +351,9 @@ std::pair&lt; Eigen::Vector3f, Eigen::Vector3f &gt;&#160;</td><td class="memItem
 <tr class="memitem:aa953c68969df93a7f0b1866e7732e128" id="r_aa953c68969df93a7f0b1866e7732e128"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classlagrange_1_1ui_1_1_frustum.html">Frustum</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa953c68969df93a7f0b1866e7732e128">get_frustum</a> () const</td></tr>
 <tr class="memdesc:aa953c68969df93a7f0b1866e7732e128"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the Camera's Frustum.  <br /></td></tr>
 <tr class="separator:aa953c68969df93a7f0b1866e7732e128"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3ed98cb1f6c337753b4b9b6970a74cc8" id="r_a3ed98cb1f6c337753b4b9b6970a74cc8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classlagrange_1_1ui_1_1_frustum.html">Frustum</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3ed98cb1f6c337753b4b9b6970a74cc8">get_frustum</a> (Eigen::Vector2f min, Eigen::Vector2f max) const</td></tr>
-<tr class="memdesc:a3ed98cb1f6c337753b4b9b6970a74cc8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the Camera's Frustum of a region.  <br /></td></tr>
-<tr class="separator:a3ed98cb1f6c337753b4b9b6970a74cc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5eea25b41c327a52210a4f9b8aef0ce2" id="r_a5eea25b41c327a52210a4f9b8aef0ce2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classlagrange_1_1ui_1_1_frustum.html">Frustum</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5eea25b41c327a52210a4f9b8aef0ce2">get_frustum</a> (const Eigen::Vector2f &amp;min, const Eigen::Vector2f &amp;max) const</td></tr>
+<tr class="memdesc:a5eea25b41c327a52210a4f9b8aef0ce2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the Camera's Frustum of a region.  <br /></td></tr>
+<tr class="separator:a5eea25b41c327a52210a4f9b8aef0ce2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -781,8 +781,8 @@ Eigen::Vector4f&#160;</td><td class="memItemRight" valign="bottom"><b>m_ortho_vi
 
 </div>
 </div>
-<a id="a134f422abb6e684b6026cd8514a55229" name="a134f422abb6e684b6026cd8514a55229"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a134f422abb6e684b6026cd8514a55229">&#9670;&#160;</a></span>rotate_turntable()</h2>
+<a id="a129ad6eff8b4f804ef603d844a1091ac" name="a129ad6eff8b4f804ef603d844a1091ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a129ad6eff8b4f804ef603d844a1091ac">&#9670;&#160;</a></span>rotate_turntable()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -800,7 +800,7 @@ Eigen::Vector4f&#160;</td><td class="memItemRight" valign="bottom"><b>m_ortho_vi
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">Eigen::Vector3f</td>          <td class="paramname"><span class="paramname"><em>primary_axis</em></span><span class="paramdefsep"> = </span><span class="paramdefval">Eigen::Vector3f::Zero()</span>&#160;)</td>
+          <td class="paramtype">const Eigen::Vector3f &amp;</td>          <td class="paramname"><span class="paramname"><em>primary_axis</em></span><span class="paramdefsep"> = </span><span class="paramdefval">Eigen::Vector3f::Zero()</span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -870,8 +870,8 @@ Eigen::Vector4f&#160;</td><td class="memItemRight" valign="bottom"><b>m_ortho_vi
 
 </div>
 </div>
-<a id="a4ce168947d798892dd19de2e5e6aa1a9" name="a4ce168947d798892dd19de2e5e6aa1a9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4ce168947d798892dd19de2e5e6aa1a9">&#9670;&#160;</a></span>set_ortho_viewport()</h2>
+<a id="a216722b537d55dd37a79b9c470d888b7" name="a216722b537d55dd37a79b9c470d888b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a216722b537d55dd37a79b9c470d888b7">&#9670;&#160;</a></span>set_ortho_viewport()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -879,7 +879,7 @@ Eigen::Vector4f&#160;</td><td class="memItemRight" valign="bottom"><b>m_ortho_vi
         <tr>
           <td class="memname">void set_ortho_viewport </td>
           <td>(</td>
-          <td class="paramtype">Eigen::Vector4f</td>          <td class="paramname"><span class="paramname"><em>viewport</em></span></td><td>)</td>
+          <td class="paramtype">const Eigen::Vector4f &amp;</td>          <td class="paramname"><span class="paramname"><em>viewport</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -972,8 +972,8 @@ Eigen::Vector4f&#160;</td><td class="memItemRight" valign="bottom"><b>m_ortho_vi
 
 </div>
 </div>
-<a id="a3ed98cb1f6c337753b4b9b6970a74cc8" name="a3ed98cb1f6c337753b4b9b6970a74cc8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3ed98cb1f6c337753b4b9b6970a74cc8">&#9670;&#160;</a></span>get_frustum() <span class="overload">[2/2]</span></h2>
+<a id="a5eea25b41c327a52210a4f9b8aef0ce2" name="a5eea25b41c327a52210a4f9b8aef0ce2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5eea25b41c327a52210a4f9b8aef0ce2">&#9670;&#160;</a></span>get_frustum() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -981,12 +981,12 @@ Eigen::Vector4f&#160;</td><td class="memItemRight" valign="bottom"><b>m_ortho_vi
         <tr>
           <td class="memname"><a class="el" href="classlagrange_1_1ui_1_1_frustum.html">Frustum</a> get_frustum </td>
           <td>(</td>
-          <td class="paramtype">Eigen::Vector2f</td>          <td class="paramname"><span class="paramname"><em>min</em></span>, </td>
+          <td class="paramtype">const Eigen::Vector2f &amp;</td>          <td class="paramname"><span class="paramname"><em>min</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">Eigen::Vector2f</td>          <td class="paramname"><span class="paramname"><em>max</em></span>&#160;) const</td>
+          <td class="paramtype">const Eigen::Vector2f &amp;</td>          <td class="paramname"><span class="paramname"><em>max</em></span>&#160;) const</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1007,7 +1007,7 @@ Eigen::Vector4f&#160;</td><td class="memItemRight" valign="bottom"><b>m_ortho_vi
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacelagrange.html">lagrange</a></li><li class="navelem"><a class="el" href="namespacelagrange_1_1ui.html">ui</a></li><li class="navelem"><a class="el" href="classlagrange_1_1ui_1_1_camera.html">Camera</a></li>
-    <li class="footer">Generated on Sat Jun 20 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+    <li class="footer">Generated on Tue Aug 4 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>
 </body>

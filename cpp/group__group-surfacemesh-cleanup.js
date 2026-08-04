@@ -31,6 +31,11 @@ var group__group_surfacemesh_cleanup =
       [ "active_region_attribute", "structlagrange_1_1_split_long_edges_options.html#abffe183776696b4a5d7aede165372ae5", null ],
       [ "edge_length_attribute", "structlagrange_1_1_split_long_edges_options.html#a4e3c61ea439d03cbfc5ad53f078803bb", null ]
     ] ],
+    [ "SplitObtuseTrianglesOptions", "structlagrange_1_1_split_obtuse_triangles_options.html", [
+      [ "max_angle", "structlagrange_1_1_split_obtuse_triangles_options.html#af4a8e20036bf31fad11ddcf83b17cd98", null ],
+      [ "max_iterations", "structlagrange_1_1_split_obtuse_triangles_options.html#a877a0e0a05853bbbd97d82b8eca807e3", null ],
+      [ "active_region_attribute", "structlagrange_1_1_split_obtuse_triangles_options.html#abffe183776696b4a5d7aede165372ae5", null ]
+    ] ],
     [ "UnflipUVOptions", "structlagrange_1_1_unflip_u_v_options.html", [
       [ "uv_attribute_name", "structlagrange_1_1_unflip_u_v_options.html#a812bd5f3c809396ee71d159824173876", null ]
     ] ],
@@ -48,5 +53,6 @@ var group__group_surfacemesh_cleanup =
     [ "resolve_nonmanifoldness", "group__group-surfacemesh-cleanup.html#gaff610cf8951744d2f65f7e03d8613d7f", null ],
     [ "resolve_vertex_nonmanifoldness", "group__group-surfacemesh-cleanup.html#ga371c176cddc42c777b0ef489f91f8c1c", null ],
     [ "split_long_edges", "group__group-surfacemesh-cleanup.html#ga7746c0138844828ccafc3836a65e403a", null ],
+    [ "split_obtuse_triangles", "group__group-surfacemesh-cleanup.html#gafbf32fb91c37243f3a00dd15a0bb40c8", null ],
     [ "unflip_uv_triangles", "group__group-surfacemesh-cleanup.html#ga1a52980d167584935ed162810d2a71ba", null ]
 ];

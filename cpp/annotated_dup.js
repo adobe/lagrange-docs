@@ -1,11 +1,5 @@
 var annotated_dup =
 [
-    [ "fmt", null, [
-      [ "formatter< lagrange::fmt_detail::range_join_view< Range >, char >", "structfmt_1_1formatter_3_01lagrange_1_1fmt__detail_1_1range__join__view_3_01_range_01_4_00_01char_01_4.html", null ],
-      [ "formatter< lagrange::fmt_detail::tuple_join_view< Tuple >, char >", "structfmt_1_1formatter_3_01lagrange_1_1fmt__detail_1_1tuple__join__view_3_01_tuple_01_4_00_01char_01_4.html", null ],
-      [ "formatter< T, std::enable_if_t< std::is_base_of< Eigen::DenseBase< T >, T >::value, char > >", "structfmt_1_1formatter_3_01_t_00_01std_1_1enable__if__t_3_01std_1_1is__base__of_3_01_eigen_1_1_d4cad164886cc373111d40252deee7ffc.html", null ],
-      [ "is_range< Derived, std::enable_if_t< std::is_base_of< Eigen::DenseBase< Derived >, Derived >::value, char > >", "structfmt_1_1is__range_3_01_derived_00_01std_1_1enable__if__t_3_01std_1_1is__base__of_3_01_eigen8831e8e9466b492bd5196648eda925fb.html", null ]
-    ] ],
     [ "lagrange", "namespacelagrange.html", [
       [ "bvh", null, [
         [ "AABB", "classlagrange_1_1bvh_1_1_a_a_b_b.html", "classlagrange_1_1bvh_1_1_a_a_b_b" ],
@@ -208,7 +202,8 @@ var annotated_dup =
       [ "python", null, [
         [ "GridWrapper", "structlagrange_1_1python_1_1_grid_wrapper.html", null ],
         [ "PyAttribute", "classlagrange_1_1python_1_1_py_attribute.html", null ],
-        [ "PyIndexedAttribute", "classlagrange_1_1python_1_1_py_indexed_attribute.html", null ]
+        [ "PyIndexedAttribute", "classlagrange_1_1python_1_1_py_indexed_attribute.html", null ],
+        [ "StubType", "structlagrange_1_1python_1_1_stub_type.html", null ]
       ] ],
       [ "raycasting", "namespacelagrange_1_1raycasting.html", [
         [ "detail", null, [
@@ -340,10 +335,6 @@ var annotated_dup =
           [ "convert_implicit", "structlagrange_1_1ui_1_1detail_1_1convert__implicit.html", null ]
         ] ],
         [ "util", null, [
-          [ "AsFunction", "structlagrange_1_1ui_1_1util_1_1_as_function.html", null ],
-          [ "AsFunction< ReturnType(*)(Arg)>", "structlagrange_1_1ui_1_1util_1_1_as_function_3_01_return_type_07_5_08_07_arg_08_4.html", null ],
-          [ "AsFunction< ReturnType(Arg) const >", "structlagrange_1_1ui_1_1util_1_1_as_function_3_01_return_type_07_arg_08_01const_01_4.html", null ],
-          [ "AsFunction< ReturnType(Class::*)(Arg) const >", "structlagrange_1_1ui_1_1util_1_1_as_function_3_01_return_type_07_class_1_1_5_08_07_arg_08_01const_01_4.html", null ],
           [ "lambda_helper", "structlagrange_1_1ui_1_1util_1_1lambda__helper.html", null ],
           [ "lambda_helper< Result(F::*)(Args...) const >", "structlagrange_1_1ui_1_1util_1_1lambda__helper_3_01_result_07_f_1_1_5_08_07_args_8_8_8_08_01const_01_4.html", null ]
         ] ],
@@ -498,6 +489,19 @@ var annotated_dup =
       [ "winding", null, [
         [ "FastWindingNumber", "classlagrange_1_1winding_1_1_fast_winding_number.html", "classlagrange_1_1winding_1_1_fast_winding_number" ]
       ] ],
+      [ "xatlas", null, [
+        [ "internal", null, [
+          [ "MeshAdapter", "structlagrange_1_1xatlas_1_1internal_1_1_mesh_adapter.html", "structlagrange_1_1xatlas_1_1internal_1_1_mesh_adapter" ],
+          [ "ProgressBridge", "classlagrange_1_1xatlas_1_1internal_1_1_progress_bridge.html", "classlagrange_1_1xatlas_1_1internal_1_1_progress_bridge" ],
+          [ "UvMeshAdapter", "structlagrange_1_1xatlas_1_1internal_1_1_uv_mesh_adapter.html", "structlagrange_1_1xatlas_1_1internal_1_1_uv_mesh_adapter" ]
+        ] ],
+        [ "AtlasEngine", "classlagrange_1_1xatlas_1_1_atlas_engine.html", "classlagrange_1_1xatlas_1_1_atlas_engine" ],
+        [ "ChartOptions", "structlagrange_1_1xatlas_1_1_chart_options.html", "structlagrange_1_1xatlas_1_1_chart_options" ],
+        [ "PackOptions", "structlagrange_1_1xatlas_1_1_pack_options.html", "structlagrange_1_1xatlas_1_1_pack_options" ],
+        [ "RepackOptions", "structlagrange_1_1xatlas_1_1_repack_options.html", "structlagrange_1_1xatlas_1_1_repack_options" ],
+        [ "SceneOptions", "structlagrange_1_1xatlas_1_1_scene_options.html", "structlagrange_1_1xatlas_1_1_scene_options" ],
+        [ "UnwrapOptions", "structlagrange_1_1xatlas_1_1_unwrap_options.html", "structlagrange_1_1xatlas_1_1_unwrap_options" ]
+      ] ],
       [ "ActingMeshGeometry", "classlagrange_1_1_acting_mesh_geometry.html", null ],
       [ "AdjacencyList", "classlagrange_1_1_adjacency_list.html", "classlagrange_1_1_adjacency_list" ],
       [ "Attribute", "classlagrange_1_1_attribute.html", "classlagrange_1_1_attribute" ],
@@ -576,6 +580,7 @@ var annotated_dup =
       [ "SilentTimer", "classlagrange_1_1_silent_timer.html", "classlagrange_1_1_silent_timer" ],
       [ "SmallVector", "classlagrange_1_1_small_vector.html", null ],
       [ "SplitLongEdgesOptions", "structlagrange_1_1_split_long_edges_options.html", "structlagrange_1_1_split_long_edges_options" ],
+      [ "SplitObtuseTrianglesOptions", "structlagrange_1_1_split_obtuse_triangles_options.html", "structlagrange_1_1_split_obtuse_triangles_options" ],
       [ "StackSet", "structlagrange_1_1_stack_set.html", null ],
       [ "StackVector", "structlagrange_1_1_stack_vector.html", null ],
       [ "StaticAssertableBool", "structlagrange_1_1_static_assertable_bool.html", null ],
@@ -598,7 +603,13 @@ var annotated_dup =
       [ "VerboseTimer", "classlagrange_1_1_verbose_timer.html", "classlagrange_1_1_verbose_timer" ],
       [ "VertexManifoldOptions", "structlagrange_1_1_vertex_manifold_options.html", "structlagrange_1_1_vertex_manifold_options" ],
       [ "VertexNormalOptions", "structlagrange_1_1_vertex_normal_options.html", "structlagrange_1_1_vertex_normal_options" ],
-      [ "VertexValenceOptions", "structlagrange_1_1_vertex_valence_options.html", "structlagrange_1_1_vertex_valence_options" ]
+      [ "VertexValenceOptions", "structlagrange_1_1_vertex_valence_options.html", "structlagrange_1_1_vertex_valence_options" ],
+      [ "WeldOptions", "structlagrange_1_1_weld_options.html", "structlagrange_1_1_weld_options" ]
+    ] ],
+    [ "nanobind", null, [
+      [ "detail", null, [
+        [ "type_caster< lagrange::python::StubType< T, Hint > >", "structnanobind_1_1detail_1_1type__caster_3_01lagrange_1_1python_1_1_stub_type_3_01_t_00_01_hint_01_4_01_4.html", null ]
+      ] ]
     ] ],
     [ "std", null, [
       [ "hash< lagrange::EdgeType< Index > >", "structstd_1_1hash_3_01lagrange_1_1_edge_type_3_01_index_01_4_01_4.html", null ]

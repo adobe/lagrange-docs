@@ -139,33 +139,31 @@ $(function(){initNavTree('user__fmt__formatter_8h_source.html',''); initResizabl
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#pragma once</span></div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#pragma message(&quot;Using user-provided fmt::formatter&lt;&gt; for Eigen types&quot;)</span></div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="foldopen" id="foldopen00017" data-start="{" data-end="};">
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="structfmt_1_1formatter_3_01_t_00_01std_1_1enable__if__t_3_01std_1_1is__base__of_3_01_eigen_1_1_d4cad164886cc373111d40252deee7ffc.html">   17</a></span><span class="keyword">struct </span>fmt::formatter&lt;T, std::enable_if_t&lt;std::is_base_of&lt;Eigen::DenseBase&lt;T&gt;, T&gt;::value, char&gt;&gt;</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    : fmt::nested_formatter&lt;typename T::Scalar&gt;</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>{</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <span class="keyword">auto</span> format(T <span class="keyword">const</span>&amp; a, format_context&amp; ctx)<span class="keyword"> const</span></div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="keyword">    </span>{</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        <span class="keywordflow">return</span> this-&gt;write_padded(ctx, [&amp;](<span class="keyword">auto</span> out) {</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>            <span class="keywordflow">for</span> (Eigen::Index ir = 0; ir &lt; a.rows(); ir++) {</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>                <span class="keywordflow">for</span> (Eigen::Index ic = 0; ic &lt; a.cols(); ic++) {</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>                    out = fmt::format_to(out, <span class="stringliteral">&quot;{} &quot;</span>, this-&gt;nested(a(ir, ic)));</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>                }</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>                out = fmt::format_to(out, <span class="stringliteral">&quot;\n&quot;</span>);</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>            }</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>            <span class="keywordflow">return</span> out;</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        });</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    }</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>};</div>
-</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keyword">struct </span>fmt::formatter&lt;T, std::enable_if_t&lt;std::is_base_of&lt;Eigen::DenseBase&lt;T&gt;, T&gt;::value, char&gt;&gt;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    : fmt::nested_formatter&lt;typename T::Scalar&gt;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>{</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="keyword">auto</span> format(T <span class="keyword">const</span>&amp; a, format_context&amp; ctx)<span class="keyword"> const</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="keyword">    </span>{</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        <span class="keywordflow">return</span> this-&gt;write_padded(ctx, [&amp;](<span class="keyword">auto</span> out) {</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>            <span class="keywordflow">for</span> (Eigen::Index ir = 0; ir &lt; a.rows(); ir++) {</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>                <span class="keywordflow">for</span> (Eigen::Index ic = 0; ic &lt; a.cols(); ic++) {</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>                    out = fmt::format_to(out, <span class="stringliteral">&quot;{} &quot;</span>, this-&gt;nested(a(ir, ic)));</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>                }</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>                out = fmt::format_to(out, <span class="stringliteral">&quot;\n&quot;</span>);</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>            }</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>            <span class="keywordflow">return</span> out;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        });</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    }</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>};</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_cda9008a25c30768c6bfe2da24ccc3e3.html">tests</a></li><li class="navelem"><a class="el" href="dir_1d49ed6e9b46db7ba6795f9896bdfa9e.html">fmt</a></li><li class="navelem"><b>user_fmt_formatter.h</b></li>
-    <li class="footer">Generated on Sat Jun 20 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+    <li class="footer">Generated on Tue Aug 4 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>
 </body>

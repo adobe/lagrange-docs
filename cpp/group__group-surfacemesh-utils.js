@@ -162,7 +162,8 @@ var group__group_surfacemesh_utils =
       [ "attribute_id", "structlagrange_1_1_isoline_options.html#a9d007016295ea10ad679e8c6974681d6", null ],
       [ "channel_index", "structlagrange_1_1_isoline_options.html#ac8aa24f51b93557026464047992c8a3f", null ],
       [ "isovalue", "structlagrange_1_1_isoline_options.html#a4f872975d082a5c218816be05ff08fce", null ],
-      [ "keep_below", "structlagrange_1_1_isoline_options.html#ad569f1ddf959f44cfcde73d1f065d59f", null ]
+      [ "keep_below", "structlagrange_1_1_isoline_options.html#ad569f1ddf959f44cfcde73d1f065d59f", null ],
+      [ "keep_attributes", "structlagrange_1_1_isoline_options.html#a6353336ebf35adf1cb2daae8de606d53", null ]
     ] ],
     [ "OrientOptions", "structlagrange_1_1_orient_options.html", [
       [ "positive", "structlagrange_1_1_orient_options.html#acdea3192c7c9a99816f27e88da0eeff2", null ]
@@ -286,7 +287,7 @@ var group__group_surfacemesh_utils =
     [ "compute_dijkstra_distance", "group__group-surfacemesh-utils.html#ga63cc672971ecc26849450a45db354f6b", null ],
     [ "compute_edge_lengths", "group__group-surfacemesh-utils.html#ga58593e3709263771bc25ff51f473c92a", null ],
     [ "compute_facet_circumcenter", "group__group-surfacemesh-utils.html#gacfb6197a434be9f7c931295ecf406b46", null ],
-    [ "compute_facet_facet_adjacency", "group__group-surfacemesh-utils.html#gae8857569ff13729d4721feb0b41f521d", null ],
+    [ "compute_facet_facet_adjacency", "group__group-surfacemesh-utils.html#ga4cde236b903ca6d7e93b235e4be11556", null ],
     [ "compute_facet_normal", "group__group-surfacemesh-utils.html#ga50e835144b2dd2ad5df9848293c8b097", null ],
     [ "compute_greedy_coloring", "group__group-surfacemesh-utils.html#ga2d693ab4db6092d9984a55b6073c2d8f", null ],
     [ "compute_mesh_covariance", "group__group-surfacemesh-utils.html#ga1abef284cf8170f9412b2a922e577d44", null ],
@@ -302,7 +303,7 @@ var group__group_surfacemesh_utils =
     [ "compute_uv_tile_list", "group__group-surfacemesh-utils.html#gaa9c124c65e79e319a4aefc92ccb5ce7f", null ],
     [ "compute_vertex_normal", "group__group-surfacemesh-utils.html#ga8c1ac1ec1658273f6e6bb312dd2b0718", null ],
     [ "compute_vertex_valence", "group__group-surfacemesh-utils.html#ga6a2a7d7f5165ef7f5433ef67efad4306", null ],
-    [ "compute_vertex_vertex_adjacency", "group__group-surfacemesh-utils.html#ga203af050581e879b52d339558b788a08", null ],
+    [ "compute_vertex_vertex_adjacency", "group__group-surfacemesh-utils.html#ga0c89ec682fb87c8939f7b4ae0724f181", null ],
     [ "compute_weighted_corner_normal", "group__group-surfacemesh-utils.html#gaa13892cc06d31d64e6613c3e48785591", null ],
     [ "disconnect_uv_charts", "group__group-surfacemesh-utils.html#ga3f53104d1cc22467975607b404cd7379", null ],
     [ "eigen_to_surface_mesh", "group__group-surfacemesh-utils.html#ga7934b43c189ee9cbc1a684ee38ac026c", null ],
@@ -317,6 +318,7 @@ var group__group_surfacemesh_utils =
     [ "get_unique_attribute_name", "group__group-surfacemesh-utils.html#ga352200edd00fae6cf18f656cf36be847", null ],
     [ "trim_by_isoline", "group__group-surfacemesh-utils.html#ga0e2ab861e8faec161cd8613e8a9362de", null ],
     [ "extract_isoline", "group__group-surfacemesh-utils.html#gafef35c376e1761a87d7ffdc81e845adf", null ],
+    [ "insert_isoline", "group__group-surfacemesh-utils.html#ga4cc4c8c931c0a4530d67dd077795db1b", null ],
     [ "mesh_bbox", "group__group-surfacemesh-utils.html#gabf3517305e7ccc7062aab01527e78468", null ],
     [ "to_surface_mesh_copy", "group__group-surfacemesh-utils.html#gabb5fc3fc93e8d973bcc534398eeb0aa9", null ],
     [ "to_surface_mesh_wrap", "group__group-surfacemesh-utils.html#ga68ad17ee5b7475decfbaf17fcfa63d65", null ],

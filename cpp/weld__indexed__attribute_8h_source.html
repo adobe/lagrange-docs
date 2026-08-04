@@ -146,37 +146,46 @@ $(function(){initNavTree('weld__indexed__attribute_8h_source.html',''); initResi
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacelagrange.html">lagrange</a> {</div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span></div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span></div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="keyword">struct </span>WeldOptions</div>
+<div class="foldopen" id="foldopen00030" data-start="{" data-end="};">
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="structlagrange_1_1_weld_options.html">   30</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structlagrange_1_1_weld_options.html">WeldOptions</a></div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>{</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    std::optional&lt;double&gt; epsilon_rel;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="structlagrange_1_1_weld_options.html#a8cdc36ab1977d4c909552aa765b7d2e0">   34</a></span>    std::optional&lt;double&gt; <a class="code hl_variable" href="structlagrange_1_1_weld_options.html#a8cdc36ab1977d4c909552aa765b7d2e0">epsilon_rel</a>;</div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span></div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    std::optional&lt;double&gt; epsilon_abs;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="structlagrange_1_1_weld_options.html#ae32f83f9278aaba1dd68bd4b5cde080e">   38</a></span>    std::optional&lt;double&gt; <a class="code hl_variable" href="structlagrange_1_1_weld_options.html#ae32f83f9278aaba1dd68bd4b5cde080e">epsilon_abs</a>;</div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span></div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    std::optional&lt;double&gt; angle_abs;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="structlagrange_1_1_weld_options.html#a089d0e67f627afef416b908e25ab4fab">   51</a></span>    std::optional&lt;double&gt; <a class="code hl_variable" href="structlagrange_1_1_weld_options.html#a089d0e67f627afef416b908e25ab4fab">angle_abs</a>;</div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span></div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="keywordtype">bool</span> merge_across_vertices = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="structlagrange_1_1_weld_options.html#a854336f55d95d90df6bdfcf779c3487c">   56</a></span>    <span class="keywordtype">bool</span> <a class="code hl_variable" href="structlagrange_1_1_weld_options.html#a854336f55d95d90df6bdfcf779c3487c">merge_across_vertices</a> = <span class="keyword">false</span>;</div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span></div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    span&lt;const size_t&gt; exclude_vertices = {};</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="structlagrange_1_1_weld_options.html#a443fe8667ad990e0646556be1c334854">   62</a></span>    <a class="code hl_typedef" href="group__group-utils-misc.html#ga4afead0b9ccc53fe4fca896787595d26">span&lt;const size_t&gt;</a> <a class="code hl_variable" href="structlagrange_1_1_weld_options.html#a443fe8667ad990e0646556be1c334854">exclude_vertices</a> = {};</div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>};</div>
+</div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span></div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> Scalar, <span class="keyword">typename</span> Index&gt;</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span><span class="keywordtype">void</span> weld_indexed_attribute(</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    <a class="code hl_class" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh&lt;Scalar, Index&gt;</a>&amp; mesh,</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    <a class="code hl_typedef" href="group__group-surfacemesh-attr.html#ga4d115376c2c766084ef808c837348fc3">AttributeId</a> attr_id,</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    <span class="keyword">const</span> WeldOptions&amp; options = {});</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span></div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>} <span class="comment">// namespace lagrange</span></div>
-<div class="ttc" id="aclasslagrange_1_1_surface_mesh_html"><div class="ttname"><a href="classlagrange_1_1_surface_mesh.html">lagrange::SurfaceMesh</a></div><div class="ttdoc">A general purpose polygonal mesh class.</div><div class="ttdef"><b>Definition</b> SurfaceMesh.h:73</div></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> Scalar, <span class="keyword">typename</span> Index&gt;</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span><span class="keywordtype">void</span> <a class="code hl_function" href="group__group-surfacemesh-attr-utils.html#gac25160103a579bb49738ba559ec85fb8">weld_indexed_attribute</a>(</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    SurfaceMesh&lt;Scalar, Index&gt;&amp; mesh,</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    <a class="code hl_typedef" href="group__group-surfacemesh-attr.html#ga4d115376c2c766084ef808c837348fc3">AttributeId</a> attr_id,</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    <span class="keyword">const</span> WeldOptions&amp; options = {});</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span></div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>} <span class="comment">// namespace lagrange</span></div>
+<div class="ttc" id="agroup__group-surfacemesh-attr-utils_html_gac25160103a579bb49738ba559ec85fb8"><div class="ttname"><a href="group__group-surfacemesh-attr-utils.html#gac25160103a579bb49738ba559ec85fb8">lagrange::weld_indexed_attribute</a></div><div class="ttdeci">void weld_indexed_attribute(SurfaceMesh&lt; Scalar, Index &gt; &amp;mesh, AttributeId attr_id, const WeldOptions &amp;options={})</div><div class="ttdoc">Weld an indexed attribute by combining all corners around a vertex with the same attribute value.</div><div class="ttdef"><b>Definition</b> weld_indexed_attribute.cpp:320</div></div>
 <div class="ttc" id="agroup__group-surfacemesh-attr_html_ga4d115376c2c766084ef808c837348fc3"><div class="ttname"><a href="group__group-surfacemesh-attr.html#ga4d115376c2c766084ef808c837348fc3">lagrange::AttributeId</a></div><div class="ttdeci">uint32_t AttributeId</div><div class="ttdoc">Identified to be used to access an attribute.</div><div class="ttdef"><b>Definition</b> AttributeFwd.h:73</div></div>
+<div class="ttc" id="agroup__group-utils-misc_html_ga4afead0b9ccc53fe4fca896787595d26"><div class="ttname"><a href="group__group-utils-misc.html#ga4afead0b9ccc53fe4fca896787595d26">lagrange::span</a></div><div class="ttdeci">::nonstd::span&lt; T, Extent &gt; span</div><div class="ttdoc">A bounds-safe view for sequences of objects.</div><div class="ttdef"><b>Definition</b> span.h:27</div></div>
 <div class="ttc" id="anamespacelagrange_html"><div class="ttname"><a href="namespacelagrange.html">lagrange</a></div><div class="ttdoc">Main namespace for Lagrange.</div></div>
+<div class="ttc" id="astructlagrange_1_1_weld_options_html"><div class="ttname"><a href="structlagrange_1_1_weld_options.html">lagrange::WeldOptions</a></div><div class="ttdoc">Options for welding indexed attributes.</div><div class="ttdef"><b>Definition</b> weld_indexed_attribute.h:31</div></div>
+<div class="ttc" id="astructlagrange_1_1_weld_options_html_a089d0e67f627afef416b908e25ab4fab"><div class="ttname"><a href="structlagrange_1_1_weld_options.html#a089d0e67f627afef416b908e25ab4fab">lagrange::WeldOptions::angle_abs</a></div><div class="ttdeci">std::optional&lt; double &gt; angle_abs</div><div class="ttdoc">If set, the absolute angle threshold (in radians) for merging attributes.</div><div class="ttdef"><b>Definition</b> weld_indexed_attribute.h:51</div></div>
+<div class="ttc" id="astructlagrange_1_1_weld_options_html_a443fe8667ad990e0646556be1c334854"><div class="ttname"><a href="structlagrange_1_1_weld_options.html#a443fe8667ad990e0646556be1c334854">lagrange::WeldOptions::exclude_vertices</a></div><div class="ttdeci">span&lt; const size_t &gt; exclude_vertices</div><div class="ttdoc">Vertices to exclude from welding.</div><div class="ttdef"><b>Definition</b> weld_indexed_attribute.h:62</div></div>
+<div class="ttc" id="astructlagrange_1_1_weld_options_html_a854336f55d95d90df6bdfcf779c3487c"><div class="ttname"><a href="structlagrange_1_1_weld_options.html#a854336f55d95d90df6bdfcf779c3487c">lagrange::WeldOptions::merge_across_vertices</a></div><div class="ttdeci">bool merge_across_vertices</div><div class="ttdoc">If indices are shared between corners around different vertices, merge them together.</div><div class="ttdef"><b>Definition</b> weld_indexed_attribute.h:56</div></div>
+<div class="ttc" id="astructlagrange_1_1_weld_options_html_a8cdc36ab1977d4c909552aa765b7d2e0"><div class="ttname"><a href="structlagrange_1_1_weld_options.html#a8cdc36ab1977d4c909552aa765b7d2e0">lagrange::WeldOptions::epsilon_rel</a></div><div class="ttdeci">std::optional&lt; double &gt; epsilon_rel</div><div class="ttdoc">If set, values whose relative difference (in L-inf norm) is less than epsilon are merged together.</div><div class="ttdef"><b>Definition</b> weld_indexed_attribute.h:34</div></div>
+<div class="ttc" id="astructlagrange_1_1_weld_options_html_ae32f83f9278aaba1dd68bd4b5cde080e"><div class="ttname"><a href="structlagrange_1_1_weld_options.html#ae32f83f9278aaba1dd68bd4b5cde080e">lagrange::WeldOptions::epsilon_abs</a></div><div class="ttdeci">std::optional&lt; double &gt; epsilon_abs</div><div class="ttdoc">If set, values whose absolute difference (in L-inf norm) is less than epsilon are merged together.</div><div class="ttdef"><b>Definition</b> weld_indexed_attribute.h:38</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_e277d0e790805391a364b883bec7db94.html">lagrange</a></li><li class="navelem"><b>weld_indexed_attribute.h</b></li>
-    <li class="footer">Generated on Sat Jun 20 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+    <li class="footer">Generated on Tue Aug 4 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>
 </body>

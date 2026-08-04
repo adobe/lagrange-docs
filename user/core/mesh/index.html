@@ -21,7 +21,7 @@
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -29,7 +29,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -732,6 +732,8 @@
       
         
       
+        
+      
     
     
     
@@ -886,6 +888,39 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#accessing-mesh-elements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Accessing Mesh Elements
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flipping-facet-orientation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Flipping Facet Orientation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clearing-and-compacting-storage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Clearing and Compacting Storage
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#copy-on-write" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -934,6 +969,17 @@
     <span class="md-ellipsis">
       
         Half-Edges
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mesh-metadata" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mesh Metadata
       
     </span>
   </a>
@@ -1023,6 +1069,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../mesh-cleanup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mesh Cleanup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../general-utilities/" class="md-nav__link">
         
   
@@ -1072,10 +1146,10 @@
         
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_1_5" >
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_1_6" >
         
           
-          <label class="md-nav__link" for="__nav_2_1_5" id="__nav_2_1_5_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2_1_6" id="__nav_2_1_6_label" tabindex="0">
             
   
   
@@ -1093,8 +1167,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_1_5">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_6">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -1167,14 +1241,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../mesh-cleanup/" class="md-nav__link">
+      <a href="../legacy-mesh-cleanup/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Mesh Cleanup
+    Legacy Mesh Cleanup
   
 
     
@@ -2275,6 +2349,39 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#accessing-mesh-elements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Accessing Mesh Elements
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flipping-facet-orientation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Flipping Facet Orientation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clearing-and-compacting-storage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Clearing and Compacting Storage
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#copy-on-write" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2330,6 +2437,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#mesh-metadata" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mesh Metadata
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#supported-types" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2368,10 +2486,10 @@
 <h1 id="mesh-class">Mesh Class</h1>
 <div class="admonition warning">
 <p class="admonition-title">Legacy Mesh vs Surface Mesh</p>
-<p>Since v6.0.0, Lagrange introduced a new polygonal mesh class that is meant to replace the
-original mesh class used throughout Lagrange. While currently few of the Lagrange functions use
-this new mesh class, over time old and new features will transition to use this new data
-structure.</p>
+<p>Since v6.0.0, Lagrange provides a polygonal mesh class (<a href="../../../cpp/classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>) that replaces the
+original (legacy) mesh class. It is now the default mesh type used throughout Lagrange. The
+legacy mesh class remains available only as an opt-in, via the <code>LAGRANGE_ENABLE_LEGACY_FUNCTIONS</code>
+option.</p>
 </div>
 <!-- @header
 #include <lagrange/SurfaceMesh.h>
@@ -2427,7 +2545,7 @@ polygonal meshes. This new data structure was designed with a couple of key feat
 <li><strong>Powerful attribute system</strong>:<ul>
 <li>Generic attribute system supporting any fixed-size integer types (<code>int8_t</code> ... <code>uint64_t</code>) and
   floating point types (<code>float</code>, <code>double</code>).</li>
-<li>Attributes can be attached to any mesh element (vertex, facet, edge, corner), or can indexed
+<li>Attributes can be attached to any mesh element (vertex, facet, edge, corner), or can be indexed
   by a secondary buffer (e.g. UVs).</li>
 <li>Usage tag specifies how attributes are used and transformed (e.g. Color, Normals, UV, etc.).</li>
 </ul>
@@ -2490,11 +2608,17 @@ surface, mesh containing isolated vertices, point clouds, etc.</p>
   mesh is a hybrid mesh.</li>
 <li><strong>Vertex valence</strong>: Number of facet corners pointing to a given vertex (repeated vertex indices in
   a degenerate facet will count multiple times towards the vertex valence).</li>
-<li><strong>Facet size</strong>: Number of corners/vertices in a facet. Currently we require facet sizes to be &gt; 2,
-  but this restriction will be lifted in a future version (supporting facets of size 1 and 2).</li>
+<li><strong>Facet size</strong>: Number of corners/vertices in a facet. Facet sizes must be &gt; 0. Facets of size 1
+  and 2 are supported.</li>
 </ul>
 <p>A hybrid mesh will store an additional "offset" attribute for each facet, to determine where each
 facet starts/ends in the attribute buffer storing vertex indices.</p>
+<div class="admonition tip">
+<p class="admonition-title">Querying Mesh Type</p>
+<p>The facet structure of a mesh can be queried at runtime: <code>is_regular()</code>, <code>is_hybrid()</code>,
+<code>is_triangle_mesh()</code> and <code>is_quad_mesh()</code> return booleans, while <code>get_vertex_per_facet()</code>
+returns the common facet size of a regular mesh.</p>
+</div>
 <div class="admonition example">
 <p class="admonition-title">Offset Indices</p>
 <p>In the following mesh, facets <code>[f0, f1, f2]</code> have an "offset" attribute of <code>[0, 3, 7]</code>. This
@@ -2508,12 +2632,12 @@ a facet can be computed from the difference between two consecutive offsets.</p>
 <div class="highlight"><pre><span></span><code><span class="n">lagrange</span><span class="o">::</span><span class="n">SurfaceMesh</span><span class="o">&lt;</span><span class="n">Scalar</span><span class="p">,</span><span class="w"> </span><span class="n">Index</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mesh</span><span class="p">;</span>
 <span class="n">mesh</span><span class="p">.</span><span class="n">add_vertices</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span><span class="w"> </span><span class="c1">// adds 10 vertices with 0-initialized coordinates</span>
 <span class="n">mesh</span><span class="p">.</span><span class="n">add_triangles</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span><span class="w"> </span><span class="c1">// adds 3 triangles with 0-initialized vertex indices</span>
-<span class="n">mesh</span><span class="p">.</span><span class="n">add_quads</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span><span class="w"> </span><span class="c1">// adds 2 quads with 0-initialized vertex vertices</span>
+<span class="n">mesh</span><span class="p">.</span><span class="n">add_quads</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span><span class="w"> </span><span class="c1">// adds 2 quads with 0-initialized vertex indices</span>
 </code></pre></div>
 <p>Another example:</p>
 <div class="highlight"><pre><span></span><code><span class="n">lagrange</span><span class="o">::</span><span class="n">SurfaceMesh</span><span class="o">&lt;</span><span class="n">Scalar</span><span class="p">,</span><span class="w"> </span><span class="n">Index</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mesh</span><span class="p">;</span>
 <span class="n">mesh</span><span class="p">.</span><span class="n">add_vertex</span><span class="p">({</span><span class="mf">0.5</span><span class="p">,</span><span class="w"> </span><span class="mf">0.2</span><span class="p">,</span><span class="w"> </span><span class="mf">0.9</span><span class="p">});</span><span class="w"> </span><span class="c1">// adds a vertex at (0.5, 0.2, 0.9)</span>
-<span class="n">mesh</span><span class="p">.</span><span class="n">add_triangle</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">);</span><span class="w"> </span><span class="c1">// adds triangle (v1, v3, v3)</span>
+<span class="n">mesh</span><span class="p">.</span><span class="n">add_triangle</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">);</span><span class="w"> </span><span class="c1">// adds triangle (v1, v3, v4)</span>
 <span class="n">mesh</span><span class="p">.</span><span class="n">add_quad</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span><span class="w"> </span><span class="c1">// adds quad (v1, v3, v4, v2)</span>
 <span class="n">mesh</span><span class="p">.</span><span class="n">add_polygon</span><span class="p">({</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">});</span><span class="w"> </span><span class="c1">// adds polygon (v1, v3, v4, v2, v5)</span>
 </code></pre></div>
@@ -2535,6 +2659,13 @@ a facet can be computed from the difference between two consecutive offsets.</p>
 <span class="n">mesh</span><span class="p">.</span><span class="n">add_vertices</span><span class="p">(</span>
 <span class="w">    </span><span class="n">Index</span><span class="p">(</span><span class="n">vertices</span><span class="p">.</span><span class="n">size</span><span class="p">()),</span>
 <span class="w">    </span><span class="p">{</span><span class="n">vertices</span><span class="p">.</span><span class="n">empty</span><span class="p">()</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="nb">nullptr</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">vertices</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">data</span><span class="p">(),</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">vertices</span><span class="p">.</span><span class="n">size</span><span class="p">()});</span>
+</code></pre></div>
+<p>To add many facets that all share the <em>same</em> size in a single call, use <code>add_polygons()</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="n">lagrange</span><span class="o">::</span><span class="n">SurfaceMesh</span><span class="o">&lt;</span><span class="n">Scalar</span><span class="p">,</span><span class="w"> </span><span class="n">Index</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mesh</span><span class="p">;</span>
+<span class="n">mesh</span><span class="p">.</span><span class="n">add_vertices</span><span class="p">(</span><span class="mi">20</span><span class="p">);</span>
+
+<span class="c1">// Add 4 pentagons (facet size = 5) with 0-initialized vertex indices</span>
+<span class="n">mesh</span><span class="p">.</span><span class="n">add_polygons</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">);</span>
 </code></pre></div>
 <p>You can add multiple polygonal facets with different sizes in the same function call by using the
 <code>add_hybrid()</code> method. While this method can take an existing buffer as input, it may be simpler to
@@ -2561,8 +2692,10 @@ use it via user-defined callbacks:</p>
 <span class="p">});</span>
 </code></pre></div>
 <div class="admonition tip">
-<p class="admonition-title">Wrapping External Buffers ans Eigen Matrices</p>
-<p>Please read our dedicated section on <a href="../attributes/#wrapping-external-buffers">wrapping external
+<p class="admonition-title">Wrapping External Buffers and Eigen Matrices</p>
+<p>The buffer-taking <code>add_*()</code> overloads copy the input data into the mesh. To instead wrap an
+existing external buffer as the vertex/facet data <em>without copying</em>, use <code>wrap_as_vertices()</code> and
+<code>wrap_as_facets()</code>. Please read our dedicated section on <a href="../attributes/#wrapping-external-buffers">wrapping external
 buffer</a>, as well as our documentation on
 <a href="../general-utilities/#shared-span">SharedSpan</a> for tracking ownership of shared objects when
 wrapping external buffers.</p>
@@ -2610,6 +2743,78 @@ remove:</p>
 <p>Removing a facet will <strong>not</strong> automatically remove any incident vertex. You can end up with
 floating/isolated vertices after facet removal. Consider filtering them as a post-processing.</p>
 </div>
+<h2 id="accessing-mesh-elements">Accessing Mesh Elements</h2>
+<p>Beyond the <a href="#eigen-matrix-views">Eigen matrix views</a>, mesh elements can be queried directly, one
+element at a time. This works uniformly for regular and hybrid meshes.</p>
+<div class="highlight"><pre><span></span><code><span class="n">lagrange</span><span class="o">::</span><span class="n">SurfaceMesh</span><span class="o">&lt;</span><span class="n">Scalar</span><span class="p">,</span><span class="w"> </span><span class="n">Index</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mesh</span><span class="p">;</span>
+
+<span class="c1">// Fill up mesh...</span>
+
+<span class="c1">// Number of elements of each type</span>
+<span class="n">Index</span><span class="w"> </span><span class="n">nv</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mesh</span><span class="p">.</span><span class="n">get_num_vertices</span><span class="p">();</span>
+<span class="n">Index</span><span class="w"> </span><span class="n">nf</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mesh</span><span class="p">.</span><span class="n">get_num_facets</span><span class="p">();</span>
+<span class="n">Index</span><span class="w"> </span><span class="n">nc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mesh</span><span class="p">.</span><span class="n">get_num_corners</span><span class="p">();</span>
+<span class="n">Index</span><span class="w"> </span><span class="n">ne</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mesh</span><span class="p">.</span><span class="n">get_num_edges</span><span class="p">();</span><span class="w"> </span><span class="c1">// requires initialize_edges()</span>
+
+<span class="c1">// Read a vertex position (span of size get_dimension())</span>
+<span class="k">auto</span><span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mesh</span><span class="p">.</span><span class="n">get_position</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+
+<span class="c1">// Iterate over facets and their corners</span>
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">Index</span><span class="w"> </span><span class="n">f</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">f</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">mesh</span><span class="p">.</span><span class="n">get_num_facets</span><span class="p">();</span><span class="w"> </span><span class="o">++</span><span class="n">f</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Vertex indices of facet f (span of size get_facet_size(f))</span>
+<span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">facet_vertices</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mesh</span><span class="p">.</span><span class="n">get_facet_vertices</span><span class="p">(</span><span class="n">f</span><span class="p">);</span>
+
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">Index</span><span class="w"> </span><span class="n">lv</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">lv</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">mesh</span><span class="p">.</span><span class="n">get_facet_size</span><span class="p">(</span><span class="n">f</span><span class="p">);</span><span class="w"> </span><span class="o">++</span><span class="n">lv</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">Index</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">facet_vertices</span><span class="p">[</span><span class="n">lv</span><span class="p">];</span><span class="w"> </span><span class="c1">// lv-th vertex of facet f</span>
+<span class="w">        </span><span class="c1">// ...</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// Corner &lt;-&gt; vertex/facet mapping</span>
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">Index</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">mesh</span><span class="p">.</span><span class="n">get_num_corners</span><span class="p">();</span><span class="w"> </span><span class="o">++</span><span class="n">c</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">Index</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mesh</span><span class="p">.</span><span class="n">get_corner_vertex</span><span class="p">(</span><span class="n">c</span><span class="p">);</span><span class="w"> </span><span class="c1">// vertex referenced by corner c</span>
+<span class="w">    </span><span class="n">Index</span><span class="w"> </span><span class="n">f</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mesh</span><span class="p">.</span><span class="n">get_corner_facet</span><span class="p">(</span><span class="n">c</span><span class="p">);</span><span class="w">  </span><span class="c1">// facet owning corner c</span>
+<span class="p">}</span>
+</code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">Corner Ranges</p>
+<p>The corners of a facet <code>f</code> occupy the contiguous range
+<code>[mesh.get_facet_corner_begin(f), mesh.get_facet_corner_end(f))</code>. For a regular mesh this is
+simply <code>[f * mesh.get_vertex_per_facet(), (f + 1) * mesh.get_vertex_per_facet())</code>.</p>
+</div>
+<p>Use the <code>ref_xxx()</code> variants (e.g. <code>ref_position()</code>, <code>ref_facet_vertices()</code>) for writable access.
+See <a href="#copy-on-write">Copy-On-Write</a> below.</p>
+<h2 id="flipping-facet-orientation">Flipping Facet Orientation</h2>
+<p>The orientation of one or more facets can be reversed in place with <code>flip_facets()</code>. As with facet
+removal, you can select facets via an explicit list or a predicate:</p>
+<div class="highlight"><pre><span></span><code><span class="n">lagrange</span><span class="o">::</span><span class="n">SurfaceMesh</span><span class="o">&lt;</span><span class="n">Scalar</span><span class="p">,</span><span class="w"> </span><span class="n">Index</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mesh</span><span class="p">;</span>
+
+<span class="c1">// Fill up mesh...</span>
+
+<span class="c1">// Flip a specific list of facets</span>
+<span class="n">mesh</span><span class="p">.</span><span class="n">flip_facets</span><span class="p">({</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">});</span>
+
+<span class="c1">// Flip facets based on a predicate (e.g. flip every other facet)</span>
+<span class="n">mesh</span><span class="p">.</span><span class="n">flip_facets</span><span class="p">([](</span><span class="n">Index</span><span class="w"> </span><span class="n">f</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="p">(</span><span class="n">f</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span><span class="w"> </span><span class="p">});</span>
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Reorienting Attributes</p>
+<p><code>flip_facets()</code> accepts an optional <code>AttributeReorientPolicy</code> argument to control whether
+orientation-sensitive attributes (e.g. normals) are reoriented along with the facets.</p>
+</div>
+<h2 id="clearing-and-compacting-storage">Clearing and Compacting Storage</h2>
+<div class="highlight"><pre><span></span><code><span class="c1">// Remove all facets (vertices are kept)</span>
+<span class="n">mesh</span><span class="p">.</span><span class="n">clear_facets</span><span class="p">();</span>
+
+<span class="c1">// Remove all vertices (this also removes all incident facets)</span>
+<span class="n">mesh</span><span class="p">.</span><span class="n">clear_vertices</span><span class="p">();</span>
+
+<span class="c1">// Release excess memory reserved by the internal buffers</span>
+<span class="n">mesh</span><span class="p">.</span><span class="n">shrink_to_fit</span><span class="p">();</span>
+
+<span class="c1">// Convert hybrid storage to regular storage if all facets have the same size</span>
+<span class="n">mesh</span><span class="p">.</span><span class="n">compress_if_regular</span><span class="p">();</span>
+</code></pre></div>
 <h2 id="copy-on-write">Copy-On-Write</h2>
 <p>All mesh data is stored in an <a href="../../../cpp/classlagrange_1_1_attribute.html">Attribute</a> object, including vertex positions, facet indices, etc.
 These mesh attributes are handled via a copy-on-write mechanism, meaning that copying a mesh is a
@@ -2649,7 +2854,7 @@ thread-safety"</a> for more information.</p>
 <span class="w">    </span><span class="n">copy</span><span class="p">.</span><span class="n">get_corner_to_vertex</span><span class="p">().</span><span class="n">get_all</span><span class="p">().</span><span class="n">data</span><span class="p">();</span><span class="w"> </span><span class="c1">// --&gt; true</span>
 </code></pre></div>
 <h2 id="eigen-matrix-views">Eigen Matrix Views</h2>
-<p>Mesh attributes such as positions and facet indices can be views as <a href="http://eigen.tuxfamily.org">Eigen</a> matrices. Specifically,
+<p>Mesh attributes such as positions and facet indices can be viewed as <a href="http://eigen.tuxfamily.org">Eigen</a> matrices. Specifically,
 we provide read-only views as <code>Eigen::Map&lt;const ...&gt;</code>:</p>
 <!-- @views -->
 <div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;lagrange/SurfaceMesh.h&gt;</span>
@@ -2786,8 +2991,55 @@ which assume manifold surfaces.</p>
 <span class="w">    </span><span class="p">});</span>
 <span class="p">}</span>
 </code></pre></div>
-<p>In the example above, we could have use the method <code>count_num_corners_around_vertex()</code> to
+<p>In the example above, we could have used the method <code>count_num_corners_around_vertex()</code> to
 compute vertex valence directly. See <a href="../../../cpp/classlagrange_1_1_surface_mesh.html">SurfaceMesh</a> class documentation for a full reference.</p>
+<p>In addition to the <code>foreach_xxx_around_xxx()</code> helpers, the following accessors provide direct
+navigation once edges have been initialized:</p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>get_edge(f, lv)</code></td>
+<td>Edge id of the <code>lv</code>-th edge of facet <code>f</code>.</td>
+</tr>
+<tr>
+<td><code>get_corner_edge(c)</code></td>
+<td>Edge id associated with corner <code>c</code>.</td>
+</tr>
+<tr>
+<td><code>get_edge_vertices(e)</code></td>
+<td>The two endpoint vertices of edge <code>e</code>.</td>
+</tr>
+<tr>
+<td><code>is_boundary_edge(e)</code></td>
+<td>Whether edge <code>e</code> lies on the mesh boundary.</td>
+</tr>
+<tr>
+<td><code>get_one_facet_around_edge(e)</code></td>
+<td>An arbitrary facet incident to edge <code>e</code>.</td>
+</tr>
+<tr>
+<td><code>get_clockwise_corner_around_vertex(c)</code> / <code>get_counterclockwise_corner_around_vertex(c)</code></td>
+<td>Traverse corners around a vertex (manifold ordering).</td>
+</tr>
+<tr>
+<td><code>get_first_corner_around_vertex(v)</code> / <code>get_next_corner_around_vertex(c)</code></td>
+<td>Walk the chain of corners around a vertex. Works on non-manifold geometry; the chain order has no geometric meaning.</td>
+</tr>
+<tr>
+<td><code>count_num_corners_around_vertex(v)</code> / <code>count_num_corners_around_edge(e)</code></td>
+<td>Count incident corners.</td>
+</tr>
+</tbody>
+</table>
+<p>Additional traversal helpers include <code>foreach_facet_around_edge()</code>, <code>foreach_facet_around_facet()</code>,
+<code>foreach_corner_around_edge()</code> and <code>foreach_corner_around_vertex()</code>. See the <a href="../../../cpp/classlagrange_1_1_surface_mesh.html">SurfaceMesh</a> class
+documentation for the full list.</p>
 <div class="admonition danger">
 <p class="admonition-title">Degenerate Facets</p>
 <p>If a mesh facet is degenerate, and references the same vertex several time (e.g. facet <code>f2 =
@@ -2815,6 +3067,19 @@ indices can be used to navigate around mesh elements the same way a half-edge da
 <p>To implement the <code>twin(h_i)</code> operation, you can use <code>SurfaceMesh::get_next_corner_around_edge()</code>.</p>
 </div>
 <p>In the future we may add a half-edge "proxy" structure to facilitate mesh navigation.</p>
+<h2 id="mesh-metadata">Mesh Metadata</h2>
+<p>Besides typed <a href="../attributes/">attributes</a>, a mesh can store arbitrary string key/value pairs as
+<strong>metadata</strong>. This is handy for provenance information, units, author, etc.</p>
+<div class="highlight"><pre><span></span><code><span class="n">lagrange</span><span class="o">::</span><span class="n">SurfaceMesh</span><span class="o">&lt;</span><span class="n">Scalar</span><span class="p">,</span><span class="w"> </span><span class="n">Index</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mesh</span><span class="p">;</span>
+
+<span class="c1">// Create or update a metadata entry</span>
+<span class="n">mesh</span><span class="p">.</span><span class="n">create_metadata</span><span class="p">(</span><span class="s">&quot;author&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Lagrange&quot;</span><span class="p">);</span>
+<span class="n">mesh</span><span class="p">.</span><span class="n">set_metadata</span><span class="p">(</span><span class="s">&quot;author&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Lagrange Team&quot;</span><span class="p">);</span>
+
+<span class="c1">// Read it back</span>
+<span class="n">std</span><span class="o">::</span><span class="n">string_view</span><span class="w"> </span><span class="n">author</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mesh</span><span class="p">.</span><span class="n">get_metadata</span><span class="p">(</span><span class="s">&quot;author&quot;</span><span class="p">);</span>
+</code></pre></div>
+<p>Metadata is stored as value attributes, and is preserved when the mesh is copied.</p>
 <h2 id="supported-types">Supported Types</h2>
 <p>While our <code>SurfaceMesh&lt;&gt;</code> class is templated by both a <code>Scalar</code> and <code>Index</code> type, we only actually
 support a finite set of template parameters. Specifically:</p>
@@ -2888,9 +3153,9 @@ explicitly instantiate a templated function with the supported mesh types. For e
 <hr />
 <ol>
 <li id="fn:1">
-<p>Note that while the new polygonal mesh class is using explicit template instantiation to
-facilitate compilation, at the time most of Lagrange is still header-only and relying on our
-legacy mesh data structure. Thus overall compilation times still have room for improvement.&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+<p>The new polygonal mesh class uses explicit template instantiation to facilitate compilation.
+Note that some legacy code paths remain header-only, so overall compilation times still have
+room for improvement.&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
 </li>
 </ol>
 </div>
@@ -2952,7 +3217,7 @@ legacy mesh data structure. Thus overall compilation times still have room for i
       <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "navigation.indexes", "content.action.edit"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/tablesort.min.js"></script>
       

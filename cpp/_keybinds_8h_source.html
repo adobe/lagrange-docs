@@ -186,82 +186,82 @@ $(function(){initNavTree('_keybinds_8h_source.html',''); initResizable(true); })
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span></div>
 <div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classlagrange_1_1ui_1_1_keybinds.html#af7a5ff700dee6d52dd76bf29cd662a28">push_context</a>(<span class="keyword">const</span> std::string&amp; context);</div>
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span></div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classlagrange_1_1ui_1_1_keybinds.html#acaa213e334b066dd3a6d0a5fa894f4a1">pop_context</a>();</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    <span class="keywordtype">void</span> reset_context();</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span></div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    <span class="keywordtype">void</span></div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    <a class="code hl_function" href="classlagrange_1_1ui_1_1_keybinds.html#a3515d52aa0912e694cc31f122fb55153">add</a>(<span class="keyword">const</span> std::string&amp; action, ImGuiKey button, <span class="keyword">const</span> std::vector&lt;ImGuiKey&gt;&amp; modifiers = {});</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span> </div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span></div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    <span class="keywordtype">bool</span> has(</div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>        <span class="keyword">const</span> std::string&amp; action,</div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>        ImGuiKey button,</div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>        <span class="keyword">const</span> std::vector&lt;ImGuiKey&gt;&amp; modifiers = {}) <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span> </div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span></div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    <span class="keywordtype">void</span> add(<span class="keyword">const</span> std::string&amp; action, <span class="keyword">const</span> Keybind&amp; keybind);</div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span> </div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span></div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>    <span class="keyword">const</span> MapType&amp; get() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span> </div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span></div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    <span class="keywordtype">bool</span> remove(<span class="keyword">const</span> std::string&amp; action);</div>
-<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span> </div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span></div>
-<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>    <span class="keywordtype">bool</span> unregister_action(<span class="keyword">const</span> std::string&amp; action);</div>
-<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span> </div>
-<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span></div>
-<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>    <span class="keywordtype">bool</span> register_action(<span class="keyword">const</span> std::string&amp; action);</div>
-<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span> </div>
-<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span></div>
-<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>    <span class="keywordtype">bool</span> is_pressed(<span class="keyword">const</span> std::string&amp; action) <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span></div>
-<div class="line"><a id="l00147" name="l00147"></a><span class="lineno"><a class="line" href="classlagrange_1_1ui_1_1_keybinds.html#a6ddd73627c0ea1b5a0220d0b1f5449b6">  147</a></span>    <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classlagrange_1_1ui_1_1_keybinds.html#a6ddd73627c0ea1b5a0220d0b1f5449b6">is_pressed</a>(ImGuiKey key_code)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> ImGui::IsKeyPressed(key_code); }</div>
-<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span></div>
-<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>    <span class="keywordtype">bool</span> is_down(<span class="keyword">const</span> std::string&amp; action) <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span></div>
-<div class="line"><a id="l00157" name="l00157"></a><span class="lineno"><a class="line" href="classlagrange_1_1ui_1_1_keybinds.html#ad0c57bf59b5f953cfc1c94ed25d50146">  157</a></span>    <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classlagrange_1_1ui_1_1_keybinds.html#ad0c57bf59b5f953cfc1c94ed25d50146">is_down</a>(ImGuiKey key_code)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> ImGui::IsKeyDown(key_code); }</div>
-<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span></div>
-<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>    <span class="keywordtype">bool</span> is_released(<span class="keyword">const</span> std::string&amp; action) <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span></div>
-<div class="line"><a id="l00167" name="l00167"></a><span class="lineno"><a class="line" href="classlagrange_1_1ui_1_1_keybinds.html#a7722790e068b94ba288f6ff1dfdf54fe">  167</a></span>    <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classlagrange_1_1ui_1_1_keybinds.html#a7722790e068b94ba288f6ff1dfdf54fe">is_released</a>(ImGuiKey key_code)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> ImGui::IsKeyReleased(key_code); }</div>
-<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span></div>
-<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>    <span class="keywordtype">bool</span> save(std::ostream&amp; out) <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span> </div>
-<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span></div>
-<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>    <span class="keywordtype">bool</span> load(std::istream&amp; in, <span class="keywordtype">bool</span> append = <span class="keyword">false</span>);</div>
-<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span></div>
-<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>    <span class="keywordtype">void</span> enable(<span class="keywordtype">bool</span> enabled);</div>
-<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span></div>
-<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>    <span class="keywordtype">bool</span> is_enabled() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span> </div>
-<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span></div>
-<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>    <span class="keyword">static</span> std::string to_string(<span class="keyword">const</span> Keybind&amp; keybind);</div>
-<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span></div>
-<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>    <span class="keyword">static</span> std::string to_string(ImGuiKey key);</div>
-<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span></div>
-<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>    std::string to_string(<span class="keyword">const</span> std::string&amp; action, <span class="keywordtype">int</span> limit = 1) <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span> </div>
-<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>    MapType m_mapping;</div>
-<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>    <span class="keywordtype">bool</span> m_enabled = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>    std::vector&lt;std::string&gt; m_context_stack;</div>
-<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span> </div>
-<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>    <span class="keywordtype">bool</span> is_action_in_state(<span class="keyword">const</span> std::string&amp; action, KeyState state) <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>};</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classlagrange_1_1ui_1_1_keybinds.html#acaa213e334b066dd3a6d0a5fa894f4a1">pop_context</a>();</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    <span class="keywordtype">void</span> reset_context();</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span></div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    <span class="keywordtype">void</span></div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    <a class="code hl_function" href="classlagrange_1_1ui_1_1_keybinds.html#a3515d52aa0912e694cc31f122fb55153">add</a>(<span class="keyword">const</span> std::string&amp; action, ImGuiKey button, <span class="keyword">const</span> std::vector&lt;ImGuiKey&gt;&amp; modifiers = {});</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span></div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    <span class="keywordtype">bool</span> has(</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>        <span class="keyword">const</span> std::string&amp; action,</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>        ImGuiKey button,</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>        <span class="keyword">const</span> std::vector&lt;ImGuiKey&gt;&amp; modifiers = {}) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span> </div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span></div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    <span class="keywordtype">void</span> add(<span class="keyword">const</span> std::string&amp; action, <span class="keyword">const</span> Keybind&amp; keybind);</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span> </div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span></div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    <span class="keyword">const</span> MapType&amp; get() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span> </div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span></div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>    <span class="keywordtype">bool</span> remove(<span class="keyword">const</span> std::string&amp; action);</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span> </div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span></div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>    <span class="keywordtype">bool</span> unregister_action(<span class="keyword">const</span> std::string&amp; action);</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span> </div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span></div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>    <span class="keywordtype">bool</span> register_action(<span class="keyword">const</span> std::string&amp; action);</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span> </div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span></div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>    <span class="keywordtype">bool</span> is_pressed(<span class="keyword">const</span> std::string&amp; action) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span></div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno"><a class="line" href="classlagrange_1_1ui_1_1_keybinds.html#a6ddd73627c0ea1b5a0220d0b1f5449b6">  146</a></span>    <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classlagrange_1_1ui_1_1_keybinds.html#a6ddd73627c0ea1b5a0220d0b1f5449b6">is_pressed</a>(ImGuiKey key_code)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> ImGui::IsKeyPressed(key_code); }</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span></div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>    <span class="keywordtype">bool</span> is_down(<span class="keyword">const</span> std::string&amp; action) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span></div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno"><a class="line" href="classlagrange_1_1ui_1_1_keybinds.html#ad0c57bf59b5f953cfc1c94ed25d50146">  156</a></span>    <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classlagrange_1_1ui_1_1_keybinds.html#ad0c57bf59b5f953cfc1c94ed25d50146">is_down</a>(ImGuiKey key_code)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> ImGui::IsKeyDown(key_code); }</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span></div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>    <span class="keywordtype">bool</span> is_released(<span class="keyword">const</span> std::string&amp; action) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span></div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno"><a class="line" href="classlagrange_1_1ui_1_1_keybinds.html#a7722790e068b94ba288f6ff1dfdf54fe">  166</a></span>    <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classlagrange_1_1ui_1_1_keybinds.html#a7722790e068b94ba288f6ff1dfdf54fe">is_released</a>(ImGuiKey key_code)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> ImGui::IsKeyReleased(key_code); }</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span></div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>    <span class="keywordtype">bool</span> save(std::ostream&amp; out) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span> </div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span></div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>    <span class="keywordtype">bool</span> load(std::istream&amp; in, <span class="keywordtype">bool</span> append = <span class="keyword">false</span>);</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span></div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>    <span class="keywordtype">void</span> enable(<span class="keywordtype">bool</span> enabled);</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span></div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>    <span class="keywordtype">bool</span> is_enabled() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span> </div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span></div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>    <span class="keyword">static</span> std::string to_string(<span class="keyword">const</span> Keybind&amp; keybind);</div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span></div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>    <span class="keyword">static</span> std::string to_string(ImGuiKey key);</div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span></div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>    std::string to_string(<span class="keyword">const</span> std::string&amp; action, <span class="keywordtype">int</span> limit = 1) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span> </div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>    MapType m_mapping;</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>    <span class="keywordtype">bool</span> m_enabled = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>    std::vector&lt;std::string&gt; m_context_stack;</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span> </div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>    <span class="keywordtype">bool</span> is_action_in_state(<span class="keyword">const</span> std::string&amp; action, KeyState state) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>};</div>
 </div>
-<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span> </div>
-<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>} <span class="comment">// namespace ui</span></div>
-<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>} <span class="comment">// namespace lagrange</span></div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span> </div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>} <span class="comment">// namespace ui</span></div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>} <span class="comment">// namespace lagrange</span></div>
 <div class="ttc" id="aclasslagrange_1_1ui_1_1_keybinds_html_a0d187713751b35153120f90c2ab685ac"><div class="ttname"><a href="classlagrange_1_1ui_1_1_keybinds.html#a0d187713751b35153120f90c2ab685ac">lagrange::ui::Keybinds::MapType</a></div><div class="ttdeci">std::map&lt; std::string, std::vector&lt; Keybind &gt; &gt; MapType</div><div class="ttdoc">Internal map type.</div><div class="ttdef"><b>Definition</b> Keybinds.h:66</div></div>
 <div class="ttc" id="aclasslagrange_1_1ui_1_1_keybinds_html_a3515d52aa0912e694cc31f122fb55153"><div class="ttname"><a href="classlagrange_1_1ui_1_1_keybinds.html#a3515d52aa0912e694cc31f122fb55153">lagrange::ui::Keybinds::add</a></div><div class="ttdeci">void add(const std::string &amp;action, ImGuiKey button, const std::vector&lt; ImGuiKey &gt; &amp;modifiers={})</div><div class="ttdoc">Adds a key binding for given action.</div><div class="ttdef"><b>Definition</b> Keybinds.cpp:143</div></div>
-<div class="ttc" id="aclasslagrange_1_1ui_1_1_keybinds_html_a6ddd73627c0ea1b5a0220d0b1f5449b6"><div class="ttname"><a href="classlagrange_1_1ui_1_1_keybinds.html#a6ddd73627c0ea1b5a0220d0b1f5449b6">lagrange::ui::Keybinds::is_pressed</a></div><div class="ttdeci">bool is_pressed(ImGuiKey key_code) const</div><div class="ttdoc">Returns true if key was just pressed.</div><div class="ttdef"><b>Definition</b> Keybinds.h:147</div></div>
-<div class="ttc" id="aclasslagrange_1_1ui_1_1_keybinds_html_a7722790e068b94ba288f6ff1dfdf54fe"><div class="ttname"><a href="classlagrange_1_1ui_1_1_keybinds.html#a7722790e068b94ba288f6ff1dfdf54fe">lagrange::ui::Keybinds::is_released</a></div><div class="ttdeci">bool is_released(ImGuiKey key_code) const</div><div class="ttdoc">Returns true if key was just released.</div><div class="ttdef"><b>Definition</b> Keybinds.h:167</div></div>
+<div class="ttc" id="aclasslagrange_1_1ui_1_1_keybinds_html_a6ddd73627c0ea1b5a0220d0b1f5449b6"><div class="ttname"><a href="classlagrange_1_1ui_1_1_keybinds.html#a6ddd73627c0ea1b5a0220d0b1f5449b6">lagrange::ui::Keybinds::is_pressed</a></div><div class="ttdeci">bool is_pressed(ImGuiKey key_code) const</div><div class="ttdoc">Returns true if key was just pressed.</div><div class="ttdef"><b>Definition</b> Keybinds.h:146</div></div>
+<div class="ttc" id="aclasslagrange_1_1ui_1_1_keybinds_html_a7722790e068b94ba288f6ff1dfdf54fe"><div class="ttname"><a href="classlagrange_1_1ui_1_1_keybinds.html#a7722790e068b94ba288f6ff1dfdf54fe">lagrange::ui::Keybinds::is_released</a></div><div class="ttdeci">bool is_released(ImGuiKey key_code) const</div><div class="ttdoc">Returns true if key was just released.</div><div class="ttdef"><b>Definition</b> Keybinds.h:166</div></div>
 <div class="ttc" id="aclasslagrange_1_1ui_1_1_keybinds_html_ac5c54df7ed3b930268c8d7752c101725"><div class="ttname"><a href="classlagrange_1_1ui_1_1_keybinds.html#ac5c54df7ed3b930268c8d7752c101725">lagrange::ui::Keybinds::update</a></div><div class="ttdeci">void update()</div><div class="ttdoc">Updating key states.</div><div class="ttdef"><b>Definition</b> Keybinds.cpp:25</div></div>
 <div class="ttc" id="aclasslagrange_1_1ui_1_1_keybinds_html_acaa213e334b066dd3a6d0a5fa894f4a1"><div class="ttname"><a href="classlagrange_1_1ui_1_1_keybinds.html#acaa213e334b066dd3a6d0a5fa894f4a1">lagrange::ui::Keybinds::pop_context</a></div><div class="ttdeci">void pop_context()</div><div class="ttdoc">Pops the last pushed context.</div><div class="ttdef"><b>Definition</b> Keybinds.cpp:133</div></div>
-<div class="ttc" id="aclasslagrange_1_1ui_1_1_keybinds_html_ad0c57bf59b5f953cfc1c94ed25d50146"><div class="ttname"><a href="classlagrange_1_1ui_1_1_keybinds.html#ad0c57bf59b5f953cfc1c94ed25d50146">lagrange::ui::Keybinds::is_down</a></div><div class="ttdeci">bool is_down(ImGuiKey key_code) const</div><div class="ttdoc">Returns true if key is held down.</div><div class="ttdef"><b>Definition</b> Keybinds.h:157</div></div>
+<div class="ttc" id="aclasslagrange_1_1ui_1_1_keybinds_html_ad0c57bf59b5f953cfc1c94ed25d50146"><div class="ttname"><a href="classlagrange_1_1ui_1_1_keybinds.html#ad0c57bf59b5f953cfc1c94ed25d50146">lagrange::ui::Keybinds::is_down</a></div><div class="ttdeci">bool is_down(ImGuiKey key_code) const</div><div class="ttdoc">Returns true if key is held down.</div><div class="ttdef"><b>Definition</b> Keybinds.h:156</div></div>
 <div class="ttc" id="aclasslagrange_1_1ui_1_1_keybinds_html_af7a5ff700dee6d52dd76bf29cd662a28"><div class="ttname"><a href="classlagrange_1_1ui_1_1_keybinds.html#af7a5ff700dee6d52dd76bf29cd662a28">lagrange::ui::Keybinds::push_context</a></div><div class="ttdeci">void push_context(const std::string &amp;context)</div><div class="ttdoc">Changes current context.</div><div class="ttdef"><b>Definition</b> Keybinds.cpp:128</div></div>
 <div class="ttc" id="anamespacelagrange_1_1ui_html"><div class="ttname"><a href="namespacelagrange_1_1ui.html">lagrange::ui</a></div><div class="ttdoc">Lagrange UI Viewer and mini 3D engine.</div><div class="ttdef"><b>Definition</b> AcceleratedPicking.h:23</div></div>
 <div class="ttc" id="anamespacelagrange_html"><div class="ttname"><a href="namespacelagrange.html">lagrange</a></div><div class="ttdoc">Main namespace for Lagrange.</div></div>
@@ -271,7 +271,7 @@ $(function(){initNavTree('_keybinds_8h_source.html',''); initResizable(true); })
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_95d3c4dd232e168482f385e9dcc567c0.html">lagrange</a></li><li class="navelem"><a class="el" href="dir_840af7a4c0a0a7d566e78cb58e0e071b.html">ui</a></li><li class="navelem"><a class="el" href="dir_0b549efe35dbc938cac5fbd1693f9f65.html">types</a></li><li class="navelem"><b>Keybinds.h</b></li>
-    <li class="footer">Generated on Sat Jun 20 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+    <li class="footer">Generated on Tue Aug 4 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>
 </body>

@@ -178,7 +178,7 @@ $(function(){initNavTree('legacy_2reorder__mesh__vertices_8h_source.html',''); i
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
 <div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    <span class="comment">// Cound the number of new vertices</span></div>
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    Index num_new_vertices = 0;</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> io : <a class="code hl_function" href="group__group-utils-misc.html#ga41568d17fc48cea4a31db0e40cd93cf8">range</a>(num_old_vertices)) {</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> io : <a class="code hl_function" href="namespacelagrange.html#a41568d17fc48cea4a31db0e40cd93cf8">range</a>(num_old_vertices)) {</div>
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        num_new_vertices = std::max(num_new_vertices, forward_mapping_no_invalid(io));</div>
 <div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    }</div>
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    num_new_vertices += 1; <span class="comment">// num_of_*** = biggest index +  1</span></div>
@@ -190,7 +190,7 @@ $(function(){initNavTree('legacy_2reorder__mesh__vertices_8h_source.html',''); i
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    <span class="comment">// Create the backward mapping and the new vertices</span></div>
 <div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    IndexList backward_mapping(num_new_vertices, <a class="code hl_function" href="group__group-utils-misc.html#ga6c3e5aabde25a440beb7fc174ab081df">invalid&lt;Index&gt;</a>());</div>
 <div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    VertexArray vertices_new(num_new_vertices, mesh.get_dim());</div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> io : <a class="code hl_function" href="group__group-utils-misc.html#ga41568d17fc48cea4a31db0e40cd93cf8">range</a>(num_old_vertices)) {</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> io : <a class="code hl_function" href="namespacelagrange.html#a41568d17fc48cea4a31db0e40cd93cf8">range</a>(num_old_vertices)) {</div>
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>        <span class="keyword">const</span> <span class="keyword">auto</span> in = forward_mapping_no_invalid(io);</div>
 <div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>        backward_mapping[in] = io;</div>
 <div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>        vertices_new.row(in) = vertices.row(io);</div>
@@ -203,7 +203,7 @@ $(function(){initNavTree('legacy_2reorder__mesh__vertices_8h_source.html',''); i
 <div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span> </div>
 <div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    <span class="comment">// Create new faces</span></div>
 <div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    FacetArray facets_new(facets.rows(), facets.cols());</div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> i : <a class="code hl_function" href="group__group-utils-misc.html#ga41568d17fc48cea4a31db0e40cd93cf8">range</a>(facets.rows())) {</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> i : <a class="code hl_function" href="namespacelagrange.html#a41568d17fc48cea4a31db0e40cd93cf8">range</a>(facets.rows())) {</div>
 <div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>        facets_new(i, 0) = forward_mapping_no_invalid(facets(i, 0));</div>
 <div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>        facets_new(i, 1) = forward_mapping_no_invalid(facets(i, 1));</div>
 <div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>        facets_new(i, 2) = forward_mapping_no_invalid(facets(i, 2));</div>
@@ -220,19 +220,19 @@ $(function(){initNavTree('legacy_2reorder__mesh__vertices_8h_source.html',''); i
 <div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span> </div>
 <div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>} <span class="comment">// namespace legacy</span></div>
 <div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>} <span class="comment">// namespace lagrange</span></div>
-<div class="ttc" id="agroup__group-utils-assert_html_ga1ccafcb14523a1aae57dcac3c3f32ecd"><div class="ttname"><a href="group__group-utils-assert.html#ga1ccafcb14523a1aae57dcac3c3f32ecd">la_runtime_assert</a></div><div class="ttdeci">#define la_runtime_assert(...)</div><div class="ttdoc">Runtime assertion check.</div><div class="ttdef"><b>Definition</b> assert.h:175</div></div>
-<div class="ttc" id="agroup__group-utils-misc_html_ga41568d17fc48cea4a31db0e40cd93cf8"><div class="ttname"><a href="group__group-utils-misc.html#ga41568d17fc48cea4a31db0e40cd93cf8">lagrange::range</a></div><div class="ttdeci">internal::Range&lt; Index &gt; range(Index end)</div><div class="ttdoc">Returns an iterable object representing the range [0, end).</div><div class="ttdef"><b>Definition</b> range.h:176</div></div>
+<div class="ttc" id="agroup__group-utils-assert_html_ga1ccafcb14523a1aae57dcac3c3f32ecd"><div class="ttname"><a href="group__group-utils-assert.html#ga1ccafcb14523a1aae57dcac3c3f32ecd">la_runtime_assert</a></div><div class="ttdeci">#define la_runtime_assert(...)</div><div class="ttdoc">Runtime assertion check.</div><div class="ttdef"><b>Definition</b> assert.h:177</div></div>
 <div class="ttc" id="agroup__group-utils-misc_html_ga6c3e5aabde25a440beb7fc174ab081df"><div class="ttname"><a href="group__group-utils-misc.html#ga6c3e5aabde25a440beb7fc174ab081df">lagrange::invalid</a></div><div class="ttdeci">constexpr T invalid()</div><div class="ttdoc">You can use invalid&lt;T&gt;() to get a value that can represent &quot;invalid&quot; values, such as invalid indices ...</div><div class="ttdef"><b>Definition</b> invalid.h:40</div></div>
 <div class="ttc" id="agroup__group-utils-misc_html_gafc5798c28b15e46d20d0234b72c4ef63"><div class="ttname"><a href="group__group-utils-misc.html#gafc5798c28b15e46d20d0234b72c4ef63">lagrange::safe_cast</a></div><div class="ttdeci">constexpr auto safe_cast(SourceType value) -&gt; std::enable_if_t&lt;!std::is_same&lt; SourceType, TargetType &gt;::value, TargetType &gt;</div><div class="ttdoc">Perform safe cast from SourceType to TargetType, where &quot;safe&quot; means:</div><div class="ttdef"><b>Definition</b> safe_cast.h:51</div></div>
 <div class="ttc" id="anamespacelagrange_html"><div class="ttname"><a href="namespacelagrange.html">lagrange</a></div><div class="ttdoc">Main namespace for Lagrange.</div></div>
 <div class="ttc" id="anamespacelagrange_html_a01a55c916bd22d4ee64baa54c4993344"><div class="ttname"><a href="namespacelagrange.html#a01a55c916bd22d4ee64baa54c4993344">lagrange::create_mesh</a></div><div class="ttdeci">auto create_mesh(const Eigen::MatrixBase&lt; DerivedV &gt; &amp;vertices, const Eigen::MatrixBase&lt; DerivedF &gt; &amp;facets)</div><div class="ttdoc">This function create a new mesh given the vertex and facet arrays by copying data into the Mesh objec...</div><div class="ttdef"><b>Definition</b> create_mesh.h:39</div></div>
+<div class="ttc" id="anamespacelagrange_html_a41568d17fc48cea4a31db0e40cd93cf8"><div class="ttname"><a href="namespacelagrange.html#a41568d17fc48cea4a31db0e40cd93cf8">lagrange::range</a></div><div class="ttdeci">internal::Range&lt; Index &gt; range(Index end)</div><div class="ttdoc">Returns an iterable object representing the range [0, end).</div><div class="ttdef"><b>Definition</b> range.h:176</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_e277d0e790805391a364b883bec7db94.html">lagrange</a></li><li class="navelem"><a class="el" href="dir_3e86c1114dca7f32217f9b892f901fa0.html">legacy</a></li><li class="navelem"><b>reorder_mesh_vertices.h</b></li>
-    <li class="footer">Generated on Sat Jun 20 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+    <li class="footer">Generated on Tue Aug 4 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>
 </body>

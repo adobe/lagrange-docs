@@ -321,7 +321,7 @@ $(function(){initNavTree('legacy_2chain__edges_8h_source.html',''); initResizabl
 <div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>    };</div>
 <div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span> </div>
 <div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>    <a class="code hl_define" href="group__group-utils-warning.html#gaea1008e72c7279ac1c0683098356e09f">LA_IGNORE_RANGE_LOOP_ANALYSIS_BEGIN</a></div>
-<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> ei : <a class="code hl_function" href="group__group-utils-misc.html#ga41568d17fc48cea4a31db0e40cd93cf8">range</a>(num_edges)) {</div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> ei : <a class="code hl_function" href="namespacelagrange.html#a41568d17fc48cea4a31db0e40cd93cf8">range</a>(num_edges)) {</div>
 <div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>        add_adj_connection(ei);</div>
 <div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>    }</div>
 <div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>    LA_IGNORE_RANGE_LOOP_ANALYSIS_END</div>
@@ -358,7 +358,7 @@ $(function(){initNavTree('legacy_2chain__edges_8h_source.html',''); initResizabl
 <div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>        std::reverse(chain.begin(), chain.end());</div>
 <div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>    };</div>
 <div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span> </div>
-<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> ei : <a class="code hl_function" href="group__group-utils-misc.html#ga41568d17fc48cea4a31db0e40cd93cf8">range</a>(num_edges)) {</div>
+<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> ei : <a class="code hl_function" href="namespacelagrange.html#a41568d17fc48cea4a31db0e40cd93cf8">range</a>(num_edges)) {</div>
 <div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>        <span class="keywordflow">if</span> (visited[ei]) <span class="keywordflow">continue</span>;</div>
 <div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span> </div>
 <div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>        <span class="keyword">auto</span> v = _detail::get_edge_endpoints&lt;Index&gt;(edges, ei);</div>
@@ -383,17 +383,17 @@ $(function(){initNavTree('legacy_2chain__edges_8h_source.html',''); initResizabl
 <div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>} <span class="comment">// namespace lagrange</span></div>
 <div class="ttc" id="agroup__group-surfacemesh-attr_html_gga5a2f28c8b9e2f8fce6e70b2418c46e45a7302d7da6a3804b1edf63b4b16198d80"><div class="ttname"><a href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45a7302d7da6a3804b1edf63b4b16198d80">lagrange::AttributeUsage::VertexIndex</a></div><div class="ttdeci">@ VertexIndex</div><div class="ttdoc">Single channel integer attribute indexing a mesh vertex.</div><div class="ttdef"><b>Definition</b> AttributeFwd.h:63</div></div>
 <div class="ttc" id="agroup__group-surfacemesh-attr_html_gga5a2f28c8b9e2f8fce6e70b2418c46e45a7e0536ad6c15bf05bf40e8876b1a5c10"><div class="ttname"><a href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45a7e0536ad6c15bf05bf40e8876b1a5c10">lagrange::AttributeUsage::EdgeIndex</a></div><div class="ttdeci">@ EdgeIndex</div><div class="ttdoc">Single channel integer attribute indexing a mesh edge.</div><div class="ttdef"><b>Definition</b> AttributeFwd.h:66</div></div>
-<div class="ttc" id="agroup__group-utils-assert_html_ga5b5259c4072f1caaa696e074f2f7ea15"><div class="ttname"><a href="group__group-utils-assert.html#ga5b5259c4072f1caaa696e074f2f7ea15">la_debug_assert</a></div><div class="ttdeci">#define la_debug_assert(...)</div><div class="ttdoc">Debug assertion check.</div><div class="ttdef"><b>Definition</b> assert.h:195</div></div>
-<div class="ttc" id="agroup__group-utils-misc_html_ga41568d17fc48cea4a31db0e40cd93cf8"><div class="ttname"><a href="group__group-utils-misc.html#ga41568d17fc48cea4a31db0e40cd93cf8">lagrange::range</a></div><div class="ttdeci">internal::Range&lt; Index &gt; range(Index end)</div><div class="ttdoc">Returns an iterable object representing the range [0, end).</div><div class="ttdef"><b>Definition</b> range.h:176</div></div>
+<div class="ttc" id="agroup__group-utils-assert_html_ga5b5259c4072f1caaa696e074f2f7ea15"><div class="ttname"><a href="group__group-utils-assert.html#ga5b5259c4072f1caaa696e074f2f7ea15">la_debug_assert</a></div><div class="ttdeci">#define la_debug_assert(...)</div><div class="ttdoc">Debug assertion check.</div><div class="ttdef"><b>Definition</b> assert.h:197</div></div>
 <div class="ttc" id="agroup__group-utils-warning_html_gaea1008e72c7279ac1c0683098356e09f"><div class="ttname"><a href="group__group-utils-warning.html#gaea1008e72c7279ac1c0683098356e09f">LA_IGNORE_RANGE_LOOP_ANALYSIS_BEGIN</a></div><div class="ttdeci">#define LA_IGNORE_RANGE_LOOP_ANALYSIS_BEGIN</div><div class="ttdoc">Ignore range loop variable may be a copy.</div><div class="ttdef"><b>Definition</b> warning.h:148</div></div>
 <div class="ttc" id="anamespacelagrange_html"><div class="ttname"><a href="namespacelagrange.html">lagrange</a></div><div class="ttdoc">Main namespace for Lagrange.</div></div>
+<div class="ttc" id="anamespacelagrange_html_a41568d17fc48cea4a31db0e40cd93cf8"><div class="ttname"><a href="namespacelagrange.html#a41568d17fc48cea4a31db0e40cd93cf8">lagrange::range</a></div><div class="ttdeci">internal::Range&lt; Index &gt; range(Index end)</div><div class="ttdoc">Returns an iterable object representing the range [0, end).</div><div class="ttdef"><b>Definition</b> range.h:176</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_e277d0e790805391a364b883bec7db94.html">lagrange</a></li><li class="navelem"><a class="el" href="dir_3e86c1114dca7f32217f9b892f901fa0.html">legacy</a></li><li class="navelem"><b>chain_edges.h</b></li>
-    <li class="footer">Generated on Sat Jun 20 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+    <li class="footer">Generated on Tue Aug 4 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>
 </body>

@@ -2,7 +2,9 @@ var group__group_utils =
 [
     [ "Assert and errors", "group__group-utils-assert.html", "group__group-utils-assert" ],
     [ "Miscellaneous", "group__group-utils-misc.html", "group__group-utils-misc" ],
+    [ "Geometry utilities", "group__group-utils-geom.html", "group__group-utils-geom" ],
     [ "Warnings", "group__group-utils-warning.html", "group__group-utils-warning" ],
+    [ "lagrange", "namespacelagrange.html", null ],
     [ "AdjacencyList< Index >", "classlagrange_1_1_adjacency_list.html", [
       [ "AdjacencyList", "classlagrange_1_1_adjacency_list.html#a8f221aaa4d53745772439afdc35a1729", null ],
       [ "get_num_entries", "classlagrange_1_1_adjacency_list.html#acd2ccfb271587acbff7b77c1e0a3cd24", null ],

@@ -790,7 +790,7 @@ template&lt;typename <a class="el" href="#a48f6eee0351a3cea4b2c4fb25705241a">Val
 <p>The buffer ownership is shared with the attribute. Note that only the number of element is allowed to change when wrapping an external buffer (the number of channels is fixed during the attribute construction).</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">shared_buffer</td><td>Pointer to an external buffer managed by a SharedSpan to be used as storage. This pointer exposes a view of the buffer managed by the owner. The buffer must have a capacity (determined by buffer_ptr.size()) that is large enough to store num elements x num channels entries. The buffer can be larger than required, in which case the padding capacity can be used to grow the attribute, as determined by the AttributeGrowthPolicy. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">buffer_ptr</td><td>Pointer to an external buffer managed by a SharedSpan to be used as storage. This pointer exposes a view of the buffer managed by the owner. The buffer must have a capacity (determined by buffer_ptr.size()) that is large enough to store num elements x num channels entries. The buffer can be larger than required, in which case the padding capacity can be used to grow the attribute, as determined by the AttributeGrowthPolicy. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">num_elements</td><td>New number of elements associated with the attribute. </td></tr>
   </table>
   </dd>
@@ -2085,7 +2085,7 @@ template&lt;typename ValueType_&gt; </div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacelagrange.html">lagrange</a></li><li class="navelem"><a class="el" href="classlagrange_1_1_attribute.html">Attribute</a></li>
-    <li class="footer">Generated on Sat Jun 20 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+    <li class="footer">Generated on Tue Aug 4 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>
 </body>

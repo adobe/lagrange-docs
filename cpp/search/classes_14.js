@@ -2,7 +2,7 @@ var searchData=
 [
   ['weak_5fptr_0',['weak_ptr',['../classlagrange_1_1internal_1_1weak__ptr.html',1,'lagrange::internal']]],
   ['weak_5fptr_3c_20lagrange_3a_3aattributebase_20_3e_1',['weak_ptr&lt; lagrange::AttributeBase &gt;',['../classlagrange_1_1internal_1_1weak__ptr.html',1,'lagrange::internal']]],
-  ['weldoptions_2',['WeldOptions',['../structlagrange_1_1bvh_1_1_weld_options.html',1,'lagrange::bvh']]],
+  ['weldoptions_2',['WeldOptions',['../structlagrange_1_1bvh_1_1_weld_options.html',1,'WeldOptions'],['../structlagrange_1_1_weld_options.html',1,'WeldOptions']]],
   ['windowcloseevent_3',['WindowCloseEvent',['../structlagrange_1_1ui_1_1_window_close_event.html',1,'lagrange::ui']]],
   ['windowdropevent_4',['WindowDropEvent',['../structlagrange_1_1ui_1_1_window_drop_event.html',1,'lagrange::ui']]],
   ['windowoptions_5',['WindowOptions',['../structlagrange_1_1ui_1_1_viewer_1_1_window_options.html',1,'lagrange::ui::Viewer']]],

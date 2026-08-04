@@ -123,6 +123,7 @@ $(function(){initNavTree('group__group-surfacemesh-attr-utils.html',''); initRes
 
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">Attributes utilities<div class="ingroups"><a class="el" href="group__module-core.html">Core Module</a> &raquo; <a class="el" href="group__group-surfacemesh.html">SurfaceMesh</a></div></div></div>
 </div><!--header-->
@@ -131,12 +132,30 @@ $(function(){initNavTree('group__group-surfacemesh-attr-utils.html',''); initRes
 <p>Various attribute processing utilities.  
 <a href="#details">More...</a></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlagrange_1_1_weld_options.html">WeldOptions</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Options for welding indexed attributes.  <a href="structlagrange_1_1_weld_options.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:ga6ba59a3f695fb5caaac99278d9591d50" id="r_ga6ba59a3f695fb5caaac99278d9591d50"><td class="memTemplParams" colspan="2">template&lt;typename ValueType, typename Index, typename Predicate&gt; </td></tr>
+<tr class="memitem:ga6ba59a3f695fb5caaac99278d9591d50"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ga6ba59a3f695fb5caaac99278d9591d50">set_predicated_indexed_values</a> (<a class="el" href="classlagrange_1_1_indexed_attribute.html">IndexedAttribute</a>&lt; ValueType, Index &gt; &amp;attr, Predicate &amp;&amp;predicate)</td></tr>
+<tr class="memdesc:ga6ba59a3f695fb5caaac99278d9591d50"><td class="mdescLeft">&#160;</td><td class="mdescRight">For each index matching the given predicate, appends a new value set to <code>invalid&lt;ValueType&gt;()</code> and reassigns the index to point to it.  <br /></td></tr>
+<tr class="separator:ga6ba59a3f695fb5caaac99278d9591d50"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga9df24832b109461a412c5946825640db" id="r_ga9df24832b109461a412c5946825640db"><td class="memTemplParams" colspan="2">template&lt;typename ValueType, typename Index&gt; </td></tr>
 <tr class="memitem:ga9df24832b109461a412c5946825640db"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ga9df24832b109461a412c5946825640db">set_invalid_indexed_values</a> (<a class="el" href="classlagrange_1_1_indexed_attribute.html">IndexedAttribute</a>&lt; ValueType, Index &gt; &amp;attr)</td></tr>
-<tr class="memdesc:ga9df24832b109461a412c5946825640db"><td class="mdescLeft">&#160;</td><td class="mdescRight">For each element in the index buffer set to <code>invalid&lt;Index&gt;()</code>, appends a new value set to invalid&lt;ValueType&gt;() and updates the index to point to it.  <br /></td></tr>
+<tr class="memdesc:ga9df24832b109461a412c5946825640db"><td class="mdescLeft">&#160;</td><td class="mdescRight">For each element in the index buffer set to <code>invalid&lt;Index&gt;()</code>, appends a new value set to <code>invalid&lt;ValueType&gt;()</code> and updates the index to point to it.  <br /></td></tr>
 <tr class="separator:ga9df24832b109461a412c5946825640db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5e509acad3e012840cb98d334cf59389" id="r_ga5e509acad3e012840cb98d334cf59389"><td class="memTemplParams" colspan="2">template&lt;typename ValueType, typename Index&gt; </td></tr>
+<tr class="memitem:ga5e509acad3e012840cb98d334cf59389"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ga5e509acad3e012840cb98d334cf59389">set_out_of_range_indexed_values</a> (<a class="el" href="classlagrange_1_1_indexed_attribute.html">IndexedAttribute</a>&lt; ValueType, Index &gt; &amp;attr)</td></tr>
+<tr class="memdesc:ga5e509acad3e012840cb98d334cf59389"><td class="mdescLeft">&#160;</td><td class="mdescRight">For each element in the index buffer pointing outside the value buffer, appends a new value set to <code>invalid&lt;ValueType&gt;()</code> and updates the index to point to it.  <br /></td></tr>
+<tr class="separator:ga5e509acad3e012840cb98d334cf59389"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac25160103a579bb49738ba559ec85fb8" id="r_gac25160103a579bb49738ba559ec85fb8"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, typename Index&gt; </td></tr>
+<tr class="memitem:gac25160103a579bb49738ba559ec85fb8"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#gac25160103a579bb49738ba559ec85fb8">weld_indexed_attribute</a> (<a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index &gt; &amp;mesh, <a class="el" href="group__group-surfacemesh-attr.html#ga4d115376c2c766084ef808c837348fc3">AttributeId</a> attr_id, const <a class="el" href="structlagrange_1_1_weld_options.html">WeldOptions</a> &amp;options={})</td></tr>
+<tr class="memdesc:gac25160103a579bb49738ba559ec85fb8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Weld an indexed attribute by combining all corners around a vertex with the same attribute value.  <br /></td></tr>
+<tr class="separator:gac25160103a579bb49738ba559ec85fb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader">Attribute remapping</h2></td></tr>
 <tr><td class="ititle" colspan="2"><p>Mapping attributes between different element types.</p>
@@ -175,6 +194,48 @@ Functions</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>Various attribute processing utilities. </p>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="ga6ba59a3f695fb5caaac99278d9591d50" name="ga6ba59a3f695fb5caaac99278d9591d50"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga6ba59a3f695fb5caaac99278d9591d50">&#9670;&#160;</a></span>set_predicated_indexed_values()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ValueType, typename Index, typename Predicate&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void set_predicated_indexed_values </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classlagrange_1_1_indexed_attribute.html">IndexedAttribute</a>&lt; ValueType, Index &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>attr</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Predicate &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>predicate</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;lagrange/internal/set_indexed_values.h&gt;</code></p>
+
+<p>For each index matching the given predicate, appends a new value set to <code>invalid&lt;ValueType&gt;()</code> and reassigns the index to point to it. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">attr</td><td>The indexed attribute to fix up. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">predicate</td><td>Returns true for each index that must be remapped.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">ValueType</td><td>Attribute value type. </td></tr>
+    <tr><td class="paramname">Index</td><td>Attribute index type. </td></tr>
+    <tr><td class="paramname">Predicate</td><td>Callable of signature <code>bool(Index)</code>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="ga9df24832b109461a412c5946825640db" name="ga9df24832b109461a412c5946825640db"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga9df24832b109461a412c5946825640db">&#9670;&#160;</a></span>set_invalid_indexed_values()</h2>
 
@@ -192,19 +253,55 @@ template&lt;typename ValueType, typename Index&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p><code>#include &lt;lagrange/internal/set_invalid_indexed_values.h&gt;</code></p>
+<p><code>#include &lt;lagrange/internal/set_indexed_values.h&gt;</code></p>
 
-<p>For each element in the index buffer set to <code>invalid&lt;Index&gt;()</code>, appends a new value set to invalid&lt;ValueType&gt;() and updates the index to point to it. </p>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">ValueType</td><td>Attribute value type. </td></tr>
-    <tr><td class="paramname">Index</td><td>Attribute index type.</td></tr>
+<p>For each element in the index buffer set to <code>invalid&lt;Index&gt;()</code>, appends a new value set to <code>invalid&lt;ValueType&gt;()</code> and updates the index to point to it. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">attr</td><td>The indexed attribute to fix up.</td></tr>
   </table>
   </dd>
 </dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">ValueType</td><td>Attribute value type. </td></tr>
+    <tr><td class="paramname">Index</td><td>Attribute index type. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga5e509acad3e012840cb98d334cf59389" name="ga5e509acad3e012840cb98d334cf59389"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5e509acad3e012840cb98d334cf59389">&#9670;&#160;</a></span>set_out_of_range_indexed_values()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ValueType, typename Index&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void set_out_of_range_indexed_values </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classlagrange_1_1_indexed_attribute.html">IndexedAttribute</a>&lt; ValueType, Index &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>attr</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;lagrange/internal/set_indexed_values.h&gt;</code></p>
+
+<p>For each element in the index buffer pointing outside the value buffer, appends a new value set to <code>invalid&lt;ValueType&gt;()</code> and updates the index to point to it. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in,out]</td><td class="paramname">attr</td><td>The indexed attribute to fix up. </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">attr</td><td>The indexed attribute to fix up.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">ValueType</td><td>Attribute value type. </td></tr>
+    <tr><td class="paramname">Index</td><td>Attribute index type. </td></tr>
   </table>
   </dd>
 </dl>
@@ -494,12 +591,59 @@ template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5
 
 </div>
 </div>
+<a id="gac25160103a579bb49738ba559ec85fb8" name="gac25160103a579bb49738ba559ec85fb8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac25160103a579bb49738ba559ec85fb8">&#9670;&#160;</a></span>weld_indexed_attribute()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, typename Index&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void weld_indexed_attribute </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>mesh</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__group-surfacemesh-attr.html#ga4d115376c2c766084ef808c837348fc3">AttributeId</a></td>          <td class="paramname"><span class="paramname"><em>attr_id</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structlagrange_1_1_weld_options.html">WeldOptions</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>options</em></span><span class="paramdefsep"> = </span><span class="paramdefval">{}</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;lagrange/weld_indexed_attribute.h&gt;</code></p>
+
+<p>Weld an indexed attribute by combining all corners around a vertex with the same attribute value. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Scalar</td><td>The mesh scalar type. </td></tr>
+    <tr><td class="paramname">Index</td><td>The mesh index type.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mesh</td><td>The source mesh. </td></tr>
+    <tr><td class="paramname">attr_id</td><td>The indexed attribute id. </td></tr>
+    <tr><td class="paramname">options</td><td>Welding options (e.g. vertices to exclude). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Sat Jun 20 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+    <li class="footer">Generated on Tue Aug 4 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>
 </body>

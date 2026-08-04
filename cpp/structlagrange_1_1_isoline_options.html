@@ -152,10 +152,31 @@ double&#160;</td><td class="memItemRight" valign="bottom"><b>isovalue</b> = 0.0<
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>keep_below</b> = true</td></tr>
 <tr class="memdesc:ad569f1ddf959f44cfcde73d1f065d59f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether to keep the part below the isoline. Ignored for isoline extraction. <br /></td></tr>
 <tr class="separator:ad569f1ddf959f44cfcde73d1f065d59f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6353336ebf35adf1cb2daae8de606d53" id="r_a6353336ebf35adf1cb2daae8de606d53"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6353336ebf35adf1cb2daae8de606d53">keep_attributes</a> = true</td></tr>
+<tr class="memdesc:a6353336ebf35adf1cb2daae8de606d53"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether to propagate input mesh attributes (vertex, facet, corner and indexed) to the output mesh.  <br /></td></tr>
+<tr class="separator:a6353336ebf35adf1cb2daae8de606d53"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Options for isoline extraction/trimming. </p>
-</div><hr/>The documentation for this struct was generated from the following file:<ul>
+</div><h2 class="groupheader">Member Data Documentation</h2>
+<a id="a6353336ebf35adf1cb2daae8de606d53" name="a6353336ebf35adf1cb2daae8de606d53"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6353336ebf35adf1cb2daae8de606d53">&#9670;&#160;</a></span>keep_attributes</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool keep_attributes = true</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Whether to propagate input mesh attributes (vertex, facet, corner and indexed) to the output mesh. </p>
+<p>Attributes are linearly interpolated within each parent facet. When set to false, the output mesh retains only its vertex positions, which avoids the interpolation cost. </p>
+
+</div>
+</div>
+<hr/>The documentation for this struct was generated from the following file:<ul>
 <li>lagrange/<a class="el" href="isoline_8h_source.html">isoline.h</a></li>
 </ul>
 </div><!-- contents -->
@@ -164,7 +185,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>keep_below</b> = true
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacelagrange.html">lagrange</a></li><li class="navelem"><a class="el" href="structlagrange_1_1_isoline_options.html">IsolineOptions</a></li>
-    <li class="footer">Generated on Sat Jun 20 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+    <li class="footer">Generated on Tue Aug 4 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>
 </body>

@@ -24,11 +24,13 @@ Functions
 .. autoapisummary::
 
    lagrange.scripts.meshstat._colored
+   lagrange.scripts.meshstat._delete_if_exists
    lagrange.scripts.meshstat._dtype_to_str
    lagrange.scripts.meshstat._element_to_str
    lagrange.scripts.meshstat._facet_type
    lagrange.scripts.meshstat._normalize_uv_attribute
    lagrange.scripts.meshstat._safe_attribute_name
+   lagrange.scripts.meshstat._temp_mesh_attribute
    lagrange.scripts.meshstat._usage_to_str
    lagrange.scripts.meshstat.collect_attributes
    lagrange.scripts.meshstat.collect_basic_info
@@ -55,6 +57,8 @@ Module Contents
 
 .. py:function:: _colored(text, color)
 
+.. py:function:: _delete_if_exists(mesh, name)
+
 .. py:function:: _dtype_to_str(dtype)
 
 .. py:function:: _element_to_str(element)
@@ -67,6 +71,11 @@ Module Contents
 
 
 .. py:function:: _safe_attribute_name(name)
+
+.. py:function:: _temp_mesh_attribute(mesh, name_hint)
+
+   Reserve a unique attribute name; delete the attribute on exit if present.
+
 
 .. py:function:: _usage_to_str(usage)
 
