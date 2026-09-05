@@ -3,6 +3,11 @@ lagrange.winding
 
 .. py:module:: lagrange.winding
 
+.. autoapi-nested-parse::
+
+   winding module
+
+
 
 Classes
 -------
@@ -28,7 +33,7 @@ Module Contents
 
 
    .. py:method:: is_inside(point: collections.abc.Sequence[float]) -> bool
-                  is_inside(points: Annotated[numpy.typing.NDArray[numpy.float64], dict(shape=(None, 3), order='C', device='cpu', writable=False)]) -> Annotated[numpy.typing.NDArray[numpy.bool], dict(shape=(None, ))]
+                  is_inside(points: Annotated[numpy.typing.NDArray[numpy.float64], dict(shape=(None, 3), order='C', device='cpu', writable=False)]) -> Annotated[numpy.typing.NDArray[numpy.bool_], dict(shape=(None, ))]
 
       Determine whether each of a batch of query points is inside the volume.
 

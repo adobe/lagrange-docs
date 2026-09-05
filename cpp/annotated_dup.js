@@ -9,6 +9,7 @@ var annotated_dup =
         [ "EdgeAABBTree", "structlagrange_1_1bvh_1_1_edge_a_a_b_b_tree.html", "structlagrange_1_1bvh_1_1_edge_a_a_b_b_tree" ],
         [ "MeshDistancesOptions", "structlagrange_1_1bvh_1_1_mesh_distances_options.html", "structlagrange_1_1bvh_1_1_mesh_distances_options" ],
         [ "PyEdgeAABBTree", "classlagrange_1_1bvh_1_1_py_edge_a_a_b_b_tree.html", null ],
+        [ "ResolveTJunctionsOptions", "structlagrange_1_1bvh_1_1_resolve_t_junctions_options.html", "structlagrange_1_1bvh_1_1_resolve_t_junctions_options" ],
         [ "TriangleAABBTree", "classlagrange_1_1bvh_1_1_triangle_a_a_b_b_tree.html", "classlagrange_1_1bvh_1_1_triangle_a_a_b_b_tree" ],
         [ "UVOverlapOptions", "structlagrange_1_1bvh_1_1_u_v_overlap_options.html", "structlagrange_1_1bvh_1_1_u_v_overlap_options" ],
         [ "UVOverlapResult", "structlagrange_1_1bvh_1_1_u_v_overlap_result.html", "structlagrange_1_1bvh_1_1_u_v_overlap_result" ],

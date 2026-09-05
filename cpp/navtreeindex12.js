@@ -1,5 +1,14 @@
 var NAVTREEINDEX12 =
 {
+"structlagrange_1_1primitive_1_1_rounded_cone_options.html#a4838e5ee02b6d225105c704156edbd5d":[2,13,3,11],
+"structlagrange_1_1primitive_1_1_rounded_cone_options.html#a4c0728ca47894084a1c93fa93506cf67":[2,13,3,2],
+"structlagrange_1_1primitive_1_1_rounded_cone_options.html#a662fdf470fa4ef8f085be8f66e072c61":[2,13,3,4],
+"structlagrange_1_1primitive_1_1_rounded_cone_options.html#a7a6f1671bb73f0971b1a31d09b86cba2":[2,13,3,9],
+"structlagrange_1_1primitive_1_1_rounded_cone_options.html#a7ea4834ca4e876d1a9342a00a2ee8279":[2,13,3,5],
+"structlagrange_1_1primitive_1_1_rounded_cone_options.html#aa11a64b7845ac0bd746e0e43fc8064d5":[2,13,3,1],
+"structlagrange_1_1primitive_1_1_rounded_cone_options.html#aa9a605924af139225fe7922bd177ed56":[2,13,3,10],
+"structlagrange_1_1primitive_1_1_rounded_cone_options.html#aae48f74077f2ebc979d2bb3abc2475bc":[2,13,3,6],
+"structlagrange_1_1primitive_1_1_rounded_cone_options.html#ab30d69c69f426b88eb89db5abd45f8f0":[2,13,3,7],
 "structlagrange_1_1primitive_1_1_rounded_cone_options.html#ac8e03c27a0682d210bec860dcc42af96":[2,13,3,12],
 "structlagrange_1_1primitive_1_1_rounded_cone_options.html#af84e4f499deca8a374a862610ba61a79":[2,13,3,14],
 "structlagrange_1_1primitive_1_1_rounded_cube_options.html":[2,13,4],
@@ -240,14 +249,5 @@ var NAVTREEINDEX12 =
 "structlagrange_1_1scene_1_1_texture_info.html#a8d0d5af3cc4c1386b0f53b4d64381f95":[4,0,0,19,18,0],
 "structlagrange_1_1scene_1_1_user_data_converter.html":[4,0,0,19,19],
 "structlagrange_1_1scene_1_1detail_1_1type__identity.html":[4,0,0,19,0,0],
-"structlagrange_1_1scene_1_1internal_1_1_single_mesh_to_scene_options.html":[4,0,0,19,1,0],
-"structlagrange_1_1serialization_1_1_deserialize_options.html":[4,0,0,20,1],
-"structlagrange_1_1serialization_1_1_deserialize_options.html#ac13ca9eb0e86e9ba8b41a14b5073042e":[4,0,0,20,1,0],
-"structlagrange_1_1serialization_1_1_deserialize_options.html#ae4426f467d61ae456b95844d4d9c2dcd":[4,0,0,20,1,2],
-"structlagrange_1_1serialization_1_1_deserialize_options.html#ae8a6c1815869d869073473be2f63ba85":[4,0,0,20,1,1],
-"structlagrange_1_1serialization_1_1_serialize_options.html":[4,0,0,20,2],
-"structlagrange_1_1serialization_1_1_serialize_options.html#a0b70b64d661ba9ee3b89b117f763e9ab":[4,0,0,20,2,1],
-"structlagrange_1_1serialization_1_1_serialize_options.html#a89f78986272988a58b4fda114fe915c3":[4,0,0,20,2,0],
-"structlagrange_1_1serialization_1_1_serialize_options.html#a9ec7ed9f95f682dcf95150e79435646d":[4,0,0,20,2,2],
-"structlagrange_1_1serialization_1_1internal_1_1_cista_animation.html":[4,0,0,20,0,0]
+"structlagrange_1_1scene_1_1internal_1_1_single_mesh_to_scene_options.html":[4,0,0,19,1,0]
 };

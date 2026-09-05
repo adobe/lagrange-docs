@@ -2333,7 +2333,7 @@ Developer Command Prompt before running <code>cmake -G ...</code>.</p>
 <p>When compiling with clang, one can use the
 <a href="https://aras-p.info/blog/2019/01/16/time-trace-timeline-flame-chart-profiler-for-Clang/">-ftime-trace</a>
 flag to get detailed information on where clang spends most of its time compiling your project:</p>
-<div class="highlight"><pre><span></span><code>cmake<span class="w"> </span>-G<span class="w"> </span>Ninja<span class="w"> </span>-DCMAKE_CXX_FLAGS<span class="o">=</span><span class="s2">&quot;-ftime-trace&quot;</span><span class="w"> </span>..
+<div class="highlight"><pre><span></span><code>cmake<span class="w"> </span>-G<span class="w"> </span>Ninja<span class="w"> </span>-DCMAKE_CXX_FLAGS<span class="o">=</span><span class="s2">"-ftime-trace"</span><span class="w"> </span>..
 ninja
 </code></pre></div>
 <p>Then, simply add <code>-e</code> to the <code>ninjatracing</code> call:</p>
@@ -2364,7 +2364,7 @@ compile the tool, then simply follow the instructions in the README (copied belo
 include all the compatible <code>*.json</code> files for analysis, no matter when they were produced.</p>
 <h3 id="analysis-output">Analysis Output</h3>
 <p>The analysis output will look something like this:</p>
-<div class="highlight"><pre><span></span><code>Analyzing build trace from &#39;artifacts/FullCapture.bin&#39;...
+<div class="highlight"><pre><span></span><code>Analyzing build trace from 'artifacts/FullCapture.bin'...
 **** Time summary:
 Compilation (1761 times):
   Parsing (frontend):         5167.4 s

@@ -236,6 +236,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a252940a1c11ea835592d9e6d1952c868"><td class="memTemplItemLeft" align="right" valign="top">std::string_view&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a252940a1c11ea835592d9e6d1952c868">value_type_name</a> ()</td></tr>
 <tr class="memdesc:a252940a1c11ea835592d9e6d1952c868"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a string representation of the attribute value type.  <br /></td></tr>
 <tr class="separator:a252940a1c11ea835592d9e6d1952c868"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada674372218dee8407538a8b1581605c" id="r_ada674372218dee8407538a8b1581605c"><td class="memItemLeft" align="right" valign="top">LA_CORE_API std::string_view&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ada674372218dee8407538a8b1581605c">value_type_name</a> (<a class="el" href="group__group-surfacemesh-attr.html#gaa6b9ce91409ac67b7b5319cf573f66b8">AttributeValueType</a> value_type)</td></tr>
+<tr class="memdesc:ada674372218dee8407538a8b1581605c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a string representation of the attribute value type.  <br /></td></tr>
+<tr class="separator:ada674372218dee8407538a8b1581605c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a10b9d17084e2958faea52fd3672dea5f" id="r_a10b9d17084e2958faea52fd3672dea5f"><td class="memTemplParams" colspan="2"><a id="a10b9d17084e2958faea52fd3672dea5f" name="a10b9d17084e2958faea52fd3672dea5f"></a>
 template&lt;typename DerivedF, typename DerivedFF, typename DerivedC&gt; </td></tr>
 <tr class="memitem:a10b9d17084e2958faea52fd3672dea5f"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>bfs_orient</b> (const Eigen::MatrixBase&lt; DerivedF &gt; &amp;F, Eigen::PlainObjectBase&lt; DerivedFF &gt; &amp;FF, Eigen::PlainObjectBase&lt; DerivedC &gt; &amp;C)</td></tr>
@@ -433,8 +436,12 @@ template&lt;typename DerivedX&gt; </td></tr>
 <tr class="separator:a23470163b5873880ae388a9ac065bbad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a37b51c54c608f9674c515fd0a560a217" id="r_a37b51c54c608f9674c515fd0a560a217"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, typename Index&gt; </td></tr>
 <tr class="memitem:a37b51c54c608f9674c515fd0a560a217"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; Index &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a37b51c54c608f9674c515fd0a560a217">split_edges</a> (<a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index &gt; &amp;mesh, <a class="el" href="classlagrange_1_1function__ref.html">function_ref</a>&lt; <a class="el" href="group__group-utils-misc.html#ga4afead0b9ccc53fe4fca896787595d26">span</a>&lt; Index &gt;(Index)&gt; get_edge_split_pts, <a class="el" href="classlagrange_1_1function__ref.html">function_ref</a>&lt; bool(Index)&gt; active_facet)</td></tr>
-<tr class="memdesc:a37b51c54c608f9674c515fd0a560a217"><td class="mdescLeft">&#160;</td><td class="mdescRight">Split edges based on the input split points.  <br /></td></tr>
+<tr class="memdesc:a37b51c54c608f9674c515fd0a560a217"><td class="mdescLeft">&#160;</td><td class="mdescRight">Split edges based on the input split points, retriangulating the affected facets accordingly.  <br /></td></tr>
 <tr class="separator:a37b51c54c608f9674c515fd0a560a217"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a37abf76417456e4524bb70b3ac3bd9fe" id="r_a37abf76417456e4524bb70b3ac3bd9fe"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, typename Index&gt; </td></tr>
+<tr class="memitem:a37abf76417456e4524bb70b3ac3bd9fe"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; Index &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a37abf76417456e4524bb70b3ac3bd9fe">split_edges_only</a> (<a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index &gt; &amp;mesh, <a class="el" href="classlagrange_1_1function__ref.html">function_ref</a>&lt; <a class="el" href="group__group-utils-misc.html#ga4afead0b9ccc53fe4fca896787595d26">span</a>&lt; Index &gt;(Index)&gt; get_edge_split_pts, <a class="el" href="classlagrange_1_1function__ref.html">function_ref</a>&lt; bool(Index)&gt; active_facet)</td></tr>
+<tr class="memdesc:a37abf76417456e4524bb70b3ac3bd9fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Split edges based on the input split points <em>without</em> retriangulating the affected facets (in contrast to <code>split_edges</code>, which does retriangulate).  <br /></td></tr>
+<tr class="separator:a37abf76417456e4524bb70b3ac3bd9fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a58a2dd6f367eddfbabca4304c4067592" id="r_a58a2dd6f367eddfbabca4304c4067592"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, typename Index&gt; </td></tr>
 <tr class="memitem:a58a2dd6f367eddfbabca4304c4067592"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a58a2dd6f367eddfbabca4304c4067592">split_triangle</a> (size_t num_points, <a class="el" href="group__group-utils-misc.html#ga4afead0b9ccc53fe4fca896787595d26">span</a>&lt; const <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a> &gt; points, <a class="el" href="group__group-utils-misc.html#ga4afead0b9ccc53fe4fca896787595d26">span</a>&lt; const Index &gt; chain, <a class="el" href="group__group-utils-misc.html#ga4afead0b9ccc53fe4fca896787595d26">span</a>&lt; Index &gt; visited_buffer, std::vector&lt; Index &gt; &amp;queue_buffer, const Index v0, const Index v1, const Index v2, <a class="el" href="group__group-utils-misc.html#ga4afead0b9ccc53fe4fca896787595d26">span</a>&lt; Index &gt; triangulation)</td></tr>
 <tr class="memdesc:a58a2dd6f367eddfbabca4304c4067592"><td class="mdescLeft">&#160;</td><td class="mdescRight">Split a triangle into smaller triangles based on the chain of splitting points on the edges.  <br /></td></tr>
@@ -645,7 +652,7 @@ constexpr double&#160;</td><td class="memItemRight" valign="bottom"><b>pi_4</b> 
 </div>
 </div>
 <a id="a365755bee2e12743525ba9d78a556c09" name="a365755bee2e12743525ba9d78a556c09"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a365755bee2e12743525ba9d78a556c09">&#9670;&#160;</a></span>value_type_name() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a365755bee2e12743525ba9d78a556c09">&#9670;&#160;</a></span>value_type_name() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -679,7 +686,7 @@ template&lt;typename ValueType&gt; </div>
 </div>
 </div>
 <a id="a252940a1c11ea835592d9e6d1952c868" name="a252940a1c11ea835592d9e6d1952c868"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a252940a1c11ea835592d9e6d1952c868">&#9670;&#160;</a></span>value_type_name() <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a252940a1c11ea835592d9e6d1952c868">&#9670;&#160;</a></span>value_type_name() <span class="overload">[2/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -699,6 +706,32 @@ template&lt;typename ValueType&gt; </div>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">ValueType</td><td>Attribute value type.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>String representation. </dd></dl>
+
+</div>
+</div>
+<a id="ada674372218dee8407538a8b1581605c" name="ada674372218dee8407538a8b1581605c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada674372218dee8407538a8b1581605c">&#9670;&#160;</a></span>value_type_name() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string_view value_type_name </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__group-surfacemesh-attr.html#gaa6b9ce91409ac67b7b5319cf573f66b8">AttributeValueType</a></td>          <td class="paramname"><span class="paramname"><em>value_type</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a string representation of the attribute value type. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">value_type</td><td>Attribute value type.</td></tr>
   </table>
   </dd>
 </dl>
@@ -1908,7 +1941,7 @@ template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5
       </table>
 </div><div class="memdoc">
 
-<p>Split edges based on the input split points. </p>
+<p>Split edges based on the input split points, retriangulating the affected facets accordingly. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">mesh</td><td>Input mesh which will be updated in place. All potential splits should be represented as vertices in the mesh. The mesh will be updated in place. </td></tr>
@@ -1917,6 +1950,52 @@ template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5
   </table>
   </dd>
 </dl>
+<dl class="section note"><dt>Note</dt><dd>The original facets that got split will remain in the mesh. The callers are responsible for what to do with them (e.g., remove them if needed).</dd>
+<dd>
+Facet, corner and indexed attributes are propagated to the newly created facets/corners.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>A vector of original facet IDs that were split. </dd></dl>
+
+</div>
+</div>
+<a id="a37abf76417456e4524bb70b3ac3bd9fe" name="a37abf76417456e4524bb70b3ac3bd9fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a37abf76417456e4524bb70b3ac3bd9fe">&#9670;&#160;</a></span>split_edges_only()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, typename Index&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; Index &gt; split_edges_only </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>mesh</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classlagrange_1_1function__ref.html">function_ref</a>&lt; <a class="el" href="group__group-utils-misc.html#ga4afead0b9ccc53fe4fca896787595d26">span</a>&lt; Index &gt;(Index)&gt;</td>          <td class="paramname"><span class="paramname"><em>get_edge_split_pts</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classlagrange_1_1function__ref.html">function_ref</a>&lt; bool(Index)&gt;</td>          <td class="paramname"><span class="paramname"><em>active_facet</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Split edges based on the input split points <em>without</em> retriangulating the affected facets (in contrast to <code>split_edges</code>, which does retriangulate). </p>
+<p>Each original facet is left untouched in place. For every affected facet, a single new facet is appended whose corner chain has the edge split points inserted into it, so the facet grows by one corner per split point (e.g. a triangle with one split edge becomes a quad). The new facets are appended after all existing facets, so their facet IDs are contiguous and all <code>&gt;=</code> the facet count at call time; callers can use this to identify the newly created facets (e.g. to selectively triangulate only them). The mesh may become hybrid as a result.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mesh</td><td>Input mesh which will be updated in place. All potential splits should be represented as vertices in the mesh. The mesh will be updated in place. </td></tr>
+    <tr><td class="paramname">get_edge_split_pts</td><td>A function that returns the split points for each edge. The function takes an edge ID as input and returns a span of vertex indices representing the split pts. </td></tr>
+    <tr><td class="paramname">active_facet</td><td>A function that takes a facet ID as input and returns true if the facet is active. Only active facets will be affected.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>The original facets that got split remain in the mesh unmodified. The callers are responsible for what to do with them (e.g., remove them if needed).</dd>
+<dd>
+Facet, corner and indexed attributes are propagated to the newly created facets/corners. Values at inserted split points are linearly interpolated along the split edge, so the split edge must not be geometrically degenerate (its endpoints must have distinct positions).</dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>A vector of original facet IDs that were split. </dd></dl>
 
 </div>
@@ -2491,7 +2570,7 @@ template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacelagrange.html">lagrange</a></li><li class="navelem"><a class="el" href="namespacelagrange_1_1internal.html">internal</a></li>
-    <li class="footer">Generated on Tue Aug 4 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+    <li class="footer">Generated on Sat Sep 5 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>
 </body>

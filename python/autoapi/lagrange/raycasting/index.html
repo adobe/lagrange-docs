@@ -255,6 +255,7 @@
         <article role="main" id="furo-main-content">
           <section id="module-lagrange.raycasting">
 <span id="lagrange-raycasting"></span><h1>lagrange.raycasting<a class="headerlink" href="#module-lagrange.raycasting" title="Link to this heading">¶</a></h1>
+<p>raycasting module</p>
 <section id="classes">
 <h2>Classes<a class="headerlink" href="#classes" title="Link to this heading">¶</a></h2>
 <div class="table-wrapper autosummary longtable docutils container">
@@ -489,11 +490,11 @@ The surface point is: <code class="docutils literal notranslate"><span class="pr
 
 <dl class="py property">
 <dt class="sig sig-object py" id="lagrange.raycasting.ClosestPointHits.hit">
-<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">hit</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Annotated</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.typing.NDArray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.bool</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">(</span></span><span class="n"><span class="pre">shape</span></span><span class="o"><span class="pre">=</span></span><span class="pre">None</span><span class="p"><span class="pre">)</span></span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#lagrange.raycasting.ClosestPointHits.hit" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">hit</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Annotated</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.typing.NDArray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.bool_</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">(</span></span><span class="n"><span class="pre">shape</span></span><span class="o"><span class="pre">=</span></span><span class="pre">None</span><span class="p"><span class="pre">)</span></span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#lagrange.raycasting.ClosestPointHits.hit" title="Link to this definition">¶</a></dt>
 <dd><p>Boolean mask of shape (N,); <code class="docutils literal notranslate"><span class="pre">True</span></code> where a closest point was found.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>Annotated[numpy.typing.NDArray[numpy.bool], dict(shape=(None, ))]</p>
+<dd class="field-odd"><p>Annotated[numpy.typing.NDArray[numpy.bool_], dict(shape=(None, ))]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -805,7 +806,7 @@ parallel. For N &gt; 16, rays are processed in chunks of up to 16.</p>
 For a batch (2D input): a numpy <code class="docutils literal notranslate"><span class="pre">bool</span></code> array of shape (N,), one per ray.</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>bool | Annotated[numpy.typing.NDArray[numpy.bool], dict(shape=(None, ))]</p>
+<dd class="field-odd"><p>bool | Annotated[numpy.typing.NDArray[numpy.bool_], dict(shape=(None, ))]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -1000,11 +1001,11 @@ The surface point is: <code class="docutils literal notranslate"><span class="pr
 
 <dl class="py property">
 <dt class="sig sig-object py" id="lagrange.raycasting.RayHits.hit">
-<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">hit</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Annotated</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.typing.NDArray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.bool</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">(</span></span><span class="n"><span class="pre">shape</span></span><span class="o"><span class="pre">=</span></span><span class="pre">None</span><span class="p"><span class="pre">)</span></span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#lagrange.raycasting.RayHits.hit" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">hit</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Annotated</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.typing.NDArray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.bool_</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">(</span></span><span class="n"><span class="pre">shape</span></span><span class="o"><span class="pre">=</span></span><span class="pre">None</span><span class="p"><span class="pre">)</span></span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#lagrange.raycasting.RayHits.hit" title="Link to this definition">¶</a></dt>
 <dd><p>Boolean mask of shape (N,); <code class="docutils literal notranslate"><span class="pre">True</span></code> where the ray hit something.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>Annotated[numpy.typing.NDArray[numpy.bool], dict(shape=(None, ))]</p>
+<dd class="field-odd"><p>Annotated[numpy.typing.NDArray[numpy.bool_], dict(shape=(None, ))]</p>
 </dd>
 </dl>
 </dd></dl>

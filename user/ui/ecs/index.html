@@ -2369,7 +2369,7 @@
 <p>Any data that is attached to an <code>Entity</code>. Uniquely identified by template typename <code>&lt;T&gt;</code> and <code>Entity</code>.</p>
 <p>Components <strong>don't have logic, that means no code</strong>. They only store data and implicitly define behavior. Ideally, the components should be <code>structs</code> with no functions. However, it may be beneficial to have setters/getters as member functions in some cases.</p>
 <p>To attach a component of type <code>MyComponent</code> to an entity :
-<div class="highlight"><pre><span></span><code><span class="c1">// When it doesn&#39;t exist</span>
+<div class="highlight"><pre><span></span><code><span class="c1">// When it doesn't exist</span>
 <span class="n">registry</span><span class="p">.</span><span class="n">emplace</span><span class="o">&lt;</span><span class="n">MyComponent</span><span class="o">&gt;</span><span class="p">(</span><span class="n">entity</span><span class="p">,</span><span class="w"> </span><span class="n">MyComponent</span><span class="p">(</span><span class="mi">42</span><span class="p">))</span>
 
 <span class="c1">// When it might exist already</span>
@@ -2379,7 +2379,7 @@
 <div class="highlight"><pre><span></span><code><span class="c1">// If it exists already</span>
 <span class="n">MyComponent</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">registry</span><span class="p">.</span><span class="n">get</span><span class="o">&lt;</span><span class="n">MyComponent</span><span class="o">&gt;</span><span class="p">(</span><span class="n">entity</span><span class="p">);</span>
 
-<span class="c1">// If you&#39;re not sure it exists</span>
+<span class="c1">// If you're not sure it exists</span>
 <span class="n">MyComponent</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">registry</span><span class="p">.</span><span class="n">try_get</span><span class="o">&lt;</span><span class="n">MyComponent</span><span class="o">&gt;</span><span class="p">(</span><span class="n">entity</span><span class="p">);</span>
 <span class="c1">//or</span>
 <span class="k">if</span><span class="p">(</span><span class="n">registry</span><span class="p">.</span><span class="n">has</span><span class="o">&lt;</span><span class="n">MyComponent</span><span class="o">&gt;</span><span class="p">()){</span>
@@ -2421,7 +2421,7 @@ will iterate over all entities that have both <code>Velocity</code> and <code>Tr
 <div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">print_mouse_position</span><span class="p">(</span><span class="n">Registry</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">registry</span><span class="p">){</span>
 <span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">input_state</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">registry</span><span class="p">.</span><span class="n">ctx</span><span class="o">&lt;</span><span class="n">InputState</span><span class="o">&gt;</span><span class="p">();</span>
 
-<span class="w">    </span><span class="n">lagrange</span><span class="o">::</span><span class="n">logger</span><span class="p">().</span><span class="n">info</span><span class="p">(</span><span class="s">&quot;Mouse position: {}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">input_state</span><span class="p">.</span><span class="n">mouse_pos</span><span class="p">);</span>
+<span class="w">    </span><span class="n">lagrange</span><span class="o">::</span><span class="n">logger</span><span class="p">().</span><span class="n">info</span><span class="p">(</span><span class="s">"Mouse position: {}"</span><span class="p">,</span><span class="w"> </span><span class="n">input_state</span><span class="p">.</span><span class="n">mouse_pos</span><span class="p">);</span>
 <span class="p">}</span>
 </code></pre></div></p>
 <h2 id="design-considerations">Design Considerations</h2>

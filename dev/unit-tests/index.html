@@ -2299,7 +2299,7 @@ ninja<span class="w"> </span><span class="nb">test</span>
 </code></pre></div>
 <p>Some tests are tagged <code>[.slow]</code> and skipped by default. If you wish to run them, you need to pass
 <code>[slow]</code> as an argument, or the name of a specific test, e.g.:</p>
-<div class="highlight"><pre><span></span><code>./tests/test_lagrange_core<span class="w"> </span><span class="s2">&quot;[slow]&quot;</span>
+<div class="highlight"><pre><span></span><code>./tests/test_lagrange_core<span class="w"> </span><span class="s2">"[slow]"</span>
 </code></pre></div>
 <div class="admonition tip">
 <p class="admonition-title">Running Individual Tests</p>
@@ -2307,7 +2307,7 @@ ninja<span class="w"> </span><span class="nb">test</span>
 executable. For more details on the available command-line options, please refer to <a href="https://github.com/catchorg/Catch2/blob/devel/docs/command-line.md">this
 page</a> of the Catch2
 documentation.</p>
-<div class="highlight"><pre><span></span><code>./tests/test_lagrange_core<span class="w"> </span><span class="s2">&quot;MeshCreation&quot;</span>
+<div class="highlight"><pre><span></span><code>./tests/test_lagrange_core<span class="w"> </span><span class="s2">"MeshCreation"</span>
 </code></pre></div>
 </div>
 <h2 id="writing-unit-tests">Writing Unit Tests</h2>
@@ -2319,9 +2319,9 @@ However, there are some idiosyncrasies specifics to Lagrange:</p>
 <p>Unit test data is stored in a separate <a href="https://github.com/adobe/lagrange-test-data">data
   repository</a>. Assets are downloaded by CMake, and can
   be loaded via the convenience function <code>lagrange::testing::load_mesh()</code>:</p>
-<div class="highlight"><pre><span></span><code><span class="n">TEST_CASE</span><span class="p">(</span><span class="s">&quot;thicken_and_close_mesh stanford-bunny&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;[mesh][thicken_and_close_mesh][stanford-bunny]&quot;</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="n">TEST_CASE</span><span class="p">(</span><span class="s">"thicken_and_close_mesh stanford-bunny"</span><span class="p">,</span><span class="w"> </span><span class="s">"[mesh][thicken_and_close_mesh][stanford-bunny]"</span><span class="p">)</span>
 <span class="p">{</span>
-<span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">mesh</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lagrange</span><span class="o">::</span><span class="n">testing</span><span class="o">::</span><span class="n">load_mesh</span><span class="o">&lt;</span><span class="n">TriangleMesh3Df</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;open/core/stanford-bunny.obj&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">mesh</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lagrange</span><span class="o">::</span><span class="n">testing</span><span class="o">::</span><span class="n">load_mesh</span><span class="o">&lt;</span><span class="n">TriangleMesh3Df</span><span class="o">&gt;</span><span class="p">(</span><span class="s">"open/core/stanford-bunny.obj"</span><span class="p">);</span>
 <span class="w">    </span><span class="n">REQUIRE</span><span class="p">(...);</span>
 <span class="p">}</span>
 </code></pre></div>
@@ -2331,7 +2331,7 @@ However, there are some idiosyncrasies specifics to Lagrange:</p>
   <strong><code>LA_MAYFAIL_FLAG</code></strong> tag. Contrary to Catch2's <code>[!mayfail]</code>, our <code>LA_MAYFAIL_FLAG</code> tag expands to
   an empty string when Lagrange is compiled during continuous integration, in order to avoid
   reporting false positives.</p>
-<div class="highlight"><pre><span></span><code><span class="n">TEST_CASE</span><span class="p">(</span><span class="s">&quot;Constrained Quadratic Problem 0&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;[decimation]&quot;</span><span class="w"> </span><span class="n">LA_MAYFAIL_FLAG</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="n">TEST_CASE</span><span class="p">(</span><span class="s">"Constrained Quadratic Problem 0"</span><span class="p">,</span><span class="w"> </span><span class="s">"[decimation]"</span><span class="w"> </span><span class="n">LA_MAYFAIL_FLAG</span><span class="p">)</span>
 <span class="p">{</span>
 <span class="w">    </span><span class="c1">// ...</span>
 <span class="p">}</span>

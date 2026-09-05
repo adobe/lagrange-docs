@@ -910,70 +910,74 @@ $(function(){initNavTree('bind__scene_8h_source.html',''); initResizable(true); 
 <div class="line"><a id="l00783" name="l00783"></a><span class="lineno">  783</span>        <span class="stringliteral">&quot;reorient&quot;</span>_a = TransformOptions{}.reorient,</div>
 <div class="line"><a id="l00784" name="l00784"></a><span class="lineno">  784</span>        R<span class="stringliteral">&quot;(Converts a scene into a list of meshes with all the transforms applied and a list of material IDs.</span></div>
 <div class="line"><a id="l00785" name="l00785"></a><span class="lineno">  785</span><span class="stringliteral"></span> </div>
-<div class="line"><a id="l00786" name="l00786"></a><span class="lineno">  786</span><span class="stringliteral">:param scene: Scene to convert.</span></div>
-<div class="line"><a id="l00787" name="l00787"></a><span class="lineno">  787</span><span class="stringliteral">:param normalize_normals: If enabled, normals are normalized after transformation.</span></div>
-<div class="line"><a id="l00788" name="l00788"></a><span class="lineno">  788</span><span class="stringliteral">:param normalize_tangents_bitangents: If enabled, tangents and bitangents are normalized after transformation.</span></div>
-<div class="line"><a id="l00789" name="l00789"></a><span class="lineno">  789</span><span class="stringliteral">:param reorient: If enabled, flip facets and reorient attributes for instances with a negative-determinant transform.</span></div>
-<div class="line"><a id="l00790" name="l00790"></a><span class="lineno">  790</span><span class="stringliteral"></span> </div>
-<div class="line"><a id="l00791" name="l00791"></a><span class="lineno">  791</span><span class="stringliteral">:return: List of meshes with transforms applied and a list of material IDs.)&quot;);</span></div>
-<div class="line"><a id="l00792" name="l00792"></a><span class="lineno">  792</span><span class="stringliteral"></span> </div>
-<div class="line"><a id="l00793" name="l00793"></a><span class="lineno">  793</span><span class="stringliteral">    m.def(</span></div>
-<div class="line"><a id="l00794" name="l00794"></a><span class="lineno">  794</span><span class="stringliteral">        </span><span class="stringliteral">&quot;mesh_to_scene&quot;</span>,</div>
-<div class="line"><a id="l00795" name="l00795"></a><span class="lineno">  795</span>        [](<span class="keyword">const</span> <a class="code hl_typedef" href="classlagrange_1_1scene_1_1_simple_scene.html#aea37efe150fbf93ebd0d33db5ef6ea47">SceneType::MeshType</a>&amp; mesh) { <span class="keywordflow">return</span> scene::mesh_to_scene(mesh); },</div>
-<div class="line"><a id="l00796" name="l00796"></a><span class="lineno">  796</span>        <span class="stringliteral">&quot;mesh&quot;</span>_a,</div>
-<div class="line"><a id="l00797" name="l00797"></a><span class="lineno">  797</span>        R<span class="stringliteral">&quot;(Converts a single mesh into a scene with a single identity instance of the input mesh.</span></div>
-<div class="line"><a id="l00798" name="l00798"></a><span class="lineno">  798</span><span class="stringliteral"></span> </div>
-<div class="line"><a id="l00799" name="l00799"></a><span class="lineno">  799</span><span class="stringliteral">:param mesh: Input mesh to convert.</span></div>
-<div class="line"><a id="l00800" name="l00800"></a><span class="lineno">  800</span><span class="stringliteral"></span> </div>
-<div class="line"><a id="l00801" name="l00801"></a><span class="lineno">  801</span><span class="stringliteral">:return: Scene containing the input mesh.)&quot;);</span></div>
+<div class="line"><a id="l00786" name="l00786"></a><span class="lineno">  786</span><span class="stringliteral">Each output mesh also carries a ``material_id`` facet attribute holding the global scene material</span></div>
+<div class="line"><a id="l00787" name="l00787"></a><span class="lineno">  787</span><span class="stringliteral">index used by each facet, so the facet-to-material assignment is preserved even when a single mesh</span></div>
+<div class="line"><a id="l00788" name="l00788"></a><span class="lineno">  788</span><span class="stringliteral">uses multiple materials. Facets with no associated material are marked with ``invalid_index``.</span></div>
+<div class="line"><a id="l00789" name="l00789"></a><span class="lineno">  789</span><span class="stringliteral"></span> </div>
+<div class="line"><a id="l00790" name="l00790"></a><span class="lineno">  790</span><span class="stringliteral">:param scene: Scene to convert.</span></div>
+<div class="line"><a id="l00791" name="l00791"></a><span class="lineno">  791</span><span class="stringliteral">:param normalize_normals: If enabled, normals are normalized after transformation.</span></div>
+<div class="line"><a id="l00792" name="l00792"></a><span class="lineno">  792</span><span class="stringliteral">:param normalize_tangents_bitangents: If enabled, tangents and bitangents are normalized after transformation.</span></div>
+<div class="line"><a id="l00793" name="l00793"></a><span class="lineno">  793</span><span class="stringliteral">:param reorient: If enabled, flip facets and reorient attributes for instances with a negative-determinant transform.</span></div>
+<div class="line"><a id="l00794" name="l00794"></a><span class="lineno">  794</span><span class="stringliteral"></span> </div>
+<div class="line"><a id="l00795" name="l00795"></a><span class="lineno">  795</span><span class="stringliteral">:return: List of meshes with transforms applied and a list of material IDs.)&quot;);</span></div>
+<div class="line"><a id="l00796" name="l00796"></a><span class="lineno">  796</span><span class="stringliteral"></span> </div>
+<div class="line"><a id="l00797" name="l00797"></a><span class="lineno">  797</span><span class="stringliteral">    m.def(</span></div>
+<div class="line"><a id="l00798" name="l00798"></a><span class="lineno">  798</span><span class="stringliteral">        </span><span class="stringliteral">&quot;mesh_to_scene&quot;</span>,</div>
+<div class="line"><a id="l00799" name="l00799"></a><span class="lineno">  799</span>        [](<span class="keyword">const</span> <a class="code hl_typedef" href="classlagrange_1_1scene_1_1_simple_scene.html#aea37efe150fbf93ebd0d33db5ef6ea47">SceneType::MeshType</a>&amp; mesh) { <span class="keywordflow">return</span> scene::mesh_to_scene(mesh); },</div>
+<div class="line"><a id="l00800" name="l00800"></a><span class="lineno">  800</span>        <span class="stringliteral">&quot;mesh&quot;</span>_a,</div>
+<div class="line"><a id="l00801" name="l00801"></a><span class="lineno">  801</span>        R<span class="stringliteral">&quot;(Converts a single mesh into a scene with a single identity instance of the input mesh.</span></div>
 <div class="line"><a id="l00802" name="l00802"></a><span class="lineno">  802</span><span class="stringliteral"></span> </div>
-<div class="line"><a id="l00803" name="l00803"></a><span class="lineno">  803</span><span class="stringliteral">    m.def(</span></div>
-<div class="line"><a id="l00804" name="l00804"></a><span class="lineno">  804</span><span class="stringliteral">        </span><span class="stringliteral">&quot;meshes_to_scene&quot;</span>,</div>
-<div class="line"><a id="l00805" name="l00805"></a><span class="lineno">  805</span>        [](std::vector&lt;SceneType::MeshType&gt; meshes) {</div>
-<div class="line"><a id="l00806" name="l00806"></a><span class="lineno">  806</span>            <span class="keywordflow">return</span> scene::meshes_to_scene(std::move(meshes));</div>
-<div class="line"><a id="l00807" name="l00807"></a><span class="lineno">  807</span>        },</div>
-<div class="line"><a id="l00808" name="l00808"></a><span class="lineno">  808</span>        <span class="stringliteral">&quot;meshes&quot;</span>_a,</div>
-<div class="line"><a id="l00809" name="l00809"></a><span class="lineno">  809</span>        R<span class="stringliteral">&quot;(Converts a list of meshes into a scene with a single identity instance of each input mesh.</span></div>
-<div class="line"><a id="l00810" name="l00810"></a><span class="lineno">  810</span><span class="stringliteral"></span> </div>
-<div class="line"><a id="l00811" name="l00811"></a><span class="lineno">  811</span><span class="stringliteral">:param meshes: Input meshes to convert.</span></div>
-<div class="line"><a id="l00812" name="l00812"></a><span class="lineno">  812</span><span class="stringliteral"></span> </div>
-<div class="line"><a id="l00813" name="l00813"></a><span class="lineno">  813</span><span class="stringliteral">:return: Scene containing the input meshes.)&quot;);</span></div>
+<div class="line"><a id="l00803" name="l00803"></a><span class="lineno">  803</span><span class="stringliteral">:param mesh: Input mesh to convert.</span></div>
+<div class="line"><a id="l00804" name="l00804"></a><span class="lineno">  804</span><span class="stringliteral"></span> </div>
+<div class="line"><a id="l00805" name="l00805"></a><span class="lineno">  805</span><span class="stringliteral">:return: Scene containing the input mesh.)&quot;);</span></div>
+<div class="line"><a id="l00806" name="l00806"></a><span class="lineno">  806</span><span class="stringliteral"></span> </div>
+<div class="line"><a id="l00807" name="l00807"></a><span class="lineno">  807</span><span class="stringliteral">    m.def(</span></div>
+<div class="line"><a id="l00808" name="l00808"></a><span class="lineno">  808</span><span class="stringliteral">        </span><span class="stringliteral">&quot;meshes_to_scene&quot;</span>,</div>
+<div class="line"><a id="l00809" name="l00809"></a><span class="lineno">  809</span>        [](std::vector&lt;SceneType::MeshType&gt; meshes) {</div>
+<div class="line"><a id="l00810" name="l00810"></a><span class="lineno">  810</span>            <span class="keywordflow">return</span> scene::meshes_to_scene(std::move(meshes));</div>
+<div class="line"><a id="l00811" name="l00811"></a><span class="lineno">  811</span>        },</div>
+<div class="line"><a id="l00812" name="l00812"></a><span class="lineno">  812</span>        <span class="stringliteral">&quot;meshes&quot;</span>_a,</div>
+<div class="line"><a id="l00813" name="l00813"></a><span class="lineno">  813</span>        R<span class="stringliteral">&quot;(Converts a list of meshes into a scene with a single identity instance of each input mesh.</span></div>
 <div class="line"><a id="l00814" name="l00814"></a><span class="lineno">  814</span><span class="stringliteral"></span> </div>
-<div class="line"><a id="l00815" name="l00815"></a><span class="lineno">  815</span><span class="stringliteral">    </span><span class="keyword">using </span>SimpleScene3D = scene::SimpleScene&lt;Scalar, Index, 3&gt;;</div>
-<div class="line"><a id="l00816" name="l00816"></a><span class="lineno">  816</span> </div>
-<div class="line"><a id="l00817" name="l00817"></a><span class="lineno">  817</span>    m.def(</div>
-<div class="line"><a id="l00818" name="l00818"></a><span class="lineno">  818</span>        <span class="stringliteral">&quot;scene_to_simple_scene&quot;</span>,</div>
-<div class="line"><a id="l00819" name="l00819"></a><span class="lineno">  819</span>        [](<span class="keyword">const</span> SceneType&amp; scene) { <span class="keywordflow">return</span> scene::scene_to_simple_scene(scene); },</div>
-<div class="line"><a id="l00820" name="l00820"></a><span class="lineno">  820</span>        <span class="stringliteral">&quot;scene&quot;</span>_a,</div>
-<div class="line"><a id="l00821" name="l00821"></a><span class="lineno">  821</span>        R<span class="stringliteral">&quot;(Converts a Scene into a SimpleScene.</span></div>
-<div class="line"><a id="l00822" name="l00822"></a><span class="lineno">  822</span><span class="stringliteral"></span> </div>
-<div class="line"><a id="l00823" name="l00823"></a><span class="lineno">  823</span><span class="stringliteral">The Scene&#39;s node hierarchy is flattened: each mesh instance in the scene becomes a</span></div>
-<div class="line"><a id="l00824" name="l00824"></a><span class="lineno">  824</span><span class="stringliteral">MeshInstance in the SimpleScene with the accumulated world transform. Meshes are copied</span></div>
-<div class="line"><a id="l00825" name="l00825"></a><span class="lineno">  825</span><span class="stringliteral">by index. Materials and other scene metadata (images, textures, cameras, lights) are not</span></div>
-<div class="line"><a id="l00826" name="l00826"></a><span class="lineno">  826</span><span class="stringliteral">preserved in the SimpleScene.</span></div>
-<div class="line"><a id="l00827" name="l00827"></a><span class="lineno">  827</span><span class="stringliteral"></span> </div>
-<div class="line"><a id="l00828" name="l00828"></a><span class="lineno">  828</span><span class="stringliteral">:param scene: Input scene to convert.</span></div>
-<div class="line"><a id="l00829" name="l00829"></a><span class="lineno">  829</span><span class="stringliteral"></span> </div>
-<div class="line"><a id="l00830" name="l00830"></a><span class="lineno">  830</span><span class="stringliteral">:return: SimpleScene containing all mesh instances from the scene.)&quot;);</span></div>
+<div class="line"><a id="l00815" name="l00815"></a><span class="lineno">  815</span><span class="stringliteral">:param meshes: Input meshes to convert.</span></div>
+<div class="line"><a id="l00816" name="l00816"></a><span class="lineno">  816</span><span class="stringliteral"></span> </div>
+<div class="line"><a id="l00817" name="l00817"></a><span class="lineno">  817</span><span class="stringliteral">:return: Scene containing the input meshes.)&quot;);</span></div>
+<div class="line"><a id="l00818" name="l00818"></a><span class="lineno">  818</span><span class="stringliteral"></span> </div>
+<div class="line"><a id="l00819" name="l00819"></a><span class="lineno">  819</span><span class="stringliteral">    </span><span class="keyword">using </span>SimpleScene3D = scene::SimpleScene&lt;Scalar, Index, 3&gt;;</div>
+<div class="line"><a id="l00820" name="l00820"></a><span class="lineno">  820</span> </div>
+<div class="line"><a id="l00821" name="l00821"></a><span class="lineno">  821</span>    m.def(</div>
+<div class="line"><a id="l00822" name="l00822"></a><span class="lineno">  822</span>        <span class="stringliteral">&quot;scene_to_simple_scene&quot;</span>,</div>
+<div class="line"><a id="l00823" name="l00823"></a><span class="lineno">  823</span>        [](<span class="keyword">const</span> SceneType&amp; scene) { <span class="keywordflow">return</span> scene::scene_to_simple_scene(scene); },</div>
+<div class="line"><a id="l00824" name="l00824"></a><span class="lineno">  824</span>        <span class="stringliteral">&quot;scene&quot;</span>_a,</div>
+<div class="line"><a id="l00825" name="l00825"></a><span class="lineno">  825</span>        R<span class="stringliteral">&quot;(Converts a Scene into a SimpleScene.</span></div>
+<div class="line"><a id="l00826" name="l00826"></a><span class="lineno">  826</span><span class="stringliteral"></span> </div>
+<div class="line"><a id="l00827" name="l00827"></a><span class="lineno">  827</span><span class="stringliteral">The Scene&#39;s node hierarchy is flattened: each mesh instance in the scene becomes a</span></div>
+<div class="line"><a id="l00828" name="l00828"></a><span class="lineno">  828</span><span class="stringliteral">MeshInstance in the SimpleScene with the accumulated world transform. Meshes are copied</span></div>
+<div class="line"><a id="l00829" name="l00829"></a><span class="lineno">  829</span><span class="stringliteral">by index. Materials and other scene metadata (images, textures, cameras, lights) are not</span></div>
+<div class="line"><a id="l00830" name="l00830"></a><span class="lineno">  830</span><span class="stringliteral">preserved in the SimpleScene.</span></div>
 <div class="line"><a id="l00831" name="l00831"></a><span class="lineno">  831</span><span class="stringliteral"></span> </div>
-<div class="line"><a id="l00832" name="l00832"></a><span class="lineno">  832</span><span class="stringliteral">    m.def(</span></div>
-<div class="line"><a id="l00833" name="l00833"></a><span class="lineno">  833</span><span class="stringliteral">        </span><span class="stringliteral">&quot;simple_scene_to_scene&quot;</span>,</div>
-<div class="line"><a id="l00834" name="l00834"></a><span class="lineno">  834</span>        [](<span class="keyword">const</span> SimpleScene3D&amp; simple_scene) {</div>
-<div class="line"><a id="l00835" name="l00835"></a><span class="lineno">  835</span>            <span class="keywordflow">return</span> scene::simple_scene_to_scene(simple_scene);</div>
-<div class="line"><a id="l00836" name="l00836"></a><span class="lineno">  836</span>        },</div>
-<div class="line"><a id="l00837" name="l00837"></a><span class="lineno">  837</span>        <span class="stringliteral">&quot;simple_scene&quot;</span>_a,</div>
-<div class="line"><a id="l00838" name="l00838"></a><span class="lineno">  838</span>        R<span class="stringliteral">&quot;(Converts a SimpleScene into a Scene.</span></div>
-<div class="line"><a id="l00839" name="l00839"></a><span class="lineno">  839</span><span class="stringliteral"></span> </div>
-<div class="line"><a id="l00840" name="l00840"></a><span class="lineno">  840</span><span class="stringliteral">Each mesh instance in the SimpleScene becomes a node in the Scene with the instance</span></div>
-<div class="line"><a id="l00841" name="l00841"></a><span class="lineno">  841</span><span class="stringliteral">transform. All nodes are direct children of a single root node. Meshes are copied</span></div>
-<div class="line"><a id="l00842" name="l00842"></a><span class="lineno">  842</span><span class="stringliteral">by index.</span></div>
+<div class="line"><a id="l00832" name="l00832"></a><span class="lineno">  832</span><span class="stringliteral">:param scene: Input scene to convert.</span></div>
+<div class="line"><a id="l00833" name="l00833"></a><span class="lineno">  833</span><span class="stringliteral"></span> </div>
+<div class="line"><a id="l00834" name="l00834"></a><span class="lineno">  834</span><span class="stringliteral">:return: SimpleScene containing all mesh instances from the scene.)&quot;);</span></div>
+<div class="line"><a id="l00835" name="l00835"></a><span class="lineno">  835</span><span class="stringliteral"></span> </div>
+<div class="line"><a id="l00836" name="l00836"></a><span class="lineno">  836</span><span class="stringliteral">    m.def(</span></div>
+<div class="line"><a id="l00837" name="l00837"></a><span class="lineno">  837</span><span class="stringliteral">        </span><span class="stringliteral">&quot;simple_scene_to_scene&quot;</span>,</div>
+<div class="line"><a id="l00838" name="l00838"></a><span class="lineno">  838</span>        [](<span class="keyword">const</span> SimpleScene3D&amp; simple_scene) {</div>
+<div class="line"><a id="l00839" name="l00839"></a><span class="lineno">  839</span>            <span class="keywordflow">return</span> scene::simple_scene_to_scene(simple_scene);</div>
+<div class="line"><a id="l00840" name="l00840"></a><span class="lineno">  840</span>        },</div>
+<div class="line"><a id="l00841" name="l00841"></a><span class="lineno">  841</span>        <span class="stringliteral">&quot;simple_scene&quot;</span>_a,</div>
+<div class="line"><a id="l00842" name="l00842"></a><span class="lineno">  842</span>        R<span class="stringliteral">&quot;(Converts a SimpleScene into a Scene.</span></div>
 <div class="line"><a id="l00843" name="l00843"></a><span class="lineno">  843</span><span class="stringliteral"></span> </div>
-<div class="line"><a id="l00844" name="l00844"></a><span class="lineno">  844</span><span class="stringliteral">:param simple_scene: Input simple scene to convert.</span></div>
-<div class="line"><a id="l00845" name="l00845"></a><span class="lineno">  845</span><span class="stringliteral"></span> </div>
-<div class="line"><a id="l00846" name="l00846"></a><span class="lineno">  846</span><span class="stringliteral">:return: Scene containing the meshes and instances from the SimpleScene.)&quot;);</span></div>
-<div class="line"><a id="l00847" name="l00847"></a><span class="lineno">  847</span><span class="stringliteral">}</span></div>
-<div class="line"><a id="l00848" name="l00848"></a><span class="lineno">  848</span><span class="stringliteral"></span> </div>
-<div class="line"><a id="l00849" name="l00849"></a><span class="lineno">  849</span><span class="stringliteral">} </span><span class="comment">// namespace lagrange::python</span></div>
+<div class="line"><a id="l00844" name="l00844"></a><span class="lineno">  844</span><span class="stringliteral">Each mesh instance in the SimpleScene becomes a node in the Scene with the instance</span></div>
+<div class="line"><a id="l00845" name="l00845"></a><span class="lineno">  845</span><span class="stringliteral">transform. All nodes are direct children of a single root node. Meshes are copied</span></div>
+<div class="line"><a id="l00846" name="l00846"></a><span class="lineno">  846</span><span class="stringliteral">by index.</span></div>
+<div class="line"><a id="l00847" name="l00847"></a><span class="lineno">  847</span><span class="stringliteral"></span> </div>
+<div class="line"><a id="l00848" name="l00848"></a><span class="lineno">  848</span><span class="stringliteral">:param simple_scene: Input simple scene to convert.</span></div>
+<div class="line"><a id="l00849" name="l00849"></a><span class="lineno">  849</span><span class="stringliteral"></span> </div>
+<div class="line"><a id="l00850" name="l00850"></a><span class="lineno">  850</span><span class="stringliteral">:return: Scene containing the meshes and instances from the SimpleScene.)&quot;);</span></div>
+<div class="line"><a id="l00851" name="l00851"></a><span class="lineno">  851</span><span class="stringliteral">}</span></div>
+<div class="line"><a id="l00852" name="l00852"></a><span class="lineno">  852</span><span class="stringliteral"></span> </div>
+<div class="line"><a id="l00853" name="l00853"></a><span class="lineno">  853</span><span class="stringliteral">} </span><span class="comment">// namespace lagrange::python</span></div>
 <div class="ttc" id="aclasslagrange_1_1scene_1_1_simple_scene_html_aea37efe150fbf93ebd0d33db5ef6ea47"><div class="ttname"><a href="classlagrange_1_1scene_1_1_simple_scene.html#aea37efe150fbf93ebd0d33db5ef6ea47">lagrange::scene::SimpleScene&lt; Scalar, Index, 3 &gt;::MeshType</a></div><div class="ttdeci">SurfaceMesh&lt; Scalar, Index &gt; MeshType</div><div class="ttdef"><b>Definition</b> SimpleScene.h:65</div></div>
 <div class="ttc" id="agroup__group-logger_html_ga84167f554a5d7594c0ba4ae760f31599"><div class="ttname"><a href="group__group-logger.html#ga84167f554a5d7594c0ba4ae760f31599">lagrange::logger</a></div><div class="ttdeci">LA_CORE_API spdlog::logger &amp; logger()</div><div class="ttdoc">Retrieves the current logger.</div><div class="ttdef"><b>Definition</b> Logger.cpp:40</div></div>
 <div class="ttc" id="agroup__group-surfacemesh-attr_html_gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74"><div class="ttname"><a href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">lagrange::AttributeUsage::Scalar</a></div><div class="ttdeci">@ Scalar</div><div class="ttdoc">Mesh attribute must have exactly 1 channel.</div><div class="ttdef"><b>Definition</b> AttributeFwd.h:56</div></div>
@@ -995,7 +999,7 @@ $(function(){initNavTree('bind__scene_8h_source.html',''); initResizable(true); 
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_3c441d77f22c8082694501a0516e9f1c.html">python</a></li><li class="navelem"><a class="el" href="dir_3b69ad906bf0968d5487dd36c7d12895.html">src</a></li><li class="navelem"><b>bind_scene.h</b></li>
-    <li class="footer">Generated on Tue Aug 4 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+    <li class="footer">Generated on Sat Sep 5 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>
 </body>

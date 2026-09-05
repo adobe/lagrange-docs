@@ -255,6 +255,7 @@
         <article role="main" id="furo-main-content">
           <section id="module-lagrange.bvh">
 <span id="lagrange-bvh"></span><h1>lagrange.bvh<a class="headerlink" href="#module-lagrange.bvh" title="Link to this heading">¶</a></h1>
+<p>bvh module</p>
 <section id="classes">
 <h2>Classes<a class="headerlink" href="#classes" title="Link to this heading">¶</a></h2>
 <div class="table-wrapper autosummary longtable docutils container">
@@ -302,7 +303,10 @@
 <tr class="row-even"><td><p><a class="reference internal" href="#lagrange.bvh.remove_interior_shells" title="lagrange.bvh.remove_interior_shells"><code class="xref py py-obj docutils literal notranslate"><span class="pre">remove_interior_shells</span></code></a>(mesh)</p></td>
 <td><p>Removes interior shells from a (manifold, non-intersecting) mesh</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#lagrange.bvh.weld_vertices" title="lagrange.bvh.weld_vertices"><code class="xref py py-obj docutils literal notranslate"><span class="pre">weld_vertices</span></code></a>(mesh[, radius, boundary_only])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#lagrange.bvh.resolve_tjunctions" title="lagrange.bvh.resolve_tjunctions"><code class="xref py py-obj docutils literal notranslate"><span class="pre">resolve_tjunctions</span></code></a>(mesh, *[, tolerance, ...])</p></td>
+<td><p>Resolve T-junctions formed by collinear, overlapping edges.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#lagrange.bvh.weld_vertices" title="lagrange.bvh.weld_vertices"><code class="xref py py-obj docutils literal notranslate"><span class="pre">weld_vertices</span></code></a>(mesh[, radius, boundary_only])</p></td>
 <td><p>Weld nearby vertices together of a surface mesh.</p></td>
 </tr>
 </tbody>
@@ -674,7 +678,7 @@
 </div>
 </li>
 <li><p>name lookup:</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">Color</span><span class="p">[</span><span class="s1">&#39;RED&#39;</span><span class="p">]</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">Color</span><span class="p">[</span><span class="s1">'RED'</span><span class="p">]</span>
 <span class="go">&lt;Color.RED: 1&gt;</span>
 </pre></div>
 </div>
@@ -875,6 +879,32 @@ The result may be invalid if these conditions are not met.</p>
 </dd></dl>
 
 <dl class="py function">
+<dt class="sig sig-object py" id="lagrange.bvh.resolve_tjunctions">
+<span class="sig-prename descclassname"><span class="pre">lagrange.bvh.</span></span><span class="sig-name descname"><span class="pre">resolve_tjunctions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mesh</span></span></em>, <em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">tolerance</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">boundary_only</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">triangulate_affected</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lagrange.bvh.resolve_tjunctions" title="Link to this definition">¶</a></dt>
+<dd><p>Resolve T-junctions formed by collinear, overlapping edges.</p>
+<p>A T-junction occurs when a vertex lies on an edge it is not topologically connected to. This
+splits every such edge at the vertices lying on it, and splits the adjacent facets accordingly,
+so the output mesh has no overlapping collinear edges. Vertices are not moved; only edges and
+facets are subdivided. Both triangle and polygonal meshes are supported.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>mesh</strong> (<a class="reference internal" href="../core/index.html#lagrange.core.SurfaceMesh" title="lagrange.core.SurfaceMesh"><em>lagrange.core.SurfaceMesh</em></a>) – Input mesh, triangle or polygonal (modified in place).</p></li>
+<li><p><strong>tolerance</strong> (<em>float</em>) – Absolute distance tolerance for detecting vertices on an edge. If negative,
+defaults to 1e-6 times the bounding box diagonal.</p></li>
+<li><p><strong>boundary_only</strong> (<em>bool</em>) – If True, only boundary edges are checked for T-junctions. Set to False to
+also resolve T-junctions on interior edges.</p></li>
+<li><p><strong>triangulate_affected</strong> (<em>bool</em>) – If True (default), triangulate the facets affected by a split, so a
+triangle mesh stays triangular. If False, keep those facets as polygons.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
 <dt class="sig sig-object py" id="lagrange.bvh.weld_vertices">
 <span class="sig-prename descclassname"><span class="pre">lagrange.bvh.</span></span><span class="sig-name descname"><span class="pre">weld_vertices</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mesh</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">radius</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">9.999999974752427e-07</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">boundary_only</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lagrange.bvh.weld_vertices" title="Link to this definition">¶</a></dt>
 <dd><p>Weld nearby vertices together of a surface mesh.</p>
@@ -998,6 +1028,7 @@ The result may be invalid if these conditions are not met.</p>
 <li><a class="reference internal" href="#lagrange.bvh.compute_mesh_distances"><code class="docutils literal notranslate"><span class="pre">compute_mesh_distances()</span></code></a></li>
 <li><a class="reference internal" href="#lagrange.bvh.compute_uv_overlap"><code class="docutils literal notranslate"><span class="pre">compute_uv_overlap()</span></code></a></li>
 <li><a class="reference internal" href="#lagrange.bvh.remove_interior_shells"><code class="docutils literal notranslate"><span class="pre">remove_interior_shells()</span></code></a></li>
+<li><a class="reference internal" href="#lagrange.bvh.resolve_tjunctions"><code class="docutils literal notranslate"><span class="pre">resolve_tjunctions()</span></code></a></li>
 <li><a class="reference internal" href="#lagrange.bvh.weld_vertices"><code class="docutils literal notranslate"><span class="pre">weld_vertices()</span></code></a></li>
 </ul>
 </li>

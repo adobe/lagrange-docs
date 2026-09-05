@@ -2534,7 +2534,7 @@ coordinates.  To remove duplicate vertices:</p>
 
 <span class="c1">// Two vertices are duplicates only if their positions *and* all listed</span>
 <span class="c1">// attributes match exactly.</span>
-<span class="n">options</span><span class="p">.</span><span class="n">extra_attributes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="n">mesh</span><span class="p">.</span><span class="n">get_attribute_id</span><span class="p">(</span><span class="s">&quot;color&quot;</span><span class="p">)};</span>
+<span class="n">options</span><span class="p">.</span><span class="n">extra_attributes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="n">mesh</span><span class="p">.</span><span class="n">get_attribute_id</span><span class="p">(</span><span class="s">"color"</span><span class="p">)};</span>
 
 <span class="c1">// Only merge duplicate vertices that lie on the boundary.</span>
 <span class="n">options</span><span class="p">.</span><span class="n">boundary_only</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span>
@@ -2637,7 +2637,7 @@ surrounding geometry is allowed to change, use <code>RemoveShortEdgesOptions</co
 
 <span class="c1">// Optional per-vertex importance: the vertex with the higher value survives a</span>
 <span class="c1">// collapse. If left empty, importance is derived from local geometry.</span>
-<span class="n">options</span><span class="p">.</span><span class="n">vertex_importance_attribute_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;importance&quot;</span><span class="p">;</span>
+<span class="n">options</span><span class="p">.</span><span class="n">vertex_importance_attribute_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"importance"</span><span class="p">;</span>
 
 <span class="c1">// Reject a collapse if any surrounding facet normal would rotate by more than</span>
 <span class="c1">// this angle. The default (pi/2) only rejects actual normal flips.</span>
@@ -2743,8 +2743,8 @@ non-manifold edges or inconsistently oriented facets.  Use
 <div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;lagrange/mesh_cleanup/rescale_uv_charts.h&gt;</span>
 
 <span class="n">lagrange</span><span class="o">::</span><span class="n">RescaleUVOptions</span><span class="w"> </span><span class="n">options</span><span class="p">;</span>
-<span class="n">options</span><span class="p">.</span><span class="n">uv_attribute_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">;</span><span class="w">       </span><span class="c1">// Empty: use the first UV attribute found.</span>
-<span class="n">options</span><span class="p">.</span><span class="n">chart_id_attribute_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">;</span><span class="w"> </span><span class="c1">// Empty: compute charts from UV connectivity.</span>
+<span class="n">options</span><span class="p">.</span><span class="n">uv_attribute_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">""</span><span class="p">;</span><span class="w">       </span><span class="c1">// Empty: use the first UV attribute found.</span>
+<span class="n">options</span><span class="p">.</span><span class="n">chart_id_attribute_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">""</span><span class="p">;</span><span class="w"> </span><span class="c1">// Empty: compute charts from UV connectivity.</span>
 <span class="n">options</span><span class="p">.</span><span class="n">uv_area_threshold</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1e-6</span><span class="p">;</span><span class="w">     </span><span class="c1">// Triangles below this UV area are ignored.</span>
 
 <span class="n">lagrange</span><span class="o">::</span><span class="n">rescale_uv_charts</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span><span class="w"> </span><span class="n">options</span><span class="p">);</span>
@@ -2760,7 +2760,7 @@ triangles):</p>
 <div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;lagrange/mesh_cleanup/unflip_uv_triangles.h&gt;</span>
 
 <span class="n">lagrange</span><span class="o">::</span><span class="n">UnflipUVOptions</span><span class="w"> </span><span class="n">options</span><span class="p">;</span>
-<span class="n">options</span><span class="p">.</span><span class="n">uv_attribute_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">;</span><span class="w"> </span><span class="c1">// Empty: use the first indexed UV attribute.</span>
+<span class="n">options</span><span class="p">.</span><span class="n">uv_attribute_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">""</span><span class="p">;</span><span class="w"> </span><span class="c1">// Empty: use the first indexed UV attribute.</span>
 
 <span class="n">lagrange</span><span class="o">::</span><span class="n">unflip_uv_triangles</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span><span class="w"> </span><span class="n">options</span><span class="p">);</span>
 </code></pre></div>

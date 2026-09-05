@@ -3,6 +3,11 @@ lagrange.texproc
 
 .. py:module:: lagrange.texproc
 
+.. autoapi-nested-parse::
+
+   texproc module
+
+
 
 Functions
 ---------
@@ -58,6 +63,29 @@ Module Contents
 
 .. py:function:: rasterize_textures_from_renders(scene: lagrange.scene.Scene, renders: collections.abc.Sequence[Annotated[numpy.typing.NDArray[numpy.float32], dict(shape=(None, None, None), order='C', device='cpu')]], *, base_texture: Annotated[numpy.typing.NDArray[numpy.float32], dict(shape=(None, None, None), order='C', device='cpu')] | None = None, width: int | None = None, height: int | None = None, low_confidence_ratio: float = 0.75, base_confidence: float | None = None) -> tuple[list[Annotated[numpy.typing.NDArray[numpy.float32], dict(order='C', device='cpu')]], list[Annotated[numpy.typing.NDArray[numpy.float32], dict(order='C', device='cpu')]]]
                  rasterize_textures_from_renders(mesh: lagrange.core.SurfaceMesh, cameras: collections.abc.Sequence[lagrange.core.CameraTransforms], renders: collections.abc.Sequence[Annotated[numpy.typing.NDArray[numpy.float32], dict(shape=(None, None, None), order='C', device='cpu')]], *, base_texture: Annotated[numpy.typing.NDArray[numpy.float32], dict(shape=(None, None, None), order='C', device='cpu')] | None = None, width: int | None = None, height: int | None = None, low_confidence_ratio: float = 0.75, base_confidence: float | None = None) -> tuple[list[Annotated[numpy.typing.NDArray[numpy.float32], dict(order='C', device='cpu')]], list[Annotated[numpy.typing.NDArray[numpy.float32], dict(order='C', device='cpu')]]]
+
+   Rasterize one (color, weight) per (render, camera) and filter out low-confidence weights.
+
+   This function has two overloads:
+
+   1. ``rasterize_textures_from_renders(scene, renders, *, base_texture=None, ...)``: extract mesh,
+      base texture, and cameras from a scene. ``base_texture`` (if provided) overrides any base texture
+      in the scene.
+   2. ``rasterize_textures_from_renders(mesh, cameras, renders, *, base_texture=None, ...)``: take an
+      explicit mesh and a list of CameraTransforms.
+
+   :param scene: Scene containing a single mesh (possibly with a base texture), and multiple cameras.
+   :param mesh: Input mesh with UVs (alternative to scene).
+   :param cameras: List of CameraTransforms (alternative to scene).
+   :param renders: List of rendered images, one per camera.
+   :param base_texture: Optional base texture override. Takes precedence over any texture in the scene.
+   :param width: Width of the rasterized textures. Must match the width of the base texture if present. Otherwise, defaults to 1024.
+   :param height: Height of the rasterized textures. Must match the height of the base texture if present. Otherwise, defaults to 1024.
+   :param low_confidence_ratio: Discard low confidence texels whose weights are < ratio * max_weight.
+   :param base_confidence: Confidence value for the base texture if present. If set to 0, ignore the base texture. Defaults to 0.3 otherwise.
+
+   :return: A pair of lists (textures, weights), one per camera.
+
 
 .. py:function:: texture_compositing(mesh, colors, weights, value_weight = 1000.0, quadrature_samples = 6, jitter_epsilon = 0.0001, clamp_to_range = None, smooth_low_weight_areas = False, num_multigrid_levels = 4, num_gauss_seidel_iterations = 3, num_v_cycles = 5)
 

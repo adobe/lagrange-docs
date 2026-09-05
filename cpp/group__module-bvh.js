@@ -35,6 +35,11 @@ var group__module_bvh =
       [ "foreach_element_containing", "structlagrange_1_1bvh_1_1_edge_a_a_b_b_tree.html#a67e1a0cd37c592ad6cffd3451d522d5f", null ],
       [ "get_closest_point", "structlagrange_1_1bvh_1_1_edge_a_a_b_b_tree.html#a24fa34ce618bd63b0c9d9c4bdc3fc9c5", null ]
     ] ],
+    [ "ResolveTJunctionsOptions", "structlagrange_1_1bvh_1_1_resolve_t_junctions_options.html", [
+      [ "tolerance", "structlagrange_1_1bvh_1_1_resolve_t_junctions_options.html#a97eab6d709b80585fe9e8a54b1e3da27", null ],
+      [ "boundary_only", "structlagrange_1_1bvh_1_1_resolve_t_junctions_options.html#abe1380fd152e7c39c5509136339422d0", null ],
+      [ "triangulate_affected", "structlagrange_1_1bvh_1_1_resolve_t_junctions_options.html#a22a2b08d8bdb5f27b4186ace515af16c", null ]
+    ] ],
     [ "TriangleAABBTree< Scalar, Index, Dim >", "classlagrange_1_1bvh_1_1_triangle_a_a_b_b_tree.html", [
       [ "ActionCallback", "classlagrange_1_1bvh_1_1_triangle_a_a_b_b_tree.html#a386999d5e43dd47823f5b247745957ef", null ],
       [ "TriangleAABBTree", "classlagrange_1_1bvh_1_1_triangle_a_a_b_b_tree.html#a3593fe575d080ed2fda8ae015f3452c5", null ],
@@ -59,5 +64,6 @@ var group__module_bvh =
     [ "compute_hausdorff", "group__module-bvh.html#ga0ffd251371a17cc104cfcf1be0affad1", null ],
     [ "compute_chamfer", "group__module-bvh.html#ga3cd0f3afed6a3bae7aae59407e491489", null ],
     [ "compute_uv_overlap", "group__module-bvh.html#ga32a555d00a25d570ed2b9fa2e0940bd1", null ],
+    [ "resolve_tjunctions", "group__module-bvh.html#ga03fb225400736df61e8634acbf05eb00", null ],
     [ "weld_vertices", "group__module-bvh.html#ga4e23b9d49adcfe017da3455eb381ce13", null ]
 ];

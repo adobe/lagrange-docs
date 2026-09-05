@@ -2449,10 +2449,10 @@ attributes.</p>
 <div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;lagrange/compute_vertex_normal.h&gt;</span>
 
 <span class="n">lagrange</span><span class="o">::</span><span class="n">compute_vertex_normal</span><span class="p">(</span><span class="n">mesh</span><span class="p">);</span>
-<span class="n">assert</span><span class="p">(</span><span class="n">mesh</span><span class="p">.</span><span class="n">has_vertex_attribute</span><span class="p">(</span><span class="s">&quot;normal&quot;</span><span class="p">));</span>
+<span class="n">assert</span><span class="p">(</span><span class="n">mesh</span><span class="p">.</span><span class="n">has_vertex_attribute</span><span class="p">(</span><span class="s">"normal"</span><span class="p">));</span>
 
 <span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="o">&amp;</span><span class="w"> </span><span class="n">vertex_normals</span><span class="w"> </span><span class="o">=</span>
-<span class="w">    </span><span class="n">mesh</span><span class="p">.</span><span class="n">get_vertex_attribute</span><span class="p">(</span><span class="s">&quot;normal&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">mesh</span><span class="p">.</span><span class="n">get_vertex_attribute</span><span class="p">(</span><span class="s">"normal"</span><span class="p">);</span>
 <span class="n">assert</span><span class="p">(</span><span class="n">vertex_normals</span><span class="p">.</span><span class="n">rows</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">mesh</span><span class="p">.</span><span class="n">get_num_vertices</span><span class="p">());</span>
 <span class="n">assert</span><span class="p">(</span><span class="n">vertex_normals</span><span class="p">.</span><span class="n">cols</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">3</span><span class="p">);</span>
 </code></pre></div>
@@ -2472,10 +2472,10 @@ weighted average of facet normals.</p>
 <div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;lagrange/compute_vertex_valance.h&gt;</span>
 
 <span class="n">lagrange</span><span class="o">::</span><span class="n">compute_vertex_valance</span><span class="p">(</span><span class="n">mesh</span><span class="p">);</span>
-<span class="n">assert</span><span class="p">(</span><span class="n">mesh</span><span class="p">.</span><span class="n">has_vertex_attribute</span><span class="p">(</span><span class="s">&quot;valance&quot;</span><span class="p">));</span>
+<span class="n">assert</span><span class="p">(</span><span class="n">mesh</span><span class="p">.</span><span class="n">has_vertex_attribute</span><span class="p">(</span><span class="s">"valance"</span><span class="p">));</span>
 
 <span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="o">&amp;</span><span class="w"> </span><span class="n">valance</span><span class="w"> </span><span class="o">=</span>
-<span class="w">    </span><span class="n">mesh</span><span class="p">.</span><span class="n">get_vertex_attribute</span><span class="p">(</span><span class="s">&quot;valance&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">mesh</span><span class="p">.</span><span class="n">get_vertex_attribute</span><span class="p">(</span><span class="s">"valance"</span><span class="p">);</span>
 <span class="n">assert</span><span class="p">(</span><span class="n">valance</span><span class="p">.</span><span class="n">rows</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">mesh</span><span class="p">.</span><span class="n">get_num_vertices</span><span class="p">());</span>
 <span class="n">assert</span><span class="p">(</span><span class="n">valance</span><span class="p">.</span><span class="n">cols</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
 </code></pre></div>
@@ -2490,10 +2490,10 @@ named "valance".  It is an <code>n</code> by <code>1</code> matrix, where <code>
 <div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;lagrange/compute_triangle_normal.h&gt;</span>
 
 <span class="n">lagrange</span><span class="o">::</span><span class="n">compute_triangle_normal</span><span class="p">(</span><span class="n">mesh</span><span class="p">);</span>
-<span class="n">assert</span><span class="p">(</span><span class="n">mesh</span><span class="p">.</span><span class="n">has_facet_attribute</span><span class="p">(</span><span class="s">&quot;normal&quot;</span><span class="p">));</span>
+<span class="n">assert</span><span class="p">(</span><span class="n">mesh</span><span class="p">.</span><span class="n">has_facet_attribute</span><span class="p">(</span><span class="s">"normal"</span><span class="p">));</span>
 
 <span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="o">&amp;</span><span class="w"> </span><span class="n">facet_normals</span><span class="w"> </span><span class="o">=</span>
-<span class="w">    </span><span class="n">mesh</span><span class="p">.</span><span class="n">get_facet_attribute</span><span class="p">(</span><span class="s">&quot;normal&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">mesh</span><span class="p">.</span><span class="n">get_facet_attribute</span><span class="p">(</span><span class="s">"normal"</span><span class="p">);</span>
 <span class="n">assert</span><span class="p">(</span><span class="n">facet_normals</span><span class="p">.</span><span class="n">rows</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">mesh</span><span class="p">.</span><span class="n">get_num_facets</span><span class="p">());</span>
 <span class="n">assert</span><span class="p">(</span><span class="n">facet_normals</span><span class="p">.</span><span class="n">cols</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">3</span><span class="p">);</span>
 </code></pre></div>
@@ -2511,10 +2511,10 @@ named "normal", where <code>m</code> is the number of facets.</p>
 <div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;lagrange/compute_facet_area.h&gt;</span>
 
 <span class="n">lagrange</span><span class="o">::</span><span class="n">compute_facet_area</span><span class="p">(</span><span class="n">mesh</span><span class="p">);</span>
-<span class="n">assert</span><span class="p">(</span><span class="n">mesh</span><span class="p">.</span><span class="n">has_facet_attribute</span><span class="p">(</span><span class="s">&quot;area&quot;</span><span class="p">));</span>
+<span class="n">assert</span><span class="p">(</span><span class="n">mesh</span><span class="p">.</span><span class="n">has_facet_attribute</span><span class="p">(</span><span class="s">"area"</span><span class="p">));</span>
 
 <span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="o">&amp;</span><span class="w"> </span><span class="n">areas</span><span class="w"> </span><span class="o">=</span>
-<span class="w">    </span><span class="n">mesh</span><span class="p">.</span><span class="n">get_facet_attribute</span><span class="p">(</span><span class="s">&quot;area&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">mesh</span><span class="p">.</span><span class="n">get_facet_attribute</span><span class="p">(</span><span class="s">"area"</span><span class="p">);</span>
 <span class="n">assert</span><span class="p">(</span><span class="n">areas</span><span class="p">.</span><span class="n">rows</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">mesh</span><span class="p">.</span><span class="n">get_num_facets</span><span class="p">());</span>
 <span class="n">assert</span><span class="p">(</span><span class="n">areas</span><span class="p">.</span><span class="n">cols</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
 </code></pre></div>
@@ -2529,10 +2529,10 @@ are supported.</p>
 <div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;lagrange/compute_uv_distortion.h&gt;</span>
 
 <span class="n">lagrange</span><span class="o">::</span><span class="n">compute_uv_distortion</span><span class="p">(</span><span class="n">mesh</span><span class="p">);</span>
-<span class="n">assert</span><span class="p">(</span><span class="n">mesh</span><span class="p">.</span><span class="n">has_facet_attribute</span><span class="p">(</span><span class="s">&quot;distortion&quot;</span><span class="p">));</span>
+<span class="n">assert</span><span class="p">(</span><span class="n">mesh</span><span class="p">.</span><span class="n">has_facet_attribute</span><span class="p">(</span><span class="s">"distortion"</span><span class="p">));</span>
 
 <span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="o">&amp;</span><span class="w"> </span><span class="n">distortion</span><span class="w"> </span><span class="o">=</span>
-<span class="w">    </span><span class="n">mesh</span><span class="p">.</span><span class="n">get_facet_attribute</span><span class="p">(</span><span class="s">&quot;distortion&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">mesh</span><span class="p">.</span><span class="n">get_facet_attribute</span><span class="p">(</span><span class="s">"distortion"</span><span class="p">);</span>
 <span class="n">assert</span><span class="p">(</span><span class="n">distortion</span><span class="p">.</span><span class="n">rows</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">mesh</span><span class="p">.</span><span class="n">get_num_facets</span><span class="p">());</span>
 <span class="n">assert</span><span class="p">(</span><span class="n">distortion</span><span class="p">.</span><span class="n">cols</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
 </code></pre></div>
@@ -2554,10 +2554,10 @@ defined in <a href="https://igl.ethz.ch/projects/slim/">Rabinovich et al. 2017</
 <div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;lagrange/compute_edge_lengths.h&gt;</span>
 
 <span class="n">lagrange</span><span class="o">::</span><span class="n">compute_edge_lengths</span><span class="p">(</span><span class="n">mesh</span><span class="p">);</span>
-<span class="n">assert</span><span class="p">(</span><span class="n">mehs</span><span class="p">.</span><span class="n">has_edge_attribute</span><span class="p">(</span><span class="s">&quot;length&quot;</span><span class="p">));</span>
+<span class="n">assert</span><span class="p">(</span><span class="n">mehs</span><span class="p">.</span><span class="n">has_edge_attribute</span><span class="p">(</span><span class="s">"length"</span><span class="p">));</span>
 
 <span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="o">&amp;</span><span class="w"> </span><span class="n">edge_lengths</span><span class="w"> </span><span class="o">=</span>
-<span class="w">    </span><span class="n">mesh</span><span class="p">.</span><span class="n">get_edge_attribute</span><span class="p">(</span><span class="s">&quot;length&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">mesh</span><span class="p">.</span><span class="n">get_edge_attribute</span><span class="p">(</span><span class="s">"length"</span><span class="p">);</span>
 <span class="n">assert</span><span class="p">(</span><span class="n">edge_lengths</span><span class="p">.</span><span class="n">rows</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">mesh</span><span class="p">.</span><span class="n">get_num_edges</span><span class="p">());</span>
 <span class="n">assert</span><span class="p">(</span><span class="n">edge_lengths</span><span class="p">.</span><span class="n">cols</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
 </code></pre></div>
@@ -2572,10 +2572,10 @@ normals of two adjacent facets.</p>
 <div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;lagrange/compute_dihedral_angles.h&gt;</span>
 
 <span class="n">lagrange</span><span class="o">::</span><span class="n">compute_dihedral_angles</span><span class="p">(</span><span class="n">mesh</span><span class="p">);</span>
-<span class="n">assert</span><span class="p">(</span><span class="n">mesh</span><span class="p">.</span><span class="n">has_edge_attribute</span><span class="p">(</span><span class="s">&quot;dihedral_angle&quot;</span><span class="p">));</span>
+<span class="n">assert</span><span class="p">(</span><span class="n">mesh</span><span class="p">.</span><span class="n">has_edge_attribute</span><span class="p">(</span><span class="s">"dihedral_angle"</span><span class="p">));</span>
 
 <span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="o">&amp;</span><span class="w"> </span><span class="n">dihedral_angle</span><span class="w"> </span><span class="o">=</span>
-<span class="w">    </span><span class="n">mesh</span><span class="p">.</span><span class="n">get_edge_attribute</span><span class="p">(</span><span class="s">&quot;dihedral_angle&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">mesh</span><span class="p">.</span><span class="n">get_edge_attribute</span><span class="p">(</span><span class="s">"dihedral_angle"</span><span class="p">);</span>
 <span class="n">assert</span><span class="p">(</span><span class="n">dihedral_angle</span><span class="p">.</span><span class="n">rows</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">mesh</span><span class="p">.</span><span class="n">get_num_edges</span><span class="p">());</span>
 <span class="n">assert</span><span class="p">(</span><span class="n">dihedral_angle</span><span class="p">.</span><span class="n">cols</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
 </code></pre></div>

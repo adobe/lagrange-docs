@@ -3,6 +3,11 @@ lagrange.bvh
 
 .. py:module:: lagrange.bvh
 
+.. autoapi-nested-parse::
+
+   bvh module
+
+
 
 Classes
 -------
@@ -27,6 +32,7 @@ Functions
    lagrange.bvh.compute_mesh_distances
    lagrange.bvh.compute_uv_overlap
    lagrange.bvh.remove_interior_shells
+   lagrange.bvh.resolve_tjunctions
    lagrange.bvh.weld_vertices
 
 
@@ -381,6 +387,24 @@ Module Contents
 
    :param mesh: Input mesh to process.
    :return: A new mesh with interior shells removed.
+
+
+.. py:function:: resolve_tjunctions(mesh, *, tolerance = -1.0, boundary_only = True, triangulate_affected = True)
+
+   Resolve T-junctions formed by collinear, overlapping edges.
+
+   A T-junction occurs when a vertex lies on an edge it is not topologically connected to. This
+   splits every such edge at the vertices lying on it, and splits the adjacent facets accordingly,
+   so the output mesh has no overlapping collinear edges. Vertices are not moved; only edges and
+   facets are subdivided. Both triangle and polygonal meshes are supported.
+
+   :param mesh: Input mesh, triangle or polygonal (modified in place).
+   :param tolerance: Absolute distance tolerance for detecting vertices on an edge. If negative,
+                     defaults to 1e-6 times the bounding box diagonal.
+   :param boundary_only: If True, only boundary edges are checked for T-junctions. Set to False to
+                         also resolve T-junctions on interior edges.
+   :param triangulate_affected: If True (default), triangulate the facets affected by a split, so a
+                       triangle mesh stays triangular. If False, keep those facets as polygons.
 
 
 .. py:function:: weld_vertices(mesh, radius = 9.999999974752427e-07, boundary_only = False)

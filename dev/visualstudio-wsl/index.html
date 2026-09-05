@@ -2557,9 +2557,9 @@
 <li>Download and run MobaXTerm (https://mobaxterm.mobatek.net/download.html), go to X Server -&gt; Start X Server  (other alternatives like Xming use older GLX version)</li>
 <li>To test if it works, Run <code>export DISPLAY=:0</code> and then <code>sudo apt install mesa-utils</code> and run <code>glxgears</code></li>
 <li><code>OpenCmakeSettings.json</code> in the lagrange project and add this before <code>configurations</code>:
-<div class="highlight"><pre><span></span><code>&quot;environments&quot;: [
+<div class="highlight"><pre><span></span><code>"environments": [
     {
-      &quot;DISPLAY&quot;: &quot;:0&quot;
+      "DISPLAY": ":0"
     }
   ],
 </code></pre></div></li>

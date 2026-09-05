@@ -14,9 +14,11 @@ var searchData=
   ['texture_5fseam_5fweight_11',['texture_seam_weight',['../structlagrange_1_1xatlas_1_1_chart_options.html#a660262c445b6cc9b2a572e8a5d3d1b15',1,'lagrange::xatlas::ChartOptions']]],
   ['threshold_12',['threshold',['../structlagrange_1_1_remove_short_edges_options.html#afcfbedec6ebde62c6a091ce335836ef1',1,'lagrange::RemoveShortEdgesOptions']]],
   ['title_13',['title',['../structlagrange_1_1ui_1_1_u_i_panel.html#ac30fed21fe991cc8475ce543929f8b72',1,'lagrange::ui::UIPanel']]],
-  ['top_5fsegments_14',['top_segments',['../structlagrange_1_1primitive_1_1_rounded_cone_options.html#a4838e5ee02b6d225105c704156edbd5d',1,'lagrange::primitive::RoundedConeOptions']]],
-  ['transform_15',['transform',['../structlagrange_1_1scene_1_1_mesh_instance.html#abbd6ccea530a2fa33fb91927d25eee36',1,'lagrange::scene::MeshInstance']]],
-  ['transform_5fbytes_16',['transform_bytes',['../structlagrange_1_1serialization_1_1internal_1_1_cista_instance.html#a799966d5318a075093c3cab392e94393',1,'lagrange::serialization::internal::CistaInstance']]],
-  ['triangulate_17',['triangulate',['../structlagrange_1_1io_1_1legacy_1_1_mesh_loader_params.html#abe2f6144e25d7ce8c9d818b3926a5a39',1,'lagrange::io::legacy::MeshLoaderParams::triangulate'],['../structlagrange_1_1io_1_1_load_options.html#a28b75c7a2a709f010d24914838a8acdb',1,'lagrange::io::LoadOptions::triangulate'],['../structlagrange_1_1primitive_1_1_primitive_options.html#abe2f6144e25d7ce8c9d818b3926a5a39',1,'lagrange::primitive::PrimitiveOptions::triangulate']]],
-  ['triangulate_5fholes_18',['triangulate_holes',['../structlagrange_1_1_close_small_holes_options.html#a2fb41141c15c3df4685d0b78d62c1359',1,'lagrange::CloseSmallHolesOptions']]]
+  ['tolerance_14',['tolerance',['../structlagrange_1_1bvh_1_1_resolve_t_junctions_options.html#a97eab6d709b80585fe9e8a54b1e3da27',1,'lagrange::bvh::ResolveTJunctionsOptions']]],
+  ['top_5fsegments_15',['top_segments',['../structlagrange_1_1primitive_1_1_rounded_cone_options.html#a4838e5ee02b6d225105c704156edbd5d',1,'lagrange::primitive::RoundedConeOptions']]],
+  ['transform_16',['transform',['../structlagrange_1_1scene_1_1_mesh_instance.html#abbd6ccea530a2fa33fb91927d25eee36',1,'lagrange::scene::MeshInstance']]],
+  ['transform_5fbytes_17',['transform_bytes',['../structlagrange_1_1serialization_1_1internal_1_1_cista_instance.html#a799966d5318a075093c3cab392e94393',1,'lagrange::serialization::internal::CistaInstance']]],
+  ['triangulate_18',['triangulate',['../structlagrange_1_1io_1_1legacy_1_1_mesh_loader_params.html#abe2f6144e25d7ce8c9d818b3926a5a39',1,'lagrange::io::legacy::MeshLoaderParams::triangulate'],['../structlagrange_1_1io_1_1_load_options.html#a28b75c7a2a709f010d24914838a8acdb',1,'lagrange::io::LoadOptions::triangulate'],['../structlagrange_1_1primitive_1_1_primitive_options.html#abe2f6144e25d7ce8c9d818b3926a5a39',1,'lagrange::primitive::PrimitiveOptions::triangulate']]],
+  ['triangulate_5faffected_19',['triangulate_affected',['../structlagrange_1_1bvh_1_1_resolve_t_junctions_options.html#a22a2b08d8bdb5f27b4186ace515af16c',1,'lagrange::bvh::ResolveTJunctionsOptions']]],
+  ['triangulate_5fholes_20',['triangulate_holes',['../structlagrange_1_1_close_small_holes_options.html#a2fb41141c15c3df4685d0b78d62c1359',1,'lagrange::CloseSmallHolesOptions']]]
 ];

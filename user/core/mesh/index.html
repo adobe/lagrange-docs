@@ -3073,11 +3073,11 @@ indices can be used to navigate around mesh elements the same way a half-edge da
 <div class="highlight"><pre><span></span><code><span class="n">lagrange</span><span class="o">::</span><span class="n">SurfaceMesh</span><span class="o">&lt;</span><span class="n">Scalar</span><span class="p">,</span><span class="w"> </span><span class="n">Index</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mesh</span><span class="p">;</span>
 
 <span class="c1">// Create or update a metadata entry</span>
-<span class="n">mesh</span><span class="p">.</span><span class="n">create_metadata</span><span class="p">(</span><span class="s">&quot;author&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Lagrange&quot;</span><span class="p">);</span>
-<span class="n">mesh</span><span class="p">.</span><span class="n">set_metadata</span><span class="p">(</span><span class="s">&quot;author&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Lagrange Team&quot;</span><span class="p">);</span>
+<span class="n">mesh</span><span class="p">.</span><span class="n">create_metadata</span><span class="p">(</span><span class="s">"author"</span><span class="p">,</span><span class="w"> </span><span class="s">"Lagrange"</span><span class="p">);</span>
+<span class="n">mesh</span><span class="p">.</span><span class="n">set_metadata</span><span class="p">(</span><span class="s">"author"</span><span class="p">,</span><span class="w"> </span><span class="s">"Lagrange Team"</span><span class="p">);</span>
 
 <span class="c1">// Read it back</span>
-<span class="n">std</span><span class="o">::</span><span class="n">string_view</span><span class="w"> </span><span class="n">author</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mesh</span><span class="p">.</span><span class="n">get_metadata</span><span class="p">(</span><span class="s">&quot;author&quot;</span><span class="p">);</span>
+<span class="n">std</span><span class="o">::</span><span class="n">string_view</span><span class="w"> </span><span class="n">author</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mesh</span><span class="p">.</span><span class="n">get_metadata</span><span class="p">(</span><span class="s">"author"</span><span class="p">);</span>
 </code></pre></div>
 <p>Metadata is stored as value attributes, and is preserved when the mesh is copied.</p>
 <h2 id="supported-types">Supported Types</h2>

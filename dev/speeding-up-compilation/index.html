@@ -2599,7 +2599,7 @@ Seriously. Do not use templates unless you have to.</p>
 <div class="tabbed-block">
 <div class="highlight"><pre><span></span><code><span class="cp">#pragma once</span>
 
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;expensive_operation&gt;</span><span class="c1"> // Expensive header to parse</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;expensive_operation&gt;</span><span class="w"> </span><span class="c1">// Expensive header to parse</span>
 
 <span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">Scalar</span><span class="o">&gt;</span>
 <span class="n">Scalar</span><span class="w"> </span><span class="n">sum</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Scalar</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="n">pts</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
@@ -2613,7 +2613,7 @@ Seriously. Do not use templates unless you have to.</p>
 </div>
 <div class="tabbed-block">
 <div class="highlight"><pre><span></span><code><span class="c1">// This will pull other headers, such as `expensive_operation`</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;sum.h&quot;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">"sum.h"</span>
 
 <span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;</span><span class="w"> </span><span class="n">pts</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">};</span>
@@ -2635,7 +2635,7 @@ Seriously. Do not use templates unless you have to.</p>
 </code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;sum.h&quot;</span>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">"sum.h"</span>
 
 <span class="c1">// Now `expensive_operation` is safely hidden inside the .cpp</span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;expensive_operation&gt;</span>
@@ -2656,7 +2656,7 @@ Seriously. Do not use templates unless you have to.</p>
 </div>
 <div class="tabbed-block">
 <div class="highlight"><pre><span></span><code><span class="c1">// Now this header is cheap to parse</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;sum.h&quot;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">"sum.h"</span>
 
 <span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;</span><span class="w"> </span><span class="n">pts</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">};</span>
@@ -2966,8 +2966,8 @@ lists.</p>
 </code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;Header.h&quot;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;Types.h&quot;</span>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">"Header.h"</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">"Types.h"</span>
 
 <span class="c1">// Method/function definitions in the source file</span>
 

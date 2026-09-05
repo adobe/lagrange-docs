@@ -28,12 +28,13 @@ var searchData=
   ['repackoptions_25',['RepackOptions',['../structlagrange_1_1packing_1_1_repack_options.html',1,'RepackOptions'],['../structlagrange_1_1xatlas_1_1_repack_options.html',1,'RepackOptions']]],
   ['rescaleuvoptions_26',['RescaleUVOptions',['../structlagrange_1_1_rescale_u_v_options.html',1,'lagrange']]],
   ['reservedattributeids_27',['ReservedAttributeIds',['../structlagrange_1_1_surface_mesh_1_1_reserved_attribute_ids.html',1,'lagrange::SurfaceMesh']]],
-  ['rotatetooltag_28',['RotateToolTag',['../structlagrange_1_1ui_1_1_rotate_tool_tag.html',1,'lagrange::ui']]],
-  ['roundedconeconfig_29',['RoundedConeConfig',['../structlagrange_1_1primitive_1_1legacy_1_1_rounded_cone_config.html',1,'lagrange::primitive::legacy']]],
-  ['roundedconeoptions_30',['RoundedConeOptions',['../structlagrange_1_1primitive_1_1_rounded_cone_options.html',1,'lagrange::primitive']]],
-  ['roundedcubeconfig_31',['RoundedCubeConfig',['../structlagrange_1_1primitive_1_1legacy_1_1_rounded_cube_config.html',1,'lagrange::primitive::legacy']]],
-  ['roundedcubeoptions_32',['RoundedCubeOptions',['../structlagrange_1_1primitive_1_1_rounded_cube_options.html',1,'lagrange::primitive']]],
-  ['roundedcylinderconfig_33',['RoundedCylinderConfig',['../structlagrange_1_1primitive_1_1legacy_1_1_rounded_cylinder_config.html',1,'lagrange::primitive::legacy']]],
-  ['roundedplaneconfig_34',['RoundedPlaneConfig',['../structlagrange_1_1primitive_1_1legacy_1_1_rounded_plane_config.html',1,'lagrange::primitive::legacy']]],
-  ['roundedplaneoptions_35',['RoundedPlaneOptions',['../structlagrange_1_1primitive_1_1_rounded_plane_options.html',1,'lagrange::primitive']]]
+  ['resolvetjunctionsoptions_28',['ResolveTJunctionsOptions',['../structlagrange_1_1bvh_1_1_resolve_t_junctions_options.html',1,'lagrange::bvh']]],
+  ['rotatetooltag_29',['RotateToolTag',['../structlagrange_1_1ui_1_1_rotate_tool_tag.html',1,'lagrange::ui']]],
+  ['roundedconeconfig_30',['RoundedConeConfig',['../structlagrange_1_1primitive_1_1legacy_1_1_rounded_cone_config.html',1,'lagrange::primitive::legacy']]],
+  ['roundedconeoptions_31',['RoundedConeOptions',['../structlagrange_1_1primitive_1_1_rounded_cone_options.html',1,'lagrange::primitive']]],
+  ['roundedcubeconfig_32',['RoundedCubeConfig',['../structlagrange_1_1primitive_1_1legacy_1_1_rounded_cube_config.html',1,'lagrange::primitive::legacy']]],
+  ['roundedcubeoptions_33',['RoundedCubeOptions',['../structlagrange_1_1primitive_1_1_rounded_cube_options.html',1,'lagrange::primitive']]],
+  ['roundedcylinderconfig_34',['RoundedCylinderConfig',['../structlagrange_1_1primitive_1_1legacy_1_1_rounded_cylinder_config.html',1,'lagrange::primitive::legacy']]],
+  ['roundedplaneconfig_35',['RoundedPlaneConfig',['../structlagrange_1_1primitive_1_1legacy_1_1_rounded_plane_config.html',1,'lagrange::primitive::legacy']]],
+  ['roundedplaneoptions_36',['RoundedPlaneOptions',['../structlagrange_1_1primitive_1_1_rounded_plane_options.html',1,'lagrange::primitive']]]
 ];

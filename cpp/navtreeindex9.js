@@ -1,5 +1,9 @@
 var NAVTREEINDEX9 =
 {
+"namespacelagrange_1_1ui.html#a620a5fabbe3ebe544274ccd285d69f1b":[3,0,0,7,218],
+"namespacelagrange_1_1ui.html#a624bcfdabec195670921b2511b47bc24":[3,0,0,7,219],
+"namespacelagrange_1_1ui.html#a6423bbe0c6e1a9467cec6c693b68f3f3":[3,0,0,7,146],
+"namespacelagrange_1_1ui.html#a65cf6bc00f6d7ed35bde3c5f20500860":[3,0,0,7,158],
 "namespacelagrange_1_1ui.html#a672166f07d855923f4e2c9771be837ac":[3,0,0,7,196],
 "namespacelagrange_1_1ui.html#a6760f7a3d6b6e87406203ff2c896850c":[3,0,0,7,153],
 "namespacelagrange_1_1ui.html#a685d7ab2e9625f24cb5ea5d6bc192062":[3,0,0,7,177],
@@ -245,9 +249,5 @@ var NAVTREEINDEX9 =
 "structlagrange_1_1_remove_duplicate_facet_options.html#a3a53d38d37410f88be10879cb048e27d":[2,1,1,4,1,0],
 "structlagrange_1_1_remove_duplicate_vertices_options.html":[2,1,1,4,2],
 "structlagrange_1_1_remove_duplicate_vertices_options.html#a1f3274faf4d13c22001e47b145c5ff3f":[2,1,1,4,2,0],
-"structlagrange_1_1_remove_duplicate_vertices_options.html#abe1380fd152e7c39c5509136339422d0":[2,1,1,4,2,1],
-"structlagrange_1_1_remove_null_area_facets_options.html":[2,1,1,4,3],
-"structlagrange_1_1_remove_null_area_facets_options.html#a7912fd3c8e4930cec8ed8c05567434a4":[2,1,1,4,3,1],
-"structlagrange_1_1_remove_null_area_facets_options.html#ad49f5977fbc988e5d27cb0ece3e6cb00":[2,1,1,4,3,0],
-"structlagrange_1_1_remove_short_edges_options.html":[2,1,1,4,4]
+"structlagrange_1_1_remove_duplicate_vertices_options.html#abe1380fd152e7c39c5509136339422d0":[2,1,1,4,2,1]
 };

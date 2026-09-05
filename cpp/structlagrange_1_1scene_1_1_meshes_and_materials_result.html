@@ -136,13 +136,11 @@ $(function(){initNavTree('structlagrange_1_1scene_1_1_meshes_and_materials_resul
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a32b66f157a48ee9779520fc294c6528f" id="r_a32b66f157a48ee9779520fc294c6528f"><td class="memItemLeft" align="right" valign="top"><a id="a32b66f157a48ee9779520fc294c6528f" name="a32b66f157a48ee9779520fc294c6528f"></a>
-std::vector&lt; <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>meshes</b></td></tr>
-<tr class="memdesc:a32b66f157a48ee9779520fc294c6528f"><td class="mdescLeft">&#160;</td><td class="mdescRight">List of meshes with transforms applied. <br /></td></tr>
+<tr class="memitem:a32b66f157a48ee9779520fc294c6528f" id="r_a32b66f157a48ee9779520fc294c6528f"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a32b66f157a48ee9779520fc294c6528f">meshes</a></td></tr>
+<tr class="memdesc:a32b66f157a48ee9779520fc294c6528f"><td class="mdescLeft">&#160;</td><td class="mdescRight">List of meshes with transforms applied.  <br /></td></tr>
 <tr class="separator:a32b66f157a48ee9779520fc294c6528f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a64b774b4827e744f5bbd52709668e013" id="r_a64b774b4827e744f5bbd52709668e013"><td class="memItemLeft" align="right" valign="top"><a id="a64b774b4827e744f5bbd52709668e013" name="a64b774b4827e744f5bbd52709668e013"></a>
-std::vector&lt; std::vector&lt; ElementId &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>material_ids</b></td></tr>
-<tr class="memdesc:a64b774b4827e744f5bbd52709668e013"><td class="mdescLeft">&#160;</td><td class="mdescRight">List of material IDs for each mesh. <br /></td></tr>
+<tr class="memitem:a64b774b4827e744f5bbd52709668e013" id="r_a64b774b4827e744f5bbd52709668e013"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::vector&lt; ElementId &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a64b774b4827e744f5bbd52709668e013">material_ids</a></td></tr>
+<tr class="memdesc:a64b774b4827e744f5bbd52709668e013"><td class="mdescLeft">&#160;</td><td class="mdescRight">List of material IDs used by each mesh (indices into <code>Scene::materials</code>).  <br /></td></tr>
 <tr class="separator:a64b774b4827e744f5bbd52709668e013"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -155,7 +153,46 @@ struct lagrange::scene::MeshesAndMaterialsResult&lt; Scalar, Index &gt;</div><p>
   </table>
   </dd>
 </dl>
-</div><hr/>The documentation for this struct was generated from the following file:<ul>
+</div><h2 class="groupheader">Member Data Documentation</h2>
+<a id="a32b66f157a48ee9779520fc294c6528f" name="a32b66f157a48ee9779520fc294c6528f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a32b66f157a48ee9779520fc294c6528f">&#9670;&#160;</a></span>meshes</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, typename Index&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt;<a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index&gt; &gt; meshes</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>List of meshes with transforms applied. </p>
+<p>Each mesh carries a <code>material_id</code> facet attribute (see <a class="el" href="structlagrange_1_1_attribute_name.html#a684f770f2cc5ec13c7f32d1a4b3a50ef">material_id</a>) whose values are global indices into the scene's material list (i.e. the same indexing as <code>Scene::materials</code> and <code>material_ids</code> below). Facets with no associated material are marked with <code>invalid&lt;Index&gt;()</code>. </p>
+
+</div>
+</div>
+<a id="a64b774b4827e744f5bbd52709668e013" name="a64b774b4827e744f5bbd52709668e013"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a64b774b4827e744f5bbd52709668e013">&#9670;&#160;</a></span>material_ids</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, typename Index&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;std::vector&lt;ElementId&gt; &gt; material_ids</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>List of material IDs used by each mesh (indices into <code>Scene::materials</code>). </p>
+<p>This is the set of materials referenced by the corresponding mesh instance; use the per-facet <code>material_id</code> attribute on each mesh to recover the exact facet-to-material assignment. </p>
+
+</div>
+</div>
+<hr/>The documentation for this struct was generated from the following file:<ul>
 <li>lagrange/scene/<a class="el" href="scene__convert_8h_source.html">scene_convert.h</a></li>
 </ul>
 </div><!-- contents -->
@@ -164,7 +201,7 @@ struct lagrange::scene::MeshesAndMaterialsResult&lt; Scalar, Index &gt;</div><p>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacelagrange.html">lagrange</a></li><li class="navelem"><b>scene</b></li><li class="navelem"><a class="el" href="structlagrange_1_1scene_1_1_meshes_and_materials_result.html">MeshesAndMaterialsResult</a></li>
-    <li class="footer">Generated on Tue Aug 4 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+    <li class="footer">Generated on Sat Sep 5 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>
 </body>

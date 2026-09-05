@@ -1,5 +1,14 @@
 var NAVTREEINDEX13 =
 {
+"structlagrange_1_1serialization_1_1_deserialize_options.html":[4,0,0,20,1],
+"structlagrange_1_1serialization_1_1_deserialize_options.html#ac13ca9eb0e86e9ba8b41a14b5073042e":[4,0,0,20,1,0],
+"structlagrange_1_1serialization_1_1_deserialize_options.html#ae4426f467d61ae456b95844d4d9c2dcd":[4,0,0,20,1,2],
+"structlagrange_1_1serialization_1_1_deserialize_options.html#ae8a6c1815869d869073473be2f63ba85":[4,0,0,20,1,1],
+"structlagrange_1_1serialization_1_1_serialize_options.html":[4,0,0,20,2],
+"structlagrange_1_1serialization_1_1_serialize_options.html#a0b70b64d661ba9ee3b89b117f763e9ab":[4,0,0,20,2,1],
+"structlagrange_1_1serialization_1_1_serialize_options.html#a89f78986272988a58b4fda114fe915c3":[4,0,0,20,2,0],
+"structlagrange_1_1serialization_1_1_serialize_options.html#a9ec7ed9f95f682dcf95150e79435646d":[4,0,0,20,2,2],
+"structlagrange_1_1serialization_1_1internal_1_1_cista_animation.html":[4,0,0,20,0,0],
 "structlagrange_1_1serialization_1_1internal_1_1_cista_attribute_info.html":[4,0,0,20,0,1],
 "structlagrange_1_1serialization_1_1internal_1_1_cista_camera.html":[4,0,0,20,0,2],
 "structlagrange_1_1serialization_1_1internal_1_1_cista_extensions.html":[4,0,0,20,0,3],
@@ -240,14 +249,5 @@ var NAVTREEINDEX13 =
 "structlagrange_1_1ui_1_1_input_state_1_1_mouse.html#ae686ba2e5a51369d6e58ed5135b9a163":[4,0,0,25,50,0,1],
 "structlagrange_1_1ui_1_1_keybinds_1_1_keybind.html":[3,0,0,7,48,0],
 "structlagrange_1_1ui_1_1_keybinds_1_1_keybind.html":[4,0,0,25,51,0],
-"structlagrange_1_1ui_1_1_last_tool.html":[3,0,0,7,49],
-"structlagrange_1_1ui_1_1_last_tool.html":[4,0,0,25,52],
-"structlagrange_1_1ui_1_1_layer.html":[3,0,0,7,50],
-"structlagrange_1_1ui_1_1_layer.html":[4,0,0,25,53],
-"structlagrange_1_1ui_1_1_light_component.html":[3,0,0,7,51],
-"structlagrange_1_1ui_1_1_light_component.html":[4,0,0,25,54],
-"structlagrange_1_1ui_1_1_light_component_changed_event.html":[3,0,0,7,52],
-"structlagrange_1_1ui_1_1_light_component_changed_event.html":[4,0,0,25,55],
-"structlagrange_1_1ui_1_1_logger_context_data.html":[3,0,0,7,54],
-"structlagrange_1_1ui_1_1_logger_context_data.html":[4,0,0,25,57]
+"structlagrange_1_1ui_1_1_last_tool.html":[3,0,0,7,49]
 };

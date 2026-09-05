@@ -2553,7 +2553,7 @@ to explicitly specify the <code>VertexArray</code> and <code>FacetArray</code> t
 <span class="k">using</span><span class="w"> </span><span class="n">FacetArray</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lagrange</span><span class="o">::</span><span class="n">Triangles</span><span class="p">;</span>
 <span class="k">using</span><span class="w"> </span><span class="n">MeshType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lagrange</span><span class="o">::</span><span class="n">Mesh</span><span class="o">&lt;</span><span class="n">VertexArray</span><span class="p">,</span><span class="w"> </span><span class="n">FacetArray</span><span class="o">&gt;</span><span class="p">;</span>
 
-<span class="k">auto</span><span class="w"> </span><span class="n">mesh_unique</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lagrange</span><span class="o">::</span><span class="n">load_mesh</span><span class="o">&lt;</span><span class="n">MeshType</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;filename.obj&quot;</span><span class="p">);</span>
+<span class="k">auto</span><span class="w"> </span><span class="n">mesh_unique</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lagrange</span><span class="o">::</span><span class="n">load_mesh</span><span class="o">&lt;</span><span class="n">MeshType</span><span class="o">&gt;</span><span class="p">(</span><span class="s">"filename.obj"</span><span class="p">);</span>
 </code></pre></div>
 <p>It is often necessary to convert a unique pointer to shared pointer or raw
 pointer to invoke Lagrange functions.  It can be done easily:</p>
@@ -2726,13 +2726,13 @@ attribute:</p>
 <div class="highlight"><pre><span></span><code><span class="n">MeshType</span><span class="o">::</span><span class="n">AttributeArray</span><span class="w"> </span><span class="nf">attr</span><span class="p">(</span><span class="n">num_vertices</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
 <span class="c1">// Initialize the `attr` matrix.</span>
 
-<span class="n">mesh</span><span class="p">.</span><span class="n">add_vertex_attribute</span><span class="p">(</span><span class="s">&quot;attr_name&quot;</span><span class="p">);</span>
-<span class="n">mesh</span><span class="p">.</span><span class="n">set_vertex_attribute</span><span class="p">(</span><span class="s">&quot;attr_name&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">attr</span><span class="p">);</span>
+<span class="n">mesh</span><span class="p">.</span><span class="n">add_vertex_attribute</span><span class="p">(</span><span class="s">"attr_name"</span><span class="p">);</span>
+<span class="n">mesh</span><span class="p">.</span><span class="n">set_vertex_attribute</span><span class="p">(</span><span class="s">"attr_name"</span><span class="p">,</span><span class="w"> </span><span class="n">attr</span><span class="p">);</span>
 </code></pre></div>
 <p>Attribute can be retrieved at any time from its name:</p>
-<div class="highlight"><pre><span></span><code><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">mesh</span><span class="p">.</span><span class="n">has_vertex_attribute</span><span class="p">(</span><span class="s">&quot;attr_name&quot;</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<div class="highlight"><pre><span></span><code><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">mesh</span><span class="p">.</span><span class="n">has_vertex_attribute</span><span class="p">(</span><span class="s">"attr_name"</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="o">&amp;</span><span class="w"> </span><span class="n">attr</span><span class="w"> </span><span class="o">=</span>
-<span class="w">        </span><span class="n">mesh</span><span class="p">.</span><span class="n">get_vertex_attribute</span><span class="p">(</span><span class="s">&quot;attr_name&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">mesh</span><span class="p">.</span><span class="n">get_vertex_attribute</span><span class="p">(</span><span class="s">"attr_name"</span><span class="p">);</span>
 <span class="w">    </span><span class="n">assert</span><span class="p">(</span><span class="n">attr</span><span class="p">.</span><span class="n">rows</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">mesh</span><span class="p">.</span><span class="n">get_num_vertices</span><span class="p">());</span>
 <span class="p">}</span>
 </code></pre></div>

@@ -2325,19 +2325,19 @@ more advanced features, you may register the components in the UI:</p>
 <h2 id="rendering">Rendering</h2>
 <h3 id="shader-and-material-properties">Shader and Material properties</h3>
 <p>Material properties can be defined in the shader using the following syntax:</p>
-<div class="highlight"><pre><span></span><code><span class="cp">#pragma property NAME &quot;DISPLAY NAME&quot; TYPE(DEFAULT VALUE AND/OR RANGE) [TAG1, TAG2]</span>
+<div class="highlight"><pre><span></span><code><span class="cp">#pragma property NAME "DISPLAY NAME" TYPE(DEFAULT VALUE AND/OR RANGE) [TAG1, TAG2]</span>
 </code></pre></div>
 <p>For example:
 <div class="highlight"><pre><span></span><code><span class="c1">//Defines a 2D texture property with the default value of rgba(0.7,0.7,0.7,1) if no texture is bound</span>
-<span class="cp">#pragma property material_base_color &quot;Base Color&quot; Texture2D(0.7,0.7,0.7,1)</span>
+<span class="cp">#pragma property material_base_color "Base Color" Texture2D(0.7,0.7,0.7,1)</span>
 <span class="c1">//Defines a 2D texture property with the default value of red=0.4 if no texture is bound</span>
-<span class="cp">#pragma property material_roughness &quot;Roughness&quot; Texture2D(0.4)</span>
+<span class="cp">#pragma property material_roughness "Roughness" Texture2D(0.4)</span>
 <span class="c1">//Defines a 2D texture property with the default value of red=0.1 if no texture is bound</span>
-<span class="cp">#pragma property material_metallic &quot;Metallic&quot; Texture2D(0.1)</span>
+<span class="cp">#pragma property material_metallic "Metallic" Texture2D(0.1)</span>
 <span class="c1">//Defines a 2D texture property that is to be interpreted as normal texture</span>
-<span class="cp">#pragma property material_normal &quot;Normal&quot; Texture2D [normal]</span>
+<span class="cp">#pragma property material_normal "Normal" Texture2D [normal]</span>
 <span class="c1">//Defines a float property, with the default value of 1 and range 0,1</span>
-<span class="cp">#pragma property material_opacity &quot;Opacity&quot; float(1,0,1)</span>
+<span class="cp">#pragma property material_opacity "Opacity" float(1,0,1)</span>
 </code></pre></div></p>
 <p>The pragmas are parsed whenever a shader is loaded and replaced with:
 <div class="highlight"><pre><span></span><code><span class="k">uniform</span><span class="w"> </span><span class="n">TYPE</span><span class="w"> </span><span class="n">NAME</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DEFAULT_VALUE</span>

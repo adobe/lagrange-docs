@@ -377,6 +377,7 @@ var namespacelagrange =
     [ "transform_mesh", "group__group-surfacemesh-utils.html#gacc5a05b5bc041f50fbff82c00e18c631", null ],
     [ "transformed_mesh", "group__group-surfacemesh-utils.html#gac646c16958d9cb11644e1c9e72e305dc", null ],
     [ "triangulate_polygonal_facets", "group__group-surfacemesh-utils.html#ga8842b75f11402e01405aaa861a8cbb2c", null ],
+    [ "triangulate_polygonal_facets", "group__group-surfacemesh-utils.html#ga676acb1f4bee00276eb2142c7da31114", null ],
     [ "unflip_uv_charts", "group__group-surfacemesh-utils.html#ga52edbb33ed7f41a311102e42db0d50a5", null ],
     [ "unify_index_buffer", "group__group-surfacemesh-attr-utils.html#gae8deb2977d6d78e0b8e3a9a7773b6c72", null ],
     [ "unify_named_index_buffer", "group__group-surfacemesh-attr-utils.html#ga40817d91add1d124cc9f362f019d1f0c", null ],

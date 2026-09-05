@@ -353,6 +353,7 @@ var group__group_surfacemesh_utils =
     [ "transform_mesh", "group__group-surfacemesh-utils.html#gacc5a05b5bc041f50fbff82c00e18c631", null ],
     [ "transformed_mesh", "group__group-surfacemesh-utils.html#gac646c16958d9cb11644e1c9e72e305dc", null ],
     [ "triangulate_polygonal_facets", "group__group-surfacemesh-utils.html#ga8842b75f11402e01405aaa861a8cbb2c", null ],
+    [ "triangulate_polygonal_facets", "group__group-surfacemesh-utils.html#ga676acb1f4bee00276eb2142c7da31114", null ],
     [ "unflip_uv_charts", "group__group-surfacemesh-utils.html#ga52edbb33ed7f41a311102e42db0d50a5", null ],
     [ "uv_mesh_ref", "group__group-surfacemesh-utils.html#gae68df8e09ed4829ef852e47518e5a47d", null ],
     [ "uv_mesh_view", "group__group-surfacemesh-utils.html#ga9701752c8bd35e6cb8a9189cff79636a", null ],

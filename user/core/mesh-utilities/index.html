@@ -3387,7 +3387,7 @@ function:</p>
 <span class="k">auto</span><span class="w"> </span><span class="n">vertex_valence</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">attribute_vector_view</span><span class="o">&lt;</span><span class="n">Index</span><span class="o">&gt;</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span><span class="w"> </span><span class="n">id</span><span class="p">);</span>
 <span class="k">auto</span><span class="w"> </span><span class="n">num_regular_vertices</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">vertex_valence</span><span class="p">.</span><span class="n">array</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">6</span><span class="p">).</span><span class="n">count</span><span class="p">();</span>
 
-<span class="n">lagrange</span><span class="o">::</span><span class="n">logger</span><span class="p">().</span><span class="n">info</span><span class="p">(</span><span class="s">&quot;The mesh has {} regular vertices&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">num_regular_vertices</span><span class="p">);</span>
+<span class="n">lagrange</span><span class="o">::</span><span class="n">logger</span><span class="p">().</span><span class="n">info</span><span class="p">(</span><span class="s">"The mesh has {} regular vertices"</span><span class="p">,</span><span class="w"> </span><span class="n">num_regular_vertices</span><span class="p">);</span>
 </code></pre></div>
 <h3 id="adjacency-graph">Adjacency Graph</h3>
 <p>While our mesh class offers some low-level <a href="../mesh/#connectivity-and-navigation">navigation
@@ -3405,9 +3405,9 @@ adjacency list graph:</p>
 <span class="c1">// Display all edges of the graph</span>
 <span class="n">assert</span><span class="p">(</span><span class="n">graph</span><span class="p">.</span><span class="n">get_num_entries</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">mesh</span><span class="p">.</span><span class="n">get_num_vertices</span><span class="p">());</span>
 <span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">Index</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">mesh</span><span class="p">.</span><span class="n">get_num_vertices</span><span class="p">();</span><span class="w"> </span><span class="o">++</span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">lagrange</span><span class="o">::</span><span class="n">logger</span><span class="p">().</span><span class="n">info</span><span class="p">(</span><span class="s">&quot;Vertex v{} has {} neighbors&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">graph</span><span class="p">.</span><span class="n">get_num_neighbors</span><span class="p">(</span><span class="n">x</span><span class="p">));</span>
+<span class="w">    </span><span class="n">lagrange</span><span class="o">::</span><span class="n">logger</span><span class="p">().</span><span class="n">info</span><span class="p">(</span><span class="s">"Vertex v{} has {} neighbors"</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">graph</span><span class="p">.</span><span class="n">get_num_neighbors</span><span class="p">(</span><span class="n">x</span><span class="p">));</span>
 <span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">Index</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">graph</span><span class="p">.</span><span class="n">get_neighbors</span><span class="p">(</span><span class="n">x</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">lagrange</span><span class="o">::</span><span class="n">logger</span><span class="p">().</span><span class="n">info</span><span class="p">(</span><span class="s">&quot;Edge v{} -&gt; v{}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">);</span>
+<span class="w">        </span><span class="n">lagrange</span><span class="o">::</span><span class="n">logger</span><span class="p">().</span><span class="n">info</span><span class="p">(</span><span class="s">"Edge v{} -&gt; v{}"</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">);</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
@@ -3459,7 +3459,7 @@ the default) or a vertex (<code>ConnectivityType::Vertex</code>):</p>
 
 <span class="c1">// Each loop is an ordered list of vertex indices</span>
 <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Index</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">loops</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lagrange</span><span class="o">::</span><span class="n">extract_boundary_loops</span><span class="p">(</span><span class="n">mesh</span><span class="p">);</span>
-<span class="n">lagrange</span><span class="o">::</span><span class="n">logger</span><span class="p">().</span><span class="n">info</span><span class="p">(</span><span class="s">&quot;Mesh has {} boundary loop(s)&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">loops</span><span class="p">.</span><span class="n">size</span><span class="p">());</span>
+<span class="n">lagrange</span><span class="o">::</span><span class="n">logger</span><span class="p">().</span><span class="n">info</span><span class="p">(</span><span class="s">"Mesh has {} boundary loop(s)"</span><span class="p">,</span><span class="w"> </span><span class="n">loops</span><span class="p">.</span><span class="n">size</span><span class="p">());</span>
 </code></pre></div>
 <h3 id="topology-queries">Topology Queries</h3>
 <p>Basic topological queries operate directly on a <code>SurfaceMesh</code>:</p>
@@ -3649,7 +3649,7 @@ into something suitable for the GPU.</p>
 <span class="k">auto</span><span class="w"> </span><span class="n">unified_mesh</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">unify_index_buffer</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="n">normal_id</span><span class="p">,</span><span class="w"> </span><span class="n">uv_id</span><span class="p">});</span>
 
 <span class="c1">// Using attribute names instead</span>
-<span class="k">auto</span><span class="w"> </span><span class="n">unified_mesh</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">unify_index_buffer</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="s">&quot;normals&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;uv&quot;</span><span class="p">});</span>
+<span class="k">auto</span><span class="w"> </span><span class="n">unified_mesh</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">unify_index_buffer</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="s">"normals"</span><span class="p">,</span><span class="w"> </span><span class="s">"uv"</span><span class="p">});</span>
 </code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Vertex Indices</p>
@@ -3679,7 +3679,7 @@ tangents (see the tip in <a href="#compute-tangent-space">Compute Tangent Space<
 
 <span class="c1">// Transfer vertex normal attribute onto mesh facets (values will be averaged)</span>
 <span class="k">auto</span><span class="w"> </span><span class="n">vid</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">compute_vertex_normal</span><span class="p">(</span><span class="n">mesh</span><span class="p">);</span>
-<span class="k">auto</span><span class="w"> </span><span class="n">fid</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">map_attribute</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span><span class="w"> </span><span class="n">vid</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;new_name&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">lagrange</span><span class="o">::</span><span class="n">AttributeElement</span><span class="o">::</span><span class="n">Facet</span><span class="p">);</span>
+<span class="k">auto</span><span class="w"> </span><span class="n">fid</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">map_attribute</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span><span class="w"> </span><span class="n">vid</span><span class="p">,</span><span class="w"> </span><span class="s">"new_name"</span><span class="p">,</span><span class="w"> </span><span class="n">lagrange</span><span class="o">::</span><span class="n">AttributeElement</span><span class="o">::</span><span class="n">Facet</span><span class="p">);</span>
 </code></pre></div>
 <p>One can also transfer an attribute type in place (i.e. without creating a new attribute, just
 replacing the old one):</p>
@@ -3799,10 +3799,10 @@ can select by name/id, attribute usage, or element type:</p>
 
 <span class="n">lagrange</span><span class="o">::</span><span class="n">AttributeFilter</span><span class="w"> </span><span class="n">filter</span><span class="p">;</span>
 
-<span class="c1">// Keep only the &quot;normals&quot; and &quot;uv&quot; attributes</span>
+<span class="c1">// Keep only the "normals" and "uv" attributes</span>
 <span class="n">filter</span><span class="p">.</span><span class="n">included_attributes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">lagrange</span><span class="o">::</span><span class="n">AttributeFilter</span><span class="o">::</span><span class="n">AttributeNameOrId</span><span class="o">&gt;</span><span class="p">{</span>
-<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">(</span><span class="s">&quot;normals&quot;</span><span class="p">),</span>
-<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">(</span><span class="s">&quot;uv&quot;</span><span class="p">)};</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">(</span><span class="s">"normals"</span><span class="p">),</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">(</span><span class="s">"uv"</span><span class="p">)};</span>
 
 <span class="k">auto</span><span class="w"> </span><span class="n">filtered</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lagrange</span><span class="o">::</span><span class="n">filter_attributes</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span><span class="w"> </span><span class="n">filter</span><span class="p">);</span>
 </code></pre></div>
@@ -3832,7 +3832,7 @@ against a view frustum. Both write a per-facet selection attribute.</p>
 <div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;lagrange/compute_uv_charts.h&gt;</span>
 
 <span class="n">lagrange</span><span class="o">::</span><span class="n">UVChartOptions</span><span class="w"> </span><span class="n">options</span><span class="p">;</span>
-<span class="n">options</span><span class="p">.</span><span class="n">uv_attribute_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;uv&quot;</span><span class="p">;</span><span class="w"> </span><span class="c1">// if empty, the first UV attribute is used</span>
+<span class="n">options</span><span class="p">.</span><span class="n">uv_attribute_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"uv"</span><span class="p">;</span><span class="w"> </span><span class="c1">// if empty, the first UV attribute is used</span>
 <span class="k">auto</span><span class="w"> </span><span class="n">num_charts</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lagrange</span><span class="o">::</span><span class="n">compute_uv_charts</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span><span class="w"> </span><span class="n">options</span><span class="p">);</span>
 </code></pre></div>
 <p>Seam edges (edges where the UV parameterization is discontinuous) can be marked as a per-edge
@@ -3846,7 +3846,7 @@ attribute:</p>
 <div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;lagrange/compute_uv_distortion.h&gt;</span>
 
 <span class="n">lagrange</span><span class="o">::</span><span class="n">UVDistortionOptions</span><span class="w"> </span><span class="n">options</span><span class="p">;</span>
-<span class="n">options</span><span class="p">.</span><span class="n">uv_attribute_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;uv&quot;</span><span class="p">;</span>
+<span class="n">options</span><span class="p">.</span><span class="n">uv_attribute_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"uv"</span><span class="p">;</span>
 <span class="n">options</span><span class="p">.</span><span class="n">metric</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lagrange</span><span class="o">::</span><span class="n">DistortionMetric</span><span class="o">::</span><span class="n">MIPS</span><span class="p">;</span>
 <span class="k">auto</span><span class="w"> </span><span class="n">distortion_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lagrange</span><span class="o">::</span><span class="n">compute_uv_distortion</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span><span class="w"> </span><span class="n">options</span><span class="p">);</span>
 </code></pre></div>

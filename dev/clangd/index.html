@@ -2369,7 +2369,7 @@ git apply D78038.diff
 <p>Build clang and clangd:
     <div class="highlight"><pre><span></span><code>mkdir build
 cd build
-cmake -G Ninja -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/usr/local/opt/llvm-git lang -DLLVM_ENABLE_PROJECTS=&quot;clang;clang-tools-extra;libcxx;libcxxabi;polly;lldb;lld;compiler-rt&quot; ../llvm
+cmake -G Ninja -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/usr/local/opt/llvm-git lang -DLLVM_ENABLE_PROJECTS="clang;clang-tools-extra;libcxx;libcxxabi;polly;lldb;lld;compiler-rt" ../llvm
 ninja
 ninja install
 </code></pre></div>
@@ -2382,7 +2382,7 @@ how to install the clangd plugin for your favorite editor. In this tutorial we w
 Users of Vim/NeoVim can also check out <a href="https://github.com/neoclide/coc.nvim">coc.vim</a>.</p>
 <p>For the VSCode plugin, do not forget to set the <code>clangd</code> path to the binary compiled in the previous
 step:
-<div class="highlight"><pre><span></span><code>&quot;clangd.path&quot;: &quot;/usr/local/opt/llvm-git/bin/clangd&quot;
+<div class="highlight"><pre><span></span><code>"clangd.path": "/usr/local/opt/llvm-git/bin/clangd"
 </code></pre></div></p>
 <p>Also the <code>compile_commands.json</code> file should be in your project root folder, and the default
 Microsoft C/C++ plugin (Intellisense...) must be uninstalled or disabled.</p>
@@ -2390,11 +2390,11 @@ Microsoft C/C++ plugin (Intellisense...) must be uninstalled or disabled.</p>
 <h3 id="cmake">CMake</h3>
 <p>Make sure you configure your CMake project with the following options:</p>
 <div class="highlight"><pre><span></span><code><span class="c"># Generates a `compile_commands.json` that can be used for autocompletion</span>
-<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_EXPORT_COMPILE_COMMANDS</span><span class="w"> </span><span class="s">ON</span><span class="w"> </span><span class="s">CACHE</span><span class="w"> </span><span class="s">BOOL</span><span class="w"> </span><span class="s2">&quot;Enable/Disable output of compile commands during generation.&quot;</span><span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_EXPORT_COMPILE_COMMANDS</span><span class="w"> </span><span class="s">ON</span><span class="w"> </span><span class="s">CACHE</span><span class="w"> </span><span class="s">BOOL</span><span class="w"> </span><span class="s2">"Enable/Disable output of compile commands during generation."</span><span class="p">)</span>
 
 <span class="c"># Use a specific C/C++ compiler, e.g. llvm-clang on macOS (so we can use clangd)</span>
-<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_C_COMPILER</span><span class="w">   </span><span class="s2">&quot;/usr/local/opt/llvm-git/bin/clang&quot;</span><span class="w"> </span><span class="s">CACHE</span><span class="w"> </span><span class="s">STRING</span><span class="w"> </span><span class="s2">&quot;C compiler&quot;</span><span class="w"> </span><span class="s">FORCE</span><span class="p">)</span>
-<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_CXX_COMPILER</span><span class="w"> </span><span class="s2">&quot;/usr/local/opt/llvm-git/bin/clang++&quot;</span><span class="w"> </span><span class="s">CACHE</span><span class="w"> </span><span class="s">STRING</span><span class="w"> </span><span class="s2">&quot;C++ compiler&quot;</span><span class="w"> </span><span class="s">FORCE</span><span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_C_COMPILER</span><span class="w">   </span><span class="s2">"/usr/local/opt/llvm-git/bin/clang"</span><span class="w"> </span><span class="s">CACHE</span><span class="w"> </span><span class="s">STRING</span><span class="w"> </span><span class="s2">"C compiler"</span><span class="w"> </span><span class="s">FORCE</span><span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_CXX_COMPILER</span><span class="w"> </span><span class="s2">"/usr/local/opt/llvm-git/bin/clang++"</span><span class="w"> </span><span class="s">CACHE</span><span class="w"> </span><span class="s">STRING</span><span class="w"> </span><span class="s2">"C++ compiler"</span><span class="w"> </span><span class="s">FORCE</span><span class="p">)</span>
 </code></pre></div>
 <p>You can also pass those options via the command line when you first configure your project (<code>cmake
 -DCMAKE_CXX_COMPILER=&lt;...&gt; ..</code>). For Lagrange, you can put those lines in a file

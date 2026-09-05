@@ -414,6 +414,7 @@ var hierarchy =
     [ "RepackOptions", "structlagrange_1_1xatlas_1_1_repack_options.html", null ],
     [ "RescaleUVOptions", "structlagrange_1_1_rescale_u_v_options.html", null ],
     [ "ReservedAttributeIds", "structlagrange_1_1_surface_mesh_1_1_reserved_attribute_ids.html", null ],
+    [ "ResolveTJunctionsOptions", "structlagrange_1_1bvh_1_1_resolve_t_junctions_options.html", null ],
     [ "RotateToolTag", "structlagrange_1_1ui_1_1_rotate_tool_tag.html", null ],
     [ "RoundedConeConfig", "structlagrange_1_1primitive_1_1legacy_1_1_rounded_cone_config.html", null ],
     [ "RoundedCubeConfig", "structlagrange_1_1primitive_1_1legacy_1_1_rounded_cube_config.html", null ],

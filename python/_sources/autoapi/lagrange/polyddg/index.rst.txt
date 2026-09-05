@@ -3,6 +3,11 @@ lagrange.polyddg
 
 .. py:module:: lagrange.polyddg
 
+.. autoapi-nested-parse::
+
+   polyddg module
+
+
 
 Classes
 -------
@@ -483,8 +488,8 @@ Module Contents
    :return: A tuple ``(kappa_min_id, kappa_max_id, direction_min_id, direction_max_id)`` of attribute IDs.
 
 
-.. py:function:: compute_smooth_direction_field(mesh: lagrange.core.SurfaceMesh, ops: DifferentialOperators, *, nrosy: int = 4, beta: float = 1.0, output_element_type: lagrange.core.AttributeElement = AttributeElement.Vertex, alignment_attribute: str = '', direction_field_attribute: str = '') -> int
-                 compute_smooth_direction_field(mesh: lagrange.core.SurfaceMesh, *, nrosy: int = 4, beta: float = 1.0, output_element_type: lagrange.core.AttributeElement = AttributeElement.Vertex, alignment_attribute: str = '', direction_field_attribute: str = '') -> int
+.. py:function:: compute_smooth_direction_field(mesh: lagrange.core.SurfaceMesh, ops: DifferentialOperators, *, nrosy: int = 4, beta: float = 1.0, output_element_type: lagrange.core.AttributeElement = AttributeElement.Vertex, alignment_attribute: str = '', direction_field_attribute: str = '', alignment_lambda: float = 0.0) -> int
+                 compute_smooth_direction_field(mesh: lagrange.core.SurfaceMesh, *, nrosy: int = 4, beta: float = 1.0, output_element_type: lagrange.core.AttributeElement = AttributeElement.Vertex, alignment_attribute: str = '', direction_field_attribute: str = '', alignment_lambda: float = 0.0) -> int
 
    Compute the globally smoothest n-direction field on a surface mesh.
 
@@ -507,6 +512,11 @@ Module Contents
        (default) for per-vertex output, or ``AttributeElement.Facet`` for per-facet output.
    :param alignment_attribute: Name of an alignment vector attribute (zero = unconstrained).
        Must match ``output_element_type``. If empty, the unconstrained smoothest field is computed.
+   :param alignment_lambda: Tradeoff parameter :math:`\lambda_t` balancing smoothness against
+       alignment strength in the constrained solve (Knöppel et al. 2013, Eq. 16). Only used when
+       ``alignment_attribute`` is set. ``0`` (default) is the recommended balanced value; negative
+       values strengthen alignment; positive values (below the smallest generalized eigenvalue)
+       yield a smoother, less-aligned field.
    :param direction_field_attribute: Output attribute name. Pass ``""`` (the default) to use
        the canonical name.
 

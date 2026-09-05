@@ -255,6 +255,7 @@
         <article role="main" id="furo-main-content">
           <section id="module-lagrange.scene">
 <span id="lagrange-scene"></span><h1>lagrange.scene<a class="headerlink" href="#module-lagrange.scene" title="Link to this heading">¶</a></h1>
+<p>scene module</p>
 <section id="classes">
 <h2>Classes<a class="headerlink" href="#classes" title="Link to this heading">¶</a></h2>
 <div class="table-wrapper autosummary longtable docutils container">
@@ -4610,6 +4611,9 @@ returns True. Meshes with no remaining instances are dropped; mesh indices are c
 <dt class="sig sig-object py" id="lagrange.scene.scene_to_meshes_and_materials">
 <span class="sig-prename descclassname"><span class="pre">lagrange.scene.</span></span><span class="sig-name descname"><span class="pre">scene_to_meshes_and_materials</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">scene</span></span></em>, <em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">normalize_normals</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normalize_tangents_bitangents</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reorient</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lagrange.scene.scene_to_meshes_and_materials" title="Link to this definition">¶</a></dt>
 <dd><p>Converts a scene into a list of meshes with all the transforms applied and a list of material IDs.</p>
+<p>Each output mesh also carries a <code class="docutils literal notranslate"><span class="pre">material_id</span></code> facet attribute holding the global scene material
+index used by each facet, so the facet-to-material assignment is preserved even when a single mesh
+uses multiple materials. Facets with no associated material are marked with <code class="docutils literal notranslate"><span class="pre">invalid_index</span></code>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">

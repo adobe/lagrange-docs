@@ -255,6 +255,7 @@
         <article role="main" id="furo-main-content">
           <section id="module-lagrange.core">
 <span id="lagrange-core"></span><h1>lagrange.core<a class="headerlink" href="#module-lagrange.core" title="Link to this heading">¶</a></h1>
+<p>core module</p>
 <section id="attributes">
 <h2>Attributes<a class="headerlink" href="#attributes" title="Link to this heading">¶</a></h2>
 <div class="table-wrapper autosummary longtable docutils container">
@@ -611,7 +612,7 @@
 <tr class="row-even"><td><p><a class="reference internal" href="#lagrange.core.transform_mesh" title="lagrange.core.transform_mesh"><code class="xref py py-obj docutils literal notranslate"><span class="pre">transform_mesh</span></code></a>(mesh, affine_transform, *[, ...])</p></td>
 <td><p>Apply affine transformation to a mesh.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#lagrange.core.triangulate_polygonal_facets" title="lagrange.core.triangulate_polygonal_facets"><code class="xref py py-obj docutils literal notranslate"><span class="pre">triangulate_polygonal_facets</span></code></a>(mesh[, scheme])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#lagrange.core.triangulate_polygonal_facets" title="lagrange.core.triangulate_polygonal_facets"><code class="xref py py-obj docutils literal notranslate"><span class="pre">triangulate_polygonal_facets</span></code></a>(mesh[, scheme, ...])</p></td>
 <td><p>Triangulate polygonal facets of the mesh.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#lagrange.core.trim_by_isoline" title="lagrange.core.trim_by_isoline"><code class="xref py py-obj docutils literal notranslate"><span class="pre">trim_by_isoline</span></code></a>(mesh, attribute[, isovalue, ...])</p></td>
@@ -3236,55 +3237,55 @@ If not provided, the edges are initialized in an arbitrary order.</p>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="lagrange.core.SurfaceMesh.attr_name_corner_to_edge">
-<span class="sig-name descname"><span class="pre">attr_name_corner_to_edge</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">Ellipsis</span></em><a class="headerlink" href="#lagrange.core.SurfaceMesh.attr_name_corner_to_edge" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">attr_name_corner_to_edge</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><span class="pre">Final</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">Ellipsis</span></em><a class="headerlink" href="#lagrange.core.SurfaceMesh.attr_name_corner_to_edge" title="Link to this definition">¶</a></dt>
 <dd><p>The name of the attribute that stores the corner to edge mapping.</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="lagrange.core.SurfaceMesh.attr_name_corner_to_facet">
-<span class="sig-name descname"><span class="pre">attr_name_corner_to_facet</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">Ellipsis</span></em><a class="headerlink" href="#lagrange.core.SurfaceMesh.attr_name_corner_to_facet" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">attr_name_corner_to_facet</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><span class="pre">Final</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">Ellipsis</span></em><a class="headerlink" href="#lagrange.core.SurfaceMesh.attr_name_corner_to_facet" title="Link to this definition">¶</a></dt>
 <dd><p>The name of the attribute that stores the corner to facet mapping.</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="lagrange.core.SurfaceMesh.attr_name_corner_to_vertex">
-<span class="sig-name descname"><span class="pre">attr_name_corner_to_vertex</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">Ellipsis</span></em><a class="headerlink" href="#lagrange.core.SurfaceMesh.attr_name_corner_to_vertex" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">attr_name_corner_to_vertex</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><span class="pre">Final</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">Ellipsis</span></em><a class="headerlink" href="#lagrange.core.SurfaceMesh.attr_name_corner_to_vertex" title="Link to this definition">¶</a></dt>
 <dd><p>The name of the attribute that stores the corner to vertex mapping.</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="lagrange.core.SurfaceMesh.attr_name_edge_to_first_corner">
-<span class="sig-name descname"><span class="pre">attr_name_edge_to_first_corner</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">Ellipsis</span></em><a class="headerlink" href="#lagrange.core.SurfaceMesh.attr_name_edge_to_first_corner" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">attr_name_edge_to_first_corner</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><span class="pre">Final</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">Ellipsis</span></em><a class="headerlink" href="#lagrange.core.SurfaceMesh.attr_name_edge_to_first_corner" title="Link to this definition">¶</a></dt>
 <dd><p>The name of the attribute that stores the edge to first corner mapping.</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="lagrange.core.SurfaceMesh.attr_name_facet_to_first_corner">
-<span class="sig-name descname"><span class="pre">attr_name_facet_to_first_corner</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">Ellipsis</span></em><a class="headerlink" href="#lagrange.core.SurfaceMesh.attr_name_facet_to_first_corner" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">attr_name_facet_to_first_corner</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><span class="pre">Final</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">Ellipsis</span></em><a class="headerlink" href="#lagrange.core.SurfaceMesh.attr_name_facet_to_first_corner" title="Link to this definition">¶</a></dt>
 <dd><p>The name of the attribute that stores the facet to first corner mapping.</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="lagrange.core.SurfaceMesh.attr_name_next_corner_around_edge">
-<span class="sig-name descname"><span class="pre">attr_name_next_corner_around_edge</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">Ellipsis</span></em><a class="headerlink" href="#lagrange.core.SurfaceMesh.attr_name_next_corner_around_edge" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">attr_name_next_corner_around_edge</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><span class="pre">Final</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">Ellipsis</span></em><a class="headerlink" href="#lagrange.core.SurfaceMesh.attr_name_next_corner_around_edge" title="Link to this definition">¶</a></dt>
 <dd><p>The name of the attribute that stores the next corner around edge mapping.</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="lagrange.core.SurfaceMesh.attr_name_next_corner_around_vertex">
-<span class="sig-name descname"><span class="pre">attr_name_next_corner_around_vertex</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">Ellipsis</span></em><a class="headerlink" href="#lagrange.core.SurfaceMesh.attr_name_next_corner_around_vertex" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">attr_name_next_corner_around_vertex</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><span class="pre">Final</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">Ellipsis</span></em><a class="headerlink" href="#lagrange.core.SurfaceMesh.attr_name_next_corner_around_vertex" title="Link to this definition">¶</a></dt>
 <dd><p>The name of the attribute that stores the next corner around vertex mapping.</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="lagrange.core.SurfaceMesh.attr_name_vertex_to_first_corner">
-<span class="sig-name descname"><span class="pre">attr_name_vertex_to_first_corner</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">Ellipsis</span></em><a class="headerlink" href="#lagrange.core.SurfaceMesh.attr_name_vertex_to_first_corner" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">attr_name_vertex_to_first_corner</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><span class="pre">Final</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">Ellipsis</span></em><a class="headerlink" href="#lagrange.core.SurfaceMesh.attr_name_vertex_to_first_corner" title="Link to this definition">¶</a></dt>
 <dd><p>The name of the attribute that stores the vertex to first corner mapping.</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="lagrange.core.SurfaceMesh.attr_name_vertex_to_position">
-<span class="sig-name descname"><span class="pre">attr_name_vertex_to_position</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">Ellipsis</span></em><a class="headerlink" href="#lagrange.core.SurfaceMesh.attr_name_vertex_to_position" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">attr_name_vertex_to_position</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><span class="pre">Final</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">Ellipsis</span></em><a class="headerlink" href="#lagrange.core.SurfaceMesh.attr_name_vertex_to_position" title="Link to this definition">¶</a></dt>
 <dd><p>The name of the attribute that stores the vertex positions.</p>
 </dd></dl>
 
@@ -5296,13 +5297,17 @@ re-split in a later iteration is counted again).</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="lagrange.core.triangulate_polygonal_facets">
-<span class="sig-prename descclassname"><span class="pre">lagrange.core.</span></span><span class="sig-name descname"><span class="pre">triangulate_polygonal_facets</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mesh</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scheme</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'earcut'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lagrange.core.triangulate_polygonal_facets" title="Link to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">lagrange.core.</span></span><span class="sig-name descname"><span class="pre">triangulate_polygonal_facets</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mesh</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scheme</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'earcut'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">selected_facets</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lagrange.core.triangulate_polygonal_facets" title="Link to this definition">¶</a></dt>
 <dd><p>Triangulate polygonal facets of the mesh.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>mesh</strong> (<a class="reference internal" href="#lagrange.core.SurfaceMesh" title="lagrange.core.SurfaceMesh"><em>SurfaceMesh</em></a>) – The input mesh to be triangulated in place.</p></li>
-<li><p><strong>scheme</strong> (<em>str</em>) – The triangulation scheme (options are ‘earcut’ and ‘centroid_fan’)</p></li>
+<li><p><strong>scheme</strong> (<em>str</em>) – The triangulation scheme (options are ‘earcut’ and ‘centroid_fan’).</p></li>
+<li><p><strong>selected_facets</strong> (<em>Annotated</em><em>[</em><em>numpy.typing.NDArray</em><em>[</em><em>numpy.uint32</em><em>]</em><em>, </em><em>dict</em><em>(</em><em>order='C'</em><em>, </em><em>device='cpu'</em><em>)</em><em>] </em><em>| </em><em>Annotated</em><em>[</em><em>numpy.typing.NDArray</em><em>[</em><em>numpy.bool_</em><em>]</em><em>, </em><em>dict</em><em>(</em><em>order='C'</em><em>, </em><em>device='cpu'</em><em>)</em><em>] </em><em>| </em><em>list</em><em> | </em><em>None</em>) – Optional subset of facets to triangulate. Either a list/array of facet ids,
+or a boolean per-facet mask (a length <code class="docutils literal notranslate"><span class="pre">num_facets</span></code> array whose <code class="docutils literal notranslate"><span class="pre">True</span></code> entries mark facets to
+triangulate). Honored by both schemes; facets not selected are left untouched. If omitted, all
+polygonal facets are triangulated.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>

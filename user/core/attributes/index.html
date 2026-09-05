@@ -2697,12 +2697,12 @@ buffers</a>. If you need to track ownership, you can use a
 
 <span class="c1">// Minimal version only requires name + element type.</span>
 <span class="k">auto</span><span class="w"> </span><span class="n">id0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mesh</span><span class="p">.</span><span class="n">create_attribute</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="p">(</span>
-<span class="w">    </span><span class="s">&quot;color&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s">"color"</span><span class="p">,</span>
 <span class="w">    </span><span class="n">lagrange</span><span class="o">::</span><span class="n">AttributeElement</span><span class="o">::</span><span class="n">Corner</span><span class="p">);</span>
 
 <span class="c1">// Optionally specify num channels + usage tag.</span>
 <span class="k">auto</span><span class="w"> </span><span class="n">id1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mesh</span><span class="p">.</span><span class="n">create_attribute</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;</span><span class="p">(</span>
-<span class="w">    </span><span class="s">&quot;normals&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s">"normals"</span><span class="p">,</span>
 <span class="w">    </span><span class="n">lagrange</span><span class="o">::</span><span class="n">AttributeElement</span><span class="o">::</span><span class="n">Vertex</span><span class="p">,</span>
 <span class="w">    </span><span class="mi">3</span><span class="p">,</span>
 <span class="w">    </span><span class="n">lagrange</span><span class="o">::</span><span class="n">AttributeUsage</span><span class="o">::</span><span class="n">Normal</span><span class="p">);</span>
@@ -2717,10 +2717,10 @@ buffers</a>. If you need to track ownership, you can use a
 <span class="c1">// ...</span>
 
 <span class="c1">// Returns a const Attribute&lt;T&gt; &amp;</span>
-<span class="k">auto</span><span class="o">&amp;</span><span class="w"> </span><span class="n">attr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mesh</span><span class="p">.</span><span class="n">get_attribute</span><span class="o">&lt;</span><span class="n">Scalar</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;normals&quot;</span><span class="p">);</span>
+<span class="k">auto</span><span class="o">&amp;</span><span class="w"> </span><span class="n">attr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mesh</span><span class="p">.</span><span class="n">get_attribute</span><span class="o">&lt;</span><span class="n">Scalar</span><span class="o">&gt;</span><span class="p">(</span><span class="s">"normals"</span><span class="p">);</span>
 
 <span class="c1">// Alternative: use id to retrieve attr (avoids a hash map lookup)</span>
-<span class="k">auto</span><span class="w"> </span><span class="n">attr_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mesh</span><span class="p">.</span><span class="n">get_attribute_id</span><span class="p">(</span><span class="s">&quot;normals&quot;</span><span class="p">);</span>
+<span class="k">auto</span><span class="w"> </span><span class="n">attr_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mesh</span><span class="p">.</span><span class="n">get_attribute_id</span><span class="p">(</span><span class="s">"normals"</span><span class="p">);</span>
 <span class="k">auto</span><span class="o">&amp;</span><span class="w"> </span><span class="n">attr2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mesh</span><span class="p">.</span><span class="n">get_attribute</span><span class="o">&lt;</span><span class="n">Scalar</span><span class="o">&gt;</span><span class="p">(</span><span class="n">attr_id</span><span class="p">);</span>
 
 <span class="c1">// Wrap as an Eigen matrix as usual</span>
@@ -2739,7 +2739,7 @@ Attribute buffers have value semantics (like <code>std::vector&lt;&gt;</code>), 
 <code>mesh.get_attribute&lt;&gt;()</code> in a <code>auto attr</code> variable would lead to an implicit copy. For this
 reason, the following code will <strong>not</strong> compile and produce an error:</p>
 <div class="highlight"><pre><span></span><code><span class="c1">// The following will NOT compile (Attribute copy is explicit)</span>
-<span class="c1">// auto attr3 = mesh.get_attribute&lt;float&gt;(&quot;normals&quot;);</span>
+<span class="c1">// auto attr3 = mesh.get_attribute&lt;float&gt;("normals");</span>
 </code></pre></div>
 <p>Copy-on-write handling of attribute buffers is done at the mesh level, i.e. when copying a
 <code>SurfaceMesh</code> object, or when calling methods such as <code>SurfaceMesh::duplicate_attribute()</code>.</p>
@@ -2754,7 +2754,7 @@ reason, the following code will <strong>not</strong> compile and produce an erro
 <span class="c1">// ...</span>
 
 <span class="c1">// Returns a const IndexedAttribute&lt;T, Index&gt; &amp;</span>
-<span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="o">&amp;</span><span class="w"> </span><span class="n">attr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mesh</span><span class="p">.</span><span class="n">get_indexed_attribute</span><span class="o">&lt;</span><span class="n">Scalar</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;normals&quot;</span><span class="p">);</span>
+<span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="o">&amp;</span><span class="w"> </span><span class="n">attr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mesh</span><span class="p">.</span><span class="n">get_indexed_attribute</span><span class="o">&lt;</span><span class="n">Scalar</span><span class="o">&gt;</span><span class="p">(</span><span class="s">"normals"</span><span class="p">);</span>
 
 <span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="o">&amp;</span><span class="w"> </span><span class="n">attr_indices</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">attr</span><span class="p">.</span><span class="n">indices</span><span class="p">();</span>
 <span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="o">&amp;</span><span class="w"> </span><span class="n">attr_values</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">attr</span><span class="p">.</span><span class="n">values</span><span class="p">();</span>
@@ -2785,12 +2785,12 @@ mesh attributes, with additional filtering based on element types.</p>
 
 <span class="c1">// Iterate over each attribute sequentially</span>
 <span class="n">seq_foreach_attribute_read</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span><span class="w"> </span><span class="p">[](</span><span class="k">auto</span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">attr</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">lagrange</span><span class="o">::</span><span class="n">logger</span><span class="p">().</span><span class="n">info</span><span class="p">(</span><span class="s">&quot;Attribute with {} channels&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">attr</span><span class="p">.</span><span class="n">get_num_channels</span><span class="p">());</span>
+<span class="w">    </span><span class="n">lagrange</span><span class="o">::</span><span class="n">logger</span><span class="p">().</span><span class="n">info</span><span class="p">(</span><span class="s">"Attribute with {} channels"</span><span class="p">,</span><span class="w"> </span><span class="n">attr</span><span class="p">.</span><span class="n">get_num_channels</span><span class="p">());</span>
 <span class="p">});</span>
 
 <span class="c1">// Same, but retrieves attribute names while iterating</span>
 <span class="n">seq_foreach_named_attribute_read</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="o">&amp;</span><span class="p">](</span><span class="n">std</span><span class="o">::</span><span class="n">string_view</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="k">auto</span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">attr</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">lagrange</span><span class="o">::</span><span class="n">logger</span><span class="p">().</span><span class="n">info</span><span class="p">(</span><span class="s">&quot;Attribute named &#39;{}&#39; with {} channels&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="n">lagrange</span><span class="o">::</span><span class="n">logger</span><span class="p">().</span><span class="n">info</span><span class="p">(</span><span class="s">"Attribute named '{}' with {} channels"</span><span class="p">,</span>
 <span class="w">        </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">attr</span><span class="p">.</span><span class="n">get_num_channels</span><span class="p">());</span>
 <span class="p">});</span>
 </code></pre></div></p>
@@ -2829,7 +2829,7 @@ the value type of the current attribute in the following manner:</p>
 <span class="w">    </span><span class="c1">// Retrieve the attribute value type within the lambda</span>
 <span class="w">    </span><span class="k">using</span><span class="w"> </span><span class="n">AttributeType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">decay_t</span><span class="o">&lt;</span><span class="k">decltype</span><span class="p">(</span><span class="n">attr</span><span class="p">)</span><span class="o">&gt;</span><span class="p">;</span>
 <span class="w">    </span><span class="k">using</span><span class="w"> </span><span class="n">ValueType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">typename</span><span class="w"> </span><span class="nc">AttributeType</span><span class="o">::</span><span class="n">ValueType</span><span class="p">;</span>
-<span class="w">    </span><span class="n">lagrange</span><span class="o">::</span><span class="n">logger</span><span class="p">().</span><span class="n">info</span><span class="p">(</span><span class="s">&quot;Attribute value type size: {}&quot;</span><span class="p">,</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="n">ValueType</span><span class="p">));</span>
+<span class="w">    </span><span class="n">lagrange</span><span class="o">::</span><span class="n">logger</span><span class="p">().</span><span class="n">info</span><span class="p">(</span><span class="s">"Attribute value type size: {}"</span><span class="p">,</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="n">ValueType</span><span class="p">));</span>
 <span class="p">});</span>
 </code></pre></div>
 <h3 id="filtering-element-types">Filtering Element Types</h3>
@@ -2845,12 +2845,12 @@ possible to do so concisely thanks to C++17's <code>if constexpr()</code>, like 
 <span class="w">    </span><span class="k">using</span><span class="w"> </span><span class="n">AttributeType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">decay_t</span><span class="o">&lt;</span><span class="k">decltype</span><span class="p">(</span><span class="n">attr</span><span class="p">)</span><span class="o">&gt;</span><span class="p">;</span>
 <span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="k">constexpr</span><span class="w"> </span><span class="p">(</span><span class="n">AttributeType</span><span class="o">::</span><span class="n">IsIndexed</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="n">lagrange</span><span class="o">::</span><span class="n">logger</span><span class="p">().</span><span class="n">info</span><span class="p">(</span>
-<span class="w">            </span><span class="s">&quot;Indexed attribute &#39;{}&#39; with {} values&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s">"Indexed attribute '{}' with {} values"</span><span class="p">,</span>
 <span class="w">            </span><span class="n">name</span><span class="p">,</span>
 <span class="w">            </span><span class="n">attr</span><span class="p">.</span><span class="n">values</span><span class="p">().</span><span class="n">get_num_elements</span><span class="p">());</span>
 <span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="n">lagrange</span><span class="o">::</span><span class="n">logger</span><span class="p">().</span><span class="n">info</span><span class="p">(</span>
-<span class="w">            </span><span class="s">&quot;Non-indexed attribute &#39;{}&#39; with {} elements&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s">"Non-indexed attribute '{}' with {} elements"</span><span class="p">,</span>
 <span class="w">            </span><span class="n">name</span><span class="p">,</span>
 <span class="w">            </span><span class="n">attr</span><span class="p">.</span><span class="n">get_num_elements</span><span class="p">());</span>
 <span class="w">    </span><span class="p">}</span>
@@ -2867,7 +2867,7 @@ over a specific element type:</p>
 <span class="w">    </span><span class="n">mesh</span><span class="p">,</span>
 <span class="w">    </span><span class="p">[</span><span class="o">&amp;</span><span class="p">](</span><span class="n">std</span><span class="o">::</span><span class="n">string_view</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="k">auto</span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">attr</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="n">lagrange</span><span class="o">::</span><span class="n">logger</span><span class="p">().</span><span class="n">info</span><span class="p">(</span>
-<span class="w">            </span><span class="s">&quot;Attribute named &#39;{}&#39; with {} elements&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s">"Attribute named '{}' with {} elements"</span><span class="p">,</span>
 <span class="w">            </span><span class="n">name</span><span class="p">,</span>
 <span class="w">            </span><span class="n">attr</span><span class="p">.</span><span class="n">get_num_elements</span><span class="p">());</span>
 <span class="w">    </span><span class="p">});</span>
@@ -2880,7 +2880,7 @@ over a specific element type:</p>
 <span class="w">        </span><span class="k">using</span><span class="w"> </span><span class="n">ValueType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">typename</span><span class="w"> </span><span class="nc">AttributeType</span><span class="o">::</span><span class="n">ValueType</span><span class="p">;</span>
 <span class="w">        </span><span class="k">using</span><span class="w"> </span><span class="n">Index</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">typename</span><span class="w"> </span><span class="nc">AttributeType</span><span class="o">::</span><span class="n">Index</span><span class="p">;</span>
 <span class="w">        </span><span class="n">lagrange</span><span class="o">::</span><span class="n">logger</span><span class="p">().</span><span class="n">info</span><span class="p">(</span>
-<span class="w">            </span><span class="s">&quot;Indexed attribute using value type size {} and index size {}&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s">"Indexed attribute using value type size {} and index size {}"</span><span class="p">,</span>
 <span class="w">            </span><span class="k">sizeof</span><span class="p">(</span><span class="n">ValueType</span><span class="p">),</span>
 <span class="w">            </span><span class="k">sizeof</span><span class="p">(</span><span class="n">Index</span><span class="p">));</span>
 <span class="w">    </span><span class="p">});</span>
@@ -2901,7 +2901,7 @@ than <code>seq_foreach_attribute_read(mesh, ...)</code>.</p>
 <span class="w">    </span><span class="n">lagrange</span><span class="o">::</span><span class="n">AttributeElement</span><span class="o">::</span><span class="n">Vertex</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">lagrange</span><span class="o">::</span><span class="n">AttributeElement</span><span class="o">::</span><span class="n">Facet</span><span class="w"> </span><span class="o">|</span>
 <span class="w">    </span><span class="n">lagrange</span><span class="o">::</span><span class="n">AttributeElement</span><span class="o">::</span><span class="n">Corner</span><span class="o">&gt;</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="o">&amp;</span><span class="p">](</span><span class="k">auto</span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">attr</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="n">lagrange</span><span class="o">::</span><span class="n">logger</span><span class="p">().</span><span class="n">info</span><span class="p">(</span>
-<span class="w">        </span><span class="s">&quot;Non-indexed attribute with {} elements&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s">"Non-indexed attribute with {} elements"</span><span class="p">,</span>
 <span class="w">        </span><span class="n">attr</span><span class="p">.</span><span class="n">get_num_elements</span><span class="p">());</span>
 <span class="p">});</span>
 </code></pre></div>
@@ -2947,14 +2947,14 @@ you will be able to wrap a continuous buffer as a mesh attribute and pass it aro
 
 <span class="c1">// Wrap external buffer as a read-write attribute</span>
 <span class="n">mesh</span><span class="p">.</span><span class="n">wrap_as_attribute</span><span class="o">&lt;</span><span class="n">Scalar</span><span class="o">&gt;</span><span class="p">(</span>
-<span class="w">    </span><span class="s">&quot;normals&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s">"normals"</span><span class="p">,</span>
 <span class="w">    </span><span class="n">lagrange</span><span class="o">::</span><span class="n">AttributeElement</span><span class="o">::</span><span class="n">Vertex</span><span class="p">,</span>
 <span class="w">    </span><span class="n">lagrange</span><span class="o">::</span><span class="n">AttributeUsage</span><span class="o">::</span><span class="n">Normal</span><span class="p">,</span>
 <span class="w">    </span><span class="n">num_coords</span><span class="p">,</span>
 <span class="w">    </span><span class="n">normals</span><span class="p">);</span>
 
 <span class="c1">// Retrieves a Eigen::Map&lt;&gt; view of the attribute</span>
-<span class="k">auto</span><span class="w"> </span><span class="n">N</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lagrange</span><span class="o">::</span><span class="n">attribute_matrix_ref</span><span class="o">&lt;</span><span class="n">Scalar</span><span class="o">&gt;</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;normals&quot;</span><span class="p">);</span>
+<span class="k">auto</span><span class="w"> </span><span class="n">N</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lagrange</span><span class="o">::</span><span class="n">attribute_matrix_ref</span><span class="o">&lt;</span><span class="n">Scalar</span><span class="o">&gt;</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span><span class="w"> </span><span class="s">"normals"</span><span class="p">);</span>
 
 <span class="c1">// Check that all coordinates are finite (no inf/nan).</span>
 <span class="n">assert</span><span class="p">(</span><span class="n">N</span><span class="p">.</span><span class="n">allFinite</span><span class="p">());</span>
@@ -2965,20 +2965,20 @@ will not be be written to:</p>
 <div class="highlight"><pre><span></span><code><span class="c1">// Wrap external buffer as a read-only attribute</span>
 <span class="k">const</span><span class="w"> </span><span class="n">Scalar</span><span class="w"> </span><span class="o">*</span><span class="n">const_normals</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">normals</span><span class="p">.</span><span class="n">data</span><span class="p">();</span>
 <span class="n">mesh</span><span class="p">.</span><span class="n">wrap_as_const_attribute</span><span class="o">&lt;</span><span class="n">Scalar</span><span class="o">&gt;</span><span class="p">(</span>
-<span class="w">    </span><span class="s">&quot;const_normals&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s">"const_normals"</span><span class="p">,</span>
 <span class="w">    </span><span class="n">lagrange</span><span class="o">::</span><span class="n">AttributeElement</span><span class="o">::</span><span class="n">Vertex</span><span class="p">,</span>
 <span class="w">    </span><span class="n">lagrange</span><span class="o">::</span><span class="n">AttributeUsage</span><span class="o">::</span><span class="n">Normal</span><span class="p">,</span>
 <span class="w">    </span><span class="n">num_coords</span><span class="p">,</span>
 <span class="w">    </span><span class="p">{</span><span class="n">const_normals</span><span class="p">,</span><span class="w"> </span><span class="n">normals</span><span class="p">.</span><span class="n">size</span><span class="p">()});</span>
 
 <span class="c1">// Non-const methods on the normal attr will throw an error</span>
-<span class="n">mesh</span><span class="p">.</span><span class="n">ref_attribute</span><span class="o">&lt;</span><span class="n">Scalar</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;const_normals&quot;</span><span class="p">).</span><span class="n">ref_all</span><span class="p">();</span><span class="w"> </span><span class="c1">// --&gt; throws an exception</span>
+<span class="n">mesh</span><span class="p">.</span><span class="n">ref_attribute</span><span class="o">&lt;</span><span class="n">Scalar</span><span class="o">&gt;</span><span class="p">(</span><span class="s">"const_normals"</span><span class="p">).</span><span class="n">ref_all</span><span class="p">();</span><span class="w"> </span><span class="c1">// --&gt; throws an exception</span>
 </code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Non-Const Access</p>
 <p>The following code does <strong>not</strong> throw an exception:
 <!-- @attr -->
-<div class="highlight"><pre><span></span><code><span class="k">auto</span><span class="w"> </span><span class="o">&amp;</span><span class="n">attr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mesh</span><span class="p">.</span><span class="n">ref_attribute</span><span class="o">&lt;</span><span class="n">Scalar</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;const_normals&quot;</span><span class="p">);</span>
+<div class="highlight"><pre><span></span><code><span class="k">auto</span><span class="w"> </span><span class="o">&amp;</span><span class="n">attr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mesh</span><span class="p">.</span><span class="n">ref_attribute</span><span class="o">&lt;</span><span class="n">Scalar</span><span class="o">&gt;</span><span class="p">(</span><span class="s">"const_normals"</span><span class="p">);</span>
 </code></pre></div>
 This is because while <code>attr</code> is a writable reference to the attribute <code>"const_normals"</code>, the
 user could decide to update the attribute itself to wrap another non-const buffer (via
@@ -2991,7 +2991,7 @@ object and let the compiler deduce the <code>Scalar</code> type template argumen
 <div class="highlight"><pre><span></span><code><span class="c1">// Pass a `span&lt;&gt;` object directly to let the compiler deduce</span>
 <span class="c1">// the template value type</span>
 <span class="n">mesh</span><span class="p">.</span><span class="n">wrap_as_const_attribute</span><span class="p">(</span>
-<span class="w">    </span><span class="s">&quot;normals&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s">"normals"</span><span class="p">,</span>
 <span class="w">    </span><span class="n">lagrange</span><span class="o">::</span><span class="n">AttributeElement</span><span class="o">::</span><span class="n">Vertex</span><span class="p">,</span>
 <span class="w">    </span><span class="n">lagrange</span><span class="o">::</span><span class="n">AttributeUsage</span><span class="o">::</span><span class="n">Normal</span><span class="p">,</span>
 <span class="w">    </span><span class="n">num_coords</span><span class="p">,</span>
@@ -3015,7 +3015,7 @@ any extra buffer copy, as long as the memory layout of the coordinates are compa
 <span class="c1">// ...</span>
 
 <span class="c1">// Delete attribute</span>
-<span class="n">mesh</span><span class="p">.</span><span class="n">delete_attribute</span><span class="p">(</span><span class="s">&quot;normals&quot;</span><span class="p">);</span>
+<span class="n">mesh</span><span class="p">.</span><span class="n">delete_attribute</span><span class="p">(</span><span class="s">"normals"</span><span class="p">);</span>
 </code></pre></div>
 <p>More interestingly, the attribute itself can be exported into a <code>std::shared_ptr&lt;Attribute&lt;T&gt;&gt;</code> that
 can be handed back to the user. This allows client code to reuse the attribute data after the
@@ -3023,7 +3023,7 @@ destruction of any mesh object that was containing the attribute: only the
 <code>std::shared_ptr&lt;Attribute&lt;T&gt;&gt;</code> needs to be kept alive.</p>
 <!-- @delete -->
 <div class="highlight"><pre><span></span><code><span class="c1">// Delete and export a std::shared_ptr&lt;Attribute&lt;T&gt;&gt;</span>
-<span class="k">auto</span><span class="w"> </span><span class="n">attr_ptr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mesh</span><span class="p">.</span><span class="n">delete_and_export_attribute</span><span class="o">&lt;</span><span class="n">Scalar</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;normals&quot;</span><span class="p">);</span>
+<span class="k">auto</span><span class="w"> </span><span class="n">attr_ptr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mesh</span><span class="p">.</span><span class="n">delete_and_export_attribute</span><span class="o">&lt;</span><span class="n">Scalar</span><span class="o">&gt;</span><span class="p">(</span><span class="s">"normals"</span><span class="p">);</span>
 
 <span class="c1">// Pass a raw pointer/span to the attribute data back to client code</span>
 <span class="k">auto</span><span class="w"> </span><span class="n">data_ptr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">attr_ptr</span><span class="o">-&gt;</span><span class="n">ref_all</span><span class="p">().</span><span class="n">data</span><span class="p">();</span>
@@ -3086,7 +3086,7 @@ for more details.</p>
 
 <span class="c1">// Wrap external buffer as read-only attribute</span>
 <span class="k">auto</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mesh</span><span class="p">.</span><span class="n">wrap_as_const_attribute</span><span class="o">&lt;</span><span class="n">Scalar</span><span class="o">&gt;</span><span class="p">(</span>
-<span class="w">    </span><span class="s">&quot;normals&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s">"normals"</span><span class="p">,</span>
 <span class="w">    </span><span class="n">lagrange</span><span class="o">::</span><span class="n">AttributeElement</span><span class="o">::</span><span class="n">Vertex</span><span class="p">,</span>
 <span class="w">    </span><span class="n">lagrange</span><span class="o">::</span><span class="n">AttributeUsage</span><span class="o">::</span><span class="n">Normal</span><span class="p">,</span>
 <span class="w">    </span><span class="n">num_channels</span><span class="p">,</span>
@@ -3119,7 +3119,7 @@ documentation</a> for more details.</p>
 
 <span class="c1">// Wrap external buffer as read-only attribute</span>
 <span class="k">auto</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mesh</span><span class="p">.</span><span class="n">wrap_as_const_attribute</span><span class="o">&lt;</span><span class="n">Scalar</span><span class="o">&gt;</span><span class="p">(</span>
-<span class="w">    </span><span class="s">&quot;normals&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s">"normals"</span><span class="p">,</span>
 <span class="w">    </span><span class="n">lagrange</span><span class="o">::</span><span class="n">AttributeElement</span><span class="o">::</span><span class="n">Vertex</span><span class="p">,</span>
 <span class="w">    </span><span class="n">lagrange</span><span class="o">::</span><span class="n">AttributeUsage</span><span class="o">::</span><span class="n">Normal</span><span class="p">,</span>
 <span class="w">    </span><span class="n">num_channels</span><span class="p">,</span>
@@ -3128,15 +3128,15 @@ documentation</a> for more details.</p>
 <span class="c1">// Delete and export might create an internal copy depending on policy</span>
 <span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">lagrange</span><span class="p">;</span>
 <span class="k">auto</span><span class="w"> </span><span class="n">attr_ptr1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mesh</span><span class="p">.</span><span class="n">delete_and_export_attribute</span><span class="o">&lt;</span><span class="n">Scalar</span><span class="o">&gt;</span><span class="p">(</span>
-<span class="w">    </span><span class="s">&quot;normals&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s">"normals"</span><span class="p">,</span>
 <span class="w">    </span><span class="n">AttributeDeletePolicy</span><span class="o">::</span><span class="n">ErrorIfReserved</span><span class="p">,</span>
 <span class="w">    </span><span class="n">AttributeExportPolicy</span><span class="o">::</span><span class="n">CopyIfExternal</span><span class="p">);</span>
 <span class="k">auto</span><span class="w"> </span><span class="n">attr_ptr2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mesh</span><span class="p">.</span><span class="n">delete_and_export_attribute</span><span class="o">&lt;</span><span class="n">Scalar</span><span class="o">&gt;</span><span class="p">(</span>
-<span class="w">    </span><span class="s">&quot;normals&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s">"normals"</span><span class="p">,</span>
 <span class="w">    </span><span class="n">AttributeDeletePolicy</span><span class="o">::</span><span class="n">ErrorIfReserved</span><span class="p">,</span>
 <span class="w">    </span><span class="n">AttributeExportPolicy</span><span class="o">::</span><span class="n">ErrorIfExternal</span><span class="p">);</span>
 <span class="k">auto</span><span class="w"> </span><span class="n">attr_ptr3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mesh</span><span class="p">.</span><span class="n">delete_and_export_attribute</span><span class="o">&lt;</span><span class="n">Scalar</span><span class="o">&gt;</span><span class="p">(</span>
-<span class="w">    </span><span class="s">&quot;normals&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s">"normals"</span><span class="p">,</span>
 <span class="w">    </span><span class="n">AttributeDeletePolicy</span><span class="o">::</span><span class="n">ErrorIfReserved</span><span class="p">,</span>
 <span class="w">    </span><span class="n">AttributeExportPolicy</span><span class="o">::</span><span class="n">KeepExternalPtr</span><span class="p">);</span>
 </code></pre></div>

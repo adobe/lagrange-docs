@@ -2455,7 +2455,7 @@ traditional <code>std::cout</code> messaging:</p>
 <p>The default Lagrange logger can be accessed as follows:</p>
 <div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;lagrange/Logger.h&gt;</span>
 
-<span class="n">lagrange</span><span class="o">::</span><span class="n">logger</span><span class="p">().</span><span class="n">debug</span><span class="p">(</span><span class="s">&quot;This mesh has {} vertices and {} facets&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">v</span><span class="p">,</span><span class="w"> </span><span class="n">f</span><span class="p">);</span>
+<span class="n">lagrange</span><span class="o">::</span><span class="n">logger</span><span class="p">().</span><span class="n">debug</span><span class="p">(</span><span class="s">"This mesh has {} vertices and {} facets"</span><span class="p">,</span><span class="w"> </span><span class="n">v</span><span class="p">,</span><span class="w"> </span><span class="n">f</span><span class="p">);</span>
 </code></pre></div>
 <p>To control the logging level, or set additional sinks (e.g. to write logs to a file), please read
 the <a href="https://github.com/gabime/spdlog">spdlog</a> documentation.</p>
@@ -2471,9 +2471,9 @@ arguments. E.g. using <a href="https://github.com/CLIUtils/CLI11">CLI11</a> to p
 <span class="c1">// Parse command-line args with CLI11</span>
 <span class="n">CLI</span><span class="o">::</span><span class="n">App</span><span class="w"> </span><span class="n">app</span><span class="p">{</span><span class="n">argv</span><span class="p">[</span><span class="mi">0</span><span class="p">]};</span>
 <span class="n">app</span><span class="p">.</span><span class="n">option_defaults</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">always_capture_default</span><span class="p">();</span>
-<span class="n">app</span><span class="p">.</span><span class="n">add_flag</span><span class="p">(</span><span class="s">&quot;-q,--quiet&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">args</span><span class="p">.</span><span class="n">quiet</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Hide logger on stdout.&quot;</span><span class="p">);</span>
-<span class="n">app</span><span class="p">.</span><span class="n">add_option</span><span class="p">(</span><span class="s">&quot;-l,--level&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">args</span><span class="p">.</span><span class="n">log_level</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Log level (0 = most verbose, 6 = off).&quot;</span><span class="p">);</span>
-<span class="n">app</span><span class="p">.</span><span class="n">add_option</span><span class="p">(</span><span class="s">&quot;-f,--log-file&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">args</span><span class="p">.</span><span class="n">log_file</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Log file.&quot;</span><span class="p">);</span>
+<span class="n">app</span><span class="p">.</span><span class="n">add_flag</span><span class="p">(</span><span class="s">"-q,--quiet"</span><span class="p">,</span><span class="w"> </span><span class="n">args</span><span class="p">.</span><span class="n">quiet</span><span class="p">,</span><span class="w"> </span><span class="s">"Hide logger on stdout."</span><span class="p">);</span>
+<span class="n">app</span><span class="p">.</span><span class="n">add_option</span><span class="p">(</span><span class="s">"-l,--level"</span><span class="p">,</span><span class="w"> </span><span class="n">args</span><span class="p">.</span><span class="n">log_level</span><span class="p">,</span><span class="w"> </span><span class="s">"Log level (0 = most verbose, 6 = off)."</span><span class="p">);</span>
+<span class="n">app</span><span class="p">.</span><span class="n">add_option</span><span class="p">(</span><span class="s">"-f,--log-file"</span><span class="p">,</span><span class="w"> </span><span class="n">args</span><span class="p">.</span><span class="n">log_file</span><span class="p">,</span><span class="w"> </span><span class="s">"Log file."</span><span class="p">);</span>
 <span class="n">CLI11_PARSE</span><span class="p">(</span><span class="n">app</span><span class="p">,</span><span class="w"> </span><span class="n">argc</span><span class="p">,</span><span class="w"> </span><span class="n">argv</span><span class="p">)</span>
 
 <span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">args</span><span class="p">.</span><span class="n">quiet</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
@@ -2500,7 +2500,7 @@ Here is an example use case:</p>
 <span class="k">auto</span><span class="w"> </span><span class="n">finish_time</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lagrange</span><span class="o">::</span><span class="n">get_timestamp</span><span class="p">();</span>
 
 <span class="k">auto</span><span class="w"> </span><span class="n">duration</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lagrange</span><span class="o">::</span><span class="n">timestamp_diff_in_seconds</span><span class="p">(</span><span class="n">start_time</span><span class="p">,</span><span class="w"> </span><span class="n">finish_time</span><span class="p">);</span>
-<span class="n">lagrange</span><span class="o">::</span><span class="n">logger</span><span class="p">().</span><span class="n">info</span><span class="p">(</span><span class="s">&quot;Duration: {}s&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">duration</span><span class="p">);</span>
+<span class="n">lagrange</span><span class="o">::</span><span class="n">logger</span><span class="p">().</span><span class="n">info</span><span class="p">(</span><span class="s">"Duration: {}s"</span><span class="p">,</span><span class="w"> </span><span class="n">duration</span><span class="p">);</span>
 </code></pre></div>
 <h2 id="assertion">Assertion</h2>
 <p>Lagrange provide two types of assertion macros:</p>
@@ -2529,8 +2529,8 @@ message. To conveniently format assertion messages with a printf-like syntax, us
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;spdlog/fmt/fmt.h&gt;</span>
 
 <span class="n">la_debug_assert</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">3</span><span class="p">);</span>
-<span class="n">la_debug_assert</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Error message&quot;</span><span class="p">);</span>
-<span class="n">la_debug_assert</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="n">fmt</span><span class="o">::</span><span class="n">format</span><span class="p">(</span><span class="s">&quot;Incorrect value of x: {}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="p">));</span>
+<span class="n">la_debug_assert</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="s">"Error message"</span><span class="p">);</span>
+<span class="n">la_debug_assert</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="n">fmt</span><span class="o">::</span><span class="n">format</span><span class="p">(</span><span class="s">"Incorrect value of x: {}"</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="p">));</span>
 </code></pre></div>
 <div class="admonition tip">
 <p class="admonition-title">Break Into Debugger</p>
@@ -2638,7 +2638,7 @@ an enum type.</p>
 <span class="n">op</span><span class="p">.</span><span class="n">set</span><span class="p">(</span><span class="n">Operation</span><span class="o">::</span><span class="n">Translation</span><span class="p">);</span>
 <span class="n">op</span><span class="p">.</span><span class="n">set</span><span class="p">(</span><span class="n">Operation</span><span class="o">::</span><span class="n">Scaling</span><span class="p">);</span>
 <span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">op</span><span class="p">.</span><span class="n">test</span><span class="p">(</span><span class="n">Operation</span><span class="o">::</span><span class="n">Scaling</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">lagrange</span><span class="o">::</span><span class="n">logger</span><span class="p">().</span><span class="n">info</span><span class="p">(</span><span class="s">&quot;Scaling bit is set&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">lagrange</span><span class="o">::</span><span class="n">logger</span><span class="p">().</span><span class="n">info</span><span class="p">(</span><span class="s">"Scaling bit is set"</span><span class="p">);</span>
 <span class="p">}</span>
 </code></pre></div>
 <h2 id="floating-point-exceptions">Floating Point Exceptions</h2>
@@ -2736,7 +2736,7 @@ over a raw pointer, while tracking the actual owner object via a different <code
 <span class="w">    </span><span class="c1">// Number of vertices is number of coordinates divided by 3</span>
 <span class="w">    </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">num_vertices</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">owner_obj</span><span class="o">-&gt;</span><span class="n">vertices</span><span class="p">.</span><span class="n">size</span><span class="p">()</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span>
 
-<span class="w">    </span><span class="c1">// Create a &quot;view&quot; of the raw vertices pointer while tracking ownership information</span>
+<span class="w">    </span><span class="c1">// Create a "view" of the raw vertices pointer while tracking ownership information</span>
 <span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">vertices_view</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">make_shared_span</span><span class="p">(</span>
 <span class="w">        </span><span class="n">owner_obj</span><span class="p">,</span>
 <span class="w">        </span><span class="n">owner_obj</span><span class="o">-&gt;</span><span class="n">vertices</span><span class="p">.</span><span class="n">data</span><span class="p">(),</span>

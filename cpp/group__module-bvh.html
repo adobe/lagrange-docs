@@ -149,6 +149,9 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlagrange_1_1bvh_1_1_edge_a_a_b_b_tree.html">EdgeAABBTree&lt; VertexArray, EdgeArray, Dim &gt;</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlagrange_1_1bvh_1_1_resolve_t_junctions_options.html">ResolveTJunctionsOptions</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Option settings for <a class="el" href="#ga03fb225400736df61e8634acbf05eb00">resolve_tjunctions</a>.  <a href="structlagrange_1_1bvh_1_1_resolve_t_junctions_options.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlagrange_1_1bvh_1_1_triangle_a_a_b_b_tree.html">TriangleAABBTree&lt; Scalar, Index, Dim &gt;</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">AABB tree for a triangle mesh.  <a href="classlagrange_1_1bvh_1_1_triangle_a_a_b_b_tree.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -186,6 +189,10 @@ Functions</h2></td></tr>
 <tr class="memitem:ga32a555d00a25d570ed2b9fa2e0940bd1"><td class="memTemplItemLeft" align="right" valign="top">LA_BVH_API <a class="el" href="structlagrange_1_1bvh_1_1_u_v_overlap_result.html">UVOverlapResult</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ga32a555d00a25d570ed2b9fa2e0940bd1">compute_uv_overlap</a> (<a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index &gt; &amp;mesh, const <a class="el" href="structlagrange_1_1bvh_1_1_u_v_overlap_options.html">UVOverlapOptions</a> &amp;options={})</td></tr>
 <tr class="memdesc:ga32a555d00a25d570ed2b9fa2e0940bd1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute pairwise UV triangle overlap.  <br /></td></tr>
 <tr class="separator:ga32a555d00a25d570ed2b9fa2e0940bd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga03fb225400736df61e8634acbf05eb00" id="r_ga03fb225400736df61e8634acbf05eb00"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, typename Index&gt; </td></tr>
+<tr class="memitem:ga03fb225400736df61e8634acbf05eb00"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ga03fb225400736df61e8634acbf05eb00">resolve_tjunctions</a> (<a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index &gt; &amp;mesh, <a class="el" href="structlagrange_1_1bvh_1_1_resolve_t_junctions_options.html">ResolveTJunctionsOptions</a> options={})</td></tr>
+<tr class="memdesc:ga03fb225400736df61e8634acbf05eb00"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resolve T-junctions formed by collinear, overlapping edges.  <br /></td></tr>
+<tr class="separator:ga03fb225400736df61e8634acbf05eb00"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga4e23b9d49adcfe017da3455eb381ce13" id="r_ga4e23b9d49adcfe017da3455eb381ce13"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, typename Index&gt; </td></tr>
 <tr class="memitem:ga4e23b9d49adcfe017da3455eb381ce13"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ga4e23b9d49adcfe017da3455eb381ce13">weld_vertices</a> (<a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index &gt; &amp;mesh, <a class="el" href="structlagrange_1_1bvh_1_1_weld_options.html">WeldOptions</a> options={})</td></tr>
 <tr class="memdesc:ga4e23b9d49adcfe017da3455eb381ce13"><td class="mdescLeft">&#160;</td><td class="mdescRight">Weld nearby vertices together of a surface mesh.  <br /></td></tr>
@@ -472,6 +479,51 @@ template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5
 
 </div>
 </div>
+<a id="ga03fb225400736df61e8634acbf05eb00" name="ga03fb225400736df61e8634acbf05eb00"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga03fb225400736df61e8634acbf05eb00">&#9670;&#160;</a></span>resolve_tjunctions()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, typename Index&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void resolve_tjunctions </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>mesh</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structlagrange_1_1bvh_1_1_resolve_t_junctions_options.html">ResolveTJunctionsOptions</a></td>          <td class="paramname"><span class="paramname"><em>options</em></span><span class="paramdefsep"> = </span><span class="paramdefval">{}</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;lagrange/bvh/resolve_tjunctions.h&gt;</code></p>
+
+<p>Resolve T-junctions formed by collinear, overlapping edges. </p>
+<p>A T-junction occurs when a vertex lies on an edge that it is not topologically connected to, causing the edge to overlap with the (unconnected) sub-edges incident to that vertex. This function splits every such edge at the vertices lying on it, and splits the adjacent facets accordingly, so the output mesh contains no overlapping collinear edges.</p>
+<p>Vertices are not moved: only edges and facets are subdivided so the topology conforms to the existing vertex positions. The <code>tolerance</code> only controls detection, not geometric snapping.</p>
+<p>Both triangle and polygonal meshes are supported. By default (<code>triangulate_affected == true</code>) the facets touched by a split are triangulated, so a triangle-mesh input yields a triangle-mesh output. Set <code>triangulate_affected</code> to false to instead keep those facets as polygons, with the split points inserted as additional (collinear) boundary vertices.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">mesh</td><td>Input mesh (triangle or polygonal). Modified in place. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">options</td><td>Optional settings.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Scalar</td><td>Mesh scalar type. </td></tr>
+    <tr><td class="paramname">Index</td><td>Mesh index type.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>Consider running <a class="el" href="group__group-surfacemesh-cleanup.html#ga027de7d500f4a17245fa0f7450a1d433">remove_duplicate_vertices</a> and <a class="el" href="group__group-surfacemesh-cleanup.html#gad63697b009aedad95c0bc1b925f1f98e">remove_degenerate_facets</a> beforehand to avoid propagating pre-existing degeneracies. </dd></dl>
+
+</div>
+</div>
 <a id="ga4e23b9d49adcfe017da3455eb381ce13" name="ga4e23b9d49adcfe017da3455eb381ce13"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga4e23b9d49adcfe017da3455eb381ce13">&#9670;&#160;</a></span>weld_vertices()</h2>
 
@@ -512,7 +564,7 @@ template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Tue Aug 4 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+    <li class="footer">Generated on Sat Sep 5 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>
 </body>

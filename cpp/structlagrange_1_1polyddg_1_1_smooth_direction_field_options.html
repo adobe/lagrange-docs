@@ -152,6 +152,9 @@ double&#160;</td><td class="memItemRight" valign="bottom"><b>lambda</b> = 1.0</t
 <tr class="memitem:aa528c6ad17d6f25b72b2f45fed63611a" id="r_aa528c6ad17d6f25b72b2f45fed63611a"><td class="memItemLeft" align="right" valign="top">std::optional&lt; std::string_view &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa528c6ad17d6f25b72b2f45fed63611a">direction_field_attribute</a></td></tr>
 <tr class="memdesc:aa528c6ad17d6f25b72b2f45fed63611a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Output attribute name for the smooth direction field.  <br /></td></tr>
 <tr class="separator:aa528c6ad17d6f25b72b2f45fed63611a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41e961f3f614384955d3611f0c7329dd" id="r_a41e961f3f614384955d3611f0c7329dd"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a41e961f3f614384955d3611f0c7329dd">alignment_lambda</a> = 0.0</td></tr>
+<tr class="memdesc:a41e961f3f614384955d3611f0c7329dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Alignment tradeoff parameter λ_t balancing smoothness against alignment strength in the constrained solve (L_reg − λ_t M) u = M q (Knöppel et al.  <br /></td></tr>
+<tr class="separator:a41e961f3f614384955d3611f0c7329dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Options for compute_smooth_direction_field(). </p>
@@ -235,6 +238,28 @@ double&#160;</td><td class="memItemRight" valign="bottom"><b>lambda</b> = 1.0</t
 
 </div>
 </div>
+<a id="a41e961f3f614384955d3611f0c7329dd" name="a41e961f3f614384955d3611f0c7329dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a41e961f3f614384955d3611f0c7329dd">&#9670;&#160;</a></span>alignment_lambda</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double alignment_lambda = 0.0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Alignment tradeoff parameter λ_t balancing smoothness against alignment strength in the constrained solve (L_reg − λ_t M) u = M q (Knöppel et al. </p>
+<p>2013, Eq. 16 / Algorithm 3). Only used when <code>alignment_attribute</code> is set.</p>
+<ul>
+<li><code>0</code> (default): the paper's recommended balanced value.</li>
+<li>Negative (toward −∞): stronger alignment, weaker smoothness.</li>
+<li>Positive (toward λ₁, the smallest generalized eigenvalue): weaker alignment, smoother field. Must stay strictly below λ₁; values at or above it make the system indefinite and the solve fails. </li>
+</ul>
+
+</div>
+</div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
 <li>lagrange/polyddg/<a class="el" href="compute__smooth__direction__field_8h_source.html">compute_smooth_direction_field.h</a></li>
 </ul>
@@ -244,7 +269,7 @@ double&#160;</td><td class="memItemRight" valign="bottom"><b>lambda</b> = 1.0</t
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacelagrange.html">lagrange</a></li><li class="navelem"><b>polyddg</b></li><li class="navelem"><a class="el" href="structlagrange_1_1polyddg_1_1_smooth_direction_field_options.html">SmoothDirectionFieldOptions</a></li>
-    <li class="footer">Generated on Tue Aug 4 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+    <li class="footer">Generated on Sat Sep 5 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>
 </body>

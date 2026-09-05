@@ -3,6 +3,11 @@ lagrange.core
 
 .. py:module:: lagrange.core
 
+.. autoapi-nested-parse::
+
+   core module
+
+
 
 Attributes
 ----------
@@ -1997,7 +2002,7 @@ Module Contents
 
 
    .. py:attribute:: attr_name_corner_to_edge
-      :type:  str
+      :type:  ClassVar[Final[str]]
       :value: Ellipsis
 
 
@@ -2005,7 +2010,7 @@ Module Contents
 
 
    .. py:attribute:: attr_name_corner_to_facet
-      :type:  str
+      :type:  ClassVar[Final[str]]
       :value: Ellipsis
 
 
@@ -2013,7 +2018,7 @@ Module Contents
 
 
    .. py:attribute:: attr_name_corner_to_vertex
-      :type:  str
+      :type:  ClassVar[Final[str]]
       :value: Ellipsis
 
 
@@ -2021,7 +2026,7 @@ Module Contents
 
 
    .. py:attribute:: attr_name_edge_to_first_corner
-      :type:  str
+      :type:  ClassVar[Final[str]]
       :value: Ellipsis
 
 
@@ -2029,7 +2034,7 @@ Module Contents
 
 
    .. py:attribute:: attr_name_facet_to_first_corner
-      :type:  str
+      :type:  ClassVar[Final[str]]
       :value: Ellipsis
 
 
@@ -2037,7 +2042,7 @@ Module Contents
 
 
    .. py:attribute:: attr_name_next_corner_around_edge
-      :type:  str
+      :type:  ClassVar[Final[str]]
       :value: Ellipsis
 
 
@@ -2045,7 +2050,7 @@ Module Contents
 
 
    .. py:attribute:: attr_name_next_corner_around_vertex
-      :type:  str
+      :type:  ClassVar[Final[str]]
       :value: Ellipsis
 
 
@@ -2053,7 +2058,7 @@ Module Contents
 
 
    .. py:attribute:: attr_name_vertex_to_first_corner
-      :type:  str
+      :type:  ClassVar[Final[str]]
       :value: Ellipsis
 
 
@@ -2061,7 +2066,7 @@ Module Contents
 
 
    .. py:attribute:: attr_name_vertex_to_position
-      :type:  str
+      :type:  ClassVar[Final[str]]
       :value: Ellipsis
 
 
@@ -3244,12 +3249,16 @@ Module Contents
    :returns: Transformed mesh if in_place is False.
 
 
-.. py:function:: triangulate_polygonal_facets(mesh, scheme = 'earcut')
+.. py:function:: triangulate_polygonal_facets(mesh, scheme = 'earcut', selected_facets = None)
 
    Triangulate polygonal facets of the mesh.
 
    :param mesh: The input mesh to be triangulated in place.
-   :param scheme: The triangulation scheme (options are 'earcut' and 'centroid_fan')
+   :param scheme: The triangulation scheme (options are 'earcut' and 'centroid_fan').
+   :param selected_facets: Optional subset of facets to triangulate. Either a list/array of facet ids,
+       or a boolean per-facet mask (a length ``num_facets`` array whose ``True`` entries mark facets to
+       triangulate). Honored by both schemes; facets not selected are left untouched. If omitted, all
+       polygonal facets are triangulated.
 
 
 .. py:function:: trim_by_isoline(mesh, attribute, isovalue = 0.0, keep_below = True, keep_attributes = True)

@@ -660,6 +660,10 @@ template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5
 <tr class="memitem:ga8842b75f11402e01405aaa861a8cbb2c"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ga8842b75f11402e01405aaa861a8cbb2c">triangulate_polygonal_facets</a> (<a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index &gt; &amp;mesh, const <a class="el" href="structlagrange_1_1_triangulation_options.html">TriangulationOptions</a> &amp;options={})</td></tr>
 <tr class="memdesc:ga8842b75f11402e01405aaa861a8cbb2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Triangulate polygonal facets of a mesh using a prescribed set of rules.  <br /></td></tr>
 <tr class="separator:ga8842b75f11402e01405aaa861a8cbb2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga676acb1f4bee00276eb2142c7da31114" id="r_ga676acb1f4bee00276eb2142c7da31114"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, typename Index&gt; </td></tr>
+<tr class="memitem:ga676acb1f4bee00276eb2142c7da31114"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ga676acb1f4bee00276eb2142c7da31114">triangulate_polygonal_facets</a> (<a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index &gt; &amp;mesh, <a class="el" href="classlagrange_1_1function__ref.html">function_ref</a>&lt; bool(Index)&gt; should_triangulate, const <a class="el" href="structlagrange_1_1_triangulation_options.html">TriangulationOptions</a> &amp;options={})</td></tr>
+<tr class="memdesc:ga676acb1f4bee00276eb2142c7da31114"><td class="mdescLeft">&#160;</td><td class="mdescRight">Triangulate polygonal facets of a mesh using a prescribed set of rules.  <br /></td></tr>
+<tr class="separator:ga676acb1f4bee00276eb2142c7da31114"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga52edbb33ed7f41a311102e42db0d50a5" id="r_ga52edbb33ed7f41a311102e42db0d50a5"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, typename Index&gt; </td></tr>
 <tr class="memitem:ga52edbb33ed7f41a311102e42db0d50a5"><td class="memTemplItemLeft" align="right" valign="top">size_t&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ga52edbb33ed7f41a311102e42db0d50a5">unflip_uv_charts</a> (<a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index &gt; &amp;mesh, const <a class="el" href="structlagrange_1_1_unflip_u_v_charts_options.html">UnflipUVChartsOptions</a> &amp;options={})</td></tr>
 <tr class="memdesc:ga52edbb33ed7f41a311102e42db0d50a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mirror the UV positions of every UV vertex in any chart that is "flipped".  <br /></td></tr>
@@ -4735,7 +4739,7 @@ template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5
 </div>
 </div>
 <a id="ga8842b75f11402e01405aaa861a8cbb2c" name="ga8842b75f11402e01405aaa861a8cbb2c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga8842b75f11402e01405aaa861a8cbb2c">&#9670;&#160;</a></span>triangulate_polygonal_facets()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8842b75f11402e01405aaa861a8cbb2c">&#9670;&#160;</a></span>triangulate_polygonal_facets() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -4761,6 +4765,53 @@ template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in,out]</td><td class="paramname">mesh</td><td>Polygonal mesh to triangulate in place. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">options</td><td>Options for triangulation.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Scalar</td><td>Mesh scalar type. </td></tr>
+    <tr><td class="paramname">Index</td><td>Mesh index type. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga676acb1f4bee00276eb2142c7da31114" name="ga676acb1f4bee00276eb2142c7da31114"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga676acb1f4bee00276eb2142c7da31114">&#9670;&#160;</a></span>triangulate_polygonal_facets() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, typename Index&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void triangulate_polygonal_facets </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>mesh</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classlagrange_1_1function__ref.html">function_ref</a>&lt; bool(Index)&gt;</td>          <td class="paramname"><span class="paramname"><em>should_triangulate</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structlagrange_1_1_triangulation_options.html">TriangulationOptions</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>options</em></span><span class="paramdefsep"> = </span><span class="paramdefval">{}</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;lagrange/triangulate_polygonal_facets.h&gt;</code></p>
+
+<p>Triangulate polygonal facets of a mesh using a prescribed set of rules. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">mesh</td><td>Polygonal mesh to triangulate in place. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">should_triangulate</td><td>Predicate determining whether a facet with more than 3 vertices should be triangulated. Facets for which it returns false are left untouched. This applies to both the earcut and centroid-fan schemes. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">options</td><td>Options for triangulation.</td></tr>
   </table>
   </dd>
@@ -4963,7 +5014,7 @@ template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Tue Aug 4 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+    <li class="footer">Generated on Sat Sep 5 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>
 </body>

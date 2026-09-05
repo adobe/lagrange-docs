@@ -2673,36 +2673,36 @@ Glyph types:
 <p>You may set colors and textures of materials using the following API:</p>
 <div class="highlight"><pre><span></span><code><span class="k">auto</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">material</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">*</span><span class="n">ui</span><span class="o">::</span><span class="n">get_material</span><span class="p">(</span><span class="n">r</span><span class="p">,</span><span class="w"> </span><span class="n">entity_with_meshrender</span><span class="p">);</span>
 
-<span class="c1">//Sets &quot;property name&quot; to a red color</span>
-<span class="n">material</span><span class="p">.</span><span class="n">set_color</span><span class="p">(</span><span class="s">&quot;property name&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">ui</span><span class="o">::</span><span class="n">Color</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">));</span>
+<span class="c1">//Sets "property name" to a red color</span>
+<span class="n">material</span><span class="p">.</span><span class="n">set_color</span><span class="p">(</span><span class="s">"property name"</span><span class="p">,</span><span class="w"> </span><span class="n">ui</span><span class="o">::</span><span class="n">Color</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">));</span>
 
-<span class="c1">//Sets &quot;texture name&quot; to texture loaded from file</span>
-<span class="n">material</span><span class="p">.</span><span class="n">set_texture</span><span class="p">(</span><span class="s">&quot;texture name&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">ui</span><span class="o">::</span><span class="n">load_texture</span><span class="p">(</span><span class="s">&quot;texture.jpg&quot;</span><span class="p">));</span>
+<span class="c1">//Sets "texture name" to texture loaded from file</span>
+<span class="n">material</span><span class="p">.</span><span class="n">set_texture</span><span class="p">(</span><span class="s">"texture name"</span><span class="p">,</span><span class="w"> </span><span class="n">ui</span><span class="o">::</span><span class="n">load_texture</span><span class="p">(</span><span class="s">"texture.jpg"</span><span class="p">));</span>
 </code></pre></div>
 <h4 id="pbrmaterial">PBRMaterial</h4>
 <p>For the default <code>PBRMaterial</code>, you may use aliases for the property names:
 <div class="highlight"><pre><span></span><code><span class="c1">//Uniform rgba color</span>
 <span class="n">material</span><span class="p">.</span><span class="n">set_color</span><span class="p">(</span><span class="n">PBRMaterial</span><span class="o">::</span><span class="n">BaseColor</span><span class="p">,</span><span class="w"> </span><span class="n">ui</span><span class="o">::</span><span class="n">Color</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">));</span>
 <span class="c1">//RGB(A) color/albedo texture</span>
-<span class="n">material</span><span class="p">.</span><span class="n">set_texture</span><span class="p">(</span><span class="n">PBRMaterial</span><span class="o">::</span><span class="n">BaseColor</span><span class="p">,</span><span class="w"> </span><span class="n">ui</span><span class="o">::</span><span class="n">load_texture</span><span class="p">(</span><span class="s">&quot;color.jpg&quot;</span><span class="p">));</span>
+<span class="n">material</span><span class="p">.</span><span class="n">set_texture</span><span class="p">(</span><span class="n">PBRMaterial</span><span class="o">::</span><span class="n">BaseColor</span><span class="p">,</span><span class="w"> </span><span class="n">ui</span><span class="o">::</span><span class="n">load_texture</span><span class="p">(</span><span class="s">"color.jpg"</span><span class="p">));</span>
 
 <span class="c1">//Normal texture (and texture only)</span>
-<span class="n">material</span><span class="p">.</span><span class="n">set_texture</span><span class="p">(</span><span class="n">PBRMaterial</span><span class="o">::</span><span class="n">Normal</span><span class="p">,</span><span class="w"> </span><span class="n">ui</span><span class="o">::</span><span class="n">load_texture</span><span class="p">(</span><span class="s">&quot;normal.jpg&quot;</span><span class="p">));</span>
+<span class="n">material</span><span class="p">.</span><span class="n">set_texture</span><span class="p">(</span><span class="n">PBRMaterial</span><span class="o">::</span><span class="n">Normal</span><span class="p">,</span><span class="w"> </span><span class="n">ui</span><span class="o">::</span><span class="n">load_texture</span><span class="p">(</span><span class="s">"normal.jpg"</span><span class="p">));</span>
 
 <span class="c1">//Uniform roughness</span>
 <span class="n">material</span><span class="p">.</span><span class="n">set_float</span><span class="p">(</span><span class="n">PBRMaterial</span><span class="o">::</span><span class="n">Roughness</span><span class="p">,</span><span class="w"> </span><span class="mf">0.75f</span><span class="p">);</span>
 <span class="c1">//Roughness texture</span>
-<span class="n">material</span><span class="p">.</span><span class="n">set_texture</span><span class="p">(</span><span class="n">PBRMaterial</span><span class="o">::</span><span class="n">Roughness</span><span class="p">,</span><span class="w"> </span><span class="n">ui</span><span class="o">::</span><span class="n">load_texture</span><span class="p">(</span><span class="s">&quot;metallic.jpg&quot;</span><span class="p">));</span>
+<span class="n">material</span><span class="p">.</span><span class="n">set_texture</span><span class="p">(</span><span class="n">PBRMaterial</span><span class="o">::</span><span class="n">Roughness</span><span class="p">,</span><span class="w"> </span><span class="n">ui</span><span class="o">::</span><span class="n">load_texture</span><span class="p">(</span><span class="s">"metallic.jpg"</span><span class="p">));</span>
 
 <span class="c1">//Uniform roughness</span>
 <span class="n">material</span><span class="p">.</span><span class="n">set_float</span><span class="p">(</span><span class="n">PBRMaterial</span><span class="o">::</span><span class="n">Metallic</span><span class="p">,</span><span class="w"> </span><span class="mf">0.75f</span><span class="p">);</span>
 <span class="c1">//Metallic texture</span>
-<span class="n">material</span><span class="p">.</span><span class="n">set_texture</span><span class="p">(</span><span class="n">PBRMaterial</span><span class="o">::</span><span class="n">Metallic</span><span class="p">,</span><span class="w"> </span><span class="n">ui</span><span class="o">::</span><span class="n">load_texture</span><span class="p">(</span><span class="s">&quot;metallic.jpg&quot;</span><span class="p">));</span>
+<span class="n">material</span><span class="p">.</span><span class="n">set_texture</span><span class="p">(</span><span class="n">PBRMaterial</span><span class="o">::</span><span class="n">Metallic</span><span class="p">,</span><span class="w"> </span><span class="n">ui</span><span class="o">::</span><span class="n">load_texture</span><span class="p">(</span><span class="s">"metallic.jpg"</span><span class="p">));</span>
 
 <span class="c1">//Uniform opacity</span>
 <span class="n">material</span><span class="p">.</span><span class="n">set_float</span><span class="p">(</span><span class="n">PBRMaterial</span><span class="o">::</span><span class="n">Opacity</span><span class="p">,</span><span class="w"> </span><span class="mf">1.0f</span><span class="p">);</span>
 <span class="c1">//Opacity texture</span>
-<span class="n">material</span><span class="p">.</span><span class="n">set_texture</span><span class="p">(</span><span class="n">PBRMaterial</span><span class="o">::</span><span class="n">Opacity</span><span class="p">,</span><span class="w"> </span><span class="n">ui</span><span class="o">::</span><span class="n">load_texture</span><span class="p">(</span><span class="s">&quot;opacity.jpg&quot;</span><span class="p">));</span>
+<span class="n">material</span><span class="p">.</span><span class="n">set_texture</span><span class="p">(</span><span class="n">PBRMaterial</span><span class="o">::</span><span class="n">Opacity</span><span class="p">,</span><span class="w"> </span><span class="n">ui</span><span class="o">::</span><span class="n">load_texture</span><span class="p">(</span><span class="s">"opacity.jpg"</span><span class="p">));</span>
 </code></pre></div></p>
 <h3 id="rasterizer-properties">Rasterizer Properties</h3>
 <p>To control OpenGl properties, you may following syntax:</p>
