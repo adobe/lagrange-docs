@@ -38,6 +38,7 @@ automatically downloaded by our CMake system depending on which Lagrange module 
 | [Nanobind](https://github.com/wjakob/nanobind)                                                 | BSD-3                             | Python                                                |
 | [OpenSubdiv](https://github.com/PixarAnimationStudios/OpenSubdiv)                              | Apache 2                          | Subdivision                                           |
 | [OpenVDB](https://github.com/AcademySoftwareFoundation/openvdb)                                | MPL2                              | Examples (Volume), Python Bindings (Volume), Volume   |
+| [PcdIO](https://github.com/Research-Adobe/pcdio)[^5_pcdio]                                     | Apache 2                          | IO                                                    |
 | [PoissonRecon](https://github.com/mkazhdan/PoissonRecon)                                       | MIT                               | Poisson                                               |
 | [Polyscope](https://github.com/nmwsharp/polyscope)                                             | MIT                               | Examples (Volume), Polyscope                          |
 | [Portable File Dialogs](https://github.com/samhocevar/portable-file-dialogs)                   | WTFPL (public domain)             | UI                                                    |
@@ -45,7 +46,7 @@ automatically downloaded by our CMake system depending on which Lagrange module 
 | [Shape Gradient Domain](https://github.com/mkazhdan/ShapeGradientDomain)                       | MIT                               | Filtering                                             |
 | [Threading Building Blocks](https://github.com/oneapi-src/oneTBB)                              | Apache 2                          | Core, Solver                                          |
 | [TinyEXR](https://github.com/syoyo/tinyexr)                                                    | BSD-3                             | Image_IO                                              |
-| [Tracy](https://github.com/wolfpld/tracy)[^5_tracy]                                            | BSD-3                             | Core                                                  |
+| [Tracy](https://github.com/wolfpld/tracy)[^6_tracy]                                            | BSD-3                             | Core                                                  |
 | [WindingNumber](https://github.com/sideeffects/WindingNumber)                                  | MIT                               | Unit Tests (Winding), Winding                         |
 | [Zstd](https://github.com/facebook/zstd)                                                       | BSD-3                             | Serialization2                                        |
 | [geometry-central](https://github.com/nmwsharp/geometry-central)                               | MIT                               | Geodesic                                              |
@@ -68,7 +69,8 @@ automatically downloaded by our CMake system depending on which Lagrange module 
 [^2_boost]:           Boost::filesystem is an optional backend of the FS module.
 [^3_cli11_examples]:  CLI11 is used by the examples in the following modules: BVH, Core, Filtering, IO, Image, Image_IO, Partitioning, Poisson, Polyscope, Primitive, Raycasting, Subdivision, Texproc, UI, Volume, Winding, Xatlas
 [^4_filesystem]:      `gulrak/filesystem` is only needed when the IO module is compiled in C++14 mode. In C++17 mode, the IO module will defaults to `std::filesystem`.
-[^5_tracy]:           Tracy is an optional dependency of the core module.
+[^5_pcdio]:           PcdIO provides PCD (Point Cloud Data) read/write for the IO module.
+[^6_tracy]:           Tracy is an optional dependency of the core module.
 
 ## Bundled Dependencies
 
