@@ -139,29 +139,32 @@ $(function(){initNavTree('midpoint__subdivision_8h_source.html',''); initResizab
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#pragma once</span></div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#ifdef LAGRANGE_ENABLE_LEGACY_FUNCTIONS</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#ifdef LAGRANGE_ENABLE_LEGACY_HEADERS</span></div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">    #include &lt;lagrange/subdivision/legacy/midpoint_subdivision.h&gt;</span></div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#include &lt;lagrange/SurfaceMesh.h&gt;</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#include &lt;lagrange/subdivision/api.h&gt;</span></div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacelagrange_1_1subdivision.html">lagrange::subdivision</a> {</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span></div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span></div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> Scalar, <span class="keyword">typename</span> Index&gt;</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>SurfaceMesh&lt;Scalar, Index&gt; <a class="code hl_function" href="group__module-subdivision.html#ga5bb45b1783fc315efefb291e2d2dbd9f">midpoint_subdivision</a>(<span class="keyword">const</span> SurfaceMesh&lt;Scalar, Index&gt;&amp; mesh);</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span></div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>} <span class="comment">// namespace lagrange::subdivision</span></div>
-<div class="ttc" id="agroup__module-subdivision_html_ga5bb45b1783fc315efefb291e2d2dbd9f"><div class="ttname"><a href="group__module-subdivision.html#ga5bb45b1783fc315efefb291e2d2dbd9f">lagrange::subdivision::midpoint_subdivision</a></div><div class="ttdeci">SurfaceMesh&lt; Scalar, Index &gt; midpoint_subdivision(const SurfaceMesh&lt; Scalar, Index &gt; &amp;mesh)</div><div class="ttdoc">Performs one step of midpoint subdivision for triangle meshes.</div><div class="ttdef"><b>Definition</b> midpoint_subdivision.cpp:22</div></div>
-<div class="ttc" id="anamespacelagrange_1_1subdivision_html"><div class="ttname"><a href="namespacelagrange_1_1subdivision.html">lagrange::subdivision</a></div><div class="ttdoc">Subdivision surfaces.</div><div class="ttdef"><b>Definition</b> compute_sharpness.h:19</div></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &lt;lagrange/SurfaceMesh.h&gt;</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacelagrange_1_1subdivision.html">lagrange::subdivision</a> {</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> Scalar, <span class="keyword">typename</span> Index&gt;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>LA_SUBDIVISION_API SurfaceMesh&lt;Scalar, Index&gt; <a class="code hl_function" href="group__module-subdivision.html#ga5bb45b1783fc315efefb291e2d2dbd9f">midpoint_subdivision</a>(</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="keyword">const</span> SurfaceMesh&lt;Scalar, Index&gt;&amp; mesh);</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>} <span class="comment">// namespace lagrange::subdivision</span></div>
+<div class="ttc" id="agroup__module-subdivision_html_ga5bb45b1783fc315efefb291e2d2dbd9f"><div class="ttname"><a href="group__module-subdivision.html#ga5bb45b1783fc315efefb291e2d2dbd9f">lagrange::subdivision::midpoint_subdivision</a></div><div class="ttdeci">SurfaceMesh&lt; Scalar, Index &gt; midpoint_subdivision(const SurfaceMesh&lt; Scalar, Index &gt; &amp;mesh)</div><div class="ttdoc">Performs one step of midpoint subdivision for triangle meshes.</div><div class="ttdef"><b>Definition</b> midpoint_subdivision.cpp:23</div></div>
+<div class="ttc" id="anamespacelagrange_1_1subdivision_html"><div class="ttname"><a href="namespacelagrange_1_1subdivision.html">lagrange::subdivision</a></div><div class="ttdoc">Subdivision surfaces.</div><div class="ttdef"><b>Definition</b> compute_sharpness.h:21</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_07f81415e34b65c913a0ecacd99353f6.html">lagrange</a></li><li class="navelem"><a class="el" href="dir_403ba6ec4bfa8c6b58afc67600c60fb5.html">subdivision</a></li><li class="navelem"><b>midpoint_subdivision.h</b></li>
-    <li class="footer">Generated on Sat Sep 5 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+    <li class="footer">Generated on Mon Oct 5 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>
 </body>

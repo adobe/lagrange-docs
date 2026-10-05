@@ -23,7 +23,8 @@ var searchData=
   ['excluded_5fattributes_20',['excluded_attributes',['../structlagrange_1_1_attribute_filter.html#a4aa22445446ec6fa89194d60fc8ee9e3',1,'lagrange::AttributeFilter']]],
   ['export_5fmaterials_21',['export_materials',['../structlagrange_1_1io_1_1_save_options.html#af20d5daaff3e4179c1df8f8238a219bc',1,'lagrange::io::SaveOptions']]],
   ['extensions_22',['extensions',['../structlagrange_1_1scene_1_1_image_experimental.html#a08936f4f41506b0b95105d8e620a9a96',1,'lagrange::scene::ImageExperimental']]],
-  ['exterior_5fonly_23',['exterior_only',['../structlagrange_1_1texproc_1_1_stitching_options.html#aa1c5474979d2ade3016e457d168d2f38',1,'lagrange::texproc::StitchingOptions']]],
-  ['extra_5fattributes_24',['extra_attributes',['../structlagrange_1_1_remove_duplicate_vertices_options.html#a1f3274faf4d13c22001e47b145c5ff3f',1,'lagrange::RemoveDuplicateVerticesOptions']]],
-  ['extrinsic_25',['extrinsic',['../structlagrange_1_1remeshing__im_1_1_remeshing_options.html#a91d779f476665f38b96028533a714c55',1,'lagrange::remeshing_im::RemeshingOptions']]]
+  ['exterior_5fbandwidth_23',['exterior_bandwidth',['../structlagrange_1_1volume_1_1_mesh_to_volume_options.html#a19656ebcaee758365391232556d093df',1,'lagrange::volume::MeshToVolumeOptions']]],
+  ['exterior_5fonly_24',['exterior_only',['../structlagrange_1_1texproc_1_1_stitching_options.html#aa1c5474979d2ade3016e457d168d2f38',1,'lagrange::texproc::StitchingOptions']]],
+  ['extra_5fattributes_25',['extra_attributes',['../structlagrange_1_1_remove_duplicate_vertices_options.html#a1f3274faf4d13c22001e47b145c5ff3f',1,'lagrange::RemoveDuplicateVerticesOptions']]],
+  ['extrinsic_26',['extrinsic',['../structlagrange_1_1remeshing__im_1_1_remeshing_options.html#a91d779f476665f38b96028533a714c55',1,'lagrange::remeshing_im::RemeshingOptions']]]
 ];

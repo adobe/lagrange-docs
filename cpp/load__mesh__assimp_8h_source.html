@@ -138,34 +138,36 @@ $(function(){initNavTree('load__mesh__assimp_8h_source.html',''); initResizable(
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment"> */</span></div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#pragma once</span></div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#ifdef LAGRANGE_WITH_ASSIMP</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;lagrange/io/api.h&gt;</span></div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">    #include &lt;lagrange/MeshTrait.h&gt;</span></div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">    #include &lt;lagrange/SurfaceMesh.h&gt;</span></div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">    #include &lt;lagrange/fs/filesystem.h&gt;</span></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">    #include &lt;lagrange/io/types.h&gt;</span></div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">    #ifdef LAGRANGE_ENABLE_LEGACY_FUNCTIONS</span></div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">        #include &lt;lagrange/io/legacy/load_mesh_assimp.h&gt;</span></div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">    #endif</span></div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">    #include &lt;iosfwd&gt;</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#ifdef LAGRANGE_WITH_ASSIMP</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">    #include &lt;lagrange/MeshTrait.h&gt;</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">    #include &lt;lagrange/SurfaceMesh.h&gt;</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">    #include &lt;lagrange/fs/filesystem.h&gt;</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">    #include &lt;lagrange/io/types.h&gt;</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">    #ifdef LAGRANGE_ENABLE_LEGACY_HEADERS</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">        #include &lt;lagrange/io/legacy/load_mesh_assimp.h&gt;</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">    #endif</span></div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacelagrange_1_1io.html">lagrange::io</a> {</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span></div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="keyword">template</span> &lt;</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="keyword">typename</span> MeshType,</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    std::enable_if_t&lt;!lagrange::MeshTraitHelper::is_mesh&lt;MeshType&gt;::value&gt;* = <span class="keyword">nullptr</span>&gt;</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>MeshType load_mesh_assimp(<span class="keyword">const</span> fs::path&amp; filename, <span class="keyword">const</span> <a class="code hl_struct" href="structlagrange_1_1io_1_1_load_options.html">LoadOptions</a>&amp; options = {});</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span></div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="keyword">template</span> &lt;</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="keyword">typename</span> MeshType,</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    std::enable_if_t&lt;!lagrange::MeshTraitHelper::is_mesh&lt;MeshType&gt;::value&gt;* = <span class="keyword">nullptr</span>&gt;</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>MeshType load_mesh_assimp(std::istream&amp; input_stream, <span class="keyword">const</span> <a class="code hl_struct" href="structlagrange_1_1io_1_1_load_options.html">LoadOptions</a>&amp; options = {});</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>} <span class="comment">// namespace lagrange::io</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">    #include &lt;iosfwd&gt;</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacelagrange_1_1io.html">lagrange::io</a> {</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="keyword">template</span> &lt;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="keyword">typename</span> MeshType,</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    std::enable_if_t&lt;!lagrange::MeshTraitHelper::is_mesh&lt;MeshType&gt;::value&gt;* = <span class="keyword">nullptr</span>&gt;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>LA_IO_API MeshType load_mesh_assimp(<span class="keyword">const</span> fs::path&amp; filename, <span class="keyword">const</span> <a class="code hl_struct" href="structlagrange_1_1io_1_1_load_options.html">LoadOptions</a>&amp; options = {});</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="keyword">template</span> &lt;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <span class="keyword">typename</span> MeshType,</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    std::enable_if_t&lt;!lagrange::MeshTraitHelper::is_mesh&lt;MeshType&gt;::value&gt;* = <span class="keyword">nullptr</span>&gt;</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>LA_IO_API MeshType load_mesh_assimp(std::istream&amp; input_stream, <span class="keyword">const</span> <a class="code hl_struct" href="structlagrange_1_1io_1_1_load_options.html">LoadOptions</a>&amp; options = {});</div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>} <span class="comment">// namespace lagrange::io</span></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="preprocessor">#endif</span></div>
 <div class="ttc" id="anamespacelagrange_1_1io_html"><div class="ttname"><a href="namespacelagrange_1_1io.html">lagrange::io</a></div><div class="ttdoc">Mesh input/output.</div><div class="ttdef"><b>Definition</b> detect_file_format.h:18</div></div>
 <div class="ttc" id="astructlagrange_1_1io_1_1_load_options_html"><div class="ttname"><a href="structlagrange_1_1io_1_1_load_options.html">lagrange::io::LoadOptions</a></div><div class="ttdoc">Options used when loading a mesh or a scene.</div><div class="ttdef"><b>Definition</b> types.h:84</div></div>
 </div><!-- fragment --></div><!-- contents -->
@@ -174,7 +176,7 @@ $(function(){initNavTree('load__mesh__assimp_8h_source.html',''); initResizable(
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_b326c4ed3bb92aa4da062efbda54f295.html">lagrange</a></li><li class="navelem"><a class="el" href="dir_414767452d3b9104a4c2963522ee51eb.html">io</a></li><li class="navelem"><b>load_mesh_assimp.h</b></li>
-    <li class="footer">Generated on Sat Sep 5 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+    <li class="footer">Generated on Mon Oct 5 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>
 </body>

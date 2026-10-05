@@ -101,14 +101,14 @@ var group__module_raycasting =
       [ "Exterior", "group__module-raycasting.html#gga11f6a306cbbe434415ce7498b22290e3ad9b3dceaf520ba1fa45c371c498c6baf", null ],
       [ "Both", "group__module-raycasting.html#gga11f6a306cbbe434415ce7498b22290e3a130c5b3473c57faa76e2a1c54e26f88e", null ]
     ] ],
-    [ "compute_local_feature_size", "group__module-raycasting.html#ga092e714b33f7282761b6eb171d0bf9d9", null ],
-    [ "project", "group__module-raycasting.html#gacca5b0a47fbc939327dac6d2c82a9abb", null ],
-    [ "project_closest_point", "group__module-raycasting.html#ga96bff6490abc440e6e07d2a12a13f3eb", null ],
-    [ "project_closest_vertex", "group__module-raycasting.html#ga5e52705d00882e910fcf65942e5351e7", null ],
-    [ "project_directional", "group__module-raycasting.html#ga5fa3bb4021bb067476cca74f2f304b44", null ],
-    [ "estimate_occluded_facets", "group__module-raycasting.html#ga43b81f445c75823c966c76542e665142", null ],
-    [ "remove_occluded_facets", "group__module-raycasting.html#ga04f6c6ef77ef136040a765cea8ae04b5", null ],
-    [ "estimate_occluded_instances", "group__module-raycasting.html#ga352bc0b85ed4699daca8f9a147fd801a", null ],
-    [ "estimate_occluded_instances", "group__module-raycasting.html#ga0c6b5e8ed4cd00ad0b68cc7c53c2499d", null ],
-    [ "remove_occluded_instances", "group__module-raycasting.html#ga08ecbd1269989afec22b4c0693136083", null ]
+    [ "compute_local_feature_size", "group__module-raycasting.html#gae2be8acc176f3d3352247afa82e1ff25", null ],
+    [ "project", "group__module-raycasting.html#gaa74244690cf3e6baa641f562108f3615", null ],
+    [ "project_closest_point", "group__module-raycasting.html#ga929807d1b87df4b8ad8f977e84a9bc04", null ],
+    [ "project_closest_vertex", "group__module-raycasting.html#gaf5e54427a1d06af9caab5e9038c13d30", null ],
+    [ "project_directional", "group__module-raycasting.html#gacdb81582cefe8f730daa8f6595a2ae76", null ],
+    [ "estimate_occluded_facets", "group__module-raycasting.html#gad9c6d9eb0042f12a6ce3d041c1d580e4", null ],
+    [ "remove_occluded_facets", "group__module-raycasting.html#ga8b1ca387513f44310588d34ca3d14c96", null ],
+    [ "estimate_occluded_instances", "group__module-raycasting.html#gaaa31812497646f7aed31274aa39fd959", null ],
+    [ "estimate_occluded_instances", "group__module-raycasting.html#gabd6c3a8a7b8e4b19a84d8d0139a420e6", null ],
+    [ "remove_occluded_instances", "group__module-raycasting.html#ga0c2db577fe9db8e8b73c70e21f9afcfb", null ]
 ];

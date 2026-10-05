@@ -184,8 +184,8 @@ var hierarchy =
     [ "function_ref< F >", "classlagrange_1_1function__ref.html", null ],
     [ "function_ref< R(Args...)>", "classlagrange_1_1function__ref_3_01_r_07_args_8_8_8_08_4.html", null ],
     [ "GeodesicEngine< Scalar, Index >", "classlagrange_1_1geodesic_1_1_geodesic_engine.html", [
-      [ "Impl", "structlagrange_1_1geodesic_1_1_geodesic_engine_heat_1_1_impl.html", null ],
-      [ "Impl", "structlagrange_1_1geodesic_1_1_geodesic_engine_m_m_p_1_1_impl.html", null ],
+      [ "Impl< Scalar, Index >", "structlagrange_1_1geodesic_1_1_geodesic_engine_heat_1_1_impl.html", null ],
+      [ "Impl< Scalar, Index >", "structlagrange_1_1geodesic_1_1_geodesic_engine_m_m_p_1_1_impl.html", null ],
       [ "GeodesicEngineDGPC< Scalar, Index >", "classlagrange_1_1geodesic_1_1_geodesic_engine_d_g_p_c.html", null ],
       [ "GeodesicEngineHeat< Scalar, Index >", "classlagrange_1_1geodesic_1_1_geodesic_engine_heat.html", null ],
       [ "GeodesicEngineMMP< Scalar, Index >", "classlagrange_1_1geodesic_1_1_geodesic_engine_m_m_p.html", null ]
@@ -506,6 +506,7 @@ var hierarchy =
     [ "SkinningExtractNResult< Scalar, Index >", "structlagrange_1_1internal_1_1_skinning_extract_n_result.html", null ],
     [ "SkyboxCubeVertexData", "structlagrange_1_1ui_1_1_skybox_cube_vertex_data.html", null ],
     [ "SmoothDirectionFieldOptions", "structlagrange_1_1polyddg_1_1_smooth_direction_field_options.html", null ],
+    [ "SmoothedMeshGradientField", "classlagrange_1_1volume_1_1_smoothed_mesh_gradient_field.html", null ],
     [ "SmoothingOptions", "structlagrange_1_1filtering_1_1_smoothing_options.html", null ],
     [ "SolverOptions", "structlagrange_1_1texproc_1_1_compositing_options_1_1_solver_options.html", null ],
     [ "SphereConfig", "structlagrange_1_1primitive_1_1legacy_1_1_sphere_config.html", null ],

@@ -164,37 +164,37 @@ $(function(){initNavTree('_progress_callback_8h_source.html',''); initResizable(
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span></div>
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    <span class="keywordtype">void</span> set_num_iterations(<span class="keywordtype">size_t</span> num_iterations);</div>
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span></div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    <span class="keywordtype">void</span> advance(<span class="keywordtype">size_t</span> increment);</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span></div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    <span class="keywordtype">void</span> update();</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span></div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    <span class="keywordtype">void</span> update(<span class="keywordtype">float</span> progress);</div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span></div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno"><a class="line" href="classlagrange_1_1_progress_callback.html#ab4d3ca61fc3b4dc344b82d1034ddfe91">   99</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classlagrange_1_1_progress_callback.html#ab4d3ca61fc3b4dc344b82d1034ddfe91">set_verbose</a>(<span class="keywordtype">bool</span> verbose) { m_verbose = verbose; }</div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span> </div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    std::function&lt;void(<span class="keyword">const</span> std::string&amp;, <span class="keywordtype">float</span>)&gt; m_callback;</div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span></div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    std::string m_section_name;</div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span></div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    <span class="keywordtype">size_t</span> m_num_iterations = 1;</div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span></div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    std::atomic_size_t m_current_iteration = {0};</div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span></div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>    <span class="keywordtype">float</span> m_last_progress = 0.f;</div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span></div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>    tbb::spin_mutex m_mutex;</div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span></div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>    <span class="keywordtype">bool</span> m_verbose = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>};</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    <span class="keywordtype">void</span> advance(<span class="keywordtype">size_t</span> increment);</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span></div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    <span class="keywordtype">void</span> update();</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span></div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    <span class="keywordtype">void</span> update(<span class="keywordtype">float</span> progress);</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span></div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno"><a class="line" href="classlagrange_1_1_progress_callback.html#ab4d3ca61fc3b4dc344b82d1034ddfe91">  101</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classlagrange_1_1_progress_callback.html#ab4d3ca61fc3b4dc344b82d1034ddfe91">set_verbose</a>(<span class="keywordtype">bool</span> verbose) { m_verbose = verbose; }</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span> </div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    std::function&lt;void(<span class="keyword">const</span> std::string&amp;, <span class="keywordtype">float</span>)&gt; m_callback;</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span></div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    std::string m_section_name;</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span></div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    <span class="keywordtype">size_t</span> m_num_iterations = 1;</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span></div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    std::atomic_size_t m_current_iteration = {0};</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span></div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    <span class="keywordtype">float</span> m_last_progress = 0.f;</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span></div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    tbb::spin_mutex m_mutex;</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span></div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>    <span class="keywordtype">bool</span> m_verbose = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>};</div>
 </div>
-<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span> </div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>} <span class="comment">// namespace lagrange</span></div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span> </div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>} <span class="comment">// namespace lagrange</span></div>
 <div class="ttc" id="aclasslagrange_1_1_progress_callback_html_a12d11d2edbbc2a579b340653ad919657"><div class="ttname"><a href="classlagrange_1_1_progress_callback.html#a12d11d2edbbc2a579b340653ad919657">lagrange::ProgressCallback::ProgressCallback</a></div><div class="ttdeci">ProgressCallback(std::function&lt; void(const std::string &amp;, float)&gt; func=nullptr, std::string name=&quot;&quot;, size_t num_iterations=1)</div><div class="ttdoc">Constructs a new instance.</div><div class="ttdef"><b>Definition</b> ProgressCallback.cpp:20</div></div>
 <div class="ttc" id="aclasslagrange_1_1_progress_callback_html_a64a81acd39c68257ea88f950a046b3bb"><div class="ttname"><a href="classlagrange_1_1_progress_callback.html#a64a81acd39c68257ea88f950a046b3bb">lagrange::ProgressCallback::get_section</a></div><div class="ttdeci">const std::string &amp; get_section() const</div><div class="ttdoc">Retrieves current section name.</div><div class="ttdef"><b>Definition</b> ProgressCallback.h:64</div></div>
 <div class="ttc" id="aclasslagrange_1_1_progress_callback_html_a64c53ed1480efa5b3d2c82d38989ef91"><div class="ttname"><a href="classlagrange_1_1_progress_callback.html#a64c53ed1480efa5b3d2c82d38989ef91">lagrange::ProgressCallback::set_callback</a></div><div class="ttdeci">void set_callback(std::function&lt; void(const std::string &amp;, float)&gt; func)</div><div class="ttdoc">Set notification callback.</div><div class="ttdef"><b>Definition</b> ProgressCallback.cpp:79</div></div>
 <div class="ttc" id="aclasslagrange_1_1_progress_callback_html_a667276faae35293c523efd422e334f18"><div class="ttname"><a href="classlagrange_1_1_progress_callback.html#a667276faae35293c523efd422e334f18">lagrange::ProgressCallback::set_section</a></div><div class="ttdeci">void set_section(std::string name, size_t num_iterations=1)</div><div class="ttdoc">Starts a new section, reset current iteration counter to 0, and notify.</div><div class="ttdef"><b>Definition</b> ProgressCallback.cpp:29</div></div>
-<div class="ttc" id="aclasslagrange_1_1_progress_callback_html_ab4d3ca61fc3b4dc344b82d1034ddfe91"><div class="ttname"><a href="classlagrange_1_1_progress_callback.html#ab4d3ca61fc3b4dc344b82d1034ddfe91">lagrange::ProgressCallback::set_verbose</a></div><div class="ttdeci">void set_verbose(bool verbose)</div><div class="ttdoc">Sets the verbosity.</div><div class="ttdef"><b>Definition</b> ProgressCallback.h:99</div></div>
+<div class="ttc" id="aclasslagrange_1_1_progress_callback_html_ab4d3ca61fc3b4dc344b82d1034ddfe91"><div class="ttname"><a href="classlagrange_1_1_progress_callback.html#ab4d3ca61fc3b4dc344b82d1034ddfe91">lagrange::ProgressCallback::set_verbose</a></div><div class="ttdeci">void set_verbose(bool verbose)</div><div class="ttdoc">Sets the verbosity.</div><div class="ttdef"><b>Definition</b> ProgressCallback.h:101</div></div>
 <div class="ttc" id="anamespacelagrange_html"><div class="ttname"><a href="namespacelagrange.html">lagrange</a></div><div class="ttdoc">Main namespace for Lagrange.</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
@@ -202,7 +202,7 @@ $(function(){initNavTree('_progress_callback_8h_source.html',''); initResizable(
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_e277d0e790805391a364b883bec7db94.html">lagrange</a></li><li class="navelem"><a class="el" href="dir_7ef152871a4677ccccc6e1c83ae16bce.html">utils</a></li><li class="navelem"><b>ProgressCallback.h</b></li>
-    <li class="footer">Generated on Sat Sep 5 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+    <li class="footer">Generated on Mon Oct 5 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>
 </body>

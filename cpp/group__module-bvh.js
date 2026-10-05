@@ -60,10 +60,10 @@ var group__module_bvh =
       [ "Hybrid", "group__module-bvh.html#gga7e55018c6fcf6fb3e8f6b02e4fc46892afb1b6e23a3767d2a31ef7899e6dd3f1e", null ]
     ] ],
     [ "compute_intersecting_pairs", "group__module-bvh.html#ga4e4be146df5c66d9eec08e28fbc4dc83", null ],
-    [ "compute_mesh_distances", "group__module-bvh.html#ga5f64c98d00b325344dd5b57e51f16451", null ],
-    [ "compute_hausdorff", "group__module-bvh.html#ga0ffd251371a17cc104cfcf1be0affad1", null ],
-    [ "compute_chamfer", "group__module-bvh.html#ga3cd0f3afed6a3bae7aae59407e491489", null ],
-    [ "compute_uv_overlap", "group__module-bvh.html#ga32a555d00a25d570ed2b9fa2e0940bd1", null ],
+    [ "compute_mesh_distances", "group__module-bvh.html#ga81b60f5995480590cb7fceac7e51ddfa", null ],
+    [ "compute_hausdorff", "group__module-bvh.html#ga92dc92a3acb71f669c656c8f0bd1431c", null ],
+    [ "compute_chamfer", "group__module-bvh.html#ga9748e8053f3754475ae4482f599da19e", null ],
+    [ "compute_uv_overlap", "group__module-bvh.html#gacc12ee4768cccb573adec6f9f4f1adfc", null ],
     [ "resolve_tjunctions", "group__module-bvh.html#ga03fb225400736df61e8634acbf05eb00", null ],
     [ "weld_vertices", "group__module-bvh.html#ga4e23b9d49adcfe017da3455eb381ce13", null ]
 ];

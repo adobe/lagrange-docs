@@ -1,5 +1,9 @@
 var NAVTREEINDEX10 =
 {
+"structlagrange_1_1_remove_duplicate_facet_options.html#a3a53d38d37410f88be10879cb048e27d":[2,1,1,4,1,0],
+"structlagrange_1_1_remove_duplicate_vertices_options.html":[2,1,1,4,2],
+"structlagrange_1_1_remove_duplicate_vertices_options.html#a1f3274faf4d13c22001e47b145c5ff3f":[2,1,1,4,2,0],
+"structlagrange_1_1_remove_duplicate_vertices_options.html#abe1380fd152e7c39c5509136339422d0":[2,1,1,4,2,1],
 "structlagrange_1_1_remove_null_area_facets_options.html":[2,1,1,4,3],
 "structlagrange_1_1_remove_null_area_facets_options.html#a7912fd3c8e4930cec8ed8c05567434a4":[2,1,1,4,3,1],
 "structlagrange_1_1_remove_null_area_facets_options.html#ad49f5977fbc988e5d27cb0ece3e6cb00":[2,1,1,4,3,0],
@@ -245,9 +249,5 @@ var NAVTREEINDEX10 =
 "structlagrange_1_1image_1_1_image_histogram.html#a832b1fb2e74c768466193efc26fbe2fa":[4,0,0,4,1,0],
 "structlagrange_1_1image_1_1_image_histogram.html#aad5729d76ea20f8aded557bc39d776bf":[3,0,0,1,1,2],
 "structlagrange_1_1image_1_1_image_histogram.html#aad5729d76ea20f8aded557bc39d776bf":[4,0,0,4,1,2],
-"structlagrange_1_1image_1_1_image_histogram.html#ab57d4076e7e499e5da8c1ae500170a02":[3,0,0,1,1,3],
-"structlagrange_1_1image_1_1_image_histogram.html#ab57d4076e7e499e5da8c1ae500170a02":[4,0,0,4,1,3],
-"structlagrange_1_1image_1_1_image_traits.html":[3,0,0,1,3],
-"structlagrange_1_1image_1_1_image_traits.html":[4,0,0,4,3],
-"structlagrange_1_1image_1_1_raw_input_image_1_1_pixel_traits.html":[3,0,0,1,6,0]
+"structlagrange_1_1image_1_1_image_histogram.html#ab57d4076e7e499e5da8c1ae500170a02":[3,0,0,1,1,3]
 };

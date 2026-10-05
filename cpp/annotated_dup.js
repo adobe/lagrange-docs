@@ -485,6 +485,7 @@ var annotated_dup =
         ] ],
         [ "MeshToVolumeOptions", "structlagrange_1_1volume_1_1_mesh_to_volume_options.html", "structlagrange_1_1volume_1_1_mesh_to_volume_options" ],
         [ "NormalsFromVolumeOptions", "structlagrange_1_1volume_1_1_normals_from_volume_options.html", "structlagrange_1_1volume_1_1_normals_from_volume_options" ],
+        [ "SmoothedMeshGradientField", "classlagrange_1_1volume_1_1_smoothed_mesh_gradient_field.html", "classlagrange_1_1volume_1_1_smoothed_mesh_gradient_field" ],
         [ "VolumeToMeshOptions", "structlagrange_1_1volume_1_1_volume_to_mesh_options.html", "structlagrange_1_1volume_1_1_volume_to_mesh_options" ]
       ] ],
       [ "winding", null, [

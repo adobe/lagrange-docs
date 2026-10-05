@@ -155,5 +155,6 @@ var searchData=
   ['get_5fwindow_5fsize_152',['get_window_size',['../namespacelagrange_1_1ui.html#afd2b8d532ab39e9738999d4127f8116b',1,'lagrange::ui']]],
   ['get_5fwrite_5fpolicy_153',['get_write_policy',['../classlagrange_1_1_attribute.html#ad9b8b1f723ee9f5918f8c9783fc27590',1,'lagrange::Attribute']]],
   ['getindexspacepoint_154',['getIndexSpacePoint',['../classlagrange_1_1volume_1_1legacy_1_1_mesh_adapter.html#aea02a94cdb9e9cecdf097605d9cd8c09',1,'lagrange::volume::legacy::MeshAdapter']]],
-  ['gradient_155',['gradient',['../classlagrange_1_1polyddg_1_1_differential_operators.html#ac4492dcf51ac60d1917f637f4da7cdf8',1,'lagrange::polyddg::DifferentialOperators::gradient() const'],['../classlagrange_1_1polyddg_1_1_differential_operators.html#ae4f47d19cfb2d6fd90f2b02529d229ee',1,'lagrange::polyddg::DifferentialOperators::gradient(Index fid) const']]]
+  ['gradient_155',['gradient',['../classlagrange_1_1polyddg_1_1_differential_operators.html#ac4492dcf51ac60d1917f637f4da7cdf8',1,'lagrange::polyddg::DifferentialOperators::gradient() const'],['../classlagrange_1_1polyddg_1_1_differential_operators.html#ae4f47d19cfb2d6fd90f2b02529d229ee',1,'lagrange::polyddg::DifferentialOperators::gradient(Index fid) const']]],
+  ['grid_156',['grid',['../classlagrange_1_1volume_1_1_smoothed_mesh_gradient_field.html#a0e6305dde6726c1381653438393f5b7a',1,'lagrange::volume::SmoothedMeshGradientField']]]
 ];

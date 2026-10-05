@@ -156,6 +156,9 @@ double&#160;</td><td class="memItemRight" valign="bottom"><b>stiffness_regulariz
 std::optional&lt; std::pair&lt; double, double &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>clamp_to_range</b> = std::nullopt</td></tr>
 <tr class="memdesc:a7f7515e85289d54ddb825f97d7c2f558"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clamp out-of-range texels to the given range (nullopt to disable). <br /></td></tr>
 <tr class="separator:a7f7515e85289d54ddb825f97d7c2f558"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11da114f8545d1e6ef760d5b3b279aa0" id="r_a11da114f8545d1e6ef760d5b3b279aa0"><td class="memItemLeft" align="right" valign="top">std::optional&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a11da114f8545d1e6ef760d5b3b279aa0">sanity_check</a> = std::nullopt</td></tr>
+<tr class="memdesc:a11da114f8545d1e6ef760d5b3b279aa0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether to run solver sanity checks.  <br /></td></tr>
+<tr class="separator:a11da114f8545d1e6ef760d5b3b279aa0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abc55debe57196f8726a6553f516f41eb" id="r_abc55debe57196f8726a6553f516f41eb"><td class="memItemLeft" align="right" valign="top"><a id="abc55debe57196f8726a6553f516f41eb" name="abc55debe57196f8726a6553f516f41eb"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>__randomize</b> = false</td></tr>
 <tr class="memdesc:abc55debe57196f8726a6553f516f41eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initially the boundary texels to random values (for debugging purposes). <br /></td></tr>
@@ -163,7 +166,25 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>__randomize</b> = fal
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Options for texture stitching. </p>
-</div><hr/>The documentation for this struct was generated from the following file:<ul>
+</div><h2 class="groupheader">Member Data Documentation</h2>
+<a id="a11da114f8545d1e6ef760d5b3b279aa0" name="a11da114f8545d1e6ef760d5b3b279aa0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11da114f8545d1e6ef760d5b3b279aa0">&#9670;&#160;</a></span>sanity_check</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::optional&lt;bool&gt; sanity_check = std::nullopt</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Whether to run solver sanity checks. </p>
+<p>If unset, defaults to true in debug builds and false in release builds. </p>
+
+</div>
+</div>
+<hr/>The documentation for this struct was generated from the following file:<ul>
 <li>lagrange/texproc/<a class="el" href="texture__stitching_8h_source.html">texture_stitching.h</a></li>
 </ul>
 </div><!-- contents -->
@@ -172,7 +193,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>__randomize</b> = fal
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacelagrange.html">lagrange</a></li><li class="navelem"><b>texproc</b></li><li class="navelem"><a class="el" href="structlagrange_1_1texproc_1_1_stitching_options.html">StitchingOptions</a></li>
-    <li class="footer">Generated on Sat Sep 5 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+    <li class="footer">Generated on Mon Oct 5 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>
 </body>

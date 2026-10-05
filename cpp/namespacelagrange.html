@@ -270,7 +270,7 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlagrange_1_1_genuine_mesh_geometry.html">GenuineMeshGeometry</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlagrange_1_1_greedy_coloring_options.html">GreedyColoringOptions</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Option struct for computing dihedral angles.  <a href="structlagrange_1_1_greedy_coloring_options.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Option struct for computing greedy coloring.  <a href="structlagrange_1_1_greedy_coloring_options.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlagrange_1_1_indexed_attribute.html">IndexedAttribute</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Derived attribute class that stores the actual information.  <a href="classlagrange_1_1_indexed_attribute.html#details">More...</a><br /></td></tr>
@@ -946,10 +946,6 @@ template&lt;class T&gt; </td></tr>
 template&lt;typename GeometryType&gt; </td></tr>
 <tr class="memitem:a14f768e5cde6773f82390f692bfc5335"><td class="memTemplItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classlagrange_1_1_connectivity.html">Connectivity</a>&lt; GeometryType &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>compute_connectivity</b> (const GeometryType &amp;geometry)</td></tr>
 <tr class="separator:a14f768e5cde6773f82390f692bfc5335"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad34583bdda68644dcd9c7175ce179735" id="r_ad34583bdda68644dcd9c7175ce179735"><td class="memTemplParams" colspan="2">template&lt;typename DerivedF, typename DerivedC&gt; </td></tr>
-<tr class="memitem:ad34583bdda68644dcd9c7175ce179735"><td class="memTemplItemLeft" align="right" valign="top">Eigen::Index&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ad34583bdda68644dcd9c7175ce179735">corner_to_edge_mapping</a> (const Eigen::MatrixBase&lt; DerivedF &gt; &amp;F, Eigen::PlainObjectBase&lt; DerivedC &gt; &amp;C2E)</td></tr>
-<tr class="memdesc:ad34583bdda68644dcd9c7175ce179735"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes a mapping from mesh corners (k*f+i) to unique edge ids.  <br /></td></tr>
-<tr class="separator:ad34583bdda68644dcd9c7175ce179735"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a81deba98a13efcfa8427fdba5b24413d" id="r_a81deba98a13efcfa8427fdba5b24413d"><td class="memTemplParams" colspan="2"><a id="a81deba98a13efcfa8427fdba5b24413d" name="a81deba98a13efcfa8427fdba5b24413d"></a>
 template&lt;typename DerivedV, typename DerivedF&gt; </td></tr>
 <tr class="memitem:a81deba98a13efcfa8427fdba5b24413d"><td class="memTemplItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classlagrange_1_1_mesh.html">Mesh</a>&lt; DerivedV, DerivedF &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>create_empty_mesh</b> ()</td></tr>
@@ -987,13 +983,13 @@ template&lt;typename VertexArray, typename FacetArray&gt; </td></tr>
 <tr class="memitem:a4fc317ebb509e1424bd063d3b8161706"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>wrap_with_mesh</b> (const Eigen::MatrixBase&lt; VertexArray &gt; &amp;&amp;, const Eigen::MatrixBase&lt; FacetArray &gt; &amp;)</td></tr>
 <tr class="separator:a4fc317ebb509e1424bd063d3b8161706"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3e8bcd4939a21ed624de2c6d9fd281eb" id="r_a3e8bcd4939a21ed624de2c6d9fd281eb"><td class="memItemLeft" align="right" valign="top"><a id="a3e8bcd4939a21ed624de2c6d9fd281eb" name="a3e8bcd4939a21ed624de2c6d9fd281eb"></a>
-std::unique_ptr&lt; <a class="el" href="classlagrange_1_1_mesh.html">TriangleMesh3D</a> &gt; LA_CORE_API&#160;</td><td class="memItemRight" valign="bottom"><b>create_cube</b> ()</td></tr>
+std::unique_ptr&lt; <a class="el" href="classlagrange_1_1_mesh.html">TriangleMesh3D</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>create_cube</b> ()</td></tr>
 <tr class="separator:a3e8bcd4939a21ed624de2c6d9fd281eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9413b6be0c30efd8eaf93d8b30c6b058" id="r_a9413b6be0c30efd8eaf93d8b30c6b058"><td class="memItemLeft" align="right" valign="top"><a id="a9413b6be0c30efd8eaf93d8b30c6b058" name="a9413b6be0c30efd8eaf93d8b30c6b058"></a>
-std::unique_ptr&lt; <a class="el" href="classlagrange_1_1_mesh.html">TriangleMesh3D</a> &gt; LA_CORE_API&#160;</td><td class="memItemRight" valign="bottom"><b>create_quad</b> (bool with_center_vertex)</td></tr>
+std::unique_ptr&lt; <a class="el" href="classlagrange_1_1_mesh.html">TriangleMesh3D</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>create_quad</b> (bool with_center_vertex)</td></tr>
 <tr class="separator:a9413b6be0c30efd8eaf93d8b30c6b058"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac5d0f9c1a4c8b1d92aaecbdb8e825a8a" id="r_ac5d0f9c1a4c8b1d92aaecbdb8e825a8a"><td class="memItemLeft" align="right" valign="top"><a id="ac5d0f9c1a4c8b1d92aaecbdb8e825a8a" name="ac5d0f9c1a4c8b1d92aaecbdb8e825a8a"></a>
-std::unique_ptr&lt; <a class="el" href="classlagrange_1_1_mesh.html">TriangleMesh3D</a> &gt; LA_CORE_API&#160;</td><td class="memItemRight" valign="bottom"><b>create_sphere</b> (double refine_order=2)</td></tr>
+std::unique_ptr&lt; <a class="el" href="classlagrange_1_1_mesh.html">TriangleMesh3D</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>create_sphere</b> (double refine_order=2)</td></tr>
 <tr class="separator:ac5d0f9c1a4c8b1d92aaecbdb8e825a8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga3f53104d1cc22467975607b404cd7379" id="r_ga3f53104d1cc22467975607b404cd7379"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, typename Index&gt; </td></tr>
 <tr class="memitem:ga3f53104d1cc22467975607b404cd7379"><td class="memTemplItemLeft" align="right" valign="top">size_t&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__group-surfacemesh-utils.html#ga3f53104d1cc22467975607b404cd7379">disconnect_uv_charts</a> (<a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index &gt; &amp;mesh, const <a class="el" href="structlagrange_1_1_disconnect_u_v_charts_options.html">DisconnectUVChartsOptions</a> &amp;options={})</td></tr>
@@ -1075,10 +1071,10 @@ template&lt;typename DerivedF&gt; </td></tr>
 <tr class="memitem:ga4cc4c8c931c0a4530d67dd077795db1b"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__group-surfacemesh-utils.html#ga4cc4c8c931c0a4530d67dd077795db1b">insert_isoline</a> (const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index &gt; &amp;mesh, const <a class="el" href="structlagrange_1_1_isoline_options.html">IsolineOptions</a> &amp;options={})</td></tr>
 <tr class="memdesc:ga4cc4c8c931c0a4530d67dd077795db1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Insert the isoline of an implicit function into a mesh.  <br /></td></tr>
 <tr class="separator:ga4cc4c8c931c0a4530d67dd077795db1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga84167f554a5d7594c0ba4ae760f31599" id="r_ga84167f554a5d7594c0ba4ae760f31599"><td class="memItemLeft" align="right" valign="top">LA_CORE_API spdlog::logger &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group-logger.html#ga84167f554a5d7594c0ba4ae760f31599">logger</a> ()</td></tr>
+<tr class="memitem:ga84167f554a5d7594c0ba4ae760f31599" id="r_ga84167f554a5d7594c0ba4ae760f31599"><td class="memItemLeft" align="right" valign="top">spdlog::logger &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group-logger.html#ga84167f554a5d7594c0ba4ae760f31599">logger</a> ()</td></tr>
 <tr class="memdesc:ga84167f554a5d7594c0ba4ae760f31599"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the current logger.  <br /></td></tr>
 <tr class="separator:ga84167f554a5d7594c0ba4ae760f31599"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga8f17bae29eab16304d0f5a71f383ae15" id="r_ga8f17bae29eab16304d0f5a71f383ae15"><td class="memItemLeft" align="right" valign="top">LA_CORE_API void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group-logger.html#ga8f17bae29eab16304d0f5a71f383ae15">set_logger</a> (std::shared_ptr&lt; spdlog::logger &gt; <a class="el" href="group__group-logger.html#ga84167f554a5d7594c0ba4ae760f31599">logger</a>)</td></tr>
+<tr class="memitem:ga8f17bae29eab16304d0f5a71f383ae15" id="r_ga8f17bae29eab16304d0f5a71f383ae15"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group-logger.html#ga8f17bae29eab16304d0f5a71f383ae15">set_logger</a> (std::shared_ptr&lt; spdlog::logger &gt; <a class="el" href="group__group-logger.html#ga84167f554a5d7594c0ba4ae760f31599">logger</a>)</td></tr>
 <tr class="memdesc:ga8f17bae29eab16304d0f5a71f383ae15"><td class="mdescLeft">&#160;</td><td class="mdescRight">Setup a logger object to be used by Lagrange.  <br /></td></tr>
 <tr class="separator:ga8f17bae29eab16304d0f5a71f383ae15"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aed6a4ba76d19d3abeb66fcdbd594f8a6" id="r_aed6a4ba76d19d3abeb66fcdbd594f8a6"><td class="memTemplParams" colspan="2"><a id="aed6a4ba76d19d3abeb66fcdbd594f8a6" name="aed6a4ba76d19d3abeb66fcdbd594f8a6"></a>
@@ -1153,18 +1149,18 @@ template&lt;typename _VertexArray, typename _FacetArray, typename Archive&gt; </
 <tr class="memitem:ga1a52980d167584935ed162810d2a71ba"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__group-surfacemesh-cleanup.html#ga1a52980d167584935ed162810d2a71ba">unflip_uv_triangles</a> (<a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index &gt; &amp;mesh, const <a class="el" href="structlagrange_1_1_unflip_u_v_options.html">UnflipUVOptions</a> &amp;options={})</td></tr>
 <tr class="memdesc:ga1a52980d167584935ed162810d2a71ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unflip flipped UV triangles.  <br /></td></tr>
 <tr class="separator:ga1a52980d167584935ed162810d2a71ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gabb5fc3fc93e8d973bcc534398eeb0aa9" id="r_gabb5fc3fc93e8d973bcc534398eeb0aa9"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, typename Index, typename <a class="el" href="classlagrange_1_1_mesh.html">MeshType</a>&gt; </td></tr>
-<tr class="memitem:gabb5fc3fc93e8d973bcc534398eeb0aa9"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__group-surfacemesh-utils.html#gabb5fc3fc93e8d973bcc534398eeb0aa9">to_surface_mesh_copy</a> (const <a class="el" href="classlagrange_1_1_mesh.html">MeshType</a> &amp;mesh)</td></tr>
-<tr class="memdesc:gabb5fc3fc93e8d973bcc534398eeb0aa9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert a legacy mesh object to a surface mesh object.  <br /></td></tr>
-<tr class="separator:gabb5fc3fc93e8d973bcc534398eeb0aa9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga68ad17ee5b7475decfbaf17fcfa63d65" id="r_ga68ad17ee5b7475decfbaf17fcfa63d65"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, typename Index, typename <a class="el" href="classlagrange_1_1_mesh.html">MeshType</a>&gt; </td></tr>
-<tr class="memitem:ga68ad17ee5b7475decfbaf17fcfa63d65"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__group-surfacemesh-utils.html#ga68ad17ee5b7475decfbaf17fcfa63d65">to_surface_mesh_wrap</a> (<a class="el" href="classlagrange_1_1_mesh.html">MeshType</a> &amp;&amp;mesh)</td></tr>
-<tr class="memdesc:ga68ad17ee5b7475decfbaf17fcfa63d65"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wrap a legacy mesh object as a surface mesh object.  <br /></td></tr>
-<tr class="separator:ga68ad17ee5b7475decfbaf17fcfa63d65"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gac349d354b36d62bc2efeb93dd2b7f078" id="r_gac349d354b36d62bc2efeb93dd2b7f078"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="classlagrange_1_1_mesh.html">MeshType</a>, typename <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, typename Index&gt; </td></tr>
-<tr class="memitem:gac349d354b36d62bc2efeb93dd2b7f078"><td class="memTemplItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classlagrange_1_1_mesh.html">MeshType</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__group-surfacemesh-utils.html#gac349d354b36d62bc2efeb93dd2b7f078">to_legacy_mesh</a> (const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index &gt; &amp;mesh)</td></tr>
-<tr class="memdesc:gac349d354b36d62bc2efeb93dd2b7f078"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert a surface mesh object to a legacy mesh object.  <br /></td></tr>
-<tr class="separator:gac349d354b36d62bc2efeb93dd2b7f078"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb5fc3fc93e8d973bcc534398eeb0aa9" id="r_abb5fc3fc93e8d973bcc534398eeb0aa9"><td class="memTemplParams" colspan="2"><a id="abb5fc3fc93e8d973bcc534398eeb0aa9" name="abb5fc3fc93e8d973bcc534398eeb0aa9"></a>
+template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, typename Index, typename <a class="el" href="classlagrange_1_1_mesh.html">MeshType</a>&gt; </td></tr>
+<tr class="memitem:abb5fc3fc93e8d973bcc534398eeb0aa9"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>to_surface_mesh_copy</b> (const <a class="el" href="classlagrange_1_1_mesh.html">MeshType</a> &amp;mesh)</td></tr>
+<tr class="separator:abb5fc3fc93e8d973bcc534398eeb0aa9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a68ad17ee5b7475decfbaf17fcfa63d65" id="r_a68ad17ee5b7475decfbaf17fcfa63d65"><td class="memTemplParams" colspan="2"><a id="a68ad17ee5b7475decfbaf17fcfa63d65" name="a68ad17ee5b7475decfbaf17fcfa63d65"></a>
+template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, typename Index, typename <a class="el" href="classlagrange_1_1_mesh.html">MeshType</a>&gt; </td></tr>
+<tr class="memitem:a68ad17ee5b7475decfbaf17fcfa63d65"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>to_surface_mesh_wrap</b> (<a class="el" href="classlagrange_1_1_mesh.html">MeshType</a> &amp;&amp;mesh)</td></tr>
+<tr class="separator:a68ad17ee5b7475decfbaf17fcfa63d65"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac349d354b36d62bc2efeb93dd2b7f078" id="r_ac349d354b36d62bc2efeb93dd2b7f078"><td class="memTemplParams" colspan="2"><a id="ac349d354b36d62bc2efeb93dd2b7f078" name="ac349d354b36d62bc2efeb93dd2b7f078"></a>
+template&lt;typename <a class="el" href="classlagrange_1_1_mesh.html">MeshType</a>, typename <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, typename Index&gt; </td></tr>
+<tr class="memitem:ac349d354b36d62bc2efeb93dd2b7f078"><td class="memTemplItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classlagrange_1_1_mesh.html">MeshType</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>to_legacy_mesh</b> (const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index &gt; &amp;mesh)</td></tr>
+<tr class="separator:ac349d354b36d62bc2efeb93dd2b7f078"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a88d1858ee3052bb8908c966a00ec65d2" id="r_a88d1858ee3052bb8908c966a00ec65d2"><td class="memTemplParams" colspan="2"><a id="a88d1858ee3052bb8908c966a00ec65d2" name="a88d1858ee3052bb8908c966a00ec65d2"></a>
 template&lt;typename _VertexArray, typename _FacetArray, typename Archive&gt; </td></tr>
 <tr class="memitem:a88d1858ee3052bb8908c966a00ec65d2"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>serialize</b> (<a class="el" href="classlagrange_1_1_mesh_geometry.html">MeshGeometry</a>&lt; _VertexArray, _FacetArray &gt; &amp;geometry, Archive &amp;ar)</td></tr>
@@ -1309,17 +1305,17 @@ template&lt;typename <a class="el" href="classlagrange_1_1_mesh.html">MeshType</
 <tr class="memitem:ga52edbb33ed7f41a311102e42db0d50a5"><td class="memTemplItemLeft" align="right" valign="top">size_t&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__group-surfacemesh-utils.html#ga52edbb33ed7f41a311102e42db0d50a5">unflip_uv_charts</a> (<a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index &gt; &amp;mesh, const <a class="el" href="structlagrange_1_1_unflip_u_v_charts_options.html">UnflipUVChartsOptions</a> &amp;options={})</td></tr>
 <tr class="memdesc:ga52edbb33ed7f41a311102e42db0d50a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mirror the UV positions of every UV vertex in any chart that is "flipped".  <br /></td></tr>
 <tr class="separator:ga52edbb33ed7f41a311102e42db0d50a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaf0eeb4d96ed545aadd3b6bf27ed631c6" id="r_gaf0eeb4d96ed545aadd3b6bf27ed631c6"><td class="memItemLeft" align="right" valign="top">LA_CORE_API void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group-utils-assert.html#gaf0eeb4d96ed545aadd3b6bf27ed631c6">set_breakpoint_enabled</a> (bool enabled)</td></tr>
+<tr class="memitem:gaf0eeb4d96ed545aadd3b6bf27ed631c6" id="r_gaf0eeb4d96ed545aadd3b6bf27ed631c6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group-utils-assert.html#gaf0eeb4d96ed545aadd3b6bf27ed631c6">set_breakpoint_enabled</a> (bool enabled)</td></tr>
 <tr class="memdesc:gaf0eeb4d96ed545aadd3b6bf27ed631c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets whether to trigger a debugger breakpoint on assert failure.  <br /></td></tr>
 <tr class="separator:gaf0eeb4d96ed545aadd3b6bf27ed631c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gac1d763e905c12a114bb94a8f38227094" id="r_gac1d763e905c12a114bb94a8f38227094"><td class="memItemLeft" align="right" valign="top">LA_CORE_API bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group-utils-assert.html#gac1d763e905c12a114bb94a8f38227094">is_breakpoint_enabled</a> ()</td></tr>
+<tr class="memitem:gac1d763e905c12a114bb94a8f38227094" id="r_gac1d763e905c12a114bb94a8f38227094"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group-utils-assert.html#gac1d763e905c12a114bb94a8f38227094">is_breakpoint_enabled</a> ()</td></tr>
 <tr class="memdesc:gac1d763e905c12a114bb94a8f38227094"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether to trigger a debugger breakpoint on assert failure.  <br /></td></tr>
 <tr class="separator:gac1d763e905c12a114bb94a8f38227094"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga82afecd46baab6fadf8dfa8d7dbea5ec" id="r_ga82afecd46baab6fadf8dfa8d7dbea5ec"><td class="memItemLeft" align="right" valign="top">
-LA_CORE_API void&#160;</td><td class="memItemRight" valign="bottom"><b>trigger_breakpoint</b> ()</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>trigger_breakpoint</b> ()</td></tr>
 <tr class="memdesc:ga82afecd46baab6fadf8dfa8d7dbea5ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Call to explicitly trigger a debugger breakpoint. <br /></td></tr>
 <tr class="separator:ga82afecd46baab6fadf8dfa8d7dbea5ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga3fa47832a47c910f51b99004c3bc165f" id="r_ga3fa47832a47c910f51b99004c3bc165f"><td class="memItemLeft" align="right" valign="top">LA_CORE_API bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group-utils-assert.html#ga3fa47832a47c910f51b99004c3bc165f">assertion_failed</a> (const char *function, const char *file, unsigned int line, const char *condition, std::string_view message)</td></tr>
+<tr class="memitem:ga3fa47832a47c910f51b99004c3bc165f" id="r_ga3fa47832a47c910f51b99004c3bc165f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group-utils-assert.html#ga3fa47832a47c910f51b99004c3bc165f">assertion_failed</a> (const char *function, const char *file, unsigned int line, const char *condition, std::string_view message)</td></tr>
 <tr class="separator:ga3fa47832a47c910f51b99004c3bc165f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gadc37a853021fc87c80d53f7cb0a21ae5" id="r_gadc37a853021fc87c80d53f7cb0a21ae5"><td class="memTemplParams" colspan="2">template&lt;typename Index&gt; </td></tr>
 <tr class="memitem:gadc37a853021fc87c80d53f7cb0a21ae5"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structlagrange_1_1_chain_edges_result.html">ChainEdgesResult</a>&lt; Index &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__group-utils.html#gadc37a853021fc87c80d53f7cb0a21ae5">chain_directed_edges</a> (const <a class="el" href="group__group-utils-misc.html#ga4afead0b9ccc53fe4fca896787595d26">span</a>&lt; const Index &gt; edges, const <a class="el" href="structlagrange_1_1_chain_edges_options.html">ChainEdgesOptions</a> &amp;options={})</td></tr>
@@ -1356,14 +1352,14 @@ template&lt;typename... Args&gt; </td></tr>
 <tr class="memitem:a5de73cba9c92c27d529e2191847f3959"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>print</b> (std::ostream &amp;os, format_string&lt; Args... &gt; fmt_str, <a class="el" href="struct_args.html">Args</a> &amp;&amp;... args)</td></tr>
 <tr class="memdesc:a5de73cba9c92c27d529e2191847f3959"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes a formatted string to an output stream. <br /></td></tr>
 <tr class="separator:a5de73cba9c92c27d529e2191847f3959"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga7f5441f1abed7ed4b18603fb092a9088" id="r_ga7f5441f1abed7ed4b18603fb092a9088"><td class="memItemLeft" align="right" valign="top">
-LA_CORE_API void&#160;</td><td class="memItemRight" valign="bottom"><b>enable_fpe</b> ()</td></tr>
-<tr class="memdesc:ga7f5441f1abed7ed4b18603fb092a9088"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable floating-point exceptions (useful for debugging). <br /></td></tr>
-<tr class="separator:ga7f5441f1abed7ed4b18603fb092a9088"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga43e9d211a5c2057d21ea76850599f93d" id="r_ga43e9d211a5c2057d21ea76850599f93d"><td class="memItemLeft" align="right" valign="top">
-LA_CORE_API void&#160;</td><td class="memItemRight" valign="bottom"><b>disable_fpe</b> ()</td></tr>
-<tr class="memdesc:ga43e9d211a5c2057d21ea76850599f93d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disable previously-enabled fpe. <br /></td></tr>
-<tr class="separator:ga43e9d211a5c2057d21ea76850599f93d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga19b64389774c826a71abae902e0b46b9" id="r_ga19b64389774c826a71abae902e0b46b9"><td class="memItemLeft" align="right" valign="top">
+void&#160;</td><td class="memItemRight" valign="bottom"><b>enable_fpe</b> ()</td></tr>
+<tr class="memdesc:ga19b64389774c826a71abae902e0b46b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable floating-point exceptions (useful for debugging). <br /></td></tr>
+<tr class="separator:ga19b64389774c826a71abae902e0b46b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gabe7e2f24aa07f2b2e38829ef368a0f59" id="r_gabe7e2f24aa07f2b2e38829ef368a0f59"><td class="memItemLeft" align="right" valign="top">
+void&#160;</td><td class="memItemRight" valign="bottom"><b>disable_fpe</b> ()</td></tr>
+<tr class="memdesc:gabe7e2f24aa07f2b2e38829ef368a0f59"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disable previously-enabled fpe. <br /></td></tr>
+<tr class="separator:gabe7e2f24aa07f2b2e38829ef368a0f59"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga626fd0cc926eb83e8adb607687c3c8e2" id="r_ga626fd0cc926eb83e8adb607687c3c8e2"><td class="memTemplParams" colspan="2">
 template&lt;typename R, typename... Args&gt; </td></tr>
 <tr class="memitem:ga626fd0cc926eb83e8adb607687c3c8e2"><td class="memTemplItemLeft" align="right" valign="top">constexpr void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>swap</b> (<a class="el" href="classlagrange_1_1function__ref.html">function_ref</a>&lt; R(Args...)&gt; &amp;lhs, <a class="el" href="classlagrange_1_1function__ref.html">function_ref</a>&lt; R(Args...)&gt; &amp;rhs) noexcept</td></tr>
@@ -1544,19 +1540,19 @@ template&lt;typename Derived, typename <a class="el" href="group__group-surfacem
 template&lt;typename Derived, typename <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>&gt; </td></tr>
 <tr class="memitem:ae507fa7ddcefa3ebd984728963adb14d"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>eigen_to_flat_vector</b> (const Eigen::MatrixBase&lt; Derived &gt; &amp;from, std::vector&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a> &gt; &amp;to, int row_major_flag=Eigen::RowMajor)</td></tr>
 <tr class="separator:ae507fa7ddcefa3ebd984728963adb14d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gad2f13bef4d8b9c7c6b2dc61b87d95bd4" id="r_gad2f13bef4d8b9c7c6b2dc61b87d95bd4"><td class="memItemLeft" align="right" valign="top">LA_CORE_API std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group-utils-misc.html#gad2f13bef4d8b9c7c6b2dc61b87d95bd4">string_split</a> (const std::string &amp;str, char delimiter)</td></tr>
+<tr class="memitem:gad2f13bef4d8b9c7c6b2dc61b87d95bd4" id="r_gad2f13bef4d8b9c7c6b2dc61b87d95bd4"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group-utils-misc.html#gad2f13bef4d8b9c7c6b2dc61b87d95bd4">string_split</a> (const std::string &amp;str, char delimiter)</td></tr>
 <tr class="memdesc:gad2f13bef4d8b9c7c6b2dc61b87d95bd4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Split a std::string using a prescribed delimiter.  <br /></td></tr>
 <tr class="separator:gad2f13bef4d8b9c7c6b2dc61b87d95bd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaebb929afb5049cc3aaaabd296f556ac3" id="r_gaebb929afb5049cc3aaaabd296f556ac3"><td class="memItemLeft" align="right" valign="top">LA_CORE_API bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group-utils-misc.html#gaebb929afb5049cc3aaaabd296f556ac3">starts_with</a> (std::string_view str, std::string_view prefix)</td></tr>
+<tr class="memitem:gaebb929afb5049cc3aaaabd296f556ac3" id="r_gaebb929afb5049cc3aaaabd296f556ac3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group-utils-misc.html#gaebb929afb5049cc3aaaabd296f556ac3">starts_with</a> (std::string_view str, std::string_view prefix)</td></tr>
 <tr class="memdesc:gaebb929afb5049cc3aaaabd296f556ac3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the string begins with the given prefix.  <br /></td></tr>
 <tr class="separator:gaebb929afb5049cc3aaaabd296f556ac3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga8eef11056e4525af0cd41aeb98869cbb" id="r_ga8eef11056e4525af0cd41aeb98869cbb"><td class="memItemLeft" align="right" valign="top">LA_CORE_API bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group-utils-misc.html#ga8eef11056e4525af0cd41aeb98869cbb">ends_with</a> (std::string_view str, std::string_view suffix)</td></tr>
+<tr class="memitem:ga8eef11056e4525af0cd41aeb98869cbb" id="r_ga8eef11056e4525af0cd41aeb98869cbb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group-utils-misc.html#ga8eef11056e4525af0cd41aeb98869cbb">ends_with</a> (std::string_view str, std::string_view suffix)</td></tr>
 <tr class="memdesc:ga8eef11056e4525af0cd41aeb98869cbb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the string ends with the given suffix.  <br /></td></tr>
 <tr class="separator:ga8eef11056e4525af0cd41aeb98869cbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga40b443ced6fb40c747991e41e12494f4" id="r_ga40b443ced6fb40c747991e41e12494f4"><td class="memItemLeft" align="right" valign="top">LA_CORE_API std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group-utils-misc.html#ga40b443ced6fb40c747991e41e12494f4">to_lower</a> (std::string str)</td></tr>
+<tr class="memitem:ga40b443ced6fb40c747991e41e12494f4" id="r_ga40b443ced6fb40c747991e41e12494f4"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group-utils-misc.html#ga40b443ced6fb40c747991e41e12494f4">to_lower</a> (std::string str)</td></tr>
 <tr class="memdesc:ga40b443ced6fb40c747991e41e12494f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert a string to lowercase.  <br /></td></tr>
 <tr class="separator:ga40b443ced6fb40c747991e41e12494f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga81d5673419396307677f905d5f4033ce" id="r_ga81d5673419396307677f905d5f4033ce"><td class="memItemLeft" align="right" valign="top">LA_CORE_API std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group-utils-misc.html#ga81d5673419396307677f905d5f4033ce">to_upper</a> (std::string str)</td></tr>
+<tr class="memitem:ga81d5673419396307677f905d5f4033ce" id="r_ga81d5673419396307677f905d5f4033ce"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group-utils-misc.html#ga81d5673419396307677f905d5f4033ce">to_upper</a> (std::string str)</td></tr>
 <tr class="memdesc:ga81d5673419396307677f905d5f4033ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert a string to uppercase.  <br /></td></tr>
 <tr class="separator:ga81d5673419396307677f905d5f4033ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gab0ccfafd7993dceb16b5cda49fa5ea36" id="r_gab0ccfafd7993dceb16b5cda49fa5ea36"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
@@ -1795,12 +1791,12 @@ template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5
 template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, typename Index&gt; </td></tr>
 <tr class="memitem:af69728ca4136f996c7d673a1a48ada7e"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>triangulate_polygonal_facets_centroid_fan</b> (<a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index &gt; &amp;mesh, bool preserve_edges, bool preserve_points, <a class="el" href="classlagrange_1_1function__ref.html">function_ref</a>&lt; bool(Index)&gt; *should_triangulate=nullptr)</td></tr>
 <tr class="separator:af69728ca4136f996c7d673a1a48ada7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acdd3bc33951881c8236e6cf55c9817c5" id="r_acdd3bc33951881c8236e6cf55c9817c5"><td class="memItemLeft" align="right" valign="top"><a id="acdd3bc33951881c8236e6cf55c9817c5" name="acdd3bc33951881c8236e6cf55c9817c5"></a>
-template LA_CORE_API bool&#160;</td><td class="memItemRight" valign="bottom"><b>triangle_triangle_intersection&lt; float &gt;</b> (<a class="el" href="group__group-utils-misc.html#ga4afead0b9ccc53fe4fca896787595d26">span</a>&lt; const float, 3 &gt;, <a class="el" href="group__group-utils-misc.html#ga4afead0b9ccc53fe4fca896787595d26">span</a>&lt; const float, 3 &gt;, <a class="el" href="group__group-utils-misc.html#ga4afead0b9ccc53fe4fca896787595d26">span</a>&lt; const float, 3 &gt;, <a class="el" href="group__group-utils-misc.html#ga4afead0b9ccc53fe4fca896787595d26">span</a>&lt; const float, 3 &gt;, <a class="el" href="group__group-utils-misc.html#ga4afead0b9ccc53fe4fca896787595d26">span</a>&lt; const float, 3 &gt;, <a class="el" href="group__group-utils-misc.html#ga4afead0b9ccc53fe4fca896787595d26">span</a>&lt; const float, 3 &gt;, <a class="el" href="group__group-utils-geom.html#gaaf1ac02be69b434d1c3c8b1b863e0933">IncludeBoundaryIntersection</a>)</td></tr>
-<tr class="separator:acdd3bc33951881c8236e6cf55c9817c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3bc972eca8ecd7cc8726e8bf71a95fa3" id="r_a3bc972eca8ecd7cc8726e8bf71a95fa3"><td class="memItemLeft" align="right" valign="top"><a id="a3bc972eca8ecd7cc8726e8bf71a95fa3" name="a3bc972eca8ecd7cc8726e8bf71a95fa3"></a>
-template LA_CORE_API bool&#160;</td><td class="memItemRight" valign="bottom"><b>triangle_triangle_intersection&lt; double &gt;</b> (<a class="el" href="group__group-utils-misc.html#ga4afead0b9ccc53fe4fca896787595d26">span</a>&lt; const double, 3 &gt;, <a class="el" href="group__group-utils-misc.html#ga4afead0b9ccc53fe4fca896787595d26">span</a>&lt; const double, 3 &gt;, <a class="el" href="group__group-utils-misc.html#ga4afead0b9ccc53fe4fca896787595d26">span</a>&lt; const double, 3 &gt;, <a class="el" href="group__group-utils-misc.html#ga4afead0b9ccc53fe4fca896787595d26">span</a>&lt; const double, 3 &gt;, <a class="el" href="group__group-utils-misc.html#ga4afead0b9ccc53fe4fca896787595d26">span</a>&lt; const double, 3 &gt;, <a class="el" href="group__group-utils-misc.html#ga4afead0b9ccc53fe4fca896787595d26">span</a>&lt; const double, 3 &gt;, <a class="el" href="group__group-utils-geom.html#gaaf1ac02be69b434d1c3c8b1b863e0933">IncludeBoundaryIntersection</a>)</td></tr>
-<tr class="separator:a3bc972eca8ecd7cc8726e8bf71a95fa3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56cfbe76eedb73e62a4ca04b7f401fed" id="r_a56cfbe76eedb73e62a4ca04b7f401fed"><td class="memItemLeft" align="right" valign="top"><a id="a56cfbe76eedb73e62a4ca04b7f401fed" name="a56cfbe76eedb73e62a4ca04b7f401fed"></a>
+template bool&#160;</td><td class="memItemRight" valign="bottom"><b>triangle_triangle_intersection&lt; float &gt;</b> (<a class="el" href="group__group-utils-misc.html#ga4afead0b9ccc53fe4fca896787595d26">span</a>&lt; const float, 3 &gt;, <a class="el" href="group__group-utils-misc.html#ga4afead0b9ccc53fe4fca896787595d26">span</a>&lt; const float, 3 &gt;, <a class="el" href="group__group-utils-misc.html#ga4afead0b9ccc53fe4fca896787595d26">span</a>&lt; const float, 3 &gt;, <a class="el" href="group__group-utils-misc.html#ga4afead0b9ccc53fe4fca896787595d26">span</a>&lt; const float, 3 &gt;, <a class="el" href="group__group-utils-misc.html#ga4afead0b9ccc53fe4fca896787595d26">span</a>&lt; const float, 3 &gt;, <a class="el" href="group__group-utils-misc.html#ga4afead0b9ccc53fe4fca896787595d26">span</a>&lt; const float, 3 &gt;, <a class="el" href="group__group-utils-geom.html#gaaf1ac02be69b434d1c3c8b1b863e0933">IncludeBoundaryIntersection</a>)</td></tr>
+<tr class="separator:a56cfbe76eedb73e62a4ca04b7f401fed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a760fa03359156b40d16aab3b663c76e8" id="r_a760fa03359156b40d16aab3b663c76e8"><td class="memItemLeft" align="right" valign="top"><a id="a760fa03359156b40d16aab3b663c76e8" name="a760fa03359156b40d16aab3b663c76e8"></a>
+template bool&#160;</td><td class="memItemRight" valign="bottom"><b>triangle_triangle_intersection&lt; double &gt;</b> (<a class="el" href="group__group-utils-misc.html#ga4afead0b9ccc53fe4fca896787595d26">span</a>&lt; const double, 3 &gt;, <a class="el" href="group__group-utils-misc.html#ga4afead0b9ccc53fe4fca896787595d26">span</a>&lt; const double, 3 &gt;, <a class="el" href="group__group-utils-misc.html#ga4afead0b9ccc53fe4fca896787595d26">span</a>&lt; const double, 3 &gt;, <a class="el" href="group__group-utils-misc.html#ga4afead0b9ccc53fe4fca896787595d26">span</a>&lt; const double, 3 &gt;, <a class="el" href="group__group-utils-misc.html#ga4afead0b9ccc53fe4fca896787595d26">span</a>&lt; const double, 3 &gt;, <a class="el" href="group__group-utils-misc.html#ga4afead0b9ccc53fe4fca896787595d26">span</a>&lt; const double, 3 &gt;, <a class="el" href="group__group-utils-geom.html#gaaf1ac02be69b434d1c3c8b1b863e0933">IncludeBoundaryIntersection</a>)</td></tr>
+<tr class="separator:a760fa03359156b40d16aab3b663c76e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5a88279224c2babdfdd5441776f883d0" id="r_a5a88279224c2babdfdd5441776f883d0"><td class="memItemLeft" align="right" valign="top"><a id="a5a88279224c2babdfdd5441776f883d0" name="a5a88279224c2babdfdd5441776f883d0"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>LA_SURFACE_MESH_SCALAR_X</b> (<a class="el" href="#ab63029c7c83fee8c6f3bf5de81e4353c">triangle_uv_distortion</a>, 0)</td></tr>
 <tr class="separator:a5a88279224c2babdfdd5441776f883d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -2168,7 +2164,7 @@ template&lt;typename DerivedF, typename DerivedE, typename DerivedN&gt; </div>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">num_vertices</td><td>Number of vertices in the mesh. This information is necessary since there may be isolated vertices, and thus computing it from the facet array may be misleading. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">facets</td><td>F x k array of facet indices. </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">vertex_to_corner</td><td>E x 1 array of first facet corner in the chain starting from a given vertex. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">vertex_to_corner</td><td>V x 1 array of first facet corner in the chain starting from a given vertex. </td></tr>
     <tr><td class="paramdir">[out]</td><td class="paramname">next_corner_around_vertex</td><td>C x 1 array of next facet corner in the chain at a given facet corner.</td></tr>
   </table>
   </dd>
@@ -2290,8 +2286,8 @@ template&lt;typename <a class="el" href="classlagrange_1_1_mesh.html">MeshType</
 </div><div class="memdoc">
 
 <p>This compute the sparse bilinear map from mesh vertex attributes to point cloud attributes. </p>
-<p>Input points are supposed to lie on facets on the input mesh. Each row of element_indices is a input triangle index of which the point at the same row is supposed to lie. It uses barycentric coordinates on each triangle to fill in coeffs of a sparse matrix which is then returned. This bilinear sparse mapping (a.k.a. the returned sparse matrix) can used extend mesh defined fields to fields defined in R^3. This is useful for interpolating positions or scalar curvatures to a sampled point cloud for example. This is suited for use with sampling functions like random_sample_uniform that naturally build the third arg.</p>
-<dl class="section return"><dt>Returns</dt><dd>Sparse n*m matrix, where n is the number of vertex in the input mesh and m is the number of vertex in the input point cloud. </dd></dl>
+<p>Input points are supposed to lie on facets on the input mesh. Each row of element_indices is a input triangle index of which the point at the same row is supposed to lie. It uses barycentric coordinates on each triangle to fill in coeffs of a sparse matrix which is then returned. This bilinear sparse mapping (a.k.a. the returned sparse matrix) can used extend mesh defined fields to fields defined in R^3. This is useful for interpolating positions or scalar curvatures to a sampled point cloud for example. This is suited for use with sampling functions like sample_uniform that naturally build the third arg.</p>
+<dl class="section return"><dt>Returns</dt><dd>Sparse n*m matrix, where n is the number of points in the input point cloud and m is the number of vertices in the input mesh. </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">mesh</td><td>Input triangular mesh.  </td></tr>
@@ -2326,7 +2322,7 @@ template&lt;typename <a class="el" href="classlagrange_1_1_mesh.html">MeshType</
 
 <p>This compute the sparse bilinear map from mesh vertex attributes to point cloud attributes. </p>
 <p>It uses barycentric coordinates on each triangle to fill in coeffs of a sparse matrix which is then returned. This bilinear sparse mapping (a.k.a. the returned sparse matrix) can used extend mesh defined fields to fields defined in R^3. This is useful for interpolating positions or scalar curvatures to a sampled point cloud for example. This is suited for use with bvh structure whose data return by batch_query can be used as the second arg.</p>
-<dl class="section return"><dt>Returns</dt><dd>Sparse n*m matrix, where n is the number of vertex in the input mesh and m is the number of vertex in the input point cloud. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Sparse n*m matrix, where n is the number of points in the input point cloud and m is the number of vertices in the input mesh. </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">mesh</td><td>input triangular mesh.  </td></tr>
@@ -2334,46 +2330,6 @@ template&lt;typename <a class="el" href="classlagrange_1_1_mesh.html">MeshType</
   </table>
   </dd>
 </dl>
-
-</div>
-</div>
-<a id="ad34583bdda68644dcd9c7175ce179735" name="ad34583bdda68644dcd9c7175ce179735"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad34583bdda68644dcd9c7175ce179735">&#9670;&#160;</a></span>corner_to_edge_mapping()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename DerivedF, typename DerivedC&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">Eigen::Index corner_to_edge_mapping </td>
-          <td>(</td>
-          <td class="paramtype">const Eigen::MatrixBase&lt; DerivedF &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>F</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">Eigen::PlainObjectBase&lt; DerivedC &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>C2E</em></span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Computes a mapping from mesh corners (k*f+i) to unique edge ids. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">F</td><td>F x k matrix of facet indices. </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">C2E</td><td>F*k vector of unique edge ids per corner.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">DerivedF</td><td>Type of facet array. </td></tr>
-    <tr><td class="paramname">DerivedC</td><td>Type of corner to edge vector.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Number of unique edges created. </dd></dl>
 
 </div>
 </div>
@@ -3552,7 +3508,7 @@ template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5
 </div><div class="memdoc">
 
 <p>Convert degrees to radians. </p>
-<p>Use either as to_degrees(x) or x * to_degrees&lt;double&gt;(); </p>
+<p>Use either as to_radians(x) or x * to_radians&lt;double&gt;(); </p>
 
 </div>
 </div>
@@ -3653,7 +3609,7 @@ template&lt;typename DerivedV, typename DerivedE&gt; </div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacelagrange.html">lagrange</a></li>
-    <li class="footer">Generated on Sat Sep 5 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+    <li class="footer">Generated on Mon Oct 5 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>
 </body>

@@ -129,13 +129,16 @@ $(function(){initNavTree('group__module-geodesic.html',''); initResizable(true);
 <p>Geodesic distance computation on meshes.  
 </p>
 <p>Geodesic distance computation on meshes. </p>
-<p>Multiple geodesic engines (DGPC, heat method, MMP) for computing geodesic distances over surface meshes. </p>
+<p>The base <code>lagrange::geodesic</code> target provides the generic and DGPC engines without a geometry-central dependency. The heat-method and MMP engines are provided by the optional <code>geometrycentral</code> component.</p>
+<div class="fragment"><div class="line">lagrange_include_module(geodesic COMPONENTS geometrycentral)</div>
+<div class="line">target_link_libraries(my_target PRIVATE lagrange::geodesic::geometrycentral)</div>
+</div><!-- fragment --><p>Including <code>GeodesicEngineHeat.h</code> or <code>GeodesicEngineMMP.h</code> without linking the component produces a compile-time error that names the required target. </p>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Sat Sep 5 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+    <li class="footer">Generated on Mon Oct 5 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>
 </body>

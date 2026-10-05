@@ -157,66 +157,69 @@ $(function(){initNavTree('register__grid_8h_source.html',''); initResizable(true
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="keyword">using </span>FloatGrid = lagrange::volume::Grid&lt;float&gt;;</div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="keywordtype">void</span> register_grid(std::string_view name, <span class="keyword">const</span> FloatGrid&amp; grid)</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="keywordtype">void</span> register_grid(std::string_view name, <span class="keyword">const</span> FloatGrid&amp; grid, <span class="keywordtype">bool</span> isocontour = <span class="keyword">false</span>)</div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>{</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="keyword">auto</span> bbox_index = grid.evalActiveVoxelBoundingBox();</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="keyword">const</span> <span class="keyword">auto</span> bbox_index = grid.evalActiveVoxelBoundingBox();</div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <a class="code hl_define" href="group__group-utils-assert.html#ga1ccafcb14523a1aae57dcac3c3f32ecd">la_runtime_assert</a>(!bbox_index.empty(), <span class="stringliteral">&quot;Grid has no active voxels.&quot;</span>);</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="keyword">auto</span> bbox_world = grid.transform().indexToWorld(bbox_index);</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    uint32_t dimX = bbox_index.dim().x();</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    uint32_t dimY = bbox_index.dim().y();</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    uint32_t dimZ = bbox_index.dim().z();</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    glm::vec3 bbox_min(</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        <span class="keyword">static_cast&lt;</span><span class="keywordtype">float</span><span class="keyword">&gt;</span>(bbox_world.min().x()),</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        <span class="keyword">static_cast&lt;</span><span class="keywordtype">float</span><span class="keyword">&gt;</span>(bbox_world.min().y()),</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        <span class="keyword">static_cast&lt;</span><span class="keywordtype">float</span><span class="keyword">&gt;</span>(bbox_world.min().z()));</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    glm::vec3 bbox_max(</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        <span class="keyword">static_cast&lt;</span><span class="keywordtype">float</span><span class="keyword">&gt;</span>(bbox_world.max().x()),</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        <span class="keyword">static_cast&lt;</span><span class="keywordtype">float</span><span class="keyword">&gt;</span>(bbox_world.max().y()),</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        <span class="keyword">static_cast&lt;</span><span class="keywordtype">float</span><span class="keyword">&gt;</span>(bbox_world.max().z()));</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="comment">// register the grid</span></div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    polyscope::VolumeGrid* ps_grid =</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        polyscope::registerVolumeGrid(std::string(name), {dimX, dimY, dimZ}, bbox_min, bbox_max);</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <span class="comment">// add a scalar function on the grid</span></div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    uint32_t num_voxels = dimX * dimY * dimZ;</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    std::vector&lt;float&gt; values(num_voxels, 0.f);</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="keyword">auto</span> o = bbox_index.min();</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <span class="keyword">struct </span>Data</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    {</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        FloatGrid::ConstAccessor accessor;</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    };</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    tbb::enumerable_thread_specific&lt;Data&gt; data([&amp;]() { <span class="keywordflow">return</span> Data{grid.getConstAccessor()}; });</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <span class="keyword">using </span>Range3d = tbb::blocked_range3d&lt;int32_t&gt;;</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <span class="keyword">const</span> Range3d voxel_range(0, dimZ, 0, dimY, 0, dimX);</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    tbb::parallel_for(voxel_range, [&amp;](<span class="keyword">const</span> Range3d&amp; range) {</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        <span class="keyword">auto</span> rz = <a class="code hl_function" href="namespacelagrange.html#a41568d17fc48cea4a31db0e40cd93cf8">range</a>.pages();</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        <span class="keyword">auto</span> ry = <a class="code hl_function" href="namespacelagrange.html#a41568d17fc48cea4a31db0e40cd93cf8">range</a>.rows();</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        <span class="keyword">auto</span> rx = <a class="code hl_function" href="namespacelagrange.html#a41568d17fc48cea4a31db0e40cd93cf8">range</a>.cols();</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        <span class="keyword">auto</span>&amp; accessor = data.local().accessor;</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        <span class="keywordflow">for</span> (int32_t k = rz.begin(); k != rz.end(); ++k) {</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>            <span class="keywordflow">for</span> (int32_t j = ry.begin(); j != ry.end(); ++j) {</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>                <span class="keywordflow">for</span> (int32_t i = rx.begin(); i != rx.end(); ++i) {</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>                    openvdb::Vec3R ijk_is(i + o.x(), j + o.y(), k + o.z());</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>                    <span class="keywordtype">float</span> value = openvdb::tools::BoxSampler::sample(accessor, ijk_is);</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>                    values[k * dimY * dimX + j * dimX + i] = value;</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>                }</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>            }</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        }</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    });</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    <a class="code hl_function" href="group__group-logger.html#ga84167f554a5d7594c0ba4ae760f31599">lagrange::logger</a>().info(</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        <span class="stringliteral">&quot;Registered {} voxels. Min corner: {}, {}, {}&quot;</span>,</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        num_voxels,</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        bbox_min.x,</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        bbox_min.y,</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        bbox_min.z);</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    polyscope::VolumeGridNodeScalarQuantity* ps_scalars =</div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>        ps_grid-&gt;addNodeScalarQuantity(<span class="stringliteral">&quot;values&quot;</span>, std::make_tuple(values.data(), num_voxels));</div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    ps_scalars-&gt;setEnabled(<span class="keyword">true</span>);</div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>}</div>
-<div class="ttc" id="agroup__group-logger_html_ga84167f554a5d7594c0ba4ae760f31599"><div class="ttname"><a href="group__group-logger.html#ga84167f554a5d7594c0ba4ae760f31599">lagrange::logger</a></div><div class="ttdeci">LA_CORE_API spdlog::logger &amp; logger()</div><div class="ttdoc">Retrieves the current logger.</div><div class="ttdef"><b>Definition</b> Logger.cpp:40</div></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="keyword">const</span> <span class="keyword">auto</span> bbox_world = grid.transform().indexToWorld(bbox_index);</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="keyword">const</span> <span class="keyword">auto</span> voxel_size = grid.transform().voxelSize();</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    uint32_t dimX = bbox_index.dim().x();</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    uint32_t dimY = bbox_index.dim().y();</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    uint32_t dimZ = bbox_index.dim().z();</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    glm::vec3 bbox_min(</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        <span class="keyword">static_cast&lt;</span><span class="keywordtype">float</span><span class="keyword">&gt;</span>(bbox_world.min().x()),</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        <span class="keyword">static_cast&lt;</span><span class="keywordtype">float</span><span class="keyword">&gt;</span>(bbox_world.min().y()),</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        <span class="keyword">static_cast&lt;</span><span class="keywordtype">float</span><span class="keyword">&gt;</span>(bbox_world.min().z()));</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    glm::vec3 bbox_max(</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        <span class="keyword">static_cast&lt;</span><span class="keywordtype">float</span><span class="keyword">&gt;</span>(bbox_world.max().x()),</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        <span class="keyword">static_cast&lt;</span><span class="keywordtype">float</span><span class="keyword">&gt;</span>(bbox_world.max().y()),</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        <span class="keyword">static_cast&lt;</span><span class="keywordtype">float</span><span class="keyword">&gt;</span>(bbox_world.max().z()));</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="comment">// register the grid</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    polyscope::VolumeGrid* ps_grid =</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        polyscope::registerVolumeGrid(std::string(name), {dimX, dimY, dimZ}, bbox_min, bbox_max);</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="comment">// add a scalar function on the grid</span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    uint32_t num_voxels = dimX * dimY * dimZ;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    std::vector&lt;float&gt; values(num_voxels, 0.f);</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <span class="keyword">auto</span> o = bbox_index.min();</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <span class="keyword">struct </span>Data</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    {</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        FloatGrid::ConstAccessor accessor;</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    };</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    tbb::enumerable_thread_specific&lt;Data&gt; data([&amp;]() { <span class="keywordflow">return</span> Data{grid.getConstAccessor()}; });</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <span class="keyword">using </span>Range3d = tbb::blocked_range3d&lt;int32_t&gt;;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <span class="keyword">const</span> Range3d voxel_range(0, dimZ, 0, dimY, 0, dimX);</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    tbb::parallel_for(voxel_range, [&amp;](<span class="keyword">const</span> Range3d&amp; range) {</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        <span class="keyword">auto</span> rz = <a class="code hl_function" href="namespacelagrange.html#a41568d17fc48cea4a31db0e40cd93cf8">range</a>.pages();</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        <span class="keyword">auto</span> ry = <a class="code hl_function" href="namespacelagrange.html#a41568d17fc48cea4a31db0e40cd93cf8">range</a>.rows();</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        <span class="keyword">auto</span> rx = <a class="code hl_function" href="namespacelagrange.html#a41568d17fc48cea4a31db0e40cd93cf8">range</a>.cols();</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        <span class="keyword">auto</span>&amp; accessor = data.local().accessor;</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        <span class="keywordflow">for</span> (int32_t k = rz.begin(); k != rz.end(); ++k) {</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>            <span class="keywordflow">for</span> (int32_t j = ry.begin(); j != ry.end(); ++j) {</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>                <span class="keywordflow">for</span> (int32_t i = rx.begin(); i != rx.end(); ++i) {</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>                    openvdb::Vec3R ijk_is(i + o.x(), j + o.y(), k + o.z());</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>                    <span class="keywordtype">float</span> value = openvdb::tools::BoxSampler::sample(accessor, ijk_is);</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>                    values[k * dimY * dimX + j * dimX + i] = value;</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>                }</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>            }</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        }</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    });</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    <a class="code hl_function" href="group__group-logger.html#ga84167f554a5d7594c0ba4ae760f31599">lagrange::logger</a>().debug(<span class="stringliteral">&quot;num_voxels {}&quot;</span>, num_voxels);</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    <a class="code hl_function" href="group__group-logger.html#ga84167f554a5d7594c0ba4ae760f31599">lagrange::logger</a>().debug(<span class="stringliteral">&quot;bbox_low {} {} {}&quot;</span>, bbox_min.x, bbox_min.y, bbox_min.z);</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    <a class="code hl_function" href="group__group-logger.html#ga84167f554a5d7594c0ba4ae760f31599">lagrange::logger</a>().debug(<span class="stringliteral">&quot;bbox_high {} {} {}&quot;</span>, bbox_max.x, bbox_max.y, bbox_max.z);</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    <a class="code hl_function" href="group__group-logger.html#ga84167f554a5d7594c0ba4ae760f31599">lagrange::logger</a>().debug(<span class="stringliteral">&quot;voxel_size {} {} {}&quot;</span>, voxel_size.x(), voxel_size.y(), voxel_size.z());</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    polyscope::VolumeGridNodeScalarQuantity* ps_scalars =</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        ps_grid-&gt;addNodeScalarQuantity(<span class="stringliteral">&quot;values&quot;</span>, std::make_tuple(values.data(), num_voxels));</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    ps_scalars-&gt;setEnabled(<span class="keyword">true</span>);</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    <span class="keywordflow">if</span> (isocontour) {</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>        ps_scalars-&gt;setIsosurfaceVizEnabled(<span class="keyword">true</span>);</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>        ps_scalars-&gt;setGridcubeVizEnabled(<span class="keyword">false</span>);</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    }</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>}</div>
+<div class="ttc" id="agroup__group-logger_html_ga84167f554a5d7594c0ba4ae760f31599"><div class="ttname"><a href="group__group-logger.html#ga84167f554a5d7594c0ba4ae760f31599">lagrange::logger</a></div><div class="ttdeci">spdlog::logger &amp; logger()</div><div class="ttdoc">Retrieves the current logger.</div><div class="ttdef"><b>Definition</b> Logger.cpp:40</div></div>
 <div class="ttc" id="agroup__group-utils-assert_html_ga1ccafcb14523a1aae57dcac3c3f32ecd"><div class="ttname"><a href="group__group-utils-assert.html#ga1ccafcb14523a1aae57dcac3c3f32ecd">la_runtime_assert</a></div><div class="ttdeci">#define la_runtime_assert(...)</div><div class="ttdoc">Runtime assertion check.</div><div class="ttdef"><b>Definition</b> assert.h:177</div></div>
 <div class="ttc" id="anamespacelagrange_html_a41568d17fc48cea4a31db0e40cd93cf8"><div class="ttname"><a href="namespacelagrange.html#a41568d17fc48cea4a31db0e40cd93cf8">lagrange::range</a></div><div class="ttdeci">internal::Range&lt; Index &gt; range(Index end)</div><div class="ttdoc">Returns an iterable object representing the range [0, end).</div><div class="ttdef"><b>Definition</b> range.h:176</div></div>
 </div><!-- fragment --></div><!-- contents -->
@@ -225,7 +228,7 @@ $(function(){initNavTree('register__grid_8h_source.html',''); initResizable(true
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_8e2115a83de487923e8ad3b2bb4d2775.html">examples</a></li><li class="navelem"><b>register_grid.h</b></li>
-    <li class="footer">Generated on Sat Sep 5 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+    <li class="footer">Generated on Mon Oct 5 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>
 </body>

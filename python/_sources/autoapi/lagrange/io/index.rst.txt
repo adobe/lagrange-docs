@@ -66,6 +66,13 @@ Module Contents
    Options used when loading a mesh or a scene. Note that not all options are supported for all backends or filetypes
 
 
+   .. py:property:: load_lines
+      :type: bool
+
+
+      Load line elements (e.g. OBJ polylines) as 2-vertex facets
+
+
    .. py:property:: load_materials
       :type: bool
 
@@ -236,7 +243,7 @@ Module Contents
       Attributes to output, usage depends on output_attributes setting
 
 
-.. py:function:: load_mesh(filename, triangulate = False, load_normals = True, load_tangents = True, load_uvs = True, load_weights = True, load_materials = True, load_vertex_colors = True, load_object_ids = True, load_images = True, stitch_vertices = False, quiet = False, search_path = None)
+.. py:function:: load_mesh(filename, triangulate = False, load_normals = True, load_tangents = True, load_uvs = True, load_weights = True, load_materials = True, load_vertex_colors = True, load_object_ids = True, load_images = True, stitch_vertices = False, quiet = False, search_path = None, load_lines = True)
 
    Load mesh from a file.
 
@@ -253,12 +260,13 @@ Module Contents
    :param stitch_vertices:    Whether to stitch boundary vertices based on position. Defaults to False.
    :param quiet:              Whether to silence warnings during loading. Defaults to False.
    :param search_path:        Search path for external references (e.g. .mtl, .bin, etc.). Defaults to "".
+   :param load_lines:         Whether to load line elements (e.g. OBJ polylines) as 2-vertex facets with a `line_id` facet attribute. Defaults to True.
 
    :return SurfaceMesh: The mesh object loaded from the file.
 
 
 .. py:function:: load_scene(filename: str | os.PathLike, options: LoadOptions = ...) -> lagrange.scene.Scene
-                 load_scene(filename: str | os.PathLike, triangulate: bool = False, load_normals: bool = True, load_tangents: bool = True, load_uvs: bool = True, load_weights: bool = True, load_materials: bool = True, load_vertex_colors: bool = True, load_object_ids: bool = True, load_images: bool = True, stitch_vertices: bool = False, quiet: bool = False, search_path: str | os.PathLike | None = None) -> lagrange.scene.Scene
+                 load_scene(filename: str | os.PathLike, triangulate: bool = False, load_normals: bool = True, load_tangents: bool = True, load_uvs: bool = True, load_weights: bool = True, load_materials: bool = True, load_vertex_colors: bool = True, load_object_ids: bool = True, load_images: bool = True, stitch_vertices: bool = False, quiet: bool = False, search_path: str | os.PathLike | None = None, load_lines: bool = True) -> lagrange.scene.Scene
 
    Load a scene.
 
@@ -275,11 +283,12 @@ Module Contents
    :param stitch_vertices:    Whether to stitch boundary vertices based on position. Defaults to False.
    :param quiet:              Whether to silence warnings during loading. Defaults to False.
    :param search_path:        Search path for external references (e.g. .mtl, .bin, etc.). Defaults to "".
+   :param load_lines:         Whether to load line elements (e.g. OBJ polylines) as 2-vertex facets with a `line_id` facet attribute. Defaults to True.
 
    :return Scene: The loaded scene object.
 
 
-.. py:function:: load_simple_scene(filename, triangulate = False, load_normals = True, load_tangents = True, load_uvs = True, load_weights = True, load_materials = True, load_vertex_colors = True, load_object_ids = True, load_images = True, stitch_vertices = False, quiet = False, search_path = None)
+.. py:function:: load_simple_scene(filename, triangulate = False, load_normals = True, load_tangents = True, load_uvs = True, load_weights = True, load_materials = True, load_vertex_colors = True, load_object_ids = True, load_images = True, stitch_vertices = False, quiet = False, search_path = None, load_lines = True)
 
    Load a simple scene from file.
 
@@ -296,6 +305,7 @@ Module Contents
    :param stitch_vertices:    Whether to stitch boundary vertices based on position. Defaults to False.
    :param quiet:              Whether to silence warnings during loading. Defaults to False.
    :param search_path:        Search path for external references (e.g. .mtl, .bin, etc.). Defaults to "".
+   :param load_lines:         Whether to load line elements (e.g. OBJ polylines) as 2-vertex facets with a `line_id` facet attribute. Defaults to True.
 
    :return SimpleScene: The scene object loaded from the file.
 

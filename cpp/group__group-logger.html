@@ -140,10 +140,10 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ga84167f554a5d7594c0ba4ae760f31599" id="r_ga84167f554a5d7594c0ba4ae760f31599"><td class="memItemLeft" align="right" valign="top">LA_CORE_API spdlog::logger &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga84167f554a5d7594c0ba4ae760f31599">logger</a> ()</td></tr>
+<tr class="memitem:ga84167f554a5d7594c0ba4ae760f31599" id="r_ga84167f554a5d7594c0ba4ae760f31599"><td class="memItemLeft" align="right" valign="top">spdlog::logger &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga84167f554a5d7594c0ba4ae760f31599">logger</a> ()</td></tr>
 <tr class="memdesc:ga84167f554a5d7594c0ba4ae760f31599"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the current logger.  <br /></td></tr>
 <tr class="separator:ga84167f554a5d7594c0ba4ae760f31599"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga8f17bae29eab16304d0f5a71f383ae15" id="r_ga8f17bae29eab16304d0f5a71f383ae15"><td class="memItemLeft" align="right" valign="top">LA_CORE_API void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga8f17bae29eab16304d0f5a71f383ae15">set_logger</a> (std::shared_ptr&lt; spdlog::logger &gt; <a class="el" href="#ga84167f554a5d7594c0ba4ae760f31599">logger</a>)</td></tr>
+<tr class="memitem:ga8f17bae29eab16304d0f5a71f383ae15" id="r_ga8f17bae29eab16304d0f5a71f383ae15"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga8f17bae29eab16304d0f5a71f383ae15">set_logger</a> (std::shared_ptr&lt; spdlog::logger &gt; <a class="el" href="#ga84167f554a5d7594c0ba4ae760f31599">logger</a>)</td></tr>
 <tr class="memdesc:ga8f17bae29eab16304d0f5a71f383ae15"><td class="mdescLeft">&#160;</td><td class="mdescRight">Setup a logger object to be used by Lagrange.  <br /></td></tr>
 <tr class="separator:ga8f17bae29eab16304d0f5a71f383ae15"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -153,11 +153,11 @@ Functions</h2></td></tr>
 <div class="fragment"><div class="line"><span class="preprocessor">#include &lt;lagrange/Logger.h&gt;</span></div>
 <div class="line"> </div>
 <div class="line"><a class="code hl_function" href="#ga84167f554a5d7594c0ba4ae760f31599">lagrange::logger</a>().info(<span class="stringliteral">&quot;This is a message&quot;</span>);</div>
-<div class="line"><a class="code hl_function" href="#ga84167f554a5d7594c0ba4ae760f31599">lagrange::logger</a>().warning(<span class="stringliteral">&quot;Invalid value for x: {}&quot;</span>, x);</div>
+<div class="line"><a class="code hl_function" href="#ga84167f554a5d7594c0ba4ae760f31599">lagrange::logger</a>().warn(<span class="stringliteral">&quot;Invalid value for x: {}&quot;</span>, x);</div>
 <div class="line"> </div>
 <div class="line"><span class="comment">// set logger verbosity</span></div>
 <div class="line"><a class="code hl_function" href="#ga84167f554a5d7594c0ba4ae760f31599">lagrange::logger</a>().set_level(spdlog::level::debug);</div>
-<div class="ttc" id="agroup__group-logger_html_ga84167f554a5d7594c0ba4ae760f31599"><div class="ttname"><a href="#ga84167f554a5d7594c0ba4ae760f31599">lagrange::logger</a></div><div class="ttdeci">LA_CORE_API spdlog::logger &amp; logger()</div><div class="ttdoc">Retrieves the current logger.</div><div class="ttdef"><b>Definition</b> Logger.cpp:40</div></div>
+<div class="ttc" id="agroup__group-logger_html_ga84167f554a5d7594c0ba4ae760f31599"><div class="ttname"><a href="#ga84167f554a5d7594c0ba4ae760f31599">lagrange::logger</a></div><div class="ttdeci">spdlog::logger &amp; logger()</div><div class="ttdoc">Retrieves the current logger.</div><div class="ttdef"><b>Definition</b> Logger.cpp:40</div></div>
 </div><!-- fragment --><p>The Lagrange logger is a plain spdlog logger, with a type-safe printf formatting syntax provided by fmt. For more details, please consult these libraries' respective documentations:</p><ul>
 <li><a href="https://github.com/gabime/spdlog/wiki/1.-QuickStart">spdlog documentation</a>.</li>
 <li><a href="https://fmt.dev/latest/index.html">fmt documentation</a>. </li>
@@ -218,7 +218,7 @@ Functions</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Sat Sep 5 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+    <li class="footer">Generated on Mon Oct 5 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>
 </body>

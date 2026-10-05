@@ -138,27 +138,29 @@ $(function(){initNavTree('save__mesh__ply_8h_source.html',''); initResizable(tru
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment"> */</span></div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#pragma once</span></div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;lagrange/SurfaceMesh.h&gt;</span></div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &lt;lagrange/fs/filesystem.h&gt;</span></div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &lt;lagrange/io/types.h&gt;</span></div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#include &lt;iosfwd&gt;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;lagrange/io/api.h&gt;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &lt;lagrange/SurfaceMesh.h&gt;</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &lt;lagrange/fs/filesystem.h&gt;</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#include &lt;lagrange/io/types.h&gt;</span></div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacelagrange_1_1io.html">lagrange::io</a> {</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span></div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> Scalar, <span class="keyword">typename</span> Index&gt;</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="keywordtype">void</span> <a class="code hl_function" href="namespacelagrange_1_1io.html#a9c3ba13751c3f7592ebb762fde9bbfd2">save_mesh_ply</a>(</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    std::ostream&amp; output_stream,</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="keyword">const</span> SurfaceMesh&lt;Scalar, Index&gt;&amp; mesh,</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="keyword">const</span> <a class="code hl_struct" href="structlagrange_1_1io_1_1_save_options.html">SaveOptions</a>&amp; options = {});</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span></div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> Scalar, <span class="keyword">typename</span> Index&gt;</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="keywordtype">void</span> <a class="code hl_function" href="namespacelagrange_1_1io.html#a9c3ba13751c3f7592ebb762fde9bbfd2">save_mesh_ply</a>(</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="keyword">const</span> fs::path&amp; filename,</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <span class="keyword">const</span> SurfaceMesh&lt;Scalar, Index&gt;&amp; mesh,</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <span class="keyword">const</span> <a class="code hl_struct" href="structlagrange_1_1io_1_1_save_options.html">SaveOptions</a>&amp; options = {});</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>} <span class="comment">// namespace lagrange::io</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &lt;iosfwd&gt;</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacelagrange_1_1io.html">lagrange::io</a> {</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> Scalar, <span class="keyword">typename</span> Index&gt;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>LA_IO_API <span class="keywordtype">void</span> <a class="code hl_function" href="namespacelagrange_1_1io.html#a9c3ba13751c3f7592ebb762fde9bbfd2">save_mesh_ply</a>(</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    std::ostream&amp; output_stream,</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="keyword">const</span> SurfaceMesh&lt;Scalar, Index&gt;&amp; mesh,</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="keyword">const</span> <a class="code hl_struct" href="structlagrange_1_1io_1_1_save_options.html">SaveOptions</a>&amp; options = {});</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> Scalar, <span class="keyword">typename</span> Index&gt;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>LA_IO_API <span class="keywordtype">void</span> <a class="code hl_function" href="namespacelagrange_1_1io.html#a9c3ba13751c3f7592ebb762fde9bbfd2">save_mesh_ply</a>(</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <span class="keyword">const</span> fs::path&amp; filename,</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <span class="keyword">const</span> SurfaceMesh&lt;Scalar, Index&gt;&amp; mesh,</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="keyword">const</span> <a class="code hl_struct" href="structlagrange_1_1io_1_1_save_options.html">SaveOptions</a>&amp; options = {});</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>} <span class="comment">// namespace lagrange::io</span></div>
 <div class="ttc" id="anamespacelagrange_1_1io_html"><div class="ttname"><a href="namespacelagrange_1_1io.html">lagrange::io</a></div><div class="ttdoc">Mesh input/output.</div><div class="ttdef"><b>Definition</b> detect_file_format.h:18</div></div>
 <div class="ttc" id="anamespacelagrange_1_1io_html_a9c3ba13751c3f7592ebb762fde9bbfd2"><div class="ttname"><a href="namespacelagrange_1_1io.html#a9c3ba13751c3f7592ebb762fde9bbfd2">lagrange::io::save_mesh_ply</a></div><div class="ttdeci">void save_mesh_ply(std::ostream &amp;output_stream, const SurfaceMesh&lt; Scalar, Index &gt; &amp;mesh, const SaveOptions &amp;options={})</div><div class="ttdoc">Saves a mesh to a stream in PLY format.</div><div class="ttdef"><b>Definition</b> save_mesh_ply.cpp:215</div></div>
 <div class="ttc" id="astructlagrange_1_1io_1_1_save_options_html"><div class="ttname"><a href="structlagrange_1_1io_1_1_save_options.html">lagrange::io::SaveOptions</a></div><div class="ttdoc">Options used when saving a mesh or a scene.</div><div class="ttdef"><b>Definition</b> types.h:33</div></div>
@@ -168,7 +170,7 @@ $(function(){initNavTree('save__mesh__ply_8h_source.html',''); initResizable(tru
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_b326c4ed3bb92aa4da062efbda54f295.html">lagrange</a></li><li class="navelem"><a class="el" href="dir_414767452d3b9104a4c2963522ee51eb.html">io</a></li><li class="navelem"><b>save_mesh_ply.h</b></li>
-    <li class="footer">Generated on Sat Sep 5 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+    <li class="footer">Generated on Mon Oct 5 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>
 </body>

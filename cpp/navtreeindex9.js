@@ -1,5 +1,9 @@
 var NAVTREEINDEX9 =
 {
+"namespacelagrange_1_1ui.html#a5975a85c2454fe82ec2650168b3368b4":[3,0,0,7,137],
+"namespacelagrange_1_1ui.html#a59bae8ae7c4c0e999f912273829476f2":[3,0,0,7,213],
+"namespacelagrange_1_1ui.html#a59da08d3a7630a61f181e8ab9bf49d88":[3,0,0,7,182],
+"namespacelagrange_1_1ui.html#a6124461fa4c5de3e76014f3fe279e288":[3,0,0,7,136],
 "namespacelagrange_1_1ui.html#a620a5fabbe3ebe544274ccd285d69f1b":[3,0,0,7,218],
 "namespacelagrange_1_1ui.html#a624bcfdabec195670921b2511b47bc24":[3,0,0,7,219],
 "namespacelagrange_1_1ui.html#a6423bbe0c6e1a9467cec6c693b68f3f3":[3,0,0,7,146],
@@ -245,9 +249,5 @@ var NAVTREEINDEX9 =
 "structlagrange_1_1_remap_vertices_options.html":[2,1,1,1,34],
 "structlagrange_1_1_remap_vertices_options.html#adfe0aeb79b764bf99539a0f3ca973207":[2,1,1,1,34,1],
 "structlagrange_1_1_remap_vertices_options.html#afefe76052ce1fa3ed45b6aee79876855":[2,1,1,1,34,0],
-"structlagrange_1_1_remove_duplicate_facet_options.html":[2,1,1,4,1],
-"structlagrange_1_1_remove_duplicate_facet_options.html#a3a53d38d37410f88be10879cb048e27d":[2,1,1,4,1,0],
-"structlagrange_1_1_remove_duplicate_vertices_options.html":[2,1,1,4,2],
-"structlagrange_1_1_remove_duplicate_vertices_options.html#a1f3274faf4d13c22001e47b145c5ff3f":[2,1,1,4,2,0],
-"structlagrange_1_1_remove_duplicate_vertices_options.html#abe1380fd152e7c39c5509136339422d0":[2,1,1,4,2,1]
+"structlagrange_1_1_remove_duplicate_facet_options.html":[2,1,1,4,1]
 };

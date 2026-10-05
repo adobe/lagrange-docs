@@ -192,6 +192,9 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>load_object_ids</b> =
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>load_images</b> = true</td></tr>
 <tr class="memdesc:a9e0f5880b21bbb725d95ea38037a8be0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load external images. <br /></td></tr>
 <tr class="separator:a9e0f5880b21bbb725d95ea38037a8be0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5fb86a32b5169c10d194edcb0727f34d" id="r_a5fb86a32b5169c10d194edcb0727f34d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5fb86a32b5169c10d194edcb0727f34d">load_lines</a> = true</td></tr>
+<tr class="memdesc:a5fb86a32b5169c10d194edcb0727f34d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load line elements (e.g.  <br /></td></tr>
+<tr class="separator:a5fb86a32b5169c10d194edcb0727f34d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a50f816ca0b8ccf6aa1436bd3985a1b7b" id="r_a50f816ca0b8ccf6aa1436bd3985a1b7b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a50f816ca0b8ccf6aa1436bd3985a1b7b">stitch_vertices</a> = false</td></tr>
 <tr class="memdesc:a50f816ca0b8ccf6aa1436bd3985a1b7b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stitch duplicate boundary vertices together when loading file.  <br /></td></tr>
 <tr class="separator:a50f816ca0b8ccf6aa1436bd3985a1b7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -210,6 +213,23 @@ std::vector&lt; <a class="el" href="structlagrange_1_1scene_1_1_user_data_conver
 <div class="textblock"><p>Options used when loading a mesh or a scene. </p>
 <p>Note that not all options are supported for all backends or filetypes. </p>
 </div><h2 class="groupheader">Member Data Documentation</h2>
+<a id="a5fb86a32b5169c10d194edcb0727f34d" name="a5fb86a32b5169c10d194edcb0727f34d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5fb86a32b5169c10d194edcb0727f34d">&#9670;&#160;</a></span>load_lines</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool load_lines = true</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Load line elements (e.g. </p>
+<p>OBJ polylines). When present, they are added as 2-vertex facets and a <code>line_id</code> facet attribute is created. </p>
+
+</div>
+</div>
 <a id="a50f816ca0b8ccf6aa1436bd3985a1b7b" name="a50f816ca0b8ccf6aa1436bd3985a1b7b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a50f816ca0b8ccf6aa1436bd3985a1b7b">&#9670;&#160;</a></span>stitch_vertices</h2>
 
@@ -253,7 +273,7 @@ std::vector&lt; <a class="el" href="structlagrange_1_1scene_1_1_user_data_conver
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacelagrange.html">lagrange</a></li><li class="navelem"><a class="el" href="namespacelagrange_1_1io.html">io</a></li><li class="navelem"><a class="el" href="structlagrange_1_1io_1_1_load_options.html">LoadOptions</a></li>
-    <li class="footer">Generated on Sat Sep 5 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+    <li class="footer">Generated on Mon Oct 5 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>
 </body>

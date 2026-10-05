@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['image_5fstorage_5fformat_0',['image_storage_format',['../classlagrange_1_1image_1_1_raw_input_image.html#a34696b388dbdf37225520d2c1a128765',1,'lagrange::image::RawInputImage']]],
-  ['includeboundaryintersection_1',['IncludeBoundaryIntersection',['../group__group-utils-geom.html#gaaf1ac02be69b434d1c3c8b1b863e0933',1,'lagrange']]]
+  ['gradientnormalization_0',['GradientNormalization',['../group__module-texproc.html#ga6e251cd8be4ef5b980f20d9135b00e50',1,'lagrange::texproc']]]
 ];

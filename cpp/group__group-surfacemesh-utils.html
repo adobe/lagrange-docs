@@ -167,7 +167,7 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Option struct for computing per-facet mesh normals.  <a href="structlagrange_1_1_facet_normal_options.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlagrange_1_1_greedy_coloring_options.html">GreedyColoringOptions</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Option struct for computing dihedral angles.  <a href="structlagrange_1_1_greedy_coloring_options.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Option struct for computing greedy coloring.  <a href="structlagrange_1_1_greedy_coloring_options.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlagrange_1_1_mesh_covariance_options.html">MeshCovarianceOptions</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Options struct for computing mesh covariance.  <a href="structlagrange_1_1_mesh_covariance_options.html#details">More...</a><br /></td></tr>
@@ -528,18 +528,6 @@ template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5
 <tr class="memitem:gabf3517305e7ccc7062aab01527e78468"><td class="memTemplItemLeft" align="right" valign="top">Eigen::AlignedBox&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, static_cast&lt; int &gt;(Dimension)&gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#gabf3517305e7ccc7062aab01527e78468">mesh_bbox</a> (const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index &gt; &amp;mesh)</td></tr>
 <tr class="memdesc:gabf3517305e7ccc7062aab01527e78468"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the axis-aligned bounding box of a mesh.  <br /></td></tr>
 <tr class="separator:gabf3517305e7ccc7062aab01527e78468"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gabb5fc3fc93e8d973bcc534398eeb0aa9" id="r_gabb5fc3fc93e8d973bcc534398eeb0aa9"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, typename Index, typename <a class="el" href="classlagrange_1_1_mesh.html">MeshType</a>&gt; </td></tr>
-<tr class="memitem:gabb5fc3fc93e8d973bcc534398eeb0aa9"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#gabb5fc3fc93e8d973bcc534398eeb0aa9">to_surface_mesh_copy</a> (const <a class="el" href="classlagrange_1_1_mesh.html">MeshType</a> &amp;mesh)</td></tr>
-<tr class="memdesc:gabb5fc3fc93e8d973bcc534398eeb0aa9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert a legacy mesh object to a surface mesh object.  <br /></td></tr>
-<tr class="separator:gabb5fc3fc93e8d973bcc534398eeb0aa9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga68ad17ee5b7475decfbaf17fcfa63d65" id="r_ga68ad17ee5b7475decfbaf17fcfa63d65"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, typename Index, typename <a class="el" href="classlagrange_1_1_mesh.html">MeshType</a>&gt; </td></tr>
-<tr class="memitem:ga68ad17ee5b7475decfbaf17fcfa63d65"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ga68ad17ee5b7475decfbaf17fcfa63d65">to_surface_mesh_wrap</a> (<a class="el" href="classlagrange_1_1_mesh.html">MeshType</a> &amp;&amp;mesh)</td></tr>
-<tr class="memdesc:ga68ad17ee5b7475decfbaf17fcfa63d65"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wrap a legacy mesh object as a surface mesh object.  <br /></td></tr>
-<tr class="separator:ga68ad17ee5b7475decfbaf17fcfa63d65"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gac349d354b36d62bc2efeb93dd2b7f078" id="r_gac349d354b36d62bc2efeb93dd2b7f078"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="classlagrange_1_1_mesh.html">MeshType</a>, typename <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, typename Index&gt; </td></tr>
-<tr class="memitem:gac349d354b36d62bc2efeb93dd2b7f078"><td class="memTemplItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classlagrange_1_1_mesh.html">MeshType</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#gac349d354b36d62bc2efeb93dd2b7f078">to_legacy_mesh</a> (const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index &gt; &amp;mesh)</td></tr>
-<tr class="memdesc:gac349d354b36d62bc2efeb93dd2b7f078"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert a surface mesh object to a legacy mesh object.  <br /></td></tr>
-<tr class="separator:gac349d354b36d62bc2efeb93dd2b7f078"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga8a3c053ce081c3a551af20b1ed5bca08" id="r_ga8a3c053ce081c3a551af20b1ed5bca08"><td class="memTemplParams" colspan="2">template&lt;size_t Dimension = 3, typename <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, typename Index&gt; </td></tr>
 <tr class="memitem:ga8a3c053ce081c3a551af20b1ed5bca08"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ga8a3c053ce081c3a551af20b1ed5bca08">normalize_mesh_with_transform</a> (<a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index &gt; &amp;mesh, const <a class="el" href="structlagrange_1_1_transform_options.html">TransformOptions</a> &amp;options={}) -&gt; Eigen::Transform&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Dimension, Eigen::Affine &gt;</td></tr>
 <tr class="memdesc:ga8a3c053ce081c3a551af20b1ed5bca08"><td class="mdescLeft">&#160;</td><td class="mdescRight">Normalize a mesh to fit in a unit box centered at the origin.  <br /></td></tr>
@@ -2339,7 +2327,7 @@ template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5
 <p><code>#include &lt;lagrange/compute_uv_charts.h&gt;</code></p>
 
 <p>Compute UV charts of an input mesh. </p>
-<p>This method will create a per-vertex chart id in an attribute named <code>UVChartOptions::output_attribute_name</code>. Each chart id is in [0, num_charts-1].</p>
+<p>This method will create a per-facet chart id in an attribute named <code>UVChartOptions::output_attribute_name</code>. Each chart id is in [0, num_charts-1].</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">mesh</td><td>Input mesh. </td></tr>
@@ -3311,122 +3299,6 @@ template&lt;size_t Dimension, typename <a class="el" href="group__group-surfacem
 
 </div>
 </div>
-<a id="gabb5fc3fc93e8d973bcc534398eeb0aa9" name="gabb5fc3fc93e8d973bcc534398eeb0aa9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gabb5fc3fc93e8d973bcc534398eeb0aa9">&#9670;&#160;</a></span>to_surface_mesh_copy()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, typename Index, typename <a class="el" href="classlagrange_1_1_mesh.html">MeshType</a>&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index &gt; to_surface_mesh_copy </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classlagrange_1_1_mesh.html">MeshType</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>mesh</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p><code>#include &lt;lagrange/mesh_convert.h&gt;</code></p>
-
-<p>Convert a legacy mesh object to a surface mesh object. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">mesh</td><td>Mesh object to convert.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">Scalar</td><td>Output mesh scalar type. Must be either float or double. </td></tr>
-    <tr><td class="paramname">Index</td><td>Output mesh index type. Must be either uint32_t or uint64_t. </td></tr>
-    <tr><td class="paramname">MeshType</td><td>Input mesh type.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>New mesh object. </dd></dl>
-
-</div>
-</div>
-<a id="ga68ad17ee5b7475decfbaf17fcfa63d65" name="ga68ad17ee5b7475decfbaf17fcfa63d65"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga68ad17ee5b7475decfbaf17fcfa63d65">&#9670;&#160;</a></span>to_surface_mesh_wrap()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, typename Index, typename <a class="el" href="classlagrange_1_1_mesh.html">MeshType</a>&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index &gt; to_surface_mesh_wrap </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classlagrange_1_1_mesh.html">MeshType</a> &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>mesh</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p><code>#include &lt;lagrange/mesh_convert.h&gt;</code></p>
-
-<p>Wrap a legacy mesh object as a surface mesh object. </p>
-<p>The mesh scalar &amp; index types must match.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">mesh</td><td>Mesh object to convert. The mesh object must be a lvalue reference (no temporary).</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">Scalar</td><td>Output mesh scalar type. Must be either float or double. </td></tr>
-    <tr><td class="paramname">Index</td><td>Output mesh index type. Must be either uint32_t or uint64_t. </td></tr>
-    <tr><td class="paramname">MeshType</td><td>Input mesh type.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>New mesh object. </dd></dl>
-
-</div>
-</div>
-<a id="gac349d354b36d62bc2efeb93dd2b7f078" name="gac349d354b36d62bc2efeb93dd2b7f078"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gac349d354b36d62bc2efeb93dd2b7f078">&#9670;&#160;</a></span>to_legacy_mesh()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename <a class="el" href="classlagrange_1_1_mesh.html">MeshType</a>, typename <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, typename Index&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">std::unique_ptr&lt; <a class="el" href="classlagrange_1_1_mesh.html">MeshType</a> &gt; to_legacy_mesh </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>mesh</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p><code>#include &lt;lagrange/mesh_convert.h&gt;</code></p>
-
-<p>Convert a surface mesh object to a legacy mesh object. </p>
-<p>The mesh must be a regular mesh object.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">mesh</td><td>Mesh object to convert.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">MeshType</td><td>Output mesh type. </td></tr>
-    <tr><td class="paramname">Scalar</td><td>Input mesh scalar type. Must be either float or double. </td></tr>
-    <tr><td class="paramname">Index</td><td>Input mesh index type. Must be either uint32_t or uint64_t.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>New mesh object. </dd></dl>
-
-</div>
-</div>
 <a id="ga8a3c053ce081c3a551af20b1ed5bca08" name="ga8a3c053ce081c3a551af20b1ed5bca08"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga8a3c053ce081c3a551af20b1ed5bca08">&#9670;&#160;</a></span>normalize_mesh_with_transform()</h2>
 
@@ -3996,7 +3868,7 @@ template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5
   <table class="params">
     <tr><td class="paramdir">[in,out]</td><td class="paramname">mesh</td><td>The input mesh. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">seed_facet_id</td><td>The index of the seed facet </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">options</td><td>Optional arguments (greedy, output_attribute_name).</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">options</td><td>Optional arguments (flood_error_limit, search_type, output_attribute_name, etc.).</td></tr>
   </table>
   </dd>
 </dl>
@@ -4008,7 +3880,7 @@ template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>AttributeId The attribute id of the selection, whose attribute name is given by options.output_attribute_name.</dd></dl>
-<dl class="section note"><dt>Note</dt><dd>Currently only support triangular mesh and will throw error if mesh.is_triangle_mesh() is false! The function will check if the mesh contains facet normal by looking for options.facet_normal_attribute_name, and if not found, will call compute_facet_normal(meshm, options.facet_normal_attribute_name).</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Currently only support triangular mesh and will throw error if mesh.is_triangle_mesh() is false! The function will check if the mesh contains facet normal by looking for options.facet_normal_attribute_name, and if not found, will call compute_facet_normal(mesh, options.facet_normal_attribute_name).</dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="structlagrange_1_1_select_facets_by_normal_similarity_options.html">SelectFacetsByNormalSimilarityOptions</a> </dd></dl>
 
 </div>
@@ -4720,7 +4592,7 @@ template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5
 </ul>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">mesh</td><td>Mesh to transform in-place. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mesh</td><td>Mesh to transform. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">transform</td><td>Affine transform to apply. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">options</td><td>Transform options.</td></tr>
   </table>
@@ -4960,7 +4832,7 @@ template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>The extracted UV mesh reference.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The extracted UV mesh view.</dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="structlagrange_1_1_u_v_mesh_options.html">UVMeshOptions</a> </dd></dl>
 
 </div>
@@ -5014,7 +4886,7 @@ template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Sat Sep 5 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+    <li class="footer">Generated on Mon Oct 5 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>
 </body>

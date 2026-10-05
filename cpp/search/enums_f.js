@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['vertexboundaryinterpolation_0',['VertexBoundaryInterpolation',['../group__module-subdivision.html#ga4189a9f8863a8107f9686281bdbe9364',1,'lagrange::subdivision']]]
+  ['uvoverlapmethod_0',['UVOverlapMethod',['../group__module-bvh.html#ga7e55018c6fcf6fb3e8f6b02e4fc46892',1,'lagrange::bvh']]]
 ];

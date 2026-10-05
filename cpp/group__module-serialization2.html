@@ -136,60 +136,60 @@ Functions</h2></td></tr>
 <tr class="memitem:ga9631bdca8831cc1e577e44d0ff2c88ad" id="r_ga9631bdca8831cc1e577e44d0ff2c88ad"><td class="memItemLeft" align="right" valign="top">constexpr uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga9631bdca8831cc1e577e44d0ff2c88ad">mesh_format_version</a> ()</td></tr>
 <tr class="memdesc:ga9631bdca8831cc1e577e44d0ff2c88ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Current mesh serialization format version.  <br /></td></tr>
 <tr class="separator:ga9631bdca8831cc1e577e44d0ff2c88ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga44c6195a7d2d3c8aee5f17dae5205fea" id="r_ga44c6195a7d2d3c8aee5f17dae5205fea"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, typename Index&gt; </td></tr>
-<tr class="memitem:ga44c6195a7d2d3c8aee5f17dae5205fea"><td class="memTemplItemLeft" align="right" valign="top">LA_SERIALIZATION2_API std::vector&lt; uint8_t &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ga44c6195a7d2d3c8aee5f17dae5205fea">serialize_mesh</a> (const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index &gt; &amp;mesh, const <a class="el" href="structlagrange_1_1serialization_1_1_serialize_options.html">SerializeOptions</a> &amp;options={})</td></tr>
-<tr class="memdesc:ga44c6195a7d2d3c8aee5f17dae5205fea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Serialize a SurfaceMesh to a byte buffer.  <br /></td></tr>
-<tr class="separator:ga44c6195a7d2d3c8aee5f17dae5205fea"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga73c84ddf5641a3b6549da6e57c5bb782" id="r_ga73c84ddf5641a3b6549da6e57c5bb782"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="classlagrange_1_1_mesh.html">MeshType</a>&gt; </td></tr>
-<tr class="memitem:ga73c84ddf5641a3b6549da6e57c5bb782"><td class="memTemplItemLeft" align="right" valign="top">LA_SERIALIZATION2_API <a class="el" href="classlagrange_1_1_mesh.html">MeshType</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ga73c84ddf5641a3b6549da6e57c5bb782">deserialize_mesh</a> (<a class="el" href="group__group-utils-misc.html#ga4afead0b9ccc53fe4fca896787595d26">span</a>&lt; const uint8_t &gt; buffer, const <a class="el" href="structlagrange_1_1serialization_1_1_deserialize_options.html">DeserializeOptions</a> &amp;options={})</td></tr>
-<tr class="memdesc:ga73c84ddf5641a3b6549da6e57c5bb782"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deserialize a SurfaceMesh from a byte buffer.  <br /></td></tr>
-<tr class="separator:ga73c84ddf5641a3b6549da6e57c5bb782"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga11aa45b21f9762ee65a16d1c27454216" id="r_ga11aa45b21f9762ee65a16d1c27454216"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, typename Index&gt; </td></tr>
-<tr class="memitem:ga11aa45b21f9762ee65a16d1c27454216"><td class="memTemplItemLeft" align="right" valign="top">LA_SERIALIZATION2_API void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ga11aa45b21f9762ee65a16d1c27454216">save_mesh</a> (const fs::path &amp;filename, const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index &gt; &amp;mesh, const <a class="el" href="structlagrange_1_1serialization_1_1_serialize_options.html">SerializeOptions</a> &amp;options={})</td></tr>
-<tr class="memdesc:ga11aa45b21f9762ee65a16d1c27454216"><td class="mdescLeft">&#160;</td><td class="mdescRight">Save a SurfaceMesh to a file.  <br /></td></tr>
-<tr class="separator:ga11aa45b21f9762ee65a16d1c27454216"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaa90c6bca907f1eed66beb752f8c9da36" id="r_gaa90c6bca907f1eed66beb752f8c9da36"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="classlagrange_1_1_mesh.html">MeshType</a>&gt; </td></tr>
-<tr class="memitem:gaa90c6bca907f1eed66beb752f8c9da36"><td class="memTemplItemLeft" align="right" valign="top">LA_SERIALIZATION2_API <a class="el" href="classlagrange_1_1_mesh.html">MeshType</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#gaa90c6bca907f1eed66beb752f8c9da36">load_mesh</a> (const fs::path &amp;filename, const <a class="el" href="structlagrange_1_1serialization_1_1_deserialize_options.html">DeserializeOptions</a> &amp;options={})</td></tr>
-<tr class="memdesc:gaa90c6bca907f1eed66beb752f8c9da36"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load a SurfaceMesh from a file.  <br /></td></tr>
-<tr class="separator:gaa90c6bca907f1eed66beb752f8c9da36"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1ddab221f7066e9d002e85a1aa1aaaa2" id="r_ga1ddab221f7066e9d002e85a1aa1aaaa2"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, typename Index&gt; </td></tr>
+<tr class="memitem:ga1ddab221f7066e9d002e85a1aa1aaaa2"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; uint8_t &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ga1ddab221f7066e9d002e85a1aa1aaaa2">serialize_mesh</a> (const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index &gt; &amp;mesh, const <a class="el" href="structlagrange_1_1serialization_1_1_serialize_options.html">SerializeOptions</a> &amp;options={})</td></tr>
+<tr class="memdesc:ga1ddab221f7066e9d002e85a1aa1aaaa2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Serialize a SurfaceMesh to a byte buffer.  <br /></td></tr>
+<tr class="separator:ga1ddab221f7066e9d002e85a1aa1aaaa2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga983ae046ad215e36e93fe52564ef709b" id="r_ga983ae046ad215e36e93fe52564ef709b"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="classlagrange_1_1_mesh.html">MeshType</a>&gt; </td></tr>
+<tr class="memitem:ga983ae046ad215e36e93fe52564ef709b"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classlagrange_1_1_mesh.html">MeshType</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ga983ae046ad215e36e93fe52564ef709b">deserialize_mesh</a> (<a class="el" href="group__group-utils-misc.html#ga4afead0b9ccc53fe4fca896787595d26">span</a>&lt; const uint8_t &gt; buffer, const <a class="el" href="structlagrange_1_1serialization_1_1_deserialize_options.html">DeserializeOptions</a> &amp;options={})</td></tr>
+<tr class="memdesc:ga983ae046ad215e36e93fe52564ef709b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deserialize a SurfaceMesh from a byte buffer.  <br /></td></tr>
+<tr class="separator:ga983ae046ad215e36e93fe52564ef709b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5689af8d349526a63c775d6bfa1afa33" id="r_ga5689af8d349526a63c775d6bfa1afa33"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, typename Index&gt; </td></tr>
+<tr class="memitem:ga5689af8d349526a63c775d6bfa1afa33"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ga5689af8d349526a63c775d6bfa1afa33">save_mesh</a> (const fs::path &amp;filename, const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index &gt; &amp;mesh, const <a class="el" href="structlagrange_1_1serialization_1_1_serialize_options.html">SerializeOptions</a> &amp;options={})</td></tr>
+<tr class="memdesc:ga5689af8d349526a63c775d6bfa1afa33"><td class="mdescLeft">&#160;</td><td class="mdescRight">Save a SurfaceMesh to a file.  <br /></td></tr>
+<tr class="separator:ga5689af8d349526a63c775d6bfa1afa33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1e6f7cb392bd75d0c05913016bf2111f" id="r_ga1e6f7cb392bd75d0c05913016bf2111f"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="classlagrange_1_1_mesh.html">MeshType</a>&gt; </td></tr>
+<tr class="memitem:ga1e6f7cb392bd75d0c05913016bf2111f"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classlagrange_1_1_mesh.html">MeshType</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ga1e6f7cb392bd75d0c05913016bf2111f">load_mesh</a> (const fs::path &amp;filename, const <a class="el" href="structlagrange_1_1serialization_1_1_deserialize_options.html">DeserializeOptions</a> &amp;options={})</td></tr>
+<tr class="memdesc:ga1e6f7cb392bd75d0c05913016bf2111f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load a SurfaceMesh from a file.  <br /></td></tr>
+<tr class="separator:ga1e6f7cb392bd75d0c05913016bf2111f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga0da5a97df2e6524aab7a4d94b34d6e77" id="r_ga0da5a97df2e6524aab7a4d94b34d6e77"><td class="memItemLeft" align="right" valign="top">constexpr uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga0da5a97df2e6524aab7a4d94b34d6e77">scene_format_version</a> ()</td></tr>
 <tr class="memdesc:ga0da5a97df2e6524aab7a4d94b34d6e77"><td class="mdescLeft">&#160;</td><td class="mdescRight">Current scene serialization format version.  <br /></td></tr>
 <tr class="separator:ga0da5a97df2e6524aab7a4d94b34d6e77"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaec1ef7b42502253a6a437459704c5831" id="r_gaec1ef7b42502253a6a437459704c5831"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, typename Index&gt; </td></tr>
-<tr class="memitem:gaec1ef7b42502253a6a437459704c5831"><td class="memTemplItemLeft" align="right" valign="top">LA_SERIALIZATION2_API std::vector&lt; uint8_t &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#gaec1ef7b42502253a6a437459704c5831">serialize_scene</a> (const <a class="el" href="structlagrange_1_1scene_1_1_scene.html">scene::Scene</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index &gt; &amp;scene, const <a class="el" href="structlagrange_1_1serialization_1_1_serialize_options.html">SerializeOptions</a> &amp;options={})</td></tr>
-<tr class="memdesc:gaec1ef7b42502253a6a437459704c5831"><td class="mdescLeft">&#160;</td><td class="mdescRight">Serialize a Scene to a byte buffer.  <br /></td></tr>
-<tr class="separator:gaec1ef7b42502253a6a437459704c5831"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gad9c7fe14f2a5987b7983e64fb00551ac" id="r_gad9c7fe14f2a5987b7983e64fb00551ac"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="classlagrange_1_1scene_1_1_simple_scene.html">SceneType</a>&gt; </td></tr>
-<tr class="memitem:gad9c7fe14f2a5987b7983e64fb00551ac"><td class="memTemplItemLeft" align="right" valign="top">LA_SERIALIZATION2_API <a class="el" href="classlagrange_1_1scene_1_1_simple_scene.html">SceneType</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#gad9c7fe14f2a5987b7983e64fb00551ac">deserialize_scene</a> (<a class="el" href="group__group-utils-misc.html#ga4afead0b9ccc53fe4fca896787595d26">span</a>&lt; const uint8_t &gt; buffer, const <a class="el" href="structlagrange_1_1serialization_1_1_deserialize_options.html">DeserializeOptions</a> &amp;options={})</td></tr>
-<tr class="memdesc:gad9c7fe14f2a5987b7983e64fb00551ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deserialize a Scene from a byte buffer.  <br /></td></tr>
-<tr class="separator:gad9c7fe14f2a5987b7983e64fb00551ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gac309da58cceb0f7a79bc96e8670ed18b" id="r_gac309da58cceb0f7a79bc96e8670ed18b"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, typename Index&gt; </td></tr>
-<tr class="memitem:gac309da58cceb0f7a79bc96e8670ed18b"><td class="memTemplItemLeft" align="right" valign="top">LA_SERIALIZATION2_API void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#gac309da58cceb0f7a79bc96e8670ed18b">save_scene</a> (const fs::path &amp;filename, const <a class="el" href="structlagrange_1_1scene_1_1_scene.html">scene::Scene</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index &gt; &amp;scene, const <a class="el" href="structlagrange_1_1serialization_1_1_serialize_options.html">SerializeOptions</a> &amp;options={})</td></tr>
-<tr class="memdesc:gac309da58cceb0f7a79bc96e8670ed18b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Save a Scene to a file.  <br /></td></tr>
-<tr class="separator:gac309da58cceb0f7a79bc96e8670ed18b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga8a3ffc48bbc752f1ba83f7084f8fd34f" id="r_ga8a3ffc48bbc752f1ba83f7084f8fd34f"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="classlagrange_1_1scene_1_1_simple_scene.html">SceneType</a>&gt; </td></tr>
-<tr class="memitem:ga8a3ffc48bbc752f1ba83f7084f8fd34f"><td class="memTemplItemLeft" align="right" valign="top">LA_SERIALIZATION2_API <a class="el" href="classlagrange_1_1scene_1_1_simple_scene.html">SceneType</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ga8a3ffc48bbc752f1ba83f7084f8fd34f">load_scene</a> (const fs::path &amp;filename, const <a class="el" href="structlagrange_1_1serialization_1_1_deserialize_options.html">DeserializeOptions</a> &amp;options={})</td></tr>
-<tr class="memdesc:ga8a3ffc48bbc752f1ba83f7084f8fd34f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load a Scene from a file.  <br /></td></tr>
-<tr class="separator:ga8a3ffc48bbc752f1ba83f7084f8fd34f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf7c62886526ec32d0e43e3af1dfff3c1" id="r_gaf7c62886526ec32d0e43e3af1dfff3c1"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, typename Index&gt; </td></tr>
+<tr class="memitem:gaf7c62886526ec32d0e43e3af1dfff3c1"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; uint8_t &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#gaf7c62886526ec32d0e43e3af1dfff3c1">serialize_scene</a> (const <a class="el" href="structlagrange_1_1scene_1_1_scene.html">scene::Scene</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index &gt; &amp;scene, const <a class="el" href="structlagrange_1_1serialization_1_1_serialize_options.html">SerializeOptions</a> &amp;options={})</td></tr>
+<tr class="memdesc:gaf7c62886526ec32d0e43e3af1dfff3c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Serialize a Scene to a byte buffer.  <br /></td></tr>
+<tr class="separator:gaf7c62886526ec32d0e43e3af1dfff3c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gafa64740a1b9bc35661393ed33f748528" id="r_gafa64740a1b9bc35661393ed33f748528"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="classlagrange_1_1scene_1_1_simple_scene.html">SceneType</a>&gt; </td></tr>
+<tr class="memitem:gafa64740a1b9bc35661393ed33f748528"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classlagrange_1_1scene_1_1_simple_scene.html">SceneType</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#gafa64740a1b9bc35661393ed33f748528">deserialize_scene</a> (<a class="el" href="group__group-utils-misc.html#ga4afead0b9ccc53fe4fca896787595d26">span</a>&lt; const uint8_t &gt; buffer, const <a class="el" href="structlagrange_1_1serialization_1_1_deserialize_options.html">DeserializeOptions</a> &amp;options={})</td></tr>
+<tr class="memdesc:gafa64740a1b9bc35661393ed33f748528"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deserialize a Scene from a byte buffer.  <br /></td></tr>
+<tr class="separator:gafa64740a1b9bc35661393ed33f748528"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga579c4ecd00d782d28a6092f7354206a7" id="r_ga579c4ecd00d782d28a6092f7354206a7"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, typename Index&gt; </td></tr>
+<tr class="memitem:ga579c4ecd00d782d28a6092f7354206a7"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ga579c4ecd00d782d28a6092f7354206a7">save_scene</a> (const fs::path &amp;filename, const <a class="el" href="structlagrange_1_1scene_1_1_scene.html">scene::Scene</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index &gt; &amp;scene, const <a class="el" href="structlagrange_1_1serialization_1_1_serialize_options.html">SerializeOptions</a> &amp;options={})</td></tr>
+<tr class="memdesc:ga579c4ecd00d782d28a6092f7354206a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Save a Scene to a file.  <br /></td></tr>
+<tr class="separator:ga579c4ecd00d782d28a6092f7354206a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac1c21f676e049cd3636956b93bd11369" id="r_gac1c21f676e049cd3636956b93bd11369"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="classlagrange_1_1scene_1_1_simple_scene.html">SceneType</a>&gt; </td></tr>
+<tr class="memitem:gac1c21f676e049cd3636956b93bd11369"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classlagrange_1_1scene_1_1_simple_scene.html">SceneType</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#gac1c21f676e049cd3636956b93bd11369">load_scene</a> (const fs::path &amp;filename, const <a class="el" href="structlagrange_1_1serialization_1_1_deserialize_options.html">DeserializeOptions</a> &amp;options={})</td></tr>
+<tr class="memdesc:gac1c21f676e049cd3636956b93bd11369"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load a Scene from a file.  <br /></td></tr>
+<tr class="separator:gac1c21f676e049cd3636956b93bd11369"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gab085a0cbb513da3270b600ea30f7514e" id="r_gab085a0cbb513da3270b600ea30f7514e"><td class="memItemLeft" align="right" valign="top">constexpr uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gab085a0cbb513da3270b600ea30f7514e">simple_scene_format_version</a> ()</td></tr>
 <tr class="memdesc:gab085a0cbb513da3270b600ea30f7514e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Current simple scene serialization format version.  <br /></td></tr>
 <tr class="separator:gab085a0cbb513da3270b600ea30f7514e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gad673dbba37958789d12488ce1db0c947" id="r_gad673dbba37958789d12488ce1db0c947"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, typename Index, size_t Dimension&gt; </td></tr>
-<tr class="memitem:gad673dbba37958789d12488ce1db0c947"><td class="memTemplItemLeft" align="right" valign="top">LA_SERIALIZATION2_API std::vector&lt; uint8_t &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#gad673dbba37958789d12488ce1db0c947">serialize_simple_scene</a> (const <a class="el" href="classlagrange_1_1scene_1_1_simple_scene.html">scene::SimpleScene</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index, Dimension &gt; &amp;scene, const <a class="el" href="structlagrange_1_1serialization_1_1_serialize_options.html">SerializeOptions</a> &amp;options={})</td></tr>
-<tr class="memdesc:gad673dbba37958789d12488ce1db0c947"><td class="mdescLeft">&#160;</td><td class="mdescRight">Serialize a SimpleScene to a byte buffer.  <br /></td></tr>
-<tr class="separator:gad673dbba37958789d12488ce1db0c947"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga44be7adf97064d84c54257c1faa19601" id="r_ga44be7adf97064d84c54257c1faa19601"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="classlagrange_1_1scene_1_1_simple_scene.html">SceneType</a>&gt; </td></tr>
-<tr class="memitem:ga44be7adf97064d84c54257c1faa19601"><td class="memTemplItemLeft" align="right" valign="top">LA_SERIALIZATION2_API <a class="el" href="classlagrange_1_1scene_1_1_simple_scene.html">SceneType</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ga44be7adf97064d84c54257c1faa19601">deserialize_simple_scene</a> (<a class="el" href="group__group-utils-misc.html#ga4afead0b9ccc53fe4fca896787595d26">span</a>&lt; const uint8_t &gt; buffer, const <a class="el" href="structlagrange_1_1serialization_1_1_deserialize_options.html">DeserializeOptions</a> &amp;options={})</td></tr>
-<tr class="memdesc:ga44be7adf97064d84c54257c1faa19601"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deserialize a SimpleScene from a byte buffer.  <br /></td></tr>
-<tr class="separator:ga44be7adf97064d84c54257c1faa19601"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga0cdd2fe55042358f10cbb03c5ae4487d" id="r_ga0cdd2fe55042358f10cbb03c5ae4487d"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, typename Index, size_t Dimension&gt; </td></tr>
-<tr class="memitem:ga0cdd2fe55042358f10cbb03c5ae4487d"><td class="memTemplItemLeft" align="right" valign="top">LA_SERIALIZATION2_API void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ga0cdd2fe55042358f10cbb03c5ae4487d">save_simple_scene</a> (const fs::path &amp;filename, const <a class="el" href="classlagrange_1_1scene_1_1_simple_scene.html">scene::SimpleScene</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index, Dimension &gt; &amp;scene, const <a class="el" href="structlagrange_1_1serialization_1_1_serialize_options.html">SerializeOptions</a> &amp;options={})</td></tr>
-<tr class="memdesc:ga0cdd2fe55042358f10cbb03c5ae4487d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Save a SimpleScene to a file.  <br /></td></tr>
-<tr class="separator:ga0cdd2fe55042358f10cbb03c5ae4487d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga43d68cf453654efcf9048d19b0303499" id="r_ga43d68cf453654efcf9048d19b0303499"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="classlagrange_1_1scene_1_1_simple_scene.html">SceneType</a>&gt; </td></tr>
-<tr class="memitem:ga43d68cf453654efcf9048d19b0303499"><td class="memTemplItemLeft" align="right" valign="top">LA_SERIALIZATION2_API <a class="el" href="classlagrange_1_1scene_1_1_simple_scene.html">SceneType</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ga43d68cf453654efcf9048d19b0303499">load_simple_scene</a> (const fs::path &amp;filename, const <a class="el" href="structlagrange_1_1serialization_1_1_deserialize_options.html">DeserializeOptions</a> &amp;options={})</td></tr>
-<tr class="memdesc:ga43d68cf453654efcf9048d19b0303499"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load a SimpleScene from a file.  <br /></td></tr>
-<tr class="separator:ga43d68cf453654efcf9048d19b0303499"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa2000cabcd5531b3fbdede17e8c9f914" id="r_gaa2000cabcd5531b3fbdede17e8c9f914"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, typename Index, size_t Dimension&gt; </td></tr>
+<tr class="memitem:gaa2000cabcd5531b3fbdede17e8c9f914"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; uint8_t &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#gaa2000cabcd5531b3fbdede17e8c9f914">serialize_simple_scene</a> (const <a class="el" href="classlagrange_1_1scene_1_1_simple_scene.html">scene::SimpleScene</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index, Dimension &gt; &amp;scene, const <a class="el" href="structlagrange_1_1serialization_1_1_serialize_options.html">SerializeOptions</a> &amp;options={})</td></tr>
+<tr class="memdesc:gaa2000cabcd5531b3fbdede17e8c9f914"><td class="mdescLeft">&#160;</td><td class="mdescRight">Serialize a SimpleScene to a byte buffer.  <br /></td></tr>
+<tr class="separator:gaa2000cabcd5531b3fbdede17e8c9f914"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga013ca91f994ad02deb97efec573885df" id="r_ga013ca91f994ad02deb97efec573885df"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="classlagrange_1_1scene_1_1_simple_scene.html">SceneType</a>&gt; </td></tr>
+<tr class="memitem:ga013ca91f994ad02deb97efec573885df"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classlagrange_1_1scene_1_1_simple_scene.html">SceneType</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ga013ca91f994ad02deb97efec573885df">deserialize_simple_scene</a> (<a class="el" href="group__group-utils-misc.html#ga4afead0b9ccc53fe4fca896787595d26">span</a>&lt; const uint8_t &gt; buffer, const <a class="el" href="structlagrange_1_1serialization_1_1_deserialize_options.html">DeserializeOptions</a> &amp;options={})</td></tr>
+<tr class="memdesc:ga013ca91f994ad02deb97efec573885df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deserialize a SimpleScene from a byte buffer.  <br /></td></tr>
+<tr class="separator:ga013ca91f994ad02deb97efec573885df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa5b7b965ca1b11eceaea21b4ea2a0498" id="r_gaa5b7b965ca1b11eceaea21b4ea2a0498"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, typename Index, size_t Dimension&gt; </td></tr>
+<tr class="memitem:gaa5b7b965ca1b11eceaea21b4ea2a0498"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#gaa5b7b965ca1b11eceaea21b4ea2a0498">save_simple_scene</a> (const fs::path &amp;filename, const <a class="el" href="classlagrange_1_1scene_1_1_simple_scene.html">scene::SimpleScene</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index, Dimension &gt; &amp;scene, const <a class="el" href="structlagrange_1_1serialization_1_1_serialize_options.html">SerializeOptions</a> &amp;options={})</td></tr>
+<tr class="memdesc:gaa5b7b965ca1b11eceaea21b4ea2a0498"><td class="mdescLeft">&#160;</td><td class="mdescRight">Save a SimpleScene to a file.  <br /></td></tr>
+<tr class="separator:gaa5b7b965ca1b11eceaea21b4ea2a0498"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6245f730c0cafead5ea1be4e41d1dbdd" id="r_ga6245f730c0cafead5ea1be4e41d1dbdd"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="classlagrange_1_1scene_1_1_simple_scene.html">SceneType</a>&gt; </td></tr>
+<tr class="memitem:ga6245f730c0cafead5ea1be4e41d1dbdd"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classlagrange_1_1scene_1_1_simple_scene.html">SceneType</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ga6245f730c0cafead5ea1be4e41d1dbdd">load_simple_scene</a> (const fs::path &amp;filename, const <a class="el" href="structlagrange_1_1serialization_1_1_deserialize_options.html">DeserializeOptions</a> &amp;options={})</td></tr>
+<tr class="memdesc:ga6245f730c0cafead5ea1be4e41d1dbdd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load a SimpleScene from a file.  <br /></td></tr>
+<tr class="separator:ga6245f730c0cafead5ea1be4e41d1dbdd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>Binary serialization of meshes and scenes. </p>
@@ -226,8 +226,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ga44c6195a7d2d3c8aee5f17dae5205fea" name="ga44c6195a7d2d3c8aee5f17dae5205fea"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga44c6195a7d2d3c8aee5f17dae5205fea">&#9670;&#160;</a></span>serialize_mesh()</h2>
+<a id="ga1ddab221f7066e9d002e85a1aa1aaaa2" name="ga1ddab221f7066e9d002e85a1aa1aaaa2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1ddab221f7066e9d002e85a1aa1aaaa2">&#9670;&#160;</a></span>serialize_mesh()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -235,7 +235,7 @@ Functions</h2></td></tr>
 template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, typename Index&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">LA_SERIALIZATION2_API std::vector&lt; uint8_t &gt; serialize_mesh </td>
+          <td class="memname">std::vector&lt; uint8_t &gt; serialize_mesh </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>mesh</em></span>, </td>
         </tr>
@@ -268,8 +268,8 @@ template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5
 
 </div>
 </div>
-<a id="ga73c84ddf5641a3b6549da6e57c5bb782" name="ga73c84ddf5641a3b6549da6e57c5bb782"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga73c84ddf5641a3b6549da6e57c5bb782">&#9670;&#160;</a></span>deserialize_mesh()</h2>
+<a id="ga983ae046ad215e36e93fe52564ef709b" name="ga983ae046ad215e36e93fe52564ef709b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga983ae046ad215e36e93fe52564ef709b">&#9670;&#160;</a></span>deserialize_mesh()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -277,7 +277,7 @@ template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5
 template&lt;typename <a class="el" href="classlagrange_1_1_mesh.html">MeshType</a>&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">LA_SERIALIZATION2_API <a class="el" href="classlagrange_1_1_mesh.html">MeshType</a> deserialize_mesh </td>
+          <td class="memname"><a class="el" href="classlagrange_1_1_mesh.html">MeshType</a> deserialize_mesh </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="group__group-utils-misc.html#ga4afead0b9ccc53fe4fca896787595d26">span</a>&lt; const uint8_t &gt;</td>          <td class="paramname"><span class="paramname"><em>buffer</em></span>, </td>
         </tr>
@@ -310,8 +310,8 @@ template&lt;typename <a class="el" href="classlagrange_1_1_mesh.html">MeshType</
 
 </div>
 </div>
-<a id="ga11aa45b21f9762ee65a16d1c27454216" name="ga11aa45b21f9762ee65a16d1c27454216"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga11aa45b21f9762ee65a16d1c27454216">&#9670;&#160;</a></span>save_mesh()</h2>
+<a id="ga5689af8d349526a63c775d6bfa1afa33" name="ga5689af8d349526a63c775d6bfa1afa33"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5689af8d349526a63c775d6bfa1afa33">&#9670;&#160;</a></span>save_mesh()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -319,7 +319,7 @@ template&lt;typename <a class="el" href="classlagrange_1_1_mesh.html">MeshType</
 template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, typename Index&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">LA_SERIALIZATION2_API void save_mesh </td>
+          <td class="memname">void save_mesh </td>
           <td>(</td>
           <td class="paramtype">const fs::path &amp;</td>          <td class="paramname"><span class="paramname"><em>filename</em></span>, </td>
         </tr>
@@ -358,8 +358,8 @@ template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5
 
 </div>
 </div>
-<a id="gaa90c6bca907f1eed66beb752f8c9da36" name="gaa90c6bca907f1eed66beb752f8c9da36"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gaa90c6bca907f1eed66beb752f8c9da36">&#9670;&#160;</a></span>load_mesh()</h2>
+<a id="ga1e6f7cb392bd75d0c05913016bf2111f" name="ga1e6f7cb392bd75d0c05913016bf2111f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1e6f7cb392bd75d0c05913016bf2111f">&#9670;&#160;</a></span>load_mesh()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -367,7 +367,7 @@ template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5
 template&lt;typename <a class="el" href="classlagrange_1_1_mesh.html">MeshType</a>&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">LA_SERIALIZATION2_API <a class="el" href="classlagrange_1_1_mesh.html">MeshType</a> load_mesh </td>
+          <td class="memname"><a class="el" href="classlagrange_1_1_mesh.html">MeshType</a> load_mesh </td>
           <td>(</td>
           <td class="paramtype">const fs::path &amp;</td>          <td class="paramname"><span class="paramname"><em>filename</em></span>, </td>
         </tr>
@@ -431,8 +431,8 @@ template&lt;typename <a class="el" href="classlagrange_1_1_mesh.html">MeshType</
 
 </div>
 </div>
-<a id="gaec1ef7b42502253a6a437459704c5831" name="gaec1ef7b42502253a6a437459704c5831"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gaec1ef7b42502253a6a437459704c5831">&#9670;&#160;</a></span>serialize_scene()</h2>
+<a id="gaf7c62886526ec32d0e43e3af1dfff3c1" name="gaf7c62886526ec32d0e43e3af1dfff3c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf7c62886526ec32d0e43e3af1dfff3c1">&#9670;&#160;</a></span>serialize_scene()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -440,7 +440,7 @@ template&lt;typename <a class="el" href="classlagrange_1_1_mesh.html">MeshType</
 template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, typename Index&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">LA_SERIALIZATION2_API std::vector&lt; uint8_t &gt; serialize_scene </td>
+          <td class="memname">std::vector&lt; uint8_t &gt; serialize_scene </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="structlagrange_1_1scene_1_1_scene.html">scene::Scene</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>scene</em></span>, </td>
         </tr>
@@ -473,8 +473,8 @@ template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5
 
 </div>
 </div>
-<a id="gad9c7fe14f2a5987b7983e64fb00551ac" name="gad9c7fe14f2a5987b7983e64fb00551ac"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gad9c7fe14f2a5987b7983e64fb00551ac">&#9670;&#160;</a></span>deserialize_scene()</h2>
+<a id="gafa64740a1b9bc35661393ed33f748528" name="gafa64740a1b9bc35661393ed33f748528"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gafa64740a1b9bc35661393ed33f748528">&#9670;&#160;</a></span>deserialize_scene()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -482,7 +482,7 @@ template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5
 template&lt;typename <a class="el" href="classlagrange_1_1scene_1_1_simple_scene.html">SceneType</a>&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">LA_SERIALIZATION2_API <a class="el" href="classlagrange_1_1scene_1_1_simple_scene.html">SceneType</a> deserialize_scene </td>
+          <td class="memname"><a class="el" href="classlagrange_1_1scene_1_1_simple_scene.html">SceneType</a> deserialize_scene </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="group__group-utils-misc.html#ga4afead0b9ccc53fe4fca896787595d26">span</a>&lt; const uint8_t &gt;</td>          <td class="paramname"><span class="paramname"><em>buffer</em></span>, </td>
         </tr>
@@ -515,8 +515,8 @@ template&lt;typename <a class="el" href="classlagrange_1_1scene_1_1_simple_scene
 
 </div>
 </div>
-<a id="gac309da58cceb0f7a79bc96e8670ed18b" name="gac309da58cceb0f7a79bc96e8670ed18b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gac309da58cceb0f7a79bc96e8670ed18b">&#9670;&#160;</a></span>save_scene()</h2>
+<a id="ga579c4ecd00d782d28a6092f7354206a7" name="ga579c4ecd00d782d28a6092f7354206a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga579c4ecd00d782d28a6092f7354206a7">&#9670;&#160;</a></span>save_scene()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -524,7 +524,7 @@ template&lt;typename <a class="el" href="classlagrange_1_1scene_1_1_simple_scene
 template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, typename Index&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">LA_SERIALIZATION2_API void save_scene </td>
+          <td class="memname">void save_scene </td>
           <td>(</td>
           <td class="paramtype">const fs::path &amp;</td>          <td class="paramname"><span class="paramname"><em>filename</em></span>, </td>
         </tr>
@@ -563,8 +563,8 @@ template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5
 
 </div>
 </div>
-<a id="ga8a3ffc48bbc752f1ba83f7084f8fd34f" name="ga8a3ffc48bbc752f1ba83f7084f8fd34f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga8a3ffc48bbc752f1ba83f7084f8fd34f">&#9670;&#160;</a></span>load_scene()</h2>
+<a id="gac1c21f676e049cd3636956b93bd11369" name="gac1c21f676e049cd3636956b93bd11369"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac1c21f676e049cd3636956b93bd11369">&#9670;&#160;</a></span>load_scene()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -572,7 +572,7 @@ template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5
 template&lt;typename <a class="el" href="classlagrange_1_1scene_1_1_simple_scene.html">SceneType</a>&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">LA_SERIALIZATION2_API <a class="el" href="classlagrange_1_1scene_1_1_simple_scene.html">SceneType</a> load_scene </td>
+          <td class="memname"><a class="el" href="classlagrange_1_1scene_1_1_simple_scene.html">SceneType</a> load_scene </td>
           <td>(</td>
           <td class="paramtype">const fs::path &amp;</td>          <td class="paramname"><span class="paramname"><em>filename</em></span>, </td>
         </tr>
@@ -636,8 +636,8 @@ template&lt;typename <a class="el" href="classlagrange_1_1scene_1_1_simple_scene
 
 </div>
 </div>
-<a id="gad673dbba37958789d12488ce1db0c947" name="gad673dbba37958789d12488ce1db0c947"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gad673dbba37958789d12488ce1db0c947">&#9670;&#160;</a></span>serialize_simple_scene()</h2>
+<a id="gaa2000cabcd5531b3fbdede17e8c9f914" name="gaa2000cabcd5531b3fbdede17e8c9f914"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa2000cabcd5531b3fbdede17e8c9f914">&#9670;&#160;</a></span>serialize_simple_scene()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -645,7 +645,7 @@ template&lt;typename <a class="el" href="classlagrange_1_1scene_1_1_simple_scene
 template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, typename Index, size_t Dimension&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">LA_SERIALIZATION2_API std::vector&lt; uint8_t &gt; serialize_simple_scene </td>
+          <td class="memname">std::vector&lt; uint8_t &gt; serialize_simple_scene </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classlagrange_1_1scene_1_1_simple_scene.html">scene::SimpleScene</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index, Dimension &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>scene</em></span>, </td>
         </tr>
@@ -679,8 +679,8 @@ template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5
 
 </div>
 </div>
-<a id="ga44be7adf97064d84c54257c1faa19601" name="ga44be7adf97064d84c54257c1faa19601"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga44be7adf97064d84c54257c1faa19601">&#9670;&#160;</a></span>deserialize_simple_scene()</h2>
+<a id="ga013ca91f994ad02deb97efec573885df" name="ga013ca91f994ad02deb97efec573885df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga013ca91f994ad02deb97efec573885df">&#9670;&#160;</a></span>deserialize_simple_scene()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -688,7 +688,7 @@ template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5
 template&lt;typename <a class="el" href="classlagrange_1_1scene_1_1_simple_scene.html">SceneType</a>&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">LA_SERIALIZATION2_API <a class="el" href="classlagrange_1_1scene_1_1_simple_scene.html">SceneType</a> deserialize_simple_scene </td>
+          <td class="memname"><a class="el" href="classlagrange_1_1scene_1_1_simple_scene.html">SceneType</a> deserialize_simple_scene </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="group__group-utils-misc.html#ga4afead0b9ccc53fe4fca896787595d26">span</a>&lt; const uint8_t &gt;</td>          <td class="paramname"><span class="paramname"><em>buffer</em></span>, </td>
         </tr>
@@ -721,8 +721,8 @@ template&lt;typename <a class="el" href="classlagrange_1_1scene_1_1_simple_scene
 
 </div>
 </div>
-<a id="ga0cdd2fe55042358f10cbb03c5ae4487d" name="ga0cdd2fe55042358f10cbb03c5ae4487d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga0cdd2fe55042358f10cbb03c5ae4487d">&#9670;&#160;</a></span>save_simple_scene()</h2>
+<a id="gaa5b7b965ca1b11eceaea21b4ea2a0498" name="gaa5b7b965ca1b11eceaea21b4ea2a0498"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa5b7b965ca1b11eceaea21b4ea2a0498">&#9670;&#160;</a></span>save_simple_scene()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -730,7 +730,7 @@ template&lt;typename <a class="el" href="classlagrange_1_1scene_1_1_simple_scene
 template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, typename Index, size_t Dimension&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">LA_SERIALIZATION2_API void save_simple_scene </td>
+          <td class="memname">void save_simple_scene </td>
           <td>(</td>
           <td class="paramtype">const fs::path &amp;</td>          <td class="paramname"><span class="paramname"><em>filename</em></span>, </td>
         </tr>
@@ -770,8 +770,8 @@ template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5
 
 </div>
 </div>
-<a id="ga43d68cf453654efcf9048d19b0303499" name="ga43d68cf453654efcf9048d19b0303499"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga43d68cf453654efcf9048d19b0303499">&#9670;&#160;</a></span>load_simple_scene()</h2>
+<a id="ga6245f730c0cafead5ea1be4e41d1dbdd" name="ga6245f730c0cafead5ea1be4e41d1dbdd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga6245f730c0cafead5ea1be4e41d1dbdd">&#9670;&#160;</a></span>load_simple_scene()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -779,7 +779,7 @@ template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5
 template&lt;typename <a class="el" href="classlagrange_1_1scene_1_1_simple_scene.html">SceneType</a>&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">LA_SERIALIZATION2_API <a class="el" href="classlagrange_1_1scene_1_1_simple_scene.html">SceneType</a> load_simple_scene </td>
+          <td class="memname"><a class="el" href="classlagrange_1_1scene_1_1_simple_scene.html">SceneType</a> load_simple_scene </td>
           <td>(</td>
           <td class="paramtype">const fs::path &amp;</td>          <td class="paramname"><span class="paramname"><em>filename</em></span>, </td>
         </tr>
@@ -818,7 +818,7 @@ template&lt;typename <a class="el" href="classlagrange_1_1scene_1_1_simple_scene
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Sat Sep 5 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+    <li class="footer">Generated on Mon Oct 5 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>
 </body>

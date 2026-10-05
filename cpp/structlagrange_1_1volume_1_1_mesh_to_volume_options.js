@@ -6,5 +6,7 @@ var structlagrange_1_1volume_1_1_mesh_to_volume_options =
       [ "Unsigned", "structlagrange_1_1volume_1_1_mesh_to_volume_options.html#ad870f3a2c3baacb65e34071ae73c66cbaa1a914735b205424ba6c40b85528d78a", null ]
     ] ],
     [ "voxel_size", "structlagrange_1_1volume_1_1_mesh_to_volume_options.html#ad118a11bb72422d15842daa074486186", null ],
-    [ "signing_method", "structlagrange_1_1volume_1_1_mesh_to_volume_options.html#a9501e378c5f00b9003568600404d661b", null ]
+    [ "signing_method", "structlagrange_1_1volume_1_1_mesh_to_volume_options.html#a9501e378c5f00b9003568600404d661b", null ],
+    [ "exterior_bandwidth", "structlagrange_1_1volume_1_1_mesh_to_volume_options.html#a19656ebcaee758365391232556d093df", null ],
+    [ "interior_bandwidth", "structlagrange_1_1volume_1_1_mesh_to_volume_options.html#a27b7e600817f922bab5c12896a628b94", null ]
 ];

@@ -138,36 +138,38 @@ $(function(){initNavTree('generate__octahedron_8h_source.html',''); initResizabl
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment"> */</span></div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#pragma once</span></div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#ifdef LAGRANGE_ENABLE_LEGACY_FUNCTIONS</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#ifdef LAGRANGE_ENABLE_LEGACY_HEADERS</span></div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">    #include &lt;lagrange/primitive/legacy/generate_octahedron.h&gt;</span></div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#include &lt;lagrange/primitive/PrimitiveOptions.h&gt;</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#include &lt;lagrange/primitive/api.h&gt;</span></div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="keyword">namespace </span>lagrange::primitive {</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span></div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span></div>
-<div class="foldopen" id="foldopen00028" data-start="{" data-end="};">
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="structlagrange_1_1primitive_1_1_octahedron_options.html">   28</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structlagrange_1_1primitive_1_1_octahedron_options.html">OctahedronOptions</a> : <span class="keyword">public</span> <a class="code hl_struct" href="structlagrange_1_1primitive_1_1_primitive_options.html">PrimitiveOptions</a></div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>{</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="keyword">using </span>Scalar = PrimitiveOptions::Scalar;</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span></div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="structlagrange_1_1primitive_1_1_octahedron_options.html#ab3e4a3f725642180f73777ee68654e76">   33</a></span>    Scalar <a class="code hl_variable" href="structlagrange_1_1primitive_1_1_octahedron_options.html#ab3e4a3f725642180f73777ee68654e76">radius</a> = 1;</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span></div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="structlagrange_1_1primitive_1_1_octahedron_options.html#a1180fcc7096856a2fcf8bf37bd85ed19">   43</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="structlagrange_1_1primitive_1_1_octahedron_options.html#a1180fcc7096856a2fcf8bf37bd85ed19">project_to_valid_range</a>() { <a class="code hl_variable" href="structlagrange_1_1primitive_1_1_octahedron_options.html#ab3e4a3f725642180f73777ee68654e76">radius</a> = std::max(<a class="code hl_variable" href="structlagrange_1_1primitive_1_1_octahedron_options.html#ab3e4a3f725642180f73777ee68654e76">radius</a>, Scalar(0)); }</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>};</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &lt;lagrange/primitive/PrimitiveOptions.h&gt;</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="keyword">namespace </span>lagrange::primitive {</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span></div>
+<div class="foldopen" id="foldopen00030" data-start="{" data-end="};">
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="structlagrange_1_1primitive_1_1_octahedron_options.html">   30</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structlagrange_1_1primitive_1_1_octahedron_options.html">OctahedronOptions</a> : <span class="keyword">public</span> <a class="code hl_struct" href="structlagrange_1_1primitive_1_1_primitive_options.html">PrimitiveOptions</a></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>{</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="keyword">using </span>Scalar = PrimitiveOptions::Scalar;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="structlagrange_1_1primitive_1_1_octahedron_options.html#ab3e4a3f725642180f73777ee68654e76">   35</a></span>    Scalar <a class="code hl_variable" href="structlagrange_1_1primitive_1_1_octahedron_options.html#ab3e4a3f725642180f73777ee68654e76">radius</a> = 1;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="structlagrange_1_1primitive_1_1_octahedron_options.html#a1180fcc7096856a2fcf8bf37bd85ed19">   45</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="structlagrange_1_1primitive_1_1_octahedron_options.html#a1180fcc7096856a2fcf8bf37bd85ed19">project_to_valid_range</a>() { <a class="code hl_variable" href="structlagrange_1_1primitive_1_1_octahedron_options.html#ab3e4a3f725642180f73777ee68654e76">radius</a> = std::max(<a class="code hl_variable" href="structlagrange_1_1primitive_1_1_octahedron_options.html#ab3e4a3f725642180f73777ee68654e76">radius</a>, Scalar(0)); }</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>};</div>
 </div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span></div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> Scalar, <span class="keyword">typename</span> Index&gt;</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><a class="code hl_class" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh&lt;Scalar, Index&gt;</a> <a class="code hl_function" href="group__module-primitive.html#ga421c794ff673ade77ba37787687136a1">generate_octahedron</a>(OctahedronOptions settings);</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span></div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>} <span class="comment">// namespace lagrange::primitive</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> Scalar, <span class="keyword">typename</span> Index&gt;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>LA_PRIMITIVE_API <a class="code hl_class" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh&lt;Scalar, Index&gt;</a> <a class="code hl_function" href="group__module-primitive.html#ga421c794ff673ade77ba37787687136a1">generate_octahedron</a>(OctahedronOptions settings);</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span></div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>} <span class="comment">// namespace lagrange::primitive</span></div>
 <div class="ttc" id="aclasslagrange_1_1_surface_mesh_html"><div class="ttname"><a href="classlagrange_1_1_surface_mesh.html">lagrange::SurfaceMesh</a></div><div class="ttdoc">A general purpose polygonal mesh class.</div><div class="ttdef"><b>Definition</b> SurfaceMesh.h:73</div></div>
 <div class="ttc" id="agroup__module-primitive_html_ga421c794ff673ade77ba37787687136a1"><div class="ttname"><a href="group__module-primitive.html#ga421c794ff673ade77ba37787687136a1">lagrange::primitive::generate_octahedron</a></div><div class="ttdeci">SurfaceMesh&lt; Scalar, Index &gt; generate_octahedron(OctahedronOptions settings)</div><div class="ttdoc">Generate an octahedron mesh.</div><div class="ttdef"><b>Definition</b> generate_octahedron.cpp:25</div></div>
-<div class="ttc" id="astructlagrange_1_1primitive_1_1_octahedron_options_html"><div class="ttname"><a href="structlagrange_1_1primitive_1_1_octahedron_options.html">lagrange::primitive::OctahedronOptions</a></div><div class="ttdoc">Options for generating an octahedron mesh.</div><div class="ttdef"><b>Definition</b> generate_octahedron.h:29</div></div>
-<div class="ttc" id="astructlagrange_1_1primitive_1_1_octahedron_options_html_a1180fcc7096856a2fcf8bf37bd85ed19"><div class="ttname"><a href="structlagrange_1_1primitive_1_1_octahedron_options.html#a1180fcc7096856a2fcf8bf37bd85ed19">lagrange::primitive::OctahedronOptions::project_to_valid_range</a></div><div class="ttdeci">void project_to_valid_range()</div><div class="ttdoc">Clamps all parameters to valid ranges.</div><div class="ttdef"><b>Definition</b> generate_octahedron.h:43</div></div>
-<div class="ttc" id="astructlagrange_1_1primitive_1_1_octahedron_options_html_ab3e4a3f725642180f73777ee68654e76"><div class="ttname"><a href="structlagrange_1_1primitive_1_1_octahedron_options.html#ab3e4a3f725642180f73777ee68654e76">lagrange::primitive::OctahedronOptions::radius</a></div><div class="ttdeci">Scalar radius</div><div class="ttdoc">Radius of the circumscribed sphere around the octahedron.</div><div class="ttdef"><b>Definition</b> generate_octahedron.h:33</div></div>
+<div class="ttc" id="astructlagrange_1_1primitive_1_1_octahedron_options_html"><div class="ttname"><a href="structlagrange_1_1primitive_1_1_octahedron_options.html">lagrange::primitive::OctahedronOptions</a></div><div class="ttdoc">Options for generating an octahedron mesh.</div><div class="ttdef"><b>Definition</b> generate_octahedron.h:31</div></div>
+<div class="ttc" id="astructlagrange_1_1primitive_1_1_octahedron_options_html_a1180fcc7096856a2fcf8bf37bd85ed19"><div class="ttname"><a href="structlagrange_1_1primitive_1_1_octahedron_options.html#a1180fcc7096856a2fcf8bf37bd85ed19">lagrange::primitive::OctahedronOptions::project_to_valid_range</a></div><div class="ttdeci">void project_to_valid_range()</div><div class="ttdoc">Clamps all parameters to valid ranges.</div><div class="ttdef"><b>Definition</b> generate_octahedron.h:45</div></div>
+<div class="ttc" id="astructlagrange_1_1primitive_1_1_octahedron_options_html_ab3e4a3f725642180f73777ee68654e76"><div class="ttname"><a href="structlagrange_1_1primitive_1_1_octahedron_options.html#ab3e4a3f725642180f73777ee68654e76">lagrange::primitive::OctahedronOptions::radius</a></div><div class="ttdeci">Scalar radius</div><div class="ttdoc">Radius of the circumscribed sphere around the octahedron.</div><div class="ttdef"><b>Definition</b> generate_octahedron.h:35</div></div>
 <div class="ttc" id="astructlagrange_1_1primitive_1_1_primitive_options_html"><div class="ttname"><a href="structlagrange_1_1primitive_1_1_primitive_options.html">lagrange::primitive::PrimitiveOptions</a></div><div class="ttdoc">Common settings shared by all primitives.</div><div class="ttdef"><b>Definition</b> PrimitiveOptions.h:28</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
@@ -175,7 +177,7 @@ $(function(){initNavTree('generate__octahedron_8h_source.html',''); initResizabl
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_e36f8fa9358c3f75a04901d63ff66590.html">lagrange</a></li><li class="navelem"><a class="el" href="dir_d0409b165963810c6de8a88faa72c0ab.html">primitive</a></li><li class="navelem"><b>generate_octahedron.h</b></li>
-    <li class="footer">Generated on Sat Sep 5 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+    <li class="footer">Generated on Mon Oct 5 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>
 </body>

@@ -14,7 +14,11 @@ var group__module_texproc =
       [ "quadrature_samples", "structlagrange_1_1texproc_1_1_compositing_options.html#ad3e7cea1a808330f227ccb31f07fe84c", null ],
       [ "jitter_epsilon", "structlagrange_1_1texproc_1_1_compositing_options.html#aeed21ccd90b03ed70ece280fd5982cb8", null ],
       [ "clamp_to_range", "structlagrange_1_1texproc_1_1_compositing_options.html#a7f7515e85289d54ddb825f97d7c2f558", null ],
-      [ "smooth_low_weight_areas", "structlagrange_1_1texproc_1_1_compositing_options.html#aab352b662460fc145d0937e5569f31e6", null ]
+      [ "gradient_normalization", "structlagrange_1_1texproc_1_1_compositing_options.html#ab235220948b3f0b4a3b639a671a77305", null ],
+      [ "use_direct_solver", "structlagrange_1_1texproc_1_1_compositing_options.html#a2cd2f01ea621ff4e2042ac264d8662c0", null ],
+      [ "stiffness_regularization_weight", "structlagrange_1_1texproc_1_1_compositing_options.html#a53e448271e2e67e9f4016c861c8415c8", null ],
+      [ "smooth_low_weight_areas", "structlagrange_1_1texproc_1_1_compositing_options.html#aab352b662460fc145d0937e5569f31e6", null ],
+      [ "sanity_check", "structlagrange_1_1texproc_1_1_compositing_options.html#a11da114f8545d1e6ef760d5b3b279aa0", null ]
     ] ],
     [ "ConstWeightedTextureView< ValueType >", "structlagrange_1_1texproc_1_1_const_weighted_texture_view.html", [
       [ "texture", "structlagrange_1_1texproc_1_1_const_weighted_texture_view.html#a2066685f4320f6c002ab273c370e72ca", null ],
@@ -27,7 +31,8 @@ var group__module_texproc =
       [ "quadrature_samples", "structlagrange_1_1texproc_1_1_filtering_options.html#ad3e7cea1a808330f227ccb31f07fe84c", null ],
       [ "jitter_epsilon", "structlagrange_1_1texproc_1_1_filtering_options.html#aeed21ccd90b03ed70ece280fd5982cb8", null ],
       [ "stiffness_regularization_weight", "structlagrange_1_1texproc_1_1_filtering_options.html#a53e448271e2e67e9f4016c861c8415c8", null ],
-      [ "clamp_to_range", "structlagrange_1_1texproc_1_1_filtering_options.html#a7f7515e85289d54ddb825f97d7c2f558", null ]
+      [ "clamp_to_range", "structlagrange_1_1texproc_1_1_filtering_options.html#a7f7515e85289d54ddb825f97d7c2f558", null ],
+      [ "sanity_check", "structlagrange_1_1texproc_1_1_filtering_options.html#a11da114f8545d1e6ef760d5b3b279aa0", null ]
     ] ],
     [ "StitchingOptions", "structlagrange_1_1texproc_1_1_stitching_options.html", [
       [ "exterior_only", "structlagrange_1_1texproc_1_1_stitching_options.html#aa1c5474979d2ade3016e457d168d2f38", null ],
@@ -35,6 +40,7 @@ var group__module_texproc =
       [ "jitter_epsilon", "structlagrange_1_1texproc_1_1_stitching_options.html#aeed21ccd90b03ed70ece280fd5982cb8", null ],
       [ "stiffness_regularization_weight", "structlagrange_1_1texproc_1_1_stitching_options.html#a53e448271e2e67e9f4016c861c8415c8", null ],
       [ "clamp_to_range", "structlagrange_1_1texproc_1_1_stitching_options.html#a7f7515e85289d54ddb825f97d7c2f558", null ],
+      [ "sanity_check", "structlagrange_1_1texproc_1_1_stitching_options.html#a11da114f8545d1e6ef760d5b3b279aa0", null ],
       [ "__randomize", "structlagrange_1_1texproc_1_1_stitching_options.html#abc55debe57196f8726a6553f516f41eb", null ]
     ] ],
     [ "TextureRasterizerOptions", "structlagrange_1_1texproc_1_1_texture_rasterizer_options.html", [
@@ -48,6 +54,10 @@ var group__module_texproc =
       [ "TextureRasterizer", "classlagrange_1_1texproc_1_1_texture_rasterizer.html#a7611e56ef2e6684cf80d6ef630a21257", null ],
       [ "~TextureRasterizer", "classlagrange_1_1texproc_1_1_texture_rasterizer.html#aedabaef81d364b7a792e40c254251a8f", null ],
       [ "weighted_texture_from_render", "classlagrange_1_1texproc_1_1_texture_rasterizer.html#a27488a89d0f208566814c868d27d0c5b", null ]
+    ] ],
+    [ "GradientNormalization", "group__module-texproc.html#ga6e251cd8be4ef5b980f20d9135b00e50", [
+      [ "PerEdge", "group__module-texproc.html#gga6e251cd8be4ef5b980f20d9135b00e50aca60a793e8941dba0ac337d452092cd8", null ],
+      [ "PerTexelSqrt", "group__module-texproc.html#gga6e251cd8be4ef5b980f20d9135b00e50ac3c56ab1ff7f68e13b60a1f351b81b21", null ]
     ] ],
     [ "geodesic_dilation", "group__module-texproc.html#gafaf64c79dd34d7d6fa0ce97f0508a00f", null ],
     [ "texture_compositing", "group__module-texproc.html#gab3d8e8517a29a00717c081623b77ba66", null ],

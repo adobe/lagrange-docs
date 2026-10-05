@@ -136,29 +136,19 @@ $(function(){initNavTree('corner__to__edge__mapping_8h_source.html',''); initRes
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment"> * OF ANY KIND, either express or implied. See the License for the specific language</span></div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment"> * governing permissions and limitations under the License.</span></div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment"> */</span></div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#pragma once</span></div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;Eigen/Core&gt;</span></div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacelagrange.html">lagrange</a> {</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span></div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> DerivedF, <span class="keyword">typename</span> DerivedC&gt;</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>Eigen::Index <a class="code hl_function" href="namespacelagrange.html#ad34583bdda68644dcd9c7175ce179735">corner_to_edge_mapping</a>(</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="keyword">const</span> Eigen::MatrixBase&lt;DerivedF&gt;&amp; F,</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    Eigen::PlainObjectBase&lt;DerivedC&gt;&amp; C2E);</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>} <span class="comment">// namespace lagrange</span></div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="comment">// Templated definitions</span></div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="preprocessor">#include &lt;lagrange/corner_to_edge_mapping.impl.h&gt;</span></div>
-<div class="ttc" id="anamespacelagrange_html"><div class="ttname"><a href="namespacelagrange.html">lagrange</a></div><div class="ttdoc">Main namespace for Lagrange.</div></div>
-<div class="ttc" id="anamespacelagrange_html_ad34583bdda68644dcd9c7175ce179735"><div class="ttname"><a href="namespacelagrange.html#ad34583bdda68644dcd9c7175ce179735">lagrange::corner_to_edge_mapping</a></div><div class="ttdeci">Eigen::Index corner_to_edge_mapping(const Eigen::MatrixBase&lt; DerivedF &gt; &amp;F, Eigen::PlainObjectBase&lt; DerivedC &gt; &amp;C2E)</div><div class="ttdoc">Computes a mapping from mesh corners (k*f+i) to unique edge ids.</div><div class="ttdef"><b>Definition</b> corner_to_edge_mapping.impl.h:36</div></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#ifdef LAGRANGE_ENABLE_LEGACY_HEADERS</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    <span class="comment">// Replaced by SurfaceMesh::initialize_edges() and SurfaceMesh::get_corner_edge().</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">    #include &lt;lagrange/legacy/corner_to_edge_mapping.h&gt;</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_e277d0e790805391a364b883bec7db94.html">lagrange</a></li><li class="navelem"><b>corner_to_edge_mapping.h</b></li>
-    <li class="footer">Generated on Sat Sep 5 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+    <li class="footer">Generated on Mon Oct 5 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>
 </body>

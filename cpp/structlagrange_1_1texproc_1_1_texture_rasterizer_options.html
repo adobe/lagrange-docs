@@ -172,7 +172,8 @@ size_t&#160;</td><td class="memItemRight" valign="bottom"><b>height</b> = 1024</
 </div><div class="memdoc">
 
 <p>Depth precision (for determining visibility). </p>
-<p>Ideally we'd use raytracing to determine if a texel is visible. But for simplicity we just compare the texel depth with depth map value at the screen location. </p>
+<p>Ideally we'd use raytracing to determine if a texel is visible. But for simplicity we just compare the texel depth with depth map value at the screen location.</p>
+<p>For perspective cameras this is a relative tolerance, a texel at depth z is considered visible when z &lt; depth * (1 + depth_precision). For orthographic cameras this is an absolute tolerance, a texel is considered visible when z &lt; depth + depth_precision. </p>
 
 </div>
 </div>
@@ -185,7 +186,7 @@ size_t&#160;</td><td class="memItemRight" valign="bottom"><b>height</b> = 1024</
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacelagrange.html">lagrange</a></li><li class="navelem"><b>texproc</b></li><li class="navelem"><a class="el" href="structlagrange_1_1texproc_1_1_texture_rasterizer_options.html">TextureRasterizerOptions</a></li>
-    <li class="footer">Generated on Sat Sep 5 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+    <li class="footer">Generated on Mon Oct 5 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>
 </body>

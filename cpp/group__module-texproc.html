@@ -124,6 +124,7 @@ $(function(){initNavTree('group__module-texproc.html',''); initResizable(true); 
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
+<a href="#enum-members">Enumerations</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">Texproc Module</div></div>
 </div><!--header-->
@@ -156,6 +157,14 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given a mesh with UVs, unproject rendered images into a UV texture and confidence map.  <a href="classlagrange_1_1texproc_1_1_texture_rasterizer.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:ga6e251cd8be4ef5b980f20d9135b00e50" id="r_ga6e251cd8be4ef5b980f20d9135b00e50"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga6e251cd8be4ef5b980f20d9135b00e50">GradientNormalization</a> { <a class="el" href="#gga6e251cd8be4ef5b980f20d9135b00e50aca60a793e8941dba0ac337d452092cd8">PerEdge</a>
+, <a class="el" href="#gga6e251cd8be4ef5b980f20d9135b00e50ac3c56ab1ff7f68e13b60a1f351b81b21">PerTexelSqrt</a>
+ }</td></tr>
+<tr class="memdesc:ga6e251cd8be4ef5b980f20d9135b00e50"><td class="mdescLeft">&#160;</td><td class="mdescRight">How per-view gradient contributions are normalized when assembling the edge-difference target.  <a href="#ga6e251cd8be4ef5b980f20d9135b00e50">More...</a><br /></td></tr>
+<tr class="separator:ga6e251cd8be4ef5b980f20d9135b00e50"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:gafaf64c79dd34d7d6fa0ce97f0508a00f" id="r_gafaf64c79dd34d7d6fa0ce97f0508a00f"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, typename Index, typename ValueType&gt; </td></tr>
@@ -180,6 +189,40 @@ Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>Texture-space processing utilities. </p>
+<h2 class="groupheader">Enumeration Type Documentation</h2>
+<a id="ga6e251cd8be4ef5b980f20d9135b00e50" name="ga6e251cd8be4ef5b980f20d9135b00e50"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga6e251cd8be4ef5b980f20d9135b00e50">&#9670;&#160;</a></span>GradientNormalization</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum class <a class="el" href="#ga6e251cd8be4ef5b980f20d9135b00e50">GradientNormalization</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel strong">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;lagrange/texproc/texture_compositing.h&gt;</code></p>
+
+<p>How per-view gradient contributions are normalized when assembling the edge-difference target. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="gga6e251cd8be4ef5b980f20d9135b00e50aca60a793e8941dba0ac337d452092cd8" name="gga6e251cd8be4ef5b980f20d9135b00e50aca60a793e8941dba0ac337d452092cd8"></a>PerEdge&#160;</td><td class="fielddoc"><p>Per-edge weighted average of per-view gradients: edge_target = sum_i(grad_i * w_i(n1) * w_i(n2)) / sum_i(w_i(n1) * w_i(n2)) Matches the ShapeGradientDomain reference. </p>
+<p>Produces gradient targets bounded by the range of per-view gradients (no overshoot from the gradient term alone). </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga6e251cd8be4ef5b980f20d9135b00e50ac3c56ab1ff7f68e13b60a1f351b81b21" name="gga6e251cd8be4ef5b980f20d9135b00e50ac3c56ab1ff7f68e13b60a1f351b81b21"></a>PerTexelSqrt&#160;</td><td class="fielddoc"><p>Per-texel normalization with geometric-mean combination (legacy behavior): edge_target = sum_i(grad_i * sqrt(w_i(n1)/Σw(n1) * w_i(n2)/Σw(n2))) The gradient weights do not sum to 1 per edge at view boundaries, which attenuates gradient targets in transition regions. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="gafaf64c79dd34d7d6fa0ce97f0508a00f" name="gafaf64c79dd34d7d6fa0ce97f0508a00f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#gafaf64c79dd34d7d6fa0ce97f0508a00f">&#9670;&#160;</a></span>geodesic_dilation()</h2>
@@ -412,7 +455,7 @@ template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Sat Sep 5 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+    <li class="footer">Generated on Mon Oct 5 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>
 </body>

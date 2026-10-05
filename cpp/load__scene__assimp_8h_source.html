@@ -138,25 +138,27 @@ $(function(){initNavTree('load__scene__assimp_8h_source.html',''); initResizable
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment"> */</span></div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#pragma once</span></div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#ifdef LAGRANGE_WITH_ASSIMP</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;lagrange/io/api.h&gt;</span></div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">    #include &lt;lagrange/fs/filesystem.h&gt;</span></div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">    #include &lt;lagrange/io/types.h&gt;</span></div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">    #include &lt;lagrange/scene/Scene.h&gt;</span></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">    #include &lt;iosfwd&gt;</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#ifdef LAGRANGE_WITH_ASSIMP</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">    #include &lt;lagrange/fs/filesystem.h&gt;</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">    #include &lt;lagrange/io/types.h&gt;</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">    #include &lt;lagrange/scene/Scene.h&gt;</span></div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacelagrange_1_1io.html">lagrange::io</a> {</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span></div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> SceneType&gt;</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>SceneType load_scene_assimp(<span class="keyword">const</span> fs::path&amp; filename, <span class="keyword">const</span> <a class="code hl_struct" href="structlagrange_1_1io_1_1_load_options.html">LoadOptions</a>&amp; options = {});</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span></div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> SceneType&gt;</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>SceneType load_scene_assimp(std::istream&amp; input_stream, <span class="keyword">const</span> <a class="code hl_struct" href="structlagrange_1_1io_1_1_load_options.html">LoadOptions</a>&amp; options = {});</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>} <span class="comment">// namespace lagrange::io</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">    #include &lt;iosfwd&gt;</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacelagrange_1_1io.html">lagrange::io</a> {</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> SceneType&gt;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>LA_IO_API SceneType load_scene_assimp(<span class="keyword">const</span> fs::path&amp; filename, <span class="keyword">const</span> <a class="code hl_struct" href="structlagrange_1_1io_1_1_load_options.html">LoadOptions</a>&amp; options = {});</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> SceneType&gt;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>LA_IO_API SceneType load_scene_assimp(std::istream&amp; input_stream, <span class="keyword">const</span> <a class="code hl_struct" href="structlagrange_1_1io_1_1_load_options.html">LoadOptions</a>&amp; options = {});</div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>} <span class="comment">// namespace lagrange::io</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="preprocessor">#endif</span></div>
 <div class="ttc" id="anamespacelagrange_1_1io_html"><div class="ttname"><a href="namespacelagrange_1_1io.html">lagrange::io</a></div><div class="ttdoc">Mesh input/output.</div><div class="ttdef"><b>Definition</b> detect_file_format.h:18</div></div>
 <div class="ttc" id="astructlagrange_1_1io_1_1_load_options_html"><div class="ttname"><a href="structlagrange_1_1io_1_1_load_options.html">lagrange::io::LoadOptions</a></div><div class="ttdoc">Options used when loading a mesh or a scene.</div><div class="ttdef"><b>Definition</b> types.h:84</div></div>
 </div><!-- fragment --></div><!-- contents -->
@@ -165,7 +167,7 @@ $(function(){initNavTree('load__scene__assimp_8h_source.html',''); initResizable
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_b326c4ed3bb92aa4da062efbda54f295.html">lagrange</a></li><li class="navelem"><a class="el" href="dir_414767452d3b9104a4c2963522ee51eb.html">io</a></li><li class="navelem"><b>load_scene_assimp.h</b></li>
-    <li class="footer">Generated on Sat Sep 5 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+    <li class="footer">Generated on Mon Oct 5 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>
 </body>

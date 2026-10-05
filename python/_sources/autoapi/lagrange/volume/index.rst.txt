@@ -126,7 +126,7 @@ Module Contents
 
 
 
-   .. py:method:: from_mesh(mesh, voxel_size = -0.01, signing_method = Sign.FloodFill, dtype = numpy.float32)
+   .. py:method:: from_mesh(mesh, *, voxel_size = -0.01, signing_method = Sign.FloodFill, exterior_bandwidth = 3.0, interior_bandwidth = 3.0, dtype = numpy.float32)
       :staticmethod:
 
 
@@ -135,6 +135,8 @@ Module Contents
       :param mesh: Input mesh. Must be a triangle mesh, a quad-mesh, or a quad-dominant mesh.
       :param voxel_size: Voxel size. Negative means relative to bbox diagonal (`vs -> -vs * bbox_diag`).
       :param signing_method: Method used to compute the sign of the distance field.
+      :param exterior_bandwidth: Exterior bandwidth of the narrow band.
+      :param interior_bandwidth: Interior bandwidth of the narrow band.
       :param dtype: Scalar type of the output grid (float32 or float64).
 
       :returns: Generated sparse voxel grid.

@@ -138,32 +138,34 @@ $(function(){initNavTree('generate__icosahedron_8h_source.html',''); initResizab
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment"> */</span></div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#pragma once</span></div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;lagrange/primitive/PrimitiveOptions.h&gt;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;lagrange/primitive/api.h&gt;</span></div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keyword">namespace </span>lagrange::primitive {</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span></div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span></div>
-<div class="foldopen" id="foldopen00024" data-start="{" data-end="};">
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="structlagrange_1_1primitive_1_1_icosahedron_options.html">   24</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structlagrange_1_1primitive_1_1_icosahedron_options.html">IcosahedronOptions</a> : <span class="keyword">public</span> <a class="code hl_struct" href="structlagrange_1_1primitive_1_1_primitive_options.html">PrimitiveOptions</a></div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>{</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="keyword">using </span>Scalar = PrimitiveOptions::Scalar;</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span></div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="structlagrange_1_1primitive_1_1_icosahedron_options.html#ab3e4a3f725642180f73777ee68654e76">   29</a></span>    Scalar <a class="code hl_variable" href="structlagrange_1_1primitive_1_1_icosahedron_options.html#ab3e4a3f725642180f73777ee68654e76">radius</a> = 1;</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span></div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="structlagrange_1_1primitive_1_1_icosahedron_options.html#a1180fcc7096856a2fcf8bf37bd85ed19">   39</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="structlagrange_1_1primitive_1_1_icosahedron_options.html#a1180fcc7096856a2fcf8bf37bd85ed19">project_to_valid_range</a>() { <a class="code hl_variable" href="structlagrange_1_1primitive_1_1_icosahedron_options.html#ab3e4a3f725642180f73777ee68654e76">radius</a> = std::max(<a class="code hl_variable" href="structlagrange_1_1primitive_1_1_icosahedron_options.html#ab3e4a3f725642180f73777ee68654e76">radius</a>, Scalar(0)); }</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>};</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &lt;lagrange/primitive/PrimitiveOptions.h&gt;</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keyword">namespace </span>lagrange::primitive {</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span></div>
+<div class="foldopen" id="foldopen00026" data-start="{" data-end="};">
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="structlagrange_1_1primitive_1_1_icosahedron_options.html">   26</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structlagrange_1_1primitive_1_1_icosahedron_options.html">IcosahedronOptions</a> : <span class="keyword">public</span> <a class="code hl_struct" href="structlagrange_1_1primitive_1_1_primitive_options.html">PrimitiveOptions</a></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>{</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <span class="keyword">using </span>Scalar = PrimitiveOptions::Scalar;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="structlagrange_1_1primitive_1_1_icosahedron_options.html#ab3e4a3f725642180f73777ee68654e76">   31</a></span>    Scalar <a class="code hl_variable" href="structlagrange_1_1primitive_1_1_icosahedron_options.html#ab3e4a3f725642180f73777ee68654e76">radius</a> = 1;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="structlagrange_1_1primitive_1_1_icosahedron_options.html#a1180fcc7096856a2fcf8bf37bd85ed19">   41</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="structlagrange_1_1primitive_1_1_icosahedron_options.html#a1180fcc7096856a2fcf8bf37bd85ed19">project_to_valid_range</a>() { <a class="code hl_variable" href="structlagrange_1_1primitive_1_1_icosahedron_options.html#ab3e4a3f725642180f73777ee68654e76">radius</a> = std::max(<a class="code hl_variable" href="structlagrange_1_1primitive_1_1_icosahedron_options.html#ab3e4a3f725642180f73777ee68654e76">radius</a>, Scalar(0)); }</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>};</div>
 </div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span></div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> Scalar, <span class="keyword">typename</span> Index&gt;</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><a class="code hl_class" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh&lt;Scalar, Index&gt;</a> <a class="code hl_function" href="group__module-primitive.html#gabc29769f500eb5ba509deff2f7c7fc6a">generate_icosahedron</a>(IcosahedronOptions settings);</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span></div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>} <span class="comment">// namespace lagrange::primitive</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> Scalar, <span class="keyword">typename</span> Index&gt;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>LA_PRIMITIVE_API <a class="code hl_class" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh&lt;Scalar, Index&gt;</a> <a class="code hl_function" href="group__module-primitive.html#gabc29769f500eb5ba509deff2f7c7fc6a">generate_icosahedron</a>(IcosahedronOptions settings);</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>} <span class="comment">// namespace lagrange::primitive</span></div>
 <div class="ttc" id="aclasslagrange_1_1_surface_mesh_html"><div class="ttname"><a href="classlagrange_1_1_surface_mesh.html">lagrange::SurfaceMesh</a></div><div class="ttdoc">A general purpose polygonal mesh class.</div><div class="ttdef"><b>Definition</b> SurfaceMesh.h:73</div></div>
 <div class="ttc" id="agroup__module-primitive_html_gabc29769f500eb5ba509deff2f7c7fc6a"><div class="ttname"><a href="group__module-primitive.html#gabc29769f500eb5ba509deff2f7c7fc6a">lagrange::primitive::generate_icosahedron</a></div><div class="ttdeci">SurfaceMesh&lt; Scalar, Index &gt; generate_icosahedron(IcosahedronOptions settings)</div><div class="ttdoc">Generate an icosahedron mesh.</div><div class="ttdef"><b>Definition</b> generate_icosahedron.cpp:25</div></div>
-<div class="ttc" id="astructlagrange_1_1primitive_1_1_icosahedron_options_html"><div class="ttname"><a href="structlagrange_1_1primitive_1_1_icosahedron_options.html">lagrange::primitive::IcosahedronOptions</a></div><div class="ttdoc">Options for generating an icosahedron mesh.</div><div class="ttdef"><b>Definition</b> generate_icosahedron.h:25</div></div>
-<div class="ttc" id="astructlagrange_1_1primitive_1_1_icosahedron_options_html_a1180fcc7096856a2fcf8bf37bd85ed19"><div class="ttname"><a href="structlagrange_1_1primitive_1_1_icosahedron_options.html#a1180fcc7096856a2fcf8bf37bd85ed19">lagrange::primitive::IcosahedronOptions::project_to_valid_range</a></div><div class="ttdeci">void project_to_valid_range()</div><div class="ttdoc">Clamps all parameters to valid ranges.</div><div class="ttdef"><b>Definition</b> generate_icosahedron.h:39</div></div>
-<div class="ttc" id="astructlagrange_1_1primitive_1_1_icosahedron_options_html_ab3e4a3f725642180f73777ee68654e76"><div class="ttname"><a href="structlagrange_1_1primitive_1_1_icosahedron_options.html#ab3e4a3f725642180f73777ee68654e76">lagrange::primitive::IcosahedronOptions::radius</a></div><div class="ttdeci">Scalar radius</div><div class="ttdoc">Radius of the circumscribed sphere around the icosahedron.</div><div class="ttdef"><b>Definition</b> generate_icosahedron.h:29</div></div>
+<div class="ttc" id="astructlagrange_1_1primitive_1_1_icosahedron_options_html"><div class="ttname"><a href="structlagrange_1_1primitive_1_1_icosahedron_options.html">lagrange::primitive::IcosahedronOptions</a></div><div class="ttdoc">Options for generating an icosahedron mesh.</div><div class="ttdef"><b>Definition</b> generate_icosahedron.h:27</div></div>
+<div class="ttc" id="astructlagrange_1_1primitive_1_1_icosahedron_options_html_a1180fcc7096856a2fcf8bf37bd85ed19"><div class="ttname"><a href="structlagrange_1_1primitive_1_1_icosahedron_options.html#a1180fcc7096856a2fcf8bf37bd85ed19">lagrange::primitive::IcosahedronOptions::project_to_valid_range</a></div><div class="ttdeci">void project_to_valid_range()</div><div class="ttdoc">Clamps all parameters to valid ranges.</div><div class="ttdef"><b>Definition</b> generate_icosahedron.h:41</div></div>
+<div class="ttc" id="astructlagrange_1_1primitive_1_1_icosahedron_options_html_ab3e4a3f725642180f73777ee68654e76"><div class="ttname"><a href="structlagrange_1_1primitive_1_1_icosahedron_options.html#ab3e4a3f725642180f73777ee68654e76">lagrange::primitive::IcosahedronOptions::radius</a></div><div class="ttdeci">Scalar radius</div><div class="ttdoc">Radius of the circumscribed sphere around the icosahedron.</div><div class="ttdef"><b>Definition</b> generate_icosahedron.h:31</div></div>
 <div class="ttc" id="astructlagrange_1_1primitive_1_1_primitive_options_html"><div class="ttname"><a href="structlagrange_1_1primitive_1_1_primitive_options.html">lagrange::primitive::PrimitiveOptions</a></div><div class="ttdoc">Common settings shared by all primitives.</div><div class="ttdef"><b>Definition</b> PrimitiveOptions.h:28</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
@@ -171,7 +173,7 @@ $(function(){initNavTree('generate__icosahedron_8h_source.html',''); initResizab
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_e36f8fa9358c3f75a04901d63ff66590.html">lagrange</a></li><li class="navelem"><a class="el" href="dir_d0409b165963810c6de8a88faa72c0ab.html">primitive</a></li><li class="navelem"><b>generate_icosahedron.h</b></li>
-    <li class="footer">Generated on Sat Sep 5 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+    <li class="footer">Generated on Mon Oct 5 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>
 </body>

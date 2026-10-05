@@ -138,7 +138,7 @@ $(function(){initNavTree('structlagrange_1_1texproc_1_1_compositing_options.html
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlagrange_1_1texproc_1_1_compositing_options_1_1_solver_options.html">SolverOptions</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Multigrid solver options.  <a href="structlagrange_1_1texproc_1_1_compositing_options_1_1_solver_options.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Multigrid solver options (ignored when use_direct_solver is true).  <a href="structlagrange_1_1texproc_1_1_compositing_options_1_1_solver_options.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
@@ -159,9 +159,22 @@ double&#160;</td><td class="memItemRight" valign="bottom"><b>jitter_epsilon</b> 
 std::optional&lt; std::pair&lt; double, double &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>clamp_to_range</b> = std::nullopt</td></tr>
 <tr class="memdesc:a7f7515e85289d54ddb825f97d7c2f558"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clamp out-of-range texels to the given range (nullopt to disable). <br /></td></tr>
 <tr class="separator:a7f7515e85289d54ddb825f97d7c2f558"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab235220948b3f0b4a3b639a671a77305" id="r_ab235220948b3f0b4a3b639a671a77305"><td class="memItemLeft" align="right" valign="top"><a id="ab235220948b3f0b4a3b639a671a77305" name="ab235220948b3f0b4a3b639a671a77305"></a>
+<a class="el" href="group__module-texproc.html#ga6e251cd8be4ef5b980f20d9135b00e50">GradientNormalization</a>&#160;</td><td class="memItemRight" valign="bottom"><b>gradient_normalization</b> = <a class="el" href="group__module-texproc.html#gga6e251cd8be4ef5b980f20d9135b00e50ac3c56ab1ff7f68e13b60a1f351b81b21">GradientNormalization::PerTexelSqrt</a></td></tr>
+<tr class="memdesc:ab235220948b3f0b4a3b639a671a77305"><td class="mdescLeft">&#160;</td><td class="mdescRight">How per-view gradient contributions are normalized into the edge-difference target. <br /></td></tr>
+<tr class="separator:ab235220948b3f0b4a3b639a671a77305"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2cd2f01ea621ff4e2042ac264d8662c0" id="r_a2cd2f01ea621ff4e2042ac264d8662c0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2cd2f01ea621ff4e2042ac264d8662c0">use_direct_solver</a> = false</td></tr>
+<tr class="memdesc:a2cd2f01ea621ff4e2042ac264d8662c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Use a direct (LDLT) solver instead of the multigrid v-cycle.  <br /></td></tr>
+<tr class="separator:a2cd2f01ea621ff4e2042ac264d8662c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53e448271e2e67e9f4016c861c8415c8" id="r_a53e448271e2e67e9f4016c861c8415c8"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a53e448271e2e67e9f4016c861c8415c8">stiffness_regularization_weight</a> = 1e-9</td></tr>
+<tr class="memdesc:a53e448271e2e67e9f4016c861c8415c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Weight for combinatorial Laplacian regularization added to the stiffness matrix.  <br /></td></tr>
+<tr class="separator:a53e448271e2e67e9f4016c861c8415c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aab352b662460fc145d0937e5569f31e6" id="r_aab352b662460fc145d0937e5569f31e6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aab352b662460fc145d0937e5569f31e6">smooth_low_weight_areas</a> = false</td></tr>
-<tr class="memdesc:aab352b662460fc145d0937e5569f31e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether to smooth pixels with a low total weight (&lt; 1).  <br /></td></tr>
+<tr class="memdesc:aab352b662460fc145d0937e5569f31e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">When using GradientNormalization::PerTexelSqrt, whether to smooth pixels with a low total weight (&lt; 1).  <br /></td></tr>
 <tr class="separator:aab352b662460fc145d0937e5569f31e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11da114f8545d1e6ef760d5b3b279aa0" id="r_a11da114f8545d1e6ef760d5b3b279aa0"><td class="memItemLeft" align="right" valign="top">std::optional&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a11da114f8545d1e6ef760d5b3b279aa0">sanity_check</a> = std::nullopt</td></tr>
+<tr class="memdesc:a11da114f8545d1e6ef760d5b3b279aa0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether to run solver sanity checks.  <br /></td></tr>
+<tr class="separator:a11da114f8545d1e6ef760d5b3b279aa0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aafc0da5d8e1d301bd331da22be37f6fd" id="r_aafc0da5d8e1d301bd331da22be37f6fd"><td class="memItemLeft" align="right" valign="top"><a id="aafc0da5d8e1d301bd331da22be37f6fd" name="aafc0da5d8e1d301bd331da22be37f6fd"></a>
 struct <a class="el" href="structlagrange_1_1texproc_1_1_compositing_options_1_1_solver_options.html">lagrange::texproc::CompositingOptions::SolverOptions</a>&#160;</td><td class="memItemRight" valign="bottom"><b>solver</b></td></tr>
 <tr class="separator:aafc0da5d8e1d301bd331da22be37f6fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -169,6 +182,40 @@ struct <a class="el" href="structlagrange_1_1texproc_1_1_compositing_options_1_1
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Options for texture compositing. </p>
 </div><h2 class="groupheader">Member Data Documentation</h2>
+<a id="a2cd2f01ea621ff4e2042ac264d8662c0" name="a2cd2f01ea621ff4e2042ac264d8662c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2cd2f01ea621ff4e2042ac264d8662c0">&#9670;&#160;</a></span>use_direct_solver</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool use_direct_solver = false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Use a direct (LDLT) solver instead of the multigrid v-cycle. </p>
+<p>The direct solver is exact, but uses more memory. The multigrid solver is approximate, uses less memory and runs faster. </p>
+
+</div>
+</div>
+<a id="a53e448271e2e67e9f4016c861c8415c8" name="a53e448271e2e67e9f4016c861c8415c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a53e448271e2e67e9f4016c861c8415c8">&#9670;&#160;</a></span>stiffness_regularization_weight</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double stiffness_regularization_weight = 1e-9</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Weight for combinatorial Laplacian regularization added to the stiffness matrix. </p>
+<p>Helps stabilize the system in poorly conditioned regions. Set to 0 to disable. </p>
+
+</div>
+</div>
 <a id="aab352b662460fc145d0937e5569f31e6" name="aab352b662460fc145d0937e5569f31e6"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aab352b662460fc145d0937e5569f31e6">&#9670;&#160;</a></span>smooth_low_weight_areas</h2>
 
@@ -181,8 +228,25 @@ struct <a class="el" href="structlagrange_1_1texproc_1_1_compositing_options_1_1
       </table>
 </div><div class="memdoc">
 
-<p>Whether to smooth pixels with a low total weight (&lt; 1). </p>
-<p>When enabled, this will not dampen the gradient terms for pixels with a low total weight, resulting in a smoother texture in low-confidence areas. </p>
+<p>When using GradientNormalization::PerTexelSqrt, whether to smooth pixels with a low total weight (&lt; 1). </p>
+<p>When enabled, this will dampen the gradient terms for pixels with a low total weight, resulting in a smoother texture in low-confidence areas. </p>
+
+</div>
+</div>
+<a id="a11da114f8545d1e6ef760d5b3b279aa0" name="a11da114f8545d1e6ef760d5b3b279aa0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11da114f8545d1e6ef760d5b3b279aa0">&#9670;&#160;</a></span>sanity_check</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::optional&lt;bool&gt; sanity_check = std::nullopt</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Whether to run solver sanity checks. </p>
+<p>If unset, defaults to true in debug builds and false in release builds. </p>
 
 </div>
 </div>
@@ -195,7 +259,7 @@ struct <a class="el" href="structlagrange_1_1texproc_1_1_compositing_options_1_1
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacelagrange.html">lagrange</a></li><li class="navelem"><b>texproc</b></li><li class="navelem"><a class="el" href="structlagrange_1_1texproc_1_1_compositing_options.html">CompositingOptions</a></li>
-    <li class="footer">Generated on Sat Sep 5 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+    <li class="footer">Generated on Mon Oct 5 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>
 </body>

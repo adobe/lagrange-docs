@@ -90,6 +90,7 @@ Functions
    lagrange.core.compute_uv_charts
    lagrange.core.compute_uv_distortion
    lagrange.core.compute_uv_orientation
+   lagrange.core.compute_uv_tile_list
    lagrange.core.compute_vertex_is_manifold
    lagrange.core.compute_vertex_normal
    lagrange.core.compute_vertex_valence
@@ -109,6 +110,7 @@ Functions
    lagrange.core.is_vertex_manifold
    lagrange.core.map_attribute
    lagrange.core.map_attribute_in_place
+   lagrange.core.mesh_bbox
    lagrange.core.normalize_mesh
    lagrange.core.normalize_mesh_with_transform
    lagrange.core.normalize_mesh_with_transform_2d
@@ -2002,7 +2004,7 @@ Module Contents
 
 
    .. py:attribute:: attr_name_corner_to_edge
-      :type:  ClassVar[Final[str]]
+      :type:  Final[str]
       :value: Ellipsis
 
 
@@ -2010,7 +2012,7 @@ Module Contents
 
 
    .. py:attribute:: attr_name_corner_to_facet
-      :type:  ClassVar[Final[str]]
+      :type:  Final[str]
       :value: Ellipsis
 
 
@@ -2018,7 +2020,7 @@ Module Contents
 
 
    .. py:attribute:: attr_name_corner_to_vertex
-      :type:  ClassVar[Final[str]]
+      :type:  Final[str]
       :value: Ellipsis
 
 
@@ -2026,7 +2028,7 @@ Module Contents
 
 
    .. py:attribute:: attr_name_edge_to_first_corner
-      :type:  ClassVar[Final[str]]
+      :type:  Final[str]
       :value: Ellipsis
 
 
@@ -2034,7 +2036,7 @@ Module Contents
 
 
    .. py:attribute:: attr_name_facet_to_first_corner
-      :type:  ClassVar[Final[str]]
+      :type:  Final[str]
       :value: Ellipsis
 
 
@@ -2042,7 +2044,7 @@ Module Contents
 
 
    .. py:attribute:: attr_name_next_corner_around_edge
-      :type:  ClassVar[Final[str]]
+      :type:  Final[str]
       :value: Ellipsis
 
 
@@ -2050,7 +2052,7 @@ Module Contents
 
 
    .. py:attribute:: attr_name_next_corner_around_vertex
-      :type:  ClassVar[Final[str]]
+      :type:  Final[str]
       :value: Ellipsis
 
 
@@ -2058,7 +2060,7 @@ Module Contents
 
 
    .. py:attribute:: attr_name_vertex_to_first_corner
-      :type:  ClassVar[Final[str]]
+      :type:  Final[str]
       :value: Ellipsis
 
 
@@ -2066,7 +2068,7 @@ Module Contents
 
 
    .. py:attribute:: attr_name_vertex_to_position
-      :type:  ClassVar[Final[str]]
+      :type:  Final[str]
       :value: Ellipsis
 
 
@@ -2529,7 +2531,7 @@ Module Contents
 
    :param mesh: Input mesh.
    :param element_type: Element type to be colored. Can be either Vertex or Facet.
-   :param num_color_used: Minimum number of colors to use. The algorithm will cycle through them but may use more.
+   :param num_color_used: Initial color palette size. The algorithm allocates more colors when neighbors exhaust the palette, and may use fewer.
    :param output_attribute_name: Output attribute name.
 
    :returns: Color attribute id.
@@ -2679,6 +2681,19 @@ Module Contents
    :returns: A :class:`UVOrientationCount` with counts of positive, degenerate, and negative facets.
 
 
+.. py:function:: compute_uv_tile_list(mesh)
+
+   Extract the list of all UV tiles that a mesh's parametrization spans.
+
+   UV tiles are understood to be a regular unit grid in UV space. Tiles are unioned across
+   every attribute marked with UV usage (both indexed and per-vertex), adding an entry for
+   each distinct integer ``(floor(u), floor(v))`` pair found.
+
+   :param mesh: Input mesh to be analyzed.
+
+   :returns: A list of integer ``(u, v)`` coordinate pairs, one per UV tile.
+
+
 .. py:function:: compute_vertex_is_manifold(mesh, output_attribute_name = '@vertex_is_manifold')
 
    Compute whether each vertex is manifold.
@@ -2711,7 +2726,7 @@ Module Contents
 .. py:function:: compute_vertex_valence(mesh: SurfaceMesh, options: VertexValenceOptions = ...) -> int
                  compute_vertex_valence(mesh: SurfaceMesh, output_attribute_name: str | None = None, induced_by_attribute: str | None = None) -> int
 
-   Compute vertex valence);
+   Compute vertex valence.
 
    :param mesh: The input mesh.
    :param output_attribute_name: The name of the output attribute.
@@ -2918,6 +2933,15 @@ Module Contents
    :param new_element: The new element type.
 
    :returns: The id of the new attribute.
+
+
+.. py:function:: mesh_bbox(mesh)
+
+   Compute the axis-aligned bounding box of a mesh.
+
+   :param mesh: Input mesh (must be 2D or 3D).
+
+   :returns: A tuple ``(min, max)`` of corner coordinates. For a mesh with no vertices, an empty box is returned, where ``min`` is component-wise greater than ``max``.
 
 
 .. py:function:: normalize_mesh(mesh, normalize_normals = True, normalize_tangents_bitangents = True)
@@ -3175,6 +3199,7 @@ Module Contents
    :param facet_group_indices:     The group index for each facet. Each group index must be in the range of [0, max(facet_group_indices)]
    :param source_vertex_attr_name: The optional attribute name to track source vertices.
    :param source_facet_attr_name:  The optional attribute name to track source facets.
+   :param map_attributes:          Map attributes from the source to target meshes.
 
    :returns: A list of meshes, one for each facet group.
 

@@ -243,16 +243,16 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>clear</b> ()</td></tr
 <tr class="memdesc:a73708b428a01b492a77edcaf123955d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks whether the attribute is external and pointing to a const buffer.  <br /></td></tr>
 <tr class="separator:a73708b428a01b492a77edcaf123955d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abbea9191f90ddaa1966796e870cf3cdd" id="r_abbea9191f90ddaa1966796e870cf3cdd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a48f6eee0351a3cea4b2c4fb25705241a">ValueType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abbea9191f90ddaa1966796e870cf3cdd">get</a> (size_t i, size_t c) const</td></tr>
-<tr class="memdesc:abbea9191f90ddaa1966796e870cf3cdd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets an entry for element <code class="param">i</code>, at channel <code class="param">p</code>.  <br /></td></tr>
+<tr class="memdesc:abbea9191f90ddaa1966796e870cf3cdd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets an entry for element <code class="param">i</code>, at channel <code class="param">c</code>.  <br /></td></tr>
 <tr class="separator:abbea9191f90ddaa1966796e870cf3cdd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af90e74057b85e5df3435cf0ce63fe2c6" id="r_af90e74057b85e5df3435cf0ce63fe2c6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a48f6eee0351a3cea4b2c4fb25705241a">ValueType</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af90e74057b85e5df3435cf0ce63fe2c6">ref</a> (size_t i, size_t c)</td></tr>
-<tr class="memdesc:af90e74057b85e5df3435cf0ce63fe2c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets a writable reference to the entry for element <code class="param">i</code>, at channel <code class="param">p</code>.  <br /></td></tr>
+<tr class="memdesc:af90e74057b85e5df3435cf0ce63fe2c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets a writable reference to the entry for element <code class="param">i</code>, at channel <code class="param">c</code>.  <br /></td></tr>
 <tr class="separator:af90e74057b85e5df3435cf0ce63fe2c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae61ed0c572059caf9ed53e2bb93ac614" id="r_ae61ed0c572059caf9ed53e2bb93ac614"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a48f6eee0351a3cea4b2c4fb25705241a">ValueType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae61ed0c572059caf9ed53e2bb93ac614">get</a> (size_t i) const</td></tr>
 <tr class="memdesc:ae61ed0c572059caf9ed53e2bb93ac614"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets an entry for a scalar element <code class="param">i</code>.  <br /></td></tr>
 <tr class="separator:ae61ed0c572059caf9ed53e2bb93ac614"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a64ec5111359ba201a6313d775f0e1cd0" id="r_a64ec5111359ba201a6313d775f0e1cd0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a48f6eee0351a3cea4b2c4fb25705241a">ValueType</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a64ec5111359ba201a6313d775f0e1cd0">ref</a> (size_t i)</td></tr>
-<tr class="memdesc:a64ec5111359ba201a6313d775f0e1cd0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets a writable reference to a scalar element <code class="param">i</code>, at channel <code class="param">p</code>.  <br /></td></tr>
+<tr class="memdesc:a64ec5111359ba201a6313d775f0e1cd0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets a writable reference to a scalar element <code class="param">i</code>.  <br /></td></tr>
 <tr class="separator:a64ec5111359ba201a6313d775f0e1cd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0689838581e50aaa8c31e29063fcd451" id="r_a0689838581e50aaa8c31e29063fcd451"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__group-utils-misc.html#ga4afead0b9ccc53fe4fca896787595d26">lagrange::span</a>&lt; const <a class="el" href="#a48f6eee0351a3cea4b2c4fb25705241a">ValueType</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0689838581e50aaa8c31e29063fcd451">get_all</a> () const</td></tr>
 <tr class="memdesc:a0689838581e50aaa8c31e29063fcd451"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a read-only view of the buffer spanning num elements x num channels.  <br /></td></tr>
@@ -1581,7 +1581,7 @@ template&lt;typename <a class="el" href="#a48f6eee0351a3cea4b2c4fb25705241a">Val
       </table>
 </div><div class="memdoc">
 
-<p>Gets an entry for element <code class="param">i</code>, at channel <code class="param">p</code>. </p>
+<p>Gets an entry for element <code class="param">i</code>, at channel <code class="param">c</code>. </p>
 <p>Note that due to internal checks, it is more efficient to first retrieve a span() of the whole buffer, then do access operations on this span inside a for loop.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -1615,7 +1615,7 @@ template&lt;typename <a class="el" href="#a48f6eee0351a3cea4b2c4fb25705241a">Val
       </table>
 </div><div class="memdoc">
 
-<p>Gets a writable reference to the entry for element <code class="param">i</code>, at channel <code class="param">p</code>. </p>
+<p>Gets a writable reference to the entry for element <code class="param">i</code>, at channel <code class="param">c</code>. </p>
 <p>Note that due to internal checks, it is more efficient to first retrieve a span() of the whole buffer, then do access operations on this span inside a for loop.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -1674,7 +1674,7 @@ template&lt;typename <a class="el" href="#a48f6eee0351a3cea4b2c4fb25705241a">Val
       </table>
 </div><div class="memdoc">
 
-<p>Gets a writable reference to a scalar element <code class="param">i</code>, at channel <code class="param">p</code>. </p>
+<p>Gets a writable reference to a scalar element <code class="param">i</code>. </p>
 <p>Note that due to internal checks, it is more efficient to first retrieve a span() of the whole buffer, then do access operations on this span inside a for loop.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -2085,7 +2085,7 @@ template&lt;typename ValueType_&gt; </div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacelagrange.html">lagrange</a></li><li class="navelem"><a class="el" href="classlagrange_1_1_attribute.html">Attribute</a></li>
-    <li class="footer">Generated on Sat Sep 5 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+    <li class="footer">Generated on Mon Oct 5 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>
 </body>

@@ -139,41 +139,42 @@ $(function(){initNavTree('image__filters_8h_source.html',''); initResizable(true
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#pragma once</span></div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;lagrange/image/ImageView.h&gt;</span></div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacelagrange.html">lagrange</a> {</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacelagrange_1_1image.html">image</a> {</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span></div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="keywordtype">void</span> <a class="code hl_function" href="namespacelagrange_1_1image.html#ab07cb71e1aaf9a4252a65a47b290731e">make_box_kernel</a>(<span class="keywordtype">size_t</span> size, image::ImageView&lt;float&gt;&amp; kernel);</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span></div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="keywordtype">void</span> <a class="code hl_function" href="namespacelagrange_1_1image.html#a71adf7d505c13aaaca0dbd0e36f03d9d">make_sobelh_kernel</a>(image::ImageView&lt;float&gt;&amp; kernel);</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span></div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="keywordtype">void</span> <a class="code hl_function" href="namespacelagrange_1_1image.html#a79379aadfb774fde93965ba6e3094c86">make_sobelv_kernel</a>(image::ImageView&lt;float&gt;&amp; kernel);</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span></div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="keywordtype">void</span> <a class="code hl_function" href="namespacelagrange_1_1image.html#a366c546c955e0a966eddfa71f1ac2226">make_gaussian_kernel</a>(image::ImageView&lt;float&gt;&amp; kernel);</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span></div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="keywordtype">void</span> <a class="code hl_function" href="namespacelagrange_1_1image.html#a23d17fe80963b4da62cd36bfb93d9655">make_weighted_avg_xkernel</a>(image::ImageView&lt;float&gt;&amp; kernel);</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span></div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="keywordtype">void</span> <a class="code hl_function" href="namespacelagrange_1_1image.html#adde5f34e8d67cc1a38a77a09787ba604">make_weighted_avg_ykernel</a>(image::ImageView&lt;float&gt;&amp; kernel);</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span></div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="keywordtype">void</span> <a class="code hl_function" href="namespacelagrange_1_1image.html#ae935eca4b8418b92eca732289cea55e5">make_diff_xkernel</a>(image::ImageView&lt;float&gt;&amp; kernel);</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span></div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span><span class="keywordtype">void</span> <a class="code hl_function" href="namespacelagrange_1_1image.html#a1e62b2c798be5eddaab27084a84f9a87">make_diff_ykernel</a>(image::ImageView&lt;float&gt;&amp; kernel);</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span></div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span><span class="keywordtype">void</span> <a class="code hl_function" href="namespacelagrange_1_1image.html#acba254b64b956e215793ee216f298b3f">convolve</a>(</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    <span class="keyword">const</span> image::ImageView&lt;float&gt;&amp; image,</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    <span class="keyword">const</span> image::ImageView&lt;float&gt;&amp; kernel,</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    image::ImageView&lt;float&gt;&amp; result);</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span></div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span><span class="keywordtype">void</span> <a class="code hl_function" href="namespacelagrange_1_1image.html#aef899a65a2fcc7724184b98ecb3bba7b">sobel_x</a>(<span class="keyword">const</span> image::ImageView&lt;float&gt;&amp; image, image::ImageView&lt;float&gt;&amp; result);</div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span></div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span><span class="keywordtype">void</span> <a class="code hl_function" href="namespacelagrange_1_1image.html#adeae7c283b04acbc2d08d37a652db3c2">sobel_y</a>(<span class="keyword">const</span> image::ImageView&lt;float&gt;&amp; image, image::ImageView&lt;float&gt;&amp; result);</div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span></div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span><span class="keywordtype">void</span> <a class="code hl_function" href="namespacelagrange_1_1image.html#a38755b840e59ab4bf2646e14bb28fa7e">image_dxx</a>(<span class="keyword">const</span> image::ImageView&lt;float&gt;&amp; image, image::ImageView&lt;float&gt;&amp; result);</div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span></div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span><span class="keywordtype">void</span> <a class="code hl_function" href="namespacelagrange_1_1image.html#a2b0903177dc12340fb44ac222b0f7291">image_dyy</a>(<span class="keyword">const</span> image::ImageView&lt;float&gt;&amp; image, image::ImageView&lt;float&gt;&amp; result);</div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span> </div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>} <span class="comment">// namespace image</span></div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>} <span class="comment">// namespace lagrange</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &lt;lagrange/image/api.h&gt;</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacelagrange.html">lagrange</a> {</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacelagrange_1_1image.html">image</a> {</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>LA_IMAGE_API <span class="keywordtype">void</span> <a class="code hl_function" href="namespacelagrange_1_1image.html#ab07cb71e1aaf9a4252a65a47b290731e">make_box_kernel</a>(<span class="keywordtype">size_t</span> size, image::ImageView&lt;float&gt;&amp; kernel);</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>LA_IMAGE_API <span class="keywordtype">void</span> <a class="code hl_function" href="namespacelagrange_1_1image.html#a71adf7d505c13aaaca0dbd0e36f03d9d">make_sobelh_kernel</a>(image::ImageView&lt;float&gt;&amp; kernel);</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>LA_IMAGE_API <span class="keywordtype">void</span> <a class="code hl_function" href="namespacelagrange_1_1image.html#a79379aadfb774fde93965ba6e3094c86">make_sobelv_kernel</a>(image::ImageView&lt;float&gt;&amp; kernel);</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>LA_IMAGE_API <span class="keywordtype">void</span> <a class="code hl_function" href="namespacelagrange_1_1image.html#a366c546c955e0a966eddfa71f1ac2226">make_gaussian_kernel</a>(image::ImageView&lt;float&gt;&amp; kernel);</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>LA_IMAGE_API <span class="keywordtype">void</span> <a class="code hl_function" href="namespacelagrange_1_1image.html#a23d17fe80963b4da62cd36bfb93d9655">make_weighted_avg_xkernel</a>(image::ImageView&lt;float&gt;&amp; kernel);</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>LA_IMAGE_API <span class="keywordtype">void</span> <a class="code hl_function" href="namespacelagrange_1_1image.html#adde5f34e8d67cc1a38a77a09787ba604">make_weighted_avg_ykernel</a>(image::ImageView&lt;float&gt;&amp; kernel);</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span></div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>LA_IMAGE_API <span class="keywordtype">void</span> <a class="code hl_function" href="namespacelagrange_1_1image.html#ae935eca4b8418b92eca732289cea55e5">make_diff_xkernel</a>(image::ImageView&lt;float&gt;&amp; kernel);</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span></div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>LA_IMAGE_API <span class="keywordtype">void</span> <a class="code hl_function" href="namespacelagrange_1_1image.html#a1e62b2c798be5eddaab27084a84f9a87">make_diff_ykernel</a>(image::ImageView&lt;float&gt;&amp; kernel);</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span></div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>LA_IMAGE_API <span class="keywordtype">void</span> <a class="code hl_function" href="namespacelagrange_1_1image.html#acba254b64b956e215793ee216f298b3f">convolve</a>(</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    <span class="keyword">const</span> image::ImageView&lt;float&gt;&amp; image,</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    <span class="keyword">const</span> image::ImageView&lt;float&gt;&amp; kernel,</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    image::ImageView&lt;float&gt;&amp; result);</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span></div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>LA_IMAGE_API <span class="keywordtype">void</span> <a class="code hl_function" href="namespacelagrange_1_1image.html#aef899a65a2fcc7724184b98ecb3bba7b">sobel_x</a>(<span class="keyword">const</span> image::ImageView&lt;float&gt;&amp; image, image::ImageView&lt;float&gt;&amp; result);</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span></div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>LA_IMAGE_API <span class="keywordtype">void</span> <a class="code hl_function" href="namespacelagrange_1_1image.html#adeae7c283b04acbc2d08d37a652db3c2">sobel_y</a>(<span class="keyword">const</span> image::ImageView&lt;float&gt;&amp; image, image::ImageView&lt;float&gt;&amp; result);</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span></div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>LA_IMAGE_API <span class="keywordtype">void</span> <a class="code hl_function" href="namespacelagrange_1_1image.html#a38755b840e59ab4bf2646e14bb28fa7e">image_dxx</a>(<span class="keyword">const</span> image::ImageView&lt;float&gt;&amp; image, image::ImageView&lt;float&gt;&amp; result);</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span></div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>LA_IMAGE_API <span class="keywordtype">void</span> <a class="code hl_function" href="namespacelagrange_1_1image.html#a2b0903177dc12340fb44ac222b0f7291">image_dyy</a>(<span class="keyword">const</span> image::ImageView&lt;float&gt;&amp; image, image::ImageView&lt;float&gt;&amp; result);</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span> </div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>} <span class="comment">// namespace image</span></div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>} <span class="comment">// namespace lagrange</span></div>
 <div class="ttc" id="anamespacelagrange_1_1image_html"><div class="ttname"><a href="namespacelagrange_1_1image.html">lagrange::image</a></div><div class="ttdoc">Basic image data structure.</div></div>
 <div class="ttc" id="anamespacelagrange_1_1image_html_a1e62b2c798be5eddaab27084a84f9a87"><div class="ttname"><a href="namespacelagrange_1_1image.html#a1e62b2c798be5eddaab27084a84f9a87">lagrange::image::make_diff_ykernel</a></div><div class="ttdeci">void make_diff_ykernel(image::ImageView&lt; float &gt; &amp;kernel)</div><div class="ttdoc">Creates a 1 by 3 vertical finite difference kernel with weights (-1, 0, 1).</div><div class="ttdef"><b>Definition</b> image_filters.cpp:95</div></div>
 <div class="ttc" id="anamespacelagrange_1_1image_html_a23d17fe80963b4da62cd36bfb93d9655"><div class="ttname"><a href="namespacelagrange_1_1image.html#a23d17fe80963b4da62cd36bfb93d9655">lagrange::image::make_weighted_avg_xkernel</a></div><div class="ttdeci">void make_weighted_avg_xkernel(image::ImageView&lt; float &gt; &amp;kernel)</div><div class="ttdoc">Creates a 3 by 1 horizontal kernel with weights (1, 2, 1) / 4.</div><div class="ttdef"><b>Definition</b> image_filters.cpp:71</div></div>
@@ -195,7 +196,7 @@ $(function(){initNavTree('image__filters_8h_source.html',''); initResizable(true
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_03a61a22dc6366b67f08238750201f2e.html">lagrange</a></li><li class="navelem"><a class="el" href="dir_449de0e0165918d709b799f086a511ae.html">image</a></li><li class="navelem"><b>image_filters.h</b></li>
-    <li class="footer">Generated on Sat Sep 5 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+    <li class="footer">Generated on Mon Oct 5 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>
 </body>

@@ -94,12 +94,12 @@ var group__module_polyddg =
       [ "coexact_id", "structlagrange_1_1polyddg_1_1_hodge_decomposition_result.html#a48a28003dd3c34b4eb2de30774144c9e", null ],
       [ "harmonic_id", "structlagrange_1_1polyddg_1_1_hodge_decomposition_result.html#a3590b71a4b95e250d0c27aa666866f66", null ]
     ] ],
-    [ "compute_principal_curvatures", "group__module-polyddg.html#ga1a2667035180bd33a1927b87e9e2202d", null ],
-    [ "compute_principal_curvatures", "group__module-polyddg.html#ga55bce86c9cd4b27f84a0c7ea45dea472", null ],
-    [ "compute_smooth_direction_field", "group__module-polyddg.html#ga5df3086e2ff6fc5c887491b4e4f68bcc", null ],
-    [ "compute_smooth_direction_field", "group__module-polyddg.html#ga1032ebc207582850b04d75904ac9b0db", null ],
-    [ "hodge_decomposition_1_form", "group__module-polyddg.html#gafeb428f5d53beae60db19349b12f1501", null ],
-    [ "hodge_decomposition_1_form", "group__module-polyddg.html#gaf12652b12d46556b9a8469131c237a79", null ],
-    [ "hodge_decomposition_vector_field", "group__module-polyddg.html#gaaaba548b130abc31c6e7e7d55f006026", null ],
-    [ "hodge_decomposition_vector_field", "group__module-polyddg.html#gabf7ad9c779e15c0c9da82865c3a819d3", null ]
+    [ "compute_principal_curvatures", "group__module-polyddg.html#ga0b7f57dd84b9513c0dd1e71ad87ceaa7", null ],
+    [ "compute_principal_curvatures", "group__module-polyddg.html#ga32464bcc59614c80ddc159a495acf45f", null ],
+    [ "compute_smooth_direction_field", "group__module-polyddg.html#ga42888be237a047172f1c8368851d45a7", null ],
+    [ "compute_smooth_direction_field", "group__module-polyddg.html#gab52ad955c8255077d27272a05d4cc8c2", null ],
+    [ "hodge_decomposition_1_form", "group__module-polyddg.html#ga454488cb9a1330521356fce855a8548e", null ],
+    [ "hodge_decomposition_1_form", "group__module-polyddg.html#gad5688255fb69b8725e5c0b4bda78b7eb", null ],
+    [ "hodge_decomposition_vector_field", "group__module-polyddg.html#gadfbf00567abd0cee5fed31e29074a892", null ],
+    [ "hodge_decomposition_vector_field", "group__module-polyddg.html#ga68726f0808fbc944ac425ae8d6a817d5", null ]
 ];

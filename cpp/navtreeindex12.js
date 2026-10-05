@@ -1,5 +1,11 @@
 var NAVTREEINDEX12 =
 {
+"structlagrange_1_1primitive_1_1_primitive_options.html#af415958265b08fa7358207e75cf7af8a":[2,13,10,5],
+"structlagrange_1_1primitive_1_1_rounded_cone_options.html":[2,13,3],
+"structlagrange_1_1primitive_1_1_rounded_cone_options.html#a1180fcc7096856a2fcf8bf37bd85ed19":[2,13,3,0],
+"structlagrange_1_1primitive_1_1_rounded_cone_options.html#a152380e93b8a84cec4b38af91d705480":[2,13,3,3],
+"structlagrange_1_1primitive_1_1_rounded_cone_options.html#a19f6b66c0494fd4b75e1d47273df32e8":[2,13,3,13],
+"structlagrange_1_1primitive_1_1_rounded_cone_options.html#a3d2f4c69e0ad9408f1307781ff7fa983":[2,13,3,8],
 "structlagrange_1_1primitive_1_1_rounded_cone_options.html#a4838e5ee02b6d225105c704156edbd5d":[2,13,3,11],
 "structlagrange_1_1primitive_1_1_rounded_cone_options.html#a4c0728ca47894084a1c93fa93506cf67":[2,13,3,2],
 "structlagrange_1_1primitive_1_1_rounded_cone_options.html#a662fdf470fa4ef8f085be8f66e072c61":[2,13,3,4],
@@ -243,11 +249,5 @@ var NAVTREEINDEX12 =
 "structlagrange_1_1scene_1_1_scene.html#af06e6e34dcc21d371d23186d126f8c13":[4,0,0,19,13,0],
 "structlagrange_1_1scene_1_1_scene_mesh_instance.html":[4,0,0,19,14],
 "structlagrange_1_1scene_1_1_skeleton.html":[4,0,0,19,16],
-"structlagrange_1_1scene_1_1_texture.html":[4,0,0,19,17],
-"structlagrange_1_1scene_1_1_texture_info.html":[4,0,0,19,18],
-"structlagrange_1_1scene_1_1_texture_info.html#a57a4dd1e240a59db44ea00ae76549da3":[4,0,0,19,18,1],
-"structlagrange_1_1scene_1_1_texture_info.html#a8d0d5af3cc4c1386b0f53b4d64381f95":[4,0,0,19,18,0],
-"structlagrange_1_1scene_1_1_user_data_converter.html":[4,0,0,19,19],
-"structlagrange_1_1scene_1_1detail_1_1type__identity.html":[4,0,0,19,0,0],
-"structlagrange_1_1scene_1_1internal_1_1_single_mesh_to_scene_options.html":[4,0,0,19,1,0]
+"structlagrange_1_1scene_1_1_texture.html":[4,0,0,19,17]
 };

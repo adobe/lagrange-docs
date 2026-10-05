@@ -1,5 +1,17 @@
 var NAVTREEINDEX14 =
 {
+"structlagrange_1_1ui_1_1_input_state_1_1_mouse.html":[4,0,0,25,50,0],
+"structlagrange_1_1ui_1_1_input_state_1_1_mouse.html#a00dde4d404c8cbc0140241d8016581f6":[3,0,0,7,47,0,3],
+"structlagrange_1_1ui_1_1_input_state_1_1_mouse.html#a00dde4d404c8cbc0140241d8016581f6":[4,0,0,25,50,0,3],
+"structlagrange_1_1ui_1_1_input_state_1_1_mouse.html#a03c7b11f1388dad69110dd19809558de":[3,0,0,7,47,0,2],
+"structlagrange_1_1ui_1_1_input_state_1_1_mouse.html#a03c7b11f1388dad69110dd19809558de":[4,0,0,25,50,0,2],
+"structlagrange_1_1ui_1_1_input_state_1_1_mouse.html#a81f80e875fa7bc858012e2786d091838":[3,0,0,7,47,0,0],
+"structlagrange_1_1ui_1_1_input_state_1_1_mouse.html#a81f80e875fa7bc858012e2786d091838":[4,0,0,25,50,0,0],
+"structlagrange_1_1ui_1_1_input_state_1_1_mouse.html#ae686ba2e5a51369d6e58ed5135b9a163":[3,0,0,7,47,0,1],
+"structlagrange_1_1ui_1_1_input_state_1_1_mouse.html#ae686ba2e5a51369d6e58ed5135b9a163":[4,0,0,25,50,0,1],
+"structlagrange_1_1ui_1_1_keybinds_1_1_keybind.html":[3,0,0,7,48,0],
+"structlagrange_1_1ui_1_1_keybinds_1_1_keybind.html":[4,0,0,25,51,0],
+"structlagrange_1_1ui_1_1_last_tool.html":[3,0,0,7,49],
 "structlagrange_1_1ui_1_1_last_tool.html":[4,0,0,25,52],
 "structlagrange_1_1ui_1_1_layer.html":[3,0,0,7,50],
 "structlagrange_1_1ui_1_1_layer.html":[4,0,0,25,53],
@@ -237,17 +249,5 @@ var NAVTREEINDEX14 =
 "structlagrange_1_1ui_1_1type__traits_3_01int8__t_01_4.html":[4,0,0,25,118],
 "structlagrange_1_1ui_1_1type__traits_3_01uint16__t_01_4.html":[3,0,0,7,116],
 "structlagrange_1_1ui_1_1type__traits_3_01uint16__t_01_4.html":[4,0,0,25,119],
-"structlagrange_1_1ui_1_1type__traits_3_01uint32__t_01_4.html":[3,0,0,7,117],
-"structlagrange_1_1ui_1_1type__traits_3_01uint32__t_01_4.html":[4,0,0,25,120],
-"structlagrange_1_1ui_1_1type__traits_3_01uint8__t_01_4.html":[3,0,0,7,118],
-"structlagrange_1_1ui_1_1type__traits_3_01uint8__t_01_4.html":[4,0,0,25,121],
-"structlagrange_1_1ui_1_1util_1_1lambda__helper.html":[4,0,0,25,1,0],
-"structlagrange_1_1ui_1_1util_1_1lambda__helper_3_01_result_07_f_1_1_5_08_07_args_8_8_8_08_01const_01_4.html":[4,0,0,25,1,1],
-"structlagrange_1_1ui_1_1utils_1_1pair__hash.html":[4,0,0,25,2,0],
-"structlagrange_1_1ui_1_1utils_1_1value__field.html":[4,0,0,25,2,1],
-"structlagrange_1_1ui_1_1utils_1_1value__field_3_01double_01_4.html":[4,0,0,25,2,2],
-"structlagrange_1_1ui_1_1utils_1_1value__field_3_01float_01_4.html":[4,0,0,25,2,3],
-"structlagrange_1_1ui_1_1utils_1_1value__field_3_01int_01_4.html":[4,0,0,25,2,4],
-"structlagrange_1_1volume_1_1_mesh_to_volume_options.html":[4,0,0,26,1],
-"structlagrange_1_1volume_1_1_mesh_to_volume_options.html#a9501e378c5f00b9003568600404d661b":[4,0,0,26,1,2]
+"structlagrange_1_1ui_1_1type__traits_3_01uint32__t_01_4.html":[3,0,0,7,117]
 };

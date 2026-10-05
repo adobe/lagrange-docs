@@ -62,16 +62,16 @@ var NAVTREEINDEX =
 "classlagrange_1_1internal_1_1shared__ptr.html",
 "classlagrange_1_1raycasting_1_1_occluded_facet_sampler.html#a7be221a7284e1955af3e9be0c3e02535",
 "classlagrange_1_1ui_1_1_camera.html#a934411a296eecd8b436943aa86460edb",
-"functions_g.html",
-"group__group-surfacemesh-utils.html#gga3cce9a28814e60e46fc8877d69ce28e3a00af2052da1d2929181bea6b434ebf4f",
-"namespacelagrange.html#a94b9fb92b7f050d2201011e9a1bea7a6a0b16659cd14eb8ec2cc6869c9c0f6f7e",
-"namespacelagrange_1_1ui.html#a620a5fabbe3ebe544274ccd285d69f1b",
-"structlagrange_1_1_remove_null_area_facets_options.html",
-"structlagrange_1_1image_1_1_raw_input_image_1_1_pixel_traits.html",
-"structlagrange_1_1primitive_1_1_rounded_cone_options.html#a4838e5ee02b6d225105c704156edbd5d",
-"structlagrange_1_1serialization_1_1_deserialize_options.html",
-"structlagrange_1_1ui_1_1_last_tool.html",
-"structlagrange_1_1volume_1_1_mesh_to_volume_options.html#ad118a11bb72422d15842daa074486186"
+"functions_func_t.html",
+"group__group-surfacemesh-utils.html#gafef35c376e1761a87d7ffdc81e845adf",
+"namespacelagrange.html#a875c9bdeb526a486f2db92a44b6e2124",
+"namespacelagrange_1_1ui.html#a5975a85c2454fe82ec2650168b3368b4",
+"structlagrange_1_1_remove_duplicate_facet_options.html#a3a53d38d37410f88be10879cb048e27d",
+"structlagrange_1_1image_1_1_image_histogram.html#ab57d4076e7e499e5da8c1ae500170a02",
+"structlagrange_1_1primitive_1_1_primitive_options.html#af415958265b08fa7358207e75cf7af8a",
+"structlagrange_1_1scene_1_1_texture_info.html",
+"structlagrange_1_1ui_1_1_input_state_1_1_mouse.html",
+"structlagrange_1_1ui_1_1type__traits_3_01uint32__t_01_4.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';
