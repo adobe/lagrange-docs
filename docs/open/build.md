@@ -140,7 +140,7 @@ Lagrange dependencies, make sure they are specified as CMake targets before call
 
 ### Vcpkg Support
 
-Please read our [➡️ dedicated page ⬅️](../corp/dev/vcpkg.md) for information about vcpkg in Lagrange.
+Please read our [➡️ dedicated page ⬅️]({{ vcpkg_doc }}) for information about vcpkg in Lagrange.
 
 {% endif %}
 

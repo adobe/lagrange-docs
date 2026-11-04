@@ -4,7 +4,7 @@ So, you want to contribute code to Lagrange? Great! Here are a few bits of infor
 
 {% if is_corp %}
 
-{% include 'corp/dev/contribute.md' %}
+{% include 'dev/contribute.md' %}
 
 {% else %}
 

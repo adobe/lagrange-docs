@@ -12,5 +12,9 @@ window.MathJax = {
 };
 
 document$.subscribe(() => {
-    MathJax.typesetPromise()
-})
+    // Instant navigation removes MathJax's dynamically generated styles.
+    MathJax.startup.output.clearCache();
+    MathJax.typesetClear();
+    MathJax.texReset();
+    MathJax.typesetPromise();
+});

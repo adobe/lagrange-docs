@@ -4,7 +4,7 @@
 
 !!! info "GitHub Enterprise Cloud Migration"
     Lagrange moved to GitHub Enterprise Cloud on Apr 15, 2025. Read about our
-    [recommendations](../corp/ghec.md) for GHEC access.
+    [recommendations]({{ ghec_doc }}) for GHEC access.
 
 {% endif %}
 
@@ -15,7 +15,7 @@ principles:
 
 {% if is_corp %}
 
-![](open/img/intro.png){ width=600 }
+![](img/intro.png){ width=600 }
 
 {% endif %}
 

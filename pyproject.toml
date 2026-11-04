@@ -1,30 +1,35 @@
+[build-system]
+build-backend = "hatchling.build"
+requires = [ "hatchling" ]
+
 [project]
 name = "lagrange-website"
 version = "0.1.0"
 description = "Documentation website for project Lagrange"
 readme = "README.md"
 requires-python = ">=3.14,<3.15"
-classifiers = [ "Programming Language :: Python :: 3 :: Only", "Programming Language :: Python :: 3.13" ]
+classifiers = [ "Programming Language :: Python :: 3 :: Only", "Programming Language :: Python :: 3.14" ]
 dependencies = [
   "adobe-lagrange[docs]",
   "ghp-import~=2.1.0",
   "linkchecker~=10.6.0",
-  "mkdocs~=1.6.1",
-  "mkdocs-bibtex~=2.21.0",
-  "mkdocs-exclude~=1.0.2",
-  "mkdocs-img2figv2-plugin~=0.0.2",
-  "mkdocs-macros-plugin~=1.5.0",
-  "mkdocs-material~=9.7.4",
-  "mkdocs-redirects~=1.2.0",
+  "markdown-img2fig==1.0.1",
+  "prodockit~=0.75.0",
   "pygments~=2.21.0",
-  "pymdown-extensions~=11.0.1",
-  "pypandoc-binary~=1.15",
-  "pystache~=0.6.7",
+  "pymdown-extensions~=12.3.0",
+  "zensical~=0.0.73",
 ]
 
-[tool.pixi.project]
+[tool.hatch.build.targets.wheel]
+bypass-selection = true
+
+[tool.pixi.workspace]
 channels = [ "conda-forge" ]
 platforms = [ "win-64", "linux-64", "osx-arm64" ]
+
+[tool.pixi.tasks]
+build = "zensical build --strict"
+serve = "zensical serve"
 
 [tool.pixi.dependencies]
 doxygen = "~=1.13.2"

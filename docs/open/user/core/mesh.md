@@ -580,10 +580,10 @@ indices can be used to navigate around mesh elements the same way a half-edge da
 <figure>
   <div style="display:flex">
     <div>
-      <img src="../img/mesh_half_edges.svg" width=350>
+      <img src="img/mesh_half_edges.svg" width=350>
     </div>
     <div>
-      <img src="../img/mesh_half_edges_corners.svg" width=350>
+      <img src="img/mesh_half_edges_corners.svg" width=350>
     </div>
   </div>
 

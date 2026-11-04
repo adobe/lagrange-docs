@@ -3,13 +3,25 @@ site_url: 'https://opensource.adobe.com/lagrange-docs/'
 edit_uri: 'https://github.com/adobe/lagrange-docs/edit/docs/docs/open'
 docs_dir: 'docs/open'
 theme:
-  name: 'material'
+  variant: modern
   logo: img/Lagrange-logo.svg
   icon:
     repo: fontawesome/brands/github
   palette:
-    primary: red
-    accent: red
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: red
+      accent: red
+      toggle:
+        icon: lucide/sun
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: red
+      accent: red
+      toggle:
+        icon: lucide/moon
+        name: Switch to light mode
   features:
     - navigation.instant
     - navigation.tabs
@@ -24,30 +36,31 @@ repo_url: https://github.com/adobe/lagrange
 markdown_extensions:
   - admonition
   - attr_list
+  - img2fig:
+      source_attr: alt
+      remove_attr: false
+      force_convert: false
   - codehilite
   - footnotes
+  - prodockit.bibliography:
+      bib_file: docs/open/user/core/mesh-utilities.bib
+      csl_style: acm-siggraph.csl
   - md_in_html
   - pymdownx.inlinehilite
   - pymdownx.superfences
-  - pymdownx.tabbed
   - pymdownx.details
   - pymdownx.smartsymbols
   - pymdownx.tabbed:
       alternate_style: true
   - pymdownx.arithmatex:
       generic: true
-  - pymdownx.emoji:
-      emoji_index: !!python/name:pymdownx.emoji.twemoji
-      emoji_generator: !!python/name:pymdownx.emoji.to_svg
+  - pymdownx.emoji
 
 plugins:
   - search
-  - img2figv2
-  - bibtex:
-      bib_file: "refs.bib"
-      csl_file: acm-siggraph.csl
-      cite_inline: True
   - macros:
+      on_error_fail: true
+      on_undefined: strict
       include_yaml:
         - macros.open.yml
   - redirects:
@@ -57,7 +70,6 @@ plugins:
 
 extra_javascript:
   - https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/tablesort.min.js
-  - javascripts/extra.js
   - javascripts/tables.js
   - javascripts/mathjax.js
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
@@ -71,8 +83,9 @@ nav:
     - Goals: goals.md
     - Getting Started: setup/index.md
     - Build: build.md
-    - Contribute: dev/contribute.md
-    - Code Style: dev/code-style.md
+    # HTML shortcuts leave the Markdown pages owned by Dev Guide.
+    - Contribute: dev/contribute/index.html
+    - Code Style: dev/code-style/index.html
     - Changelog: https://github.com/adobe/lagrange/releases
     - Third Party Libraries: third-party.md
   - User Guide:
@@ -86,6 +99,9 @@ nav:
         - Legacy Mesh Class: user/core/legacy-mesh.md
         - Legacy Mesh Attributes: user/core/legacy-attributes.md
         - Legacy Mesh Cleanup: user/core/legacy-mesh-cleanup.md
+    - Modules:
+      - Sampling: user/modules/sampling.md
+      - Scene: user/modules/scene.md
     - UI:
       - Overview: user/ui/overview.md
       - Entity Component System: user/ui/ecs.md

@@ -125,7 +125,7 @@ benchmark takes some time to run, you might want to use fewer samples.
 
 ## Unit Test Data & Artifactory
 
-Please read our [dedicated page](../../corp/dev/artifactory.md) about working with unit test data and
+Please read our [dedicated page]({{ artifactory_doc }}) about working with unit test data and
 Artifactory inside Lagrange.
 
 {% endif %}

@@ -40,10 +40,10 @@ See [Mesh Utilities][mesh-utils] reference documentation for more details.
 ### Compute Tangent Space
 
 {% if is_corp %}
-![Test mesh with tangent-space information](../../../corp/user/core/img/tangent_bitangent.png){width="300"}
+![Test mesh with tangent-space information](../../../corp/user/core/img/tangent_bitangent.png){style="width: 300px"}
 {% endif %}
 
-Lagrange offers a function to compute tangent-space information, following [@Mikkelsen:2008:SOW]:
+Lagrange offers a function to compute tangent-space information, following \cite{Mikkelsen2008}:
 
 ```c++
 #include <lagrange/compute_tangent_bitangent.h>
@@ -72,18 +72,18 @@ The input mesh must have an existing indexed UV and normal attribute. The
 <figure markdown="1">
   <div style="display:flex">
     <div>
-      <img src="../../core/img/tangent_groups.png" width=500>
+      <img src="img/tangent_groups.png" width=500>
     </div>
   </div>
 
   <figcaption markdown="1">Corners are grouped into different smoothing groups, based on provided
-  UV and normal attributes. Image from [@Mikkelsen:2008:SOW]</figcaption>
+  UV and normal attributes. Image from \cite{Mikkelsen2008}</figcaption>
 </figure>
 
 !!! info "Accuracy vs Mikktspace"
     We have [unit
     tests](https://github.com/adobe/lagrange/blob/e69058be8153d0a600e3e073740a93cd972da89c/modules/core/tests/test_compute_tangent_bitangent.cpp#L382-L385)
-    comparing our results with the original [mikktspace](https://github.com/mmikk/MikkTSpace) code [@Mikkelsen:2008:SOW]. We found that, in
+    comparing our results with the original [mikktspace](https://github.com/mmikk/MikkTSpace) code \cite{Mikkelsen2008}. We found that, in
     floating points, we have a max error of `1e-6f`.
 
 !!! info "Performance vs Mikktspace"
@@ -826,6 +826,10 @@ auto distortion_id = lagrange::compute_uv_distortion(mesh, options);
 !!! tip "Related UV Functions"
     See also `disconnect_uv_charts()`, `unflip_uv_charts()`, `compute_uv_orientation()`, and
     `uv_mesh_view()` / `uv_mesh_ref()` for extracting the UV layout as a standalone mesh.
+
+## References
+
+\bibliography{docs/open/user/core/mesh-utilities.bib}{true}
 
 [attr-utils]: ../../{{ dox_folder }}/group__group-surfacemesh-attr-utils.html
 [mesh-utils]: ../../{{ dox_folder }}/group__group-surfacemesh-utils.html

@@ -21,8 +21,8 @@ jobs:
         shell: bash -l {0}
         run: |
           git clone --depth 1 https://github.com/adobe/lagrange.git ./lagrange_tmp
-          pixi run python generate.py ./lagrange_tmp
-          pixi run mkdocs build
+          pixi run python generate.py py cpp --path ./lagrange_tmp
+          pixi run build
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4

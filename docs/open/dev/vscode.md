@@ -22,5 +22,5 @@
     - [Sublime Text Keymap and Settings Importer](https://marketplace.visualstudio.com/items?itemName=ms-vscode.sublime-keybindings)
 
 {% if is_corp %}
-{% include 'corp/dev/vscode-github.md' %}
+{% include 'dev/vscode-github.md' %}
 {% endif %}

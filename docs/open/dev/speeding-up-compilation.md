@@ -66,7 +66,7 @@ pre-compiled headers from one target to the next, rather than using an interface
 purpose.
 
 {% if is_corp %}
-{% include 'corp/dev/incredibuild.md' %}
+{% include 'dev/incredibuild.md' %}
 {% endif %}
 
 ### Using ccache

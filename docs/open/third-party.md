@@ -1,5 +1,5 @@
 {% if is_corp %}
-{% include 'corp/third-party.md' %}
+{% include 'third-party.md' %}
 {% else %}
 ## External Dependencies
 
@@ -15,8 +15,7 @@ automatically downloaded by our CMake system depending on which Lagrange module 
 |------------------------------------------------------------------------------------------------|-----------------------------------|-------------------------------------------------------|
 | [Assimp](https://github.com/assimp/assimp)[^0_assimp]                                          | BSD-3                             | IO                                                    |
 | [BLAS](https://en.wikipedia.org/wiki/Basic_Linear_Algebra_Subprograms)[^1_blas]                | **Depends**                       | Solver                                                |
-| [Boost](https://www.boost.org/)[^2_boost]                                                      | Boost                             | FS                                                    |
-| [CLI11](https://github.com/CLIUtils/CLI11)                                                     | BSD-3                             | Examples[^3_cli11_examples], Performance Tests (Core) |
+| [CLI11](https://github.com/CLIUtils/CLI11)                                                     | BSD-3                             | Examples[^2_cli11_examples], Performance Tests (Core) |
 | [Catch2](https://github.com/catchorg/Catch2)                                                   | Boost                             | Testing, Unit Tests (Core)                            |
 | [Cista](https://github.com/felixguendling/cista)                                               | MIT                               | Serialization2, Unit Tests (Serialization2)           |
 | [Cpptrace](https://github.com/jeremy-rifkin/cpptrace)                                          | MIT                               | Testing                                               |
@@ -24,7 +23,6 @@ automatically downloaded by our CMake system depending on which Lagrange module 
 | [Eigen](https://eigen.tuxfamily.org/)                                                          | MPL2                              | Core, Solver, UI, Unit Tests (Core)                   |
 | [Embree](https://github.com/embree/embree)                                                     | Apache 2                          | Raycasting                                            |
 | [EnTT](https://github.com/skypjack/entt)                                                       | MIT                               | UI                                                    |
-| [Filesystem](https://github.com/gulrak/filesystem)[^4_filesystem]                              | MIT                               | FS                                                    |
 | [GLFW](https://github.com/glfw/glfw)                                                           | MIT                               | UI                                                    |
 | [Gradient Domain Texture Processing](https://github.com/mkazhdan/TextureSignalProcessing)      | MIT                               | Texproc, Unit Tests (Texproc)                         |
 | [Happly](https://github.com/nmwsharp/happly)                                                   | MIT                               | IO                                                    |
@@ -38,7 +36,8 @@ automatically downloaded by our CMake system depending on which Lagrange module 
 | [Nanobind](https://github.com/wjakob/nanobind)                                                 | BSD-3                             | Python                                                |
 | [OpenSubdiv](https://github.com/PixarAnimationStudios/OpenSubdiv)                              | Apache 2                          | Subdivision                                           |
 | [OpenVDB](https://github.com/AcademySoftwareFoundation/openvdb)                                | MPL2                              | Examples (Volume), Python Bindings (Volume), Volume   |
-| [PcdIO](https://github.com/Research-Adobe/pcdio)[^5_pcdio]                                     | Apache 2                          | IO                                                    |
+| [PCG](https://github.com/Total-Random/pcg-cpp)                                                 | MIT/Apache 2                      | Examples (Sampling), Sampling                         |
+| [PcdIO](https://github.com/adobe/pcdio)[^3_pcdio]                                              | Apache 2                          | IO                                                    |
 | [PoissonRecon](https://github.com/mkazhdan/PoissonRecon)                                       | MIT                               | Poisson                                               |
 | [Polyscope](https://github.com/nmwsharp/polyscope)                                             | MIT                               | Examples (Volume), Polyscope                          |
 | [Portable File Dialogs](https://github.com/samhocevar/portable-file-dialogs)                   | WTFPL (public domain)             | UI                                                    |
@@ -46,15 +45,16 @@ automatically downloaded by our CMake system depending on which Lagrange module 
 | [Shape Gradient Domain](https://github.com/mkazhdan/ShapeGradientDomain)                       | MIT                               | Filtering                                             |
 | [Threading Building Blocks](https://github.com/oneapi-src/oneTBB)                              | Apache 2                          | Core, Solver                                          |
 | [TinyEXR](https://github.com/syoyo/tinyexr)                                                    | BSD-3                             | Image_IO                                              |
-| [Tracy](https://github.com/wolfpld/tracy)[^6_tracy]                                            | BSD-3                             | Core                                                  |
+| [Tracy](https://github.com/wolfpld/tracy)[^4_tracy]                                            | BSD-3                             | Core                                                  |
 | [WindingNumber](https://github.com/sideeffects/WindingNumber)                                  | MIT                               | Unit Tests (Winding), Winding                         |
 | [Zstd](https://github.com/facebook/zstd)                                                       | BSD-3                             | Serialization2                                        |
+| [fcBK](https://github.com/fcBK-maxflow/fcBK)                                                   | MIT                               | Raycasting                                            |
 | [geometry-central](https://github.com/nmwsharp/geometry-central)                               | MIT                               | Geodesic                                              |
 | [gl3w](https://github.com/skaslev/gl3w)                                                        | MIT                               | UI                                                    |
 | [imgui fonts](https://github.com/HasKha/imgui-fonts)                                           | MIT                               | UI                                                    |
 | [instant-meshes-core](https://github.com/qnzhou/instant-meshes-core)                           | BSD-3                             | Remeshing_IM                                          |
 | [mdspan](https://github.com/kokkos/mdspan)                                                     | Apache 2                          | Image                                                 |
-| [nanoflann](https://github.com/jlblancoc/nanoflann)                                            | BSD-2                             | BVH, UI                                               |
+| [nanoflann](https://github.com/jlblancoc/nanoflann)                                            | BSD-2                             | BVH, Sampling, UI                                     |
 | [span-lite](https://github.com/martinmoene/span-lite)                                          | Boost                             | Core                                                  |
 | [spdlog](https://github.com/gabime/spdlog)                                                     | MIT                               | Core, Unit Tests (Core)                               |
 | [spectra](https://github.com/yixuan/spectra)                                                   | MPL2                              | Solver                                                |
@@ -66,11 +66,9 @@ automatically downloaded by our CMake system depending on which Lagrange module 
 
 [^0_assimp]:          Assimp is an optional dependency of the IO module.
 [^1_blas]:            Either MKL or Accelerate depending on the platform.
-[^2_boost]:           Boost::filesystem is an optional backend of the FS module.
-[^3_cli11_examples]:  CLI11 is used by the examples in the following modules: BVH, Core, Filtering, IO, Image, Image_IO, Partitioning, Poisson, Polyscope, Primitive, Raycasting, Subdivision, Texproc, UI, Volume, Winding, Xatlas
-[^4_filesystem]:      `gulrak/filesystem` is only needed when the IO module is compiled in C++14 mode. In C++17 mode, the IO module will defaults to `std::filesystem`.
-[^5_pcdio]:           PcdIO provides PCD (Point Cloud Data) read/write for the IO module.
-[^6_tracy]:           Tracy is an optional dependency of the core module.
+[^2_cli11_examples]:  CLI11 is used by the examples in the following modules: BVH, Core, Filtering, IO, Image, Image_IO, Partitioning, Poisson, Polyscope, Primitive, Raycasting, Sampling, Subdivision, Texproc, UI, Volume, Winding, Xatlas
+[^3_pcdio]:           PcdIO provides PCD (Point Cloud Data) read/write for the IO module.
+[^4_tracy]:           Tracy is an optional dependency of the core module.
 
 ## Bundled Dependencies
 
