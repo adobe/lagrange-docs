@@ -124,7 +124,6 @@ $(function(){initNavTree('struct_args.html',''); initResizable(true); });
 <div class="header">
   <div class="summary">
 <a href="#pub-attribs">Public Attributes</a> &#124;
-<a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="struct_args-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">Args Struct Reference</div></div>
 </div><!--header-->
@@ -175,11 +174,19 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>input</b></td>
 uint64_t&#160;</td><td class="memItemRight" valign="bottom"><b>num_rays</b> = 0LLU</td></tr>
 <tr class="separator:a33e86a40d7b095182af1c99e7e78e509"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab6eac282097305a7910913b7e171d924" id="r_ab6eac282097305a7910913b7e171d924"><td class="memItemLeft" align="right" valign="top"><a id="ab6eac282097305a7910913b7e171d924" name="ab6eac282097305a7910913b7e171d924"></a>
-uint64_t&#160;</td><td class="memItemRight" valign="bottom"><b>batch_size</b> = 5000000</td></tr>
+uint64_t&#160;</td><td class="memItemRight" valign="bottom"><b>batch_size</b> = <a class="el" href="structlagrange_1_1raycasting_1_1_occluded_facet_estimate_options.html">lagrange::raycasting::OccludedFacetEstimateOptions</a>{}.batch_size</td></tr>
 <tr class="separator:ab6eac282097305a7910913b7e171d924"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a23076d0bf8db9d62787d974df28af18b" id="r_a23076d0bf8db9d62787d974df28af18b"><td class="memItemLeft" align="right" valign="top"><a id="a23076d0bf8db9d62787d974df28af18b" name="a23076d0bf8db9d62787d974df28af18b"></a>
-uint64_t&#160;</td><td class="memItemRight" valign="bottom"><b>num_adaptive_per_normal</b> = default_options.estimate_options.num_adaptive_per_normal</td></tr>
-<tr class="separator:a23076d0bf8db9d62787d974df28af18b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a125b3dae54279364494356db5b2026e9" id="r_a125b3dae54279364494356db5b2026e9"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a125b3dae54279364494356db5b2026e9">num_adaptive_per_cosine</a></td></tr>
+<tr class="separator:a125b3dae54279364494356db5b2026e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa53a4169d73eb43494f9b4c7a3b7832d" id="r_aa53a4169d73eb43494f9b4c7a3b7832d"><td class="memItemLeft" align="right" valign="top"><a id="aa53a4169d73eb43494f9b4c7a3b7832d" name="aa53a4169d73eb43494f9b4c7a3b7832d"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><b>vmf_kappa</b> = <a class="el" href="structlagrange_1_1raycasting_1_1_adaptive_options.html">lagrange::raycasting::AdaptiveOptions</a>{}.vmf_kappa</td></tr>
+<tr class="separator:aa53a4169d73eb43494f9b4c7a3b7832d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9090dc0b930a5f9212a3b6f3e4b5c5ab" id="r_a9090dc0b930a5f9212a3b6f3e4b5c5ab"><td class="memItemLeft" align="right" valign="top"><a id="a9090dc0b930a5f9212a3b6f3e4b5c5ab" name="a9090dc0b930a5f9212a3b6f3e4b5c5ab"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><b>max_threshold</b> = <a class="el" href="structlagrange_1_1raycasting_1_1_occluded_facet_sampler_options.html">lagrange::raycasting::OccludedFacetSamplerOptions</a>{}.threshold</td></tr>
+<tr class="separator:a9090dc0b930a5f9212a3b6f3e4b5c5ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21cbe997171f6bd6cf609654eb309e45" id="r_a21cbe997171f6bd6cf609654eb309e45"><td class="memItemLeft" align="right" valign="top"><a id="a21cbe997171f6bd6cf609654eb309e45" name="a21cbe997171f6bd6cf609654eb309e45"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><b>size_influence</b> = <a class="el" href="structlagrange_1_1raycasting_1_1_occluded_instance_sampler_options.html">lagrange::raycasting::OccludedInstanceSamplerOptions</a>{}.size_influence</td></tr>
+<tr class="separator:a21cbe997171f6bd6cf609654eb309e45"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa1f026bd7d0dd9de7b19779c0c0821ed" id="r_aa1f026bd7d0dd9de7b19779c0c0821ed"><td class="memItemLeft" align="right" valign="top"><a id="aa1f026bd7d0dd9de7b19779c0c0821ed" name="aa1f026bd7d0dd9de7b19779c0c0821ed"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>vis</b> = false</td></tr>
 <tr class="separator:aa1f026bd7d0dd9de7b19779c0c0821ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -189,13 +196,26 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>until_converged</b> =
 <tr class="memitem:a2618e89b4c26dc851feae865df3a1a49" id="r_a2618e89b4c26dc851feae865df3a1a49"><td class="memItemLeft" align="right" valign="top"><a id="a2618e89b4c26dc851feae865df3a1a49" name="a2618e89b4c26dc851feae865df3a1a49"></a>
 Mode&#160;</td><td class="memItemRight" valign="bottom"><b>mode</b> = Mode::Meshes</td></tr>
 <tr class="separator:a2618e89b4c26dc851feae865df3a1a49"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
-Static Public Attributes</h2></td></tr>
-<tr class="memitem:a6b2c0f32ca1364dd0085fa6e1dd36877" id="r_a6b2c0f32ca1364dd0085fa6e1dd36877"><td class="memItemLeft" align="right" valign="top"><a id="a6b2c0f32ca1364dd0085fa6e1dd36877" name="a6b2c0f32ca1364dd0085fa6e1dd36877"></a>
-static constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><b>default_options</b> = <a class="el" href="structlagrange_1_1raycasting_1_1_remove_occluded_facets_options.html">lagrange::raycasting::RemoveOccludedFacetsOptions</a>{}</td></tr>
-<tr class="separator:a6b2c0f32ca1364dd0085fa6e1dd36877"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a125b3dae54279364494356db5b2026e9" name="a125b3dae54279364494356db5b2026e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a125b3dae54279364494356db5b2026e9">&#9670;&#160;</a></span>num_adaptive_per_cosine</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t num_adaptive_per_cosine</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">=</div>
+<div class="line">        <a class="code hl_struct" href="structlagrange_1_1raycasting_1_1_adaptive_options.html">lagrange::raycasting::AdaptiveOptions</a>{}.<a class="code hl_variable" href="structlagrange_1_1raycasting_1_1_adaptive_options.html#a125b3dae54279364494356db5b2026e9">num_adaptive_per_cosine</a></div>
+<div class="ttc" id="astructlagrange_1_1raycasting_1_1_adaptive_options_html"><div class="ttname"><a href="structlagrange_1_1raycasting_1_1_adaptive_options.html">lagrange::raycasting::AdaptiveOptions</a></div><div class="ttdoc">Options for adaptive mode of OccludedFacetSampler.</div><div class="ttdef"><b>Definition</b> remove_occluded_facets.h:37</div></div>
+<div class="ttc" id="astructlagrange_1_1raycasting_1_1_adaptive_options_html_a125b3dae54279364494356db5b2026e9"><div class="ttname"><a href="structlagrange_1_1raycasting_1_1_adaptive_options.html#a125b3dae54279364494356db5b2026e9">lagrange::raycasting::AdaptiveOptions::num_adaptive_per_cosine</a></div><div class="ttdeci">size_t num_adaptive_per_cosine</div><div class="ttdoc">Seed-guided rays per cosine ray in the adaptive mixture (1:K ratio, K &gt;= 1).</div><div class="ttdef"><b>Definition</b> remove_occluded_facets.h:39</div></div>
+</div><!-- fragment -->
+</div>
+</div>
 <hr/>The documentation for this struct was generated from the following files:<ul>
 <li>/home/runner/work/lagrange-docs/lagrange-docs/lagrange_tmp/modules/raycasting/examples/<b>project.cpp</b></li>
 <li>/home/runner/work/lagrange-docs/lagrange-docs/lagrange_tmp/modules/raycasting/examples/<b>remove_occluded.cpp</b></li>
@@ -206,7 +226,7 @@ static constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><b>defa
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="struct_args.html">Args</a></li>
-    <li class="footer">Generated on Mon Oct 5 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+    <li class="footer">Generated on Wed Nov 4 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>
 </body>

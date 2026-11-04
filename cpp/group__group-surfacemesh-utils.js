@@ -224,7 +224,8 @@ var group__group_surfacemesh_utils =
     [ "TriangulationOptions", "structlagrange_1_1_triangulation_options.html", [
       [ "Scheme", "structlagrange_1_1_triangulation_options.html#a5c5181a54a4f46149d9c9662b2694167", [
         [ "Earcut", "structlagrange_1_1_triangulation_options.html#a5c5181a54a4f46149d9c9662b2694167a5bc26b4c10e53460ffdb83dcb1cd44c6", null ],
-        [ "CentroidFan", "structlagrange_1_1_triangulation_options.html#a5c5181a54a4f46149d9c9662b2694167abb1b218d068efcbf201f2f012901599d", null ]
+        [ "CentroidFan", "structlagrange_1_1_triangulation_options.html#a5c5181a54a4f46149d9c9662b2694167abb1b218d068efcbf201f2f012901599d", null ],
+        [ "Delaunay", "structlagrange_1_1_triangulation_options.html#a5c5181a54a4f46149d9c9662b2694167a3b8b51872ff9b3b1ccaca1cfd05dc5a8", null ]
       ] ],
       [ "scheme", "structlagrange_1_1_triangulation_options.html#ae6330a2bea84ebba6567e33fc09a0de7", null ],
       [ "preserve_edges", "structlagrange_1_1_triangulation_options.html#a553fd3a34bcf5723df15837a3ad26158", null ],
@@ -320,6 +321,7 @@ var group__group_surfacemesh_utils =
     [ "extract_isoline", "group__group-surfacemesh-utils.html#gafef35c376e1761a87d7ffdc81e845adf", null ],
     [ "insert_isoline", "group__group-surfacemesh-utils.html#ga4cc4c8c931c0a4530d67dd077795db1b", null ],
     [ "mesh_bbox", "group__group-surfacemesh-utils.html#gabf3517305e7ccc7062aab01527e78468", null ],
+    [ "mesh_bbox", "group__group-surfacemesh-utils.html#ga63ae603e569d4e4febd3427da74fc716", null ],
     [ "normalize_mesh_with_transform", "group__group-surfacemesh-utils.html#ga8a3c053ce081c3a551af20b1ed5bca08", null ],
     [ "normalize_mesh", "group__group-surfacemesh-utils.html#ga7338d1f11a59b043aecad72a3cf708bf", null ],
     [ "normalize_meshes_with_transform", "group__group-surfacemesh-utils.html#gaff1990dcc852e6a57d266bd14c6a2343", null ],

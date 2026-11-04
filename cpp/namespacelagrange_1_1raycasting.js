@@ -1,15 +1,25 @@
 var namespacelagrange_1_1raycasting =
 [
+    [ "detail", null, [
+      [ "betting", "namespacelagrange_1_1raycasting_1_1detail_1_1betting.html", null ],
+      [ "FacetInstanceData", "structlagrange_1_1raycasting_1_1detail_1_1_facet_instance_data.html", "structlagrange_1_1raycasting_1_1detail_1_1_facet_instance_data" ],
+      [ "FacetTriangle", "structlagrange_1_1raycasting_1_1detail_1_1_facet_triangle.html", null ],
+      [ "ImplBase", "structlagrange_1_1raycasting_1_1detail_1_1_impl_base.html", null ],
+      [ "InstanceData", "structlagrange_1_1raycasting_1_1detail_1_1_instance_data.html", null ],
+      [ "RayPacket16", "structlagrange_1_1raycasting_1_1detail_1_1_ray_packet16.html", "structlagrange_1_1raycasting_1_1detail_1_1_ray_packet16" ],
+      [ "RaySampler", "structlagrange_1_1raycasting_1_1detail_1_1_ray_sampler.html", "structlagrange_1_1raycasting_1_1detail_1_1_ray_sampler" ],
+      [ "SeedReservoir", "structlagrange_1_1raycasting_1_1detail_1_1_seed_reservoir.html", null ]
+    ] ],
+    [ "AdaptiveOptions", "structlagrange_1_1raycasting_1_1_adaptive_options.html", "structlagrange_1_1raycasting_1_1_adaptive_options" ],
     [ "ClosestPointHit", "structlagrange_1_1raycasting_1_1_closest_point_hit.html", "structlagrange_1_1raycasting_1_1_closest_point_hit" ],
     [ "ClosestPointHitN", "structlagrange_1_1raycasting_1_1_closest_point_hit_n.html", "structlagrange_1_1raycasting_1_1_closest_point_hit_n" ],
     [ "HitBase", "structlagrange_1_1raycasting_1_1_hit_base.html", "structlagrange_1_1raycasting_1_1_hit_base" ],
     [ "HitBaseN", "structlagrange_1_1raycasting_1_1_hit_base_n.html", "structlagrange_1_1raycasting_1_1_hit_base_n" ],
     [ "LocalFeatureSizeOptions", "structlagrange_1_1raycasting_1_1_local_feature_size_options.html", "structlagrange_1_1raycasting_1_1_local_feature_size_options" ],
     [ "OccludedFacetEstimateOptions", "structlagrange_1_1raycasting_1_1_occluded_facet_estimate_options.html", "structlagrange_1_1raycasting_1_1_occluded_facet_estimate_options" ],
-    [ "OccludedFacetSampler", "classlagrange_1_1raycasting_1_1_occluded_facet_sampler.html", "classlagrange_1_1raycasting_1_1_occluded_facet_sampler" ],
     [ "OccludedFacetSamplerOptions", "structlagrange_1_1raycasting_1_1_occluded_facet_sampler_options.html", "structlagrange_1_1raycasting_1_1_occluded_facet_sampler_options" ],
     [ "OccludedInstanceEstimateOptions", "structlagrange_1_1raycasting_1_1_occluded_instance_estimate_options.html", "structlagrange_1_1raycasting_1_1_occluded_instance_estimate_options" ],
-    [ "OccludedInstanceSampler", "classlagrange_1_1raycasting_1_1_occluded_instance_sampler.html", "classlagrange_1_1raycasting_1_1_occluded_instance_sampler" ],
+    [ "OccludedInstanceSamplerOptions", "structlagrange_1_1raycasting_1_1_occluded_instance_sampler_options.html", "structlagrange_1_1raycasting_1_1_occluded_instance_sampler_options" ],
     [ "ProjectCommonOptions", "structlagrange_1_1raycasting_1_1_project_common_options.html", "structlagrange_1_1raycasting_1_1_project_common_options" ],
     [ "ProjectDirectionalOptions", "structlagrange_1_1raycasting_1_1_project_directional_options.html", "structlagrange_1_1raycasting_1_1_project_directional_options" ],
     [ "ProjectOptions", "structlagrange_1_1raycasting_1_1_project_options.html", "structlagrange_1_1raycasting_1_1_project_options" ],
@@ -17,6 +27,7 @@ var namespacelagrange_1_1raycasting =
     [ "RayHit", "structlagrange_1_1raycasting_1_1_ray_hit.html", "structlagrange_1_1raycasting_1_1_ray_hit" ],
     [ "RayHitN", "structlagrange_1_1raycasting_1_1_ray_hit_n.html", "structlagrange_1_1raycasting_1_1_ray_hit_n" ],
     [ "RemoveOccludedFacetsOptions", "structlagrange_1_1raycasting_1_1_remove_occluded_facets_options.html", "structlagrange_1_1raycasting_1_1_remove_occluded_facets_options" ],
+    [ "RemoveOccludedInstancesOptions", "structlagrange_1_1raycasting_1_1_remove_occluded_instances_options.html", "structlagrange_1_1raycasting_1_1_remove_occluded_instances_options" ],
     [ "RayDirectionMode", "group__module-raycasting.html#ga11f6a306cbbe434415ce7498b22290e3", [
       [ "Interior", "group__module-raycasting.html#gga11f6a306cbbe434415ce7498b22290e3aebbcc9b3b8fc5c7d79d0126910b82a69", null ],
       [ "Exterior", "group__module-raycasting.html#gga11f6a306cbbe434415ce7498b22290e3ad9b3dceaf520ba1fa45c371c498c6baf", null ],
@@ -56,6 +67,11 @@ var namespacelagrange_1_1raycasting =
       [ "Medium", "namespacelagrange_1_1raycasting.html#ade737eff21604d56d55bdb5f62280f67a87f8a6ab85c9ced3702b4ea641ad4bb5", null ],
       [ "High", "namespacelagrange_1_1raycasting.html#ade737eff21604d56d55bdb5f62280f67a655d20c1ca69519ca647684edbb2db35", null ]
     ] ],
+    [ "InstancingPolicy", "group__module-raycasting.html#ga2ff38b8eb8a4946126f4d9732fbdebb2", [
+      [ "FlattenInstances", "group__module-raycasting.html#gga2ff38b8eb8a4946126f4d9732fbdebb2a41706451914a7a37869b5a490e93c153", null ],
+      [ "Max", "group__module-raycasting.html#gga2ff38b8eb8a4946126f4d9732fbdebb2a6a061313d22e51e0f25b7cd4dc065233", null ],
+      [ "Average", "group__module-raycasting.html#gga2ff38b8eb8a4946126f4d9732fbdebb2ab1897515d548a960afe49ecf66a29021", null ]
+    ] ],
     [ "FallbackMode", "namespacelagrange_1_1raycasting.html#a2f74394b5033a3b8844015cdfc1454d5", null ],
     [ "compute_local_feature_size", "group__module-raycasting.html#gae2be8acc176f3d3352247afa82e1ff25", null ],
     [ "project_modes", "namespacelagrange_1_1raycasting.html#afbefaf5b72491a9d7cc540f1d328f6cc", null ],
@@ -63,10 +79,12 @@ var namespacelagrange_1_1raycasting =
     [ "project_closest_point", "group__module-raycasting.html#ga929807d1b87df4b8ad8f977e84a9bc04", null ],
     [ "project_closest_vertex", "group__module-raycasting.html#gaf5e54427a1d06af9caab5e9038c13d30", null ],
     [ "project_directional", "group__module-raycasting.html#gacdb81582cefe8f730daa8f6595a2ae76", null ],
-    [ "estimate_occluded_facets", "group__module-raycasting.html#gad9c6d9eb0042f12a6ce3d041c1d580e4", null ],
+    [ "estimate_occluded_facet_measures", "group__module-raycasting.html#ga29aa56b2bae035ed56ef4cba2b7e1330", null ],
     [ "remove_occluded_facets", "group__module-raycasting.html#ga8b1ca387513f44310588d34ca3d14c96", null ],
-    [ "estimate_occluded_instances", "group__module-raycasting.html#gaaa31812497646f7aed31274aa39fd959", null ],
+    [ "estimate_occluded_instance_measures", "group__module-raycasting.html#ga41da80ba79566400557064400c8ed016", null ],
+    [ "remove_occluded_instances", "group__module-raycasting.html#ga710b748c11348a1bd76157aa55d6d084", null ],
     [ "estimate_occluded_instances", "group__module-raycasting.html#gabd6c3a8a7b8e4b19a84d8d0139a420e6", null ],
     [ "remove_occluded_instances", "group__module-raycasting.html#ga0c2db577fe9db8e8b73c70e21f9afcfb", null ],
-    [ "closest_vertex_from_barycentric", "namespacelagrange_1_1raycasting.html#a8e7cec78da1487564fefd67166d0ca5e", null ]
+    [ "closest_vertex_from_barycentric", "namespacelagrange_1_1raycasting.html#a8e7cec78da1487564fefd67166d0ca5e", null ],
+    [ "estimate_occluded_instances", "group__module-raycasting.html#gabd6c3a8a7b8e4b19a84d8d0139a420e6", null ]
 ];

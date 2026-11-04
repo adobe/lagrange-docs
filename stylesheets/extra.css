@@ -1,17 +1,22 @@
 .md-header__button.md-logo img, .md-header__button.md-logo svg {
-    width: 10rem;
+    width: auto;
+    height: 2rem;
+}
+
+[data-md-color-scheme="slate"] .md-logo img {
+    content: url("../img/Lagrange-logo-dark.svg");
 }
 
 .md-header__title > div{
     display:none;
 }
 
-:root > * {
+[data-md-color-scheme="default"] {
   --md-code-hl-comment-color: #008000;
   --md-code-hl-string-color:  #A31515;
 }
 
-.md-typeset__table tr:nth-child(2n) {
+[data-md-color-scheme="default"] .md-typeset__table tr:nth-child(2n) {
   background-color: #f8f8f8;
 }
 
@@ -23,24 +28,42 @@
 .md-typeset .mermaid {
     display: flex;
     justify-content: center;
+    /* Preserve per-state colors on Material's nested label elements. */
+    --md-mermaid-label-fg-color: currentColor;
 }
 
-/* PR state badges — colors match the GitHub Projects board Status field */
-.md-typeset .pr-state {
+/* GitHub Projects light-theme status palette. Root variables also inherit into
+   Material's Mermaid Shadow DOM, where page CSS selectors cannot reach. */
+:root {
+    --st-font-weight: 600;
+    --st-gray-bg: #f6f8fa; --st-gray-fg: #59636e; --st-gray-border: #d1d9e0;
+    --st-pink-bg: #ffeff7; --st-pink-fg: #bf3989; --st-pink-border: #ff80c866;
+    --st-orange-bg: #fff1e5; --st-orange-fg: #bc4c00; --st-orange-border: #fb8f4466;
+    --st-yellow-bg: #fff8c5; --st-yellow-fg: #9a6700; --st-yellow-border: #d4a72c66;
+    --st-blue-bg: #ddf4ff; --st-blue-fg: #0969da; --st-blue-border: #54aeff66;
+    --st-green-bg: #dafbe1; --st-green-fg: #1a7f37; --st-green-border: #4ac26b66;
+    --st-purple-bg: #fbefff; --st-purple-fg: #8250df; --st-purple-border: #c297ff66;
+    --st-red-bg: #ffebe9; --st-red-fg: #d1242f; --st-red-border: #ff818266;
+}
+
+/* Compact badge markup: ==Label=={.st-color}. */
+.md-typeset .st-gray   { --st-bg: var(--st-gray-bg); --st-fg: var(--st-gray-fg); --st-border: var(--st-gray-border); }
+.md-typeset .st-pink   { --st-bg: var(--st-pink-bg); --st-fg: var(--st-pink-fg); --st-border: var(--st-pink-border); }
+.md-typeset .st-orange { --st-bg: var(--st-orange-bg); --st-fg: var(--st-orange-fg); --st-border: var(--st-orange-border); }
+.md-typeset .st-yellow { --st-bg: var(--st-yellow-bg); --st-fg: var(--st-yellow-fg); --st-border: var(--st-yellow-border); }
+.md-typeset .st-blue   { --st-bg: var(--st-blue-bg); --st-fg: var(--st-blue-fg); --st-border: var(--st-blue-border); }
+.md-typeset .st-green  { --st-bg: var(--st-green-bg); --st-fg: var(--st-green-fg); --st-border: var(--st-green-border); }
+.md-typeset .st-purple { --st-bg: var(--st-purple-bg); --st-fg: var(--st-purple-fg); --st-border: var(--st-purple-border); }
+.md-typeset .st-red    { --st-bg: var(--st-red-bg); --st-fg: var(--st-red-fg); --st-border: var(--st-red-border); }
+
+.md-typeset mark[class^="st-"] {
     display: inline-block;
     padding: 0.05em 0.5em;
     border-radius: 1em;
-    border: 1px solid;
+    border: 1px solid var(--st-border);
+    background: var(--st-bg);
+    color: var(--st-fg);
     font-size: 0.85em;
-    font-weight: 600;
+    font-weight: var(--st-font-weight);
     white-space: nowrap;
-    color: #24292f;
 }
-.md-typeset .pr-state--gray   { background: #eaeef2; border-color: #afb8c1; }
-.md-typeset .pr-state--pink   { background: #ffeff7; border-color: #ec6cb9; }
-.md-typeset .pr-state--orange { background: #fff1e5; border-color: #e16f24; }
-.md-typeset .pr-state--yellow { background: #fff8c5; border-color: #d4a72c; }
-.md-typeset .pr-state--blue   { background: #ddf4ff; border-color: #54aeff; }
-.md-typeset .pr-state--green  { background: #dafbe1; border-color: #4ac26b; }
-.md-typeset .pr-state--purple { background: #fbefff; border-color: #c297ff; }
-.md-typeset .pr-state--red    { background: #ffebe9; border-color: #ff8182; }

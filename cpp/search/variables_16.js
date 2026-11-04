@@ -16,7 +16,7 @@ var searchData=
   ['viewport_5fmax_13',['viewport_max',['../structlagrange_1_1ui_1_1_selection_context.html#a8bbf9c1d4c8377d333198d978ca7eb30',1,'lagrange::ui::SelectionContext']]],
   ['viewport_5fmin_14',['viewport_min',['../structlagrange_1_1ui_1_1_selection_context.html#a4f81b410aac44c3b2d207d394bd4abd0',1,'lagrange::ui::SelectionContext']]],
   ['viewport_5fposition_15',['viewport_position',['../structlagrange_1_1ui_1_1_selection_context.html#a3f3ce9cc8ad99eb76497baf40959b603',1,'lagrange::ui::SelectionContext']]],
-  ['visibility_5fthreshold_16',['visibility_threshold',['../structlagrange_1_1raycasting_1_1_occluded_facet_sampler_options.html#a2a3b34e0db70cc3c5fc94b11f4c42cbe',1,'lagrange::raycasting::OccludedFacetSamplerOptions']]],
+  ['vmf_5fkappa_16',['vmf_kappa',['../structlagrange_1_1raycasting_1_1_adaptive_options.html#aa53a4169d73eb43494f9b4c7a3b7832d',1,'lagrange::raycasting::AdaptiveOptions']]],
   ['voxel_5fsize_17',['voxel_size',['../structlagrange_1_1volume_1_1_mesh_to_volume_options.html#ad118a11bb72422d15842daa074486186',1,'lagrange::volume::MeshToVolumeOptions']]],
   ['vsync_18',['vsync',['../structlagrange_1_1ui_1_1_viewer_1_1_window_options.html#a1196e170e242f04e8ee8ab20dff42d6a',1,'lagrange::ui::Viewer::WindowOptions']]]
 ];

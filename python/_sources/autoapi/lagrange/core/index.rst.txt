@@ -64,6 +64,7 @@ Functions
 .. autoapisummary::
 
    lagrange.core.cast_attribute
+   lagrange.core.chain_edges
    lagrange.core.close_small_holes
    lagrange.core.combine_meshes
    lagrange.core.compute_components
@@ -2350,6 +2351,18 @@ Module Contents
    :returns: The id of the new attribute.
 
 
+.. py:function:: chain_edges(edges, *, directed, output_edge_index = False, close_loop_with_identical_vertices = False)
+
+   Chain a set of edges into loops and chains.
+
+   :param edges: An N x 2 tensor of edge vertex indices.
+   :param directed: Whether to treat edges as directed (``[v0, v1]`` goes from ``v0`` to ``v1``) or undirected.
+   :param output_edge_index: Whether to return edge indices instead of vertex indices.
+   :param close_loop_with_identical_vertices: Whether to repeat the first vertex at the end of each loop. Only applies when ``output_edge_index`` is false.
+
+   :returns: A tuple ``(loops, chains)`` of lists of edge or vertex index lists.
+
+
 .. py:function:: close_small_holes(mesh, max_hole_size = 16, triangulate_holes = True)
 
    Close small holes in a mesh.
@@ -3279,10 +3292,10 @@ Module Contents
    Triangulate polygonal facets of the mesh.
 
    :param mesh: The input mesh to be triangulated in place.
-   :param scheme: The triangulation scheme (options are 'earcut' and 'centroid_fan').
+   :param scheme: The triangulation scheme (options are 'earcut', 'centroid_fan', and 'delaunay').
    :param selected_facets: Optional subset of facets to triangulate. Either a list/array of facet ids,
        or a boolean per-facet mask (a length ``num_facets`` array whose ``True`` entries mark facets to
-       triangulate). Honored by both schemes; facets not selected are left untouched. If omitted, all
+       triangulate). Honored by all schemes; facets not selected are left untouched. If omitted, all
        polygonal facets are triangulated.
 
 

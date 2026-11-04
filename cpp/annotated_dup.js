@@ -61,6 +61,7 @@ var annotated_dup =
       [ "geodesic", null, [
         [ "GeodesicEngine", "classlagrange_1_1geodesic_1_1_geodesic_engine.html", "classlagrange_1_1geodesic_1_1_geodesic_engine" ],
         [ "GeodesicEngineDGPC", "classlagrange_1_1geodesic_1_1_geodesic_engine_d_g_p_c.html", "classlagrange_1_1geodesic_1_1_geodesic_engine_d_g_p_c" ],
+        [ "GeodesicEngineFlip", "classlagrange_1_1geodesic_1_1_geodesic_engine_flip.html", "classlagrange_1_1geodesic_1_1_geodesic_engine_flip" ],
         [ "GeodesicEngineHeat", "classlagrange_1_1geodesic_1_1_geodesic_engine_heat.html", "classlagrange_1_1geodesic_1_1_geodesic_engine_heat" ],
         [ "GeodesicEngineMMP", "classlagrange_1_1geodesic_1_1_geodesic_engine_m_m_p.html", "classlagrange_1_1geodesic_1_1_geodesic_engine_m_m_p" ],
         [ "GeodesicPathResult", "structlagrange_1_1geodesic_1_1_geodesic_path_result.html", "structlagrange_1_1geodesic_1_1_geodesic_path_result" ],
@@ -133,7 +134,8 @@ var annotated_dup =
       ] ],
       [ "mapbox", null, [
         [ "detail", null, [
-          [ "Earcut", "classlagrange_1_1mapbox_1_1detail_1_1_earcut.html", null ]
+          [ "Earcut", "classlagrange_1_1mapbox_1_1detail_1_1_earcut.html", null ],
+          [ "Refiner", "classlagrange_1_1mapbox_1_1detail_1_1_refiner.html", null ]
         ] ],
         [ "util", null, [
           [ "nth", "structlagrange_1_1mapbox_1_1util_1_1nth.html", null ]
@@ -209,12 +211,16 @@ var annotated_dup =
       [ "raycasting", "namespacelagrange_1_1raycasting.html", [
         [ "detail", null, [
           [ "FacetInstanceData", "structlagrange_1_1raycasting_1_1detail_1_1_facet_instance_data.html", "structlagrange_1_1raycasting_1_1detail_1_1_facet_instance_data" ],
+          [ "FacetTriangle", "structlagrange_1_1raycasting_1_1detail_1_1_facet_triangle.html", null ],
           [ "ImplBase", "structlagrange_1_1raycasting_1_1detail_1_1_impl_base.html", null ],
           [ "InstanceData", "structlagrange_1_1raycasting_1_1detail_1_1_instance_data.html", null ],
           [ "RayPacket16", "structlagrange_1_1raycasting_1_1detail_1_1_ray_packet16.html", "structlagrange_1_1raycasting_1_1detail_1_1_ray_packet16" ],
-          [ "RaySampler", "structlagrange_1_1raycasting_1_1detail_1_1_ray_sampler.html", "structlagrange_1_1raycasting_1_1detail_1_1_ray_sampler" ]
+          [ "RaySampler", "structlagrange_1_1raycasting_1_1detail_1_1_ray_sampler.html", "structlagrange_1_1raycasting_1_1detail_1_1_ray_sampler" ],
+          [ "SeedReservoir", "structlagrange_1_1raycasting_1_1detail_1_1_seed_reservoir.html", null ]
         ] ],
         [ "internal", null, [
+          [ "OccludedFacetSampler", "classlagrange_1_1raycasting_1_1internal_1_1_occluded_facet_sampler.html", "classlagrange_1_1raycasting_1_1internal_1_1_occluded_facet_sampler" ],
+          [ "OccludedInstanceSampler", "classlagrange_1_1raycasting_1_1internal_1_1_occluded_instance_sampler.html", "classlagrange_1_1raycasting_1_1internal_1_1_occluded_instance_sampler" ],
           [ "RayCasterOBBAccess", "structlagrange_1_1raycasting_1_1internal_1_1_ray_caster_o_b_b_access.html", null ]
         ] ],
         [ "legacy", null, [
@@ -223,23 +229,24 @@ var annotated_dup =
           [ "RaycasterMesh", "classlagrange_1_1raycasting_1_1legacy_1_1_raycaster_mesh.html", null ],
           [ "RaycasterMeshDerived", "classlagrange_1_1raycasting_1_1legacy_1_1_raycaster_mesh_derived.html", null ]
         ] ],
+        [ "AdaptiveOptions", "structlagrange_1_1raycasting_1_1_adaptive_options.html", "structlagrange_1_1raycasting_1_1_adaptive_options" ],
         [ "ClosestPointHit", "structlagrange_1_1raycasting_1_1_closest_point_hit.html", "structlagrange_1_1raycasting_1_1_closest_point_hit" ],
         [ "ClosestPointHitN", "structlagrange_1_1raycasting_1_1_closest_point_hit_n.html", "structlagrange_1_1raycasting_1_1_closest_point_hit_n" ],
         [ "HitBase", "structlagrange_1_1raycasting_1_1_hit_base.html", "structlagrange_1_1raycasting_1_1_hit_base" ],
         [ "HitBaseN", "structlagrange_1_1raycasting_1_1_hit_base_n.html", "structlagrange_1_1raycasting_1_1_hit_base_n" ],
         [ "LocalFeatureSizeOptions", "structlagrange_1_1raycasting_1_1_local_feature_size_options.html", "structlagrange_1_1raycasting_1_1_local_feature_size_options" ],
         [ "OccludedFacetEstimateOptions", "structlagrange_1_1raycasting_1_1_occluded_facet_estimate_options.html", "structlagrange_1_1raycasting_1_1_occluded_facet_estimate_options" ],
-        [ "OccludedFacetSampler", "classlagrange_1_1raycasting_1_1_occluded_facet_sampler.html", "classlagrange_1_1raycasting_1_1_occluded_facet_sampler" ],
         [ "OccludedFacetSamplerOptions", "structlagrange_1_1raycasting_1_1_occluded_facet_sampler_options.html", "structlagrange_1_1raycasting_1_1_occluded_facet_sampler_options" ],
         [ "OccludedInstanceEstimateOptions", "structlagrange_1_1raycasting_1_1_occluded_instance_estimate_options.html", "structlagrange_1_1raycasting_1_1_occluded_instance_estimate_options" ],
-        [ "OccludedInstanceSampler", "classlagrange_1_1raycasting_1_1_occluded_instance_sampler.html", "classlagrange_1_1raycasting_1_1_occluded_instance_sampler" ],
+        [ "OccludedInstanceSamplerOptions", "structlagrange_1_1raycasting_1_1_occluded_instance_sampler_options.html", "structlagrange_1_1raycasting_1_1_occluded_instance_sampler_options" ],
         [ "ProjectCommonOptions", "structlagrange_1_1raycasting_1_1_project_common_options.html", "structlagrange_1_1raycasting_1_1_project_common_options" ],
         [ "ProjectDirectionalOptions", "structlagrange_1_1raycasting_1_1_project_directional_options.html", "structlagrange_1_1raycasting_1_1_project_directional_options" ],
         [ "ProjectOptions", "structlagrange_1_1raycasting_1_1_project_options.html", "structlagrange_1_1raycasting_1_1_project_options" ],
         [ "RayCaster", "classlagrange_1_1raycasting_1_1_ray_caster.html", "classlagrange_1_1raycasting_1_1_ray_caster" ],
         [ "RayHit", "structlagrange_1_1raycasting_1_1_ray_hit.html", "structlagrange_1_1raycasting_1_1_ray_hit" ],
         [ "RayHitN", "structlagrange_1_1raycasting_1_1_ray_hit_n.html", "structlagrange_1_1raycasting_1_1_ray_hit_n" ],
-        [ "RemoveOccludedFacetsOptions", "structlagrange_1_1raycasting_1_1_remove_occluded_facets_options.html", "structlagrange_1_1raycasting_1_1_remove_occluded_facets_options" ]
+        [ "RemoveOccludedFacetsOptions", "structlagrange_1_1raycasting_1_1_remove_occluded_facets_options.html", "structlagrange_1_1raycasting_1_1_remove_occluded_facets_options" ],
+        [ "RemoveOccludedInstancesOptions", "structlagrange_1_1raycasting_1_1_remove_occluded_instances_options.html", "structlagrange_1_1raycasting_1_1_remove_occluded_instances_options" ]
       ] ],
       [ "remeshing_im", null, [
         [ "RemeshingOptions", "structlagrange_1_1remeshing__im_1_1_remeshing_options.html", "structlagrange_1_1remeshing__im_1_1_remeshing_options" ]
@@ -620,6 +627,8 @@ var annotated_dup =
     [ "DemoState", "struct_demo_state.html", "struct_demo_state" ],
     [ "OrientReturn", "struct_orient_return.html", null ],
     [ "PickedPoint", "struct_picked_point.html", null ],
+    [ "RegisteredFacetMesh", "struct_registered_facet_mesh.html", null ],
+    [ "RegisteredInstance", "struct_registered_instance.html", "struct_registered_instance" ],
     [ "type_caster< lagrange::scene::Value >", "structtype__caster_3_01lagrange_1_1scene_1_1_value_01_4.html", null ],
     [ "type_caster< lagrange::StackVector< T, N > >", "structtype__caster_3_01lagrange_1_1_stack_vector_3_01_t_00_01_n_01_4_01_4.html", null ],
     [ "UiState", "struct_ui_state.html", null ]

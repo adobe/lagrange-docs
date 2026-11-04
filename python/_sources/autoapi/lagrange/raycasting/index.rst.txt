@@ -19,6 +19,7 @@ Classes
    lagrange.raycasting.ClosestPointHit
    lagrange.raycasting.ClosestPointHits
    lagrange.raycasting.FallbackMode
+   lagrange.raycasting.InstancingPolicy
    lagrange.raycasting.ProjectMode
    lagrange.raycasting.RayCaster
    lagrange.raycasting.RayHit
@@ -32,6 +33,8 @@ Functions
 .. autoapisummary::
 
    lagrange.raycasting.compute_local_feature_size
+   lagrange.raycasting.estimate_occluded_facet_measures
+   lagrange.raycasting.estimate_occluded_instance_measures
    lagrange.raycasting.estimate_occluded_instances
    lagrange.raycasting.project
    lagrange.raycasting.project_closest_point
@@ -229,6 +232,35 @@ Module Contents
 
 
       Fill with a constant value.
+
+
+.. py:class:: InstancingPolicy
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   How a facet's measure is reconciled across the instances of its source mesh.
+
+
+   .. py:attribute:: Average
+      :value: 2
+
+
+      Preserve instancing; measure is the mean over its instances.
+
+
+   .. py:attribute:: FlattenInstances
+      :value: 0
+
+
+      One output mesh per instance; instancing is lost.
+
+
+   .. py:attribute:: Max
+      :value: 1
+
+
+      Preserve instancing; measure is the max (most visible) over its instances.
 
 
 .. py:class:: ProjectMode
@@ -641,16 +673,85 @@ Module Contents
    :rtype: int
 
 
-.. py:function:: estimate_occluded_instances(scene, *, num_rays = 1600000000, batch_size = 20000000, until_converged = False, is_occluder = None)
+.. py:function:: estimate_occluded_facet_measures(scene, *, attribute_name = 'visibility_measure', num_rays = 1600000000, batch_size = 50000000, adaptive = True, num_adaptive_per_cosine = 6, vmf_kappa = 128.0, threshold = 5e-06, size_influence = 0.5, confidence = 0.9, instancing = InstancingPolicy.Max, is_occluder = None)
 
-   Find mesh instances that are fully occluded by other geometry.
+   Estimate each facet's visibility measure and write it to a named per-facet attribute.
+
+   Each output mesh carries a per-facet Scalar attribute ``attribute_name`` equal to the facet's
+   (possibly aggregated) visibility measure
+   ``mean_visibility * (area_f / mean_face_area) ** size_influence``. The sampler runs at ``threshold``;
+   remove facets whose attribute is below any ``t <= threshold`` to filter without re-tracing.
+
+   :param scene:                   Input scene.
+   :param attribute_name:          Name of the per-facet Scalar attribute to create on each mesh.
+   :param num_rays:                Total ray budget. Must be > 0.
+   :param batch_size:              Rays per batch.
+   :param adaptive:                Enable adaptive sampling (seed reuse to find small holes faster).
+                                   True by default; False uses plain cosine sampling.
+   :param num_adaptive_per_cosine: Seed-guided rays per cosine ray (>= 1). Ignored when not adaptive.
+   :param vmf_kappa:               Concentration of the adaptive vMF proposal lobe (> 0). Ignored
+                                   when not adaptive.
+   :param threshold:               Strictest keep-threshold in [0, 0.5] to sample for.
+   :param size_influence:          Exponent on area_f / mean_face_area (0 = pure occlusion culling).
+   :param confidence:              Per-facet confidence in (0, 1) for anytime-valid early keeping.
+                                   Higher values retire later. It does not control final removals or
+                                   joint confidence across the scene.
+   :param instancing:              How to reconcile a facet's measure across instances of its source
+                                   mesh: ``Max`` (default, most visible) or ``Average`` (both preserve
+                                   instancing), or ``FlattenInstances`` (one mesh per instance).
+   :param is_occluder:             Optional callable ``(mesh_index, instance_index) -> bool``.
+
+   :return: Scene whose meshes carry the per-facet visibility measure attribute, per ``instancing``.
+
+
+.. py:function:: estimate_occluded_instance_measures(scene, *, num_rays = 1600000000, batch_size = 50000000, until_converged = False, threshold = 1e-06, size_influence = 0.5, confidence = 0.9, is_occluder = None)
+
+   Estimate every instance's visibility measure, indexed ``[mesh_index][instance_index]``.
+
+   The sampler runs at ``threshold`` (the strictest threshold you intend to use); the returned
+   measures let you keep instances at any ``t <= threshold`` without re-tracing — keep
+   ``(mesh_index, instance_index)`` iff ``measures[mesh_index][instance_index] >= t``.
+
+   All instance functions default ``threshold`` to ``1e-6`` (matching the C++ API); pass a near-zero
+   value to reproduce the original first-observed-escape behavior.
 
    :param scene:           Input scene.
    :param num_rays:        Total ray budget. Must be > 0 unless ``until_converged`` is True.
    :param batch_size:      Rays per batch.
-   :param until_converged: Stop early when a batch finds no new visible instances.
-   :param is_occluder:     Optional callable ``(mesh_index, instance_index) -> bool``. See
+   :param until_converged: After the initial batch, stop when a batch confidently retires no new
+                           instances. This is a batch-size-dependent heuristic.
+   :param threshold:       Strictest keep-threshold in [0, 0.5] to sample for. See
                            :py:func:`remove_occluded_instances`.
+   :param size_influence:  Exponent on area/scene-AABB-area (0 = size-independent, 1 = area-weighted).
+   :param confidence:      Per-instance confidence in (0, 1) used at each batch-end early-keep test.
+                           Higher values retire later; it does not control final removals or joint
+                           confidence across the scene.
+   :param is_occluder:     Optional callable ``(mesh_index, instance_index) -> bool``.
+
+   :return: Per-instance measures as ``measures[mesh_index][instance_index]``.
+
+
+.. py:function:: estimate_occluded_instances(scene, *, num_rays = 1600000000, batch_size = 50000000, until_converged = False, threshold = 1e-06, size_influence = 0.5, confidence = 0.9, is_occluder = None)
+
+   Find mesh instances whose visibility measure falls below the threshold.
+
+   Deprecated: use :py:func:`estimate_occluded_instance_measures` and apply the desired threshold to
+   the returned measures.
+
+   :param scene:           Input scene.
+   :param num_rays:        Total ray budget. Must be > 0 unless ``until_converged`` is True.
+   :param batch_size:      Rays per batch.
+   :param until_converged: After the initial batch, stop when a batch confidently retires no new
+                           instances. This is a batch-size-dependent heuristic.
+   :param threshold:       Keep-threshold in [0, 0.5]. Defaults to ``1e-6`` (matching the C++ API); a
+                           near-zero value reproduces the original first-observed-escape behavior. See
+                           :py:func:`remove_occluded_instances`.
+   :param size_influence:  Exponent on area/scene-AABB-area (0 = size-independent, 1 = area-weighted).
+                           See :py:func:`remove_occluded_instances`.
+   :param confidence:      Per-instance confidence in (0, 1) used at each batch-end early-keep test.
+                           Higher values retire later; it does not control final removals or joint
+                           confidence across the scene.
+   :param is_occluder:     Optional callable ``(mesh_index, instance_index) -> bool``.
 
    :return: List of ``(mesh_index, instance_index)`` pairs for occluded instances.
 
@@ -718,24 +819,33 @@ Module Contents
    :return: (N, 3) NumPy array of projected positions (float64).
 
 
-.. py:function:: remove_occluded_facets(scene, *, num_rays = 1600000000, batch_size = 20000000, num_adaptive_per_normal = 6, brute_force = False, until_converged = False, jitter_sigma = 0.025, visibility_threshold = 3, is_occluder = None)
+.. py:function:: remove_occluded_facets(scene, *, num_rays = 1600000000, batch_size = 50000000, adaptive = True, num_adaptive_per_cosine = 6, vmf_kappa = 128.0, threshold = 5e-06, size_influence = 0.5, confidence = 0.9, instancing = InstancingPolicy.Max, is_occluder = None)
 
    Build a new scene with facets not visible from the outside removed.
 
-   The output contains one unique mesh per input instance: instances of the same source mesh can
-   end up with different facets culled, so the input's instancing cannot be preserved.
+   A facet is kept when its visibility measure
+   ``mean_visibility * (area_f / mean_face_area) ** size_influence`` is at least ``threshold``, where
+   ``mean_visibility`` is the cosine-weighted escaped fraction.
 
    :param scene:                   Input scene.
-   :param num_rays:                Total ray budget. Must be > 0 unless ``until_converged`` is True.
+   :param num_rays:                Total ray budget. Must be > 0.
    :param batch_size:              Rays per batch.
-   :param num_adaptive_per_normal: Adaptive batches per normal batch (0 = pure cosine sampling).
-                                   Ignored when ``brute_force`` is True.
-   :param brute_force:             Run brute-force batches only — baseline for benchmarking.
-   :param until_converged:         Stop early when a cycle finds no new visible facets.
-   :param jitter_sigma:            Std-dev of Gaussian jitter applied to adaptive seed directions.
-   :param visibility_threshold:    Number of independent escapes required to mark a facet visible
-                                   (>= 1). 1 = first-escape-wins (original); 2-3 dampens hairline-
-                                   gap shrapnel.
+   :param adaptive:                Enable adaptive sampling (seed reuse to find small holes faster).
+                                   True by default; False uses plain cosine sampling.
+   :param num_adaptive_per_cosine: Seed-guided rays per cosine ray in the adaptive mixture (>= 1).
+                                   Ignored when ``adaptive`` is False.
+   :param vmf_kappa:               Concentration of the adaptive vMF proposal lobe (> 0; angular
+                                   width ~ 1/sqrt(kappa)). Ignored when ``adaptive`` is False.
+   :param threshold:               Keep-threshold in [0, 0.5] on the per-face visibility measure.
+   :param size_influence:          Exponent on area_f / mean_face_area. 0 = keep any exposed facet
+                                   (pure occlusion culling); > 0 also culls facets small relative to
+                                   their mesh (visibility-weighted decimation).
+   :param confidence:              Per-facet confidence in (0, 1) for anytime-valid early keeping.
+                                   Higher values retire later. It does not control final removals or
+                                   joint confidence across the scene.
+   :param instancing:              How to reconcile a facet's measure across instances of its source
+                                   mesh: ``Max`` (default, most visible) or ``Average`` (both preserve
+                                   instancing), or ``FlattenInstances`` (one mesh per instance).
    :param is_occluder:             Optional callable ``(mesh_index, instance_index) -> bool``
                                    returning whether an instance should block rays. Non-occluders
                                    are still tested for visibility but do not contribute to the
@@ -744,14 +854,29 @@ Module Contents
    :return: Scene with occluded facets removed.
 
 
-.. py:function:: remove_occluded_instances(scene, *, num_rays = 1600000000, batch_size = 20000000, until_converged = False, is_occluder = None)
+.. py:function:: remove_occluded_instances(scene, *, num_rays = 1600000000, batch_size = 50000000, until_converged = False, threshold = 1e-06, size_influence = 0.5, confidence = 0.9, is_occluder = None)
 
-   Remove fully-occluded mesh instances from a scene.
+   Remove instances whose exterior visibility measure is below ``threshold``.
+
+   Keeps an instance when its visibility measure—mean visibility weighted by relative surface
+   area—is at least ``threshold``. Unlike a per-point test, this can grow with mesh size: a large mesh
+   seen through a small hole survives, while a small or barely visible one is culled.
 
    :param scene:           Input scene.
    :param num_rays:        Total ray budget. Must be > 0 unless ``until_converged`` is True.
    :param batch_size:      Rays per batch.
-   :param until_converged: Stop early when a batch finds no new visible instances.
+   :param until_converged: After the initial batch, stop when a batch confidently retires no new
+                           instances. This is a batch-size-dependent heuristic.
+   :param threshold:       Keep-threshold in [0, 0.5]: keep when mean_visibility * (area/scene-AABB-area)
+                           ** size_influence >= threshold. Defaults to ``1e-6`` (matching the C++ API);
+                           larger values enable aggressive culling, and a near-zero value reproduces the
+                           original first-observed-escape behavior.
+   :param size_influence:  How much mesh size counts (exponent on area/scene-AABB-area). 0 = size-
+                           independent (keeps small exterior details like emblems); 1 = area-weighted
+                           visibility; 0.5 = weighted by linear size.
+   :param confidence:      Per-instance confidence in (0, 1) used at each batch-end early-keep test.
+                           Higher values retire later; it does not control final removals or joint
+                           confidence across the scene.
    :param is_occluder:     Optional callable ``(mesh_index, instance_index) -> bool`` returning
                            whether an instance should block rays. Non-occluders are still tested
                            for visibility but do not contribute to the ray-caster scene. Defaults

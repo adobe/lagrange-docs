@@ -276,19 +276,22 @@
 <tr class="row-odd"><td><p><a class="reference internal" href="#lagrange.raycasting.FallbackMode" title="lagrange.raycasting.FallbackMode"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FallbackMode</span></code></a></p></td>
 <td><p>Fallback mode for vertices without a ray hit.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#lagrange.raycasting.ProjectMode" title="lagrange.raycasting.ProjectMode"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ProjectMode</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#lagrange.raycasting.InstancingPolicy" title="lagrange.raycasting.InstancingPolicy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">InstancingPolicy</span></code></a></p></td>
+<td><p>How a facet's measure is reconciled across the instances of its source mesh.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#lagrange.raycasting.ProjectMode" title="lagrange.raycasting.ProjectMode"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ProjectMode</span></code></a></p></td>
 <td><p>Main projection mode.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#lagrange.raycasting.RayCaster" title="lagrange.raycasting.RayCaster"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RayCaster</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#lagrange.raycasting.RayCaster" title="lagrange.raycasting.RayCaster"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RayCaster</span></code></a></p></td>
 <td><p>A ray caster built on top of Embree.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#lagrange.raycasting.RayHit" title="lagrange.raycasting.RayHit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RayHit</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#lagrange.raycasting.RayHit" title="lagrange.raycasting.RayHit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RayHit</span></code></a></p></td>
 <td><p>Result of a ray intersection query.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#lagrange.raycasting.RayHits" title="lagrange.raycasting.RayHits"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RayHits</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#lagrange.raycasting.RayHits" title="lagrange.raycasting.RayHits"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RayHits</span></code></a></p></td>
 <td><p>Struct-of-arrays result of a batch ray cast, with one entry per input ray.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#lagrange.raycasting.SceneFlags" title="lagrange.raycasting.SceneFlags"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SceneFlags</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#lagrange.raycasting.SceneFlags" title="lagrange.raycasting.SceneFlags"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SceneFlags</span></code></a></p></td>
 <td><p>Flags for configuring the Embree scene.</p></td>
 </tr>
 </tbody>
@@ -303,8 +306,14 @@
 <tr class="row-odd"><td><p><a class="reference internal" href="#lagrange.raycasting.compute_local_feature_size" title="lagrange.raycasting.compute_local_feature_size"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compute_local_feature_size</span></code></a>(mesh, *[, ...])</p></td>
 <td><p>Compute local feature size for each vertex using medial axis approximation.</p></td>
 </tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#lagrange.raycasting.estimate_occluded_facet_measures" title="lagrange.raycasting.estimate_occluded_facet_measures"><code class="xref py py-obj docutils literal notranslate"><span class="pre">estimate_occluded_facet_measures</span></code></a>(scene, *[, ...])</p></td>
+<td><p>Estimate each facet's visibility measure and write it to a named per-facet attribute.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#lagrange.raycasting.estimate_occluded_instance_measures" title="lagrange.raycasting.estimate_occluded_instance_measures"><code class="xref py py-obj docutils literal notranslate"><span class="pre">estimate_occluded_instance_measures</span></code></a>(scene, *[, ...])</p></td>
+<td><p>Estimate every instance's visibility measure, indexed <code class="docutils literal notranslate"><span class="pre">[mesh_index][instance_index]</span></code>.</p></td>
+</tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#lagrange.raycasting.estimate_occluded_instances" title="lagrange.raycasting.estimate_occluded_instances"><code class="xref py py-obj docutils literal notranslate"><span class="pre">estimate_occluded_instances</span></code></a>(scene, *[, num_rays, ...])</p></td>
-<td><p>Find mesh instances that are fully occluded by other geometry.</p></td>
+<td><p>Find mesh instances whose visibility measure falls below the threshold.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#lagrange.raycasting.project" title="lagrange.raycasting.project"><code class="xref py py-obj docutils literal notranslate"><span class="pre">project</span></code></a>(…)</p></td>
 <td><p>Project query points onto a source mesh.</p></td>
@@ -322,7 +331,7 @@
 <td><p>Build a new scene with facets not visible from the outside removed.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#lagrange.raycasting.remove_occluded_instances" title="lagrange.raycasting.remove_occluded_instances"><code class="xref py py-obj docutils literal notranslate"><span class="pre">remove_occluded_instances</span></code></a>(scene, *[, num_rays, ...])</p></td>
-<td><p>Remove fully-occluded mesh instances from a scene.</p></td>
+<td><p>Remove instances whose exterior visibility measure is below <code class="docutils literal notranslate"><span class="pre">threshold</span></code>.</p></td>
 </tr>
 </tbody>
 </table>
@@ -555,6 +564,31 @@ The surface point is: <code class="docutils literal notranslate"><span class="pr
 <dt class="sig sig-object py" id="lagrange.raycasting.FallbackMode.Constant">
 <span class="sig-name descname"><span class="pre">Constant</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#lagrange.raycasting.FallbackMode.Constant" title="Link to this definition">¶</a></dt>
 <dd><p>Fill with a constant value.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="lagrange.raycasting.InstancingPolicy">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">lagrange.raycasting.</span></span><span class="sig-name descname"><span class="pre">InstancingPolicy</span></span><a class="headerlink" href="#lagrange.raycasting.InstancingPolicy" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">enum.Enum</span></code></p>
+<p>How a facet’s measure is reconciled across the instances of its source mesh.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lagrange.raycasting.InstancingPolicy.Average">
+<span class="sig-name descname"><span class="pre">Average</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2</span></em><a class="headerlink" href="#lagrange.raycasting.InstancingPolicy.Average" title="Link to this definition">¶</a></dt>
+<dd><p>Preserve instancing; measure is the mean over its instances.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lagrange.raycasting.InstancingPolicy.FlattenInstances">
+<span class="sig-name descname"><span class="pre">FlattenInstances</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#lagrange.raycasting.InstancingPolicy.FlattenInstances" title="Link to this definition">¶</a></dt>
+<dd><p>One output mesh per instance; instancing is lost.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lagrange.raycasting.InstancingPolicy.Max">
+<span class="sig-name descname"><span class="pre">Max</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#lagrange.raycasting.InstancingPolicy.Max" title="Link to this definition">¶</a></dt>
+<dd><p>Preserve instancing; measure is the max (most visible) over its instances.</p>
 </dd></dl>
 
 </dd></dl>
@@ -1139,18 +1173,103 @@ but require more iterations (default: 1e-4).</p></li>
 </dd></dl>
 
 <dl class="py function">
-<dt class="sig sig-object py" id="lagrange.raycasting.estimate_occluded_instances">
-<span class="sig-prename descclassname"><span class="pre">lagrange.raycasting.</span></span><span class="sig-name descname"><span class="pre">estimate_occluded_instances</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">scene</span></span></em>, <em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_rays</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1600000000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">batch_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">20000000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">until_converged</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_occluder</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lagrange.raycasting.estimate_occluded_instances" title="Link to this definition">¶</a></dt>
-<dd><p>Find mesh instances that are fully occluded by other geometry.</p>
+<dt class="sig sig-object py" id="lagrange.raycasting.estimate_occluded_facet_measures">
+<span class="sig-prename descclassname"><span class="pre">lagrange.raycasting.</span></span><span class="sig-name descname"><span class="pre">estimate_occluded_facet_measures</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">scene</span></span></em>, <em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">attribute_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'visibility_measure'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_rays</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1600000000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">batch_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">50000000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">adaptive</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_adaptive_per_cosine</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">6</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vmf_kappa</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">128.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">threshold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5e-06</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">size_influence</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">confidence</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.9</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">instancing</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">InstancingPolicy.Max</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_occluder</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lagrange.raycasting.estimate_occluded_facet_measures" title="Link to this definition">¶</a></dt>
+<dd><p>Estimate each facet’s visibility measure and write it to a named per-facet attribute.</p>
+<p>Each output mesh carries a per-facet Scalar attribute <code class="docutils literal notranslate"><span class="pre">attribute_name</span></code> equal to the facet’s
+(possibly aggregated) visibility measure
+<code class="docutils literal notranslate"><span class="pre">mean_visibility</span> <span class="pre">*</span> <span class="pre">(area_f</span> <span class="pre">/</span> <span class="pre">mean_face_area)</span> <span class="pre">**</span> <span class="pre">size_influence</span></code>. The sampler runs at <code class="docutils literal notranslate"><span class="pre">threshold</span></code>;
+remove facets whose attribute is below any <code class="docutils literal notranslate"><span class="pre">t</span> <span class="pre">&lt;=</span> <span class="pre">threshold</span></code> to filter without re-tracing.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>scene</strong> (<a class="reference internal" href="../scene/index.html#lagrange.scene.SimpleScene3D" title="lagrange.scene.SimpleScene3D"><em>lagrange.scene.SimpleScene3D</em></a>) – Input scene.</p></li>
+<li><p><strong>attribute_name</strong> (<em>str</em>) – Name of the per-facet Scalar attribute to create on each mesh.</p></li>
+<li><p><strong>num_rays</strong> (<em>int</em>) – Total ray budget. Must be &gt; 0.</p></li>
+<li><p><strong>batch_size</strong> (<em>int</em>) – Rays per batch.</p></li>
+<li><p><strong>adaptive</strong> (<em>bool</em>) – Enable adaptive sampling (seed reuse to find small holes faster).
+True by default; False uses plain cosine sampling.</p></li>
+<li><p><strong>num_adaptive_per_cosine</strong> (<em>int</em>) – Seed-guided rays per cosine ray (&gt;= 1). Ignored when not adaptive.</p></li>
+<li><p><strong>vmf_kappa</strong> (<em>float</em>) – Concentration of the adaptive vMF proposal lobe (&gt; 0). Ignored
+when not adaptive.</p></li>
+<li><p><strong>threshold</strong> (<em>float</em>) – Strictest keep-threshold in [0, 0.5] to sample for.</p></li>
+<li><p><strong>size_influence</strong> (<em>float</em>) – Exponent on area_f / mean_face_area (0 = pure occlusion culling).</p></li>
+<li><p><strong>confidence</strong> (<em>float</em>) – Per-facet confidence in (0, 1) for anytime-valid early keeping.
+Higher values retire later. It does not control final removals or
+joint confidence across the scene.</p></li>
+<li><p><strong>instancing</strong> (<a class="reference internal" href="#lagrange.raycasting.InstancingPolicy" title="lagrange.raycasting.InstancingPolicy"><em>InstancingPolicy</em></a>) – How to reconcile a facet’s measure across instances of its source
+mesh: <code class="docutils literal notranslate"><span class="pre">Max</span></code> (default, most visible) or <code class="docutils literal notranslate"><span class="pre">Average</span></code> (both preserve
+instancing), or <code class="docutils literal notranslate"><span class="pre">FlattenInstances</span></code> (one mesh per instance).</p></li>
+<li><p><strong>is_occluder</strong> (<em>collections.abc.Callable</em><em>[</em><em>[</em><em>int</em><em>, </em><em>int</em><em>]</em><em>, </em><em>bool</em><em>] </em><em>| </em><em>None</em>) – Optional callable <code class="docutils literal notranslate"><span class="pre">(mesh_index,</span> <span class="pre">instance_index)</span> <span class="pre">-&gt;</span> <span class="pre">bool</span></code>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Scene whose meshes carry the per-facet visibility measure attribute, per <code class="docutils literal notranslate"><span class="pre">instancing</span></code>.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="../scene/index.html#lagrange.scene.SimpleScene3D" title="lagrange.scene.SimpleScene3D">scene.SimpleScene3D</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="lagrange.raycasting.estimate_occluded_instance_measures">
+<span class="sig-prename descclassname"><span class="pre">lagrange.raycasting.</span></span><span class="sig-name descname"><span class="pre">estimate_occluded_instance_measures</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">scene</span></span></em>, <em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_rays</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1600000000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">batch_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">50000000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">until_converged</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">threshold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1e-06</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">size_influence</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">confidence</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.9</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_occluder</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lagrange.raycasting.estimate_occluded_instance_measures" title="Link to this definition">¶</a></dt>
+<dd><p>Estimate every instance’s visibility measure, indexed <code class="docutils literal notranslate"><span class="pre">[mesh_index][instance_index]</span></code>.</p>
+<p>The sampler runs at <code class="docutils literal notranslate"><span class="pre">threshold</span></code> (the strictest threshold you intend to use); the returned
+measures let you keep instances at any <code class="docutils literal notranslate"><span class="pre">t</span> <span class="pre">&lt;=</span> <span class="pre">threshold</span></code> without re-tracing — keep
+<code class="docutils literal notranslate"><span class="pre">(mesh_index,</span> <span class="pre">instance_index)</span></code> iff <code class="docutils literal notranslate"><span class="pre">measures[mesh_index][instance_index]</span> <span class="pre">&gt;=</span> <span class="pre">t</span></code>.</p>
+<p>All instance functions default <code class="docutils literal notranslate"><span class="pre">threshold</span></code> to <code class="docutils literal notranslate"><span class="pre">1e-6</span></code> (matching the C++ API); pass a near-zero
+value to reproduce the original first-observed-escape behavior.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>scene</strong> (<a class="reference internal" href="../scene/index.html#lagrange.scene.SimpleScene3D" title="lagrange.scene.SimpleScene3D"><em>lagrange.scene.SimpleScene3D</em></a>) – Input scene.</p></li>
 <li><p><strong>num_rays</strong> (<em>int</em>) – Total ray budget. Must be &gt; 0 unless <code class="docutils literal notranslate"><span class="pre">until_converged</span></code> is True.</p></li>
 <li><p><strong>batch_size</strong> (<em>int</em>) – Rays per batch.</p></li>
-<li><p><strong>until_converged</strong> (<em>bool</em>) – Stop early when a batch finds no new visible instances.</p></li>
-<li><p><strong>is_occluder</strong> (<em>collections.abc.Callable</em><em>[</em><em>[</em><em>int</em><em>, </em><em>int</em><em>]</em><em>, </em><em>bool</em><em>] </em><em>| </em><em>None</em>) – Optional callable <code class="docutils literal notranslate"><span class="pre">(mesh_index,</span> <span class="pre">instance_index)</span> <span class="pre">-&gt;</span> <span class="pre">bool</span></code>. See
+<li><p><strong>until_converged</strong> (<em>bool</em>) – After the initial batch, stop when a batch confidently retires no new
+instances. This is a batch-size-dependent heuristic.</p></li>
+<li><p><strong>threshold</strong> (<em>float</em>) – Strictest keep-threshold in [0, 0.5] to sample for. See
 <a class="reference internal" href="#lagrange.raycasting.remove_occluded_instances" title="lagrange.raycasting.remove_occluded_instances"><code class="xref py py-func docutils literal notranslate"><span class="pre">remove_occluded_instances()</span></code></a>.</p></li>
+<li><p><strong>size_influence</strong> (<em>float</em>) – Exponent on area/scene-AABB-area (0 = size-independent, 1 = area-weighted).</p></li>
+<li><p><strong>confidence</strong> (<em>float</em>) – Per-instance confidence in (0, 1) used at each batch-end early-keep test.
+Higher values retire later; it does not control final removals or joint
+confidence across the scene.</p></li>
+<li><p><strong>is_occluder</strong> (<em>collections.abc.Callable</em><em>[</em><em>[</em><em>int</em><em>, </em><em>int</em><em>]</em><em>, </em><em>bool</em><em>] </em><em>| </em><em>None</em>) – Optional callable <code class="docutils literal notranslate"><span class="pre">(mesh_index,</span> <span class="pre">instance_index)</span> <span class="pre">-&gt;</span> <span class="pre">bool</span></code>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Per-instance measures as <code class="docutils literal notranslate"><span class="pre">measures[mesh_index][instance_index]</span></code>.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list[list[float]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="lagrange.raycasting.estimate_occluded_instances">
+<span class="sig-prename descclassname"><span class="pre">lagrange.raycasting.</span></span><span class="sig-name descname"><span class="pre">estimate_occluded_instances</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">scene</span></span></em>, <em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_rays</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1600000000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">batch_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">50000000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">until_converged</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">threshold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1e-06</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">size_influence</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">confidence</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.9</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_occluder</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lagrange.raycasting.estimate_occluded_instances" title="Link to this definition">¶</a></dt>
+<dd><p>Find mesh instances whose visibility measure falls below the threshold.</p>
+<p>Deprecated: use <a class="reference internal" href="#lagrange.raycasting.estimate_occluded_instance_measures" title="lagrange.raycasting.estimate_occluded_instance_measures"><code class="xref py py-func docutils literal notranslate"><span class="pre">estimate_occluded_instance_measures()</span></code></a> and apply the desired threshold to
+the returned measures.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>scene</strong> (<a class="reference internal" href="../scene/index.html#lagrange.scene.SimpleScene3D" title="lagrange.scene.SimpleScene3D"><em>lagrange.scene.SimpleScene3D</em></a>) – Input scene.</p></li>
+<li><p><strong>num_rays</strong> (<em>int</em>) – Total ray budget. Must be &gt; 0 unless <code class="docutils literal notranslate"><span class="pre">until_converged</span></code> is True.</p></li>
+<li><p><strong>batch_size</strong> (<em>int</em>) – Rays per batch.</p></li>
+<li><p><strong>until_converged</strong> (<em>bool</em>) – After the initial batch, stop when a batch confidently retires no new
+instances. This is a batch-size-dependent heuristic.</p></li>
+<li><p><strong>threshold</strong> (<em>float</em>) – Keep-threshold in [0, 0.5]. Defaults to <code class="docutils literal notranslate"><span class="pre">1e-6</span></code> (matching the C++ API); a
+near-zero value reproduces the original first-observed-escape behavior. See
+<a class="reference internal" href="#lagrange.raycasting.remove_occluded_instances" title="lagrange.raycasting.remove_occluded_instances"><code class="xref py py-func docutils literal notranslate"><span class="pre">remove_occluded_instances()</span></code></a>.</p></li>
+<li><p><strong>size_influence</strong> (<em>float</em>) – Exponent on area/scene-AABB-area (0 = size-independent, 1 = area-weighted).
+See <a class="reference internal" href="#lagrange.raycasting.remove_occluded_instances" title="lagrange.raycasting.remove_occluded_instances"><code class="xref py py-func docutils literal notranslate"><span class="pre">remove_occluded_instances()</span></code></a>.</p></li>
+<li><p><strong>confidence</strong> (<em>float</em>) – Per-instance confidence in (0, 1) used at each batch-end early-keep test.
+Higher values retire later; it does not control final removals or joint
+confidence across the scene.</p></li>
+<li><p><strong>is_occluder</strong> (<em>collections.abc.Callable</em><em>[</em><em>[</em><em>int</em><em>, </em><em>int</em><em>]</em><em>, </em><em>bool</em><em>] </em><em>| </em><em>None</em>) – Optional callable <code class="docutils literal notranslate"><span class="pre">(mesh_index,</span> <span class="pre">instance_index)</span> <span class="pre">-&gt;</span> <span class="pre">bool</span></code>.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
@@ -1259,24 +1378,33 @@ source mesh, vertex positions are set from the hit.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="lagrange.raycasting.remove_occluded_facets">
-<span class="sig-prename descclassname"><span class="pre">lagrange.raycasting.</span></span><span class="sig-name descname"><span class="pre">remove_occluded_facets</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">scene</span></span></em>, <em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_rays</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1600000000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">batch_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">20000000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_adaptive_per_normal</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">6</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">brute_force</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">until_converged</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">jitter_sigma</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.025</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">visibility_threshold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_occluder</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lagrange.raycasting.remove_occluded_facets" title="Link to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">lagrange.raycasting.</span></span><span class="sig-name descname"><span class="pre">remove_occluded_facets</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">scene</span></span></em>, <em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_rays</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1600000000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">batch_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">50000000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">adaptive</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_adaptive_per_cosine</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">6</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vmf_kappa</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">128.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">threshold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5e-06</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">size_influence</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">confidence</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.9</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">instancing</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">InstancingPolicy.Max</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_occluder</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lagrange.raycasting.remove_occluded_facets" title="Link to this definition">¶</a></dt>
 <dd><p>Build a new scene with facets not visible from the outside removed.</p>
-<p>The output contains one unique mesh per input instance: instances of the same source mesh can
-end up with different facets culled, so the input’s instancing cannot be preserved.</p>
+<p>A facet is kept when its visibility measure
+<code class="docutils literal notranslate"><span class="pre">mean_visibility</span> <span class="pre">*</span> <span class="pre">(area_f</span> <span class="pre">/</span> <span class="pre">mean_face_area)</span> <span class="pre">**</span> <span class="pre">size_influence</span></code> is at least <code class="docutils literal notranslate"><span class="pre">threshold</span></code>, where
+<code class="docutils literal notranslate"><span class="pre">mean_visibility</span></code> is the cosine-weighted escaped fraction.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>scene</strong> (<a class="reference internal" href="../scene/index.html#lagrange.scene.SimpleScene3D" title="lagrange.scene.SimpleScene3D"><em>lagrange.scene.SimpleScene3D</em></a>) – Input scene.</p></li>
-<li><p><strong>num_rays</strong> (<em>int</em>) – Total ray budget. Must be &gt; 0 unless <code class="docutils literal notranslate"><span class="pre">until_converged</span></code> is True.</p></li>
+<li><p><strong>num_rays</strong> (<em>int</em>) – Total ray budget. Must be &gt; 0.</p></li>
 <li><p><strong>batch_size</strong> (<em>int</em>) – Rays per batch.</p></li>
-<li><p><strong>num_adaptive_per_normal</strong> (<em>int</em>) – Adaptive batches per normal batch (0 = pure cosine sampling).
-Ignored when <code class="docutils literal notranslate"><span class="pre">brute_force</span></code> is True.</p></li>
-<li><p><strong>brute_force</strong> (<em>bool</em>) – Run brute-force batches only — baseline for benchmarking.</p></li>
-<li><p><strong>until_converged</strong> (<em>bool</em>) – Stop early when a cycle finds no new visible facets.</p></li>
-<li><p><strong>jitter_sigma</strong> (<em>float</em>) – Std-dev of Gaussian jitter applied to adaptive seed directions.</p></li>
-<li><p><strong>visibility_threshold</strong> (<em>int</em>) – Number of independent escapes required to mark a facet visible
-(&gt;= 1). 1 = first-escape-wins (original); 2-3 dampens hairline-
-gap shrapnel.</p></li>
+<li><p><strong>adaptive</strong> (<em>bool</em>) – Enable adaptive sampling (seed reuse to find small holes faster).
+True by default; False uses plain cosine sampling.</p></li>
+<li><p><strong>num_adaptive_per_cosine</strong> (<em>int</em>) – Seed-guided rays per cosine ray in the adaptive mixture (&gt;= 1).
+Ignored when <code class="docutils literal notranslate"><span class="pre">adaptive</span></code> is False.</p></li>
+<li><p><strong>vmf_kappa</strong> (<em>float</em>) – Concentration of the adaptive vMF proposal lobe (&gt; 0; angular
+width ~ 1/sqrt(kappa)). Ignored when <code class="docutils literal notranslate"><span class="pre">adaptive</span></code> is False.</p></li>
+<li><p><strong>threshold</strong> (<em>float</em>) – Keep-threshold in [0, 0.5] on the per-face visibility measure.</p></li>
+<li><p><strong>size_influence</strong> (<em>float</em>) – Exponent on area_f / mean_face_area. 0 = keep any exposed facet
+(pure occlusion culling); &gt; 0 also culls facets small relative to
+their mesh (visibility-weighted decimation).</p></li>
+<li><p><strong>confidence</strong> (<em>float</em>) – Per-facet confidence in (0, 1) for anytime-valid early keeping.
+Higher values retire later. It does not control final removals or
+joint confidence across the scene.</p></li>
+<li><p><strong>instancing</strong> (<a class="reference internal" href="#lagrange.raycasting.InstancingPolicy" title="lagrange.raycasting.InstancingPolicy"><em>InstancingPolicy</em></a>) – How to reconcile a facet’s measure across instances of its source
+mesh: <code class="docutils literal notranslate"><span class="pre">Max</span></code> (default, most visible) or <code class="docutils literal notranslate"><span class="pre">Average</span></code> (both preserve
+instancing), or <code class="docutils literal notranslate"><span class="pre">FlattenInstances</span></code> (one mesh per instance).</p></li>
 <li><p><strong>is_occluder</strong> (<em>collections.abc.Callable</em><em>[</em><em>[</em><em>int</em><em>, </em><em>int</em><em>]</em><em>, </em><em>bool</em><em>] </em><em>| </em><em>None</em>) – Optional callable <code class="docutils literal notranslate"><span class="pre">(mesh_index,</span> <span class="pre">instance_index)</span> <span class="pre">-&gt;</span> <span class="pre">bool</span></code>
 returning whether an instance should block rays. Non-occluders
 are still tested for visibility but do not contribute to the
@@ -1295,15 +1423,29 @@ occluder).</p></li>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="lagrange.raycasting.remove_occluded_instances">
-<span class="sig-prename descclassname"><span class="pre">lagrange.raycasting.</span></span><span class="sig-name descname"><span class="pre">remove_occluded_instances</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">scene</span></span></em>, <em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_rays</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1600000000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">batch_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">20000000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">until_converged</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_occluder</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lagrange.raycasting.remove_occluded_instances" title="Link to this definition">¶</a></dt>
-<dd><p>Remove fully-occluded mesh instances from a scene.</p>
+<span class="sig-prename descclassname"><span class="pre">lagrange.raycasting.</span></span><span class="sig-name descname"><span class="pre">remove_occluded_instances</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">scene</span></span></em>, <em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_rays</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1600000000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">batch_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">50000000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">until_converged</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">threshold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1e-06</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">size_influence</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">confidence</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.9</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_occluder</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lagrange.raycasting.remove_occluded_instances" title="Link to this definition">¶</a></dt>
+<dd><p>Remove instances whose exterior visibility measure is below <code class="docutils literal notranslate"><span class="pre">threshold</span></code>.</p>
+<p>Keeps an instance when its visibility measure—mean visibility weighted by relative surface
+area—is at least <code class="docutils literal notranslate"><span class="pre">threshold</span></code>. Unlike a per-point test, this can grow with mesh size: a large mesh
+seen through a small hole survives, while a small or barely visible one is culled.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>scene</strong> (<a class="reference internal" href="../scene/index.html#lagrange.scene.SimpleScene3D" title="lagrange.scene.SimpleScene3D"><em>lagrange.scene.SimpleScene3D</em></a>) – Input scene.</p></li>
 <li><p><strong>num_rays</strong> (<em>int</em>) – Total ray budget. Must be &gt; 0 unless <code class="docutils literal notranslate"><span class="pre">until_converged</span></code> is True.</p></li>
 <li><p><strong>batch_size</strong> (<em>int</em>) – Rays per batch.</p></li>
-<li><p><strong>until_converged</strong> (<em>bool</em>) – Stop early when a batch finds no new visible instances.</p></li>
+<li><p><strong>until_converged</strong> (<em>bool</em>) – After the initial batch, stop when a batch confidently retires no new
+instances. This is a batch-size-dependent heuristic.</p></li>
+<li><p><strong>threshold</strong> (<em>float</em>) – Keep-threshold in [0, 0.5]: keep when mean_visibility * (area/scene-AABB-area)
+** size_influence &gt;= threshold. Defaults to <code class="docutils literal notranslate"><span class="pre">1e-6</span></code> (matching the C++ API);
+larger values enable aggressive culling, and a near-zero value reproduces the
+original first-observed-escape behavior.</p></li>
+<li><p><strong>size_influence</strong> (<em>float</em>) – How much mesh size counts (exponent on area/scene-AABB-area). 0 = size-
+independent (keeps small exterior details like emblems); 1 = area-weighted
+visibility; 0.5 = weighted by linear size.</p></li>
+<li><p><strong>confidence</strong> (<em>float</em>) – Per-instance confidence in (0, 1) used at each batch-end early-keep test.
+Higher values retire later; it does not control final removals or joint
+confidence across the scene.</p></li>
 <li><p><strong>is_occluder</strong> (<em>collections.abc.Callable</em><em>[</em><em>[</em><em>int</em><em>, </em><em>int</em><em>]</em><em>, </em><em>bool</em><em>] </em><em>| </em><em>None</em>) – Optional callable <code class="docutils literal notranslate"><span class="pre">(mesh_index,</span> <span class="pre">instance_index)</span> <span class="pre">-&gt;</span> <span class="pre">bool</span></code> returning
 whether an instance should block rays. Non-occluders are still tested
 for visibility but do not contribute to the ray-caster scene. Defaults
@@ -1417,6 +1559,12 @@ to None (every instance is an occluder).</p></li>
 <li><a class="reference internal" href="#lagrange.raycasting.FallbackMode.Constant"><code class="docutils literal notranslate"><span class="pre">FallbackMode.Constant</span></code></a></li>
 </ul>
 </li>
+<li><a class="reference internal" href="#lagrange.raycasting.InstancingPolicy"><code class="docutils literal notranslate"><span class="pre">InstancingPolicy</span></code></a><ul>
+<li><a class="reference internal" href="#lagrange.raycasting.InstancingPolicy.Average"><code class="docutils literal notranslate"><span class="pre">InstancingPolicy.Average</span></code></a></li>
+<li><a class="reference internal" href="#lagrange.raycasting.InstancingPolicy.FlattenInstances"><code class="docutils literal notranslate"><span class="pre">InstancingPolicy.FlattenInstances</span></code></a></li>
+<li><a class="reference internal" href="#lagrange.raycasting.InstancingPolicy.Max"><code class="docutils literal notranslate"><span class="pre">InstancingPolicy.Max</span></code></a></li>
+</ul>
+</li>
 <li><a class="reference internal" href="#lagrange.raycasting.ProjectMode"><code class="docutils literal notranslate"><span class="pre">ProjectMode</span></code></a><ul>
 <li><a class="reference internal" href="#lagrange.raycasting.ProjectMode.ClosestPoint"><code class="docutils literal notranslate"><span class="pre">ProjectMode.ClosestPoint</span></code></a></li>
 <li><a class="reference internal" href="#lagrange.raycasting.ProjectMode.ClosestVertex"><code class="docutils literal notranslate"><span class="pre">ProjectMode.ClosestVertex</span></code></a></li>
@@ -1469,6 +1617,8 @@ to None (every instance is an occluder).</p></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#lagrange.raycasting.compute_local_feature_size"><code class="docutils literal notranslate"><span class="pre">compute_local_feature_size()</span></code></a></li>
+<li><a class="reference internal" href="#lagrange.raycasting.estimate_occluded_facet_measures"><code class="docutils literal notranslate"><span class="pre">estimate_occluded_facet_measures()</span></code></a></li>
+<li><a class="reference internal" href="#lagrange.raycasting.estimate_occluded_instance_measures"><code class="docutils literal notranslate"><span class="pre">estimate_occluded_instance_measures()</span></code></a></li>
 <li><a class="reference internal" href="#lagrange.raycasting.estimate_occluded_instances"><code class="docutils literal notranslate"><span class="pre">estimate_occluded_instances()</span></code></a></li>
 <li><a class="reference internal" href="#lagrange.raycasting.project"><code class="docutils literal notranslate"><span class="pre">project()</span></code></a></li>
 <li><a class="reference internal" href="#lagrange.raycasting.project_closest_point"><code class="docutils literal notranslate"><span class="pre">project_closest_point()</span></code></a></li>

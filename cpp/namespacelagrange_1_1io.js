@@ -12,6 +12,8 @@ var namespacelagrange_1_1io =
     [ "load_mesh_msh", "namespacelagrange_1_1io.html#a3cdfe41629b2e53a2763fcad35b3527a", null ],
     [ "load_mesh_obj", "namespacelagrange_1_1io.html#a2bbe7eba3b83c0a9b95d9f816a4fd050", null ],
     [ "load_mesh_obj", "namespacelagrange_1_1io.html#addd53774d944f8306ca4da9e7f9b277e", null ],
+    [ "load_mesh_pcd", "namespacelagrange_1_1io.html#af98edc5f319ee1beff7baae4485a0197", null ],
+    [ "load_mesh_pcd", "namespacelagrange_1_1io.html#af485c600574d45e144db0d660f4d4eb1", null ],
     [ "load_mesh_ply", "namespacelagrange_1_1io.html#a1b86447ec2052740eca15c57de7a9292", null ],
     [ "load_mesh_ply", "namespacelagrange_1_1io.html#a838761f1101535c1589be1f5df2c443d", null ],
     [ "load_mesh_stl", "namespacelagrange_1_1io.html#ae02f11ee2792ef20c997620fa29b5753", null ],
@@ -38,6 +40,8 @@ var namespacelagrange_1_1io =
     [ "save_mesh_msh", "namespacelagrange_1_1io.html#a7870e64c36cc0795b3b578ba90d4907a", null ],
     [ "save_mesh_obj", "namespacelagrange_1_1io.html#a49017796656516244dd86fb3fbdad218", null ],
     [ "save_mesh_obj", "namespacelagrange_1_1io.html#a654cbb2f2cf7f00a83f21825cd2fb5bf", null ],
+    [ "save_mesh_pcd", "namespacelagrange_1_1io.html#a02422e13f073b50f393ceb8c570825bd", null ],
+    [ "save_mesh_pcd", "namespacelagrange_1_1io.html#ab01c719486d405647898737924402e4c", null ],
     [ "save_mesh_ply", "namespacelagrange_1_1io.html#a9c3ba13751c3f7592ebb762fde9bbfd2", null ],
     [ "save_mesh_ply", "namespacelagrange_1_1io.html#a0228c35e32ef99743f66f7bf774dc6ae", null ],
     [ "save_scene", "namespacelagrange_1_1io.html#a637317230163bf7f291d7b512ebdaff6", null ],
@@ -51,5 +55,7 @@ var namespacelagrange_1_1io =
     [ "save_simple_scene_gltf", "namespacelagrange_1_1io.html#a5e02b963e18a80664a94233d613014cb", null ],
     [ "save_simple_scene_gltf", "namespacelagrange_1_1io.html#aa14d5abea45ab83e5a405fe623938d5b", null ],
     [ "save_simple_scene_obj", "namespacelagrange_1_1io.html#a88a68c25d69670b6fdfb4f354d9a9efc", null ],
-    [ "save_simple_scene_obj", "namespacelagrange_1_1io.html#a187a3b61d73c5c89bc62f363e2028d8d", null ]
+    [ "save_simple_scene_obj", "namespacelagrange_1_1io.html#a187a3b61d73c5c89bc62f363e2028d8d", null ],
+    [ "dispatch_pcd_type", "namespacelagrange_1_1io.html#a2e22d97cd14b6be2a1793d2ed61cca8a", null ],
+    [ "pcd_type_char", "namespacelagrange_1_1io.html#ae101a4cfd01e49e7b154c015ec7b1a0a", null ]
 ];

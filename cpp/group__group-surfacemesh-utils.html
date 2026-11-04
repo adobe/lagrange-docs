@@ -528,6 +528,10 @@ template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5
 <tr class="memitem:gabf3517305e7ccc7062aab01527e78468"><td class="memTemplItemLeft" align="right" valign="top">Eigen::AlignedBox&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, static_cast&lt; int &gt;(Dimension)&gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#gabf3517305e7ccc7062aab01527e78468">mesh_bbox</a> (const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index &gt; &amp;mesh)</td></tr>
 <tr class="memdesc:gabf3517305e7ccc7062aab01527e78468"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the axis-aligned bounding box of a mesh.  <br /></td></tr>
 <tr class="separator:gabf3517305e7ccc7062aab01527e78468"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga63ae603e569d4e4febd3427da74fc716" id="r_ga63ae603e569d4e4febd3427da74fc716"><td class="memTemplParams" colspan="2">template&lt;size_t Dimension, typename <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, typename Index&gt; </td></tr>
+<tr class="memitem:ga63ae603e569d4e4febd3427da74fc716"><td class="memTemplItemLeft" align="right" valign="top">Eigen::AlignedBox&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, static_cast&lt; int &gt;(Dimension)&gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ga63ae603e569d4e4febd3427da74fc716">mesh_bbox</a> (const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index &gt; &amp;mesh, const Eigen::Transform&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, static_cast&lt; int &gt;(Dimension), Eigen::Affine &gt; &amp;transform)</td></tr>
+<tr class="memdesc:ga63ae603e569d4e4febd3427da74fc716"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.Compute the axis-aligned bounding box after applying an affine transformation to the mesh vertices.  <br /></td></tr>
+<tr class="separator:ga63ae603e569d4e4febd3427da74fc716"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga8a3c053ce081c3a551af20b1ed5bca08" id="r_ga8a3c053ce081c3a551af20b1ed5bca08"><td class="memTemplParams" colspan="2">template&lt;size_t Dimension = 3, typename <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, typename Index&gt; </td></tr>
 <tr class="memitem:ga8a3c053ce081c3a551af20b1ed5bca08"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ga8a3c053ce081c3a551af20b1ed5bca08">normalize_mesh_with_transform</a> (<a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index &gt; &amp;mesh, const <a class="el" href="structlagrange_1_1_transform_options.html">TransformOptions</a> &amp;options={}) -&gt; Eigen::Transform&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Dimension, Eigen::Affine &gt;</td></tr>
 <tr class="memdesc:ga8a3c053ce081c3a551af20b1ed5bca08"><td class="mdescLeft">&#160;</td><td class="mdescRight">Normalize a mesh to fit in a unit box centered at the origin.  <br /></td></tr>
@@ -3261,12 +3265,15 @@ The <code>keep_below</code> option is ignored, since both sides of the isoline a
 </div>
 </div>
 <a id="gabf3517305e7ccc7062aab01527e78468" name="gabf3517305e7ccc7062aab01527e78468"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gabf3517305e7ccc7062aab01527e78468">&#9670;&#160;</a></span>mesh_bbox()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#gabf3517305e7ccc7062aab01527e78468">&#9670;&#160;</a></span>mesh_bbox() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;size_t Dimension, typename <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, typename Index&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">Eigen::AlignedBox&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, static_cast&lt; int &gt;(Dimension)&gt; mesh_bbox </td>
@@ -3275,6 +3282,11 @@ template&lt;size_t Dimension, typename <a class="el" href="group__group-surfacem
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel nodiscard">nodiscard</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p><code>#include &lt;lagrange/mesh_bbox.h&gt;</code></p>
@@ -3296,6 +3308,59 @@ template&lt;size_t Dimension, typename <a class="el" href="group__group-surfacem
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The axis-aligned bounding box of the mesh vertices. </dd></dl>
+
+</div>
+</div>
+<a id="ga63ae603e569d4e4febd3427da74fc716" name="ga63ae603e569d4e4febd3427da74fc716"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga63ae603e569d4e4febd3427da74fc716">&#9670;&#160;</a></span>mesh_bbox() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;size_t Dimension, typename <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, typename Index&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Eigen::AlignedBox&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, static_cast&lt; int &gt;(Dimension)&gt; mesh_bbox </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>mesh</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Transform&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, static_cast&lt; int &gt;(Dimension), Eigen::Affine &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>transform</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel nodiscard">nodiscard</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;lagrange/mesh_bbox.h&gt;</code></p>
+
+<p>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.Compute the axis-aligned bounding box after applying an affine transformation to the mesh vertices. </p>
+<p>The input mesh is not modified.</p>
+<p>If the mesh has no vertices, the returned bounding box is empty.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">mesh</td><td>Input mesh. Its dimension must match the <code class="param">Dimension</code> template parameter. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">transform</td><td>Affine transformation to apply to the mesh vertices.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Dimension</td><td>Spatial dimension of the bounding box. Must be 2 or 3. </td></tr>
+    <tr><td class="paramname">Scalar</td><td>Mesh scalar type. </td></tr>
+    <tr><td class="paramname">Index</td><td>Mesh index type.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The axis-aligned bounding box of the transformed mesh vertices. </dd></dl>
 
 </div>
 </div>
@@ -4683,7 +4748,7 @@ template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in,out]</td><td class="paramname">mesh</td><td>Polygonal mesh to triangulate in place. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">should_triangulate</td><td>Predicate determining whether a facet with more than 3 vertices should be triangulated. Facets for which it returns false are left untouched. This applies to both the earcut and centroid-fan schemes. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">should_triangulate</td><td>Predicate determining whether a facet with more than 3 vertices should be triangulated. Facets for which it returns false are left untouched. This applies to all triangulation schemes. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">options</td><td>Options for triangulation.</td></tr>
   </table>
   </dd>
@@ -4886,7 +4951,7 @@ template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Mon Oct 5 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+    <li class="footer">Generated on Wed Nov 4 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>
 </body>

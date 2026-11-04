@@ -264,10 +264,13 @@
 <tr class="row-odd"><td><p><a class="reference internal" href="#lagrange.geodesic.GeodesicEngineDGPC" title="lagrange.geodesic.GeodesicEngineDGPC"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GeodesicEngineDGPC</span></code></a></p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#lagrange.geodesic.GeodesicEngineHeat" title="lagrange.geodesic.GeodesicEngineHeat"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GeodesicEngineHeat</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#lagrange.geodesic.GeodesicEngineFlip" title="lagrange.geodesic.GeodesicEngineFlip"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GeodesicEngineFlip</span></code></a></p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#lagrange.geodesic.GeodesicEngineMMP" title="lagrange.geodesic.GeodesicEngineMMP"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GeodesicEngineMMP</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#lagrange.geodesic.GeodesicEngineHeat" title="lagrange.geodesic.GeodesicEngineHeat"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GeodesicEngineHeat</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#lagrange.geodesic.GeodesicEngineMMP" title="lagrange.geodesic.GeodesicEngineMMP"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GeodesicEngineMMP</span></code></a></p></td>
 <td><p></p></td>
 </tr>
 </tbody>
@@ -327,6 +330,67 @@
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>tuple[int, int]</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="lagrange.geodesic.GeodesicEngineFlip">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">lagrange.geodesic.</span></span><span class="sig-name descname"><span class="pre">GeodesicEngineFlip</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mesh</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_iterations</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_relative_length_decrease</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lagrange.geodesic.GeodesicEngineFlip" title="Link to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>mesh</strong> (<a class="reference internal" href="../core/index.html#lagrange.core.SurfaceMesh" title="lagrange.core.SurfaceMesh"><em>lagrange.core.SurfaceMesh</em></a>)</p></li>
+<li><p><strong>max_iterations</strong> (<em>int</em>)</p></li>
+<li><p><strong>max_relative_length_decrease</strong> (<em>float</em>)</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="lagrange.geodesic.GeodesicEngineFlip.point_to_point_geodesic">
+<span class="sig-name descname"><span class="pre">point_to_point_geodesic</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">source_facet_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_facet_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">source_facet_bc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_facet_bc</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lagrange.geodesic.GeodesicEngineFlip.point_to_point_geodesic" title="Link to this definition">¶</a></dt>
+<dd><p>Compute geodesic distance between two points on the mesh.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>source_facet_id</strong> (<em>int</em>) – Facet containing the source point.</p></li>
+<li><p><strong>target_facet_id</strong> (<em>int</em>) – Facet containing the target point.</p></li>
+<li><p><strong>source_facet_bc</strong> (<em>collections.abc.Sequence</em><em>[</em><em>float</em><em>]</em>) – Barycentric coordinates of the source point within the source facet. Given a triangle (p1, p2, p3), the barycentric coordinates (u, v) are such that the surface point is represented by p = (1 - u - v) * p1 + u * p2 + v * p3.</p></li>
+<li><p><strong>target_facet_bc</strong> (<em>collections.abc.Sequence</em><em>[</em><em>float</em><em>]</em>) – Barycentric coordinates of the target point within the target facet. Given a triangle (p1, p2, p3), the barycentric coordinates (u, v) are such that the surface point is represented by p = (1 - u - v) * p1 + u * p2 + v * p3.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The geodesic distance between the two points.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lagrange.geodesic.GeodesicEngineFlip.point_to_point_geodesic_path">
+<span class="sig-name descname"><span class="pre">point_to_point_geodesic_path</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">source_facet_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_facet_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">source_facet_bc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_facet_bc</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lagrange.geodesic.GeodesicEngineFlip.point_to_point_geodesic_path" title="Link to this definition">¶</a></dt>
+<dd><p>Compute the geodesic path between two points on the mesh.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>source_facet_id</strong> (<em>int</em>) – Facet containing the source point.</p></li>
+<li><p><strong>target_facet_id</strong> (<em>int</em>) – Facet containing the target point.</p></li>
+<li><p><strong>source_facet_bc</strong> (<em>collections.abc.Sequence</em><em>[</em><em>float</em><em>]</em>) – Barycentric coordinates of the source point within the source facet. Given a triangle (p1, p2, p3), the barycentric coordinates (u, v) are such that the surface point is represented by p = (1 - u - v) * p1 + u * p2 + v * p3.</p></li>
+<li><p><strong>target_facet_bc</strong> (<em>collections.abc.Sequence</em><em>[</em><em>float</em><em>]</em>) – Barycentric coordinates of the target point within the target facet. Given a triangle (p1, p2, p3), the barycentric coordinates (u, v) are such that the surface point is represented by p = (1 - u - v) * p1 + u * p2 + v * p3.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A tuple of (points, facet_ids) where points is a list of [x, y, z] coordinates along the geodesic path (first is source, last is target), and facet_ids is a list of facet indices for each path segment.</p>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>RuntimeError</strong> – If the engine does not support path extraction.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>tuple[list[list[float]], list[int]]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -529,6 +593,11 @@
 <li><a class="reference internal" href="#lagrange.geodesic.GeodesicEngineDGPC"><code class="docutils literal notranslate"><span class="pre">GeodesicEngineDGPC</span></code></a><ul>
 <li><a class="reference internal" href="#lagrange.geodesic.GeodesicEngineDGPC.point_to_point_geodesic"><code class="docutils literal notranslate"><span class="pre">GeodesicEngineDGPC.point_to_point_geodesic()</span></code></a></li>
 <li><a class="reference internal" href="#lagrange.geodesic.GeodesicEngineDGPC.single_source_geodesic"><code class="docutils literal notranslate"><span class="pre">GeodesicEngineDGPC.single_source_geodesic()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#lagrange.geodesic.GeodesicEngineFlip"><code class="docutils literal notranslate"><span class="pre">GeodesicEngineFlip</span></code></a><ul>
+<li><a class="reference internal" href="#lagrange.geodesic.GeodesicEngineFlip.point_to_point_geodesic"><code class="docutils literal notranslate"><span class="pre">GeodesicEngineFlip.point_to_point_geodesic()</span></code></a></li>
+<li><a class="reference internal" href="#lagrange.geodesic.GeodesicEngineFlip.point_to_point_geodesic_path"><code class="docutils literal notranslate"><span class="pre">GeodesicEngineFlip.point_to_point_geodesic_path()</span></code></a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#lagrange.geodesic.GeodesicEngineHeat"><code class="docutils literal notranslate"><span class="pre">GeodesicEngineHeat</span></code></a><ul>

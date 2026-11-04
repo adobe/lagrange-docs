@@ -7,6 +7,7 @@ var searchData=
   ['lagrange_3a_3aio_4',['io',['../namespacelagrange_1_1io.html',1,'lagrange']]],
   ['lagrange_3a_3apartitioning_5',['partitioning',['../namespacelagrange_1_1partitioning.html',1,'lagrange']]],
   ['lagrange_3a_3araycasting_6',['raycasting',['../namespacelagrange_1_1raycasting.html',1,'lagrange']]],
-  ['lagrange_3a_3asubdivision_7',['subdivision',['../namespacelagrange_1_1subdivision.html',1,'lagrange']]],
-  ['lagrange_3a_3aui_8',['ui',['../namespacelagrange_1_1ui.html',1,'lagrange']]]
+  ['lagrange_3a_3araycasting_3a_3adetail_3a_3abetting_7',['betting',['../namespacelagrange_1_1raycasting_1_1detail_1_1betting.html',1,'lagrange::raycasting::detail']]],
+  ['lagrange_3a_3asubdivision_8',['subdivision',['../namespacelagrange_1_1subdivision.html',1,'lagrange']]],
+  ['lagrange_3a_3aui_9',['ui',['../namespacelagrange_1_1ui.html',1,'lagrange']]]
 ];

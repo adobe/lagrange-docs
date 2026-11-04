@@ -505,7 +505,7 @@ template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5
 <p>Resolve T-junctions formed by collinear, overlapping edges. </p>
 <p>A T-junction occurs when a vertex lies on an edge that it is not topologically connected to, causing the edge to overlap with the (unconnected) sub-edges incident to that vertex. This function splits every such edge at the vertices lying on it, and splits the adjacent facets accordingly, so the output mesh contains no overlapping collinear edges.</p>
 <p>Vertices are not moved: only edges and facets are subdivided so the topology conforms to the existing vertex positions. The <code>tolerance</code> only controls detection, not geometric snapping.</p>
-<p>Both triangle and polygonal meshes are supported. By default (<code>triangulate_affected == true</code>) the facets touched by a split are triangulated, so a triangle-mesh input yields a triangle-mesh output. Set <code>triangulate_affected</code> to false to instead keep those facets as polygons, with the split points inserted as additional (collinear) boundary vertices.</p>
+<p>Both triangle and polygonal meshes are supported. By default (<code>triangulate_affected == true</code>), affected triangular facets are retriangulated directly, even in a hybrid mesh; affected polygonal facets use polygon triangulation. Set <code>triangulate_affected</code> to false to instead keep all affected facets as polygons, with the split points inserted as additional (collinear) boundary vertices.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in,out]</td><td class="paramname">mesh</td><td>Input mesh (triangle or polygonal). Modified in place. </td></tr>
@@ -564,7 +564,7 @@ template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Mon Oct 5 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+    <li class="footer">Generated on Wed Nov 4 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>
 </body>

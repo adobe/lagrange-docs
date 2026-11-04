@@ -685,8 +685,8 @@
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>mesh</strong> (<a class="reference internal" href="../core/index.html#lagrange.core.SurfaceMesh" title="lagrange.core.SurfaceMesh"><em>lagrange.core.SurfaceMesh</em></a>) – The input mesh.</p></li>
-<li><p><strong>format</strong> (<em>str</em>) – Format to use. Supported formats are “obj”, “ply”, “msh”, “gltf” and “glb”.</p></li>
-<li><p><strong>binary</strong> (<em>bool</em>) – Whether to save the mesh in binary format if supported. Defaults to True. Only <cite>msh</cite>, <cite>ply</cite> and <cite>glb</cite> support binary format.</p></li>
+<li><p><strong>format</strong> (<em>str</em>) – Format to use. Supported formats are “obj”, “ply”, “msh”, “gltf”, “glb” and “pcd”.</p></li>
+<li><p><strong>binary</strong> (<em>bool</em>) – Whether to save the mesh in binary format if supported. Defaults to True. Only <cite>msh</cite>, <cite>ply</cite>, <cite>glb</cite> and <cite>pcd</cite> support binary format.</p></li>
 <li><p><strong>exact_match</strong> (<em>bool</em>) – Whether to save attributes in their exact form. Some mesh formats may not support all the attribute types. If set to False, attributes will be converted to the closest supported attribute type. Defaults to True.</p></li>
 <li><p><strong>selected_attributes</strong> (<em>collections.abc.Sequence</em><em>[</em><em>int</em><em>] </em><em>| </em><em>None</em>) – A list of attribute ids to save. If not specified, all attributes will be saved. Defaults to None.</p></li>
 </ul>
@@ -704,13 +704,13 @@
 <dt class="sig sig-object py" id="lagrange.io.save_mesh">
 <span class="sig-prename descclassname"><span class="pre">lagrange.io.</span></span><span class="sig-name descname"><span class="pre">save_mesh</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mesh</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">binary</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exact_match</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">selected_attributes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lagrange.io.save_mesh" title="Link to this definition">¶</a></dt>
 <dd><p>Save mesh to file.</p>
-<p>Filename extension determines the file format. Supported formats are: <cite>obj</cite>, <cite>ply</cite>, <cite>msh</cite>, <cite>glb</cite>, <cite>gltf</cite> and <cite>lgm</cite>.</p>
+<p>Filename extension determines the file format. Supported formats are: <cite>obj</cite>, <cite>ply</cite>, <cite>msh</cite>, <cite>glb</cite>, <cite>gltf</cite>, <cite>pcd</cite> and <cite>lgm</cite>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>filename</strong> (<em>str</em><em> | </em><em>os.PathLike</em>) – The output file name.</p></li>
 <li><p><strong>mesh</strong> (<a class="reference internal" href="../core/index.html#lagrange.core.SurfaceMesh" title="lagrange.core.SurfaceMesh"><em>lagrange.core.SurfaceMesh</em></a>) – The input mesh.</p></li>
-<li><p><strong>binary</strong> (<em>bool</em>) – Whether to save the mesh in binary format if supported. Defaults to True. Only <cite>msh</cite>, <cite>ply</cite> and <cite>glb</cite> support binary format.</p></li>
+<li><p><strong>binary</strong> (<em>bool</em>) – Whether to save the mesh in binary format if supported. Defaults to True. Only <cite>msh</cite>, <cite>ply</cite>, <cite>glb</cite> and <cite>pcd</cite> support binary format.</p></li>
 <li><p><strong>exact_match</strong> (<em>bool</em>) – Whether to save attributes in their exact form. Some mesh formats may not support all the attribute types. If set to False, attributes will be converted to the closest supported attribute type. Defaults to True.</p></li>
 <li><p><strong>selected_attributes</strong> (<em>collections.abc.Sequence</em><em>[</em><em>int</em><em>] </em><em>| </em><em>None</em>) – A list of attribute ids to save. If not specified, all attributes will be saved. Defaults to None.</p></li>
 </ul>
@@ -788,7 +788,7 @@
 <span class="sig-prename descclassname"><span class="pre">lagrange.io.</span></span><span class="sig-name descname"><span class="pre">string_to_mesh</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">triangulate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lagrange.io.string_to_mesh" title="Link to this definition">¶</a></dt>
 <dd><p>Convert a binary string to a mesh.</p>
 <p>The binary string should use one of the supported formats. Supported formats include <cite>obj</cite>, <cite>ply</cite>,
-<cite>gltf</cite>, <cite>glb</cite>, <cite>fbx</cite> and <cite>msh</cite>. Format is automatically detected.</p>
+<cite>gltf</cite>, <cite>glb</cite>, <cite>fbx</cite>, <cite>pcd</cite> and <cite>msh</cite>. Format is automatically detected.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">

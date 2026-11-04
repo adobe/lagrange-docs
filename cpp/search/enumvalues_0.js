@@ -7,5 +7,5 @@ var searchData=
   ['area_4',['Area',['../structlagrange_1_1_mesh_centroid_options.html#a8ef3cb3f56dc8aba3f2dc87664f7bfffa0e21a695eb09681881cc31bb221fb174',1,'lagrange::MeshCentroidOptions']]],
   ['argb_5',['argb',['../classlagrange_1_1image_1_1_raw_input_image.html#ac7c3db208d7c02c87845bed88ceb3ed0a160d69bb77496bdc5035cf5b53fd273f',1,'lagrange::image::RawInputImage']]],
   ['assert_6',['Assert',['../namespacelagrange_1_1internal.html#aba06e8423da8b5273ee958411b873fc1ad530f9d1b94f864f2238775b0e19e48c',1,'lagrange::internal']]],
-  ['average_7',['Average',['../namespacelagrange.html#af15e960c877b7516935402a9080b7e1aab1897515d548a960afe49ecf66a29021',1,'lagrange']]]
+  ['average_7',['Average',['../namespacelagrange.html#af15e960c877b7516935402a9080b7e1aab1897515d548a960afe49ecf66a29021',1,'lagrange::Average'],['../group__module-raycasting.html#gga2ff38b8eb8a4946126f4d9732fbdebb2ab1897515d548a960afe49ecf66a29021',1,'lagrange::raycasting::Average']]]
 ];

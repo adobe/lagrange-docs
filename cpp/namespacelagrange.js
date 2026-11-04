@@ -326,6 +326,7 @@ var namespacelagrange =
     [ "map_attribute_in_place", "group__group-surfacemesh-attr-utils.html#gacd6500c173df1a5bc53e2c9b32e08309", null ],
     [ "map_attribute_in_place", "group__group-surfacemesh-attr-utils.html#ga4a2e525bede1624580d71782861b0cd6", null ],
     [ "mesh_bbox", "group__group-surfacemesh-utils.html#gabf3517305e7ccc7062aab01527e78468", null ],
+    [ "mesh_bbox", "group__group-surfacemesh-utils.html#ga63ae603e569d4e4febd3427da74fc716", null ],
     [ "close_small_holes", "group__group-surfacemesh-cleanup.html#gabf6539e36eaa9881adb4df8a871122c1", null ],
     [ "detect_degenerate_facets", "group__group-surfacemesh-cleanup.html#gae47e0b414a04c27b736ffb61985ae3e1", null ],
     [ "remove_degenerate_facets", "group__group-surfacemesh-cleanup.html#gad63697b009aedad95c0bc1b925f1f98e", null ],

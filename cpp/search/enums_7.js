@@ -1,5 +1,6 @@
 var searchData=
 [
   ['image_5fstorage_5fformat_0',['image_storage_format',['../classlagrange_1_1image_1_1_raw_input_image.html#a34696b388dbdf37225520d2c1a128765',1,'lagrange::image::RawInputImage']]],
-  ['includeboundaryintersection_1',['IncludeBoundaryIntersection',['../group__group-utils-geom.html#gaaf1ac02be69b434d1c3c8b1b863e0933',1,'lagrange']]]
+  ['includeboundaryintersection_1',['IncludeBoundaryIntersection',['../group__group-utils-geom.html#gaaf1ac02be69b434d1c3c8b1b863e0933',1,'lagrange']]],
+  ['instancingpolicy_2',['InstancingPolicy',['../group__module-raycasting.html#ga2ff38b8eb8a4946126f4d9732fbdebb2',1,'lagrange::raycasting']]]
 ];

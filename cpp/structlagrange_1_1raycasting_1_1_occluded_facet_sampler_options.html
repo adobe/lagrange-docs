@@ -136,31 +136,71 @@ $(function(){initNavTree('structlagrange_1_1raycasting_1_1_occluded_facet_sample
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a36f8103482851608715f53082d31211b" id="r_a36f8103482851608715f53082d31211b"><td class="memItemLeft" align="right" valign="top"><a id="a36f8103482851608715f53082d31211b" name="a36f8103482851608715f53082d31211b"></a>
-double&#160;</td><td class="memItemRight" valign="bottom"><b>jitter_sigma</b> = 0.025</td></tr>
-<tr class="memdesc:a36f8103482851608715f53082d31211b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Standard deviation of the Gaussian jitter applied to seed directions in adaptive batches. <br /></td></tr>
-<tr class="separator:a36f8103482851608715f53082d31211b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2a3b34e0db70cc3c5fc94b11f4c42cbe" id="r_a2a3b34e0db70cc3c5fc94b11f4c42cbe"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2a3b34e0db70cc3c5fc94b11f4c42cbe">visibility_threshold</a> = 3</td></tr>
-<tr class="memdesc:a2a3b34e0db70cc3c5fc94b11f4c42cbe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of independent escapes a facet must accumulate before being marked visible.  <br /></td></tr>
-<tr class="separator:a2a3b34e0db70cc3c5fc94b11f4c42cbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb340bea3a4d57ec3a5daa6bc1d6ecba" id="r_abb340bea3a4d57ec3a5daa6bc1d6ecba"><td class="memItemLeft" align="right" valign="top">std::optional&lt; <a class="el" href="structlagrange_1_1raycasting_1_1_adaptive_options.html">AdaptiveOptions</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abb340bea3a4d57ec3a5daa6bc1d6ecba">adaptive</a> = <a class="el" href="structlagrange_1_1raycasting_1_1_adaptive_options.html">AdaptiveOptions</a>{}</td></tr>
+<tr class="memdesc:abb340bea3a4d57ec3a5daa6bc1d6ecba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adaptive multiple importance sampling (MIS) with a cosine + seed-guided mixture is enabled by default.  <br /></td></tr>
+<tr class="separator:abb340bea3a4d57ec3a5daa6bc1d6ecba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21cbe997171f6bd6cf609654eb309e45" id="r_a21cbe997171f6bd6cf609654eb309e45"><td class="memItemLeft" align="right" valign="top"><a id="a21cbe997171f6bd6cf609654eb309e45" name="a21cbe997171f6bd6cf609654eb309e45"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><b>size_influence</b> = 0.5</td></tr>
+<tr class="memdesc:a21cbe997171f6bd6cf609654eb309e45"><td class="mdescLeft">&#160;</td><td class="mdescRight">How much a facet size counts toward keeping it. <code>0</code> = size-independent, <code>1</code> = area-weighted. <br /></td></tr>
+<tr class="separator:a21cbe997171f6bd6cf609654eb309e45"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afcfbedec6ebde62c6a091ce335836ef1" id="r_afcfbedec6ebde62c6a091ce335836ef1"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afcfbedec6ebde62c6a091ce335836ef1">threshold</a> = 5e-06</td></tr>
+<tr class="memdesc:afcfbedec6ebde62c6a091ce335836ef1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Keep-threshold for <code>M = mean_visibility * (area_f / mean_face_area)^size_influence</code>.  <br /></td></tr>
+<tr class="separator:afcfbedec6ebde62c6a091ce335836ef1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7619dbfb4848e968def6ecee4c0ecb24" id="r_a7619dbfb4848e968def6ecee4c0ecb24"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7619dbfb4848e968def6ecee4c0ecb24">confidence</a> = 0.9</td></tr>
+<tr class="memdesc:a7619dbfb4848e968def6ecee4c0ecb24"><td class="mdescLeft">&#160;</td><td class="mdescRight">Per-facet confidence for anytime-valid early-keep retirement.  <br /></td></tr>
+<tr class="separator:a7619dbfb4848e968def6ecee4c0ecb24"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Options for OccludedFacetSampler. </p>
 </div><h2 class="groupheader">Member Data Documentation</h2>
-<a id="a2a3b34e0db70cc3c5fc94b11f4c42cbe" name="a2a3b34e0db70cc3c5fc94b11f4c42cbe"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2a3b34e0db70cc3c5fc94b11f4c42cbe">&#9670;&#160;</a></span>visibility_threshold</h2>
+<a id="abb340bea3a4d57ec3a5daa6bc1d6ecba" name="abb340bea3a4d57ec3a5daa6bc1d6ecba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb340bea3a4d57ec3a5daa6bc1d6ecba">&#9670;&#160;</a></span>adaptive</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">uint8_t visibility_threshold = 3</td>
+          <td class="memname">std::optional&lt;<a class="el" href="structlagrange_1_1raycasting_1_1_adaptive_options.html">AdaptiveOptions</a>&gt; adaptive = <a class="el" href="structlagrange_1_1raycasting_1_1_adaptive_options.html">AdaptiveOptions</a>{}</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Number of independent escapes a facet must accumulate before being marked visible. </p>
-<p>K=1 is the original "first escape wins" behavior; K=2-3 dampens single-ray noise (a lucky ray sneaking through a hairline gap no longer flips a facet on its own). Counts saturate at 255. </p>
+<p>Adaptive multiple importance sampling (MIS) with a cosine + seed-guided mixture is enabled by default. </p>
+<p>Set to <code>std::nullopt</code> for plain cosine-weighted hemisphere sampling. </p>
+
+</div>
+</div>
+<a id="afcfbedec6ebde62c6a091ce335836ef1" name="afcfbedec6ebde62c6a091ce335836ef1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afcfbedec6ebde62c6a091ce335836ef1">&#9670;&#160;</a></span>threshold</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double threshold = 5e-06</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Keep-threshold for <code>M = mean_visibility * (area_f / mean_face_area)^size_influence</code>. </p>
+<p>A facet is kept when <code>M &gt;= threshold</code>. </p>
+
+</div>
+</div>
+<a id="a7619dbfb4848e968def6ecee4c0ecb24" name="a7619dbfb4848e968def6ecee4c0ecb24"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7619dbfb4848e968def6ecee4c0ecb24">&#9670;&#160;</a></span>confidence</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double confidence = 0.9</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Per-facet confidence for anytime-valid early-keep retirement. </p>
+<p>Under the betting-test assumptions, the chance of incorrectly retiring a facet is at most <code>1 - confidence</code> over any number of batches. Higher values retire later. This does not control final removals or joint confidence across the scene. </p>
 
 </div>
 </div>
@@ -173,7 +213,7 @@ double&#160;</td><td class="memItemRight" valign="bottom"><b>jitter_sigma</b> = 
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacelagrange.html">lagrange</a></li><li class="navelem"><a class="el" href="namespacelagrange_1_1raycasting.html">raycasting</a></li><li class="navelem"><a class="el" href="structlagrange_1_1raycasting_1_1_occluded_facet_sampler_options.html">OccludedFacetSamplerOptions</a></li>
-    <li class="footer">Generated on Mon Oct 5 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+    <li class="footer">Generated on Wed Nov 4 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>
 </body>

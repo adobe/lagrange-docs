@@ -12,7 +12,7 @@ var searchData=
   ['texels_5fper_5funit_9',['texels_per_unit',['../structlagrange_1_1xatlas_1_1_pack_options.html#a20534f9288eb0a650eb7d6a3a6b4cc94',1,'lagrange::xatlas::PackOptions']]],
   ['texture_10',['texture',['../structlagrange_1_1texproc_1_1_const_weighted_texture_view.html#a2066685f4320f6c002ab273c370e72ca',1,'lagrange::texproc::ConstWeightedTextureView']]],
   ['texture_5fseam_5fweight_11',['texture_seam_weight',['../structlagrange_1_1xatlas_1_1_chart_options.html#a660262c445b6cc9b2a572e8a5d3d1b15',1,'lagrange::xatlas::ChartOptions']]],
-  ['threshold_12',['threshold',['../structlagrange_1_1_remove_short_edges_options.html#afcfbedec6ebde62c6a091ce335836ef1',1,'lagrange::RemoveShortEdgesOptions']]],
+  ['threshold_12',['threshold',['../structlagrange_1_1_remove_short_edges_options.html#afcfbedec6ebde62c6a091ce335836ef1',1,'lagrange::RemoveShortEdgesOptions::threshold'],['../structlagrange_1_1raycasting_1_1_occluded_facet_sampler_options.html#afcfbedec6ebde62c6a091ce335836ef1',1,'lagrange::raycasting::OccludedFacetSamplerOptions::threshold'],['../structlagrange_1_1raycasting_1_1_occluded_instance_sampler_options.html#afcfbedec6ebde62c6a091ce335836ef1',1,'lagrange::raycasting::OccludedInstanceSamplerOptions::threshold']]],
   ['title_13',['title',['../structlagrange_1_1ui_1_1_u_i_panel.html#ac30fed21fe991cc8475ce543929f8b72',1,'lagrange::ui::UIPanel']]],
   ['tolerance_14',['tolerance',['../structlagrange_1_1bvh_1_1_resolve_t_junctions_options.html#a97eab6d709b80585fe9e8a54b1e3da27',1,'lagrange::bvh::ResolveTJunctionsOptions']]],
   ['top_5fsegments_15',['top_segments',['../structlagrange_1_1primitive_1_1_rounded_cone_options.html#a4838e5ee02b6d225105c704156edbd5d',1,'lagrange::primitive::RoundedConeOptions']]],

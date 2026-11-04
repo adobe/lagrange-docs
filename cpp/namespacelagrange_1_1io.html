@@ -156,6 +156,7 @@ Enumerations</h2></td></tr>
 , <br />
 &#160;&#160;<b>Fbx</b>
 , <b>Stl</b>
+, <b>Pcd</b>
 , <b>Unknown</b>
 <br />
  }</td></tr>
@@ -203,6 +204,14 @@ Functions</h2></td></tr>
 <tr class="memitem:addd53774d944f8306ca4da9e7f9b277e"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classlagrange_1_1_mesh.html">MeshType</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#addd53774d944f8306ca4da9e7f9b277e">load_mesh_obj</a> (const fs::path &amp;filename, const <a class="el" href="structlagrange_1_1io_1_1_load_options.html">LoadOptions</a> &amp;options={})</td></tr>
 <tr class="memdesc:addd53774d944f8306ca4da9e7f9b277e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads a mesh from a file in MSH format.  <br /></td></tr>
 <tr class="separator:addd53774d944f8306ca4da9e7f9b277e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af98edc5f319ee1beff7baae4485a0197" id="r_af98edc5f319ee1beff7baae4485a0197"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="classlagrange_1_1_mesh.html">MeshType</a>&gt; </td></tr>
+<tr class="memitem:af98edc5f319ee1beff7baae4485a0197"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classlagrange_1_1_mesh.html">MeshType</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#af98edc5f319ee1beff7baae4485a0197">load_mesh_pcd</a> (std::istream &amp;input_stream, const <a class="el" href="structlagrange_1_1io_1_1_load_options.html">LoadOptions</a> &amp;options={})</td></tr>
+<tr class="memdesc:af98edc5f319ee1beff7baae4485a0197"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads a point cloud from a stream in PCD (Point Cloud Data) format.  <br /></td></tr>
+<tr class="separator:af98edc5f319ee1beff7baae4485a0197"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af485c600574d45e144db0d660f4d4eb1" id="r_af485c600574d45e144db0d660f4d4eb1"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="classlagrange_1_1_mesh.html">MeshType</a>&gt; </td></tr>
+<tr class="memitem:af485c600574d45e144db0d660f4d4eb1"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classlagrange_1_1_mesh.html">MeshType</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#af485c600574d45e144db0d660f4d4eb1">load_mesh_pcd</a> (const fs::path &amp;filename, const <a class="el" href="structlagrange_1_1io_1_1_load_options.html">LoadOptions</a> &amp;options={})</td></tr>
+<tr class="memdesc:af485c600574d45e144db0d660f4d4eb1"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.Loads a point cloud from a file in PCD (Point Cloud Data) format.  <br /></td></tr>
+<tr class="separator:af485c600574d45e144db0d660f4d4eb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1b86447ec2052740eca15c57de7a9292" id="r_a1b86447ec2052740eca15c57de7a9292"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="classlagrange_1_1_mesh.html">MeshType</a>&gt; </td></tr>
 <tr class="memitem:a1b86447ec2052740eca15c57de7a9292"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classlagrange_1_1_mesh.html">MeshType</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a1b86447ec2052740eca15c57de7a9292">load_mesh_ply</a> (std::istream &amp;input_stream, const <a class="el" href="structlagrange_1_1io_1_1_load_options.html">LoadOptions</a> &amp;options={})</td></tr>
 <tr class="memdesc:a1b86447ec2052740eca15c57de7a9292"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads a mesh from a stream in PLY format.  <br /></td></tr>
@@ -307,6 +316,14 @@ Functions</h2></td></tr>
 <tr class="memitem:a654cbb2f2cf7f00a83f21825cd2fb5bf"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a654cbb2f2cf7f00a83f21825cd2fb5bf">save_mesh_obj</a> (const fs::path &amp;filename, const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index &gt; &amp;mesh, const <a class="el" href="structlagrange_1_1io_1_1_save_options.html">SaveOptions</a> &amp;options={})</td></tr>
 <tr class="memdesc:a654cbb2f2cf7f00a83f21825cd2fb5bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.Saves a mesh to a file in OBJ format.  <br /></td></tr>
 <tr class="separator:a654cbb2f2cf7f00a83f21825cd2fb5bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02422e13f073b50f393ceb8c570825bd" id="r_a02422e13f073b50f393ceb8c570825bd"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, typename Index&gt; </td></tr>
+<tr class="memitem:a02422e13f073b50f393ceb8c570825bd"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a02422e13f073b50f393ceb8c570825bd">save_mesh_pcd</a> (std::ostream &amp;output_stream, const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index &gt; &amp;mesh, const <a class="el" href="structlagrange_1_1io_1_1_save_options.html">SaveOptions</a> &amp;options={})</td></tr>
+<tr class="memdesc:a02422e13f073b50f393ceb8c570825bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Saves a mesh (point cloud) to a stream in PCD (Point Cloud Data) format.  <br /></td></tr>
+<tr class="separator:a02422e13f073b50f393ceb8c570825bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab01c719486d405647898737924402e4c" id="r_ab01c719486d405647898737924402e4c"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, typename Index&gt; </td></tr>
+<tr class="memitem:ab01c719486d405647898737924402e4c"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ab01c719486d405647898737924402e4c">save_mesh_pcd</a> (const fs::path &amp;filename, const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index &gt; &amp;mesh, const <a class="el" href="structlagrange_1_1io_1_1_save_options.html">SaveOptions</a> &amp;options={})</td></tr>
+<tr class="memdesc:ab01c719486d405647898737924402e4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.Saves a mesh (point cloud) to a file in PCD (Point Cloud Data) format.  <br /></td></tr>
+<tr class="separator:ab01c719486d405647898737924402e4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9c3ba13751c3f7592ebb762fde9bbfd2" id="r_a9c3ba13751c3f7592ebb762fde9bbfd2"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, typename Index&gt; </td></tr>
 <tr class="memitem:a9c3ba13751c3f7592ebb762fde9bbfd2"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a9c3ba13751c3f7592ebb762fde9bbfd2">save_mesh_ply</a> (std::ostream &amp;output_stream, const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index &gt; &amp;mesh, const <a class="el" href="structlagrange_1_1io_1_1_save_options.html">SaveOptions</a> &amp;options={})</td></tr>
 <tr class="memdesc:a9c3ba13751c3f7592ebb762fde9bbfd2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Saves a mesh to a stream in PLY format.  <br /></td></tr>
@@ -461,6 +478,15 @@ template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5
 template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, typename Index&gt; </td></tr>
 <tr class="memitem:a4121f2839555fbee742ef87d2aa92554"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>stitch_mesh</b> (<a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index &gt; &amp;mesh)</td></tr>
 <tr class="separator:a4121f2839555fbee742ef87d2aa92554"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e22d97cd14b6be2a1793d2ed61cca8a" id="r_a2e22d97cd14b6be2a1793d2ed61cca8a"><td class="memTemplParams" colspan="2">template&lt;typename Func&gt; </td></tr>
+<tr class="memitem:a2e22d97cd14b6be2a1793d2ed61cca8a"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a2e22d97cd14b6be2a1793d2ed61cca8a">dispatch_pcd_type</a> (char type, int size, Func &amp;&amp;func)</td></tr>
+<tr class="memdesc:a2e22d97cd14b6be2a1793d2ed61cca8a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dispatches a (type, size) pair from a PCD header to the matching C++ value type and invokes <code>func</code> with a value-initialized instance of that type.  <br /></td></tr>
+<tr class="separator:a2e22d97cd14b6be2a1793d2ed61cca8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae101a4cfd01e49e7b154c015ec7b1a0a" id="r_ae101a4cfd01e49e7b154c015ec7b1a0a"><td class="memTemplParams" colspan="2"><a id="ae101a4cfd01e49e7b154c015ec7b1a0a" name="ae101a4cfd01e49e7b154c015ec7b1a0a"></a>
+template&lt;typename ValueType&gt; </td></tr>
+<tr class="memitem:ae101a4cfd01e49e7b154c015ec7b1a0a"><td class="memTemplItemLeft" align="right" valign="top">constexpr char&#160;</td><td class="memTemplItemRight" valign="bottom"><b>pcd_type_char</b> ()</td></tr>
+<tr class="memdesc:ae101a4cfd01e49e7b154c015ec7b1a0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the PCD <code>TYPE</code> character corresponding to a C++ value type: signed integer ('I'), unsigned integer ('U'), or floating point ('F'). <br /></td></tr>
+<tr class="separator:ae101a4cfd01e49e7b154c015ec7b1a0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Mesh input/output. </p>
@@ -853,6 +879,86 @@ template&lt;typename <a class="el" href="classlagrange_1_1_mesh.html">MeshType</
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Loaded mesh. </dd></dl>
+
+</div>
+</div>
+<a id="af98edc5f319ee1beff7baae4485a0197" name="af98edc5f319ee1beff7baae4485a0197"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af98edc5f319ee1beff7baae4485a0197">&#9670;&#160;</a></span>load_mesh_pcd() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename <a class="el" href="classlagrange_1_1_mesh.html">MeshType</a>&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classlagrange_1_1_mesh.html">MeshType</a> load_mesh_pcd </td>
+          <td>(</td>
+          <td class="paramtype">std::istream &amp;</td>          <td class="paramname"><span class="paramname"><em>input_stream</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structlagrange_1_1io_1_1_load_options.html">LoadOptions</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>options</em></span><span class="paramdefsep"> = </span><span class="paramdefval">{}</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Loads a point cloud from a stream in PCD (Point Cloud Data) format. </p>
+<p>The resulting mesh contains only vertices (no facets). The <code>x</code>, <code>y</code>, <code>z</code> fields populate the vertex positions. <code>normal_x</code>/<code>normal_y</code>/<code>normal_z</code> (or <code>nx</code>/<code>ny</code>/<code>nz</code>) are loaded as a <code>AttributeName::normal</code> vertex attribute. Packed <code>rgb</code>/<code>rgba</code> fields are unpacked into a <code>AttributeName::color</code> vertex attribute (uint8, 3 or 4 channels). Any remaining field is loaded as a vertex attribute named after the field. The <code>ascii</code>, <code>binary</code>, and <code>binary_compressed</code> (LZF) PCD data sections are all supported.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">input_stream</td><td>Input stream. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">options</td><td>Load options.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">MeshType</td><td>Mesh type to load.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Loaded point cloud. </dd></dl>
+
+</div>
+</div>
+<a id="af485c600574d45e144db0d660f4d4eb1" name="af485c600574d45e144db0d660f4d4eb1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af485c600574d45e144db0d660f4d4eb1">&#9670;&#160;</a></span>load_mesh_pcd() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename <a class="el" href="classlagrange_1_1_mesh.html">MeshType</a>&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classlagrange_1_1_mesh.html">MeshType</a> load_mesh_pcd </td>
+          <td>(</td>
+          <td class="paramtype">const fs::path &amp;</td>          <td class="paramname"><span class="paramname"><em>filename</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structlagrange_1_1io_1_1_load_options.html">LoadOptions</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>options</em></span><span class="paramdefsep"> = </span><span class="paramdefval">{}</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.Loads a point cloud from a file in PCD (Point Cloud Data) format. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">filename</td><td>Input filename. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">options</td><td>Load options.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">MeshType</td><td>Mesh type to load.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="#af98edc5f319ee1beff7baae4485a0197">load_mesh_pcd</a></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Loaded point cloud. </dd></dl>
 
 </div>
 </div>
@@ -1826,6 +1932,97 @@ template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5
 
 </div>
 </div>
+<a id="a02422e13f073b50f393ceb8c570825bd" name="a02422e13f073b50f393ceb8c570825bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a02422e13f073b50f393ceb8c570825bd">&#9670;&#160;</a></span>save_mesh_pcd() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, typename Index&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void save_mesh_pcd </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;</td>          <td class="paramname"><span class="paramname"><em>output_stream</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>mesh</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structlagrange_1_1io_1_1_save_options.html">SaveOptions</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>options</em></span><span class="paramdefsep"> = </span><span class="paramdefval">{}</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Saves a mesh (point cloud) to a stream in PCD (Point Cloud Data) format. </p>
+<p>Only vertices are written (facets are ignored). Vertex positions are written as <code>x</code>/<code>y</code>/<code>z</code> fields. A vertex attribute with <code>AttributeUsage::Normal</code> is written as <code>normal_x</code>/<code>normal_y</code>/<code>normal_z</code>. A vertex attribute with <code>AttributeUsage::Color</code> is written as a packed <code>rgb</code> (3 channels) or <code>rgba</code> (4 channels) field. Any other vertex attribute is written as a field named after the attribute. When <code>encoding</code> is <code>Ascii</code> the data is written as <code>ascii</code>; otherwise it is written as LZF-compressed <code>binary_compressed</code> (binary output is always compressed).</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">output_stream</td><td>Output stream. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mesh</td><td>Mesh to write. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">options</td><td>Save options.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Scalar</td><td>Mesh scalar type. </td></tr>
+    <tr><td class="paramname">Index</td><td>Mesh index type. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ab01c719486d405647898737924402e4c" name="ab01c719486d405647898737924402e4c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab01c719486d405647898737924402e4c">&#9670;&#160;</a></span>save_mesh_pcd() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, typename Index&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void save_mesh_pcd </td>
+          <td>(</td>
+          <td class="paramtype">const fs::path &amp;</td>          <td class="paramname"><span class="paramname"><em>filename</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classlagrange_1_1_surface_mesh.html">SurfaceMesh</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, Index &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>mesh</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structlagrange_1_1io_1_1_save_options.html">SaveOptions</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>options</em></span><span class="paramdefsep"> = </span><span class="paramdefval">{}</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.Saves a mesh (point cloud) to a file in PCD (Point Cloud Data) format. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">filename</td><td>Output filename. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mesh</td><td>Mesh to write. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">options</td><td>Save options.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Scalar</td><td>Mesh scalar type. </td></tr>
+    <tr><td class="paramname">Index</td><td>Mesh index type. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a9c3ba13751c3f7592ebb762fde9bbfd2" name="a9c3ba13751c3f7592ebb762fde9bbfd2"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9c3ba13751c3f7592ebb762fde9bbfd2">&#9670;&#160;</a></span>save_mesh_ply() <span class="overload">[1/2]</span></h2>
 
@@ -2409,13 +2606,52 @@ template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5
 
 </div>
 </div>
+<a id="a2e22d97cd14b6be2a1793d2ed61cca8a" name="a2e22d97cd14b6be2a1793d2ed61cca8a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e22d97cd14b6be2a1793d2ed61cca8a">&#9670;&#160;</a></span>dispatch_pcd_type()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Func&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void dispatch_pcd_type </td>
+          <td>(</td>
+          <td class="paramtype">char</td>          <td class="paramname"><span class="paramname"><em>type</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>size</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Func &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>func</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Dispatches a (type, size) pair from a PCD header to the matching C++ value type and invokes <code>func</code> with a value-initialized instance of that type. </p>
+<p>The concrete type is one of the types supported by Lagrange attributes (see LA_ATTRIBUTE_X).</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">type</td><td>PCD type character ('I', 'U', or 'F'). </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">size</td><td>Size in bytes of the field element (1, 2, 4, or 8). </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">func</td><td>Callable invoked as <code>func(ValueType{})</code>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacelagrange.html">lagrange</a></li><li class="navelem"><a class="el" href="namespacelagrange_1_1io.html">io</a></li>
-    <li class="footer">Generated on Mon Oct 5 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+    <li class="footer">Generated on Wed Nov 4 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>
 </body>

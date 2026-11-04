@@ -139,40 +139,38 @@ Inheritance diagram for FacetInstanceData&lt; Scalar, Index &gt;:</div>
  <div class="center">
   <img src="structlagrange_1_1raycasting_1_1detail_1_1_facet_instance_data.png" usemap="#FacetInstanceData_3C_20Scalar_2C_20Index_20_3E_map" alt=""/>
   <map id="FacetInstanceData_3C_20Scalar_2C_20Index_20_3E_map" name="FacetInstanceData_3C_20Scalar_2C_20Index_20_3E_map">
-<area href="structlagrange_1_1raycasting_1_1detail_1_1_instance_data.html" title="Per-instance precomputation shared by both samplers." alt="InstanceData&lt; Scalar, Index &gt;" shape="rect" coords="0,0,217,24"/>
+<area href="structlagrange_1_1raycasting_1_1detail_1_1_instance_data.html" title="Per-instance precomputation shared by both samplers." alt="InstanceData&lt; Scalar &gt;" shape="rect" coords="0,0,217,24"/>
   </map>
 </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a389390ec67e28e87d5079d87832332a1" id="r_a389390ec67e28e87d5079d87832332a1"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a389390ec67e28e87d5079d87832332a1">facet_weights</a></td></tr>
-<tr class="memdesc:a389390ec67e28e87d5079d87832332a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Per-facet ray-distribution weight = cbrt(area).  <br /></td></tr>
+<tr class="memdesc:a389390ec67e28e87d5079d87832332a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Per-facet ray-allocation weight ∝ 1/tau_f = (area / mean_face_area)^size_influence.  <br /></td></tr>
 <tr class="separator:a389390ec67e28e87d5079d87832332a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a42100cbb134156aa36a96f5aa88481f0" id="r_a42100cbb134156aa36a96f5aa88481f0"><td class="memItemLeft" align="right" valign="top"><a id="a42100cbb134156aa36a96f5aa88481f0" name="a42100cbb134156aa36a96f5aa88481f0"></a>
 std::vector&lt; Index &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>active_local_facets</b></td></tr>
 <tr class="separator:a42100cbb134156aa36a96f5aa88481f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af0be4f48526342515c76c48bc6d035dd" id="r_af0be4f48526342515c76c48bc6d035dd"><td class="memItemLeft" align="right" valign="top">std::optional&lt; <a class="el" href="classlagrange_1_1_adjacency_list.html">AdjacencyList</a>&lt; Index &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af0be4f48526342515c76c48bc6d035dd">facet_neighbors</a></td></tr>
-<tr class="memdesc:af0be4f48526342515c76c48bc6d035dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">1-ring edge-neighbors (mesh dual graph).  <br /></td></tr>
+<tr class="memitem:af0be4f48526342515c76c48bc6d035dd" id="r_af0be4f48526342515c76c48bc6d035dd"><td class="memItemLeft" align="right" valign="top"><a id="af0be4f48526342515c76c48bc6d035dd" name="af0be4f48526342515c76c48bc6d035dd"></a>
+std::optional&lt; <a class="el" href="classlagrange_1_1_adjacency_list.html">AdjacencyList</a>&lt; Index &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>facet_neighbors</b></td></tr>
 <tr class="separator:af0be4f48526342515c76c48bc6d035dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a72b1c20f39ec9ecccbab0e6ce1f6dd83" id="r_a72b1c20f39ec9ecccbab0e6ce1f6dd83"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::optional&lt; Eigen::Vector3&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a> &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a72b1c20f39ec9ecccbab0e6ce1f6dd83">facet_escape_directions</a></td></tr>
-<tr class="memdesc:a72b1c20f39ec9ecccbab0e6ce1f6dd83"><td class="mdescLeft">&#160;</td><td class="mdescRight">World-space unit-length escape direction recorded the first time each facet becomes visible; std::nullopt means "not yet visible".  <br /></td></tr>
-<tr class="separator:a72b1c20f39ec9ecccbab0e6ce1f6dd83"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a69f2b04d11034fd7dfb4c7f1855e72f3" id="r_a69f2b04d11034fd7dfb4c7f1855e72f3"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::optional&lt; Eigen::Vector3&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a> &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a69f2b04d11034fd7dfb4c7f1855e72f3">facet_escape_snapshot</a></td></tr>
-<tr class="memdesc:a69f2b04d11034fd7dfb4c7f1855e72f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pre-batch snapshot of <code>facet_escape_directions</code>.  <br /></td></tr>
-<tr class="separator:a69f2b04d11034fd7dfb4c7f1855e72f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_attribs_structlagrange_1_1raycasting_1_1detail_1_1_instance_data"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_attribs_structlagrange_1_1raycasting_1_1detail_1_1_instance_data')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="structlagrange_1_1raycasting_1_1detail_1_1_instance_data.html">InstanceData&lt; Scalar, Index &gt;</a></td></tr>
-<tr class="memitem:a4b8c10b968567324a6129398346445f7 inherit pub_attribs_structlagrange_1_1raycasting_1_1detail_1_1_instance_data" id="r_a4b8c10b968567324a6129398346445f7"><td class="memItemLeft" align="right" valign="top">
-Index&#160;</td><td class="memItemRight" valign="bottom"><b>mesh_index</b></td></tr>
-<tr class="separator:a4b8c10b968567324a6129398346445f7 inherit pub_attribs_structlagrange_1_1raycasting_1_1detail_1_1_instance_data"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a42dd1d5da22d8b49ac2e0d64df159552 inherit pub_attribs_structlagrange_1_1raycasting_1_1detail_1_1_instance_data" id="r_a42dd1d5da22d8b49ac2e0d64df159552"><td class="memItemLeft" align="right" valign="top">
-Eigen::Transform&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, 3, Eigen::Affine &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>transform</b></td></tr>
-<tr class="separator:a42dd1d5da22d8b49ac2e0d64df159552 inherit pub_attribs_structlagrange_1_1raycasting_1_1detail_1_1_instance_data"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32fbd70f0603440d9d3e3559ea566734" id="r_a32fbd70f0603440d9d3e3559ea566734"><td class="memItemLeft" align="right" valign="top"><a id="a32fbd70f0603440d9d3e3559ea566734" name="a32fbd70f0603440d9d3e3559ea566734"></a>
+std::vector&lt; <a class="el" href="structlagrange_1_1raycasting_1_1detail_1_1_seed_reservoir.html">SeedReservoir</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>facet_seeds</b></td></tr>
+<tr class="memdesc:a32fbd70f0603440d9d3e3559ea566734"><td class="mdescLeft">&#160;</td><td class="mdescRight">Per-facet escape-direction seeds, only updated in flush() from snapshot (to avoid race condition). <br /></td></tr>
+<tr class="separator:a32fbd70f0603440d9d3e3559ea566734"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0765a00d600a5b1026c3bf8644a03fcd" id="r_a0765a00d600a5b1026c3bf8644a03fcd"><td class="memItemLeft" align="right" valign="top"><a id="a0765a00d600a5b1026c3bf8644a03fcd" name="a0765a00d600a5b1026c3bf8644a03fcd"></a>
+std::vector&lt; <a class="el" href="structlagrange_1_1raycasting_1_1detail_1_1_seed_reservoir.html">SeedReservoir</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>facet_seeds_snapshot</b></td></tr>
+<tr class="separator:a0765a00d600a5b1026c3bf8644a03fcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_attribs_structlagrange_1_1raycasting_1_1detail_1_1_instance_data"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_attribs_structlagrange_1_1raycasting_1_1detail_1_1_instance_data')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="structlagrange_1_1raycasting_1_1detail_1_1_instance_data.html">InstanceData&lt; Scalar &gt;</a></td></tr>
 <tr class="memitem:a45e19138b7ea52a4486523352caea67e inherit pub_attribs_structlagrange_1_1raycasting_1_1detail_1_1_instance_data" id="r_a45e19138b7ea52a4486523352caea67e"><td class="memItemLeft" align="right" valign="top">
 std::vector&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>facet_areas</b></td></tr>
 <tr class="separator:a45e19138b7ea52a4486523352caea67e inherit pub_attribs_structlagrange_1_1raycasting_1_1detail_1_1_instance_data"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a932292386e0c0e915cca097576565b66 inherit pub_attribs_structlagrange_1_1raycasting_1_1detail_1_1_instance_data" id="r_a932292386e0c0e915cca097576565b66"><td class="memItemLeft" align="right" valign="top">
 std::vector&lt; <a class="el" href="structlagrange_1_1raycasting_1_1detail_1_1_ray_sampler.html">RaySampler</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>ray_samplers</b></td></tr>
 <tr class="separator:a932292386e0c0e915cca097576565b66 inherit pub_attribs_structlagrange_1_1raycasting_1_1detail_1_1_instance_data"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5608bc33787065544db392fd991d26d6 inherit pub_attribs_structlagrange_1_1raycasting_1_1detail_1_1_instance_data" id="r_a5608bc33787065544db392fd991d26d6"><td class="memItemLeft" align="right" valign="top">
+std::vector&lt; <a class="el" href="structlagrange_1_1raycasting_1_1detail_1_1_facet_triangle.html">FacetTriangle</a>&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>facet_triangles</b></td></tr>
+<tr class="separator:a5608bc33787065544db392fd991d26d6 inherit pub_attribs_structlagrange_1_1raycasting_1_1detail_1_1_instance_data"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, typename Index&gt;<br />
@@ -192,65 +190,8 @@ template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5
       </table>
 </div><div class="memdoc">
 
-<p>Per-facet ray-distribution weight = cbrt(area). </p>
-<p>cbrt softens per-facet because each facet is its own Bernoulli trial. </p>
-
-</div>
-</div>
-<a id="af0be4f48526342515c76c48bc6d035dd" name="af0be4f48526342515c76c48bc6d035dd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af0be4f48526342515c76c48bc6d035dd">&#9670;&#160;</a></span>facet_neighbors</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, typename Index&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">std::optional&lt;<a class="el" href="classlagrange_1_1_adjacency_list.html">AdjacencyList</a>&lt;Index&gt; &gt; facet_neighbors</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>1-ring edge-neighbors (mesh dual graph). </p>
-<p>std::optional because AdjacencyList isn't default-constructible. </p>
-
-</div>
-</div>
-<a id="a72b1c20f39ec9ecccbab0e6ce1f6dd83" name="a72b1c20f39ec9ecccbab0e6ce1f6dd83"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a72b1c20f39ec9ecccbab0e6ce1f6dd83">&#9670;&#160;</a></span>facet_escape_directions</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, typename Index&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">std::vector&lt;std::optional&lt;Eigen::Vector3&lt;<a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>&gt; &gt; &gt; facet_escape_directions</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>World-space unit-length escape direction recorded the first time each facet becomes visible; std::nullopt means "not yet visible". </p>
-<p>Adaptive reads from <code>facet_escape_snapshot</code> instead so live writes here don't race. </p>
-
-</div>
-</div>
-<a id="a69f2b04d11034fd7dfb4c7f1855e72f3" name="a69f2b04d11034fd7dfb4c7f1855e72f3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a69f2b04d11034fd7dfb4c7f1855e72f3">&#9670;&#160;</a></span>facet_escape_snapshot</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>, typename Index&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">std::vector&lt;std::optional&lt;Eigen::Vector3&lt;<a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a>&gt; &gt; &gt; facet_escape_snapshot</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Pre-batch snapshot of <code>facet_escape_directions</code>. </p>
-<p>Read by Adaptive; refreshed at the start of each <code>process_instance</code>. Kept as a member to reuse the allocation. </p>
+<p>Per-facet ray-allocation weight ∝ 1/tau_f = (area / mean_face_area)^size_influence. </p>
+<p>Rays track statistical difficulty: low-tau (large) facets need the most to resolve their test. </p>
 
 </div>
 </div>
@@ -263,7 +204,7 @@ template&lt;typename <a class="el" href="group__group-surfacemesh-attr.html#gga5
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacelagrange.html">lagrange</a></li><li class="navelem"><a class="el" href="namespacelagrange_1_1raycasting.html">raycasting</a></li><li class="navelem"><b>detail</b></li><li class="navelem"><a class="el" href="structlagrange_1_1raycasting_1_1detail_1_1_facet_instance_data.html">FacetInstanceData</a></li>
-    <li class="footer">Generated on Mon Oct 5 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+    <li class="footer">Generated on Wed Nov 4 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>
 </body>

@@ -1,7 +1,7 @@
 var searchData=
 [
   ['uninstantiated_5fmeshes_5fstrategy_0',['uninstantiated_meshes_strategy',['../structlagrange_1_1scene_1_1_remeshing_options.html#ae1a1cecc9638ff87a210ad863bfed8a3',1,'lagrange::scene::RemeshingOptions']]],
-  ['until_5fconverged_1',['until_converged',['../structlagrange_1_1raycasting_1_1_occluded_facet_estimate_options.html#a95e89d3e75c1d7cea83e526ef91d0e75',1,'lagrange::raycasting::OccludedFacetEstimateOptions::until_converged'],['../structlagrange_1_1raycasting_1_1_occluded_instance_estimate_options.html#a95e89d3e75c1d7cea83e526ef91d0e75',1,'lagrange::raycasting::OccludedInstanceEstimateOptions::until_converged']]],
+  ['until_5fconverged_1',['until_converged',['../structlagrange_1_1raycasting_1_1_occluded_instance_estimate_options.html#a95e89d3e75c1d7cea83e526ef91d0e75',1,'lagrange::raycasting::OccludedInstanceEstimateOptions']]],
   ['uri_2',['uri',['../structlagrange_1_1scene_1_1_image_experimental.html#ae9c35b64a13278dde4a7350efa422f56',1,'lagrange::scene::ImageExperimental']]],
   ['usages_3',['usages',['../structlagrange_1_1_attribute_matcher.html#ab234de094dc5e6baf6210d7554e0d681',1,'lagrange::AttributeMatcher']]],
   ['use_5fdirect_5fsolver_4',['use_direct_solver',['../structlagrange_1_1texproc_1_1_compositing_options.html#a2cd2f01ea621ff4e2042ac264d8662c0',1,'lagrange::texproc::CompositingOptions']]],

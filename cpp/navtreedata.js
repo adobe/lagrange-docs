@@ -59,19 +59,19 @@ var NAVTREEINDEX =
 "../",
 "classlagrange_1_1_mesh_navigation.html#ab4b72663d159f5e5280c524fab4cebc3",
 "classlagrange_1_1_surface_mesh.html#add807d4ec4699aba67e2e2857599b50f",
-"classlagrange_1_1internal_1_1shared__ptr.html",
-"classlagrange_1_1raycasting_1_1_occluded_facet_sampler.html#a7be221a7284e1955af3e9be0c3e02535",
-"classlagrange_1_1ui_1_1_camera.html#a934411a296eecd8b436943aa86460edb",
-"functions_func_t.html",
-"group__group-surfacemesh-utils.html#gafef35c376e1761a87d7ffdc81e845adf",
-"namespacelagrange.html#a875c9bdeb526a486f2db92a44b6e2124",
-"namespacelagrange_1_1ui.html#a5975a85c2454fe82ec2650168b3368b4",
-"structlagrange_1_1_remove_duplicate_facet_options.html#a3a53d38d37410f88be10879cb048e27d",
-"structlagrange_1_1image_1_1_image_histogram.html#ab57d4076e7e499e5da8c1ae500170a02",
-"structlagrange_1_1primitive_1_1_primitive_options.html#af415958265b08fa7358207e75cf7af8a",
-"structlagrange_1_1scene_1_1_texture_info.html",
-"structlagrange_1_1ui_1_1_input_state_1_1_mouse.html",
-"structlagrange_1_1ui_1_1type__traits_3_01uint32__t_01_4.html"
+"classlagrange_1_1internal_1_1default__delete.html#ab8c65fc5a332c975d00ea3d465d04f1e",
+"classlagrange_1_1primitive_1_1legacy_1_1_sweep_path.html#aeee1875e9be4a328a866f1b835667afd",
+"classlagrange_1_1ui_1_1_camera.html#a05428503a3e3ba3b9ff24edc76049164",
+"classlagrange_1_1xatlas_1_1_atlas_engine.html#a8410fd98b49fe1e3d634106f60638230",
+"group__group-surfacemesh-utils.html#ga668cc68bd27510b1bec92cf8dbe0e362",
+"group__module-subdivision.html#gadc9a4e6974a57b177a7dd86921554c85",
+"namespacelagrange_1_1raycasting.html#a1bf0ebeb95eeae0cf367574faaecd8dda84649f83191a70b22c34ed631812be23",
+"structlagrange_1_1_error.html",
+"structlagrange_1_1experimental_1_1_enum_to_scalar_3_01_scalar_enum_1_1_u_i_n_t64_01_4.html",
+"structlagrange_1_1packing_1_1legacy_1_1_packing_options.html#a863a6ce49a581dba9da9e7def06f2e1c",
+"structlagrange_1_1raycasting_1_1_ray_hit_n.html#aabde84ef455e0603bb405ff80e0d2e93",
+"structlagrange_1_1texproc_1_1_texture_rasterizer_options.html#a0bb547d957f533b41ac64a6fd2404c29",
+"structlagrange_1_1ui_1_1_shader_loader.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';

@@ -11,7 +11,8 @@ var searchData=
   ['keep_5fweighted_5fcorner_5fnormals_8',['keep_weighted_corner_normals',['../structlagrange_1_1_vertex_normal_options.html#a06e5a379f00572d4e9e497c8b35d091f',1,'lagrange::VertexNormalOptions']]],
   ['keepexternalptr_9',['KeepExternalPtr',['../group__group-surfacemesh-attr.html#gga4ffa0a4eff5003941fab38ce5e9fd3e6a9a526f6dc0d4d6aef1f368972f20d13e',1,'lagrange::KeepExternalPtr'],['../group__group-surfacemesh-attr.html#gga7f5c3f54af0c081c331ab314f6e8813da9a526f6dc0d4d6aef1f368972f20d13e',1,'lagrange::KeepExternalPtr']]],
   ['keepfirst_10',['KeepFirst',['../namespacelagrange.html#af15e960c877b7516935402a9080b7e1aa0e86b31f0ceff2268f199fa31e7b1369',1,'lagrange']]],
-  ['keybind_11',['Keybind',['../structlagrange_1_1ui_1_1_keybinds_1_1_keybind.html',1,'lagrange::ui::Keybinds']]],
-  ['keybinds_12',['Keybinds',['../classlagrange_1_1ui_1_1_keybinds.html',1,'lagrange::ui']]],
-  ['knn_5fpoints_13',['knn_points',['../structlagrange_1_1remeshing__im_1_1_remeshing_options.html#ab7e81b20d012178d3cf191b86498dcdd',1,'lagrange::remeshing_im::RemeshingOptions']]]
+  ['kept_11',['kept',['../structlagrange_1_1raycasting_1_1internal_1_1_occluded_facet_sampler_1_1_impl.html#ae4ca436ce24cab0652abb6059fbfd56e',1,'lagrange::raycasting::internal::OccludedFacetSampler::Impl::kept()'],['../structlagrange_1_1raycasting_1_1internal_1_1_occluded_instance_sampler_1_1_impl.html#a4179bd55fb1fdeb4395c9f89526e07b4',1,'lagrange::raycasting::internal::OccludedInstanceSampler::Impl::kept()']]],
+  ['keybind_12',['Keybind',['../structlagrange_1_1ui_1_1_keybinds_1_1_keybind.html',1,'lagrange::ui::Keybinds']]],
+  ['keybinds_13',['Keybinds',['../classlagrange_1_1ui_1_1_keybinds.html',1,'lagrange::ui']]],
+  ['knn_5fpoints_14',['knn_points',['../structlagrange_1_1remeshing__im_1_1_remeshing_options.html#ab7e81b20d012178d3cf191b86498dcdd',1,'lagrange::remeshing_im::RemeshingOptions']]]
 ];

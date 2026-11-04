@@ -2,7 +2,9 @@ var hierarchy =
 [
     [ "AABB< Scalar, Dim >", "classlagrange_1_1bvh_1_1_a_a_b_b.html", null ],
     [ "AcceleratedPicking", "structlagrange_1_1ui_1_1_accelerated_picking.html", null ],
-    [ "AdaptiveCandidate", "structlagrange_1_1raycasting_1_1_occluded_facet_sampler_1_1_impl_1_1_adaptive_candidate.html", null ],
+    [ "AdaptiveOptions", "structlagrange_1_1raycasting_1_1_adaptive_options.html", null ],
+    [ "AdaptiveSamplingPolicy", "structlagrange_1_1raycasting_1_1internal_1_1_occluded_facet_sampler_1_1_impl_1_1_adaptive_sampling_policy.html", null ],
+    [ "AdaptiveScratch", "structlagrange_1_1raycasting_1_1internal_1_1_occluded_facet_sampler_1_1_impl_1_1_adaptive_scratch.html", null ],
     [ "AdjacencyList< Index >", "classlagrange_1_1_adjacency_list.html", null ],
     [ "AlignedBox3f", null, [
       [ "AABB", "classlagrange_1_1ui_1_1_a_a_b_b.html", null ]
@@ -34,6 +36,7 @@ var hierarchy =
     [ "Attributes< _AttributeArray >", "classlagrange_1_1_attributes.html", null ],
     [ "AttributeSmoothingOptions", "structlagrange_1_1filtering_1_1_attribute_smoothing_options.html", null ],
     [ "BareMeshTag", "structlagrange_1_1_surface_mesh_1_1_bare_mesh_tag.html", null ],
+    [ "BettingPolicy", "structlagrange_1_1raycasting_1_1internal_1_1_occluded_facet_sampler_1_1_impl_1_1_betting_policy.html", null ],
     [ "BitField< EnumType_ >", "classlagrange_1_1_bit_field.html", null ],
     [ "bitset", null, [
       [ "Layer", "structlagrange_1_1ui_1_1_layer.html", null ]
@@ -162,6 +165,8 @@ var hierarchy =
     [ "FacetCentroidOptions", "structlagrange_1_1_facet_centroid_options.html", null ],
     [ "FacetCircumcenterOptions", "structlagrange_1_1_facet_circumcenter_options.html", null ],
     [ "FacetNormalOptions", "structlagrange_1_1_facet_normal_options.html", null ],
+    [ "FacetStats", "structlagrange_1_1raycasting_1_1internal_1_1_occluded_facet_sampler_1_1_impl_1_1_facet_stats.html", null ],
+    [ "FacetTriangle< Scalar >", "structlagrange_1_1raycasting_1_1detail_1_1_facet_triangle.html", null ],
     [ "FacetVectorAreaOptions", "structlagrange_1_1_facet_vector_area_options.html", null ],
     [ "false_type", null, [
       [ "is_mesh_helper< T, void >", "structlagrange_1_1_mesh_trait_helper_1_1is__mesh__helper.html", null ],
@@ -184,9 +189,11 @@ var hierarchy =
     [ "function_ref< F >", "classlagrange_1_1function__ref.html", null ],
     [ "function_ref< R(Args...)>", "classlagrange_1_1function__ref_3_01_r_07_args_8_8_8_08_4.html", null ],
     [ "GeodesicEngine< Scalar, Index >", "classlagrange_1_1geodesic_1_1_geodesic_engine.html", [
+      [ "Impl< Scalar, Index >", "structlagrange_1_1geodesic_1_1_geodesic_engine_flip_1_1_impl.html", null ],
       [ "Impl< Scalar, Index >", "structlagrange_1_1geodesic_1_1_geodesic_engine_heat_1_1_impl.html", null ],
       [ "Impl< Scalar, Index >", "structlagrange_1_1geodesic_1_1_geodesic_engine_m_m_p_1_1_impl.html", null ],
       [ "GeodesicEngineDGPC< Scalar, Index >", "classlagrange_1_1geodesic_1_1_geodesic_engine_d_g_p_c.html", null ],
+      [ "GeodesicEngineFlip< Scalar, Index >", "classlagrange_1_1geodesic_1_1_geodesic_engine_flip.html", null ],
       [ "GeodesicEngineHeat< Scalar, Index >", "classlagrange_1_1geodesic_1_1_geodesic_engine_heat.html", null ],
       [ "GeodesicEngineMMP< Scalar, Index >", "classlagrange_1_1geodesic_1_1_geodesic_engine_m_m_p.html", null ]
     ] ],
@@ -239,18 +246,18 @@ var hierarchy =
     ] ],
     [ "Impl", "structlagrange_1_1winding_1_1_fast_winding_number_1_1_impl.html", null ],
     [ "Impl< Scalar, Index >", "structlagrange_1_1xatlas_1_1_atlas_engine_1_1_impl.html", null ],
-    [ "ImplBase< Derived, Scalar, Index >", "structlagrange_1_1raycasting_1_1detail_1_1_impl_base.html", [
-      [ "Impl", "structlagrange_1_1raycasting_1_1_occluded_facet_sampler_1_1_impl.html", null ],
-      [ "Impl", "structlagrange_1_1raycasting_1_1_occluded_instance_sampler_1_1_impl.html", null ]
+    [ "ImplBase< Derived, Scalar >", "structlagrange_1_1raycasting_1_1detail_1_1_impl_base.html", [
+      [ "Impl", "structlagrange_1_1raycasting_1_1internal_1_1_occluded_facet_sampler_1_1_impl.html", null ],
+      [ "Impl", "structlagrange_1_1raycasting_1_1internal_1_1_occluded_instance_sampler_1_1_impl.html", null ]
     ] ],
     [ "IndexedAttribute", "classlagrange_1_1experimental_1_1_indexed_attribute.html", null ],
     [ "IndexedAttributeManager", "classlagrange_1_1experimental_1_1_indexed_attribute_manager.html", null ],
     [ "IndexedAttributes< _AttributeArray, _IndexArray >", "classlagrange_1_1_indexed_attributes.html", null ],
     [ "InputState", "structlagrange_1_1ui_1_1_input_state.html", null ],
-    [ "InstanceData< Scalar, Index >", "structlagrange_1_1raycasting_1_1detail_1_1_instance_data.html", [
+    [ "InstanceData< Scalar >", "structlagrange_1_1raycasting_1_1detail_1_1_instance_data.html", [
       [ "FacetInstanceData< Scalar, Index >", "structlagrange_1_1raycasting_1_1detail_1_1_facet_instance_data.html", null ]
     ] ],
-    [ "InstanceInfo", "structlagrange_1_1raycasting_1_1_occluded_facet_sampler_1_1_instance_info.html", null ],
+    [ "InstanceInfo", "structlagrange_1_1raycasting_1_1internal_1_1_occluded_facet_sampler_1_1_instance_info.html", null ],
     [ "InterpolatedAttributeIds", "structlagrange_1_1subdivision_1_1_interpolated_attribute_ids.html", null ],
     [ "InterpolatedAttributes", "classlagrange_1_1subdivision_1_1_interpolated_attributes.html", null ],
     [ "InverseMapping< Index >", "structlagrange_1_1internal_1_1_inverse_mapping.html", null ],
@@ -332,10 +339,12 @@ var hierarchy =
     [ "ObjectIDViewport", "structlagrange_1_1ui_1_1_object_i_d_viewport.html", null ],
     [ "ObjReaderResult< Scalar, Index >", "structlagrange_1_1io_1_1internal_1_1_obj_reader_result.html", null ],
     [ "OccludedFacetEstimateOptions", "structlagrange_1_1raycasting_1_1_occluded_facet_estimate_options.html", null ],
-    [ "OccludedFacetSampler< Scalar, Index >", "classlagrange_1_1raycasting_1_1_occluded_facet_sampler.html", null ],
+    [ "OccludedFacetSampler< Scalar, Index >", "classlagrange_1_1raycasting_1_1internal_1_1_occluded_facet_sampler.html", null ],
     [ "OccludedFacetSamplerOptions", "structlagrange_1_1raycasting_1_1_occluded_facet_sampler_options.html", null ],
     [ "OccludedInstanceEstimateOptions", "structlagrange_1_1raycasting_1_1_occluded_instance_estimate_options.html", null ],
-    [ "OccludedInstanceSampler< Scalar, Index >", "classlagrange_1_1raycasting_1_1_occluded_instance_sampler.html", null ],
+    [ "OccludedInstanceSampler< Scalar, Index >", "classlagrange_1_1raycasting_1_1internal_1_1_occluded_instance_sampler.html", null ],
+    [ "OccludedInstanceSamplerOptions", "structlagrange_1_1raycasting_1_1_occluded_instance_sampler_options.html", null ],
+    [ "Options", "structlagrange_1_1geodesic_1_1_geodesic_engine_flip_1_1_options.html", null ],
     [ "OrderedPairHash< T, Enable >", "structlagrange_1_1_ordered_pair_hash.html", null ],
     [ "OrderedPairHash< std::pair< U, V > >", "structlagrange_1_1_ordered_pair_hash_3_01std_1_1pair_3_01_u_00_01_v_01_4_01_4.html", null ],
     [ "OrientationOptions", "structlagrange_1_1_orientation_options.html", null ],
@@ -401,6 +410,9 @@ var hierarchy =
     [ "RayFacetHit", "structlagrange_1_1ui_1_1_ray_facet_hit.html", null ],
     [ "RayPacket16", "structlagrange_1_1raycasting_1_1detail_1_1_ray_packet16.html", null ],
     [ "RaySampler< Scalar >", "structlagrange_1_1raycasting_1_1detail_1_1_ray_sampler.html", null ],
+    [ "Refiner< N >", "classlagrange_1_1mapbox_1_1detail_1_1_refiner.html", null ],
+    [ "RegisteredFacetMesh", "struct_registered_facet_mesh.html", null ],
+    [ "RegisteredInstance", "struct_registered_instance.html", null ],
     [ "RemapVerticesOptions", "structlagrange_1_1_remap_vertices_options.html", null ],
     [ "RemeshingOptions", "structlagrange_1_1remeshing__im_1_1_remeshing_options.html", null ],
     [ "RemeshingOptions", "structlagrange_1_1scene_1_1_remeshing_options.html", null ],
@@ -408,6 +420,7 @@ var hierarchy =
     [ "RemoveDuplicateVerticesOptions", "structlagrange_1_1_remove_duplicate_vertices_options.html", null ],
     [ "RemoveNullAreaFacetsOptions", "structlagrange_1_1_remove_null_area_facets_options.html", null ],
     [ "RemoveOccludedFacetsOptions", "structlagrange_1_1raycasting_1_1_remove_occluded_facets_options.html", null ],
+    [ "RemoveOccludedInstancesOptions", "structlagrange_1_1raycasting_1_1_remove_occluded_instances_options.html", null ],
     [ "RemoveShortEdgesOptions", "structlagrange_1_1_remove_short_edges_options.html", null ],
     [ "RenderContext", "structlagrange_1_1ui_1_1_render_context.html", null ],
     [ "RepackOptions", "structlagrange_1_1packing_1_1_repack_options.html", null ],
@@ -452,6 +465,8 @@ var hierarchy =
     [ "ScopedLogLevel", "classlagrange_1_1_scoped_log_level.html", null ],
     [ "ScopedTimer", "classlagrange_1_1_scoped_timer.html", null ],
     [ "SeamEdgesOptions", "structlagrange_1_1_seam_edges_options.html", null ],
+    [ "Seed", "structlagrange_1_1raycasting_1_1internal_1_1_occluded_facet_sampler_1_1_impl_1_1_adaptive_sampling_policy_1_1_seed.html", null ],
+    [ "SeedReservoir< Scalar >", "structlagrange_1_1raycasting_1_1detail_1_1_seed_reservoir.html", null ],
     [ "Selected", "structlagrange_1_1ui_1_1_selected.html", null ],
     [ "SelectedEvent", "structlagrange_1_1ui_1_1_selected_event.html", null ],
     [ "SelectFacetsByNormalSimilarityOptions", "structlagrange_1_1_select_facets_by_normal_similarity_options.html", null ],

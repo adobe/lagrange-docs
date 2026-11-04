@@ -155,13 +155,14 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a5450a3e7cfe8f3340af059ed161cc485" id="r_a5450a3e7cfe8f3340af059ed161cc485"><td class="memItemLeft" align="right" valign="top"><a id="a5450a3e7cfe8f3340af059ed161cc485" name="a5450a3e7cfe8f3340af059ed161cc485"></a>
 const Eigen::RowVector3&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>get_normal</b> () const</td></tr>
 <tr class="separator:a5450a3e7cfe8f3340af059ed161cc485"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a84400a98994d8f4a155d8c3f38fa75dd" id="r_a84400a98994d8f4a155d8c3f38fa75dd"><td class="memItemLeft" align="right" valign="top"><a id="a84400a98994d8f4a155d8c3f38fa75dd" name="a84400a98994d8f4a155d8c3f38fa75dd"></a>
-<a class="el" href="structlagrange_1_1raycasting_1_1detail_1_1_ray_sampler_1_1_sample.html">Sample</a>&#160;</td><td class="memItemRight" valign="bottom"><b>operator()</b> ()</td></tr>
-<tr class="memdesc:a84400a98994d8f4a155d8c3f38fa75dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bi-hemisphere sample via Malley's method: when bary reflection fires (u+v &gt; 1), the direction is also negated, giving symmetric upper/lower coverage from one 4D draw. <br /></td></tr>
-<tr class="separator:a84400a98994d8f4a155d8c3f38fa75dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab52ddb85dabec2f5778e739961fcedc5" id="r_ab52ddb85dabec2f5778e739961fcedc5"><td class="memItemLeft" align="right" valign="top"><a id="ab52ddb85dabec2f5778e739961fcedc5" name="ab52ddb85dabec2f5778e739961fcedc5"></a>
-<a class="el" href="structlagrange_1_1raycasting_1_1detail_1_1_ray_sampler_1_1_sample.html">Sample</a>&#160;</td><td class="memItemRight" valign="bottom"><b>jitter</b> (<a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a> jitter_sigma)</td></tr>
-<tr class="separator:ab52ddb85dabec2f5778e739961fcedc5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a67ba1f89ba5a93e78198656f9f1fefbc" id="r_a67ba1f89ba5a93e78198656f9f1fefbc"><td class="memItemLeft" align="right" valign="top"><a id="a67ba1f89ba5a93e78198656f9f1fefbc" name="a67ba1f89ba5a93e78198656f9f1fefbc"></a>
+<a class="el" href="structlagrange_1_1raycasting_1_1detail_1_1_ray_sampler_1_1_sample.html">Sample</a>&#160;</td><td class="memItemRight" valign="bottom"><b>sample_cosine</b> ()</td></tr>
+<tr class="memdesc:a67ba1f89ba5a93e78198656f9f1fefbc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bi-hemisphere sample via Malley's method: when bary reflection fires (u+v &gt; 1), the direction is also negated, giving symmetric upper/lower coverage from one 4D draw. <br /></td></tr>
+<tr class="separator:a67ba1f89ba5a93e78198656f9f1fefbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4872a82819eda96127cc669209af542b" id="r_a4872a82819eda96127cc669209af542b"><td class="memItemLeft" align="right" valign="top"><a id="a4872a82819eda96127cc669209af542b" name="a4872a82819eda96127cc669209af542b"></a>
+<a class="el" href="structlagrange_1_1raycasting_1_1detail_1_1_ray_sampler_1_1_sample.html">Sample</a>&#160;</td><td class="memItemRight" valign="bottom"><b>sample_vmf</b> (const Eigen::RowVector3&lt; <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a> &gt; &amp;axis, <a class="el" href="group__group-surfacemesh-attr.html#gga5a2f28c8b9e2f8fce6e70b2418c46e45af60357a8d17e45793298323f1b372a74">Scalar</a> kappa)</td></tr>
+<tr class="memdesc:a4872a82819eda96127cc669209af542b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sample a direction from a von Mises-Fisher lobe (mean <code>axis</code>, concentration <code>kappa</code>) on the full sphere, plus a folded barycentric point. <br /></td></tr>
+<tr class="separator:a4872a82819eda96127cc669209af542b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <hr/>The documentation for this struct was generated from the following file:<ul>
 <li><a class="el" href="occluded__sampler__common_8h_source.html">occluded_sampler_common.h</a></li>
@@ -172,7 +173,7 @@ const Eigen::RowVector3&lt; <a class="el" href="group__group-surfacemesh-attr.ht
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacelagrange.html">lagrange</a></li><li class="navelem"><a class="el" href="namespacelagrange_1_1raycasting.html">raycasting</a></li><li class="navelem"><b>detail</b></li><li class="navelem"><a class="el" href="structlagrange_1_1raycasting_1_1detail_1_1_ray_sampler.html">RaySampler</a></li>
-    <li class="footer">Generated on Mon Oct 5 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+    <li class="footer">Generated on Wed Nov 4 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>
 </body>

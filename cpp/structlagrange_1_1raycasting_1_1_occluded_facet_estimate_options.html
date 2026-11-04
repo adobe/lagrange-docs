@@ -129,86 +129,25 @@ $(function(){initNavTree('structlagrange_1_1raycasting_1_1_occluded_facet_estima
 </div><!--header-->
 <div class="contents">
 
-<p>Loop options for <a class="el" href="group__module-raycasting.html#gad9c6d9eb0042f12a6ce3d041c1d580e4">estimate_occluded_facets()</a> and <a class="el" href="group__module-raycasting.html#ga8b1ca387513f44310588d34ca3d14c96">remove_occluded_facets()</a>.  
+<p>Ray-budget options for <a class="el" href="group__module-raycasting.html#ga29aa56b2bae035ed56ef4cba2b7e1330">estimate_occluded_facet_measures()</a> and <a class="el" href="group__module-raycasting.html#ga8b1ca387513f44310588d34ca3d14c96">remove_occluded_facets()</a>.  
  <a href="#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="remove__occluded__facets_8h_source.html">lagrange/raycasting/remove_occluded_facets.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a33e86a40d7b095182af1c99e7e78e509" id="r_a33e86a40d7b095182af1c99e7e78e509"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a33e86a40d7b095182af1c99e7e78e509">num_rays</a> = 1600000000ULL</td></tr>
-<tr class="memdesc:a33e86a40d7b095182af1c99e7e78e509"><td class="mdescLeft">&#160;</td><td class="mdescRight">Total ray budget.  <br /></td></tr>
+<tr class="memitem:a33e86a40d7b095182af1c99e7e78e509" id="r_a33e86a40d7b095182af1c99e7e78e509"><td class="memItemLeft" align="right" valign="top"><a id="a33e86a40d7b095182af1c99e7e78e509" name="a33e86a40d7b095182af1c99e7e78e509"></a>
+uint64_t&#160;</td><td class="memItemRight" valign="bottom"><b>num_rays</b> = 1600000000ULL</td></tr>
+<tr class="memdesc:a33e86a40d7b095182af1c99e7e78e509"><td class="mdescLeft">&#160;</td><td class="mdescRight">Total ray budget. If 0, a non-null cancellation flag is required. <br /></td></tr>
 <tr class="separator:a33e86a40d7b095182af1c99e7e78e509"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab6eac282097305a7910913b7e171d924" id="r_ab6eac282097305a7910913b7e171d924"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab6eac282097305a7910913b7e171d924">batch_size</a> = 20000000ULL</td></tr>
-<tr class="memdesc:ab6eac282097305a7910913b7e171d924"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rays per batch.  <br /></td></tr>
+<tr class="memitem:ab6eac282097305a7910913b7e171d924" id="r_ab6eac282097305a7910913b7e171d924"><td class="memItemLeft" align="right" valign="top"><a id="ab6eac282097305a7910913b7e171d924" name="ab6eac282097305a7910913b7e171d924"></a>
+uint64_t&#160;</td><td class="memItemRight" valign="bottom"><b>batch_size</b> = 50000000ULL</td></tr>
+<tr class="memdesc:ab6eac282097305a7910913b7e171d924"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rays per batch. Cancellation and progress are checked at batch boundaries. <br /></td></tr>
 <tr class="separator:ab6eac282097305a7910913b7e171d924"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a23076d0bf8db9d62787d974df28af18b" id="r_a23076d0bf8db9d62787d974df28af18b"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a23076d0bf8db9d62787d974df28af18b">num_adaptive_per_normal</a> = 6</td></tr>
-<tr class="memdesc:a23076d0bf8db9d62787d974df28af18b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adaptive batches per normal batch.  <br /></td></tr>
-<tr class="separator:a23076d0bf8db9d62787d974df28af18b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae7c0c42e3603fb3d1e5d44365438e151" id="r_ae7c0c42e3603fb3d1e5d44365438e151"><td class="memItemLeft" align="right" valign="top"><a id="ae7c0c42e3603fb3d1e5d44365438e151" name="ae7c0c42e3603fb3d1e5d44365438e151"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>brute_force</b> = false</td></tr>
-<tr class="memdesc:ae7c0c42e3603fb3d1e5d44365438e151"><td class="mdescLeft">&#160;</td><td class="mdescRight">Run brute-force batches only — baseline for benchmarking against the adaptive mode. <br /></td></tr>
-<tr class="separator:ae7c0c42e3603fb3d1e5d44365438e151"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a95e89d3e75c1d7cea83e526ef91d0e75" id="r_a95e89d3e75c1d7cea83e526ef91d0e75"><td class="memItemLeft" align="right" valign="top"><a id="a95e89d3e75c1d7cea83e526ef91d0e75" name="a95e89d3e75c1d7cea83e526ef91d0e75"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>until_converged</b> = false</td></tr>
-<tr class="memdesc:a95e89d3e75c1d7cea83e526ef91d0e75"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stop early when a cycle finds no new visible facets. <br /></td></tr>
-<tr class="separator:a95e89d3e75c1d7cea83e526ef91d0e75"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Loop options for <a class="el" href="group__module-raycasting.html#gad9c6d9eb0042f12a6ce3d041c1d580e4">estimate_occluded_facets()</a> and <a class="el" href="group__module-raycasting.html#ga8b1ca387513f44310588d34ca3d14c96">remove_occluded_facets()</a>. </p>
-</div><h2 class="groupheader">Member Data Documentation</h2>
-<a id="a33e86a40d7b095182af1c99e7e78e509" name="a33e86a40d7b095182af1c99e7e78e509"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a33e86a40d7b095182af1c99e7e78e509">&#9670;&#160;</a></span>num_rays</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">uint64_t num_rays = 1600000000ULL</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Total ray budget. </p>
-<p>If 0, the loop runs until cancelled or converged — at least one of <code>num_rays&gt;0</code>, <a class="el" href="#a95e89d3e75c1d7cea83e526ef91d0e75">until_converged</a>, or a non-null cancel flag is required. </p>
-
-</div>
-</div>
-<a id="ab6eac282097305a7910913b7e171d924" name="ab6eac282097305a7910913b7e171d924"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab6eac282097305a7910913b7e171d924">&#9670;&#160;</a></span>batch_size</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">uint64_t batch_size = 20000000ULL</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Rays per batch. </p>
-<p>Cancellation, progress, and convergence are checked at cycle boundaries (one batch per cycle in brute-force, one normal + <a class="el" href="#a23076d0bf8db9d62787d974df28af18b">num_adaptive_per_normal</a> adaptive otherwise). </p>
-
-</div>
-</div>
-<a id="a23076d0bf8db9d62787d974df28af18b" name="a23076d0bf8db9d62787d974df28af18b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a23076d0bf8db9d62787d974df28af18b">&#9670;&#160;</a></span>num_adaptive_per_normal</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">uint64_t num_adaptive_per_normal = 6</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Adaptive batches per normal batch. </p>
-<p>0 reduces to pure cosine sampling. Ignored when <a class="el" href="#ae7c0c42e3603fb3d1e5d44365438e151">brute_force</a> is true. </p>
-
-</div>
-</div>
-<hr/>The documentation for this struct was generated from the following file:<ul>
+<div class="textblock"><p>Ray-budget options for <a class="el" href="group__module-raycasting.html#ga29aa56b2bae035ed56ef4cba2b7e1330">estimate_occluded_facet_measures()</a> and <a class="el" href="group__module-raycasting.html#ga8b1ca387513f44310588d34ca3d14c96">remove_occluded_facets()</a>. </p>
+</div><hr/>The documentation for this struct was generated from the following file:<ul>
 <li>lagrange/raycasting/<a class="el" href="remove__occluded__facets_8h_source.html">remove_occluded_facets.h</a></li>
 </ul>
 </div><!-- contents -->
@@ -217,7 +156,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>until_converged</b> =
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacelagrange.html">lagrange</a></li><li class="navelem"><a class="el" href="namespacelagrange_1_1raycasting.html">raycasting</a></li><li class="navelem"><a class="el" href="structlagrange_1_1raycasting_1_1_occluded_facet_estimate_options.html">OccludedFacetEstimateOptions</a></li>
-    <li class="footer">Generated on Mon Oct 5 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+    <li class="footer">Generated on Wed Nov 4 2026 for Lagrange by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>
 </body>
